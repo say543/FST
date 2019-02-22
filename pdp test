@@ -11,5 +11,10 @@ play tiger device    UserDevices    0    1    sonos:tiger    1    -1    -1
 
 play song of the sea on my living room sonos  UserMediaTitles 0 1 song of the sea 1 -1  -1
 
+# with two the same 
+play song of the sea on my living room sonos     UserMediaTitles 0       1       song of the sea 1       -1      -1      UserDevices       0       1       sonos:my living room sonos      1       -1      -1
 
-music_golden.tsv ㄋ
+
+music_golden.tsv 有唯一的example
+
+
