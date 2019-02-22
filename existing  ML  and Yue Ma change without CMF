@@ -1,0 +1,661 @@
+
+
+https://msasg.visualstudio.com/DefaultCollection/Cortana/_git/CoreScience/pullrequest/923270?_a=files
+跟CMF 建出來的完全不一樣  只能從這邊看diff
+
+好像有revert change
+https://msasg.visualstudio.com/DefaultCollection/Cortana/_git/CoreScience/pullrequest/926797?_a=files
+
+
+
+featurlizer 的說明
+http://qasvalidation.azurewebsites.net/mlgprocessors
+
+
+intent order 參考這邊
+luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.intents.pattern.entities.config
+
+slots 的order 參考這邊
+luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.pattern.entities.config
+
+
+
+yue
+
+     不同的featurlizer 寫到output 的話  先寫道的  先贏
+     <confirmed by Yue>
+
+根據
+output=ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_domain_pattern
+是再加上luna 自己 converted oattern  domain_pattern 的output
+
+
+===============================================================
+[qd_mediacontrol_mv8_2_domain_pattern_luna_convert_mediacontrol_featurizer]
+===============================================================
+
+根據
+output=ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_domain_pattern
+是再加上luna 自己 converted pattern  domain_pattern 的output
+p.s  qd_mediacontrol_mv8_2_domain_pattern_featurizer 這個是原始的model 的pattern 基本上把luna 的pattern 跟原本的pattern 分開
+
+
+
+對應到這個pipeline files
+ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv1_luna_convert_domain.pattern.pipeline
+這個是yue 完全自己手寫的
+
+
+# Further preprocess to remove uncessary tokens
+# Lower case
+for preprocess_output1
+
+SingleTokenView
+ignore
+ {*.*}, {!}, {:)}.
+https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2FDUDocumentViewSingleToken.h&version=GBmaster
+
+NLPFSTApplier
+https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2FDUNLPFSTApplier.h&version=GBmaster
+這個apply yue 的 .fst
+來源是luna 的convert.preprocess.fst
+
+
+ExtractNthFeature
+https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2FDUExtractNthFeature.h&version=GBmaster
+這邊用-1 不知道extra last one of preprocess 是什麼意思 是不是固定跟 NLPFSTApplier 搭配
+
+CharTokenizer
+
+https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2FDUDocumentViewCharTokenized.h&version=GBmaster
+// Input1 (string feature) = "call mary\tjane"
+// Output1 (string features) = "call" "mary" "jane"
+// Output2 (string features) = "", " ", "", ""
+
+會輸出兩個feature 的output
+一個是原本的string token  一個是seperator
+
+TextEditor
+https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2FDUDocumentViewTextEditor.h&version=GBmaster
+轉成lower case
+要提供一個single file 當作input
+
+最後輸出
+luna_convert_preprocessed_output_lower_case
+
+# Add BOS to query
+# Combine BOS to query
+? 這個先不管
+ConstFeatureGenerator
+StringFeatureUnion
+SingleTokenView
+
+# Apply FST
+
+NLPFSTApplier
+這邊用的是
+ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv1_luna_convert_domain.pattern.fst 的intent pattern
+對家了bos 的query apply
+生成DomainMatchedName,DomainMatchedType,DomainMatchedStartChar,DomainMatchedLength
+? 為什麼可以生成4個  有點不太還是就先當作接受
+
+FstTags2CrfTags
+https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2FDUFstTags2CrfTags.h&version=GBmaster
+// Inputs:
+// 1.   Original Query
+// 2.   FST output tags
+//
+// Output:
+// 1.   CRF like tags
+
+用到這個intent 的  mapping
+luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.domain.pattern.entities.config.xml
+
+FeatureNormalizer
+https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2FDUFeatureNormalizer.h&version=GBmaster
+
+mapping 成CRF tags 之後  換成
+進行normalization
+-ddf
+luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.domain.pattern.map.txt
+只有 negative 跟postiive  mediacontrol 的部分  沒有什麼調
+不知道這個pair 怎麼決定的
+p.s  yue 說他的domain / intent 是固定的format 只有slot 有調
+
+
+感覺是輸出每個的score
+p.s 但是可以調weight
+
+FeatureValueAggregator
+       https://qasvalidation.azurewebsites.net/mlgdocs/class_d_u_feature_value_aggregator.html
+　　用id  當key 對前面產生的score 進行action
+　　?取max 的動作不是太懂
+       ? 感覺只是把　　featureid[featureindex1, featureindex2]
+       變成  featureid [-1,-1]
+       因為input 只有一個
+  
+
+
+
+
+===============================================================
+[qd_mediacontrol_mv8_2_intents_pattern_luna_convert_mediacontrol_featurizer]
+=============================================================== 
+
+對應這個pipeline file
+ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv1_luna_convert_intents.pattern.pipeline
+
+
+# Further preprocess to remove uncessary tokens
+# Lower case
+    這兩步都跟  luna_domain_convert 依樣
+
+# Replace Slot Tag To Magic String, for intent matching
+for  slots_lccrf_tags
+FeatureSimpleFilter
+只輸出某一些tag Id   --keeptags= 15
+這邊apply 多次 --keeptags= 15   , --keeptags= 14,  --keeptags=26
+
+會不會是xml  slot tagger 的15呢?
+對  就是要留下mediaTile  mediaSource  , mediaControlTime
+然後map 成magical tag　之後才要處理
+
+TokenReplacer
+一次可以取代多個
+然後 取代   luna_convert_preprocessed_output_lower_case 裡面的device type 變成
+MagicDeviceType
+用canonical Token 來取代
+--canonicalToken= MagicMediacontrolTitle,MagicMediacontrolMediaSource,MagicMediacontrolTime
+
+ 生成LowerCasedQueryAfterSlotReplace 給後面使用
+     
+
+# Add BOS to query
+# Combine BOS to query
+    這兩步都跟  luna_domain_convert 依樣 
+    但是用 LowerCasedQueryAfterSlotReplace 當作input
+
+#apply fst
+    跟  luna_domain_convert 依樣 
+
+      
+     
+　NLPFSTApplier
+　fst pattern
+　ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv1_　　　　luna_convert_intents.pattern.fst
+
+　FstTags2CrfTags
+      luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.intents.pattern.entities.config.xml
+      這邊有用到所有的intent
+　  ? 在mlg tool 中　似乎FstTags2CrfTags 不需要也可以tag 對不知道功用是什麼
+      可以看一下yue 給我的place.txt 比較看看
+
+　 FeatureNormalizer
+　ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv1_　　
+luna_convert_intents.pattern.map.txt
+　? 這個intent pattern 內容不太懂
+　37 intents 是沒有錯   但是會什麼每個pair 都要有
+　是不是像是pair wise 的概念
+　是不是classfier 的概念  自己對自己是1 其他的都是-1000
+　
+　FeatureValueAggregator
+       https://qasvalidation.azurewebsites.net/mlgdocs/class_d_u_feature_value_aggregator.html
+　　用id  當key 對前面產生的score 進行action
+　　?取max 的動作不是太懂
+       ? 感覺只是把　　featureid[featureindex1, featureindex2]
+       變成  featureid [-1,-1]
+       因為
+       externalInput 3 沒define 但是 基本上根本沒有被使用
+  
+       Example : FeatureValueAggregator –in=input_1,input_2 –out=output –algo=max –aggregatePerFeatureId input1 : 1[1,1]=1 , 2[2,2]=3 input2 : 1[1,2]=0 , 2[3,4]=4 Then output : 1[-1,-1]=1 , 2[-1,-1]=4
+
+
+
+
+==================================
+qd_mediacontrol_mv8_2_slots_pattern_luna_convert_mediacontrol_featurizer
+==================================
+對應這個pipeline file
+ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv1_luna_convert_slots.pattern.pipeline.txt
+
+
+# Further preprocess to remove uncessary tokens
+# Lower case
+    這兩步都跟  luna_domain_convert 依樣
+
+# Add BOS to query
+# Combine BOS to query
+    這兩步都跟  luna_domain_convert 依樣
+
+# Apply FST
+    NLPFSTApplier
+       用*.fst apply patterns
+
+    輸出4種
+　MatchedNameLuna,MatchedTypeLuna,MatchedStartCharLuna,MatchedLengthLuna
+   ? 不知道功用是什麼
+
+　FstTags2CrfTags
+　　? 感覺這邊的input 因該要是bondary_query而不是singletoken_query
+       bondary_query 是沒有加bos 的結果
+       singletoken_query 是有家bos 的結果
+　　感覺是因為用 singletoken_query 所以要用 FeatureShifter shift 回去
+
+　FeatureShifter
+　https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2FDUFeatureShifter.h&version=GBmaster
+　這邊-1 因該是在shift left
+   感覺是把BOS拿掉
+
+
+　FeatureNormalizer1
+      對original  slot lccrf 的 結果 (ExternalInput2) 做處理
+　ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv1_luna_convert_slots.original.MV1.buckets.txt
+　39 slots 是沒有錯   
+　　 主要是改bucket weight
+     personal_device_name  (19) 的weight 0.99 比其他的大
+　?　（50） 的weight 99 也比其他的大　　但是不知道這個是哪個slot
+　　　(39 to 49） 的weigh 是0
+
+       寫到
+　　　slots_tags_original_normalize
+　FeatureNormalizer2
+
+      對feature shifter 的結果做處理 (luna pattern match 的結果)
+　 　跟 FeatureNormalizer1　用依樣的權重file
+      寫到
+　　slots_tags_luna_convert_normalize
+     
+　TagReducer
+　　對
+　　　ExternalInput1 (preprocessed query ) (input stream)
+           slots_tags_original_normalize  (tag1)
+　　　slots_tags_luna_convert_normalize (tag2)
+　　　這邊做slot_merged
+      maxweight     : reduces tags based on tag weights first and then by order in which the features sets are input
+           順序也重要　　所以originla 會比luna 重要
+　FeatureIdMapper
+　　　https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2FDUFeatureIdMapper.h&version=GBmaster
+
+　　　FeatureIdMapper maps input tag feature id to the other id read from the mapping file
+　　　用到ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv1_luna_convert_slots.mapping.txt
+　　 (39 to 49）如果有被pick 到
+　　　這邊會被mapped to 0 to 38 個原本的slots
+        ? 用意不知道是什麼
+　　　
+===============================================
+==================================
+qd_mediacontrol_mv8_2_slots_PDP_device_name_featurizer
+==================================
+===============================================
+
+　　　PDP 看起來是personal data processing
+
+          PDP 這個還沒問到  yue 是怎麼work 的  之後看
+
+? 不知道是不是movie tv 相關
+來自原這個file
+luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_luna_convert_slots.device.pipeline
+external input1
+  來自於preprocess 的output
+  ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_preprocess_output
+external input2
+ generic:ipe_lu_Microsoft_Threshold_Shell_3_generic_enus_MV1_preprocessed_intertoken
+ ? 不知道這個功用是幹嘛的
+  感覺是string 變成token 中的seperate
+  https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2FDUDynamicLexiconFeaturizer.h&version=GBmaster
+    call my mom
+    會有4個 intertoken,  兩個gap 加上頭尾
+
+ 
+
+
+   參考這個link
+external input3
+  來自於 qd_mediacontrol_mv8_2_slots_lccrf_featurizer tagger 的結果
+  ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_lccrf_tags
+external input4
+　UserDevices
+　是從input  query 的額外information 來的  像是
+    注意彼此間要是tag 間隔
+    play tiger device    UserDevices    0    1    sonos:tiger    1    -1    -1
+  
+
+   ConstFeatureGenerator
+
+ 　　generated constant string feature
+         ? input 找不到 好像是default 就這樣
+         BodySurfaceStream
+
+         好像是生成sonos 這個default token
+
+   TextEditor
+      external input4   生成filterDeivcename
+      用
+ luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.media_title.blacklist.config
+      ?只有sonos 的key word 不知道功用是時麼
+      這邊感覺好像不是black list , 是white list 的感覺
+
+    ConditionalFeatureSetFilter
+         ConstFeatureGenerator
+This processor takes two input string feature sets (X and Y), and filter criteria 
+         two inputs
+           sonosName 來自於 ConstFeatureGenerator
+           FilteredDeviceNames 來自於 TextEditor
+
+　　輸出
+           SonosDeviceNames  by filterCriteria
+
+     DynamicLexiconFeaturizer1
+
+           input
+                   
+TokenizedFeatureSet
+                    external input 1 =
+InterTokenFeatureSet
+                     external input 2
+StringFeatureSet
+                    external 4
+           ouput
+      　　　生成MatchedSonosTagFeature_1,MatchedSonosStringFeature_1
+     TextEditor
+           input
+               external input 2
+            用個replace token luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.personal.intertoken.texteditor.config
+             ouput
+                 FilteredInterTokens
+      DynamicLexiconFeaturizer2
+  
+           input
+                    external input 1
+                    FilteredInterTokens
+                    external 4
+  
+           ouput
+      　　　生成MatchedSonosTagFeature_2,MatchedSonosStringFeature_2
+        FeatureUnion
+                 feature set 合併 
+                  ? 不知道multiply 是什麼意思
+                  input
+                 MatchedSonosTagFeature_1
+                 MatchedSonosTagFeature_2
+                  output
+                 MatchedSonosTagFeature
+　　FeatureIdMapper
+                  用file
+                   luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.device.idmap.txt
+                   0 map to 19
+                     ? 來源不知道是時麼　　但是0 不是是BOS 嗎
+                      跟據xml
+                      19 是personal_device_name 
+                         似乎蠻合理的
+　　　　　in
+                 MatchedSonosTagFeature
+                 out   MatchedSonosTagFeature Mat MatchedSonosTagFeature chedSonosTagFeature
+                 MatchedSonosSlot
+
+　　TagReducer
+　　　　input
+　　　　　external input 1  from preprocessor (input stream)
+                  MatchedSonosSlot (tag1 source)
+                  external input 3 from slot crf (tag2 source)
+      maxweight     : reduces tags based on tag weights first and then by order in which the features sets are input
+
+           ?這邊是用max weight  sonos 的weight 是 1 不知道哪邊initial, 
+            一般的tag 似乎是0.4
+                    from luna_181112_mediacontrol_enus_MV1.slots.model.pipeline.txt
+                    先featureNormalizer weight 1 * 0. 5 = 0.5
+                     在featurNormalizer  weight 0.5 * 0,8  = 0.4
+           順序也重要　 MatchedSonosSlots　所以 MatchedSonosSMatchedSonosSlot 會比slot crf 重要
+         
+               ouput
+                  QuerySlotWithSonos
+                     hedSonosSlot
+       FeatureNormalizer
+                rescale with 0.99 to make sure the personal device name can be overwrittern by
+pattern or whitelist
+                好像是* 1個0.99
+                input
+                  QuerySlotWithSonos
+　　　　　這邊是linear
+                  權重直接給0.99
+      FeatureReplicate
+               ? span 的處理　　　不是太懂
+               不知道為什麼要這個
+/// The processor essentially transforms the input feature set by
+/// modifying/replicating the 'From'/'To' fields of the Tag features. The Id and
+/// weight fields are not affected.
+               in
+                   from  FeatureNormalizer
+            Featu
+===============================================
+qd_mediacontrol_mv8_2_slots_PDP_media_title_featurizer
+===============================================
+==================================
+來自於這個file
+luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_luna_convert_slots
+  ExternalInput1: 來自於preprocess 的output
+  ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_preprocess_output
+
+ExternalInput2:
+ generic:ipe_lu_Microsoft_Threshold_Shell_3_generic_enus_MV1_preprocessed_intertoken
+ ? 不知道這個功用是幹嘛的
+   ExternalInput3:mediacontrol:ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_lccrf_tags
+#   ExternalInput4:ExternalFeatureSet:UserMediaTitles
+# @return ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_tags_after_PDP
+
+
+
+=====================================================================
+qd_mediacontrol_mv8_2_slots_metadata_rewrite_featurizer
+=============================================== ==================================
+   input
+           
+    i
+   TextEditor1
+      external input2   生成filterDeivcename
+      用
+luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_p13n
+      ? 感覺是balck list 這些list 會被換掉  在user define 會被換掉 <!non match  >
+      output
+       FilteredPersonalMusicItems
+
+   DynamicLexiconFeaturizer1
+           input
+                   
+TokenizedFeatureSet
+                    external input 1 =
+InterTokenFeatureSet
+                     external input 4
+StringFeatureSet
+                    FilteredPersonalMusicItems
+
+   TextEditor2
+       external input 4 DynamicLexiconFeaturizer2
+        ? 對token 做filter  不知道功用是什麼
+  TextEdtior 2
+  DynamicLexiconFeaturizer2
+         external  input 4
+         ? 為什麼inter token 要做一樣的事情不太懂
+       
+
+
+  FeatureUnion
+         合併 DynamicLexiconFeaturizer1,   DynamicLexiconFeaturizer2 DynamicLexiconFeaturizer2
+         by ini file 
+      這個file 不是太董         luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.featureunion.dynamic.ini
+   FeatureNormalizer,  ini fi    DynamicLexiconFeaturizer1,   DynamicLexiconFeaturizer2 DynamicLexiconFeaturizer1,dy   DynamicLexiconFeaturizer2 DynamicLexiconFeaturizer2s
+FeatureNormalizer1
+      對 FeatureUnion 進行scale by 2
+
+FeatureReplicate
+      ? 不太知道這幹嘛
+
+      最後輸出被black list 給取代的結果personal_slot_tags_override
+
+
+FeatureNormalizer2
+     input
+         external 3
+ mediacontrol:ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_tags_hotfix:
+        ? 感覺是給不同的權重 不是太董
+    output
+        slot_tags_redirect
+
+
+TagReducer1
+     input
+          external niput
+          personal_slot_tags_override
+      output
+          感覺是把unknown tag 的weihght 變成0
+           personal_slot  ,  然後tag2 會把它移掉  因為weight = 0
+
+TagReducer2
+  
+     input
+          external niput
+          personal_slot_tags_override
+          personal_slot
+     output
+         personal_slot_result
+TokenIdToString
+    input
+       personal_slot_result
+    用這個file
+    ? 不知道是幹嘛的  只剩下media title
+luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.media_title.itoc.config.txt
+     output
+          perosnal_slot_result_string   
+
+SingleTokenView1
+   input 
+    perosnal_slot_result_string   
+ SingleTokenView used to ignore some queries that constist of only whitespace/
+// punctuation for example, {*.*}, {!}, {:)}. With this legacy bug, MLG pipeline
+   output
+     personal_media_title_tgs_singleString
+ 
+NLPFSTApplier
+    input
+
+      用這個pattern
+      這個因該是certain query pattern
+      luna_180508
+       meta.personal.mediacontrol.bin
+
+ 
+==================================
+movie tv do not care
+===================================
+<movietv 先不管>
+// 因為好像不需要了
+[qd_mediacontrol_mv8_2_domain_pattern_luna_convert_movietv_featurizer]
+?  這邊是movie tv 的處理 好像不再需要了
+
+
+根據
+output=ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_domain_pattern
+是再加上luna 自己 converted oattern  domain_pattern 的output
+
+p.s  qd_mediacontrol_mv8_2_domain_pattern_featurizer 這個是原始的model 的pattern 基本上把他跟這邊分開
+
+對應到這個pipeline files
+ipe_lu_Microsoft_Threshold_Shell_3_movietv_enus_mv1_luna_convert_domain.pattern.pipeline.txt
+這個是yue 完全自己手解的
+
+
+# Further preprocess to remove uncessary tokens
+# Lower case
+for preprocess_output1
+
+SingleTokenView
+ignore
+ {*.*}, {!}, {:)}.
+https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2FDUDocumentViewSingleToken.h&version=GBmaster
+
+NLPFSTApplier
+https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2FDUNLPFSTApplier.h&version=GBmaster
+這個apply yue 的 .fst
+來源是luna 的convert.preprocess.fst
+
+
+ExtractNthFeature
+https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2FDUExtractNthFeature.h&version=GBmaster
+這邊用-1 不知道extra last one of preprocess 是什麼意思 是不是固定跟 NLPFSTApplier 搭配
+
+CharTokenizer
+
+https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2FDUDocumentViewCharTokenized.h&version=GBmaster
+// Input1 (string feature) = "call mary\tjane"
+// Output1 (string features) = "call" "mary" "jane"
+// Output2 (string features) = "", " ", "", ""
+
+會輸出兩個feature
+
+TextEditor
+https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2FDUDocumentViewTextEditor.h&version=GBmaster
+轉成lower case
+要提供一個single file 當作input
+
+最後輸出
+luna_convert_preprocessed_output_lower_case
+
+# Replace Slot Tag To Magic String, for intent matching
+for  slots_lccrf_tags
+FeatureSimpleFilter
+只輸出某一些tag Id   --keeptags= 3
+這邊3
+會不會是xml  slot tagger 的3呢?
+對  就是device_type   (index = 0 開始算)
+
+
+TokenReplacer
+然後 取代   luna_convert_preprocessed_output_lower_case 裡面的device type 變成
+MagicDeviceType
+用canonical Token 來取代
+--canonicalToken=MagicDeviceType
+
+
+# Add BOS to query
+# Combine BOS to query
+? 這個先
+ConstFeatureGenerator
+StringFeatureUnion
+
+
+
+# Apply FST
+
+NLPFSTApplier
+這邊用的是
+ipe_lu_Microsoft_Threshold_Shell_3_movietv_enus_mv1_luna_convert_intents.pattern.fst
+luna convert 的intent pattern
+對家了bos 的query apply
+生成IntentMatchedName,IntentMatchedType,IntentMatchedStartChar,IntentMatchedLength
+? 為什麼可以生成4個  有點不太懂
+
+FstTags2CrfTags
+https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2FDUFstTags2CrfTags.h&version=GBmaster
+// Inputs:
+// 1.   Original Query
+// 2.   FST output tags
+//
+// Output:
+// 1.   CRF like tags
+
+用到這個intent 的  mapping
+luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.intents.pattern.entities.config.xml
+
+FeatureNormalizer
+https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2FDUFeatureNormalizer.h&version=GBmaster
+
+mapping 成CRF tags 之後  換成
+進行normalization
+-ddf
+這邊是movie tv 的處理
+ipe_lu_Microsoft_Threshold_Shell_3_movietv_enus_mv1_luna_convert_domain_overwrite.pattern.map.txt
+這邊因該有自己override 每一個intent 的權重
+感覺是輸出每個的score
+......
+movie tv 沒讀完  但是先不管
+
