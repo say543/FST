@@ -15,6 +15,12 @@ play song of the sea on my living room sonos  UserMediaTitles 0 1 song of the se
 play song of the sea on my living room sonos     UserMediaTitles 0       1       song of the sea 1       -1      -1      UserDevices       0       1       sonos:my living room sonos      1       -1      -1
 
 
+play song of the sea by rihanna on my living room sonos  UserMediaTitles 0       1       song of the sea 1       -1      -1      UserDevices     0            1       sonos:my living room sonos      1       -1      -1
+
 music_golden.tsv 有唯一的example
 
+
+
+rule  for 後面的說明
+ 0(num tag feature)        1(num string feature)        Value        Weight        -1(start_index)        -1(end_index)rule
 
