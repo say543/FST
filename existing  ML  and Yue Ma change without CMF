@@ -448,7 +448,10 @@ ExternalInput2:
 =====================================================================
 qd_mediacontrol_mv8_2_slots_metadata_rewrite_featurizer
 =============================================== ==================================
-   input
+mediacontrol_ml:ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_preprocess_output:ExternalInput1,
+ExternalFeatureSet:UserMediaTitles:ExternalInput2,
+mediacontrol_ml:ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_tags_hotfix:ExternalInput3,
+generic:ipe_lu_Microsoft_Threshold_Shell_3_generic_enus_MV1_preprocessed_intertoken:ExternalInput4
            
     i
    TextEditor1
@@ -492,16 +495,6 @@ FeatureReplicate
 
       最後輸出被black list 給取代的結果personal_slot_tags_override
 
-
-FeatureNormalizer2
-     input
-         external 3
- mediacontrol:ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_tags_hotfix:
-        ? 感覺是給不同的權重 不是太董
-    output
-        slot_tags_redirect
-
-
 TagReducer1
      input
           external niput
@@ -522,7 +515,7 @@ TokenIdToString
     input
        personal_slot_result
     用這個file
-    ? 不知道是幹嘛的  只剩下media title
+    ? 不知道是幹嘛的  只剩下media title 還有prefix  suffix  兩個new tags
 luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.media_title.itoc.config.txt
      output
           perosnal_slot_result_string   
@@ -535,15 +528,98 @@ SingleTokenView1
    output
      personal_media_title_tgs_singleString
  
-NLPFSTApplier
+NLPFSTApplier1
     input
 
       用這個pattern
-      這個因該是certain query pattern
-      luna_180508
-       meta.personal.mediacontrol.bin
+      這個因該是certain positve  wihtelist query pattern
+      luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.meta.personal.mediacontrol
+
+    output
+       personal_MatchedName,personal_MatchedType,personal_MatchedStartChar,personal_MatchedLength
+ 
+ FstTags2CrfTags2
+      對NLPFSTApplier1  whilte list pattern  根據slot file map 成slot
+     --in=personal_slot_result_string, personal_MatchedType
+     --output
+      personal_slot_result_final1
+      
+     
+ TagReducer
+     -in=ExternalInput1,personal_slot_result_final1,personal_slot_tags_override
+     --out=personal_slot_result_final
+ 
+ # 2018-1-19 huaslin  line 26
+ SingleTokenView2
+     -in=ExternalInput1
+     --out=preprocess_query_singleString
+ NLPFSTApplier2
+     --in=preprocess_query_singleString
+      用這個pattern
+      這個因該是certain negative  wihtelist query pattern
+     luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.personal.mediacontrol.disallowed.pattern.pretreatment.bin
+ FstTags2CrfTags1
+     --in=ExternalInput1,personal_Pattern_Pretreatment_MatchedType 
+     --out=personal_pattern_pretreatment_final1
+     根據slot file map 成slot
 
  
+
+           
+# 2018-1-19 huaslin  line 36
+TagReducer2
+把 positve(certain positve  wihtelist query pattern)  把negative (certain negative  wihtelist query pattern)  進行合併
+-- in ExternalInput1,personal_pattern_pretreatment_final1,personal_slot_result_final 
+--out=personal_pattern_pretreatment_merge
+   ?權重的number 現在還不再確定  要跑examples
+   
+TokenIdToString 
+    用這個file
+    ? 不知道是幹嘛的  只剩下media title 還有prefix  suffix  兩個new tags
+luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.media_title.itoc.config.txt
+
+     --in=personal_pattern_pretreatment_merge --out=personal_pattern_pretreatment_merge_string   
+   
+SingleTokenView3 
+     --in=personal_pattern_pretreatment_merge_string 
+     --out=personal_pattern_pretreatment_merge_singleString   
+NLPFSTApplier4
+    
+  --in=personal_pattern_pretreatment_merge_singleString 
+  --out=personal_Pattern_Matched,personal_Pattern_MatchedType,personal_Pattern_MatchedStartChar,personal_Pattern_MatchedLength 
+  ? 前面用的是pretreatnent disalliwed pattern
+  這邊用的到 另外一個
+  disallowed.pattern.bin
+  不知道差別是什麼
+  luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.personal.mediacontrol.disallowed.pattern.bin --mode=matcher
+FstTags2CrfTags
+   轉成tag
+  --in=ExternalInput1,personal_Pattern_MatchedType --out=personal_pattern_final1
+FeatureNormalizer 
+  ? 感覺在調一次weight
+  --in=personal_pattern_final1 
+  --out=personal_pattern_final --norm=discretize 
+  --ddf=luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.personal.pattern.media_title.map.txt   
+   
+line 15  (leave it later)
+FeatureNormalizer2
+     input
+         external 3
+ mediacontrol:ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_tags_hotfix:
+        ? 感覺是給不同的權重 不是太董
+    output
+        slot_tags_redirect
+# media_title for hotfix > personal > statistic
+TagReducer 
+     slot_tags_redirect  (hotfix)
+     personal_pattern_final (所以的pattern merge filter 5 c.42k7ru,6eji3
+     )
+     --in=ExternalInput1,slot_tags_redirect,personal_pattern_final 
+     
+     --out=ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_personal_overwrite
+
+### rewrite p13n_matched (when hotfix is applied, there may also personal is substring of hotfix result, so we rewrite the personal meta for this situation)
+
 ==================================
 movie tv do not care
 ===================================
