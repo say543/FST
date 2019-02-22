@@ -53,7 +53,7 @@ for preprocess_output1
 SingleTokenView
 ignore
  {*.*}, {!}, {:)}.
-https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2FDUDocumentViewSingleToken.h&version=GBmaster
+https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrcrewrite%2Fmlg3.4%2FDUDocumentViewSingleToken.h&version=GBmaster
 
 NLPFSTApplier
 https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2FDUNLPFSTApplier.h&version=GBmaster
@@ -588,8 +588,15 @@ NLPFSTApplier1
     input
 
       用這個pattern
-      ? 這個因該是certain positve  wihtelist query pattern or personal 定義的pattern 
+      // 這個pattern 跟wihte list 沒有關西
       luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.meta.personal.mediacontrol
+      
+       // 因該是把media title 的span 合併  頭尾都加media+title
+       // O 也是合併頭尾都加media+title
+      fst[1]: pmatch media_title media_title O O O
+      pmatch media_title media_title O O O
+      <media_title>media_title media_title</media_title> <O>O O O</O>   
+
 
     output
        personal_MatchedName,personal_MatchedType,personal_MatchedStartChar,personal_MatchedLength
@@ -624,7 +631,7 @@ NLPFSTApplier1
      
  TagReducer
      -in=ExternalInput1,personal_slot_result_final1,personal_slot_tags_override
-        personal_slot_result_final1  apply ? 這個因該是certain positve  wihtelist query pattern or personal 定義的pattern  權重1
+        personal_slot_result_final1 這個只是把  media_title string 生成media_tile tag 並且把span 合併  (0 生成O 並且和)
         personal_slot_tags_override  apply 第一步限制user 的 blacklist 的lexicon 結果  權重2
      --out=personal_slot_result_final
         personal pattern 會override
@@ -638,8 +645,16 @@ NLPFSTApplier1
  NLPFSTApplier2
      --in=preprocess_query_singleString
       用這個pattern
-      ? 這個因該是certain negative  wihtelist query pattern 因為寫 disallowed
+     // 感覺是tag by 跟's 
      luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.personal.mediacontrol.disallowed.pattern.pretreatment.bin
+     fst[1]: pmatch play the song by rihanna
+     pmatch play the song by rihanna
+     play the song <prefix>by</prefix> rihanna
+     fst[1]: pmatch play rihanna 's song
+     pmatch play rihanna 's song
+     play rihanna <suffix>'s</suffix> song
+     
+     
      沒有match 會生成
      output
                  personal_Pattern_Pretreatment_Matched (tag: 0, string: 0)
@@ -652,13 +667,16 @@ NLPFSTApplier1
      根據slot file map 成slot
      沒有match 到的就會變成  0[0,0] = 1
      initial 權重都是1
-
+      用luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.config.xml
+      
+      但是這個file 根本沒有prefix 跟suffix 感覺沒什麼用
  
 
            
 # 2018-1-19 huaslin  line 36
 TagReducer2
-把negative (certain negative  wihtelist query pattern) (personal_pattern_pretreatment_final1)  把 positve(certain positve  wihtelist query pattern)(personal_slot_result_final)    進行合併
+把by , 's by tager 成prefix and suffix (personal_pattern_pretreatment_final1)  
+把 (media_title string 生成media_tile tag 並且把span 合併  (0 生成O 並且和))(personal_slot_result_final)    進行合併
 -- in ExternalInput1,personal_pattern_pretreatment_final1,personal_slot_result_final 
 --out=personal_pattern_pretreatment_merge
 personal_slot_result_final  權重 2
@@ -681,77 +699,153 @@ SingleTokenView3
      --out=personal_pattern_pretreatment_merge_singleString   
      
      生成一個連接的string 
-     personal_pattern_pretreatment_final1
+        Inputs:
+                personal_pattern_pretreatment_merge_string (tag: 0, string: 10)
+                        O[0,0]=1
+                        media_title[0,0]=1
+                        media_title[0,0]=1
+                        media_title[0,0]=1
+                        media_title[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+        Output:
+                personal_pattern_pretreatment_merge_singleString (tag: 0, string: 1)
+                        O media_title media_title media_title media_title O O O O O[0,0]=1
+     personal_pattern_pretreatment_merge_singleString
+     
+     
 NLPFSTApplier4
     
   --in=personal_pattern_pretreatment_merge_singleString 
   --out=personal_Pattern_Matched,personal_Pattern_MatchedType,personal_Pattern_MatchedStartChar,personal_Pattern_MatchedLength 
-  ? 前面用的是pretreatnent disalliwed pattern
+  (前面是disallowed.pattern.pretreated)
   這邊用的到 另外一個
-  disallowed.pattern.bin   (前面是disallowed.pattern.pretreated)
-  不知道差別是什麼
+  disallowed.pattern.bin 
+  fst[1]: pmatch O O O prefix media_title media_title
+pmatch O O O prefix media_title media_title
+O O O prefix <media_title><Ignore>media_title media_title</Ignore></media_title>
+fst[1]: pmatch O O O media_title media_title suffix
+pmatch O O O media_title media_title suffix
+<O>O O O</O> <media_title><Ignore>media_title media_title</Ignore></media_title> suffix
+fst[1]: pmatch O O O media_title
+pmatch O O O media_title
+<O>O O O</O> <media_title>media_title</media_title>
+
+    ? 但是問題是prefix 跟suffix 5 前面早就已經都不再了  所以這邊Ignore 根本沒有機會家
+    在by (prefix) 後面 的media_title 要加上ignore  可能之後要被ignore 掉
+    在's (suffix) 前面 的media_title 要加上ignore  可能之後要被ignore 掉
+  
   luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.personal.mediacontrol.disallowed.pattern.bin --mode=matcher
-FstTags2CrfTags
+FstTags2CrfTags7
    string 轉成 tag number
    nedia_tile => 15
    這個時候權重都是1
   --in=ExternalInput1,personal_Pattern_MatchedType --out=personal_pattern_final1
-FeatureNormalizer 
-  ? 感覺在調一次weight
-  權重從1 調成2 
+  
+  
+FeatureNormalizer7 
+  感覺在調一次weight
+  把media control 的權重調成2
   --in=personal_pattern_final1 
   --out=personal_pattern_final --norm=discretize 
   --ddf=luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.personal.pattern.media_title.map.txt   
    
 line 15  (leave it later)
+因為ouput 相連的關西
 FeatureNormalizer2
      input
          external 3
  mediacontrol:ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_tags_hotfix:
-        ? 感覺是給不同的權重 不是太董
+        ? 感覺是給不同的權重 不是太董為啥要這樣條
         有的權重變成0,7 => 1.5
         有的權重變0.99 => 3
     output
         slot_tags_redirect
+        
+        
+        
 line 46
 # media_title for hotfix > personal > statistic
-TagReducer 
+TagReducer8 
+
+     --in=ExternalInput1,slot_tags_redirect,personal_pattern_final 
      slot_tags_redirect  (hotfix 有的權重是1.5  有的權重是3 )
      personal_pattern_final (這個是personal disallowed pattern not treatment的結果   權重視2 if tag , not tag = 1
      )
      
      不一定誰會贏  要看權重
-     
-     --in=ExternalInput1,slot_tags_redirect,personal_pattern_final 
+     ? 這邊的權重不太懂
      
      --out=ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_personal_overwrite
 
 
 ### rewrite p13n_matched (when hotfix is applied, there may also personal is substring of hotfix result, so we rewrite the personal meta for this situation)
 # redirect personal media_title id 0
+只剩下media_title 15 to 0  權重變成 2 
+line 50 51
 FeatureNormalize6 
 --in=personal_slot_result 
+    personal_slot_result  權重 2 的filtered media device
 --out=personal_slot_tags_media_title 
 --ddf=luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.personal.media_title.map.txt
   ? file 內容看不太懂  
-  15 變成0
+  15(column1) 變成0 (columb 2)  感覺重種還是維持2
   
 # redirect model media_title id 1
-FeatureNormalizer 
+personal pattern 加上hotfix 只剩下media_title 15 to 1  權重變成1
+FeatureNormalizer 7
 --in=ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_personal_overwrite 
+     ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_personal_overwrite  
+     personal 加上hotfix 權重合併的結果
 --out=slot_tags_media_title 
 -ddf=luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.media_title.map.txt
   ? file 內容看不太懂  
   15 變成1
   
 # other tagger id 2
-TagReducer 
+TagReducer9
+personal pattern 加上hotfix 除了 media_title 都變成 to 2  權重變成1
  ? 去掉unkonwtag 2
   --in=ExternalInput1,slot_tags_media_title --out=slot_tags_media_title_internal  --unknownTag=2
  
-TagReducer 
+TagReducer10 
+  personal pattern 加上hotfix 只剩下media_title 15 to 1  權重變成1
+  personal pattern  加上hotfix 除了 media_title 都變成 to 2  權重變成1
+  兩個合併成同一個 weight 大的決定
  ? 怎麼決定weight 這邊不是太董
-  --in=ExternalInput1,slot_tags_media_title,slot_tags_media_title_internal --out=slot_tags_media_title2 --algo=maxweight  
+  --in=ExternalInput1,slot_tags_media_title,slot_tags_media_title_internal 
+  --out=slot_tags_media_title2 --algo=maxweight  
+  
+# 2018-01-22 huaslin tagger the weight =3, which id =2
+FeatureNormalizer11 
+    --in=slot_tags_media_title2 
+    TagReducer10 的output 
+    --out=slot_tags_media_title3 -
+    -norm=discretize 
+    --ddf=luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.personal.metadata.map.txt
+    這時候只有tag 0 1 2  ()
+     0: persnaol lexicon filter 的list , 權重 1
+     1 :  personal pattern  加上hotfix 的media ttile, 權重1
+     2 : personal pattern  加上hotfix  other than medai title, 權重3
+         
+TagReducer12 
+    --in=ExternalInput1,slot_tags_media_title3, personal_slot_tags_media_title 
+       FeatureNormalizer11  的output 
+       
+       personal_slot_tags_media_title 是FeatureNormalize6  的output 
+       weight 高的會取代
+    
+    --out=slot_tags_media_title4 --algo=maxweight
+FeatureNormalizer 
+     --in=slot_tags_media_title4 
+     --out=p13n_matched_final1 
+     
+     --ddf=luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.personal.metadata.p13n_matched.map.txt
+
+FeatureSegmentMerger --in=p13n_matched_final1 --out=p13n_matched_final
   
 ==================================
 movie tv do not care
