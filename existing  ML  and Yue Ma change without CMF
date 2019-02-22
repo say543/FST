@@ -448,10 +448,22 @@ ExternalInput2:
 =====================================================================
 qd_mediacontrol_mv8_2_slots_metadata_rewrite_featurizer
 =============================================== ==================================
+
+https://msasg.visualstudio.com/Bing_and_IPG/_git/CarinaEnUsModelingData?path=%2Fscenario%2FMicrosoft.Threshold.Shell%2Fen-us%2Fsource%2Fslots.override&version=GBmaster
+可以找pattern
+最reverse engoneerong
+
+轉fst to txt
+D:\Tools\mlgtools\MLGTools.exe proc2feat -in=skills_groupon_enus_version.intents.1gram.bin -out=intent.1gram.example.txt
+
+
 mediacontrol_ml:ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_preprocess_output:ExternalInput1,
 ExternalFeatureSet:UserMediaTitles:ExternalInput2,
 mediacontrol_ml:ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_tags_hotfix:ExternalInput3,
 generic:ipe_lu_Microsoft_Threshold_Shell_3_generic_enus_MV1_preprocessed_intertoken:ExternalInput4
+
+
+
            
     i
    TextEditor1
@@ -471,28 +483,48 @@ InterTokenFeatureSet
                      external input 4
 StringFeatureSet
                     FilteredPersonalMusicItems
+          output
+              p13n_matched_1
+                 根據FilteredPersonalMusicItems 找match
+                 此時 tag 會變成0
 
    TextEditor2
        external input 4 DynamicLexiconFeaturizer2
-        ? 對token 做filter  不知道功用是什麼
-  TextEdtior 2
+        ? 對interken token 做filter  不知道功用是什麼
+       output
+       FilteredInterTokens
   DynamicLexiconFeaturizer2
-         external  input 4
-         ? 為什麼inter token 要做一樣的事情不太懂
-       
-
-
+         input 
+         external  input 1
+         ? 對interken token 做filter  不知道功用是什麼
+        
+        
+         ? 為什麼inter
   FeatureUnion
-         合併 DynamicLexiconFeaturizer1,   DynamicLexiconFeaturizer2 DynamicLexiconFeaturizer2
+         合併 DynamicLexiconFeaturizer1,   DynamicLexiconFeaturizer2 的output
          by ini file 
-      這個file 不是太董         luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.featureunion.dynamic.ini
-   FeatureNormalizer,  ini fi    DynamicLexiconFeaturizer1,   DynamicLexiconFeaturizer2 DynamicLexiconFeaturizer1,dy   DynamicLexiconFeaturizer2 DynamicLexiconFeaturizer2s
+         這個file 不是太董         luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.featureunion.dynamic.ini
+         slot 0 shift 到15
+          ? 不知道15 的含意是什麼 
+         outpiut
+            p13n_matched_union
+   
 FeatureNormalizer1
+        --in=p13n_matched_union
+        n --out=personal_slot_tags_spans -
       對 FeatureUnion 進行scale by 2
 
 FeatureReplicate
-      ? 不太知道這幹嘛
-
+      --in=personal_slot_tags_spans --out=personal_slot_tags_override
+      
+      15[1,4] 2 = 
+      
+      15[1,1] = 2
+      15[2,2] = 2
+      15[3,3] = 2
+      15[4,4] = 2
+      分成4個
+      
       最後輸出被black list 給取代的結果personal_slot_tags_override
 
 TagReducer1
@@ -500,6 +532,11 @@ TagReducer1
           external niput
           personal_slot_tags_override
       output
+           保留權重   但是tag 15  移除
+           0[0.0] = 1
+           15[1,1] = 2 => 0[1,1] = 2
+           
+           //wrong
           感覺是把unknown tag 的weihght 變成0
            personal_slot  ,  然後tag2 會把它移掉  因為weight = 0
 
@@ -511,11 +548,27 @@ TagReducer2
           personal_slot
      output
          personal_slot_result
+           保留權重  跟  tag   
+      15[1,1] = 2
+      15[2,2] = 2
+      15[3,3] = 2
+      15[4,4] = 2
+
 TokenIdToString
     input
        personal_slot_result
     用這個file
-    ? 不知道是幹嘛的  只剩下media title 還有prefix  suffix  兩個new tags
+    ? 不知道是幹嘛的  只剩下media title(1, 15) 還有prefix  suffix (30,31)  兩個new tags
+    
+    0  => O 
+    
+    from
+                            0[0,0]=1
+                        15[1,1]=2
+    to                
+                                                O[0,0]=1
+                        media_title[0,0]=1
+
 luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.media_title.itoc.config.txt
      output
           perosnal_slot_result_string   
@@ -527,12 +580,15 @@ SingleTokenView1
 // punctuation for example, {*.*}, {!}, {:)}. With this legacy bug, MLG pipeline
    output
      personal_media_title_tgs_singleString
+     
+     生成一個single string  只取tag 
+     O media_title media_title media_title media_title O O O O O[0,0]=1
  
 NLPFSTApplier1
     input
 
       用這個pattern
-      這個因該是certain positve  wihtelist query pattern
+      ? 這個因該是certain positve  wihtelist query pattern or personal 定義的pattern 
       luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.meta.personal.mediacontrol
 
     output
@@ -541,62 +597,108 @@ NLPFSTApplier1
  FstTags2CrfTags2
       對NLPFSTApplier1  whilte list pattern  根據slot file map 成slot
      --in=personal_slot_result_string, personal_MatchedType
+                        O[0,0]=1
+                        media_title[0,0]=1
+                        media_title[0,0]=1
+                        media_title[0,0]=1
+                        media_title[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
      --output
       personal_slot_result_final1
+                         又再把它變回去 numbver
+                        0[0,0]=1
+                        15[1,1]=1
+                        15[2,2]=1
+                        15[3,3]=1
+                        15[4,4]=1
+                        0[5,5]=1
+                        0[6,6]=1
+                        0[7,7]=1
+                        0[8,8]=1
+                        0[9,9]=1
       
      
  TagReducer
      -in=ExternalInput1,personal_slot_result_final1,personal_slot_tags_override
+        personal_slot_result_final1  apply ? 這個因該是certain positve  wihtelist query pattern or personal 定義的pattern  權重1
+        personal_slot_tags_override  apply 第一步限制user 的 blacklist 的lexicon 結果  權重2
      --out=personal_slot_result_final
+        personal pattern 會override
  
  # 2018-1-19 huaslin  line 26
  SingleTokenView2
      -in=ExternalInput1
      --out=preprocess_query_singleString
+     只輸出string
+      play song of the sea on my living room sonos[0,0]=1
  NLPFSTApplier2
      --in=preprocess_query_singleString
       用這個pattern
-      這個因該是certain negative  wihtelist query pattern
+      ? 這個因該是certain negative  wihtelist query pattern 因為寫 disallowed
      luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.personal.mediacontrol.disallowed.pattern.pretreatment.bin
+     沒有match 會生成
+     output
+                 personal_Pattern_Pretreatment_Matched (tag: 0, string: 0)
+                personal_Pattern_Pretreatment_MatchedType (tag: 0, string: 0)
+                personal_Pattern_Pretreatment_MatchedStartChar (tag: 0, string: 0)
+                personal_Pattern_Pretreatment_MatchedLength (tag: 0, string: 0)    
  FstTags2CrfTags1
      --in=ExternalInput1,personal_Pattern_Pretreatment_MatchedType 
      --out=personal_pattern_pretreatment_final1
      根據slot file map 成slot
+     沒有match 到的就會變成  0[0,0] = 1
+     initial 權重都是1
 
  
 
            
 # 2018-1-19 huaslin  line 36
 TagReducer2
-把 positve(certain positve  wihtelist query pattern)  把negative (certain negative  wihtelist query pattern)  進行合併
+把negative (certain negative  wihtelist query pattern) (personal_pattern_pretreatment_final1)  把 positve(certain positve  wihtelist query pattern)(personal_slot_result_final)    進行合併
 -- in ExternalInput1,personal_pattern_pretreatment_final1,personal_slot_result_final 
 --out=personal_pattern_pretreatment_merge
+personal_slot_result_final  權重 2
+personal_pattern_pretreatment_final1 權重1
    ?權重的number 現在還不再確定  要跑examples
    
 TokenIdToString 
     用這個file
     ? 不知道是幹嘛的  只剩下media title 還有prefix  suffix  兩個new tags
 luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.media_title.itoc.config.txt
-
      --in=personal_pattern_pretreatment_merge --out=personal_pattern_pretreatment_merge_string   
+     
+     15 => 變成string media_title
+     0=> O
+   
+   
    
 SingleTokenView3 
      --in=personal_pattern_pretreatment_merge_string 
      --out=personal_pattern_pretreatment_merge_singleString   
+     
+     生成一個連接的string 
+     personal_pattern_pretreatment_final1
 NLPFSTApplier4
     
   --in=personal_pattern_pretreatment_merge_singleString 
   --out=personal_Pattern_Matched,personal_Pattern_MatchedType,personal_Pattern_MatchedStartChar,personal_Pattern_MatchedLength 
   ? 前面用的是pretreatnent disalliwed pattern
   這邊用的到 另外一個
-  disallowed.pattern.bin
+  disallowed.pattern.bin   (前面是disallowed.pattern.pretreated)
   不知道差別是什麼
   luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.personal.mediacontrol.disallowed.pattern.bin --mode=matcher
 FstTags2CrfTags
-   轉成tag
+   string 轉成 tag number
+   nedia_tile => 15
+   這個時候權重都是1
   --in=ExternalInput1,personal_Pattern_MatchedType --out=personal_pattern_final1
 FeatureNormalizer 
   ? 感覺在調一次weight
+  權重從1 調成2 
   --in=personal_pattern_final1 
   --out=personal_pattern_final --norm=discretize 
   --ddf=luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.personal.pattern.media_title.map.txt   
@@ -607,16 +709,23 @@ FeatureNormalizer2
          external 3
  mediacontrol:ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_tags_hotfix:
         ? 感覺是給不同的權重 不是太董
+        有的權重變成0,7 => 1.5
+        有的權重變0.99 => 3
     output
         slot_tags_redirect
+line 46
 # media_title for hotfix > personal > statistic
 TagReducer 
-     slot_tags_redirect  (hotfix)
-     personal_pattern_final (所以的pattern merge filter 5 c.42k7ru,6eji3
+     slot_tags_redirect  (hotfix 有的權重是1.5  有的權重是3 )
+     personal_pattern_final (這個是personal disallowed pattern not treatment的結果   權重視2 if tag , not tag = 1
      )
+     
+     不一定誰會贏  要看權重
+     
      --in=ExternalInput1,slot_tags_redirect,personal_pattern_final 
      
      --out=ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_personal_overwrite
+
 
 ### rewrite p13n_matched (when hotfix is applied, there may also personal is substring of hotfix result, so we rewrite the personal meta for this situation)
 # redirect personal media_title id 0
