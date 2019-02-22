@@ -619,7 +619,31 @@ TagReducer
      --out=ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_personal_overwrite
 
 ### rewrite p13n_matched (when hotfix is applied, there may also personal is substring of hotfix result, so we rewrite the personal meta for this situation)
-
+# redirect personal media_title id 0
+FeatureNormalize6 
+--in=personal_slot_result 
+--out=personal_slot_tags_media_title 
+--ddf=luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.personal.media_title.map.txt
+  ? file 內容看不太懂  
+  15 變成0
+  
+# redirect model media_title id 1
+FeatureNormalizer 
+--in=ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_personal_overwrite 
+--out=slot_tags_media_title 
+-ddf=luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.media_title.map.txt
+  ? file 內容看不太懂  
+  15 變成1
+  
+# other tagger id 2
+TagReducer 
+ ? 去掉unkonwtag 2
+  --in=ExternalInput1,slot_tags_media_title --out=slot_tags_media_title_internal  --unknownTag=2
+ 
+TagReducer 
+ ? 怎麼決定weight 這邊不是太董
+  --in=ExternalInput1,slot_tags_media_title,slot_tags_media_title_internal --out=slot_tags_media_title2 --algo=maxweight  
+  
 ==================================
 movie tv do not care
 ===================================
