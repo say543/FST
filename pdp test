@@ -11,9 +11,33 @@ play tiger device    UserDevices    0    1    sonos:tiger    1    -1    -1
 
 play song of the sea on my living room sonos  UserMediaTitles 0 1 song of the sea 1 -1  -1
 
+play Michael Jackson  UserMediaTitles 0 1 play 1 -1  -1
+
+Michel jackson media persion, play 不生效　　不生效好像就沒有canonical value 
+
+
+play music on my xbox  UserMediaTitles 0 1 xbox 1 -1  -1
+
+xbox 變成media title 了....有bug 
+luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_p13n.texteditor.config 這邊沒有xbox 加上去可能就可以了
+要請ling 確認這個example
+
+play music on my xbox  UserMediaTitles 0 1 music 1 -1  -1
+music　不生效成personal 因該的
+
+luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_p13n.texteditor.config
+
+play the Song Tiger      UserMediaTitles 0       1       Tiger   1       -1      -1
+因該有bug 
+tiger 要是media title 但是canonical value 要怎麼看　　問一下
+是不是看這個
+play the Song Tiger     0:CanonicalEntity:track 1:PersonalMediaTitle:<UserMediaTitle>
+因該說tiger 是要tag 成media title 但是不因該是personal MediaTitle
+要請ling 確認這個example
+
+
 # with two the same 
 play song of the sea on my living room sonos     UserMediaTitles 0       1       song of the sea 1       -1      -1      UserDevices       0       1       sonos:my living room sonos      1       -1      -1
-
 
 play song of the sea by rihanna on my living room sonos  UserMediaTitles 0       1       song of the sea 1       -1      -1      UserDevices     0            1       sonos:my living room sonos      1       -1      -1
 
