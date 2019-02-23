@@ -464,17 +464,26 @@ generic:ipe_lu_Microsoft_Threshold_Shell_3_generic_enus_MV1_preprocessed_interto
 
 
 
-           
-    i
-   TextEditor1
+/*****
+section1 : 完成personal lexciono filter 對token / non ken 的取代　, 輸出15 as media title tag 
+生成
+                personal_slot_tags_override (tag: 4, string: 0)
+                        15[1,1]=2
+                        15[2,2]=2
+                        15[3,3]=2
+                        15[4,4]=2
+****/
+//對正常token 用personal lexcion filter 做match
+TextEditor1 
+      --in=ExternalInput2 
       external input2   生成filterPersonalMusicItems
       用
 luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_p13n
       ? 感覺是balck list 這些list 會被換掉  在user define 會被換掉 <!non match  >
-      output
-       FilteredPersonalMusicItems
+    --out=FilteredPersonalMusicItems
 
-   DynamicLexiconFeaturizer1
+DynamicLexiconFeaturizer1 
+        --in=ExternalInput1,ExternalInput4,FilteredPersonalMusicItems --out=p13n_matched_1,tmp1
            input
                    
 TokenizedFeatureSet
@@ -483,140 +492,147 @@ InterTokenFeatureSet
                      external input 4
 StringFeatureSet
                     FilteredPersonalMusicItems
-          output
+         --out=p13n_matched_1,tmp1
               p13n_matched_1
                  根據FilteredPersonalMusicItems 找match
-                 此時 tag 會變成0
-
-   TextEditor2
+                 此時 personal lexcion tag 會變成0, 權重維持1
+        Inputs:
+                ExternalInput1 (tag: 0, string: 12)
+                        play[0,0]=1
+                        song[1,1]=1
+                        of[2,2]=1
+                        the[3,3]=1
+                        sea[4,4]=1
+                        by[5,5]=1
+                        rihanna[6,6]=1
+                        on[7,7]=1
+                        my[8,8]=1
+                        living[9,9]=1
+                        room[10,10]=1
+                        sonos[11,11]=1
+                ExternalInput4 (tag: 0, string: 13)
+                        [0,0]=1
+                         [1,1]=1
+                         [2,2]=1
+                         [3,3]=1
+                         [4,4]=1
+                         [5,5]=1
+                         [6,6]=1
+                         [7,7]=1
+                         [8,8]=1
+                         [9,9]=1
+                         [10,10]=1
+                         [11,11]=1
+                        [12,12]=1
+                FilteredPersonalMusicItems (tag: 0, string: 1)
+                        song of the sea[0,0]=1
+        Output:
+                p13n_matched_1 (tag: 1, string: 0)
+                        0[1,4]=1
+                tmp1 (tag: 0, string: 1)
+                        [1,4]=1
+                        
+//對intertoken 用personal lexcion filter 做match
+TextEditor2 
+    --in=ExternalInput4 --out=FilteredInterTokens 
+    --config=luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.personal.intertoken.texteditor.config
        external input 4 DynamicLexiconFeaturizer2
         ? 對interken token 做filter  不知道功用是什麼
-       output
-       FilteredInterTokens
-  DynamicLexiconFeaturizer2
+       --out=FilteredInterTokens 
+DynamicLexiconFeaturizer2 
+       --in=ExternalInput1,FilteredInterTokens,FilteredPersonalMusicItems 
          input 
          external  input 1
          ? 對interken token 做filter  不知道功用是什麼
-        
-        
-         ? 為什麼inter
-  FeatureUnion
-         合併 DynamicLexiconFeaturizer1,   DynamicLexiconFeaturizer2 的output
+      --out=p13n_matched_2,tmp2
+
+
+FeatureUnion1
+         --in=p13n_matched_1,p13n_matched_2 --out=p13n_matched_union --algo=multiply  --ini=luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.featureunion.dynamic.ini
+         合併 DynamicLexiconFeaturizer1(對正常token 用personal lexcion filter 做match),   DynamicLexiconFeaturizer2 的output(//對intertoken 用personal lexcion filter 做match)
          by ini file 
-         這個file 不是太董         luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.featureunion.dynamic.ini
-         slot 0 shift 到15
+         這個file 不是太董
+         
+         tag 0 shift 到15 權重視1
+         tag 1 shift 到15 權重視1
+          ? 這個時候好像不會有tag 1
           ? 不知道15 的含意是什麼 
-         outpiut
+--out=p13n_matched_union --algo=multiply  --ini=luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.featureunion.dynamic.ini
             p13n_matched_union
-   
+        Inputs:
+                p13n_matched_1 (tag: 1, string: 0)
+                        0[1,4]=1
+                p13n_matched_2 (tag: 1, string: 0)
+                        0[1,4]=1
+        Output:
+                p13n_matched_union (tag: 1, string: 0)
+                        15[1,4]=1
+
+
+
 FeatureNormalizer1
         --in=p13n_matched_union
-        n --out=personal_slot_tags_spans -
-      對 FeatureUnion 進行scale by 2
+         FeatureUnion1 的結果
+         是合併 
+         DynamicLexiconFeaturizer1(對正常token 用personal lexcion filter 做match),   DynamicLexiconFeaturizer2 的output(//對intertoken 用personal lexcion filter 做match)
+         並且做
+         tag 0 shift 到15 權重視1
+         tag 1 shift 到15 權重視1
+        --out=personal_slot_tags_spans -
+      　對 FeatureUnion1 的結果 進行scale by 2
 
-FeatureReplicate
-      --in=personal_slot_tags_spans --out=personal_slot_tags_override
+FeatureReplicate1
+      --in=personal_slot_tags_spans 
+      --out=personal_slot_tags_override
       
-      15[1,4] 2 = 
-      
-      15[1,1] = 2
-      15[2,2] = 2
-      15[3,3] = 2
-      15[4,4] = 2
       分成4個
-      
+      --out=personal_slot_tags_override
       最後輸出被black list 給取代的結果personal_slot_tags_override
-
-TagReducer1
-     input
-          external niput
-          personal_slot_tags_override
-      output
-           保留權重   但是tag 15  移除
-           0[0.0] = 1
-           15[1,1] = 2 => 0[1,1] = 2
-           
-           //wrong
-          感覺是把unknown tag 的weihght 變成0
-           personal_slot  ,  然後tag2 會把它移掉  因為weight = 0
-
-TagReducer2
-  
-     input
-          external niput
-          personal_slot_tags_override
-          personal_slot
-     output
-         personal_slot_result
-           保留權重  跟  tag   
-      15[1,1] = 2
-      15[2,2] = 2
-      15[3,3] = 2
-      15[4,4] = 2
-
-TokenIdToString
-    input
-       personal_slot_result
-    用這個file
-    ? 不知道是幹嘛的  只剩下media title(1, 15) 還有prefix  suffix (30,31)  兩個new tags
-    
-    0  => O 
-    
-    from
-                            0[0,0]=1
+        Inputs:
+                personal_slot_tags_spans (tag: 1, string: 0)
+                        15[1,4]=2
+        Output:
+                personal_slot_tags_override (tag: 4, string: 0)
                         15[1,1]=2
-    to                
-                                                O[0,0]=1
-                        media_title[0,0]=1
+                        15[2,2]=2
+                        15[3,3]=2
+                        15[4,4]=2
+//                         
 
-luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.media_title.itoc.config.txt
-     output
-          perosnal_slot_result_string   
+/*****
+section2 : 
+根據section1 的output : 
+                personal_slot_tags_override (tag: 4, string: 0)
+                完成personal lexciono filter 對token / non ken 的取代　, 輸出15 as media title tag 
+                        15[1,1]=2
+                        15[2,2]=2
+                        15[3,3]=2
+                        15[4,4]=2
+                        
+ 生成
 
-SingleTokenView1
-   input 
-    perosnal_slot_result_string   
- SingleTokenView used to ignore some queries that constist of only whitespace/
-// punctuation for example, {*.*}, {!}, {:)}. With this legacy bug, MLG pipeline
-   output
-     personal_media_title_tgs_singleString
-     
-     生成一個single string  只取tag 
-     O media_title media_title media_title media_title O O O O O[0,0]=1
- 
-NLPFSTApplier1
-    input
-
-      用這個pattern
-      // 這個pattern 跟wihte list 沒有關西
-      luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.meta.personal.mediacontrol
-      
-       // 因該是把media title 的span 合併  頭尾都加media+title
-       // O 也是合併頭尾都加media+title
-      fst[1]: pmatch media_title media_title O O O
-      pmatch media_title media_title O O O
-      <media_title>media_title media_title</media_title> <O>O O O</O>   
-
-
-    output
-       personal_MatchedName,personal_MatchedType,personal_MatchedStartChar,personal_MatchedLength
- 
- FstTags2CrfTags2
-      對NLPFSTApplier1  whilte list pattern  根據slot file map 成slot
-     --in=personal_slot_result_string, personal_MatchedType
-                        O[0,0]=1
-                        media_title[0,0]=1
-                        media_title[0,0]=1
-                        media_title[0,0]=1
-                        media_title[0,0]=1
-                        O[0,0]=1
-                        O[0,0]=1
-                        O[0,0]=1
-                        O[0,0]=1
-                        O[0,0]=1
-     --output
-      personal_slot_result_final1
-                         又再把它變回去 numbver
+         personal_slot_result (權重2 for media title)
+           保留權重   
+           tag 　mediacontrol 0又變成15 但是權重保留
+           其他的tag 還是0  但是權重 '2'
+                personal_slot_result (tag: 12, string: 0)
+                        0[0,0]=1
+                        15[1,1]=2
+                        15[2,2]=2
+                        15[3,3]=2
+                        15[4,4]=2
+                        0[5,5]=1
+                        0[6,6]=1
+                        0[7,7]=1
+                        0[8,8]=1
+                        0[9,9]=1
+                        0[10,10]=1
+                        0[11,11]=1
+        personal_slot_result_final1　（權重1, for all）
+            保留權重   
+           tag 　mediacontrol 0又變成15 但是權重保留
+           其他的tag 還是0  但是權重 '1'          
+                personal_slot_result_final1 (tag: 12, string: 0)
                         0[0,0]=1
                         15[1,1]=1
                         15[2,2]=1
@@ -627,21 +643,394 @@ NLPFSTApplier1
                         0[7,7]=1
                         0[8,8]=1
                         0[9,9]=1
+                        0[10,10]=1
+                        0[11,11]=1           
+****/
+# personal slot tagger, media_title score = 2, O = 1
+TagReducer1
+--in=ExternalInput1,personal_slot_tags_override
+          external niput
+          personal_slot_tags_override
+      output
+      --out=personal_slot
+           保留權重   
+           tag 15　mediacontrol  變成0 但是權重保留
+           其他的tag 也變成0  但是權重保留
+        Inputs:
+                ExternalInput1 (tag: 0, string: 12)
+                        play[0,0]=1
+                        song[1,1]=1
+                        of[2,2]=1
+                        the[3,3]=1
+                        sea[4,4]=1
+                        by[5,5]=1
+                        rihanna[6,6]=1
+                        on[7,7]=1
+                        my[8,8]=1
+                        living[9,9]=1
+                        room[10,10]=1
+                        sonos[11,11]=1
+                personal_slot_tags_override (tag: 4, string: 0)
+                        15[1,1]=2
+                        15[2,2]=2
+                        15[3,3]=2
+                        15[4,4]=2
+        Output:
+                personal_slot (tag: 12, string: 0)
+                        0[0,0]=1
+                        0[1,1]=2
+                        0[2,2]=2
+                        0[3,3]=2
+                        0[4,4]=2
+                        0[5,5]=1
+                        0[6,6]=1
+                        0[7,7]=1
+                        0[8,8]=1
+                        0[9,9]=1
+                        0[10,10]=1
+                        0[11,11]=1
+TagReducer2
+  
+     -in=ExternalInput1,personal_slot_tags_override,personal_slot          
+          external niput
+          personal_slot_tags_override
+          　　　apply personal lexicon 沒有做tag mapping 的結果
+          personal_slot
+          　　　apply personal lexicon 做完　ag mapping 的結果
+     output
+         personal_slot_result
+           保留權重   
+           tag 　mediacontrol 0又變成15 但是權重保留
+           其他的tag 還是0  但是權重保留
+        Inputs:
+                ExternalInput1 (tag: 0, string: 12)
+                        play[0,0]=1
+                        song[1,1]=1
+                        of[2,2]=1
+                        the[3,3]=1
+                        sea[4,4]=1
+                        by[5,5]=1
+                        rihanna[6,6]=1
+                        on[7,7]=1
+                        my[8,8]=1
+                        living[9,9]=1
+                        room[10,10]=1
+                        sonos[11,11]=1
+                personal_slot_tags_override (tag: 4, string: 0)
+                        15[1,1]=2
+                        15[2,2]=2
+                        15[3,3]=2
+                        15[4,4]=2
+                personal_slot (tag: 12, string: 0)
+                        0[0,0]=1
+                        0[1,1]=2
+                        0[2,2]=2
+                        0[3,3]=2
+                        0[4,4]=2
+                        0[5,5]=1
+                        0[6,6]=1
+                        0[7,7]=1
+                        0[8,8]=1
+                        0[9,9]=1
+                        0[10,10]=1
+                        0[11,11]=1
+        Output:
+                personal_slot_result (tag: 12, string: 0)
+                        0[0,0]=1
+                        15[1,1]=2
+                        15[2,2]=2
+                        15[3,3]=2
+                        15[4,4]=2
+                        0[5,5]=1
+                        0[6,6]=1
+                        0[7,7]=1
+                        0[8,8]=1
+                        0[9,9]=1
+                        0[10,10]=1
+                        0[11,11]=1
+
+TokenIdToString1 
+   --in=personal_slot_result 
+      apply personal lexicon 做完　
+      mediacntrol  15 權重2
+      other tags 都是0  權重1
+   --out=personal_slot_result_string 
+   --vocabFile=luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.media_title.itoc.config.txt
+    input
+       personal_slot_result
+    用這個file
+
+luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.media_title.itoc.config.txt
+     -out=personal_slot_result_string 
+         把　tag 變成string 
+    ? 不知道是幹嘛的  只剩下media title(1, 15) 還有prefix  suffix (30,31)  兩個new tags
+     0 -> O
+     其他的變成other
+     權重變成1
+        Inputs:
+                personal_slot_result (tag: 12, string: 0)
+                        0[0,0]=1
+                        15[1,1]=2
+                        15[2,2]=2
+                        15[3,3]=2
+                        15[4,4]=2
+                        0[5,5]=1
+                        0[6,6]=1
+                        0[7,7]=1
+                        0[8,8]=1
+                        0[9,9]=1
+                        0[10,10]=1
+                        0[11,11]=1
+        Output:
+                personal_slot_result_string (tag: 0, string: 12)
+                        O[0,0]=1
+                        media_title[0,0]=1
+                        media_title[0,0]=1
+                        media_title[0,0]=1
+                        media_title[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+SingleTokenView11
+   input 
+    perosnal_slot_result_string  
+      apply personal lexicon 做完　
+      mediacntrol  15 權重2
+      other tags 都是0  權重1
+      tag mapping to string 
+      只剩下media title(1, 15) 還有prefix  suffix (30,31)  兩個new tags
+     0 -> O
+     其他的變成other
+     權重1
+   SingleTokenView used to ignore some queries that constist of only whitespace/
+    punctuation for example, {*.*}, {!}, {:)}. With this legacy bug, MLG pipeline
+   output
+     personal_media_title_tgs_singleString
+     
+     生成一個single string  只取tag 
+     O media_title media_title media_title media_title O O O O O[0,0]=1
+        Inputs:
+                personal_slot_result_string (tag: 0, string: 12)
+                        O[0,0]=1
+                        media_title[0,0]=1
+                        media_title[0,0]=1
+                        media_title[0,0]=1
+                        media_title[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+        Output:
+                personal_media_title_tags_singleString (tag: 0, string: 1)
+                        O media_title media_title media_title media_title O O O O O O O[0,0]=1
+
+
+NLPFSTApplier1
+    input
+       personal_media_title_tags_singleString
+        apply personal lexicon 做完　
+        mediacntrol  15 權重2
+        other tags 都是0  權重1
+        tag mapping to string 
+        只剩下media title(1, 15) 還有prefix  suffix (30,31)  兩個new tags
+         0 -> O
+         其他的變成other
+         轉成一個單一的string 
+         權重1
+      用這個pattern
+      // 這個pattern 跟wihte list 沒有關西
+      luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.meta.personal.mediacontrol
+      
+       // 因該是把media title 的span 合併  頭尾都加media+title
+       // O 也是合併頭尾都加media+title
+      fst[1]: pmatch media_title media_title O O O
+      pmatch media_title media_title O O O
+      <media_title>media_title media_title</media_title> <O>O O O</O>   
+    output
+       personal_MatchedName,personal_MatchedType,personal_MatchedStartChar,personal_MatchedLength
+         Inputs:
+                personal_media_title_tags_singleString (tag: 0, string: 1)
+                        O media_title media_title media_title media_title O O O O O O O[0,0]=1
+        Output:
+                personal_MatchedName (tag: 0, string: 3)
+                        O[0,0]=1
+                        media_title media_title media_title media_title[1,4]=1
+                        O O O O O O O[5,11]=1
+                personal_MatchedType (tag: 0, string: 3)
+                        <O>[0,0]=1
+                        <media_title>[1,4]=1
+                        <O>[5,11]=1
+                personal_MatchedStartChar (tag: 0, string: 3)
+                        0[0,0]=1
+                        2[1,4]=1
+                        50[5,11]=1
+                personal_MatchedLength (tag: 0, string: 3)
+                        1[0,0]=1
+                        47[1,4]=1
+                        13[5,11]=1
+ // line 31 32
+ FstTags2CrfTags2
+    
+     --in=personal_slot_result_string, personal_MatchedType
+       對NLPFSTApplier1 personal_MatchedType (因該是把media title 的span 合併  頭尾都加media+title)  根據slot file map 成slot
+       又再把它變回去 number
+        Inputs:
+                personal_slot_result_string (tag: 0, string: 12)
+                        O[0,0]=1
+                        media_title[0,0]=1
+                        media_title[0,0]=1
+                        media_title[0,0]=1
+                        media_title[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                personal_MatchedType (tag: 0, string: 3)
+                        <O>[0,0]=1
+                        <media_title>[1,4]=1
+                        <O>[5,11]=1
+        Output:
+                personal_slot_result_final1 (tag: 12, string: 0)
+                        0[0,0]=1
+                        15[1,1]=1
+                        15[2,2]=1
+                        15[3,3]=1
+                        15[4,4]=1
+                        0[5,5]=1
+                        0[6,6]=1
+                        0[7,7]=1
+                        0[8,8]=1
+                        0[9,9]=1
+                        0[10,10]=1
+                        0[11,11]=1
       
      
- TagReducer
+ TagReducerX1
      -in=ExternalInput1,personal_slot_result_final1,personal_slot_tags_override
-        personal_slot_result_final1 這個只是把  media_title string 生成media_tile tag 並且把span 合併  (0 生成O 並且和)
-        personal_slot_tags_override  apply 第一步限制user 的 blacklist 的lexicon 結果  權重2
+        personal_slot_result_final1 
+        apply personal lexicon 做完　
+        mediacntrol  15 權重2
+        other tags 都是0  權重1
+        tag mapping to string 
+        只剩下media title(1, 15) 還有prefix  suffix (30,31)  兩個new tags
+         0 -> O
+         其他的變成other
+         轉成一個單一的string 
+         因該是把media title 的span 合併  頭尾都加media+title  
+         根據slot file map 成slot
+         又再把它變回去 number, 
+         權重視1
+         
+         
+        personal_slot_tags_override  
+             完成personal lexciono filter 對token / non ken 的取代　, 輸出15 as media title tag 
+             權重2
      --out=personal_slot_result_final
         personal pattern 會override
+        Inputs:
+                ExternalInput1 (tag: 0, string: 12)
+                        play[0,0]=1
+                        song[1,1]=1
+                        of[2,2]=1
+                        the[3,3]=1
+                        sea[4,4]=1
+                        by[5,5]=1
+                        rihanna[6,6]=1
+                        on[7,7]=1
+                        my[8,8]=1
+                        living[9,9]=1
+                        room[10,10]=1
+                        sonos[11,11]=1
+                personal_slot_result_final1 (tag: 12, string: 0)
+                        0[0,0]=1
+                        15[1,1]=1
+                        15[2,2]=1
+                        15[3,3]=1
+                        15[4,4]=1
+                        0[5,5]=1
+                        0[6,6]=1
+                        0[7,7]=1
+                        0[8,8]=1
+                        0[9,9]=1
+                        0[10,10]=1
+                        0[11,11]=1
+                personal_slot_tags_override (tag: 4, string: 0)
+                        15[1,1]=2
+                        15[2,2]=2
+                        15[3,3]=2
+                        15[4,4]=2
+        Output:
+                personal_slot_result_final (tag: 12, string: 0)
+                        0[0,0]=1
+                        15[1,1]=2
+                        15[2,2]=2
+                        15[3,3]=2
+                        15[4,4]=2
+                        0[5,5]=1
+                        0[6,6]=1
+                        0[7,7]=1
+                        0[8,8]=1
+                        0[9,9]=1
+                        0[10,10]=1
+                        0[11,11]=1
  
+ /****
+ section 3
+  # 2018-1-19 huaslin  line 26　生成　把by , 's by tager 成prefix and suffix (personal_pattern_pretreatment_final1) (權重都是1) 
+ 
+ 
+ 裡論上　　因該prefix suffix 要保留
+ but slot mapped 根本沒有prefix 跟suffix 感覺沒根本沒什麼用
+ 
+         Output:
+                personal_pattern_pretreatment_final1 (tag: 12, string: 0)
+                        0[0,0]=1
+                        0[1,1]=1
+                        0[2,2]=1
+                        0[3,3]=1
+                        0[4,4]=1
+                        0[5,5]=1
+                        0[6,6]=1
+                        0[7,7]=1
+                        0[8,8]=1
+                        0[9,9]=1
+                        0[10,10]=1
+                        0[11,11]=1
+ *****/
  # 2018-1-19 huaslin  line 26
  SingleTokenView2
      -in=ExternalInput1
      --out=preprocess_query_singleString
      只輸出string
       play song of the sea on my living room sonos[0,0]=1
+      
+        Inputs:
+                ExternalInput1 (tag: 0, string: 12)
+                        play[0,0]=1
+                        song[1,1]=1
+                        of[2,2]=1
+                        the[3,3]=1
+                        sea[4,4]=1
+                        by[5,5]=1
+                        rihanna[6,6]=1
+                        on[7,7]=1
+                        my[8,8]=1
+                        living[9,9]=1
+                        room[10,10]=1
+                        sonos[11,11]=1
+        Output:
+                preprocess_query_singleString (tag: 0, string: 1)
+                        play song of the sea by rihanna on my living room sonos[0,0]=1
  NLPFSTApplier2
      --in=preprocess_query_singleString
       用這個pattern
@@ -661,38 +1050,205 @@ NLPFSTApplier1
                 personal_Pattern_Pretreatment_MatchedType (tag: 0, string: 0)
                 personal_Pattern_Pretreatment_MatchedStartChar (tag: 0, string: 0)
                 personal_Pattern_Pretreatment_MatchedLength (tag: 0, string: 0)    
+         Inputs:
+                preprocess_query_singleString (tag: 0, string: 1)
+                        play song of the sea by rihanna on my living room sonos[0,0]=1
+        Output:
+                personal_Pattern_Pretreatment_Matched (tag: 0, string: 1)
+                        by[5,5]=1
+                personal_Pattern_Pretreatment_MatchedType (tag: 0, string: 1)
+                        <prefix>[5,5]=1
+                personal_Pattern_Pretreatment_MatchedStartChar (tag: 0, string: 1)
+                        21[5,5]=1
+                personal_Pattern_Pretreatment_MatchedLength (tag: 0, string: 1)
+                        2[5,5]=1                
+
  FstTags2CrfTags1
      --in=ExternalInput1,personal_Pattern_Pretreatment_MatchedType 
+     
+         personal_Pattern_Pretreatment_MatchedType
+      用這個pattern 的結果
+     // 感覺是tag by 跟's 
+     luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.personal.mediacontrol.disallowed.pattern.pretreatment.bin
+     fst[1]: pmatch play the song by rihanna
+     pmatch play the song by rihanna
+     play the song <prefix>by</prefix> rihanna
+     fst[1]: pmatch play rihanna 's song
+     pmatch play rihanna 's song
+     play rihanna <suffix>'s</suffix> song
+     
      --out=personal_pattern_pretreatment_final1
      根據slot file map 成slot
-     沒有match 到的就會變成  0[0,0] = 1
+     沒有match 到的就會變成  0[0,0] = 權重變成1
      initial 權重都是1
       用luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.config.xml
       
       但是這個file 根本沒有prefix 跟suffix 感覺沒什麼用
- 
+        Inputs:
+                ExternalInput1 (tag: 0, string: 12)
+                        play[0,0]=1
+                        song[1,1]=1
+                        of[2,2]=1
+                        the[3,3]=1
+                        sea[4,4]=1
+                        by[5,5]=1
+                        rihanna[6,6]=1
+                        on[7,7]=1
+                        my[8,8]=1
+                        living[9,9]=1
+                        room[10,10]=1
+                        sonos[11,11]=1
+                personal_Pattern_Pretreatment_MatchedType (tag: 0, string: 1)
+                        <prefix>[5,5]=1
+        Output:
+                personal_pattern_pretreatment_final1 (tag: 12, string: 0)
+                        0[0,0]=1
+                        0[1,1]=1
+                        0[2,2]=1
+                        0[3,3]=1
+                        0[4,4]=1
+                        0[5,5]=1
+                        0[6,6]=1
+                        0[7,7]=1
+                        0[8,8]=1
+                        0[9,9]=1
+                        0[10,10]=1
+                        0[11,11]=1
 
+ /****
+ section 4
+ section 2 的 output personal_slot_result_final (權重2 for mediatitle)
+ section 3 的outut 把by , 's by tager 成prefix and suffix (personal_pattern_pretreatment_final1)(權重1)
            
+ 進行動作
+ 這個部分會把prefix suffix pattern 的media title 加上ignore
+ ? 理論上igonre 因該要必移除　　但是在section　3 prefix suffix 根本沒留著 這邊根本沒有作用
+ OUTPUT
+                 personal_pattern_final (tag: 12, string: 0)
+                        0[0,0]=1
+                        15[1,1]=2
+                        15[2,2]=2
+                        15[3,3]=2
+                        15[4,4]=2
+                        0[5,5]=1
+                        0[6,6]=1
+                        0[7,7]=1
+                        0[8,8]=1
+                        0[9,9]=1
+                        0[10,10]=1
+                        0[11,11]=1
+ 
+ *****/           
 # 2018-1-19 huaslin  line 36
 TagReducer2
 把by , 's by tager 成prefix and suffix (personal_pattern_pretreatment_final1)  
-把 (media_title string 生成media_tile tag 並且把span 合併  (0 生成O 並且和))(personal_slot_result_final)    進行合併
--- in ExternalInput1,personal_pattern_pretreatment_final1,personal_slot_result_final 
+把 (media_title string 生成media_tile tag 並且把span 合併  (0 生成O 並且和))(personal_slot_result_final)    進行合併by maxWeight
+-- in ExternalInput1,
+
+     personal_pattern_pretreatment_final1,
+     　權重1
+     personal_slot_result_final 
+        section 2 的output. 權重2 for personal lexicon title,  其他的是1
 --out=personal_pattern_pretreatment_merge
 personal_slot_result_final  權重 2
 personal_pattern_pretreatment_final1 權重1
    ?權重的number 現在還不再確定  要跑examples
+         Inputs:
+                ExternalInput1 (tag: 0, string: 12)
+                        play[0,0]=1
+                        song[1,1]=1
+                        of[2,2]=1
+                        the[3,3]=1
+                        sea[4,4]=1
+                        by[5,5]=1
+                        rihanna[6,6]=1
+                        on[7,7]=1
+                        my[8,8]=1
+                        living[9,9]=1
+                        room[10,10]=1
+                        sonos[11,11]=1
+                personal_pattern_pretreatment_final1 (tag: 12, string: 0)
+                        0[0,0]=1
+                        0[1,1]=1
+                        0[2,2]=1
+                        0[3,3]=1
+                        0[4,4]=1
+                        0[5,5]=1
+                        0[6,6]=1
+                        0[7,7]=1
+                        0[8,8]=1
+                        0[9,9]=1
+                        0[10,10]=1
+                        0[11,11]=1
+                personal_slot_result_final (tag: 12, string: 0)
+                        0[0,0]=1
+                        15[1,1]=2
+                        15[2,2]=2
+                        15[3,3]=2
+                        15[4,4]=2
+                        0[5,5]=1
+                        0[6,6]=1
+                        0[7,7]=1
+                        0[8,8]=1
+                        0[9,9]=1
+                        0[10,10]=1
+                        0[11,11]=1
+        Output:
+                personal_pattern_pretreatment_merge (tag: 12, string: 0)
+                        0[0,0]=1
+                        15[1,1]=2
+                        15[2,2]=2
+                        15[3,3]=2
+                        15[4,4]=2
+                        0[5,5]=1
+                        0[6,6]=1
+                        0[7,7]=1
+                        0[8,8]=1
+                        0[9,9]=1
+                        0[10,10]=1
+                        0[11,11]=1  
+   
    
 TokenIdToString 
     用這個file
-    ? 不知道是幹嘛的  只剩下media title 還有prefix  suffix  兩個new tags
+    number to tag 
+    只剩下media title 還有prefix  suffix  兩個new tags　
 luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.media_title.itoc.config.txt
      --in=personal_pattern_pretreatment_merge --out=personal_pattern_pretreatment_merge_string   
      
      15 => 變成string media_title
      0=> O
-   
-   
+         number to tag 
+    只剩下media title 還有prefix  suffix  兩個new tags　
+   --out=personal_pattern_pretreatment_merge_string   
+       Inputs:
+                personal_pattern_pretreatment_merge (tag: 12, string: 0)
+                        0[0,0]=1
+                        15[1,1]=2
+                        15[2,2]=2
+                        15[3,3]=2
+                        15[4,4]=2
+                        0[5,5]=1
+                        0[6,6]=1
+                        0[7,7]=1
+                        0[8,8]=1
+                        0[9,9]=1
+                        0[10,10]=1
+                        0[11,11]=1
+        Output:
+                personal_pattern_pretreatment_merge_string (tag: 0, string: 12)
+                        O[0,0]=1
+                        media_title[0,0]=1
+                        media_title[0,0]=1
+                        media_title[0,0]=1
+                        media_title[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1   
    
 SingleTokenView3 
      --in=personal_pattern_pretreatment_merge_string 
@@ -739,12 +1295,70 @@ pmatch O O O media_title
     在's (suffix) 前面 的media_title 要加上ignore  可能之後要被ignore 掉
   
   luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.personal.mediacontrol.disallowed.pattern.bin --mode=matcher
+  
+         Inputs:
+                personal_pattern_pretreatment_merge_singleString (tag: 0, string: 1)
+                        O media_title media_title media_title media_title O O O O O O O[0,0]=1
+        Output:
+                personal_Pattern_Matched (tag: 0, string: 3)
+                        O[0,0]=1
+                        media_title media_title media_title media_title[1,4]=1
+                        O O O O O O O[5,11]=1
+                personal_Pattern_MatchedType (tag: 0, string: 3)
+                        <O>[0,0]=1
+                        <media_title>[1,4]=1
+                        <O>[5,11]=1
+                personal_Pattern_MatchedStartChar (tag: 0, string: 3)
+                        0[0,0]=1
+                        2[1,4]=1
+                        50[5,11]=1
+                personal_Pattern_MatchedLength (tag: 0, string: 3)
+                        1[0,0]=1
+                        47[1,4]=1
+                        13[5,11]=1
+  
+  
 FstTags2CrfTags7
    string 轉成 tag number
    nedia_tile => 15
    這個時候權重都是1
-  --in=ExternalInput1,personal_Pattern_MatchedType --out=personal_pattern_final1
+  --in=ExternalInput1,
+  personal_Pattern_MatchedType 
   
+  
+  --out=personal_pattern_final1
+        Inputs:
+                ExternalInput1 (tag: 0, string: 12)
+                        play[0,0]=1
+                        song[1,1]=1
+                        of[2,2]=1
+                        the[3,3]=1
+                        sea[4,4]=1
+                        by[5,5]=1
+                        rihanna[6,6]=1
+                        on[7,7]=1
+                        my[8,8]=1
+                        living[9,9]=1
+                        room[10,10]=1
+                        sonos[11,11]=1
+                personal_Pattern_MatchedType (tag: 0, string: 3)
+                        <O>[0,0]=1
+                        <media_title>[1,4]=1
+                        <O>[5,11]=1
+        Output:
+                personal_pattern_final1 (tag: 12, string: 0)
+                        0[0,0]=1
+                        15[1,1]=1
+                        15[2,2]=1
+                        15[3,3]=1
+                        15[4,4]=1
+                        0[5,5]=1
+                        0[6,6]=1
+                        0[7,7]=1
+                        0[8,8]=1
+                        0[9,9]=1
+                        0[10,10]=1
+                        0[11,11]=1  
   
 FeatureNormalizer7 
   感覺在調一次weight
@@ -752,19 +1366,100 @@ FeatureNormalizer7
   --in=personal_pattern_final1 
   --out=personal_pattern_final --norm=discretize 
   --ddf=luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.personal.pattern.media_title.map.txt   
-   
-line 15  (leave it later)
+                personal_pattern_final1 (tag: 12, string: 0)
+                        0[0,0]=1
+                        15[1,1]=1
+                        15[2,2]=1
+                        15[3,3]=1
+                        15[4,4]=1
+                        0[5,5]=1
+                        0[6,6]=1
+                        0[7,7]=1
+                        0[8,8]=1
+                        0[9,9]=1
+                        0[10,10]=1
+                        0[11,11]=1
+        Output:
+                personal_pattern_final (tag: 12, string: 0)
+                        0[0,0]=1
+                        15[1,1]=2
+                        15[2,2]=2
+                        15[3,3]=2
+                        15[4,4]=2
+                        0[5,5]=1
+                        0[6,6]=1
+                        0[7,7]=1
+                        0[8,8]=1
+                        0[9,9]=1
+                        0[10,10]=1
+                        0[11,11]=1
+
+
+ /****
+ section 5
+ section 4 的 output  personal_pattern_final(權重2 for media title)  當作ＩNPUT
+ slot hotfix 的input 
+ 調整slot hotfix的權重
+ 然後 slot hotfix　（有權重1,5 or 3）  跟personal_pattern_final (有權重　0, 1, 2) 做合併 by max weight
+ media title　　from tag 15 to 1, 權重1
+ 其他的tag 變成　2 , 權重1
+ 
+                slot_tags_media_title2 (tag: 12, string: 0)
+                        2[0,0]=1
+                        1[1,1]=1
+                        1[2,2]=1
+                        1[3,3]=1
+                        1[4,4]=1
+                        2[5,5]=1
+                        2[6,6]=1
+                        2[7,7]=1
+                        2[8,8]=1
+                        2[9,9]=1
+                        2[10,10]=1
+                        2[11,11]=1
+                        
+ *****/    
+ line 15  (leave it later)
+ // 用
 因為ouput 相連的關西
 FeatureNormalizer2
      input
          external 3
  mediacontrol:ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_tags_hotfix:
+        model 給定的結我
         ? 感覺是給不同的權重 不是太董為啥要這樣條
         有的權重變成0,7 => 1.5
         有的權重變0.99 => 3
     output
         slot_tags_redirect
-        
+        Inputs:
+                ExternalInput3 (tag: 12, string: 0)
+                        0[0,0]=0
+                        16[1,1]=0.7
+                        15[2,2]=0.5
+                        15[3,3]=0.5
+                        15[4,4]=0.5
+                        0[5,5]=0
+                        11[6,6]=0.7
+                        0[7,7]=0
+                        19[8,8]=0.99
+                        19[9,9]=0.99
+                        19[10,10]=0.99
+                        19[11,11]=0.99
+        Output:
+                slot_tags_redirect (tag: 12, string: 0)
+                        0[0,0]=0
+                        16[1,1]=1.5
+                        15[2,2]=1.5
+                        15[3,3]=1.5
+                        15[4,4]=1.5
+                        0[5,5]=0
+                        11[6,6]=1.5
+                        0[7,7]=0
+                        19[8,8]=3
+                        19[9,9]=3
+                        19[10,10]=3
+                        19[11,11]=3       
         
         
 line 46
@@ -772,17 +1467,214 @@ line 46
 TagReducer8 
 
      --in=ExternalInput1,slot_tags_redirect,personal_pattern_final 
-     slot_tags_redirect  (hotfix 有的權重是1.5  有的權重是3 )
+     slot_tags_redirect  (slot crt 有的權重是1.5  有的權重是3 )
      personal_pattern_final (這個是personal disallowed pattern not treatment的結果   權重視2 if tag , not tag = 1
      )
+        section 4 的 output 的output
      
-     不一定誰會贏  要看權重
-     ? 這邊的權重不太懂
+     不一定誰會贏  要看權重　
+     ? 這邊的權重為啥這樣不太懂
      
      --out=ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_personal_overwrite
-
+        Inputs:
+                ExternalInput1 (tag: 0, string: 12)
+                        play[0,0]=1
+                        song[1,1]=1
+                        of[2,2]=1
+                        the[3,3]=1
+                        sea[4,4]=1
+                        by[5,5]=1
+                        rihanna[6,6]=1
+                        on[7,7]=1
+                        my[8,8]=1
+                        living[9,9]=1
+                        room[10,10]=1
+                        sonos[11,11]=1
+                slot_tags_redirect (tag: 12, string: 0)
+                        0[0,0]=0
+                        16[1,1]=1.5
+                        15[2,2]=1.5
+                        15[3,3]=1.5
+                        15[4,4]=1.5
+                        0[5,5]=0
+                        11[6,6]=1.5
+                        0[7,7]=0
+                        19[8,8]=3
+                        19[9,9]=3
+                        19[10,10]=3
+                        19[11,11]=3
+                personal_pattern_final (tag: 12, string: 0)
+                        0[0,0]=1
+                        15[1,1]=2
+                        15[2,2]=2
+                        15[3,3]=2
+                        15[4,4]=2
+                        0[5,5]=1
+                        0[6,6]=1
+                        0[7,7]=1
+                        0[8,8]=1
+                        0[9,9]=1
+                        0[10,10]=1
+                        0[11,11]=1
+        Output:
+                ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_personal_overwrite (tag: 12, string: 0)
+                        0[0,0]=1
+                        15[1,1]=2
+                        15[2,2]=2
+                        15[3,3]=2
+                        15[4,4]=2
+                        0[5,5]=1
+                        11[6,6]=1.5
+                        0[7,7]=1
+                        19[8,8]=3
+                        19[9,9]=3
+                        19[10,10]=3
+                        19[11,11]=3
 
 ### rewrite p13n_matched (when hotfix is applied, there may also personal is substring of hotfix result, so we rewrite the personal meta for this situation)
+
+# line 53
+# redirect model media_title id 1
+personal pattern 加上hotfix 只剩下media_title 15 to 1  權重變成1
+FeatureNormalizer 7
+--in=ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_personal_overwrite 
+     ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_personal_overwrite  
+     personal 加上hotfix 權重合併的結果
+--out=slot_tags_media_title 
+-ddf=luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.media_title.map.txt
+  ? file 內容看不太懂  
+  15 變成1  其他不見
+  
+       Inputs:
+                ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_personal_overwrite (tag: 12, string: 0)
+                        0[0,0]=1
+                        15[1,1]=2
+                        15[2,2]=2
+                        15[3,3]=2
+                        15[4,4]=2
+                        0[5,5]=1
+                        11[6,6]=1.5
+                        0[7,7]=1
+                        19[8,8]=3
+                        19[9,9]=3
+                        19[10,10]=3
+                        19[11,11]=3
+        Output:
+                slot_tags_media_title (tag: 4, string: 0)
+                        1[1,1]=1
+                        1[2,2]=1
+                        1[3,3]=1
+                        1[4,4]=1
+
+# other tagger id 2
+TagReducer9
+personal pattern 加上hotfix 除了 media_title 都變成 to 2  權重變成1
+ ? 去掉unkonwtag 2
+  --in=ExternalInput1,slot_tags_media_title --out=slot_tags_media_title_internal  --unknownTag=2
+
+        Inputs:
+                ExternalInput1 (tag: 0, string: 12)
+                        play[0,0]=1
+                        song[1,1]=1
+                        of[2,2]=1
+                        the[3,3]=1
+                        sea[4,4]=1
+                        by[5,5]=1
+                        rihanna[6,6]=1
+                        on[7,7]=1
+                        my[8,8]=1
+                        living[9,9]=1
+                        room[10,10]=1
+                        sonos[11,11]=1
+                slot_tags_media_title (tag: 4, string: 0)
+                        1[1,1]=1
+                        1[2,2]=1
+                        1[3,3]=1
+                        1[4,4]=1
+        Output:
+                slot_tags_media_title_internal (tag: 12, string: 0)
+                        2[0,0]=1
+                        0[1,1]=1
+                        0[2,2]=1
+                        0[3,3]=1
+                        0[4,4]=1
+                        2[5,5]=1
+                        2[6,6]=1
+                        2[7,7]=1
+                        2[8,8]=1
+                        2[9,9]=1
+                        2[10,10]=1
+                        2[11,11]=1
+
+
+TagReducer10 
+  personal pattern 加上hotfix 只剩下media_title 15 to 1  權重變成1
+  personal pattern  加上hotfix 除了 media_title 都變成 to 2  權重變成1
+  兩個合併成同一個 weight 大的決定
+ ? 怎麼決定weight 這邊不是太董
+  --in=ExternalInput1,slot_tags_media_title,slot_tags_media_title_internal 
+  --out=slot_tags_media_title2 --algo=maxweight  
+        Inputs:
+                ExternalInput1 (tag: 0, string: 12)
+                        play[0,0]=1
+                        song[1,1]=1
+                        of[2,2]=1
+                        the[3,3]=1
+                        sea[4,4]=1
+                        by[5,5]=1
+                        rihanna[6,6]=1
+                        on[7,7]=1
+                        my[8,8]=1
+                        living[9,9]=1
+                        room[10,10]=1
+                        sonos[11,11]=1
+                slot_tags_media_title (tag: 4, string: 0)
+                        1[1,1]=1
+                        1[2,2]=1
+                        1[3,3]=1
+                        1[4,4]=1
+                slot_tags_media_title_internal (tag: 12, string: 0)
+                        2[0,0]=1
+                        0[1,1]=1
+                        0[2,2]=1
+                        0[3,3]=1
+                        0[4,4]=1
+                        2[5,5]=1
+                        2[6,6]=1
+                        2[7,7]=1
+                        2[8,8]=1
+                        2[9,9]=1
+                        2[10,10]=1
+                        2[11,11]=1
+        Output:
+                slot_tags_media_title2 (tag: 12, string: 0)
+                        2[0,0]=1
+                        1[1,1]=1
+                        1[2,2]=1
+                        1[3,3]=1
+                        1[4,4]=1
+                        2[5,5]=1
+                        2[6,6]=1
+                        2[7,7]=1
+                        2[8,8]=1
+                        2[9,9]=1
+                        2[10,10]=1
+                        2[11,11]=1
+
+ /****
+ section 6
+ section 2的 output  personal_slot_result 當作UNPUT ( personal lexcion 的結果)
+ 
+ 只剩下media_title 15 to 0  權重變成 2 
+ 
+                personal_slot_tags_media_title (tag: 4, string: 0)
+                        0[1,1]=2
+                        0[2,2]=2
+                        0[3,3]=2
+                        0[4,4]=2  
+ *****/  
+
+# line 59
 # redirect personal media_title id 0
 只剩下media_title 15 to 0  權重變成 2 
 line 50 51
@@ -793,31 +1685,106 @@ FeatureNormalize6
 --ddf=luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.personal.media_title.map.txt
   ? file 內容看不太懂  
   15(column1) 變成0 (columb 2)  然後重種還是維持2
+        Inputs:
+                personal_slot_result (tag: 12, string: 0)
+                        0[0,0]=1
+                        15[1,1]=2
+                        15[2,2]=2
+                        15[3,3]=2
+                        15[4,4]=2
+                        0[5,5]=1
+                        0[6,6]=1
+                        0[7,7]=1
+                        0[8,8]=1
+                        0[9,9]=1
+                        0[10,10]=1
+                        0[11,11]=1
+        Output:
+                personal_slot_tags_media_title (tag: 4, string: 0)
+                        0[1,1]=2
+                        0[2,2]=2
+                        0[3,3]=2
+                        0[4,4]=2  
+
   
-# redirect model media_title id 1
-personal pattern 加上hotfix 只剩下media_title 15 to 1  權重變成1
-FeatureNormalizer 7
---in=ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_personal_overwrite 
-     ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_personal_overwrite  
-     personal 加上hotfix 權重合併的結果
---out=slot_tags_media_title 
--ddf=luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.media_title.map.txt
-  ? file 內容看不太懂  
-  15 變成1
+
   
-# other tagger id 2
-TagReducer9
-personal pattern 加上hotfix 除了 media_title 都變成 to 2  權重變成1
- ? 去掉unkonwtag 2
-  --in=ExternalInput1,slot_tags_media_title --out=slot_tags_media_title_internal  --unknownTag=2
+
+ /****
+ section 7
  
-TagReducer10 
-  personal pattern 加上hotfix 只剩下media_title 15 to 1  權重變成1
-  personal pattern  加上hotfix 除了 media_title 都變成 to 2  權重變成1
-  兩個合併成同一個 weight 大的決定
- ? 怎麼決定weight 這邊不是太董
-  --in=ExternalInput1,slot_tags_media_title,slot_tags_media_title_internal 
-  --out=slot_tags_media_title2 --algo=maxweight  
+ section 5 的　output slot_tags_media_title2
+     slot hotfix　（有權重1.5 or 3）  跟personal_pattern_final (有權重　0, 1, 2) 做合併 by max weight
+     media title　　from tag 15 to 1, 權重1
+     其他的tag 變成　2 , 權重1
+                   slot_tags_media_title2 (tag: 12, string: 0)
+                        2[0,0]=1
+                        1[1,1]=1
+                        1[2,2]=1
+                        1[3,3]=1
+                        1[4,4]=1
+                        2[5,5]=1
+                        2[6,6]=1
+                        2[7,7]=1
+                        2[8,8]=1
+                        2[9,9]=1
+                        2[10,10]=1
+                        2[11,11]=1 
+ 
+ 
+ 先調整slot_tags_media_title2 weight
+   media title　　權重1 to 1
+  其他的tag 變成　權重1 to 3
+                 slot_tags_media_title3 (tag: 12, string: 0)
+                        2[0,0]=3
+                        1[1,1]=1
+                        1[2,2]=1
+                        1[3,3]=1
+                        1[4,4]=1
+                        2[5,5]=3
+                        2[6,6]=3
+                        2[7,7]=3
+                        2[8,8]=3
+                        2[9,9]=3
+                        2[10,10]=3
+                        2[11,11]=3
+                        
+ section 6  personal_slot_tags_media_title
+     只剩下media_title 15 to 0  權重變成 2 
+ 
+                personal_slot_tags_media_title (tag: 4, string: 0)
+                        0[1,1]=2
+                        0[2,2]=2
+                        0[3,3]=2
+                        0[4,4]=2  
+ 
+ 跟section 6 進行　max weight 合併
+        hotfix 的權重　　＜ personal slot 的權重低
+ 　　　                slot_tags_media_title4 (tag: 12, string: 0)
+                        2[0,0]=3
+                        0[1,1]=2
+                        0[2,2]=2
+                        0[3,3]=2
+                        0[4,4]=2
+                        2[5,5]=3
+                        2[6,6]=3
+                        2[7,7]=3
+                        2[8,8]=3
+                        2[9,9]=3
+                        2[10,10]=3
+                        2[11,11]=3
+                        
+                        
+ 只留下media title （這個時候是tag 0） 然後　weight reset 成1
+                 p13n_matched_final1 (tag: 4, string: 0)
+                        0[1,1]=1
+                        0[2,2]=1
+                        0[3,3]=1
+                        0[4,4]=1
+ 合併成一個連續的 media title
+                 p13n_matched_final (tag: 1, string: 0)
+                        0[1,4]=1 
+ ****/
   
 # 2018-01-22 huaslin tagger the weight =3, which id =2
 FeatureNormalizer11 
@@ -830,8 +1797,36 @@ FeatureNormalizer11
     結果會變成:
      0: persnaol lexicon filter 的list , 權重 1
      1 :  personal pattern  加上hotfix 的media ttile, 權重1
-     2 : personal pattern  加上hotfix  other than medai title, 權重3
-         
+     2 : personal pattern  加hotfix  other than medai title, 權重3
+        Inputs:
+                slot_tags_media_title2 (tag: 12, string: 0)
+                        2[0,0]=1
+                        1[1,1]=1
+                        1[2,2]=1
+                        1[3,3]=1
+                        1[4,4]=1
+                        2[5,5]=1
+                        2[6,6]=1
+                        2[7,7]=1
+                        2[8,8]=1
+                        2[9,9]=1
+                        2[10,10]=1
+                        2[11,11]=1
+        Output:
+                slot_tags_media_title3 (tag: 12, string: 0)
+                        2[0,0]=3
+                        1[1,1]=1
+                        1[2,2]=1
+                        1[3,3]=1
+                        1[4,4]=1
+                        2[5,5]=3
+                        2[6,6]=3
+                        2[7,7]=3
+                        2[8,8]=3
+                        2[9,9]=3
+                        2[10,10]=3
+                        2[11,11]=3
+                        
 TagReducer12 
     --in=ExternalInput1,slot_tags_media_title3, personal_slot_tags_media_title 
        FeatureNormalizer11  的output 
@@ -843,11 +1838,57 @@ TagReducer12
         2 留著
         
     --out=slot_tags_media_title4 --algo=maxweight
+        Inputs:
+                ExternalInput1 (tag: 0, string: 12)
+                        play[0,0]=1
+                        song[1,1]=1
+                        of[2,2]=1
+                        the[3,3]=1
+                        sea[4,4]=1
+                        by[5,5]=1
+                        rihanna[6,6]=1
+                        on[7,7]=1
+                        my[8,8]=1
+                        living[9,9]=1
+                        room[10,10]=1
+                        sonos[11,11]=1
+                slot_tags_media_title3 (tag: 12, string: 0)
+                        2[0,0]=3
+                        1[1,1]=1
+                        1[2,2]=1
+                        1[3,3]=1
+                        1[4,4]=1
+                        2[5,5]=3
+                        2[6,6]=3
+                        2[7,7]=3
+                        2[8,8]=3
+                        2[9,9]=3
+                        2[10,10]=3
+                        2[11,11]=3
+                personal_slot_tags_media_title (tag: 4, string: 0)
+                        0[1,1]=2
+                        0[2,2]=2
+                        0[3,3]=2
+                        0[4,4]=2
+        Output:
+                slot_tags_media_title4 (tag: 12, string: 0)
+                        2[0,0]=3
+                        0[1,1]=2
+                        0[2,2]=2
+                        0[3,3]=2
+                        0[4,4]=2
+                        2[5,5]=3
+                        2[6,6]=3
+                        2[7,7]=3
+                        2[8,8]=3
+                        2[9,9]=3
+                        2[10,10]=3
+                        2[11,11]=3
 FeatureNormalizer12 
      --in=slot_tags_media_title4 
           TagReducer12 的output 
      --out=p13n_matched_final1 
-　　　　　　只把0的weight ＝　給留著　　其他的都移除
+　　　　　　只把0 (media title) 拿出來並且weight reset 成1
            0 的來自於personal lexicon list 
       
            matched.map.txt 只有留0得　權重設成1
@@ -888,7 +1929,75 @@ FeatureSegmentMerger13
                 p13n_matched_final (tag: 1, string: 0)
                         0[1,4]=1      
   
-  
+ /****
+ section 7
+ 
+ section 5 的　output slot_tags_media_title2
+
+  mediacontrol 權重1 其他是2
+                   slot_tags_media_title2 (tag: 12, string: 0)
+                        2[0,0]=1
+                        1[1,1]=1
+                        1[2,2]=1
+                        1[3,3]=1
+                        1[4,4]=1
+                        2[5,5]=1
+                        2[6,6]=1
+                        2[7,7]=1
+                        2[8,8]=1
+                        2[9,9]=1
+                        2[10,10]=1
+                        2[11,11]=1 
+                        
+ section 6  的ˊoutput personal_slot_tags_media_title 
+           只剩下media_title 15 to 0  權重變成 2 
+ 
+                personal_slot_tags_media_title (tag: 4, string: 0)
+                        0[1,1]=2
+                        0[2,2]=2
+                        0[3,3]=2
+                        0[4,4]=2  
+                        
+if the personal result is substring of model(hotfix) result. the result will split into 3 part [A:model] [B:personal] [C:model]  
+hotfix 權重　＜personal result 的權重 
+        Output:
+                media_title_splited (tag: 12, string: 0)
+                        2[0,0]=1
+                        0[1,1]=2
+                        0[2,2]=2
+                        0[3,3]=2
+                        0[4,4]=2
+                        2[5,5]=1
+                        2[6,6]=1
+                        2[7,7]=1
+                        2[8,8]=1
+                        2[9,9]=1
+                        2[10,10]=1
+                        2[11,11]=1
+
+然後　
+       tag
+       0-> O　（此時的0　是 perseonal media title )
+       1 ->  media control（? 此時的1　是 ? 不知道從哪來)
+       2 ->: others     
+     
+       Output:
+                model_media_title_tags (tag: 0, string: 12)
+                        other[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        other[0,0]=1
+                        other[0,0]=1
+                        other[0,0]=1
+                        other[0,0]=1
+                        other[0,0]=1
+                        other[0,0]=1
+                        other[0,0]=1
+
+
+***/
 # combine personal result with model result, 
 # if the personal result is substring of model result. the result will split into 3 part [A:model] [B:personal] [C:model]  
 # personal result 的權重比較高的意思
@@ -952,7 +2061,7 @@ TagReducer14
                         2[9,9]=1
                         2[10,10]=1
                         2[11,11]=1
-
+                        
 # change to to text representation "other media_title O mediaTitle"
 TokenIdToString15 
 　　--in=media_title_splited 
@@ -969,6 +2078,59 @@ TokenIdToString15
        這邊只轉tag 權重不考慮
    　　只留下 personal pattern  加上hotfix 的media ttile 根據mapping
      
+        Inputs:
+                media_title_splited (tag: 12, string: 0)
+                        2[0,0]=1
+                        0[1,1]=2
+                        0[2,2]=2
+                        0[3,3]=2
+                        0[4,4]=2
+                        2[5,5]=1
+                        2[6,6]=1
+                        2[7,7]=1
+                        2[8,8]=1
+                        2[9,9]=1
+                        2[10,10]=1
+                        2[11,11]=1
+        Output:
+                model_media_title_tags (tag: 0, string: 12)
+                        other[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        other[0,0]=1
+                        other[0,0]=1
+                        other[0,0]=1
+                        other[0,0]=1
+                        other[0,0]=1
+                        other[0,0]=1
+                        other[0,0]=1
+
+
+/******
+section 8
+section 7 的output 
+                model_media_title_tags (tag: 0, string: 12)
+                        other[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        O[0,0]=1
+                        other[0,0]=1
+                        other[0,0]=1
+                        other[0,0]=1
+                        other[0,0]=1
+                        other[0,0]=1
+                        other[0,0]=1
+                        other[0,0]=1
+                        
+apply meta data fst pattern
+         ? 不知道這個　meta data fst pattern 是幹嘛的　　也找不到FST
+        Output:
+                meta_rewrite_matched (tag: 0, string: 0)
+******/
+line 74
 # apply fst on the meta information of it 
 # ? bin 找不到原始的pattern　　不知道meta data 是幹嘛的
 SingleTokenView16
@@ -1007,7 +2169,7 @@ NLPFSTApplier17
     --out=MatchedName,MatchedType,MatchedStartChar,MatchedLength 
     --fst=luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.rewrite.personal.meta.bin 
     
-    ?但是不知道功用是什麼
+    ?但是不知道功用是什麼　找不到fst
     ? 可能是這個FSt　
     https://msasg.visualstudio.com/Bing_and_IPG/_git/CarinaEnUsModelingData?path=%2Fscenario%2FMicrosoft.Threshold.Shell%2Fen-us%2Fsource%2Fother%2Fmediacontrol_metadata_personalizedMedia.infile&version=GBmaster
         Inputs:
@@ -1045,6 +2207,37 @@ FeatureNormalizer19
      --out=meta_rewrite_matched --norm=linear --scale=10
                 
         ?但是不知道功用是什麼
+        Inputs:
+                rewrite_result (tag: 0, string: 0)
+        Output:
+                meta_rewrite_matched (tag: 0, string: 0)
+
+     
+
+/******
+section 9
+section 6 output p13n_matched_final (tag: 1, string: 0)
+
+　這邊的0 的media control 的合併點
+   0[1,4]=1 
+   
+section 8 output    
+   meta_rewrite_matched 
+   apply metadata 
+用max weight 合併
+? 但是這邊meta　看不出來結果　　因為是bin 不知道pattern
+
+
+        Output:
+                ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_p13n_matched (tag: 1, string: 0)
+                        0[1,4]=1   
+                        
+                        
+       會灌給
+       qd_mediacontrol_mv8_2_slots_metadata_featurizer
+       　　　裡面有提到 Npn match 的logic 可以之後看
+******/
+
 
 #combine original personal matched with rewrite personal matched
 TagReducer20 
@@ -1059,6 +2252,27 @@ TagReducer20
     
     --out=
     p13n_matched_rewrite_final --algo=maxweight
+
+        Inputs:
+                ExternalInput1 (tag: 0, string: 12)
+                        play[0,0]=1
+                        song[1,1]=1
+                        of[2,2]=1
+                        the[3,3]=1
+                        sea[4,4]=1
+                        by[5,5]=1
+                        rihanna[6,6]=1
+                        on[7,7]=1
+                        my[8,8]=1
+                        living[9,9]=1
+                        room[10,10]=1
+                        sonos[11,11]=1
+                p13n_matched_final (tag: 1, string: 0)
+                        0[1,4]=1
+                meta_rewrite_matched (tag: 0, string: 0)
+        Output:
+                p13n_matched_rewrite_final (tag: 1, string: 0)
+                        0[1,4]=1
 
 # filter out rewrite personal matched
 FeatureNormalizer21 
@@ -1075,9 +2289,14 @@ FeatureNormalizer21
    --out=
    ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_p13n_matched 
    --norm=discretize --ddf=luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.meta.filter.map.txt
-   0 的來自於personal lexicon list   
+   0 的來自於 media control    personal lexicon list   
    map 0 的weight 變成1
-   
+        Inputs:
+                p13n_matched_rewrite_final (tag: 1, string: 0)
+                        0[1,4]=1
+        Output:
+                ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_p13n_matched (tag: 1, string: 0)
+                        0[1,4]=1   
 
 ==================================
 movie tv do not care
