@@ -1122,7 +1122,8 @@ NLPFSTApplier1
            
  進行動作
  這個部分會把prefix suffix pattern 的media title 加上ignore
- ? 理論上igonre 因該要必移除　　但是在section　3 prefix suffix 根本沒留著 這邊根本沒有作用
+ ? 理論上igonre 因該要必移除　　但是在section　3 prefix suffix 根本沒留著 
+ 同時　section　3 prefix suffix 　的權重 1 比section 2 權重2 小　感覺沒有作用
  OUTPUT
                  personal_pattern_final (tag: 12, string: 0)
                         0[0,0]=1
@@ -1152,7 +1153,6 @@ TagReducer2
 --out=personal_pattern_pretreatment_merge
 personal_slot_result_final  權重 2
 personal_pattern_pretreatment_final1 權重1
-   ?權重的number 現在還不再確定  要跑examples
          Inputs:
                 ExternalInput1 (tag: 0, string: 12)
                         play[0,0]=1
