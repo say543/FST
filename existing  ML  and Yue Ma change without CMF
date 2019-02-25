@@ -2561,6 +2561,15 @@ input
      
      從medata data retriever  直接讀DB
      這個不
+     
+     
+ [qd_mediacontrol_mv8_2_metadataretriever]
+ 
+    這邊是另外一個的medadata retriver  但是不是mediaTitle
+     data stores frmo a list of files
+     一推name 的canonical value
+     luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_luna_convert_slots.canonicalentities.media_type.txt,luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_luna_convert_slots.canonicalentities.app_name.txt,luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_luna_convert_slots.canonicalentities.location.txt,luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_luna_convert_slots.canonicalentities.media_genre.txt,luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_luna_convert_slots.canonicalentities.media_keyword.txt,luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_luna_convert_slots.canonicalentities.media_person.txt,luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_luna_convert_slots.canonicalentities.media_release_date.txt,luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_luna_convert_slots.canonicalentities.media_title.txt,luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_luna_convert_slots.canonicalentities.personal_device_name.txt,luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_luna_convert_slots.canonicalentities.position_ref.txt,luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_luna_convert_slots.canonicalentities.radio_callsign.txt,luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_luna_convert_slots.canonicalentities.radio_frequency.txt,luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.canonicalentities.numerical_increment.txt,luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.canonicalentities.volume_level.txt,luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.canonicalentities.device_type.txt,luna_180405_mediacontrol_enus.canonicalentities.media_keyword.txt
+     
 ==================================
 movie tv do not care
 ===================================
