@@ -612,9 +612,16 @@ section2 :
  生成
 
          personal_slot_result (權重2 for media title)
+         
+         
+         personal_slot_result_final(權重2 for media title)
            保留權重   
            tag 　mediacontrol 0又變成15 但是權重保留
            其他的tag 還是0  但是權重 '2'
+                //correct
+                personal_slot_result_final(tag: 12, string: 0)
+                
+                // wrong
                 personal_slot_result (tag: 12, string: 0)
                         0[0,0]=1
                         15[1,1]=2
