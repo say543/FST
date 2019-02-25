@@ -2325,6 +2325,12 @@ FeatureNormalizer21
                 ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_p13n_matched (tag: 1, string: 0)
                         0[1,4]=1   
 
+
+[qd_mediacontrol_mv8_2_slots_queryparser]
+input 
+     ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_personal_overwrite
+這個是generic query parser  收slot_personal_overwrite 的結果 
+
 ==================================
 movie tv do not care
 ===================================
