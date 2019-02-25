@@ -1539,7 +1539,8 @@ TagReducer8
                         0[9,9]=1
                         0[10,10]=1
                         0[11,11]=1
-        Output:
+        Output1:
+              <最後的輸出output >
                 ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_personal_overwrite (tag: 12, string: 0)
                         0[0,0]=1
                         15[1,1]=2
