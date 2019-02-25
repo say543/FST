@@ -48,8 +48,7 @@ Michel jackson media persion, play 不生效　　不生效好像就沒有canoni
 
 沒有canonical value
 
-
-play music on my xbox  UserMediaTitles 0 1 xbox 1 -1  -1
+play music on my xbox    UserMediaTitles 0       1       xbox    1       -1      -1
 
 xbox 變成media title 了....有bug 
 luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_p13n.texteditor.config 這邊沒有xbox 加上去可能就可以了
