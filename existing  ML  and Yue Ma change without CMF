@@ -1400,7 +1400,7 @@ FeatureNormalizer7
  section 4 的 output  personal_pattern_final(權重2 for media title)  當作ＩNPUT
  slot hotfix 的input 
  調整slot hotfix的權重
- 然後 slot hotfix　（有權重1,5 or 3）  跟personal_pattern_final (有權重　0, 1, 2) 做合併 by max weight
+ 然後 slot hotfix　（有權重1.5 or 3, 還不知道規律. 有所有的tag）  跟personal_pattern_final (tag0: 有權重1, tag15: 有權重2) 做合併 by max weight
  media title　　from tag 15 to 1, 權重1
  其他的tag 變成　2 , 權重1
  
@@ -1427,7 +1427,10 @@ FeatureNormalizer2
          external 3
  mediacontrol:ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_tags_hotfix:
         model 給定的結我
+        用這個調權重
+        luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_luna_convert.slots.redirect.map.txt
         ? 感覺是給不同的權重 不是太董為啥要這樣條
+        主要是input 權重原本就不同　　但是equation 都是依樣for all tags
         有的權重變成0,7 => 1.5
         有的權重變0.99 => 3
     output
