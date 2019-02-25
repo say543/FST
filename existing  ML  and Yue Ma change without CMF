@@ -2256,14 +2256,13 @@ section 9 output
 ? 但是這邊meta　看不出來結果　　因為是bin 不知道pattern
 
 
-        Output2:
+        Output:
+               會灌給
+       qd_mediacontrol_mv8_2_slots_metadata_featurize
+       裡面有提到 Npn match 的logic 可以之後看
+           <最後的輸出output2>
                 ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_p13n_matched (tag: 1, string: 0)
                         0[1,4]=1   
-                        
-                        
-       會灌給
-       qd_mediacontrol_mv8_2_slots_metadata_featurizer
-       　　　裡面有提到 Npn match 的logic 可以之後看
 ******/
 
 
