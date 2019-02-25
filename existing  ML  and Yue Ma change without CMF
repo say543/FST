@@ -2331,6 +2331,109 @@ input
      ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_personal_overwrite
 這個是generic query parser  收slot_personal_overwrite 的結果 
 
+
+[qd_mediacontrol_mv8_2_slots_metadata_featurizer]
+input 
+     ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_p13n_matched
+     
+     
+# @param 
+ExternalInput1:ipe_lu_Microsoft_Threshold_Shell_3_generic_enus_MV1_preprocessed_query,
+// comment 錯了 自己修改成對的
+ExternalInput2:ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_personal_overwrite
+ExternalInput3:ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_p13n_matched
+
+
+##-----------
+# Custom logic to output resolution metadata when the slot matched personal media items (ExternalInput2)
+#
+
+# Replace the slot ID for personal items to a magic value (1000)
+FeatureUnion --in=ExternalInput3,ExternalInput3 --out=personal_slot_tags_spans_metadata --ini=luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.featureunion.p13n_metadata.ini
+         magic value 
+         tag 0 to 1000
+         權重from 1 to 2 
+
+        Inputs:
+                ExternalInput3 (tag: 1, string: 0)
+                        0[1,4]=1
+                ExternalInput3 (tag: 1, string: 0)
+                        0[1,4]=1
+        Output:
+                personal_slot_tags_spans_metadata (tag: 1, string: 0)
+                        1000[1,4]=2
+
+FeatureReplicate --in=personal_slot_tags_spans_metadata  --out=personal_slot_tags_override_metadata  --xform=span
+        把combined 的tag 變成分離的tag
+        Inputs:
+                personal_slot_tags_spans_metadata (tag: 1, string: 0)
+                        1000[1,4]=2
+        Output:
+                personal_slot_tags_override_metadata (tag: 4, string: 0)
+                        1000[1,1]=2
+                        1000[2,2]=2
+                        1000[3,3]=2
+                        1000[4,4]=2
+
+
+TagReducer --in=ExternalInput1,personal_slot_tags_override_metadata,ExternalInput2 --out=personal_slots_tags_metadata  --algo=maxweight
+        Inputs:
+                ExternalInput1 (tag: 0, string: 12)
+                        play[0,0]=1
+                        song[1,1]=1
+                        of[2,2]=1
+                        the[3,3]=1
+                        sea[4,4]=1
+                        by[5,5]=1
+                        rihanna[6,6]=1
+                        on[7,7]=1
+                        my[8,8]=1
+                        living[9,9]=1
+                        room[10,10]=1
+                        sonos[11,11]=1
+                personal_slot_tags_override_metadata (tag: 4, string: 0)
+                        1000[1,1]=2
+                        1000[2,2]=2
+                        1000[3,3]=2
+                        1000[4,4]=2
+                ExternalInput2 (tag: 12, string: 0)
+                        0[0,0]=1
+                        15[1,1]=2
+                        15[2,2]=2
+                        15[3,3]=2
+                        15[4,4]=2
+                        0[5,5]=1
+                        11[6,6]=1.5
+                        0[7,7]=1
+                        19[8,8]=3
+                        19[9,9]=3
+                        19[10,10]=3
+                        19[11,11]=3
+        Output:
+                personal_slots_tags_metadata (tag: 12, string: 0)
+                        0[0,0]=1
+                        1000[1,1]=2
+                        1000[2,2]=2
+                        1000[3,3]=2
+                        1000[4,4]=2
+                        0[5,5]=1
+                        11[6,6]=1.5
+                        0[7,7]=1
+                        19[8,8]=3
+                        19[9,9]=3
+                        19[10,10]=3
+                        19[11,11]=3
+
+# Merge consecutive tags to match the number of entities extracted
+EntityStitcher --in=ExternalInput1,personal_slots_tags_metadata --out=personal_tags_stiched
+
+# Create a 1-1 mapping into a string feature space
+FeatureTagToText --in=personal_tags_stiched --out=personal_tags_stiched_string
+
+# Run FST on the string feature (to 're-write' their names -- i.e. anything but custom tag 1000 is a <!-- NOMATCH --> which the QAS metadata extractor ignores)
+SingleTokenView --in=personal_tags_stiched_string --out=personal_tags_stiched_string_singletoken
+NLPFSTApplier --in=personal_tags_stiched_string_singletoken --out=MatchedName,ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_p13n_metadata,MatchedStartChar,MatchedLength --fst=luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.metadata.fst --mode=matcher     
+     
 ==================================
 movie tv do not care
 ===================================
