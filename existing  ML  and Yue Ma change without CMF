@@ -2512,6 +2512,11 @@ NLPFSTApplier --in=personal_tags_stiched_string_singletoken --out=MatchedName,ip
 
      　因該就是這個infile 因為裡面的comment 就有提到這個　
 　　　　mediacontrol_metadata_personalizedMedia.infile
+    
+       ? 為什麼除了1000 UserMediaTitle  其他都變成non NOMATCH
+       #  anything but custom tag 1000 is a <!-- NOMATCH --> which the QAS metadata extractor ignores)
+       根據這個comment 似乎會被忽略
+       
        
     luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.metadata.fst  因為有NOMATCH 的ket word
         Inputs:
@@ -2554,7 +2559,8 @@ NLPFSTApplier --in=personal_tags_stiched_string_singletoken --out=MatchedName,ip
 input 
      ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_p13n_metadata
      
-     從medata data retriever
+     從medata data retriever  直接讀DB
+     這個不
 ==================================
 movie tv do not care
 ===================================
