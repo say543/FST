@@ -2340,7 +2340,30 @@ input
 ExternalInput1:ipe_lu_Microsoft_Threshold_Shell_3_generic_enus_MV1_preprocessed_query,
 // comment 錯了 自己修改成對的
 ExternalInput2:ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_slots_personal_overwrite
+            qd_mediacontrol_mv8_2_slots_metadata_rewrite_featurizer 的output 1
+            
+            
+            
+                ExternalInput2 (tag: 12, string: 0)
+                        0[0,0]=1
+                        15[1,1]=2
+                        15[2,2]=2
+                        15[3,3]=2
+                        15[4,4]=2
+                        0[5,5]=1
+                        11[6,6]=1.5
+                        0[7,7]=1
+                        19[8,8]=3
+                        19[9,9]=3
+                        19[10,10]=3
+                        19[11,11]=3
+            
+
 ExternalInput3:ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_p13n_matched
+            qd_mediacontrol_mv8_2_slots_metadata_rewrite_featurizer 的output 2
+                           mediatitle tag 是0 然後權重視1
+                           0[1,4]=1
+                             
 
 output 
 ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_p13n_metadata
@@ -2560,7 +2583,10 @@ input
      ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_p13n_metadata
      
      從medata data retriever  直接讀DB
-     這個不
+     這個是用labels 來maooung 的
+     luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_metadata.p13n.labels.txt
+     
+     比0 變成PersonalMediaTitle
      
      
  [qd_mediacontrol_mv8_2_metadataretriever]
