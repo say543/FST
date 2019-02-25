@@ -2,11 +2,42 @@
 注意彼此間格都要是tab
 
 
+#  my test example 
+
 [Yesterday 2:31 PM] Yue Ma
 cancel  PreviousTurnDomain  0 1 teams 1 -1  -1
 
 [Yesterday 2:31 PM] Yue Ma
 play tiger device    UserDevices    0    1    sonos:tiger    1    -1    -1
+
+metadata.output.txt output:
+play tiger device       0:CanonicalEntity:Tiger
+
+canonical Value 是capatalized 
+
+<自己製造的examle>
+from 變成
+music_golden.tsv 有唯一的example
+
+play song of the sea by rihanna on my living room sonos  UserMediaTitles 0       1       song of the sea 1       -1      -1      UserDevices     0            1       sonos:my living room sonos      1       -1      -1
+metadata.output.txt output:
+play song of the sea by rihanna on my living room sonos 
+0:CanonicalEntity:song of the sea       1:PersonalMediaTitle:<UserMediaTitle>   2:CanonicalEntity:my living room sonos
+
+rihanna 有tag  media_person 但是沒有canonical value ? 
+
+
+ play song of the sea on my living room sonos     UserMediaTitles 0       1       song of the sea 1       -1      -1      UserDevices     0       1            sonos:my living room sonos      1       -1      -1      -1
+play song of the sea by rihanna on my living room sonos 
+0:CanonicalEntity:song of the sea       1:PersonalMediaTitle:<UserMediaTitle>   2:CanonicalEntity:my living room sonos
+? 感覺PersonalMediaTitle:<UserMediaTitle> 是跟著 第一個走的 但是結果不會出現
+
+ 這個file 有出現 PersonalMediaTitle
+ luna_180405_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_metadata.p13n.labels.txt
+
+
+
+
 
 
 play song of the sea on my living room sonos  UserMediaTitles 0 1 song of the sea 1 -1  -1
@@ -14,6 +45,8 @@ play song of the sea on my living room sonos  UserMediaTitles 0 1 song of the se
 play Michael Jackson  UserMediaTitles 0 1 play 1 -1  -1
 
 Michel jackson media persion, play 不生效　　不生效好像就沒有canonical value 
+
+沒有canonical value
 
 
 play music on my xbox  UserMediaTitles 0 1 xbox 1 -1  -1
@@ -36,12 +69,7 @@ play the Song Tiger     0:CanonicalEntity:track 1:PersonalMediaTitle:<UserMediaT
 要請ling 確認這個example
 
 
-# with two the same 
-play song of the sea on my living room sonos     UserMediaTitles 0       1       song of the sea 1       -1      -1      UserDevices       0       1       sonos:my living room sonos      1       -1      -1
 
-play song of the sea by rihanna on my living room sonos  UserMediaTitles 0       1       song of the sea 1       -1      -1      UserDevices     0            1       sonos:my living room sonos      1       -1      -1
-
-music_golden.tsv 有唯一的example
 
 
 
