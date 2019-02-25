@@ -610,9 +610,24 @@ section2 :
                         15[4,4]=2
                         
  生成
-
+         ? personal_slot_result 跟personal_slot_result_final 目前覺得依樣　沒有差別　　之後研究
          personal_slot_result (權重2 for media title)
-         
+           保留權重   
+           tag 　mediacontrol 0又變成15 但是權重保留
+           其他的tag 還是0  但是權重 '2'
+                personal_slot_result (tag: 12, string: 0)
+                        0[0,0]=1
+                        15[1,1]=2
+                        15[2,2]=2
+                        15[3,3]=2
+                        15[4,4]=2
+                        0[5,5]=1
+                        0[6,6]=1
+                        0[7,7]=1
+                        0[8,8]=1
+                        0[9,9]=1
+                        0[10,10]=1
+                        0[11,11]=1         
          
          personal_slot_result_final(權重2 for media title)
            保留權重   
@@ -621,8 +636,6 @@ section2 :
                 //correct
                 personal_slot_result_final(tag: 12, string: 0)
                 
-                // wrong
-                personal_slot_result (tag: 12, string: 0)
                         0[0,0]=1
                         15[1,1]=2
                         15[2,2]=2
