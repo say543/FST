@@ -43,6 +43,46 @@ play song of the sea by rihanna on my living room sonos
 play song of the sea on my living room sonos UserMediaTitles 0 1 song of the sea 1 -1 -1 UserDevices 0 1 sonos:my living room sonos 1 -1 -1
 =======================================
 
+
+play song of the sea on my living room sonos    0:CanonicalEntity:song of the sea       1:PersonalMediaTitle:<UserMediaTitle>   2:CanonicalEntity:my living room sonos
+
+有canonical value 是因為
+luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_luna_convert_slots.canonicalentities.media_title.txt
+這邊有define
+
+=================================
+Play my playlist from Spotify in my living room from my playlist sonos   UserDevices     0       1       my playlist     1       -1      -1      UserMediaTitles 0       1       my playlist     1          -1      -1
+=================================
+
+Play my playlist from Spotify in my living room from my playlist sonos  0:PersonalMediaTitle:<UserMediaTitle>   1:CanonicalEntity:spotify       2:CanonicalEntity:living room   3:CanonicalEntity:playlist
+？還不知道怎麼解讀
+
+
+output 
+first my playlist
+persnola deivce 成功  且有一樣的canonnical value
+
+這個file 有定義personal device 的canonical value 
+luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_luna_convert_slots.canonicalentities.personal_device_name
+
+
+第二個
+my playlist => 只剩playlist
+沒有　canonical value 
+因為不再luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_luna_convert_slots.canonicalentities.media_title.txt
+
+ ? 但是看featurl
+
+
+personal device
+my 　在black list 裡面會被拿掉　　只剩playlist
+會有兩個
+
+user media title
+只會取代第一個.... 第二個不會
+
+
+
 =================================
 play Michael Jackson  UserMediaTitles 0 1 play 1 -1  -1
 =================================
