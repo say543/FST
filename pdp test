@@ -56,6 +56,10 @@ play music on my xbox    UserMediaTitles 0       1       xbox    1       -1     
 =================================
 
 xbox 變成media title 了 因為xbox 不再white list 裡面
+有沒有pattern 沒有影響  因為會override
+
+
+if 不要media title
 luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_p13n.texteditor.config 這邊沒有xbox 加上去可能就可以了
 
 metadata.output.txt output:
@@ -64,8 +68,10 @@ play music on my xbox   0:CanonicalEntity:music 1:PersonalMediaTitle:<UserMediaT
 =========================
 play music on my xbox    UserMediaTitles 0       1       music   1       -1      -1
 =================================
-music　不生效成personal 但是會被pattern tag
-xbox 不生效成personal 但是會被pattern tag
+music　不生效成personal 因為在whitelist 但是會被pattern tag 成media_type
+
+xbox會被pattern tag 成device_name
+
 metadata.output.txt output:
 play music on my xbox   0:CanonicalEntity:music 1:CanonicalEntity:XBOX
 
@@ -77,10 +83,9 @@ play the Song Tiger      UserMediaTitles 0       1       Tiger   1       -1     
 =================================
 
 
-tiger 不再black list 裡面  
-但是因為沒有 black list pattern
-所以會生效 變成media_title
+tiger 不再black list 裡面 所以會生效 變成media_title   
 
+(一方便也就是因為沒有 black list patter / white list pattern  as Ling says  其實有沒有都沒差  因為 personla 的weight 比較高  )
 metadata.output.txt output:
 play the Song Tiger     0:CanonicalEntity:track 1:PersonalMediaTitle:<UserMediaTitle>
 
