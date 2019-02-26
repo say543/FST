@@ -2621,7 +2621,12 @@ NLPFSTApplier --in=personal_tags_stiched_string_singletoken --out=MatchedName,ip
                         12[5,5]=1   
                         
   
-  
+
+
+心得:
+兩個metadatretriever 的result 會合併   
+所以如果luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_luna_convert_slots.canonicalentities.media_title
+有define 就會有canonical value
   
 [qd_mediacontrol_p13n_mv8_2_metadataretriever]
 input 
