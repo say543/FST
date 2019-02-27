@@ -1,0 +1,3 @@
+In the attached file, filter by column BY (ConstraintCanonicalValueAccuracy) == F
+Then look at the following two columns:
+WfCanonicalValues	CuCanonicalValues
