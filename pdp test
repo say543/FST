@@ -170,11 +170,13 @@ fst[1]: pmatch O O O media_title
 pmatch O O O media_title
 <O>O O O</O> <media_title>media_title</media_title>
 
---out=MatchedName,MatchedType,MatchedStartChar,MatchedLength 
---fst=luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.rewrite.personal.meta.bin 
-could not find source of it 
 
 4>
+ask functionality and source 
+--out=MatchedName,MatchedType,MatchedStartChar,MatchedLength 
+--fst=luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.rewrite.personal.meta.bin 
+
+5>
 ask for soruce
 luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.metadata.fst
                 MatchedName (tag: 0, string: 6)
