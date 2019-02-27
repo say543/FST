@@ -1,3 +1,15 @@
 In the attached file, filter by column BY (ConstraintCanonicalValueAccuracy) == F
 Then look at the following two columns:
 WfCanonicalValues	CuCanonicalValues
+
+
+注意WF 有的  但是cu 的沒有的 or 是有錯的
+timex 可以先不管
+
+
+
+column 1 / column2
+tunein radio	TuneIn
+
+column1 都是lower case
+column2 可以有大小寫  for canonical value 
