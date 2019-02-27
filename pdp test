@@ -137,3 +137,139 @@ play the Song Tiger     0:CanonicalEntity:track 1:PersonalMediaTitle:<UserMediaT
 rule  for 後面的說明
  0(num tag feature)        1(num string feature)        Value        Weight        -1(start_index)        -1(end_index)rule
 
+
+
+
+PDP discussion
+1>
+no problem 
+luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.meta.personal.mediacontrol.bin
+has *.fst
+
+2>
+ask the reason
+personal_pattern_pretreatment final
+     luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.personal.mediacontrol.disallowed.pattern.pretreatment.bin
+     fst[1]: pmatch play the song by rihanna
+     pmatch play the song by rihanna
+     play the song <prefix>by</prefix> rihanna
+     fst[1]: pmatch play rihanna 's song
+     pmatch play rihanna 's song
+play rihanna <suffix>'s</suffix> song
+
+3>
+ask the reason
+disallowed.pattern.bin 
+fst[1]: pmatch O O O prefix media_title media_title
+pmatch O O O prefix media_title media_title
+O O O prefix <media_title><Ignore>media_title media_title</Ignore></media_title>
+fst[1]: pmatch O O O media_title media_title suffix
+pmatch O O O media_title media_title suffix
+<O>O O O</O> <media_title><Ignore>media_title media_title</Ignore></media_title> suffix
+fst[1]: pmatch O O O media_title
+pmatch O O O media_title
+<O>O O O</O> <media_title>media_title</media_title>
+
+--out=MatchedName,MatchedType,MatchedStartChar,MatchedLength 
+--fst=luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.rewrite.personal.meta.bin 
+could not find source of it 
+
+4>
+ask for soruce
+luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.metadata.fst
+                MatchedName (tag: 0, string: 6)
+                        0[0,0]=1.0[0,0]=1
+                        1000[1,4]=2.0[1,1]=1
+                        0[5,5]=1.0[2,2]=1
+                        11[6,6]=1.5[3,3]=1
+                        0[7,7]=1.0[4,4]=1
+                        19[8,11]=3.0[5,5]=1
+                ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_p13n_metadata (tag: 0, string: 6)
+                        <!-- NOMATCH -->[0,0]=1
+                        <UserMediaTitle>[1,1]=1
+                        <!-- NOMATCH -->[2,2]=1
+                        <!-- NOMATCH -->[3,3]=1
+                        <!-- NOMATCH -->[4,4]=1
+
+5> blakc list
+luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_p13n.texteditor.config
+ blacklist you are talking about 
+	radio	<!-- NOMATCH : Radio -->
+	music	<!-- NOMATCH : Music -->
+	album	<!-- NOMATCH : Album -->
+	artist	<!-- NOMATCH : Artist -->
+	song	<!-- NOMATCH : Song -->
+	track	<!-- NOMATCH : Track -->
+	single	<!-- NOMATCH : Single -->
+	soundtrack	<!-- NOMATCH : Soundtrack -->
+	podcast	<!-- NOMATCH : Podcast -->
+	genre	<!-- NOMATCH : Genre -->
+	play	<!-- NOMATCH : Play-->
+	start playing	<!-- NOMATCH : Start Play -->
+	put on	<!-- NOMATCH : Put On -->
+	tune into	<!-- NOMATCH : Tune Into -->
+	start listening	<!-- NOMATCH : Start Listening -->
+	listen to	<!-- NOMATCH : Listen To -->
+	turn on	<!-- NOMATCH : Turn On -->
+	tunein	<!-- NOMATCH : TuneIn -->
+	iheartradio	<!-- NOMATCH : IHeartRadio -->
+	spotify	<!-- NOMATCH : Spotify -->
+	groove	<!-- NOMATCH : Groove -->
+	pandora	<!-- NOMATCH : Pandora -->
+	sonos	<!-- NOMATCH : Sonos -->
+	something	<!-- NOMATCH : Something -->
+	something else	<!-- NOMATCH : Something Else -->
+	something cool	<!-- NOMATCH : Something Cool -->
+	some cool music	<!--NOMATCH : Some Cool Music -->
+	can you	<!--NOMATCH : Can You -->
+	could you	<!-- NOMATCH : Could you -->
+	please	<!-- NOMATCH : Please -->
+	you	<!-- NOMATCH : You -->
+	hello	<!-- NOMATCH : Hello -->
+	next	<!-- NOMATCH : Next -->
+	my	<!-- NOMATCH : My -->
+	cortana	<!-- NOMATCH : Cortana -->
+	sorry	<!-- NOMATCH : Sorry -->
+	songs	<!-- NOMATCH : Songs -->
+	rock and roll	<!-- NOMATCH : Rock and roll -->
+	jazz	<!-- NOMATCH : Jazz -->
+	country	<!-- NOMATCH : Country -->
+	can i	<!-- NOMATCH : Can i -->
+	volume	<!-- NOMATCH : Volume -->
+	this	<!-- NOMATCH : This -->
+	stop	<!-- NOMATCH : Stop -->
+	shuffle	<!-- NOMATCH : Shuffle -->
+	play that song	<!-- NOMATCH : Play that song -->
+	listen	<!-- NOMATCH : Listen -->
+	like	<!-- NOMATCH : Like -->
+	groove music	<!-- NOMATCH : Groove music -->
+	do you	<!-- NOMATCH : Do you -->
+	all	<!-- NOMATCH : All -->
+	playlist	<!-- NOMATCH : Playlist -->
+	playlists	<!-- NOMATCH : Playlists -->
+	show	<!-- NOMATCH : Show -->
+	movie	<!-- NOMATCH : Movie -->
+	film	<!-- NOMATCH : Film -->
+	band	<!-- NOMATCH : Band -->
+	group	<!-- NOMATCH : Group -->
+     
+6>
+asking purpose of it
+[qd_mediacontrol_p13n_mv8_2_metadataretriever]
+implementationclassname = ExposeFeatureMetadataRetrieverImpl
+input = ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_p13n_metadata
+param:datastorelookup_implementationclassname = HashSetDataStoreLookupImpl
+param:datastorelookup_datastores = 
+param:Labels = luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_metadata.p13n.labels.txt
+param:AddMetadataToEntity = true
+
+
+luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_metadata.p13n.labels.txt
+content
+0	PersonalMediaTitle
+
+
+
+
+
+
