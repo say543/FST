@@ -20,6 +20,21 @@ E:\mercury\private\PersonalAssistant\Service\Host\Qas\Luna.Service.QasHost.Cu\Te
 qd_mediacontrol_mv8_2_domain_svm_featurizer
 input = mediacontrol_ml:ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_preprocess_output:ExternalInput1,generic:taskframestatus_previousTurnDomain_hotfix:ExternalInput2
 
+[qd_generic_domain_featurizer]
+luna_180403_ipe_lu_Microsoft_Threshold_Shell_3_generic_enus_MV1_4
+
+
+因為generic usage 所以在這邊讀所有的patterns 
+新的CMF 的model 就不再需要這個了
+
+MlgFeaturizer --in=ExternalInput2 --out=previous_domain_id --fts=luna_180403_ipe_lu_Microsoft_Threshold_Shell_3_generic_enus_MV1.previousDomain.bin
+MlgFeaturizer --in=ExternalInput4 --out=task_status_raw --fts=luna_180403_ipe_lu_Microsoft_Threshold_Shell_3_generic_enus_MV1_taskframeStatus.bin
+
+
+
+可以用MLgtool disemble back  (除了lexcion pattern 不行外  都可以dissemble)
+
+
 這個裡面的multi trun
 
 實際的test multiturn
