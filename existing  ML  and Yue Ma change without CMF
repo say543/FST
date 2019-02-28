@@ -2400,7 +2400,10 @@ FeatureNormalizer19
          FstTags2CrfTags18  output 
      --out=meta_rewrite_matched --norm=linear --scale=10
                 
-        ?但是不知道功用是什麼
+        
+         目標是把personal media title 被 slot crt + hotfix media title 包住的部分  權重調成10
+         然後之後會被filter 掉
+        
         Inputs:
                 rewrite_result (tag: 0, string: 0)
         Output:
