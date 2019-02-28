@@ -6,6 +6,8 @@ E:\mercury\private\PersonalAssistant\Service\Host\Qas\Luna.Service.QasHost.Cu\Te
 
 qd_generic_domain_featurizer
 
+這個的source 來自於  TCP 裡面  固定的設計
+
 4 個input 都有在這邊
 generic:ipe_lu_Microsoft_Threshold_Shell_3_generic_enus_MV1_preprocessed_query:ExternalInput1,ExternalFeatureSet:PreviousTurnDomain:ExternalInput2,ExternalFeatureSet:PreviousTurnIntent:ExternalInput3,ExternalFeatureSet:TaskFrameStatus:ExternalInput4
 
