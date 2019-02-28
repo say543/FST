@@ -1854,6 +1854,13 @@ FeatureNormalizer11
     --out=slot_tags_media_title3 -
     -norm=discretize 
     --ddf=luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.personal.metadata.map.txt
+    
+    
+    
+    
+
+    
+    
     這時候只有tag 0 1 2  ()
     結果會變成:
      0: persnaol lexicon filter 的list , 權重 1
