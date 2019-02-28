@@ -2194,7 +2194,99 @@ section 8 的output
                         other[0,0]=1
                         
 apply meta data fst pattern
-         ? 不知道這個　meta data fst pattern 是幹嘛的　　也找不到FST
+    根據example 是要把 media_title 前後的 O 給移掉
+    這時候O 是personal media title 會把它移除
+    
+    
+        位置
+    https://msasg.visualstudio.com/DefaultCollection/Bing_and_IPG/_git/CarinaEnUsModelingData/commit/666d1b5feba30ff2f31787ea898bf7066738d200?path=%2Fscenario%2FMicrosoft.Threshold.Shell%2Fen-us%2Fsource%2Fslots.override%2Fmediacontrol.rewrite.personal.meta.infile&gridItemType=2&_a=contents
+    mediacontrol.rewrite.personal.meta.infile
+    ? 抓了但是 fst compile 不過
+    
+     要把這個多餘的predefintions 弄掉 才可以compile
+     #predefintions
+define WS { };
+define BOS {BOS} (WS);
+define EOS [(WS) .#.];
+    
+     #test case
+pmatch media_title O;
+pmatch O media_title;
+pmatch O media_title media_title O;
+pmatch media_title media_title O;
+pmatch media_title;
+pmatch other media_title media_title media_title O media_title media_title media_title media_title other other other other other;
+pmatch other media_title media_title O O media_title media_title media_title media_title other other other other other;
+pmatch other media_title media_title O O O media_title media_title media_title other other other other other;    
+     #outout
+media_title <removed>O</removed>
+<removed>O</removed> media_title
+<removed>O</removed> media_title media_title <removed>O</removed>
+media_title media_title <removed>O</removed>
+media_title
+other media_title media_title media_title <removed>O</removed> media_title media_title media_title media_title other other other other other
+other media_title media_title <removed>O</removed> <removed>O</removed> media_title media_title media_title media_title other other other other other
+other media_title media_title <removed>O O O</removed> media_title media_title media_title other other other other other
+
+     STCA comment
+                For query “play the yesterday once more”, the normal slot result is “play the <media_title> yesterday once more </media_title>”. While if we have a personal playlist named “once”. Then the “once” will be tag as “media_title” with “PersonalMediaTitle:<UserMediaTitle>” tag. Then, QAS will throw an exception because the token number from slot(“play the”, “yesterday once more”) and token number from meta data(“play the”, “yesterday”, “once”, “more”) is not matched.
+                For turning off this issue, we have to move out the slot tag of “yesterday” and “more” to make the output as “play the yesterday <media_title> once </media_title> more”.
+                So, I guess the main function of this fst is to retag “<media_title> <personal_playlist> <media_title>” as “<remove> <personal_playlist> <remove>”.
+                Then, map the <remove> as <O> and adjust the score in the next 2 steps.
+    但是我覺得這個有問題
+        剛好是反向的
+        是要把  <personal_playlist> (O) 變成removed 
+        然後remove 要把persnoal 
+        
+        用另一個一個example 測試
+ play mamma mia here we go again by rihanna on my living room sonos       UserMediaTitles 0       1       mamma   1       -1      -1      UserDevices     0       1       sonos:my living room sonoonos        1       -1      -1
+        
+        
+        這個personal media title 的(O) 的權重是10 會override slot crt model + hotfx 的結果  而且有可能會切割 
+        但是權重10 在
+        luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.meta.filter.map.txt
+        超過range -1 9  就會被移除
+        所以這個personal media title 會被移除
+        也是有點像是blacklist 的效果
+        
+        就出現remove
+        Inputs:
+                model_media_title_tags (tag: 0, string: 14)
+                        other[0,0]=1
+                        O[0,0]=1
+                        media_title[0,0]=1
+                        media_title[0,0]=1
+                        media_title[0,0]=1
+                        media_title[0,0]=1
+                        media_title[0,0]=1
+                        other[0,0]=1
+                        other[0,0]=1
+                        other[0,0]=1
+                        other[0,0]=1
+                        other[0,0]=1
+                        other[0,0]=1
+                        other[0,0]=1
+        Output:
+                model_media_title_tags_singleString (tag: 0, string: 1)
+                        other O media_title media_title media_title media_title media_title other other other other other other other[0,0]=1
+36: NLPFSTApplier --in=model_media_title_tags_singleString --out=MatchedName,MatchedType,MatchedStartChar,MatchedLength --fst=luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.rewrite.personal.meta.bin --mode=matcher
+        Inputs:
+                model_media_title_tags_singleString (tag: 0, string: 1)
+                        other O media_title media_title media_title media_title media_title other other other other other other other[0,0]=1
+        Output:
+                MatchedName (tag: 0, string: 1)
+                        O[1,1]=1
+                MatchedType (tag: 0, string: 1)
+                        <removed>[1,1]=1
+                MatchedStartChar (tag: 0, string: 1)
+                        6[1,1]=1
+                MatchedLength (tag: 0, string: 1)
+                        1[1,1]=1
+        
+        
+     
+
+
         Output:
                 meta_rewrite_matched (tag: 0, string: 0)
 ******/
@@ -2237,9 +2329,43 @@ NLPFSTApplier17
     --out=MatchedName,MatchedType,MatchedStartChar,MatchedLength 
     --fst=luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.rewrite.personal.meta.bin 
     
-    ?但是不知道功用是什麼　找不到fst
-    ? 可能是這個FSt　
-    https://msasg.visualstudio.com/Bing_and_IPG/_git/CarinaEnUsModelingData?path=%2Fscenario%2FMicrosoft.Threshold.Shell%2Fen-us%2Fsource%2Fother%2Fmediacontrol_metadata_personalizedMedia.infile&version=GBmaster
+    根據example 是要把 media_title 前後的 O 給移掉
+    這時候O 是personal media title 會把它移除
+    
+    
+        位置
+    https://msasg.visualstudio.com/DefaultCollection/Bing_and_IPG/_git/CarinaEnUsModelingData/commit/666d1b5feba30ff2f31787ea898bf7066738d200?path=%2Fscenario%2FMicrosoft.Threshold.Shell%2Fen-us%2Fsource%2Fslots.override%2Fmediacontrol.rewrite.personal.meta.infile&gridItemType=2&_a=contents
+    mediacontrol.rewrite.personal.meta.infile
+    ? 抓了但是 fst compile 不過
+    
+     要把這個多餘的predefintions 弄掉 才可以compile
+     #predefintions
+define WS { };
+define BOS {BOS} (WS);
+define EOS [(WS) .#.];
+    
+     #test case
+pmatch media_title O;
+pmatch O media_title;
+pmatch O media_title media_title O;
+pmatch media_title media_title O;
+pmatch media_title;
+pmatch other media_title media_title media_title O media_title media_title media_title media_title other other other other other;
+pmatch other media_title media_title O O media_title media_title media_title media_title other other other other other;
+pmatch other media_title media_title O O O media_title media_title media_title other other other other other;    
+     #outout
+media_title <removed>O</removed>
+<removed>O</removed> media_title
+<removed>O</removed> media_title media_title <removed>O</removed>
+media_title media_title <removed>O</removed>
+media_title
+other media_title media_title media_title <removed>O</removed> media_title media_title media_title media_title other other other other other
+other media_title media_title <removed>O</removed> <removed>O</removed> media_title media_title media_title media_title other other other other other
+other media_title media_title <removed>O O O</removed> media_title media_title media_title other other other other other
+    
+    
+    
+    
         Inputs:
                 model_media_title_tags_singleString (tag: 0, string: 1)
                         other O O O O other other other other other other other[0,0]=1
@@ -2294,6 +2420,16 @@ section 9 output
    apply metadata 
 用max weight 合併
 ? 但是這邊meta　看不出來結果　　因為是bin 不知道pattern
+        用另一個一個example 測試
+ play mamma mia here we go again by rihanna on my living room sonos       UserMediaTitles 0       1       mamma   1       -1      -1      UserDevices     0       1       sonos:my living room sonoonos        1       -1      -1
+        
+        
+        這個personal media title 的(O) 的權重是10 會override slot crt model + hotfx 的結果  而且有可能會切割 
+        但是權重10 在
+        luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.meta.filter.map.txt
+        超過range -1 9  就會被移除
+        所以這個personal media title 會被移除
+        也是有點像是blacklist 的效果
 
 
         Output:
@@ -2303,6 +2439,8 @@ section 9 output
            <最後的輸出output2>
                 ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_p13n_matched (tag: 1, string: 0)
                         0[1,4]=1   
+                        
+
 ******/
 
 
