@@ -1108,6 +1108,8 @@ NLPFSTApplier1
       
       
       ? 但是這個config.xml 根本沒有prefix 跟suffix 的mapping 感覺沒有什麼作用
+      在想會不會因該是這個file 來mapping 因為只有他有prefix suffix .....
+      luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.media_title.itoc.config.txt
       
         Inputs:
                 ExternalInput1 (tag: 0, string: 12)
