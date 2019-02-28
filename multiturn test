@@ -1,0 +1,29 @@
+========================
+mediacontrol
+==========================
+
+E:\mercury\private\PersonalAssistant\Service\Host\Qas\Luna.Service.QasHost.Cu\Templates\LunaQpcGenerator_Generic.tt
+
+qd_generic_domain_featurizer
+
+4 個input 都有在這邊
+generic:ipe_lu_Microsoft_Threshold_Shell_3_generic_enus_MV1_preprocessed_query:ExternalInput1,ExternalFeatureSet:PreviousTurnDomain:ExternalInput2,ExternalFeatureSet:PreviousTurnIntent:ExternalInput3,ExternalFeatureSet:TaskFrameStatus:ExternalInput4
+
+然後再灌到　　
+
+E:\mercury\private\PersonalAssistant\Service\Host\Qas\Luna.Service.QasHost.Cu\Templates\LunaQpcGenerator_MediaControl.tt
+(當初的想法是multiple domains 共用)
+
+
+qd_mediacontrol_mv8_2_domain_svm_featurizer
+input = mediacontrol_ml:ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_preprocess_output:ExternalInput1,generic:taskframestatus_previousTurnDomain_hotfix:ExternalInput2
+
+這個裡面的multi trun
+
+實際的test multiturn
+What podcast is playing on tiger in study        PreviousTurnDomain      0       1       mediacontrol    1       -1      -1      PreviousTurnIntent      0       1       play_media           1       -1      -1
+
+
+見的test multiturn with tastState
+但是這個slot 的比較法  可能是錯的  只是先記錄
+Query: What podcast is playing on tiger in study        PreviousTurnDomain      0       1       mediacontrol    1       -1      -1      PreviousTurnIntent      0       1       play_media           1       -1      -1      TaskFrameEntityStates   0       1       slot:test       1       -1      -1
