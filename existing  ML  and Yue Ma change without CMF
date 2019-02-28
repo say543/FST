@@ -1103,7 +1103,12 @@ NLPFSTApplier1
      initial 權重都是1
       用luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.config.xml
       
-      但是這個file 根本沒有prefix 跟suffix 感覺沒什麼用
+      [huaslin] example query “play lady gaga’s song” with personal playlist named “lady gaga”. The pattern blacklist will make sure the “lady gaga” will not be retag as media_title. 
+      測了這個case 感覺也沒有作用
+      
+      
+      ? 但是這個config.xml 根本沒有prefix 跟suffix 的mapping 感覺沒有什麼作用
+      
         Inputs:
                 ExternalInput1 (tag: 0, string: 12)
                         play[0,0]=1
