@@ -2815,6 +2815,14 @@ input
      1	PersonalMediaTitle
      column 1 的number 好像根本沒有功效  但是column2 是重要的 否則會map 成別的明子
      
+     用這個測試
+     似乎他會選column1 最小的
+     不管order
+     6	PersonalTest
+     7	PersonalBigger
+     -1	PersonalMiddle  <= 這個會被選到
+     5	PersonalSmall
+     
      
      1:PersonalMediaTitle:<UserMediaTitle> 
      
