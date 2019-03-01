@@ -2797,6 +2797,9 @@ NLPFSTApplier --in=personal_tags_stiched_string_singletoken --out=MatchedName,ip
 有define 就會有canonical value
   
 [qd_mediacontrol_p13n_mv8_2_metadataretriever]
+https://msasg.visualstudio.com/QAS/_search?text=ExposeFeatureMetadataRetrieverImpl&type=code&lp=code-Project&filters=ProjectFilters%7BQAS%7DRepositoryFilters%7Bqas%7D&result=DefaultCollection%2FQAS%2Fqas%2FGBmaster%2F%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2FQueryAnalysis%2FProcessing%2Finc%2FExposeFeatureMetadataRetrieverImpl.h&_a=contents
+找到source 在source code search
+
 input 
      ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_p13n_metadata
                              <!-- NOMATCH -->[0,0]=1
