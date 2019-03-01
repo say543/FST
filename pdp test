@@ -39,8 +39,23 @@ play song of the sea by rihanna on my living room sonos
 
 
 =================
+fail
 play mamma mia here we go again by rihanna on my living room sonos       UserMediaTitles 0       1       mamma   1       -1      -1      UserDevices     0       1       sonos:my living room sonos   1       -1      -1
+
+still fail
+play mamma mia here we go again by rihanna on my living room sonos       UserMediaTitles 0       1       mamma mia here we go again   1       -1      -1      UserDevices     0       1       sonos:my living room sonos   1       -1      -1
 =================
+mama mia 一直有問題  卡在p13n 那個meta data
+這個test case 不要 try了
+
+=================
+fail
+play back in the ussr by rihanna on my living room sonos       UserMediaTitles 0       1       ussr   1       -1      -1      UserDevices     0       1       sonos:my living room sonos   1       -1      -1
+
+ok
+play back in the ussr by rihanna on my living room sonos       UserMediaTitles 0       1       back in the ussr   1       -1      -1      UserDevices     0       1       sonos:my living room sonos   1       -1      -1
+=================
+似乎只定義一部分就會fail
 
 =================================
 play song of the sea on my living room sonos UserMediaTitles 0 1 song of the sea 1 -1 -1 UserDevices 0 1 sonos:my living room sonos 1 -1 -1
