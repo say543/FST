@@ -28,7 +28,7 @@ play song of the sea by rihanna on my living room sonos
 rihanna 有tag  media_person 但是沒有canonical value ? 
 
 =================
- play song of the sea on my living room sonos     UserMediaTitles 0       1       song of the sea 1       -1      -1      UserDevices     0       1            sonos:my living room sonos      1       -1      -1      -1
+ play song of the sea on my living room sonos     UserMediaTitles 0       1       song of the sea 1       -1      -1      UserDevices     0       1            sonos:my living room sonos      1       -1      -1
 =================
 play song of the sea by rihanna on my living room sonos 
 0:CanonicalEntity:song of the sea       1:PersonalMediaTitle:<UserMediaTitle>   2:CanonicalEntity:my living room sonos
