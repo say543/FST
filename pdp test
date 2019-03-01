@@ -18,16 +18,18 @@ canonical Value 是capatalized
 <自己製造的examle>
 from 變成
 music_golden.tsv 有唯一的example
-
+================
 play song of the sea by rihanna on my living room sonos  UserMediaTitles 0       1       song of the sea 1       -1      -1      UserDevices     0            1       sonos:my living room sonos      1       -1      -1
+=================
 metadata.output.txt output:
 play song of the sea by rihanna on my living room sonos 
 0:CanonicalEntity:song of the sea       1:PersonalMediaTitle:<UserMediaTitle>   2:CanonicalEntity:my living room sonos
 
 rihanna 有tag  media_person 但是沒有canonical value ? 
 
-
+=================
  play song of the sea on my living room sonos     UserMediaTitles 0       1       song of the sea 1       -1      -1      UserDevices     0       1            sonos:my living room sonos      1       -1      -1      -1
+=================
 play song of the sea by rihanna on my living room sonos 
 0:CanonicalEntity:song of the sea       1:PersonalMediaTitle:<UserMediaTitle>   2:CanonicalEntity:my living room sonos
 ? 感覺PersonalMediaTitle:<UserMediaTitle> 是跟著 第一個走的 但是結果不會出現
@@ -36,8 +38,9 @@ play song of the sea by rihanna on my living room sonos
  luna_180405_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_metadata.p13n.labels.txt
 
 
-
-
+=================
+play mamma mia here we go again by rihanna on my living room sonos       UserMediaTitles 0       1       mamma   1       -1      -1      UserDevices     0       1       sonos:my living room sonos   1       -1      -1
+=================
 
 =================================
 play song of the sea on my living room sonos UserMediaTitles 0 1 song of the sea 1 -1 -1 UserDevices 0 1 sonos:my living room sonos 1 -1 -1
