@@ -195,8 +195,11 @@ MagicDeviceType
 luna_convert_intents.pattern.map.txt
 　? 這個intent pattern 內容不太懂
 　37 intents 是沒有錯   但是會什麼每個pair 都要有
-　是不是像是pair wise 的概念
-　是不是classfier 的概念  自己對自己是1 其他的都是-1000
+　? 是不是classfier 的概念  自己對自己是1 其他的都是-1000
+ 
+  by Yue 是說
+  用pdebug 會看得比較清楚  但是基本上就 如果是intent 0 (by pattern) 但是match 到intent 1 就會是-1000
+  可能之後跑一個pdeubg 來看比較清楚
 　
 　FeatureValueAggregator
        https://qasvalidation.azurewebsites.net/mlgdocs/class_d_u_feature_value_aggregator.html
