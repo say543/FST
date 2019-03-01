@@ -2433,6 +2433,11 @@ section 9 output
         超過range -1 9  就會被移除
         所以這個personal media title 會被移除
         也是有點像是blacklist 的效果
+        
+        但是我把range 改成 -1  11  測query QPC  直接crash 不知道怎麼看
+        但是10 可以  很奇怪
+        
+        
 
 
         Output:
