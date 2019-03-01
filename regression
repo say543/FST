@@ -1,0 +1,27 @@
+Play CBS News podcast.
+
+
+
+我覺得是shobit 的問題
+因為我們真的是輸出 play_news
+
+Expected Intent: play_news(13)
+Actual Intent: play_media(12)
+
+
+
+ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_intents_final_score
+
+                        12[-1,-1]=0.593537
+                        13[-1,-1]=0.651292
+                        
+                        
+ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_intents_pattern
+                        12[-1,-1]=0.593537
+                        13[-1,-1]=0.651292
+                        
+qd_mediacontrol_mv8_2_intents_hotfix_override_featurizer
+                        
+                        12[-1,-1]=0.593537
+                        13[-1,-1]=0.651292
+
