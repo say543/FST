@@ -2811,6 +2811,11 @@ input
      這個是用labels 來map 的
      luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_metadata.p13n.labels.txt
      
+     https://msasg.visualstudio.com/QAS/_search?text=ExposeFeatureMetadataRetrieverImpl&type=code&lp=code-Project&filters=ProjectFilters%7BQAS%7DRepositoryFilters%7Bqas%7D&result=DefaultCollection%2FQAS%2Fqas%2FGBmaster%2F%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2FQueryAnalysis%2FProcessing%2Fsrc%2FExposeFeatureMetadataRetrieverImpl.cpp&_a=contents
+     1	PersonalMediaTitle
+     column 1 的number 好像根本沒有功效  但是column2 是重要的 否則會map 成別的明子
+     
+     
      1:PersonalMediaTitle:<UserMediaTitle> 
      
      感覺是除了<!-- NOMATCH -->  加上 PersonalMediaTitle當作prefix
