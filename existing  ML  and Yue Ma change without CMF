@@ -2430,15 +2430,14 @@ section 9 output
  play mamma mia here we go again by rihanna on my living room sonos       UserMediaTitles 0       1       mamma   1       -1      -1      UserDevices     0       1       sonos:my living room sonoonos        1       -1      -1
         
         
-        這個personal media title 的(O) 的權重是10 會override slot crt model + hotfx 的結果  而且有可能會切割 
+        這個personal media title 的(O) (這時候他的tag 是<remove>) 的權重是10 會override slot crt model + hotfx 的結果  而且有可能會切割 
         但是權重10 在
         luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.meta.filter.map.txt
-        超過range -1 9  就會被移除
+        in range -1 <value < 9 會被保留
+        超過range value <= -1, value >=9  就會被移除
         所以這個personal media title 會被移除
         也是有點像是blacklist 的效果
-        
-        但是我把range 改成 -1  11  測query QPC  直接crash 不知道怎麼看
-        但是10 可以  很奇怪
+        改成 -1, 11 後 <remove>似乎就會留著 不會被移掉
         
         
 
