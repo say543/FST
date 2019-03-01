@@ -2232,14 +2232,20 @@ other media_title media_title <removed>O</removed> <removed>O</removed> media_ti
 other media_title media_title <removed>O O O</removed> media_title media_title media_title other other other other other
 
      STCA comment
-                For query “play the yesterday once more”, the normal slot result is “play the <media_title> yesterday once more </media_title>”. While if we have a personal playlist named “once”. Then the “once” will be tag as “media_title” with “PersonalMediaTitle:<UserMediaTitle>” tag. Then, QAS will throw an exception because the token number from slot(“play the”, “yesterday once more”) and token number from meta data(“play the”, “yesterday”, “once”, “more”) is not matched.
-                For turning off this issue, we have to move out the slot tag of “yesterday” and “more” to make the output as “play the yesterday <media_title> once </media_title> more”.
-                So, I guess the main function of this fst is to retag “<media_title> <personal_playlist> <media_title>” as “<remove> <personal_playlist> <remove>”.
+                For query “play the yesterday once more”, the normal slot result is “play the <media_title> yesterday once more </media_title>”. 
+                While if we have a personal playlist named “once”. 
+                Then the “once” will be tag as “media_title” with “PersonalMediaTitle:<UserMediaTitle>” tag. 
+                Then, QAS will throw an exception because the token number from slot(“play the”, “yesterday once more”) 
+                and token number from meta data(“play the”, “yesterday”, “once”, “more”) is not matched.
+                For turning off this issue, we have to move out the slot tag of “yesterday” and “more” to 
+                make the output as “play the yesterday <media_title> once </media_title> more”.
+                So, I guess the main function of this fst is to 
+                retag “<media_title> <personal_playlist> <media_title>” as “<remove> <personal_playlist> <remove>”.
                 Then, map the <remove> as <O> and adjust the score in the next 2 steps.
     但是我覺得這個有問題
         剛好是反向的
         是要把  <personal_playlist> (O) 變成removed 
-        然後remove 要把persnoal 
+        然後要把persnoal list 給remove 掉
         
         用另一個一個example 測試
  play mamma mia here we go again by rihanna on my living room sonos       UserMediaTitles 0       1       mamma   1       -1      -1      UserDevices     0       1       sonos:my living room sonoonos        1       -1      -1
