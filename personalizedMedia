@@ -1,0 +1,22 @@
+define supportedDigit {1000};
+define unsupportedDigits [digit+ - supportedDigit];
+
+#define MetaDataTagging [unsupportedDigits {[} digit+ {,} {]=} [alphanum|{.}]+ ] EndTag('unsupported');
+
+define TagExpressionSuffix  {[} digit+ {,}digit+ {]=} digit+ ({.}) digit+ ;
+
+define SupportedTagExpression supportedDigit TagExpressionSuffix;
+define UnsupportedTagExpression unsupportedDigits TagExpressionSuffix;
+
+
+define MetaDataTaggingUnsupported UnsupportedTagExpression EndTag("!-- NOMATCH --");
+define MetaDataTaggingSupported SupportedTagExpression EndTag("UserMediaTitle");
+
+define AllTags [MetaDataTaggingSupported | MetaDataTaggingUnsupported];
+push AllTags ;
+
+pmatch 1[0,1]=12.0  3[0,1]=1.0 14[2,4]=1.0 1000[0,1]=1.0 6[1,3]=1.0
+
+optimize net;
+
+savea ipe_lu_threshold_mediacontrol_enus_mv4.slots.metadata.fst;
