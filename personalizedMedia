@@ -1,9 +1,15 @@
+
+
 define supportedDigit {1000};
+# might be real - 
 define unsupportedDigits [digit+ - supportedDigit];
 
 #define MetaDataTagging [unsupportedDigits {[} digit+ {,} {]=} [alphanum|{.}]+ ] EndTag('unsupported');
 
+# to match 1000[0,1]=1.0
+# ? no need to escaspe characters
 define TagExpressionSuffix  {[} digit+ {,}digit+ {]=} digit+ ({.}) digit+ ;
+
 
 define SupportedTagExpression supportedDigit TagExpressionSuffix;
 define UnsupportedTagExpression unsupportedDigits TagExpressionSuffix;
