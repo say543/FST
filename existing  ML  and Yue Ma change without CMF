@@ -2579,6 +2579,31 @@ ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_p13n_metadata
                         <!-- NOMATCH -->[3,3]=1
                         <!-- NOMATCH -->[4,4]=1
                         <!-- NOMATCH -->[5,5]=1
+                        
+                        
+        實際在evaluation code
+               OfflineQasRunner.cs
+               analyzedQueries = QcsQueryLabelToolInputFile.ReadAnalyzedQueries(analyzedQueryFile.FileInfo);
+               featuresets 裡面可以看到每一個featurlizer 的output 
+               
+               sstringSegmentIems [1] .value 可以看到最後的output 有UserMediaTitle
+               
+               在result view -> 選定query -> Non-Public Memebers -> m_Domains -> 選定domain -> QueryParses -> QueryEntities ->根據token
+               的位置選擇QueryMedatadata, 就就已看到Metadata items
+               這個特殊的examples 會有兩筆QueryMetaData
+                         1>
+               		TypeNameString	"CanonicalEntity"	string
+               		ValueString	"song of the sea"	string
+                         2>
+		               TypeNameString	"PersonalMediaTitle"	string
+		               ValueString	"<UserMediaTitle>"	string
+                         
+                         要從這邊parsing 出來
+               
+               
+               但是找不到對應的 p13n.labels.txt 的PersonalMediaTitle 的對應key 不知道怎麼parsing
+              
+               
 *********/
 
 ##-----------
