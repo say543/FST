@@ -481,8 +481,9 @@ TextEditor1
       --in=ExternalInput2 
       external input2   生成filterPersonalMusicItems
       用
-luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_p13n
-      ? 感覺是balck list 這些list 會被換掉  在user define 會被換掉 <!non match  >
+luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_p13n.texteditor.config
+      這邊是personal media title, balck list 這些list 會被換掉  在user define 會被換掉 <!non match  >
+      不允許這些變成blakc list for personal media title
     --out=FilteredPersonalMusicItems
 
 DynamicLexiconFeaturizer1 
