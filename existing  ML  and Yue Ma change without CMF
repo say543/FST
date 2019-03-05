@@ -787,6 +787,9 @@ luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.med
      -out=personal_slot_result_string 
          把　tag 變成string 
     ? 不知道是幹嘛的  只剩下media title(1, 15) 還有prefix  suffix (30,31)  兩個new tags
+    主要prefix suffix 是為了處理  Ladi gaga's  by  rihanna  (black list paaterns)    , ladi gaga  rihanna  雖然是personal media title 但是因為balck list 
+    所以不能被makr 成personal media title
+    
      0 -> O
      其他的變成other
      權重變成1
