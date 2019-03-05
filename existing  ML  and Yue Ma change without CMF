@@ -1015,18 +1015,38 @@ NLPFSTApplier1
  section 3
   # 2018-1-19 huaslin  line 26　生成　把by , 's by tager 成prefix and suffix (personal_pattern_pretreatment_final1) (權重都是1) 
  
+      修正:
+      yue 改了design 原本因該是luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots_luna.personal.pattern.pretreatment.config.xml
+      現在變成 
+      luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots_luna_convert.personal.pattern.pretreatment.config.xml
+      這樣裡面竟有prefix suffix 還有很多新的slots
  
- 裡論上　　因該prefix suffix 要保留
- but slot mapped 根本沒有prefix 跟suffix 感覺沒根本沒什麼用
- 
-         Output:
+        Inputs:
+                ExternalInput1 (tag: 0, string: 12)
+                        play[0,0]=1
+                        song[1,1]=1
+                        of[2,2]=1
+                        the[3,3]=1
+                        sea[4,4]=1
+                        by[5,5]=1
+                        rihanna[6,6]=1
+                        on[7,7]=1
+                        my[8,8]=1
+                        living[9,9]=1
+                        room[10,10]=1
+                        sonos[11,11]=1
+                personal_Pattern_Pretreatment_MatchedType (tag: 0, string: 1)
+                        <prefix>[5,5]=1
+        Output:
+	
+	        29 就是prefix 的number
                 personal_pattern_pretreatment_final1 (tag: 12, string: 0)
                         0[0,0]=1
                         0[1,1]=1
                         0[2,2]=1
                         0[3,3]=1
                         0[4,4]=1
-                        0[5,5]=1
+                        29[5,5]=1
                         0[6,6]=1
                         0[7,7]=1
                         0[8,8]=1
@@ -1111,12 +1131,13 @@ NLPFSTApplier1
       用luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.config.xml
       
       [huaslin] example query “play lady gaga’s song” with personal playlist named “lady gaga”. The pattern blacklist will make sure the “lady gaga” will not be retag as media_title. 
-      測了這個case 感覺也沒有作用
+      ? 測了這個case 感覺也沒有作用
       
-      
-      ? 但是這個config.xml 根本沒有prefix 跟suffix 的mapping 感覺沒有什麼作用
-      在想會不會因該是這個file 來mapping 因為只有他有prefix suffix .....
-      luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots.media_title.itoc.config.txt
+      修正:
+      yue 改了design 原本因該是luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots_luna.personal.pattern.pretreatment.config.xml
+      現在變成 
+      luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.slots_luna_convert.personal.pattern.pretreatment.config.xml
+      這樣裡面竟有prefix suffix 還有很多新的slots
       
         Inputs:
                 ExternalInput1 (tag: 0, string: 12)
