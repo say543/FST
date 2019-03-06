@@ -8,3 +8,7 @@ visuaal stduio  debug  -> properties -> debug -> script arguments
 
 
 --input seeddata.txt  --output output --intentwhitelist intents.txt --pick 100
+
+
+cmnd line
+ py .\LogDataProcessing.py --input seeddata.txt  --output output --intentwhitelist intents.txt --pick 100
