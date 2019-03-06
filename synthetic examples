@@ -38,6 +38,31 @@ E:\synthetic_example\SyntheticAether\SyntheticAether\LogDataProcessing_output\fi
 有些config 會從這個config 裡面來
 ENZ.ENU.General.decoder.config
 
+LexicalExpansion.py
+
+
+
 hard code file 
 在paraphrase source 裡面的config
 
+
+# ? 根本就沒有final folder 可以被使用
+# 直接config 就copy 到parasource 然後直接就run 了
+
+
+這個file 是paratool 會產生的
+E:\synthetic_example\SyntheticAether\SyntheticAether\LogDataProcessing_output\file_open\output\file_open.para
+然後clean_file() 會把content 輸出到  這樣比較乾淨
+E:\synthetic_example\SyntheticAether\SyntheticAether\LogDataProcessing_output\file_open\output\file_open.txt
+只留下query 其他的東西不見
+
+
+
+
+
+
+
+
+subprocess.run([decoder, config], stderr=f_stderr)
+decorer 是直接run
+PhrasalDecoder.exe
