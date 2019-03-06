@@ -4,3 +4,7 @@ LogDataProcessing.py --input {in:GenericTSV:input}  --output {out:Directory_Of_G
 
 
 visuaal stduio  debug  -> properties -> debug -> script arguments
+
+
+
+--input seeddata.txt  --output output --intentwhitelist intents.txt --pick 100
