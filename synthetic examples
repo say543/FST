@@ -7,7 +7,7 @@ visuaal stduio  debug  -> properties -> debug -> script arguments
 
 
 
---input seeddata.txt  --output output --intentwhitelist intents.txt --pick 100
+--input seeddata.txt  --output LogDataProcessing_output --intentwhitelist intents.txt --pick 100
 
 
 cmnd line
@@ -24,5 +24,5 @@ PhraseDecoder.py
  --input output  --output output --intentwhitelist intents.txt  --paraphrasetool paraToolDir --paraphrasesource parasource
  
  // input 跟output directory 分開
- --input output  --output LogDataProcessing_output --intentwhitelist intents.txt  --paraphrasetool paraToolDir --paraphrasesource parasource
+ --input LogDataProcessing_output  --output PhraseDecoder_output --intentwhitelist intents.txt  --paraphrasetool paraToolDir --paraphrasesource parasource
  
