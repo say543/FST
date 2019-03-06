@@ -13,3 +13,9 @@ visuaal stduio  debug  -> properties -> debug -> script arguments
 cmnd line
  py .\LogDataProcessing.py --input seeddata.txt  --output output --intentwhitelist intents.txt --pick 100
  
+ 
+ 
+ 
+PhraseDecoder.py
+ --input output  --output output --intentwhitelist intents.txt  --paraphrasetool paraToolDir --paraphrasesource parasource
+ 
