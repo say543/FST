@@ -27,4 +27,4 @@ PhraseDecoder.py
 --input LogDataProcessing_output  --output PhraseDecoder_output --intentwhitelist intents.txt  --paraphrasetool paraToolDir --paraphrasesource parasource
  
 cmd line
-py .\PhraseDecoder.py --input LogDataProcessing_output  --output PhraseDecoder_output --intentwhitelist intents.txt  --paraphrasetool paraToolDir --paraphrasesource parasource
+py .\PhrasalDecoder.py --input LogDataProcessing_output --output PhraseDecoder_output --intentwhitelist intents.txt --paraphrasetool paraToolDir --paraphrasesource parasource
