@@ -14,6 +14,10 @@ cmnd line
  py .\LogDataProcessing.py --input seeddata.txt  --output output --intentwhitelist intents.txt --pick 100
  
  
+ check process if locked 
+ https://docs.microsoft.com/en-us/sysinternals/downloads/process-explorer
+ happens on phrase decoder.py
+ 
  
  
 PhraseDecoder.py
