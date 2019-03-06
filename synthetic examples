@@ -1,2 +1,6 @@
 LogDataProcessing.py --input {in:GenericTSV:input}  --output {out:Directory_Of_GenericTSV:output}   
 --intentwhitelist  [{in:GenericText:intentwhitelist}]   --pick ((percentile:default,@@percentile@@)
+
+
+
+visuaal stduio  debug  -> properties -> debug -> script arguments
