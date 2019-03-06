@@ -136,6 +136,7 @@ class DataEntry:
         """
         Replace tagged slot to only tag.
         e.g. <tagname> tagvalue </tagname> => <tagname>
+        e.g. Open up <file_title> LT review discussion </file_title> file => Open up <file_title> file
         :return: replaced tagged sentence
         """
 
