@@ -23,3 +23,6 @@ cmnd line
 PhraseDecoder.py
  --input output  --output output --intentwhitelist intents.txt  --paraphrasetool paraToolDir --paraphrasesource parasource
  
+ // input 跟output directory 分開
+ --input output  --output LogDataProcessing_output --intentwhitelist intents.txt  --paraphrasetool paraToolDir --paraphrasesource parasource
+ 
