@@ -28,3 +28,14 @@ PhraseDecoder.py
  
 cmd line
 py .\PhrasalDecoder.py --input LogDataProcessing_output --output PhraseDecoder_output --intentwhitelist intents.txt --paraphrasetool paraToolDir --paraphrasesource parasource
+
+
+可以提供NBestLength 的output
+
+output config 會輸出到input 的directory 
+E:\synthetic_example\SyntheticAether\SyntheticAether\LogDataProcessing_output\file_open\input\file_open.para.config
+
+有些config 會從這個config 裡面來
+ENZ.ENU.General.decoder.config
+在paraphrase source 裡面的config
+
