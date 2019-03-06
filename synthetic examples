@@ -11,7 +11,7 @@ visuaal stduio  debug  -> properties -> debug -> script arguments
 
 
 cmnd line
- py .\LogDataProcessing.py --input seeddata.txt  --output output --intentwhitelist intents.txt --pick 100
+ py .\LogDataProcessing.py --input seeddata.txt  --output LogDataProcessing_output --intentwhitelist intents.txt --pick 100
  
  
  check process if locked 
@@ -21,8 +21,10 @@ cmnd line
  
  
 PhraseDecoder.py
- --input output  --output output --intentwhitelist intents.txt  --paraphrasetool paraToolDir --paraphrasesource parasource
+--input output  --output output --intentwhitelist intents.txt  --paraphrasetool paraToolDir --paraphrasesource parasource
  
  // input 跟output directory 分開
- --input LogDataProcessing_output  --output PhraseDecoder_output --intentwhitelist intents.txt  --paraphrasetool paraToolDir --paraphrasesource parasource
+--input LogDataProcessing_output  --output PhraseDecoder_output --intentwhitelist intents.txt  --paraphrasetool paraToolDir --paraphrasesource parasource
  
+cmd line
+py .\PhraseDecoder.py --input LogDataProcessing_output  --output PhraseDecoder_output --intentwhitelist intents.txt  --paraphrasetool paraToolDir --paraphrasesource parasource
