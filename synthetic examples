@@ -66,3 +66,57 @@ E:\synthetic_example\SyntheticAether\SyntheticAether\LogDataProcessing_output\fi
 subprocess.run([decoder, config], stderr=f_stderr)
 decorer 是直接run
 PhrasalDecoder.exe
+
+
+LexicalExpansion.py
+
+--sources SlotFolder --inputdir  PhraseDecoder_output --count 3 --intentwhitelist intents.txt --output LexicalExpansion_output
+
+
+py  .\LexicalExpansion.py  --sources SlotFolder --inputdir  PhraseDecoder_output --count 3 --intentwhitelist intents.txt --output LexicalExpansion_output
+
+
+count 的參數是
+
+
+在slotFolder (sources_path 裡面)
+query 的 domain
+names.txt
+
+query 的 intents, 但是跟whitelist 不一樣
+intents.txt 
+
+可能的slots
+slots.txt
+
+每一個slot 有自己的lexicon list
+file_filetype -> file_filetype.txt
+file_title -> file_title.txt
+
+
+一樣會先輸出到
+'PhraseDecoder_output\\data.tsv'
+在copy 到LexicalExpansion_output/ 的folder 
+
+expand()
+onlyfiles
+  就是phraseDecoder 產生出來的result
+  E:\synthetic_example\SyntheticAether\SyntheticAether\PhraseDecoder_output\file_open\output\file_open.txt
+  
+  用到sentence_expansion()
+  這個會把 tag 跟not tagger的部分生出來
+  
+  originla query
+  'Open the <file_title> file'
+  
+  生成的
+  
+		tagged	'Open the <file_title> theo chocolate </file_title> file'	str
+		untagged	'Open the  theo chocolate  file'	str
+
+  
+  
+ 
+
+
+
