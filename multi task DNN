@@ -1,0 +1,51 @@
+
+目前我選3.6  python version
+
+用這個virtaul environment
+
+https://pytorch.org/get-started/previous-versions/
+
+cpu/torch-0.4.1-cp36-cp36m-win_amd64.whl
+
+
+另外要自己專spary
+https://stackoverflow.com/questions/1098786/run-bash-script-from-windows-powershell
+
+bash 有位置mount  的問題
+
+要bash  or powershell
+
+
+our path
+C:\Program Files\Python36\
+
+自己裝wget
+要自cp[y wget 到git bash 的bin
+
+自己export python location
+https://sonalsatpute.wordpress.com/2016/07/21/python-on-windows-git-bash/
+
+叫不出interacitve 但是好像可以download
+
+
+要自己裝scikit learn
+
+
+python prepro.py
+目前comment 掉其他的data 
+只剩SciTail 
+
+生成mt-dnn 的directory
+
+python train.py
+似乎也會少一堆mnli_train.jsob
+
+這兩行也需要一堆的mnli, qqp 等等相關的data
+
+    parser.add_argument('--train_datasets', default='mnli,qqp')
+    parser.add_argument('--test_datasets', default='mnli_mismatched,mnli_matched,qqp')
+
+
+ 他說之後會open source data
+ 這個等他release 之後再說....
+
