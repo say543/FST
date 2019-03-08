@@ -1,1 +1,79 @@
 run team CMF for fun....
+
+
+marat
+我猜你是說這個intens_data_syntthesed 跟teams_slot_synthesis
+用這個兩個train
+
+generated / intents.txt  
+generated / slots.txt 
+
+也是marat 自己產生出來了
+
+
+
+現在是用
+resources/yuedata
+
+目前他不打算train domain 想用pattern 來cover
+
+
+========================
+first attempt
+use yue data
+========================
+
+這邊可以看看 training 的summary
+有confusion matrix
+E:\CoreScienceDataStaging\datasources\Teams\output_domain_intent_slot\intent_svm\tmp\test
+
+可以看到
+Classification error (total): 5	31102
+
+
+也可以看到什麼error
+
+
+query	intent	teamspace_removemember	0.434105950932742
+last sliding	goto_slide	previous_slide	0.636298102769266
+last sliding	goto_slide	previous_slide	0.636298102769266
+last sliding	goto_slide	previous_slide	0.636298102769266
+last slip	goto_slide	previous_slide	0.651354864666054
+last slip	goto_slide	previous_slide	0.651354864666054
+
+      correct should be goto_slide
+      but classifeid as previous_slide
+
+none of them	select none	teamspace_removemember	0.431198846609963
+    拼錯
+    因該是select_none
+    
+
+
+query	Intent	teamspace_removemember	0.434105950932742
+query	Intent	teamspace_removemember	0.434105950932742
+query	Intent	teamspace_removemember	0.434105950932742
+
+
+teamspace_showactivity  沒有任何的data
+
+
+直接用放在media control 下面的
+E:\CoreScienceDataStaging\datasources\MediaControl\queryclassificationprocessing> 
+做evaluation
+
+from
+.\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c ..\..\..\models\ --variant HttpQASDEVBOX_ML_OFFLINE_QAS_EVAL_INT.QASEXO01DS  -d mediacontrol
+to
+.\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c ..\..\..\datasources\Teams\output_domain_intent_slot_firstAttempt --variant model -d teams
+
+
+
+
+
+
+
+
+
+
+
