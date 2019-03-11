@@ -82,7 +82,33 @@ hotfix 的format
 https://microsoft.sharepoint.com/teams/LUforNextgenAgents/_layouts/15/WopiFrame.aspx?sourcedoc={68deb809-671e-469a-be79-ba53c05298ce}&action=edit&wd=target%28CLU%20DRI.one%7C2d7fe193-c1f9-4c01-94bb-ee4b9695f00f%2FExact%20match%20hotfix%20file%20format%7Ce81245d4-55ea-458a-aaf1-036d8c0817f5%2F%29
 
 
+========================
+my attempt
+my build_json , my build.cmd
+use yue data
+but without any patterns
+========================
+
+coresciencestage branch
+users/cheicha/intent_slot_only_for_teams_test
 
 
+intent
+錯了沒有什麼改變
+
+query	intent	teamspace_removemember	0.434105950932742
+last sliding	goto_slide	previous_slide	0.636298102769266
+last sliding	goto_slide	previous_slide	0.636298102769266
+last sliding	goto_slide	previous_slide	0.636298102769266
+last slip	goto_slide	previous_slide	0.651354864666054
+last slip	goto_slide	previous_slide	0.651354864666054
+none of them	select none	teamspace_removemember	0.431198846609963
+query	Intent	teamspace_removemember	0.434105950932742
+query	Intent	teamspace_removemember	0.434105950932742
+query	Intent	teamspace_removemember	0.434105950932742
 
 
+slots
+E:\CoreScienceDataStaging\datasources\Teams\output_domain_intent_slot\slot_lccrf\tmp\test\ 
+Teams_Slot_Training.error.html
+這個因該就是yue 在看的有問題的file
