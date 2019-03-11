@@ -112,3 +112,13 @@ slots
 E:\CoreScienceDataStaging\datasources\Teams\output_domain_intent_slot\slot_lccrf\tmp\test\ 
 Teams_Slot_Training.error.html
 這個因該就是yue 在看的有問題的file
+
+
+Teams_Slot_Training.to_xml.bad_lines.tsv
+這個是bad slot 的list
+
+
+Teams_Slot_Training.summary.txt
+這個是每一個domain 的precision and recall
+
+
