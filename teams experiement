@@ -68,9 +68,18 @@ to
 .\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c ..\..\..\datasources\Teams\output_domain_intent_slot_firstAttempt --variant model -d teams
 
 
+[qd_teams_intent_hotfix_featurizer]
+這個下面的
+ConditionalWhitelistFeaturizer
+需要 hotfix 不能是empty
+
+這個link 沒有team hotfix
+
+https://carinamodel.visualstudio.com/ModelRepository/_versionControl?path=%24%2FModelRepository%2FOnline%2FData%2FExistingHotfix%2FMicrosoft_Threshold_Shell_3_enus_CortanaSDK%2FDomain
 
 
-
+hotfix 的format
+https://microsoft.sharepoint.com/teams/LUforNextgenAgents/_layouts/15/WopiFrame.aspx?sourcedoc={68deb809-671e-469a-be79-ba53c05298ce}&action=edit&wd=target%28CLU%20DRI.one%7C2d7fe193-c1f9-4c01-94bb-ee4b9695f00f%2FExact%20match%20hotfix%20file%20format%7Ce81245d4-55ea-458a-aaf1-036d8c0817f5%2F%29
 
 
 
