@@ -46,6 +46,14 @@ slides_number => slide_number 的修改
 E:\CMF\yueShared\LunaFormat_MediaControl.py
 這個是轉mediacontrol 的因該也可以拿來轉teams
 
+(mt-dnn-env) PS E:\CoreScienceDataStaging\src\Tools\CMF> py .\LunaFormat_Teams.py .\Teams-Feb.tsv
+我用mt-dnn-env 來借用
+e:\mt-dnn\mt-dnn-env
+
+mt-dnn-env\Scripts\activate
+
+E:\CoreScienceDataStaging\datasources\Teams>run.build_my_test.cmd
+用自己的cmd 來用
 
 
 ========================
