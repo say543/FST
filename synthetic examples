@@ -1,3 +1,9 @@
+
+
+========================
+LogDataProcessing.py
+========================
+
 LogDataProcessing.py --input {in:GenericTSV:input}  --output {out:Directory_Of_GenericTSV:output}   
 --intentwhitelist  [{in:GenericText:intentwhitelist}]   --pick ((percentile:default,@@percentile@@)
 
@@ -20,6 +26,12 @@ cmnd line
  
  
  
+========================
+PhraseDecoder.py
+========================
+
+ 
+ 
 PhraseDecoder.py
 --input output  --output output --intentwhitelist intents.txt  --paraphrasetool paraToolDir --paraphrasesource parasource
  
@@ -37,6 +49,12 @@ E:\synthetic_example\SyntheticAether\SyntheticAether\LogDataProcessing_output\fi
 
 有些config 會從這個config 裡面來
 ENZ.ENU.General.decoder.config
+
+
+========================
+LexicalExpansion.py
+========================
+
 
 LexicalExpansion.py
 
@@ -66,6 +84,9 @@ E:\synthetic_example\SyntheticAether\SyntheticAether\LogDataProcessing_output\fi
 subprocess.run([decoder, config], stderr=f_stderr)
 decorer 是直接run
 PhrasalDecoder.exe
+
+
+LexicalExpansion.py
 
 
 LexicalExpansion.py
