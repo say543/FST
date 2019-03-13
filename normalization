@@ -24,3 +24,41 @@ for intent / doamin patterns
        
        所以mediacontrol 的pdp 's ,   都因該會留下來
               
+              
+ for
+     ML 因該目前都沒有remove
+
+
+
+=================================
+old luna logic
+Brief explanation of Logic: 
+==================================
+
+Normalization is done in 3 classes in this order: 
+
+    QueryNormalizer 
+
+        Remove spaces and punctuations at the end of the query (ex. "Hello there!!!      " -> "Hello there") 
+
+        Convert alphabets with diacritics to English alphabets (ex. "Café" -> "Cafe") 
+
+        Remove non-English characters (ex. "Hi紫" -> "Hi") 
+
+        Replace hyphens between number and alphabets (ex. "5-kids" -> "5 kids") 
+
+    WhitespaceTokenizer 
+
+        Break to two words if they are connected by multiple punctuations (ex. "Hello…reserve restaurant" -> "Hello… reserve restaurant") 
+
+        Break numbers from words (ex. "AMC16" -> "AMC 16") 
+
+        Break punctuations from numbers (ex. "#3." -> "#3 .") 
+
+    TokenNormalizer 
+
+        Remove standalone symbols and punctuations (ex. "&" -> empty) 
+
+        Remove symbols and punctuations at the end of words (ex. "Mr." -> "Mr", "Hello…" -> "Hello") 
+
+        Put space between time and am/pm (ex. "7pm" -> "7 pm") 
