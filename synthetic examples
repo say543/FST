@@ -43,6 +43,9 @@ py .\PhrasalDecoder.py --input LogDataProcessing_output --output PhraseDecoder_o
 
 
 可以提供NBestLength 的output
+? 我在想  把這個調大   之後再用word embedding  看sentence embedding  哪個比較接近
+or
+? 增加paraphrasesource 的語料庫  (這個已經做不到....)
 
 output config 會輸出到input 的directory 
 E:\synthetic_example\SyntheticAether\SyntheticAether\LogDataProcessing_output\file_open\input\file_open.para.config
