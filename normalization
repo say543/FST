@@ -12,6 +12,8 @@ for intent / doamin patterns
            
            維持原狀
            
+           p.s check 了Teams, , moment 似乎也都可以lower case
+           
            
       luna_conveer 
            luna does normalization then oattern match
