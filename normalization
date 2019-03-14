@@ -4,7 +4,14 @@ for mediaContral domain
 
 for intent / doamin patterns
       STCA
-           do not normalize so ' will stay
+           only do lower case conversion do not normalize so ' will stay
+           
+           listen to 92. 5 radio stations
+           =>
+           listen to 92. 5 radio stations
+           
+           維持原狀
+           
            
       luna_conveer 
            luna does normalization then oattern match
@@ -12,9 +19,25 @@ for intent / doamin patterns
     qd_mediacontrol_mv8_1_intents_pattern_luna_convert_mediacontrol_featurizer
     qd_mediacontrol_mv8_1_domain_pattern_luna_convert_mediacontrol_featurizer
           內部 有自己的preprocess
-          
-          
-     
+
+
+
+for hotfix
+    STCA
+       do not normalize so ' will stay
+           only do lower case conversion do not normalize so ' will stay
+           
+           listen to 92. 5 radio stations
+           =>
+           listen to 92. 5 radio stations
+           
+           維持原狀
+           
+           domain hotfix files 就有這樣exact 的query 
+           
+           所以也不能normalize
+           
+           
     
   for slot pattern
        STCA / luna
@@ -25,8 +48,14 @@ for intent / doamin patterns
        所以mediacontrol 的pdp 's ,   都因該會留下來
               
               
- for
-     ML 因該目前都沒有remove
+ for ML
+           only do lower case conversion do not normalize so ' will stay
+           
+           listen to 92. 5 radio stations
+           =>
+           listen to 92. 5 radio stations
+           
+           維持原狀
 
 
 
