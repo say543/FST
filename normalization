@@ -18,9 +18,21 @@ for intent / doamin patterns
       luna_conveer 
            luna does normalization then oattern match
           所以
-    qd_mediacontrol_mv8_1_intents_pattern_luna_convert_mediacontrol_featurizer
     qd_mediacontrol_mv8_1_domain_pattern_luna_convert_mediacontrol_featurizer
+    qd_mediacontrol_mv8_1_intents_pattern_luna_convert_mediacontrol_featurizer
           內部 有自己的preprocess
+          
+          但是看了一下
+          適用FST pattern 在 做normalization
+          也是 沒有normalize 一些special charaacters
+          
+          
+          另外看了一下  原本的carina pattern
+          luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.domain.pattern.pipeline.txt
+          luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1.domain.pattern.texteditor.config.txt
+          也是只是轉lower case 
+          我認為不需要
+          
 
 
 
