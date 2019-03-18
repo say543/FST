@@ -1,0 +1,8 @@
+https://github.com/hanxiao/bert-as-service
+
+
+pip install bert-serving-server  # server
+pip install bert-serving-client  # client, independent of `bert-serving-server`
+
+
+pip install tensorflow
