@@ -17,6 +17,27 @@ resources/yuedata
 
 目前他不打算train domain 想用pattern 來cover
 
+===========================
+team word embdding testing
+===========================
+
+目前還是用pattern 來多生成data
+
+positive example 
+Teams-Feb
+Teams-golden
+Teams-MustPass
+
+
+negative example
+Communication-train-19k
+Music-44k
+reminder-training-45K
+
+
+
+
+
 
 ========================
 yue share knowledge 
