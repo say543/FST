@@ -5,4 +5,25 @@ pip install bert-serving-server  # server
 pip install bert-serving-client  # client, independent of `bert-serving-server`
 
 
-pip install tensorflow
+pip install 
+
+成功了
+注意要在同個directory 下面
+ E:\bert-as-a-service> bert-serving-start -model_dir multi_cased_L-12_H-768_A-12  -num_worker=1
+usage: E:\bert-as-a-service\bert-as-a-service-env\Scripts\bert-serving-start -model_dir multi_cased_L-12_H-768_A-12 -num_worker
+
+
+成功了
+(bert-as-a-service-env) PS E:\bert-as-a-service> py
+Python 3.6.6 (v3.6.6:4cf1f54eb7, Jun 27 2018, 03:37:03) [MSC v.1900 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from bert_serving.client import BertClient
+>>> bc = BertClient()
+>>> bc.encode(['First do it', 'then do it right', 'then do it better'])
+array([[ 0.49155515,  0.08795903,  0.08263351, ...,  1.0980438 ,
+         0.41126513, -0.25397035],
+       [-0.07413623, -0.2278349 , -0.08978186, ...,  1.5093101 ,
+         1.3512025 , -0.03158315],
+       [-0.26575193,  0.19135495, -0.35613477, ...,  1.3962182 ,
+         1.4187471 ,  0.12651925]], dtype=float32)
+>>>
