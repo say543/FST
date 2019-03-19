@@ -27,3 +27,6 @@ array([[ 0.49155515,  0.08795903,  0.08263351, ...,  1.0980438 ,
        [-0.26575193,  0.19135495, -0.35613477, ...,  1.3962182 ,
          1.4187471 ,  0.12651925]], dtype=float32)
 >>>
+
+
+p.s 目前在E:\bert-as-a-service\TeamsEmbedding\TeamsEmbedding 也建了virtual enviornment 因為要用visual studio 的debug
