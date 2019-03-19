@@ -11,6 +11,21 @@ pip install
 注意要在同個directory 下面
  E:\bert-as-a-service> bert-serving-start -model_dir multi_cased_L-12_H-768_A-12  -num_worker=1
 usage: E:\bert-as-a-service\bert-as-a-service-env\Scripts\bert-serving-start -model_dir multi_cased_L-12_H-768_A-12 -num_worker
+I:[36mGRAPHOPT[0m:load parameters from checkpoint...
+I:[36mGRAPHOPT[0m:optimize...
+I:[36mGRAPHOPT[0m:freeze...
+I:[36mGRAPHOPT[0m:write graph to a tmp file: C:\Users\CHIECH~1.RED\AppData\Local\Temp\tmp7i046cd9
+I:[35mVENTILATOR[0m:optimized graph is stored at: C:\Users\CHIECH~1.RED\AppData\Local\Temp\tmp7i046cd9
+I:[35mVENTILATOR[0m:bind all sockets
+I:[35mVENTILATOR[0m:open 8 ventilator-worker sockets
+I:[35mVENTILATOR[0m:start the sink
+I:[32mSINK[0m:ready
+I:[35mVENTILATOR[0m:get devices
+W:[35mVENTILATOR[0m:no GPU available, fall back to CPU
+I:[35mVENTILATOR[0m:device map:
+                worker  0 -> cpu
+I:[33mWORKER-0[0m:use device cpu, load graph from C:\Users\CHIECH~1.RED\AppData\Local\Temp\tmp7i046cd9
+I:[33mWORKER-0[0m:ready and listening!
 
 
 成功了
