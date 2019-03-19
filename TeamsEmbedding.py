@@ -148,7 +148,7 @@ def load_as_carina_and_embedding(filename):
 
 if __name__ == "__main__":
 
-    slotFiles = glob.glob("*.tsv");
+    slotFiles = glob.glob("Teams-MustPass_Feb_Golden.tsv");
     for slotFile in slotFiles:
         # only data
         #df = load_as_carina(slotFile)
