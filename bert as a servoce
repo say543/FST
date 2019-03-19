@@ -29,4 +29,12 @@ array([[ 0.49155515,  0.08795903,  0.08263351, ...,  1.0980438 ,
 >>>
 
 
+
+======================
+extra information
+======================
+
+panda to store ndarray
+https://stackoverflow.com/questions/45548426/store-numpy-array-in-cells-of-a-pandas-dataframe
+
 p.s 目前在E:\bert-as-a-service\TeamsEmbedding\TeamsEmbedding 也建了virtual enviornment 因為要用visual studio 的debug
