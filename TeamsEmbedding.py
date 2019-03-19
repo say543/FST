@@ -130,7 +130,7 @@ def load_as_carina_and_embedding(filename):
                     'QueryId': 0,
                     'RawQuery': row['MessageText'],
                     'Intent': intent,
-                    'Domain': 'mediacontrol',
+                    'Domain': domain,
                     'SlotXML': annotation,
                     'SentenceEmbedding':  sentenceEmbedding
                     }
