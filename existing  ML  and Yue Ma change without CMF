@@ -37,7 +37,14 @@ output=ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_domain_pattern
 根據
 output=ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_domain_pattern
 是再加上luna 自己 converted pattern  domain_pattern 的output
-p.s  qd_mediacontrol_mv8_2_domain_pattern_featurizer 這個是原始的model 的pattern 基本上把luna 的pattern 跟原本的pattern 分開
+
+03192019
+p.s  
+qd_mediacontrol_mv8_2_domain_pattern_featurizer 這個是原始的model 的 hot fix pattern 
+基本上把luna 的pattern 跟原本的pattern 分開
+luna domain pattern 是0.99 
+原始的model 的 hot fix pattern 是1.00
+
 
 
 
