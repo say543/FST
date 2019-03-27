@@ -122,7 +122,9 @@ def load_carina(filename, generateSentenceEmbedding=False):
 
             query = [row['query']]
             if generateSentenceEmbedding==True:
-                sentenceEmbedding = bc.encode(query)
+                #sentenceEmbedding = bc.encode(query)
+                #sentenceEmbedding = bc.encode(query).tolist()
+                sentenceEmbedding = bc.encode(query).tolist()[0]
                 # for debug 
                 #print(f'sentenceEmbedding: {sentenceEmbedding.shape}')
                 entry = {
@@ -164,6 +166,7 @@ def calculate_topk_similarity(df_golden, df_tune):
     # query comparison for deubgging
 
     #golden_sentenceEmbeddings = np.array(df_golden['SentenceEmbedding'])
+    #tune_SentenceEmbeddings = np.array(df_tune['SentenceEmbedding'])
     
     #golden_sentenceEmbeddings = np.array(ast.literal_eval(df_golden['SentenceEmbedding'][0]))
     #tune_SentenceEmbeddings = np.array(ast.literal_eval(df_tune['SentenceEmbedding'][0]))
@@ -195,11 +198,8 @@ def calculate_topk_similarity(df_golden, df_tune):
     print (type(golden_sentenceEmbeddings[0]))
     '''
 
-
-    #golden_sentenceEmbeddings = np.array(df_golden['SentenceEmbedding'])
-    #tune_SentenceEmbeddings = np.array(df_tune['SentenceEmbedding'])
-
     golden_sentenceEmbeddings = np.array([ ast.literal_eval(df_golden['SentenceEmbedding'][i]) for i in range(len(df_golden['SentenceEmbedding']))])
+    #tune_SentenceEmbeddings = np.array([ ast.literal_eval(df_golden['SentenceEmbedding'][i]) for i in range(len(df_tune['SentenceEmbedding']))])
 
     print(f'Shape: {golden_sentenceEmbeddings.shape}')
     #print(f'Shape: {tune_SentenceEmbeddings.shape}')
