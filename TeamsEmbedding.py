@@ -4,6 +4,8 @@ import math
 import re
 import sys
 import glob
+import numpy as np
+import ast
 
 from bert_serving.client import BertClient
 
@@ -61,7 +63,10 @@ def load_luna_to_carina(filename, generateSentenceEmbedding=False):
 
             query = [row['MessageText']]
             if generateSentenceEmbedding==True:
-                sentenceEmbedding = bc.encode(query)
+                #sentenceEmbedding = bc.encode(query)
+                #sentenceEmbedding = bc.encode(query).tolist()
+                sentenceEmbedding = bc.encode(query).tolist()[0]
+
                 # for debug 
                 #print(f'sentenceEmbedding: {sentenceEmbedding.shape}')
                 entry = {
@@ -152,19 +157,79 @@ def load_carina(filename, generateSentenceEmbedding=False):
     else:
         return pd.DataFrame(entries, columns=['id', 'query', 'intent', 'domain', 'QueryXml'])
 
+
+def calculate_topk_similarity(df_golden, df_tune):
+
+    '''   
+    # query comparison for deubgging
+
+    #golden_sentenceEmbeddings = np.array(df_golden['SentenceEmbedding'])
+    
+    #golden_sentenceEmbeddings = np.array(ast.literal_eval(df_golden['SentenceEmbedding'][0]))
+    #tune_SentenceEmbeddings = np.array(ast.literal_eval(df_tune['SentenceEmbedding'][0]))
+    #golden_sentenceEmbeddings = ast.literal_eval(df_golden['SentenceEmbedding'][0])
+    #tune_SentenceEmbeddings = ast.literal_eval(df_tune['SentenceEmbedding'][0])
+
+    #golden_sentenceEmbeddings = df_golden['SentenceEmbedding']
+    #tune_SentenceEmbeddings = df_tune['SentenceEmbedding']
+
+    golden_sentenceEmbeddings = [ row[1]   for index, row in df_golden['SentenceEmbedding']]
+    #tune_SentenceEmbeddings = [ row[1]   for index, row in df_tune['SentenceEmbedding']]
+
+    #golden_sentenceEmbeddings = [ row[1]   for index, row in df_golden['SentenceEmbedding']]
+    #tune_SentenceEmbeddings = [ row[1]   for index, row in df_tune['SentenceEmbedding']]
+
+    #golden_sentenceEmbeddings = df_golden['SentenceEmbedding'].tolist()
+    #tune_SentenceEmbeddings = df_tune['SentenceEmbedding'].tolist()
+
+
+    #print(f"type: {type(golden_sentenceEmbeddings)}")
+    #print(f"type: {type(tune_SentenceEmbeddings)}")
+
+    #print(f"len: {len(golden_sentenceEmbeddings)}")
+    #print(f"len: {len(tune_SentenceEmbeddings)}")
+
+    #print(f"len: {len(golden_sentenceEmbeddings[0])}")
+    #print(f"len: {len(tune_SentenceEmbeddings[0])}")
+
+    print (type(golden_sentenceEmbeddings[0]))
+    '''
+
+
+    #golden_sentenceEmbeddings = np.array(df_golden['SentenceEmbedding'])
+    #tune_SentenceEmbeddings = np.array(df_tune['SentenceEmbedding'])
+
+    golden_sentenceEmbeddings = np.array([ ast.literal_eval(df_golden['SentenceEmbedding'][i]) for i in range(len(df_golden['SentenceEmbedding']))])
+
+    print(f'Shape: {golden_sentenceEmbeddings.shape}')
+    #print(f'Shape: {tune_SentenceEmbeddings.shape}')
+
+
+
 if __name__ == "__main__":
 
 
 
     # golden_file_processing , luna format
-    #golden_file_name="Teams-MustPass_Feb_Golden.tsv" 
+    golden_file_name="Teams-MustPass_Feb_Golden.tsv" 
     #df_golden = load_luna_to_carina(golden_file_name, generateSentenceEmbedding=True)
-    ##df_golden.to_csv('.\\' + golden_file_name.replace('.tsv', '-carina.tsv'), sep='\t', index=None)
+    #df_golden.to_csv('.\\' + golden_file_name.replace('.tsv', '-carina.tsv'), sep='\t', index=None)
 
     # fake_file_processing, carina format
     tune_file_name="Teams_Slot_Training.tsv"
-    df_tune = load_carina(tune_file_name, generateSentenceEmbedding=True)
-    df_tune.to_csv('.\\' + tune_file_name.replace('.tsv', '-carina.tsv'), sep='\t', index=None)
+    #df_tune = load_carina(tune_file_name, generateSentenceEmbedding=True)
+    ##df_tune.to_csv('.\\' + tune_file_name.replace('.tsv', '-carina.tsv'), sep='\t', index=None)
+
+    # read from previous embedding
+    df_golden = pd.read_csv(golden_file_name.replace('.tsv', '-carina.tsv'), sep='\t') 
+    df_tune = pd.read_csv(tune_file_name.replace('.tsv', '-carina.tsv'), sep='\t')
+
+    
+    # debug
+    #df_golden_generate = load_luna_to_carina(golden_file_name)
+    #print(f"initial and read-from-file comparasion: {df_golden_generate['query'].equals(df_golden['query'])}")
+
+    calculate_topk_similarity(df_golden, df_tune)
 
 
 
