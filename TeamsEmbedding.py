@@ -199,11 +199,10 @@ def calculate_topk_similarity(df_golden, df_tune):
     '''
 
     golden_sentenceEmbeddings = np.array([ ast.literal_eval(df_golden['SentenceEmbedding'][i]) for i in range(len(df_golden['SentenceEmbedding']))])
-    #tune_SentenceEmbeddings = np.array([ ast.literal_eval(df_golden['SentenceEmbedding'][i]) for i in range(len(df_tune['SentenceEmbedding']))])
+    tune_SentenceEmbeddings = np.array([ ast.literal_eval(df_tune['SentenceEmbedding'][i]) for i in range(len(df_tune['SentenceEmbedding']))])
 
     print(f'Shape: {golden_sentenceEmbeddings.shape}')
-    #print(f'Shape: {tune_SentenceEmbeddings.shape}')
-
+    print(f'Shape: {tune_SentenceEmbeddings.shape}')
 
 
 if __name__ == "__main__":
@@ -218,11 +217,13 @@ if __name__ == "__main__":
     # fake_file_processing, carina format
     tune_file_name="Teams_Slot_Training.tsv"
     #df_tune = load_carina(tune_file_name, generateSentenceEmbedding=True)
-    ##df_tune.to_csv('.\\' + tune_file_name.replace('.tsv', '-carina.tsv'), sep='\t', index=None)
+    #df_tune.to_csv('.\\' + tune_file_name.replace('.tsv', '-carina.tsv'), sep='\t', index=None)
 
     # read from previous embedding
+    print(f"load from file...")
     df_golden = pd.read_csv(golden_file_name.replace('.tsv', '-carina.tsv'), sep='\t') 
     df_tune = pd.read_csv(tune_file_name.replace('.tsv', '-carina.tsv'), sep='\t')
+    print(f"load from file done")
 
     
     # debug
