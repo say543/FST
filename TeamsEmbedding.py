@@ -198,8 +198,14 @@ def calculate_topk_similarity(df_golden, df_tune):
     print (type(golden_sentenceEmbeddings[0]))
     '''
 
-    golden_sentenceEmbeddings = np.array([ ast.literal_eval(df_golden['SentenceEmbedding'][i]) for i in range(len(df_golden['SentenceEmbedding']))])
-    tune_SentenceEmbeddings = np.array([ ast.literal_eval(df_tune['SentenceEmbedding'][i]) for i in range(len(df_tune['SentenceEmbedding']))])
+    #golden_sentenceEmbeddings = np.array([ ast.literal_eval(df_golden['SentenceEmbedding'][i]) for i in range(len(df_golden['SentenceEmbedding']))])
+    #tune_SentenceEmbeddings = np.array([ ast.literal_eval(df_tune['SentenceEmbedding'][i]) for i in range(len(df_tune['SentenceEmbedding']))])
+
+    golden_sentenceEmbeddings = np.array([ ast.literal_eval(v) for i, v in df_golden['SentenceEmbedding'].items()   ])
+    tune_SentenceEmbeddings = np.array([ ast.literal_eval(v) for i, v in df_tune['SentenceEmbedding'].items() ])
+
+    #golden_sentenceEmbeddings = [ast.literal_eval(df_golden['SentenceEmbedding'])]
+    #tune_SentenceEmbeddings = df_tune['SentenceEmbedding'].values
 
     print(f'Shape: {golden_sentenceEmbeddings.shape}')
     print(f'Shape: {tune_SentenceEmbeddings.shape}')
