@@ -76,6 +76,28 @@ Teams-Feb
 Teams-golden
 Teams-MustPass
 都合併了  然後生成了embedding
+
+
+Teams_Slot_Training (fake data)
+
+出現warning 跟這個問題
+Loading Teams_Slot_Training.tsv
+C:\Users\chiecha.REDMOND\AppData\Local\Programs\Python\Python36\lib\site-packages\bert_serving\client\__init__.py:285: UserWarning: some of your sentences have more tokens than "max_seq_len=25" set on the server, as consequence you may get less-accurate or truncated embeddings.
+here is what you can do:
+- disable the length-check by create a new "BertClient(check_length=False)" when you do not want to display this warning
+- or, start a new server with a larger "max_seq_len"
+  '- or, start a new server with a larger "max_seq_len"' % self.length_limit)
+Press any key to continue . . .
+因為超過max_seq_len 的上限  server 要重啟來調整
+
+要加上 max_seq_len= 100
+目前跑起來還沒有測試
+(bert-as-a-service-env) PS E:\bert-as-a-service\TeamsEmbedding\TeamsEmbedding> bert-serving-start -model_dir multi_cased_L-12_H-768_A-12 -num_worker=1 -max_seq_len=100
+
+
+
+
+
  
  
 ========================
