@@ -210,6 +210,44 @@ def calculate_topk_similarity(df_golden, df_tune):
     print(f'Shape: {golden_sentenceEmbeddings.shape}')
     print(f'Shape: {tune_SentenceEmbeddings.shape}')
 
+    # cosine similarity
+
+    tune_SentenceEmbeddings_distance = np.sqrt(np.sum((tune_SentenceEmbeddings)**2, axis=1))
+    golden_SentenceEmbeddings_distance = np.sqrt(np.sum((golden_SentenceEmbeddings)**2, axis=1))
+    tune_SentenceEmbeddings_distance_column_vector = tune_SentenceEmbeddings_distance.reshape(tune_SentenceEmbeddings_distance.shape[0], 1)
+    golden_SentenceEmbeddings_distance_column_vector = golden_SentenceEmbeddings_distance.reshape(golden_SentenceEmbeddings_distance.shape[0], 1)
+    
+    sentenceEmbeddings_similiary = np.dot (tune_SentenceEmbeddings, golden_SentenceEmbeddings.T) / np.dot(tune_SentenceEmbeddings_distance_column_vector, golden_SentenceEmbeddings_distance_column_vector.T)
+
+
+    # for top1
+    # debug
+    # 
+    # equal check will fail
+    # becasue there might be two items with the same cosine similairty
+    #index1 = np.argmax(sentenceEmbeddings_similiary, axis=1)
+    #index2 = (np.argpartition(sentenceEmbeddings_similiary, -1, axis=1)[:, -1:]).flatten()
+    #diff = index1 - index2
+    #np.where(diff!=0)
+    #(array([   11,    25,    26, ..., 52174, 52192, 52233], dtype=int64),)
+    # checking 11
+    # np.argmax(sentenceEmbeddings_similiary[11,:])
+    # 55
+    # np.argpartition(sentenceEmbeddings_similiary[11,:], -1)[-1:]
+    # array([364], dtype=int64)
+
+    # top k . k > 1
+    # here no need flattern since wanto to maintain index row for each tune query
+    top_k = 4
+    top_k_golden_per_tune = (np.argpartition(sentenceEmbeddings_similiary, -top_k, axis=1)[:, -top_k:])
+
+
+    # get all golden queries
+    golden_queries = df_golden['query'].values.reshape((df_golden['query']).shape[0],1)
+    closest_golden_queries_per_tune = golden_queries[top_k_golden_per_tune]
+    closest_golden_queries_per_tune = closest_golden_queries_per_tune.reshape(closest_golden_queries_per_tune.shape[0], closest_golden_queries_per_tune.shape[1])
+    
+    return top_k_golden_per_tune, closest_golden_queries_per_tune
 
 if __name__ == "__main__":
 
@@ -236,7 +274,14 @@ if __name__ == "__main__":
     #df_golden_generate = load_luna_to_carina(golden_file_name)
     #print(f"initial and read-from-file comparasion: {df_golden_generate['query'].equals(df_golden['query'])}")
 
-    calculate_topk_similarity(df_golden, df_tune)
+    top_k_golden_per_tune, closest_golden_queries_per_tune = calculate_topk_similarity(df_golden, df_tune)
+
+    # deep copy to append closest queries
+    df_tune_with_golen_queries = df_tune.copy(deep=True)
+    closest_golden_queries_per_tune_pd_series = pd.Series(map(lambda x: x[:], closest_golden_queries_per_tune))
+    df_tune_with_golen_queries['GoldenQuery'] = closest_golden_queries_per_tune_pd_series
+
+
 
 
 
