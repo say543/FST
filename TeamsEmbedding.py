@@ -201,7 +201,7 @@ def calculate_topk_similarity(df_golden, df_tune):
     #golden_sentenceEmbeddings = np.array([ ast.literal_eval(df_golden['SentenceEmbedding'][i]) for i in range(len(df_golden['SentenceEmbedding']))])
     #tune_SentenceEmbeddings = np.array([ ast.literal_eval(df_tune['SentenceEmbedding'][i]) for i in range(len(df_tune['SentenceEmbedding']))])
 
-    golden_sentenceEmbeddings = np.array([ ast.literal_eval(v) for i, v in df_golden['SentenceEmbedding'].items()   ])
+    golden_SentenceEmbeddings = np.array([ ast.literal_eval(v) for i, v in df_golden['SentenceEmbedding'].items()   ])
     tune_SentenceEmbeddings = np.array([ ast.literal_eval(v) for i, v in df_tune['SentenceEmbedding'].items() ])
 
     #golden_sentenceEmbeddings = [ast.literal_eval(df_golden['SentenceEmbedding'])]
@@ -241,13 +241,29 @@ def calculate_topk_similarity(df_golden, df_tune):
     top_k = 4
     top_k_golden_per_tune = (np.argpartition(sentenceEmbeddings_similiary, -top_k, axis=1)[:, -top_k:])
 
+    # get all similairty value based on top k indexes
+    top_k_golden_similarity_value_per_tune = np.array([ sentenceEmbeddings_similiary[i, top_k_golden_per_tune[i, :]]    for i in range(sentenceEmbeddings_similiary.shape[0])])
 
-    # get all golden queries
+
+    #top_k_golden_and_similarity_per_tune = np.dstack((top_k_golden_per_tune, top_k_golden_similarity_value_per_tune))
+    top_k_similarity_and_golden_per_tune = np.dstack((top_k_golden_similarity_value_per_tune, top_k_golden_per_tune))
+
+    # sort by similarity decreasing
+    top_k_similarity_and_golden_per_tune_sorted = np.array([ np.sort(top_k_similarity_and_golden_per_tune[i], axis=0)[::-1]    for i in range(top_k_similarity_and_golden_per_tune.shape[0])])
+    top_k_golden_sorted_per_tune = top_k_similarity_and_golden_per_tune_sorted[:,:,1].astype(int)
+
+    # get all golden queries by default order 
+    #golden_queries = df_golden['query'].values.reshape((df_golden['query']).shape[0],1)
+    #closest_golden_queries_per_tune = golden_queries[top_k_golden_per_tune]
+    #closest_golden_queries_per_tune = closest_golden_queries_per_tune.reshape(closest_golden_queries_per_tune.shape[0], closest_golden_queries_per_tune.shape[1])
+
+
+    # get all golden queries by similarity decreasing order 
     golden_queries = df_golden['query'].values.reshape((df_golden['query']).shape[0],1)
-    closest_golden_queries_per_tune = golden_queries[top_k_golden_per_tune]
+    closest_golden_queries_per_tune = golden_queries[top_k_golden_sorted_per_tune]
     closest_golden_queries_per_tune = closest_golden_queries_per_tune.reshape(closest_golden_queries_per_tune.shape[0], closest_golden_queries_per_tune.shape[1])
     
-    return top_k_golden_per_tune, closest_golden_queries_per_tune
+    return top_k_golden_sorted_per_tune, closest_golden_queries_per_tune
 
 if __name__ == "__main__":
 
@@ -274,10 +290,11 @@ if __name__ == "__main__":
     #df_golden_generate = load_luna_to_carina(golden_file_name)
     #print(f"initial and read-from-file comparasion: {df_golden_generate['query'].equals(df_golden['query'])}")
 
-    top_k_golden_per_tune, closest_golden_queries_per_tune = calculate_topk_similarity(df_golden, df_tune)
+    top_k_golden_sorted_per_tune, closest_golden_queries_per_tune = calculate_topk_similarity(df_golden, df_tune)
 
     # deep copy to append closest queries
     df_tune_with_golen_queries = df_tune.copy(deep=True)
+    df_tune_with_golen_queries = df_tune_with_golen_queries.drop('SentenceEmbedding', axis=1)
     closest_golden_queries_per_tune_pd_series = pd.Series(map(lambda x: x[:], closest_golden_queries_per_tune))
     df_tune_with_golen_queries['GoldenQuery'] = closest_golden_queries_per_tune_pd_series
 
