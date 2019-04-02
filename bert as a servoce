@@ -9,7 +9,7 @@ pip install
 
 成功了
 注意要在同個directory 下面
- E:\bert-as-a-service> bert-serving-start -model_dir multi_cased_L-12_H-768_A-12  -num_worker=1
+ E:\bert-as-a-service> bert-serving-start -model_dir multi_cased_L-12_H-768_A-12  -num_worker=1 -max_seq_len=100
 usage: E:\bert-as-a-service\bert-as-a-service-env\Scripts\bert-serving-start -model_dir multi_cased_L-12_H-768_A-12 -num_worker
 I:[36mGRAPHOPT[0m:load parameters from checkpoint...
 I:[36mGRAPHOPT[0m:optimize...
