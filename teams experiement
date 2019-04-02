@@ -124,6 +124,12 @@ E:\CoreScienceDataStaging\datasources\Teams>run.build_my_test.cmd
 
 
 
+
+python interactive load 
+要用全路徑  否則找不到
+df_golden = pd.read_csv("E:\\bert-as-a-service\\TeamsEmbedding\\TeamsEmbedding\\Teams-MustPass_Feb_Golden.tsv".replace('.tsv', '-carina.tsv'), sep='\t')
+
+
 ========================
 first attempt
 use yue data
