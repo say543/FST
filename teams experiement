@@ -129,6 +129,10 @@ python interactive load
 要用全路徑  否則找不到
 df_golden = pd.read_csv("E:\\bert-as-a-service\\TeamsEmbedding\\TeamsEmbedding\\Teams-MustPass_Feb_Golden.tsv".replace('.tsv', '-carina.tsv'), sep='\t')
 
+one note document
+FY9 Q4 OKR- Planning Draft
+最好跟這個align
+
 
 ========================
 first attempt
