@@ -251,6 +251,7 @@ def calculate_topk_similarity(df_golden, df_tune):
     # sort by similarity decreasing
     top_k_similarity_and_golden_per_tune_sorted = np.array([ np.sort(top_k_similarity_and_golden_per_tune[i], axis=0)[::-1]    for i in range(top_k_similarity_and_golden_per_tune.shape[0])])
     top_k_golden_sorted_per_tune = top_k_similarity_and_golden_per_tune_sorted[:,:,1].astype(int)
+    top_k_similarity_sorted_per_tune = top_k_similarity_and_golden_per_tune_sorted[:,:,0]
 
     # get all golden queries by default order 
     #golden_queries = df_golden['query'].values.reshape((df_golden['query']).shape[0],1)
@@ -263,7 +264,8 @@ def calculate_topk_similarity(df_golden, df_tune):
     closest_golden_queries_per_tune = golden_queries[top_k_golden_sorted_per_tune]
     closest_golden_queries_per_tune = closest_golden_queries_per_tune.reshape(closest_golden_queries_per_tune.shape[0], closest_golden_queries_per_tune.shape[1])
     
-    return top_k_golden_sorted_per_tune, closest_golden_queries_per_tune
+    return top_k_golden_sorted_per_tune, closest_golden_queries_per_tune, top_k_similarity_sorted_per_tune
+
 
 if __name__ == "__main__":
 
@@ -279,6 +281,11 @@ if __name__ == "__main__":
     #df_tune = load_carina(tune_file_name, generateSentenceEmbedding=True)
     #df_tune.to_csv('.\\' + tune_file_name.replace('.tsv', '-carina.tsv'), sep='\t', index=None)
 
+    # negative examples
+    # no need embedding
+    negative_examples_file_name = "selected_web_queries_negative_examples.tsv"
+    df_negative_examples =  pd.read_csv(negative_examples_file_name, sep='\t')
+
     # read from previous embedding
     print(f"load from file...")
     df_golden = pd.read_csv(golden_file_name.replace('.tsv', '-carina.tsv'), sep='\t') 
@@ -290,17 +297,69 @@ if __name__ == "__main__":
     #df_golden_generate = load_luna_to_carina(golden_file_name)
     #print(f"initial and read-from-file comparasion: {df_golden_generate['query'].equals(df_golden['query'])}")
 
-    top_k_golden_sorted_per_tune, closest_golden_queries_per_tune = calculate_topk_similarity(df_golden, df_tune)
+    top_k_golden_sorted_per_tune, closest_golden_queries_per_tune, top_k_similarity_sorted_per_tune = calculate_topk_similarity(df_golden, df_tune)
 
+
+    # v1
+    '''
+    # output top k all information
     # deep copy to append closest queries
     df_tune_with_golen_queries = df_tune.copy(deep=True)
+    # remove embedding for saving space
     df_tune_with_golen_queries = df_tune_with_golen_queries.drop('SentenceEmbedding', axis=1)
+    # output top k all information
     closest_golden_queries_per_tune_pd_series = pd.Series(map(lambda x: x[:], closest_golden_queries_per_tune))
+    top_k_golden_sorted_per_tune_pd_series = pd.Series(map(lambda x: x[:], top_k_golden_sorted_per_tune))
+    top_k_similarity_sorted_per_tune_pd_series = pd.Series(map(lambda x: x[:], top_k_similarity_sorted_per_tune))
+    
+
     df_tune_with_golen_queries['GoldenQuery'] = closest_golden_queries_per_tune_pd_series
+    df_tune_with_golen_queries['GoldenQueryIndex'] = top_k_golden_sorted_per_tune_pd_series
+    df_tune_with_golen_queries['GoldenQuerySimilarity'] = top_k_similarity_sorted_per_tune_pd_series
+    # persistent to file
+    df_tune_with_golen_queries.to_csv('E:\\bert-as-a-service\\TeamsEmbedding\\TeamsEmbedding\\top4.tsv', sep='\t', index=None)
+    '''
+
+    # v2
+    # output only the last one 
+    df_tune_with_last_golen_queries = df_tune.copy(deep=True)
+    df_tune_with_last_golen_queries = df_tune_with_last_golen_queries.drop('SentenceEmbedding', axis=1)
+    last_closest_golden_queries_per_tune_pd_series = pd.Series(map(lambda x: x[3], closest_golden_queries_per_tune))
+    last_golden_sorted_per_tune_pd_series = pd.Series(map(lambda x: x[3], top_k_golden_sorted_per_tune))
+    last_similarity_sorted_per_tune_pd_series = pd.Series(map(lambda x: x[3], top_k_similarity_sorted_per_tune))
+
+
+    df_tune_with_last_golen_queries['GoldenQuery'] = last_closest_golden_queries_per_tune_pd_series
+    df_tune_with_last_golen_queries['GoldenQueryIndex'] = last_golden_sorted_per_tune_pd_series
+    df_tune_with_last_golen_queries['GoldenQuerySimilarity'] = last_similarity_sorted_per_tune_pd_series
+
+    df_tune_with_last_golen_queries.to_csv('E:\\bert-as-a-service\\TeamsEmbedding\\TeamsEmbedding\\last_of_top4.tsv', sep='\t', index=None)
+
+
+    # debug 
+    # cutoff by threshold 0.94
+    # cutoff = 0.94
+    #df_tune_with_last_golen_queries_similarity_condition_bigger_than = df_tune_with_last_golen_queries['GoldenQuerySimilarity'] > 0.94
+    #df_tune_with_last_golen_queries_similarity_bigger_than = df_tune_with_last_golen_queries[df_tune_with_last_golen_queries_similarity_condition_bigger_than]
+
+    #df_tune_with_last_golen_queries_similarity_bigger_than_without_negative_example =  df_tune_with_last_golen_queries_similarity_bigger_than[df_tune_with_last_golen_queries_similarity_bigger_than['query'].isin(df_negative_examples['query'])]
 
 
 
+    # v3
+    # output only the first one 
+    df_tune_with_first_golen_queries = df_tune.copy(deep=True)
+    df_tune_with_first_golen_queries = df_tune_with_first_golen_queries.drop('SentenceEmbedding', axis=1)
+    first_closest_golden_queries_per_tune_pd_series = pd.Series(map(lambda x: x[0], closest_golden_queries_per_tune))
+    first_golden_sorted_per_tune_pd_series = pd.Series(map(lambda x: x[0], top_k_golden_sorted_per_tune))
+    first_similarity_sorted_per_tune_pd_series = pd.Series(map(lambda x: x[0], top_k_similarity_sorted_per_tune))
 
+
+    df_tune_with_first_golen_queries['GoldenQuery'] = first_closest_golden_queries_per_tune_pd_series
+    df_tune_with_first_golen_queries['GoldenQueryIndex'] = first_golden_sorted_per_tune_pd_series
+    df_tune_with_first_golen_queries['GoldenQuerySimilarity'] = first_similarity_sorted_per_tune_pd_series
+
+    df_tune_with_first_golen_queries.to_csv('E:\\bert-as-a-service\\TeamsEmbedding\\TeamsEmbedding\\first_of_top4.tsv', sep='\t', index=None)
 
     '''
     # slotFiles = glob.glob("*.tsv");
