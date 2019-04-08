@@ -76,6 +76,8 @@ Teams-Feb
 Teams-golden
 Teams-MustPass
 都合併了  然後生成了embedding
+總共569 個data
+這個可以當作新的testing data set 另外similairty 的長相
 
 
 Teams_Slot_Training (fake data)
