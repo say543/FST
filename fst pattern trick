@@ -1,8 +1,37 @@
+================================
+FST pattern matching file
+pattern-matching-with-FST.pdf
+can look up examples
+================================
+
+
+
+
+==================================================
 FW: Weekly Shiproom - Core Science Bellevue
-Hi Avani,
 
 This forwarded email (see attached) might help with your “set scene <wildcard> in <location>” problem.
 
 Mingzhu describes how to force “share file <wildcard> with <person>” to win over “share file <wildcard>”
 
--Tom
+====================================================
+
+Context: I was looking at some DSATs and thinking about how to fix them with FST:
+
+
+要討論的example
+Share file specs with roger, in which we tagged “specs with roger” as file name.
+
+If we have two rules: 
+“share file <wildcard:filename>” and 
+“share file < wildcard:filename> with <person>” 
+how can we make sure that the second one is preferred? ?
+
+Or if we have one rule with optional tokens: “share file <wildcard:filename> {with <person>}”, 
+how can we prevent the greedy wildcard matching here?
+
+
+
+conclusion
+To the best of my knowledge, FST wildcard match is greedy matching (finding the longest one). We can double check FST‘s related document to sick some clue of conservative matching. 
+Base on my knowledge, here is my input about the rules you mentioned.   Rule 1 will cover all the case about “share file *’, which is conflict with Rule 2, and as Rule1 is the longest match,  Rule 2  don’t have the chance to win.  
