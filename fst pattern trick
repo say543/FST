@@ -3,12 +3,21 @@ FST pattern matching file
 pattern-matching-with-FST.pdf
 有自己轉的pattern-matching-with-FST.docx
 
-FST.morch.txt
+FST.morch.pdf
+有自己轉的FST.morch.docx
 can look up examples
+
+
+
 ================================
+65/690
 The boundary symbol .#. indicates the beginning of a
 string in the left context and the end of a string in the right context. It has no special
 meaning anywhere else.
+
+13/39
+[all]
+Table 1: predefined list 
 
 
 
