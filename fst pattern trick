@@ -1,9 +1,13 @@
 ================================
 FST pattern matching file
 pattern-matching-with-FST.pdf
+
+FST.morch.txt
 can look up examples
 ================================
-
+The boundary symbol .#. indicates the beginning of a
+string in the left context and the end of a string in the right context. It has no special
+meaning anywhere else.
 
 
 
