@@ -35,7 +35,9 @@ E:\searchgold>sd client
 
 View:
 
-p.s 第一個 沒有  其他都要有
+
+- 是comment  但是不能全部一起做  否則太慢
+
 	//depot/... //DESKTOP-3J7614O-searchgold-1/...
 	-//depot/AutopilotService/... //DESKTOP-3J7614O-searchgold-1/AutopilotService/...
 	-//depot/Dapple/... //DESKTOP-3J7614O-searchgold-1/depot/Dapple/...
