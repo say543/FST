@@ -34,6 +34,8 @@ will open 一個txt
 E:\searchgold>sd client
 
 View:
+
+p.s 第一個 沒有  其他都要有
 	//depot/... //DESKTOP-3J7614O-searchgold-1/...
 	-//depot/AutopilotService/... //DESKTOP-3J7614O-searchgold-1/AutopilotService/...
 	-//depot/Dapple/... //DESKTOP-3J7614O-searchgold-1/depot/Dapple/...
@@ -46,3 +48,26 @@ View:
 	-//depot/deploy/builds/data/latest/test/machinelearning/mlg/... //DESKTOP-3J7614O-searchgold-1/deploy/builds/data/latest/test/machinelearning/mlg/...
 	-//depot/deploy/builds/data/answers/XapQuServiceAnswer/... //DESKTOP-3J7614O-searchgold-1/deploy/builds/data/answers/XapQuServiceAnswer/...
 	-//depot/deploy/builds/data/answers/QASECPrebuilt/... //DESKTOP-3J7614O-searchgold-1/deploy/builds/data/answers/QASECPrebuilt/...
+
+
+
+prrequisties
+這步沒有問題
+Download pre-trained GloVe word embeddings 
+
+    Open Windows Bash shell 
+
+    CD  private/PersonalAssistant/Offline/DeepTagger/BiLSTM-CRF/ 
+
+    wget -P ./data/ http://nlp.stanford.edu/data/glove.6B.zip 
+
+    unzip ./data/glove.6B.zip -d ./data/glove.6B/ 
+
+==> Make sure the "data\glove.6B" directory exists under private\PersonalAssistant\Offline\DeepTagger\BiLSTM-CRF 
+
+
+release build 
+
+#三個enlistment 都要存在
+ foreach ($dir in ("QAS01HttpQAS", "XapQuServiceAnswer", "QASECPrebuilt"))
+
