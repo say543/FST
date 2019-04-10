@@ -4,7 +4,11 @@ https://msasg.visualstudio.com/DefaultCollection/Cortana/_git/CoreScience/pullre
 https://microsoft.sharepoint.com/teams/LUforNextgenAgents/_layouts/15/WopiFrame.aspx?sourcedoc={68deb809-671e-469a-be79-ba53c05298ce}&action=edit&wd=target%28Task%20Understanding%2FLearning%20Manual.one%7C438f2f70-0bdc-4aaa-885e-d1ab739ec857%2FDeep%20Tagger%20%28Bi-LSTM%20%2B%20CRF%5C%29%7C7072b692-7c86-4b55-b078-589bcb670655%2F%29
 
 <one note document>
+
+==================================
 enlist to search gold 
+================================
+
 
 要先enlist
 E:\searchGold 
@@ -67,9 +71,12 @@ Sd sync -f deploy\builds\data\answers\XapQuServiceAnswer\...
 Sd sync -f deploy\builds\data\latest\test\machinelearning\mlg\...
 Sd sync -f deploy\builds\data\latest\test\machinelearning\qcs\...
 
-
+===================================
 prrequisties
 這步沒有問題
+=============================
+
+
 Download pre-trained GloVe word embeddings 
 
     Open Windows Bash shell 
@@ -82,12 +89,82 @@ Download pre-trained GloVe word embeddings
 
 ==> Make sure the "data\glove.6B" directory exists under private\PersonalAssistant\Offline\DeepTagger\BiLSTM-CRF 
 
+執行這個
+PS E:\mercury\private\PersonalAssistant\Offline\DeepTagger\Scripts> .\Prepare.ps1 -Domain movietv -Searchgold E:\searchgold -MlgToolsDir E:\mercury\public\ext\Carina\MLGTools
 
 release build 
-
+Make sure the "release" directory exists under private\PersonalAssistant\Offline\DeepTagger\Scripts 
 
 
 
 #三個enlistment 都要存在
  foreach ($dir in ("QAS01HttpQAS", "XapQuServiceAnswer", "QASECPrebuilt"))
+
+
+[Build Train/Dev/Test datasets ]
+
+private\PersonalAssistant\Offline\DeepTagger\NerProcesor\
+這邊build 生成 .ext
+
+NerProcessor 這個code 可能可以留著
+在這邊建experiments 存data set 
+private\PersonalAssistant\Offline\DeepTagger\NerProcesor\experiments
+
+movietv-10k.annotated.train-0.tsv 
+	E:\mercury\private\PersonalAssistant\Offline\DeepTagger\Scripts\movietv\datasets\movietv-10k.annotated.train-0.tsv
+
+	Subset of Movie-10K.tsv annotated set used for training 
+	
+	
+
+movietv-10k.annotated.test-0.tsv 
+	E:\mercury\private\PersonalAssistant\Offline\DeepTagger\Scripts\movietv\datasets\movietv-10k.annotated.test-0.tsv
+
+	Subset of Movie-10K.tsv annotated set used for model validation/testing 
+
+negatives-500.annotated.tsv 
+	
+	E:\mercury\private\PersonalAssistant\Offline\DeepTagger\Scripts\movietv\datasets\negatives-500.annotated.tsv
+
+	Top 500 negative queries (e.g. useful to avoid precision errors) 
+
+synthetic-train.annotated.tsv 
+        E:\mercury\private\PersonalAssistant\Offline\DeepTagger\Scripts\movietv\datasets\synthetic-train.annotated.tsv
+	
+	2K synthetic queries generated using Learning's Synthetic Query Generator tool 
+        這個tool 因該是可以改善 用yue 的pipeline
+
+movietv-measurement-blind.annotated.tsv 
+	
+        E:\mercury\private\PersonalAssistant\Offline\DeepTagger\Scripts\movietv\datasets\movietv-measurement-blind.annotated.tsv
+
+	Blind set for measurement & metrics reporting.  
+
+
+這個可以開始project 然後看view
+PS E:\mercury\private\PersonalAssistant\Offline\DeepTagger\NerProcesor> .\NerProcessor.csproj
+
+private\PersonalAssistant\Offline\DeepTagger\NerProcesor\bin\Debug\NerProcessor.exe Ner 
+--op Preprocess 
+--inputDir E:\mercury\private\PersonalAssistant\Offline\DeepTagger\Scripts\movietv\datasets 
+--inputFile movietv-10k.annotated.train-0.tsv 
+--outputDir .\experiments\deep-tagging\movietv 
+--domain movietv 
+--annotationFormat lu 
+--useQcsFeaturizer 
+// 舊版本  現在可能要用gauruish share 的
+// 現在在下面
+// --qcsToolsPath E:\CxCache\QcsQueryLabelWithTFSupport.1.0.1\ 
+--qcsToolsPath .\QcsQueryLabelTool-vL 
+// 這個是讀前面的release directory 的位置
+--qcsConfigDir E:\mercury\private\PersonalAssistant\Offline\DeepTagger\Scripts\release
+--tokenizer WhitespaceTokenizer 
+
+ 
+
+
+
+
+
+
 
