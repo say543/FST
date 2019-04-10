@@ -1,0 +1,1 @@
+E:\mercury\public\ext\DropTool\lib\net45>drop.exe get -u "https://msasg.artifacts.visualstudio.com/DefaultCollection/_apis/drop/drops/cortana_coresciencedatastaging/merge.29362f14035e29e7eafafb45fd14d255badb9740/5129631" -d E:\drop_folder --cachesizeoverride 0 --writable:true
