@@ -72,6 +72,11 @@ Sd sync -f deploy\builds\data\latest\test\machinelearning\mlg\...
 Sd sync -f deploy\builds\data\latest\test\machinelearning\qcs\...
 
 ===================================
+
+Deep Tagger (Bi-LSTM)
+MovieTv DeepTagger
+two one node documents
+
 prrequisties
 這步沒有問題
 =============================
@@ -139,6 +144,13 @@ movietv-measurement-blind.annotated.tsv
         E:\mercury\private\PersonalAssistant\Offline\DeepTagger\Scripts\movietv\datasets\movietv-measurement-blind.annotated.tsv
 
 	Blind set for measurement & metrics reporting.  
+	
+	
+[Lexicons ]
+private\PersonalAssistant\Offline\DeepTagger\Scripts\movietv\lexicons  
+luna.lexicon.movieTvActors.txt 
+luna.lexicon.movieTvTitles.txt 
+原本就在report 裡面  不需要做任何的動作
 
 
 這個可以開始project 然後看view
@@ -148,6 +160,7 @@ private\PersonalAssistant\Offline\DeepTagger\NerProcesor\bin\Debug\NerProcessor.
 --op Preprocess 
 --inputDir E:\mercury\private\PersonalAssistant\Offline\DeepTagger\Scripts\movietv\datasets 
 --inputFile movietv-10k.annotated.train-0.tsv 
+// output 的位置
 --outputDir .\experiments\deep-tagging\movietv 
 --domain movietv 
 --annotationFormat lu 
@@ -155,16 +168,45 @@ private\PersonalAssistant\Offline\DeepTagger\NerProcesor\bin\Debug\NerProcessor.
 // 舊版本  現在可能要用gauruish share 的
 // 現在在下面
 // --qcsToolsPath E:\CxCache\QcsQueryLabelWithTFSupport.1.0.1\ 
---qcsToolsPath .\QcsQueryLabelTool-vL 
+--qcsToolsPath .\QcsQueryLabelTool-vL\
 // 這個是讀前面的release directory 的位置
 --qcsConfigDir E:\mercury\private\PersonalAssistant\Offline\DeepTagger\Scripts\release
 --tokenizer WhitespaceTokenizer 
 
  
 
+生成出來的files name 會叫做
+movietv-10k.annotated.test-0.features.seq.tsv
+for one column
+token / slot(O) / one-hot emcoding 
+
+[question]
+如果是這樣 其實我們根本不需要Ner processor 自己生成這個column 就行了
+
+wish	B-media_title	0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
+list.	O	0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 
 
 
 
+
+Train a DNN model 
+data_base_dir 
+	
+
+Path to directory with all DNN model datasets (e.g *.features.seq.tsv) 
+
+
+result_base_dir 
+	
+
+Path to directory to output trained model 
+
+我改成這樣
+	data_base_dir = 'E:\\mercury\\private\\PersonalAssistant\\Offline\\DeepTagger\\NerProcesor\\experiments\\deep-tagging\\movietv'
+	result_base_dir = 'E:\\mercury\\private\\PersonalAssistant\\Offline\\DeepTagger\\trained_model'
+
+python build_data.py --domain movietv 
+This generates the words_<DOMAIN>.txt (vocab file) based on train/dev/test datasets 
 
 
