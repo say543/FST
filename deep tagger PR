@@ -206,7 +206,62 @@ Path to directory to output trained model
 	data_base_dir = 'E:\\mercury\\private\\PersonalAssistant\\Offline\\DeepTagger\\NerProcesor\\experiments\\deep-tagging\\movietv'
 	result_base_dir = 'E:\\mercury\\private\\PersonalAssistant\\Offline\\DeepTagger\\trained_model'
 
+
+需要自己 create python enviroment 
+自己creaate 一個virtual emviroment
+
+py -m venv BiLSTM-CRF-env
+then active
+.\BiLSTM-CRF-env\Scripts\activate
+
+要install numpy
+要install tensorflow
+
 python build_data.py --domain movietv 
 This generates the words_<DOMAIN>.txt (vocab file) based on train/dev/test datasets 
 
 
+在這個下面
+跟input.seq.tsv 的file 在同一個ddirectory 
+./private/PersonalAssistant/Offline/DeepTagger/NerProcesor/experiments/deep-tagging/movietv/words_movietv.txt
+
+ Generates 4 files:  
+ (1) words_movietv.txt, 
+     感覺是所有的vocabulary list 
+ (2) chars_movietv.txt 
+     感覺是所有的character list 
+ (3) tags_movietv.txt and 
+      感覺是所有的tag (包含沒有tag 的狀況)
+      [question]
+      沒有BOS , EOS
+      不知道train 的時候會不會有
+      
+ (4) glove.6B.100d.movietv_eval.npz 
+     [questions]
+      這個不知道是什麼  可能之後要問一下
+ 
+
+[question]
+會讀data sets 
+跟讀glove 的embedding
+   by filename_glove
+這個flow 因該也變得更好
+
+
+
+(BiLSTM-CRF-env) PS E:\mercury\private\PersonalAssistant\Offline\DeepTagger\BiLSTM-CRF> py build_data.py --domain movietv
+Building word and tag vocab...
+- done. 7553 tokens
+Building glove vocab...
+- done. 400000 tokens
+Writing vocab...
+- done. 5983 tokens
+Writing vocab...
+- done. 5 tokens
+Building char vocab...
+- done. 62 tokens
+Writing vocab...
+- done. 62 tokens
+
+這個是主要在train 的東西
+python main.py --domain movietv --train 
