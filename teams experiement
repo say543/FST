@@ -128,8 +128,33 @@ E:\CoreScienceDataStaging\datasources\Teams>run.build_my_test.cmd
 
 
 python interactive load 
-要用全路徑  否則找不到
+要用全路徑  or \\  否則找不到
 df_golden = pd.read_csv("E:\\bert-as-a-service\\TeamsEmbedding\\TeamsEmbedding\\Teams-MustPass_Feb_Golden.tsv".replace('.tsv', '-carina.tsv'), sep='\t')
+or 
+否則要在這個位置 同個資料夾下才讀的到
+E:\bert-as-a-service\TeamsEmbedding\TeamsEmbedding>
+
+import from *.py
+然後執行function
+但是每次有改file 就要在import 一次
+>>> from TeamsEmbedding import calculate_topk_similarity
+>>> top_k_golden_sorted_per_tune, closest_golden_queries_per_tune, top_k_similarity_sorted_per_tune = calculate_topk_similarity(df_golden, df_tune)
+
+p.s 可以print python 的import 的source 
+import inspect
+lines = inspect.getsource(foo)
+print(lines)
+
+p.s 可以delete import 
+>>> del calculate_topk_similarity
+
+
+
+
+
+
+
+
 
 one note document
 FY9 Q4 OKR- Planning Draft
