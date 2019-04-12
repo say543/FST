@@ -67,7 +67,7 @@ View:
 注意正負斜線
 
 [question]
-? 要問一下這些model 的output 是從哪邊來的
+? 要問一下這些model 的output 是從哪邊來的  以後能不能用
 Sd sync -f deploy\builds\data\answers\QAS01HttpQAS\...
 
 Sd sync -f deploy\builds\data\answers\QASECPrebuilt\...
@@ -115,7 +115,7 @@ Make sure the "release" directory exists under private\PersonalAssistant\Offline
  foreach ($dir in ("QAS01HttpQAS", "XapQuServiceAnswer", "QASECPrebuilt"))
 
 
-[Build Train/Dev/Test datasets ]
+#Build Train/Dev/Test datasets#
 
 private\PersonalAssistant\Offline\DeepTagger\NerProcesor\
 這邊build 生成 .ext
@@ -155,7 +155,7 @@ movietv-measurement-blind.annotated.tsv
 	Blind set for measurement & metrics reporting.  
 	
 	
-[Lexicons ]
+#Lexicons#
 private\PersonalAssistant\Offline\DeepTagger\Scripts\movietv\lexicons  
 luna.lexicon.movieTvActors.txt 
 luna.lexicon.movieTvTitles.txt 
