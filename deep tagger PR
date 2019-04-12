@@ -207,6 +207,14 @@ Path to directory to output trained model
 	result_base_dir = 'E:\\mercury\\private\\PersonalAssistant\\Offline\\DeepTagger\\trained_model'
 
 
+可以用這個visual studio 開啟這個project
+E:\mercury\private\PersonalAssistant\Offline\DeepTagger\BiLSTM-CRF\BiLSTM-CRF.pyproj
+
+有build / train / Ner 等等的code base 這些都可以一次access 看code    
+
+
+
+
 需要自己 create python enviroment 
 自己creaate 一個virtual emviroment
 
@@ -245,7 +253,7 @@ This generates the words_<DOMAIN>.txt (vocab file) based on train/dev/test datas
 會讀data sets 
 跟讀glove 的embedding
    by filename_glove
-這個flow 因該也變得更好
+這個flow 因該也可以變得更好
 
 
 
@@ -263,5 +271,58 @@ Building char vocab...
 Writing vocab...
 - done. 62 tokens
 
-這個是主要在train 的東西
-python main.py --domain movietv --train 
+[這個是主要在train 的東西]
+py main.py --domain movietv --train 
+
+class NERModel()
+這個會build tensor flow 的 model
+build(self) 這個會見一堆的model
+
+E:\mercury\private\PersonalAssistant\Offline\DeepTagger\trained_model\bilstm-crf-noChar-h100-w100   
+裡面有所有tensor flow weight 的相關files
+tensorflow 的檔案看不懂
+
+from result_base_dir = 'E:\\mercury\\private\\PersonalAssistant\\Offline\\DeepTagger\\trained_model'
+
+[這個主要是在evaluation]
+py main.py --domain movietv --evaluate
+
+會生成file
+eval_output_movietv-10k.annotated.test-0.features.seq.media_person.tsv
+
+直接輸出這樣
+Cortana,	O	O
+play	O	O
+The	O	O
+Way	O	O
+You	O	O
+Make	O	O
+Me	O	O
+Feel	O	O
+by	O	O
+Michael	B-media_person	B-media_person
+Jackson	I-media_person	I-media_person
+.	O	O
+
+Cortana	O	O
+play	O	O
+the	B-media_title	B-media_title
+dark	I-media_title	I-media_title
+knight	I-media_title	I-media_title
+rises	I-media_title	I-media_title
+from	O	O
+netflix	O	O
+
+
+[question]
+不知道為什麼tagger 要走兩個 columb
+我猜一個是expected annotation  
+    ? 第一個看code 還不太確定
+第二一個是slot tagger 的預測結果
+
+
+
+
+eval_output_movietv-10k.annotated.test-0.features.seq.media_title.tsv
+eval_output_movietv-10k.annotated.test-0.features.seq.tsv
+
