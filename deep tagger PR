@@ -37,6 +37,11 @@ will open 一個txt
 
 E:\searchgold>sd client
 
+
+
+
+
+
 View:
 
 
@@ -100,7 +105,9 @@ PS E:\mercury\private\PersonalAssistant\Offline\DeepTagger\Scripts> .\Prepare.ps
 release build 
 Make sure the "release" directory exists under private\PersonalAssistant\Offline\DeepTagger\Scripts 
 
-
+[question]
+release folder 看起來像是 要生成qpc 相關的file
+這個怎麼work 還真的不知道
 
 #三個enlistment 都要存在
  foreach ($dir in ("QAS01HttpQAS", "XapQuServiceAnswer", "QASECPrebuilt"))
@@ -329,5 +336,18 @@ eval_output_movietv-10k.annotated.test-0.features.seq.tsv
 [question]
 不知道為什麼要三個files 
 
+====================
+Export to QAS 
+==================
+py export_model.py 
+// tensorflow 讀graph
+--meta_file  E:\mercury\private\PersonalAssistant\Offline\DeepTagger\trained_model\bilstm-crf-noChar-h100-w100\model.weights\.meta  
+--model_file E:\mercury\private\PersonalAssistant\Offline\DeepTagger\trained_model\bilstm-crf-noChar-h100-w100\model.weights\  
+
+// 用 result_base_dir 來取代
+--export_path E:\mercury\private\PersonalAssistant\Offline\DeepTagger\DeepModelQas
+
+
+[question 為什麼要讀近來  在builder 到一個output ]
 
 
