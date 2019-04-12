@@ -6,6 +6,7 @@ https://microsoft.sharepoint.com/teams/LUforNextgenAgents/_layouts/15/WopiFrame.
 <one note document>
 
 ==================================
+one note 
 enlist to search gold 
 ================================
 
@@ -80,12 +81,13 @@ Sd sync -f deploy\builds\data\latest\test\machinelearning\qcs\...
 
 Deep Tagger (Bi-LSTM)
 MovieTv DeepTagger
-two one node documents
+two one note documents
+
+
+=============================
 
 prrequisties
 這步沒有問題
-=============================
-
 
 Download pre-trained GloVe word embeddings 
 
@@ -106,7 +108,7 @@ release build
 Make sure the "release" directory exists under private\PersonalAssistant\Offline\DeepTagger\Scripts 
 
 [question]
-release folder 看起來像是 要生成qpc 相關的file
+? release folder 看起來像是 要生成qpc 相關的file
 這個怎麼work 還真的不知道
 
 #三個enlistment 都要存在
@@ -278,7 +280,8 @@ Building char vocab...
 Writing vocab...
 - done. 62 tokens
 
-[這個是主要在train 的東西]
+[question]
+這個是主要在train model 可以研究model
 py main.py --domain movietv --train 
 
 class NERModel()
@@ -291,7 +294,8 @@ tensorflow 的檔案看不懂
 
 from result_base_dir = 'E:\\mercury\\private\\PersonalAssistant\\Offline\\DeepTagger\\trained_model'
 
-[這個主要是在evaluation]
+
+#evaluate  model 的結果#
 py main.py --domain movietv --evaluate
 
 會生成file
@@ -336,9 +340,8 @@ eval_output_movietv-10k.annotated.test-0.features.seq.tsv
 [question]
 不知道為什麼要三個files 
 
-====================
-Export to QAS 
-==================
+#這邊主要是要Export to QAS#
+
 py export_model.py 
 // tensorflow 讀graph
 --meta_file  E:\mercury\private\PersonalAssistant\Offline\DeepTagger\trained_model\bilstm-crf-noChar-h100-w100\model.weights\.meta  
