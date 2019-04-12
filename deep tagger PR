@@ -86,8 +86,10 @@ two one note documents
 
 =============================
 
+#################
 prrequisties
 這步沒有問題
+#################
 
 Download pre-trained GloVe word embeddings 
 
@@ -111,11 +113,15 @@ Make sure the "release" directory exists under private\PersonalAssistant\Offline
 ? release folder 看起來像是 要生成qpc 相關的file
 這個怎麼work 還真的不知道
 
+#############################
 #三個enlistment 都要存在
+#############################
  foreach ($dir in ("QAS01HttpQAS", "XapQuServiceAnswer", "QASECPrebuilt"))
 
 
+###############################
 #Build Train/Dev/Test datasets#
+###############################
 
 private\PersonalAssistant\Offline\DeepTagger\NerProcesor\
 這邊build 生成 .ext
@@ -153,7 +159,6 @@ movietv-measurement-blind.annotated.tsv
         E:\mercury\private\PersonalAssistant\Offline\DeepTagger\Scripts\movietv\datasets\movietv-measurement-blind.annotated.tsv
 
 	Blind set for measurement & metrics reporting.  
-	
 	
 #Lexicons#
 private\PersonalAssistant\Offline\DeepTagger\Scripts\movietv\lexicons  
@@ -198,8 +203,9 @@ list.	O	0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 
 
 
-
-Train a DNN model 
+##################################
+#Train a DNN model 
+##################################
 data_base_dir 
 	
 
@@ -294,8 +300,9 @@ tensorflow 的檔案看不懂
 
 from result_base_dir = 'E:\\mercury\\private\\PersonalAssistant\\Offline\\DeepTagger\\trained_model'
 
-
+####################################3
 #evaluate  model 的結果#
+#####################################
 py main.py --domain movietv --evaluate
 
 會生成file
@@ -340,7 +347,9 @@ eval_output_movietv-10k.annotated.test-0.features.seq.tsv
 [question]
 不知道為什麼要三個files 
 
+#############################################
 #這邊主要是要Export to QAS#
+#############################################
 
 py export_model.py 
 // tensorflow 讀graph
@@ -351,6 +360,8 @@ py export_model.py
 --export_path E:\mercury\private\PersonalAssistant\Offline\DeepTagger\DeepModelQas
 
 
-[question 為什麼要讀近來  在builder 到一個output ]
+[question]
+? 為什麼先存到file 然後再讀到build 的一個case  
+這個不太懂
 
 
