@@ -1,2 +1,16 @@
 04162019
 teams scrum 的test 
+
+有所有的infiles
+E:\CoreScienceDataStaging_old\datasources\Teams\resources\infiles
+
+
+目前的pipeline.txt
+NLPFSTApplier --in=BodySurfaceStream --out=MatchedName,MatchedType,MatchedStartChar,MatchedLength 
+--fst=luna_190118_teams.slots.fst_lang_model.tagger.bin --mode=matcher
+
+第二個file 不太重要
+
+
+來自於這個infile
+slot.fst_lang_model.tagger
