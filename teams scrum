@@ -14,3 +14,18 @@ NLPFSTApplier --in=BodySurfaceStream --out=MatchedName,MatchedType,MatchedStartC
 
 來自於這個infile
 slot.fst_lang_model.tagger
+
+
+
+
+qcs query level test
+--pdebug qd_teams_slots_fst_lang_model_featurizer
+
+teams 要這樣trigger 才行
+\t 要換成tab
+
+share the lt review. pptx file\tFEATURE.CLUTEAMS\t 0 \t 1 \t 1 \t 1 \t -1 \t -1
+
+
+
+
