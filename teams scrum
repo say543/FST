@@ -1,6 +1,57 @@
 04162019
 teams scrum 的test 
 
+這個是因為dimitry reorganize model structure 的change
+
+//met 1: old method wrong>  if using coretxt to build
+[Yesterday 1:34 PM] Avani Pai
+    D:\CoreScience\public\ext\QcsQueryLabel\queryclassificationprocessing\QCSQueryLabelWithLES.exe 
+    --externalFeaturesColumn 2 --interactive --verbose --encoding utf-8 
+    --legacyAllowUnusedParameters -c E:\mercury\target\distrib\debug\AnyCPU\models 
+    --variant HttpQASDEVBOX_ML_OFFLINE_QAS_EVAL_INT.QASEXO01DS -d communication_ml --clientId ""
+​[Yesterday 1:35 PM] Avani Pai
+    run msbuild here: D:\CoreScienceDataStaging\src\CopyModels
+    
+
+  每次msbuild 前要去這邊  把 AnyCpu 下面的models 給清掉
+  E:\mercury\target\distrib\debug\AnyCPU\models
+  
+  common config 要變成這個path
+  E:\mercury\target\distrib\Debug\AnyCPU\models
+  否則找不到
+ 
+
+
+ 
+//met2 corescience stage 不要用coretxt tool, cmd line 舊型
+// 這個先不管
+ 
+
+
+
+
+要看evalDiff
+  if local against cloud test  <還不能work>
+  met1:
+  $ fetcheval
+  in ocretxt
+  然後去online project run eval
+  這樣diff 才是正確
+  met2:
+  vijay method
+  run cloud test loclly 
+  
+  
+  met 3
+  遠端run cloudtest
+  
+  
+  met 4
+  marat flow 但是目前這個遠端沒有evaluation diff
+
+
+
+
 有所有的infiles
 E:\CoreScienceDataStaging_old\datasources\Teams\resources\infiles
 
