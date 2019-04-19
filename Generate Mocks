@@ -6,3 +6,11 @@
 
 3. 要先把同樣的.generate 刪掉才可以升成新的
 否則會有eception  process not found
+
+
+
+window 會輸出長這樣  
+4/19/2019 12:12:01 PM	Starting mock generation...
+4/19/2019 12:12:01 PM	Loading annotation set...
+4/19/2019 12:12:01 PM	Generating mocks...
+4/19/2019 12:24:43 PM	Mock generation finished successfully
