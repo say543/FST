@@ -1,0 +1,31 @@
+E:\mercury\private\PersonalAssistant\Evaluation\EvalDiff\objd\amd64>EvalDiff.exe -l  "E:\mercury\TestResults\Evaluation\chiecha_LastSuccessfulRun\Full\TeamsGoldenTest.2019_04_18_17_01_14\AllDetails.2019_04_18_17_01_14.tsv" -r "E:\mercury\TestResults\Evaluation\Full\TeamsGoldenTest.2019_04_19_10_02_10\AllDetails.2019_04_19_10_02_10.tsv"
+
+
+注意diff location
+left : old
+right : cirrect
+
+
+會pop up windows 在這邊
+C:\Users\chiecha.REDMOND\AppData\Local\Temp
+
+
+
+EvalDiff_Change_AllDetails
+
+EvalDiff_Full_AllDetails
+這兩個file 第一個就可以看regression
+
+
+
+p.s 這個error information 不要管
+Unhandled Exception: System.ComponentModel.Win32Exception: Application not found
+   at System.Diagnostics.Process.StartWithShellExecuteEx(ProcessStartInfo startInfo)
+   at System.Diagnostics.Process.Start(ProcessStartInfo startInfo)
+   at Microsoft.Luna.Evaluation.EvalDiff.EvalComparer.Run() in E:\mercury\private\PersonalAssistant\Evaluation\EvalDiff\EvalComparer.cs:line 251
+   at Microsoft.Luna.Evaluation.EvalDiff.Program.Main(String[] args) in E:\mercury\private\PersonalAssistant\Evaluation\EvalDiff\Program.cs:line 84
+
+我猜是excel win 32 不能用
+
+
+
