@@ -1,0 +1,8 @@
+
+
+1. online -> cudevsite -> evalution -> generate Mokcs
+2. select dataset
+要選 corescience , not staging   否則process 找不到
+
+3. 要先把同樣的.generate 刪掉才可以升成新的
+否則會有eception  process not found
