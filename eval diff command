@@ -1,3 +1,11 @@
+
+
+在corescience repor 打 fetcheval  的comment 會生成
+E:\mercury\TestResults\Evaluation\chiecha_LastSuccessfulRun\Full
+這裡面就有最初evaluation 的result
+
+
+
 E:\mercury\private\PersonalAssistant\Evaluation\EvalDiff\objd\amd64>EvalDiff.exe -l  "E:\mercury\TestResults\Evaluation\chiecha_LastSuccessfulRun\Full\TeamsGoldenTest.2019_04_18_17_01_14\AllDetails.2019_04_18_17_01_14.tsv" -r "E:\mercury\TestResults\Evaluation\Full\TeamsGoldenTest.2019_04_19_10_02_10\AllDetails.2019_04_19_10_02_10.tsv"
 
 
