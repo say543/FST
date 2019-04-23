@@ -10,9 +10,33 @@ https://www.google.com/search?newwindow=1&client=firefox-b-1-d&ei=HBu-XNqfCZT7-g
 
 
 dependency parsing
+http://nlpprogress.com/english/dependency_parsing.html
+
+
 https://shirishkadam.com/2016/12/23/dependency-parsing-in-nlp/
+https://www.jianshu.com/p/067e403d7539
 
 
 http://www.shuang0420.com/2017/02/28/NLP%20%e7%ac%94%e8%ae%b0%20-%20Syntax%20and%20Parsing/
 
 http://www.shuang0420.com/2017/02/28/NLP%20%e7%ac%94%e8%ae%b0%20-%20Syntax%20and%20Parsing
+
+
+
+
+https://blog.csdn.net/u013510838/article/details/81976427
+句法分析算法比较复杂，我们就不展开了。可以参考文章链接。介绍下几个句法分析工具。
+
+    哈工大LTP，https://www.ltp-cloud.com/intro/。
+    斯坦福句法分析工具Stanford Parser，https://nlp.stanford.edu/software/lex-parser.shtml
+    当前句法分析难度还很大，准确度不高。哈工大的LTP也只能做到80%左右的准确率。
+        https://blog.csdn.net/pipisorry/article/details/42976457
+        是java 的package
+        https://stackoverflow.com/questions/7443330/how-do-i-do-dependency-parsing-in-nltk
+        dependency parsing 
+        
+        
+ https://kknews.cc/other/9lxarb8.html
+ spaCy
+
+
