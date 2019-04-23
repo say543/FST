@@ -49,3 +49,35 @@ how can we prevent the greedy wildcard matching here?
 conclusion
 To the best of my knowledge, FST wildcard match is greedy matching (finding the longest one). We can double check FST‘s related document to sick some clue of conservative matching. 
 Base on my knowledge, here is my input about the rules you mentioned.   Rule 1 will cover all the case about “share file *’, which is conflict with Rule 2, and as Rule1 is the longest match,  Rule 2  don’t have the chance to win.  
+
+
+
+========================================
+fst 跟QPCfile 不一樣的原因
+========================================
+BOS share the <file_title>lt review. pptx</file_title> file
+BOS go to the <slide_name>marketing</slide_name> slide
+BOS go to a <slide_name>marketing</slide_name> slide
+BOS go to the <slide_name>cookie</slide_name> slide
+BOS go to a <slide_name>cookie</slide_name> slide
+BOS Go to the very <slide_number>last</slide_number> slide
+BOS go to very <slide_number>last</slide_number> slide
+BOS go to very last Slide
+BOS Go to very last Slide
+BOS Go to the marketing slide
+BOS go to the marketing Slide
+BOS Go to Main Functionality Slide
+BOS Go to Main Functionality slide
+BOS go to <slide_name>Main Functionality</slide_name> slide
+
+可能的
+in fst 因該是大小寫有差
+in QPC 因該是大小寫沒有差
+
+可能要qpc 為準....  如果覺得fst 沒有make sense
+
+
+
+
+
+
