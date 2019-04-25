@@ -1,0 +1,18 @@
+
+
+
+
+
+
+
+
+
+看EvalDiff.2019_03_19_16_26_48不要看什的 evalution change , full changeDetail 什麼
+
+
+diff command
+EvalDiff.exe -l  "E:\mercury\TestResults\Evaluation\chiecha_LastSuccessfulRun\Full\TeamsGoldenTest.2019_04_18_17_01_14\AllDetails.2019_04_18_17_01_14.tsv" -r "E:\mercury\TestResults\Evaluation\Full\TeamsGoldenTest.2019_04_19_10_02_10\AllDetails.2019_04_19_10_02_10.tsv"
+
+
+evalution local run set command
+eval run -d E:\CoreScienceDataStaging\target\distrib\Debug\AnyCPU\models
