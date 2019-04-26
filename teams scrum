@@ -77,6 +77,23 @@ teams 要這樣trigger 才行
 
 share the lt review. pptx file\tFEATURE.CLUTEAMS\t 0 \t 1 \t 1 \t 1 \t -1 \t -1
 
+========================
+domain classfiier
+========================
+// wrong
+E:\CoreScienceDataStaging\target\distrib\Debug\AnyCPU\models\luna_190305_teams.domain.fst_lang_model.INT.pipeline.txt
+用intent 的pattern 來看domain
+
+
+// new 
+E:\CoreScienceDataStaging\target\distrib\Debug\AnyCPU\models\luna_190305_teams.domain.fst_lang_model_intent_overwrite.pipeline.txt
+
+luna_190305_teams.intents.fst_lang_model.tagger.bin
+
+就是從intent file 來的
+
+
+
 
 
 
