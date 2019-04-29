@@ -49,7 +49,7 @@ teams scrum 的test
   met 4
   marat flow 但是目前這個遠端沒有evaluation diff
 
-
+lo
 
 
 有所有的infiles
@@ -86,11 +86,22 @@ E:\CoreScienceDataStaging\target\distrib\Debug\AnyCPU\models\luna_190305_teams.d
 
 
 // new 
+
+qd_teams_domain_fst_lang_model_intent_overwrite_featurizer
+這個featurlizer 才是domain 的ouput  
+
 E:\CoreScienceDataStaging\target\distrib\Debug\AnyCPU\models\luna_190305_teams.domain.fst_lang_model_intent_overwrite.pipeline.txt
 
 luna_190305_teams.intents.fst_lang_model.tagger.bin
 
 就是從intent file 來的
+
+
+這個會負責classifier
+qd_teams_domain_classifier
+MLG34DomainClassifier
+
+? 感覺他是查db 拿到最終的結果  這個可能可以再問一下
 
 
 
