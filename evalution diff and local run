@@ -17,8 +17,16 @@ EvalDiff.exe -l  "E:\mercury\TestResults\Evaluation\chiecha_LastSuccessfulRun\Fu
 evalution local run set command
 eval run -d E:\CoreScienceDataStaging\target\distrib\Debug\AnyCPU\models
 
+eval run -d E:\CoreScienceDataStaging\target\distrib\Debug\AnyCPU\models -s  DevTestGroup0
+
+也可以提供group  (exsiting group 會從core science staging pick up)
+(-b qbuild 是如果有心的test group 要run 才要加)
+
+
+
 跟vijay 的evaluation  flow 很像
-E:\mercury>powershell %inetroot%\private\personalAssistant\Tools\CuTool.ps1 eval run -d  E:\mercury\target\distrib\Debug\AnyCPU\models   -s  DevTestGroup0 -b qbuild
+E:\mercury>powershell %inetroot%\private\personalAssistant\Tools\CuTool.ps1 eval run 
+-d  E:\mercury\target\distrib\Debug\AnyCPU\models   -s  DevTestGroup0 -b qbuild
 
 
 
