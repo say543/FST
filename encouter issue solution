@@ -1,7 +1,7 @@
 git reset --hard origin/master
 
 then 
-git pull orign master
+git pull origin master
 
 
 不需要其他的command
