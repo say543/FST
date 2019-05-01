@@ -1,3 +1,9 @@
+
+corescience blind 這個repo 有blind set 的data 
+
+可以拿來跑  但是不因該看
+
+
 04162019
 teams scrum 的test 
 
@@ -32,6 +38,10 @@ teams scrum 的test
 
 要看evalDiff
   if local against cloud test  <還不能work>
+  
+  
+  
+  
   met1:
   $ fetcheval
   in ocretxt
@@ -105,6 +115,25 @@ MLG34DomainClassifier
 
 
 
+==============================
+evalauriyo
+================================
+ 跑team-march
+這個error 是因為judge annotation 了start time 在  communication 但是不因該有
+
+解決方法  在
+E:\CoreScienceDataStaging\evaluation\Configs\IntentConstraintMap-Lu-schema.tsv
+佳一行
+Constraint\tCommunication\t\tCOMMUNICATION\tstart_time\tcommunication\tstart_time\tcommunication\tstart_time
+
+這樣evaluation 才不會爆錯
+
+
+
+
+ Message: Assert.Fail failed. Assert.AreEqual failed. Expected:<0>. Actual:<2>. There are errors in evaluation report file:
+[MapUnderstandingModule] Wf constraint not found: COMMUNICATION.start_time for query: "Message my next meeting.", conversation ID: c0b5247c-627a-4540-9eae-949b0eb7ada2
+[MapUnderstandingModule] Wf constraint not found: COMMUNICATION.start_time for query: "Message my upcoming meeting.", conversation ID: 814b5a63-9e11-49ef-ae44-a2cd9ede3509
 
 
 
