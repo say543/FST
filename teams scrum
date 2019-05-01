@@ -116,7 +116,7 @@ MLG34DomainClassifier
 
 
 ==============================
-evalauriyo
+evaluation wrong information when running teamsMarch2019Test3K
 ================================
  跑team-march
 這個error 是因為judge annotation 了start time 在  communication 但是不因該有
