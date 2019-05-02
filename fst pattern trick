@@ -10,14 +10,51 @@ can look up examples
 
 
 ================================
-65/690
+82/690
 The boundary symbol .#. indicates the beginning of a
-string in the left context and the end of a string in the right context. It has no special
+string in the left context and the 
+end of a string in the right context. It has no special
 meaning anywhere else.
+
+
+189/660
+Double-Vertical-Bar Rules The most commonly used form, the right-arrow,
+double-vertical-bar rules, were introduced above in Section 3.5.2. You will recall
+that these rules are based on the following template
+A -> B || L _ R
+where A, B, L and R are regular expressions, denoting languages (not relations),
+and L and R are optional. The overall rule denotes a relation. The left context L
+is extended by default on the left, and the right context R on the right, with ?*,
+the universal language. The .#. notation may be used to override this default
+and indicate the beginning and/or end of a word. These notational conventions will
+hold for the other subtypes of replace rules to be presented.
+
+
+define removeCarrierPhrase  empty <-@ [CarrierPhrase { } Cortana { } ] || .#. _ ;
+只用到left , .#. 代表開頭
+
+
+193/660
+Longest Match Right-arrow, left-to-right, longest-match rules are built on the
+following template
+A @-> B || L _ R
+preprocess rule 是最長的match
+也有別的不同的matcgh
+
+
 
 13/39
 [all]
 Table 1: predefined list 
+是all words 所有的define 來源
+
+
+69/690
+[A .o. B] denotes the composition of the relation A with the relation
+B. If A contains the string pair x, y and B contains y, z , the
+composite relation [A .o. B] contains the string pair x, z .
+Composition is associative but not commutative. We can write
+
 
 
 
