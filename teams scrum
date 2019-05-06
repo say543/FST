@@ -137,3 +137,157 @@ Constraint\tCommunication\t\tCOMMUNICATION\tstart_time\tcommunication\tstart_tim
 
 
 
+==============================
+yue pr  improvement
+================================
+
+
+-----------------------------------------------
+05/06/2019
+<Ship Intent SVM model for Teams domain>
+-----------------------------------------------
+
+intent 改變  for multi turn only
+因為multi turn 的intent 不重要 所以這邊不討論   
+open xxx (不一定 file 結尾)      file_download ->  file open 
+跟guideline 是一致的
+
+number three xxx  filde_download -> goto_slide
+guideline 沒有  系解  但是ˇ覺得make sense
+
+
+voice skill channel teams  file_download -> teamsapce_navigate
+跟guideline 是一致的   新的intent 才是處理channel 跟teams
+
+
+
+share lt review discussion  file_download -> file_share
+? 沒有說enity file 跟guideline 不同 但是被當常file_share  可能guideline 要update 
+
+
+the lt review discussion	TEAMS	file_download	=> start_presenting
+? guideline 不懂 
+the lt review discussion file	TEAMS	file_download	=> file_navigate
+? guideline 不懂
+file lt review discussion	TEAMS	file_download => file_navigate
+? guideline 不懂
+file lt review discussion please	TEAMS	file_download  => file_open
+? guideline 不懂
+
+set to available	TEAMS	file_download =>  teamspaces_setstatus
+跟guideline 是一致的
+set to busy	file_download =>  teamspaces_setstatus
+跟guideline 是一致的
+set to away	file_downloa => teamspaces_setstatus
+跟guideline 是一致的
+
+
+set to do not disturb file_download => teamspace_help
+? 覺得是stats
+
+busy	TEAMS	file_download => teamspace_removememeber
+? 覺得是stats
+away	TEAMS	file_download => teamspace_checknumber
+? 覺得是status 因該是錯的
+
+
+
+do not disturb file_download => teamspace_checknumber
+? 覺得是status 因該是錯的
+
+away	TEAMS	file_download => teamspace_removememeber
+? 覺得是stats
+
+
+
+
+
+qd_teams_intents_dummy_featurizer => qd_teams_intents_svm_featurizer
+原本是dummy 是因為 不輸出的話  會爆錯    (因該是在intent_fst_lang_model_override_featurlizer ) , 所以現在可以被取代了
+[qd_teams_intents_dummy_featurizer]
+
+
+
+luna_181019_teams.intents.pipeline.txt
+luna_181019_teams.intents.dummy.txt
+
+
+實體的 intent svm 的pipeline
+luna_teams_enus_mv1.intent.model.pipeline.txt
+
+p.s 跟communication 相比較
+luna_communication_enus_mv1.intent.model.pipeline.txt
+
+本質上是一樣的
+但是communication 
+內容多加了pipeline 的trick  from Raj   
+#Use Threshold on SendText Intent
+## Use CommOtherScore as Max of SendText and CommOther
+#Replace CommOther Score with the Max
+# Now, thereshold SendText. NewSendTextScore = 2*SendTextScore - Threshold=70	
+
+
+
+luna_teams_enus_mv1.intent.classes.txt
+所有的intent 對應 的mapping 這個make sense
+luna_teams_enus_mv1.intents.classes.txt
+? 這兩個files 因該只要一個就行 之後可能可以merge
+
+
+luna_teams_enus_mv1.intent.ini
+感覺是feauture 的功能  這個不太懂
+
+
+-----------------------------------------------
+05/06/2019
+Teams Domain/Multiturn query fix
+-----------------------------------------------
+
+
+
+
+domain.fst_lang_model.tagger.infile
+修正了
+PPT.  file navigation (blind annotation 是對的)
+Look up STH. teamspace_search (blind annotation 是對的)
+這邊用
+FileNavigateHotfixIntent  但是實際上不是1 的socre 而是0.99  明子可能不太好
+
+? guieline 因該要跟這update
+
+domain.negative.fst_lang_model.tagger.infile
+form "qd_teams_domain_fst_lang_model_featurizer"
+不管negatuve domaiun 是什麼
+luna_181212_teams.domain.pattern.entities.config.xml  這邊會mapp 成 成<negative>  or <positive>
+<negative> 代表domain.negative.fst_lang_model.tagger.infile 的fst trigger 了
+negative pattern
+luna_190305_teams.domain.fst_lang_model.INT.
+因為negative pattern 的 featurlizer 在postive pattern[qd_teams_domain_fst_lang_model_intent_overwrite_featurizer] 前面  會overirde 他的結果
+
+
+hotfix 
+https://microsoft.sharepoint.com/teams/LUforNextgenAgents/_layouts/15/WopiFrame.aspx?sourcedoc={68deb809-671e-469a-be79-ba53c05298ce}&action=edit&wd=target%28CLU%20DRI.one%7C1990f4e6-5d06-4429-8ee9-ba6b20b33107%2FExact%20match%20hotfix%20file%20format%7Ce81245d4-55ea-458a-aaf1-036d8c0817f5%2F%29
+luna_181019_teams.intents.hotfix.txt
+要參考這個format
+? 這個有空再study
+
+
+luna_teams_intents.multiturn.pipeline.txt
+? multi turn  相關的先不管
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
