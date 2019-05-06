@@ -137,6 +137,31 @@ Constraint\tCommunication\t\tCOMMUNICATION\tstart_time\tcommunication\tstart_tim
 
 
 
+
+=====================
+slot training
+=====================
+E:\Teams_Data_Synthesis\Teams\CMF_Training\resource\Data\Combine
+(originla file path)
+\\yuema-desktop\Dropbox2\Teams_Data_Synthesis\Teams\CMF_Training\resource\Data\Combine
+collect_all_features
+把所有的tsv 都合併生成 Teams_Slot_Training.tsv
+
+這個可以copy 到
+E:\Teams_Data_Synthesis\Teams\CMF_Training\resource\Data
+
+
+
+
+
+
+
+
+
+
+
+
+
 ==============================
 yue pr  improvement
 ================================
