@@ -273,11 +273,21 @@ luna_181019_teams.intents.hotfix.txt
 
 
 luna_teams_intents.multiturn.pipeline.txt
+luna_teams_intents.common.help.def.txt"
 ? multi turn  相關的先不管
 
 
 
+-----------------------------------------------
+04/27/2019
+Bring in common help to teams teamspace_help
+----------------------------------------------
 
+
+luna_teams_intents.multiturn.pipeline.txt
+
+luna_teams_intent.common.help.idmap.txt
+? 需要multi turn 的spec
 
 
 
