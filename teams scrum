@@ -205,16 +205,19 @@ testResult\0\slots\Result\xxx-slot.error.freq.tsv
 
 解決precision 問題
 1>  加上相關的pattern in  E:\Teams_Data_Synthesis\Teams\CMF_Training\resource\Data\Combine\data_synthesised_teamsuser_contactname_teamspace_team.tsv
-根據不同slot , 加入不同的file
+根據不同slot , 加入不同的placeholder file
 
-2> 根據不同的slot  之後加不同的slot files
+2> 根據不同的slot  之後加不同的slot fst pattern
 
 3> 加入data with correct annotation 來train
 
 解決recall 問題
 1> remove 相關的pattern in  E:\Teams_Data_Synthesis\Teams\CMF_Training\resource\Data\Combine\data_synthesised_teamsuser_contactname_teamspace_team.tsv
 根據不同slot , remove 不同的placeholder pattern
-2> 加入data with empty annotation 來train
+
+2> 根據不同的slot  之後加不同的slot fst negative pattern
+
+3> 加入data with empty annotation 來train
 
 
 
