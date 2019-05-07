@@ -145,10 +145,85 @@ E:\Teams_Data_Synthesis\Teams\CMF_Training\resource\Data\Combine
 (originla file path)
 \\yuema-desktop\Dropbox2\Teams_Data_Synthesis\Teams\CMF_Training\resource\Data\Combine
 collect_all_features
-把所有的tsv 都合併生成 Teams_Slot_Training.tsv
 
-這個可以copy 到
-E:\Teams_Data_Synthesis\Teams\CMF_Training\resource\Data
+
+把所有的tsvs 在same directoreis 都合併生成 Teams_Slot_Training.tsv
+(header 都要移掉)   在execuate collect_all_features.py
+會生成  Teams_Slot_Training.tsv
+
+這個在copy 到 resource/data 裡面做 training
+
+clu studio
+https://carina/modelmanager
+
+
+
+<add model>
+
+到clu studio
+按 add model 
+
+這個可以copy 到 model
+E:\Teams_Data_Synthesis\Teams\CMF_Training\sharePathModel
+
+要選sharePathModel 的path 
+
+藥用share path 
+\\DESKTOP-3J7614O\Teams_Data_Synthesis\Teams\CMF_Training\sharePathModel
+
+這樣added 
+
+
+<run evaluation>
+
+model page 會有evaluation 的button
+
+after clicking 
+
+clu management
+E:\Teams_Data_Synthesis\Teams\CMF_Training\teams40ToCarina
+
+\\DESKTOP-3J7614O\Teams_Data_Synthesis\Teams\CMF_Training\teams40ToCarina
+
+collect_all_features.py  (自己copy  來的) 生成blind set 後
+1> 自己加上頭部
+UUID\tQuery\tIntent\tDomain\tSlot
+
+2> 把. 都取代成empty  (因為carina tool 沒有考慮.)
+
+\\DESKTOP-3J7614O\Teams_Data_Synthesis\Teams\CMF_Training\teams40ToCarina\Teams_slot_training.tsv
+上船當作evaluation
+
+clikc result page
+https://carina/modelmanager#/evaluate/4019/resultfiles/8043
+這個會有accuracy
+Teams_Slot_Training.tsv.Compare.OverallSummary.html 
+
+testResult\0\slots\Result\xxx-slot.error.freq.tsv
+
+會有query error 的informmation
+
+解決precision 問題
+1>  加上相關的pattern in  E:\Teams_Data_Synthesis\Teams\CMF_Training\resource\Data\Combine\data_synthesised_teamsuser_contactname_teamspace_team.tsv
+根據不同slot , 加入不同的file
+
+2> 根據不同的slot  之後加不同的slot files
+
+3> 加入data with correct annotation 來train
+
+解決recall 問題
+1> remove 相關的pattern in  E:\Teams_Data_Synthesis\Teams\CMF_Training\resource\Data\Combine\data_synthesised_teamsuser_contactname_teamspace_team.tsv
+根據不同slot , remove 不同的placeholder pattern
+2> 加入data with empty annotation 來train
+
+
+
+
+
+
+
+
+
 
 
 
