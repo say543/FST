@@ -202,6 +202,7 @@ Teams_Slot_Training.tsv.Compare.OverallSummary.html
 testResult\0\slots\Result\xxx-slot.error.freq.tsv
 
 會有query error 的informmation
+根據frequency 高低排序
 
 解決precision 問題
 1>  加上相關的pattern in  E:\Teams_Data_Synthesis\Teams\CMF_Training\resource\Data\Combine\data_synthesised_teamsuser_contactname_teamspace_team.tsv
