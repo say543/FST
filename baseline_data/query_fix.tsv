@@ -1,0 +1,290 @@
+0	go to teams device channel	file_navigate	teams	go to <teamspace_channel> teams device </teamspace_channel> channel
+0	go to teams device channel	file_navigate	teams	go to <teamspace_channel> teams device </teamspace_channel> channel
+0	go to teams device channel	file_navigate	teams	go to <teamspace_channel> teams device </teamspace_channel> channel
+0	go to teams device channel	file_navigate	teams	go to <teamspace_channel> teams device </teamspace_channel> channel
+0	go to teams device channel	file_navigate	teams	go to <teamspace_channel> teams device </teamspace_channel> channel
+0	go to teams device channel	file_navigate	teams	go to <teamspace_channel> teams device </teamspace_channel> channel
+0	go to teams factory channel	file_navigate	teams	go to <teamspace_channel> teams factory </teamspace_channel> channel
+0	go to teams factory channel	file_navigate	teams	go to <teamspace_channel> teams factory </teamspace_channel> channel
+0	go to teams factory channel	file_navigate	teams	go to <teamspace_channel> teams factory </teamspace_channel> channel
+0	go to teams factory channel	file_navigate	teams	go to <teamspace_channel> teams factory </teamspace_channel> channel
+0	launch that document i was composing	file_open	teams	launch <file_title> that </file_title> document <file_filerecency> i was composing </file_filerecency>
+0	launch that document i was composing	file_open	teams	launch <file_title> that </file_title> document <file_filerecency> i was composing </file_filerecency>
+0	launch that document i was composing	file_open	teams	launch <file_title> that </file_title> document <file_filerecency> i was composing </file_filerecency>
+0	launch that document i was composing	file_open	teams	launch <file_title> that </file_title> document <file_filerecency> i was composing </file_filerecency>
+0	launch that document i was composing	file_open	teams	launch <file_title> that </file_title> document <file_filerecency> i was composing </file_filerecency>
+0	present the deck i was working on	file_navigate	teams	present the deck <file_filerecency> i was working on </file_filerecency>
+0	present the deck i was working on	file_navigate	teams	present the deck <file_filerecency> i was working on </file_filerecency>
+0	present the deck i was working on	file_navigate	teams	present the deck <file_filerecency> i was working on </file_filerecency>
+0	present the deck i was working on	file_navigate	teams	present the deck <file_filerecency> i was working on </file_filerecency>
+0	present the deck i was working on	file_navigate	teams	present the deck <file_filerecency> i was working on </file_filerecency>
+0	present the deck i was working on	file_navigate	teams	present the deck <file_filerecency> i was working on </file_filerecency>
+0	Share file LT review discussion with this meeting	file_share	teams	Share file <file_title> LT review discussion </file_title> with <teammeeting_title> this </teammeeting_title> <file_sharetarget> meeting </file_sharetarget>
+0	Share file LT review discussion with this meeting	file_share	teams	Share file <file_title> LT review discussion </file_title> with <teammeeting_title> this </teammeeting_title> <file_sharetarget> meeting </file_sharetarget>
+0	Share file LT review discussion with this meeting	file_share	teams	Share file <file_title> LT review discussion </file_title> with <teammeeting_title> this </teammeeting_title> <file_sharetarget> meeting </file_sharetarget>
+0	Share file LT review discussion with this meeting	file_share	teams	Share file <file_title> LT review discussion </file_title> with <teammeeting_title> this </teammeeting_title> <file_sharetarget> meeting </file_sharetarget>
+0	Share file LT review discussion with this meeting	file_share	teams	Share file <file_title> LT review discussion </file_title> with <teammeeting_title> this </teammeeting_title> <file_sharetarget> meeting </file_sharetarget>
+0	Share file LT review discussion with this meeting	file_share	teams	Share file <file_title> LT review discussion </file_title> with <teammeeting_title> this </teammeeting_title> <file_sharetarget> meeting </file_sharetarget>
+0	present the deck i was working on	file_navigate	teams	present the deck <file_filerecency> i was working on </file_filerecency>
+0	present the deck i was working on	file_navigate	teams	present the deck <file_filerecency> i was working on </file_filerecency>
+0	present the deck i was working on	file_navigate	teams	present the deck <file_filerecency> i was working on </file_filerecency>
+0	present the deck i was working on	file_navigate	teams	present the deck <file_filerecency> i was working on </file_filerecency>
+0	present the deck i was working on	file_navigate	teams	present the deck <file_filerecency> i was working on </file_filerecency>
+0	go 2 slides back	file_navigate	teams	go <slide_number> 2 slides back </slide_number>
+0	go 2 slides back	file_navigate	teams	go <slide_number> 2 slides back </slide_number>
+0	go 2 slides back	file_navigate	teams	go <slide_number> 2 slides back </slide_number>
+0	go 2 slides back	file_navigate	teams	go <slide_number> 2 slides back </slide_number>
+0	go 2 slides back	file_navigate	teams	go <slide_number> 2 slides back </slide_number>
+0	go 3 slides forward	file_navigate	teams	go <slide_number> 3 slides forward </slide_number>
+0	go 3 slides forward	file_navigate	teams	go <slide_number> 3 slides forward </slide_number>
+0	go 3 slides forward	file_navigate	teams	go <slide_number> 3 slides forward </slide_number>
+0	go 3 slides forward	file_navigate	teams	go <slide_number> 3 slides forward </slide_number>
+0	show the linked deck	file_navigate	teams	show the <deck_location> linked </deck_location> deck
+0	show the linked deck	file_navigate	teams	show the <deck_location> linked </deck_location> deck
+0	show the linked deck	file_navigate	teams	show the <deck_location> linked </deck_location> deck
+0	show the linked deck	file_navigate	teams	show the <deck_location> linked </deck_location> deck
+0	show the linked deck	file_navigate	teams	show the <deck_location> linked </deck_location> deck
+0	show the linked deck	file_navigate	teams	show the <deck_location> linked </deck_location> deck
+0	see the enclosed deck	file_navigate	teams	show the <deck_location> enclosed </deck_location> deck
+0	see the enclosed deck	file_navigate	teams	show the <deck_location> enclosed </deck_location> deck
+0	see the enclosed deck	file_navigate	teams	show the <deck_location> enclosed </deck_location> deck
+0	see the enclosed deck	file_navigate	teams	show the <deck_location> enclosed </deck_location> deck
+0	see the enclosed deck	file_navigate	teams	show the <deck_location> enclosed </deck_location> deck
+0	unfavorite this team	file_navigate	teams	unfavorite <teamspace_team> this </teamspace_team> team
+0	unfavorite this team	file_navigate	teams	unfavorite <teamspace_team> this </teamspace_team> team
+0	unfavorite this team	file_navigate	teams	unfavorite <teamspace_team> this </teamspace_team> team
+0	unfavorite this team	file_navigate	teams	unfavorite <teamspace_team> this </teamspace_team> team
+0	unfavorite this team	file_navigate	teams	unfavorite <teamspace_team> this </teamspace_team> team
+0	un-favorite this team	file_navigate	teams	un-favorite <teamspace_team> this </teamspace_team> team
+0	un-favorite this team	file_navigate	teams	un-favorite <teamspace_team> this </teamspace_team> team
+0	un-favorite this team	file_navigate	teams	un-favorite <teamspace_team> this </teamspace_team> team
+0	un-favorite this team	file_navigate	teams	un-favorite <teamspace_team> this </teamspace_team> team
+0	go to end of presentation	file_navigate	teams	go to <slide_number> end of presentation </slide_number>
+0	go to end of presentation	file_navigate	teams	go to <slide_number> end of presentation </slide_number>
+0	go to end of presentation	file_navigate	teams	go to <slide_number> end of presentation </slide_number>
+0	go to end of presentation	file_navigate	teams	go to <slide_number> end of presentation </slide_number>
+0	go to end of presentation	file_navigate	teams	go to <slide_number> end of presentation </slide_number>
+0	search for LT review deck	file_navigate	teams	search for <teamspace_searchkeyword> LT review deck </teamspace_searchkeyword>
+0	search for LT review deck	file_navigate	teams	search for <teamspace_searchkeyword> LT review deck </teamspace_searchkeyword>
+0	search for LT review deck	file_navigate	teams	search for <teamspace_searchkeyword> LT review deck </teamspace_searchkeyword>
+0	search for LT review deck	file_navigate	teams	search for <teamspace_searchkeyword> LT review deck </teamspace_searchkeyword>
+0	search for LT review deck	file_navigate	teams	search for <teamspace_searchkeyword> LT review deck </teamspace_searchkeyword>
+0	search LT review deck	file_navigate	teams	search <teamspace_searchkeyword> LT review deck </teamspace_searchkeyword>
+0	search LT review deck	file_navigate	teams	search <teamspace_searchkeyword> LT review deck </teamspace_searchkeyword>
+0	search LT review deck	file_navigate	teams	search <teamspace_searchkeyword> LT review deck </teamspace_searchkeyword>
+0	search LT review deck	file_navigate	teams	search <teamspace_searchkeyword> LT review deck </teamspace_searchkeyword>
+0	search LT review deck	file_navigate	teams	search <teamspace_searchkeyword> LT review deck </teamspace_searchkeyword>
+0	open file LT review deck	file_navigate	teams	open file <file_title> LT review deck </file_title>
+0	open file LT review deck	file_navigate	teams	open file <file_title> LT review deck </file_title>
+0	open file LT review deck	file_navigate	teams	open file <file_title> LT review deck </file_title>
+0	open file LT review deck	file_navigate	teams	open file <file_title> LT review deck </file_title>
+0	open file LT review deck	file_navigate	teams	open file <file_title> LT review deck </file_title>
+0	set my status to be right back	file_navigate	teams	set my status to <teamsuser_status> be right back </teamsuser_status>
+0	set my status to be right back	file_navigate	teams	set my status to <teamsuser_status> be right back </teamsuser_status>
+0	set my status to be right back	file_navigate	teams	set my status to <teamsuser_status> be right back </teamsuser_status>
+0	set my status to be right back	file_navigate	teams	set my status to <teamsuser_status> be right back </teamsuser_status>
+0	set my status to out of office	file_navigate	teams	set my status to <teamsuser_status> out of office </teamsuser_status>
+0	set my status to out of office	file_navigate	teams	set my status to <teamsuser_status> out of office </teamsuser_status>
+0	set my status to out of office	file_navigate	teams	set my status to <teamsuser_status> out of office </teamsuser_status>
+0	set my status to out of office	file_navigate	teams	set my status to <teamsuser_status> out of office </teamsuser_status>
+0	set my status to out of office	file_navigate	teams	set my status to <teamsuser_status> out of office </teamsuser_status>
+0	set my status to do not disturb	file_navigate	teams	set my status to <teamsuser_status> do not disturb </teamsuser_status>
+0	set my status to do not disturb	file_navigate	teams	set my status to <teamsuser_status> do not disturb </teamsuser_status>
+0	set my status to do not disturb	file_navigate	teams	set my status to <teamsuser_status> do not disturb </teamsuser_status>
+0	set my status to do not disturb	file_navigate	teams	set my status to <teamsuser_status> do not disturb </teamsuser_status>
+0	set my status to do not disturb	file_navigate	teams	set my status to <teamsuser_status> do not disturb </teamsuser_status>
+0	set my status to away	file_navigate	teams	set my status to <teamsuser_status> away </teamsuser_status>
+0	set my status to away	file_navigate	teams	set my status to <teamsuser_status> away </teamsuser_status>
+0	set my status to away	file_navigate	teams	set my status to <teamsuser_status> away </teamsuser_status>
+0	set my status to online	file_navigate	teams	set my status to <teamsuser_status> online </teamsuser_status>
+0	set my status to online	file_navigate	teams	set my status to <teamsuser_status> online </teamsuser_status>
+0	set my status to online	file_navigate	teams	set my status to <teamsuser_status> online </teamsuser_status>
+0	set my status to online	file_navigate	teams	set my status to <teamsuser_status> online </teamsuser_status>
+0	go to slide 7	file_navigate	teams	go to slide <slide_number> 7 </slide_number>
+0	go to slide 7	file_navigate	teams	go to slide <slide_number> 7 </slide_number>
+0	go to slide 7	file_navigate	teams	go to slide <slide_number> 7 </slide_number>
+0	go to slide 7	file_navigate	teams	go to slide <slide_number> 7 </slide_number>
+0	go to slide 7	file_navigate	teams	go to slide <slide_number> 7 </slide_number>
+0	go to slide 6	file_navigate	teams	go to slide <slide_number> 6 </slide_number>
+0	go to slide 6	file_navigate	teams	go to slide <slide_number> 6 </slide_number>
+0	go to slide 6	file_navigate	teams	go to slide <slide_number> 6 </slide_number>
+0	go to slide 6	file_navigate	teams	go to slide <slide_number> 6 </slide_number>
+0	go to slide 6	file_navigate	teams	go to slide <slide_number> 6 </slide_number>
+0	go to slides 12	file_navigate	teams	go to slides <slide_number> 12 </slide_number>
+0	go to slides 12	file_navigate	teams	go to slides <slide_number> 12 </slide_number>
+0	go to slides 12	file_navigate	teams	go to slides <slide_number> 12 </slide_number>
+0	go to slides 12	file_navigate	teams	go to slides <slide_number> 12 </slide_number>
+0	go to slides 12	file_navigate	teams	go to slides <slide_number> 12 </slide_number>
+0	go to slides 12	file_navigate	teams	go to slides <slide_number> 12 </slide_number>
+0	open teams help	file_navigate	teams	open teams help
+0	open teams help	file_navigate	teams	open teams help
+0	open teams help	file_navigate	teams	open teams help
+0	open teams help	file_navigate	teams	open teams help
+0	open teams help	file_navigate	teams	open teams help
+0	open teams help	file_navigate	teams	open teams help
+0	open teams help	file_navigate	teams	open teams help
+0	open teams help	file_navigate	teams	open teams help
+0	navigate to teams help	file_navigate	teams	navigate to teams help
+0	navigate to teams help	file_navigate	teams	navigate to teams help
+0	navigate to teams help	file_navigate	teams	navigate to teams help
+0	navigate to teams help	file_navigate	teams	navigate to teams help
+0	navigate to teams help	file_navigate	teams	navigate to teams help
+0	navigate to teams help	file_navigate	teams	navigate to teams help
+0	navigate to teams help	file_navigate	teams	navigate to teams help
+0	navigate to teams help	file_navigate	teams	navigate to teams help
+0	navigate to teams help	file_navigate	teams	navigate to teams help
+0	navigate to teams help	file_navigate	teams	navigate to teams help
+0	navigate to teams help	file_navigate	teams	navigate to teams help
+0	add john to the team	file_navigate	teams	add <teamsuser_contactname> john </teamsuser_contactname> to the team
+0	add john to the team	file_navigate	teams	add <teamsuser_contactname> john </teamsuser_contactname> to the team
+0	add john to the team	file_navigate	teams	add <teamsuser_contactname> john </teamsuser_contactname> to the team
+0	add john to the team	file_navigate	teams	add <teamsuser_contactname> john </teamsuser_contactname> to the team
+0	add john to the team	file_navigate	teams	add <teamsuser_contactname> john </teamsuser_contactname> to the team
+0	add john to the channel	file_navigate	teams	add <teamsuser_contactname> john </teamsuser_contactname> to the channel
+0	add john to the channel	file_navigate	teams	add <teamsuser_contactname> john </teamsuser_contactname> to the channel
+0	add john to the channel	file_navigate	teams	add <teamsuser_contactname> john </teamsuser_contactname> to the channel
+0	add john to the channel	file_navigate	teams	add <teamsuser_contactname> john </teamsuser_contactname> to the channel
+0	add john to the channel	file_navigate	teams	add <teamsuser_contactname> john </teamsuser_contactname> to the channel
+0	open whiteboard	file_navigate	teams	open whiteboard
+0	open whiteboard	file_navigate	teams	open whiteboard
+0	open whiteboard	file_navigate	teams	open whiteboard
+0	open whiteboard	file_navigate	teams	open whiteboard
+0	open whiteboard	file_navigate	teams	open whiteboard
+0	open whiteboard	file_navigate	teams	open whiteboard
+0	exit presentation	file_navigate	teams	exit presentation
+0	exit presentation	file_navigate	teams	exit presentation
+0	exit presentation	file_navigate	teams	exit presentation
+0	exit presentation	file_navigate	teams	exit presentation
+0	exit presentation	file_navigate	teams	exit presentation
+0	present linked deck	file_navigate	teams	present <deck_location> linked </deck_location> deck
+0	present linked deck	file_navigate	teams	present <deck_location> linked </deck_location> deck
+0	present linked deck	file_navigate	teams	present <deck_location> linked </deck_location> deck
+0	present linked deck	file_navigate	teams	present <deck_location> linked </deck_location> deck
+0	present linked deck	file_navigate	teams	present <deck_location> linked </deck_location> deck
+0	present enclosed deck	file_navigate	teams	present <deck_location> enclosed </deck_location> deck
+0	present enclosed deck	file_navigate	teams	present <deck_location> enclosed </deck_location> deck
+0	present enclosed deck	file_navigate	teams	present <deck_location> enclosed </deck_location> deck
+0	present enclosed deck	file_navigate	teams	present <deck_location> enclosed </deck_location> deck
+0	present enclosed deck	file_navigate	teams	present <deck_location> enclosed </deck_location> deck
+0	present attached deck	file_navigate	teams	present <deck_location> attached </deck_location> deck
+0	present attached deck	file_navigate	teams	present <deck_location> attached </deck_location> deck
+0	present attached deck	file_navigate	teams	present <deck_location> attached </deck_location> deck
+0	present attached deck	file_navigate	teams	present <deck_location> attached </deck_location> deck
+0	present attached deck	file_navigate	teams	present <deck_location> attached </deck_location> deck
+0	share the enclosed deck	file_navigate	teams	share the <deck_location> enclosed </deck_location> <file_filetype> deck </file_filetype>
+0	share the enclosed deck	file_navigate	teams	share the <deck_location> enclosed </deck_location> <file_filetype> deck </file_filetype>
+0	share the enclosed deck	file_navigate	teams	share the <deck_location> enclosed </deck_location> <file_filetype> deck </file_filetype>
+0	share the enclosed deck	file_navigate	teams	share the <deck_location> enclosed </deck_location> <file_filetype> deck </file_filetype>
+0	share the enclosed deck	file_navigate	teams	share the <deck_location> enclosed </deck_location> <file_filetype> deck </file_filetype>
+0	share the attached deck	file_navigate	teams	share the <deck_location> attached </deck_location> <file_filetype> deck </file_filetype>
+0	share the attached deck	file_navigate	teams	share the <deck_location> attached </deck_location> <file_filetype> deck </file_filetype>
+0	share the attached deck	file_navigate	teams	share the <deck_location> attached </deck_location> <file_filetype> deck </file_filetype>
+0	share the attached deck	file_navigate	teams	share the <deck_location> attached </deck_location> <file_filetype> deck </file_filetype>
+0	share the attached deck	file_navigate	teams	share the <deck_location> attached </deck_location> <file_filetype> deck </file_filetype>
+0	share attached deck	file_navigate	teams	share <deck_location> attached </deck_location> <file_filetype> deck </file_filetype>
+0	share attached deck	file_navigate	teams	share <deck_location> attached </deck_location> <file_filetype> deck </file_filetype>
+0	share attached deck	file_navigate	teams	share <deck_location> attached </deck_location> <file_filetype> deck </file_filetype>
+0	share attached deck	file_navigate	teams	share <deck_location> attached </deck_location> <file_filetype> deck </file_filetype>
+0	share attached deck	file_navigate	teams	share <deck_location> attached </deck_location> <file_filetype> deck </file_filetype>
+0	share the linked deck	file_navigate	teams	share <deck_location> linked </deck_location> <file_filetype> deck </file_filetype>
+0	share the linked deck	file_navigate	teams	share <deck_location> linked </deck_location> <file_filetype> deck </file_filetype>
+0	share the linked deck	file_navigate	teams	share <deck_location> linked </deck_location> <file_filetype> deck </file_filetype>
+0	share the linked deck	file_navigate	teams	share <deck_location> linked </deck_location> <file_filetype> deck </file_filetype>
+0	share the linked deck	file_navigate	teams	share <deck_location> linked </deck_location> <file_filetype> deck </file_filetype>
+0	share the lt review deck with john	file_navigate	teams	share the <file_title> lt review </file_title> <file_filetype> deck </file_filetype> with <teamsuser_contactname> john </teamsuser_contactname>
+0	share the lt review deck with john	file_navigate	teams	share the <file_title> lt review </file_title> <file_filetype> deck </file_filetype> with <teamsuser_contactname> john </teamsuser_contactname>
+0	share the lt review deck with john	file_navigate	teams	share the <file_title> lt review </file_title> <file_filetype> deck </file_filetype> with <teamsuser_contactname> john </teamsuser_contactname>
+0	share the lt review deck with john	file_navigate	teams	share the <file_title> lt review </file_title> <file_filetype> deck </file_filetype> with <teamsuser_contactname> john </teamsuser_contactname>
+0	share the lt review deck with john	file_navigate	teams	share the <file_title> lt review </file_title> <file_filetype> deck </file_filetype> with <teamsuser_contactname> john </teamsuser_contactname>
+0	share the deck i was working on this afternoon	file_navigate	teams	share the <file_filetype> deck </file_filetype> <file_filerecency> i was working on </file_filerecency> this afternoon
+0	share the deck i was working on this afternoon	file_navigate	teams	share the <file_filetype> deck </file_filetype> <file_filerecency> i was working on </file_filerecency> this afternoon
+0	share the deck i was working on this afternoon	file_navigate	teams	share the <file_filetype> deck </file_filetype> <file_filerecency> i was working on </file_filerecency> this afternoon
+0	share the deck i was working on this morning	file_navigate	teams	share the <file_filetype> deck </file_filetype> <file_filerecency> i was working on </file_filerecency> this morning
+0	share the deck i was working on this morning	file_navigate	teams	share the <file_filetype> deck </file_filetype> <file_filerecency> i was working on </file_filerecency> this morning
+0	share the deck i was working on this morning	file_navigate	teams	share the <file_filetype> deck </file_filetype> <file_filerecency> i was working on </file_filerecency> this morning
+0	share the deck i was working on this evening	file_navigate	teams	share the <file_filetype> deck </file_filetype> <file_filerecency> i was working on </file_filerecency> this evening
+0	share the deck i was working on this evening	file_navigate	teams	share the <file_filetype> deck </file_filetype> <file_filerecency> i was working on </file_filerecency> this evening
+0	share the deck i was working on this evening	file_navigate	teams	share the <file_filetype> deck </file_filetype> <file_filerecency> i was working on </file_filerecency> this evening
+0	share the deck i was working on this evening	file_navigate	teams	share the <file_filetype> deck </file_filetype> <file_filerecency> i was working on </file_filerecency> this evening
+0	present the attached deck	file_navigate	teams	present the <deck_location> attached </deck_location> deck
+0	present the attached deck	file_navigate	teams	present the <deck_location> attached </deck_location> deck
+0	present the attached deck	file_navigate	teams	present the <deck_location> attached </deck_location> deck
+0	present the attached deck	file_navigate	teams	present the <deck_location> attached </deck_location> deck
+0	present the attached deck	file_navigate	teams	present the <deck_location> attached </deck_location> deck
+0	present the linked deck	file_navigate	teams	present the <deck_location> linked </deck_location> deck
+0	present the linked deck	file_navigate	teams	present the <deck_location> linked </deck_location> deck
+0	present the linked deck	file_navigate	teams	present the <deck_location> linked </deck_location> deck
+0	present the linked deck	file_navigate	teams	present the <deck_location> linked </deck_location> deck
+0	present the linked deck	file_navigate	teams	present the <deck_location> linked </deck_location> deck
+0	show unread feed	teamsuser_showactivity	teams	show <teamsuser_activitytype> unread </teamsuser_activitytype> feed
+0	show unread feed	teamsuser_showactivity	teams	show <teamsuser_activitytype> unread </teamsuser_activitytype> feed
+0	show unread feed	teamsuser_showactivity	teams	show <teamsuser_activitytype> unread </teamsuser_activitytype> feed
+0	show unread feed	teamsuser_showactivity	teams	show <teamsuser_activitytype> unread </teamsuser_activitytype> feed
+0	show unread feed	teamsuser_showactivity	teams	show <teamsuser_activitytype> unread </teamsuser_activitytype> feed
+0	present the deck i was working on this afternoon	file_navigate	teams	present the deck <file_filerecency> i was working on </file_filerecency> this afternoon
+0	present the deck i was working on this afternoon	file_navigate	teams	present the deck <file_filerecency> i was working on </file_filerecency> this afternoon
+0	present the deck i was working on this afternoon	file_navigate	teams	present the deck <file_filerecency> i was working on </file_filerecency> this afternoon
+0	present the deck i was working on this morning	file_navigate	teams	present the deck <file_filerecency> i was working on </file_filerecency> this morning
+0	present the deck i was working on this morning	file_navigate	teams	present the deck <file_filerecency> i was working on </file_filerecency> this morning
+0	present the deck i was working on this morning	file_navigate	teams	present the deck <file_filerecency> i was working on </file_filerecency> this morning
+0	go to the very end to the deck	file_navigate	teams	go to the <slide_number> very end </slide_number> to the deck
+0	go to the very end to the deck	file_navigate	teams	go to the <slide_number> very end </slide_number> to the deck
+0	go to the very end to the deck	file_navigate	teams	go to the <slide_number> very end </slide_number> to the deck
+0	go to the very end to the deck	file_navigate	teams	go to the <slide_number> very end </slide_number> to the deck
+0	go to the very end to the deck	file_navigate	teams	go to the <slide_number> very end </slide_number> to the deck
+0	go to the very end to the presentation	file_navigate	teams	go to the <slide_number> very end </slide_number> to the presentation
+0	go to the very end to the presentation	file_navigate	teams	go to the <slide_number> very end </slide_number> to the presentation
+0	go to the very end to the presentation	file_navigate	teams	go to the <slide_number> very end </slide_number> to the presentation
+0	go to the very end to the presentation	file_navigate	teams	go to the <slide_number> very end </slide_number> to the presentation
+0	go to the very end to the presentation	file_navigate	teams	go to the <slide_number> very end </slide_number> to the presentation
+0	go to the very end to the presentation	file_navigate	teams	go to the <slide_number> very end </slide_number> to the presentation
+0	go to the very end to the deck	file_navigate	teams	go to the <slide_number> very end </slide_number> to the deck
+0	go to the very end to the deck	file_navigate	teams	go to the <slide_number> very end </slide_number> to the deck
+0	go to the very end to the deck	file_navigate	teams	go to the <slide_number> very end </slide_number> to the deck
+0	go to the very end to the deck	file_navigate	teams	go to the <slide_number> very end </slide_number> to the deck
+0	go to the very end to the deck	file_navigate	teams	go to the <slide_number> very end </slide_number> to the deck
+0	go to the very last slide	file_navigate	teams	go to the very <slide_number> last </slide_number> slide
+0	go to the very last slide	file_navigate	teams	go to the very <slide_number> last </slide_number> slide
+0	go to the very last slide	file_navigate	teams	go to the very <slide_number> last </slide_number> slide
+0	go to the very last slide	file_navigate	teams	go to the very <slide_number> last </slide_number> slide
+0	go to the very last slide	file_navigate	teams	go to the very <slide_number> last </slide_number> slide
+0	go to very last slide	file_navigate	teams	go to very <slide_number> last </slide_number> slide
+0	go to very last slide	file_navigate	teams	go to very <slide_number> last </slide_number> slide
+0	go to very last slide	file_navigate	teams	go to very <slide_number> last </slide_number> slide
+0	go to very last slide	file_navigate	teams	go to very <slide_number> last </slide_number> slide
+0	go to very last slide	file_navigate	teams	go to very <slide_number> last </slide_number> slide
+0	go to the last slide	file_navigate	teams	go to the last slide
+0	go to the last slide	file_navigate	teams	go to the last slide
+0	go to the last slide	file_navigate	teams	go to the last slide
+0	go to the last slide	file_navigate	teams	go to the last slide
+0	go to the last slide	file_navigate	teams	go to the last slide
+0	go to last slide	file_navigate	teams	go to last slide
+0	go to last slide	file_navigate	teams	go to last slide
+0	go to last slide	file_navigate	teams	go to last slide
+0	go to last slide	file_navigate	teams	go to last slide
+0	go to last slide	file_navigate	teams	go to last slide
+0	navigate to very last slide	file_navigate	teams	navigate to very <slide_number> last </slide_number> slide
+0	navigate to very last slide	file_navigate	teams	navigate to very <slide_number> last </slide_number> slide
+0	navigate to very last slide	file_navigate	teams	navigate to very <slide_number> last </slide_number> slide
+0	navigate to very last slide	file_navigate	teams	navigate to very <slide_number> last </slide_number> slide
+0	navigate to very last slide	file_navigate	teams	navigate to very <slide_number> last </slide_number> slide
+0	navigate to the very last slide	file_navigate	teams	navigate to the very <slide_number> last </slide_number> slide
+0	navigate to the very last slide	file_navigate	teams	navigate to the very <slide_number> last </slide_number> slide
+0	navigate to the very last slide	file_navigate	teams	navigate to the very <slide_number> last </slide_number> slide
+0	navigate to the very last slide	file_navigate	teams	navigate to the very <slide_number> last </slide_number> slide
+0	navigate to the very last slide	file_navigate	teams	navigate to the very <slide_number> last </slide_number> slide
+0	navigate to last slide	file_navigate	teams	navigate to last slide
+0	navigate to last slide	file_navigate	teams	navigate to last slide
+0	navigate to last slide	file_navigate	teams	navigate to last slide
+0	navigate to last slide	file_navigate	teams	navigate to last slide
+0	navigate to last slide	file_navigate	teams	navigate to last slide
+0	navigate to the last slide	file_navigate	teams	navigate to the last slide
+0	navigate to the last slide	file_navigate	teams	navigate to the last slide
+0	navigate to the last slide	file_navigate	teams	navigate to the last slide
+0	navigate to the last slide	file_navigate	teams	navigate to the last slide
+0	navigate to the last slide	file_navigate	teams	navigate to the last slide
+0	go back to the title slide	file_navigate	teams	go back to the <slide_name> title </slide_name> slide
+0	go back to the title slide	file_navigate	teams	go back to the <slide_name> title </slide_name> slide
+0	go back to the title slide	file_navigate	teams	go back to the <slide_name> title </slide_name> slide
+0	go back to the title slide	file_navigate	teams	go back to the <slide_name> title </slide_name> slide
+0	go back to the title slide	file_navigate	teams	go back to the <slide_name> title </slide_name> slide

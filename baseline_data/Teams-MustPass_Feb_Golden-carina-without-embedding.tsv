@@ -1,0 +1,1704 @@
+0	present the deck i was working on	start_presenting	teams	present the deck <file_filerecency> i was working on </file_filerecency>
+0	share the deck i was working on	file_share	teams	share the <file_filetype> deck </file_filetype> <file_filerecency> i was working on </file_filerecency>
+0	share the filename deck	file_share	teams	share the <file_title> filename </file_title> <file_filetype> deck </file_filetype>
+0	share the filename presentation	start_presenting	teams	share the <deck_name> filename </deck_name> presentation
+0	present the filename deck	start_presenting	teams	present the <deck_name> filename </deck_name> deck
+0	present the filename presentation	start_presenting	teams	present the <deck_name> filename </deck_name> presentation
+0	present attached deck	start_presenting	teams	present <deck_location> attached </deck_location> deck
+0	present linked deck	start_presenting	teams	present <deck_location> linked </deck_location> deck
+0	present enclosed deck	start_presenting	teams	present <deck_location> enclosed </deck_location> deck
+0	share the attached deck	file_share	teams	share the <deck_location> attached </deck_location> <file_filetype> deck </file_filetype>
+0	share the linked deck	file_share	teams	share the <deck_location> linked </deck_location> <file_filetype> deck </file_filetype>
+0	share the enclosed deck	file_share	teams	share the <deck_location> enclosed </deck_location> <file_filetype> deck </file_filetype>
+0	present the deck i was working on this morning	start_presenting	teams	present the deck <file_filerecency> i was working on </file_filerecency> this morning
+0	present the deck i was working on this evening	start_presenting	teams	present the deck <file_filerecency> i was working on </file_filerecency> this evening
+0	present the deck i was working on this afternoon	start_presenting	teams	present the deck <file_filerecency> i was working on </file_filerecency> this afternoon
+0	share the deck i was working on this morning	file_share	teams	share the <file_filetype> deck </file_filetype> <file_filerecency> i was working on </file_filerecency> this morning
+0	share the deck i was working on this evening	file_share	teams	share the <file_filetype> deck </file_filetype> <file_filerecency> i was working on </file_filerecency> this evening
+0	share the deck i was working on this afternoon	file_share	teams	share the <file_filetype> deck </file_filetype> <file_filerecency> i was working on </file_filerecency> this afternoon
+0	present my deck	start_presenting	teams	present my deck
+0	present the deck	start_presenting	teams	present the deck
+0	end the presentation	stop_presenting	teams	end the presentation
+0	end presentation	stop_presenting	teams	end presentation
+0	stop presenting	stop_presenting	teams	stop presenting
+0	close presentation	stop_presenting	teams	close presentation
+0	close the presentation	stop_presenting	teams	close the presentation
+0	next slide	next_slide	teams	next slide
+0	go to next slide	next_slide	teams	go to next slide
+0	go to 1 slide	goto_slide	teams	go to <slide_name> 1 </slide_name> slide
+0	1 slide	goto_slide	teams	1 slide
+0	previous slide	previous_slide	teams	previous slide
+0	slide back	previous_slide	teams	slide back
+0	last slide	previous_slide	teams	last slide
+0	go to the title slide	goto_slide	teams	go to the <slide_name> title </slide_name> slide
+0	go to title slide	goto_slide	teams	go to <slide_name> title </slide_name> slide
+0	navigate to the title slide	goto_slide	teams	navigate to the title slide
+0	navigate to title slide	goto_slide	teams	navigate to title slide
+0	title slide	goto_slide	teams	title slide
+0	go to first slide	goto_slide	teams	go to <slide_number> first </slide_number> slide
+0	go to last slide	previous_slide	teams	go to last slide
+0	navigate to the first slide	goto_slide	teams	navigate to the <slide_number> first </slide_number> slide
+0	navigate to the last slide	previous_slide	teams	navigate to the last slide
+0	go to the very end to the deck	goto_slide	teams	go to the <slide_number> very end </slide_number> to the <file_filetype> deck </file_filetype>
+0	go to the very end to the presentation	goto_slide	teams	go to the  <slide_number> very end </slide_number> to the presentation
+0	go back to the title slide	goto_slide	teams	go back to the <slide_name> title </slide_name> slide
+0	go back 1 slide	goto_slide	teams	go back 1 slide
+0	go to voice skills channel	teamspace_navigate	teams	go to <teamspace_channel> voice skills </teamspace_channel> channel
+0	navigate to voice skills channel	teamspace_navigate	teams	navigate to <teamspace_channel> voice skills </teamspace_channel> channel
+0	open voice skills channel	teamspace_navigate	teams	open <teamspace_channel> voice skills </teamspace_channel> channel
+0	show me my activity	teamsuser_showactivity	teams	show me my activity
+0	go to my activity	teamsuser_showactivity	teams	go to my activity
+0	navigate to my activity	teamsuser_showactivity	teams	navigate to my activity
+0	show me at mentions	teamsuser_showactivity	teams	show me <teamsuser_activitytype> at mentions </teamsuser_activitytype>
+0	show me where i was mentioned	teamsuser_showactivity	teams	show me <teamsuser_activitytype> where i was mentioned </teamsuser_activitytype>
+0	show me my at mentions	teamsuser_showactivity	teams	show me my <teamsuser_activitytype> at mentions </teamsuser_activitytype>
+0	set my status to busy	teamsuser_setstatus	teams	set my status to <teamsuser_status> busy </teamsuser_status>
+0	set my status to available	teamsuser_setstatus	teams	set my status to <teamsuser_status> available </teamsuser_status>
+0	set my status to dnd	teamsuser_setstatus	teams	set my status to <teamsuser_status> dnd </teamsuser_status>
+0	set my status to do not disturb	teamsuser_setstatus	teams	set my status to <teamsuser_status> do not disturb </teamsuser_status>
+0	change my status to busy	teamsuser_setstatus	teams	change my status to <teamsuser_status> busy </teamsuser_status>
+0	change my status to available	teamsuser_setstatus	teams	change my status to <teamsuser_status> available </teamsuser_status>
+0	change my status to dnd	teamsuser_setstatus	teams	change my status to <teamsuser_status> dnd </teamsuser_status>
+0	change my status to do not disturb	teamsuser_setstatus	teams	change my status to <teamsuser_status> do not disturb </teamsuser_status>
+0	go to my saved items	teamsuser_showactivity	teams	go to my <teamsuser_activitytype> saved items </teamsuser_activitytype>
+0	go to unread activity	teamsuser_showactivity	teams	go to <teamsuser_activitytype> unread </teamsuser_activitytype> activity
+0	go to john's activity	teamsuser_showactivity	teams	go to <teamsuser_contactname> john </teamsuser_contactname>'s activity
+0	navigate to my saved items	teamsuser_showactivity	teams	navigate to my <teamsuser_activitytype> saved items </teamsuser_activitytype>
+0	navigate to unread activity	teamsuser_showactivity	teams	navigate to <teamsuser_activitytype> unread </teamsuser_activitytype> activity
+0	navigate to john's activity	teamsuser_showactivity	teams	navigate to <teamsuser_contactname> john </teamsuser_contactname>'s activity
+0	open my saved items	teamsuser_showactivity	teams	open my saved items
+0	open unread activity	teamsuser_showactivity	teams	open unread activity
+0	open john's activity	teamsuser_showactivity	teams	open john's activity
+0	search for free text	teamspace_search	teams	search for <teamspace_searchkeyword> free text </teamspace_searchkeyword>
+0	send feedback	teamspace_sendfeedback	teams	send feedback
+0	post feedback	teamspace_sendfeedback	teams	post feedback
+0	log feedback	teamspace_sendfeedback	teams	log feedback
+0	open a file	file_open	teams	open <file_title> a </file_title> file
+0	open lt review deck	file_open	teams	open <file_title> lt review </file_title> <file_filetype> deck </file_filetype>
+0	open the excel document i was working on	file_open	teams	open the <file_filetype> excel </file_filetype> document <file_filerecency> i was working on </file_filerecency>
+0	open the powerpoint document i was working on	file_open	teams	open the <file_filetype> powerpoint </file_filetype> document <file_filerecency> i was working on </file_filerecency>
+0	open the word document i was working on	file_open	teams	open the <file_filetype> word </file_filetype> document <file_filerecency> i was working on </file_filerecency>
+0	open the file i was working on	file_open	teams	open the file <file_filerecency> i was working on </file_filerecency>
+0	share this file with john	file_share	teams	share <file_title> this </file_title> file with john
+0	share the lt review deck with john	file_share	teams	share the <file_title> lt review </file_title> <file_filetype> deck </file_filetype> with john
+0	share the powerpoint i was working on with john	file_share	teams	share the <file_filetype> powerpoint </file_filetype> <file_filerecency> i was working on </file_filerecency> with john
+0	share the triage process document here	file_share	teams	share the <file_title> triage process </file_title> document here
+0	share the triage process document on this channel	file_share	teams	share the <file_title> triage process </file_title> document on <teamspace_channel> this </teamspace_channel> channel
+0	share the triage process document on this chat	file_share	teams	share the <file_title> triage process </file_title> document on this <file_sharetarget> chat </file_sharetarget>
+0	go to my recent files	file_navigate	teams	go to my <file_filerecency> recent </file_filerecency> files
+0	show me my recent files	file_navigate	teams	show me my <file_filerecency> recent </file_filerecency> files
+0	download this file	file_download	teams	download <file_title> this </file_title> file
+0	MessageText	JudgedTaskunderstandingIntent	judged_domain	JudgedTaskunderstandingMsgannotation
+0	Open file 'LT review discussion'	file_open	teams	Open file '<file_title> LT review discussion </file_title>'
+0	Open 'LT review discussion' deck 	file_open	teams	Open '<file_title> LT review discussion </file_title>' <file_filetype> deck </file_filetype> 
+0	Open 'voice skills' file	file_open	teams	Open '<file_title> voice skills </file_title>' file
+0	Open 'voice skills' document	file_open	teams	Open '<file_title> voice skills </file_title>' document
+0	Open 'voice skills' doc	file_open	teams	Open '<file_title> voice skills </file_title>' doc
+0	Open 'voice skills' deck	file_open	teams	Open '<file_title> voice skills </file_title>' <file_filetype> deck </file_filetype>
+0	Open 'voice skills' spreadsheet	file_open	teams	Open '<file_title> voice skills </file_title>' <file_filetype> spreadsheet </file_filetype>
+0	Open 'voice skills' PPT	file_open	teams	Open '<file_title> voice skills </file_title>' <file_filetype> PPT </file_filetype>
+0	Open 'voice skills' PowerPoint 	file_open	teams	Open '<file_title> voice skills </file_title>' <file_filetype> PowerPoint </file_filetype> 
+0	Open the spreadsheet I was working on recently 	file_open	teams	Open the <file_filetype> spreadsheet </file_filetype> <file_filerecency> I was working on recently </file_filerecency>
+0	Open the document I was working on 	file_open	teams	Open the document <file_filerecency> I was working on </file_filerecency> 
+0	Open the paper I was working on 	file_open	teams	Open the paper <file_filerecency> I was working on </file_filerecency> 
+0	Open the OneNote I was working on	file_open	teams	Open the <file_filetype> OneNote </file_filetype> <file_filerecency> I was working on </file_filerecency>
+0	Navigate to channel voice skills	teamspace_navigate	teams	Navigate to channel <teamspace_channel> voice skills </teamspace_channel>
+0	Go to channel voice skills	teamspace_navigate	teams	Go to channel <teamspace_channel> voice skills </teamspace_channel>
+0	View channel voice skills	teamspace_navigate	teams	View channel <teamspace_channel> voice skills </teamspace_channel>
+0	Access channel voice skills	teamspace_navigate	teams	Access channel <teamspace_channel> voice skills </teamspace_channel>
+0	Show channel voice skills	teamspace_navigate	teams	Show channel <teamspace_channel> voice skills </teamspace_channel>
+0	Navigate to voice skills channel	teamspace_navigate	teams	Navigate to <teamspace_channel> voice skills </teamspace_channel> channel
+0	Go to voice skills channel	teamspace_navigate	teams	Go to <teamspace_channel> voice skills </teamspace_channel> channel
+0	View voice skills channel	teamspace_navigate	teams	View <teamspace_channel> voice skills </teamspace_channel> channel
+0	Access voice skills channel	teamspace_navigate	teams	Access <teamspace_channel> voice skills </teamspace_channel> channel
+0	Show voice skills channel	teamspace_navigate	teams	Show <teamspace_channel> voice skills </teamspace_channel> channel
+0	Navigate to Intelligent communication team	teamspace_navigate	teams	Navigate to <teamspace_team> Intelligent communication </teamspace_team> team
+0	Go to Intelligent communication team	teamspace_navigate	teams	Go to <teamspace_team> Intelligent communication </teamspace_team> team
+0	View Intelligent communication team	teamspace_navigate	teams	View <teamspace_team> Intelligent communication </teamspace_team> team
+0	Access Intelligent communication team	teamspace_navigate	teams	Access <teamspace_team> Intelligent communication </teamspace_team> team
+0	Show Intelligent communication team	teamspace_navigate	teams	Show <teamspace_team> Intelligent communication </teamspace_team> team
+0	Navigate to team intelligent communications	teamspace_navigate	teams	Navigate to team <teamspace_team> intelligent communications </teamspace_team>
+0	Go to team intelligent communications	teamspace_navigate	teams	Go to team <teamspace_team> intelligent communications </teamspace_team>
+0	View team intelligent communications	teamspace_navigate	teams	View team <teamspace_team> intelligent communications </teamspace_team>
+0	Access team intelligent communications	teamspace_navigate	teams	Access team <teamspace_team> intelligent communications </teamspace_team>
+0	Show team intelligent communications	teamspace_navigate	teams	Show team <teamspace_team> intelligent communications </teamspace_team>
+0	Navigate to my calendar	teamcalendar_navigate	teams	Navigate to my calendar
+0	View my calendar	teamcalendar_navigate	teams	View my calendar
+0	See my Calendar	teamcalendar_navigate	teams	See my Calendar
+0	See my Calendar for day of the week	teamcalendar_navigate	teams	See my Calendar for <teamcalendar_starttime> day of the week </teamcalendar_starttime>
+0	go to my calendar for March 22nd	teamcalendar_navigate	teams	go to my calendar for <teamcalendar_starttime> March 22nd </teamcalendar_starttime>
+0	"Search ""voice skills tap program"""	teamspace_search	teams	"Search ""<teamspace_searchkeyword> voice skills tap program </teamspace_searchkeyword>"""
+0	"Search for ""voice skills tap program"""	teamspace_search	teams	"Search for ""<teamspace_searchkeyword> voice skills tap program </teamspace_searchkeyword>"""
+0	"Show results for ""voice skills tap program"""	teamspace_search	teams	"Show results for ""<teamspace_searchkeyword> voice skills tap program </teamspace_searchkeyword>"""
+0	"Find me everything about ""voice skills tap program"""	teamspace_search	teams	"Find me everything about ""<teamspace_searchkeyword> voice skills tap program </teamspace_searchkeyword>"""
+0	"Look for ""voice skills tap program"""	teamspace_search	teams	"Look for ""<teamspace_searchkeyword> voice skills tap program </teamspace_searchkeyword>"""
+0	Show me my recent files	file_navigate	teams	Show me my <file_filerecency> recent </file_filerecency> files
+0	Show me my files	file_navigate	teams	Show me my files
+0	Show me my PPT	file_navigate	teams	Show me my <file_filetype> PPT </file_filetype>
+0	show me my Excel	file_navigate	teams	show me my <file_filetype> Excel </file_filetype>
+0	show me my Word files	file_navigate	teams	show me my <file_filetype> Word </file_filetype> files
+0	Navigate to my recent files	file_navigate	teams	Navigate to my <file_filerecency> recent </file_filerecency> files
+0	Navigate to files	file_navigate	teams	Navigate to files
+0	Go to files	file_navigate	teams	Go to files
+0	Favorite voice skills channel	teamspace_favorite	teams	Favorite <teamspace_channel> voice skills </teamspace_channel> channel
+0	Bookmark voice skills channel	teamspace_favorite	teams	Bookmark <teamspace_channel> voice skills </teamspace_channel> channel
+0	Favorite Intelligent Communications team	teamspace_favorite	teams	Favorite <teamspace_team> Intelligent Communications </teamspace_team> team
+0	Bookmark Intelligent Communications team	teamspace_favorite	teams	Bookmark <teamspace_team> Intelligent Communications </teamspace_team> team
+0	Add voice skills channel to favorites	teamspace_favorite	teams	Add <teamspace_channel> voice skills </teamspace_channel> channel to favorites
+0	Add voice skills channel to bookmarks	teamspace_favorite	teams	Add <teamspace_channel> voice skills </teamspace_channel> channel to bookmarks
+0	Add Anna Green to the Event hub team	teamspace_addtoteam	teams	Add <teamsuser_contactname> Anna Green </teamsuser_contactname> to the <teamspace_team> Event hub </teamspace_team> team
+0	Add Anna Green to the Event hub group	teamspace_addtoteam	teams	Add <teamsuser_contactname> Anna Green </teamsuser_contactname> to the <teamspace_team> Event hub </teamspace_team> group
+0	Add a new person to the Event hub	teamspace_addtoteam	teams	Add a new person to the <teamspace_unclearkeyword> Event hub </teamspace_unclearkeyword>
+0	go to voice skills	teamspace_navigate	teams	go to <teamspace_unclearkeyword> voice skills </teamspace_unclearkeyword>
+0	go to voice skills channel in Intelligent Communications team	teamspace_navigate	teams	go to <teamspace_channel> voice skills </teamspace_channel> channel in <teamspace_team> Intelligent Communications </teamspace_team> team
+0	follow voice skills channel in Intelligent Communications team	teamspace_follow	teams	follow <teamspace_channel> voice skills </teamspace_channel> channel in <teamspace_team> Intelligent Communications </teamspace_team> team
+0	view my calendar for tomorrow	teamcalendar_navigate	teams	view my calendar for <teamcalendar_starttime> tomorrow </teamcalendar_starttime>
+0	Is Jacob part of voice skills team?	teamspace_checkmember	teams	Is <teamsuser_contactname> Jacob </teamsuser_contactname> part of <teamspace_team> voice skills </teamspace_team> team?
+0	Is Jacob in voice skills team?	teamspace_checkmember	teams	Is <teamsuser_contactname> Jacob </teamsuser_contactname> in <teamspace_team> voice skills </teamspace_team> team?
+0	Does voice skills team have Jacob?	teamspace_checkmember	teams	Does <teamspace_team> voice skills </teamspace_team> team have <teamsuser_contactname> Jacob </teamsuser_contactname>?
+0	Is Jacob member of voice skills team?	teamspace_checkmember	teams	Is <teamsuser_contactname> Jacob </teamsuser_contactname> member of <teamspace_team> voice skills </teamspace_team> team?
+0	Do voice skills team members include Jacob?	teamspace_checkmember	teams	Do <teamspace_team> voice skills </teamspace_team> team members include <teamsuser_contactname> Jacob </teamsuser_contactname>?
+0	Unfollow this channel	teamspace_unfollow	teams	Unfollow <teamspace_channel> this </teamspace_channel> channel
+0	Remove this channel from my followed list	teamspace_unfollow	teams	Remove <teamspace_channel> this </teamspace_channel> channel from my followed list
+0	Stop following this channel	teamspace_unfollow	teams	Stop following <teamspace_channel> this </teamspace_channel> channel
+0	Un-favorite this channel	teamspace_unfavorite	teams	Un-favorite <teamspace_channel> this </teamspace_channel> channel
+0	Un-favorite the voice skills channel	teamspace_unfavorite	teams	Un-favorite the <teamspace_channel> voice skills </teamspace_channel> channel
+0	Remove voice skills team from my favorites	teamspace_unfavorite	teams	Remove <teamspace_team> voice skills </teamspace_team> team from my favorites
+0	Go to my downloads	file_navigate	teams	Go to my <file_filetype> downloads </file_filetype>
+0	Go to downloads	file_navigate	teams	Go to <file_filetype> downloads </file_filetype>
+0	Navigate to downloaded files	file_navigate	teams	Navigate to <file_filetype> downloaded files </file_filetype>
+0	Remove Jacob from a team	teamspace_removemember	teams	Remove <teamsuser_contactname> Jacob </teamsuser_contactname> from a team
+0	Remove Jacob from this team	teamspace_removemember	teams	Remove <teamsuser_contactname> Jacob </teamsuser_contactname> from <teamspace_team> this </teamspace_team> team
+0	Start a new team	teamspace_createteam	teams	Start a new team
+0	Create a team	teamspace_createteam	teams	Create a team
+0	Create a new team	teamspace_createteam	teams	Create a new team
+0	Join a new team	teamspace_jointeam	teams	Join a new team
+0	Join a team	teamspace_jointeam	teams	Join a team
+0	Join voice skills team	teamspace_jointeam	teams	Join <teamspace_team> voice skills </teamspace_team> team
+0	I want to join a team	teamspace_jointeam	teams	I want to join a team
+0	I need help with Teams	teamspace_help	teams	I need help with Teams
+0	Navigate to Teams help	teamspace_help	teams	Navigate to Teams help
+0	Go to FAQ	teamspace_help	teams	Go to FAQ
+0	Send feedback	teamspace_sendfeedback	teams	Send feedback
+0	Give feedback	teamspace_sendfeedback	teams	Give feedback
+0	Log feedback	teamspace_sendfeedback	teams	Log feedback
+0	Provide feedback	teamspace_sendfeedback	teams	Provide feedback
+0	Send feedback to Microsoft	teamspace_sendfeedback	teams	Send feedback to Microsoft
+0	What are shortcut keys?	teamspace_showhotkey	teams	What are shortcut keys?
+0	Show me shortcut keys	teamspace_showhotkey	teams	Show me shortcut keys
+0	Show me where I was mentioned	teamsuser_showactivity	teams	Show me <teamsuser_activitytype> where I was mentioned </teamsuser_activitytype>
+0	Show me my at mentions	teamsuser_showactivity	teams	Show me my <teamsuser_activitytype> at mentions </teamsuser_activitytype>
+0	Navigate to at mentions	teamsuser_showactivity	teams	Navigate to <teamsuser_activitytype> at mentions </teamsuser_activitytype>
+0	See my mentions	teamsuser_showactivity	teams	See my <teamsuser_activitytype> mentions </teamsuser_activitytype>
+0	show saved items	teamsuser_showactivity	teams	show <teamsuser_activitytype> saved items </teamsuser_activitytype>
+0	show unread activities	teamsuser_showactivity	teams	show <teamsuser_activitytype> unread </teamsuser_activitytype> activities
+0	show unread activity	teamsuser_showactivity	teams	show <teamsuser_activitytype> unread </teamsuser_activitytype> activity
+0	show unread feed	teamsuser_showactivity	teams	show <teamsuser_activitytype> unread </teamsuser_activitytype> feed
+0	show my activity	teamsuser_showactivity	teams	show my activity
+0	show Jacob's activities	teamsuser_showactivity	teams	show <teamsuser_contactname> Jacob </teamsuser_contactname>'s activities
+0	show activity by Jacob	teamsuser_showactivity	teams	show activity by <teamsuser_contactname> Jacob </teamsuser_contactname>
+0	Go to chat with Jacob 	teamsuser_openchat	teams	Go to chat with <teamsuser_contactname> Jacob </teamsuser_contactname> 
+0	Go to Jacob's chat 	teamsuser_openchat	teams	Go to <teamsuser_contactname> Jacob </teamsuser_contactname>'s chat 
+0	Tell me about Jacob's org	teamsuser_checkorg	teams	Tell me about <teamsuser_contactname> Jacob </teamsuser_contactname>'s org
+0	Give me info about Jacob's org	teamsuser_checkorg	teams	Give me info about <teamsuser_contactname> Jacob </teamsuser_contactname>'s org
+0	What team is Jacob in?	teamsuser_checkorg	teams	What team is <teamsuser_contactname> Jacob </teamsuser_contactname> in?
+0	share file with alice	file_share	teams	share file with <teamsuser_contactname> alice </teamsuser_contactname>
+0	share this file with jay ongg	file_share	teams	share <file_title> this </file_title> file with <teamsuser_contactname> jay ongg </teamsuser_contactname>
+0	share file with my next meeting	file_share	teams	share file with my <teammeeting_starttime> next </teammeeting_starttime> <file_sharetarget> meeting </file_sharetarget>
+0	share this file with my next shiproom meeting	file_share	teams	share <file_title> this </file_title> file with my <teammeeting_starttime> next </teammeeting_starttime> <teammeeting_title> shiproom </teammeeting_title> <file_sharetarget> meeting </file_sharetarget>
+0	download this file	file_download	teams	download <file_title> this </file_title> file
+0	download this excel	file_download	teams	download <file_title> this </file_title> <file_filetype> excel </file_filetype>
+0	Un-follow this channel	teamspace_unfollow	teams	Un-follow <teamspace_channel> this </teamspace_channel> channel
+0	Follow this channel	teamspace_follow	teams	Follow <teamspace_channel> this </teamspace_channel> channel
+0	Favorite this channel	teamspace_favorite	teams	Favorite <teamspace_channel> this </teamspace_channel> channel
+0	Favorite this team	teamspace_favorite	teams	Favorite <teamspace_team> this </teamspace_team> team
+0	Un-favorite Cortana team	teamspace_unfavorite	teams	Un-favorite <teamspace_team> Cortana </teamspace_team> team
+0	Un-favorite this team	teamspace_unfavorite	teams	Un-favorite <teamspace_team> this </teamspace_team> team
+0	Add person to this team	teamspace_addtoteam	teams	Add person to <teamspace_team> this </teamspace_team> team
+0	Remove person from Cortana team	teamspace_removemember	teams	Remove person from <teamspace_team> Cortana </teamspace_team> team
+0	Remove person from this team	teamspace_removemember	teams	Remove person from <teamspace_team> this </teamspace_team> team
+0	Share file LT review discussion with this meeting	file_share	teams	Share file <file_title> LT review discussion </file_title> with <teammeeting_title> this </teammeeting_title> <file_sharetarget> meeting </file_sharetarget>
+0	Share voice skills deck with the next meeting	file_share	teams	Share <file_title> voice skills </file_title> <file_filetype> deck </file_filetype> with the <teammeeting_starttime> next </teammeeting_starttime> <file_sharetarget> meeting </file_sharetarget>
+0	Share the spreadsheet I was working on with the meeting attendees	file_share	teams	Share the <file_filetype> spreadsheet </file_filetype> <file_filerecency> I was working on </file_filerecency> with the <file_sharetarget> meeting attendees </file_sharetarget>
+0	Share the document I was working on with the meeting participants	file_share	teams	Share the document <file_filerecency> I was working on </file_filerecency> with the <file_sharetarget> meeting participants </file_sharetarget>
+0	Share the paper I was working on with design sync meeting	file_share	teams	Share the paper <file_filerecency> I was working on </file_filerecency> with <teammeeting_title> design sync </teammeeting_title> <file_sharetarget> meeting </file_sharetarget>
+0	Remove person from this team	teamspace_removemember	teams	Remove person from <teamspace_team> this </teamspace_team> team
+0	Open files tab in the voice skills channel	teamspace_showtab	teams	Open <teamspace_tab> files </teamspace_tab> tab in the <teamspace_channel> voice skills </teamspace_channel> channel
+0	Open files tab in the channel	teamspace_showtab	teams	Open <teamspace_tab> files </teamspace_tab> tab in the channel
+0	Open tab in the voice skills channel	teamspace_showtab	teams	Open tab in the <teamspace_channel> voice skills </teamspace_channel> channel
+0	Open the tab in the channel	teamspace_showtab	teams	Open the tab in the channel
+0	Change my status	teamsuser_setstatus	teams	Change my status
+0	set my Status to Busy	teamsuser_setstatus	teams	set my Status to <teamsuser_status> Busy </teamsuser_status>
+0	Change my status to available	teamsuser_setstatus	teams	Change my status to <teamsuser_status> available </teamsuser_status>
+0	Share this tab with Jacob	teamspace_sharetab	teams	Share <teamspace_tab> this </teamspace_tab> tab with <teamsuser_contactname> Jacob </teamsuser_contactname>
+0	Share the tab with Jacob	teamspace_sharetab	teams	Share the tab with <teamsuser_contactname> Jacob </teamsuser_contactname>
+0	Send this tab to Jacob	teamspace_sharetab	teams	Send <teamspace_tab> this </teamspace_tab> tab to <teamsuser_contactname> Jacob </teamsuser_contactname>
+0	Share the link to this channel with Jacob	teamspace_sharechannel	teams	Share the link to <teamspace_channel> this </teamspace_channel> channel with <teamsuser_contactname> Jacob </teamsuser_contactname>
+0	Share the link to channel with Jacob	teamspace_sharechannel	teams	Share the link to channel with <teamsuser_contactname> Jacob </teamsuser_contactname>
+0	Share this link to voice skills channel with Jacob	teamspace_sharechannel	teams	Share this link to <teamspace_channel> voice skills </teamspace_channel> channel with <teamsuser_contactname> Jacob </teamsuser_contactname>
+0	Share voice skills channel with Jacob	teamspace_sharechannel	teams	Share <teamspace_channel> voice skills </teamspace_channel> channel with <teamsuser_contactname> Jacob </teamsuser_contactname>
+0	Add link to files tab in the compose box	teamspace_sharetab	teams	Add link to <teamspace_tab> files </teamspace_tab> tab in the <teamspace_sharetarget> compose box </teamspace_sharetarget>
+0	Share voice skills channel link with Jacob	teamspace_sharechannel	teams	Share <teamspace_channel> voice skills </teamspace_channel> channel link with <teamsuser_contactname> Jacob </teamsuser_contactname>
+0	Copy link to files tab in the message	teamspace_sharetab	teams	Copy link to <teamspace_tab> files </teamspace_tab> tab in the <teamspace_sharetarget> message </teamspace_sharetarget>
+0	Share the file on this chat	file_share	teams	Share the file on this <file_sharetarget> chat </file_sharetarget>
+0	Start presentation	start_presenting	teams	Start presentation
+0	Present my deck	start_presenting	teams	Present my deck
+0	Project the deck	start_presenting	teams	Project the deck
+0	Present planning deck	start_presenting	teams	Present <deck_name> planning </deck_name> deck
+0	Project planning deck	start_presenting	teams	Project <deck_name> planning </deck_name> deck
+0	Stop presentation	stop_presenting	teams	Stop presentation
+0	Next slide	next_slide	teams	Next slide
+0	Previous slide	previous_slide	teams	Previous slide
+0	Last slide	previous_slide	teams	Last slide
+0	Go back to the last slide	previous_slide	teams	Go back to the last slide
+0	Go back a slide	slide_back	teams	Go back a slide
+0	Slide 11	goto_slide	teams	Slide <slide_number> 11 </slide_number>
+0	Go to slide number 11	goto_slide	teams	Go to slide number <slide_number> 11 </slide_number>
+0	Show slide number 11	goto_slide	teams	Show slide number <slide_number> 11 </slide_number>
+0	Jump to slide 11	goto_slide	teams	Jump to slide <slide_number> 11 </slide_number>
+0	Go to budget slide	goto_slide	teams	Go to <slide_name> budget </slide_name> slide
+0	Show budget slide	goto_slide	teams	Show <slide_name> budget </slide_name> slide
+0	Jump to budget slide	goto_slide	teams	Jump to <slide_name> budget </slide_name> slide
+0	Share my deck	file_share	teams	Share my <file_filetype> deck </file_filetype>
+0	Share the deck	file_share	teams	Share the <file_filetype> deck </file_filetype>
+0	Share planning deck	file_share	teams	Share <file_title> planning </file_title> <file_filetype> deck </file_filetype>
+0	Mute everyone	mute_participant	teams	Mute everyone
+0	Mute all	mute_participant	teams	Mute <teammeeting_quantifier> all </teammeeting_quantifier>
+0	Mute all participants	mute_participant	teams	Mute <teammeeting_quantifier> all </teammeeting_quantifier> participants
+0	Mute John	mute_participant	teams	Mute <teamsuser_contactname> John </teamsuser_contactname>
+0	Show whiteboard	show_whiteboard	teams	Show whiteboard
+0	Start whiteboard	show_whiteboard	teams	Start whiteboard
+0	Open whiteboard	show_whiteboard	teams	Open whiteboard
+0	Project whiteboard	show_whiteboard	teams	Project whiteboard
+0	Hide whiteboard	hide_whiteboard	teams	Hide whiteboard
+0	Stop whiteboard	hide_whiteboard	teams	Stop whiteboard
+0	Close whiteboard	hide_whiteboard	teams	Close whiteboard
+0	End presenting	stop_presenting	teams	End presenting
+0	End presentation	stop_presenting	teams	End presentation
+0	Finish presenting	stop_presenting	teams	Finish presenting
+0	Stop presenting	stop_presenting	teams	Stop presenting
+0	Exit presentation	stop_presenting	teams	Exit presentation
+0	first one	file_download	teams	<position_ref> first </position_ref> one
+0	go to end of presentation	goto_slide	teams	go to <slide_number> end of presentation </slide_number>
+0	go to very last slide	goto_slide	teams	go to very <slide_number> last </slide_number> slide
+0	download lt review file	file_download	teams	download <file_title> lt review </file_title> file
+0	open voice skills team	teamspace_navigate	teams	open <teamspace_team> voice skills </teamspace_team> team
+0	share this file	file_share	teams	share <file_title> this </file_title> file
+0	go to the final slide	goto_slide	teams	go to the <slide_number> final </slide_number> slide
+0	hide the whiteboard	hide_whiteboard	teams	hide the whiteboard
+0	go to the next slide	next_slide	teams	go to the next slide
+0	jump to the previous slide	previous_slide	teams	jump to the previous slide
+0	Go to the last slide	previous_slide	teams	Go to the last slide
+0	go to the previous slide	previous_slide	teams	go to the previous slide
+0	present the attached deck	start_presenting	teams	present the <deck_location> attached </deck_location> deck
+0	present the deck I was working on	start_presenting	teams	present the deck <file_filerecency> I was working on </file_filerecency>
+0	follow voice skills channel	teamspace_follow	teams	follow <teamspace_channel> voice skills </teamspace_channel> channel
+0	open teams help	teamspace_help	teams	open teams help
+0	send teams feedback	teamspace_sendfeedback	teams	send teams feedback
+0	Show hotkeys	teamspace_showhotkey	teams	Show hotkeys
+0	Show keyboard shortcuts	teamspace_showhotkey	teams	Show keyboard shortcuts
+0	open files tab in voice skills channel	teamspace_showtab	teams	open <teamspace_tab> files </teamspace_tab> tab in <teamspace_channel> voice skills </teamspace_channel> channel
+0	show me onenote tab	teamspace_showtab	teams	show me <teamspace_tab> onenote </teamspace_tab> tab
+0	go to unread activity	teamsuser_showactivity	teams	go to <teamsuser_activitytype> unread </teamsuser_activitytype> activity
+0	let me see my mentions	teamsuser_showactivity	teams	let me see my <teamsuser_activitytype> mentions </teamsuser_activitytype>
+0	go to my activity	teamsuser_showactivity	teams	go to my activity
+0	first slide	goto_slide	teams	<slide_number> first </slide_number> slide
+0	let me see my at mentions	teamsuser_showactivity	teams	let me see my <teamsuser_activitytype> at mentions </teamsuser_activitytype>
+0	bring up my calendar	teamcalendar_navigate	teams	bring up my calendar
+0	could you navigate to my calendar	teamcalendar_navigate	teams	could you navigate to my calendar
+0	direct to my calendar	teamcalendar_navigate	teams	direct to my calendar
+0	find my calendar and open it	teamcalendar_navigate	teams	find my calendar and open it
+0	go to my 2018 calendar for may	teamcalendar_navigate	teams	go to my <teamcalendar_starttime> 2018 </teamcalendar_starttime> calendar for <teamcalendar_starttime> may </teamcalendar_starttime>
+0	go to my calendar please	teamcalendar_navigate	teams	go to my calendar please
+0	i need to view my calendar	teamcalendar_navigate	teams	i need to view my calendar
+0	navigate to calendar	teamcalendar_navigate	teams	navigate to calendar
+0	navigate to my calendar on 4/10/2018	teamcalendar_navigate	teams	navigate to my calendar on <teamcalendar_starttime> 4/10/2018 </teamcalendar_starttime>
+0	open my calendar for may 5th 2018	teamcalendar_navigate	teams	open my calendar for <teamcalendar_starttime> may 5th 2018 </teamcalendar_starttime>
+0	show me my calendar for 4/10/2018	teamcalendar_navigate	teams	show me my calendar for <teamcalendar_starttime> 4/10/2018 </teamcalendar_starttime>
+0	download this deck	file_download	teams	download <file_title> this </file_title> <file_filetype> deck </file_filetype>
+0	share this file with jay ongg	file_share	teams	share <file_title> this </file_title> file with <teamsuser_contactname> jay ongg </teamsuser_contactname>
+0	start presenting	start_presenting	teams	start presenting
+0	show next week in my calendar	teamcalendar_navigate	teams	show <teamcalendar_starttime> next week </teamcalendar_starttime> in my calendar
+0	Add voice skills channel to my bookmarks	teamspace_favorite	teams	Add <teamspace_channel> voice skills </teamspace_channel> channel to my bookmarks
+0	go to the voice skills	teamspace_navigate	teams	go to the <teamspace_unclearkeyword> voice skills </teamspace_unclearkeyword>
+0	Remove person from the team	teamspace_removemember	teams	Remove person from the team
+0	open shortcuts	teamspace_showhotkey	teams	open shortcuts
+0	Un-favorite the voice skills team	teamspace_unfavorite	teams	Un-favorite the <teamspace_team> voice skills </teamspace_team> team
+0	go to Jacob's org	teamsuser_checkorg	teams	go to <teamsuser_contactname> Jacob </teamsuser_contactname>'s org
+0	go to Jacob's organization	teamsuser_checkorg	teams	go to <teamsuser_contactname> Jacob </teamsuser_contactname>'s organization
+0	go to roger's activity	teamsuser_showactivity	teams	go to <teamsuser_contactname> roger </teamsuser_contactname>'s activity
+0	Bookmark voice skills team	teamspace_favorite	teams	Bookmark <teamspace_team> voice skills </teamspace_team> team
+0	Copy link to files tab in this chat	teamspace_sharetab	teams	Copy link to <teamspace_tab> files </teamspace_tab> tab in this <teamspace_sharetarget> chat </teamspace_sharetarget>
+0	share file with meeting tomorrow	file_share	teams	share file with <file_sharetarget> meeting </file_sharetarget> <teammeeting_starttime> tomorrow </teammeeting_starttime>
+0	show the last slide again	previous_slide	teams	show the last slide again
+0	Present the deck	start_presenting	teams	Present the deck
+0	Show the presentation	start_presenting	teams	Show the presentation
+0	Show the planning presentation	start_presenting	teams	Show the <deck_name> planning </deck_name> presentation
+0	Project the deck	start_presenting	teams	Project the deck
+0	Project the planning deck	start_presenting	teams	Project the <deck_name> planning </deck_name> deck
+0	add roger to the johnson test group team	teamspace_addtoteam	teams	add <teamsuser_contactname> roger </teamsuser_contactname> to the <teamspace_team> johnson test group </teamspace_team> team
+0	Go to team hackathon 2018	teamspace_navigate	teams	Go to team <teamspace_team> hackathon 2018 </teamspace_team>
+0	invite jay to bot team	teamspace_addtoteam	teams	invite <teamsuser_contactname> jay </teamsuser_contactname> to <teamspace_team> bot </teamspace_team> team
+0	Launch that document I was composing	file_open	teams	Launch <file_title> that </file_title> document <file_filerecency> I was composing </file_filerecency>
+0	Open voice skills ppt	file_open	teams	Open <file_title> voice skills </file_title> <file_filetype> ppt </file_filetype>
+0	present the planning 2018 deck	start_presenting	teams	present the <deck_name> planning 2018 </deck_name> deck
+0	Pull up deployment timeline doc	file_open	teams	Pull up <file_title> deployment timeline </file_title> doc
+0	share the brownbag excel with this conversation	file_share	teams	share the <file_title> brownbag </file_title> <file_filetype> excel </file_filetype> with this <file_sharetarget> conversation </file_sharetarget>
+0	share this file with roger	file_share	teams	share <file_title> this </file_title> file with <teamsuser_contactname> roger </teamsuser_contactname>
+0	show jay ongg chat 	teamsuser_openchat	teams	show <teamsuser_contactname> jay ongg </teamsuser_contactname> chat 
+0	show jay ongg org chart	teamsuser_checkorg	teams	show <teamsuser_contactname> jay ongg </teamsuser_contactname> org chart
+0	Unfollow that team	teamspace_unfollow	teams	Unfollow <teamspace_team> that </teamspace_team> team
+0	open file preview test plan document	file_open	teams	open file <file_title> preview test plan document </file_title>
+0	search all hands deck	teamspace_search	teams	search <teamspace_searchkeyword> all hands deck </teamspace_searchkeyword>
+0	Go to last slide	previous_slide	teams	Go to last slide
+0	Share the LT review.pptx deck	file_share	teams	Share the <file_title> LT review.pptx </file_title> <file_filetype> deck </file_filetype>
+0	Share the Some name deck	file_share	teams	Share the <file_title> Some name </file_title> <file_filetype> deck </file_filetype>
+0	Go to slide 7	goto_slide	teams	Go to slide <slide_number> 7 </slide_number>
+0	Go to the very last slide	goto_slide	teams	Go to the very <slide_number> last </slide_number> slide
+0	Go to the first slide	goto_slide	teams	Go to the <slide_number> first </slide_number> slide
+0	go to at mentions	teamsuser_showactivity	teams	go to <teamsuser_activitytype> at mentions </teamsuser_activitytype>
+0	set my status to be right back	teamsuser_setstatus	teams	set my status to <teamsuser_status> be right back </teamsuser_status>
+0	set my status to out of office	teamsuser_setstatus	teams	set my status to <teamsuser_status> out of office </teamsuser_status>
+0	set my status to busy	teamsuser_setstatus	teams	set my status to <teamsuser_status> busy </teamsuser_status>
+0	go to downloads	file_navigate	teams	go to <file_filetype> downloads </file_filetype>
+0	set my status to away	teamsuser_setstatus	teams	set my status to <teamsuser_status> away </teamsuser_status>
+0	set my status to available	teamsuser_setstatus	teams	set my status to <teamsuser_status> available </teamsuser_status>
+0	set my status to do not disturb	teamsuser_setstatus	teams	set my status to <teamsuser_status> do not disturb </teamsuser_status>
+0	search for random	teamspace_search	teams	search for <teamspace_searchkeyword> random </teamspace_searchkeyword>
+0	go to saved items	teamsuser_showactivity	teams	go to <teamsuser_activitytype> saved items </teamsuser_activitytype>
+0	go to my recent files	file_navigate	teams	go to my <file_filerecency> recent </file_filerecency> files
+0	go to help	teamspace_help	teams	go to help
+0	go to keyboard shortcuts	teamspace_showhotkey	teams	go to keyboard shortcuts
+0	open keyboard shortcuts	teamspace_showhotkey	teams	open keyboard shortcuts
+0	the first one	file_download	teams	the <position_ref> first </position_ref> one
+0	second one	file_download	teams	<position_ref> second </position_ref> one
+0	third one	file_download	teams	<position_ref> third </position_ref> one
+0	number one	file_download	teams	number <position_ref> one </position_ref>
+0	number two	file_download	teams	number <position_ref> two </position_ref>
+0	it is number two	file_download	teams	it is number <position_ref> two </position_ref>
+0	lt review discussion	file_download	teams	<file_title> lt review discussion </file_title>
+0	lt review deck	file_download	teams	<deck_name> lt review </deck_name> deck
+0	marketing slide	file_download	teams	<slide_name> marketing </slide_name> slide
+0	slide two	file_download	teams	<slide_number> slide two </slide_number>
+0	stand up meeting	file_download	teams	<teammeeting_title> stand up </teammeeting_title> meeting
+0	voice skill	file_download	teams	<teamspace_channel> voice skill </teamspace_channel>
+0	intelligence one	file_download	teams	<teamspace_team> intelligence one </teamspace_team>
+0	personal tab	file_download	teams	<teamspace_tab> personal </teamspace_tab> tab
+0	it is jay ongg	file_download	teams	it is <teamsuser_contactname> jay ongg </teamsuser_contactname>
+0	available	file_download	teams	<teamsuser_status> available </teamsuser_status>
+0	MessageText	JudgedTaskunderstandingIntent	judged_domain	JudgedTaskunderstandingMsgannotation
+0	Join a presentation.	start_presenting	teams	Join a presentation.
+0	Go to general channel.	teamspace_navigate	teams	Go to <teamspace_channel> general </teamspace_channel> channel.
+0	Go to free Journal.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> free Journal </teamspace_unclearkeyword>.
+0	Present the deck.	start_presenting	teams	Present the deck.
+0	Open the file I was working on.	file_open	teams	Open the file <file_filerecency> I was working on </file_filerecency>.
+0	Open up Cortana agent file.	file_open	teams	Open up <file_title> Cortana agent </file_title> file.
+0	Open chat with Kunal Garg.	teamsuser_openchat	teams	Open chat with <teamsuser_contactname> Kunal Garg </teamsuser_contactname>.
+0	Go to my recent files.	file_navigate	teams	Go to my <file_filerecency> recent </file_filerecency> files.
+0	Show me girls activity.	teamsuser_showactivity	teams	Show me <teamsuser_contactname> girls </teamsuser_contactname> activity.
+0	Change my presence status to available.	teamsuser_setstatus	teams	Change my presence status to <teamsuser_status> available </teamsuser_status>.
+0	Go to channel.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> channel </teamspace_unclearkeyword>.
+0	Set my status to busy.	teamsuser_setstatus	teams	Set my status to <teamsuser_status> busy </teamsuser_status>.
+0	Slide number 5.	goto_slide	teams	Slide number <slide_number> 5 </slide_number>.
+0	Show my recent files.	file_navigate	teams	Show my <file_filerecency> recent </file_filerecency> files.
+0	Give me files.	file_navigate	teams	Give me files.
+0	go to the fun channel	teamspace_navigate	teams	go to the <teamspace_channel> fun </teamspace_channel> channel
+0	Recent files.	file_navigate	teams	<file_filerecency> Recent </file_filerecency> files.
+0	Go to rest.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> rest </teamspace_unclearkeyword>.
+0	Go to intelligent communications team.	teamspace_navigate	teams	Go to <teamspace_team> intelligent communications </teamspace_team> team.
+0	Go to engineering channel.	teamspace_navigate	teams	Go to <teamspace_channel> engineering </teamspace_channel> channel.
+0	Go to slide 20.	goto_slide	teams	Go to slide <slide_number> 20 </slide_number>.
+0	Open the Cortana design team.	teamspace_navigate	teams	Open the <teamspace_team> Cortana design </teamspace_team> team.
+0	Go to my activity.	teamsuser_showactivity	teams	Go to my activity.
+0	Open the PowerPoint I was working on.	file_open	teams	Open the <file_filetype> PowerPoint </file_filetype> <file_filerecency> I was working on </file_filerecency>.
+0	Open connectors channel.	teamspace_navigate	teams	Open <teamspace_channel> connectors </teamspace_channel> channel.
+0	Go to my calendar for 3 PM today.	teamcalendar_navigate	teams	Go to my calendar for <teamcalendar_starttime> 3 PM today </teamcalendar_starttime>.
+0	Go to my calendar for next week.	teamcalendar_navigate	teams	Go to my calendar for <teamcalendar_starttime> next week </teamcalendar_starttime>.
+0	Set my status to away.	teamsuser_setstatus	teams	Set my status to <teamsuser_status> away </teamsuser_status>.
+0	Go to my calendar for tomorrow.	teamcalendar_navigate	teams	Go to my calendar for <teamcalendar_starttime> tomorrow </teamcalendar_starttime>.
+0	Go to shanard activity.	teamsuser_showactivity	teams	Go to <teamsuser_contactname> shanard </teamsuser_contactname> activity.
+0	Open up file.	file_open	teams	Open up file.
+0	Go to slide 5.	goto_slide	teams	Go to slide <slide_number> 5 </slide_number>.
+0	Go to the last slide.	previous_slide	teams	Go to the last slide.
+0	Present the LT review deck.	start_presenting	teams	Present the <deck_name> LT review </deck_name> deck.
+0	Go to the voice channel.	teamspace_navigate	teams	Go to the <teamspace_channel> voice </teamspace_channel> channel.
+0	Change my presence to available.	teamsuser_setstatus	teams	Change my presence to <teamsuser_status> available </teamsuser_status>.
+0	What can I say?	teamspace_help	teams	What can I say?
+0	Go to the next slide.	next_slide	teams	Go to the next slide.
+0	Open file specs.	file_open	teams	Open file <file_title> specs </file_title>.
+0	Go to the Boy Scouts channel.	teamspace_navigate	teams	Go to the <teamspace_channel> Boy Scouts </teamspace_channel> channel.
+0	Change my status to available.	teamsuser_setstatus	teams	Change my status to <teamsuser_status> available </teamsuser_status>.
+0	Go to the first slide.	goto_slide	teams	Go to the <slide_number> first </slide_number> slide.
+0	Send the deck.	file_share	teams	Send the <file_filetype> deck </file_filetype>.
+0	Find 1234567.	teamspace_search	teams	Find <teamspace_searchkeyword> 1234567 </teamspace_searchkeyword>.
+0	Go to my recent files.	file_navigate	teams	Go to my <file_filerecency> recent </file_filerecency> files.
+0	Go to my chat with Tomer Hermelin.	teamsuser_openchat	teams	Go to my chat with <teamsuser_contactname> Tomer Hermelin </teamsuser_contactname>.
+0	go to club channel	teamspace_navigate	teams	go to <teamspace_channel> club </teamspace_channel> channel
+0	Set the status to be right back.	teamsuser_setstatus	teams	Set the status to <teamsuser_status> be right back </teamsuser_status>.
+0	What can I do with Cortana?	teamspace_help	teams	What can I do with Cortana?
+0	Go to Alex Olson organization.	teamsuser_checkorg	teams	Go to <teamsuser_contactname> Alex Olson </teamsuser_contactname> organization.
+0	Go to my chat with August.	teamsuser_openchat	teams	Go to my chat with <teamsuser_contactname> August </teamsuser_contactname>.
+0	Go to slide number 5.	goto_slide	teams	Go to slide number <slide_number> 5 </slide_number>.
+0	Go to next slide.	next_slide	teams	Go to next slide.
+0	Go to the lunch channel.	teamspace_navigate	teams	Go to the <teamspace_channel> lunch </teamspace_channel> channel.
+0	Go to tap 100 team.	teamspace_navigate	teams	Go to <teamspace_team> tap 100 </teamspace_team> team.
+0	Go to intelligent communication team.	teamspace_navigate	teams	Go to <teamspace_team> intelligent communication </teamspace_team> team.
+0	Open file LG tribute deck.	file_open	teams	Open file <file_title> LG tribute deck </file_title>.
+0	I want to create a team.	teamspace_createteam	teams	I want to create a team.
+0	Open SQI metrics 2018-2019 PowerPoint.	file_open	teams	Open <file_title> SQI metrics 2018-2019 </file_title> <file_filetype> PowerPoint </file_filetype>.
+0	Slide 5.	goto_slide	teams	Slide <slide_number> 5 </slide_number>.
+0	open the wiki tab	teamspace_showtab	teams	open the <teamspace_tab> wiki </teamspace_tab> tab
+0	Show me where I was mentioned.	teamsuser_showactivity	teams	Show me <teamsuser_activitytype> where I was mentioned </teamsuser_activitytype>.
+0	Go to the next slide.	next_slide	teams	Go to the next slide.
+0	Show PowerPoint.	file_navigate	teams	Show <file_filetype> PowerPoint </file_filetype>.
+0	Open deck.	file_open	teams	Open <file_filetype> deck </file_filetype>.
+0	Stop sharing.	stop_presenting	teams	Stop sharing.
+0	Set my status to available.	teamsuser_setstatus	teams	Set my status to <teamsuser_status> available </teamsuser_status>.
+0	Open multi window file.	file_open	teams	Open <file_title> multi window </file_title> file.
+0	Go to slide one.	goto_slide	teams	Go to slide <slide_number> one </slide_number>.
+0	Go to the general Journal.	teamspace_navigate	teams	Go to the <teamspace_unclearkeyword> general Journal </teamspace_unclearkeyword>.
+0	Show my activity.	teamsuser_showactivity	teams	Show my activity.
+0	go to the code review channel	teamspace_navigate	teams	go to the <teamspace_channel> code review </teamspace_channel> channel
+0	Open chat with Marat to.	teamsuser_openchat	teams	Open chat with <teamsuser_contactname> Marat </teamsuser_contactname> to.
+0	What can I do?	teamspace_help	teams	What can I do?
+0	Go to the design channel.	teamspace_navigate	teams	Go to the <teamspace_channel> design </teamspace_channel> channel.
+0	open my recent file	file_navigate	teams	open my <file_filerecency> recent </file_filerecency> file
+0	Set my status to do not disturb.	teamsuser_setstatus	teams	Set my status to <teamsuser_status> do not disturb </teamsuser_status>.
+0	Share the deck I was working on on.	file_share	teams	Share the <file_filetype> deck </file_filetype> <file_filerecency> I was working on </file_filerecency> on.
+0	End the presentation.	stop_presenting	teams	End the presentation.
+0	Go to the teams devices channel.	teamspace_navigate	teams	Go to the <teamspace_channel> teams devices </teamspace_channel> channel.
+0	What can I do with you?	teamspace_help	teams	What can I do with you?
+0	show alex's activity	teamsuser_showactivity	teams	show <teamsuser_contactname> alex </teamsuser_contactname>'s activity
+0	Go to the lunch channel.	teamspace_navigate	teams	Go to the <teamspace_channel> lunch </teamspace_channel> channel.
+0	Next slide.	next_slide	teams	Next slide.
+0	What can you do?	teamspace_help	teams	What can you do?
+0	share file specs with mohit	file_share	teams	share file <file_title> specs </file_title> with <teamsuser_contactname> mohit </teamsuser_contactname>
+0	Go to sleep by.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> sleep by </teamspace_unclearkeyword>.
+0	Open PowerPoint deck.	file_open	teams	Open <file_filetype> PowerPoint deck </file_filetype>.
+0	Go to giang activity.	teamsuser_showactivity	teams	Go to <teamsuser_contactname> giang </teamsuser_contactname> activity.
+0	Search for query.	teamspace_search	teams	Search for <teamspace_searchkeyword> query </teamspace_searchkeyword>.
+0	Find Lee LT review deck.	teamspace_search	teams	Find <teamspace_searchkeyword> Lee LT review deck </teamspace_searchkeyword>.
+0	Go to slide 10.	goto_slide	teams	Go to slide <slide_number> 10 </slide_number>.
+0	Go to Internet communications team.	teamspace_navigate	teams	Go to <teamspace_team> Internet communications </teamspace_team> team.
+0	Close this presentation.	stop_presenting	teams	Close this presentation.
+0	Go to active.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> active </teamspace_unclearkeyword>.
+0	Go to August activity.	teamsuser_showactivity	teams	Go to <teamsuser_contactname> August </teamsuser_contactname> activity.
+0	Present the deck I was working on this moment.	start_presenting	teams	Present the deck <file_filerecency> I was working on </file_filerecency> this moment.
+0	Open the document that I was working on.	file_open	teams	Open the document that <file_filerecency> I was working on </file_filerecency>.
+0	Open the skills spreadsheet.	file_open	teams	Open the <file_title> skills </file_title> <file_filetype> spreadsheet </file_filetype>.
+0	Show me a mekinges activity.	teamsuser_showactivity	teams	Show me a <teamsuser_contactname> mekinges </teamsuser_contactname> activity.
+0	Go to the slide number 5.	goto_slide	teams	Go to the slide number <slide_number> 5 </slide_number>.
+0	share file with this chat	file_share	teams	share file with this <file_sharetarget> chat </file_sharetarget>
+0	Go to my feed.	teamsuser_showactivity	teams	Go to my <teamsuser_activitytype> feed </teamsuser_activitytype>.
+0	What all can I say?	teamspace_help	teams	What all can I say?
+0	Go to teams intelligent devices.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> teams intelligent devices </teamspace_unclearkeyword>.
+0	Close the presentation.	stop_presenting	teams	Close the presentation.
+0	Slide 10.	goto_slide	teams	Slide <slide_number> 10 </slide_number>.
+0	go to roger organization	teamsuser_checkorg	teams	go to <teamsuser_contactname> roger </teamsuser_contactname> organization
+0	go to the book club channel	teamspace_navigate	teams	go to the <teamspace_channel> book club </teamspace_channel> channel
+0	Go to slide for.	goto_slide	teams	Go to slide for.
+0	share the LT review deck to roger	file_share	teams	share the <file_title> LT review </file_title> <file_filetype> deck </file_filetype> to <teamsuser_contactname> roger </teamsuser_contactname>
+0	Show me my recent files.	file_navigate	teams	Show me my <file_filerecency> recent </file_filerecency> files.
+0	Navigate to voice skills channel.	teamspace_navigate	teams	Navigate to <teamspace_channel> voice skills </teamspace_channel> channel.
+0	Close presentation.	stop_presenting	teams	Close presentation.
+0	Present the deck I was working on.	start_presenting	teams	Present the deck <file_filerecency> I was working on </file_filerecency>.
+0	Present the deck attached to the meeting.	start_presenting	teams	Present the deck <deck_location> attached </deck_location> to the meeting.
+0	Go to previous slide.	previous_slide	teams	Go to previous slide.
+0	I want to join a team.	teamspace_jointeam	teams	I want to join a team.
+0	Go to settings engineering channel.	teamspace_navigate	teams	Go to <teamspace_channel> settings engineering </teamspace_channel> channel.
+0	Open SQL I metrics 2018-2019 presentation.	file_open	teams	Open <file_title> SQL I metrics 2018-2019 </file_title> presentation.
+0	Go to activity.	teamsuser_showactivity	teams	Go to activity.
+0	Open substrate framing memo.	file_open	teams	Open <file_title> substrate framing </file_title> <file_filetype> memo </file_filetype>.
+0	add roger to the team	teamspace_addtoteam	teams	add <teamsuser_contactname> roger </teamsuser_contactname> to the team
+0	Open the ship room deck.	file_open	teams	Open the <file_title> ship room </file_title> <file_filetype> deck </file_filetype>.
+0	Present the presentation.	start_presenting	teams	Present the presentation.
+0	Go to play lunch channel.	teamspace_navigate	teams	Go to <teamspace_channel> play lunch </teamspace_channel> channel.
+0	add alex to the team	teamspace_addtoteam	teams	add <teamsuser_contactname> alex </teamsuser_contactname> to the team
+0	go to the welcome team	teamspace_navigate	teams	go to the <teamspace_team> welcome </teamspace_team> team
+0	Go to chat with Mark.	teamsuser_openchat	teams	Go to chat with <teamsuser_contactname> Mark </teamsuser_contactname>.
+0	Go to slide number 3.	goto_slide	teams	Go to slide number <slide_number> 3 </slide_number>.
+0	go to lunch channel	teamspace_navigate	teams	go to <teamspace_channel> lunch </teamspace_channel> channel
+0	Show calendar.	teamcalendar_navigate	teams	Show calendar.
+0	Go to slide by.	goto_slide	teams	Go to slide by.
+0	go to recent files	file_navigate	teams	go to <file_filerecency> recent </file_filerecency> files
+0	Go to the previous slide.	previous_slide	teams	Go to the previous slide.
+0	Present the deck I was recently working on.	start_presenting	teams	Present the deck <file_filerecency> I was recently working on </file_filerecency>.
+0	Open my recent word document.	file_open	teams	Open my <file_filerecency> recent </file_filerecency> <file_filetype> word </file_filetype> document.
+0	Stop presentation.	stop_presenting	teams	Stop presentation.
+0	Go to shift.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> shift </teamspace_unclearkeyword>.
+0	Go to slide 12.	goto_slide	teams	Go to slide <slide_number> 12 </slide_number>.
+0	Go to the voice kids channel.	teamspace_navigate	teams	Go to the <teamspace_channel> voice kids </teamspace_channel> channel.
+0	Go to free general.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> free general </teamspace_unclearkeyword>.
+0	Go to the lodge Juneau.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> the lodge Juneau </teamspace_unclearkeyword>.
+0	Open intelligent communications team.	teamspace_navigate	teams	Open <teamspace_team> intelligent communications </teamspace_team> team.
+0	open the onenote tab	teamspace_showtab	teams	open the <teamspace_tab> onenote </teamspace_tab> tab
+0	Open the seals spreadsheet.	file_open	teams	Open the <file_title> seals </file_title> <file_filetype> spreadsheet </file_filetype>.
+0	Show my calendar.	teamcalendar_navigate	teams	Show my calendar.
+0	Go to coral internal.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> coral internal </teamspace_unclearkeyword>.
+0	Go to slide 2.	goto_slide	teams	Go to slide <slide_number> 2 </slide_number>.
+0	Open the excel spreadsheet I was working on.	file_open	teams	Open the <file_filetype> excel spreadsheet </file_filetype> <file_filerecency> I was working on </file_filerecency>.
+0	Open XLT review PowerPoint.	file_open	teams	Open <file_title> XLT review </file_title> <file_filetype> PowerPoint </file_filetype>.
+0	Go to speech and language.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> speech and language </teamspace_unclearkeyword>.
+0	Next slide next.	next_slide	teams	Next slide next.
+0	Go to chat now.	teamsuser_openchat	teams	Go to chat now.
+0	Open the files.	file_open	teams	Open the files.
+0	go to the book channel	teamspace_navigate	teams	go to the <teamspace_channel> book </teamspace_channel> channel
+0	Go to urgent communications team.	teamspace_navigate	teams	Go to <teamspace_team> urgent communications </teamspace_team> team.
+0	Go to slide 19.	goto_slide	teams	Go to slide <slide_number> 19 </slide_number>.
+0	Show me the next slide.	next_slide	teams	Show me the next slide.
+0	Go to slide number 4.	goto_slide	teams	Go to slide number <slide_number> 4 </slide_number>.
+0	Go to teams intelligent channel.	teamspace_navigate	teams	Go to <teamspace_channel> teams intelligent </teamspace_channel> channel.
+0	Go to slide 6.	goto_slide	teams	Go to slide <slide_number> 6 </slide_number>.
+0	Show me my PowerPoint files.	file_navigate	teams	Show me my <file_filetype> PowerPoint </file_filetype> files.
+0	Change my status.	teamsuser_setstatus	teams	Change my status.
+0	Go to the West coast channel.	teamspace_navigate	teams	Go to the <teamspace_channel> West coast </teamspace_channel> channel.
+0	open skills deck	file_open	teams	open <file_title> skills </file_title> <file_filetype> deck </file_filetype>
+0	Previous slide.	previous_slide	teams	Previous slide.
+0	Open SQI metrics 2018-2019 file.	file_open	teams	Open <file_title> SQI metrics 2018-2019 </file_title> file.
+0	Go to slide 3.	goto_slide	teams	Go to slide <slide_number> 3 </slide_number>.
+0	go to recent files	file_navigate	teams	go to <file_filerecency> recent </file_filerecency> files
+0	Go to the report change.	teamspace_navigate	teams	Go to the <teamspace_unclearkeyword> report change </teamspace_unclearkeyword>.
+0	Go to fridge.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> fridge </teamspace_unclearkeyword>.
+0	Navigate to intelligent communications team.	teamspace_navigate	teams	Navigate to <teamspace_team> intelligent communications </teamspace_team> team.
+0	End presentation.	stop_presenting	teams	End presentation.
+0	add alex to this team	teamspace_addtoteam	teams	add <teamsuser_contactname> alex </teamsuser_contactname> to <teamspace_team> this </teamspace_team> team
+0	Show me my mentions.	teamsuser_showactivity	teams	Show me my <teamsuser_activitytype> mentions </teamsuser_activitytype>.
+0	Present the deck.	start_presenting	teams	Present the deck.
+0	Show me August activity.	teamsuser_showactivity	teams	Show me <teamsuser_contactname> August </teamsuser_contactname> activity.
+0	Go to my recent file.	file_navigate	teams	Go to my <file_filerecency> recent </file_filerecency> file.
+0	present the deck i was working on	start_presenting	teams	present the deck <file_filerecency> i was working on </file_filerecency>
+0	share the deck i was working on	file_share	teams	share the <file_filetype> deck </file_filetype> <file_filerecency> i was working on </file_filerecency>
+0	share the filename deck	file_share	teams	share the <file_title> filename </file_title> <file_filetype> deck </file_filetype>
+0	share the filename presentation	start_presenting	teams	share the <deck_name> filename </deck_name> presentation
+0	present the filename deck	start_presenting	teams	present the <deck_name> filename </deck_name> deck
+0	present the filename presentation	start_presenting	teams	present the <deck_name> filename </deck_name> presentation
+0	present attached deck	start_presenting	teams	present <deck_location> attached </deck_location> deck
+0	present linked deck	start_presenting	teams	present <deck_location> linked </deck_location> deck
+0	present enclosed deck	start_presenting	teams	present <deck_location> enclosed </deck_location> deck
+0	share the attached deck	file_share	teams	share the <deck_location> attached </deck_location> <file_filetype> deck </file_filetype>
+0	share the linked deck	file_share	teams	share the <deck_location> linked </deck_location> <file_filetype> deck </file_filetype>
+0	share the enclosed deck	file_share	teams	share the <deck_location> enclosed </deck_location> <file_filetype> deck </file_filetype>
+0	present the deck i was working on this morning	start_presenting	teams	present the deck <file_filerecency> i was working on </file_filerecency> this morning
+0	present the deck i was working on this evening	start_presenting	teams	present the deck <file_filerecency> i was working on </file_filerecency> this evening
+0	present the deck i was working on this afternoon	start_presenting	teams	present the deck <file_filerecency> i was working on </file_filerecency> this afternoon
+0	share the deck i was working on this morning	file_share	teams	share the <file_filetype> deck </file_filetype> <file_filerecency> i was working on </file_filerecency> this morning
+0	share the deck i was working on this evening	file_share	teams	share the <file_filetype> deck </file_filetype> <file_filerecency> i was working on </file_filerecency> this evening
+0	share the deck i was working on this afternoon	file_share	teams	share the <file_filetype> deck </file_filetype> <file_filerecency> i was working on </file_filerecency> this afternoon
+0	present my deck	start_presenting	teams	present my deck
+0	present the deck	start_presenting	teams	present the deck
+0	end the presentation	stop_presenting	teams	end the presentation
+0	end presentation	stop_presenting	teams	end presentation
+0	stop presenting	stop_presenting	teams	stop presenting
+0	close presentation	stop_presenting	teams	close presentation
+0	close the presentation	stop_presenting	teams	close the presentation
+0	next slide	next_slide	teams	next slide
+0	go to next slide	next_slide	teams	go to next slide
+0	go to 1 slide	goto_slide	teams	go to <slide_name> 1 </slide_name> slide
+0	1 slide	goto_slide	teams	1 slide
+0	previous slide	previous_slide	teams	previous slide
+0	slide back	previous_slide	teams	slide back
+0	last slide	previous_slide	teams	last slide
+0	go to the title slide	goto_slide	teams	go to the <slide_name> title </slide_name> slide
+0	go to title slide	goto_slide	teams	go to <slide_name> title </slide_name> slide
+0	navigate to the title slide	goto_slide	teams	navigate to the title slide
+0	navigate to title slide	goto_slide	teams	navigate to title slide
+0	title slide	goto_slide	teams	title slide
+0	go to first slide	goto_slide	teams	go to <slide_number> first </slide_number> slide
+0	go to last slide	previous_slide	teams	go to last slide
+0	navigate to the first slide	goto_slide	teams	navigate to the <slide_number> first </slide_number> slide
+0	navigate to the last slide	previous_slide	teams	navigate to the last slide
+0	go to the very end to the deck	goto_slide	teams	go to the <slide_number> very end </slide_number> to the <file_filetype> deck </file_filetype>
+0	go to the very end to the presentation	goto_slide	teams	go to the  <slide_number> very end </slide_number> to the presentation
+0	go back to the title slide	goto_slide	teams	go back to the <slide_name> title </slide_name> slide
+0	go back 1 slide	goto_slide	teams	go back 1 slide
+0	go to voice skills channel	teamspace_navigate	teams	go to <teamspace_channel> voice skills </teamspace_channel> channel
+0	navigate to voice skills channel	teamspace_navigate	teams	navigate to <teamspace_channel> voice skills </teamspace_channel> channel
+0	open voice skills channel	teamspace_navigate	teams	open <teamspace_channel> voice skills </teamspace_channel> channel
+0	show me my activity	teamsuser_showactivity	teams	show me my activity
+0	go to my activity	teamsuser_showactivity	teams	go to my activity
+0	navigate to my activity	teamsuser_showactivity	teams	navigate to my activity
+0	show me at mentions	teamsuser_showactivity	teams	show me <teamsuser_activitytype> at mentions </teamsuser_activitytype>
+0	show me where i was mentioned	teamsuser_showactivity	teams	show me <teamsuser_activitytype> where i was mentioned </teamsuser_activitytype>
+0	show me my at mentions	teamsuser_showactivity	teams	show me my <teamsuser_activitytype> at mentions </teamsuser_activitytype>
+0	set my status to busy	teamsuser_setstatus	teams	set my status to <teamsuser_status> busy </teamsuser_status>
+0	set my status to available	teamsuser_setstatus	teams	set my status to <teamsuser_status> available </teamsuser_status>
+0	set my status to dnd	teamsuser_setstatus	teams	set my status to <teamsuser_status> dnd </teamsuser_status>
+0	set my status to do not disturb	teamsuser_setstatus	teams	set my status to <teamsuser_status> do not disturb </teamsuser_status>
+0	change my status to busy	teamsuser_setstatus	teams	change my status to <teamsuser_status> busy </teamsuser_status>
+0	change my status to available	teamsuser_setstatus	teams	change my status to <teamsuser_status> available </teamsuser_status>
+0	change my status to dnd	teamsuser_setstatus	teams	change my status to <teamsuser_status> dnd </teamsuser_status>
+0	change my status to do not disturb	teamsuser_setstatus	teams	change my status to <teamsuser_status> do not disturb </teamsuser_status>
+0	go to my saved items	teamsuser_showactivity	teams	go to my <teamsuser_activitytype> saved items </teamsuser_activitytype>
+0	go to unread activity	teamsuser_showactivity	teams	go to <teamsuser_activitytype> unread </teamsuser_activitytype> activity
+0	go to john's activity	teamsuser_showactivity	teams	go to <teamsuser_contactname> john </teamsuser_contactname>'s activity
+0	navigate to my saved items	teamsuser_showactivity	teams	navigate to my <teamsuser_activitytype> saved items </teamsuser_activitytype>
+0	navigate to unread activity	teamsuser_showactivity	teams	navigate to <teamsuser_activitytype> unread </teamsuser_activitytype> activity
+0	navigate to john's activity	teamsuser_showactivity	teams	navigate to <teamsuser_contactname> john </teamsuser_contactname>'s activity
+0	open my saved items	teamsuser_showactivity	teams	open my saved items
+0	open unread activity	teamsuser_showactivity	teams	open unread activity
+0	open john's activity	teamsuser_showactivity	teams	open john's activity
+0	search for free text	teamspace_search	teams	search for <teamspace_searchkeyword> free text </teamspace_searchkeyword>
+0	send feedback	teamspace_sendfeedback	teams	send feedback
+0	post feedback	teamspace_sendfeedback	teams	post feedback
+0	log feedback	teamspace_sendfeedback	teams	log feedback
+0	open a file	file_open	teams	open <file_title> a </file_title> file
+0	open lt review deck	file_open	teams	open <file_title> lt review </file_title> <file_filetype> deck </file_filetype>
+0	open the excel document i was working on	file_open	teams	open the <file_filetype> excel </file_filetype> document <file_filerecency> i was working on </file_filerecency>
+0	open the powerpoint document i was working on	file_open	teams	open the <file_filetype> powerpoint </file_filetype> document <file_filerecency> i was working on </file_filerecency>
+0	open the word document i was working on	file_open	teams	open the <file_filetype> word </file_filetype> document <file_filerecency> i was working on </file_filerecency>
+0	open the file i was working on	file_open	teams	open the file <file_filerecency> i was working on </file_filerecency>
+0	share this file with john	file_share	teams	share <file_title> this </file_title> file with john
+0	share the lt review deck with john	file_share	teams	share the <file_title> lt review </file_title> <file_filetype> deck </file_filetype> with john
+0	share the powerpoint i was working on with john	file_share	teams	share the <file_filetype> powerpoint </file_filetype> <file_filerecency> i was working on </file_filerecency> with john
+0	share the triage process document here	file_share	teams	share the <file_title> triage process </file_title> document here
+0	share the triage process document on this channel	file_share	teams	share the <file_title> triage process </file_title> document on <teamspace_channel> this </teamspace_channel> channel
+0	share the triage process document on this chat	file_share	teams	share the <file_title> triage process </file_title> document on this <file_sharetarget> chat </file_sharetarget>
+0	go to my recent files	file_navigate	teams	go to my <file_filerecency> recent </file_filerecency> files
+0	show me my recent files	file_navigate	teams	show me my <file_filerecency> recent </file_filerecency> files
+0	download this file	file_download	teams	download <file_title> this </file_title> file
+0	MessageText	JudgedTaskunderstandingIntent	judged_domain	JudgedTaskunderstandingMsgannotation
+0	Open file 'LT review discussion'	file_open	teams	Open file '<file_title> LT review discussion </file_title>'
+0	Open 'LT review discussion' deck 	file_open	teams	Open '<file_title> LT review discussion </file_title>' <file_filetype> deck </file_filetype> 
+0	Open 'voice skills' file	file_open	teams	Open '<file_title> voice skills </file_title>' file
+0	Open 'voice skills' document	file_open	teams	Open '<file_title> voice skills </file_title>' document
+0	Open 'voice skills' doc	file_open	teams	Open '<file_title> voice skills </file_title>' doc
+0	Open 'voice skills' deck	file_open	teams	Open '<file_title> voice skills </file_title>' <file_filetype> deck </file_filetype>
+0	Open 'voice skills' spreadsheet	file_open	teams	Open '<file_title> voice skills </file_title>' <file_filetype> spreadsheet </file_filetype>
+0	Open 'voice skills' PPT	file_open	teams	Open '<file_title> voice skills </file_title>' <file_filetype> PPT </file_filetype>
+0	Open 'voice skills' PowerPoint 	file_open	teams	Open '<file_title> voice skills </file_title>' <file_filetype> PowerPoint </file_filetype> 
+0	Open the spreadsheet I was working on recently 	file_open	teams	Open the <file_filetype> spreadsheet </file_filetype> <file_filerecency> I was working on recently </file_filerecency>
+0	Open the document I was working on 	file_open	teams	Open the document <file_filerecency> I was working on </file_filerecency> 
+0	Open the paper I was working on 	file_open	teams	Open the paper <file_filerecency> I was working on </file_filerecency> 
+0	Open the OneNote I was working on	file_open	teams	Open the <file_filetype> OneNote </file_filetype> <file_filerecency> I was working on </file_filerecency>
+0	Navigate to channel voice skills	teamspace_navigate	teams	Navigate to channel <teamspace_channel> voice skills </teamspace_channel>
+0	Go to channel voice skills	teamspace_navigate	teams	Go to channel <teamspace_channel> voice skills </teamspace_channel>
+0	View channel voice skills	teamspace_navigate	teams	View channel <teamspace_channel> voice skills </teamspace_channel>
+0	Access channel voice skills	teamspace_navigate	teams	Access channel <teamspace_channel> voice skills </teamspace_channel>
+0	Show channel voice skills	teamspace_navigate	teams	Show channel <teamspace_channel> voice skills </teamspace_channel>
+0	Navigate to voice skills channel	teamspace_navigate	teams	Navigate to <teamspace_channel> voice skills </teamspace_channel> channel
+0	Go to voice skills channel	teamspace_navigate	teams	Go to <teamspace_channel> voice skills </teamspace_channel> channel
+0	View voice skills channel	teamspace_navigate	teams	View <teamspace_channel> voice skills </teamspace_channel> channel
+0	Access voice skills channel	teamspace_navigate	teams	Access <teamspace_channel> voice skills </teamspace_channel> channel
+0	Show voice skills channel	teamspace_navigate	teams	Show <teamspace_channel> voice skills </teamspace_channel> channel
+0	Navigate to Intelligent communication team	teamspace_navigate	teams	Navigate to <teamspace_team> Intelligent communication </teamspace_team> team
+0	Go to Intelligent communication team	teamspace_navigate	teams	Go to <teamspace_team> Intelligent communication </teamspace_team> team
+0	View Intelligent communication team	teamspace_navigate	teams	View <teamspace_team> Intelligent communication </teamspace_team> team
+0	Access Intelligent communication team	teamspace_navigate	teams	Access <teamspace_team> Intelligent communication </teamspace_team> team
+0	Show Intelligent communication team	teamspace_navigate	teams	Show <teamspace_team> Intelligent communication </teamspace_team> team
+0	Navigate to team intelligent communications	teamspace_navigate	teams	Navigate to team <teamspace_team> intelligent communications </teamspace_team>
+0	Go to team intelligent communications	teamspace_navigate	teams	Go to team <teamspace_team> intelligent communications </teamspace_team>
+0	View team intelligent communications	teamspace_navigate	teams	View team <teamspace_team> intelligent communications </teamspace_team>
+0	Access team intelligent communications	teamspace_navigate	teams	Access team <teamspace_team> intelligent communications </teamspace_team>
+0	Show team intelligent communications	teamspace_navigate	teams	Show team <teamspace_team> intelligent communications </teamspace_team>
+0	Navigate to my calendar	teamcalendar_navigate	teams	Navigate to my calendar
+0	View my calendar	teamcalendar_navigate	teams	View my calendar
+0	See my Calendar	teamcalendar_navigate	teams	See my Calendar
+0	See my Calendar for day of the week	teamcalendar_navigate	teams	See my Calendar for <teamcalendar_starttime> day of the week </teamcalendar_starttime>
+0	go to my calendar for March 22nd	teamcalendar_navigate	teams	go to my calendar for <teamcalendar_starttime> March 22nd </teamcalendar_starttime>
+0	"Search ""voice skills tap program"""	teamspace_search	teams	"Search ""<teamspace_searchkeyword> voice skills tap program </teamspace_searchkeyword>"""
+0	"Search for ""voice skills tap program"""	teamspace_search	teams	"Search for ""<teamspace_searchkeyword> voice skills tap program </teamspace_searchkeyword>"""
+0	"Show results for ""voice skills tap program"""	teamspace_search	teams	"Show results for ""<teamspace_searchkeyword> voice skills tap program </teamspace_searchkeyword>"""
+0	"Find me everything about ""voice skills tap program"""	teamspace_search	teams	"Find me everything about ""<teamspace_searchkeyword> voice skills tap program </teamspace_searchkeyword>"""
+0	"Look for ""voice skills tap program"""	teamspace_search	teams	"Look for ""<teamspace_searchkeyword> voice skills tap program </teamspace_searchkeyword>"""
+0	Show me my recent files	file_navigate	teams	Show me my <file_filerecency> recent </file_filerecency> files
+0	Show me my files	file_navigate	teams	Show me my files
+0	Show me my PPT	file_navigate	teams	Show me my <file_filetype> PPT </file_filetype>
+0	show me my Excel	file_navigate	teams	show me my <file_filetype> Excel </file_filetype>
+0	show me my Word files	file_navigate	teams	show me my <file_filetype> Word </file_filetype> files
+0	Navigate to my recent files	file_navigate	teams	Navigate to my <file_filerecency> recent </file_filerecency> files
+0	Navigate to files	file_navigate	teams	Navigate to files
+0	Go to files	file_navigate	teams	Go to files
+0	Favorite voice skills channel	teamspace_favorite	teams	Favorite <teamspace_channel> voice skills </teamspace_channel> channel
+0	Bookmark voice skills channel	teamspace_favorite	teams	Bookmark <teamspace_channel> voice skills </teamspace_channel> channel
+0	Favorite Intelligent Communications team	teamspace_favorite	teams	Favorite <teamspace_team> Intelligent Communications </teamspace_team> team
+0	Bookmark Intelligent Communications team	teamspace_favorite	teams	Bookmark <teamspace_team> Intelligent Communications </teamspace_team> team
+0	Add voice skills channel to favorites	teamspace_favorite	teams	Add <teamspace_channel> voice skills </teamspace_channel> channel to favorites
+0	Add voice skills channel to bookmarks	teamspace_favorite	teams	Add <teamspace_channel> voice skills </teamspace_channel> channel to bookmarks
+0	Add Anna Green to the Event hub team	teamspace_addtoteam	teams	Add <teamsuser_contactname> Anna Green </teamsuser_contactname> to the <teamspace_team> Event hub </teamspace_team> team
+0	Add Anna Green to the Event hub group	teamspace_addtoteam	teams	Add <teamsuser_contactname> Anna Green </teamsuser_contactname> to the <teamspace_team> Event hub </teamspace_team> group
+0	Add a new person to the Event hub	teamspace_addtoteam	teams	Add a new person to the <teamspace_unclearkeyword> Event hub </teamspace_unclearkeyword>
+0	go to voice skills	teamspace_navigate	teams	go to <teamspace_unclearkeyword> voice skills </teamspace_unclearkeyword>
+0	go to voice skills channel in Intelligent Communications team	teamspace_navigate	teams	go to <teamspace_channel> voice skills </teamspace_channel> channel in <teamspace_team> Intelligent Communications </teamspace_team> team
+0	follow voice skills channel in Intelligent Communications team	teamspace_follow	teams	follow <teamspace_channel> voice skills </teamspace_channel> channel in <teamspace_team> Intelligent Communications </teamspace_team> team
+0	view my calendar for tomorrow	teamcalendar_navigate	teams	view my calendar for <teamcalendar_starttime> tomorrow </teamcalendar_starttime>
+0	Is Jacob part of voice skills team?	teamspace_checkmember	teams	Is <teamsuser_contactname> Jacob </teamsuser_contactname> part of <teamspace_team> voice skills </teamspace_team> team?
+0	Is Jacob in voice skills team?	teamspace_checkmember	teams	Is <teamsuser_contactname> Jacob </teamsuser_contactname> in <teamspace_team> voice skills </teamspace_team> team?
+0	Does voice skills team have Jacob?	teamspace_checkmember	teams	Does <teamspace_team> voice skills </teamspace_team> team have <teamsuser_contactname> Jacob </teamsuser_contactname>?
+0	Is Jacob member of voice skills team?	teamspace_checkmember	teams	Is <teamsuser_contactname> Jacob </teamsuser_contactname> member of <teamspace_team> voice skills </teamspace_team> team?
+0	Do voice skills team members include Jacob?	teamspace_checkmember	teams	Do <teamspace_team> voice skills </teamspace_team> team members include <teamsuser_contactname> Jacob </teamsuser_contactname>?
+0	Unfollow this channel	teamspace_unfollow	teams	Unfollow <teamspace_channel> this </teamspace_channel> channel
+0	Remove this channel from my followed list	teamspace_unfollow	teams	Remove <teamspace_channel> this </teamspace_channel> channel from my followed list
+0	Stop following this channel	teamspace_unfollow	teams	Stop following <teamspace_channel> this </teamspace_channel> channel
+0	Un-favorite this channel	teamspace_unfavorite	teams	Un-favorite <teamspace_channel> this </teamspace_channel> channel
+0	Un-favorite the voice skills channel	teamspace_unfavorite	teams	Un-favorite the <teamspace_channel> voice skills </teamspace_channel> channel
+0	Remove voice skills team from my favorites	teamspace_unfavorite	teams	Remove <teamspace_team> voice skills </teamspace_team> team from my favorites
+0	Go to my downloads	file_navigate	teams	Go to my <file_filetype> downloads </file_filetype>
+0	Go to downloads	file_navigate	teams	Go to <file_filetype> downloads </file_filetype>
+0	Navigate to downloaded files	file_navigate	teams	Navigate to <file_filetype> downloaded files </file_filetype>
+0	Remove Jacob from a team	teamspace_removemember	teams	Remove <teamsuser_contactname> Jacob </teamsuser_contactname> from a team
+0	Remove Jacob from this team	teamspace_removemember	teams	Remove <teamsuser_contactname> Jacob </teamsuser_contactname> from <teamspace_team> this </teamspace_team> team
+0	Start a new team	teamspace_createteam	teams	Start a new team
+0	Create a team	teamspace_createteam	teams	Create a team
+0	Create a new team	teamspace_createteam	teams	Create a new team
+0	Join a new team	teamspace_jointeam	teams	Join a new team
+0	Join a team	teamspace_jointeam	teams	Join a team
+0	Join voice skills team	teamspace_jointeam	teams	Join <teamspace_team> voice skills </teamspace_team> team
+0	I want to join a team	teamspace_jointeam	teams	I want to join a team
+0	I need help with Teams	teamspace_help	teams	I need help with Teams
+0	Navigate to Teams help	teamspace_help	teams	Navigate to Teams help
+0	Go to FAQ	teamspace_help	teams	Go to FAQ
+0	Send feedback	teamspace_sendfeedback	teams	Send feedback
+0	Give feedback	teamspace_sendfeedback	teams	Give feedback
+0	Log feedback	teamspace_sendfeedback	teams	Log feedback
+0	Provide feedback	teamspace_sendfeedback	teams	Provide feedback
+0	Send feedback to Microsoft	teamspace_sendfeedback	teams	Send feedback to Microsoft
+0	What are shortcut keys?	teamspace_showhotkey	teams	What are shortcut keys?
+0	Show me shortcut keys	teamspace_showhotkey	teams	Show me shortcut keys
+0	Show me where I was mentioned	teamsuser_showactivity	teams	Show me <teamsuser_activitytype> where I was mentioned </teamsuser_activitytype>
+0	Show me my at mentions	teamsuser_showactivity	teams	Show me my <teamsuser_activitytype> at mentions </teamsuser_activitytype>
+0	Navigate to at mentions	teamsuser_showactivity	teams	Navigate to <teamsuser_activitytype> at mentions </teamsuser_activitytype>
+0	See my mentions	teamsuser_showactivity	teams	See my <teamsuser_activitytype> mentions </teamsuser_activitytype>
+0	show saved items	teamsuser_showactivity	teams	show <teamsuser_activitytype> saved items </teamsuser_activitytype>
+0	show unread activities	teamsuser_showactivity	teams	show <teamsuser_activitytype> unread </teamsuser_activitytype> activities
+0	show unread activity	teamsuser_showactivity	teams	show <teamsuser_activitytype> unread </teamsuser_activitytype> activity
+0	show unread feed	teamsuser_showactivity	teams	show <teamsuser_activitytype> unread </teamsuser_activitytype> feed
+0	show my activity	teamsuser_showactivity	teams	show my activity
+0	show Jacob's activities	teamsuser_showactivity	teams	show <teamsuser_contactname> Jacob </teamsuser_contactname>'s activities
+0	show activity by Jacob	teamsuser_showactivity	teams	show activity by <teamsuser_contactname> Jacob </teamsuser_contactname>
+0	Go to chat with Jacob 	teamsuser_openchat	teams	Go to chat with <teamsuser_contactname> Jacob </teamsuser_contactname> 
+0	Go to Jacob's chat 	teamsuser_openchat	teams	Go to <teamsuser_contactname> Jacob </teamsuser_contactname>'s chat 
+0	Tell me about Jacob's org	teamsuser_checkorg	teams	Tell me about <teamsuser_contactname> Jacob </teamsuser_contactname>'s org
+0	Give me info about Jacob's org	teamsuser_checkorg	teams	Give me info about <teamsuser_contactname> Jacob </teamsuser_contactname>'s org
+0	What team is Jacob in?	teamsuser_checkorg	teams	What team is <teamsuser_contactname> Jacob </teamsuser_contactname> in?
+0	share file with alice	file_share	teams	share file with <teamsuser_contactname> alice </teamsuser_contactname>
+0	share this file with jay ongg	file_share	teams	share <file_title> this </file_title> file with <teamsuser_contactname> jay ongg </teamsuser_contactname>
+0	share file with my next meeting	file_share	teams	share file with my <teammeeting_starttime> next </teammeeting_starttime> <file_sharetarget> meeting </file_sharetarget>
+0	share this file with my next shiproom meeting	file_share	teams	share <file_title> this </file_title> file with my <teammeeting_starttime> next </teammeeting_starttime> <teammeeting_title> shiproom </teammeeting_title> <file_sharetarget> meeting </file_sharetarget>
+0	download this file	file_download	teams	download <file_title> this </file_title> file
+0	download this excel	file_download	teams	download <file_title> this </file_title> <file_filetype> excel </file_filetype>
+0	Un-follow this channel	teamspace_unfollow	teams	Un-follow <teamspace_channel> this </teamspace_channel> channel
+0	Follow this channel	teamspace_follow	teams	Follow <teamspace_channel> this </teamspace_channel> channel
+0	Favorite this channel	teamspace_favorite	teams	Favorite <teamspace_channel> this </teamspace_channel> channel
+0	Favorite this team	teamspace_favorite	teams	Favorite <teamspace_team> this </teamspace_team> team
+0	Un-favorite Cortana team	teamspace_unfavorite	teams	Un-favorite <teamspace_team> Cortana </teamspace_team> team
+0	Un-favorite this team	teamspace_unfavorite	teams	Un-favorite <teamspace_team> this </teamspace_team> team
+0	Add person to this team	teamspace_addtoteam	teams	Add person to <teamspace_team> this </teamspace_team> team
+0	Remove person from Cortana team	teamspace_removemember	teams	Remove person from <teamspace_team> Cortana </teamspace_team> team
+0	Remove person from this team	teamspace_removemember	teams	Remove person from <teamspace_team> this </teamspace_team> team
+0	Share file LT review discussion with this meeting	file_share	teams	Share file <file_title> LT review discussion </file_title> with <teammeeting_title> this </teammeeting_title> <file_sharetarget> meeting </file_sharetarget>
+0	Share voice skills deck with the next meeting	file_share	teams	Share <file_title> voice skills </file_title> <file_filetype> deck </file_filetype> with the <teammeeting_starttime> next </teammeeting_starttime> <file_sharetarget> meeting </file_sharetarget>
+0	Share the spreadsheet I was working on with the meeting attendees	file_share	teams	Share the <file_filetype> spreadsheet </file_filetype> <file_filerecency> I was working on </file_filerecency> with the <file_sharetarget> meeting attendees </file_sharetarget>
+0	Share the document I was working on with the meeting participants	file_share	teams	Share the document <file_filerecency> I was working on </file_filerecency> with the <file_sharetarget> meeting participants </file_sharetarget>
+0	Share the paper I was working on with design sync meeting	file_share	teams	Share the paper <file_filerecency> I was working on </file_filerecency> with <teammeeting_title> design sync </teammeeting_title> <file_sharetarget> meeting </file_sharetarget>
+0	Remove person from this team	teamspace_removemember	teams	Remove person from <teamspace_team> this </teamspace_team> team
+0	Open files tab in the voice skills channel	teamspace_showtab	teams	Open <teamspace_tab> files </teamspace_tab> tab in the <teamspace_channel> voice skills </teamspace_channel> channel
+0	Open files tab in the channel	teamspace_showtab	teams	Open <teamspace_tab> files </teamspace_tab> tab in the channel
+0	Open tab in the voice skills channel	teamspace_showtab	teams	Open tab in the <teamspace_channel> voice skills </teamspace_channel> channel
+0	Open the tab in the channel	teamspace_showtab	teams	Open the tab in the channel
+0	Change my status	teamsuser_setstatus	teams	Change my status
+0	set my Status to Busy	teamsuser_setstatus	teams	set my Status to <teamsuser_status> Busy </teamsuser_status>
+0	Change my status to available	teamsuser_setstatus	teams	Change my status to <teamsuser_status> available </teamsuser_status>
+0	Share this tab with Jacob	teamspace_sharetab	teams	Share <teamspace_tab> this </teamspace_tab> tab with <teamsuser_contactname> Jacob </teamsuser_contactname>
+0	Share the tab with Jacob	teamspace_sharetab	teams	Share the tab with <teamsuser_contactname> Jacob </teamsuser_contactname>
+0	Send this tab to Jacob	teamspace_sharetab	teams	Send <teamspace_tab> this </teamspace_tab> tab to <teamsuser_contactname> Jacob </teamsuser_contactname>
+0	Share the link to this channel with Jacob	teamspace_sharechannel	teams	Share the link to <teamspace_channel> this </teamspace_channel> channel with <teamsuser_contactname> Jacob </teamsuser_contactname>
+0	Share the link to channel with Jacob	teamspace_sharechannel	teams	Share the link to channel with <teamsuser_contactname> Jacob </teamsuser_contactname>
+0	Share this link to voice skills channel with Jacob	teamspace_sharechannel	teams	Share this link to <teamspace_channel> voice skills </teamspace_channel> channel with <teamsuser_contactname> Jacob </teamsuser_contactname>
+0	Share voice skills channel with Jacob	teamspace_sharechannel	teams	Share <teamspace_channel> voice skills </teamspace_channel> channel with <teamsuser_contactname> Jacob </teamsuser_contactname>
+0	Add link to files tab in the compose box	teamspace_sharetab	teams	Add link to <teamspace_tab> files </teamspace_tab> tab in the <teamspace_sharetarget> compose box </teamspace_sharetarget>
+0	Share voice skills channel link with Jacob	teamspace_sharechannel	teams	Share <teamspace_channel> voice skills </teamspace_channel> channel link with <teamsuser_contactname> Jacob </teamsuser_contactname>
+0	Copy link to files tab in the message	teamspace_sharetab	teams	Copy link to <teamspace_tab> files </teamspace_tab> tab in the <teamspace_sharetarget> message </teamspace_sharetarget>
+0	Share the file on this chat	file_share	teams	Share the file on this <file_sharetarget> chat </file_sharetarget>
+0	Start presentation	start_presenting	teams	Start presentation
+0	Present my deck	start_presenting	teams	Present my deck
+0	Project the deck	start_presenting	teams	Project the deck
+0	Present planning deck	start_presenting	teams	Present <deck_name> planning </deck_name> deck
+0	Project planning deck	start_presenting	teams	Project <deck_name> planning </deck_name> deck
+0	Stop presentation	stop_presenting	teams	Stop presentation
+0	Next slide	next_slide	teams	Next slide
+0	Previous slide	previous_slide	teams	Previous slide
+0	Last slide	previous_slide	teams	Last slide
+0	Go back to the last slide	previous_slide	teams	Go back to the last slide
+0	Go back a slide	slide_back	teams	Go back a slide
+0	Slide 11	goto_slide	teams	Slide <slide_number> 11 </slide_number>
+0	Go to slide number 11	goto_slide	teams	Go to slide number <slide_number> 11 </slide_number>
+0	Show slide number 11	goto_slide	teams	Show slide number <slide_number> 11 </slide_number>
+0	Jump to slide 11	goto_slide	teams	Jump to slide <slide_number> 11 </slide_number>
+0	Go to budget slide	goto_slide	teams	Go to <slide_name> budget </slide_name> slide
+0	Show budget slide	goto_slide	teams	Show <slide_name> budget </slide_name> slide
+0	Jump to budget slide	goto_slide	teams	Jump to <slide_name> budget </slide_name> slide
+0	Share my deck	file_share	teams	Share my <file_filetype> deck </file_filetype>
+0	Share the deck	file_share	teams	Share the <file_filetype> deck </file_filetype>
+0	Share planning deck	file_share	teams	Share <file_title> planning </file_title> <file_filetype> deck </file_filetype>
+0	Mute everyone	mute_participant	teams	Mute everyone
+0	Mute all	mute_participant	teams	Mute <teammeeting_quantifier> all </teammeeting_quantifier>
+0	Mute all participants	mute_participant	teams	Mute <teammeeting_quantifier> all </teammeeting_quantifier> participants
+0	Mute John	mute_participant	teams	Mute <teamsuser_contactname> John </teamsuser_contactname>
+0	Show whiteboard	show_whiteboard	teams	Show whiteboard
+0	Start whiteboard	show_whiteboard	teams	Start whiteboard
+0	Open whiteboard	show_whiteboard	teams	Open whiteboard
+0	Project whiteboard	show_whiteboard	teams	Project whiteboard
+0	Hide whiteboard	hide_whiteboard	teams	Hide whiteboard
+0	Stop whiteboard	hide_whiteboard	teams	Stop whiteboard
+0	Close whiteboard	hide_whiteboard	teams	Close whiteboard
+0	End presenting	stop_presenting	teams	End presenting
+0	End presentation	stop_presenting	teams	End presentation
+0	Finish presenting	stop_presenting	teams	Finish presenting
+0	Stop presenting	stop_presenting	teams	Stop presenting
+0	Exit presentation	stop_presenting	teams	Exit presentation
+0	first one	file_download	teams	<position_ref> first </position_ref> one
+0	go to end of presentation	goto_slide	teams	go to <slide_number> end of presentation </slide_number>
+0	go to very last slide	goto_slide	teams	go to very <slide_number> last </slide_number> slide
+0	download lt review file	file_download	teams	download <file_title> lt review </file_title> file
+0	open voice skills team	teamspace_navigate	teams	open <teamspace_team> voice skills </teamspace_team> team
+0	share this file	file_share	teams	share <file_title> this </file_title> file
+0	go to the final slide	goto_slide	teams	go to the <slide_number> final </slide_number> slide
+0	hide the whiteboard	hide_whiteboard	teams	hide the whiteboard
+0	go to the next slide	next_slide	teams	go to the next slide
+0	jump to the previous slide	previous_slide	teams	jump to the previous slide
+0	Go to the last slide	previous_slide	teams	Go to the last slide
+0	go to the previous slide	previous_slide	teams	go to the previous slide
+0	present the attached deck	start_presenting	teams	present the <deck_location> attached </deck_location> deck
+0	present the deck I was working on	start_presenting	teams	present the deck <file_filerecency> I was working on </file_filerecency>
+0	follow voice skills channel	teamspace_follow	teams	follow <teamspace_channel> voice skills </teamspace_channel> channel
+0	open teams help	teamspace_help	teams	open teams help
+0	send teams feedback	teamspace_sendfeedback	teams	send teams feedback
+0	Show hotkeys	teamspace_showhotkey	teams	Show hotkeys
+0	Show keyboard shortcuts	teamspace_showhotkey	teams	Show keyboard shortcuts
+0	open files tab in voice skills channel	teamspace_showtab	teams	open <teamspace_tab> files </teamspace_tab> tab in <teamspace_channel> voice skills </teamspace_channel> channel
+0	show me onenote tab	teamspace_showtab	teams	show me <teamspace_tab> onenote </teamspace_tab> tab
+0	go to unread activity	teamsuser_showactivity	teams	go to <teamsuser_activitytype> unread </teamsuser_activitytype> activity
+0	let me see my mentions	teamsuser_showactivity	teams	let me see my <teamsuser_activitytype> mentions </teamsuser_activitytype>
+0	go to my activity	teamsuser_showactivity	teams	go to my activity
+0	first slide	goto_slide	teams	<slide_number> first </slide_number> slide
+0	let me see my at mentions	teamsuser_showactivity	teams	let me see my <teamsuser_activitytype> at mentions </teamsuser_activitytype>
+0	bring up my calendar	teamcalendar_navigate	teams	bring up my calendar
+0	could you navigate to my calendar	teamcalendar_navigate	teams	could you navigate to my calendar
+0	direct to my calendar	teamcalendar_navigate	teams	direct to my calendar
+0	find my calendar and open it	teamcalendar_navigate	teams	find my calendar and open it
+0	go to my 2018 calendar for may	teamcalendar_navigate	teams	go to my <teamcalendar_starttime> 2018 </teamcalendar_starttime> calendar for <teamcalendar_starttime> may </teamcalendar_starttime>
+0	go to my calendar please	teamcalendar_navigate	teams	go to my calendar please
+0	i need to view my calendar	teamcalendar_navigate	teams	i need to view my calendar
+0	navigate to calendar	teamcalendar_navigate	teams	navigate to calendar
+0	navigate to my calendar on 4/10/2018	teamcalendar_navigate	teams	navigate to my calendar on <teamcalendar_starttime> 4/10/2018 </teamcalendar_starttime>
+0	open my calendar for may 5th 2018	teamcalendar_navigate	teams	open my calendar for <teamcalendar_starttime> may 5th 2018 </teamcalendar_starttime>
+0	show me my calendar for 4/10/2018	teamcalendar_navigate	teams	show me my calendar for <teamcalendar_starttime> 4/10/2018 </teamcalendar_starttime>
+0	download this deck	file_download	teams	download <file_title> this </file_title> <file_filetype> deck </file_filetype>
+0	share this file with jay ongg	file_share	teams	share <file_title> this </file_title> file with <teamsuser_contactname> jay ongg </teamsuser_contactname>
+0	start presenting	start_presenting	teams	start presenting
+0	show next week in my calendar	teamcalendar_navigate	teams	show <teamcalendar_starttime> next week </teamcalendar_starttime> in my calendar
+0	Add voice skills channel to my bookmarks	teamspace_favorite	teams	Add <teamspace_channel> voice skills </teamspace_channel> channel to my bookmarks
+0	go to the voice skills	teamspace_navigate	teams	go to the <teamspace_unclearkeyword> voice skills </teamspace_unclearkeyword>
+0	Remove person from the team	teamspace_removemember	teams	Remove person from the team
+0	open shortcuts	teamspace_showhotkey	teams	open shortcuts
+0	Un-favorite the voice skills team	teamspace_unfavorite	teams	Un-favorite the <teamspace_team> voice skills </teamspace_team> team
+0	go to Jacob's org	teamsuser_checkorg	teams	go to <teamsuser_contactname> Jacob </teamsuser_contactname>'s org
+0	go to Jacob's organization	teamsuser_checkorg	teams	go to <teamsuser_contactname> Jacob </teamsuser_contactname>'s organization
+0	go to roger's activity	teamsuser_showactivity	teams	go to <teamsuser_contactname> roger </teamsuser_contactname>'s activity
+0	Bookmark voice skills team	teamspace_favorite	teams	Bookmark <teamspace_team> voice skills </teamspace_team> team
+0	Copy link to files tab in this chat	teamspace_sharetab	teams	Copy link to <teamspace_tab> files </teamspace_tab> tab in this <teamspace_sharetarget> chat </teamspace_sharetarget>
+0	share file with meeting tomorrow	file_share	teams	share file with <file_sharetarget> meeting </file_sharetarget> <teammeeting_starttime> tomorrow </teammeeting_starttime>
+0	show the last slide again	previous_slide	teams	show the last slide again
+0	Present the deck	start_presenting	teams	Present the deck
+0	Show the presentation	start_presenting	teams	Show the presentation
+0	Show the planning presentation	start_presenting	teams	Show the <deck_name> planning </deck_name> presentation
+0	Project the deck	start_presenting	teams	Project the deck
+0	Project the planning deck	start_presenting	teams	Project the <deck_name> planning </deck_name> deck
+0	add roger to the johnson test group team	teamspace_addtoteam	teams	add <teamsuser_contactname> roger </teamsuser_contactname> to the <teamspace_team> johnson test group </teamspace_team> team
+0	Go to team hackathon 2018	teamspace_navigate	teams	Go to team <teamspace_team> hackathon 2018 </teamspace_team>
+0	invite jay to bot team	teamspace_addtoteam	teams	invite <teamsuser_contactname> jay </teamsuser_contactname> to <teamspace_team> bot </teamspace_team> team
+0	Launch that document I was composing	file_open	teams	Launch <file_title> that </file_title> document <file_filerecency> I was composing </file_filerecency>
+0	Open voice skills ppt	file_open	teams	Open <file_title> voice skills </file_title> <file_filetype> ppt </file_filetype>
+0	present the planning 2018 deck	start_presenting	teams	present the <deck_name> planning 2018 </deck_name> deck
+0	Pull up deployment timeline doc	file_open	teams	Pull up <file_title> deployment timeline </file_title> doc
+0	share the brownbag excel with this conversation	file_share	teams	share the <file_title> brownbag </file_title> <file_filetype> excel </file_filetype> with this <file_sharetarget> conversation </file_sharetarget>
+0	share this file with roger	file_share	teams	share <file_title> this </file_title> file with <teamsuser_contactname> roger </teamsuser_contactname>
+0	show jay ongg chat 	teamsuser_openchat	teams	show <teamsuser_contactname> jay ongg </teamsuser_contactname> chat 
+0	show jay ongg org chart	teamsuser_checkorg	teams	show <teamsuser_contactname> jay ongg </teamsuser_contactname> org chart
+0	Unfollow that team	teamspace_unfollow	teams	Unfollow <teamspace_team> that </teamspace_team> team
+0	open file preview test plan document	file_open	teams	open file <file_title> preview test plan document </file_title>
+0	search all hands deck	teamspace_search	teams	search <teamspace_searchkeyword> all hands deck </teamspace_searchkeyword>
+0	Go to last slide	previous_slide	teams	Go to last slide
+0	Share the LT review.pptx deck	file_share	teams	Share the <file_title> LT review.pptx </file_title> <file_filetype> deck </file_filetype>
+0	Share the Some name deck	file_share	teams	Share the <file_title> Some name </file_title> <file_filetype> deck </file_filetype>
+0	Go to slide 7	goto_slide	teams	Go to slide <slide_number> 7 </slide_number>
+0	Go to the very last slide	goto_slide	teams	Go to the very <slide_number> last </slide_number> slide
+0	Go to the first slide	goto_slide	teams	Go to the <slide_number> first </slide_number> slide
+0	go to at mentions	teamsuser_showactivity	teams	go to <teamsuser_activitytype> at mentions </teamsuser_activitytype>
+0	set my status to be right back	teamsuser_setstatus	teams	set my status to <teamsuser_status> be right back </teamsuser_status>
+0	set my status to out of office	teamsuser_setstatus	teams	set my status to <teamsuser_status> out of office </teamsuser_status>
+0	set my status to busy	teamsuser_setstatus	teams	set my status to <teamsuser_status> busy </teamsuser_status>
+0	go to downloads	file_navigate	teams	go to <file_filetype> downloads </file_filetype>
+0	set my status to away	teamsuser_setstatus	teams	set my status to <teamsuser_status> away </teamsuser_status>
+0	set my status to available	teamsuser_setstatus	teams	set my status to <teamsuser_status> available </teamsuser_status>
+0	set my status to do not disturb	teamsuser_setstatus	teams	set my status to <teamsuser_status> do not disturb </teamsuser_status>
+0	search for random	teamspace_search	teams	search for <teamspace_searchkeyword> random </teamspace_searchkeyword>
+0	go to saved items	teamsuser_showactivity	teams	go to <teamsuser_activitytype> saved items </teamsuser_activitytype>
+0	go to my recent files	file_navigate	teams	go to my <file_filerecency> recent </file_filerecency> files
+0	go to help	teamspace_help	teams	go to help
+0	go to keyboard shortcuts	teamspace_showhotkey	teams	go to keyboard shortcuts
+0	open keyboard shortcuts	teamspace_showhotkey	teams	open keyboard shortcuts
+0	the first one	file_download	teams	the <position_ref> first </position_ref> one
+0	second one	file_download	teams	<position_ref> second </position_ref> one
+0	third one	file_download	teams	<position_ref> third </position_ref> one
+0	number one	file_download	teams	number <position_ref> one </position_ref>
+0	number two	file_download	teams	number <position_ref> two </position_ref>
+0	it is number two	file_download	teams	it is number <position_ref> two </position_ref>
+0	lt review discussion	file_download	teams	<file_title> lt review discussion </file_title>
+0	lt review deck	file_download	teams	<deck_name> lt review </deck_name> deck
+0	marketing slide	file_download	teams	<slide_name> marketing </slide_name> slide
+0	slide two	file_download	teams	<slide_number> slide two </slide_number>
+0	stand up meeting	file_download	teams	<teammeeting_title> stand up </teammeeting_title> meeting
+0	voice skill	file_download	teams	<teamspace_channel> voice skill </teamspace_channel>
+0	intelligence one	file_download	teams	<teamspace_team> intelligence one </teamspace_team>
+0	personal tab	file_download	teams	<teamspace_tab> personal </teamspace_tab> tab
+0	it is jay ongg	file_download	teams	it is <teamsuser_contactname> jay ongg </teamsuser_contactname>
+0	available	file_download	teams	<teamsuser_status> available </teamsuser_status>
+0	MessageText	JudgedTaskunderstandingIntent	judged_domain	JudgedTaskunderstandingMsgannotation
+0	Join a presentation.	start_presenting	teams	Join a presentation.
+0	Go to general channel.	teamspace_navigate	teams	Go to <teamspace_channel> general </teamspace_channel> channel.
+0	Go to free Journal.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> free Journal </teamspace_unclearkeyword>.
+0	Present the deck.	start_presenting	teams	Present the deck.
+0	Open the file I was working on.	file_open	teams	Open the file <file_filerecency> I was working on </file_filerecency>.
+0	Open up Cortana agent file.	file_open	teams	Open up <file_title> Cortana agent </file_title> file.
+0	Open chat with Kunal Garg.	teamsuser_openchat	teams	Open chat with <teamsuser_contactname> Kunal Garg </teamsuser_contactname>.
+0	Go to my recent files.	file_navigate	teams	Go to my <file_filerecency> recent </file_filerecency> files.
+0	Show me girls activity.	teamsuser_showactivity	teams	Show me <teamsuser_contactname> girls </teamsuser_contactname> activity.
+0	Change my presence status to available.	teamsuser_setstatus	teams	Change my presence status to <teamsuser_status> available </teamsuser_status>.
+0	Go to channel.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> channel </teamspace_unclearkeyword>.
+0	Set my status to busy.	teamsuser_setstatus	teams	Set my status to <teamsuser_status> busy </teamsuser_status>.
+0	Slide number 5.	goto_slide	teams	Slide number <slide_number> 5 </slide_number>.
+0	Show my recent files.	file_navigate	teams	Show my <file_filerecency> recent </file_filerecency> files.
+0	Give me files.	file_navigate	teams	Give me files.
+0	go to the fun channel	teamspace_navigate	teams	go to the <teamspace_channel> fun </teamspace_channel> channel
+0	Recent files.	file_navigate	teams	<file_filerecency> Recent </file_filerecency> files.
+0	Go to rest.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> rest </teamspace_unclearkeyword>.
+0	Go to intelligent communications team.	teamspace_navigate	teams	Go to <teamspace_team> intelligent communications </teamspace_team> team.
+0	Go to engineering channel.	teamspace_navigate	teams	Go to <teamspace_channel> engineering </teamspace_channel> channel.
+0	Go to slide 20.	goto_slide	teams	Go to slide <slide_number> 20 </slide_number>.
+0	Open the Cortana design team.	teamspace_navigate	teams	Open the <teamspace_team> Cortana design </teamspace_team> team.
+0	Go to my activity.	teamsuser_showactivity	teams	Go to my activity.
+0	Open the PowerPoint I was working on.	file_open	teams	Open the <file_filetype> PowerPoint </file_filetype> <file_filerecency> I was working on </file_filerecency>.
+0	Open connectors channel.	teamspace_navigate	teams	Open <teamspace_channel> connectors </teamspace_channel> channel.
+0	Go to my calendar for 3 PM today.	teamcalendar_navigate	teams	Go to my calendar for <teamcalendar_starttime> 3 PM today </teamcalendar_starttime>.
+0	Go to my calendar for next week.	teamcalendar_navigate	teams	Go to my calendar for <teamcalendar_starttime> next week </teamcalendar_starttime>.
+0	Set my status to away.	teamsuser_setstatus	teams	Set my status to <teamsuser_status> away </teamsuser_status>.
+0	Go to my calendar for tomorrow.	teamcalendar_navigate	teams	Go to my calendar for <teamcalendar_starttime> tomorrow </teamcalendar_starttime>.
+0	Go to shanard activity.	teamsuser_showactivity	teams	Go to <teamsuser_contactname> shanard </teamsuser_contactname> activity.
+0	Open up file.	file_open	teams	Open up file.
+0	Go to slide 5.	goto_slide	teams	Go to slide <slide_number> 5 </slide_number>.
+0	Go to the last slide.	previous_slide	teams	Go to the last slide.
+0	Present the LT review deck.	start_presenting	teams	Present the <deck_name> LT review </deck_name> deck.
+0	Go to the voice channel.	teamspace_navigate	teams	Go to the <teamspace_channel> voice </teamspace_channel> channel.
+0	Change my presence to available.	teamsuser_setstatus	teams	Change my presence to <teamsuser_status> available </teamsuser_status>.
+0	What can I say?	teamspace_help	teams	What can I say?
+0	Go to the next slide.	next_slide	teams	Go to the next slide.
+0	Open file specs.	file_open	teams	Open file <file_title> specs </file_title>.
+0	Go to the Boy Scouts channel.	teamspace_navigate	teams	Go to the <teamspace_channel> Boy Scouts </teamspace_channel> channel.
+0	Change my status to available.	teamsuser_setstatus	teams	Change my status to <teamsuser_status> available </teamsuser_status>.
+0	Go to the first slide.	goto_slide	teams	Go to the <slide_number> first </slide_number> slide.
+0	Send the deck.	file_share	teams	Send the <file_filetype> deck </file_filetype>.
+0	Find 1234567.	teamspace_search	teams	Find <teamspace_searchkeyword> 1234567 </teamspace_searchkeyword>.
+0	Go to my recent files.	file_navigate	teams	Go to my <file_filerecency> recent </file_filerecency> files.
+0	Go to my chat with Tomer Hermelin.	teamsuser_openchat	teams	Go to my chat with <teamsuser_contactname> Tomer Hermelin </teamsuser_contactname>.
+0	go to club channel	teamspace_navigate	teams	go to <teamspace_channel> club </teamspace_channel> channel
+0	Set the status to be right back.	teamsuser_setstatus	teams	Set the status to <teamsuser_status> be right back </teamsuser_status>.
+0	What can I do with Cortana?	teamspace_help	teams	What can I do with Cortana?
+0	Go to Alex Olson organization.	teamsuser_checkorg	teams	Go to <teamsuser_contactname> Alex Olson </teamsuser_contactname> organization.
+0	Go to my chat with August.	teamsuser_openchat	teams	Go to my chat with <teamsuser_contactname> August </teamsuser_contactname>.
+0	Go to slide number 5.	goto_slide	teams	Go to slide number <slide_number> 5 </slide_number>.
+0	Go to next slide.	next_slide	teams	Go to next slide.
+0	Go to the lunch channel.	teamspace_navigate	teams	Go to the <teamspace_channel> lunch </teamspace_channel> channel.
+0	Go to tap 100 team.	teamspace_navigate	teams	Go to <teamspace_team> tap 100 </teamspace_team> team.
+0	Go to intelligent communication team.	teamspace_navigate	teams	Go to <teamspace_team> intelligent communication </teamspace_team> team.
+0	Open file LG tribute deck.	file_open	teams	Open file <file_title> LG tribute deck </file_title>.
+0	I want to create a team.	teamspace_createteam	teams	I want to create a team.
+0	Open SQI metrics 2018-2019 PowerPoint.	file_open	teams	Open <file_title> SQI metrics 2018-2019 </file_title> <file_filetype> PowerPoint </file_filetype>.
+0	Slide 5.	goto_slide	teams	Slide <slide_number> 5 </slide_number>.
+0	open the wiki tab	teamspace_showtab	teams	open the <teamspace_tab> wiki </teamspace_tab> tab
+0	Show me where I was mentioned.	teamsuser_showactivity	teams	Show me <teamsuser_activitytype> where I was mentioned </teamsuser_activitytype>.
+0	Go to the next slide.	next_slide	teams	Go to the next slide.
+0	Show PowerPoint.	file_navigate	teams	Show <file_filetype> PowerPoint </file_filetype>.
+0	Open deck.	file_open	teams	Open <file_filetype> deck </file_filetype>.
+0	Stop sharing.	stop_presenting	teams	Stop sharing.
+0	Set my status to available.	teamsuser_setstatus	teams	Set my status to <teamsuser_status> available </teamsuser_status>.
+0	Open multi window file.	file_open	teams	Open <file_title> multi window </file_title> file.
+0	Go to slide one.	goto_slide	teams	Go to slide <slide_number> one </slide_number>.
+0	Go to the general Journal.	teamspace_navigate	teams	Go to the <teamspace_unclearkeyword> general Journal </teamspace_unclearkeyword>.
+0	Show my activity.	teamsuser_showactivity	teams	Show my activity.
+0	go to the code review channel	teamspace_navigate	teams	go to the <teamspace_channel> code review </teamspace_channel> channel
+0	Open chat with Marat to.	teamsuser_openchat	teams	Open chat with <teamsuser_contactname> Marat </teamsuser_contactname> to.
+0	What can I do?	teamspace_help	teams	What can I do?
+0	Go to the design channel.	teamspace_navigate	teams	Go to the <teamspace_channel> design </teamspace_channel> channel.
+0	open my recent file	file_navigate	teams	open my <file_filerecency> recent </file_filerecency> file
+0	Set my status to do not disturb.	teamsuser_setstatus	teams	Set my status to <teamsuser_status> do not disturb </teamsuser_status>.
+0	Share the deck I was working on on.	file_share	teams	Share the <file_filetype> deck </file_filetype> <file_filerecency> I was working on </file_filerecency> on.
+0	End the presentation.	stop_presenting	teams	End the presentation.
+0	Go to the teams devices channel.	teamspace_navigate	teams	Go to the <teamspace_channel> teams devices </teamspace_channel> channel.
+0	What can I do with you?	teamspace_help	teams	What can I do with you?
+0	show alex's activity	teamsuser_showactivity	teams	show <teamsuser_contactname> alex </teamsuser_contactname>'s activity
+0	Go to the lunch channel.	teamspace_navigate	teams	Go to the <teamspace_channel> lunch </teamspace_channel> channel.
+0	Next slide.	next_slide	teams	Next slide.
+0	What can you do?	teamspace_help	teams	What can you do?
+0	share file specs with mohit	file_share	teams	share file <file_title> specs </file_title> with <teamsuser_contactname> mohit </teamsuser_contactname>
+0	Go to sleep by.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> sleep by </teamspace_unclearkeyword>.
+0	Open PowerPoint deck.	file_open	teams	Open <file_filetype> PowerPoint deck </file_filetype>.
+0	Go to giang activity.	teamsuser_showactivity	teams	Go to <teamsuser_contactname> giang </teamsuser_contactname> activity.
+0	Search for query.	teamspace_search	teams	Search for <teamspace_searchkeyword> query </teamspace_searchkeyword>.
+0	Find Lee LT review deck.	teamspace_search	teams	Find <teamspace_searchkeyword> Lee LT review deck </teamspace_searchkeyword>.
+0	Go to slide 10.	goto_slide	teams	Go to slide <slide_number> 10 </slide_number>.
+0	Go to Internet communications team.	teamspace_navigate	teams	Go to <teamspace_team> Internet communications </teamspace_team> team.
+0	Close this presentation.	stop_presenting	teams	Close this presentation.
+0	Go to active.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> active </teamspace_unclearkeyword>.
+0	Go to August activity.	teamsuser_showactivity	teams	Go to <teamsuser_contactname> August </teamsuser_contactname> activity.
+0	Present the deck I was working on this moment.	start_presenting	teams	Present the deck <file_filerecency> I was working on </file_filerecency> this moment.
+0	Open the document that I was working on.	file_open	teams	Open the document that <file_filerecency> I was working on </file_filerecency>.
+0	Open the skills spreadsheet.	file_open	teams	Open the <file_title> skills </file_title> <file_filetype> spreadsheet </file_filetype>.
+0	Show me a mekinges activity.	teamsuser_showactivity	teams	Show me a <teamsuser_contactname> mekinges </teamsuser_contactname> activity.
+0	Go to the slide number 5.	goto_slide	teams	Go to the slide number <slide_number> 5 </slide_number>.
+0	share file with this chat	file_share	teams	share file with this <file_sharetarget> chat </file_sharetarget>
+0	Go to my feed.	teamsuser_showactivity	teams	Go to my <teamsuser_activitytype> feed </teamsuser_activitytype>.
+0	What all can I say?	teamspace_help	teams	What all can I say?
+0	Go to teams intelligent devices.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> teams intelligent devices </teamspace_unclearkeyword>.
+0	Close the presentation.	stop_presenting	teams	Close the presentation.
+0	Slide 10.	goto_slide	teams	Slide <slide_number> 10 </slide_number>.
+0	go to roger organization	teamsuser_checkorg	teams	go to <teamsuser_contactname> roger </teamsuser_contactname> organization
+0	go to the book club channel	teamspace_navigate	teams	go to the <teamspace_channel> book club </teamspace_channel> channel
+0	Go to slide for.	goto_slide	teams	Go to slide for.
+0	share the LT review deck to roger	file_share	teams	share the <file_title> LT review </file_title> <file_filetype> deck </file_filetype> to <teamsuser_contactname> roger </teamsuser_contactname>
+0	Show me my recent files.	file_navigate	teams	Show me my <file_filerecency> recent </file_filerecency> files.
+0	Navigate to voice skills channel.	teamspace_navigate	teams	Navigate to <teamspace_channel> voice skills </teamspace_channel> channel.
+0	Close presentation.	stop_presenting	teams	Close presentation.
+0	Present the deck I was working on.	start_presenting	teams	Present the deck <file_filerecency> I was working on </file_filerecency>.
+0	Present the deck attached to the meeting.	start_presenting	teams	Present the deck <deck_location> attached </deck_location> to the meeting.
+0	Go to previous slide.	previous_slide	teams	Go to previous slide.
+0	I want to join a team.	teamspace_jointeam	teams	I want to join a team.
+0	Go to settings engineering channel.	teamspace_navigate	teams	Go to <teamspace_channel> settings engineering </teamspace_channel> channel.
+0	Open SQL I metrics 2018-2019 presentation.	file_open	teams	Open <file_title> SQL I metrics 2018-2019 </file_title> presentation.
+0	Go to activity.	teamsuser_showactivity	teams	Go to activity.
+0	Open substrate framing memo.	file_open	teams	Open <file_title> substrate framing </file_title> <file_filetype> memo </file_filetype>.
+0	add roger to the team	teamspace_addtoteam	teams	add <teamsuser_contactname> roger </teamsuser_contactname> to the team
+0	Open the ship room deck.	file_open	teams	Open the <file_title> ship room </file_title> <file_filetype> deck </file_filetype>.
+0	Present the presentation.	start_presenting	teams	Present the presentation.
+0	Go to play lunch channel.	teamspace_navigate	teams	Go to <teamspace_channel> play lunch </teamspace_channel> channel.
+0	add alex to the team	teamspace_addtoteam	teams	add <teamsuser_contactname> alex </teamsuser_contactname> to the team
+0	go to the welcome team	teamspace_navigate	teams	go to the <teamspace_team> welcome </teamspace_team> team
+0	Go to chat with Mark.	teamsuser_openchat	teams	Go to chat with <teamsuser_contactname> Mark </teamsuser_contactname>.
+0	Go to slide number 3.	goto_slide	teams	Go to slide number <slide_number> 3 </slide_number>.
+0	go to lunch channel	teamspace_navigate	teams	go to <teamspace_channel> lunch </teamspace_channel> channel
+0	Show calendar.	teamcalendar_navigate	teams	Show calendar.
+0	Go to slide by.	goto_slide	teams	Go to slide by.
+0	go to recent files	file_navigate	teams	go to <file_filerecency> recent </file_filerecency> files
+0	Go to the previous slide.	previous_slide	teams	Go to the previous slide.
+0	Present the deck I was recently working on.	start_presenting	teams	Present the deck <file_filerecency> I was recently working on </file_filerecency>.
+0	Open my recent word document.	file_open	teams	Open my <file_filerecency> recent </file_filerecency> <file_filetype> word </file_filetype> document.
+0	Stop presentation.	stop_presenting	teams	Stop presentation.
+0	Go to shift.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> shift </teamspace_unclearkeyword>.
+0	Go to slide 12.	goto_slide	teams	Go to slide <slide_number> 12 </slide_number>.
+0	Go to the voice kids channel.	teamspace_navigate	teams	Go to the <teamspace_channel> voice kids </teamspace_channel> channel.
+0	Go to free general.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> free general </teamspace_unclearkeyword>.
+0	Go to the lodge Juneau.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> the lodge Juneau </teamspace_unclearkeyword>.
+0	Open intelligent communications team.	teamspace_navigate	teams	Open <teamspace_team> intelligent communications </teamspace_team> team.
+0	open the onenote tab	teamspace_showtab	teams	open the <teamspace_tab> onenote </teamspace_tab> tab
+0	Open the seals spreadsheet.	file_open	teams	Open the <file_title> seals </file_title> <file_filetype> spreadsheet </file_filetype>.
+0	Show my calendar.	teamcalendar_navigate	teams	Show my calendar.
+0	Go to coral internal.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> coral internal </teamspace_unclearkeyword>.
+0	Go to slide 2.	goto_slide	teams	Go to slide <slide_number> 2 </slide_number>.
+0	Open the excel spreadsheet I was working on.	file_open	teams	Open the <file_filetype> excel spreadsheet </file_filetype> <file_filerecency> I was working on </file_filerecency>.
+0	Open XLT review PowerPoint.	file_open	teams	Open <file_title> XLT review </file_title> <file_filetype> PowerPoint </file_filetype>.
+0	Go to speech and language.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> speech and language </teamspace_unclearkeyword>.
+0	Next slide next.	next_slide	teams	Next slide next.
+0	Go to chat now.	teamsuser_openchat	teams	Go to chat now.
+0	Open the files.	file_open	teams	Open the files.
+0	go to the book channel	teamspace_navigate	teams	go to the <teamspace_channel> book </teamspace_channel> channel
+0	Go to urgent communications team.	teamspace_navigate	teams	Go to <teamspace_team> urgent communications </teamspace_team> team.
+0	Go to slide 19.	goto_slide	teams	Go to slide <slide_number> 19 </slide_number>.
+0	Show me the next slide.	next_slide	teams	Show me the next slide.
+0	Go to slide number 4.	goto_slide	teams	Go to slide number <slide_number> 4 </slide_number>.
+0	Go to teams intelligent channel.	teamspace_navigate	teams	Go to <teamspace_channel> teams intelligent </teamspace_channel> channel.
+0	Go to slide 6.	goto_slide	teams	Go to slide <slide_number> 6 </slide_number>.
+0	Show me my PowerPoint files.	file_navigate	teams	Show me my <file_filetype> PowerPoint </file_filetype> files.
+0	Change my status.	teamsuser_setstatus	teams	Change my status.
+0	Go to the West coast channel.	teamspace_navigate	teams	Go to the <teamspace_channel> West coast </teamspace_channel> channel.
+0	open skills deck	file_open	teams	open <file_title> skills </file_title> <file_filetype> deck </file_filetype>
+0	Previous slide.	previous_slide	teams	Previous slide.
+0	Open SQI metrics 2018-2019 file.	file_open	teams	Open <file_title> SQI metrics 2018-2019 </file_title> file.
+0	Go to slide 3.	goto_slide	teams	Go to slide <slide_number> 3 </slide_number>.
+0	go to recent files	file_navigate	teams	go to <file_filerecency> recent </file_filerecency> files
+0	Go to the report change.	teamspace_navigate	teams	Go to the <teamspace_unclearkeyword> report change </teamspace_unclearkeyword>.
+0	Go to fridge.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> fridge </teamspace_unclearkeyword>.
+0	Navigate to intelligent communications team.	teamspace_navigate	teams	Navigate to <teamspace_team> intelligent communications </teamspace_team> team.
+0	End presentation.	stop_presenting	teams	End presentation.
+0	add alex to this team	teamspace_addtoteam	teams	add <teamsuser_contactname> alex </teamsuser_contactname> to <teamspace_team> this </teamspace_team> team
+0	Show me my mentions.	teamsuser_showactivity	teams	Show me my <teamsuser_activitytype> mentions </teamsuser_activitytype>.
+0	Present the deck.	start_presenting	teams	Present the deck.
+0	Show me August activity.	teamsuser_showactivity	teams	Show me <teamsuser_contactname> August </teamsuser_contactname> activity.
+0	Go to my recent file.	file_navigate	teams	Go to my <file_filerecency> recent </file_filerecency> file.
+0	present the deck i was working on	start_presenting	teams	present the deck <file_filerecency> i was working on </file_filerecency>
+0	share the deck i was working on	file_share	teams	share the <file_filetype> deck </file_filetype> <file_filerecency> i was working on </file_filerecency>
+0	share the filename deck	file_share	teams	share the <file_title> filename </file_title> <file_filetype> deck </file_filetype>
+0	share the filename presentation	start_presenting	teams	share the <deck_name> filename </deck_name> presentation
+0	present the filename deck	start_presenting	teams	present the <deck_name> filename </deck_name> deck
+0	present the filename presentation	start_presenting	teams	present the <deck_name> filename </deck_name> presentation
+0	present attached deck	start_presenting	teams	present <deck_location> attached </deck_location> deck
+0	present linked deck	start_presenting	teams	present <deck_location> linked </deck_location> deck
+0	present enclosed deck	start_presenting	teams	present <deck_location> enclosed </deck_location> deck
+0	share the attached deck	file_share	teams	share the <deck_location> attached </deck_location> <file_filetype> deck </file_filetype>
+0	share the linked deck	file_share	teams	share the <deck_location> linked </deck_location> <file_filetype> deck </file_filetype>
+0	share the enclosed deck	file_share	teams	share the <deck_location> enclosed </deck_location> <file_filetype> deck </file_filetype>
+0	present the deck i was working on this morning	start_presenting	teams	present the deck <file_filerecency> i was working on </file_filerecency> this morning
+0	present the deck i was working on this evening	start_presenting	teams	present the deck <file_filerecency> i was working on </file_filerecency> this evening
+0	present the deck i was working on this afternoon	start_presenting	teams	present the deck <file_filerecency> i was working on </file_filerecency> this afternoon
+0	share the deck i was working on this morning	file_share	teams	share the <file_filetype> deck </file_filetype> <file_filerecency> i was working on </file_filerecency> this morning
+0	share the deck i was working on this evening	file_share	teams	share the <file_filetype> deck </file_filetype> <file_filerecency> i was working on </file_filerecency> this evening
+0	share the deck i was working on this afternoon	file_share	teams	share the <file_filetype> deck </file_filetype> <file_filerecency> i was working on </file_filerecency> this afternoon
+0	present my deck	start_presenting	teams	present my deck
+0	present the deck	start_presenting	teams	present the deck
+0	end the presentation	stop_presenting	teams	end the presentation
+0	end presentation	stop_presenting	teams	end presentation
+0	stop presenting	stop_presenting	teams	stop presenting
+0	close presentation	stop_presenting	teams	close presentation
+0	close the presentation	stop_presenting	teams	close the presentation
+0	next slide	next_slide	teams	next slide
+0	go to next slide	next_slide	teams	go to next slide
+0	go to 1 slide	goto_slide	teams	go to <slide_name> 1 </slide_name> slide
+0	1 slide	goto_slide	teams	1 slide
+0	previous slide	previous_slide	teams	previous slide
+0	slide back	previous_slide	teams	slide back
+0	last slide	previous_slide	teams	last slide
+0	go to the title slide	goto_slide	teams	go to the <slide_name> title </slide_name> slide
+0	go to title slide	goto_slide	teams	go to <slide_name> title </slide_name> slide
+0	navigate to the title slide	goto_slide	teams	navigate to the title slide
+0	navigate to title slide	goto_slide	teams	navigate to title slide
+0	title slide	goto_slide	teams	title slide
+0	go to first slide	goto_slide	teams	go to <slide_number> first </slide_number> slide
+0	go to last slide	previous_slide	teams	go to last slide
+0	navigate to the first slide	goto_slide	teams	navigate to the <slide_number> first </slide_number> slide
+0	navigate to the last slide	previous_slide	teams	navigate to the last slide
+0	go to the very end to the deck	goto_slide	teams	go to the <slide_number> very end </slide_number> to the <file_filetype> deck </file_filetype>
+0	go to the very end to the presentation	goto_slide	teams	go to the  <slide_number> very end </slide_number> to the presentation
+0	go back to the title slide	goto_slide	teams	go back to the <slide_name> title </slide_name> slide
+0	go back 1 slide	goto_slide	teams	go back 1 slide
+0	go to voice skills channel	teamspace_navigate	teams	go to <teamspace_channel> voice skills </teamspace_channel> channel
+0	navigate to voice skills channel	teamspace_navigate	teams	navigate to <teamspace_channel> voice skills </teamspace_channel> channel
+0	open voice skills channel	teamspace_navigate	teams	open <teamspace_channel> voice skills </teamspace_channel> channel
+0	show me my activity	teamsuser_showactivity	teams	show me my activity
+0	go to my activity	teamsuser_showactivity	teams	go to my activity
+0	navigate to my activity	teamsuser_showactivity	teams	navigate to my activity
+0	show me at mentions	teamsuser_showactivity	teams	show me <teamsuser_activitytype> at mentions </teamsuser_activitytype>
+0	show me where i was mentioned	teamsuser_showactivity	teams	show me <teamsuser_activitytype> where i was mentioned </teamsuser_activitytype>
+0	show me my at mentions	teamsuser_showactivity	teams	show me my <teamsuser_activitytype> at mentions </teamsuser_activitytype>
+0	set my status to busy	teamsuser_setstatus	teams	set my status to <teamsuser_status> busy </teamsuser_status>
+0	set my status to available	teamsuser_setstatus	teams	set my status to <teamsuser_status> available </teamsuser_status>
+0	set my status to dnd	teamsuser_setstatus	teams	set my status to <teamsuser_status> dnd </teamsuser_status>
+0	set my status to do not disturb	teamsuser_setstatus	teams	set my status to <teamsuser_status> do not disturb </teamsuser_status>
+0	change my status to busy	teamsuser_setstatus	teams	change my status to <teamsuser_status> busy </teamsuser_status>
+0	change my status to available	teamsuser_setstatus	teams	change my status to <teamsuser_status> available </teamsuser_status>
+0	change my status to dnd	teamsuser_setstatus	teams	change my status to <teamsuser_status> dnd </teamsuser_status>
+0	change my status to do not disturb	teamsuser_setstatus	teams	change my status to <teamsuser_status> do not disturb </teamsuser_status>
+0	go to my saved items	teamsuser_showactivity	teams	go to my <teamsuser_activitytype> saved items </teamsuser_activitytype>
+0	go to unread activity	teamsuser_showactivity	teams	go to <teamsuser_activitytype> unread </teamsuser_activitytype> activity
+0	go to john's activity	teamsuser_showactivity	teams	go to <teamsuser_contactname> john </teamsuser_contactname>'s activity
+0	navigate to my saved items	teamsuser_showactivity	teams	navigate to my <teamsuser_activitytype> saved items </teamsuser_activitytype>
+0	navigate to unread activity	teamsuser_showactivity	teams	navigate to <teamsuser_activitytype> unread </teamsuser_activitytype> activity
+0	navigate to john's activity	teamsuser_showactivity	teams	navigate to <teamsuser_contactname> john </teamsuser_contactname>'s activity
+0	open my saved items	teamsuser_showactivity	teams	open my saved items
+0	open unread activity	teamsuser_showactivity	teams	open unread activity
+0	open john's activity	teamsuser_showactivity	teams	open john's activity
+0	search for free text	teamspace_search	teams	search for <teamspace_searchkeyword> free text </teamspace_searchkeyword>
+0	send feedback	teamspace_sendfeedback	teams	send feedback
+0	post feedback	teamspace_sendfeedback	teams	post feedback
+0	log feedback	teamspace_sendfeedback	teams	log feedback
+0	open a file	file_open	teams	open <file_title> a </file_title> file
+0	open lt review deck	file_open	teams	open <file_title> lt review </file_title> <file_filetype> deck </file_filetype>
+0	open the excel document i was working on	file_open	teams	open the <file_filetype> excel </file_filetype> document <file_filerecency> i was working on </file_filerecency>
+0	open the powerpoint document i was working on	file_open	teams	open the <file_filetype> powerpoint </file_filetype> document <file_filerecency> i was working on </file_filerecency>
+0	open the word document i was working on	file_open	teams	open the <file_filetype> word </file_filetype> document <file_filerecency> i was working on </file_filerecency>
+0	open the file i was working on	file_open	teams	open the file <file_filerecency> i was working on </file_filerecency>
+0	share this file with john	file_share	teams	share <file_title> this </file_title> file with john
+0	share the lt review deck with john	file_share	teams	share the <file_title> lt review </file_title> <file_filetype> deck </file_filetype> with john
+0	share the powerpoint i was working on with john	file_share	teams	share the <file_filetype> powerpoint </file_filetype> <file_filerecency> i was working on </file_filerecency> with john
+0	share the triage process document here	file_share	teams	share the <file_title> triage process </file_title> document here
+0	share the triage process document on this channel	file_share	teams	share the <file_title> triage process </file_title> document on <teamspace_channel> this </teamspace_channel> channel
+0	share the triage process document on this chat	file_share	teams	share the <file_title> triage process </file_title> document on this <file_sharetarget> chat </file_sharetarget>
+0	go to my recent files	file_navigate	teams	go to my <file_filerecency> recent </file_filerecency> files
+0	show me my recent files	file_navigate	teams	show me my <file_filerecency> recent </file_filerecency> files
+0	download this file	file_download	teams	download <file_title> this </file_title> file
+0	MessageText	JudgedTaskunderstandingIntent	judged_domain	JudgedTaskunderstandingMsgannotation
+0	Open file 'LT review discussion'	file_open	teams	Open file '<file_title> LT review discussion </file_title>'
+0	Open 'LT review discussion' deck 	file_open	teams	Open '<file_title> LT review discussion </file_title>' <file_filetype> deck </file_filetype> 
+0	Open 'voice skills' file	file_open	teams	Open '<file_title> voice skills </file_title>' file
+0	Open 'voice skills' document	file_open	teams	Open '<file_title> voice skills </file_title>' document
+0	Open 'voice skills' doc	file_open	teams	Open '<file_title> voice skills </file_title>' doc
+0	Open 'voice skills' deck	file_open	teams	Open '<file_title> voice skills </file_title>' <file_filetype> deck </file_filetype>
+0	Open 'voice skills' spreadsheet	file_open	teams	Open '<file_title> voice skills </file_title>' <file_filetype> spreadsheet </file_filetype>
+0	Open 'voice skills' PPT	file_open	teams	Open '<file_title> voice skills </file_title>' <file_filetype> PPT </file_filetype>
+0	Open 'voice skills' PowerPoint 	file_open	teams	Open '<file_title> voice skills </file_title>' <file_filetype> PowerPoint </file_filetype> 
+0	Open the spreadsheet I was working on recently 	file_open	teams	Open the <file_filetype> spreadsheet </file_filetype> <file_filerecency> I was working on recently </file_filerecency>
+0	Open the document I was working on 	file_open	teams	Open the document <file_filerecency> I was working on </file_filerecency> 
+0	Open the paper I was working on 	file_open	teams	Open the paper <file_filerecency> I was working on </file_filerecency> 
+0	Open the OneNote I was working on	file_open	teams	Open the <file_filetype> OneNote </file_filetype> <file_filerecency> I was working on </file_filerecency>
+0	Navigate to channel voice skills	teamspace_navigate	teams	Navigate to channel <teamspace_channel> voice skills </teamspace_channel>
+0	Go to channel voice skills	teamspace_navigate	teams	Go to channel <teamspace_channel> voice skills </teamspace_channel>
+0	View channel voice skills	teamspace_navigate	teams	View channel <teamspace_channel> voice skills </teamspace_channel>
+0	Access channel voice skills	teamspace_navigate	teams	Access channel <teamspace_channel> voice skills </teamspace_channel>
+0	Show channel voice skills	teamspace_navigate	teams	Show channel <teamspace_channel> voice skills </teamspace_channel>
+0	Navigate to voice skills channel	teamspace_navigate	teams	Navigate to <teamspace_channel> voice skills </teamspace_channel> channel
+0	Go to voice skills channel	teamspace_navigate	teams	Go to <teamspace_channel> voice skills </teamspace_channel> channel
+0	View voice skills channel	teamspace_navigate	teams	View <teamspace_channel> voice skills </teamspace_channel> channel
+0	Access voice skills channel	teamspace_navigate	teams	Access <teamspace_channel> voice skills </teamspace_channel> channel
+0	Show voice skills channel	teamspace_navigate	teams	Show <teamspace_channel> voice skills </teamspace_channel> channel
+0	Navigate to Intelligent communication team	teamspace_navigate	teams	Navigate to <teamspace_team> Intelligent communication </teamspace_team> team
+0	Go to Intelligent communication team	teamspace_navigate	teams	Go to <teamspace_team> Intelligent communication </teamspace_team> team
+0	View Intelligent communication team	teamspace_navigate	teams	View <teamspace_team> Intelligent communication </teamspace_team> team
+0	Access Intelligent communication team	teamspace_navigate	teams	Access <teamspace_team> Intelligent communication </teamspace_team> team
+0	Show Intelligent communication team	teamspace_navigate	teams	Show <teamspace_team> Intelligent communication </teamspace_team> team
+0	Navigate to team intelligent communications	teamspace_navigate	teams	Navigate to team <teamspace_team> intelligent communications </teamspace_team>
+0	Go to team intelligent communications	teamspace_navigate	teams	Go to team <teamspace_team> intelligent communications </teamspace_team>
+0	View team intelligent communications	teamspace_navigate	teams	View team <teamspace_team> intelligent communications </teamspace_team>
+0	Access team intelligent communications	teamspace_navigate	teams	Access team <teamspace_team> intelligent communications </teamspace_team>
+0	Show team intelligent communications	teamspace_navigate	teams	Show team <teamspace_team> intelligent communications </teamspace_team>
+0	Navigate to my calendar	teamcalendar_navigate	teams	Navigate to my calendar
+0	View my calendar	teamcalendar_navigate	teams	View my calendar
+0	See my Calendar	teamcalendar_navigate	teams	See my Calendar
+0	See my Calendar for day of the week	teamcalendar_navigate	teams	See my Calendar for <teamcalendar_starttime> day of the week </teamcalendar_starttime>
+0	go to my calendar for March 22nd	teamcalendar_navigate	teams	go to my calendar for <teamcalendar_starttime> March 22nd </teamcalendar_starttime>
+0	"Search ""voice skills tap program"""	teamspace_search	teams	"Search ""<teamspace_searchkeyword> voice skills tap program </teamspace_searchkeyword>"""
+0	"Search for ""voice skills tap program"""	teamspace_search	teams	"Search for ""<teamspace_searchkeyword> voice skills tap program </teamspace_searchkeyword>"""
+0	"Show results for ""voice skills tap program"""	teamspace_search	teams	"Show results for ""<teamspace_searchkeyword> voice skills tap program </teamspace_searchkeyword>"""
+0	"Find me everything about ""voice skills tap program"""	teamspace_search	teams	"Find me everything about ""<teamspace_searchkeyword> voice skills tap program </teamspace_searchkeyword>"""
+0	"Look for ""voice skills tap program"""	teamspace_search	teams	"Look for ""<teamspace_searchkeyword> voice skills tap program </teamspace_searchkeyword>"""
+0	Show me my recent files	file_navigate	teams	Show me my <file_filerecency> recent </file_filerecency> files
+0	Show me my files	file_navigate	teams	Show me my files
+0	Show me my PPT	file_navigate	teams	Show me my <file_filetype> PPT </file_filetype>
+0	show me my Excel	file_navigate	teams	show me my <file_filetype> Excel </file_filetype>
+0	show me my Word files	file_navigate	teams	show me my <file_filetype> Word </file_filetype> files
+0	Navigate to my recent files	file_navigate	teams	Navigate to my <file_filerecency> recent </file_filerecency> files
+0	Navigate to files	file_navigate	teams	Navigate to files
+0	Go to files	file_navigate	teams	Go to files
+0	Favorite voice skills channel	teamspace_favorite	teams	Favorite <teamspace_channel> voice skills </teamspace_channel> channel
+0	Bookmark voice skills channel	teamspace_favorite	teams	Bookmark <teamspace_channel> voice skills </teamspace_channel> channel
+0	Favorite Intelligent Communications team	teamspace_favorite	teams	Favorite <teamspace_team> Intelligent Communications </teamspace_team> team
+0	Bookmark Intelligent Communications team	teamspace_favorite	teams	Bookmark <teamspace_team> Intelligent Communications </teamspace_team> team
+0	Add voice skills channel to favorites	teamspace_favorite	teams	Add <teamspace_channel> voice skills </teamspace_channel> channel to favorites
+0	Add voice skills channel to bookmarks	teamspace_favorite	teams	Add <teamspace_channel> voice skills </teamspace_channel> channel to bookmarks
+0	Add Anna Green to the Event hub team	teamspace_addtoteam	teams	Add <teamsuser_contactname> Anna Green </teamsuser_contactname> to the <teamspace_team> Event hub </teamspace_team> team
+0	Add Anna Green to the Event hub group	teamspace_addtoteam	teams	Add <teamsuser_contactname> Anna Green </teamsuser_contactname> to the <teamspace_team> Event hub </teamspace_team> group
+0	Add a new person to the Event hub	teamspace_addtoteam	teams	Add a new person to the <teamspace_unclearkeyword> Event hub </teamspace_unclearkeyword>
+0	go to voice skills	teamspace_navigate	teams	go to <teamspace_unclearkeyword> voice skills </teamspace_unclearkeyword>
+0	go to voice skills channel in Intelligent Communications team	teamspace_navigate	teams	go to <teamspace_channel> voice skills </teamspace_channel> channel in <teamspace_team> Intelligent Communications </teamspace_team> team
+0	follow voice skills channel in Intelligent Communications team	teamspace_follow	teams	follow <teamspace_channel> voice skills </teamspace_channel> channel in <teamspace_team> Intelligent Communications </teamspace_team> team
+0	view my calendar for tomorrow	teamcalendar_navigate	teams	view my calendar for <teamcalendar_starttime> tomorrow </teamcalendar_starttime>
+0	Is Jacob part of voice skills team?	teamspace_checkmember	teams	Is <teamsuser_contactname> Jacob </teamsuser_contactname> part of <teamspace_team> voice skills </teamspace_team> team?
+0	Is Jacob in voice skills team?	teamspace_checkmember	teams	Is <teamsuser_contactname> Jacob </teamsuser_contactname> in <teamspace_team> voice skills </teamspace_team> team?
+0	Does voice skills team have Jacob?	teamspace_checkmember	teams	Does <teamspace_team> voice skills </teamspace_team> team have <teamsuser_contactname> Jacob </teamsuser_contactname>?
+0	Is Jacob member of voice skills team?	teamspace_checkmember	teams	Is <teamsuser_contactname> Jacob </teamsuser_contactname> member of <teamspace_team> voice skills </teamspace_team> team?
+0	Do voice skills team members include Jacob?	teamspace_checkmember	teams	Do <teamspace_team> voice skills </teamspace_team> team members include <teamsuser_contactname> Jacob </teamsuser_contactname>?
+0	Unfollow this channel	teamspace_unfollow	teams	Unfollow <teamspace_channel> this </teamspace_channel> channel
+0	Remove this channel from my followed list	teamspace_unfollow	teams	Remove <teamspace_channel> this </teamspace_channel> channel from my followed list
+0	Stop following this channel	teamspace_unfollow	teams	Stop following <teamspace_channel> this </teamspace_channel> channel
+0	Un-favorite this channel	teamspace_unfavorite	teams	Un-favorite <teamspace_channel> this </teamspace_channel> channel
+0	Un-favorite the voice skills channel	teamspace_unfavorite	teams	Un-favorite the <teamspace_channel> voice skills </teamspace_channel> channel
+0	Remove voice skills team from my favorites	teamspace_unfavorite	teams	Remove <teamspace_team> voice skills </teamspace_team> team from my favorites
+0	Go to my downloads	file_navigate	teams	Go to my <file_filetype> downloads </file_filetype>
+0	Go to downloads	file_navigate	teams	Go to <file_filetype> downloads </file_filetype>
+0	Navigate to downloaded files	file_navigate	teams	Navigate to <file_filetype> downloaded files </file_filetype>
+0	Remove Jacob from a team	teamspace_removemember	teams	Remove <teamsuser_contactname> Jacob </teamsuser_contactname> from a team
+0	Remove Jacob from this team	teamspace_removemember	teams	Remove <teamsuser_contactname> Jacob </teamsuser_contactname> from <teamspace_team> this </teamspace_team> team
+0	Start a new team	teamspace_createteam	teams	Start a new team
+0	Create a team	teamspace_createteam	teams	Create a team
+0	Create a new team	teamspace_createteam	teams	Create a new team
+0	Join a new team	teamspace_jointeam	teams	Join a new team
+0	Join a team	teamspace_jointeam	teams	Join a team
+0	Join voice skills team	teamspace_jointeam	teams	Join <teamspace_team> voice skills </teamspace_team> team
+0	I want to join a team	teamspace_jointeam	teams	I want to join a team
+0	I need help with Teams	teamspace_help	teams	I need help with Teams
+0	Navigate to Teams help	teamspace_help	teams	Navigate to Teams help
+0	Go to FAQ	teamspace_help	teams	Go to FAQ
+0	Send feedback	teamspace_sendfeedback	teams	Send feedback
+0	Give feedback	teamspace_sendfeedback	teams	Give feedback
+0	Log feedback	teamspace_sendfeedback	teams	Log feedback
+0	Provide feedback	teamspace_sendfeedback	teams	Provide feedback
+0	Send feedback to Microsoft	teamspace_sendfeedback	teams	Send feedback to Microsoft
+0	What are shortcut keys?	teamspace_showhotkey	teams	What are shortcut keys?
+0	Show me shortcut keys	teamspace_showhotkey	teams	Show me shortcut keys
+0	Show me where I was mentioned	teamsuser_showactivity	teams	Show me <teamsuser_activitytype> where I was mentioned </teamsuser_activitytype>
+0	Show me my at mentions	teamsuser_showactivity	teams	Show me my <teamsuser_activitytype> at mentions </teamsuser_activitytype>
+0	Navigate to at mentions	teamsuser_showactivity	teams	Navigate to <teamsuser_activitytype> at mentions </teamsuser_activitytype>
+0	See my mentions	teamsuser_showactivity	teams	See my <teamsuser_activitytype> mentions </teamsuser_activitytype>
+0	show saved items	teamsuser_showactivity	teams	show <teamsuser_activitytype> saved items </teamsuser_activitytype>
+0	show unread activities	teamsuser_showactivity	teams	show <teamsuser_activitytype> unread </teamsuser_activitytype> activities
+0	show unread activity	teamsuser_showactivity	teams	show <teamsuser_activitytype> unread </teamsuser_activitytype> activity
+0	show unread feed	teamsuser_showactivity	teams	show <teamsuser_activitytype> unread </teamsuser_activitytype> feed
+0	show my activity	teamsuser_showactivity	teams	show my activity
+0	show Jacob's activities	teamsuser_showactivity	teams	show <teamsuser_contactname> Jacob </teamsuser_contactname>'s activities
+0	show activity by Jacob	teamsuser_showactivity	teams	show activity by <teamsuser_contactname> Jacob </teamsuser_contactname>
+0	Go to chat with Jacob 	teamsuser_openchat	teams	Go to chat with <teamsuser_contactname> Jacob </teamsuser_contactname> 
+0	Go to Jacob's chat 	teamsuser_openchat	teams	Go to <teamsuser_contactname> Jacob </teamsuser_contactname>'s chat 
+0	Tell me about Jacob's org	teamsuser_checkorg	teams	Tell me about <teamsuser_contactname> Jacob </teamsuser_contactname>'s org
+0	Give me info about Jacob's org	teamsuser_checkorg	teams	Give me info about <teamsuser_contactname> Jacob </teamsuser_contactname>'s org
+0	What team is Jacob in?	teamsuser_checkorg	teams	What team is <teamsuser_contactname> Jacob </teamsuser_contactname> in?
+0	share file with alice	file_share	teams	share file with <teamsuser_contactname> alice </teamsuser_contactname>
+0	share this file with jay ongg	file_share	teams	share <file_title> this </file_title> file with <teamsuser_contactname> jay ongg </teamsuser_contactname>
+0	share file with my next meeting	file_share	teams	share file with my <teammeeting_starttime> next </teammeeting_starttime> <file_sharetarget> meeting </file_sharetarget>
+0	share this file with my next shiproom meeting	file_share	teams	share <file_title> this </file_title> file with my <teammeeting_starttime> next </teammeeting_starttime> <teammeeting_title> shiproom </teammeeting_title> <file_sharetarget> meeting </file_sharetarget>
+0	download this file	file_download	teams	download <file_title> this </file_title> file
+0	download this excel	file_download	teams	download <file_title> this </file_title> <file_filetype> excel </file_filetype>
+0	Un-follow this channel	teamspace_unfollow	teams	Un-follow <teamspace_channel> this </teamspace_channel> channel
+0	Follow this channel	teamspace_follow	teams	Follow <teamspace_channel> this </teamspace_channel> channel
+0	Favorite this channel	teamspace_favorite	teams	Favorite <teamspace_channel> this </teamspace_channel> channel
+0	Favorite this team	teamspace_favorite	teams	Favorite <teamspace_team> this </teamspace_team> team
+0	Un-favorite Cortana team	teamspace_unfavorite	teams	Un-favorite <teamspace_team> Cortana </teamspace_team> team
+0	Un-favorite this team	teamspace_unfavorite	teams	Un-favorite <teamspace_team> this </teamspace_team> team
+0	Add person to this team	teamspace_addtoteam	teams	Add person to <teamspace_team> this </teamspace_team> team
+0	Remove person from Cortana team	teamspace_removemember	teams	Remove person from <teamspace_team> Cortana </teamspace_team> team
+0	Remove person from this team	teamspace_removemember	teams	Remove person from <teamspace_team> this </teamspace_team> team
+0	Share file LT review discussion with this meeting	file_share	teams	Share file <file_title> LT review discussion </file_title> with <teammeeting_title> this </teammeeting_title> <file_sharetarget> meeting </file_sharetarget>
+0	Share voice skills deck with the next meeting	file_share	teams	Share <file_title> voice skills </file_title> <file_filetype> deck </file_filetype> with the <teammeeting_starttime> next </teammeeting_starttime> <file_sharetarget> meeting </file_sharetarget>
+0	Share the spreadsheet I was working on with the meeting attendees	file_share	teams	Share the <file_filetype> spreadsheet </file_filetype> <file_filerecency> I was working on </file_filerecency> with the <file_sharetarget> meeting attendees </file_sharetarget>
+0	Share the document I was working on with the meeting participants	file_share	teams	Share the document <file_filerecency> I was working on </file_filerecency> with the <file_sharetarget> meeting participants </file_sharetarget>
+0	Share the paper I was working on with design sync meeting	file_share	teams	Share the paper <file_filerecency> I was working on </file_filerecency> with <teammeeting_title> design sync </teammeeting_title> <file_sharetarget> meeting </file_sharetarget>
+0	Remove person from this team	teamspace_removemember	teams	Remove person from <teamspace_team> this </teamspace_team> team
+0	Open files tab in the voice skills channel	teamspace_showtab	teams	Open <teamspace_tab> files </teamspace_tab> tab in the <teamspace_channel> voice skills </teamspace_channel> channel
+0	Open files tab in the channel	teamspace_showtab	teams	Open <teamspace_tab> files </teamspace_tab> tab in the channel
+0	Open tab in the voice skills channel	teamspace_showtab	teams	Open tab in the <teamspace_channel> voice skills </teamspace_channel> channel
+0	Open the tab in the channel	teamspace_showtab	teams	Open the tab in the channel
+0	Change my status	teamsuser_setstatus	teams	Change my status
+0	set my Status to Busy	teamsuser_setstatus	teams	set my Status to <teamsuser_status> Busy </teamsuser_status>
+0	Change my status to available	teamsuser_setstatus	teams	Change my status to <teamsuser_status> available </teamsuser_status>
+0	Share this tab with Jacob	teamspace_sharetab	teams	Share <teamspace_tab> this </teamspace_tab> tab with <teamsuser_contactname> Jacob </teamsuser_contactname>
+0	Share the tab with Jacob	teamspace_sharetab	teams	Share the tab with <teamsuser_contactname> Jacob </teamsuser_contactname>
+0	Send this tab to Jacob	teamspace_sharetab	teams	Send <teamspace_tab> this </teamspace_tab> tab to <teamsuser_contactname> Jacob </teamsuser_contactname>
+0	Share the link to this channel with Jacob	teamspace_sharechannel	teams	Share the link to <teamspace_channel> this </teamspace_channel> channel with <teamsuser_contactname> Jacob </teamsuser_contactname>
+0	Share the link to channel with Jacob	teamspace_sharechannel	teams	Share the link to channel with <teamsuser_contactname> Jacob </teamsuser_contactname>
+0	Share this link to voice skills channel with Jacob	teamspace_sharechannel	teams	Share this link to <teamspace_channel> voice skills </teamspace_channel> channel with <teamsuser_contactname> Jacob </teamsuser_contactname>
+0	Share voice skills channel with Jacob	teamspace_sharechannel	teams	Share <teamspace_channel> voice skills </teamspace_channel> channel with <teamsuser_contactname> Jacob </teamsuser_contactname>
+0	Add link to files tab in the compose box	teamspace_sharetab	teams	Add link to <teamspace_tab> files </teamspace_tab> tab in the <teamspace_sharetarget> compose box </teamspace_sharetarget>
+0	Share voice skills channel link with Jacob	teamspace_sharechannel	teams	Share <teamspace_channel> voice skills </teamspace_channel> channel link with <teamsuser_contactname> Jacob </teamsuser_contactname>
+0	Copy link to files tab in the message	teamspace_sharetab	teams	Copy link to <teamspace_tab> files </teamspace_tab> tab in the <teamspace_sharetarget> message </teamspace_sharetarget>
+0	Share the file on this chat	file_share	teams	Share the file on this <file_sharetarget> chat </file_sharetarget>
+0	Start presentation	start_presenting	teams	Start presentation
+0	Present my deck	start_presenting	teams	Present my deck
+0	Project the deck	start_presenting	teams	Project the deck
+0	Present planning deck	start_presenting	teams	Present <deck_name> planning </deck_name> deck
+0	Project planning deck	start_presenting	teams	Project <deck_name> planning </deck_name> deck
+0	Stop presentation	stop_presenting	teams	Stop presentation
+0	Next slide	next_slide	teams	Next slide
+0	Previous slide	previous_slide	teams	Previous slide
+0	Last slide	previous_slide	teams	Last slide
+0	Go back to the last slide	previous_slide	teams	Go back to the last slide
+0	Go back a slide	slide_back	teams	Go back a slide
+0	Slide 11	goto_slide	teams	Slide <slide_number> 11 </slide_number>
+0	Go to slide number 11	goto_slide	teams	Go to slide number <slide_number> 11 </slide_number>
+0	Show slide number 11	goto_slide	teams	Show slide number <slide_number> 11 </slide_number>
+0	Jump to slide 11	goto_slide	teams	Jump to slide <slide_number> 11 </slide_number>
+0	Go to budget slide	goto_slide	teams	Go to <slide_name> budget </slide_name> slide
+0	Show budget slide	goto_slide	teams	Show <slide_name> budget </slide_name> slide
+0	Jump to budget slide	goto_slide	teams	Jump to <slide_name> budget </slide_name> slide
+0	Share my deck	file_share	teams	Share my <file_filetype> deck </file_filetype>
+0	Share the deck	file_share	teams	Share the <file_filetype> deck </file_filetype>
+0	Share planning deck	file_share	teams	Share <file_title> planning </file_title> <file_filetype> deck </file_filetype>
+0	Mute everyone	mute_participant	teams	Mute everyone
+0	Mute all	mute_participant	teams	Mute <teammeeting_quantifier> all </teammeeting_quantifier>
+0	Mute all participants	mute_participant	teams	Mute <teammeeting_quantifier> all </teammeeting_quantifier> participants
+0	Mute John	mute_participant	teams	Mute <teamsuser_contactname> John </teamsuser_contactname>
+0	Show whiteboard	show_whiteboard	teams	Show whiteboard
+0	Start whiteboard	show_whiteboard	teams	Start whiteboard
+0	Open whiteboard	show_whiteboard	teams	Open whiteboard
+0	Project whiteboard	show_whiteboard	teams	Project whiteboard
+0	Hide whiteboard	hide_whiteboard	teams	Hide whiteboard
+0	Stop whiteboard	hide_whiteboard	teams	Stop whiteboard
+0	Close whiteboard	hide_whiteboard	teams	Close whiteboard
+0	End presenting	stop_presenting	teams	End presenting
+0	End presentation	stop_presenting	teams	End presentation
+0	Finish presenting	stop_presenting	teams	Finish presenting
+0	Stop presenting	stop_presenting	teams	Stop presenting
+0	Exit presentation	stop_presenting	teams	Exit presentation
+0	first one	file_download	teams	<position_ref> first </position_ref> one
+0	go to end of presentation	goto_slide	teams	go to <slide_number> end of presentation </slide_number>
+0	go to very last slide	goto_slide	teams	go to very <slide_number> last </slide_number> slide
+0	download lt review file	file_download	teams	download <file_title> lt review </file_title> file
+0	open voice skills team	teamspace_navigate	teams	open <teamspace_team> voice skills </teamspace_team> team
+0	share this file	file_share	teams	share <file_title> this </file_title> file
+0	go to the final slide	goto_slide	teams	go to the <slide_number> final </slide_number> slide
+0	hide the whiteboard	hide_whiteboard	teams	hide the whiteboard
+0	go to the next slide	next_slide	teams	go to the next slide
+0	jump to the previous slide	previous_slide	teams	jump to the previous slide
+0	Go to the last slide	previous_slide	teams	Go to the last slide
+0	go to the previous slide	previous_slide	teams	go to the previous slide
+0	present the attached deck	start_presenting	teams	present the <deck_location> attached </deck_location> deck
+0	present the deck I was working on	start_presenting	teams	present the deck <file_filerecency> I was working on </file_filerecency>
+0	follow voice skills channel	teamspace_follow	teams	follow <teamspace_channel> voice skills </teamspace_channel> channel
+0	open teams help	teamspace_help	teams	open teams help
+0	send teams feedback	teamspace_sendfeedback	teams	send teams feedback
+0	Show hotkeys	teamspace_showhotkey	teams	Show hotkeys
+0	Show keyboard shortcuts	teamspace_showhotkey	teams	Show keyboard shortcuts
+0	open files tab in voice skills channel	teamspace_showtab	teams	open <teamspace_tab> files </teamspace_tab> tab in <teamspace_channel> voice skills </teamspace_channel> channel
+0	show me onenote tab	teamspace_showtab	teams	show me <teamspace_tab> onenote </teamspace_tab> tab
+0	go to unread activity	teamsuser_showactivity	teams	go to <teamsuser_activitytype> unread </teamsuser_activitytype> activity
+0	let me see my mentions	teamsuser_showactivity	teams	let me see my <teamsuser_activitytype> mentions </teamsuser_activitytype>
+0	go to my activity	teamsuser_showactivity	teams	go to my activity
+0	first slide	goto_slide	teams	<slide_number> first </slide_number> slide
+0	let me see my at mentions	teamsuser_showactivity	teams	let me see my <teamsuser_activitytype> at mentions </teamsuser_activitytype>
+0	bring up my calendar	teamcalendar_navigate	teams	bring up my calendar
+0	could you navigate to my calendar	teamcalendar_navigate	teams	could you navigate to my calendar
+0	direct to my calendar	teamcalendar_navigate	teams	direct to my calendar
+0	find my calendar and open it	teamcalendar_navigate	teams	find my calendar and open it
+0	go to my 2018 calendar for may	teamcalendar_navigate	teams	go to my <teamcalendar_starttime> 2018 </teamcalendar_starttime> calendar for <teamcalendar_starttime> may </teamcalendar_starttime>
+0	go to my calendar please	teamcalendar_navigate	teams	go to my calendar please
+0	i need to view my calendar	teamcalendar_navigate	teams	i need to view my calendar
+0	navigate to calendar	teamcalendar_navigate	teams	navigate to calendar
+0	navigate to my calendar on 4/10/2018	teamcalendar_navigate	teams	navigate to my calendar on <teamcalendar_starttime> 4/10/2018 </teamcalendar_starttime>
+0	open my calendar for may 5th 2018	teamcalendar_navigate	teams	open my calendar for <teamcalendar_starttime> may 5th 2018 </teamcalendar_starttime>
+0	show me my calendar for 4/10/2018	teamcalendar_navigate	teams	show me my calendar for <teamcalendar_starttime> 4/10/2018 </teamcalendar_starttime>
+0	download this deck	file_download	teams	download <file_title> this </file_title> <file_filetype> deck </file_filetype>
+0	share this file with jay ongg	file_share	teams	share <file_title> this </file_title> file with <teamsuser_contactname> jay ongg </teamsuser_contactname>
+0	start presenting	start_presenting	teams	start presenting
+0	show next week in my calendar	teamcalendar_navigate	teams	show <teamcalendar_starttime> next week </teamcalendar_starttime> in my calendar
+0	Add voice skills channel to my bookmarks	teamspace_favorite	teams	Add <teamspace_channel> voice skills </teamspace_channel> channel to my bookmarks
+0	go to the voice skills	teamspace_navigate	teams	go to the <teamspace_unclearkeyword> voice skills </teamspace_unclearkeyword>
+0	Remove person from the team	teamspace_removemember	teams	Remove person from the team
+0	open shortcuts	teamspace_showhotkey	teams	open shortcuts
+0	Un-favorite the voice skills team	teamspace_unfavorite	teams	Un-favorite the <teamspace_team> voice skills </teamspace_team> team
+0	go to Jacob's org	teamsuser_checkorg	teams	go to <teamsuser_contactname> Jacob </teamsuser_contactname>'s org
+0	go to Jacob's organization	teamsuser_checkorg	teams	go to <teamsuser_contactname> Jacob </teamsuser_contactname>'s organization
+0	go to roger's activity	teamsuser_showactivity	teams	go to <teamsuser_contactname> roger </teamsuser_contactname>'s activity
+0	Bookmark voice skills team	teamspace_favorite	teams	Bookmark <teamspace_team> voice skills </teamspace_team> team
+0	Copy link to files tab in this chat	teamspace_sharetab	teams	Copy link to <teamspace_tab> files </teamspace_tab> tab in this <teamspace_sharetarget> chat </teamspace_sharetarget>
+0	share file with meeting tomorrow	file_share	teams	share file with <file_sharetarget> meeting </file_sharetarget> <teammeeting_starttime> tomorrow </teammeeting_starttime>
+0	show the last slide again	previous_slide	teams	show the last slide again
+0	Present the deck	start_presenting	teams	Present the deck
+0	Show the presentation	start_presenting	teams	Show the presentation
+0	Show the planning presentation	start_presenting	teams	Show the <deck_name> planning </deck_name> presentation
+0	Project the deck	start_presenting	teams	Project the deck
+0	Project the planning deck	start_presenting	teams	Project the <deck_name> planning </deck_name> deck
+0	add roger to the johnson test group team	teamspace_addtoteam	teams	add <teamsuser_contactname> roger </teamsuser_contactname> to the <teamspace_team> johnson test group </teamspace_team> team
+0	Go to team hackathon 2018	teamspace_navigate	teams	Go to team <teamspace_team> hackathon 2018 </teamspace_team>
+0	invite jay to bot team	teamspace_addtoteam	teams	invite <teamsuser_contactname> jay </teamsuser_contactname> to <teamspace_team> bot </teamspace_team> team
+0	Launch that document I was composing	file_open	teams	Launch <file_title> that </file_title> document <file_filerecency> I was composing </file_filerecency>
+0	Open voice skills ppt	file_open	teams	Open <file_title> voice skills </file_title> <file_filetype> ppt </file_filetype>
+0	present the planning 2018 deck	start_presenting	teams	present the <deck_name> planning 2018 </deck_name> deck
+0	Pull up deployment timeline doc	file_open	teams	Pull up <file_title> deployment timeline </file_title> doc
+0	share the brownbag excel with this conversation	file_share	teams	share the <file_title> brownbag </file_title> <file_filetype> excel </file_filetype> with this <file_sharetarget> conversation </file_sharetarget>
+0	share this file with roger	file_share	teams	share <file_title> this </file_title> file with <teamsuser_contactname> roger </teamsuser_contactname>
+0	show jay ongg chat 	teamsuser_openchat	teams	show <teamsuser_contactname> jay ongg </teamsuser_contactname> chat 
+0	show jay ongg org chart	teamsuser_checkorg	teams	show <teamsuser_contactname> jay ongg </teamsuser_contactname> org chart
+0	Unfollow that team	teamspace_unfollow	teams	Unfollow <teamspace_team> that </teamspace_team> team
+0	open file preview test plan document	file_open	teams	open file <file_title> preview test plan document </file_title>
+0	search all hands deck	teamspace_search	teams	search <teamspace_searchkeyword> all hands deck </teamspace_searchkeyword>
+0	Go to last slide	previous_slide	teams	Go to last slide
+0	Share the LT review.pptx deck	file_share	teams	Share the <file_title> LT review.pptx </file_title> <file_filetype> deck </file_filetype>
+0	Share the Some name deck	file_share	teams	Share the <file_title> Some name </file_title> <file_filetype> deck </file_filetype>
+0	Go to slide 7	goto_slide	teams	Go to slide <slide_number> 7 </slide_number>
+0	Go to the very last slide	goto_slide	teams	Go to the very <slide_number> last </slide_number> slide
+0	Go to the first slide	goto_slide	teams	Go to the <slide_number> first </slide_number> slide
+0	go to at mentions	teamsuser_showactivity	teams	go to <teamsuser_activitytype> at mentions </teamsuser_activitytype>
+0	set my status to be right back	teamsuser_setstatus	teams	set my status to <teamsuser_status> be right back </teamsuser_status>
+0	set my status to out of office	teamsuser_setstatus	teams	set my status to <teamsuser_status> out of office </teamsuser_status>
+0	set my status to busy	teamsuser_setstatus	teams	set my status to <teamsuser_status> busy </teamsuser_status>
+0	go to downloads	file_navigate	teams	go to <file_filetype> downloads </file_filetype>
+0	set my status to away	teamsuser_setstatus	teams	set my status to <teamsuser_status> away </teamsuser_status>
+0	set my status to available	teamsuser_setstatus	teams	set my status to <teamsuser_status> available </teamsuser_status>
+0	set my status to do not disturb	teamsuser_setstatus	teams	set my status to <teamsuser_status> do not disturb </teamsuser_status>
+0	search for random	teamspace_search	teams	search for <teamspace_searchkeyword> random </teamspace_searchkeyword>
+0	go to saved items	teamsuser_showactivity	teams	go to <teamsuser_activitytype> saved items </teamsuser_activitytype>
+0	go to my recent files	file_navigate	teams	go to my <file_filerecency> recent </file_filerecency> files
+0	go to help	teamspace_help	teams	go to help
+0	go to keyboard shortcuts	teamspace_showhotkey	teams	go to keyboard shortcuts
+0	open keyboard shortcuts	teamspace_showhotkey	teams	open keyboard shortcuts
+0	the first one	file_download	teams	the <position_ref> first </position_ref> one
+0	second one	file_download	teams	<position_ref> second </position_ref> one
+0	third one	file_download	teams	<position_ref> third </position_ref> one
+0	number one	file_download	teams	number <position_ref> one </position_ref>
+0	number two	file_download	teams	number <position_ref> two </position_ref>
+0	it is number two	file_download	teams	it is number <position_ref> two </position_ref>
+0	lt review discussion	file_download	teams	<file_title> lt review discussion </file_title>
+0	lt review deck	file_download	teams	<deck_name> lt review </deck_name> deck
+0	marketing slide	file_download	teams	<slide_name> marketing </slide_name> slide
+0	slide two	file_download	teams	<slide_number> slide two </slide_number>
+0	stand up meeting	file_download	teams	<teammeeting_title> stand up </teammeeting_title> meeting
+0	voice skill	file_download	teams	<teamspace_channel> voice skill </teamspace_channel>
+0	intelligence one	file_download	teams	<teamspace_team> intelligence one </teamspace_team>
+0	personal tab	file_download	teams	<teamspace_tab> personal </teamspace_tab> tab
+0	it is jay ongg	file_download	teams	it is <teamsuser_contactname> jay ongg </teamsuser_contactname>
+0	available	file_download	teams	<teamsuser_status> available </teamsuser_status>
+0	MessageText	JudgedTaskunderstandingIntent	judged_domain	JudgedTaskunderstandingMsgannotation
+0	Join a presentation.	start_presenting	teams	Join a presentation.
+0	Go to general channel.	teamspace_navigate	teams	Go to <teamspace_channel> general </teamspace_channel> channel.
+0	Go to free Journal.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> free Journal </teamspace_unclearkeyword>.
+0	Present the deck.	start_presenting	teams	Present the deck.
+0	Open the file I was working on.	file_open	teams	Open the file <file_filerecency> I was working on </file_filerecency>.
+0	Open up Cortana agent file.	file_open	teams	Open up <file_title> Cortana agent </file_title> file.
+0	Open chat with Kunal Garg.	teamsuser_openchat	teams	Open chat with <teamsuser_contactname> Kunal Garg </teamsuser_contactname>.
+0	Go to my recent files.	file_navigate	teams	Go to my <file_filerecency> recent </file_filerecency> files.
+0	Show me girls activity.	teamsuser_showactivity	teams	Show me <teamsuser_contactname> girls </teamsuser_contactname> activity.
+0	Change my presence status to available.	teamsuser_setstatus	teams	Change my presence status to <teamsuser_status> available </teamsuser_status>.
+0	Go to channel.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> channel </teamspace_unclearkeyword>.
+0	Set my status to busy.	teamsuser_setstatus	teams	Set my status to <teamsuser_status> busy </teamsuser_status>.
+0	Slide number 5.	goto_slide	teams	Slide number <slide_number> 5 </slide_number>.
+0	Show my recent files.	file_navigate	teams	Show my <file_filerecency> recent </file_filerecency> files.
+0	Give me files.	file_navigate	teams	Give me files.
+0	go to the fun channel	teamspace_navigate	teams	go to the <teamspace_channel> fun </teamspace_channel> channel
+0	Recent files.	file_navigate	teams	<file_filerecency> Recent </file_filerecency> files.
+0	Go to rest.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> rest </teamspace_unclearkeyword>.
+0	Go to intelligent communications team.	teamspace_navigate	teams	Go to <teamspace_team> intelligent communications </teamspace_team> team.
+0	Go to engineering channel.	teamspace_navigate	teams	Go to <teamspace_channel> engineering </teamspace_channel> channel.
+0	Go to slide 20.	goto_slide	teams	Go to slide <slide_number> 20 </slide_number>.
+0	Open the Cortana design team.	teamspace_navigate	teams	Open the <teamspace_team> Cortana design </teamspace_team> team.
+0	Go to my activity.	teamsuser_showactivity	teams	Go to my activity.
+0	Open the PowerPoint I was working on.	file_open	teams	Open the <file_filetype> PowerPoint </file_filetype> <file_filerecency> I was working on </file_filerecency>.
+0	Open connectors channel.	teamspace_navigate	teams	Open <teamspace_channel> connectors </teamspace_channel> channel.
+0	Go to my calendar for 3 PM today.	teamcalendar_navigate	teams	Go to my calendar for <teamcalendar_starttime> 3 PM today </teamcalendar_starttime>.
+0	Go to my calendar for next week.	teamcalendar_navigate	teams	Go to my calendar for <teamcalendar_starttime> next week </teamcalendar_starttime>.
+0	Set my status to away.	teamsuser_setstatus	teams	Set my status to <teamsuser_status> away </teamsuser_status>.
+0	Go to my calendar for tomorrow.	teamcalendar_navigate	teams	Go to my calendar for <teamcalendar_starttime> tomorrow </teamcalendar_starttime>.
+0	Go to shanard activity.	teamsuser_showactivity	teams	Go to <teamsuser_contactname> shanard </teamsuser_contactname> activity.
+0	Open up file.	file_open	teams	Open up file.
+0	Go to slide 5.	goto_slide	teams	Go to slide <slide_number> 5 </slide_number>.
+0	Go to the last slide.	previous_slide	teams	Go to the last slide.
+0	Present the LT review deck.	start_presenting	teams	Present the <deck_name> LT review </deck_name> deck.
+0	Go to the voice channel.	teamspace_navigate	teams	Go to the <teamspace_channel> voice </teamspace_channel> channel.
+0	Change my presence to available.	teamsuser_setstatus	teams	Change my presence to <teamsuser_status> available </teamsuser_status>.
+0	What can I say?	teamspace_help	teams	What can I say?
+0	Go to the next slide.	next_slide	teams	Go to the next slide.
+0	Open file specs.	file_open	teams	Open file <file_title> specs </file_title>.
+0	Go to the Boy Scouts channel.	teamspace_navigate	teams	Go to the <teamspace_channel> Boy Scouts </teamspace_channel> channel.
+0	Change my status to available.	teamsuser_setstatus	teams	Change my status to <teamsuser_status> available </teamsuser_status>.
+0	Go to the first slide.	goto_slide	teams	Go to the <slide_number> first </slide_number> slide.
+0	Send the deck.	file_share	teams	Send the <file_filetype> deck </file_filetype>.
+0	Find 1234567.	teamspace_search	teams	Find <teamspace_searchkeyword> 1234567 </teamspace_searchkeyword>.
+0	Go to my recent files.	file_navigate	teams	Go to my <file_filerecency> recent </file_filerecency> files.
+0	Go to my chat with Tomer Hermelin.	teamsuser_openchat	teams	Go to my chat with <teamsuser_contactname> Tomer Hermelin </teamsuser_contactname>.
+0	go to club channel	teamspace_navigate	teams	go to <teamspace_channel> club </teamspace_channel> channel
+0	Set the status to be right back.	teamsuser_setstatus	teams	Set the status to <teamsuser_status> be right back </teamsuser_status>.
+0	What can I do with Cortana?	teamspace_help	teams	What can I do with Cortana?
+0	Go to Alex Olson organization.	teamsuser_checkorg	teams	Go to <teamsuser_contactname> Alex Olson </teamsuser_contactname> organization.
+0	Go to my chat with August.	teamsuser_openchat	teams	Go to my chat with <teamsuser_contactname> August </teamsuser_contactname>.
+0	Go to slide number 5.	goto_slide	teams	Go to slide number <slide_number> 5 </slide_number>.
+0	Go to next slide.	next_slide	teams	Go to next slide.
+0	Go to the lunch channel.	teamspace_navigate	teams	Go to the <teamspace_channel> lunch </teamspace_channel> channel.
+0	Go to tap 100 team.	teamspace_navigate	teams	Go to <teamspace_team> tap 100 </teamspace_team> team.
+0	Go to intelligent communication team.	teamspace_navigate	teams	Go to <teamspace_team> intelligent communication </teamspace_team> team.
+0	Open file LG tribute deck.	file_open	teams	Open file <file_title> LG tribute deck </file_title>.
+0	I want to create a team.	teamspace_createteam	teams	I want to create a team.
+0	Open SQI metrics 2018-2019 PowerPoint.	file_open	teams	Open <file_title> SQI metrics 2018-2019 </file_title> <file_filetype> PowerPoint </file_filetype>.
+0	Slide 5.	goto_slide	teams	Slide <slide_number> 5 </slide_number>.
+0	open the wiki tab	teamspace_showtab	teams	open the <teamspace_tab> wiki </teamspace_tab> tab
+0	Show me where I was mentioned.	teamsuser_showactivity	teams	Show me <teamsuser_activitytype> where I was mentioned </teamsuser_activitytype>.
+0	Go to the next slide.	next_slide	teams	Go to the next slide.
+0	Show PowerPoint.	file_navigate	teams	Show <file_filetype> PowerPoint </file_filetype>.
+0	Open deck.	file_open	teams	Open <file_filetype> deck </file_filetype>.
+0	Stop sharing.	stop_presenting	teams	Stop sharing.
+0	Set my status to available.	teamsuser_setstatus	teams	Set my status to <teamsuser_status> available </teamsuser_status>.
+0	Open multi window file.	file_open	teams	Open <file_title> multi window </file_title> file.
+0	Go to slide one.	goto_slide	teams	Go to slide <slide_number> one </slide_number>.
+0	Go to the general Journal.	teamspace_navigate	teams	Go to the <teamspace_unclearkeyword> general Journal </teamspace_unclearkeyword>.
+0	Show my activity.	teamsuser_showactivity	teams	Show my activity.
+0	go to the code review channel	teamspace_navigate	teams	go to the <teamspace_channel> code review </teamspace_channel> channel
+0	Open chat with Marat to.	teamsuser_openchat	teams	Open chat with <teamsuser_contactname> Marat </teamsuser_contactname> to.
+0	What can I do?	teamspace_help	teams	What can I do?
+0	Go to the design channel.	teamspace_navigate	teams	Go to the <teamspace_channel> design </teamspace_channel> channel.
+0	open my recent file	file_navigate	teams	open my <file_filerecency> recent </file_filerecency> file
+0	Set my status to do not disturb.	teamsuser_setstatus	teams	Set my status to <teamsuser_status> do not disturb </teamsuser_status>.
+0	Share the deck I was working on on.	file_share	teams	Share the <file_filetype> deck </file_filetype> <file_filerecency> I was working on </file_filerecency> on.
+0	End the presentation.	stop_presenting	teams	End the presentation.
+0	Go to the teams devices channel.	teamspace_navigate	teams	Go to the <teamspace_channel> teams devices </teamspace_channel> channel.
+0	What can I do with you?	teamspace_help	teams	What can I do with you?
+0	show alex's activity	teamsuser_showactivity	teams	show <teamsuser_contactname> alex </teamsuser_contactname>'s activity
+0	Go to the lunch channel.	teamspace_navigate	teams	Go to the <teamspace_channel> lunch </teamspace_channel> channel.
+0	Next slide.	next_slide	teams	Next slide.
+0	What can you do?	teamspace_help	teams	What can you do?
+0	share file specs with mohit	file_share	teams	share file <file_title> specs </file_title> with <teamsuser_contactname> mohit </teamsuser_contactname>
+0	Go to sleep by.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> sleep by </teamspace_unclearkeyword>.
+0	Open PowerPoint deck.	file_open	teams	Open <file_filetype> PowerPoint deck </file_filetype>.
+0	Go to giang activity.	teamsuser_showactivity	teams	Go to <teamsuser_contactname> giang </teamsuser_contactname> activity.
+0	Search for query.	teamspace_search	teams	Search for <teamspace_searchkeyword> query </teamspace_searchkeyword>.
+0	Find Lee LT review deck.	teamspace_search	teams	Find <teamspace_searchkeyword> Lee LT review deck </teamspace_searchkeyword>.
+0	Go to slide 10.	goto_slide	teams	Go to slide <slide_number> 10 </slide_number>.
+0	Go to Internet communications team.	teamspace_navigate	teams	Go to <teamspace_team> Internet communications </teamspace_team> team.
+0	Close this presentation.	stop_presenting	teams	Close this presentation.
+0	Go to active.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> active </teamspace_unclearkeyword>.
+0	Go to August activity.	teamsuser_showactivity	teams	Go to <teamsuser_contactname> August </teamsuser_contactname> activity.
+0	Present the deck I was working on this moment.	start_presenting	teams	Present the deck <file_filerecency> I was working on </file_filerecency> this moment.
+0	Open the document that I was working on.	file_open	teams	Open the document that <file_filerecency> I was working on </file_filerecency>.
+0	Open the skills spreadsheet.	file_open	teams	Open the <file_title> skills </file_title> <file_filetype> spreadsheet </file_filetype>.
+0	Show me a mekinges activity.	teamsuser_showactivity	teams	Show me a <teamsuser_contactname> mekinges </teamsuser_contactname> activity.
+0	Go to the slide number 5.	goto_slide	teams	Go to the slide number <slide_number> 5 </slide_number>.
+0	share file with this chat	file_share	teams	share file with this <file_sharetarget> chat </file_sharetarget>
+0	Go to my feed.	teamsuser_showactivity	teams	Go to my <teamsuser_activitytype> feed </teamsuser_activitytype>.
+0	What all can I say?	teamspace_help	teams	What all can I say?
+0	Go to teams intelligent devices.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> teams intelligent devices </teamspace_unclearkeyword>.
+0	Close the presentation.	stop_presenting	teams	Close the presentation.
+0	Slide 10.	goto_slide	teams	Slide <slide_number> 10 </slide_number>.
+0	go to roger organization	teamsuser_checkorg	teams	go to <teamsuser_contactname> roger </teamsuser_contactname> organization
+0	go to the book club channel	teamspace_navigate	teams	go to the <teamspace_channel> book club </teamspace_channel> channel
+0	Go to slide for.	goto_slide	teams	Go to slide for.
+0	share the LT review deck to roger	file_share	teams	share the <file_title> LT review </file_title> <file_filetype> deck </file_filetype> to <teamsuser_contactname> roger </teamsuser_contactname>
+0	Show me my recent files.	file_navigate	teams	Show me my <file_filerecency> recent </file_filerecency> files.
+0	Navigate to voice skills channel.	teamspace_navigate	teams	Navigate to <teamspace_channel> voice skills </teamspace_channel> channel.
+0	Close presentation.	stop_presenting	teams	Close presentation.
+0	Present the deck I was working on.	start_presenting	teams	Present the deck <file_filerecency> I was working on </file_filerecency>.
+0	Present the deck attached to the meeting.	start_presenting	teams	Present the deck <deck_location> attached </deck_location> to the meeting.
+0	Go to previous slide.	previous_slide	teams	Go to previous slide.
+0	I want to join a team.	teamspace_jointeam	teams	I want to join a team.
+0	Go to settings engineering channel.	teamspace_navigate	teams	Go to <teamspace_channel> settings engineering </teamspace_channel> channel.
+0	Open SQL I metrics 2018-2019 presentation.	file_open	teams	Open <file_title> SQL I metrics 2018-2019 </file_title> presentation.
+0	Go to activity.	teamsuser_showactivity	teams	Go to activity.
+0	Open substrate framing memo.	file_open	teams	Open <file_title> substrate framing </file_title> <file_filetype> memo </file_filetype>.
+0	add roger to the team	teamspace_addtoteam	teams	add <teamsuser_contactname> roger </teamsuser_contactname> to the team
+0	Open the ship room deck.	file_open	teams	Open the <file_title> ship room </file_title> <file_filetype> deck </file_filetype>.
+0	Present the presentation.	start_presenting	teams	Present the presentation.
+0	Go to play lunch channel.	teamspace_navigate	teams	Go to <teamspace_channel> play lunch </teamspace_channel> channel.
+0	add alex to the team	teamspace_addtoteam	teams	add <teamsuser_contactname> alex </teamsuser_contactname> to the team
+0	go to the welcome team	teamspace_navigate	teams	go to the <teamspace_team> welcome </teamspace_team> team
+0	Go to chat with Mark.	teamsuser_openchat	teams	Go to chat with <teamsuser_contactname> Mark </teamsuser_contactname>.
+0	Go to slide number 3.	goto_slide	teams	Go to slide number <slide_number> 3 </slide_number>.
+0	go to lunch channel	teamspace_navigate	teams	go to <teamspace_channel> lunch </teamspace_channel> channel
+0	Show calendar.	teamcalendar_navigate	teams	Show calendar.
+0	Go to slide by.	goto_slide	teams	Go to slide by.
+0	go to recent files	file_navigate	teams	go to <file_filerecency> recent </file_filerecency> files
+0	Go to the previous slide.	previous_slide	teams	Go to the previous slide.
+0	Present the deck I was recently working on.	start_presenting	teams	Present the deck <file_filerecency> I was recently working on </file_filerecency>.
+0	Open my recent word document.	file_open	teams	Open my <file_filerecency> recent </file_filerecency> <file_filetype> word </file_filetype> document.
+0	Stop presentation.	stop_presenting	teams	Stop presentation.
+0	Go to shift.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> shift </teamspace_unclearkeyword>.
+0	Go to slide 12.	goto_slide	teams	Go to slide <slide_number> 12 </slide_number>.
+0	Go to the voice kids channel.	teamspace_navigate	teams	Go to the <teamspace_channel> voice kids </teamspace_channel> channel.
+0	Go to free general.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> free general </teamspace_unclearkeyword>.
+0	Go to the lodge Juneau.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> the lodge Juneau </teamspace_unclearkeyword>.
+0	Open intelligent communications team.	teamspace_navigate	teams	Open <teamspace_team> intelligent communications </teamspace_team> team.
+0	open the onenote tab	teamspace_showtab	teams	open the <teamspace_tab> onenote </teamspace_tab> tab
+0	Open the seals spreadsheet.	file_open	teams	Open the <file_title> seals </file_title> <file_filetype> spreadsheet </file_filetype>.
+0	Show my calendar.	teamcalendar_navigate	teams	Show my calendar.
+0	Go to coral internal.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> coral internal </teamspace_unclearkeyword>.
+0	Go to slide 2.	goto_slide	teams	Go to slide <slide_number> 2 </slide_number>.
+0	Open the excel spreadsheet I was working on.	file_open	teams	Open the <file_filetype> excel spreadsheet </file_filetype> <file_filerecency> I was working on </file_filerecency>.
+0	Open XLT review PowerPoint.	file_open	teams	Open <file_title> XLT review </file_title> <file_filetype> PowerPoint </file_filetype>.
+0	Go to speech and language.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> speech and language </teamspace_unclearkeyword>.
+0	Next slide next.	next_slide	teams	Next slide next.
+0	Go to chat now.	teamsuser_openchat	teams	Go to chat now.
+0	Open the files.	file_open	teams	Open the files.
+0	go to the book channel	teamspace_navigate	teams	go to the <teamspace_channel> book </teamspace_channel> channel
+0	Go to urgent communications team.	teamspace_navigate	teams	Go to <teamspace_team> urgent communications </teamspace_team> team.
+0	Go to slide 19.	goto_slide	teams	Go to slide <slide_number> 19 </slide_number>.
+0	Show me the next slide.	next_slide	teams	Show me the next slide.
+0	Go to slide number 4.	goto_slide	teams	Go to slide number <slide_number> 4 </slide_number>.
+0	Go to teams intelligent channel.	teamspace_navigate	teams	Go to <teamspace_channel> teams intelligent </teamspace_channel> channel.
+0	Go to slide 6.	goto_slide	teams	Go to slide <slide_number> 6 </slide_number>.
+0	Show me my PowerPoint files.	file_navigate	teams	Show me my <file_filetype> PowerPoint </file_filetype> files.
+0	Change my status.	teamsuser_setstatus	teams	Change my status.
+0	Go to the West coast channel.	teamspace_navigate	teams	Go to the <teamspace_channel> West coast </teamspace_channel> channel.
+0	open skills deck	file_open	teams	open <file_title> skills </file_title> <file_filetype> deck </file_filetype>
+0	Previous slide.	previous_slide	teams	Previous slide.
+0	Open SQI metrics 2018-2019 file.	file_open	teams	Open <file_title> SQI metrics 2018-2019 </file_title> file.
+0	Go to slide 3.	goto_slide	teams	Go to slide <slide_number> 3 </slide_number>.
+0	go to recent files	file_navigate	teams	go to <file_filerecency> recent </file_filerecency> files
+0	Go to the report change.	teamspace_navigate	teams	Go to the <teamspace_unclearkeyword> report change </teamspace_unclearkeyword>.
+0	Go to fridge.	teamspace_navigate	teams	Go to <teamspace_unclearkeyword> fridge </teamspace_unclearkeyword>.
+0	Navigate to intelligent communications team.	teamspace_navigate	teams	Navigate to <teamspace_team> intelligent communications </teamspace_team> team.
+0	End presentation.	stop_presenting	teams	End presentation.
+0	add alex to this team	teamspace_addtoteam	teams	add <teamsuser_contactname> alex </teamsuser_contactname> to <teamspace_team> this </teamspace_team> team
+0	Show me my mentions.	teamsuser_showactivity	teams	Show me my <teamsuser_activitytype> mentions </teamsuser_activitytype>.
+0	Present the deck.	start_presenting	teams	Present the deck.
+0	Show me August activity.	teamsuser_showactivity	teams	Show me <teamsuser_contactname> August </teamsuser_contactname> activity.
+0	Go to my recent file.	file_navigate	teams	Go to my <file_filerecency> recent </file_filerecency> file.
