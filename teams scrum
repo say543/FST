@@ -173,6 +173,8 @@ E:\Teams_Data_Synthesis\Teams\CMF_Training\sharePathModel
 
 這樣added 
 
+然後Model Domains 選teams
+
 
 <run evaluation>
 
@@ -183,7 +185,11 @@ after clicking
 clu management
 E:\Teams_Data_Synthesis\Teams\CMF_Training\teams40ToCarina
 
-\\DESKTOP-3J7614O\Teams_Data_Synthesis\Teams\CMF_Training\teams40ToCarina
+\\DESKTOP-3J7614O\Teams_Data_Synthesis\Teams\CMF_Training\teams40ToCarina\Teams_Slot_Training.tsv
+p.s 這個的來源是Teams-March-2019-Test-3k-carina.tsv 去掉. 之後的結果
+
+evaluate type 要選 slot evaluate    
+(因為現在的工作室CRF 要tune slot)
 
 collect_all_features.py  (自己copy  來的) 生成blind set 後
 1> 自己加上頭部
@@ -203,6 +209,12 @@ testResult\0\slots\Result\xxx-slot.error.freq.tsv
 
 會有query error 的informmation
 根據frequency 高低排序
+
+E:\Teams_Data_Synthesis\Teams\Open_Text_Synthesis\pattern_generate_final.py
+這邊有open text 的pattern 增加 和取代
+這邊會自動生成所有的.tsv 
+
+
 
 解決precision 問題
 1>  加上相關的pattern in  E:\Teams_Data_Synthesis\Teams\CMF_Training\resource\Data\Combine\data_synthesised_teamsuser_contactname_teamspace_team.tsv
