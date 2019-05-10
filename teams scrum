@@ -91,6 +91,23 @@ share the lt review. pptx file\tFEATURE.CLUTEAMS\t 0 \t 1 \t 1 \t 1 \t -1 \t -1
 
 evaluation  output 的新的path
 E:\CoreScienceDataStaging\TestResults\Evaluation\Full
+加上test group 新的設定
+      <CustomConstraint key="constraint.FEATURE.CLUTEAMS">1</CustomConstraint>
+      
+      => 
+      <CustomConstraint key="FEATURE.CLUTEAMS">1</CustomConstraint>
+    </Data>
+    
+    
+    // 這個section 不需要  因為這個是luna 的domain classifier 不再需要了
+    <DomainClassifiers>
+      <DomainClassifier id="teams"></DomainClassifier>
+      <DomainClassifier id="mediacontrol"></DomainClassifier>
+      <DomainClassifier id="reminder"></DomainClassifier>
+      <DomainClassifier id="communication"></DomainClassifier>
+      <DomainClassifier id="homeautomation"></DomainClassifier>
+      <DomainClassifier id="moments"></DomainClassifier>
+    </DomainClassifiers>
 
 ========================
 domain classfiier
