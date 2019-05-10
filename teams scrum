@@ -65,7 +65,8 @@ lo
 有所有的infiles
 E:\CoreScienceDataStaging_old\datasources\Teams\resources\infiles
 
-
+[qd_teams_slots_fst_lang_model_featurizer]
+這個是slot pattern 的featurlizer
 目前的pipeline.txt
 NLPFSTApplier --in=BodySurfaceStream --out=MatchedName,MatchedType,MatchedStartChar,MatchedLength 
 --fst=luna_190118_teams.slots.fst_lang_model.tagger.bin --mode=matcher
