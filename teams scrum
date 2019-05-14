@@ -263,7 +263,71 @@ E:\Teams_Data_Synthesis\Teams\Open_Text_Synthesis\pattern_generate_final.py
 
 
 
+===================================
+my pr improvment
 
+=====================================
+
+
+------------------[17608787]-------------------
+share xxx 因該是file share 跟這個ticket 無關
+
+show me file
+my example
+eg : show me file Cortana call science shiproom
+
+p.s 找到最目前接近的data 
+eg: 
+show me my files of this last week
+file navigate [teamsnavigation]
+但是這個data 可能跟要train 的behavior 有衝突
+
+QAs confirm intent
+<TextRecord numLabels="1" query="show me file Cortana call science shiproom" ><Text><E l="O">show me file Cortana call</E><E l="teammeeting_title">science shiproom</E></Text></TextRecord>
+
+train 完後變成search key word  
+
+qp:
+file navigate [teamsnavigation]
+
+
+open my file 
+file_open
+my example
+eg: open my file  Cortana call science shiproom
+
+QAs confirm intent
+<TextRecord numLabels="1" query="open my file  Cortana call science shiproom" ><Text><E l="O">open my file Cortana call</E><E l="teammeeting_title">science shiproom</E></Text></TextRecord>
+
+train 完後呈郭變成file_title  (success)
+
+
+
+偷看data 有機會improvement
+但是我們data 只有open file 沒有open my  file 
+只能賭賭看
+open file xxx
+open file XXX
+
+qp:
+file open
+
+
+show file
+file navigate [teamsnavigation]
+my example
+eg: show file Cortana call science shiproom
+
+<TextRecord numLabels="1" query="show file Cortana call science shiproom" ><Text><E l="O">show file Cortana call</E><E l="teammeeting_title">science shiproom</E></Text></TextRecord>
+
+偷看data 沒有幫助
+
+train 之後沒有變
+
+有show my data
+
+
+實際training 後對blind set data 沒有幫助...
 
 
 
