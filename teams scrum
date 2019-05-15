@@ -233,6 +233,11 @@ testResult\0\slots\Result\xxx-slot.error.freq.tsv
 根據frequency 高低排序
 
 E:\Teams_Data_Synthesis\Teams\Open_Text_Synthesis\pattern_generate_final.py
+每一個slot like 有自己的sub directory 
+eg:
+E:\Teams_Data_Synthesis\Teams\Open_Text_Synthesis\Teammeeting_Title
+裡面有自己的generate
+
 這邊有open text 的pattern 增加 和取代
 這邊會自動生成所有的.tsv 
 
