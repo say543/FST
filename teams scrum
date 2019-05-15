@@ -290,7 +290,10 @@ file navigate [teamsnavigation]
 QAs confirm intent
 <TextRecord numLabels="1" query="show me file Cortana call science shiproom" ><Text><E l="O">show me file Cortana call</E><E l="teammeeting_title">science shiproom</E></Text></TextRecord>
 
-train 完後變成search key word  
+<manaully add>
+train 完後變成search key word
+<pattern add>
+success 了
 
 qp:
 file navigate [teamsnavigation]
@@ -299,12 +302,17 @@ file navigate [teamsnavigation]
 open my file 
 file_open
 my example
-eg: open my file  Cortana call science shiproom
+eg: open my file Cortana call science shiproom
 
 QAs confirm intent
 <TextRecord numLabels="1" query="open my file  Cortana call science shiproom" ><Text><E l="O">open my file Cortana call</E><E l="teammeeting_title">science shiproom</E></Text></TextRecord>
 
+
+<manaully add> 
 train 完後呈郭變成file_title  (success)
+<pattern add>
+success 了
+
 
 
 
@@ -327,7 +335,10 @@ eg: show file Cortana call science shiproom
 
 偷看data 沒有幫助
 
+<manaully add>
 train 之後沒有變
+<pattern add>
+success 了
 
 有show my data
 
