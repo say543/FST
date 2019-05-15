@@ -219,8 +219,12 @@ UUID\tQuery\tIntent\tDomain\tSlot
 
 2> 把. 都取代成empty  (因為carina tool 沒有考慮.)
 
+40% teams only
 \\DESKTOP-3J7614O\Teams_Data_Synthesis\Teams\CMF_Training\teams40ToCarina\Teams_slot_training.tsv
 上船當作evaluation
+
+whole set
+\\DESKTOP-3J7614O\Teams_Data_Synthesis\Teams\CMF_Training\teams40ToCarina\wholeset\Teams_Slot_Training.tsv
 
 clikc result page
 https://carina/modelmanager#/evaluate/4019/resultfiles/8043
