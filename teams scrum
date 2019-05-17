@@ -402,6 +402,17 @@ yue pr  improvement
 <Ship Intent SVM model for Teams domain>
 -----------------------------------------------
 
+如果train intent model 要改connection
+for this file name
+luna_teams_enus_mv1.intent.model.pipeline.txt
+
+froom
+	FeatureNormalizer --in=intent_default_linear --out=luna_teams_enus_mv1_intent_svm_score --norm=identity
+to
+	FeatureNormalizer --in=intent_default_linear --out=teams_intents_svm_score --norm=identity
+for naming inssues 
+
+
 intent 改變  for multi turn only
 因為multi turn 的intent 不重要 所以這邊不討論   
 open xxx (不一定 file 結尾)      file_download ->  file open 
