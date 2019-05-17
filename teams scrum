@@ -250,6 +250,12 @@ E:\Teams_Data_Synthesis\Teams\Open_Text_Synthesis\Teammeeting_Title
 這邊有open text 的pattern 增加 和取代
 這邊會自動生成所有的.tsv 
 
+如果有用到lexicon 在這個script 裡面有hyper parameter (300)
+現在只能去改code 所以每次選擇的會不依樣
+
+
+
+
 
 
 解決precision 問題
