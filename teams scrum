@@ -111,6 +111,7 @@ E:\CoreScienceDataStaging\TestResults\Evaluation\Full
     
     
 05152091
+test -> test setting
 set as x64
 
 ========================
@@ -269,7 +270,12 @@ E:\Teams_Data_Synthesis\Teams\Open_Text_Synthesis\Teammeeting_Title
 
 
 
+E:\Teams_Data_Synthesis\Teams\CMF_Training\resource\Data\Combine\remove\
 
+clean intent.py
+clean slot.py
+
+可以用來去掉dataset 那些query 不要放進去train
 
 
 
