@@ -273,6 +273,13 @@ E:\Teams_Data_Synthesis\Teams\Open_Text_Synthesis\Teammeeting_Title
 
 
 
+=====================================
+teams multi trun spec
+=====================================
+
+https://microsoft-my.sharepoint-df.com/:w:/p/inzhelti/EclaUYr33ptPkH4-PeSt3-sBUjafh_Yk8_SNWXv1zU4Gyg?rtime=uF0ZcO7a1kg
+https://microsoft-my.sharepoint-df.com/:w:/p/yum/ERFKs5aKlSxAqbRr92rI0A0BTzlMGg6_mwJ-DLEGJN5EZA?rtime=CZECgO7a1kg
+
 
 
 
@@ -294,6 +301,8 @@ eg:
 show me my files of this last week
 file navigate [teamsnavigation]
 但是這個data 可能跟要train 的behavior 有衝突
+
+p.s 似乎intent 因該要改成file_open
 
 QAs confirm intent
 <TextRecord numLabels="1" query="show me file Cortana call science shiproom" ><Text><E l="O">show me file Cortana call</E><E l="teammeeting_title">science shiproom</E></Text></TextRecord>
@@ -338,6 +347,8 @@ show file
 file navigate [teamsnavigation]
 my example
 eg: show file Cortana call science shiproom
+
+p.s 似乎intent 因該要改成file_open
 
 <TextRecord numLabels="1" query="show file Cortana call science shiproom" ><Text><E l="O">show file Cortana call</E><E l="teammeeting_title">science shiproom</E></Text></TextRecord>
 
@@ -527,7 +538,11 @@ luna_teams_intent.common.help.idmap.txt
 checking in Teams CRF model
 -------------------------------------------
 
-
+[qd_teams_slots_fst_lang_model_query_rewrite_featurizer]  
+這個design 被拿掉了  這個以後可以參考
+this is to remove the condition that if intent is teamspace_navigate and satisfies certain patterns it will tag as unclear keyword. 
+this will be covered by new CRF model so remove it .
+有空可以看一下他的functionality 怎麼加
 
 
 
