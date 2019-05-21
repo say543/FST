@@ -301,6 +301,20 @@ my pr improvment
 =====================================
 
 
+
+------------------
+teams feb data evaluation
+--------------------
+05172019
+calendar intent 要留著 才可以拿到yue 的number
+
+
+
+
+
+
+
+
 ------------------[17608787]-------------------
 share xxx 因該是file share 跟這個ticket 無關
 
@@ -566,8 +580,12 @@ checking in Teams CRF model
 this is to remove the condition that if intent is teamspace_navigate and satisfies certain patterns it will tag as unclear keyword. 
 this will be covered by new CRF model so remove it .
 有空可以看一下他的functionality 怎麼加
+luna_teams_enus_mv1.slot.model.pipeline
 
 
+要改成這個for output
+
+SparseLinearChainCRF --in=ExternalInput1,lccrf_ngram_1gram,lccrf_ngram_2gram_replicate,lccrf_ngram_3gram_replicate,P1_lccrf_ngram_1gram,P2_lccrf_ngram_1gram,P3_lccrf_ngram_1gram,N1_lccrf_ngram_1gram,N2_lccrf_ngram_1gram,P1_lccrf_ngram_2gram,N1_lccrf_ngram_2gram,N2_lccrf_ngram_2gram,S_slot_mlg_lexicon,P1_S_slot_mlg_lexicon,P2_S_slot_mlg_lexicon,N1_S_slot_mlg_lexicon,N2_S_slot_mlg_lexicon,P1_S_CONJ_1gram_P1_S_slot_mlg_lexicon_lccrf_ngram_1gram --out=words,luna_teams_slot_lccrf_tag --model=luna_teams_enus_mv1.slot.lccrf.model --trimboundary=false
 
 
 
