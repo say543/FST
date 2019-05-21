@@ -112,6 +112,19 @@ luna_180508_ipe_lu_Microsoft_Threshold_Shell_3_mediacontrol_enus_mv8_1_p13n.text
 metadata.output.txt output:
 play music on my xbox   0:CanonicalEntity:music 1:PersonalMediaTitle:<UserMediaTitle>
 
+
+carina bing intent
+
+在external feature 上面加multi turn
+feature name
+UserMediaTitles
+Feature value
+xbox
+
+就可以啟動這個case 的pdp
+
+
+
 =========================
 play music on my xbox    UserMediaTitles 0       1       music   1       -1      -1
 =================================
