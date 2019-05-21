@@ -46,7 +46,9 @@ E:\searchgold>sd client
 View:
 
 
-- 是comment  但是不能全部一起做  否則太慢
+- 是comment  但是不能全部一起做  否則
+p.s 就得client 被刪掉了  我現在的ckuent 是   DESKTOP-3J7614O-searchgold-2
+用這個取代下面
 
 	//depot/... //DESKTOP-3J7614O-searchgold-1/...
 	//depot/AutopilotService/... //DESKTOP-3J7614O-searchgold-1/AutopilotService/...
@@ -61,6 +63,8 @@ View:
 	//depot/deploy/builds/data/answers/XapQuServiceAnswer/... //DESKTOP-3J7614O-searchgold-1/deploy/builds/data/answers/XapQuServiceAnswer/...
 	//depot/deploy/builds/data/answers/QASECPrebuilt/... //DESKTOP-3J7614O-searchgold-1/deploy/builds/data/answers/QASECPrebuilt/...
 
+另外多加三個enlistment as the following
+https://microsoft.sharepoint.com/teams/LUforNextgenAgents/_layouts/15/WopiFrame.aspx?sourcedoc={68deb809-671e-469a-be79-ba53c05298ce}&action=edit&wd=target%28CLU%20DRI.one%7C1990f4e6-5d06-4429-8ee9-ba6b20b33107%2FCU%20QAS%20Deployment%7Cb595de03-009e-4776-b3b5-8fcb78e93c0e%2F%29
 
 先生成需要的directory
 (不能整個search gold 一起sync 那樣檔案會太大)
