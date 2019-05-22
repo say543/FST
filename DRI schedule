@@ -112,3 +112,18 @@ lunalangauge components
 DRI mmonday
 
 
+
+
+如果成功的deploy 
+http://qasvalidation.azurewebsites.net/?filter=owner%3Achiecha
+這個可以看到你own 的deployment 的過程
+checkin  column 會顯示checkin  否則  status 就會沒有寫
+"QAS check-in taking longer than expected - id 137161 and 137139"
+這個email title 有QAS的 改變
+
+
+
+
+
+
+
