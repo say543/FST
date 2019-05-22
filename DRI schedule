@@ -77,10 +77,23 @@ clu_ret_ml
 
 
 kusto 
-onet note
+one note
 
 Useful Kusto Queries  (Web view)
 已裝好  叫做 kusto.explore
+Dialog table 已經看得見
+
+i typically only use Dialog Reactive Host Prod
+
+CortexTraceMDS is the new table
+
+and in general, it's better to use cortana log viewer
+
+
+
+
+
+
 
 connection 1 has added
 connection cannot be   明天try
