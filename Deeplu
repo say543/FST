@@ -1,4 +1,4 @@
-
+SQI DeepLU Toolkita.pptx
 
 新的pull register
 https://msasg.visualstudio.com/SQI%20Team/_git/SQI%20Team/pullrequest/930517?_a=files
@@ -70,9 +70,17 @@ best mode store 在指定的epoch
 
 python .\standardmodeldriver.py --train --data .\sampledata\intents.sample.train --path model --sequence false -b 10
 
+這邊有可以設epochs
+[--number-epochs NUMBER_EPOCHS]
+
+
+
 ?不知道sequence 是幹嘛的
  true : slot model
 false, you can try model or intent
+
+
+
 
 
 testing
