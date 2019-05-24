@@ -73,7 +73,7 @@ def load_luna_to_carina(filename, generateSentenceEmbedding=False):
                     'id': 0,
                     'query': row['MessageText'],
                     'intent': intent,
-                    'domain': domain,
+                    'domain': domain.lower(),
                     'QueryXml': annotation,
                     'SentenceEmbedding':  sentenceEmbedding
                     }
@@ -82,7 +82,7 @@ def load_luna_to_carina(filename, generateSentenceEmbedding=False):
                     'id': 0,
                     'query': row['MessageText'],
                     'intent': intent,
-                    'domain': domain,
+                    'domain': domain.lower(),
                     'QueryXml': annotation
                     }
 
@@ -131,7 +131,7 @@ def load_carina(filename, generateSentenceEmbedding=False):
                     'id': 0,
                     'query': row['query'],
                     'intent': row['intent'],
-                    'domain': row['domain'],
+                    'domain': row['domain'].lower(),
                     'QueryXml': row['QueryXml'],
                     'SentenceEmbedding':  sentenceEmbedding
                     }
@@ -140,7 +140,7 @@ def load_carina(filename, generateSentenceEmbedding=False):
                     'id': 0,
                     'query': row['query'],
                     'intent': row['intent'],
-                    'domain': row['domain'],
+                    'domain': row['domain'].lower(),
                     'QueryXml': row['QueryXml'],
                     }
 
@@ -159,6 +159,67 @@ def load_carina(filename, generateSentenceEmbedding=False):
     else:
         return pd.DataFrame(entries, columns=['id', 'query', 'intent', 'domain', 'QueryXml'])
 
+
+
+def updateFileType(df):
+    for index, row in df.iterrows():
+
+
+        # hard code rule
+        # no replace since incomplete
+        # Show my presentation about
+        # Share the presentation functionally in
+
+
+        # deck_name might be affected by this routine...
+        # those three need special care
+        # Present the meeting the deck
+        # Present the teams meeting intelligence deck
+        # Present the teams meeting intelligence stack
+
+        # deck_location might be affected
+
+
+
+        # need to fix it
+        # Present the teams meeting intelligence stack
+        # Present the meeting the deck
+        # Present the teams meeting intelligence deck
+        # present the deck i was working on  (intent in consistency so update will not happen)
+
+
+
+        if df.at[index,'intent'] == 'start_presenting' or df.at[index,'intent'] == 'stop_presenting' or df.at[index,'intent'] == 'goto_slide':
+
+            # replace <deck_name> , </deck_name>
+            newQueryXml = df.at[index,'QueryXml'].replace('<deck_name>', '<file_title>')
+            newQueryXml = newQueryXml.replace('</deck_name>', '</file_title>')
+
+            # replace plural terms
+            newQueryXml = newQueryXml.replace('presentations', 'PLURAL_ps')
+            newQueryXml = newQueryXml.replace('decks', 'PLURAL_ds')
+
+
+            newQueryXml = df.at[index,'QueryXml'].replace('presentation', '<file_filetype> presentation </file_filetype>')
+            newQueryXml = newQueryXml.replace('deck', '<file_filetype> deck </file_filetype>')
+            
+            #prevent duplicate replacement
+            newQueryXml = newQueryXml.replace('<file_filetype><file_filetype>', '<file_filetype>')
+            newQueryXml = newQueryXml.replace('</file_filetype></file_filetype>', '</file_filetype>')
+            newQueryXml = newQueryXml.replace('<file_filetype> <file_filetype>', '<file_filetype>')
+            newQueryXml = newQueryXml.replace('</file_filetype> </file_filetype>', '</file_filetype>')
+
+
+            # replace back plura terms
+            newQueryXml = newQueryXml.replace('PLURAL_ps', 'presentations')
+            newQueryXml = newQueryXml.replace('PLURAL_ds', 'decks')
+
+            # deprecate usage
+            #df.set_value(index, 'QueryXml', newQueryXml)
+            df.at[index,'QueryXml'] = newQueryXml
+    return df
+            
+    
 
 def calculate_topk_similarity(df_golden, df_tune):
 
