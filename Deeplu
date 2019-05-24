@@ -1,0 +1,180 @@
+
+
+新的pull register
+https://msasg.visualstudio.com/SQI%20Team/_git/SQI%20Team/pullrequest/930517?_a=files
+
+my setup path
+C:\Users\chiecha.REDMOND\source\repos\CMFExperiment
+
+
+video
+https://msit.microsoftstream.com/video/6e3832f1-9fa3-4829-946d-35812341c2d9
+
+
+
+02:35
+Training Models for hosting in QAS
+
+
+05:23
+oboarding  tensor flow
+     MLG DNNProcessor
+     export the model
+             可以用toolkit 也可以用別的
+    convert python code to MLG
+    create query processing configuration
+             qpc 必要的for QAS
+
+     這個可以validation , 你要deploy 的model
+      ? dpk version
+     http://qasvalidation.azurewebsites.net/
+     裡面也有reousrce 的wiki
+
+
+
+
+10:00
+開始介紹deeplu
+
+
+14:00
+有說明 17:00 simple archutecture looks like
+17:00 開始
+有說道simple model 到底有什麼option 可以選擇
+
+
+create virtual env
+https://docs.python.org/3/library/venv.html
+
+py -m venv mt-dnn-env
+
+activate
+ mt-dnn-env\Scripts\activate
+
+
+
+要install
+tensorflow
+nltk
+sklearn
+
+
+要手動download 這個  不知道為啥
+>>> import nltk
+>>> nltk.download('punkt')
+[nltk_data] Downloading package punkt to E:\nltk_data...
+[nltk_data]   Unzipping tokenizers\punkt.zip.
+True
+
+best mode store 在指定的epoch
+
+python .\standardmodeldriver.py --train --data .\sampledata\intents.sample.train --path model --sequence false -b 10
+
+?不知道sequence 是幹嘛的
+ true : slot model
+false, you can try model or intent
+
+
+testing
+symbol cannot be recognized then it will fail
+
+ python .\standardmodeldriver.py --test --data .\sampledata\intents.sampleAll.test --path .\intent_model5000_01312019\ --sequence false -b 10 -pe output.txt
+
+-b 10 因該沒用我想
+要注意有些intent 可能根本沒有train 到
+目前filter 掉turn_down 跟skip_to
+
+ouput 三個column
+first column
+query
+second column
+expected
+third column
+prediceted
+
+
+no evaluation script
+要自己寫
+
+
+20:59
+tensor flow model 有說明 directory 怎麼使用
+
+
+python  qas\deepluexporter.py
+這個可以export deep early model
+
+
+
+for deployment
+
+  可以用carina mlg
+   E:\mercury\public\ext\Carina\MLGTools
+
+
+domain 
+eg: sqi
+
+--model-path ./model
+
+--export-path
+? 不知道幹嘛
+
+--sequence
+   false 代表是intent judge
+         如果要train domain 因該也可以這樣用一樣的方式train
+   true 待表示slot tagging
+
+mlg-tools
+need to install somewhere
+
+
+28:59
+有一些options 的選項可以選
+
+
+28:80
+architecture point of view
+
+
+
+
+my takeway
+architecture
+image.png
+
+
+image.png
+
+rewrite tensor flow code
+
+
+
+get_character_word_layer ()
+ get_character_layer () 生成character level representation
+      這邊有用到第一層的char-level bidirectional LSTM
+     來生成character level 的embedding
+
+  get_word_embeddings ()  生成word embbedibf 但是是character level 把她concat 起來
+  bidirectional_lstm
+      用bidreictional lstm
+
+
+feed_forward_with_activation()
+    這邊是用flatten output
+    ? CNN 是要flatten output 但是這邊不知道為什麼要用
+    感覺只是加activation 來生成output
+    support tanH 跟Relu
+
+
+ran intent sequence  test
+number of  epoch decided?
+
+parameter 的彈性更高
+dropout
+
+tensor flow  study
+
+featurlizer introduced ?
+
+
