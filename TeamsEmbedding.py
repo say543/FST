@@ -219,7 +219,75 @@ def updateFileType(df):
             df.at[index,'QueryXml'] = newQueryXml
     return df
             
-    
+
+
+def carina_to_deepLu_intent(df):
+
+    df_new = df.loc[:, ['query', 'intent']].copy(deep=True)
+
+    return df_new
+
+def carina_to_deepLu_slot(df):
+    #df_new = df.loc[:, ['query', 'QueryXml']].copy(deep=True)
+    df_new = df.loc[:, ['query', 'QueryXml']].copy(deep=True)
+
+    try:
+        slotfile = open("token_slot.txt", "w")
+        try:
+            for index, row in df_new.iterrows():
+                newQueryXml = df.at[index,'QueryXml'].strip()
+
+                query = df.at[index,'query'].strip()
+
+                xml_pattern = re.compile('(<(.+?)>(.*?)<\/.*?>)')
+
+                matches = re.findall(xml_pattern, newQueryXml)
+
+                bad_lines = []
+
+                outputForOneQuery = ""
+
+                start_index = 0
+                hasIssue = False
+                for original, tag, slot in matches:
+
+                    tag = tag.strip()
+                    slot = slot.strip()
+                    slotIndex = query.lower().index(slot.lower(), start_index)
+
+                    if (slotIndex == -1):
+                        bad_lines.append(str(index) + ': ' + newQueryXml)
+                        hasIssue = True
+                        break;
+
+                    # multiple spaces then without parameter
+                    #https://stackoverflow.com/questions/13028120/split-string-by-arbitrary-number-of-white-spaces?rq=1
+                    words = query[start_index:slotIndex].strip().split()
+
+                    for word in words:
+                        outputForOneQuery += word + "\t" + "O" + "\n"
+
+                    outputForOneQuery += slot+ "\t" + tag + "\n"
+
+                    start_index =  slotIndex + len(slot)
+
+                if hasIssue:
+                    continue;
+
+                if start_index < len(query):
+                    words = query[start_index:len(query)].strip().split()
+                    for word in words:
+                        outputForOneQuery += word + "\t" + "O" + "\n"
+
+                outputForOneQuery += "\n"
+
+                slotfile.write(outputForOneQuery)
+        except:
+            print(f'Skip: {query}')
+    finally:
+        if slotfile is not None:
+            slotfile.close()
+
 
 def calculate_topk_similarity(df_golden, df_tune):
 
@@ -404,9 +472,14 @@ def algoV3(df_tune, closest_golden_queries_per_tune, top_k_golden_sorted_per_tun
 
 if __name__ == "__main__":
 
+    #==================================================
+    # slot / intent to deep lu routine
+    #==================================================
+    # for test 
+    df_tune = load_carina("Teams_Slot_Training.tsv", generateSentenceEmbedding=False)
+    carina_to_deepLu_slot(df_tune)
 
-
-    # golden_file_processing , luna format
+     # golden_file_processing , luna format
     golden_file_name="Teams-MustPass_Feb_Golden.tsv" 
     #df_golden = load_luna_to_carina(golden_file_name, generateSentenceEmbedding=True)
     #df_golden.to_csv('.\\' + golden_file_name.replace('.tsv', '-carina.tsv'), sep='\t', index=None)
@@ -496,12 +569,9 @@ if __name__ == "__main__":
     for slotFile in slotFiles:
         #load luna data and transform to carina
         #df = load_as_carina(slotFile)
-
         #load luna data, transform to carina, generate sentence embedding
         #df = load_as_carina_and_embedding(slotFile)
-
         #generate embedding to pickles
-
         #generate csv with embedding
         #df.to_csv('.\\' + slotFile.replace('.tsv', '-carina.tsv'), sep='\t', index=None)    
     '''
