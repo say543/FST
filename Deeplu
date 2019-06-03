@@ -82,6 +82,8 @@ python
 
 [for training]
 
+
+intent
 python .\standardmodeldriver.py --train --data .\sampledata\intents.sample.train --path model --sequence false -b 10
 
 
@@ -95,9 +97,26 @@ python .\standardmodeldriver.py --train --data .\sampledata\sentence_intent_trai
 
 
 
-?不知道sequence 是幹嘛的
+sequence 的功用
  true : slot model
 false, you can try model or intent
+
+
+python .\standardmodeldriver.py --train --data .\sampledata\slots.sample.train --path teams_slot_model_06022019 --sequence true -b 10 --number-epochs 20
+
+
+uft-8 無法support 中文
+
+sol1
+先把utf-8 關掉  來for slot traninig
+看按結果行不行
+
+sol2:
+把file 改成utf-8 編碼輸出
+https://blog.csdn.net/moledyzhang/article/details/78978312
+
+python error decoding
+https://openhome.cc/Gossip/Encoding/Python.html
 
 
 
@@ -136,6 +155,8 @@ tensor flow model 有說明 directory 怎麼使用
 
 21:00 開始講deployment
 python  qas\deepluexporter.py
+這個會輸出所有的OPTION 可以provide
+
 這個可以export deep early model
 for deployment
   需要mlg file
@@ -146,6 +167,7 @@ for deployment
 
 domain 
 eg: sqi
+只是一班的file xxx.yyy.inc 的 name
 
 --model-path ./model
 
@@ -159,6 +181,15 @@ eg: sqi
 
 mlg-tools
 need to install somewhere
+
+
+
+// intent
+python  qas\deepluexporter.py   --domain model  --model-path ./teams_intent_model_06022019  --export-path teams_intent_model_06022019_export   --sequence false  --mlg-tools .\MLGTools\MLGTools.exe
+
+
+// slot
+python  qas\deepluexporter.py   --domain model  --model-path .\teams_slot_model_06022019  --export-path teams_slot_model_06022019_export   --sequence true  --mlg-tools .\MLGTools\MLGTools.exe
 
 
 28:59
