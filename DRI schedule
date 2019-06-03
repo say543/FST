@@ -55,6 +55,13 @@ cortana log viewer:
 https://cortanalogviewer.azurewebsites.net/query/8ece46f790164d0b9b112365c68e221f/prod
 ICM有ticket 都會有trade id
 
+
+from title 'LU Bug for InMeeting Compliant Stack - Rejection is not recognized'
+example 的判斷
+https://cortanalogviewer.azurewebsites.net/query/186d68d6757f4023a474754cbdd1eb31/ppe
+? ppe 是什麼不太確定
+
+
 carina bing intent
 
 可以測production 的environment
