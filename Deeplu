@@ -68,10 +68,30 @@ True
 
 best mode store 在指定的epoch
 
+--sequence
+? 忘記sequence 是什麼了 要查察
+
+-b 
+batch size
+
+
+--number-epochs
+10
+
+python 
+
+[for training]
+
 python .\standardmodeldriver.py --train --data .\sampledata\intents.sample.train --path model --sequence false -b 10
+
+
 
 這邊有可以設epochs
 [--number-epochs NUMBER_EPOCHS]
+
+新加epoch 跟time
+python .\standardmodeldriver.py --train --data .\sampledata\sentence_intent_training.txt --path teams_intent_model_06022019 --sequence false -b 10 --number-epochs 20
+
 
 
 
@@ -83,7 +103,7 @@ false, you can try model or intent
 
 
 
-testing
+[testing]
 symbol cannot be recognized then it will fail
 
  python .\standardmodeldriver.py --test --data .\sampledata\intents.sampleAll.test --path .\intent_model5000_01312019\ --sequence false -b 10 -pe output.txt
@@ -101,6 +121,12 @@ third column
 prediceted
 
 
+17:00
+查詢可能可以support  的所有options
+python  .\standardmodeldriver.py
+會輸出所有的standardmodeldriver 所支持的options
+
+
 no evaluation script
 要自己寫
 
@@ -108,15 +134,13 @@ no evaluation script
 20:59
 tensor flow model 有說明 directory 怎麼使用
 
-
+21:00 開始講deployment
 python  qas\deepluexporter.py
 這個可以export deep early model
-
-
-
 for deployment
-
+  需要mlg file
   可以用carina mlg
+  
    E:\mercury\public\ext\Carina\MLGTools
 
 
