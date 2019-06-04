@@ -22,6 +22,9 @@ E:\xts-5.1080\xts.exe
 執行就會跑出一個開始的window
 
 
+我的seach gold 的location
+
+
 hotfix onebook
 with title
 "Hotfix Handbook" 
@@ -128,6 +131,12 @@ checkin  column 會顯示checkin  否則  status 就會沒有寫
 "QAS check-in taking longer than expected - id 137161 and 137139"
 這個email title 有QAS的 改變太慢  怎麼求救
 
+
+=================
+report bug example
+=================
+'Inconsistent LU result'
+有兩個trace id 
 
 
 
