@@ -58,6 +58,8 @@ cortana log viewer:
 https://cortanalogviewer.azurewebsites.net/query/8ece46f790164d0b9b112365c68e221f/prod
 ICM有ticket 都會有trade id
 
+understanding tab 會有detail 的rank 的結果  , intent score
+
 
 from title 'LU Bug for InMeeting Compliant Stack - Rejection is not recognized'
 example 的判斷
@@ -137,6 +139,7 @@ report bug example
 =================
 'Inconsistent LU result'
 有兩個trace id 
+? 為啥一個intent 正確  一個intent false 不太確定
 
 
 
