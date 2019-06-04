@@ -598,8 +598,11 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 
 email title
 LU Bug for InMeeting Compliant Stack - Rejection is not recognized
+可能到時候要問一下tax form 在哪改
 
-? 不知道這個夠不夠general
-因為又加了一個rekect 
+
+又加了一個reject intent 但是這個是 multi turn 的 intent only 所以不影響single turn
+
+
 
 
