@@ -595,6 +595,10 @@ SparseLinearChainCRF --in=ExternalInput1,lccrf_ngram_1gram,lccrf_ngram_2gram_rep
 add reject intent
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1067519?_a=files
 --------------------------------------------
+
+email title
+LU Bug for InMeeting Compliant Stack - Rejection is not recognized
+
 ? 不知道這個夠不夠general
 因為又加了一個rekect 
 
