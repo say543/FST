@@ -604,5 +604,14 @@ LU Bug for InMeeting Compliant Stack - Rejection is not recognized
 又加了一個reject intent 但是這個是 multi turn 的 intent only 所以不影響single turn
 
 
+--------------------------------------------
+06112019
+Merged PR 1070849: Checking in Teams Retrained ML model with score improvement
+--------------------------------------------
+--------------------------------------------
+06112019
+Merged PR 1075071: Remove teams calendar navigate from domain triggering, and complete the handover to calendar domain
+--------------------------------------------
+
 
 
