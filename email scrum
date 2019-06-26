@@ -1,1 +1,53 @@
+search gold 的兩個scrum
+//depot/deploy/builds/data/answers/QasIpe01Ds/... //DESKTOP-3J7614O-searchgold-2/deploy/builds/data/answers/QasIpe01Ds/...
+//depot/deploy/builds/data/answers/QAS12HttpQAS/... //DESKTOP-3J7614O-searchgold-2/deploy/builds/data/answers/QAS12HttpQAS/...
+
+
+michael example 
+QcsQueryLabelWithLes.exe -c D:\SearchGold\deploy\builds\data\Answers\QasIpe01Ds --variant Prod.email_enus_MV1  --verbose --legacyAllowUnusedParameters -dl email --encoding utf-8 --interactive --externalFeaturesColumn 2,9,16,23 --queryInColumn 1
+
+change to meet old 我們舊的方式
+其中一個column
+.\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2,9,16,23 --queryInColumn 1 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c E:\SearchGold\deploy\builds\data\answers\QasIpe01Ds  --variant Prod.email_enus_MV1 -dl email
+
+prod.email_enus_mv1
+這個是ini 的name
+
+<temporary problem>
+06262091
+p.s 目前只能用QAS12HttpQAS, not QasIpe01Ds
+p.s model file 要用這個 email_enus_MV1
+.\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2,9,16,23 --queryInColumn 1 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c E:\SearchGold\deploy\builds\data\answers\QAS12HttpQAS  --variant email_enus_MV1 -dl email
+
+
+email 的bing intent
+carina bing intent
+
+可以測production 的environment
+p.s 這個email thread 有簡單的教學 for bing intent
+RE: Regression: LU no longer returning PersonalMediaTitle information for Speaker queries (Desktop/Xbox work fine)
+
+carina/binginent 
+https://carina/bingintent
+選Bed
+exg: HttpQAS-Prod
+virtual service 
+CortanaLU
+data set 選我們自己的column
+QAS12HttpQAS
+client
+Microsoft_Threshold_Shell_3_enus_CortanaSDK
+
+怎麼multi turn result 不太確定  之後看
+
+
+
+
+========================
+multi 
+https://msasg.visualstudio.com/Cortana/_workitems/edit/1863645
+========================
+
+flag conversations\tPreviousTurnIntent\t0\t1\tsearch_email\t1.0\t-1\t-1\tPreviousTurnDomain\t0\t1\temail\t1.0\t-1\t-1
+
 
