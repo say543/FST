@@ -1,17 +1,26 @@
 
 ===================
-vijay
+Vijay
+
+check but not fully understand
 ===================
 
 [Private flight] - Moments integration tests are failing
 momnents integration error
 
-
+06252019
 LU runtime convergence status - In Dev ring
-所有的self host 的這邊都有說
+所有的ring 的這邊都有說
+這個內容沒有太懂
 
+06252019
+Issue with HK2 data rollout
+似乎memory 有所限制 一個column
+有很多discussion 以後再來看
 
-
+06242019
+Need your help running frisbee against dev ring
+這個感覺是要 所有的models 來測試
 
 
 
