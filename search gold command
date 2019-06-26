@@ -1,0 +1,13 @@
+
+// file update and revert
+
+[1:21 PM] Chieh-Chun Chang
+    hey Vijay. i have a question about search gold. do you know how to revert files being opened?  i type sd opened and i found lists of files opened and i am wondering how to revert them ? thanks,
+​[1:48 PM] Vijay Rajagopal
+    type sdb
+​[1:48 PM] Vijay Rajagopal
+    it will open a GUI
+​[1:49 PM] Vijay Rajagopal
+    select files, right click and revert
+​[1:49 PM] Vijay Rajagopal
+    or use: sd revert ... (if you want to revert anything under the current folder)
