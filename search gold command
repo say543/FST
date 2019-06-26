@@ -11,3 +11,18 @@
     select files, right click and revert
 ​[1:49 PM] Vijay Rajagopal
     or use: sd revert ... (if you want to revert anything under the current folder)
+    
+    
+    
+
+// 解決 
+// 去sdclient 裡面 把 noclobber to clobber
+// if you get "Can't clobber writeable file" you can run sd client and change noclobber to clobber
+//depot/deploy/builds/data/Answers/QAS01HttpQAS/luna_teams_enus_mv1.lccrf.ngram.1gram.bin#6 - added as e:\searchgold\deploy\builds\data\answers\QAS01HttpQAS\luna_teams_enus_mv1.lccrf.ngram.1gram.bin
+Can't clobber writeable file e:\searchgold\deploy\builds\data\answers\QAS01HttpQAS\luna_teams_enus_mv1.lccrf.ngram.1gram.bin
+//depot/deploy/builds/data/Answers/QAS01HttpQAS/luna_teams_enus_mv1.lccrf.ngram.2gram.bin#6 - added as e:\searchgold\deploy\builds\data\answers\QAS01HttpQAS\luna_teams_enus_mv1.lccrf.ngram.2gram.bin
+Can't clobber writeable file e:\searchgold\deploy\builds\data\answers\QAS01HttpQAS\luna_teams_enus_mv1.lccrf.ngram.2gram.bin
+//depot/deploy/builds/data/Answers/QAS01HttpQAS/luna_teams_enus_mv1.lccrf.ngram.3gram.bin#6 - added as e:\searchgold\deploy\builds\data\answers\QAS01HttpQAS\luna_teams_enus_mv1.lccrf.ngram.3gram.bin
+Can't clobber writeable file e:\searchgold\deploy\builds\data\answers\QAS01HttpQAS\luna_teams_enus_mv1.lccrf.ngram.3gram.bin
+//depot/deploy/builds/data/Answers/QAS01HttpQAS/luna_teams_enus_mv1.slot.lccrf.model#6 - added as e:\searchgold\deploy\builds\data\answers\QAS01HttpQAS\luna_teams_enus_mv1.slot.lccrf.model
+Can't clobber writeable file e:\searchgold\deploy\builds\data\answers\QAS01HttpQAS\luna_teams_enus_mv1.slot.lccrf.model
