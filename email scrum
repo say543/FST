@@ -1,6 +1,7 @@
 search gold 的兩個scrum
 //depot/deploy/builds/data/answers/QasIpe01Ds/... //DESKTOP-3J7614O-searchgold-2/deploy/builds/data/answers/QasIpe01Ds/...
 //depot/deploy/builds/data/answers/QAS12HttpQAS/... //DESKTOP-3J7614O-searchgold-2/deploy/builds/data/answers/QAS12HttpQAS/...
+//depot/deploy/builds/data/local/email... //DESKTOP-3J7614O-searchgold-2/deploy/builds/data/local/email...
 
 
 michael example 
@@ -40,6 +41,14 @@ Microsoft_Threshold_Shell_3_enus_CortanaSDK
 
 怎麼multi turn result 不太確定  之後看
 
+
+
+pattern 所在的位置
+在search gold 的下面
+deploy/builds/data/local/email
+
+其中一個
+email.message_type.partial.pattern.tagger.partial.txt
 
 
 
@@ -102,6 +111,7 @@ flag conversaion 的featurizer 的 trace 討論:
 
 
 [qd_cortana_email_enus_MV1_slots_hotfix_featurizer]
+直接apply hotfix 的files 當作wihte list
 出現21
 用到hotfix
 cortana_email_enus_MV1.slots.hotfix.txt
@@ -141,6 +151,7 @@ p.s 這邊似乎first turn or second turn hotfix 都會作用
         externalinput 以經有0.28588
         
         [qd_email_domain_featurizer]
+              有multi turn logic  by comment
               有previousturn doamin 的as ExternalInput6
               
               7: MlgFeaturizer --in=ExternalInput6 --out=emailPreviousDomainTemp --fts=email.previousTurnDomain.bin
@@ -181,6 +192,7 @@ p.s 這邊似乎first turn or second turn hotfix 都會作用
         externalinput 以經有0.28588
         
         [qd_email_domain_featurizer]
+              有multi turn logic  by comment
               有previousturn doamin 的as ExternalInput6
               
         [qd_email_domain_intent_last_eval_featurizer]
@@ -257,7 +269,7 @@ email.slots.mapping_to.20180702.txt
 21 還是到21
 
 [qd_email_slots_featurizer]
-有multi turn logic  by comment
+
 但是21還是21
 
 [qd_email_slots_hotfix_featurizer]
@@ -307,3 +319,21 @@ flag conversaions 的featurizer 的 trace 討論:
 
 
 
+flag the email 的featurizer 的 trace 討論:
+[qd_cortana_email_enus_MV1_slots_lccrf_featurizer]
+[qd_cortana_email_enus_MV1_slots_partial_pattern_featurizer]
+[qd_cortana_email_enus_MV1_slots_pattern_featurizer]
+[qd_cortana_email_enus_MV1_slots_pattern_override_featurizer]
+[qd_cortana_email_enus_MV1_slots_pattern_restore_featurizer]
+[qd_cortana_email_enus_MV1_slots_hotfix_featurizer]
+[qd_cortana_email_enus_MV1_slots_hotfix_override_featurizer]
+    會tag flag as 13 message_category
+    
+ [qd_email_mapIntentAndSlots_featurizer]
+ [qd_email_slots_featurizer]
+ [qd_email_slots_hotfix_featurizer]
+     這個會新增emall as 21 message_type
+     是用pattern file
+     email.message_type.partial.pattern.tagger.partial.txt
+     
+     會把13 轉成1 不太懂   
