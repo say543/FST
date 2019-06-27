@@ -10,3 +10,6 @@ default 是這樣  所以一定要even
 email.domain.model.20190116.pipeline.txt 的最後filter
 FeatureSetFilter --in=OneConf,isConfirmIntent2,OneConf,email_domain_intent_boost,OneConf,ShouldBoostDomainConf,OneConf,email_domain_intent_slot_boost --out=email_domain_intent --filterTagId=0 --filterWeight=0.1 --keepTagFeatures=1 --maxOutFeatureSets=1
 
+email_domain_intent (tag: 1, string: 0)
+p.s  (tag: 代表總共的長度, string: 沒啥用  先不管)
+
