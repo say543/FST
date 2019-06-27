@@ -44,10 +44,38 @@ Microsoft_Threshold_Shell_3_enus_CortanaSDK
 
 
 ========================
-multi 
+multi -turn query test
 https://msasg.visualstudio.com/Cortana/_workitems/edit/1863645
 ========================
 
 flag conversations\tPreviousTurnIntent\t0\t1\tsearch_email\t1.0\t-1\t-1\tPreviousTurnDomain\t0\t1\temail\t1.0\t-1\t-1
+
+參照這個flag single 的output flag 因該是要message type
+flag conversation\tPreviousTurnIntent\t0\t1\tsearch_email\t1.0\t-1\t-1\tPreviousTurnDomain\t0\t1\temail\t1.0\t-1\t-1
+
+PreviousTurnIntent 
+0
+
+1
+number of string features
+1代表後面0[-1,-1]
+0 : wegiht
+[-1 , -1] index
+
+
+加上
+ClientContext_ReferenceTime
+2019-06-26T16:20:27
+Delete
+PreviousTurnIntent
+search_email
+Delete
+
+PreviousTurnDomain
+
+email
+Delete
+
+
 
 
