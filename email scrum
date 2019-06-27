@@ -101,6 +101,7 @@ flag conversation	cortana_email_enus_MV1_slots_hotfix
 0	1	0	0	21	1	1	1
 
 根據cortana_email_enus_MV1.slots.entities.Config
+(用在 qd_cortana_email_enus_MV1_slots_queryparser 的slot 的最後一個)
 21 就是message type
 
 
