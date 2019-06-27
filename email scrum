@@ -53,35 +53,43 @@ flag conversations\tPreviousTurnIntent\t0\t1\tsearch_email\t1.0\t-1\t-1\tPreviou
 參照這個flag single 的output flag 因該是要message type
 flag conversation\tPreviousTurnIntent\t0\t1\tsearch_email\t1.0\t-1\t-1\tPreviousTurnDomain\t0\t1\temail\t1.0\t-1\t-1
 
-PreviousTurnIntent 
-0
-
-1
+format 說明
+\t\t1
+第一個1 代表
 number of string features
-1代表後面0[-1,-1]
+1代表後面 一組  0[-1,-1]
 0 : wegiht
-[-1 , -1] index
+-1 , -1 index 
+
+p.s 跟實際的MLG processor format不太同
+a[b,c] = d
+a: tag id
+b,c  index 
+d : weight
+參照這個link
+https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2Fdoc%2FFeatureSetFilter.md&version=GBmaster
 
 
+
+
+if 要用 carina bingintet
 加上
-ClientContext_ReferenceTime
-2019-06-26T16:20:27
-Delete
-PreviousTurnIntent
-search_email
-Delete
+ClientContext_ReferenceTime / 2019-06-26T16:20:27
+PreviousTurnIntent / search_email
+PreviousTurnDomain / email
 
-PreviousTurnDomain
-
-email
-Delete
+Bed: HttpQas-Prod
+VirtualService : CortanaLU
+DataSet: QAS12HttpQAS
+ClientId: Microsoft_Threshold_Shell_3_enus_CortanaSDK
 
 
+flag conversaion 的featurizer 的 trace 討論:
 [qd_cortana_email_enus_MV1_slots_lccrf_featurizer]
-qd_cortana_email_enus_MV1_slots_partial_pattern_featurizer
-qd_cortana_email_enus_MV1_slots_pattern_featurizer
-qd_cortana_email_enus_MV1_slots_pattern_override_featurizer
-qd_cortana_email_enus_MV1_slots_pattern_restore_featurizer
+[qd_cortana_email_enus_MV1_slots_partial_pattern_featurizer]
+[qd_cortana_email_enus_MV1_slots_pattern_featurizer]
+[qd_cortana_email_enus_MV1_slots_pattern_override_featurizer]
+[qd_cortana_email_enus_MV1_slots_pattern_restore_featurizer]
 沒tag 正確slot
 
 
@@ -104,6 +112,135 @@ flag conversation	cortana_email_enus_MV1_slots_hotfix
 (用在 qd_cortana_email_enus_MV1_slots_queryparser 的slot 的最後一個)
 21 就是message type
 
+p.s 這邊似乎first turn or second turn hotfix 都會作用
+    if 如果是first turn domain score 不會win  因為web 很高  所以沒有作用  
+        QAS intent output
+        email.multiclass.output.txt output:
+        flag conversation       email_other     1
+        
+        QAS domain output 
+        form [qd_cortana_email_enus_MV1_domain_domainclassifier]
+        email.maxent.output.txt output:
+        flag conversation       0.28588
+        
+        trace back
+        [qd_email_domain_intent_last_eval_featurizer]
+        [qd_email_domain_query_hotfix_override_featurizer]
+        [qd_email_domain_pattern_override_featurizer]
+        [qd_email_domain_hotfix_featurizer]
+             from email_domain_intent:ExternalInput2
+             
+        externalinput 以經有0.28588
+        
+        [qd_email_domain_featurizer]
+              有previousturn doamin 的as ExternalInput6
+              
+              7: MlgFeaturizer --in=ExternalInput6 --out=emailPreviousDomainTemp --fts=email.previousTurnDomain.bin
+              Inputs:
+                ExternalInput6 (tag: 0, string: 0)
+              Output:
+                emailPreviousDomainTemp (tag: 0, string: 0)
+              沒有東西
+              
+              裡面也有multi turn logic
+              from email:cortana_email_enus_MV1_domain_hotfix:ExternalInput1
+              0.23588
+              加上shifty 0.05
+              0.28588
+        [qd_cortana_email_enus_MV1_domain_hotfix_override_featurizer]
+        [qd_cortana_email_enus_MV1_domain_pattern_override_featurizer]
+        [qd_cortana_email_enus_MV1_domain_svm_featurizer]
+              0.23588 的來源
+              是這個svm 的model train 出來的
+        
+    if multi turn
+        QAS intent output
+        email.multiclass.output.txt output:
+        flag conversation       flag     1
+        
+        QAS domain output 
+        form [qd_cortana_email_enus_MV1_domain_domainclassifier]
+        email.maxent.output.txt output:
+        flag conversation       1
+        
+        trace back
+        [qd_email_domain_intent_last_eval_featurizer]
+        [qd_email_domain_query_hotfix_override_featurizer]
+        [qd_email_domain_pattern_override_featurizer]
+        [qd_email_domain_hotfix_featurizer]
+             from email_domain_intent:ExternalInput2
+             
+        externalinput 以經有0.28588
+        
+        [qd_email_domain_featurizer]
+              有previousturn doamin 的as ExternalInput6
+              
+        [qd_email_domain_intent_last_eval_featurizer]
+        [qd_email_domain_query_hotfix_override_featurizer]
+        [qd_email_domain_pattern_override_featurizer]
+        [qd_email_domain_hotfix_featurizer]
+             from email_domain_intent:ExternalInput2
+             
+        externalinput 以經有0.28588
+        
+        [qd_email_domain_featurizer]
+              有previousturn doamin 的as ExternalInput6
+              
+               7: MlgFeaturizer --in=ExternalInput6 --out=emailPreviousDomainTemp --fts=email.previousTurnDomain.bin
+               Inputs:
+                ExternalInput6 (tag: 0, string: 1)
+                        email[-1,-1]=1
+               Output:
+                 emailPreviousDomainTemp (tag: 1, string: 0)
+                        0[0,0]=1
+                        
+                27: FeatureSetFilter --in=OneConf,isConfirmIntent2,OneConf,email_domain_intent_boost,OneConf,ShouldBoostDomainConf,OneConf,email_domain_intent_slot_boost --out=email_domain_intent --filterTagId=0 --filterWeight=0.1 --keepTagFeatures=1 --maxOutFeatureSets=1
+                Inputs:
+                OneConf (tag: 1, string: 0)
+                        0[-1,-1]=1
+                isConfirmIntent2 (tag: 1, string: 0)
+                        0[-1,-1]=0  v.s 0[-1,-1]=-1 (single turn)
+                OneConf (tag: 1, string: 0)
+                        0[-1,-1]=1
+                email_domain_intent_boost (tag: 1, string: 0)
+                        0[-1,-1]=1 v.s 0[-1,-1]=0 (single turn)
+                OneConf (tag: 1, string: 0)
+                        0[-1,-1]=1
+                ShouldBoostDomainConf (tag: 1, string: 0)
+                        0[-1,-1]=0
+                OneConf (tag: 1, string: 0)
+                        0[-1,-1]=1
+                email_domain_intent_slot_boost (tag: 1, string: 0)
+                        0[-1,-1]=0 v.s 0[-1,-1]=-2 (single turn)
+                Output:
+                email_domain_intent (tag: 1, string: 0)
+                        0[-1,-1]=1  v.s 0[-1,-1]=0.28588 (single turn)
+                multi turn 的 domain score 會override email_domain_intent  (所以後面會override 前面的?)
+                參照 'QAS component' 似乎任何一個pair<ele1, ele2> 符合  都可以把OneConf  輸出到結果
+                ele2 (isConfirmIntent2, email_domain_intent_boost,  ShouldBoostDomainConf,  email_domain_intent_slot_boost) 似乎是exclusive 的概念
+                
+              
+              裡面也有multi turn logic
+              from email:cortana_email_enus_MV1_domain_hotfix:ExternalInput1
+              0.23588
+              加上shifty 0.05
+              0.28588
+        [qd_cortana_email_enus_MV1_domain_hotfix_override_featurizer]
+        [qd_cortana_email_enus_MV1_domain_pattern_override_featurizer]
+        [qd_cortana_email_enus_MV1_domain_svm_featurizer]
+              0.23588 的來源
+              是這個svm 的model train 出來的
+              
+              裡面也有multi turn logic
+              from email:cortana_email_enus_MV1_domain_hotfix:ExternalInput1
+              0.23588
+              加上shifty 0.05
+              0.28588
+        [qd_cortana_email_enus_MV1_domain_hotfix_override_featurizer]
+        [qd_cortana_email_enus_MV1_domain_pattern_override_featurizer]
+        [qd_cortana_email_enus_MV1_domain_svm_featurizer]
+              0.23588 的來源
+              是這個svm 的model train 出來的
 
 
 [qd_email_mapIntentAndSlots_featurizer]
@@ -125,16 +262,39 @@ qd_email_mapIntentAndSlotsBack_featurizer
 這妹
 
 [qd_email_slots_partial_pattern_featurizer]
-
+from 
 [featurizer3011 = qd_email_slots_partial_pattern_featurizer]
 
-21
+21 還是
 from ExternalInput2 
 from  email:email_slots_hotfix:ExternalInput2  [qd_email_slots_hotfix_featurizer]
 
 
 
 
+flag conversaions 的featurizer 的 trace 討論:
+    if 如果是first turn domain score 不會win  因為web 很高  所以沒有作用  
+        QAS intent output
+        email.multiclass.output.txt output:
+        flag conversation       email_other     1
+        
+        QAS domain output 
+        form [qd_cortana_email_enus_MV1_domain_domainclassifier]
+        email.maxent.output.txt output:
+        flag conversation       0.303262
+
+        [qd_cortana_email_enus_MV1_slots_lccrf_featurizer]
+        這邊crf 就已經tag flag as message_category 是目前錯誤的來源
+   
+    if multi turn
+        QAS intent output
+        email.multiclass.output.txt output:
+        flag conversation       flag     1
+        
+        QAS domain output 
+        form [qd_cortana_email_enus_MV1_domain_domainclassifier]
+        email.maxent.output.txt output:
+        flag conversation       1
 
 
 
