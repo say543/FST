@@ -100,13 +100,36 @@ flag conversation	cortana_email_enus_MV1_slots_hotfix
 (#slotid #weight #token_index  #token_index)
 0	1	0	0	21	1	1	1
 
+根據cortana_email_enus_MV1.slots.entities.Config
+21 就是message type
+
+
+
+[qd_email_mapIntentAndSlots_featurizer]
+用到file
+email.slots.mapping_to.20180702.txt
+21 還是到21
+
+[qd_email_slots_featurizer]
+有multi turn logic  by comment
+但是21還是21
+
+[qd_email_slots_hotfix_featurizer]
+qd_email_slots_partial_pattern_featurizer
+qd_email_slots_pattern_override_featurizer
+qd_email_slots_pattern_restore_featurizer
+qd_email_slots_query_hotfix_override_featurizer
+qd_email_mapIntentAndSlotsBack_featurizer
+還是21 沒有改變
+這妹
+
+[qd_email_slots_partial_pattern_featurizer]
 
 [featurizer3011 = qd_email_slots_partial_pattern_featurizer]
 
 21
 from ExternalInput2 
 from  email:email_slots_hotfix:ExternalInput2  [qd_email_slots_hotfix_featurizer]
-
 
 
 
