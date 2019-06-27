@@ -77,5 +77,41 @@ email
 Delete
 
 
+[qd_cortana_email_enus_MV1_slots_lccrf_featurizer]
+qd_cortana_email_enus_MV1_slots_partial_pattern_featurizer
+qd_cortana_email_enus_MV1_slots_pattern_featurizer
+qd_cortana_email_enus_MV1_slots_pattern_override_featurizer
+qd_cortana_email_enus_MV1_slots_pattern_restore_featurizer
+沒tag 正確slot
+
+
+[qd_cortana_email_enus_MV1_slots_hotfix_featurizer]
+出現21
+用到hotfix
+cortana_email_enus_MV1.slots.hotfix.txt
+
+
+based on format
+https://microsoft.sharepoint.com/teams/LUforNextgenAgents/_layouts/15/WopiFrame.aspx?sourcedoc={68deb809-671e-469a-be79-ba53c05298ce}&action=edit&wd=target%28CLU%20DRI.one%7C1990f4e6-5d06-4429-8ee9-ba6b20b33107%2FExact%20match%20hotfix%20file%20format%7Ce81245d4-55ea-458a-aaf1-036d8c0817f5%2F%29
+
+flag conversation	cortana_email_enus_MV1_slots_hotfix	
+(#number of kokens, 0)
+2	0	
+(#slotid #weight #token_index  #token_index)
+0	1	0	0	21	1	1	1
+
+
+[featurizer3011 = qd_email_slots_partial_pattern_featurizer]
+
+21
+from ExternalInput2 
+from  email:email_slots_hotfix:ExternalInput2  [qd_email_slots_hotfix_featurizer]
+
+
+
+
+
+
+
 
 
