@@ -54,14 +54,22 @@ flag conversations\tPreviousTurnIntent\t0\t1\tsearch_email\t1.0\t-1\t-1\tPreviou
 flag conversation\tPreviousTurnIntent\t0\t1\tsearch_email\t1.0\t-1\t-1\tPreviousTurnDomain\t0\t1\temail\t1.0\t-1\t-1
 
 format 說明
-\t\t1
+PreviousTurnDomain\t0\t1\temail\t1.0\t-1\t-1
+第一個0 忘記是什麼?
 第一個1 代表
 number of string features
-1代表後面 一組  0[-1,-1]
-0 : wegiht
--1 , -1 index 
+1代表後面 一個 triple
+1.0 : wegiht
+[-1 , -1] index 的span
+Inputs:
+    ExternalInput6 (tag: 0, string: 1)
+      email[-1,-1]=1
+      
+    這邊的email 是string
+    ? 怎麼轉的  裡面可能會在自己轉
 
-p.s 跟實際的MLG processor format不太同
+
+p.s 跟實際的MLG processor format很similar 但是這邊的a 是tag id 
 a[b,c] = d
 a: tag id
 b,c  index 
