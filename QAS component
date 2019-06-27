@@ -1,6 +1,6 @@
 [feauterSetFilter]
 https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2FDUFeatureSetFilter.h&version=GBmaster
-
+https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2Fdoc%2FFeatureSetFilter.md&version=GBmaster
 default 是這樣  所以一定要even
 
 --conditionInFirstFeatureSet=0
@@ -8,3 +8,4 @@ default 是這樣  所以一定要even
 
 參照
 email.domain.model.20190116.pipeline.txt 的最吼ˋfilter
+
