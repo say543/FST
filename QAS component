@@ -7,5 +7,6 @@ default 是這樣  所以一定要even
 
 
 參照
-email.domain.model.20190116.pipeline.txt 的最吼ˋfilter
+email.domain.model.20190116.pipeline.txt 的最後filter
+FeatureSetFilter --in=OneConf,isConfirmIntent2,OneConf,email_domain_intent_boost,OneConf,ShouldBoostDomainConf,OneConf,email_domain_intent_slot_boost --out=email_domain_intent --filterTagId=0 --filterWeight=0.1 --keepTagFeatures=1 --maxOutFeatureSets=1
 
