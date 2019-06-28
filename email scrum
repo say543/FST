@@ -269,7 +269,8 @@ email.slots.mapping_to.20180702.txt
 21 還是到21
 
 [qd_email_slots_featurizer]
-
+'andle multi-turn slot override'
+也有multi turn 得slot 功能
 但是21還是21
 
 [qd_email_slots_hotfix_featurizer]
@@ -315,23 +316,42 @@ flag conversaions 的featurizer 的 trace 討論:
         form [qd_cortana_email_enus_MV1_domain_domainclassifier]
         email.maxent.output.txt output:
         flag conversation       1
-
-
+    [qd_cortana_email_enus_MV1_slots_lccrf_featurizer]
+    [qd_cortana_email_enus_MV1_slots_partial_pattern_featurizer]
+    [qd_cortana_email_enus_MV1_slots_pattern_featurizer]
+    [qd_cortana_email_enus_MV1_slots_pattern_override_featurizer]
+    [qd_cortana_email_enus_MV1_slots_pattern_restore_featurizer]
+    [qd_cortana_email_enus_MV1_slots_hotfix_featurizer]
+    [qd_cortana_email_enus_MV1_slots_hotfix_override_featurizer]
+        會tag flag as 13 message_category
+    
+    [qd_email_mapIntentAndSlots_featurizer]
+        for slot
+        會把13 轉成 1
+        ? 不知道這個功能是什麼
+        
+        主要是用了舊的carina model
+        ;; Old Carina Model
+        /domain /intent/ slot
+        ....
+        
+        最後用這個轉回來
+        [qd_email_mapIntentAndSlotsBack_featurizer]
 
 
 flag the email 的featurizer 的 trace 討論:
-[qd_cortana_email_enus_MV1_slots_lccrf_featurizer]
-[qd_cortana_email_enus_MV1_slots_partial_pattern_featurizer]
-[qd_cortana_email_enus_MV1_slots_pattern_featurizer]
-[qd_cortana_email_enus_MV1_slots_pattern_override_featurizer]
-[qd_cortana_email_enus_MV1_slots_pattern_restore_featurizer]
-[qd_cortana_email_enus_MV1_slots_hotfix_featurizer]
-[qd_cortana_email_enus_MV1_slots_hotfix_override_featurizer]
-    會tag flag as 13 message_category
+    [qd_cortana_email_enus_MV1_slots_lccrf_featurizer]
+    [qd_cortana_email_enus_MV1_slots_partial_pattern_featurizer]
+    [qd_cortana_email_enus_MV1_slots_pattern_featurizer]
+    [qd_cortana_email_enus_MV1_slots_pattern_override_featurizer]
+    [qd_cortana_email_enus_MV1_slots_pattern_restore_featurizer]
+    [qd_cortana_email_enus_MV1_slots_hotfix_featurizer]
+    [qd_cortana_email_enus_MV1_slots_hotfix_override_featurizer]
+        會tag flag as 13 message_category
     
- [qd_email_mapIntentAndSlots_featurizer]
- [qd_email_slots_featurizer]
- [qd_email_slots_hotfix_featurizer]
+    [qd_email_mapIntentAndSlots_featurizer]
+    [qd_email_slots_featurizer]
+    [qd_email_slots_hotfix_featurizer]
      這個會新增emall as 21 message_type
      是用pattern file
      email.message_type.partial.pattern.tagger.partial.txt
