@@ -1,0 +1,61 @@
+========================
+search gold make change
+========================
+
+in search 指定的folder
+
+cd E:\searchgold\deploy\builds\data\answers\QAS12HttpQAS
+
+sd edit cortana_email_enus_MV1.slots.hotfix.txt
+//depot/deploy/builds/data/Answers/QAS12HttpQAS/cortana_email_enus_MV1.slots.hotfix.txt#5 - opened for edit
+直接修改file 
+
+sd change
+在description 那邊打上你要打的comment
+
+
+
+codeflow
+cd E:\searchgold\deploy\builds\data\answers\QAS12HttpQAS
+
+
+
+
+
+
+
+
+====================
+<setup>
+codeflow
+===================
+desktop click codeflow
+add teams server 
+url with Name
+msasg.visualstudio.com
+
+tfs 不用管
+port 不用管
+
+用http
+
+加入後
+project選兩個
+bing_and_ipg
+searchgold
+
+選new 
+
+不同project 下面就可以看到不同的change
+
+
+
+
+
+
+
+
+
+
+
+
