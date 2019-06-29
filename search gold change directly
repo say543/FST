@@ -13,6 +13,10 @@ sd edit cortana_email_enus_MV1.slots.hotfix.txt
 sd change
 在description 那邊打上你要打的comment
 
+p.s 在 codeflow create 一個pr 只能對應一個change list
+
+? 但是現在還不知道怎麼在comment 上面修改file 維持同一個view
+
 
 
 codeflow
@@ -29,6 +33,7 @@ cd E:\searchgold\deploy\builds\data\answers\QAS12HttpQAS
 <setup>
 codeflow
 ===================
+設定code flow
 desktop click codeflow
 add teams server 
 url with Name
@@ -47,6 +52,70 @@ searchgold
 選new 
 
 不同project 下面就可以看到不同的change
+
+====================
+<create view>
+codeflow
+===================
+select view
+右邊選藥的change list
+
+右下角選publish view
+
+required 填你要的reviewer
+optional  選 emaillu
+
+
+然後選publish 在右上角  就會收到email 了
+
+
+====================
+<submit>
+QAS
+===================
+
+
+part1
+[5:15 PM] Michael Marlen
+    both files in local/email
+​[5:16 PM] Michael Marlen
+    click + drag those into the default change list
+​[5:16 PM] Michael Marlen
+    right click on them and go to submit
+​[5:16 PM] Michael Marlen
+    put in the message and it will take a few seconds to actually submit it
+
+
+part2
+[5:16 PM] Michael Marlen
+    to create a change list you will need to use this command
+​[5:17 PM] Michael Marlen
+    sdp pack -c <ChangelistID> <folder\filename.dpk>
+    
+    p.s 不用說明什麼file 因為Changelist 已經你有要的file
+    
+    dpk 的name 也不太重要
+    
+​[5:17 PM] Michael Marlen
+    
+then go to http://qasvalidation.azurewebsites.net/
+​[5:17 PM] Michael Marlen
+    click "New batch" (top left)
+​[5:17 PM] Michael Marlen
+    
+Validation type should be HttpQas using the drop down
+​[5:18 PM] Michael Marlen
+    ICM Team Name CLU
+​[5:18 PM] Michael Marlen
+    dpk location local
+    
+before submit
+記得把 notify me / check in pass 兩個option 都選起來
+大概要10 to 30 minutes 來check ˊ公
+
+
+
+
 
 
 
