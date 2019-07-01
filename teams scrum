@@ -665,5 +665,31 @@ Go to slide #5 wrong slot value
 這個thread 說明可以fight back 
 if preprocessing logic 有限制  怎麼用canonical value 來提供  然後skilll team parsing 來處理
 
+---------------------
+07012019
+https://microsoft-my.sharepoint-df.com/:w:/p/yum/EWJaNaCJYHtEg4sGm4XVtekBRtAXoVIs8Ns9HGd3hxK5Dg?rtime=drS_wUL-1kg
+teams domain split
+---------------------
+要注意跟別的domain intent conflict
+ex: people skill
+if yes, 只要我們的column 不要present 那個skill 那問題就不大
+
+deck_name 沒有變成 file_type 因為既然已經seperate domain 舊不需要了
+
+
+Two new slot to add: 
+    為了support shuyin 的  slide jump
+    slot_relative_number: jump forward/backward xxx slides 
+
+    slide_content_type: go to xxx chart (value could be chart/section/image/video) 
+
+Deleted Intent: teamspace_sendfeedback (conflict with feedback domain submit_feedback intent), just use feedback domain instead. 
+     ? 不知道怎麼知道有這個 feedback domain的
+
+
+Merge slot file_sharetarget with teamspace_sharetarget to share_target slot 
+       不用跟file_share intent 綁再一起(原本share_target 是file_share only)
+       這樣比較consistent 只要skill teams signs off 就可以
+      
 
 
