@@ -690,6 +690,12 @@ Deleted Intent: teamspace_sendfeedback (conflict with feedback domain submit_fee
 Merge slot file_sharetarget with teamspace_sharetarget to share_target slot 
        不用跟file_share intent 綁再一起(原本share_target 是file_share only)
        這樣比較consistent 只要skill teams signs off 就可以
-      
+
+
+---------------------------------
+07012019
+teams contextual LU model flighted
+---------------------------------
+Yue 幫contextual lu team 做的
 
 
