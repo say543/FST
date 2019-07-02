@@ -1,7 +1,7 @@
 [feauterSetFilter]
 https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2FDUFeatureSetFilter.h&version=GBmaster
 https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2Fdoc%2FFeatureSetFilter.md&version=GBmaster
-default 是這樣  所以一定要even
+default conditionInFirstFeatureSet=0 所以一定要even
 
 --conditionInFirstFeatureSet=0
 
@@ -12,4 +12,79 @@ FeatureSetFilter --in=OneConf,isConfirmIntent2,OneConf,email_domain_intent_boost
 
 email_domain_intent (tag: 1, string: 0)
 p.s  (tag: 代表總共的長度, string: 沒啥用  先不管)
+
+
+
+[ConstFeatureGenerator]
+生 成一個feature set
+in luna_teams_intents.multiturn.pipeline.txt
+生成teams[-1,-1] = 1
+
+
+[ConditionalFeatureSetFilter]
+
+判斷domain 有沒有依樣
+
+也可以用threshold 來做filter
+in luna_teams_intents.multiturn.pipeline.txt
+
+ConditionalFeatureSetFilter --in=CurrentDomain,ExternalInput3 --out=valid_previous_turn_domain --filterCriteria=Y_IF_Y_CONTAINS_ANY_X
+
+[TopN]
+
+把intent 的結果 進行desc 排序  (insc 排序因該也可以support)
+in luna_teams_intents.multiturn.pipeline.txt
+
+[FeatureIdMapper]
+把tag id 根據file 做mapping 到tag id
+
+為了support 某一些intent 才有作用我想
+in luna_teams_intents.multiturn.pipeline.txt
+
+[FeatureNormalizer]
+
+linear algo 把weight 變成1
+
+or 
+可以用identify 當作algo
+
+or 用sign + cutoff
+
+in luna_teams_intents.multiturn.pipeline.txt
+
+[FeatureTagToText]
+? 這個不是太董
+        Inputs:
+                scaled_mapped_intent (tag: 1, string: 0)
+                        36[-1,-1]=1
+        Output:
+                scaled_mapped_intent_text (tag: 0, string: 1)
+                        36[-1,-1]=1.0[0,0]=1
+in luna_teams_intents.multiturn.pipeline.txt
+
+
+
+[WhitelistFeaturizer]
+? 公用不太確定
+teams	valid_tag_feature	1	0	0	1	-1	-1
+
+in luna_teams_intents.multiturn.pipeline.txt
+
+
+[RandomFeature]
+根據input token 所有的intent 的給舉zero as weight 
+in luna_teams_intents.multiturn.pipeline.txt
+
+[FeatureValueAggregator]
+把scaled intent 跟randomFEature 的intent 根據algo max 取max 
+但是每個intent 都有score
+in luna_teams_intents.multiturn.pipeline.txt
+
+[FeatureValueAggregator]
+? 不知道在幹嘛
+luna_teams_intents.multiturn.def.txt
+這個file 也不確定幹嘛
+in luna_teams_intents.multiturn.pipeline.txt
+
+
 
