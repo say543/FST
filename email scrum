@@ -364,6 +364,22 @@ flag the email 的featurizer 的 trace 討論:
      
      會把13 轉成1 不太懂   
 
+
+最後的測試
+archive conversations\tPreviousTurnIntent\t0\t1\tsearch_email\t1.0\t-1\t-1\tPreviousTurnDomain\t0\t1\temail\t1.0\t-1\t-1
+
+
+output
+email.multiclass.output.txt output:
+archive conversations   archive 1
+
+email.metadata.output.txt output:
+archive conversations   0:Timex:<!-- NOMATCH -->        1:CanonicalEntity:conversation
+
+email.crf.output.xml output:
+<TextRecord numLabels="1" query="archive conversations" ><Text><E l="O">archive</E><E l="message_type">conversations</E></Text></TextRecord>
+
+
 ========================
 multi -turn query test
 
