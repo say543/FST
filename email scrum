@@ -382,10 +382,11 @@ email.crf.output.xml output:
 
 ========================
 multi -turn query test
-
+070220192
 ========================
 https://microsoft-my.sharepoint-df.com/personal/chiecha_microsoft_com/_layouts/15/doc.aspx?sourcedoc={600283ad-e4ba-48f1-9255-535788f2e1af}&action=edit
 有multi turn 的behavior
 
 
-
+如何test
+yes\tPreviousTurnIntent\t0\t1\tsearch_email\t1.0\t-1\t-1\tPreviousTurnDomain\t0\t1\temail\t1.0\t-1\t-1\tTaskFrameEntityStates\t0\t1\tmessage:PromptedForValue\t1\t-1\t-1
