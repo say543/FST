@@ -363,3 +363,13 @@ flag the email 的featurizer 的 trace 討論:
      email.message_type.partial.pattern.tagger.partial.txt
      
      會把13 轉成1 不太懂   
+
+========================
+multi -turn query test
+
+========================
+https://microsoft-my.sharepoint-df.com/personal/chiecha_microsoft_com/_layouts/15/doc.aspx?sourcedoc={600283ad-e4ba-48f1-9255-535788f2e1af}&action=edit
+有multi turn 的behavior
+
+
+
