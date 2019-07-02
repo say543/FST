@@ -310,6 +310,8 @@ luna_teams_intents.multiturn.pipeline.txt
 intent 不重要  所以沒有存intent
 
 要回confirm 當作intent
+這個當作reference
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1068443?_a=files
 
 no\tFEATURE.CLUTEAMS\t0\t1\t1\t1\t-1\t-1\tPreviousTurnDomain\t0\t1\tteams\t1\t-1\t-1
 
