@@ -83,8 +83,17 @@ in luna_teams_intents.multiturn.pipeline.txt
 [FeatureValueAggregator]
 ? 不知道在幹嘛
 luna_teams_intents.multiturn.def.txt
+
+
+可以用
+--aggregatePerFeatureId
+每個tag id (feature id) aggregate
+
 這個file 也不確定幹嘛
 in luna_teams_intents.multiturn.pipeline.txt
+
+似乎把所有feature set weight加起來  但是tag 會給0
+in email.intent.model.20190116.pipeline.txt
 
 
 [MlgFeaturizer]
