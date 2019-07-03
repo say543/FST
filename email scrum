@@ -392,8 +392,11 @@ https://microsoft-my.sharepoint-df.com/personal/chiecha_microsoft_com/_layouts/1
 yes\tPreviousTurnIntent\t0\t1\tsend_email\t1.0\t-1\t-1\tPreviousTurnDomain\t0\t1\temail\t1.0\t-1\t-1\tTaskFrameEntityStates\t0\t1\tmessage:PromptedForValue\t1\t-1\t-1
 
 
-
+//這個不是last mappiing
 intent map 的 file
 cortana_email_enus_mv1.intentsClasses.txt
 index starting wtih zero
+
+// 這個裁示last mapping 為啥要有兩個不知道
+cortana_email_enus_MV1.intents.whitelist.pcfg.tagset.txt
 
