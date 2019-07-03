@@ -392,6 +392,12 @@ https://microsoft-my.sharepoint-df.com/personal/chiecha_microsoft_com/_layouts/1
 yes\tPreviousTurnIntent\t0\t1\tsend_email\t1.0\t-1\t-1\tPreviousTurnDomain\t0\t1\temail\t1.0\t-1\t-1\tTaskFrameEntityStates\t0\t1\tmessage:PromptedForValue\t1\t-1\t-1
 
 
+
+[qd_email_intent_featurizer]
+這邊有有用到multi turn action
+可以考慮加在這
+
+
 //這個不是last mappiing
 intent map 的 file
 cortana_email_enus_mv1.intentsClasses.txt
@@ -399,4 +405,49 @@ index starting wtih zero
 
 // 這個裁示last mapping 為啥要有兩個不知道
 cortana_email_enus_MV1.intents.whitelist.pcfg.tagset.txt
+
+
+yes\tPreviousTurnIntent\t0\t1\tsend_email\t1.0\t-1\t-1\tPreviousTurnDomain\t0\t1\temail\t1.0\t-1\t-1\tTaskFrameEntityStates\t0\t1\tmessage:PromptedForValue\t1\t-1\t-1
+的回推
+  [qd_email_intent_featurizer]
+  email_intent_final = 2 (confirm)
+
+  [qd_email_mapIntentAndSlotsBack_featurizer]
+  map form 6 to 2
+  ? 因該是舊的carina model to 新的model 的區別
+  以後查6是啥
+
+  [qd_email_intents_query_hotfix_override_featurizer]
+  [qd_email_intents_pattern_override_featurizer]
+  [qd_email_intent_hotfix_featurizer]
+    still 6
+  [qd_email_intent_featurizer]
+    有multi turn 的logic 但是原本external input 舊是對的?
+
+  [qd_email_mapIntentAndSlots_featurizer]
+    map from 2 to 6
+
+  [qd_cortana_email_enus_MV1_intents_hotfix_featurizer]
+    dothing 沒作用
+  [qd_cortana_email_enus_MV1_intents_hotfix_override_featurizer]
+    2 還是2
+
+  [qd_cortana_email_enus_MV1_intents_pattern_featurizer]
+    donothing
+  [qd_cortana_email_enus_MV1_intents_pattern_override_featurizer]
+    2 還是2
+
+  [qd_cortana_email_enus_MV1_intents_svm_featurizer]
+    svm 就是這個的intent 的來源
+
+
+no\tPreviousTurnIntent\t0\t1\tsend_email\t1.0\t-1\t-1\tPreviousTurnDomain\t0\t1\temail\t1.0\t-1\t-1\tTaskFrameEntityStates\t0\t1\tmessage:PromptedForValue\t1\t-1\t-1
+  7還是7
+  同 yes  
+  svm 就是這個的intent 來源
+
+cance\tPreviousTurnIntent\t0\t1\tsend_email\t1.0\t-1\t-1\tPreviousTurnDomain\t0\t1\temail\t1.0\t-1\t-1\tTaskFrameEntityStates\t0\t1\tmessage:PromptedForValue\t1\t-1\t-1l
+  1 還是1
+  同yes , no
+  svm 就是這個的intent 來源
 
