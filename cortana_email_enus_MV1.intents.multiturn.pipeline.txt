@@ -1,3 +1,25 @@
+featurizer139=qd_email_mapIntentAndSlotsBack_featurizer
+
+
+featurizer1401=qd_email_intents_keep_first_turn_featurizer
+featurizer1402=qd_email_domain_intent_last_eval_featurizer
+
+//before [qd_email_domain_intent_last_eval_featurizer]
+
+
+[qd_email_intents_keep_first_turn_featurizer]
+implementationclassname=MLG34PipelineFeaturizer
+input=email:email_domain_query_hotfix:ExternalInput1,email:cortana_email_enus_MV1_intents_hotfix_transformed:ExternalInput2,ExternalFeatureSet:PreviousTurnDomain:ExternalInput3,ExternalFeatureSet:PreviousTurnIntent:ExternalInput4,ExternalFeatureSet:TaskFrameEntityStates:ExternalInput5
+output=email_intent_final
+param:ExpectNonEmptyFeatureSet=false
+param:GenerateEmptyFeatureSets=false
+param:PipelineBaseFilename=cortana_email_enus_MV1.intents.multiturn
+param:FeatureSetNameDomainMapping=email_intent_final:email
+param:SeparatorChars=" \\t"
+
+
+
+
 ##########################################################################
 # Mulit turn Pipeline for keeping the first turn intent without modifying  given the following scenarios
 ##
@@ -9,7 +31,6 @@
 #     ExternalFeatureSet:TaskFrameEntityStates:ExternalInput5
 #     
 # Outputs
-#     email:email_domain_final
 #     email:email_intent_final
 #
 
@@ -89,7 +110,7 @@ FeatureValueAggregator --in=merged_external_intent,valid_previous_turn_domain_an
 # choose top intent
 TopN --in=merged_intents --out=top_intent  --n=1 --order=desc
 #scale to 1 if bigger than 1
-FeatureNormalizer --in=top_intent --out=top_intent_after_one_as_cap --norm=sign --cutoff=1.0
+FeatureNormalizer --in=top_intent --out=email_intent_final --norm=sign --cutoff=1.0
 
 
 # my add 
@@ -109,8 +130,8 @@ FeatureNormalizer --in=top_intent --out=top_intent_after_one_as_cap --norm=sign 
 #####
 # output default for default, remove in the future
 #####
-FeatureNormalizer --in=ExternalInput1 --out=email_domain_final --norm=identity
-FeatureNormalizer --in=ExternalInput2 --out=email_intent_final --norm=identity
+#FeatureNormalizer --in=ExternalInput1 --out=email_domain_final --norm=identity
+#FeatureNormalizer --in=ExternalInput2 --out=email_intent_final --norm=identity
 #####
 # output default for default, remove in the future
 #####
