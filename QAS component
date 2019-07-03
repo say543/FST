@@ -99,3 +99,10 @@ in luna_teams_intents.multiturn.pipeline.txt
                         1[0,0]=1
 in email.intent.model.20190116.pipeline.txt
 
+
+[FeatureSimpleFilter]
+
+用tags id 做match  用來filter 那些intent 
+in email.intent.model.20190116.pipeline.txt
+
+
