@@ -396,6 +396,9 @@ yes\tPreviousTurnIntent\t0\t1\tsend_email\t1.0\t-1\t-1\tPreviousTurnDomain\t0\t1
 [qd_email_intent_featurizer]
 這邊有有用到multi turn action
 可以考慮加在這
+實際instance 
+email.intent.model.20190116.pipeline.txt
+也有parse TaskFrameEntityStates
 
 
 //這個不是last mappiing
