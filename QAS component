@@ -87,4 +87,15 @@ luna_teams_intents.multiturn.def.txt
 in luna_teams_intents.multiturn.pipeline.txt
 
 
+[MlgFeaturizer]
+
+? 還不知道功能是啥
+  把input 
+        Inputs:
+                ExternalInput3 (tag: 0, string: 1)
+                        send_email[-1,-1]=1
+        Output:
+                PreviousIntentMatch (tag: 1, string: 0)
+                        1[0,0]=1
+in email.intent.model.20190116.pipeline.txt
 
