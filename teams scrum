@@ -317,7 +317,22 @@ no\tFEATURE.CLUTEAMS\t0\t1\t1\t1\t-1\t-1\tPreviousTurnDomain\t0\t1\tteams\t1\t-1
 
 
 
+參考feature 來處理 PromptedForValue 
+[qd_teams_MV1_slots_pattern_featurizer]
+來fill 
+有用到
+ExternalFeatureSet:TaskFrameEntityStates:ExternalInput5
+用到 luna_teams_slots.conditions.txt
+這邊是把上次turn TaskFrameEntityStates 要fill 的case 當作case 然後選不同的fst 來tag
+? 這個以後再仔細研究
+(根據yue 的說法 promutedFroValue 如果有多個以上,  cortana 會用多個response 來一次一個resolve)
 
+
+
+
+p.s communication 的multi turn 可以參考一下
+? 
+luna_communication_intents.multiturn
 
 
 ===================================
