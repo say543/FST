@@ -18,7 +18,7 @@ param:SeparatorChars=" \\t"
 
 [qd_email_domain_intent_last_eval_featurizer]
 implementationclassname=MLG34PipelineFeaturizer
-input=email:email_domain_query_hotfix:ExternalInput1,email:cortana_email_enus_MV1_intents_hotfix_transformed:ExternalInput2
+input=email:email_domain_query_hotfix:ExternalInput1,email:email_intent_keep_first_turn_multiturn:ExternalInput2
 output=email_domain_final,email_intent_final
 param:ExpectNonEmptyFeatureSet=false
 param:GenerateEmptyFeatureSets=false
