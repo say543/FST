@@ -54,15 +54,6 @@ param:SeparatorChars=" \\t"
 #     email:email_intent_keep_first_turn_multiturn
 #
 
-##########################################################################
-### teams input for reference, remove in the future
-### common:cortana_common_enus_MV2_domain_hotfix:ExternalInput1
-### common:cortana_common_enus_MV2_intents_hotfix:ExternalInput2
-### ExternalFeatureSet:PreviousTurnDomain:ExternalInput3
-### ExternalFeatureSet:TaskFrameStatus:ExternalInput4
-### teams:teams_domain_hotfix:ExternalInput5
-#########################################################################
-
 # if previous turn domain == current domain
 ConstFeatureGenerator --in=BodySurfaceStream --out=CurrentDomain --stringfeaturevalue=email
 ConditionalFeatureSetFilter --in=CurrentDomain,ExternalInput3 --out=valid_previous_turn_domain --filterCriteria=Y_IF_Y_CONTAINS_ANY_X
@@ -132,7 +123,7 @@ FeatureValueAggregator --in=merged_external_intent,valid_previous_turn_domain_an
 TopN --in=merged_intents --out=top_intent  --n=1 --order=desc
 
 # scale to 1 if bigger than 0.3 (0.3 is )
-FeatureNormalizer --in=top_intent --out=email_intent_keep_first_turn_multiturn --norm=sign --cutoff=1.0
+#FeatureNormalizer --in=top_intent --out=email_intent_keep_first_turn_multiturn --norm=sign --cutoff=1.0
 #FeatureNormalizer --in=top_intent --out=email_intent_keep_first_turn_multiturn --norm=sign --cutoff=0.1
 
 
@@ -146,96 +137,4 @@ FeatureNormalizer --in=top_intent --out=top_intent_if_first_turn_win_after_cutof
 FeatureSimpleFilter --in=top_intent,ExternalInput2 --out=top_intent_if_original_intent_win --keepTagsFromFeatureSet 
 
 # output final intent with correct weight
-FeatureSetMerger --in=top_intent_if_original_intent_win,top_intent_if_first_turn_win_after_cutoff --out=test --algo=mergeall
-
-
-# must have string value given otherwise it will fail
-#ConstFeatureGenerator --in=BodySurfaceStream --out=first_turn_win_threshold --stringfeaturevalue=first_turn_win_threshold --weight=1.2
-
-#ConditionalFeatureSetFilter --in=top_intent,first_turn_win_threshold --out=top_intent_if_first_turn_win --filterCriteria=GREATER_THAN_OR_EQUAL_CLASSIFIER_THRESHOLD --threshold=1.2
-#ConditionalFeatureSetFilter --in=top_intent,first_turn_win_threshold --out=valid_previous_turn_domain_and_common_score --filterCriteria=GREATER_THAN_OR_EQUAL_CLASSIFIER_THRESHOLD --threshold=0.8
-
-
-# ? not sure wht this does not wokr as document
-#FeatureSimpleFilter --in=top_intent --out=top_intent_if_original_intent_win --keepStringWeights=2.0 --weightPrecision=0.01
-
-
-# extract first turn intent if wins
-# if first turn intent wins, weight will be 2 and it will shift back to weight =1
-# otherwise it will be empty
-#FeatureSetFilter --in=top_intent,top_intent --out=top_intent_if_first_turn_win--filterWeight=2 --conditionInFirstFeatureSet=0
-
-
-
-#FeatureFilter --in=top_intent --out=top_intent_if_first_turn_win --keepStringWeights=2.0
-
-# 
-#ConditionalFeatureSetFilter --in=top_intent_if_first_turn_win, email_intent_keep_first_turn_multiturn --out=email_intent_keep_first_turn_multiturn --filterCriteria=Y_IF_Y_CONTAINS_ANY_X_OR_X_EMPTY
-
-
-
-# if first turn intent wins, weight will be 2 and it will shift back to weight [0, 1]
-# if original turn intent wins, it will be negative but it will be processed to gain back  
-## FeatureShifter --in=top_intent --out=top_intent_after_shift --shift=-1 --field=Weight --trimStart=false
-## FeatureSetMerger --in=top_intent_after_shift,ExternalInput2 --out=intents_after_shift_and_merge_with_original_turn_intent --algo=mergeall
-# choose top intent
-# if first turn intent has eqaul weight (weight ==1) as originla turn intent, it will be picked up at first based on order
-# TopN --in=intents_after_shift_and_merge_with_original_turn_intent --out=email_intent_keep_first_turn_multiturn  --n=1 --order=desc
-
-
-# merge by 
-
-
-# my add 
-#FeatureIdMapper --in=ExternalInput2 --out=mapped_intent --map=cortana_email_enus_MV1.intents.multiturn.idmap.txt
-
-
-
-# my add
-#FeaturesSparseCrossProduct --in=valid_previous_turn_domain_feature,merged_intent --out=merged_intent_after_previous_domain --def=cortana_email_enus_MV1.intents.multiturn.previous.turn.def.txt
-
-
-
-
-
-
-
-#####
-# output default for default, remove in the future
-#####
-#FeatureNormalizer --in=ExternalInput1 --out=email_domain_final --norm=identity
-#FeatureNormalizer --in=ExternalInput2 --out=email_intent_final --norm=identity
-#####
-# output default for default, remove in the future
-#####
-
-
-
-##TopN --in=ExternalInput2 --out=additional_intent_id  --n=1 --order=desc
-##FeatureIdMapper --in=additional_intent_id --out=mapped_intent_id --map=luna_teams_intent.multiturn.idmap.txt
-##FeatureNormalizer --in=mapped_intent_id --out=scaled_mapped_intent --norm=linear --scale=1
-
-##FeatureTagToText --in=scaled_mapped_intent --out=scaled_mapped_intent_text
-##ConditionalFeatureSetFilter --in=scaled_mapped_intent_text,valid_previous_turn_domain_and_common_score --out=valid_previous_turn_domain_and_common_score_and_intent_id --filterCriteria=EMPTY_IF_X_IS_EMPTY_ELSE_Y
-##WhitelistFeaturizer --in=valid_previous_turn_domain_and_common_score_and_intent_id --out=valid_tag_feature --textwhitelist=luna_teams_intents.multiturn.whitelist.txt
-
-### append the intent score
-##RandomFeature --in=BodySurfaceStream --out=zero_intent --rv=constant --val=0 --tagidval=0 --fromval=-1 --toval=-1 --numOutputs=39 --outputZeroValueFeatures=true
-##FeatureValueAggregator --in=scaled_mapped_intent,zero_intent --out=merged_intent --algo=max --aggregatePerFeatureId
-##FeaturesSparseCrossProduct --in=valid_tag_feature,merged_intent --out=teams_intents_fst_lang_model --def=luna_teams_intents.multiturn.def.txt
-
-### update domain score to 1 in valid confirm/cancel/reject cases
-##FeatureNormalizer --in=valid_tag_feature --out=teams_domain_final --norm=identity
-
-### Trigger teams domain to be domain score 1.0 and intent as 'teamspace_help', 
-### if common domain triggers with intent 'help' and domain score above 0.9
-
-##FeatureIdMapper --in=additional_intent_id --out=mapped_intent_id_common_help --map=luna_teams_intent.common.help.idmap.txt
-##FeatureNormalizer --in=ExternalInput1 --out=common_domain_scaled --norm=sign --cutoff=0.9
-##FeatureSetFilter --in=common_domain_scaled,mapped_intent_id_common_help --out=teams_domain_final --filterTagId=19 --filterWeight=1 --keepTagFeatures=1
-##FeatureNormalizer --in=ExternalInput5 --out=teams_domain_final --norm=identity
-
-##FeatureSetFilter --in=common_domain_scaled,mapped_intent_id_common_help --out=teams_intent_common_output --filterTagId=19 --filterWeight=1 --keepTagFeatures=1
-##RandomFeature --in=BodySurfaceStream --out=zero_intent --rv=constant --val=0 --tagidval=0 --fromval=-1 --toval=-1 --numOutputs=39 --outputZeroValueFeatures=true
-##FeatureValueAggregator --in=mapped_intent_id_common_help,zero_intent --out=teams_intents_common_help --algo=max --aggregatePerFeatureId
-##FeaturesSparseCrossProduct --in=teams_intent_common_output,teams_intents_common_help --out=teams_intents_fst_lang_model --def=luna_teams_intents.common.help.def.txt
+FeatureSetMerger --in=top_intent_if_original_intent_win,top_intent_if_first_turn_win_after_cutoff --out=email_intent_keep_first_turn_multiturn --algo=mergeall
