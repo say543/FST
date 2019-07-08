@@ -75,6 +75,15 @@ optional  選 emaillu
 
 
 ====================
+<update view>
+codeflow
+===================
+在現有的view 的上面有個+ 號
+可以選updeate view
+就因該會抓到latest change
+
+
+====================
 <submit>
 QAS
 ===================
