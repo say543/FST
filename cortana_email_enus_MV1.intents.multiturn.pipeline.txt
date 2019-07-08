@@ -22,6 +22,17 @@ param:SeparatorChars=" \\t"
 
 ##########################################################################
 # Mulit turn Pipeline for keeping the first turn intent without modifying  given the following scenarios
+# if previous domain equals to current domain (email) and 
+# if previous intent equals to send_email and 
+# if TaskFrameStatus has message:PromptedForValue
+# then keeps the first turn intent for
+# yes -> send_email 
+# no -> send_email
+# cancel -> send_email 
+# otherwise
+# yes -> confirm 
+# no -> send_email
+# cancel -> cancel
 ##
 # Inputs
 #     email:email_domain_query_hotfix:ExternalInput1
@@ -31,7 +42,7 @@ param:SeparatorChars=" \\t"
 #     ExternalFeatureSet:TaskFrameEntityStates:ExternalInput5
 #     
 # Outputs
-#     email:email_intent_final
+#     email:email_intent_keep_first_turn_multiturn
 #
 
 ##########################################################################
@@ -95,7 +106,8 @@ FeatureValueAggregator --in=TaskFrameEntityStatesMatch --out=PromptForSelectionC
 FeaturesSparseCrossProduct --in=valid_previous_turn_domain_feature,valid_intent_feature --out=valid_previous_turn_domain_and_valid_intent_feature --def=cortana_email_enus_MV1.intents.multiturn.previous.turn.def.txt
 FeaturesSparseCrossProduct --in=valid_previous_turn_domain_and_valid_intent_feature,PromptForSelectionCount --out=valid_previous_turn_domain_and_valid_intent_feature_and_PromptForSelectionCount --def=cortana_email_enus_MV1.intents.multiturn.previous.turn.def.txt
 # scale to 2
-FeatureNormalizer --in=valid_previous_turn_domain_and_valid_intent_feature_and_PromptForSelectionCount --out=valid_previous_turn_domain_and_valid_intent_feature_and_PromptForSelectionCount_after_scale --norm=linear --scale=2 
+FeatureNormalizer --in=valid_previous_turn_domain_and_valid_intent_feature_and_PromptForSelectionCount --out=valid_previous_turn_domain_and_valid_intent_feature_and_PromptForSelectionCount_after_scale --norm=linear --scale=2
+
 # map from list for intents to send_email based on configuration files
 FeatureIdMapper --in=valid_previous_turn_domain_and_valid_intent_feature_and_PromptForSelectionCount_after_scale --out=valid_previous_turn_domain_and_valid_intent_feature_and_PromptForSelectionCount_after_scale_and_map --map=cortana_email_enus_MV1.intents.multiturn.sendEmail.idmap.txt
 
@@ -109,8 +121,60 @@ FeatureValueAggregator --in=merged_external_intent,valid_previous_turn_domain_an
 
 # choose top intent
 TopN --in=merged_intents --out=top_intent  --n=1 --order=desc
-#scale to 1 if bigger than 1
-FeatureNormalizer --in=top_intent --out=email_intent_final --norm=sign --cutoff=1.0
+
+# scale to 1 if bigger than 0.3 (0.3 is )
+FeatureNormalizer --in=top_intent --out=email_intent_keep_first_turn_multiturn --norm=sign --cutoff=1.0
+#FeatureNormalizer --in=top_intent --out=email_intent_keep_first_turn_multiturn --norm=sign --cutoff=0.1
+
+
+# extract first turn intent if wins
+# if first turn intent wins, weight will be 2 and it will shift back to weight =1
+# otherwise it will be empty
+FeatureNormalizer --in=top_intent --out=top_intent_if_first_turn_win_after_cutoff --norm=sign --cutoff=1.0
+
+# extract original turn intent if wins
+# otherwise it will be empty
+FeatureSimpleFilter --in=top_intent,ExternalInput2 --out=top_intent_if_original_intent_win --keepTagsFromFeatureSet 
+
+# output final intent with correct weight
+FeatureSetMerger --in=top_intent_if_original_intent_win,top_intent_if_first_turn_win_after_cutoff --out=test --algo=mergeall
+
+
+# must have string value given otherwise it will fail
+#ConstFeatureGenerator --in=BodySurfaceStream --out=first_turn_win_threshold --stringfeaturevalue=first_turn_win_threshold --weight=1.2
+
+#ConditionalFeatureSetFilter --in=top_intent,first_turn_win_threshold --out=top_intent_if_first_turn_win --filterCriteria=GREATER_THAN_OR_EQUAL_CLASSIFIER_THRESHOLD --threshold=1.2
+#ConditionalFeatureSetFilter --in=top_intent,first_turn_win_threshold --out=valid_previous_turn_domain_and_common_score --filterCriteria=GREATER_THAN_OR_EQUAL_CLASSIFIER_THRESHOLD --threshold=0.8
+
+
+# ? not sure wht this does not wokr as document
+#FeatureSimpleFilter --in=top_intent --out=top_intent_if_original_intent_win --keepStringWeights=2.0 --weightPrecision=0.01
+
+
+# extract first turn intent if wins
+# if first turn intent wins, weight will be 2 and it will shift back to weight =1
+# otherwise it will be empty
+#FeatureSetFilter --in=top_intent,top_intent --out=top_intent_if_first_turn_win--filterWeight=2 --conditionInFirstFeatureSet=0
+
+
+
+#FeatureFilter --in=top_intent --out=top_intent_if_first_turn_win --keepStringWeights=2.0
+
+# 
+#ConditionalFeatureSetFilter --in=top_intent_if_first_turn_win, email_intent_keep_first_turn_multiturn --out=email_intent_keep_first_turn_multiturn --filterCriteria=Y_IF_Y_CONTAINS_ANY_X_OR_X_EMPTY
+
+
+
+# if first turn intent wins, weight will be 2 and it will shift back to weight [0, 1]
+# if original turn intent wins, it will be negative but it will be processed to gain back  
+## FeatureShifter --in=top_intent --out=top_intent_after_shift --shift=-1 --field=Weight --trimStart=false
+## FeatureSetMerger --in=top_intent_after_shift,ExternalInput2 --out=intents_after_shift_and_merge_with_original_turn_intent --algo=mergeall
+# choose top intent
+# if first turn intent has eqaul weight (weight ==1) as originla turn intent, it will be picked up at first based on order
+# TopN --in=intents_after_shift_and_merge_with_original_turn_intent --out=email_intent_keep_first_turn_multiturn  --n=1 --order=desc
+
+
+# merge by 
 
 
 # my add 
