@@ -449,8 +449,23 @@ no\tPreviousTurnIntent\t0\t1\tsend_email\t1.0\t-1\t-1\tPreviousTurnDomain\t0\t1\
   同 yes  
   svm 就是這個的intent 來源
 
-cance\tPreviousTurnIntent\t0\t1\tsend_email\t1.0\t-1\t-1\tPreviousTurnDomain\t0\t1\temail\t1.0\t-1\t-1\tTaskFrameEntityStates\t0\t1\tmessage:PromptedForValue\t1\t-1\t-1l
+no\tPreviousTurnIntent\t0\t1\tsend_email\t1.0\t-1\t-1\tPreviousTurnDomain\t0\t1\temail\t1.0\t-1\t-1\tTaskFrameEntityStates\t0\t1\temail_subject:PromptedForValue\t1\t-1\t-1
+  7還是7
+  同 yes  
+  svm 就是這個的intent 來源
+
+
+cancel\tPreviousTurnIntent\t0\t1\tsend_email\t1.0\t-1\t-1\tPreviousTurnDomain\t0\t1\temail\t1.0\t-1\t-1\tTaskFrameEntityStates\t0\t1\tmessage:PromptedForValue\t1\t-1\t-1l
   1 還是1
   同yes , no
   svm 就是這個的intent 來源
+  
+no\tPreviousTurnIntent\t0\t1\tsend_email\t1.0\t-1\t-1\tPreviousTurnDomain\t0\t1\temail\t1.0\t-1\t-1\tTaskFrameEntityStates\t0\t1\temail_subject:PromptedForValue\t1\t-1\t-1
+  7還是7
+  同 yes  
+  svm 就是這個的intent 來源
+
+  
+  
+  
 
