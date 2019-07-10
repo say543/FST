@@ -25,6 +25,9 @@ QcsQueryLabelWithLes.exe -c D:\SearchGold\deploy\builds\data\Answers\QasIpe01Ds 
 --externalFeaturesColumn 2,9,16,23
 是說明ExternalFeatureSet 的來源
 
+   p.s 如果是依序填　　感覺只要有2 像teams 就可以　依序parsing (實際測試是ok 的) 
+   
+
 對照　test case
 <--queryInColumn 1>
 <column 1 代表是query>
