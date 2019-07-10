@@ -6,29 +6,6 @@ featurizer1402=qd_email_domain_intent_last_eval_featurizer
 
 //before [qd_email_domain_intent_last_eval_featurizer]
 
-[qd_email_intent_keep_previous_turn_multiturn_featurizer]
-implementationclassname=MLG34PipelineFeaturizer
-input=email:email_domain_query_hotfix:ExternalInput1,email:cortana_email_enus_MV1_intents_hotfix_transformed:ExternalInput2,ExternalFeatureSet:PreviousTurnDomain:ExternalInput3,ExternalFeatureSet:PreviousTurnIntent:ExternalInput4,ExternalFeatureSet:TaskFrameEntityStates:ExternalInput5
-output=email_intent_keep_previous_turn_multiturn
-param:ExpectNonEmptyFeatureSet=false
-param:GenerateEmptyFeatureSets=false
-param:PipelineBaseFilename=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn
-param:FeatureSetNameDomainMapping=email_intent_keep_previous_turn_multiturn:email
-param:SeparatorChars=" \\t"
-
-[qd_email_domain_intent_last_eval_featurizer]
-implementationclassname=MLG34PipelineFeaturizer
-input=email:email_domain_query_hotfix:ExternalInput1,email:email_intent_keep_previous_turn_multiturn:ExternalInput2
-output=email_domain_final,email_intent_final
-param:ExpectNonEmptyFeatureSet=false
-param:GenerateEmptyFeatureSets=false
-param:PipelineBaseFilename=email.last.eval.domain_intent
-param:FeatureSetNameDomainMapping=email_domain_final:email,email_intent_final:email
-param:SeparatorChars=" \\t"
-
-
-
-
 ##########################################################################
 # Mulit turn Pipeline for keeping the previous turn intent without modifying  given the following scenarios
 # if previous domain equals to current domain (email) and 
@@ -81,7 +58,6 @@ FeatureShifter --in=send_email_or_reply_or_forward_after_map --out=send_email_or
 # otherwise output 0[-1,-1]= 0
 FeatureValueAggregator --in=send_email_or_reply_or_forward_after_map_shift --out=valid_intent_feature --algo=count --default=0
 
-
 # if either message:PromptedForValue (tag1) or email_subject:PromptedForValue(tag2) exists exclusively, generate feature set 1[0,0]= 1 or 2[0,0]= 1
 SingleTokenView --in=ExternalInput5 --out=TaskFrameEntityStates
 MlgFeaturizer --in=TaskFrameEntityStates --out=TaskFrameEntityStatesMatch --fts=email.TaskFrameEntityStates.20180518.bin
@@ -96,7 +72,6 @@ FeaturesSparseCrossProduct --in=valid_previous_turn_domain_feature,valid_intent_
 FeaturesSparseCrossProduct --in=valid_previous_turn_domain_and_valid_intent_feature,message_or_email_subject_promptedForValue_count --out=valid_previous_turn_domain_and_valid_intent_feature_and_messageOremail_subject_promptedForValue --def=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn.def.txt
 # scale to 2
 FeatureNormalizer --in=valid_previous_turn_domain_and_valid_intent_feature_and_messageOremail_subject_promptedForValue --out=valid_previous_turn_domain_and_valid_intent_feature_and_messageOremail_subject_promptedForValue_after_scale --norm=linear --scale=2
-
 
 # map from a list of intents to previous turn intent
 FeaturesSparseCrossProduct --in=valid_previous_turn_domain_and_valid_intent_feature_and_messageOremail_subject_promptedForValue_after_scale,send_email_or_reply_or_forward_after_map_shift --out=valid_previous_turn_domain_and_valid_intent_feature_and_messageOremail_subject_promptedForValue_after_scale_and_map --def=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn.def.txt
