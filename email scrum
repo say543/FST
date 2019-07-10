@@ -21,6 +21,50 @@ p.s 第一個可能會對search gold 的change list 產生問題
 michael example 
 QcsQueryLabelWithLes.exe -c D:\SearchGold\deploy\builds\data\Answers\QasIpe01Ds --variant Prod.email_enus_MV1  --verbose --legacyAllowUnusedParameters -dl email --encoding utf-8 --interactive --externalFeaturesColumn 2,9,16,23 --queryInColumn 1
 
+
+--externalFeaturesColumn 2,9,16,23
+是說明ExternalFeatureSet 的來源
+
+對照　test case
+<--queryInColumn 1>
+<column 1 代表是query>
+no\t
+<column 2 as input>
+  PreviousTurnIntent\t
+0\t
+1\t
+send_email\t
+1.0\t
+-1\t
+-1\t
+<column 9 as input>
+  PreviousTurnDomain\t
+0\t
+1\t
+email\t
+1.0\t
+-1\t
+-1\t
+<column 16 as input>
+   TaskFrameEntityStates\t
+0\t
+1\t
+email_subject:PromptedForValue\t
+1\t
+-1\t
+-1\t
+<columb 23 as input>
+    TaskFrameStatus
+    
+    p.s 目前測試都沒有specify this 
+
+每一個external feature  都有他的固定的格式
+
+for example:
+
+
+
+
 change to meet old 我們舊的方式
 其中一個column
 .\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2,9,16,23 --queryInColumn 1 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c E:\SearchGold\deploy\builds\data\answers\QasIpe01Ds  --variant Prod.email_enus_MV1 -dl email
