@@ -85,27 +85,27 @@ FeatureValueAggregator --in=send_email_or_reply_or_forward_after_map_shift --out
 # if either message:PromptedForValue (tag1) or email_subject:PromptedForValue(tag2) exists exclusively, generate feature set 1[0,0]= 1 or 2[0,0]= 1
 SingleTokenView --in=ExternalInput5 --out=TaskFrameEntityStates
 MlgFeaturizer --in=TaskFrameEntityStates --out=TaskFrameEntityStatesMatch --fts=email.TaskFrameEntityStates.20180518.bin
-FeatureSimpleFilter --in=TaskFrameEntityStatesMatch --out=message_or_email_subject_promoted --keepTags=1,2
+FeatureSimpleFilter --in=TaskFrameEntityStatesMatch --out=message_or_email_subject_promptedForValue --keepTags=1,2
 # then transfrom from  1[0,0]= 1 or 2[0,0]= 1 to 0[-1,-1]= 1
 # otherwise output 0[-1,-1]= 0
-FeatureValueAggregator --in=message_or_email_subject_promoted --out=message_or_email_subject_promoted_count --algo=count --default=0
+FeatureValueAggregator --in=message_or_email_subject_promptedForValue --out=message_or_email_subject_promptedForValue_count --algo=count --default=0
 
 # if neither one input is valid, output 0[-1,-1] = 0 or or empty feature set
 # otherwise output 0[-1,-1] = 1
 FeaturesSparseCrossProduct --in=valid_previous_turn_domain_feature,valid_intent_feature --out=valid_previous_turn_domain_and_valid_intent_feature --def=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn.def.txt
-FeaturesSparseCrossProduct --in=valid_previous_turn_domain_and_valid_intent_feature,message_or_email_subject_promoted_count --out=valid_previous_turn_domain_and_valid_intent_feature_and_PromptForSelectionCount --def=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn.def.txt
+FeaturesSparseCrossProduct --in=valid_previous_turn_domain_and_valid_intent_feature,message_or_email_subject_promptedForValue_count --out=valid_previous_turn_domain_and_valid_intent_feature_and_messageOremail_subject_promptedForValue --def=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn.def.txt
 # scale to 2
-FeatureNormalizer --in=valid_previous_turn_domain_and_valid_intent_feature_and_PromptForSelectionCount --out=valid_previous_turn_domain_and_valid_intent_feature_and_PromptForSelectionCount_after_scale --norm=linear --scale=2
+FeatureNormalizer --in=valid_previous_turn_domain_and_valid_intent_feature_and_messageOremail_subject_promptedForValue --out=valid_previous_turn_domain_and_valid_intent_feature_and_messageOremail_subject_promptedForValue_after_scale --norm=linear --scale=2
 
 
 # map from a list of intents to previous turn intent
-FeaturesSparseCrossProduct --in=valid_previous_turn_domain_and_valid_intent_feature_and_PromptForSelectionCount_after_scale,send_email_or_reply_or_forward_after_map_shift --out=valid_previous_turn_domain_and_valid_intent_feature_and_PromptForSelectionCount_after_scale_and_map --def=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn.def.txt
+FeaturesSparseCrossProduct --in=valid_previous_turn_domain_and_valid_intent_feature_and_messageOremail_subject_promptedForValue_after_scale,send_email_or_reply_or_forward_after_map_shift --out=valid_previous_turn_domain_and_valid_intent_feature_and_messageOremail_subject_promptedForValue_after_scale_and_map --def=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn.def.txt
 
 # generate zero weight for all intents based on the length of cortana_email_enus_MV1.intents.whitelist.pcfg.tagset.txt
-# merge ExternalInput2 and the intent output from condition regarding previous turn doamin / current turn intent / message prompted
+# merge ExternalInput2 and the intent output from condition regarding previous turn doamin / current turn intent / message or email subject promptedForValue
 RandomFeature --in=BodySurfaceStream --out=zero_intent --rv=constant --val=0 --tagidval=0 --fromval=-1 --toval=-1 --numOutputs=13 --outputZeroValueFeatures=true
 FeatureValueAggregator --in=ExternalInput2,zero_intent --out=merged_external_intent --algo=max --aggregatePerFeatureId
-FeatureValueAggregator --in=merged_external_intent,valid_previous_turn_domain_and_valid_intent_feature_and_PromptForSelectionCount_after_scale_and_map --out=merged_intents --algo=max --aggregatePerFeatureId
+FeatureValueAggregator --in=merged_external_intent,valid_previous_turn_domain_and_valid_intent_feature_and_messageOremail_subject_promptedForValue_after_scale_and_map --out=merged_intents --algo=max --aggregatePerFeatureId
 
 # choose top intent
 TopN --in=merged_intents --out=top_intent  --n=1 --order=desc
