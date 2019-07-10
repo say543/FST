@@ -151,7 +151,7 @@ Inputs:
       email[-1,-1]=1
       
     這邊的email 是string
-    ? 怎麼轉的  裡面可能會在自己轉
+    ? 怎麼轉的  裡面可能會在自己轉　但是就先follow 這個順序
 
 
 p.s 跟實際的MLG processor format很similar 但是這邊的a 是tag id 
