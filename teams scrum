@@ -94,6 +94,22 @@ teams 要這樣trigger 才行
 
 share the lt review. pptx file\tFEATURE.CLUTEAMS\t 0 \t 1 \t 1 \t 1 \t -1 \t -1
 
+FEATURE.CLUTEAMS\t 0 \t 1 \t 1 \t 1 \t -1 \t -1
+
+FEATURE.CLUTEAMS 是比較特別的external feature set
+用在[qd_teams_control_flight] 這個featurizer 用來control flight
+   ? 不太知道怎麼control flight
+但是format 是 一樣的
+
+第一個0 忘記是什麼?
+第一個1 代表
+number of string features
+代表後面 一個 triple
+1 : wegiht
+1 => 代表string 
+[-1 , -1] index 的span
+
+
 
 evaluation  output 的新的path
 E:\CoreScienceDataStaging\TestResults\Evaluation\Full
