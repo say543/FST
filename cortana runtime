@@ -1,0 +1,30 @@
+user  -> api client -> cortana runtime
+
+
+
+<api client>
+user 知道要hit 的client id 
+根據user 的來源 和  client id  來append   feature list   as client id : feature list
+
+client id 可能是desktop, voice mobile 不同的來源和 ring
+
+ features list  是在某一個desktop, voice mobile or which ring(selfhost, production)  conidtion 下面存在的feature
+ 
+
+每一個feature 可能就是一個qpc file
+
+<cortana runtime>
+收到client id : feature list 來查詢QPC files 來parsing
+
+
+
+
+so
+如果要ship 一個新的domain for a qpc
+你要決定  你要提供在哪一個client id  然後自己決定feature name (feature name 必須要unique comapred to all existing features)
+
+
+
+
+ 
+ 
