@@ -1,3 +1,7 @@
+
+
+
+
 search gold 的三個view
 //depot/deploy/builds/data/answers/QasIpe01Ds/... //DESKTOP-3J7614O-searchgold-2/deploy/builds/data/answers/QasIpe01Ds/...
 //depot/deploy/builds/data/answers/QAS12HttpQAS/... //DESKTOP-3J7614O-searchgold-2/deploy/builds/data/answers/QAS12HttpQAS/...
@@ -10,12 +14,20 @@ p.s 第一個可能會對search gold 的change list 產生問題
 //depot/deploy/builds/data/local/... //DESKTOP-3J7614O-searchgold-2/deploy/builds/data/local/...
 
 
+
+
+
+
 michael example 
 QcsQueryLabelWithLes.exe -c D:\SearchGold\deploy\builds\data\Answers\QasIpe01Ds --variant Prod.email_enus_MV1  --verbose --legacyAllowUnusedParameters -dl email --encoding utf-8 --interactive --externalFeaturesColumn 2,9,16,23 --queryInColumn 1
 
 change to meet old 我們舊的方式
 其中一個column
 .\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2,9,16,23 --queryInColumn 1 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c E:\SearchGold\deploy\builds\data\answers\QasIpe01Ds  --variant Prod.email_enus_MV1 -dl email
+
+directory
+PS E:\CoreScienceDataStaging\datasources\Email\queryclassificationprocessing>
+
 
 prod.email_enus_mv1
 這個是ini 的name
@@ -56,6 +68,18 @@ deploy/builds/data/local/email
 其中一個
 email.message_type.partial.pattern.tagger.partial.txt
 
+
+如何compile regular expression 的fst
+目前plan 在這邊做所有fst 的compile action until michael 把所有files 都放到repo 上
+
+E:\CoreScienceDataStaging\datasources\Email\resources\infiles>mlgtools\MLGTools.exe feat2proc -fsrc=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn.filter.txt -fbin=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn.filter.bin
+
+常出現的錯誤
+CriticalFailure : error encountered while processing command 'feat2proc':
+CriticalFailure :       System.IO.FileNotFoundException: Could not find file 'E:\CoreScienceDataStaging\datasources\Email\resources\infiles\mlgtools\email.taskframeentitystates.txt'.
+
+通常是naming 有錯
+mlgtools 是一個sub directory 也可執行  跟location 不太有關西
 
 
 ========================
