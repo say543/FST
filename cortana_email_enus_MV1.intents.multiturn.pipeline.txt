@@ -32,8 +32,8 @@ param:SeparatorChars=" \\t"
 ##########################################################################
 # Mulit turn Pipeline for keeping the previous turn intent without modifying  given the following scenarios
 # if previous domain equals to current domain (email) and 
-# if previous intent equals to send_email (tag 0)(happening in the first turn)  , reply (tag 1 ) or forward (tag 2) (happeing in the third turn) 
-# if TaskFrameStatus has message:PromptedForValue (tag1) or email_subject:PromptedForValue(tag2) exclusively
+# if previous intent equals to send_email (happening in the first turn)  , reply or forward (happeing in the third turn) 
+# if TaskFrameStatus has message:PromptedForValue or email_subject:PromptedForValue exclusively
 #
 # then for 'send_email'
 # yes -> send_email 
@@ -48,8 +48,7 @@ param:SeparatorChars=" \\t"
 # user message -> reply or forward 
 # otherwise
 # user message -> user message originial intent
-
-
+#
 ##
 # Inputs
 #     email:email_domain_query_hotfix:ExternalInput1
@@ -66,11 +65,6 @@ param:SeparatorChars=" \\t"
 ConstFeatureGenerator --in=BodySurfaceStream --out=CurrentDomain --stringfeaturevalue=email
 ConditionalFeatureSetFilter --in=CurrentDomain,ExternalInput3 --out=valid_previous_turn_domain --filterCriteria=Y_IF_Y_CONTAINS_ANY_X
 WhitelistFeaturizer --in=valid_previous_turn_domain --out=valid_previous_turn_domain_feature --textwhitelist=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn.previous.turn.domain.whitelist.txt
-
-# if previous turn intent == send_email
-##ConstFeatureGenerator --in=BodySurfaceStream --out=SendEamilIntentFeature --stringfeaturevalue=send_email
-##ConditionalFeatureSetFilter --in=SendEamilIntentFeature,ExternalInput4 --out=valid_previous_turn_intent --filterCriteria=Y_IF_Y_CONTAINS_ANY_X
-##WhitelistFeaturizer --in=valid_previous_turn_intent --out=valid_intent_feature --textwhitelist=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn.intents.whitelist.txt
 
 # if previous turn intent == send_email (tag 0), reply (tag 1 ) or forward (tag 2)
 # Check previous intent and generate conditions
@@ -103,12 +97,8 @@ FeaturesSparseCrossProduct --in=valid_previous_turn_domain_and_valid_intent_feat
 # scale to 2
 FeatureNormalizer --in=valid_previous_turn_domain_and_valid_intent_feature_and_PromptForSelectionCount --out=valid_previous_turn_domain_and_valid_intent_feature_and_PromptForSelectionCount_after_scale --norm=linear --scale=2
 
-# map from a list of intents to send_email based on configuration files
-#FeatureIdMapper --in=valid_previous_turn_domain_and_valid_intent_feature_and_PromptForSelectionCount_after_scale --out=valid_previous_turn_domain_and_valid_intent_feature_and_PromptForSelectionCount_after_scale_and_map --map=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn.sendEmail.idmap.txt
-
 
 # map from a list of intents to previous turn intent
-##FeaturesSparseCrossProduct --in=test,send_email_or_reply_or_forward_after_shift --out=valid_test --def=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn.def.txt
 FeaturesSparseCrossProduct --in=valid_previous_turn_domain_and_valid_intent_feature_and_PromptForSelectionCount_after_scale,send_email_or_reply_or_forward_after_map_shift --out=valid_previous_turn_domain_and_valid_intent_feature_and_PromptForSelectionCount_after_scale_and_map --def=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn.def.txt
 
 # generate zero weight for all intents based on the length of cortana_email_enus_MV1.intents.whitelist.pcfg.tagset.txt
@@ -127,11 +117,9 @@ FeatureNormalizer --in=top_intent --out=top_intent_if_previous_turn_win_after_cu
 
 # extract original turn intent if wins
 # otherwise it will be empty
-# using top_intent as filtering rule so weight will be original weight
-#FeatureSimpleFilter --in=top_intent,ExternalInput2 --out=top_intent_if_original_intent_win --keepTagsFromFeatureSet 
+# using top_intent as filtering rule so weight will be original weight 
 FeatureSimpleFilter --in=ExternalInput2,top_intent --out=top_intent_if_original_intent_win --keepTagsFromFeatureSet 
 
 # output final intent with correct weight
 # favor previous turn intent if weight has tie
-#FeatureSetMerger --in=top_intent_if_original_intent_win,top_intent_if_previous_turn_win_after_cutoff --out=email_intent_keep_previous_turn_multiturn --algo=mergeall
 FeatureSetMerger --in=top_intent_if_previous_turn_win_after_cutoff,top_intent_if_original_intent_win --out=email_intent_keep_previous_turn_multiturn --algo=first
