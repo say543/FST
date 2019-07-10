@@ -71,6 +71,8 @@ email.message_type.partial.pattern.tagger.partial.txt
 
 如何compile regular expression 的fst
 目前plan 在這邊做所有fst 的compile action until michael 把所有files 都放到repo 上
+E:\CoreScienceDataStaging\datasources\Email\resources\infiles
+
 
 E:\CoreScienceDataStaging\datasources\Email\resources\infiles>mlgtools\MLGTools.exe feat2proc -fsrc=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn.filter.txt -fbin=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn.filter.bin
 
