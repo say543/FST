@@ -64,6 +64,20 @@ email_subject:PromptedForValue\t
 每一個external feature  都有他的固定的格式
 
 for example:
+format 說明
+PreviousTurnDomain\t0\t1\temail\t1.0\t-1\t-1
+第一個0 忘記是什麼?
+第一個1 代表
+number of string features
+1代表後面 一個 triple
+1.0 : wegiht
+[-1 , -1] index 的span
+Inputs:
+    ExternalInput6 (tag: 0, string: 1)
+      email[-1,-1]=1
+      
+    這邊的email 是string
+? 怎麼轉的 裡面可能會在自己轉　但是就先follow 這個順序
 
 
 
