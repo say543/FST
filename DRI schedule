@@ -17,12 +17,8 @@ DRI one note
 https://microsoft.sharepoint.com/teams/LUforNextgenAgents/_layouts/15/WopiFrame.aspx?sourcedoc={68deb809-671e-469a-be79-ba53c05298ce}&action=edit&wd=target%28CLU%20DRI.one%7C1990f4e6-5d06-4429-8ee9-ba6b20b33107%2FCLU%20DRI%20Responsibilities%7C5ed62907-5c7f-439a-ac2f-2f09be91c720%2F%29
 
 
-我的xts 的location
-E:\xts-5.1080\xts.exe
-執行就會跑出一個開始的window
-
-
 我的seach gold 的location
+E:\searchgold>
 
 
 hotfix onebook
@@ -41,7 +37,7 @@ model owners
 
 
 weekly DRI list
-"weekly DRI checklist"
+"weekly DRI checklist" (one note)
 with this title
 copy new pages, all links need to be new
  
@@ -49,9 +45,13 @@ copy new pages, all links need to be new
 XTS
 monitor  progress of data centers
 
+我的xts 的location
+E:\xts-5.1080\xts.exe
+執行就會跑出一個開始的window
 
 
-trade id
+
+trace id
 
 cortanalogviwer
 cortana log viewer: 
@@ -88,10 +88,8 @@ clu_ret_ml
 
 
 
-kusto 
-one note
-
-Useful Kusto Queries  (Web view)
+kusto  one note 的page
+'Useful Kusto Queries'  (Web view)
 已裝好  叫做 kusto.explore
 Dialog table 已經看得見
 
