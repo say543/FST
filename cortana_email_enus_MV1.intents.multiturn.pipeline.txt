@@ -1,24 +1,24 @@
 featurizer139=qd_email_mapIntentAndSlotsBack_featurizer
 
 
-featurizer1401=qd_email_intent_keep_first_turn_multiturn_featurizer
+featurizer1401=qd_email_intent_keep_previous_turn_multiturn_featurizer
 featurizer1402=qd_email_domain_intent_last_eval_featurizer
 
 //before [qd_email_domain_intent_last_eval_featurizer]
 
-[qd_email_intent_keep_first_turn_multiturn_featurizer]
+[qd_email_intent_keep_previous_turn_multiturn_featurizer]
 implementationclassname=MLG34PipelineFeaturizer
 input=email:email_domain_query_hotfix:ExternalInput1,email:cortana_email_enus_MV1_intents_hotfix_transformed:ExternalInput2,ExternalFeatureSet:PreviousTurnDomain:ExternalInput3,ExternalFeatureSet:PreviousTurnIntent:ExternalInput4,ExternalFeatureSet:TaskFrameEntityStates:ExternalInput5
-output=email_intent_keep_first_turn_multiturn
+output=email_intent_keep_previous_turn_multiturn
 param:ExpectNonEmptyFeatureSet=false
 param:GenerateEmptyFeatureSets=false
-param:PipelineBaseFilename=cortana_email_enus_MV1.intent.keep.first.turn.multiturn
-param:FeatureSetNameDomainMapping=email_intent_keep_first_turn_multiturn:email
+param:PipelineBaseFilename=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn
+param:FeatureSetNameDomainMapping=email_intent_keep_previous_turn_multiturn:email
 param:SeparatorChars=" \\t"
 
 [qd_email_domain_intent_last_eval_featurizer]
 implementationclassname=MLG34PipelineFeaturizer
-input=email:email_domain_query_hotfix:ExternalInput1,email:email_intent_keep_first_turn_multiturn:ExternalInput2
+input=email:email_domain_query_hotfix:ExternalInput1,email:email_intent_keep_previous_turn_multiturn:ExternalInput2
 output=email_domain_final,email_intent_final
 param:ExpectNonEmptyFeatureSet=false
 param:GenerateEmptyFeatureSets=false
@@ -30,11 +30,12 @@ param:SeparatorChars=" \\t"
 
 
 ##########################################################################
-# Mulit turn Pipeline for keeping the first turn intent without modifying  given the following scenarios
+# Mulit turn Pipeline for keeping the previous turn intent without modifying  given the following scenarios
 # if previous domain equals to current domain (email) and 
-# if previous intent equals to send_email and 
-# if TaskFrameStatus has message:PromptedForValue
-# then keeps the first turn intent for
+# if previous intent equals to send_email (tag 0)(happening in the first turn)  , reply (tag 1 ) or forward (tag 2) (happeing in the third turn) 
+# if TaskFrameStatus has message:PromptedForValue (tag1) or email_subject:PromptedForValue(tag2) exclusively
+#
+# then for 'send_email'
 # yes -> send_email 
 # no -> send_email
 # cancel -> send_email 
@@ -42,6 +43,13 @@ param:SeparatorChars=" \\t"
 # yes -> confirm 
 # no -> reject
 # cancel -> cancel
+#
+# then for 'reply or forward'
+# user message -> reply or forward 
+# otherwise
+# user message -> user message originial intent
+
+
 ##
 # Inputs
 #     email:email_domain_query_hotfix:ExternalInput1
@@ -51,35 +59,57 @@ param:SeparatorChars=" \\t"
 #     ExternalFeatureSet:TaskFrameEntityStates:ExternalInput5
 #     
 # Outputs
-#     email:email_intent_keep_first_turn_multiturn
+#     email:email_intent_keep_previous_turn_multiturn
 ##########################################################################
 
 # if previous turn domain == current domain
 ConstFeatureGenerator --in=BodySurfaceStream --out=CurrentDomain --stringfeaturevalue=email
 ConditionalFeatureSetFilter --in=CurrentDomain,ExternalInput3 --out=valid_previous_turn_domain --filterCriteria=Y_IF_Y_CONTAINS_ANY_X
-WhitelistFeaturizer --in=valid_previous_turn_domain --out=valid_previous_turn_domain_feature --textwhitelist=cortana_email_enus_MV1.intent.keep.first.turn.multiturn.previous.turn.domain.whitelist.txt
+WhitelistFeaturizer --in=valid_previous_turn_domain --out=valid_previous_turn_domain_feature --textwhitelist=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn.previous.turn.domain.whitelist.txt
 
 # if previous turn intent == send_email
-ConstFeatureGenerator --in=BodySurfaceStream --out=SendEamilIntentFeature --stringfeaturevalue=send_email
-ConditionalFeatureSetFilter --in=SendEamilIntentFeature,ExternalInput4 --out=valid_previous_turn_intent --filterCriteria=Y_IF_Y_CONTAINS_ANY_X
-WhitelistFeaturizer --in=valid_previous_turn_intent --out=valid_intent_feature --textwhitelist=cortana_email_enus_MV1.intent.keep.first.turn.multiturn.intents.whitelist.txt
+##ConstFeatureGenerator --in=BodySurfaceStream --out=SendEamilIntentFeature --stringfeaturevalue=send_email
+##ConditionalFeatureSetFilter --in=SendEamilIntentFeature,ExternalInput4 --out=valid_previous_turn_intent --filterCriteria=Y_IF_Y_CONTAINS_ANY_X
+##WhitelistFeaturizer --in=valid_previous_turn_intent --out=valid_intent_feature --textwhitelist=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn.intents.whitelist.txt
 
-# if message:Prompted exists, generate feature set 1[0,0]= 1
-SingleTokenView --in=ExternalInput5 --out=TaskFrameEntityStates
-MlgFeaturizer --in=TaskFrameEntityStates --out=TaskFrameEntityStatesMatch --fts=email.taskframeentitystates.message.bin
-# then transfrom from  1[0,0]= 1 to 0[-1,-1]= 1
+# if previous turn intent == send_email (tag 0), reply (tag 1 ) or forward (tag 2)
+# Check previous intent and generate conditions
+MlgFeaturizer --in=ExternalInput4 --out=PreviousIntentMatch --fts=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn.filter.bin
+FeatureSimpleFilter --in=PreviousIntentMatch --out=send_email_or_reply_or_forward --keepTags=0,1,2
+
+# map send_email (tag 0), reply (tag 1 ) or forward (tag 2) to correct intent tag as
+# send_email (tag 10), reply (tag 8) or forward (tag 6)
+FeatureIdMapper --in=send_email_or_reply_or_forward --out=send_email_or_reply_or_forward_after_map --map=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn.idmap.txt
+# transfrom from  10[0,0]= 1 8[0,0]= 1 or 6[0,0]= 1 to 10[-1,-1]= 1 8[-1,-1]= 1 or 6[-1,-1]= 1
 # otherwise output 0[-1,-1]= 0
-FeatureValueAggregator --in=TaskFrameEntityStatesMatch --out=PromptForSelectionCount --algo=count --default=0
+FeatureShifter --in=send_email_or_reply_or_forward_after_map --out=send_email_or_reply_or_forward_after_map_shift --shift=-1, --trimStart=false
+# transfrom from  10[-1,-1]= 1 8[-1,-1]= 1 or 6[-1,-1] to 0[-1,-1]= 1
+# otherwise output 0[-1,-1]= 0
+FeatureValueAggregator --in=send_email_or_reply_or_forward_after_map_shift --out=valid_intent_feature --algo=count --default=0
+
+
+# if either message:PromptedForValue (tag1) or email_subject:PromptedForValue(tag2) exists exclusively, generate feature set 1[0,0]= 1 or 2[0,0]= 1
+SingleTokenView --in=ExternalInput5 --out=TaskFrameEntityStates
+MlgFeaturizer --in=TaskFrameEntityStates --out=TaskFrameEntityStatesMatch --fts=email.TaskFrameEntityStates.20180518.bin
+FeatureSimpleFilter --in=TaskFrameEntityStatesMatch --out=message_or_email_subject_promoted --keepTags=1,2
+# then transfrom from  1[0,0]= 1 or 2[0,0]= 1 to 0[-1,-1]= 1
+# otherwise output 0[-1,-1]= 0
+FeatureValueAggregator --in=message_or_email_subject_promoted --out=message_or_email_subject_promoted_count --algo=count --default=0
 
 # if neither one input is valid, output 0[-1,-1] = 0 or or empty feature set
 # otherwise output 0[-1,-1] = 1
-FeaturesSparseCrossProduct --in=valid_previous_turn_domain_feature,valid_intent_feature --out=valid_previous_turn_domain_and_valid_intent_feature --def=cortana_email_enus_MV1.intent.keep.first.turn.multiturn.def.txt
-FeaturesSparseCrossProduct --in=valid_previous_turn_domain_and_valid_intent_feature,PromptForSelectionCount --out=valid_previous_turn_domain_and_valid_intent_feature_and_PromptForSelectionCount --def=cortana_email_enus_MV1.intent.keep.first.turn.multiturn.def.txt
+FeaturesSparseCrossProduct --in=valid_previous_turn_domain_feature,valid_intent_feature --out=valid_previous_turn_domain_and_valid_intent_feature --def=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn.def.txt
+FeaturesSparseCrossProduct --in=valid_previous_turn_domain_and_valid_intent_feature,message_or_email_subject_promoted_count --out=valid_previous_turn_domain_and_valid_intent_feature_and_PromptForSelectionCount --def=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn.def.txt
 # scale to 2
 FeatureNormalizer --in=valid_previous_turn_domain_and_valid_intent_feature_and_PromptForSelectionCount --out=valid_previous_turn_domain_and_valid_intent_feature_and_PromptForSelectionCount_after_scale --norm=linear --scale=2
 
 # map from a list of intents to send_email based on configuration files
-FeatureIdMapper --in=valid_previous_turn_domain_and_valid_intent_feature_and_PromptForSelectionCount_after_scale --out=valid_previous_turn_domain_and_valid_intent_feature_and_PromptForSelectionCount_after_scale_and_map --map=cortana_email_enus_MV1.intent.keep.first.turn.multiturn.sendEmail.idmap.txt
+#FeatureIdMapper --in=valid_previous_turn_domain_and_valid_intent_feature_and_PromptForSelectionCount_after_scale --out=valid_previous_turn_domain_and_valid_intent_feature_and_PromptForSelectionCount_after_scale_and_map --map=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn.sendEmail.idmap.txt
+
+
+# map from a list of intents to previous turn intent
+##FeaturesSparseCrossProduct --in=test,send_email_or_reply_or_forward_after_shift --out=valid_test --def=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn.def.txt
+FeaturesSparseCrossProduct --in=valid_previous_turn_domain_and_valid_intent_feature_and_PromptForSelectionCount_after_scale,send_email_or_reply_or_forward_after_map_shift --out=valid_previous_turn_domain_and_valid_intent_feature_and_PromptForSelectionCount_after_scale_and_map --def=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn.def.txt
 
 # generate zero weight for all intents based on the length of cortana_email_enus_MV1.intents.whitelist.pcfg.tagset.txt
 # merge ExternalInput2 and the intent output from condition regarding previous turn doamin / current turn intent / message prompted
@@ -90,14 +120,18 @@ FeatureValueAggregator --in=merged_external_intent,valid_previous_turn_domain_an
 # choose top intent
 TopN --in=merged_intents --out=top_intent  --n=1 --order=desc
 
-# extract first turn intent if wins
-# if first turn intent wins, weight will be 2 and it will scale to weight=1
+# extract previous turn intent if wins
+# if previous turn intent wins, weight will be 2 and it will scale to weight=1
 # otherwise it will be empty
-FeatureNormalizer --in=top_intent --out=top_intent_if_first_turn_win_after_cutoff --norm=sign --cutoff=1.0
+FeatureNormalizer --in=top_intent --out=top_intent_if_previous_turn_win_after_cutoff --norm=sign --cutoff=1.0
 
 # extract original turn intent if wins
 # otherwise it will be empty
-FeatureSimpleFilter --in=top_intent,ExternalInput2 --out=top_intent_if_original_intent_win --keepTagsFromFeatureSet 
+# using top_intent as filtering rule so weight will be original weight
+#FeatureSimpleFilter --in=top_intent,ExternalInput2 --out=top_intent_if_original_intent_win --keepTagsFromFeatureSet 
+FeatureSimpleFilter --in=ExternalInput2,top_intent --out=top_intent_if_original_intent_win --keepTagsFromFeatureSet 
 
 # output final intent with correct weight
-FeatureSetMerger --in=top_intent_if_original_intent_win,top_intent_if_first_turn_win_after_cutoff --out=email_intent_keep_first_turn_multiturn --algo=mergeall
+# favor previous turn intent if weight has tie
+#FeatureSetMerger --in=top_intent_if_original_intent_win,top_intent_if_previous_turn_win_after_cutoff --out=email_intent_keep_previous_turn_multiturn --algo=mergeall
+FeatureSetMerger --in=top_intent_if_previous_turn_win_after_cutoff,top_intent_if_original_intent_win --out=email_intent_keep_previous_turn_multiturn --algo=first
