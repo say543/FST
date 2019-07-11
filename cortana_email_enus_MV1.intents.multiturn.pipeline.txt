@@ -9,7 +9,7 @@ featurizer1402=qd_email_domain_intent_last_eval_featurizer
 ##########################################################################
 # Mulit turn Pipeline for keeping the previous turn intent without modifying  given the following scenarios
 # if previous domain equals to current domain (email) and 
-# if previous intent equals to send_email (happening in the first turn)  , reply or forward (happeing in the third turn) 
+# if previous intent equals to send_email (happening in the first turn)  , reply or forward (happening in the third turn) 
 # if TaskFrameStatus has message:PromptedForValue or email_subject:PromptedForValue exclusively
 #
 # then for 'send_email'
@@ -43,12 +43,12 @@ ConstFeatureGenerator --in=BodySurfaceStream --out=CurrentDomain --stringfeature
 ConditionalFeatureSetFilter --in=CurrentDomain,ExternalInput3 --out=valid_previous_turn_domain --filterCriteria=Y_IF_Y_CONTAINS_ANY_X
 WhitelistFeaturizer --in=valid_previous_turn_domain --out=valid_previous_turn_domain_feature --textwhitelist=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn.previous.turn.domain.whitelist.txt
 
-# if previous turn intent == send_email (tag 0), reply (tag 1 ) or forward (tag 2)
+# if previous turn intent == send_email (tag 1), reply (tag 2) or forward (tag 3)
 # Check previous intent and generate conditions
-MlgFeaturizer --in=ExternalInput4 --out=PreviousIntentMatch --fts=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn.filter.bin
-FeatureSimpleFilter --in=PreviousIntentMatch --out=send_email_or_reply_or_forward --keepTags=0,1,2
+MlgFeaturizer --in=ExternalInput4 --out=PreviousIntentMatch --fts=email.previousTurnIntent.bin
+FeatureSimpleFilter --in=PreviousIntentMatch --out=send_email_or_reply_or_forward --keepTags=1,2,3
 
-# map send_email (tag 0), reply (tag 1 ) or forward (tag 2) to correct intent tag as
+# map send_email (tag 1), reply (tag 2 ) or forward (tag 3) to correct intent tag as
 # send_email (tag 10), reply (tag 8) or forward (tag 6)
 FeatureIdMapper --in=send_email_or_reply_or_forward --out=send_email_or_reply_or_forward_after_map --map=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn.idmap.txt
 # transfrom from  10[0,0]= 1 8[0,0]= 1 or 6[0,0]= 1 to 10[-1,-1]= 1 8[-1,-1]= 1 or 6[-1,-1]= 1
@@ -76,9 +76,9 @@ FeatureNormalizer --in=valid_previous_turn_domain_and_valid_intent_feature_and_m
 # map from a list of intents to previous turn intent
 FeaturesSparseCrossProduct --in=valid_previous_turn_domain_and_valid_intent_feature_and_messageOremail_subject_promptedForValue_after_scale,send_email_or_reply_or_forward_after_map_shift --out=valid_previous_turn_domain_and_valid_intent_feature_and_messageOremail_subject_promptedForValue_after_scale_and_map --def=cortana_email_enus_MV1.intent.keep.previous.turn.multiturn.def.txt
 
-# generate zero weight for all intents based on the length of cortana_email_enus_MV1.intents.whitelist.pcfg.tagset.txt
+# generate zero weight for all intents based on the length of cortana_email_enus_MV1.intents.Classes.txt
 # merge ExternalInput2 and the intent output from condition regarding previous turn doamin / current turn intent / message or email subject promptedForValue
-RandomFeature --in=BodySurfaceStream --out=zero_intent --rv=constant --val=0 --tagidval=0 --fromval=-1 --toval=-1 --numOutputs=13 --outputZeroValueFeatures=true
+RandomFeature --in=BodySurfaceStream --out=zero_intent --rv=constant --val=0 --tagidval=0 --fromval=-1 --toval=-1 --numOutputs=25 --outputZeroValueFeatures=true
 FeatureValueAggregator --in=ExternalInput2,zero_intent --out=merged_external_intent --algo=max --aggregatePerFeatureId
 FeatureValueAggregator --in=merged_external_intent,valid_previous_turn_domain_and_valid_intent_feature_and_messageOremail_subject_promptedForValue_after_scale_and_map --out=merged_intents --algo=max --aggregatePerFeatureId
 
