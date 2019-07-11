@@ -9,6 +9,16 @@ email domain 的QPC
 HttpQasProd_CortanaLU.QAS12HttpQAS.queryProcessingConfiguration.ini
 跟corescience stage 的不一樣
 
+dev flight 的client id
+Microsoft_Threshold_Shell_3_enus_Test
+
+有reference 到這個
+email_enus_mv1b
+
+對應的ini with prefix
+email_enus_mv1b.queryprocessingconfiguration.ini
+
+
 
 
 search gold 的三個view
