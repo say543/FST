@@ -18,6 +18,9 @@ email_enus_mv1b
 對應的ini with prefix
 email_enus_mv1b.queryprocessingconfiguration.ini
 
+(v.s prod)
+email_enus_mv1.queryprocessingconfiguration.ini
+
 
 
 
