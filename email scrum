@@ -1,5 +1,14 @@
 
 
+email domain 的QPC
+
+
+在
+/deploy/builds/data/answers/QAS12HttpQAS/
+下面
+HttpQasProd_CortanaLU.QAS12HttpQAS.queryProcessingConfiguration.ini
+跟corescience stage 的不一樣
+
 
 
 search gold 的三個view
