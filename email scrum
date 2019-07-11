@@ -14,6 +14,9 @@ Microsoft_Threshold_Shell_3_enus_Test
 
 有reference 到這個
 email_enus_mv1b
+commment 要改成email_enus_MV1b
+.\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2 --queryInColumn 1 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c E:\SearchGold\deploy\builds\data\answers\QAS12HttpQAS  --variant email_enus_MV1b -dl email
+
 
 對應的ini with prefix
 email_enus_mv1b.queryprocessingconfiguration.ini
