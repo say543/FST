@@ -75,14 +75,7 @@ FeatureValueAggregator --in=valid_previous_turn_domain_and_valid_intent_feature,
 FeatureSetFilter --in=send_email_or_reply_or_forward_after_map_shift,valid_previous_turn_domain_and_valid_intent_feature_and_messageOremail_subject_promptedForValue --out=send_email_or_reply_or_forward_after_map_shift_conditionCheck --filterTagId=0 --keepTagFeatures=1 --keepStringFeatures=1 --maxOutFeatureSets=1
 FeatureNormalizer --in=send_email_or_reply_or_forward_after_map_shift_conditionCheck --out=send_email_or_reply_or_forward_after_map_shift_conditionCheck_scale --norm=linear --scale=2
 
-# generate zero weight for all intents based on the length of cortana_email_enus_MV1.intents.Classes.txt
 # merge ExternalInput2 and the intent output from condition regarding previous turn doamin / current turn intent / message or email subject promptedForValue
-##RandomFeature --in=BodySurfaceStream --out=zero_intent --rv=constant --val=0 --tagidval=0 --fromval=-1 --toval=-1 --numOutputs=25 --outputZeroValueFeatures=true
-##FeatureValueAggregator --in=ExternalInput2,zero_intent --out=merged_external_intent --algo=max --aggregatePerFeatureId
-##FeatureValueAggregator --in=merged_external_intent,send_email_or_reply_or_forward_after_map_shift_conditionCheck_scale --out=merged_intents --algo=max --aggregatePerFeatureId
-
-# this will sum up all weight if tag the same
-#FeatureUnion --in=ExternalInput2,send_email_or_reply_or_forward_after_map_shift_conditionCheck_scale --out=test
 FeatureValueAggregator --in=ExternalInput2,send_email_or_reply_or_forward_after_map_shift_conditionCheck_scale --out=merged_intents --algo=max --aggregatePerFeatureId
 
 # choose top intent
