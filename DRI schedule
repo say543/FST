@@ -143,6 +143,22 @@ checkin  column 會顯示checkin  否則  status 就會沒有寫
 這個email title 有QAS的 改變太慢  怎麼求救
 
 
+
+這個的答案通常都是yes
+See https://aka.ms/CuToolDeployError
+WARNING! Changing model files will affect all rings and may cause issues!
+In some cases new versions of the files should be created instead.
+Do you want to use the files in CoreScienceDataStaging to overwrite the ones in SourceDepot? [y/n]
+
+
+// prod and  griffin prod 的dpk
+// 可能要給vijay 記住  一旦press y 的package 的時候要copy path
+2019.07.16 14:32:05 Start validation for dpk C:\Users\chiecha.REDMOND\AppData\Local\Temp\Deploy_2019.07.16-14.24.16\empty\Cu_Release_Prod.dpk
+
+
+2019.07.16 14:47:50 Start validation for dpk C:\Users\chiecha.REDMOND\AppData\Local\Temp\Deploy_2019.07.16-14.40.59\empty\Cu_Release_GriffinProd.dpk
+
+
 =================
 report bug example
 =================
