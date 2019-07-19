@@ -1,0 +1,22 @@
+so-called deployment
+local to search gold directory
+
+qas will decide when to roll
+from search gold columns(physical machine or rack in qas cluster)
+
+
+virtual service can hose multiple clientid_1 , clientid_2......
+
+multiple clientidx can share some files populated from search gold directory to columns
+
+URI has a dedicated domain name with restful arguments liek 
+vs="virtaul service name" && customer id(name might not be correct)= "client_id" (you can specify client ids)
+
+
+
+
+
+
+
+
+
