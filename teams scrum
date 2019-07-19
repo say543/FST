@@ -85,6 +85,14 @@ slot.fst_lang_model.tagger
 
 
 
+另外一個是
+[qd_teams_MV1_slots_partial_pattern_featurizer]
+這個不太理解
+luna_181019_teams.slots.partial.pattern.pipeline.txt
+slot.fst.partial.infile
+EmplySlots
+?  現在不太知道他現在要幹嘛
+
 
 qcs query level test
 --pdebug qd_teams_slots_fst_lang_model_featurizer
