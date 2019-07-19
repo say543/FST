@@ -11,6 +11,21 @@ HttpQasProd_CortanaLU.QAS12HttpQAS.queryProcessingConfiguration.ini
 
 dev flight 的client id
 Microsoft_Threshold_Shell_3_enus_Test
+email=email_enus_MV1b::qd_cortana_email_enus_MV1_dev
+
+A::B
+
+A  : 直接model .ini
+B  :  定義在
+[query_domains]
+generic=qd_generic
+common=qd_common
+email=qd_cortana_email_enus_MV1_prod
+p.s 有的不同的地方 (ex in substrate griffinprod_M365Search.QasBatW.queryprocessingconfiguration.ini)
+有把 A 再用import section map 道別的model files
+
+
+
 
 有reference 到這個
 email_enus_mv1b
