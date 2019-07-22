@@ -1,5 +1,24 @@
 
 
+
+可能的command
+
+my stuff for reference
+PS E:\CoreScienceDataStaging\datasources\Email_my_temporary\queryclassificationprocessing> .\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2 --queryInColumn 1 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c E:\SearchGold\deploy\builds\data\answers\QAS12HttpQAS  --variant cortana_mystuff_enus_mv5 -dl mystuff
+
+
+email for reference
+PS E:\CoreScienceDataStaging\datasources\Email_my_temporary\queryclassificationprocessing> .\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2 --queryInColumn 1 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c E:\SearchGold\deploy\builds\data\answers\QAS12HttpQAS  --variant email_enus_MV1b -dl email
+
+
+teams for reference
+PS E:\CoreScienceDataStaging\datasources\Teams\queryclassificationprocessing> .\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c E:\CoreScienceDataStaging\target\distrib\Debug\AnyCPU\models  --variant HttpQASINT_ML_OFFLINE_QAS_EVAL_INT.QAS01HttpQAS -d teams
+
+
+files for reference
+PS E:\CoreScienceDataStaging\datasources\Files\queryclassificationprocessing> .\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2 --queryInColumn 1 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c E:\CoreScienceDataStaging\models\files  --variant files_enus_mv1 -dl files
+
+
 如果不確定  在qp 看一下怎麼handle start time  / time slot 
 
 
