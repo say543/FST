@@ -3,6 +3,8 @@
 
 可能的command
 
+
+
 my stuff for reference
 PS E:\CoreScienceDataStaging\datasources\Email_my_temporary\queryclassificationprocessing> .\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2 --queryInColumn 1 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c E:\SearchGold\deploy\builds\data\answers\QAS12HttpQAS  --variant cortana_mystuff_enus_mv5 -dl mystuff
 
@@ -17,6 +19,11 @@ PS E:\CoreScienceDataStaging\datasources\Teams\queryclassificationprocessing> .\
 
 files for reference
 PS E:\CoreScienceDataStaging\datasources\Files\queryclassificationprocessing> .\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2 --queryInColumn 1 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c E:\CoreScienceDataStaging\models\files  --variant files_enus_mv1 -dl files
+
+
+fst file
+PS E:\CoreScienceDataStaging\datasources\Files\resources\infiles> .\fst.exe -l .\slot.fst.partial.infile
+
 
 
 如果不確定  在qp 看一下怎麼handle start time  / time slot 
