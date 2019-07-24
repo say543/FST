@@ -1,4 +1,41 @@
+========================
+'RE: Deprecation of IntentConstraintMap-Lu-schema.tsv (+ action item for model owners)'
+========================
+????
+file type
 
+corescience stage
+E:/CoreScienceStaging/evaluation/Configs/AnnotationExceptions.xml
+
+
+============================================================
 07242019
 昨天 Hasmik和我说 要把common config里的一些路径换成absolute的path
 不然生成不了converged test case
+==============================================================
+
+E:\CoreScienceDataStaging\src\Evaluation.Converged.Tests\Common.config
+昨天 Hasmik和我说 要把common config里的一些路径换成absolute的path
+不然生成不了converged test case
+
+// old 
+  <add key="local.ModelsDir" value="..\..\..\..\target\distrib\Debug\AnyCPU\models" />
+  <add key="local.ConfigsDir" value="..\..\..\..\target\distrib\Debug\AnyCPU\ConvergedTest\Data\Evaluation\Configs" />
+  <add key="local.DatasetsDir" value="..\..\..\..\target\distrib\Debug\AnyCPU\ConvergedTest\Data\Evaluation\AnnotationSetsConverted" />
+  <add key="local.OutputBaseDir" value="..\..\..\..\TestResults\Evaluation" />
+
+  <add key="local.EvalMergedDir" value="%EVAL_MERGED_DIR%" />
+
+// new 
+  <add key="local.ModelsDir" value="E:\CoreScienceDataStaging\target\distrib\Debug\AnyCPU\models" />
+  <add key="local.ConfigsDir" value="E:\CoreScienceDataStaging\target\distrib\Debug\AnyCPU\ConvergedTest\Data\Evaluation\Configs" />
+  <add key="local.DatasetsDir" value="E:\CoreScienceDataStaging\target\distrib\Debug\AnyCPU\ConvergedTest\Data\Evaluation\AnnotationSetsConverted" />
+  <add key="local.OutputBaseDir" value="E:\CoreScienceDataStaging\TestResults\Evaluation" />
+  // Eval Merged Dir 這邊先給我自己給的  似乎任意填
+  <add key="local.EvalMergedDir" value="E:\CoreScienceDataStaging\TestResults\EvaluationMergedDir" />
+
+  
+ 
+  
+
+
