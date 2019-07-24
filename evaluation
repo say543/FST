@@ -35,7 +35,7 @@ E:\CoreScienceDataStaging\src\Evaluation.Converged.Tests\Common.config
   <add key="local.EvalMergedDir" value="E:\CoreScienceDataStaging\TestResults\EvaluationMergedDir" />
 
   
- 
+ 目前卡在download drop 會fail
   
 
 
