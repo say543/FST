@@ -160,6 +160,54 @@ Do you want to use the files in CoreScienceDataStaging to overwrite the ones in 
 
 
 =================
+July 2019  DRI
+=================
+[PROD] Sev 4: ID 135027680: Home automation queries returning incorrect slot values
+
+要學會的是
+1.
+要先要正確的trace id 跟錯誤的trace id 
+
+2. 用cortana log viewer
+注意如果是async turn 的部分  要自己找到primary turn 的部分  的traceid  這邊的information 才是對的
+
+
+
+3.
+用E:\kusto_script
+要用kusto.explorer 開啟
+左邊選'Reactove Host Prod'
+
+有兩個tabke
+CortexTraceMDS 存log format 1
+可以用以沒有luna 來 判斷是lunaLanguageUnderstandingComponet or LanguageUnderstandingComponent (新的)
+
+配合trace id 來拿出context
+
+
+4. context 需要用另外的code 來解
+? 可能可以跟yue 要一下 這個還沒要道
+context 可以用來說明  那些pdp  那些訊號  有重複or not
+
+像這個ICM
+主要是同樣的 pdp 出現了兩次
+但是並沒有做json 的serialization 的檢查
+
+相關的repo runtime 的code
+這個knowledge 還不太夠  可能之後再問吧
+https://msasg.visualstudio.com/Cortana/_git/Core/pullrequest/1131843?_a=files
+https://msasg.visualstudio.com/Cortana/_search?action=contents&text=QasProcess&type=code&lp=dashboard-Project&filters=ProjectFilters%7BCortana%7D&pageSize=25&result=DefaultCollection%2FCortana%2FCore%2FGBmaster%2F%2Fruntime%2Fcomponents%2FUnderstanding%2FLanguageUnderstandingComponent%2Fsrc%2FQasProcess.cs
+
+
+
+
+
+
+
+
+
+
+=================
 report bug example
 =================
 'Inconsistent LU result'
