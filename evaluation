@@ -1,0 +1,4 @@
+
+07242019
+昨天 Hasmik和我说 要把common config里的一些路径换成absolute的path
+不然生成不了converged test case
