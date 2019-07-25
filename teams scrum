@@ -463,10 +463,25 @@ success 了
 
 
 
+07252019
+yue 討論的問題
+
+qu: feature flight?
+
+現在不知道是幹嘛的了  先不管
+
+qu: 沒有domain model 的原因?
+一職都沒有domain model 我記錯了
+
+qu: 
+
+
+
+
 
 
 ================================
-haodo improvement
+haoda improvement
 aether://experiments/f37e1a70-68e6-4446-8782-2ae6bdd7e526?nodeIdPath=a8b9bbd4
 ================================
 
@@ -589,10 +604,14 @@ luna_teams_enus_mv1.intent.ini
 
 
 
------------------------------------------------
+==============================
 07/25/2019
 目前domain pattern 的流程
------------------------------------------------
+==============================
+
+
+同樣的output 前面的featurizer 會overrider 後面的
+
 [qd_teams_domain_fst_lang_model_featurizer]
 domain.negative.fst_lang_model.tagger.infile
 
@@ -608,22 +627,28 @@ luna_190305_teams.domain.fst_lang_model.INT.
 在postive pattern[qd_teams_domain_fst_lang_model_intent_overwrite_featurizer] 前面  會overirde 他的結果
 
 [qd_teams_domain_fst_lang_model_intent_overwrite_featurizer]
-positive pattern 的部分
+positive pattern 的部分 這個的分數是0.99 用ddf mapping
 luna_190305_teams.domain.fst_lang_model_intent_overwrite.pipeline.txt
 domain.fst_lang_model.tagger.infile
+
 
 
 [qd_teams_domain_fst_lang_model_override_featurizer]
 luna_190118_teams.domain.fst_lang_model.override
 這個只是生成doamin 的constant feature 跟 [qd_teams_featurizer] 相關  <email domain 可能可以用>
-? 這個可能是是domain 的output 不太懂  --pdebug 也看不出什麼東西
-? 可能要問一下yue
+--pdebug 也看不出什麼東西
+主要目的是 因為沒有domain svm 如果pattern 沒有match 就 feature 會完全是空的
+需要有一個default 所以用這個當作default featurlizer
+
+
 
 [qd_teams_domain_pattern_featurizer]
 luna_181212_teams.domain.pattern
-domain.override.infile
+domain.override.infile 這個的分數是1.00 用ddf mapping (為了evaluation 的時候是對的)
 感覺是另外一個positive pattern 的位置
 ? 問一下為什麼要有兩個positive pattern 的位置
+第一個pattern 是0.99 
+第一個pattern 是1.00
 
 
 [qd_teams_domain_pattern_override_featurizer]
@@ -643,11 +668,61 @@ luna_teams_intents.multiturn
 主要是multi turn 
 
 
------------------------------------------------
+==============================
+07/25/2019
+目前intent pattern 的流程
+==============================
+after svm
+
+[qd_teams_intents_fst_lang_model_featurizer]
+luna_190305_teams.intents.fst_lang_model.INT
+intent.fst_lang_model.tagger.infile
+
+[qd_teams_intents_fst_lang_model_override_featurizer]
+luna_190118_teams.intents.fst_lang_model.override
+只是copy 到output feature set 
+
+[qd_teams_intents_pattern_featurizer]
+luna_181019_teams.intents.pattern
+?這個目前找不到source fst name
+
+
+[qd_teams_intents_pattern_override_featurizer]
+luna_181019_teams.intents.pattern.override
+只是copy 到output feature set 
+
+[qd_teams_intents_hotfix_featurizer]
+luna_181019_teams.intents.hotfix
+
+intent hotfix file
+可能需要他
+
+
+[qd_teams_intents_hotfix_override_featurizer]
+luna_181019_teams.intents.hotfix.override
+只是copy 到output feature set 
+
+
+
+==============================
+07/25/2019
+目前slot pattern 的流程
+==============================
+slot lccrf
+有用到
+? UserFileNamesMatched
+
+after slot lccrf
+
+
+
+
+
+
+==============================
 05/06/2019
 Teams Domain/Multiturn query fix
-
------------------------------------------------
+==============================
 
 
 
