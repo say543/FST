@@ -76,3 +76,69 @@ https://microsoft-my.sharepoint-df.com/:w:/p/yum/ERiEN4JphLNMgmNPr8ZUI2oBfNz5tle
 
 自己的comment
 https://microsoft-my.sharepoint-df.com/:w:/r/personal/chiecha_microsoft_com/_layouts/15/Doc.aspx?sourcedoc=%7BFFA3E814-A82C-419B-9F83-117766DFC20A%7D&file=Document%201.docx&action=editnew&mobileredirect=true
+
+
+
+
+=====================
+domian pattern 打算  07252019
+=====================
+from teams domain pattern
+[qd_teams_domain_fst_lang_model_featurizer]
+negative patterns 這個
+
+file_open -> FileOpenNegativeDomain
+這個可能要加進來
+這個是contextual negalive tlist 
+read text ../lexicons/contextual_negative_list.txt;
+define ContextualFileOpenEntity;
+之後migrate contextual lu 可能需要有他來用
+
+[qd_teams_domain_fst_lang_model_intent_overwrite_featurizer]
+positive pattern 的部分
+domain.fst_lang_model.tagger.infile
+
+ 有file_open
+file_download -> FileDownloadIntent 可能要家一下
+但是這個是沒有domain svm 的情況
+可能測試一下是要前面or 後面
+
+
+[qd_teams_domain_pattern_featurizer]
+感覺是另外一個positive pattern 的位置
+domain.override.infile
+
+file_open -> FileOpenIntent
+這個部分可能要家一下
+
+
+[qd_teams_common_domain_intent_featurizer]
+luna_teams_intents.multiturn
+特別處理跟common 的關西避免conflict in teams multi turn
+可以先不管  
+
+=====================
+intent pattern 打算  07252019
+=====================
+after svnm
+
+
+[qd_teams_intents_fst_lang_model_featurizer]
+luna_190305_teams.intents.fst_lang_model.INT
+intent.fst_lang_model.tagger.infile
+
+這邊沒有必要的intent 不需要 做任何事
+
+
+[qd_teams_intents_hotfix_featurizer]
+luna_181019_teams.intents.hotfix
+
+intent hotfix file
+?  以後要hotfix可能需要他
+
+
+=====================
+slot pattern 打算  07252019
+=====================
+
+
