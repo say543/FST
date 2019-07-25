@@ -588,10 +588,69 @@ luna_teams_enus_mv1.intent.ini
 感覺是feauture 的功能  這個不太懂
 
 
+
+-----------------------------------------------
+07/25/2019
+目前domain pattern 的流程
+-----------------------------------------------
+[qd_teams_domain_fst_lang_model_featurizer]
+domain.negative.fst_lang_model.tagger.infile
+
+
+不管negatuve domaiun 是什麼
+luna_181212_teams.domain.pattern.entities.config.xml  這邊會mapp 成 成<negative>  or <positive>
+<negative> 代表domain.negative.fst_lang_model.tagger.infile 的fst trigger 了
+negative pattern
+luna_190305_teams.domain.fst_lang_model.INT.
+因為negative pattern 的 featurlizer 
+
+
+在postive pattern[qd_teams_domain_fst_lang_model_intent_overwrite_featurizer] 前面  會overirde 他的結果
+
+[qd_teams_domain_fst_lang_model_intent_overwrite_featurizer]
+positive pattern 的部分
+luna_190305_teams.domain.fst_lang_model_intent_overwrite.pipeline.txt
+domain.fst_lang_model.tagger.infile
+
+
+[qd_teams_domain_fst_lang_model_override_featurizer]
+luna_190118_teams.domain.fst_lang_model.override
+這個只是生成doamin 的constant feature 跟 [qd_teams_featurizer] 相關  <email domain 可能可以用>
+? 這個可能是是domain 的output 不太懂  --pdebug 也看不出什麼東西
+? 可能要問一下yue
+
+[qd_teams_domain_pattern_featurizer]
+luna_181212_teams.domain.pattern
+domain.override.infile
+感覺是另外一個positive pattern 的位置
+? 問一下為什麼要有兩個positive pattern 的位置
+
+
+[qd_teams_domain_pattern_override_featurizer]
+luna_181212_teams.domain.pattern.override
+這個目前也只是copy input feature 到output 
+? 不知道這個是不是跟hotfix 有關
+
+
+[qd_teams_domain_hotfix_override_featurizer]
+luna_181019_teams.domain.hotfix.override
+這個目前也只是copy input feature 到output 
+? 不知道這個是不是跟hotfix 有關
+
+[qd_teams_common_domain_intent_featurizer]
+luna_teams_intents.multiturn
+特別處理跟common 的關西避免conflict 
+主要是multi turn 
+
+
 -----------------------------------------------
 05/06/2019
 Teams Domain/Multiturn query fix
+
 -----------------------------------------------
+
+
+
 
 
 
@@ -605,14 +664,7 @@ FileNavigateHotfixIntent  但是實際上不是1 的socre 而是0.99  明子可�
 
 ? guieline 因該要跟這update
 
-domain.negative.fst_lang_model.tagger.infile
-form "qd_teams_domain_fst_lang_model_featurizer"
-不管negatuve domaiun 是什麼
-luna_181212_teams.domain.pattern.entities.config.xml  這邊會mapp 成 成<negative>  or <positive>
-<negative> 代表domain.negative.fst_lang_model.tagger.infile 的fst trigger 了
-negative pattern
-luna_190305_teams.domain.fst_lang_model.INT.
-因為negative pattern 的 featurlizer 在postive pattern[qd_teams_domain_fst_lang_model_intent_overwrite_featurizer] 前面  會overirde 他的結果
+
 
 
 hotfix 
