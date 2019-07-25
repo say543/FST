@@ -140,5 +140,9 @@ intent hotfix file
 =====================
 slot pattern 打算  07252019
 =====================
+after slot lccrf
 
-
+[qd_teams_slots_fst_lang_model_featurizer]
+luna_190118_teams.slots.fst_lang_model
+slot.fst_lang_model.tagger.infile
+有position Ref 的pattern 但是不是order ref  schema 沒有不需要
