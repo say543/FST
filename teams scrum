@@ -694,8 +694,7 @@ luna_181019_teams.intents.pattern.override
 [qd_teams_intents_hotfix_featurizer]
 luna_181019_teams.intents.hotfix
 
-intent hotfix file
-可能需要他
+intent hotfix file  for exact query
 
 
 [qd_teams_intents_hotfix_override_featurizer]
@@ -714,9 +713,55 @@ slot lccrf
 
 after slot lccrf
 
+[qd_teams_slots_fst_lang_model_featurizer]
+luna_190118_teams.slots.fst_lang_model
+slot.fst_lang_model.tagger.infile
+有position Ref 的pattern 這個已經放到file domain
 
 
 
+[qd_teams_slots_fst_lang_model_override_featurizer]
+luna_190118_teams.slots.fst_lang_model.override
+只是把feature copy 到output feature 沒有用
+
+[qd_teams_slots_partial_pattern_featurizer]
+luna_181019_teams.slots.partial.pattern
+slot.fst.partial.infile
+這邊像是intent 的negative pattern
+b negative pattern 會把部分slot lccrf 的結果給蓋掉
+
+
+[qd_teams_slots_pattern_featurizer]
+luna_181019_teams.slots.pattern
+用到 TaskFrameEntityState  這個的featurizer
+luna_teams_slots.conditions.txt  決定很多pattern 的對應
+用來看那些東西需要promptedForSelection
+
+
+eg:
+PromptedForSelection		luna_teams_slots.taskframe.promptForSelection.fst
+file_title:PromptedForSelection		luna_teams_slots.taskframe.promptForSelection.fst
+這邊可以是以後很好參考的fst 的地方
+不過這些fst 的compile 方式不太一樣
+
+[qd_teams_slots_pattern_override_featurizer]
+luna_181019_teams.slots.pattern.override
+只是把feature copy 到output feature 沒有用
+
+
+[qd_teams_slots_pattern_restore_featurizer]
+luna_181019_teams.slots.pattern.restore
+? 不知道這個功能是幹嘛
+
+[qd_teams_slots_hotfix_featurizer]
+luna_181019_teams.slots.hotfix.pipeline.txt
+luna_181019_teams.slots.hotfix.txt
+這邊是slot hotfix 的 exact query
+這個以後file answer 可能需要把它加上去
+
+[qd_teams_slots_hotfix_override_featurizer]
+luna_181019_teams.slots.hotfix.override
+只是把feature copy 到output feature 沒有用
 
 
 ==============================
