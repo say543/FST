@@ -709,7 +709,7 @@ luna_181019_teams.intents.hotfix.override
 ==============================
 slot lccrf
 有用到
-? UserFileNamesMatched
+? UserFileNamesMatched  這個是context lu 的featurizer
 
 after slot lccrf
 
