@@ -9,7 +9,76 @@ All model files and CMF files are under
 \\corl\contextual-lu\model files
 
 And how to run experiments are in the OneNote page:
-Experiments How To  (Web view)
+Experiments How To  (Web view)  (這個是怎麼run evaluation test)
 
 
 ? 有空可以看一下
+
+============
+07262019
+============
+
+目前在teams 的contexual lu 的featurizer
+
+[qd_teams_MV1_contextual_lu_featurizer]
+PipelineBaseFilename=luna_teams_enus_mv1.contextual
+luna_teams_enus_mv1_contextual.domain.pattern.fst
+目前只有影響domain
+
+teams_contextual_lu_domain.infile
+
+ExternalFeatureSet:UserFileNames  
+用到這個UserFileNames
+? 要問一下這個怎麼存
+
+output 1
+UserFileNamesMatched
+這個可以用在slots
+[qd_teams_slots_lccrf_featurizer]
+一般的slots_lccrf 沒有feautre 這邊可以學習建feature
+
+
+
+實際的測試
+open TeslaFile\tFEATURE.CLUTEAMS\t0\t1\t1\t1\t-1\t-1\tUserFileNames\t0\t1\tTeslaFile\t1\t-1
+來看這個featurizer
+
+這個純粹是string match 沒有pattern
+output 1 = 
+        Output:
+                UserFileNamesMatched (tag: 2, string: 0)
+                        0[0,0]=1
+                        7[1,1]=1
+                        
+                  7 是mapped 過的tag number 用來target MagicFileName 有點像是 placeholder 
+        這個是feature set slot crf 會用來train
+output 2
+teams_domain_fst_lang_model
+
+fst pattern 
+這個可以幫助domain score
+
+
+BOS
+似乎在apply pattern 前都要加BOS 這樣tag 才會正確
+
+7 是mapped 過的tag number 用來target MagicFileName 有點像是 placeholder 
+
+這邊目前只target 一個 scenario open xxx
+
+可能以後會延伸
+
+MagicFileName 的來源  runtime code  (shotbit 可以handle他)
+
+
+有doman rule  for fileOpen
+open MagicFileName
+
+
+
+實際的測試
+open TeslaFile\tFEATURE.CLUTEAMS\t0\t1\t1\t1\t-1\t-1\tUserFileNames\t0\t1\tTeslaFile\t1\t-1
+來看這個featurizer
+
+
+
