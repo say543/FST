@@ -82,3 +82,38 @@ open TeslaFile\tFEATURE.CLUTEAMS\t0\t1\t1\t1\t-1\t-1\tUserFileNames\t0\t1\tTesla
 
 
 
+[qd_teams_slots_lccrf_featurizer]
+luna_teams_enus_mv1.slot.model
+
+跟一般的slots lccrf 相比
+
+多了
+        //複製input feature
+	FeatureReplicate --in=ExternalInput2 --out=S_Teams_Contextual_File_Name --xform=span
+        
+        //index 像後shift 1
+        FeatureShifter --in=S_Teams_Contextual_File_Name --out=P1_S_Teams_Contextual_File_Name --shift=1
+        //index 像後shift 2
+	FeatureShifter --in=S_Teams_Contextual_File_Name --out=P2_S_Teams_Contextual_File_Name --shift=2
+        //index 像前shoft 1
+	FeatureShifter --in=S_Teams_Contextual_File_Name --out=N1_S_Teams_Contextual_File_Name --shift=-1
+        //index 像前shoft 2
+	FeatureShifter --in=S_Teams_Contextual_File_Name --out=N2_S_Teams_Contextual_File_Name --shift=-2
+
+        // P1_S_Teams_Contextual_File_Name 跟原本的lccrf 1_gram 給合併
+	FeatureConjunction --in=P1_S_Teams_Contextual_File_Name,lccrf_ngram_1gram --out=P1_S_CONJ_1gram_P1_S_Teams_Contextual_File_Name_lccrf_ngram_1gram --WeightOperator=max
+        
+        
+        // 新家了這些feature
+        // P2_S_Teams_Contextual_File_Name + N1_S_Teams_Contextual_File_Name + N2_S_Teams_Contextual_File_Name
+        // P1_S_CONJ_1gram_P1_S_Teams_Contextual_File_Name_lccrf_ngram_1gram
+        
+        // 為什麼要shift 不太懂
+        SparseLinearChainCRF
+        https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2Fdoc%2FSparseLinearChainCRF.md&version=GBmaster
+        
+
+
+         
+
+
