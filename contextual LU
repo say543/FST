@@ -113,6 +113,42 @@ luna_teams_enus_mv1.slot.model
         https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2Fdoc%2FSparseLinearChainCRF.md&version=GBmaster
         
 
+        矩陣要乘的時候  要考慮1-gram 2 gram 3 gram 
+	MaaFNGramFeaturizer 這個
+	
+	// old case wrong
+	ngram_range(1,1) = 只有one gram feature
+	        Inputs:
+                ExternalInput1 (tag: 0, string: 2)
+                        open[0,0]=1
+                        teslafile[1,1]=1
+        Output:
+                lccrf_ngram_1gram (tag: 1, string: 0)
+                        12[0,0]=1
+			
+		1 是word open one hot encoding 合併的表示法
+		(teslafile 不再)
+
+        //new case correct
+	0: MaaFNGramFeaturizer --in=ExternalInput1 --out=lccrf_ngram_1gram --order=1 --bin=luna_teams_enus_mv1.lccrf.ngram.1gram.bin
+        Inputs:
+                ExternalInput1 (tag: 0, string: 4)
+                        cortana[0,0]=1
+                        launch[1,1]=1
+                        teslafile[2,2]=1
+                        please[3,3]=1
+        Output:
+                lccrf_ngram_1gram (tag: 3, string: 0)
+                        1542[0,0]=1
+                        1557[1,1]=1
+                        372[3,3]=1	
+		word 有自己的 one hoting encoding 表示法
+	        teslafile 不存在bag of word(因為是從bin的library 中決定)
+		default WITHOUT CAPTUREBOUNDARY
+		? 但是為什麼不是2 的倍數?
+		
+			
+	
 
          
 
