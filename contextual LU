@@ -90,7 +90,21 @@ luna_teams_enus_mv1.slot.model
 多了
         //複製input feature
 	FeatureReplicate --in=ExternalInput2 --out=S_Teams_Contextual_File_Name --xform=span
-	
+        除了copy 也會修改tag[0,1] => [1, 1]
+        FeatureReplicate --in=lccrf_ngram_2gram --out=lccrf_ngram_2gram_replicate --xform=to
+        Inputs:
+                lccrf_ngram_2gram (tag: 4, string: 0)
+                        7138[0,1]=1
+                        81959[1,2]=1
+                        17039[2,3]=1
+                        12092[3,4]=1
+        Output:
+                lccrf_ngram_2gram_replicate (tag: 4, string: 0)
+                        7138[1,1]=1
+                        81959[2,2]=1
+                        17039[3,3]=1
+                        12092[4,4]=1	
+
         
         //index 像後shift 1
         FeatureShifter --in=S_Teams_Contextual_File_Name --out=P1_S_Teams_Contextual_File_Name --shift=1
