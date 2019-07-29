@@ -85,6 +85,9 @@ open TeslaFile\tFEATURE.CLUTEAMS\t0\t1\t1\t1\t-1\t-1\tUserFileNames\t0\t1\tTesla
 [qd_teams_slots_lccrf_featurizer]
 luna_teams_enus_mv1.slot.model
 
+
+
+
 跟一般的slots lccrf 相比
 
 多了
@@ -194,4 +197,63 @@ luna_teams_enus_mv1.slot.model
                         81960[0,2]=1
                         81961[1,3]=1
                         81962[2,4]=1
+
+
+
+linear CRF
+CRF 的變形
+
+https://blog.csdn.net/aws3217150/article/details/68935789
+对于一段输入文字“The dog barks”，我们希望获得他的词性标注“The/D(冠词) dog/N(名词) barks/V(动词)”。
+也就是对于一段输入序列x⃗ =[x1,x2,....,xn]x→=[x1,x2,....,xn],
+我们希望获得相应的特定任务的输出序列s⃗ =[s1,s2,...,sn]s→=[s1,s2,...,sn]。比如刚刚举的词性标注例子，
+此时xnxn将对应字典集VV里面的词，snsn则是词性集SS里面的元素
+
+s:  token output state
+x : token labeled data (不是model output)
+
+in QAS CRF
+1-gram
+    shift 1
+    shift 2
+    shift 3
+    shift -1
+    shift -2
+2-gram
+    shift 1
+    shift -1
+    shift -2
+lexicon
+     shift 1
+     shift 2
+     shift -1
+     shift -2
+     
+FeatureConjunction
+      lexicon + 1-gram
+      這個事生成另外一個 hashtag
+      hashtag id 不一定
+      根據page
+      (intent, unigram) -> intent-specific unigram
+      這邊是
+      (lexicon, unigram) -> lexicon-specific unigram 
+
+      輸出後一個token position 是有可能會有多個tag的 因為
+      lexicon 本來就會有多個
+      https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2FDUFeatureConjunction.cpp&version=GBmaster
+      根據code, 用first set(lexicon 當作主體)  len 決定要輸出幾個
+
+SparseLinearChainCRF
+      1-gram ,  1-gram(shift 1,2,3,-1,-2)
+      2-gram, 2-gram(shift 1,2,-1,-2)
+      lexicon, lexicon(shift 1,2,-1,-2)
+      (lexicon, unigram) -> lexicon-specific unigram 
+      
+      生成一個final tag
+      並不是用哪個為準
+      ? 目前怎麼work 還不太確定
+      
+
+
+
 
