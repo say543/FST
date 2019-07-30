@@ -19,6 +19,40 @@ how to sync with skill teams regularly?
  scenarios is more detailed compared to intent
  one intent will have differene scenarios
 
+================
+07302019
+files schema 跟team schema 討論
+================
+1. file navigation intent
+instance1 (for teams) for teams 這個部分 file_search mpa 回去file_navitation
+    要考慮會不會產生overtrigged
+instance2 (for 3s answer) 這個部分  file_search 還是file_search
+
+2. file_filerecency
+   slot 變成 file_recency
+   目前plan 用files 的file_action  (雖然只tag action, not i was)
+    把一些特別的verb 轉成要求的file_recency 的canonical value
+    來support 
+    
+    
+3. file_sharetarget, teammeeting_title, 
+   instance1 (for teams) for teams 這個部分 會expose for cortana skill team
+   instance2 (for 3s answer)  這個tag 會被移除
+   p.s 兩個physical instatnce 會有不同的featurier
+   
+   
+   
+   
+   
+
+
+
+
+
+
+
+
+
 
 ====================
 work konwledge
