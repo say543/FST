@@ -19,6 +19,11 @@ how to sync with skill teams regularly?
  scenarios is more detailed compared to intent
  one intent will have differene scenarios
 
+
+07312019
+swtich from CLU.core.1.2.286 to 1.2.305 for training 看看
+
+
 ================
 07302019
 files schema 跟team schema 討論
@@ -33,6 +38,29 @@ instance1 (for teams) for teams 這個部分 file_search mpa 回去file_navitati
 instance2 (for 3s answer) 這個部分  file_search 還是file_search
 
 
+<discuss>
+跟skill teams 的討論  感覺不太care 是不是navigation intent, file search ?
+
+
+show me my recent files / show me my files
+show me files i was working on 
+只用slot 無法分辨
+一定要file navigate  有沒有slot 無關
+
+but 
+open the files I recently worked on
+這個是file_open (在) spec 但是也需要 slot
+
+
+所以需要maintain 兩個intent
+slots 就用 file_recency (要不要包含I 再說) 跟file_action
+
+
+
+
+
+
+
 slot level
 
 2. file_filerecency
@@ -42,11 +70,24 @@ slot level
     來support 
     
     
-3. file_sharetarget, teammeeting_title, 
+3.1 file_sharetarget
    instance1 (for teams) for teams 這個部分 會expose for cortana skill team
    instance2 (for 3s answer)  這個tag 會被移除
    p.s 兩個physical instatnce 會有不同的featurier
-   
+
+<discuss>
+    覺得file_sharetarget 要新加
+    person 除非用canonical value 來tell 否則很難
+    其他的很難train 我覺得
+
+
+3.2 teammeeting_title
+   instance1 (for teams) for teams 這個部分 會expose for cortana skill team
+   instance2 (for 3s answer)  這個tag 會被移除
+   p.s 兩個physical instatnce 會有不同的featurier
+
+<discuss>
+    覺得teammeeting_title 要新加
    
 4. file_search
     直接給teams 同name
@@ -70,6 +111,8 @@ slot level
   find <file_type> note </file_type> from <start_date> last week </start_date> <file_keyword> to do ' s </file_keyword>
   <start_date> last week </start_date> ' s <file_type> notes </file_type>.
   
+  yong : 這個先不管 丟給partner teams
+   
   
  2> 
  open the file <cnotact>A shares to me 
@@ -77,9 +120,11 @@ slot level
  
  if we need to differentaite, we might need to add two like from_contact_name and contact name.
  
+ yong:
+ 加兩個slot 然後兩個都tag
  
-3>
-timeX issues
+  3>
+  timeX issues
 
 
  
