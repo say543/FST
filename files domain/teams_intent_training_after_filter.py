@@ -4,8 +4,9 @@ import random;
 # add hyper paramter if unbalanced
 hyper_parameter = 200
 
-
-fileDomainRelatedIntent = ['file_search', 'file_open', 'file_share', 'file_download', 'file_other']
+# 07132019 add file_navigate
+#fileDomainRelatedIntent = ['file_search', 'file_open', 'file_share', 'file_download', 'file_other']
+fileDomainRelatedIntent = ['file_search', 'file_open', 'file_share', 'file_download', 'file_other', 'file_navigate']
 
 OutputSet = [];
 
