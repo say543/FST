@@ -27,12 +27,12 @@ myStuffSlotToFileSlot = {
     "</data_type>" : "</file_type>",
     "<data_source>" : "<file_location>",
     "</data_source>" : "</file_location>",
-    # need to replace contact_name then from_contact_name
-    # sort should be fine by alphabetical order
+    # planning to have from_contact_name and contact_name at the same time
+    # no need to replace anymore
     #"<contact_name>" : "<contact_name>",
     #"</contact_name>" : "</contact_name>",
-    "<from_contact_name>" : "<contact_name>",
-    "</from_contact_name>" : "</contact_name>",
+    #"<from_contact_name>" : "<contact_name>",
+    #"</from_contact_name>" : "</contact_name>",
     "<keyword>" : "<file_keyword>",
     "</keyword>" : "</file_keyword>",
     #"<start_date>" : "<start_date>",
@@ -72,18 +72,22 @@ myStuffSlotToFileSlot = {
     "</transform_action> " : "",
     "</transform_action>" : "",
     }
-
-removeSpecialSlotValue = {
-    "<contact_name> my </contact_name>":"my",
-    "<contact_name> My </contact_name>":"My",
-    "<contact_name> i </contact_name>":"i",
-    "<contact_name> I </contact_name>":"I",
-    }
+# planning to have from_contact_name and contact_name at the same time
+# in this case, we will tage my my i I so no need this replacement
+#removeSpecialSlotValue = {
+#    "<contact_name> my </contact_name>":"my",
+#    "<contact_name> My </contact_name>":"My",
+#    "<contact_name> i </contact_name>":"i",
+#    "<contact_name> I </contact_name>":"I",
+#    }
 
 
 fileTypeCandidate = []
 fileNameCandidate = []
 fileKeywordCandidate = []
+fileContactNameCandidate = []
+fileFromContactNameCandidate = []
+
 
 
 OutputSet = [];
@@ -106,9 +110,10 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
             for key in sorted (myStuffSlotToFileSlot.keys()) :
                 slot = slot.replace(key, myStuffSlotToFileSlot[key])
 
-            # remove do-not-want-special-pair
-            for key in sorted (removeSpecialSlotValue.keys()) :
-                slot = slot.replace(key, removeSpecialSlotValue[key])
+            # planning to have from_contact_name and contact_name at the same time
+            # in this case, we will tage my my i I so no need this replacement
+            #for key in sorted (removeSpecialSlotValue.keys()) :
+            #    slot = slot.replace(key, removeSpecialSlotValue[key])
                 
             # remove head and end spaces 
             slot = slot.strip()
@@ -127,9 +132,10 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
                     fileNameCandidate.append(xmlpair)
                 if xmlpair.startswith("<file_keyword>"):
                     fileKeywordCandidate.append(xmlpair)
-
-            
-            
+                if xmlpair.startswith("<contact_name>"):
+                    fileContactNameCandidate.append(xmlpair)
+                if xmlpair.startswith("<from_contact_name>"):
+                    fileFromContactNameCandidate.append(xmlpair)
 
             
 
@@ -157,6 +163,14 @@ with codecs.open('files_mystuff_after_filtering_file_keyword.tsv', 'w', 'utf-8')
 
 with codecs.open('files_mystuff_after_filtering_file_name.tsv', 'w', 'utf-8') as fout:
     for item in fileNameCandidate:
+        fout.write(item + '\r\n');
+
+with codecs.open('files_mystuff_after_filtering_contact_name.tsv', 'w', 'utf-8') as fout:
+    for item in fileContactNameCandidate:
+        fout.write(item + '\r\n');
+
+with codecs.open('files_mystuff_after_filtering_from_contact_name.tsv', 'w', 'utf-8') as fout:
+    for item in fileFromContactNameCandidate:
         fout.write(item + '\r\n');
 
 
