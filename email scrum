@@ -42,6 +42,12 @@ email_enus_mv1.queryprocessingconfiguration.ini
 
 
 
+實際在evaluation check in 的test
+E:\CoreScienceDataStaging\datasources\Email\v5\post\final
+
+
+
+
 search gold 的三個view
 //depot/deploy/builds/data/answers/QasIpe01Ds/... //DESKTOP-3J7614O-searchgold-2/deploy/builds/data/answers/QasIpe01Ds/...
 //depot/deploy/builds/data/answers/QAS12HttpQAS/... //DESKTOP-3J7614O-searchgold-2/deploy/builds/data/answers/QAS12HttpQAS/...
