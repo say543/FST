@@ -57,7 +57,9 @@ slots 就用 file_recency (要不要包含I 再說) 跟file_action
 
 
 
-
+  <action_item>
+       teams_intent_training_after_filter.py done
+       E:\fileAnswer_data_synthesis\CMF_training\resource\intents.txt 加intent
 
 
 
@@ -123,7 +125,23 @@ slot level
  加兩個slot 然後兩個都tag
    實際的my stuff data 兩個都存在
   
-  my stuff 的script 已經done
+  
+  <action_item>
+       files_mystuff_after_filter.done
+       teams 的在說
+       E:\fileAnswer_data_synthesis\CMF_training\resource\slots.txt 
+       先加slots
+       lexicons 的部分
+       E:\fileAnswer_data_synthesis\CMF_training\resource\LexiconFiles\slots.lexicon.desc.txt
+       把from_contact_name 跟contact_name 用不同lexciocn name 但是content 依樣
+       contact_name:Trie(.\resource\LexiconFiles\contact_name.txt)
+       from_contact_name:Trie(.\resource\LexiconFiles\contact_name.txt)
+       p.s 現在兩個裡面都沒有i (from_contact_name) and me(contact_name) 
+       ? 可以之後考慮要不要加
+      
+       
+       
+       
    
   
  
