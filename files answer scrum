@@ -61,7 +61,29 @@ slot level
     
    
    
+目前剩下的issue
+ 1> two start_date  or start time issue
+ open the <?>last week<?> file i edited yesterday
+ we can tag two start date 但是不知道skill teams 怎麼處理
+  
+  what are <file_keyword> last weeks tasks </file_keyword>
+  find <file_type> note </file_type> from <start_date> last week </start_date> <file_keyword> to do ' s </file_keyword>
+  <start_date> last week </start_date> ' s <file_type> notes </file_type>.
+  
+  
+ 2> 
+ open the file <cnotact>A shares to me 
+ open the file i share to susan
+ 
+ if we need to differentaite, we might need to add two like from_contact_name and contact name.
+ 
+ 
+3>
+timeX issues
 
+
+ 
+  
 
 
 
