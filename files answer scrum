@@ -23,10 +23,17 @@ how to sync with skill teams regularly?
 07302019
 files schema 跟team schema 討論
 ================
+
+
+intent level
+
 1. file navigation intent
 instance1 (for teams) for teams 這個部分 file_search mpa 回去file_navitation
     要考慮會不會產生overtrigged
 instance2 (for 3s answer) 這個部分  file_search 還是file_search
+
+
+slot level
 
 2. file_filerecency
    slot 變成 file_recency
@@ -41,7 +48,17 @@ instance2 (for 3s answer) 這個部分  file_search 還是file_search
    p.s 兩個physical instatnce 會有不同的featurier
    
    
-   
+4. file_search
+    直接給teams 同name
+  
+5. file_name or file_keyword
+    直接給teams 同name
+    
+6. start_time
+    直接給teams 同name
+7.file_type
+    直接給
+    
    
    
 
