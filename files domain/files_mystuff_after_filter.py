@@ -65,12 +65,17 @@ myStuffSlotToFileSlot = {
     "<order_ref> " : "",
     "</order_ref> " : "",
     "</order_ref>" : "",
+    "<quantifier> " : "",
+    "</quantifier>" : "",
     "<source_platform> " : "",
     "</source_platform> " : "",
     "</source_platform>" : "",
     "<transform_action> " : "",
     "</transform_action> " : "",
     "</transform_action>" : "",
+    # one extra tag found by training result, remove as well
+    "<mystuff_other> " : "",
+    "</mystuff_other>" : "",
     }
 # planning to have from_contact_name and contact_name at the same time
 # in this case, we will tage my my i I so no need this replacement
