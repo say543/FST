@@ -128,16 +128,24 @@ slot level
   
   <action_item>
        files_mystuff_after_filter.done
+       
+       用contact_name 跟to_contact_name
+       這樣to_contact_name 基本都是i
+       contact_name 有i 也一堆沒有i 的
+       
        teams 的在說
        E:\fileAnswer_data_synthesis\CMF_training\resource\slots.txt 
        先加slots
        lexicons 的部分
        E:\fileAnswer_data_synthesis\CMF_training\resource\LexiconFiles\slots.lexicon.desc.txt
-       把from_contact_name 跟contact_name 用不同lexciocn name 但是content 依樣
+       把contact_name 跟to_contact_name 用不同lexciocn name 但是content 依樣
        contact_name:Trie(.\resource\LexiconFiles\contact_name.txt)
-       from_contact_name:Trie(.\resource\LexiconFiles\contact_name.txt)
-       p.s 現在兩個裡面都沒有i (from_contact_name) and me(contact_name) 
+       tp_contact_name:Trie(.\resource\LexiconFiles\to_contact__name.txt)
+       p.s 現在兩個裡面都沒有i (contact_name) and me(to_contact_name) 
        ? 可以之後考慮要不要加
+       
+       
+       
       
        
        
