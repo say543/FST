@@ -174,14 +174,59 @@ slot level
   
   <start_time>
   ? recent 藥用start time or file_recency  
-  ? in the last hour 要tag 全部  or partial is enough
+  目前把recent / recently  大小寫都變成order_ref
+  因為order_ref 要用來代替teams 裡面的 file_recency
+  靠canonical value 來給
   
    
   find the task note i created last week  沒學好  要找找
 
 
+  <order_ref>
+   要保留
+  因為order_ref 要用來代替teams 裡面的 file_recency
+  
+  
+  <file_keyword>
+     what is on my <title> to-do </title> <data_type> list </data_type> ?
+     這個仙都轉成keyword  因為沒有.doc
+     
+     find my <data_source> downloads </data_source>
+     teams 裡面是data_type 但是這個file navigation 會給teams 
+     怎麼tag 沒差  把她轉成file_keyword     
+     
+     
+     what is in my <title> shopping list </title> ?
+     
+     team  不懂
+     what is in my <keyword> shopping </keyword> <data_type> list </data_type> ?
+     
+     發現有data type 前面是keyword 比較難train 可以之後調整...
 
 
+     where is my <data_type> music </data_type> library
+     team  不懂
+     music 因該要轉成keyword
+       
+  <file_type>
+     go to my <data_source> documents </data_source
+     teams 是file navagate 沒有tag documents
+     先都轉成data type
+     
+     take me to <data_source> documents </data_source>
+     teams 不懂
+     先都轉成data type
+     
+     show me my <keyword> lists </keyword>
+     keyword 都轉成data_type
+     teams 沒behavior
+     
+  
+   <data_source>
+     what is in my <data_source> music file </data_source> 
+     music 因該要是file key word
+     teams 沒behavior
+     
 
 
 
