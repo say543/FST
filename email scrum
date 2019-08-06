@@ -13,6 +13,11 @@ dev flight 的client id
 Microsoft_Threshold_Shell_3_enus_Test
 email=email_enus_MV1b::qd_cortana_email_enus_MV1_dev
 
+self serve flight 的client id
+Microsoft_Threshold_Shell_3_enus_SelfServe
+[query_domains:Microsoft_Threshold_Shell_3_enus_SelfServe]
+email=cortana_email_enus_mv2::qd_email
+
 A::B
 
 A  : 直接model .ini
