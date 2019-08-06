@@ -17,6 +17,7 @@ self serve flight 的client id
 Microsoft_Threshold_Shell_3_enus_SelfServe
 [query_domains:Microsoft_Threshold_Shell_3_enus_SelfServe]
 email=cortana_email_enus_mv2::qd_email
+多了一個mapping  cortana_email_enus_mv2=cortana_email_enus_mv2a (比較特別的地方
 
 A::B
 
