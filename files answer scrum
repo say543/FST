@@ -272,6 +272,20 @@ slot level
      
      find the <data_type> note </data_type> with my <title> to - do list </title> .
      <title> to - do list </title> 轉成  keyword  -> file_keyword
+     
+     
+     find my pictures from italy
+     italy 變成keyword  -> file_keyword
+     
+     <data_type> visio diagrams </data_type>
+     變成keyword  -> file_keyword
+     
+     windows 10 technical preview doc
+     windows 10 technical preview -> k -> f
+     
+     ? search for justin and ashley in my files
+     justin and ashley不確定要不要合併
+     先consistent合併
        
   <file_type>
      go to my <data_source> documents </data_source
@@ -287,10 +301,13 @@ slot level
      teams 沒behavior
      
      
+     
+     
      show me the documents with <keyword> headache </keyword> in the title
      documents -> data_type -> file_type
      
      
+   
      <data_type> documents </data_type>
      <data_type> document </data_type>
      documents 先不tag by Ling
@@ -299,17 +316,36 @@ slot level
      <data_type> doc </data_type>
      doc 先不tag by Ling
      
+     
+     ? notes 要不要之後看
      ? presentation 要不要之後看
+     ? power point presentation
+     ? photos
+     ? pictures
+     ? picture
+     ? text
+     ? list
+     ? music 
+     ? spec file type
+     
+     
   
    <data_source>
      what is in my <data_source> music file </data_source> 
      music 因該要是file key word
      teams 沒behavior
 
-
+     <data_type> onenote </data_type>
+     onenote 因該是 data_source
+     
    <contact name>
       mystuff	i want to see the <data_type> note </data_type> for <keyword> wendy ' s </keyword>
       ? wendy 不是人名  先不管  因為小寫
+      
+      
+      find pictures of my wife
+      ?  my wife 如果有my wife , my something 都先skip
+      
 
    
    teams 相關
@@ -328,6 +364,10 @@ slot level
      
      find downloads / open downloads
      teams no action 
+     先把downloads 當成keywords -> file_keyword
+     
+     find my downloads
+     teams 有action 但是覺得不合理
      先把downloads 當成keywords -> file_keyword
      
      check my downloads
@@ -373,7 +413,9 @@ slot level
      
      show me downloads
      teams 到download 只好變成data_type 
-     downloads -> data_type-> file_type  
+     downloads -> data_type-> file_type 
+     
+     show me all my downloads
      
      show me my <start_time> recent </start_time> downloads
      teams 到download 只好變成data_type 
