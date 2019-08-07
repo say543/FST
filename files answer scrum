@@ -172,6 +172,10 @@ slot level
   my recent downloads
   ? downloads 不知道要不要tag
   
+  
+  titled <title> christmas list </title>
+  titled 先 不tag file action
+  
   <start_time>
   ? recent 藥用start time or file_recency  
   目前把recent / recently  大小寫都變成order_ref
@@ -187,9 +191,57 @@ slot level
   因為order_ref 要用來代替teams 裡面的 file_recency
   
   
+  <file_name>
+     grocery list
+     grocery 不是title 要轉乘keyword
+     grocery list -> keyword -> file_keyword
+     
+     christmas list
+     不是title 要轉乘keyword
+     christmas list -> keyword -> file_keyword
+     
+     除非有title
+     titled <keyword> christmas list </keyword>
+     christmas list title -> file_name
+     
+     say hey cortana show me my task list
+     tasl list -> keyword -> file_keyword
+     
+     find me my music list
+     music list -> keyword -> file_keyword
+     
+     <keyword> music </keyword> <data_type> playlist </data_type>
+     music playlist -> keyword -> file_keyword
+  
+  
+     <title> shopping list </title>
+      shopping list -> keyword -> file_keyword
+      
+      
+      watch list
+      music playlist -> keyword -> file_keyword
+      
+      walmart list
+      walmart playlist -> keyword -> file_keyword
+      
+      <wait for>
+      ideas list
+      
   <file_keyword>
+  
+     因為list 在 file 不是tpye 
+  
      what is on my <title> to-do </title> <data_type> list </data_type> ?
-     這個仙都轉成keyword  因為沒有.doc
+     這to-do list 都轉成keyword  -> file_keyword 因為沒有.doc
+     
+     
+     show me my to do list
+     to do list 要轉乘file_keyword
+     
+     what is in my shopping list
+     shopping list 改成file_keyword
+     
+     <keyword> shopping </keyword> <data_type> list </data_type>
      
      find my <data_source> downloads </data_source>
      teams 裡面是data_type 但是這個file navigation 會給teams 
@@ -197,7 +249,10 @@ slot level
      
      
      what is in my <title> shopping list </title> ?
+     shopping list 變成 keyword -> file keywrod
      
+     
+     // old 先不管
      team  不懂
      what is in my <keyword> shopping </keyword> <data_type> list </data_type> ?
      
@@ -206,7 +261,17 @@ slot level
 
      where is my <data_type> music </data_type> library
      team  不懂
-     music 因該要轉成keyword
+     music library 因該要轉成keyword
+     
+     <data_type> music </data_type> library
+     
+     
+     mystuff	looking for my <keyword> resume </keyword> , <title> resumecurrent </title> .
+     resume 因該什麼也不是
+     resumecurrent  -> keyword -> file_keyword
+     
+     find the <data_type> note </data_type> with my <title> to - do list </title> .
+     <title> to - do list </title> 轉成  keyword  -> file_keyword
        
   <file_type>
      go to my <data_source> documents </data_source
@@ -221,17 +286,105 @@ slot level
      keyword 都轉成data_type
      teams 沒behavior
      
+     
+     show me the documents with <keyword> headache </keyword> in the title
+     documents -> data_type -> file_type
+     
+     
+     <data_type> documents </data_type>
+     <data_type> document </data_type>
+     documents 先不tag by Ling
+     
+     <data_type> docs </data_type>
+     <data_type> doc </data_type>
+     doc 先不tag by Ling
+     
+     ? presentation 要不要之後看
   
    <data_source>
      what is in my <data_source> music file </data_source> 
      music 因該要是file key word
      teams 沒behavior
+
+
+   <contact name>
+      mystuff	i want to see the <data_type> note </data_type> for <keyword> wendy ' s </keyword>
+      ? wendy 不是人名  先不管  因為小寫
+
+   
+   teams 相關
+     cortana find my <order_ref> most recent </order_ref> <keyword> downloads </keyword>
+     要轉成file_recency 
+     downloads -> data_type -> file_type
      
+     find me <quantifier> all </quantifier> documents
+     documents -> data_type -> file_type
 
+     where are my downloads
+     downloads -> data_type-> file_type
+     
+     
+     
+     
+     find downloads / open downloads
+     teams no action 
+     先把downloads 當成keywords -> file_keyword
+     
+     check my downloads
+     teams no action 
+     先把downloads 當成keywords -> file_keyword
+     
+    
+     pull up my <data_source> downloads </data_source>
+     teams 到download 只好變成data_type 
+     
+     downloads -> data_type-> file_type
+     
+     
+     take me to my downloads
+     teams 到download 只好變成data_type 
+     downloads -> data_type-> file_type
+     
+     take me to downloads
+     teams 到download 只好變成data_type 
+     
+     downloads -> data_type-> file_type
+     
+     go to my downloads
+     downloads -> data_type-> file_type
+     
+     view downloads
+     teams 到download 只好變成data_type 
+     downloads -> data_type-> file_type  
+     
+     view my most recent downloads
+     teams 到download 只好變成data_type 
+     downloads -> data_type-> file_type  
 
-
-
-
+     
+     i'm looking for my latest downloads
+     teams 到download 只好變成data_type 
+     downloads -> data_type-> file_type  
+     
+     bring up my downloads
+     teams 到download 只好變成data_type 
+     downloads -> data_type-> file_type  
+     
+     
+     show me downloads
+     teams 到download 只好變成data_type 
+     downloads -> data_type-> file_type  
+     
+     show me my <start_time> recent </start_time> downloads
+     teams 到download 只好變成data_type 
+     downloads -> data_type-> file_type   
+     
+     <wait for>
+     tell me my downloads
+     teams 到download 只好變成data_type 
+     downloads -> data_type-> file_type
+     
+     pull up all my downloads
 ====================
 work konwledge
 ===================
