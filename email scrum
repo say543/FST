@@ -68,11 +68,12 @@ p.s 第一個可能會對search gold 的change list 產生問題
 
 carina model manager 的evalution
 model 只有一個設成share ok 但是突然又不work 了
-\\DESKTOP-3J7614O\CoreScienceDataStaging\datasources\Email\sharepathmodel_generated
-\\DESKTOP-3J7614O\CoreScienceDataStaging\datasources\Email\sharepathmodel_generated_backup
+\\DESKTOP-3J7614O\sharepathmodel_generated
+\\DESKTOP-3J7614O\sharepathmodel_generated_with_checkin_domain
 test file path
 先用teams
 \\DESKTOP-3J7614O\Teams_Data_Synthesis\Teams\CMF_Training\teams40ToCarina\Email-training-18k-carina.tsv
+\\DESKTOP-3J7614O\sharepath_carina_test\Email-training-18k-carina.tsv
 
 
 
