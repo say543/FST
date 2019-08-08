@@ -192,6 +192,8 @@ slot level
   
   
   <file_name>
+     沒有足夠的examples
+     
      grocery list
      grocery 不是title 要轉乘keyword
      grocery list -> keyword -> file_keyword
@@ -224,8 +226,12 @@ slot level
       walmart list
       walmart playlist -> keyword -> file_keyword
       
-      <wait for>
       ideas list
+      
+      
+      ? named  something 
+      look for he photos named " christmas
+      先把它當成 title -> file_name 
       
   <file_keyword>
   
@@ -337,12 +343,17 @@ slot level
 
      <data_type> onenote </data_type>
      onenote 因該是 data_source
+     8/7/2019 討論
+     ? 需要offline discussion
      
      <data_source> notes </data_source>
      <data_source> note </data_source>
      notes 不是data source
      
      ?notepad 算不算
+     
+     
+     ?excel 是不是data source
      
    <contact name>
       mystuff	i want to see the <data_type> note </data_type> for <keyword> wendy ' s </keyword>
@@ -375,6 +386,8 @@ slot level
      find my downloads
      teams 有action 但是覺得不合理
      先把downloads 當成keywords -> file_keyword
+     
+     where can i find my latest downloads
      
      check my downloads
      teams no action 
@@ -425,13 +438,19 @@ slot level
      show me my <start_time> recent </start_time> downloads
      teams 到download 只好變成data_type 
      downloads -> data_type-> file_type   
-     
-     <wait for>
+    
      tell me my downloads
      teams 到download 只好變成data_type 
      downloads -> data_type-> file_type
      
      pull up all my downloads
+     
+     <meeting_starttime>
+     ? 這個是可能可以改的  但是不確定前先不改成這樣
+     my stuff
+     what are the notes from today ' s meeting
+     today 變成meeting_starttime
+     meeting sharetarget_type
 ====================
 work konwledge
 ===================
