@@ -338,6 +338,12 @@ slot level
      <data_type> onenote </data_type>
      onenote 因該是 data_source
      
+     <data_source> notes </data_source>
+     <data_source> note </data_source>
+     notes 不是data source
+     
+     ?notepad 算不算
+     
    <contact name>
       mystuff	i want to see the <data_type> note </data_type> for <keyword> wendy ' s </keyword>
       ? wendy 不是人名  先不管  因為小寫
