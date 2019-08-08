@@ -7,6 +7,9 @@ email domain 的QPC
 /deploy/builds/data/answers/QAS12HttpQAS/
 下面
 HttpQasProd_CortanaLU.QAS12HttpQAS.queryProcessingConfiguration.ini
+GriffinSdf_Cortana.QAS12HttpQAS.queryProcessingConfiguration.ini
+GriffinProd_Cortana.QAS12HttpQAS.queryProcessingConfiguration.ini
+這兩個都要改
 跟corescience stage 的不一樣
 
 dev flight 的client id
