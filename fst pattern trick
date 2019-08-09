@@ -48,6 +48,10 @@ preprocess rule 是最長的match
 Table 1: predefined list 
 是all words 所有的define 來源
 
+13/39
+graph 
+是non white sapce symnbol
+
 
 69/690
 [A .o. B] denotes the composition of the relation A with the relation
@@ -56,7 +60,34 @@ composite relation [A .o. B] contains the string pair x, z .
 Composition is associative but not commutative. We can write
 
 
+81/690
+[A => L _ R] denotes the language of strings that have the property
+that any string from A that occurs as a substring is immediately
+preceded by some string from L and immediately followed by some
+string from R. We call L and R here the LEFT and the RIGHT context of
+A, respectively. For example, [a => b _ c] includes all strings that
+contain no occurrence of “a” and all strings like “back-to-back”
+that completely satisfy the condition, but no strings such as “cab” or
+“pack”.
 
+86/690
+?  不懂...
+[A -> B || L R]
+Every replaced substring in the upper language is immediately preceded
+by an upper-side string from L and immediately followed by an
+upper-side string from R.
+No license:
+
+
+202/690
+<-@  new operation?
+
+
+72/690
+? 不太3
+Similarly, [a -> 0 || .#.] deletes only the final
+a, but [a -> 0 \\ .#.] deletes all the as at the end of a word like “baa”.
+See Section 3.5.5.
 
 ==================================================
 FW: Weekly Shiproom - Core Science Bellevue
