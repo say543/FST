@@ -41,14 +41,15 @@ myStuffSlotToFileSlot = {
     #"</from_contact_name>" : "</contact_name>",    
     "<keyword>" : "<file_keyword>",
     "</keyword>" : "</file_keyword>",
-    #"<start_date>" : "<start_date>",
-    #"</start_date>" : "</start_date>",
-    #"<start_time>" : "<start_time>",
-    #"</start_time>" : "</start_time>",
-    #"<end_date>" : "<end_date>",
-    #"</end_date>" : "</end_date>",
-    #"<end_time>" : "<end_time>",
-    #"</end_time>" : "</end_time>",
+	# only has date and time so map them to the same 
+    "<start_date>" : "<date>",
+    "</start_date>" : "</date>",
+    "<start_time>" : "<time>",
+    "</start_time>" : "</time>",
+    "<end_date>" : "<date>",
+    "</end_date>" : "</date>",
+    "<end_time>" : "<time>",
+    "</end_time>" : "</time>",
     #"<file_action>" : "<file_action>",
     #"</file_action>" : "</file_action>",
     #"<position_ref>" : "<position_ref>",
@@ -178,6 +179,7 @@ blackListQuerySet = {
     "old files",
     "On Tuesday, where did I save my Baked Ziti recipe?",
     "My Notes: Find Mom Notes",
+    "can you show me a picture of my old self?",
     # key word to remove
     # need to check in the future
     "computer",
@@ -253,25 +255,30 @@ blackListQuerySet = {
     "find my spreadsheet in my documents",
     "go to last note last",
     "preview note with name chili's",
+    "the pictures of december",
+    "hey cortana show me photos that taken two thousand and sixteen",
     }
 
 
 
-fileTypeCandidate = []
-fileNameCandidate = []
-fileKeywordCandidate = []
-fileContactNameCandidate = []
-fileToContactNameCandidate = []
-fileOrderRefCandidate = []
-fileStartTimeCandidate = []
-fileDataSourceCandidate = []
+
+
+fileTypeCandidateSet = set()
+fileNameCandidateSet = set()
+fileKeywordCandidateSet = set()
+fileContactNameCandidateSet = set()
+fileToContactNameCandidateSet = set()
+fileOrderRefCandidateSet = set()
+#fileStartTimeCandidate = set()
+fileTimeCandidateSet = set()
+fileDataSourceCandidateSet = set()
 
 
 # deduplication
-skipQueryCandidate = set()
+skipQueryCandidateSet = set()
 
 
-OutputSet = [];
+Output = [];
 
 with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
     for line in fin:
@@ -295,7 +302,7 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
                 break
 
         if skip is True:
-            skipQueryCandidate.add(linestrs[0])
+            skipQueryCandidateSet.add(linestrs[0])
             continue
 
         # make sure it is find_my_stuff intent
@@ -326,13 +333,13 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
 
             # handle my
             # to my
-            if slot.find("to my") != -1:
-                slot = slot.replace("to my", "to <contact_name> my </contact_name>")
+            if slot.find(" to my ") != -1:
+                slot = slot.replace(" to my", " to <contact_name> my </contact_name>")
             # with me
-            if slot.find("to me") != -1:
-                slot = slot.replace("to me", "to <to_contact_name> me </to_contact_name>")
-            if slot.find("with me") != -1:
-                slot = slot.replace("with me", "with <to_contact_name> me </to_contact_name>")
+            if slot.find(" to me ") != -1:
+                slot = slot.replace(" to me", " to <to_contact_name> me </to_contact_name>")
+            if slot.find(" with me ") != -1:
+                slot = slot.replace(" with me ", " with <to_contact_name> me </to_contact_name>")
 
             # i verb
             verbs = ["downloaded",
@@ -346,6 +353,17 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
                      "working",
                      "shared",
                      "wrote",
+                     "added",
+                     "used",
+                     "using",
+                     "composed",
+                     "opened",
+                     "composing",
+                     "morning",
+                     "walked",
+                     "edited",
+                     "updated",
+                     "writing",
                      ]
             contactNames = ["i",
                             "I"
@@ -380,51 +398,51 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
                 slot = slot.replace("<data_source> downloads </data_source>", "<file_type> downloads </file_type>")
 
             # start time too long handle
-            if slot.find("<start_time> in the last hour </start_time>") != -1:
-                slot = slot.replace("<start_time> in the last hour </start_time>", "in the <start_time> last hour </start_time>")
-            if slot.find("<start_time> within the last hour </start_time>") != -1:
-                slot = slot.replace("<start_time> within the last hour </start_time>", "within the <start_time> last hour </start_time>")
+            if slot.find("<time> in the last hour </time>") != -1:
+                slot = slot.replace("<time> in the last hour </time>", "in the <time> last hour </time>")
+            if slot.find("<time> within the last hour </time>") != -1:
+                slot = slot.replace("<time> within the last hour </time>", "within the <time> last hour </time>")
 
-            if slot.find("<start_time> in the last day </start_time>") != -1:
-                slot = slot.replace("<start_time> in the last day </start_time>", "in the <start_time> last day </start_time>")
-            if slot.find("<start_time> within the last day </start_time>") != -1:
-                slot = slot.replace("<start_time> within the last day </start_time>", "within the <start_time> last day </start_time>")
-
-
-            if slot.find("<start_date> in the last month </start_date>") != -1:
-                slot = slot.replace("<start_date> in the last month </start_date>", "in the <start_date> last month </start_date>")
-            if slot.find("<start_date> within the last 1 month </start_date>") != -1:
-                slot = slot.replace("<start_date> within the last month </start_date>", "within the <start_date> last month </start_date>")
+            if slot.find("<time> in the last day </time>") != -1:
+                slot = slot.replace("<time> in the last day </time>", "in the <time> last day </time>")
+            if slot.find("<time> within the last day </time>") != -1:
+                slot = slot.replace("<time> within the last day </time>", "within the <time> last day </time>")
 
 
-            if slot.find("<start_date> in the last week </start_date>") != -1:
-                slot = slot.replace("<start_date> in the last week </start_date>", "in the <start_date> last week </start_date>")
-            if slot.find("<start_date> within the last week </start_date>") != -1:
-                slot = slot.replace("<start_date> within the last 1 week </start_date>", "within the <start_date> last week </start_date>")
+            if slot.find("<date> in the last month </date>") != -1:
+                slot = slot.replace("<date> in the last month </date>", "in the <date> last month </date>")
+            if slot.find("<date> within the last 1 month </date>") != -1:
+                slot = slot.replace("<date> within the last month </date>", "within the <date> last month </date>")
+
+
+            if slot.find("<date> in the last week </date>") != -1:
+                slot = slot.replace("<date> in the last week </date>", "in the <date> last week </date>")
+            if slot.find("<date> within the last week </date>") != -1:
+                slot = slot.replace("<date> within the last 1 week </date>", "within the <date> last week </date>")
 
 
             #https://blog.csdn.net/blueheart20/article/details/52883045
             for num in range(1, 400):
-                if slot.find("<start_date> in the last " + str(num) + " hours </start_date>") != -1:
-                    slot = slot.replace("<start_date> in the last " + str(num) + " hours </start_date>", "in the <start_date> last " + str(num) + " hours </start_date>")
-                if slot.find("<start_date> within the last " + str(num) + " hours </start_date>") != -1:
-                    slot = slot.replace("<start_date> within the last " + str(num) + " hours </start_date>", "within the <start_date> last " + str(num) + " hours </start_date>")
+                if slot.find("<date> in the last " + str(num) + " hours </date>") != -1:
+                    slot = slot.replace("<date> in the last " + str(num) + " hours </date>", "in the <date> last " + str(num) + " hours </date>")
+                if slot.find("<date> within the last " + str(num) + " hours </date>") != -1:
+                    slot = slot.replace("<date> within the last " + str(num) + " hours </date>", "within the <date> last " + str(num) + " hours </date>")
 
-                if slot.find("<start_date> in the last " + str(num) + " days </start_date>") != -1:
-                    slot = slot.replace("<start_date> in the last " + str(num) + " days </start_date>", "in the <start_date> last " + str(num) + " days </start_date>")
-                if slot.find("<start_date> within the last " + str(num) + " days </start_date>") != -1:
-                    slot = slot.replace("<start_date> within the last " + str(num) + " days </start_date>", "within the <start_date> last " + str(num) + " days </start_date>")
+                if slot.find("<date> in the last " + str(num) + " days </date>") != -1:
+                    slot = slot.replace("<date> in the last " + str(num) + " days </date>", "in the <date> last " + str(num) + " days </date>")
+                if slot.find("<date> within the last " + str(num) + " days </date>") != -1:
+                    slot = slot.replace("<date> within the last " + str(num) + " days </date>", "within the <date> last " + str(num) + " days </date>")
 
                 
-                if slot.find("<start_date> in the last " + str(num) + " months </start_date>") != -1:
-                    slot = slot.replace("<start_date> in the last " + str(num) + " months </start_date>", "in the <start_date> last " + str(num) + " months </start_date>")
-                if slot.find("<start_date> within the last " + str(num) + " months </start_date>") != -1:
-                    slot = slot.replace("<start_date> within the last " + str(num) + " months </start_date>", "within the <start_date> last " + str(num) + " months </start_date>")
+                if slot.find("<date> in the last " + str(num) + " months </date>") != -1:
+                    slot = slot.replace("<date> in the last " + str(num) + " months </date>", "in the <date> last " + str(num) + " months </date>")
+                if slot.find("<date> within the last " + str(num) + " months </date>") != -1:
+                    slot = slot.replace("<date> within the last " + str(num) + " months </date>", "within the <date> last " + str(num) + " months </date>")
 
-                if slot.find("<start_date> in the last " + str(num) + " weeks </start_date>") != -1:
-                    slot = slot.replace("<start_date> in the last " + str(num) + " weeks </start_date>", "in the <start_date> last " + str(num) + " weeks </start_date>")
-                if slot.find("<start_date> within the last " + str(num) + " weeks </start_date>") != -1:
-                    slot = slot.replace("<start_date> within the last " + str(num) + " weeks </start_date>", "within the <start_date> last " + str(num) + " weeks </start_date>")
+                if slot.find("<date> in the last " + str(num) + " weeks </date>") != -1:
+                    slot = slot.replace("<date> in the last " + str(num) + " weeks </date>", "in the <date> last " + str(num) + " weeks </date>")
+                if slot.find("<date> within the last " + str(num) + " weeks </date>") != -1:
+                    slot = slot.replace("<date> within the last " + str(num) + " weeks </date>", "within the <date> last " + str(num) + " weeks </date>")
                     
             alphaDigits = ["two",
                           "three",
@@ -439,25 +457,25 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
                           "twelve"
                           ]
             for alphadigit in alphaDigits:
-                if slot.find("<start_date> in the last " + alphadigit + " hours </start_date>") != -1:
-                    slot = slot.replace("<start_date> in the last " + alphadigit + " hours </start_date>", "in the <start_date> last " + alphadigit + " hours </start_date>")
-                if slot.find("<start_date> within the last " + alphadigit + " hours </start_date>") != -1:
-                    slot = slot.replace("<start_date> within the last " + alphadigit + " hours </start_date>", "within the <start_date> last " + alphadigit + " hours </start_date>")
+                if slot.find("<date> in the last " + alphadigit + " hours </date>") != -1:
+                    slot = slot.replace("<date> in the last " + alphadigit + " hours </date>", "in the <date> last " + alphadigit + " hours </date>")
+                if slot.find("<date> within the last " + alphadigit + " hours </date>") != -1:
+                    slot = slot.replace("<date> within the last " + alphadigit + " hours </date>", "within the <date> last " + alphadigit + " hours </date>")
 
-                if slot.find("<start_date> in the last " + alphadigit + " days </start_date>") != -1:
-                    slot = slot.replace("<start_date> in the last " + alphadigit + " days </start_date>", "in the <start_date> last " + alphadigit + " days </start_date>")
-                if slot.find("<start_date> within the last " + alphadigit + " days </start_date>") != -1:
-                    slot = slot.replace("<start_date> within the last " + alphadigit + " days </start_date>", "within the <start_date> last " + alphadigit + " days </start_date>")
+                if slot.find("<date> in the last " + alphadigit + " days </date>") != -1:
+                    slot = slot.replace("<date> in the last " + alphadigit + " days </date>", "in the <date> last " + alphadigit + " days </date>")
+                if slot.find("<date> within the last " + alphadigit + " days </date>") != -1:
+                    slot = slot.replace("<date> within the last " + alphadigit + " days </date>", "within the <date> last " + alphadigit + " days </date>")
                     
-                if slot.find("<start_date> in the last " + alphadigit + " months </start_date>") != -1:
-                    slot = slot.replace("<start_date> in the last " + alphadigit + " months </start_date>", "in the <start_date> last " + alphadigit + " months </start_date>")
-                if slot.find("<start_date> within the last " + alphadigit + " months </start_date>") != -1:
-                    slot = slot.replace("<start_date> within the last " + alphadigit + " months </start_date>", "within the <start_date> last " + alphadigit + " months </start_date>")
+                if slot.find("<date> in the last " + alphadigit + " months </date>") != -1:
+                    slot = slot.replace("<date> in the last " + alphadigit + " months </date>", "in the <date> last " + alphadigit + " months </date>")
+                if slot.find("<date> within the last " + alphadigit + " months </date>") != -1:
+                    slot = slot.replace("<date> within the last " + alphadigit + " months </date>", "within the <date> last " + alphadigit + " months </date>")
 
-                if slot.find("<start_date> in the last " + alphadigit + " weeks </start_date>") != -1:
-                    slot = slot.replace("<start_date> in the last " + alphadigit + " weeks </start_date>", "in the <start_date> last " + alphadigit + " weeks </start_date>")
-                if slot.find("<start_date> within the last " + alphadigit + " weeks </start_date>") != -1:
-                    slot = slot.replace("<start_date> within the last " + alphadigit + " weeks </start_date>", "within the <start_date> last " + alphadigit + " weeks </start_date>")
+                if slot.find("<date> in the last " + alphadigit + " weeks </date>") != -1:
+                    slot = slot.replace("<date> in the last " + alphadigit + " weeks </date>", "in the <date> last " + alphadigit + " weeks </date>")
+                if slot.find("<date> within the last " + alphadigit + " weeks </date>") != -1:
+                    slot = slot.replace("<date> within the last " + alphadigit + " weeks </date>", "within the <date> last " + alphadigit + " weeks </date>")
 
 
             if slot.find("<from_contact_name>") != -1 and slot.find("<contact_name>") != -1:
@@ -471,20 +489,24 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
                 slot = slot.replace("</from_contact_name>", "</contact_name>")
 
             #for recent, recently, just . Just in start_time, mapping to order_ref
-            if slot.find("<start_time> recent </start_time>") != -1:
-                slot = slot.replace("<start_time> recent </start_time>", "<file_recency> recent </file_recency>")
-            if slot.find("<start_time> Recent </start_time>") != -1:
-                slot = slot.replace("<start_time> Recent </start_time>", "<file_recency> Recent </file_recency>")
-            if slot.find("<start_time> recently </start_time>") != -1:
-                slot = slot.replace("<start_time> recently </start_time>", "<file_recency> recently </file_recency>")
-            if slot.find("<start_time> Recently </start_time>") != -1:
-                slot = slot.replace("<start_time> Recently </start_time>", "<file_recency> Recently </file_recency>")
-            if slot.find("<start_time> just </start_time>") != -1:
-                slot = slot.replace("<start_time> just </start_time>", "<file_recency> just </file_recency>")
-            if slot.find("<start_time> Just </start_time>") != -1:
-                slot = slot.replace("<start_time> Just </start_time>", "<file_recency> Just </file_recency>")
+            if slot.find("<time> recent </time>") != -1:
+                slot = slot.replace("<time> recent </time>", "<file_recency> recent </file_recency>")
+            if slot.find("<time> Recent </time>") != -1:
+                slot = slot.replace("<time> Recent </time>", "<file_recency> Recent </file_recency>")
+            if slot.find("<time> recently </time>") != -1:
+                slot = slot.replace("<time> recently </time>", "<file_recency> recently </file_recency>")
+            if slot.find("<time> Recently </time>") != -1:
+                slot = slot.replace("<time> Recently </time>", "<file_recency> Recently </file_recency>")
+            if slot.find("<time> just </time>") != -1:
+                slot = slot.replace("<time> just </time>", "<file_recency> just </file_recency>")
+            if slot.find("<time> Just </time>") != -1:
+                slot = slot.replace("<time> Just </time>", "<file_recency> Just </file_recency>")
             if slot.find("<order_ref> most recent </order_ref>") != -1:
                 slot = slot.replace("<order_ref> most recent </order_ref>", "most <file_recency> recent </file_recency>")
+            if slot.find("<order_ref> recent </order_ref>") != -1:
+                slot = slot.replace("<order_ref> recent </order_ref>", "<file_recency> recent </file_recency>")
+            if slot.find("<order_ref> Recent </order_ref>") != -1:
+                slot = slot.replace("<order_ref> Recent </order_ref>", "<file_recency> Recent </file_recency>")
 
             # for analysis
             xmlpairs = re.findall("(<.*?>.*?<\/.*?>)", slot)
@@ -492,24 +514,24 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
             for xmlpair in xmlpairs:
                 
                 if xmlpair.startswith("<file_type>"):
-                    fileTypeCandidate.append(xmlpair)
+                    fileTypeCandidateSet.add(xmlpair)
                 if xmlpair.startswith("<file_name>"):
-                    fileNameCandidate.append(xmlpair)
+                    fileNameCandidateSet.add(xmlpair)
                 if xmlpair.startswith("<file_keyword>"):
-                    fileKeywordCandidate.append(xmlpair)
+                    fileKeywordCandidateSet.add(xmlpair)
                 if xmlpair.startswith("<contact_name>"):
-                    fileContactNameCandidate.append(xmlpair)
+                    fileContactNameCandidateSet.add(xmlpair)
                 if xmlpair.startswith("<to_contact_name>"):
-                    fileToContactNameCandidate.append(xmlpair)
+                    fileToContactNameCandidateSet.add(xmlpair)
                 if xmlpair.startswith("<order_ref>"):
-                    fileOrderRefCandidate.append(xmlpair)
-                if xmlpair.startswith("<start_time>"):
-                    fileStartTimeCandidate.append(xmlpair)
+                    fileOrderRefCandidateSet.add(xmlpair)
+                if xmlpair.startswith("<time>"):
+                    fileTimeCandidateSet.add(xmlpair)
                 if xmlpair.startswith("<data_source>"):
-                    fileDataSourceCandidate.append(xmlpair)
+                    fileDataSourceCandidateSet.add(xmlpair)
             
             # output id	query	intent	domain	QueryXml	id	0   
-            OutputSet.append("0\t"+linestrs[0]+"\t"+myStuffIntentToFileIntent[linestrs[3]]+"\t"+myStuffDomainToFileDomain[linestrs[4]]+"\t"+slot);
+            Output.append("0\t"+linestrs[0]+"\t"+myStuffIntentToFileIntent[linestrs[3]]+"\t"+myStuffDomainToFileDomain[linestrs[4]]+"\t"+slot);
 
 """
 # comment shuffle in the first place
@@ -517,17 +539,17 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
 """
 
 with codecs.open('files_mystuff_after_filtering.tsv', 'w', 'utf-8') as fout:
-    for item in OutputSet:
+    for item in Output:
         fout.write(item + '\r\n');
 
 
 with codecs.open('files_mystuff_after_filtering_file_type.tsv', 'w', 'utf-8') as fout:
-    for item in fileTypeCandidate:
+    for item in fileTypeCandidateSet:
         fout.write(item + '\r\n');
 
     
 with codecs.open('files_mystuff_after_filtering_file_keyword.tsv', 'w', 'utf-8') as fout:
-    for item in fileKeywordCandidate:
+    for item in fileKeywordCandidateSet:
         fout.write(item + '\r\n');
 
 with codecs.open('files_mystuff_after_filtering_file_name.tsv', 'w', 'utf-8') as fout:
@@ -535,28 +557,28 @@ with codecs.open('files_mystuff_after_filtering_file_name.tsv', 'w', 'utf-8') as
         fout.write(item + '\r\n');
 
 with codecs.open('files_mystuff_after_filtering_contact_name.tsv', 'w', 'utf-8') as fout:
-    for item in fileContactNameCandidate:
+    for item in fileContactNameCandidateSet:
         fout.write(item + '\r\n');
 
 with codecs.open('files_mystuff_after_filtering_to_contact_name.tsv', 'w', 'utf-8') as fout:
-    for item in fileToContactNameCandidate:
+    for item in fileToContactNameCandidateSet:
         fout.write(item + '\r\n');
 
 with codecs.open('files_mystuff_after_filtering_order_ref.tsv', 'w', 'utf-8') as fout:
-    for item in fileOrderRefCandidate:
+    for item in fileOrderRefCandidateSet:
         fout.write(item + '\r\n');
 
-with codecs.open('files_mystuff_after_filtering_start_time.tsv', 'w', 'utf-8') as fout:
-    for item in fileStartTimeCandidate:
+with codecs.open('files_mystuff_after_filtering_time.tsv', 'w', 'utf-8') as fout:
+    for item in fileTimeCandidateSet:
         fout.write(item + '\r\n');
 
 with codecs.open('files_mystuff_after_filtering_data_source.tsv', 'w', 'utf-8') as fout:
-    for item in fileDataSourceCandidate:
+    for item in fileDataSourceCandidateSet:
         fout.write(item + '\r\n');
 
 
 with codecs.open('files_skip_query.tsv', 'w', 'utf-8') as fout:
-    for item in skipQueryCandidate:
+    for item in skipQueryCandidateSet:
         fout.write(item + '\r\n');
 
 #######################
