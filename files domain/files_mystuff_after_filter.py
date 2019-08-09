@@ -268,11 +268,10 @@ fileNameCandidateSet = set()
 fileKeywordCandidateSet = set()
 fileContactNameCandidateSet = set()
 fileToContactNameCandidateSet = set()
-fileOrderRefCandidateSet = set()
+orderRefCandidateSet = set()
 #fileStartTimeCandidate = set()
 fileTimeCandidateSet = set()
 fileDataSourceCandidateSet = set()
-
 
 # deduplication
 skipQueryCandidateSet = set()
@@ -524,7 +523,7 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
                 if xmlpair.startswith("<to_contact_name>"):
                     fileToContactNameCandidateSet.add(xmlpair)
                 if xmlpair.startswith("<order_ref>"):
-                    fileOrderRefCandidateSet.add(xmlpair)
+                    orderRefCandidateSet.add(xmlpair)
                 if xmlpair.startswith("<time>"):
                     fileTimeCandidateSet.add(xmlpair)
                 if xmlpair.startswith("<data_source>"):
@@ -542,6 +541,14 @@ with codecs.open('files_mystuff_after_filtering.tsv', 'w', 'utf-8') as fout:
     for item in Output:
         fout.write(item + '\r\n');
 
+with codecs.open('files_skip_query.tsv', 'w', 'utf-8') as fout:
+    for item in skipQueryCandidateSet:
+        fout.write(item + '\r\n');
+
+#######################
+# slot level output
+#######################
+
 
 with codecs.open('files_mystuff_after_filtering_file_type.tsv', 'w', 'utf-8') as fout:
     for item in fileTypeCandidateSet:
@@ -553,7 +560,7 @@ with codecs.open('files_mystuff_after_filtering_file_keyword.tsv', 'w', 'utf-8')
         fout.write(item + '\r\n');
 
 with codecs.open('files_mystuff_after_filtering_file_name.tsv', 'w', 'utf-8') as fout:
-    for item in fileNameCandidate:
+    for item in fileNameCandidateSet:
         fout.write(item + '\r\n');
 
 with codecs.open('files_mystuff_after_filtering_contact_name.tsv', 'w', 'utf-8') as fout:
@@ -565,7 +572,7 @@ with codecs.open('files_mystuff_after_filtering_to_contact_name.tsv', 'w', 'utf-
         fout.write(item + '\r\n');
 
 with codecs.open('files_mystuff_after_filtering_order_ref.tsv', 'w', 'utf-8') as fout:
-    for item in fileOrderRefCandidateSet:
+    for item in orderRefCandidateSet:
         fout.write(item + '\r\n');
 
 with codecs.open('files_mystuff_after_filtering_time.tsv', 'w', 'utf-8') as fout:
@@ -574,11 +581,6 @@ with codecs.open('files_mystuff_after_filtering_time.tsv', 'w', 'utf-8') as fout
 
 with codecs.open('files_mystuff_after_filtering_data_source.tsv', 'w', 'utf-8') as fout:
     for item in fileDataSourceCandidateSet:
-        fout.write(item + '\r\n');
-
-
-with codecs.open('files_skip_query.tsv', 'w', 'utf-8') as fout:
-    for item in skipQueryCandidateSet:
         fout.write(item + '\r\n');
 
 #######################
