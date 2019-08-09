@@ -320,6 +320,31 @@ clean slot.py
 
 
 
+==============================
+teams metadata retriever
+================================
+in HttpQASINT_ML_OFFLINE_QAS_EVAL_INT.QAS01HttpQAS.QueryProcessingConfiguration.ini
+[qd_teams_slots_metadataretriever]
+
+目前有support 的
+luna_teams_slots.canonicalentities.teamsuser_activitytype.txt,
+//files domain need
+luna_teams_slots.canonicalentities.teamsuser_contactname.txt,
+luna_teams_slots.canonicalentities.teammeeting_quantifier.txt,
+luna_teams_slots.canonicalentities.slide_number.txt,
+luna_teams_slots.canonicalentities.teamspace_tab.txt,
+luna_teams_slots.canonicalentities.teamsuser_status.txt,
+//files domain need
+luna_teams_slots.canonicalentities.position_ref.txt,
+//files domain need
+luna_teams_slots.canonicalentities.file_filerecency.txt,
+//files domain need
+luna_teams_slots.canonicalentities.file_filetype.txt,
+luna_teams_slots.canonicalentities.file_sharetarget.txt,
+//files domain need
+luna_teams_slots.canonicalentities.teamspace_sharetarget.txt
+
+
 =====================================
 teams multi turn spec
 =====================================
