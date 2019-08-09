@@ -12,7 +12,7 @@ hyper_parameter = 200
 
 
 
-fileDomainRelatedIntent = ['file_search', 'file_open', 'file_share', 'file_download', 'file_other', 'file_navigate']
+fileDomainRelatedIntent = ['file_search', 'file_open', 'file_share', 'file_download', 'file_other', 'file_navigate', "teamspace_search"]
 
 teamsDomainToFileDomain = {
     "teams" : "files"
@@ -37,6 +37,9 @@ teamsSlotToFileSlot = {
     "</file_filetype>" : "</file_type>",
     "<file_filerecency>" : "<file_recency>",
     "</file_filerecency>" : "</file_recency>",
+    # unopned to judge but data has it so cover
+    "<file_orderref>" : "<order_ref>",
+    "</file_orderref>" : "</order_ref>",
     "<file_sharetarget>" : "<sharetarget_type>",
     "</file_sharetarget>" : "</sharetarget_type>",
     # preprocessing channel or team title later
@@ -97,25 +100,92 @@ teamsSlotToFileSlot = {
 
 
 
+fileRecencyReformat = {
+    "<file_recency> the last used </file_recency>" : "the <orderref> last </orderref> <file_action> used </file_action>",
+    "<file_recency> I worked on </file_recency>" : "<contact_name> I </contact_name> <file_action> worked </file_action> on",
+    "<file_recency> I added a model </file_recency>" : "<contact_name> I </contact_name> <file_action> added </file_action> a model",
+    "<file_recency> I have recently worked on </file_recency>" : "<contact_name> I </contact_name> have <file_recency> recently </file_recency> <file_action> worked </file_action> on",
+    "<file_recency> that was closed </file_recency>" : "that was <file_action> used </file_action>",
+    "<file_recency> I was working on </file_recency>" : "<contact_name> I </contact_name> was <file_action> working </file_action> on",
+    "<file_recency> I added </file_recency>" : "<contact_name> I </contact_name> <file_action> added </file_action>",
+    "<file_recency> I was using </file_recency>" : "<contact_name> I </contact_name> was <file_action> using </file_action>",
+    # ? this case is not passivie so no action
+    "<file_recency> I compose </file_recency>": "<contact_name> I </contact_name> compose",
+    "<file_recency> I to compose </file_recency>": "<contact_name> I </contact_name> to compose",
+    "<file_recency> I was to compose </file_recency>": "<contact_name> I </contact_name> was to compose",
+    "<file_recency> I was compose </file_recency>" : "<contact_name> I </contact_name> was compose",
+    "<file_recency> I have recently opened </file_recency>" : "<contact_name> I </contact_name> have <file_recency> recently </file_recency> <file_action> opened </file_action>",
+    "<file_recency> i was composing </file_recency>": "<contact_name> i </contact_name> was <file_action> composing </file_action>",
+    "<file_recency> I was composing </file_recency>": "<contact_name> I </contact_name> was <file_action> composing </file_action>",
+    "<file_recency> I've recently used </file_recency>" : "<contact_name> I </contact_name> 've <file_recency> recently </file_recency> <file_action> used </file_action>",
+    "<file_recency> I had been working on </file_recency>" : "<contact_name> I </contact_name> have been <file_action> working </file_action> on",
+    "<file_recency> I recently morning </file_recency>" : "<contact_name> I </contact_name><file_recency> recently </file_recency> <file_action> morning </file_action>",
+    "<file_recency> I was just working on </file_recency>" : "<contact_name> I </contact_name> was <file_recency> just </file_recency> <file_action> working </file_action> on", 
+    "<file_recency> most recent </file_recency>" : "most <file_recency> recent </file_recency>",
+    # makr to orderref
+    "<file_recency> newest </file_recency>" : "<orderref> newest </orderref>",
+    "<file_recency> latest </file_recency>" : "<orderref> latest </orderref>",
+    # ? need to think if having last active as orderref
+    "<file_recency> last active </file_recency>" : "<orderref> last </orderref> active",
+    "<file_recency> I was creating </file_recency>" : "<contact_name> I </contact_name> was <file_action> creating </file_action>",
+    "<file_recency> I just walked on </file_recency>" : "<contact_name> I </contact_name> <file_recency> just </file_recency> <file_action> walked </file_action> on",
+    "<file_recency> I just edited </file_recency>" : "<contact_name> I </contact_name> <file_recency> just </file_recency> <file_action> edited </file_action>",
+    "<file_recency> I was last working on </file_recency>" : "<contact_name> I </contact_name> was <orderref> last </orderref> <file_action> working </file_action> on",
+    "<file_recency> I was recently working on </file_recency>" : "<contact_name> I </contact_name> was <file_recency> recently </file_recency> <file_action> working </file_action> on", 
+    "<file_recency> added </file_recency>" : "<file_action> added </file_action>",
+    "<file_recency> I had up before </file_recency>" : "<contact_name> I </contact_name> had <file_action> up </file_action> before",
+    "<file_recency> I worked with Elizabeth on </file_recency>" : "<contact_name> I </contact_name> <file_action> worked </file_action> with <to_contact_name> Elizabeth </to_contact_name> on",
+    "<file_recency> I uploaded </file_recency>" : "<contact_name> I </contact_name> <file_action> uploaed </file_action>",
+    "<file_recency> I updated </file_recency>" : "<contact_name> I </contact_name> <file_action> updated </file_action>",
+    "<file_recency> I last edited </file_recency>" : "<contact_name> I </contact_name> <orderref> last </orderref> <file_action> edited </file_action>",
+    "<file_recency> I was working on recently </file_recency>" : "<contact_name> I </contact_name> was <file_action> working </file_action> on <file_recency> recently </file_recency>",
+    "<file_recency> I just walked down </file_recency>" : "<contact_name> I </contact_name> <file_recency> just </file_recency> <file_action> walked </file_action> down",
+    "<file_recency> i was working on </file_recency>" : "<contact_name> i </contact_name> was <file_action> working </file_action> on",
+    "<file_recency> I shared with <to_contact_name> me </to_contact_name>" : "<contact_name> I </contact_name> <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>",
+    "<file_recency> I was editing </file_recency>" : "<contact_name> I </contact_name> was <file_action> editing </file_action>",
+    "<file_recency> I was working on last </file_recency>" : "<contact_name> i </contact_name> was <file_action> working </file_action> on <orderref> last </orderref>",
+    "<file_recency> I used most recently </file_recency>" : "<contact_name> I </contact_name> <file_action> used </file_action> most <file_recency> recent </file_recency>",
+    "<file_recency> I was working </file_recency>" : "<contact_name> I </contact_name> was <file_action> working </file_action>",
+    "<file_recency> I was writing </file_recency>" : "<contact_name> I </contact_name> was <file_action> writing </file_action>",
+    "<file_recency> recently I was working on </file_recency>" : "<file_recency> recently </file_recency> <contact_name> I </contact_name> was <file_action> working </file_action> on",
+    # not sure if new should be tag, do not new right now
+    "<file_recency> I shared with me new </file_recency>" : "<contact_name> I </contact_name> <file_action> shared </file_action> with <to_contact_name> me </to_contact_name> new",
+}
+
+
 blackListQuerySet = {
     }
 
+##############################
+# intent level candidate
+##############################
+teamspaceSearchCandidateSet = set()
+
+##############################
+# slot level candidate
+##############################
 
 
-fileKeywordCandidate = []
-meetingStarttimeCandidate = []
-fileTypeCandidate = []
-fileRecencyCandidate = []
-sharetargetTypeCandidate = []
-sharetargetNameCandidate = []
-contactNameCandidate =[]
- 
+
+fileKeywordCandidateSet = set()
+fileNameCandidateSet = set()
+meetingStarttimeCandidateSet = set()
+fileTypeCandidateSet = set()
+
+# this is for deduplication and replacement
+fileRecencyCandidateSet = set()
+
+sharetargetTypeCandidateSet = set()
+sharetargetNameCandidateSet = set()
+contactNameCandidateSet = set()
+
+fileActionCandidateSet = set() 
 
 # deduplication
-skipQueryCandidate = set()
+skipQueryCandidateSet = set()
 
 
-OutputSet = [];
+Output = [];
 
 with codecs.open('teams_slot_training.tsv', 'r', 'utf-8') as fin:
     for line in fin:
@@ -131,6 +201,12 @@ with codecs.open('teams_slot_training.tsv', 'r', 'utf-8') as fin:
         # make sure it is find_my_stuff intent
         if linestrs[2] in fileDomainRelatedIntent:
 
+            # document teamspace_search
+            # for further analysis
+            if linestrs[2] == "teamspace_search":
+                teamspaceSearchCandidateSet.add(line)
+                continue
+
             slot = linestrs[4]
             for key in sorted (teamsSlotToFileSlot.keys()) :
                 slot = slot.replace(key, teamsSlotToFileSlot[key])
@@ -139,6 +215,12 @@ with codecs.open('teams_slot_training.tsv', 'r', 'utf-8') as fin:
             # in this case, we will tage my my i I so no need this replacement
             #for key in sorted (removeSpecialSlotValue.keys()) :
             #    slot = slot.replace(key, removeSpecialSlotValue[key])
+
+
+            # recency re format
+            for key in sorted (fileRecencyReformat.keys()) :
+                slot = slot.replace(key, fileRecencyReformat[key])
+            
                 
             # remove head and end spaces 
             slot = slot.strip()
@@ -147,9 +229,14 @@ with codecs.open('teams_slot_training.tsv', 'r', 'utf-8') as fin:
             #list = re.findall("(</?[^>]*>)", slot)
 
 
+
+
+            if slot.find("<time> recent </time>") != -1:
+                slot = slot.replace("<time> recent </time>", "<file_recency> recent </file_recency>")
+
             # handle my
             # to my
-            '''
+            
             if slot.find(" to my ") != -1:
                 slot = slot.replace(" to my", " to <contact_name> my </contact_name>")
             # with me
@@ -157,7 +244,7 @@ with codecs.open('teams_slot_training.tsv', 'r', 'utf-8') as fin:
                 slot = slot.replace(" to me", " to <to_contact_name> me </to_contact_name>")
             if slot.find(" with me ") != -1:
                 slot = slot.replace(" with me ", " with <to_contact_name> me </to_contact_name>")
-
+            
             # i verb
             verbs = ["downloaded",
                      "worked",
@@ -189,7 +276,7 @@ with codecs.open('teams_slot_training.tsv', 'r', 'utf-8') as fin:
                 #if linestrs[0].find("I downloaded") != -1 and slot.find("I <file_action> downloaded </file_action>")!=-1:
                 #    slot = slot.replace("i <file_action> downloaded </file_action>", "<contact_name> I </contact_name> <file_action> downloaded </file_action>")
 
-
+            '''
             # hanlde my xxx and my should be contact name
             # ? not sure why this sniffet does not work
             ##nouns = [
@@ -317,26 +404,48 @@ with codecs.open('teams_slot_training.tsv', 'r', 'utf-8') as fin:
 
             # for analysis
             xmlpairs = re.findall("(<.*?>.*?<\/.*?>)", slot)
+
+            for xmlpair in xmlpairs:
+                # file_keywrod to file_name
+                #https://stackoverflow.com/questions/41484526/regular-expression-for-matching-non-whitespace-in-python
+                # not perfect but good enough
+                if xmlpair.startswith("<file_keyword>") and re.search(r'[\S]+\.[\S]+', xmlpair) is not None:
+                    newPair = xmlpair.replace("<file_keyword>", "<file_name>")
+                    newPair = newPair.replace("</file_keyword>", "</file_name>")
+                    slot = slot.replace(xmlpair, newPair)
+
+                # contact name?
+                # might need to add
+
+            # for analysis
+            xmlpairs = re.findall("(<.*?>.*?<\/.*?>)", slot)           
             #print (xmlpairs)
             for xmlpair in xmlpairs:
                 
                 if xmlpair.startswith("<file_keyword>"):
-                    fileKeywordCandidate.append(xmlpair)
+                    fileKeywordCandidateSet.add(xmlpair)
+                if xmlpair.startswith("<file_name>"):
+                    fileNameCandidateSet.add(xmlpair)
                 if xmlpair.startswith("<meeting_starttime>"):
-                    meetingStarttimeCandidate.append(xmlpair)
+                    meetingStarttimeCandidateSet.add(xmlpair)
                 if xmlpair.startswith("<file_type>"):
-                    fileTypeCandidate.append(xmlpair)
+                    fileTypeCandidateSet.add(xmlpair)
                 if xmlpair.startswith("<file_recency>"):
-                    fileRecencyCandidate.append(xmlpair)
+                    # this is for replacement profiling
+                    fileRecencyCandidateSet.add(xmlpair)
+
+                    
                 if xmlpair.startswith("<sharetarget_type>"):
-                    sharetargetTypeCandidate.append(xmlpair)
+                    sharetargetTypeCandidateSet.add(xmlpair)
                 if xmlpair.startswith("<sharetarget_name>"):
-                    sharetargetNameCandidate.append(xmlpair)
+                    sharetargetNameCandidateSet.add(xmlpair)
                 if xmlpair.startswith("<contact_name>"):
-                    contactNameCandidate.append(xmlpair)
+                    contactNameCandidateSet.add(xmlpair)
+                if xmlpair.startswith("<file_action>"):
+                    fileActionCandidateSet.add(xmlpair)
 
             # output: id	query	intent	domain	QueryXml	id	0   
-            OutputSet.append(linestrs[0]+"\t"+linestrs[1]+"\t"+linestrs[2]+"\t"+teamsDomainToFileDomain[linestrs[3]]+"\t"+slot);
+            Output.append(linestrs[0]+"\t"+linestrs[1]+"\t"+linestrs[2]+"\t"+teamsDomainToFileDomain[linestrs[3]]+"\t"+slot);
 
 """
 # comment shuffle in the first place
@@ -344,36 +453,60 @@ with codecs.open('teams_slot_training.tsv', 'r', 'utf-8') as fin:
 """
 
 with codecs.open('teams_slot_training_after_filtering.tsv', 'w', 'utf-8') as fout:
-    for item in OutputSet:
+    for item in Output:
         fout.write(item + '\r\n');
 
+#######################
+# intent level output
+#######################
+with codecs.open('teams_slot_training_after_filtering_teamspace_search.tsv', 'w', 'utf-8') as fout:
+    for item in teamspaceSearchCandidateSet:
+        fout.write(item + '\r\n');
+
+
+
+#######################
+# slot level output
+#######################
+
+
 with codecs.open('teams_slot_training_after_filtering_file_keyword.tsv', 'w', 'utf-8') as fout:
-    for item in fileKeywordCandidate:
+    for item in fileKeywordCandidateSet:
+        fout.write(item + '\r\n');
+
+with codecs.open('teams_slot_training_after_filtering_file_name.tsv', 'w', 'utf-8') as fout:
+    for item in fileNameCandidateSet:
         fout.write(item + '\r\n');
 
 with codecs.open('teams_slot_training_after_filtering_meeting_starttime.tsv', 'w', 'utf-8') as fout:
-    for item in meetingStarttimeCandidate:
+    for item in meetingStarttimeCandidateSet:
         fout.write(item + '\r\n');
 
 with codecs.open('teams_slot_training_after_filtering_file_type.tsv', 'w', 'utf-8') as fout:
-    for item in fileTypeCandidate:
+    for item in fileTypeCandidateSet:
         fout.write(item + '\r\n');
 
+# this is to deduplication
 with codecs.open('teams_slot_training_after_filtering_file_recency.tsv', 'w', 'utf-8') as fout:
-    for item in fileRecencyCandidate:
+    for item in fileRecencyCandidateSet:
         fout.write(item + '\r\n');
 
 with codecs.open('teams_slot_training_after_filtering_sharetarget_type.tsv', 'w', 'utf-8') as fout:
-    for item in sharetargetTypeCandidate:
+    for item in sharetargetTypeCandidateSet:
         fout.write(item + '\r\n');
 
 with codecs.open('teams_slot_training_after_filtering_sharetarget_name.tsv', 'w', 'utf-8') as fout:
-    for item in sharetargetNameCandidate:
+    for item in sharetargetNameCandidateSet:
         fout.write(item + '\r\n');
 
 with codecs.open('teams_slot_training_after_filtering_contact_name.tsv', 'w', 'utf-8') as fout:
-    for item in contactNameCandidate:
+    for item in contactNameCandidateSet:
         fout.write(item + '\r\n');
+
+with codecs.open('teams_slot_training_after_filtering_file_action.tsv', 'w', 'utf-8') as fout:
+    for item in fileActionCandidateSet:
+        fout.write(item + '\r\n');
+        
 
 
 #######################
