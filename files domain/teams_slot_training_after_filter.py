@@ -101,7 +101,7 @@ teamsSlotToFileSlot = {
 
 
 fileRecencyReformat = {
-    "<file_recency> the last used </file_recency>" : "the <orderref> last </orderref> <file_action> used </file_action>",
+    "<file_recency> the last used </file_recency>" : "the <order_ref> last </order_ref> <file_action> used </file_action>",
     "<file_recency> I worked on </file_recency>" : "<contact_name> I </contact_name> <file_action> worked </file_action> on",
     "<file_recency> I added a model </file_recency>" : "<contact_name> I </contact_name> <file_action> added </file_action> a model",
     "<file_recency> I have recently worked on </file_recency>" : "<contact_name> I </contact_name> have <file_recency> recently </file_recency> <file_action> worked </file_action> on",
@@ -123,27 +123,27 @@ fileRecencyReformat = {
     "<file_recency> I was just working on </file_recency>" : "<contact_name> I </contact_name> was <file_recency> just </file_recency> <file_action> working </file_action> on", 
     "<file_recency> most recent </file_recency>" : "most <file_recency> recent </file_recency>",
     # makr to orderref
-    "<file_recency> newest </file_recency>" : "<orderref> newest </orderref>",
-    "<file_recency> latest </file_recency>" : "<orderref> latest </orderref>",
+    "<file_recency> newest </file_recency>" : "<order_ref> newest </order_ref>",
+    "<file_recency> latest </file_recency>" : "<order_ref> latest </order_ref>",
     # ? need to think if having last active as orderref
-    "<file_recency> last active </file_recency>" : "<orderref> last </orderref> active",
+    "<file_recency> last active </file_recency>" : "<order_ref> last </order_ref> active",
     "<file_recency> I was creating </file_recency>" : "<contact_name> I </contact_name> was <file_action> creating </file_action>",
     "<file_recency> I just walked on </file_recency>" : "<contact_name> I </contact_name> <file_recency> just </file_recency> <file_action> walked </file_action> on",
     "<file_recency> I just edited </file_recency>" : "<contact_name> I </contact_name> <file_recency> just </file_recency> <file_action> edited </file_action>",
-    "<file_recency> I was last working on </file_recency>" : "<contact_name> I </contact_name> was <orderref> last </orderref> <file_action> working </file_action> on",
+    "<file_recency> I was last working on </file_recency>" : "<contact_name> I </contact_name> was <order_ref> last </order_ref> <file_action> working </file_action> on",
     "<file_recency> I was recently working on </file_recency>" : "<contact_name> I </contact_name> was <file_recency> recently </file_recency> <file_action> working </file_action> on", 
     "<file_recency> added </file_recency>" : "<file_action> added </file_action>",
     "<file_recency> I had up before </file_recency>" : "<contact_name> I </contact_name> had <file_action> up </file_action> before",
     "<file_recency> I worked with Elizabeth on </file_recency>" : "<contact_name> I </contact_name> <file_action> worked </file_action> with <to_contact_name> Elizabeth </to_contact_name> on",
     "<file_recency> I uploaded </file_recency>" : "<contact_name> I </contact_name> <file_action> uploaed </file_action>",
     "<file_recency> I updated </file_recency>" : "<contact_name> I </contact_name> <file_action> updated </file_action>",
-    "<file_recency> I last edited </file_recency>" : "<contact_name> I </contact_name> <orderref> last </orderref> <file_action> edited </file_action>",
+    "<file_recency> I last edited </file_recency>" : "<contact_name> I </contact_name> <order_ref> last </order_ref> <file_action> edited </file_action>",
     "<file_recency> I was working on recently </file_recency>" : "<contact_name> I </contact_name> was <file_action> working </file_action> on <file_recency> recently </file_recency>",
     "<file_recency> I just walked down </file_recency>" : "<contact_name> I </contact_name> <file_recency> just </file_recency> <file_action> walked </file_action> down",
     "<file_recency> i was working on </file_recency>" : "<contact_name> i </contact_name> was <file_action> working </file_action> on",
     "<file_recency> I shared with <to_contact_name> me </to_contact_name>" : "<contact_name> I </contact_name> <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>",
     "<file_recency> I was editing </file_recency>" : "<contact_name> I </contact_name> was <file_action> editing </file_action>",
-    "<file_recency> I was working on last </file_recency>" : "<contact_name> i </contact_name> was <file_action> working </file_action> on <orderref> last </orderref>",
+    "<file_recency> I was working on last </file_recency>" : "<contact_name> i </contact_name> was <file_action> working </file_action> on <order_ref> last </order_ref>",
     "<file_recency> I used most recently </file_recency>" : "<contact_name> I </contact_name> <file_action> used </file_action> most <file_recency> recent </file_recency>",
     "<file_recency> I was working </file_recency>" : "<contact_name> I </contact_name> was <file_action> working </file_action>",
     "<file_recency> I was writing </file_recency>" : "<contact_name> I </contact_name> was <file_action> writing </file_action>",
@@ -179,7 +179,10 @@ sharetargetTypeCandidateSet = set()
 sharetargetNameCandidateSet = set()
 contactNameCandidateSet = set()
 
-fileActionCandidateSet = set() 
+fileActionCandidateSet = set()
+
+
+orderRefCandidateSet = set()
 
 # deduplication
 skipQueryCandidateSet = set()
@@ -443,6 +446,8 @@ with codecs.open('teams_slot_training.tsv', 'r', 'utf-8') as fin:
                     contactNameCandidateSet.add(xmlpair)
                 if xmlpair.startswith("<file_action>"):
                     fileActionCandidateSet.add(xmlpair)
+                if xmlpair.startswith("<order_ref>"):
+                    orderRefCandidateSet.add(xmlpair)
 
             # output: id	query	intent	domain	QueryXml	id	0   
             Output.append(linestrs[0]+"\t"+linestrs[1]+"\t"+linestrs[2]+"\t"+teamsDomainToFileDomain[linestrs[3]]+"\t"+slot);
@@ -507,7 +512,9 @@ with codecs.open('teams_slot_training_after_filtering_file_action.tsv', 'w', 'ut
     for item in fileActionCandidateSet:
         fout.write(item + '\r\n');
         
-
+with codecs.open('teams_slot_training_after_filtering_order_ref.tsv', 'w', 'utf-8') as fout:
+    for item in orderRefCandidateSet:
+        fout.write(item + '\r\n');
 
 #######################
 # query replacement revert
