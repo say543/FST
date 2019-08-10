@@ -89,6 +89,20 @@ Similarly, [a -> 0 || .#.] deletes only the final
 a, but [a -> 0 \\ .#.] deletes all the as at the end of a word like “baa”.
 See Section 3.5.5.
 
+
+143/690
+ N -> m || _ p ]
+.o.
+[ p -> m || m _ ] ;
+Figure 3.14: A Regular Expression Denoting a Cascade of Rules. Rules in a
+cascade are combined via the composition operation. The square brackets in
+this example are not formally necessary.
+xfst[0]: clear stack
+xfst[0]: define Rule1 [ N -> m || _ p ] ;
+xfst[0]: define Rule2 [ p -> m || m _ ] ;
+xfst[0]: read regex Rule1 .o. Rule2 ;
+Figure 3.15: A Cascade of Rules Implemented via Defined Variables and Composition
+
 ==================================================
 FW: Weekly Shiproom - Core Science Bellevue
 
