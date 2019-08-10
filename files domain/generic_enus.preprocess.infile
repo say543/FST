@@ -169,50 +169,17 @@ define tokenizePrimeApostropheWithS Tab Prime <-@ Prime || ["A-Za-z" | digit] _;
 
 
 # . to end  but two segment
-define tokenizeFileSearchOperatorForAllFileNames Tab ... <-@ {.} || [.#. | graph+] _ ["A-Za-z" | digit | {_} | {-} | {*}]+ [{ } | .#.];
+#define tokenizeFileSearchOperatorForAllFileNames Tab ... <-@ {.} || [.#. | graph+] _ ["A-Za-z" | digit | {_} | {-} | {*}]+ [{ } | .#.];
 
-
-# define stripEOSPunc empty <-@ {.} || _ .#. ;
-# ? stuck since right now you cannoy replace
-# it will cause network problems
-#define DOCX {docx}
-#define tokenizeFileSearchOperatorForAllFileNames2 empty <-@ {.};
-define tokenizeFileSearchOperatorForAllFileNames2 Tab ... <-@ {.} || [.#. | graph+] _ ["A-Za-z" | digit | {_} | {-} | {*}]+ [{ } | .#.];
+#Tab.Tab
+define tokenizeFileSearchOperatorForAllFileNames Tab ... Tab <-@ {.} || [.#. | graph+] _ ["A-Za-z" | digit | {_} | {-} | {*}]+ [{ } | .#.];
 
 
 
-##define tokenizeFileSearchOperatorForAllFileNames [ Tab ... <-@ {.} || [.#. | graph+] _ ["A-Za-z" | digit | {_} | {-} | {*}]+ [{ } | .#.] ] .o. [ Tab {.} <-@ {.} || .#. _  ];
-
-
-#
-##define tokenizeFileSearchOperatorForAllFileNames Tab {.} <-@ {.} || [graph+] _ ;
-##define tokenizeFileSearchOperatorForAllFileNames Tab {.} <-@ {.} || .#. _ ;
-
-
-# ? why this is to start 
-#  . to start and multiple segments
-#  first step 
-#  abc.def .docx
-##define tokenizeFileSearchOperatorForAllFileNames [Tab ... <-@ {.} || [.#. | graph+] _ ["A-Za-z" | digit | {_} | {-} | {*}]+ [{ } | .#.]] .o. [ ... Tab <-@ {.} || _ ~% ];
-
-
-
-
-# test space as seperate
-# it wokrks, so space can be seperated
-##define tokenizeFileSearchOperatorForAllFileNames Space ... <-@ {.} || [.#. | graph+] _ ["A-Za-z" | digit | {_} | {-} | {*}]+ [{ } | .#.];
-
-
-
-
-
-# . to the end but multiple segments  
-##define tokenizeFileSearchOperatorForAllFileNames Tab ... <-@ {.} || ~% _;
-
-# all . seperated multiple segments  
-##define tokenizeFileSearchOperatorForAllFileNames [ Tab ... <-@ {.} || ~% _ ] .o. [ ... Tab <-@ {.} || _ ~% ];
-
-
+#.@
+#define tokenizeFileSearchOperatorForAllFileNames ... Atsign <-@ {.} || [.#. | graph+] _ ["A-Za-z" | digit | {_} | {-} | {*}]+ [{ } | .#.];
+#@.
+#define tokenizeFileSearchOperatorForAllFileNames Atsign ... <-@ {.} || [.#. | graph+] _ ["A-Za-z" | digit | {_} | {-} | {*}]+ [{ } | .#.];
 
 
 
@@ -231,9 +198,9 @@ define ruleOfTokenization [
 	Ins(tokenizeClosingApostropheWithS) .o.
 	Ins(tokenizeLeftApostropheWithS) .o.
 	Ins(tokenizePrimeApostropheWithS) .o.
-#	Ins(tokenizeFileSearchOperatorForAllFileNames)
-	Ins(tokenizeFileSearchOperatorForAllFileNames) .o.
-	Ins(tokenizeFileSearchOperatorForAllFileNames2)
+	Ins(tokenizeFileSearchOperatorForAllFileNames)
+#	Ins(tokenizeFileSearchOperatorForAllFileNames) .o.
+#	Ins(tokenizeFileSearchOperatorForAllFileNames2)
 #	Ins(tokenizeFileSearchOperatorForAllFileNames2) .o.
 #	Ins(tokenizeFileSearchOperatorWithExt) .o.
 #	Ins(tokenizeUberProductName) .o.
