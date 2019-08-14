@@ -1,4 +1,8 @@
 
+files domain 怎麼onbaord 到evaluation
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1182483?_a=files
+看這個pr
+
 ================
 memory evaluation
 ==================
@@ -405,6 +409,9 @@ slot level
      
      ?excel 是不是data source
      
+     Check <data_source> my documents </data_source>
+     ? my document 因該不是data source 之後再改
+     
    <contact name>
       mystuff	i want to see the <data_type> note </data_type> for <keyword> wendy ' s </keyword>
       ? wendy 不是人名  先不管  因為小寫
@@ -417,6 +424,11 @@ slot level
       
       ? 這個case i 未必是cohtact name
       先skip
+      
+      
+      show my pictures of sunset from kim
+      ? 這個my 不知道是不是to_contact_name 先skip
+      
       
    <file_recency>
       Show me the files that I was only using
