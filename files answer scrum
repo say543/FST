@@ -313,6 +313,9 @@ slot level
      有這個query 得先拿掉
      
      
+     有query 是
+     Open my <file_keyword> that I created </file_keyword> 
+     會影響created 的traningi 目前沒有好的方法
      
        
   <file_type>
