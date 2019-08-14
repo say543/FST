@@ -180,6 +180,14 @@ blackListQuerySet = {
     "On Tuesday, where did I save my Baked Ziti recipe?",
     "My Notes: Find Mom Notes",
     "can you show me a picture of my old self?",
+    "Basaa Smith go to my downloads go to go to my.",
+    "basaa Smith go to my downloads go to go to my.",
+    "pictures of me when i was a baby",
+    "i'm looking for the files i",
+    "Locate savedpresentation2",
+    "Locate savedpresentation3",
+    '"Cortana, my friend sent me a saved document, where is it?"',
+    "two thousand fourteen",
     # key word to remove
     # need to check in the future
     "computer",
@@ -256,7 +264,7 @@ blackListQuerySet = {
     "go to last note last",
     "preview note with name chili's",
     "the pictures of december",
-    "hey cortana show me photos that taken two thousand and sixteen",
+    "hey cortana show me photos that taken two thousand and sixteen",+
     }
 
 
@@ -341,7 +349,7 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
                 slot = slot.replace(" with me ", " with <to_contact_name> me </to_contact_name>")
 
             # i verb
-            verbs = ["downloaded",
+            verbs = set(["downloaded",
                      "worked",
                      "created",
                      "saved",
@@ -363,16 +371,30 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
                      "edited",
                      "updated",
                      "writing",
-                     ]
-            contactNames = ["i",
-                            "I"
-                            ]
+                     "doing",
+                     "did",
+                     "looking",
+                     "looked",
+                     ])
+            contactNames = set(["i",
+                            "I",
+                            ])
             for verb in verbs:
                 for contactName in contactNames:
-                    # tag contact name
+                    # with file action already
+                    # try to tag contact name
+                    # will suffer big / small case problems but leave it there eg: query small but annotation cbig
                     if linestrs[0].find(contactName +" "+ verb) != -1 and slot.find(contactName +" <file_action> "+verb+" </file_action>")!=-1:
                         slot = slot.replace(contactName +" <file_action> "+verb+" </file_action>", "<contact_name> "+contactName +" </contact_name>"+ " <file_action> "+verb+" </file_action>")
                     if linestrs[0].find(contactName +" was "+ verb) != -1 and slot.find(contactName +" was <file_action> "+verb+" </file_action>")!=-1:
+                        slot = slot.replace(contactName +" was <file_action> "+verb+" </file_action>", "<contact_name> "+contactName +" </contact_name>"+ " was <file_action> "+verb+" </file_action>")
+
+                    # with contact name already
+                    # try to tag file action
+                    # will suffer big / small case problems but leave it there eg: query small but annotation cbig
+                    if linestrs[0].find(contactName +" "+ verb) != -1 and slot.find("<contact_name> "+ contactName + " </contact_name> "+verb)!=-1:
+                        slot = slot.replace("<contact_name> "+ contactName + " </contact_name> "+verb, "<contact_name> "+contactName +" </contact_name>"+ " <file_action> "+verb+" </file_action>")
+                    if linestrs[0].find(contactName +" was "+ verb) != -1 and slot.find("<contact_name> "+ contactName + " </contact_name> was "+verb)!=-1:
                         slot = slot.replace(contactName +" was <file_action> "+verb+" </file_action>", "<contact_name> "+contactName +" </contact_name>"+ " was <file_action> "+verb+" </file_action>")
 
             
