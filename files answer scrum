@@ -1,3 +1,28 @@
+
+================
+memory evaluation
+==================
+
+0719 first model
+E:\CoreScienceDataStaging\datasources\Files\queryclassificationprocessing> .\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2 --queryInColumn 1 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c E:\searchgold\deploy\builds\data\answers\QasBatWStatic  --variant files_enus_mv1 -dl files
+
+
+
+	Line 30: i,08/14/2019 13:46:24,QCS,,SrcFile="QCSAutopilotLog" SrcFunc="QCSComponentManager" SrcLine="0" Pid="28680" Tid="19400" TS="0x01D552E15677D8EB" String1="Memory delta for component files_enus_mv1::qd_files_preprocess_featurizer is 320 Kb; time delta is 14.349 ms. Type is MLG34PipelineFeaturizer. Memory and time reporting are non-reliable because of asynchronous initialization."
+	Line 33: i,08/14/2019 13:46:24,QCS,,SrcFile="QCSAutopilotLog" SrcFunc="QCSComponentManager" SrcLine="0" Pid="28680" Tid="19400" TS="0x01D552E156795E55" String1="Memory delta for component files_enus_mv1::qd_files_domain_featurizer is 372 Kb; time delta is 6.641 ms. Type is MLG34PipelineFeaturizer. Memory and time reporting are non-reliable because of asynchronous initialization."
+	Line 41: i,08/14/2019 13:46:24,QCS,,SrcFile="QCSAutopilotLog" SrcFunc="QCSComponentManager" SrcLine="0" Pid="28680" Tid="19400" TS="0x01D552E1567C4285" String1="Memory delta for component files_enus_mv1::qd_files_intent_featurizer is 8 Kb; time delta is 6.645 ms. Type is MLG34PipelineFeaturizer. Memory and time reporting are non-reliable because of asynchronous initialization."
+	Line 45: i,08/14/2019 13:46:24,QCS,,SrcFile="QCSAutopilotLog" SrcFunc="QCSComponentManager" SrcLine="0" Pid="28680" Tid="19400" TS="0x01D552E1567EC62F" String1="Memory delta for component files_enus_mv1::qd_files_slot_featurizer is 8208 Kb; time delta is 8.839 ms. Type is MLG34PipelineFeaturizer. Memory and time reporting are non-reliable because of asynchronous initialization."
+	Line 52: i,08/14/2019 13:46:24,QCS,,SrcFile="QCSAutopilotLog" SrcFunc="QCSComponentManager" SrcLine="0" Pid="28680" Tid="19400" TS="0x01D552E156815C72" String1="Memory delta for component files_enus_mv1::qd_files_slot_partial_pattern_featurizer is 6164 Kb; time delta is 7.634 ms. Type is MLG34PipelineFeaturizer. Memory and time reporting are non-reliable because of asynchronous initialization."
+	Line 55: i,08/14/2019 13:46:24,QCS,,SrcFile="QCSAutopilotLog" SrcFunc="QCSComponentManager" SrcLine="0" Pid="28680" Tid="19400" TS="0x01D552E156837DDA" String1="Memory delta for component files_enus_mv1::qd_files_timeresolution_featurizer is 16424 Kb; time delta is 5.059 ms. Type is MLG34PipelineFeaturizer. Memory and time reporting are non-reliable because of asynchronous initialization."
+	Line 57: i,08/14/2019 13:46:24,QCS,,SrcFile="QCSAutopilotLog" SrcFunc="QCSComponentManager" SrcLine="0" Pid="28680" Tid="19400" TS="0x01D552E15683F2C2" String1="Memory delta for component files_enus_mv1::qd_files_domainclassifier is 0 Kb; time delta is 0.062 ms. Type is MLG34DomainClassifier. Memory and time reporting are non-reliable because of asynchronous initialization."
+	Line 59: i,08/14/2019 13:46:24,QCS,,SrcFile="QCSAutopilotLog" SrcFunc="QCSComponentManager" SrcLine="0" Pid="28680" Tid="19400" TS="0x01D552E156848EC0" String1="Memory delta for component files_enus_mv1::qd_files_queryparser is 0 Kb; time delta is 1.125 ms. Type is MLG34CrfQueryParser. Memory and time reporting are non-reliable because of asynchronous initialization."
+	Line 61: i,08/14/2019 13:46:24,QCS,,SrcFile="QCSAutopilotLog" SrcFunc="QCSComponentManager" SrcLine="0" Pid="28680" Tid="19400" TS="0x01D552E156855163" String1="Memory delta for component files_enus_mv1::qd_files_entityextractor is 4 Kb; time delta is 0.095 ms. Type is TokenEntityExtractorImpl. Memory and time reporting are non-reliable because of asynchronous initialization."
+	Line 63: i,08/14/2019 13:46:25,QCS,,SrcFile="QCSAutopilotLog" SrcFunc="QCSComponentManager" SrcLine="0" Pid="28680" Tid="19400" TS="0x01D552E156864F0B" String1="Memory delta for component files_enus_mv1::qd_files_domaintaxonomy is 0 Kb; time delta is 4.481 ms. Type is MLG34DomainTaxonomyClassifier. Memory and time reporting are non-reliable because of asynchronous initialization."
+	Line 65: i,08/14/2019 13:46:25,QCS,,SrcFile="QCSAutopilotLog" SrcFunc="QCSComponentManager" SrcLine="0" Pid="28680" Tid="19400" TS="0x01D552E15687D489" String1="Memory delta for component files_enus_mv1::qd_files_timeresolution_metadataretriever is 4 Kb; time delta is 5.685 ms. Type is ExposeFeatureMetadataRetrieverImpl. Memory and time reporting are non-reliable because of asynchronous initialization."
+
+around 40MB
+
+
 =================
 knowledge from teams
 ================
@@ -401,6 +426,15 @@ slot level
       give me my <keyword> copied </keyword> files
       ? 先把這個copied 轉成 file_actioned
       還不確定
+      
+      i created 
+      
+      
+      Can you open my "I was working on recently" file for me
+      ? 這個query 到底是要把整個變成 key word or 分成file keyword 跟
+      
+      i created 
+      ? 這個query 也有相關的問題
    
    teams 相關
      cortana find my <order_ref> most recent </order_ref> <keyword> downloads </keyword>
