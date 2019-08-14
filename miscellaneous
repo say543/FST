@@ -14,7 +14,7 @@ Our flighting story
 
 
 =====================
-compliaant change
+compliant change
 FW: [Announcement] Data existence resiliency in compliant experiments
 08062019
 =====================
@@ -25,3 +25,18 @@ Carina AI&NLP Platform Bi-weekly Operation Report (Sprint13-Sprint14 0716-0813)
 08132019
 ===========================
 
+
+
+=====================
+compliant ring 跟non compliant 的ring 對應
+08142019
+https://cortanawiki.azurewebsites.net/teams/core/ux/compliant/uxo/uxo-flighting.html
+=====================
+
+但是現在compliant 的 infra 還沒好  需要很多的apporve for create a flight
+
+flight 跟 client id 沒有關西
+client id readly 沒有flight 也沒辦法
+
+control tower 有50% 50% 的traffic 的調整
+這個不知道跟flight 有沒有關西...
