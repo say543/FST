@@ -240,6 +240,11 @@ slot level
       look for he photos named " christmas
       先把它當成 title -> file_name 
       
+      
+      ? marked 要討論後面是file name or file type
+      目前把called , titled 當作file_name
+      現在先不管
+      
   <file_keyword>
   
      因為list 在 file 不是tpye 
@@ -299,6 +304,16 @@ slot level
      ? search for justin and ashley in my files
      justin and ashley不確定要不要合併
      先consistent合併
+     
+     Find my <keyword> homework for tomorrow </keyword> .
+     先把tomorrow
+     
+     <keyword> two thousand fourteen </keyword>
+     ? 很難說是date or file key word 先不管
+     有這個query 得先拿掉
+     
+     
+     
        
   <file_type>
      go to my <data_source> documents </data_source
@@ -370,7 +385,19 @@ slot level
       find pictures of my wife
       ?  my wife 如果有my wife , my something 都先skip
       
-
+      mystuff	<data_type> pictures </data_type> of <keyword> me when i was a baby </keyword>
+      
+      ? 這個case i 未必是cohtact name
+      先skip
+      
+   <file_recency>
+      Show me the files that I was only using
+      ? only 先不tag
+      
+   mystuff 相關
+      give me my <keyword> copied </keyword> files
+      ? 先把這個copied 轉成 file_actioned
+      還不確定
    
    teams 相關
      cortana find my <order_ref> most recent </order_ref> <keyword> downloads </keyword>
