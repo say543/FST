@@ -151,7 +151,68 @@ fileRecencyReformat = {
     # not sure if new should be tag, do not new right now
     "<file_recency> I shared with me new </file_recency>" : "<contact_name> I </contact_name> <file_action> shared </file_action> with <to_contact_name> me </to_contact_name> new",
 }
+'''
+fileTypeReformat={
+    # download the powerpoint / powerpoints, qp
+    <file_type> powerpoint </file_type>
+    <file_type> power point </file_type>
+    <file_type> powerpoints </file_type>
+    <file_type> PowerPoint </file_type>
+    
+    # document / documents
+    # 08092019, currently not tagged but being requsted for bug in teams
+    <file_type> documents </file_type>
+    #Open up my collision memo, qp
+    <file_type> memo </file_type>
+    <file_type> memos </file_type>
+    #
+Share voice skills pictures I was last working on with the meeting, qp
+    # picture , pictures
+    <file_type> pictures </file_type>
+    # Open up my window cleaners jpg
+    <file_type> jpg </file_type>
 
+    # confirm but weird
+    <file_type> excel </file_type>
+    <file_type> spreadsheet </file_type>
+    <file_type> spread sheet </file_type>
+    <file_type> excel spreadsheet </file_type>
+
+    
+    # obvious no need to try
+    <file_type> PPTX </file_type> 
+    <file_type> powerpoint deck </file_type>
+    <file_type> onenote </file_type>
+    <file_type> ppt </file_type>
+    <file_type> Word </file_type>
+    <file_type> deck PowerPoint </file_type>
+    <file_type> deck template </file_type>
+    <file_type> OneNote </file_type>
+    <file_type> one note </file_type>
+    <file_type> csv </file_type>
+    <file_type> pdf </file_type>
+    <file_type> PowerPoint deck </file_type>
+    <file_type> deck </file_type>
+    <file_type> power point deck </file_type>
+
+    # no trigger in qp
+    <file_type> gif </file_type>
+    <file_type> slide </file_type>
+    <file_type> txt </file_type>
+    <file_type> jpeg </file_type>
+    <file_type> note </file_type>
+    <file_type> vso </file_type>
+    
+
+    # download should be file_type to support teamspace_naviation
+    <file_type> download </file_type>
+    <file_type> downloads </file_type>
+
+    # not in teams
+    # assume will not be tagged
+    <file_type> list </file_type>
+}
+'''
 
 blackListQuerySet = {
     }
@@ -226,12 +287,47 @@ with codecs.open('teams_slot_training.tsv', 'r', 'utf-8') as fin:
             
                 
             # remove head and end spaces 
-            slot = slot.strip()
+            #slot = slot.strip()
 
             # fine-grained parse
             #list = re.findall("(</?[^>]*>)", slot)
 
 
+            # missed date from teams
+            dates = set(["yesterday",
+                         "last night",
+                         "today"
+                        ]
+                       )
+            for date in dates:
+                # if found token but not being taked
+                if slot.find(date) != -1 and slot.find("<date> "+ date) == -1 and slot.find("<meeting_starttime> "+ date) == -1:
+                    slot = slot.replace(date, "<date> "+ date +" </date>")
+                # if found token but not being taked (no end tag detection since last)
+                if slot.find(date) != -1 and slot.find("<date> "+ date) == -1 and slot.find("<meeting_starttime> "+ date) == -1:
+                    slot = slot.replace(date, "<date> "+ date +" </date>")
+
+
+            # missed data source
+            datasources = set(["onedrive",
+                        ]
+                       )
+            for datasource in datasources:
+                # if found token but not being taked
+                if slot.find(datasource) != -1 and slot.find("<data_source> "+ datasource) == -1:
+                    slot = slot.replace(datasource, "<data_source> "+ datasource +" </data_source>")
+
+            # missed time
+            times = set(["this morning",
+                        ]
+                        )
+            for time in times:
+                # if found token but not being taked
+                if slot.find(time) != -1 and slot.find("<time> "+ time) == -1 and slot.find("<meeting_starttime> "+ time) == -1:
+                    slot = slot.replace(time, "<time> "+ time +" </time>")
+                # if found token but not being taked (no end tag detection since last)
+                if slot.find(time) != -1 and slot.find("<time> "+ time) == -1 and slot.find("<meeting_starttime> "+ time) == -1:
+                    slot = slot.replace(time, "<time> "+ time +" </time>")
 
 
             if slot.find("<time> recent </time>") != -1:
@@ -247,6 +343,8 @@ with codecs.open('teams_slot_training.tsv', 'r', 'utf-8') as fin:
                 slot = slot.replace(" to me", " to <to_contact_name> me </to_contact_name>")
             if slot.find(" with me ") != -1:
                 slot = slot.replace(" with me ", " with <to_contact_name> me </to_contact_name>")
+
+                
             
             # i verb
             verbs = ["downloaded",
@@ -266,7 +364,9 @@ with codecs.open('teams_slot_training.tsv', 'r', 'utf-8') as fin:
                             ]
             for verb in verbs:
                 for contactName in contactNames:
-                    # tag contact name
+                    # with file action already
+                    # try to tag contact name
+                    ## will suffer big / small case problems but leave it there eg: query small but annotation cbig
                     if linestrs[0].find(contactName +" "+ verb) != -1 and slot.find(contactName +" <file_action> "+verb+" </file_action>")!=-1:
                         slot = slot.replace(contactName +" <file_action> "+verb+" </file_action>", "<contact_name> "+contactName +" </contact_name>"+ " <file_action> "+verb+" </file_action>")
                     if linestrs[0].find(contactName +" was "+ verb) != -1 and slot.find(contactName +" was <file_action> "+verb+" </file_action>")!=-1:
@@ -294,7 +394,7 @@ with codecs.open('teams_slot_training.tsv', 'r', 'utf-8') as fin:
                 slot = slot.replace("<data_source> downloads </data_source>", "<file_type> downloads </file_type>")
 
             # start time too long handle
-            if slot.find("<time> in the last hour </time>") != -1:
+            if slot.find("<time> in the last hour </time>") != -1:zc
                 slot = slot.replace("<time> in the last hour </time>", "in the <time> last hour </time>")
             if slot.find("<time> within the last hour </time>") != -1:
                 slot = slot.replace("<time> within the last hour </time>", "within the <time> last hour </time>")
@@ -417,8 +517,31 @@ with codecs.open('teams_slot_training.tsv', 'r', 'utf-8') as fin:
                     newPair = newPair.replace("</file_keyword>", "</file_name>")
                     slot = slot.replace(xmlpair, newPair)
 
-                # contact name?
-                # might need to add
+                # to
+                # with
+                # from
+                if xmlpair.startswith("<contact_name>") and slot.find("with <contact_name>") != -1 and slot.find("<file_action>") != -1 and slot.find("<file_action>") < slot.find(xmlpair):
+                    #print("inside")
+                    newPair = xmlpair.replace("<contact_name>", "<to_contact_name>")
+                    newPair = newPair.replace("</contact_name>", "</to_contact_name>")
+                    slot = slot.replace(xmlpair, newPair)
+
+                # to deal with 'go to my fils' / hey could you please direct me to my last files that was used ?
+                # make sure it has file_action slot and it happens before
+                if xmlpair.startswith("<contact_name>") and slot.find("to <contact_name>") != -1  and slot.find("<file_action>") != -1 and slot.find("<file_action>") < slot.find(xmlpair):
+                    newPair = xmlpair.replace("<contact_name>", "<to_contact_name>")
+                    newPair = newPair.replace("</contact_name>", "</to_contact_name>")
+                    slot = slot.replace(xmlpair, newPair)
+                if xmlpair.startswith("<contact_name>") and slot.find("from <contact_name>") != -1 and slot.find("<file_action>") != -1 and slot.find("<file_action>") < slot.find(xmlpair):
+                    newPair = xmlpair.replace("<contact_name>", "<to_contact_name>")
+                    newPair = newPair.replace("</contact_name>", "</to_contact_name>")
+                    slot = slot.replace(xmlpair, newPair)
+
+
+            # remove head and end spaces 
+            slot = slot.strip()
+
+
 
             # for analysis
             xmlpairs = re.findall("(<.*?>.*?<\/.*?>)", slot)           
