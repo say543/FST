@@ -36,3 +36,41 @@ Can't clobber writeable file e:\searchgold\deploy\builds\data\answers\QAS01HttpQ
 Can't clobber writeable file e:\searchgold\deploy\builds\data\answers\QAS01HttpQAS\luna_teams_enus_mv1.lccrf.ngram.3gram.bin
 //depot/deploy/builds/data/Answers/QAS01HttpQAS/luna_teams_enus_mv1.slot.lccrf.model#6 - added as e:\searchgold\deploy\builds\data\answers\QAS01HttpQAS\luna_teams_enus_mv1.slot.lccrf.model
 Can't clobber writeable file e:\searchgold\deploy\builds\data\answers\QAS01HttpQAS\luna_teams_enus_mv1.slot.lccrf.model
+
+
+
+如果output noi sync 在submit batch 的時候 
+
+會說dpk 要resolve
+
+這個時候search gold sync 也會說有issue
+
+有兩個方法reolsve 
+
+1><? not yet verify>
+sd resolve -at 指定的file 因該會試著merge
+
+2> <verify 過>
+先revert 那些conflict 的file
+sd sync -f  "column"
+(沒有conflict 的files 還會存在)
+
+然後 用
+sdv deploy/builds/data/Answers/QAS12HttpQAS/GriffinSdf_Cortana.QAS12HttpQAS.queryProcessingConfiguration.ini
+看revert 的file
+會pop up window 說明
+最新的commit
+
+這個commit 有說那些有change
+然後看local 的files 確定有這些的change 就可以 確定revert sync 成功
+
+然後再把自己的 files change 加到這些conflict 的sync
+
+
+
+
+
+
+
+
+
