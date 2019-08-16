@@ -13,6 +13,10 @@ client id 可能是desktop, voice mobile 不同的來源和 ring
 
 每一個feature 可能就是一個qpc file
 
+
+virtual service 下面有一堆client service
+手機有一張圖片?
+
 <cortana runtime>
 收到client id : feature list 來查詢QPC files 來parsing
 
