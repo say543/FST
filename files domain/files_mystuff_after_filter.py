@@ -264,7 +264,13 @@ blackListQuerySet = {
     "go to last note last",
     "preview note with name chili's",
     "the pictures of december",
-    "hey cortana show me photos that taken two thousand and sixteen",+
+    "hey cortana show me photos that taken two thousand and sixteen",
+    "find apk files that i",
+    "Can you open my I was using files for me",
+    "can you open my I was using files for me",
+    "show my pictures of sunset from kim",
+    "locate the letters i wrote to cecilia between march 27th , 2013 and september 9th , 2013",
+    "thomson holidays my bookings my documents",
     }
 
 
@@ -342,14 +348,106 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
             # to my
             if slot.find(" to my ") != -1:
                 slot = slot.replace(" to my", " to <contact_name> my </contact_name>")
-            # with me
+            # with me / to me 
             if slot.find(" to me ") != -1:
                 slot = slot.replace(" to me", " to <to_contact_name> me </to_contact_name>")
             if slot.find(" with me ") != -1:
                 slot = slot.replace(" with me ", " with <to_contact_name> me </to_contact_name>")
 
+            # verb my, make my tag
+            # only detect at the neginning of queries
+            # with space as here for seperrator
+            prefixWtihVerbWithMy =set(["mystuff ",
+                                       "Can you ",
+                                       "can you ",
+                                       "Please ",
+                                       "please ",
+                                       "Can you please ",
+                                       "can you please ",
+                                       "hey cortana please ",
+                                       "Hey cortana please ",
+                                       "cortana please ",
+                                       "cortana ",
+                                       "Hey cortana ",
+                                       "hey cortana ",
+                                       "Hey cortana can you ",
+                                       "hey cortana can you ",
+                                       "i want to ",
+                                       "I want to ",
+                                       "i need to ",
+                                       "I need to ",
+                                       "i have to ",
+                                       "I have to ",
+                                       "i want you to ",
+                                       "I want you to ",
+                                       "i can't ",
+                                       "I can't ",
+                                       "Try to ",
+                                       "try to ",
+                                       "Cortana, ",
+                                       "cortana, ",
+                                       "Cortana, please ",
+                                       "cortana, please ",
+                                       "Cortana, help me ",
+                                       "cortana, help me ",
+                                       "cortana, i need to ",
+                                       "Cortana, i need to ",
+                                       "cortana can you ",
+                                       "Cortana can you "
+                                       "hi what's up ",
+                                       "Hi what's up ",
+                                       "hello can you ",
+                                       "Hello can you ",
+                                       "can you help me ",
+                                       "Can you help me ",
+                                       "can you help ",
+                                       "Can you help ",
+                                       "help me ",
+                                       "Help me ",
+                                       "where do i ",
+                                       "Where do i ",
+                                       "where do I ",
+                                       "Where do I ",
+                                       "where will i ",
+                                       "Where will i ",
+                                       "where will I ",
+                                       "Where will I ",
+                                       "where can i ",
+                                       "Where can i ",
+                                       "where can I ",
+                                       "Where can I ",
+                                       "where do i ",
+                                       "Where do i ",
+                                       "where do I ",
+                                       "Where do I ",
+                                       "Siri ",
+                                       "siri ",
+                                       "Bing ",
+                                       "bing ",
+                                       ])
+            # with space as here for seperrator
+            verbsWithMy = set(["open ",
+                               "find ",
+                               "show ",
+                               "Open ",
+                               "Find ",
+                               "Show ",
+                               "search ",
+                               "Search ",
+                                ])
+            mys = set(["my",
+                      "My",
+                      ])
+            for prefix in prefixWtihVerbWithMy:
+                for verb in verbsWithMy:
+                    for my in mys:
+                        if slot.startswith(prefix + verb + my):
+                            slot = slot.replace(prefix + verb + my, prefix + verb + "<contact_name> " + my +" </contact_name>")
+                        elif slot.startswith(verb + my):
+                            slot = slot.replace(verb + my, verb + "<contact_name> " + my +" </contact_name>")
+
             # i verb
-            verbs = set(["downloaded",
+            verbsAlongWithContactName = set(["downloaded",
                      "worked",
                      "created",
                      "saved",
@@ -379,7 +477,7 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
             contactNames = set(["i",
                             "I",
                             ])
-            for verb in verbs:
+            for verb in verbsAlongWithContactName:
                 for contactName in contactNames:
                     # with file action already
                     # try to tag contact name
@@ -415,8 +513,11 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
             ##        slot = slot.replace("<keyword> my " + noun +" </keyword>", "<contact_name> my </contact_name>"+" <keyword> "+ noun +" </keyword>")
 
             # tailor downloads special cases for teams
-            if slot.find("<data_source> downloads </data_source>") != -1:
-                slot = slot.replace("<data_source> downloads </data_source>", "<file_type> downloads </file_type>")
+            # add new slot file_folder  for downloads
+            if slot.find("<file_type> downloads </file_type>") != -1:
+                slot = slot.replace("<file_type> downloads </file_type>", "<file_folder> downloads </file_folder>")
+            if slot.find("<file_type> download </file_type>") != -1:
+                slot = slot.replace("<file_type> download </file_type>", "<file_folder> download </file_folder>")
 
             # start time too long handle
             if slot.find("<time> in the last hour </time>") != -1:
@@ -528,6 +629,11 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
                 slot = slot.replace("<order_ref> recent </order_ref>", "<file_recency> recent </file_recency>")
             if slot.find("<order_ref> Recent </order_ref>") != -1:
                 slot = slot.replace("<order_ref> Recent </order_ref>", "<file_recency> Recent </file_recency>")
+
+
+            # after all slot replacement
+            # remove head and end spaces 
+            slot = slot.strip()
 
             # for analysis
             xmlpairs = re.findall("(<.*?>.*?<\/.*?>)", slot)
