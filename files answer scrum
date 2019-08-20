@@ -623,12 +623,19 @@ from teams domain pattern
 [qd_teams_domain_fst_lang_model_featurizer]
 negative patterns 這個
 
+domain.negative.fst_lang_model.tagger.infile
+
 file_open -> FileOpenNegativeDomain
 這個可能要加進來
 這個是contextual negalive tlist 
 read text ../lexicons/contextual_negative_list.txt;
 define ContextualFileOpenEntity;
 之後migrate contextual lu 可能需要有他來用
+
+有其他相衝domain 的pattern
+目前不打算把它加進去
+如果是negative 就是doamin score = 0, 因為後面0.5 的限制 (但是在files 現在沒有) 所以不會trigger 後面的行為
+如果以後需要 可能要家0.5 的threshold (or 別的threshold)
 
 [qd_teams_domain_fst_lang_model_intent_overwrite_featurizer]
 positive pattern 的部分
@@ -637,8 +644,11 @@ domain.fst_lang_model.tagger.infile
 有file_open
 file_download -> FileDownloadIntent 可能要家一下
 
+
+file_download
 file_navigation 
 file_share
+
 teamspace_sharechannel
 teamspace_sharetab
     改成 file_share
@@ -665,8 +675,20 @@ teamspace_navigate
 感覺是另外一個positive pattern 的位置
 domain.override.infile
 
-file_open -> FileOpenIntent
-這個部分可能要家一下
+file_navigate
+   跟 domain.fst_lang_model.tagger.infile 的file_navigate 不完全相同
+   domain.override.infile 多了recent 了一些東西
+
+file_open
+   domain.fst_lang_model.tagger.infile 沒有這個  是posive pattern 可以加
+teamspace_search
+   domain.fst_lang_model.tagger.infile 完全依樣
+   不用加
+file_share
+   跟 domain.fst_lang_model.tagger.infile 的file_navigate 不完全相同
+   domain.fst_lang_model.tagger.infile cover 的比較多
+
+
 
 
 [qd_teams_common_domain_intent_featurizer]
@@ -703,3 +725,6 @@ after slot lccrf
 luna_190118_teams.slots.fst_lang_model
 slot.fst_lang_model.tagger.infile
 有position Ref 的pattern 但是不是order ref  schema 沒有不需要
+
+目前把它加成partial overrider 的pattern 了
+? 是不是要partial override 不太確定
