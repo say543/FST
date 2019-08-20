@@ -351,6 +351,12 @@ slot level
      Open my <file_keyword> that I created </file_keyword> 
      會影響created 的traningi 目前沒有好的方法
      
+     letters i wrote
+     
+     有query 是
+     <file_keyword> a </file_keyword>
+     會影響file_keyword 的  精確度
+       
        
   <file_type>
      go to my <data_source> documents </data_source
@@ -628,8 +634,29 @@ define ContextualFileOpenEntity;
 positive pattern 的部分
 domain.fst_lang_model.tagger.infile
 
- 有file_open
+有file_open
 file_download -> FileDownloadIntent 可能要家一下
+
+file_navigation 
+file_share
+teamspace_sharechannel
+teamspace_sharetab
+    改成 file_share
+    可能以後再evaluate 到底需不需要他
+teamspace_search
+    改成file_search
+    
+teamspace_navigate
+    改成 file_navigate
+    可能以後再evaluate 到底需不需要他
+    
+    
+也要加
+但是細節上可能要再調整
+因為有些case 現在希望是file_search 了  根據files 的guideline
+之後再調整
+
+
 但是這個是沒有domain svm 的情況
 可能測試一下是要前面or 後面
 
