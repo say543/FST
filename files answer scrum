@@ -687,6 +687,10 @@ teamspace_search
 file_share
    跟 domain.fst_lang_model.tagger.infile 的file_navigate 不完全相同
    domain.fst_lang_model.tagger.infile cover 的比較多
+   
+   
+yue 說當初一個pattern 是1.0 另一個是0.99 但是現在因該只要一個就行了  所以合併因該可以
+
 
 
 
