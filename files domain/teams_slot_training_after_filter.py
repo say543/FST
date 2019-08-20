@@ -209,8 +209,10 @@ Share voice skills pictures I was last working on with the meeting, qp
     <file_type> downloads </file_type>
 
     # not in teams
-    # assume will not be tagged
+    # ? wait for further discussion
     <file_type> list </file_type>
+    <file_type> word document </file_type>
+    <file_type> word doc </file_type>
 }
 '''
 
@@ -287,7 +289,103 @@ with codecs.open('teams_slot_training.tsv', 'r', 'utf-8') as fin:
             
                 
             # remove head and end spaces 
-            #slot = slot.strip()
+            slot = slot.strip()
+
+
+            # verb my, make my tag
+            # only detect at the neginning of queries
+            # with space as here for seperrator
+            # verb my, make my tag
+            # only detect at the neginning of queries
+            # with space as here for seperrator
+            prefixWtihVerbWithMy =set(["mystuff ",
+                                       "Can you ",
+                                       "can you ",
+                                       "Please ",
+                                       "please ",
+                                       "Can you please ",
+                                       "can you please ",
+                                       "hey cortana please ",
+                                       "Hey cortana please ",
+                                       "cortana please ",
+                                       "cortana ",
+                                       "Hey cortana ",
+                                       "hey cortana ",
+                                       "Hey cortana can you ",
+                                       "hey cortana can you ",
+                                       "i want to ",
+                                       "I want to ",
+                                       "i need to ",
+                                       "I need to ",
+                                       "i have to ",
+                                       "I have to ",
+                                       "i want you to ",
+                                       "I want you to ",
+                                       "i can't ",
+                                       "I can't ",
+                                       "Try to ",
+                                       "try to ",
+                                       "Cortana, ",
+                                       "cortana, ",
+                                       "Cortana, please ",
+                                       "cortana, please ",
+                                       "Cortana, help me ",
+                                       "cortana, help me ",
+                                       "cortana, i need to ",
+                                       "Cortana, i need to ",
+                                       "cortana can you ",
+                                       "Cortana can you "
+                                       "hi what's up ",
+                                       "Hi what's up ",
+                                       "hello can you ",
+                                       "Hello can you ",
+                                       "can you help me ",
+                                       "Can you help me ",
+                                       "can you help ",
+                                       "Can you help ",
+                                       "help me ",
+                                       "Help me ",
+                                       "where do i ",
+                                       "Where do i ",
+                                       "where do I ",
+                                       "Where do I ",
+                                       "where will i ",
+                                       "Where will i ",
+                                       "where will I ",
+                                       "Where will I ",
+                                       "where can i ",
+                                       "Where can i ",
+                                       "where can I ",
+                                       "Where can I ",
+                                       "where do i ",
+                                       "Where do i ",
+                                       "where do I ",
+                                       "Where do I ",
+                                       "Siri ",
+                                       "siri ",
+                                       "Bing ",
+                                       "bing ",
+                                       ])
+            # with space as here for seperrator
+            verbsWithMy = set(["open ",
+                               "find ",
+                               "show ",
+                               "Open ",
+                               "Find ",
+                               "Show ",
+                               "search ",
+                               "Search ",
+                                ])
+            mys = set(["my",
+                      "My",
+                      ])
+            for prefix in prefixWtihVerbWithMy:
+                for verb in verbsWithMy:
+                    for my in mys:
+                        if slot.startswith(prefix + verb + my):
+                            slot = slot.replace(prefix + verb + my, prefix + verb + "<contact_name> " + my +" </contact_name>")
+                        elif slot.startswith(verb + my):
+                            slot = slot.replace(verb + my, verb + "<contact_name> " + my +" </contact_name>")
 
             # fine-grained parse
             #list = re.findall("(</?[^>]*>)", slot)
@@ -379,6 +477,14 @@ with codecs.open('teams_slot_training.tsv', 'r', 'utf-8') as fin:
                 #if linestrs[0].find("I downloaded") != -1 and slot.find("I <file_action> downloaded </file_action>")!=-1:
                 #    slot = slot.replace("i <file_action> downloaded </file_action>", "<contact_name> I </contact_name> <file_action> downloaded </file_action>")
 
+
+            # tailor downloads special cases for teams
+            # add new slot file_folder  for downloads
+            if slot.find("<file_type> downloads </file_type>") != -1:
+                slot = slot.replace("<file_type> downloads </file_type>", "<file_folder> downloads </file_folder>")
+            if slot.find("<file_type> download </file_type>") != -1:
+                slot = slot.replace("<file_type> download </file_type>", "<file_folder> download </file_folder>")
+
             '''
             # hanlde my xxx and my should be contact name
             # ? not sure why this sniffet does not work
@@ -388,7 +494,7 @@ with codecs.open('teams_slot_training.tsv', 'r', 'utf-8') as fin:
             ##for noun in nouns:
             ##    if slot.find("<keyword> my "+noun+" </keyword>")!= -1:
             ##        slot = slot.replace("<keyword> my " + noun +" </keyword>", "<contact_name> my </contact_name>"+" <keyword> "+ noun +" </keyword>")
-
+    
             # tailor downloads special cases for teams
             if slot.find("<data_source> downloads </data_source>") != -1:
                 slot = slot.replace("<data_source> downloads </data_source>", "<file_type> downloads </file_type>")
@@ -538,6 +644,7 @@ with codecs.open('teams_slot_training.tsv', 'r', 'utf-8') as fin:
                     slot = slot.replace(xmlpair, newPair)
 
 
+            # after all slot replacement
             # remove head and end spaces 
             slot = slot.strip()
 
