@@ -740,14 +740,26 @@ canonical value  打算  07252019
 for teams
 param:datastorelookup_datastores=
 luna_teams_slots.canonicalentities.teamsuser_activitytype.txt,
+// 需要
 luna_teams_slots.canonicalentities.teamsuser_contactname.txt,
 luna_teams_slots.canonicalentities.teammeeting_quantifier.txt,
 luna_teams_slots.canonicalentities.slide_number.txt,
 luna_teams_slots.canonicalentities.teamspace_tab.txt,
 luna_teams_slots.canonicalentities.teamsuser_status.txt,
 luna_teams_slots.canonicalentities.position_ref.txt,
+// 需要
 luna_teams_slots.canonicalentities.file_filerecency.txt,
+// 需要
 luna_teams_slots.canonicalentities.file_filetype.txt,
+//需要
 luna_teams_slots.canonicalentities.file_sharetarget.txt,
-luna_teams_slots.canonicalentities.teamspace_sharetarget.txt
+
+
+
+for files
+要自己加
+order_ref
+
+sharetarget_name
+?好像是this 以後要加
 
