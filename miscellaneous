@@ -38,5 +38,22 @@ https://cortanawiki.azurewebsites.net/teams/core/ux/compliant/uxo/uxo-flighting.
 flight 跟 client id 沒有關西
 client id readly 沒有flight 也沒辦法
 
-control tower 有50% 50% 的traffic 的調整
-這個不知道跟flight 有沒有關西...
+control tower 有50% 50% 的feature / flight 的append
+這個主要是for AB test
+
+
+
+teams client 的 UI
+
+<features >
+手動船 , b clients support
+<flights>
+control tower register
+
+說穿了 features or flighs 就是環境變量
+就是qu 裡面傳的環境變量
+只要有這個我們就可以test
+
+跟DNS round robin 一點都沒有關西
+
+
