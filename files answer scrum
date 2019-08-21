@@ -732,3 +732,22 @@ slot.fst_lang_model.tagger.infile
 
 目前把它加成partial overrider 的pattern 了
 ? 是不是要partial override 不太確定
+
+
+=====================
+canonical value  打算  07252019
+=====================
+for teams
+param:datastorelookup_datastores=
+luna_teams_slots.canonicalentities.teamsuser_activitytype.txt,
+luna_teams_slots.canonicalentities.teamsuser_contactname.txt,
+luna_teams_slots.canonicalentities.teammeeting_quantifier.txt,
+luna_teams_slots.canonicalentities.slide_number.txt,
+luna_teams_slots.canonicalentities.teamspace_tab.txt,
+luna_teams_slots.canonicalentities.teamsuser_status.txt,
+luna_teams_slots.canonicalentities.position_ref.txt,
+luna_teams_slots.canonicalentities.file_filerecency.txt,
+luna_teams_slots.canonicalentities.file_filetype.txt,
+luna_teams_slots.canonicalentities.file_sharetarget.txt,
+luna_teams_slots.canonicalentities.teamspace_sharetarget.txt
+
