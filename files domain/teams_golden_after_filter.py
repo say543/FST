@@ -1,6 +1,8 @@
 import codecs;
 import random;
 import re;
+import glob;
+import os;
 
 
 import math
@@ -98,6 +100,41 @@ teamsSlotToFileSlot = {
 #    "<contact_name> i </contact_name>":"i",
 #    "<contact_name> I </contact_name>":"I",
 #    }
+
+
+# in the future read from file might be better
+'''
+fileRecencyCano ={
+    "recent":"recent",
+    "Recent":"recent",
+    "recently":"recently",
+    "Recently":"Recently",
+    "just":"just",
+    "Just": "Just"
+    }
+fileTypeCano ={
+    "deck":"ppt",
+    #downloaded file	download
+    #downloaded files	download
+    "downloaded":"download",
+    "downloads":"download",
+    "jpeg": "jpg",
+    "memos": "memo",
+    "one note" :"onenote",
+    "pictures" :"picture",
+    "power point": "ppt",
+    "powerpoint":   "ppt",
+    "spread sheet": "excel",
+    "spreadsheet":  "excel",
+    "text":	"txt",
+    "word document":    "word",
+    "word doc":	"word",
+    "word docs"	"word",
+    }
+
+positionRefCano ={}
+sharetargetType ={}
+'''
 
 
 
@@ -220,6 +257,39 @@ Share voice skills pictures I was last working on with the meeting, qp
 
 blackListQuerySet = {
     }
+
+
+##############################
+# canonical merge
+##############################
+# dictionary of dictionary
+# with sub dictionary for each canonical value
+cano={
+    }
+
+canofiles = glob.glob(r"../canonical_collect/*.txt");
+for file in canofiles:
+    filestr = os.path.basename(file)
+    filestr = filestr.split('.');
+    #print(filestr[0])
+
+    key =filestr[0]
+    cano[key] = {}
+
+    
+
+    print("collecting: " + file + "for" + key );
+    with codecs.open(file, 'r', 'utf-8') as fin:
+        for line in fin:
+            line = line.strip();
+            if not line:
+                continue;
+            array = line.split('\t');
+            if len(array) < 2:
+                print("error:" + line);
+
+            cano[key][array[0]] = array[1]
+    
 
 ##############################
 # intent level candidate
@@ -665,11 +735,23 @@ with codecs.open('Teams-golden.tsv', 'r', 'utf-8') as fin:
             slot = slot.strip()
 
 
+            metadata = ""
 
             # for analysis
             xmlpairs = re.findall("(<.*?>.*?<\/.*?>)", slot)           
             #print (xmlpairs)
             for xmlpair in xmlpairs:
+
+                xmlTypeEndInd = xmlpair.find(">")
+
+                xmlType = xmlpair[1:xmlTypeEndInd]
+
+                xmlValue = xmlpair.replace("<"+xmlType+">", "")
+                xmlValue = xmlValue.replace("</"+xmlType+">", "")
+                xmlValue = xmlValue.strip()
+
+                #print(xmlType)
+                #print(xmlValue)
                 
                 if xmlpair.startswith("<file_keyword>"):
                     fileKeywordCandidateSet.add(xmlpair)
@@ -679,28 +761,49 @@ with codecs.open('Teams-golden.tsv', 'r', 'utf-8') as fin:
                     meetingStarttimeCandidateSet.add(xmlpair)
                 if xmlpair.startswith("<file_type>"):
                     fileTypeCandidateSet.add(xmlpair)
+                    if xmlType  in cano and xmlValue in cano[xmlType]:
+                        metadata = metadata + ',' +'{"slot_name":"' + xmlType + '","slot_value":"'+xmlValue+'","meta_data":{"CanonicalEntity":"'+ cano[xmlType][xmlValue]+'"}}'
                 if xmlpair.startswith("<file_recency>"):
                     # this is for replacement profiling
                     fileRecencyCandidateSet.add(xmlpair)
-
                     
+                    if xmlType  in cano and xmlValue in cano[xmlType]:
+                        metadata = metadata + ',' +'{"slot_name":"' + xmlType + '","slot_value":"'+xmlValue+'","meta_data":{"CanonicalEntity":"'+ cano[xmlType][xmlValue]+'"}}'
+             
                 if xmlpair.startswith("<sharetarget_type>"):
                     sharetargetTypeCandidateSet.add(xmlpair)
+                    if xmlType  in cano and xmlValue in cano[xmlType]:
+                        metadata = metadata + ',' +'{"slot_name":"' + xmlType + '","slot_value":"'+xmlValue+'","meta_data":{"CanonicalEntity":"'+ cano[xmlType][xmlValue]+'"}}'
+
                 if xmlpair.startswith("<sharetarget_name>"):
                     sharetargetNameCandidateSet.add(xmlpair)
+                    if xmlType  in cano and xmlValue in cano[xmlType]:
+                        metadata = metadata + ',' +'{"slot_name":"' + xmlType + '","slot_value":"'+xmlValue+'","meta_data":{"CanonicalEntity":"'+ cano[xmlType][xmlValue]+'"}}'
                 if xmlpair.startswith("<contact_name>"):
                     contactNameCandidateSet.add(xmlpair)
                 if xmlpair.startswith("<file_action>"):
                     fileActionCandidateSet.add(xmlpair)
                 if xmlpair.startswith("<order_ref>"):
                     orderRefCandidateSet.add(xmlpair)
+                    if xmlType  in cano and xmlValue in cano[xmlType]:
+                        metadata = metadata + ',' +'{"slot_name":"' + xmlType + '","slot_value":"'+xmlValue+'","meta_data":{"CanonicalEntity":"'+ cano[xmlType][xmlValue]+'"}}'
+                if xmlpair.startswith("<position_ref>"):
+                    if xmlType  in cano and xmlValue in cano[xmlType]:
+                        metadata = metadata + ',' +'{"slot_name":"' + xmlType + '","slot_value":"'+xmlValue+'","meta_data":{"CanonicalEntity":"'+ cano[xmlType][xmlValue]+'"}}'
 
+
+
+            # remove head,
+            if len(metadata) > 0:
+                metadata = metadata[1:len(metadata)]
+            metadata = "[" +metadata +"]"
+    
             # id / message id / message time stamp / message from/ message text / judged domain / judge d intent / JudgedConstraint
             #Output.append(linestrs[0]+"\t"+linestrs[1]+"\t"+linestrs[2]+"\t"+linestrs[3]+"\t"+linestrs[4]+"\t"+teamsDomainToFileDomain[linestrs[5]]+"\t"+linestrs[6]+"\t"+slot);
 
             # original format
             # id / message id / message time stamp / message from/ message text / judged domain / judge d intent / JudgedConstraint / MetaData	/ConversationContext	/Frequency  /ImplicitConstraints
-            Output.append(linestrs[0]+"\t"+linestrs[1]+"\t"+linestrs[2]+"\t"+linestrs[3]+"\t"+linestrs[4]+"\t"+teamsDomainToFileDomain[linestrs[5]]+"\t"+linestrs[6]+"\t"+slot+"\t"+linestrs[8]+"\t"+linestrs[9]+"\t"+linestrs[10]+"\t"+"");
+            Output.append(linestrs[0]+"\t"+linestrs[1]+"\t"+linestrs[2]+"\t"+linestrs[3]+"\t"+linestrs[4]+"\t"+teamsDomainToFileDomain[linestrs[5]]+"\t"+linestrs[6]+"\t"+slot+"\t"+metadata+"\t"+linestrs[9]+"\t"+linestrs[10]+"\t"+"");
             
             #message text / judged domain / judge d intent / JudgedConstraint
             #Output.append(linestrs[3]+"\t"+linestrs[4]+"\t"+teamsDomainToFileDomain[linestrs[5]]+"\t"+linestrs[6]+"\t"+slot);
