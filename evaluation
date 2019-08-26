@@ -4,6 +4,7 @@ https://microsoft.sharepoint.com/teams/CortanaCore/_layouts/15/WopiFrame.aspx?so
 
 ========================
 'RE: Deprecation of IntentConstraintMap-Lu-schema.tsv (+ action item for model owners)'
+email title
 ========================
 ????
 file type
@@ -42,4 +43,10 @@ E:\CoreScienceDataStaging\src\Evaluation.Converged.Tests\Common.config
  目前卡在download drop 會fail
   
 
+
+yue pr 可以for reference
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1182483?_a=files
+
+my pr 可以for reference
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging
 
