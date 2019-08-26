@@ -172,3 +172,18 @@ in QPC 因該是大小寫沒有差
 NRC, not right side
 define TeamSpaceNavigateIntent {BOS} EndTag("teamspace_navigate") AND(RC(WS TeamSpaceNavigatePositivePattern), NRC(WS TeamSpaceNavigateNegativePattern));
 
+
+========================
+email thread
+Re: Investigation on FST/FSM memory consumption
+========================
+3s memory consumption
+
+
+
+========================
+fst  for generic processing
+'FST manual card'
+one note page
+========================
+對generic processing 的code 有幫助
