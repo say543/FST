@@ -43,6 +43,12 @@ E:\CoreScienceDataStaging\src\Evaluation.Converged.Tests\Common.config
  目前卡在download drop 會fail
   
 
+E:\CoreScienceDataStaging\evaluation\Configs\AnnotationExceptions.xml
+這個除非要igonre 某些slot 才要改
+否則不用
+
+E:\CoreScienceDataStaging\evaluation\AnnotationSetsConverted
+這個才是new 新的annotationSet 的location 
 
 yue pr 可以for reference
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1182483?_a=files
@@ -61,4 +67,6 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/commit/26bba9
 
     
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/commit/ad3c6ebd95ae436da6f26767974862bd2fd082b9?refName=refs%2Fheads%2Fmaster
+
+
 
