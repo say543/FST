@@ -777,3 +777,14 @@ evaluation 打算
 =====================================
 參考yue 的pr
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1182483?_a=files
+
+
+integrate 之後
+用這個跑
+ .\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2 --queryInColumn 1 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c E:\CoreScienceDataStaging\target\distrib\Debug\AnyCPU\files_model  --variant model -dl files --clientId EvalClientId
+ 
+ 
+ 已經建立好的PR
+ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging?version=GBusers%2Fchiecha%2Fsetup_files_domain_evaluation
+ 
+ 
