@@ -47,6 +47,18 @@ E:\CoreScienceDataStaging\evaluation\Configs\AnnotationExceptions.xml
 這個除非要igonre 某些slot 才要改
 否則不用
 
+
+filss qpc 要加這個
+<!-- client id will be overrided by geneal setting  but empty here does not work , need to have a default one-->
+
+[clients]
+;;=================to support evaluation======================================================================
+EvalClientId=EvalClientId
+
+[query_domains:EvalClientId]
+files=qd_files
+
+
 E:\CoreScienceDataStaging\evaluation\AnnotationSetsConverted
 這個才是new 新的annotationSet 的location 
 
@@ -64,8 +76,6 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequestcr
 
 raj pr for reference
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/commit/26bba96b5f465bd609ebb7a6da83860d5991022a?refName=refs%2Fheads%2Fmaster
-
-    
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/commit/ad3c6ebd95ae436da6f26767974862bd2fd082b9?refName=refs%2Fheads%2Fmaster
 
 
