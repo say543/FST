@@ -395,7 +395,9 @@ slot level
      ? pictures
      ? picture
      ? text
-     ? list
+     ? list / lists / listing / list doc
+        因為teams golden 的原因  先不把它當成file_type  follow teams
+	doc 也不是file type 
      ? music 
      ? spec file type
      
@@ -550,12 +552,28 @@ slot level
      
      pull up all my downloads
      
+     
+     
+     
      <meeting_starttime>
      ? 這個是可能可以改的  但是不確定前先不改成這樣
      my stuff
      what are the notes from today ' s meeting
      today 變成meeting_starttime
      meeting sharetarget_type
+     
+  <file_folder>
+     <file_filetype> downloaded files </file_filetype>
+     根據spec 先改成
+     <file_folder> downloaded </file_folder> files
+     intent 根據不同的queries verb 可能會不同
+     但是這個type 永遠在
+     
+   <to_contact_name>
+     ? share to someone
+     因為teams 有tag 現在先tag以後再根據skill team 而感
+     
+     
 ====================
 work konwledge
 ===================
@@ -787,4 +805,23 @@ integrate 之後
  已經建立好的PR
  https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging?version=GBusers%2Fchiecha%2Fsetup_files_domain_evaluation
  
+ 
+ 
+====================================
+bug or data generate attention
+=====================================
+08262019
+https://msasg.visualstudio.com/Cortana/_workitems/edit/1946532
+my model  still run
+need to generate data
+
+08262019
+https://msasg.visualstudio.com/Cortana/_workitems/edit/1972731
+my model is correct
+
+
+08262019
+https://msasg.visualstudio.com/Cortana/_workitems/edit/1899709
+go to mohit chat
+? 等之後看
  
