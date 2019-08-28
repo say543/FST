@@ -38,6 +38,8 @@ E:\CoreScienceDataStaging\src\Evaluation.Converged.Tests\Common.config
   <add key="local.OutputBaseDir" value="E:\CoreScienceDataStaging\TestResults\Evaluation" />
   // Eval Merged Dir 這邊先給我自己給的  似乎任意填
   <add key="local.EvalMergedDir" value="E:\CoreScienceDataStaging\TestResults\EvaluationMergedDir" />
+  
+  這個mergedDir 就是最後合併生成qpc 的位置
 
   
  目前卡在download drop 會fail
