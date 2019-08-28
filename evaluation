@@ -82,3 +82,50 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/commit/ad3c6e
 
 
 
+
+
+要onboard new domain
+
+
+08/28/2019
+[要local test ]
+two step process
+1>  follow this pr to make sure fille will be populated to 
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1182483?_a=files
+額外的package 要安裝  參照這個
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequestcreate?sourceRef=users%252Fchiecha%252Fsetup_files_domain_evaluation&targetRef=master&sourceRepositoryId=47fe635e-e02b-42d3-82e7-768da61e32c0&targetRepositoryId=47fe635e-e02b-42d3-82e7-768da61e32c0
+
+all new model should be here
+E:\CoreScienceDataStaging\target\distrib\Debug\AnyCPU\models
+
+2> 
+因為HttpQasProd_CortanaLU.QAS12HttpQAS_CCCtest.queryProcessingConfiguration.ini
+還沒有  設定client id 
+step1:
+sync searchgold
+step2:
+copy from  E:\searchgold\deploy\builds\data\answers\QAS12HttpQAS to E:\CoreScienceDataStaging\models
+and 一定要rename  like (不能同名 否則會conflict) 
+HttpQasProd_CortanaLU.QAS12HttpQAS_CCCtest.queryProcessingConfiguration
+加上自己的client id 
+
+重新evaluation compile then  HttpQasProd_CortanaLU.QAS12HttpQAS_CCCtest.queryProcessingConfiguration 也會populate 到
+E:\CoreScienceDataStaging\target\distrib\Debug\AnyCPU\models
+
+就可以run evaluation
+
+[要checkin && deployment]
+step1:
+正常的cortana deployment 會把new domains files 都deploy 上去
+但是這個時候HttpQasProd_CortanaLU.QAS12HttpQAS.queryProcessingConfiguration.ini
+step2:
+自己deploy QPK with 
+HttpQasProd_CortanaLU.QAS12HttpQAS.queryProcessingConfiguration.ini
+有新的client id 的update
+
+
+
+
+
+
+
