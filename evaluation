@@ -2,6 +2,11 @@
 evaluation 可能遇到的bug page
 https://microsoft.sharepoint.com/teams/CortanaCore/_layouts/15/WopiFrame.aspx?sourcedoc={6d6ae133-c9c8-400d-bfd8-ae8feec6ff9f}&action=edit&wd=target%28LU%20Tooling%2C%20Platform%20and%20Runtime%2FDev%20handbook%2FDevelopment.one%7C167a6855-2d14-4555-a326-affc6c35fa6f%2FModel%20Repository%20-%20Enlist%2C%20Setup%20and%20Structure%7C7e1929a0-cb51-4324-b4c4-97a79eda7d64%2F%29
 
+
+
+
+
+
 ========================
 'RE: Deprecation of IntentConstraintMap-Lu-schema.tsv (+ action item for model owners)'
 email title
@@ -40,6 +45,9 @@ E:\CoreScienceDataStaging\src\Evaluation.Converged.Tests\Common.config
   <add key="local.EvalMergedDir" value="E:\CoreScienceDataStaging\TestResults\EvaluationMergedDir" />
   
   這個mergedDir 就是最後合併生成qpc 的位置
+  下面會生成E:\CoreScienceDataStaging\TestResults\EvaluationMergedDir\DBC6931A
+  
+  母次最好把DBC6931A 殺掉  再跑
 
   
  目前卡在download drop 會fail
