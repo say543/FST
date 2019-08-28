@@ -89,6 +89,8 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/commit/ad3c6e
 
 08/28/2019
 [要local test ]
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging?version=GBusers%2Fchiecha%2Fsetup_files_domain_evaluation_without_bigQPC_association
+參考這個branch  (not checked just be reference)
 two step process
 1>  follow this pr to make sure fille will be populated to 
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1182483?_a=files
