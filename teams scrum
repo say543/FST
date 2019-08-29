@@ -1,5 +1,8 @@
 qp
 http://aka.ms/cluone
+default 就是hit Microsoft_Threshold_Shell_3_enus_Test
+with luttest as FlightID / enviornment 所以只要ship 到這個client test 就因該看的見
+
 
 
 teams VSO 的link
