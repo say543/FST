@@ -5,7 +5,10 @@ with luttest as FlightID / enviornment 所以只要ship 到這個client test 就
 
 Cortana Ring:
 External or DevRing 還是要configure
-這樣devRing 才看的見
+這樣DevRing 才看的見
+
+devRing 的QP
+https://qp/?permalink=bc9f01ae
 
 這邊有哪個id attached to lutest
 HttpQasProd_CortanaLU.QAS12HttpQAS.ClientIdConfig.ini
