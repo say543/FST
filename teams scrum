@@ -3,6 +3,14 @@ http://aka.ms/cluone
 default 就是hit Microsoft_Threshold_Shell_3_enus_Test
 with luttest as FlightID / enviornment 所以只要ship 到這個client test 就因該看的見
 
+這邊有哪個id attached to lutest
+HttpQasProd_CortanaLU.QAS12HttpQAS.ClientIdConfig.ini
+
+這個是主要column 12 的qpc
+HttpQasProd_CortanaLU.QAS12HttpQAS.queryProcessingConfiguration ()
+
+
+
 
 
 teams VSO 的link
