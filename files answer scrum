@@ -4,6 +4,39 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 看這個pr
 
 ================
+timex information
+==================
+.\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2 --queryInColumn 1 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c E:\searchgold\deploy\builds\data\answers\QAS12HttpQAS  --variant files_enus_mv1  -dl files
+
+externalFeaturesColumn 的order 不重要  怎麼provide 會自己被parse 的樣子
+
+        Inputs:
+                ExternalInput1 (tag: 0, string: 7)
+                        show[0,0]=1
+                        the[1,1]=1
+                        file[2,2]=1
+                        i[3,3]=1
+                        worked[4,4]=1
+                        last[5,5]=1
+                        week[6,6]=1
+                ExternalInput2 (tag: 7, string: 0)
+                        0[0,0]=1
+                        0[1,1]=1
+                        0[2,2]=1
+                        4[3,3]=1
+                        10[4,4]=1
+                        7[5,5]=1
+                        7[6,6]=1
+                ExternalInput3 (tag: 0, string: 1)
+                        2018-03-12 19:00[-1,-1]=1
+        Output:
+                Timex3 (tag: 0, string: 4)
+                        <!-- NOMATCH -->[0,2]=0
+                        <!-- NOMATCH -->[3,3]=0
+                        <!-- NOMATCH -->[4,4]=0
+                        <TIMEX3 tid="0" type="Date" value="2018-W10">last week</TIMEX3>[5,6]=1
+
+================
 memory evaluation
 ==================
 
