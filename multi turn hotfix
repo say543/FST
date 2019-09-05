@@ -1,0 +1,16 @@
+
+email domain
+configured to this file
+email.Domain.Hotfix.Annotation.tsv
+
+UUID	Query	Intent	Domain	Slot	SessionId	TurnIndex	Weight	Timex	MetaItem	ExternalFeature	ChangeType	ExpectedDomainScore	AllPredictDomains	LineIndex	CachedDomainScore
+
+
+singel turn 會生成在這邊
+cortana_email_enus_mv2.domain.1.hotfix.txt
+multi turn 會生成在這邊的不同files
+cortana_email_enus_mv2.domain.conditions.hotfix.txt
+
+
+
+
