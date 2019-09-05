@@ -1,0 +1,98 @@
+UUID	Query	Intent	Domain	Slot	SessionId	TurnIndex	Weight	Timex	MetaItem	ExternalFeature	ChangeType	ExpectedDomainScore	AllPredictDomains	LineIndex	CachedDomainScore
+0	alexa show me ebay emails		email			0	0							0	
+0	check my gmail		email			0	0							0	
+0	check my gmail for this week		email			0	0							0	
+0	check my google mail		email			0	0							0	
+0	how do i have any mails ?		email			0	0							0	
+0	my email		email			0	0							0	
+0	tell me a new emails		email			0	0							0	
+0	tell me my emails		email			0	0							0	
+0	tell me my first email		email			0	0							0	
+0	what ’s in my inbox work		email			0	0							0	
+0	what are those emails		email			0	0							0	
+0	what are those emails ?		email			0	0							0	
+0	what can you tell me about my email		email			0	0							0	
+0	what can you tell me about my email ?		email			0	0							0	
+0	what email did i have yesterday ?		email			0	0							0	
+0	what happened new emails in the last hour ?		email			0	0							0	
+0	what is my next email ?		email			0	0							0	
+0	what my mail do i have ?		email			0	0							0	
+0	what 's my next email ?		email			0	0							0	
+0	send		email			0	0							0	
+0	send it		email			0	0							0	
+0	xfinity email		email			0	0							0	
+0	Go to messages		email			0	0							0	
+0	Open messages		email			0	0							0	
+0	Take me to my email		email			0	0							0	
+0	Cortana I need to write a letter		email			0	0							0	
+0	I wanna type a letter		email			0	0							0	
+0	message box		email			0	0							0	
+0	Reply to sender		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	trash this message		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	Next one please, skip this one		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	no, skip that one, yes		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	yes, skip it		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	Archive this message		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	Archive this message		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	can you skip the next 3 messages and read the next one		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	cortana skip this entire conversation		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	delete all from this sender		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	Delete the message		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	delete this message		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	delete this message		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	delete this message		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	delete this sender		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	Flag that last message		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	Flag this message		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	go to next message		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	I need you to skip		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	i'd like you to mark that message as unread		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	i'm done with this one delete it please		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	jump to next message		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	let me hear the next message please		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	make sure this message is marked as read		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	next conversation please		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	next conversation please		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	Next one please		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	Ok  I've had enough of this sender		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	please archive conversation		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	Please flag it		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	please flag this one		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	please move this to spam		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	please read next		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	Please skip this conversation and read next		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	please skip this one		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	read the previous message again		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	remove star from this message		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	Remove this message		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	REPEAT IT		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	repeat the sentence		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	reply to current sender		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	reply to sender		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	reply to sender		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	reply to sender		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	Reply to sender		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	Reply to sender		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	reply to the sender		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	reply to this message please		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	reply to this sender		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	reply yes to this message		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	Restart from the top		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	save this message		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	Send a reply		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	send to folder		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	send to outbox		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	send to outbox		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	send to trash		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	skip ahead to the next message		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	skip conversation		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	skip conversation		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	skip over this message		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	skip the conversation		email			0	0							0	
+0	skip this one please		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	skip this sender for now		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	skip to the next message		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	Start from the beggining 		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	State the date this email arrived		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	will you read me the previous message again		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
+0	would you read me that message over		email			1	0			PreviousTurnDomain(email);PreviousTurnIntent(search_email)				0	
