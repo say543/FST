@@ -1,0 +1,35 @@
+ E:\CoreScienceDataStaging\datasources\Email> .\bin\CLU.Core.1.2.305\data_preprocess.exe -c .\v5\.domain_exact_match.json -t output_temp -o output_preprocess
+ 
+ hotfix 的input 是需要preprocess 的 大小寫
+ 
+ 可以用data_process 這個pipeline 來幫你把hotfix 沒有preprocessing 的結果來preprocessing 然後之後用來取代  
+ 
+ 
+ 
+ 
+ 在files domain 
+ 及使用 include infile
+ 
+ 因為已經register 還是可以抓到incldue 的infile 來做preprocessing..
+ 
+ 
+ 要用另外一個json
+ .\clu.exe run -c .domain_exact_match.json -o output_preprocess
+ buid_config 是整個看到的json
+ 
+ 會抓到domain_exact_match 的依賴
+ 
+ 然後preprocess output 在
+ E:\CoreScienceDataStaging\datasources\Email\output_preprocess\data_preprocess_aspect\tmp\preprocess.done\domain_exact_match
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
