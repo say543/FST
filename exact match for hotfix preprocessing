@@ -1,4 +1,10 @@
- E:\CoreScienceDataStaging\datasources\Email> .\bin\CLU.Core.1.2.305\data_preprocess.exe -c .\v5\.domain_exact_match.json -t output_temp -o output_preprocess
+//correct
+PS E:\CoreScienceDataStaging\datasources\Email> .\clu.exe run -c .domain_exact_match.json -o output_preprocess
+.dpmain_exact_match.json 是特別寫的json  (also in this repo)
+
+
+//wrong
+E:\CoreScienceDataStaging\datasources\Email> .\bin\CLU.Core.1.2.305\data_preprocess.exe -c .\v5\.domain_exact_match.json -t output_temp -o output_preprocess
  
  hotfix 的input 是需要preprocess 的 大小寫
  
