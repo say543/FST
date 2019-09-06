@@ -1,0 +1,3 @@
+ in email domain
+ PS E:\CoreScienceDataStaging\datasources\Email>
+ .\clu.exe run -c build.email.v5.json -o v5 -p domain_exact_match
