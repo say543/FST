@@ -1,0 +1,125 @@
+{
+
+"data_preprocess_aspect": 
+{
+
+	"scripts": {
+		"build": "data_preprocess.exe -c %build_config% -t %tmp%/preprocess -o %tmp%/preprocess.done",
+		"test": "cd"
+	}
+
+},
+
+/*"domain_exact_match":
+{
+  "priority": 0,
+  "use_extended_lu_schema": false,
+  "override_strategy": {
+    "scale_factor": 1,
+    "shift_factor": 0
+  },
+  "type": "domain",
+  "annotated_query_file": "./resource/email.Domain.Hotfix.Annotation.tsv",
+  "qas_inputs": {
+    "preprocessed_query": "cortana_cmfgeneric_enus_mv1_preprocessed_lowercase_query",
+    "input_score": "cortana_email_enus_domain_pattern_match_score",
+    "condition_feature": "cortana_cmfgeneric_enus_mv1_preprocessed_conditions_union"
+  },
+  "qas_outputs": {
+    "override_score": "cortana_email_enus_domain_exact_match_score"
+  },
+  "scripts": {
+    "build": "exact_match.exe -c %processor_config% -t %tmp%/build -o %final%"
+  },
+  "common": {
+    "prefix": "cortana_email_enus_mv2",
+    "preprocess_domain": "cmfgeneric",
+    "intent_classes": "cortana_email_enus_mv2.intents.dev.classes.txt",
+    "slot_entities": "cortana_email_enus_mv2.slots.config.xml",
+    "lu_schema": {
+      "domain": "email",
+      "intents": {
+        "sort": false,
+        "intent_file": "./resource/email.intents.tsv",
+        "intent_list": null
+      },
+      "slots": {
+        "sort": false,
+        "slot_file": "./resource/email.slots.tsv",
+        "slot_list": null
+      },
+      "additional_intents": {
+        "sort": false,
+        "intent_file": "",
+        "intent_list": null
+      },
+      "additional_slots": {
+        "sort": false,
+        "slot_file": "",
+        "slot_list": null
+      }
+    }
+  },*/
+  
+"intent_exact_match": {
+    "priority": 0,
+    "use_extended_lu_schema": false,
+    "override_strategy": {
+      "scale_factor": 1,
+      "shift_factor": 0
+    },
+    "type": "intent",
+    "annotated_query_file": "./resource/email.Intent.Hotfix.Annotation.tsv",
+    "qas_inputs": {
+      "preprocessed_query": "cortana_cmfgeneric_enus_mv1_preprocessed_lowercase_query",
+      /* "input_score": "${intent_pattern_match.qas_outputs.override_score}", */
+	  "input_score": "cortana_email_enus_intent_pattern_match_score",
+      "condition_feature": "cortana_cmfgeneric_enus_mv1_preprocessed_conditions_union"
+    },
+    "qas_outputs": {
+      "override_score": "cortana_email_enus_intent_exact_match_score"
+    },
+    "scripts": {
+      "build": "exact_match.exe -c %processor_config% -t %tmp%/build -o %final%"
+    },
+  "common": {
+    "prefix": "cortana_email_enus_mv2",
+    "preprocess_domain": "cmfgeneric",
+    "intent_classes": "cortana_email_enus_mv2.intents.dev.classes.txt",
+    "slot_entities": "cortana_email_enus_mv2.slots.config.xml",
+    "lu_schema": {
+      "domain": "email",
+      "intents": {
+        "sort": false,
+        "intent_file": "./resource/email.intents.tsv",
+        "intent_list": null
+      },
+      "slots": {
+        "sort": false,
+        "slot_file": "./resource/email.slots.tsv",
+        "slot_list": null
+      },
+      "additional_intents": {
+        "sort": false,
+        "intent_file": "",
+        "intent_list": null
+      },
+      "additional_slots": {
+        "sort": false,
+        "slot_file": "",
+        "slot_list": null
+      }
+    }
+  },
+  
+  
+  "data_preprocess": {
+    /* "preprocess_pipeline": ".//cmfgeneric/dependency/cortana_cmfgeneric_enus_mv1.preprocess.pipeline.txt", */
+	/* "preprocess_pipeline": "E:\\CoreScienceDataStaging\\datasources\\Email\\cmfgeneric\\dependency\cortana_cmfgeneric_enus_mv1.preprocess.pipeline.txt", */
+	"preprocess_pipeline": "E:/CoreScienceDataStaging/datasources/Email/cmfgeneric/dependency/cortana_cmfgeneric_enus_mv1.preprocess.pipeline.txt",
+    "preprocessed_feature": "cortana_cmfgeneric_enus_mv1_preprocessed_lowercase_query",
+    "punctuation_extend": [],
+    "tnitn_extend": false
+  }
+}
+}
