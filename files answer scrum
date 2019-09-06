@@ -434,6 +434,59 @@ slot level
      ? music 
      ? spec file type
      
+     09052019
+     from file answer teams
+     doc docs docx spec specs 都要tag'
+       有data 要改正
+       doc 比較重要在他的bug bash
+       spec specs 還好
+       
+     workbook 沒data
+       bug bash 沒有
+     
+     notebook 
+     notebooks 
+       沒啥dATA 但是要改正
+       可能也要生DATA
+       bug bash 沒有
+       
+    gif png
+       可能要改正 有data
+       bug bash 沒有
+       
+    msg
+       沒啥太多的data 只有from file_name 可能可以增加
+       bug bash 沒有
+    ics 
+       沒有data 要生
+       bug bash 沒有
+    vcs 
+        沒有data 要生
+	bug bash 沒有
+    vsdx, vssx. .vstx. vsdm. vssm. vst,vdw, vss, vst
+        沒有data 要生
+	can use vsd query 來generate data
+	bug bash 沒有
+     mpp, mpt 
+        沒有data 要生
+	bug bash 沒有
+	
+	
+	
+
+    
+       
+      
+       
+      
+      
+     
+     
+     
+     
+     
+     
+     
      
   
    <data_source>
