@@ -31,6 +31,10 @@ E:\CoreScienceDataStaging\datasources\Email> .\bin\CLU.Core.1.2.305\data_preproc
  
  
  
+ ================
+ intent
+ ================
+PS E:\CoreScienceDataStaging\datasources\Email> .\clu.exe run -c intent_exact_match.json -o output_preprocess
  
  
  
