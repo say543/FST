@@ -269,9 +269,28 @@ with codecs.open('teams_slot_training.tsv', 'r', 'utf-8') as fin:
 
             # document teamspace_search
             # for further analysis
+            # ? future here might need to open it for training but do not do it right know
+            #if linestrs[2] == "teamspace_search":
+            #    teamspaceSearchCandidateSet.add(line)
+            #    continue
+
+            # document teamspace_search
+            # for further analysis
+            # skip it at first
             if linestrs[2] == "teamspace_search":
-                teamspaceSearchCandidateSet.add(line)
-                continue
+                # having problem or tab
+                # then skip
+                if linestrs[1].find("program") != -1 or \
+                   linestrs[1].find("tab") != -1 or \
+                   linestrs[1].find("channel") != -1 or \
+                   linestrs[1].find("team") != -1 or \
+                   linestrs[1].find("teams") != -1 or \
+                   linestrs[1].find("conversation") != -1 or \
+                   linestrs[1].find("chat") != -1:
+                    teamspaceSearchCandidateSet.add(line)
+                    continue
+                linestrs[2] = "file_search"
+
 
             slot = linestrs[4]
             for key in sorted (teamsSlotToFileSlot.keys()) :
@@ -445,7 +464,7 @@ with codecs.open('teams_slot_training.tsv', 'r', 'utf-8') as fin:
                 
             
             # i verb
-            verbs = ["downloaded",
+            verbsAlongWithContactName = set(["downloaded",
                      "worked",
                      "created",
                      "saved",
@@ -456,11 +475,27 @@ with codecs.open('teams_slot_training.tsv', 'r', 'utf-8') as fin:
                      "working",
                      "shared",
                      "wrote",
-                     ]
+                     "added",
+                     "used",
+                     "using",
+                     "composed",
+                     "opened",
+                     "composing",
+                     "morning",
+                     "walked",
+                     "edited",
+                     "updated",
+                     "writing",
+                     "doing",
+                     "did",
+                     "looking",
+                     "looked",
+                     "reviewed",
+                     ])
             contactNames = ["i",
                             "I"
                             ]
-            for verb in verbs:
+            for verb in verbsAlongWithContactName:
                 for contactName in contactNames:
                     # with file action already
                     # try to tag contact name
@@ -611,7 +646,7 @@ with codecs.open('teams_slot_training.tsv', 'r', 'utf-8') as fin:
                 slot = slot.replace("<order_ref> Recent </order_ref>", "<file_recency> Recent </file_recency>")
             '''
 
-            # for analysis
+            # for contact_name to reanme to to_contact_name
             xmlpairs = re.findall("(<.*?>.*?<\/.*?>)", slot)
 
             for xmlpair in xmlpairs:
@@ -639,6 +674,18 @@ with codecs.open('teams_slot_training.tsv', 'r', 'utf-8') as fin:
                     newPair = newPair.replace("</contact_name>", "</to_contact_name>")
                     slot = slot.replace(xmlpair, newPair)
                 if xmlpair.startswith("<contact_name>") and slot.find("from <contact_name>") != -1 and slot.find("<file_action>") != -1 and slot.find("<file_action>") < slot.find(xmlpair):
+                    newPair = xmlpair.replace("<contact_name>", "<to_contact_name>")
+                    newPair = newPair.replace("</contact_name>", "</to_contact_name>")
+                    slot = slot.replace(xmlpair, newPair)
+
+
+                # to deal with "file to <contact_name> xxx </contact_name>"
+                if xmlpair.startswith("<contact_name>") and slot.find("file to <contact_name>") != -1 and slot.find("file to <contact_name>") < slot.find(xmlpair):
+                    newPair = xmlpair.replace("<contact_name>", "<to_contact_name>")
+                    newPair = newPair.replace("</contact_name>", "</to_contact_name>")
+                    slot = slot.replace(xmlpair, newPair)
+
+                if xmlpair.startswith("<contact_name>") and slot.find("with <contact_name>") != -1 and slot.find("with <contact_name>") < slot.find(xmlpair):
                     newPair = xmlpair.replace("<contact_name>", "<to_contact_name>")
                     newPair = newPair.replace("</contact_name>", "</to_contact_name>")
                     slot = slot.replace(xmlpair, newPair)
