@@ -437,7 +437,10 @@ slot level
      09052019
      from file answer teams
      doc docs docx spec specs 都要tag'
-       有data 要改正
+       有data 要改正 
+       
+       doc docx 要把file name 跟docx 分開
+       
        doc 比較重要在他的bug bash
        spec specs 還好
        
