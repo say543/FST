@@ -74,7 +74,11 @@ myStuffSlotToFileSlot = {
     #"</order_ref> " : "",
     #"</order_ref>" : "",
     "<quantifier> " : "",
-    "</quantifier>" : "",
+
+    # remove extra space in front
+    #"</quantifier>" : "",
+    " </quantifier>" : "",
+    
     "<source_platform> " : "",
     "</source_platform> " : "",
     "</source_platform>" : "",
@@ -446,6 +450,23 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
                         elif slot.startswith(verb + my):
                             slot = slot.replace(verb + my, verb + "<contact_name> " + my +" </contact_name>")
 
+            documentsWtihMy = set([
+                            "file",
+                            "files"                
+                            ])
+
+            # my xxx => my becomes contact name
+            # cannot cover <tag > my file <tag>  and tag != contact_name
+            # but usually it will not happen in this way
+            for my in mys:
+                for document in documentsWtihMy:
+                    if slot.find(my+" "+document) != -1 and slot.find("<contact_name> " + my +" </contact_name>"+" "+document) == -1:
+                        slot = slot.replace(my+" "+document, "<contact_name> " + my +" </contact_name>"+" "+document)
+            
+
+
+
+
             # i verb
             verbsAlongWithContactName = set(["downloaded",
                      "worked",
@@ -473,6 +494,7 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
                      "did",
                      "looking",
                      "looked",
+                     "reviewed",
                      ])
             contactNames = set(["i",
                             "I",
@@ -630,6 +652,50 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
             if slot.find("<order_ref> Recent </order_ref>") != -1:
                 slot = slot.replace("<order_ref> Recent </order_ref>", "<file_recency> Recent </file_recency>")
 
+
+            # for contact_name to reanme to to_contact_name
+            xmlpairs = re.findall("(<.*?>.*?<\/.*?>)", slot)
+
+            for xmlpair in xmlpairs:
+                # file_keywrod to file_name
+                #https://stackoverflow.com/questions/41484526/regular-expression-for-matching-non-whitespace-in-python
+                # not perfect but good enough
+                if xmlpair.startswith("<file_keyword>") and re.search(r'[\S]+\.[\S]+', xmlpair) is not None:
+                    newPair = xmlpair.replace("<file_keyword>", "<file_name>")
+                    newPair = newPair.replace("</file_keyword>", "</file_name>")
+                    slot = slot.replace(xmlpair, newPair)
+
+                # to
+                # with
+                # from
+                if xmlpair.startswith("<contact_name>") and slot.find("with <contact_name>") != -1 and slot.find("<file_action>") != -1 and slot.find("<file_action>") < slot.find(xmlpair):
+                    #print("inside")
+                    newPair = xmlpair.replace("<contact_name>", "<to_contact_name>")
+                    newPair = newPair.replace("</contact_name>", "</to_contact_name>")
+                    slot = slot.replace(xmlpair, newPair)
+
+                # to deal with 'go to my fils' / hey could you please direct me to my last files that was used ?
+                # make sure it has file_action slot and it happens before
+                if xmlpair.startswith("<contact_name>") and slot.find("to <contact_name>") != -1  and slot.find("<file_action>") != -1 and slot.find("<file_action>") < slot.find(xmlpair):
+                    newPair = xmlpair.replace("<contact_name>", "<to_contact_name>")
+                    newPair = newPair.replace("</contact_name>", "</to_contact_name>")
+                    slot = slot.replace(xmlpair, newPair)
+                if xmlpair.startswith("<contact_name>") and slot.find("from <contact_name>") != -1 and slot.find("<file_action>") != -1 and slot.find("<file_action>") < slot.find(xmlpair):
+                    newPair = xmlpair.replace("<contact_name>", "<to_contact_name>")
+                    newPair = newPair.replace("</contact_name>", "</to_contact_name>")
+                    slot = slot.replace(xmlpair, newPair)
+
+
+                # to deal with "file to <contact_name> xxx </contact_name>"
+                if xmlpair.startswith("<contact_name>") and slot.find("file to <contact_name>") != -1 and slot.find("file to <contact_name>") < slot.find(xmlpair):
+                    newPair = xmlpair.replace("<contact_name>", "<to_contact_name>")
+                    newPair = newPair.replace("</contact_name>", "</to_contact_name>")
+                    slot = slot.replace(xmlpair, newPair)
+
+                if xmlpair.startswith("<contact_name>") and slot.find("with <contact_name>") != -1 and slot.find("with <contact_name>") < slot.find(xmlpair):
+                    newPair = xmlpair.replace("<contact_name>", "<to_contact_name>")
+                    newPair = newPair.replace("</contact_name>", "</to_contact_name>")
+                    slot = slot.replace(xmlpair, newPair)
 
             # after all slot replacement
             # remove head and end spaces 
