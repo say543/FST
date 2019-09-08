@@ -95,9 +95,25 @@ clu_ret_ml
 
 
 kusto  one note 的page
+https://kusto.azurewebsites.net/docs/
+
+for online page
+refering to this to add connection
+https://lens.msftcloudes.com/v2/#/discover/query//results/table?temp=0&isSample=false&_g=()
+
+https://microsoft.sharepoint.com/teams/LUforNextgenAgents/_layouts/15/WopiFrame.aspx?sourcedoc={68deb809-671e-469a-be79-ba53c05298ce}&action=edit&wd=target%28CLU%20DRI.one%7C1990f4e6-5d06-4429-8ee9-ba6b20b33107%2FUseful%20Kusto%20Queries%7Cc5903bd0-f1ee-45ed-b9b9-43a0dccb50dd%2F%29
+
+
 'Useful Kusto Queries'  (Web view)
 已裝好  叫做 kusto.explore
 Dialog table 已經看得見
+
+another one note page
+'How to investigate with Trace Id'
+
+
+another one note page
+'How to use Kusto Explorer'
 
 i typically only use Dialog Reactive Host Prod
 
