@@ -390,6 +390,14 @@ slot level
      <file_keyword> a </file_keyword>
      會影響file_keyword 的  精確度
        
+     open <file_title> this </file_title> 
+          ? 這個沒有說 先follow up teams
+         
+     share <file_title> this </file_title> 
+         guideline 有
+	 
+	 this -> file_title -> file_keyword
+       
        
   <file_type>
      go to my <data_source> documents </data_source
@@ -425,14 +433,26 @@ slot level
        先留著等complain 再說  雖然list沒有說
      ? resume
         先留著等complain 再說  雖然list沒有說
+	file_keyword
+     ? movie
+        先留著等complain 再說  雖然list沒有說
        
      ? presentation 要不要之後看
      ? power point presentation
      ? photos
          先留著等complain 再說  雖然list沒有說
-     ? pictures
-     ? picture
+     ? pictures /picture
+          先留著等complain 再說  雖然list沒有說
+	  
+         
      ? text
+       先不當作data_type 因為spec 沒有說 
+     ? txt
+       先留著等complain 再說  雖然list沒有說
+     ? lock
+       先留著等complain 再說  雖然list沒有說
+     ? word
+       先不當作data_type 因為spec 沒有說
      ? list / lists / listing / list doc
         因為teams golden 的原因  先不把它當成file_type  follow teams
 	
@@ -440,6 +460,13 @@ slot level
      ? music 
      ? spec file type
      
+     ?Word document
+       兩個token 都不mark
+     ?word doc
+        word 移出來  doc 變成data_type -> file_type
+     
+       
+  
      09052019
      from file answer teams
      doc docs docx spec specs 都要tag'
@@ -934,3 +961,11 @@ go to mohit chat
 09052019
 calendar negative pattern 增加了
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1228764?_a=files
+
+
+
+
+09092019
+inmeeting negative pattern
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1236686?_a=overview
+可以參考
