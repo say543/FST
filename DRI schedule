@@ -257,3 +257,9 @@ Message my next meeting that i will be late query is not recognized
 email thread discussion
 PROD] Sev 3: Id 141720954: HA Rules commands are missing time information in LU
 
+
+
+09082019
+Bug 1999778 - [NorthUS2] Disambig next call is not returning to the ongoing skill
+似乎table 只剩下CortexTraceMDS  , instructment 找不到了
+
