@@ -100,6 +100,264 @@ myStuffSlotToFileSlot = {
 
 
 
+fileTypeTagWoDotInFileKeywordOrFileName={
+
+    # space is important
+    # order is important
+
+    ' ppt' : '<file_type> ppt </file_type> ',
+    ' pptx' : '<file_type> pptx </file_type> ',
+    ' ppts' : '<file_type> ppts </file_type> ',
+    ' deck' : '<file_type> deck </file_type> ',
+    ' decks' : '<file_type> decks </file_type> ',
+    ' presentation' : '<file_type> presentation </file_type> ',
+    ' presentations' : '<file_type> presentations </file_type> ',
+    ' powerpoint' : '<file_type> powerpoint </file_type> ',
+    ' powerpoints' : '<file_type> powerpoints </file_type> ',
+    # add for seperate
+    ' power point' : '<file_type> power point </file_type> ',
+    
+    ' slide' : '<file_type> slides </file_type> ',
+    ' slides' : '<file_type> slides </file_type> ',
+    ' doc' : '<file_type> doc </file_type> ',
+    ' docx' : '<file_type> docx </file_type> ',
+    ' docs' : '<file_type> docs </file_type> ',
+    # add for upper case
+    ' Doc' : '<file_type> Doc </file_type> ',
+    ' Docx' : '<file_type> Docx </file_type> ',
+    ' Docs' : '<file_type> Docs </file_type> ',
+
+    
+    ' spec' : '<file_type> spec </file_type> ',
+    ' excel' : '<file_type> excel </file_type> ',
+    ' excels' : '<file_type> excels </file_type> ',
+    ' xls' : '<file_type> xls </file_type> ',
+    ' xlsx' : '<file_type> xlsx </file_type> ',
+    ' spreadsheet' : '<file_type> spreadsheet </file_type> ',
+    ' spreadsheets' : '<file_type> spreadsheets </file_type> ',
+    ' workbook' : '<file_type> workbook </file_type> ',
+    ' worksheet' : '<file_type> worksheet </file_type> ',
+    ' csv' : '<file_type> csv </file_type> ',
+    ' tsv' : '<file_type> tsv </file_type> ',
+    ' note' : '<file_type> note </file_type> ',
+    ' notes' : '<file_type> notes </file_type> ',
+    ' onenote' : '<file_type> onenote </file_type> ',
+    ' onenotes' : '<file_type> onenotes </file_type> ',
+    # add for upper case
+    ' OneNote' : '<file_type> OneNote </file_type> ',
+    ' notebook' : '<file_type> notebook </file_type> ',
+    ' notebooks' : '<file_type> notebooks </file_type> ',
+    ' pdf' : '<file_type> pdf </file_type> ',
+    ' pdfs' : '<file_type> pdfs </file_type> ',
+    # add for upper case
+    ' PDF' : '<file_type> PDF </file_type> ',
+    ' jpg' : '<file_type> jpg </file_type> ',
+    ' jpeg' : '<file_type> jpeg </file_type> ',
+    ' gif' : '<file_type> gif </file_type> ',
+    ' png' : '<file_type> png </file_type> ',
+    ' image' : '<file_type> image </file_type> ',
+    ' msg' : '<file_type> msg </file_type> ',
+    ' ics' : '<file_type> ics </file_type> ',
+    ' vcs' : '<file_type> vcs </file_type> ',
+    ' vsdx' : '<file_type> vsdx </file_type> ',
+    ' vssx' : '<file_type> vssx </file_type> ',
+    ' vstx' : '<file_type> vstx </file_type> ',
+    ' vsdm' : '<file_type> vsdm </file_type> ',
+    ' vssm' : '<file_type> vssm </file_type> ',
+    ' vstm' : '<file_type> vstm </file_type> ',
+    ' vsd' : '<file_type> vsd </file_type> ',
+    ' vdw' : '<file_type> vdw </file_type> ',
+    ' vss' : '<file_type> vss </file_type> ',
+    ' vst' : '<file_type> vst </file_type> ',
+    ' mpp' : '<file_type> mpp </file_type> ',
+    ' mpt' : '<file_type> mpt </file_type> ',
+    # no mention in spec
+    # move it to not tag
+    #' word' : '<file_type> word </file_type> ',
+
+
+    # keep it as tag
+    ' picture' : '<file_type> picture </file_type> ',
+    ' music' : '<file_type> music </file_type> ',
+}
+
+
+fileTypeTagWDotInFileKeywordOrFileName={
+
+    # space is important
+    # order is important
+
+    '.ppt' : '.<file_type> ppt </file_type> ',
+    '.pptx' : '.<file_type> pptx </file_type> ',
+    '.ppts' : '.<file_type> ppts </file_type> ',
+    '.deck' : '.<file_type> deck </file_type> ',
+    '.decks' : '.<file_type> decks </file_type> ',
+    '.presentation' : '.<file_type> presentation </file_type> ',
+    '.presentations' : '.<file_type> presentations </file_type> ',
+    '.powerpoint' : '.<file_type> powerpoint </file_type> ',
+    '.powerpoints' : '.<file_type> powerpoints </file_type> ',
+    # add for seperate
+    '.power point' : '.<file_type> power point </file_type> ',
+    
+    '.slide' : '.<file_type> slides </file_type> ',
+    '.slides' : '.<file_type> slides </file_type> ',
+    '.doc' : '.<file_type> doc </file_type> ',
+    '.docx' : '.<file_type> docx </file_type> ',
+    '.docs' : '.<file_type> docs </file_type> ',
+    # add for upper case
+    '.Doc' : '.<file_type> Doc </file_type> ',
+    '.Docx' : '.<file_type> Docx </file_type> ',
+    '.Docs' : '.<file_type> Docs </file_type> ',
+
+    
+    '.spec' : '.<file_type> spec </file_type> ',
+    '.excel' : '.<file_type> excel </file_type> ',
+    '.excels' : '.<file_type> excels </file_type> ',
+    '.xls' : '.<file_type> xls </file_type> ',
+    '.xlsx' : '.<file_type> xlsx </file_type> ',
+    '.spreadsheet' : '.<file_type> spreadsheet </file_type> ',
+    '.spreadsheets' : '.<file_type> spreadsheets </file_type> ',
+    '.workbook' : '.<file_type> workbook </file_type> ',
+    '.worksheet' : '.<file_type> worksheet </file_type> ',
+    '.csv' : '.<file_type> csv </file_type> ',
+    '.tsv' : '.<file_type> tsv </file_type> ',
+    '.note' : '.<file_type> note </file_type> ',
+    '.notes' : '.<file_type> notes </file_type> ',
+    '.onenote' : '.<file_type> onenote </file_type> ',
+    '.onenotes' : '.<file_type> onenotes </file_type> ',
+    # add for upper case
+    '.OneNote' : '.<file_type> OneNote </file_type> ',
+    '.notebook' : '.<file_type> notebook </file_type> ',
+    '.notebooks' : '.<file_type> notebooks </file_type> ',
+    '.pdf' : '.<file_type> pdf </file_type> ',
+    # add for upper case
+    '.PDF' : '.<file_type> PDF </file_type> ',
+    '.pdfs' : '.<file_type> pdfs </file_type> ',
+    '.jpg' : '.<file_type> jpg </file_type> ',
+    '.jpeg' : '.<file_type> jpeg </file_type> ',
+    '.gif' : '.<file_type> gif </file_type> ',
+    '.png' : '.<file_type> png </file_type> ',
+    '.image' : '.<file_type> image </file_type> ',
+    '.msg' : '.<file_type> msg </file_type> ',
+    '.ics' : '.<file_type> ics </file_type> ',
+    '.vcs' : '.<file_type> vcs </file_type> ',
+    '.vsdx' : '.<file_type> vsdx </file_type> ',
+    '.vssx' : '.<file_type> vssx </file_type> ',
+    '.vstx' : '.<file_type> vstx </file_type> ',
+    '.vsdm' : '.<file_type> vsdm </file_type> ',
+    '.vssm' : '.<file_type> vssm </file_type> ',
+    '.vstm' : '.<file_type> vstm </file_type> ',
+    '.vsd' : '.<file_type> vsd </file_type> ',
+    '.vdw' : '.<file_type> vdw </file_type> ',
+    '.vss' : '.<file_type> vss </file_type> ',
+    '.vst' : '.<file_type> vst </file_type> ',
+    '.mpp' : '.<file_type> mpp </file_type> ',
+    '.mpt' : '.<file_type> mpt </file_type> ',
+    # no mention in spec
+    # move it to not tag
+    #'.word' : '.<file_type> word </file_type> ',
+
+    # keep it as tag
+    '.picture' : '.<file_type> picture </file_type> ',
+    '.music' : '.<file_type> music </file_type> ',
+}
+
+fileTypeTagWDotSpaceInFileKeywordOrFileName={
+
+    # space is important
+    # order is important
+
+    '. ppt' : '. <file_type> ppt </file_type> ',
+    '. pptx' : '. <file_type> pptx </file_type> ',
+    '. ppts' : '. <file_type> ppts </file_type> ',
+    '. deck' : '. <file_type> deck </file_type> ',
+    '. decks' : '. <file_type> decks </file_type> ',
+    '. presentation' : '. <file_type> presentation </file_type> ',
+    '. presentations' : '. <file_type> presentations </file_type> ',
+    '. powerpoint' : '. <file_type> powerpoint </file_type> ',
+    '. powerpoints' : '. <file_type> powerpoints </file_type> ',
+    # add for seperate
+    '. power point' : '. <file_type> power point </file_type> ',
+    '. slide' : '. <file_type> slides </file_type> ',
+    '. slides' : '. <file_type> slides </file_type> ',
+    '. doc' : '. <file_type> doc </file_type> ',
+    '. docx' : '. <file_type> docx </file_type> ',
+    '. docs' : '. <file_type> docs </file_type> ',
+    # add for upper case
+    '. Doc' : '. <file_type> Doc </file_type> ',
+    '. Docx' : '. <file_type> Docx </file_type> ',
+    '. Docs' : '. <file_type> Docs </file_type> ',
+
+    '. spec' : '. <file_type> spec </file_type> ',
+    '. excel' : '. <file_type> excel </file_type> ',
+    '. excels' : '. <file_type> excels </file_type> ',
+    '. xls' : '. <file_type> xls </file_type> ',
+    '. xlsx' : '. <file_type> xlsx </file_type> ',
+    '. spreadsheet' : '. <file_type> spreadsheet </file_type> ',
+    '. spreadsheets' : '. <file_type> spreadsheets </file_type> ',
+    '. workbook' : '. <file_type> workbook </file_type> ',
+    '. worksheet' : '. <file_type> worksheet </file_type> ',
+    '. csv' : '. <file_type> csv </file_type> ',
+    '. tsv' : '. <file_type> tsv </file_type> ',
+    '. note' : '. <file_type> note </file_type> ',
+    '. notes' : '. <file_type> notes </file_type> ',
+    '. onenote' : '. <file_type> onenote </file_type> ',
+    '. onenotes' : '. <file_type> onenotes </file_type> ',
+    # add for upper case
+    '. OneNote' : '. <file_type> OneNote </file_type> ',
+    '. notebook' : '. <file_type> notebook </file_type> ',
+    '. notebooks' : '. <file_type> notebooks </file_type> ',
+    '. pdf' : '. <file_type> pdf </file_type> ',
+    '. pdfs' : '. <file_type> pdfs </file_type> ',
+    # add for upper case
+    '. PDF' : '. <file_type> PDF </file_type> ',    
+    '. jpg' : '. <file_type> jpg </file_type> ',
+    '. jpeg' : '. <file_type> jpeg </file_type> ',
+    '. gif' : '. <file_type> gif </file_type> ',
+    '. png' : '. <file_type> png </file_type> ',
+    '. image' : '. <file_type> image </file_type> ',
+    '. msg' : '. <file_type> msg </file_type> ',
+    '. ics' : '. <file_type> ics </file_type> ',
+    '. vcs' : '. <file_type> vcs </file_type> ',
+    '. vsdx' : '. <file_type> vsdx </file_type> ',
+    '. vssx' : '. <file_type> vssx </file_type> ',
+    '. vstx' : '. <file_type> vstx </file_type> ',
+    '. vsdm' : '. <file_type> vsdm </file_type> ',
+    '. vssm' : '. <file_type> vssm </file_type> ',
+    '. vstm' : '. <file_type> vstm </file_type> ',
+    '. vsd' : '. <file_type> vsd </file_type> ',
+    '. vdw' : '. <file_type> vdw </file_type> ',
+    '. vss' : '. <file_type> vss </file_type> ',
+    '. vst' : '. <file_type> vst </file_type> ',
+    '. mpp' : '. <file_type> mpp </file_type> ',
+    '. mpt' : '. <file_type> mpt </file_type> ',
+    # no mention in spec
+
+    # move it to not tag
+    #'. word' : '. <file_type> word </file_type> ',
+
+    # keep it as tag
+    '. picture': '. <file_type> picture </file_type> ',
+    '. music': '. <file_type> music </file_type> ',
+}
+
+
+fileTypeNotTag={
+    ' Word',
+    ' word',
+    ' microsoft word',
+    " word's",
+    " Word's",
+    ' text',
+    ' Text',
+    
+    # . as word
+    ' dot',
+    ' Dot',
+    ' scanned',    
+    }
+
+
 blackListQuerySet = {
     "go to my desktop",
     "internet explorer on this pc",
@@ -279,6 +537,9 @@ blackListQuerySet = {
 
 
 
+fileKeywordfileNameNotUpdateblackListQuerySet = {
+    "cortana, can i see the presentation labeled richard's presentation?",
+    }
 
 
 fileTypeCandidateSet = set()
@@ -311,6 +572,7 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
         skip = False
         # cannot use str
         # it will override existing function
+        # ? this can be improved by using set for blacklistQuery and o(1) compare
         for blackListQuery in sorted (blackListQuerySet) :
             if linestrs[0].lower().find(blackListQuery.lower()) != -1:
                 #print(linestrs[0])
@@ -657,13 +919,141 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
             xmlpairs = re.findall("(<.*?>.*?<\/.*?>)", slot)
 
             for xmlpair in xmlpairs:
+
+                # extra type and value for xml tag
+                xmlTypeEndInd = xmlpair.find(">")
+
+                xmlType = xmlpair[1:xmlTypeEndInd]
+
+                xmlValue = xmlpair.replace("<"+xmlType+">", "")
+                xmlValue = xmlValue.replace("</"+xmlType+">", "")
+                xmlValue = xmlValue.strip()
+
+                if xmlValue == "daddy . doc":
+                    print(xmlpair)
+                    print(linestrs[0])
+                
+                
                 # file_keywrod to file_name
                 #https://stackoverflow.com/questions/41484526/regular-expression-for-matching-non-whitespace-in-python
                 # not perfect but good enough
-                if xmlpair.startswith("<file_keyword>") and re.search(r'[\S]+\.[\S]+', xmlpair) is not None:
-                    newPair = xmlpair.replace("<file_keyword>", "<file_name>")
-                    newPair = newPair.replace("</file_keyword>", "</file_name>")
-                    slot = slot.replace(xmlpair, newPair)
+                # this cannot work with  ' file_keyword / filename / file_typeto file_name and file_type'
+                # since xmlpair might replace at first then second branch cannot target
+                #if xmlpair.startswith("<file_keyword>") and re.search(r'[\S]+\.[\S]+', xmlpair) is not None:
+                #    newPair = xmlpair.replace("<file_keyword>", "<file_name>")
+                #    newPair = newPair.replace("</file_keyword>", "</file_name>")
+                #    slot = slot.replace(xmlpair, newPair)
+
+                # file_keyword / filename to file_name and file_type
+
+                # exception :
+                # ? might be tag the first one or tag both
+                # <file_type> word doc </file_type>
+                # ppt. doc
+                # visio doc
+                # <file_type> docs doc </file_type>
+                # <file_type> text doc </file_type>
+                # presentation slides
+                # pdf's
+                # <file_type> presentation slides </file_type>
+                
+                 
+                if (xmlpair.startswith("<file_keyword>") or xmlpair.startswith("<file_name>")):
+
+                    # skip queris from fileKeywordfileNameNotUpdateblackListQuerySet
+                    if linestrs[0] in fileKeywordfileNameNotUpdateblackListQuerySet:
+                        print (linestrs[0])
+                        continue
+
+
+                    match = False
+                    # with . and space fileTypeTagWDotSpaceInFileKeywordOrFileName
+                    # this need to done before "no .and space from fileTypeTagWoDotInFileKeywordOrFileName" and # with . from fileTypeTagWDotInFileKeywordOrFileName
+                    if not match:
+                        for key in fileTypeTagWDotSpaceInFileKeywordOrFileName:
+                            # exactly the same as key
+                            if xmlValue == key:
+                                if xmlValue == "daddy . doc":
+                                    print("1")
+                                #print(xmlValue)
+                                #print(slot.find(xmlpair))
+                                #print(newName)
+                                #print(key)
+                                newPair = fileTypeTagWDotSpaceInFileKeywordOrFileName[key]
+                                slot = slot.replace(xmlpair, newPair)
+                                match = True
+                            # endwith
+                            elif xmlValue.endswith(key):
+                                if xmlValue == "daddy . doc":
+                                    print("1.1")
+                                newName = xmlValue[0:xmlValue.find(key)].strip()
+                                #print(xmlValue)
+                                #print(xmlValue.endswith(key))
+                                #print(newName)
+                                #print(key)
+                                if len(newName) > 0:
+                                    newPair = "<file_name> " + newName + " </file_name> " + fileTypeTagWDotSpaceInFileKeywordOrFileName[key]
+                                else:
+                                    newPair = fileTypeTagWDotSpaceInFileKeywordOrFileName[key]
+                                slot = slot.replace(xmlpair, newPair)
+                                match = True
+                    if not match:       
+                        # no .and space from fileTypeTagWoDotInFileKeywordOrFileName
+                        for key in fileTypeTagWoDotInFileKeywordOrFileName:
+                            if xmlValue.endswith(key):
+                                if xmlValue == "daddy . doc":
+                                    print("2")
+                                newName = xmlValue[0:xmlValue.find(key)].strip()
+                                #print(xmlValue)
+                                #print(xmlValue.endswith(key))
+                                #print(newName)
+                                #print(key)
+                                if len(newName) > 0:
+                                    newPair = "<file_name> " + newName + " </file_name> " + fileTypeTagWoDotInFileKeywordOrFileName[key]
+                                else:
+                                    newPair = fileTypeTagWoDotInFileKeywordOrFileName[key]
+                                slot = slot.replace(xmlpair, newPair)
+                                match = True
+
+                    if not match:
+                        # with . from fileTypeTagWDotInFileKeywordOrFileName
+                        for key in fileTypeTagWDotInFileKeywordOrFileName:
+                            if xmlValue.endswith(key):
+                                newName = xmlValue[0:xmlValue.find(key)].strip()
+                                if xmlValue == "daddy . doc":
+                                    print("3")
+                                #print(xmlValue)
+                                ##print(slot.find(xmlpair))
+                                #print(newName)
+                                #print(key)
+                                if len(newName) > 0:
+                                    newPair = "<file_name> " + newName + " </file_name> " + fileTypeTagWDotInFileKeywordOrFileName[key]
+                                else:
+                                    newPair = fileTypeTagWDotInFileKeywordOrFileName[key]
+                                slot = slot.replace(xmlpair, newPair)
+                                match = True
+
+                # file type
+                if (xmlpair.startswith("<file_type>")):
+                    #if (linestrs[0] == "help me find my excel documents"):
+                    #    print(xmlpair)
+                    #    print(xmlValue)
+                    for key in fileTypeTagWoDotInFileKeywordOrFileName:
+                        if xmlValue == (key+ " documents ").strip():
+                            #print(slot)
+                            slot = slot.replace(xmlpair, "<file_type>" + key + " </file_type>" + " documents")
+                        elif xmlValue == (key+ " document ").strip():
+                            #print(slot)
+                            slot = slot.replace(xmlpair, "<file_type>" + key + " </file_type>" + " document")
+                            
+                    for key in fileTypeNotTag:
+                        if xmlValue == (key+ " documents ").strip():
+                            #print(slot)
+                            slot = slot.replace(xmlpair, (key+ " documents ").strip())
+                        elif xmlValue == (key+ " document ").strip():
+                            #print(slot)
+                            slot = slot.replace(xmlpair, (key+ " document ").strip())
+                        
 
                 # to
                 # with
