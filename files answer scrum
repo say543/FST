@@ -443,8 +443,15 @@ slot level
          先留著等complain 再說  雖然list沒有說
      ? pictures /picture
           先留著等complain 再說  雖然list沒有說
+     ? apps
+	  先留著等complain 再說  雖然list沒有說
+     ? screenshots
+          先留著等complain 再說  雖然list沒有說
+     ? photographs
+          先留著等complain 再說  雖然list沒有說
 	  
-         
+     ? letter /letters
+       先不當作data_type 因為spec 沒有說
      ? text
        先不當作data_type 因為spec 沒有說 
      ? txt
@@ -452,6 +459,8 @@ slot level
      ? lock
        先留著等complain 再說  雖然list沒有說
      ? word
+       先不當作data_type 因為spec 沒有說
+     ? game / games 
        先不當作data_type 因為spec 沒有說
      ? list / lists / listing / list doc
         因為teams golden 的原因  先不把它當成file_type  follow teams
