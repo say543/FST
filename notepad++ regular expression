@@ -1,1 +1,6 @@
 https://gerardnico.com/_detail/ide/notepad/notepad_replace_regular_expression.jpg?id=ide%3Anotepad%3Areplace
+
+skip "" to enclose
+
+"' : '<file_type> (.*) </file_type> ',"
+for  "pptx' : '<file_type> pptx </file_type> ',"  to replace tail
