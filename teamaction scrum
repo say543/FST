@@ -1,1 +1,5 @@
 
+PS E:\CoreScienceDataStaging\datasources\TeamsAction\queryclassificationprocessing> .\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2 --queryInColumn 1 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c E:\teamsAction_data_analysis  --variant cortana_teamsaction_enus_mv1  -d teamsaction
+
+
+只有teamsaction 可以跑  但是inmeeting 還不行 要另外copy
