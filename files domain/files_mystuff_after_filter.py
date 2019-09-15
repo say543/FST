@@ -105,9 +105,9 @@ fileTypeTagWoDotInFileKeywordOrFileName={
     # space is important
     # order is important
 
-    ' ppt' : '<file_type> ppt </file_type> ',
     ' pptx' : '<file_type> pptx </file_type> ',
     ' ppts' : '<file_type> ppts </file_type> ',
+    ' ppt' : '<file_type> ppt </file_type> ',
     ' deck' : '<file_type> deck </file_type> ',
     ' decks' : '<file_type> decks </file_type> ',
     ' presentation' : '<file_type> presentation </file_type> ',
@@ -127,7 +127,6 @@ fileTypeTagWoDotInFileKeywordOrFileName={
     ' Docx' : '<file_type> Docx </file_type> ',
     ' Docs' : '<file_type> Docs </file_type> ',
 
-    
     ' spec' : '<file_type> spec </file_type> ',
     ' excel' : '<file_type> excel </file_type> ',
     ' excels' : '<file_type> excels </file_type> ',
@@ -757,6 +756,8 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
                      "looking",
                      "looked",
                      "reviewed",
+                     "titled",
+                     "called",                        
                      ])
             contactNames = set(["i",
                             "I",
@@ -970,11 +971,11 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
                     # with . and space fileTypeTagWDotSpaceInFileKeywordOrFileName
                     # this need to done before "no .and space from fileTypeTagWoDotInFileKeywordOrFileName" and # with . from fileTypeTagWDotInFileKeywordOrFileName
                     if not match:
-                        for key in fileTypeTagWDotSpaceInFileKeywordOrFileName:
+                        for key in reversed(sorted(fileTypeTagWDotSpaceInFileKeywordOrFileName)):
                             # exactly the same as key
                             if xmlValue == key:
-                                if xmlValue == "daddy . doc":
-                                    print("1")
+                                #if xmlValue == "daddy . doc":
+                                #    print("1")
                                 #print(xmlValue)
                                 #print(slot.find(xmlpair))
                                 #print(newName)
@@ -984,8 +985,8 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
                                 match = True
                             # endwith
                             elif xmlValue.endswith(key):
-                                if xmlValue == "daddy . doc":
-                                    print("1.1")
+                                #if xmlValue == "daddy . doc":
+                                #    print("1.1")
                                 newName = xmlValue[0:xmlValue.find(key)].strip()
                                 #print(xmlValue)
                                 #print(xmlValue.endswith(key))
@@ -999,10 +1000,10 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
                                 match = True
                     if not match:       
                         # no .and space from fileTypeTagWoDotInFileKeywordOrFileName
-                        for key in fileTypeTagWoDotInFileKeywordOrFileName:
+                        for key in reversed(sorted(fileTypeTagWoDotInFileKeywordOrFileName)):
                             if xmlValue.endswith(key):
-                                if xmlValue == "daddy . doc":
-                                    print("2")
+                                #if xmlValue == "daddy . doc":
+                                #    print("2")
                                 newName = xmlValue[0:xmlValue.find(key)].strip()
                                 #print(xmlValue)
                                 #print(xmlValue.endswith(key))
@@ -1017,11 +1018,11 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
 
                     if not match:
                         # with . from fileTypeTagWDotInFileKeywordOrFileName
-                        for key in fileTypeTagWDotInFileKeywordOrFileName:
+                        for key in reversed(sorted(fileTypeTagWDotInFileKeywordOrFileName)):
                             if xmlValue.endswith(key):
                                 newName = xmlValue[0:xmlValue.find(key)].strip()
-                                if xmlValue == "daddy . doc":
-                                    print("3")
+                                #if xmlValue == "daddy . doc":
+                                #    print("3")
                                 #print(xmlValue)
                                 ##print(slot.find(xmlpair))
                                 #print(newName)
