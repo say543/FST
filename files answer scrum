@@ -3,17 +3,6 @@ files domain 怎麼onbaord 到evaluation
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1182483?_a=files
 看這個pr
 
-
-=======================
-flight schedule 
-=======================
-
-email title
-RE: Syncup on the solution to switch to the new LU Files domain
-
-有flight 跟detail 的schedule
-
-
 =======================
 threshold cut off
 =======================
@@ -491,10 +480,21 @@ slot level
        先留著等complain 再說  雖然list沒有說
      ? word
        先不當作data_type 因為spec 沒有說
+       
      ? game / games 
        先不當作data_type 因為spec 沒有說
      ? list / lists / listing / list doc
         因為teams golden 的原因  先不把它當成file_type  follow teams
+	
+     ? checklist
+        先不當作data_type 因為spec 沒有說
+	
+	construction documents checklist
+	
+	(o)construction documents 是file_keyword , checklist 不是type
+	or
+	(x)construction documents checklist 整個事file_keyword
+        ? confirm in the future
 	
 	doc 也不是file type 
      ? music 
@@ -593,9 +593,25 @@ slot level
      
      
      ?excel 是不是data source
+     no
      
      Check <data_source> my documents </data_source>
      ? my document 因該不是data source 之後再改
+     
+    <data_source> c:/document </data_source>
+    
+    <file_name> h:\documents </file_name>
+       改成data source for consistent
+    
+    
+    <data_source> %appdata%\microsoft\document </data_source> <file_keyword>
+     <data_source> clean kind:=document </data_source>
+        ? data source is not majority so keep it this way 都不改
+     
+     <data_source> document </data_source>
+        ? document 目前agree 不是data type
+	data source is not majority  so 都先不tag 
+        <data_source> document </data_source>  -> document
      
    <contact name>
       mystuff	i want to see the <data_type> note </data_type> for <keyword> wendy ' s </keyword>
