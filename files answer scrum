@@ -491,10 +491,18 @@ slot level
      
      ? word
        先不當作data_type 因為spec 沒有說
+     ? template
+        先不當作data_type 因為spec 沒有說
+     ?microsoft word
+       先留著等complain 再說  雖然list沒有說
+     ? microsoft office word
+       先留著等complain 再說  雖然list沒有說
+      
      ?Word document
        兩個token 都不mark
      ?word doc
         word 移出來  doc 變成data_type -> file_type
+       
      
        
   
