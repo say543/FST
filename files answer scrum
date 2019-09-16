@@ -1013,3 +1013,12 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 09112019
 有些query 以後要是files 只要verify 就行  現在還沒切過去
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1242305?path=%2Fdatasources%2FTeamsAction%2FTraining_Data%2FTeamsAction_Intent_Training.tsv&_a=overview
+
+
+
+09162019
+teams 把docs / doc 跟document 都tag了
+但是file answer 只有tag docs 跟doc 沒有document
+有pattern 但是不是domain pattern 有空要看一下
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1249894?_a=files
+
