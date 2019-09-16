@@ -489,6 +489,8 @@ slot level
      ? music 
      ? spec file type
      
+     ? word
+       先不當作data_type 因為spec 沒有說
      ?Word document
        兩個token 都不mark
      ?word doc
