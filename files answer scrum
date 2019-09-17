@@ -414,7 +414,16 @@ slot level
          guideline 有
 	 
 	 this -> file_title -> file_keyword
+	 
+	 
+     red and second red
+         先把整個全部都當成keyword
        
+       
+     new project
+         有keyword 有沒有tag....
+	 先把它當成keyword
+	 
        
   <file_type>
      go to my <data_source> documents </data_source
@@ -659,6 +668,11 @@ slot level
       my stuff 是start_time
       calendar 是start_date
       ? 先follow calendar 當作start_date
+      
+      
+   <file_folder>
+      show my downloaded files
+      downloaded 也當成 <keyword> -> file_folder
    
    teams 相關
      cortana find my <order_ref> most recent </order_ref> <keyword> downloads </keyword>
