@@ -18,7 +18,7 @@ fileDomainRelatedIntent = ['file_search', 'file_open', 'file_share', 'file_downl
 
 teamsDomainToFileDomain = {
     "teams" : "files",
-    "TEAMS" : "files"
+    "TEAMS" : "FILES"
 }
 
 
@@ -101,6 +101,43 @@ teamsSlotToFileSlot = {
 #    "<contact_name> I </contact_name>":"I",
 #    }
 
+
+filesSlotRemoveSpace = {
+    "<file_name> ": "<file_name>",
+    " </file_name>": "</file_name>",
+    "<file_type> ": "<file_type>",
+    " </file_type>": "</file_type>",
+    "<data_source> ": "<data_source>",
+    " </data_source>": "</data_source>",
+    "<contact_name> ": "<contact_name>",
+    " </contact_name>": "</contact_name>",
+    "<to_contact_name> ": "<to_contact_name>",
+    " </to_contact_name>": "</to_contact_name>",
+    "<file_keyword> ": "<file_keyword>",
+    " </file_keyword>": "</file_keyword>",
+    "<date> ": "<date>",
+    " </date>": "</date>",
+    "<time> ": "<time>",
+    " </time>": "</time>",
+    "<meeting_starttime> ": "<meeting_starttime>",
+    " </meeting_starttime>": "</meeting_starttime>",
+    "<file_action> ": "<file_action>",
+    " </file_action>": "</file_action>",
+    "<file_action_context> ": "<file_action_context>",
+    " </file_action_context>": "</file_action_context>",
+    "<position_ref> ": "<position_ref>",
+    " </position_ref>": "</position_ref>",
+    "<order_ref> ": "<order_ref>",
+    " </order_ref>": "</order_ref>",
+    "<file_recency> ": "<file_recency>",
+    " </file_recency>": "</file_recency>",
+    "<sharetarget_type> ": "<sharetarget_type>",
+    " </sharetarget_type>": "</sharetarget_type>",
+    "<sharetarget_name>": "<sharetarget_name>",
+    " </sharetarget_name>": "</sharetarget_name>",
+    "<file_folder> ": "<file_folder>",
+    " </file_folder>": "</file_folder>",
+}
 
 # in the future read from file might be better
 '''
@@ -324,7 +361,9 @@ skipQueryCandidateSet = set()
 
 
 Output = [];
-OutputEvaluation = [];
+OutputSlotEvaluation = [];
+
+OutputIntentEvaluation = [];
 
 with codecs.open('Teams-golden.tsv', 'r', 'utf-8') as fin:
     for line in fin:
@@ -354,10 +393,16 @@ with codecs.open('Teams-golden.tsv', 'r', 'utf-8') as fin:
 
                 # having problem or tab
                 # then skip
-                if linestrs[4].find("program") != -1 or linestrs[4].find("tab") != -1:
+                if linestrs[4].find("program") != -1 or \
+                   linestrs[4].find("tab") != -1 or \
+                   linestrs[4].find("channel") != -1 or \
+                   linestrs[4].find("team") != -1 or \
+                   linestrs[4].find("teams") != -1 or \
+                   linestrs[4].find("conversation") != -1 or \
+                   linestrs[4].find("chat") != -1:
                     teamspaceSearchCandidateSet.add(line)
-                    linestrs[6] = "file_search"
                     continue
+                linestrs[6] = "file_search"
 
             slot = linestrs[7]
             for key in sorted (teamsSlotToFileSlot.keys()) :
@@ -531,7 +576,7 @@ with codecs.open('Teams-golden.tsv', 'r', 'utf-8') as fin:
                 
             
             # i verb
-            verbs = ["downloaded",
+            verbsAlongWithContactName = set(["downloaded",
                      "worked",
                      "created",
                      "saved",
@@ -542,11 +587,27 @@ with codecs.open('Teams-golden.tsv', 'r', 'utf-8') as fin:
                      "working",
                      "shared",
                      "wrote",
-                     ]
+                     "added",
+                     "used",
+                     "using",
+                     "composed",
+                     "opened",
+                     "composing",
+                     "morning",
+                     "walked",
+                     "edited",
+                     "updated",
+                     "writing",
+                     "doing",
+                     "did",
+                     "looking",
+                     "looked",
+                     "reviewed",
+                     ])
             contactNames = ["i",
                             "I"
                             ]
-            for verb in verbs:
+            for verb in verbsAlongWithContactName:
                 for contactName in contactNames:
                     # with file action already
                     # try to tag contact name
@@ -697,7 +758,7 @@ with codecs.open('Teams-golden.tsv', 'r', 'utf-8') as fin:
                 slot = slot.replace("<order_ref> Recent </order_ref>", "<file_recency> Recent </file_recency>")
             '''
 
-            # for analysis
+            # for contact_name to reanme to to_contact_name
             xmlpairs = re.findall("(<.*?>.*?<\/.*?>)", slot)
 
             for xmlpair in xmlpairs:
@@ -729,6 +790,17 @@ with codecs.open('Teams-golden.tsv', 'r', 'utf-8') as fin:
                     newPair = newPair.replace("</contact_name>", "</to_contact_name>")
                     slot = slot.replace(xmlpair, newPair)
 
+
+                # to deal with "file to <contact_name> xxx </contact_name>"
+                if xmlpair.startswith("<contact_name>") and slot.find("file to <contact_name>") != -1 and slot.find("file to <contact_name>") < slot.find(xmlpair):
+                    newPair = xmlpair.replace("<contact_name>", "<to_contact_name>")
+                    newPair = newPair.replace("</contact_name>", "</to_contact_name>")
+                    slot = slot.replace(xmlpair, newPair)
+
+                if xmlpair.startswith("<contact_name>") and slot.find("with <contact_name>") != -1 and slot.find("with <contact_name>") < slot.find(xmlpair):
+                    newPair = xmlpair.replace("<contact_name>", "<to_contact_name>")
+                    newPair = newPair.replace("</contact_name>", "</to_contact_name>")
+                    slot = slot.replace(xmlpair, newPair)
 
             # after all slot replacement
             # remove head and end spaces 
@@ -803,22 +875,30 @@ with codecs.open('Teams-golden.tsv', 'r', 'utf-8') as fin:
 
             # original format
             # id / message id / message time stamp / message from/ message text / judged domain / judge d intent / JudgedConstraint / MetaData	/ConversationContext	/Frequency  /ImplicitConstraints
-            Output.append(linestrs[0]+"\t"+linestrs[1]+"\t"+linestrs[2]+"\t"+linestrs[3]+"\t"+linestrs[4]+"\t"+teamsDomainToFileDomain[linestrs[5]]+"\t"+linestrs[6]+"\t"+slot+"\t"+metadata+"\t"+linestrs[9]+"\t"+linestrs[10]+"\t"+"");
+            # for evaluation need to replace space folloiwng XML tag
+            slotRemoveSpaceAfterXML = slot
+            for key in filesSlotRemoveSpace :
+                slotRemoveSpaceAfterXML = slotRemoveSpaceAfterXML.replace(key, filesSlotRemoveSpace[key])
+            Output.append(linestrs[0]+"\t"+linestrs[1]+"\t"+linestrs[2]+"\t"+linestrs[3]+"\t"+linestrs[4]+"\t"+teamsDomainToFileDomain[linestrs[5]]+"\t"+linestrs[6]+"\t"+slotRemoveSpaceAfterXML+"\t"+metadata+"\t"+linestrs[9]+"\t"+linestrs[10]+"\t"+"");
             
             #message text / judged domain / judge d intent / JudgedConstraint
             #Output.append(linestrs[3]+"\t"+linestrs[4]+"\t"+teamsDomainToFileDomain[linestrs[5]]+"\t"+linestrs[6]+"\t"+slot);
 
             # id / message / intent / domain / constraint
             # for training purpose's format
-            #Output.append("0"+"\t"+linestrs[4]+"\t"+linestrs[6]+"\t" +teamsDomainToFileDomain[linestrs[5]]+"\t"+slot);
             
-            OutputEvaluation.append("0"+"\t"+linestrs[4]+"\t"+linestrs[6]+"\t" +teamsDomainToFileDomain[linestrs[5]]+"\t"+slot);
+            OutputSlotEvaluation.append("0"+"\t"+linestrs[4]+"\t"+linestrs[6]+"\t" +teamsDomainToFileDomain[linestrs[5]]+"\t"+slot);
+
+            # TurnNumber / PreviousTurnIntent / query /intent
+            # for training purpose's format
+            OutputIntentEvaluation.append("0"+"\t"+""+"\t"+linestrs[4]+"\t" +linestrs[6]);
 
 """
 # comment shuffle in the first place
 #random.shuffle(OutputSet);
 """
 
+# for judge trainer format
 with codecs.open('teams_golden_after_filtering.tsv', 'w', 'utf-8') as fout:
 
     # if outout originla format
@@ -826,11 +906,20 @@ with codecs.open('teams_golden_after_filtering.tsv', 'w', 'utf-8') as fout:
     for item in Output:
         fout.write(item + '\r\n');
 
-with codecs.open('teams_golden_after_filtering_evaluation.tsv', 'w', 'utf-8') as fout:
+# for CMF slot evaluation format
+with codecs.open('teams_golden_after_filtering_slot_evaluation.tsv', 'w', 'utf-8') as fout:
 
     # if output for traing
     fout.write("id\tquery\tintent\tdomain\tQueryXml\r\n")
-    for item in OutputEvaluation:
+    for item in OutputSlotEvaluation:
+        fout.write(item + '\r\n');
+
+# for CMF intent evaluation format
+with codecs.open('teams_golden_after_filtering_intent_evaluation.tsv', 'w', 'utf-8') as fout:
+
+    # if output for traing
+    fout.write("TurnNumber\tPreviousTurnIntent\tquery\tintent\r\n")
+    for item in OutputIntentEvaluation:
         fout.write(item + '\r\n');
 
 #######################
