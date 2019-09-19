@@ -4,6 +4,16 @@ https://microsoft.sharepoint.com/teams/CortanaCore/_layouts/15/WopiFrame.aspx?so
 
 
 
+========================
+evaluation local run by using search gold mirro
+========================
+E:\CoreScienceDataStaging\TestResults\EvaluationMergedDir\DBC6931A 
+update here 不會work
+
+每次跑都會從search gold 看diff
+
+soluion 是改search gold folder  但是不需要change list 只要edit locally
+就會被pick up
 
 
 
