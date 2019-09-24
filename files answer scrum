@@ -62,6 +62,36 @@ adding to those
 [qd_files_slot_partial_pattern_featurizer]
 
 
+after short pattern boost 
+
+[3s dataset _after_filtering]
+
+1>
+processabovedomainconfidencethreshold=0.3
+bef  after 
+domain with issue more . query F1 download but query P/R increase
+
+totla is 86  with domain issue
+most
+< 0.2
+34 querys
+<file_keywrod> by <contact_name>
+<file_keywrod> <contact_name>
+
+
+
+
+0.2 <= ....  <= 0.3 
+34 querys
+<file_keyword>
+<contact_name>
+<file_keywrod> by <contact_name>
+<file_keywrod> <contact_name>
+
+
+
+
+
 ================
 timex information
 ==================
