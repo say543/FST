@@ -30,6 +30,15 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 看這個pr
 
 
+=====================
+1.0 to 0.99  domain pattern 
+=====================
+09/24/2019
+
+recall will be very low
+since teamsaction might have 1.00  but those queries are files 
+sp fail
+
 
 =====================
 intent trade oof
@@ -65,7 +74,8 @@ adding to those
 after short pattern boost 
 
 [3s dataset _after_filtering]
-
+<test 1>
+all to intent and all slots
 1>
 processabovedomainconfidencethreshold=0.3
 bef  after 
@@ -88,6 +98,9 @@ most
 <file_keywrod> by <contact_name>
 <file_keywrod> <contact_name>
 
+
+<test2>
+only add 0.3 to slot
 
 
 
