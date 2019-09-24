@@ -60,6 +60,7 @@ for synlist in synlists:
 #copyfile("..\\Intent_Synthesis\\openwith_synthesis.tsv" , "openwith_synthesis.tsv")
 
 copyfile("..\\Open_Text_Synthesis\\file_keyword_and_to_contact_name\\intent_data_synthesised_to_contact_name_file_keyword.tsv" , "intent_data_synthesised_to_contact_name_file_keyword.tsv")
+copyfile("..\\Open_Text_Synthesis\\file_keyword_file_type_file_action_contact_name\\intent_data_synthesised_file_keyword_file_type_file_action_contact_name_file_name_verb.tsv" , "intent_data_synthesised_file_keyword_file_type_file_action_contact_name_file_name_verb.tsv")
 
 ############################################
 # copy file from data folder directly
