@@ -11,14 +11,38 @@ from shutil import copyfile
 outputFile = 'files_slot_training.tsv'
 # replace directly
 outputTrainingFolderFile = '..\\files_slot_training.tsv'
+# for STCA test
+outputSTCATrainingFolderFile = '..\\sharemodeltest\\files_slot_training.tsv'
+
+
 outputFileWithSource = "files_slot_training_with_source.tsv"
+dsatTraining = "dsat_training.tsv"
+
 files = glob.glob("*.tsv");
 outputs = [];
 outputsWithSource = [];
 
+############################################
+# copy file from synthetic data
+############################################
+# cancel each one if you do n
+copyfile("..\\Open_Text_Synthesis\\file_type_and_contact_name\\data_synthesised_contact_name_file_type.tsv" , "data_synthesised_contact_name_file_type.tsv")
+copyfile("..\\Open_Text_Synthesis\\file_keyword_and_file_type\\data_synthesised_file_keyword_file_type.tsv" , "data_synthesised_file_keyword_file_type.tsv")
+copyfile("..\\Open_Text_Synthesis\\file_keyword_and_to_contact_name\\data_synthesised_to_contact_name_file_keyword.tsv" , "data_synthesised_to_contact_name_file_keyword.tsv")
+copyfile("..\\Open_Text_Synthesis\\file_keyword_sharetarget_type_sharetarget_name_file_type_to_contact_name\\data_synthesised_file_keyword_sharetarget_type_sharetarget_name_file_type_to_contact_name.tsv",\
+         "data_synthesised_file_keyword_sharetarget_type_sharetarget_name_file_type_to_contact_name.tsv")
+copyfile("..\\Open_Text_Synthesis\\file_type_and_to_contact_name\\data_synthesised_to_contact_name_file_type.tsv" , "data_synthesised_to_contact_name_file_type.tsv")
 
+copyfile("..\\Open_Text_Synthesis\\file_keyword_and_contact_name\\data_synthesised_contact_name_file_keyword.tsv" , "data_synthesised_contact_name_file_keyword.tsv")
+
+copyfile("..\\Open_Text_Synthesis\\file_keyword_file_type_file_action_contact_name\\data_synthesised_file_keyword_file_type_file_action_contact_name_file_name_verb.tsv" , "data_synthesised_file_keyword_file_type_file_action_contact_name_file_name_verb.tsv")
+
+copyfile("..\\Open_Text_Synthesis\\file_type_and_contact_name_to_contact_name\\data_synthesised_contact_name_file_type_to_contact_name.tsv" , "data_synthesised_contact_name_file_type_to_contact_name.tsv")
+
+############################################
 # copy file from data folder directly
-# update more in the future
+############################################
+copyfile("..\\files_dataset.tsv" , "files_dataset.tsv")
 copyfile("..\\files_mystuff_after_filtering.tsv" , "files_mystuff_after_filtering.tsv")
 copyfile("..\\teams_slot_training_after_filtering.tsv" , "teams_slot_training_after_filtering.tsv")
 
@@ -27,6 +51,11 @@ for file in files:
 
     if file == outputFile or file == outputFileWithSource:
         continue;
+
+    # skip dsat training at first
+    if file == dsatTraining:
+        continue;
+    
     
     print("collecting: " + file);
     with codecs.open(file, 'r', 'utf-8') as fin:
@@ -66,5 +95,12 @@ with codecs.open(outputFileWithSource, 'w', 'utf-8') as fout:
 # replace directly
 # if do not want , comment this
 with codecs.open(outputTrainingFolderFile, 'w', 'utf-8') as fout:
+    for item in outputs:
+        fout.write(item + '\r\n');
+
+
+
+# STCA test folder
+with codecs.open(outputSTCATrainingFolderFile, 'w', 'utf-8') as fout:
     for item in outputs:
         fout.write(item + '\r\n');
