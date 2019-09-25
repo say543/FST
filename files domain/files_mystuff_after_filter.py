@@ -113,6 +113,7 @@ fileTypeTagWoDotInFileKeywordOrFileName={
     ' presentation' : '<file_type> presentation </file_type> ',
     ' presentations' : '<file_type> presentations </file_type> ',
     ' powerpoint' : '<file_type> powerpoint </file_type> ',
+    ' PowerPoint' : '<file_type> PowerPoint </file_type> ',
     ' powerpoints' : '<file_type> powerpoints </file_type> ',
     # add for seperate
     ' power point' : '<file_type> power point </file_type> ',
@@ -172,12 +173,13 @@ fileTypeTagWoDotInFileKeywordOrFileName={
     ' mpt' : '<file_type> mpt </file_type> ',
     # no mention in spec
     # move it to not tag
-    #' word' : '<file_type> word </file_type> ',
+    ' word' : '<file_type> word </file_type> ',
 
 
     # keep it as tag
     ' picture' : '<file_type> picture </file_type> ',
     ' music' : '<file_type> music </file_type> ',
+    ' txt' : '<file_type> txt </file_type> ',
 }
 
 
@@ -194,6 +196,7 @@ fileTypeTagWDotInFileKeywordOrFileName={
     '.presentation' : '.<file_type> presentation </file_type> ',
     '.presentations' : '.<file_type> presentations </file_type> ',
     '.powerpoint' : '.<file_type> powerpoint </file_type> ',
+    '.PowerPoint' : '.<file_type> PowerPoint </file_type> ',
     '.powerpoints' : '.<file_type> powerpoints </file_type> ',
     # add for seperate
     '.power point' : '.<file_type> power point </file_type> ',
@@ -254,11 +257,12 @@ fileTypeTagWDotInFileKeywordOrFileName={
     '.mpt' : '.<file_type> mpt </file_type> ',
     # no mention in spec
     # move it to not tag
-    #'.word' : '.<file_type> word </file_type> ',
+    '.word' : '.<file_type> word </file_type> ',
 
     # keep it as tag
     '.picture' : '.<file_type> picture </file_type> ',
     '.music' : '.<file_type> music </file_type> ',
+    '.txt' : '.<file_type> txt </file_type> ',
 }
 
 fileTypeTagWDotSpaceInFileKeywordOrFileName={
@@ -274,6 +278,7 @@ fileTypeTagWDotSpaceInFileKeywordOrFileName={
     '. presentation' : '. <file_type> presentation </file_type> ',
     '. presentations' : '. <file_type> presentations </file_type> ',
     '. powerpoint' : '. <file_type> powerpoint </file_type> ',
+    '. PowerPoint' : '. <file_type> PowerPoint </file_type> ',
     '. powerpoints' : '. <file_type> powerpoints </file_type> ',
     # add for seperate
     '. power point' : '. <file_type> power point </file_type> ',
@@ -333,27 +338,52 @@ fileTypeTagWDotSpaceInFileKeywordOrFileName={
     # no mention in spec
 
     # move it to not tag
-    #'. word' : '. <file_type> word </file_type> ',
+    '. word' : '. <file_type> word </file_type> ',
 
     # keep it as tag
     '. picture': '. <file_type> picture </file_type> ',
     '. music': '. <file_type> music </file_type> ',
+    '. txt': '. <file_type> txt </file_type> ',
 }
 
 
 fileTypeNotTag={
-    ' Word',
-    ' word',
-    ' microsoft word',
-    " word's",
-    " Word's",
+    #' Word',
+    #' word',
+    #' Words',
+    #' words',
+    #" word's",
+    #" Word's",
     ' text',
     ' Text',
-    
+    ' word pad',
+    ' wordpad',
+    ' note pad',
+    ' notepad',
+    ' adobe acrobat',
+    ' xl',
     # . as word
     ' dot',
     ' Dot',
     ' scanned',    
+    }
+
+# i reverse as tag
+# might be changed in the future
+fileTypeReservedTag={
+    ' Word',
+    ' word',
+    ' Words',
+    ' words',
+    " word's",
+    " Word's",
+    ' Microsoft word',
+    ' microsoft word',
+    ' Microsoft office word',
+    ' microsoft office word',
+    ' word xml',
+    ' Excel sheet',
+    ' excel sheet',
     }
 
 
@@ -471,6 +501,10 @@ blackListQuerySet = {
     "program file(x86)",
     "my wife",
     "my house",
+    "review notes",
+    "review note",
+    "preview notes",
+    "preview note",
     # for debug purpose
     # use regular expression to do in the futre
     "christmas list",
@@ -506,6 +540,10 @@ blackListQuerySet = {
     "(name of spreadsheet)",
     "my lists",
     # not sure how to annotate, skip at first
+    "locate the letters i wrote to susi between january 20th, 2013 and february 7th, 2014.",
+    "locate the letters i wrote to lucas between november 2, 2009 and january 3rd,2010",
+    "locate the letters i wrote to cecilia between march 27th, 2013 and september 9th, 2013",
+    "cortana, locate the letters i wrote to cole between january 1, 2010 and january 31, 2011.",
     "Find my notes on Van's",
     "show my notes on group post",
     "downloads on this pc",
@@ -756,8 +794,9 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
                      "looking",
                      "looked",
                      "reviewed",
-                     "titled",
-                     "called",                        
+                     #"titled",
+                     #"called",
+                     "marked",
                      ])
             contactNames = set(["i",
                             "I",
@@ -988,6 +1027,7 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
                                 #if xmlValue == "daddy . doc":
                                 #    print("1.1")
                                 newName = xmlValue[0:xmlValue.find(key)].strip()
+
                                 #print(xmlValue)
                                 #print(xmlValue.endswith(key))
                                 #print(newName)
@@ -1010,7 +1050,7 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
                                 #print(newName)
                                 #print(key)
                                 if len(newName) > 0:
-                                    newPair = "<file_name> " + newName + " </file_name> " + fileTypeTagWoDotInFileKeywordOrFileName[key]
+                                    newPair = "<file_keyword> " + newName + " </file_keyword> " + fileTypeTagWoDotInFileKeywordOrFileName[key]
                                 else:
                                     newPair = fileTypeTagWoDotInFileKeywordOrFileName[key]
                                 slot = slot.replace(xmlpair, newPair)
@@ -1039,22 +1079,55 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
                     #if (linestrs[0] == "help me find my excel documents"):
                     #    print(xmlpair)
                     #    print(xmlValue)
-                    for key in fileTypeTagWoDotInFileKeywordOrFileName:
-                        if xmlValue == (key+ " documents ").strip():
-                            #print(slot)
-                            slot = slot.replace(xmlpair, "<file_type>" + key + " </file_type>" + " documents")
-                        elif xmlValue == (key+ " document ").strip():
-                            #print(slot)
-                            slot = slot.replace(xmlpair, "<file_type>" + key + " </file_type>" + " document")
-                            
-                    for key in fileTypeNotTag:
-                        if xmlValue == (key+ " documents ").strip():
-                            #print(slot)
-                            slot = slot.replace(xmlpair, (key+ " documents ").strip())
-                        elif xmlValue == (key+ " document ").strip():
-                            #print(slot)
-                            slot = slot.replace(xmlpair, (key+ " document ").strip())
-                        
+
+
+                    match = False
+                    if not match:
+                        for key in reversed(sorted(fileTypeTagWoDotInFileKeywordOrFileName)):
+                            if xmlValue == (key+ " documents ").strip():
+                                #print("1.1")
+                                #print(xmlValue)
+                                #print(slot)
+                                slot = slot.replace(xmlpair, "<file_type>" + key + " </file_type>" + " documents")
+                                match = True
+                            elif xmlValue == (key+ " document ").strip():
+                                #print("1.2")
+                                #print(xmlValue)
+                                #print(slot)
+                                slot = slot.replace(xmlpair, "<file_type>" + key + " </file_type>" + " document")
+                                match = True
+                    if not match:        
+                        for key in fileTypeNotTag:
+                            if xmlValue == (key+ " documents ").strip():
+                                #print("2.1")
+                                #print(xmlValue)
+                                #print(slot)
+                                slot = slot.replace(xmlpair, (key+ " documents ").strip())
+                                #print(slot)
+                                match = True
+                            elif xmlValue == (key+ " document ").strip():
+                                #print("2.2")
+                                #print(xmlValue)
+                                #print(slot)
+                                slot = slot.replace(xmlpair, (key+ " document ").strip())
+                                #print(slot)
+                                match = True
+                                
+                    if not match:        
+                        for key in fileTypeReservedTag:
+                            if xmlValue == (key+ " documents ").strip():
+                                #print("3.1")
+                                #print(slot)
+                                slot = slot.replace(xmlpair, "<file_type>" + key + " </file_type>" + " documents")
+                                #print(slot)
+                                match = True
+                            elif xmlValue == (key+ " document ").strip():
+                                #print("3.2")
+                                #print(slot)
+                                slot = slot.replace(xmlpair, "<file_type>" + key + " </file_type>" + " document")
+                                #print(slot)
+                                match = True
+
 
                 # to
                 # with
