@@ -30,6 +30,15 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 看這個pr
 
 
+
+
+===========================
+retrun in selfhost ring
+===========================
+[query_domains:Microsoft_Threshold_Shell_3_enus_Test]
+這個地方加上
+files=files_enus_mv1::qd_files
+
 =====================
 1.0 to 0.99  domain pattern 
 =====================
