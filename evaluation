@@ -6,10 +6,11 @@ https://microsoft.sharepoint.com/teams/CortanaCore/_layouts/15/WopiFrame.aspx?so
 =====================================
 evaluation query level analysis
 =====================================
+step1:
 open project
 through  cortext
 
-step1:
+make sure it ix x64 mode
 D:\mercury\private\PersonalAssistant\Evaluation>EvaluationNuget.sln
 
 step2:
