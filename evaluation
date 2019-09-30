@@ -3,6 +3,77 @@ evaluation 可能遇到的bug page
 https://microsoft.sharepoint.com/teams/CortanaCore/_layouts/15/WopiFrame.aspx?sourcedoc={6d6ae133-c9c8-400d-bfd8-ae8feec6ff9f}&action=edit&wd=target%28LU%20Tooling%2C%20Platform%20and%20Runtime%2FDev%20handbook%2FDevelopment.one%7C167a6855-2d14-4555-a326-affc6c35fa6f%2FModel%20Repository%20-%20Enlist%2C%20Setup%20and%20Structure%7C7e1929a0-cb51-4324-b4c4-97a79eda7d64%2F%29
 
 
+=====================================
+evaluation query level analysis
+=====================================
+open project
+through  cortext
+
+step1:
+D:\mercury\private\PersonalAssistant\Evaluation>EvaluationNuget.sln
+
+step2:
+update common config
+D:\mercury\private\PersonalAssistant\Evaluation\EvaluationsCoreLib.Test\Common.config
+
+to this 
+<?xml version="1.0" encoding="utf-8"?>
+<commonConfiguration>
+
+  <!-- CloudTest specific settings. -->
+
+  <add key="ModelsDir" value="TestFixtures\greetings" />
+  <add key="ConfigsDir" value="TestFixtures\Configs" />
+  <add key="DatasetsDir" value="TestFixtures\AnnotationSets" />
+  <add key="OutputBaseDir" value="%LoggingDirectory%\Evaluation" />
+  <add key="EvaluationTestConfigPath" value="EvaluationTestConfig.xml" />
+  <add key="QCSQueryLabelToolDir" value=".\Test\Tools\QcsQueryLabel\" />
+  <add key="QCSQueryLabelToolDropUrl" value="https://msasg.artifacts.visualstudio.com/DefaultCollection/_apis/drop/drops/MSASG_qas/signing_retail/9fb164fec7d63eb58c4bcabd25a5cb1fb81a3bd1/9d188385-ff51-6529-2fd2-1fe1c2ec0980" />
+
+  <!-- Local overrides for running tests on dev machine. -->
+
+  <!--<add key="local.ModelsDir" value="%inetroot%\private\PersonalAssistant\Evaluation\EvaluationsCoreLib.Test\TestFixtures\greetings" />
+  <add key="local.ConfigsDir" value="%inetroot%\private\PersonalAssistant\Evaluation\EvaluationsCoreLib.Test\TestFixtures\Configs" />
+  <add key="local.DatasetsDir" value="%inetroot%\private\PersonalAssistant\Evaluation\EvaluationsCoreLib.Test\TestFixtures\AnnotationSets" />
+  <add key="local.OutputBaseDir" value="%inetroot%\TestResults" />
+  <add key="local.EvaluationTestConfigPath" value="EvaluationTestConfig.xml" />
+  <add key="local.QCSQueryLabelToolDir" value="%inetroot%\public\ext\QcsQueryLabel" />
+  --><!-- SearchGoldDir and EvalMergedDir are used only for local runs and don't participate in CloudTest sessions.
+  GIT LFS model merges (except hotfixes) with SearchGoldDir and all files are writtent to EvalMergedDir.
+  EvalMergedDir is persisted on disk to speed up subsequent tests !--><!--
+  <add key="local.SearchGoldDir" value="" />
+  <add key="local.EvalMergedDir" value="" />-->
+
+  <!-- Example config for running eval tests from CSDS.
+  Before using add paths to CoreScienceDataStaging and SearchGold to user environment variables or change path below.
+  -->
+
+  
+  <add key="local.ModelsDir" value="D:\CoreScienceDataStaging_old\target\distrib\Debug\AnyCPU\models" />
+  <add key="local.ConfigsDir" value="D:\CoreScienceDataStaging_old\target\distrib\Debug\AnyCPU\Test\Data\Evaluation\configs" />
+  <add key="local.DatasetsDir" value="D:\CoreScienceDataStaging_old\target\distrib\Debug\AnyCPU\Test\Data\Evaluation\AnnotationSetsConverted" />
+  <add key="local.OutputBaseDir" value="D:\CoreScienceDataStaging_old\TestResults" />
+  <add key="local.EvaluationTestConfigPath" value="D:\CoreScienceDataStaging_old\src\Evaluation.Converged.Tests\EvaluationTestConfig.xml" />
+  <add key="local.QCSQueryLabelToolDir" value="%inetroot%\public\ext\QcsQueryLabel" />
+  <add key="local.SearchGoldDir" value="D:\searchgold\deploy\builds\data\answers\QAS12HttpQAS" />
+  <add key="local.EvalMergedDir" value="D:\CoreScienceDataStaging_old\TestResults\EvaluationMergedDir" />
+  
+
+</commonConfiguration>
+
+
+step3: set breakpoint
+D:\mercury\private\PersonalAssistant\Evaluation\EvaluationsCoreLib\Modules\Runner\RankingModule.cs
+
+var analyzedQueries = QcsQueryLabelToolInputFile.ReadAnalyzedQueries(analyzedQueryFile);
+to see all queries
+
+step4: set breakpoint
+D:\mercury\private\PersonalAssistant\Evaluation\EvaluationsCoreLib\Modules\Runner\HighestScoreRankingStrategy.cs
+
+var topDomains = supportedDomains.Where(d => Math.Abs(d.DomainClassification.ConfidenceLevel - topDomainScore) < DomainScoreTolerance).OrderBy(d => d.Name).ToList();
+to retrive top queris
+
 
 ========================
 evaluation local run by using search gold mirro
