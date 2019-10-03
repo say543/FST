@@ -4,3 +4,6 @@ skip "" to enclose
 
 "' : '<file_type> (.*) </file_type> ',"
 for  "pptx' : '<file_type> pptx </file_type> ',"  to replace tail
+
+
+\\*\.doc
