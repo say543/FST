@@ -26,4 +26,17 @@ first one will be file_title
 
 要研究一下他怎麼生成的
 
+from 
+cortana_teamsaction_enus_mv1.slots.taskframe.contact_name.promptedForValue
+to
+cortana_teamsaction_enus_mv1.slots.pattern.conditions.txt
+to
+cortana_teamsaction_enus_mv1.slots.pattern.pipeline.txt
+
+
+(也可以參考  code flow email Pr
+[OMC][EmailLU][Compliance] Flag current email instead of a conversation after say 'flag conversations'
+)
+
+
 
