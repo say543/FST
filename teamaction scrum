@@ -2,4 +2,28 @@
 PS E:\CoreScienceDataStaging\datasources\TeamsAction\queryclassificationprocessing> .\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2 --queryInColumn 1 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c E:\teamsAction_data_analysis  --variant cortana_teamsaction_enus_mv1  -d teamsaction
 
 
-只有teamsaction 可以跑  但是inmeeting 還不行 要另外copy
+只有teamsaction 可以跑  但是inmeeting 還不行 
+
+
+PS E:\CoreScienceDataStaging\datasources\TeamsAction\queryclassificationprocessing> .\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2 --queryInColumn 1 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c E:\teamsAction_data_analysis  --variant cortana_teamsaction_enus_mv1  -d teamsaction
+
+
+multi turn test 
+
+
+
+
+// only first one 
+first one 
+
+will not tag
+
+
+//file_title
+first one        PreviousTurnIntent      0       1       file_open       1.0     -1      -1      PreviousTurnDomain      0       1       teamsaction     1.0     -1      -1      TaskFrameEntityStates   0       1       file_title:PromptedForValue     1       -1      -1
+first one will be file_title
+
+
+要研究一下他怎麼生成的
+
+
