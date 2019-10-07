@@ -30,13 +30,27 @@ from
 cortana_teamsaction_enus_mv1.slots.taskframe.contact_name.promptedForValue
 to
 cortana_teamsaction_enus_mv1.slots.pattern.conditions.txt
+   這個files 有所有的promtedForSelection 的pattern
+   參考這邊的所有的fst source
+   https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging?path=%2Fdatasources%2FTeamsAction%2FFST_Source%2Fmultiturn&version=GBusers%2Fchiecha%2FOWC_conflict_evaluation_10042019
+   目前覺得file_title 跟 contact_name 這兩個可能需要
 to
 cortana_teamsaction_enus_mv1.slots.pattern.pipeline.txt
+
+[qd_teamsaction_slot_pattern_featurizer]
+
+
 
 
 (也可以參考  code flow email Pr
 [OMC][EmailLU][Compliance] Flag current email instead of a conversation after say 'flag conversations'
 )
+email_featurizer131
+email_featurizer132
+email_featurizer133
+email_featurizer135
+    都是用ad_hot_pipeline
+    但是內容不像teamsaction 那麼好
 
 
 
