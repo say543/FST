@@ -1,0 +1,7 @@
+https://msasg.visualstudio.com/Cortana/_git/Core?path=%2Fruntime%2Fservices%2FCortexService%2Fservice%2Fsrc%2FScenarioConfig.ini&version=GBmaster&_a=contents&line=76&lineStyle=plain&lineEnd=111&lineStartColumn=1&lineEndColumn=1
+
+you need to add here for runtime
+
+
+append "files:files" to all lines having "teamsaction:teamsaction"
+follow PR to add reviewers.
