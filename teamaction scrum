@@ -23,6 +23,9 @@ will not tag
 first one        PreviousTurnIntent      0       1       file_open       1.0     -1      -1      PreviousTurnDomain      0       1       teamsaction     1.0     -1      -1      TaskFrameEntityStates   0       1       file_title:PromptedForValue     1       -1      -1
 first one will be file_title
 
+// files 的file_keyword 的話
+first one        PreviousTurnIntent      0       1       file_open       1.0     -1      -1      PreviousTurnDomain      0       1       files   1.0     -1      -1      TaskFrameEntityStates   0       1       file_keyword:PromptedForValue        1       -1      -1
+
 
 要研究一下他怎麼生成的
 
