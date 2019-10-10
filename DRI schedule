@@ -263,3 +263,7 @@ PROD] Sev 3: Id 141720954: HA Rules commands are missing time information in LU
 Bug 1999778 - [NorthUS2] Disambig next call is not returning to the ongoing skill
 似乎table 只剩下CortexTraceMDS  , instructment 找不到了
 
+
+10092019
+DRI prod handles good example
+RE: [PROD] Sev 3: ID 152230736: "Unflag this email." query is being marked with wrong intent
