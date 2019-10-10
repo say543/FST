@@ -73,12 +73,16 @@ https://cortanalogviewer.azurewebsites.net/query/186d68d6757f4023a474754cbdd1eb3
 ? ppe 是什麼不太確定
 
 
+
+
 carina bing intent
 
 可以測production 的environment
 p.s 這個email thread 有簡單的教學 for bing intent
 RE: Regression: LU no longer returning PersonalMediaTitle information for Speaker queries (Desktop/Xbox work fine)
 
+
+//old luna
 carina/binginent 
 https://carina/bingintent
 選Bed
@@ -89,6 +93,21 @@ data set 選我們自己的column
 QAS01HttpQAS
 client
 clu_ret_ml
+
+
+// new compliant without luna
+carina/binginent 
+https://carina/bingintent
+選Bed
+exg: HttpQAS-O365-prod
+virtual service 
+cortana
+data set 選我們自己的column
+QAS12HttpQAS
+client
+cortanamsteams
+? 如果別的domain 不知道怎麼選不過  似乎這樣就會有所有domains 的information 了
+
 
 怎麼multi turn result 不太確定
 
