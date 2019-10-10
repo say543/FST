@@ -176,6 +176,7 @@ exg: HttpQAS-Prod
 virtual service 
 CortanaLU
 data set 選我們自己的column
+p.s 這個好像是非compliant 的column
 QAS12HttpQAS
 client
 Microsoft_Threshold_Shell_3_enus_CortanaSDK
