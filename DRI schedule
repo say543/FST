@@ -5,10 +5,23 @@ https://falcon-sf-comp-prod-westus2-a.asgfalcon.io/Explorer/index.html#/
 可以取代
 點打勾 在commit 自己的page 會出現version
 
+
+in git 'core' repo
 Core runtimr - official xxx version
 用來verfiy 有沒有成功
 
-Applications -> cortexservice -> Version
+cluster ->Applications -> cortexservice -> Version
+
+
+
+cluster ->Applications -> cortexservice -> fabric:coreservice
+
+Target Version	Start Timestamp Utc	Upgrade Duration	Upgrade Domain Duration	Upgrade Mode	Upgrade State
+3.2.6990500	Thu, 10 Oct 2019 17:38:12 GMT	0.00:55:02.922	0.00:00:00.57	Monitored	RollingForwardCompleted
+
+rollingForwarCompleted 代表整個data center 都roll out 完畢
+
+
 
 
 根據
