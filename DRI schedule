@@ -1,3 +1,26 @@
+
+compliant roll outs
+https://falcon-sf-comp-prod-westus2-a.asgfalcon.io/Explorer/index.html#/
+'westus2'  不同的services
+可以取代
+點打勾 在commit 自己的page 會出現version
+
+Core runtimr - official xxx version
+用來verfiy 有沒有成功
+
+Applications -> cortexservice -> Version
+
+
+根據
+reply
+Deployment to WestUS2 is automatic after each checkin.
+Deployment to other DCs are daily.
+
+
+
+
+
+
 qas verified check link 
 http://qasvalidation.azurewebsites.net/Index/BatchInfo?batchId=145857
 
