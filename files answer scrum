@@ -32,12 +32,24 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 
 
 
+
+=============================
+domain model retraining
+============================
+
+參考mingwoo 的 communication domain training
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging?path=%2Fdatasources%2FCommunication%2FCMF%2Fresource%2FData&version=GBmaster
+可能可以參照domain training 的samples
+
+
 ===========================
 q2
 email title has detail
 FW: LU question on File skill on Windows
 ===========================
-selection model needs some wokr
+selection model needs some work
+如果沒有cutoff 大概就不需要了
+
 
 
 ===========================
