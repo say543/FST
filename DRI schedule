@@ -31,6 +31,37 @@ Deployment to other DCs are daily.
 
 
 
+=================
+teams trace verfiy for compliany deployment
+=================
+one note document
+https://microsoft.sharepoint.com/:o:/r/teams/CortanaCore/_layouts/15/WopiFrame.aspx?sourcedoc={6d6ae133-c9c8-400d-bfd8-ae8feec6ff9f}&action=edit&wd=target%28LU%20Modeling%20and%20Partners%2FCalendar%2FCalendar%20in%20Teams%2Eone%7C396D0B29%2D21F4%2D486C%2D8A03%2D491CEB5F9D14%2FDebug%20Teams%20trace%20via%20DevTools%7C628141BF%2D0B9E%2D4BBE%2DBC83%2D0C14A919E4CE%2F%29
+
+send out email
+you will not see any return email
+
+測試verify 
+在windows 右下角  left click *9  + 1 right click
+然後選open devlop windows
+
+選network -> 選WS
+F5 可以重啟teams
+
+say something  through teasm 
+搜尋response 的結果
+click name in window -> filter response
+
+有的response 有content like this 
+{"context":{"queryText":"Show my recent files.","serviceTag":"7d47c255574c422a8e883b031f61730e"},"view":{"audio":{"ssml":"<speak version=\"1.0\" xmlns=\"http://www.w3.org/2001/10/synthesis\" xmlns:mstts=\"http://www.w3.org/2001/mstts\" xmlns:emo=\"http://www.w3.org/2009/10/emotionml\" xml:lang=\"en-us\"><mstts:prompt domain=\"VoiceAssistant\"/><emo:emotion><emo:category name=\"Calm\" value=\"1.0\"/>. {EarconSuccess}</emo:emotion></speak>"}},"skills":[{"destination":"recentFiles","channelId":"","userPrincipalName":"","tabId":null,"appId":null,"id":"private/teamsUI","actionId":"navigation","action":"navigation","dismissOnAction":true,"actionDelay":0.0,"response":"{\"action\":{\"destination\":\"recentFiles\",\"channelId\":\"\",\"userPrincipalName\":\"\",\"tabId\":null,\"appId\":null,\"id\":\"private/teamsUI\",\"actionId\":\"navigation\",\"action\":\"navigation\",\"dismissOnAction\":true,\"actionDelay\":0.0}}"},{"id":"conversationalCanvas","action":"exitFocusedMode"},{"text":"Here are your recent files.","id":"text","action":"renderText"},{"cookie":"eyJyaWQiOiIiLCJ0IjpudWxsfQ==","id":"system","action":"setCookie"}],"speechMetadata":{}}
+
+serviceTag 就可以去cortana log viewer
+query PROD (or ppe?) 來找log 看看model 有沒有被deployment 
+
+
+
+=================
+general inforamtion
+=================
 
 
 
