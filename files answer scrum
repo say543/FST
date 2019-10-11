@@ -47,6 +47,25 @@ https://microsoft.sharepoint.com/:w:/r/teams/Cosmos/_layouts/15/WopiFrame.aspx?s
 以前tom 的applications
 E:\mercury_scope\ScopeApplication1
 
+用cosmo 11 discussion
+
+在search bar
+搜尋vc selector 就可以加上cosmo 11 science prod
+這個是我們現在的solution
+
+This creates a scope job.  You can track the jobs on the cluster at 
+// 要改成cosmo 11
+https://cosmos11.osdinfra.net/cosmos/science.prod/users/chiecha/
+
+To see just your jobs, click the “My Jobs” tab.  
+Each job also has a link, e.g., 
+when I ran this, it created a link at https://cosmos09.osdinfra.net/cosmos/relevance/_Jobs/0804c692-0bc4-4c29-901b-117dbe4e60d5 .  
+From the links, you can go to the “Script” tab to see the script that was run.  
+The “Job Stages” tab tells you how close the job is to completing.
+
+
+
+
 =============================
 substrate data mining
 =======================
