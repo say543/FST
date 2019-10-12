@@ -38,8 +38,8 @@ PARAMS
 QueryData =
     SELECT Request_ImpressionGuid.ToUpper().Trim() AS ImpressionGuid,
            Query_RawQuery,
-           Dataset AS dataset,
-           Request_RequestTime AS RequestTime,
+           //Dataset AS dataset,
+           //Request_RequestTime AS RequestTime,
            Request_EventsWithExtendedProperties.WhereEventTypeEquals("Event.Impression") [0].ExtendedProperties["RequestInfo/Classification/isbingatworkuser"]AS isBingATWorkUser
     FROM SlapiLog
     WHERE
@@ -70,7 +70,21 @@ https://scriptlibrary.azurewebsites.net/CosmosScript/Details?searchtext=bool&ten
 public static class Helper
 {
   public static bool Checktoken(string Query_RawQuery){
-    return Query_RawQuery.Contains("file");
+
+      var values = new [] {"pptx", "ppts", "ppt", "deck" , "decks", "presentation", "presentations", "powerpoint","powerpoints",
+        "power point", "slide", "slide", "spreadsheets", "workbook", "worksheet", "csv", "tsv", "note", "notes", "onenote",
+        "onenotes", "OneNote", "notebook", "notebooks","pdf", "pdfs","PDF","jpg","jpeg", "gif", "png", "image", "msg",
+        "ics", "vcs", "vsdx", "vssx", "vstx", "vsdm", "vssm", "vstm", "vsd", "vdw", "vss", "vst", "mpp", "mpt",
+        "word", "words", "document", "documents", "file" , "files"};
+
+
+    // skip url link
+    if (Query_RawQuery.Contains("http") || Query_RawQuery.Contains("https"))
+        return false;
+    
+    //return Query_RawQuery.Contains("file");
+    
+    return values.Any(Query_RawQuery.Contains);
   }
 }
 #ENDCS
