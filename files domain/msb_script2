@@ -1,0 +1,123 @@
+//Script GUID:66577d46-750d-40b3-90e7-c8ec36efb6e2
+//Used for tracking history
+
+
+#DECLARE FromDate string = @"2019-09-01";  
+#DECLARE ToDate string = @"2019-09-01"; 
+//#DECLARE OutputLocationTsvXlsapi string = @"/users/sachoud/output_query_batwork_xslapi_Jan.tsv";
+//#DECLARE OutputLocationTsv string = @"/users/chiecha/output_query_batwork/Jan_20d_smallContact.tsv";
+#DECLARE OutputLocationTsv string = @"/users/chiecha/check_token/sep_0901_0910.tsv";
+
+
+SlapiLog =
+    VIEW "/shares/searchDM/distrib/released/SLAPI/SearchLogPageView.view"
+    PARAMS
+    (
+        Start = @FromDate,
+        End = @ToDate,
+        Dataset = "Bing.com" //some traffic ends up being in Bing.com data set as fo 1/9/2018
+    );
+
+
+/*
+
+xSLAPI = 
+VIEW @"/shares/searchDM/distrib/released/xSLAPI/xSLAPI.view"
+PARAMS
+(
+    Start = @FromDate,
+    End = @ToDate,
+    Dataset = @"Bing.com",
+    Traffic = "Normal",
+    QueryType = "Web"
+);
+*/
+
+
+QueryData =
+    SELECT Request_ImpressionGuid.ToUpper().Trim() AS ImpressionGuid,
+           Query_RawQuery,
+           Dataset AS dataset,
+           Request_RequestTime AS RequestTime,
+           Request_EventsWithExtendedProperties.WhereEventTypeEquals("Event.Impression") [0].ExtendedProperties["RequestInfo/Classification/isbingatworkuser"]AS isBingATWorkUser
+    FROM SlapiLog
+    WHERE
+    /* miss helper functions */
+    //Query_RawQuery != "" AND (Request_EventsWithExtendedProperties.WhereEventTypeEquals("Event.Impression") [0].ExtendedProperties["RequestInfo/Classification/isbingatworkuser"] == "1") AND Regex.IsMatch(Query_RawQuery, Helper.GetRegexFromNames(),RegexOptions.IgnoreCase);*/
+    //Query_RawQuery != "" AND (Request_EventsWithExtendedProperties.WhereEventTypeEquals("Event.Impression") [0].ExtendedProperties["RequestInfo/Classification/isbingatworkuser"] == "1" and );
+    //Query_RawQuery != "" AND (Request_EventsWithExtendedProperties.WhereEventTypeEquals("Event.Impression") [0].ExtendedProperties["RequestInfo/Classification/isbingatworkuser"] == "1") AND checktoken(Query_RawQuery);
+Query_RawQuery != "" AND (Request_EventsWithExtendedProperties.WhereEventTypeEquals("Event.Impression") [0].ExtendedProperties["RequestInfo/Classification/isbingatworkuser"] == "1") AND Helper.checktoken(Query_RawQuery);
+/*
+OUTPUT QueryData
+TO SSTREAM @OutputLocation
+CLUSTERED BY ImpressionGuid;
+*/
+
+
+
+OUTPUT QueryData
+TO @OutputLocationTsv;
+
+
+
+
+/*
+https://scriptlibrary.azurewebsites.net/CosmosScript/Details?searchtext=bingatwork&tenant=all&source=main&pk=74d103c5-8f8a-6b98-c9c9-d1b13667a8c2&orderByLatest=False
+*/
+
+#CS
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text;
+using System.Net;
+using ScopeRuntime;
+using DCVisualDomParser;
+
+public class Helper
+{
+	public static boolean checktoken(string Query_RawQuery)
+    {
+        return true;
+    }
+}
+
+public static bool checktoken(string Query_RawQuery)
+{
+    /*var values = new [] {"pptx", "ppts", "ppt", "deck" , "decks", "presentation", "presentations", "powerpoint","powerpoints",
+        "power point", "slide", "slide", "spreadsheets", "workbook", "worksheet", "csv", "tsv", "note", "notes", "onenote",
+        "onenotes", "OneNote", "notebook", "notebooks","pdf", "pdfs","PDF","jpg","jpeg", "gif", "png", "image", "msg",
+        "ics", "vcs", "vsdx", "vssx", "vstx", "vsdm", "vssm", "vstm", "vsd", "vdw", "vss", "vst", "mpp", "mpt",
+        "word", "words", "document", "documents", "file" , "files"};*/
+        
+    string [] values = new string [] {"pptx", "ppts", "ppt", "deck" , "decks", "presentation", "presentations", "powerpoint","powerpoints",
+        "power point", "slide", "slide", "spreadsheets", "workbook", "worksheet", "csv", "tsv", "note", "notes", "onenote",
+        "onenotes", "OneNote", "notebook", "notebooks","pdf", "pdfs","PDF","jpg","jpeg", "gif", "png", "image", "msg",
+        "ics", "vcs", "vsdx", "vssx", "vstx", "vsdm", "vssm", "vstm", "vsd", "vdw", "vss", "vst", "mpp", "mpt",
+        "word", "words", "document", "documents", "file" , "files"};
+        
+    /*var values = new [] {"pptx", "ppts", "ppt", "deck" , "decks", "presentation", "presentations", "powerpoint","powerpoints"};*/
+    //var values = new [] {"abc", "def", "ghj"};
+    //return values.Any(Query_RawQuery.Contains);
+
+
+    /*foreach (string value in values)
+    {
+        if (Query_RawQuery.Contains(value))
+            return true;
+    }
+
+    return false;*/
+    
+    return true;
+
+}
+/*public class Helper
+{
+	public static boolean checktoken(string cV)
+    {
+        var values = new [] {"pptx", "ppts", "ppt", "deck" , "decks", "presentation", "presentations", "powerpoint","powerpoints"};
+        return values.Any(Query_RawQuery.Contains);
+
+    }
+}*/
