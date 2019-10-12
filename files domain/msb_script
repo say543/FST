@@ -1,0 +1,96 @@
+//Script GUID:66577d46-750d-40b3-90e7-c8ec36efb6e2
+//Used for tracking history
+
+
+#DECLARE FromDate string = @"2019-09-01";  
+#DECLARE ToDate string = @"2019-09-10"; 
+//#DECLARE OutputLocationTsvXlsapi string = @"/users/sachoud/output_query_batwork_xslapi_Jan.tsv";
+#DECLARE OutputLocationTsv string = @"/users/chiecha/output_query_batwork/Jan_20d_smallContact.tsv";
+
+
+
+SlapiLog =
+    VIEW "/shares/searchDM/distrib/released/SLAPI/SearchLogPageView.view"
+    PARAMS
+    (
+        Start = @FromDate,
+        End = @ToDate,
+        Dataset = "Bing.com" //some traffic ends up being in Bing.com data set as fo 1/9/2018
+    );
+
+
+/*
+
+xSLAPI = 
+VIEW @"/shares/searchDM/distrib/released/xSLAPI/xSLAPI.view"
+PARAMS
+(
+    Start = @FromDate,
+    End = @ToDate,
+    Dataset = @"Bing.com",
+    Traffic = "Normal",
+    QueryType = "Web"
+);
+*/
+
+
+QueryData =
+    SELECT Request_ImpressionGuid.ToUpper().Trim() AS ImpressionGuid,
+           Query_RawQuery,
+           Dataset AS dataset,
+           Request_RequestTime AS RequestTime,
+           Request_EventsWithExtendedProperties.WhereEventTypeEquals("Event.Impression") [0].ExtendedProperties["RequestInfo/Classification/isbingatworkuser"]AS isBingATWorkUser
+    FROM SlapiLog
+    WHERE
+    /* miss helper functions */
+    /*Query_RawQuery != "" AND (Request_EventsWithExtendedProperties.WhereEventTypeEquals("Event.Impression") [0].ExtendedProperties["RequestInfo/Classification/isbingatworkuser"] == "1") AND Regex.IsMatch(Query_RawQuery, Helper.GetRegexFromNames(),RegexOptions.IgnoreCase);*/
+    Query_RawQuery != "" AND (Request_EventsWithExtendedProperties.WhereEventTypeEquals("Event.Impression") [0].ExtendedProperties["RequestInfo/Classification/isbingatworkuser"] == "1");
+    /*Query_RawQuery != "" AND (Request_EventsWithExtendedProperties.WhereEventTypeEquals("Event.Impression") [0].ExtendedProperties["RequestInfo/Classification/isbingatworkuser"] == "1") AND Regex.IsMatch(Query_RawQuery, Helper.GetRegexFromNames(),RegexOptions.IgnoreCase);*/
+/*
+OUTPUT QueryData
+TO SSTREAM @OutputLocation
+CLUSTERED BY ImpressionGuid;
+*/
+
+
+
+OUTPUT QueryData
+TO @OutputLocationTsv;
+
+
+
+
+/*
+https://scriptlibrary.azurewebsites.net/CosmosScript/Details?searchtext=bingatwork&tenant=all&source=main&pk=74d103c5-8f8a-6b98-c9c9-d1b13667a8c2&orderByLatest=False
+*/
+
+#CS
+public static long GetFolderHash(string url)
+{
+    try
+    {
+        Uri uri = new Uri(url);
+        string[] tmp = uri.AbsolutePath.Split(new char[] {'/'}, StringSplitOptions.RemoveEmptyEntries);
+        if(tmp.Length >= 2)
+        {
+            if(tmp[0].ToLower() == "sites" && tmp.Length >= 3)
+            {
+                return Math.Abs((tmp[1].ToLower() + tmp[2].ToLower()).GetHashCode());
+            }
+            if(tmp[0].ToLower() == "teams" && tmp.Length >= 2)
+            {
+                return Math.Abs((tmp[1].ToLower()).GetHashCode());
+            }
+            return -1;
+ 
+        }
+        else
+        {
+            return -1;
+        }
+    }
+    catch
+    {
+        return -1;
+    }
+}
