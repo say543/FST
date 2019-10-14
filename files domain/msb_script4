@@ -2,31 +2,18 @@
 //Used for tracking history
 
 
+// no data available before 06 so it will shows up 'user operation fail'
 //#DECLARE FromDate string = @"2019-09-01";  
-//#DECLARE ToDate string = @"2019-09-30"; 
-//#DECLARE FromDate string = @"2019-08-01";  
-//#DECLARE ToDate string = @"2019-08-31";
-
-//#DECLARE FromDate string = @"2019-07-01";  
-//#DECLARE ToDate string = @"2019-07-31"; 
-
-//#DECLARE FromDate string = @"2019-06-01";  
-//#DECLARE ToDate string = @"2019-06-30"; 
-
-#DECLARE FromDate string = @"2019-05-01";  
-#DECLARE ToDate string = @"2019-05-31"; 
-
+//#DECLARE ToDate string = @"2019-09-02";
+#DECLARE FromDate string = @"2019-06-01";  
+#DECLARE ToDate string = @"2019-06-02"; 
 
 
 //#DECLARE OutputLocationTsvXlsapi string = @"/users/sachoud/output_query_batwork_xslapi_Jan.tsv";
 //#DECLARE OutputLocationTsv string = @"/users/chiecha/output_query_batwork/Jan_20d_smallContact.tsv";
 //#DECLARE OutputLocationTsv string = @"/users/chiecha/check_token/sep_0901_0910.tsv";
-
-//#DECLARE OutputLocationTsv string = @"/users/chiecha/check_token/sep_0901_0930_2019.tsv";
-//#DECLARE OutputLocationTsv string = @"/users/chiecha/check_token/sep_0801_0831_2019.tsv";
-//#DECLARE OutputLocationTsv string = @"/users/chiecha/check_token/sep_0701_0731_2019.tsv";
-//#DECLARE OutputLocationTsv string = @"/users/chiecha/check_token/sep_0601_0630_2019.tsv";
-#DECLARE OutputLocationTsv string = @"/users/chiecha/check_token/sep_ignorecase_0501_053_2019.tsv";
+#DECLARE OutputLocationTsv string = @"/users/chiecha/check_token/sep_test.tsv";
+//#DECLARE OutputLocationTsv string = @"/users/chiecha/check_token/sep_ig_0501_0531_2019.tsv";
 
 
 
@@ -57,11 +44,10 @@ PARAMS
 
 QueryData =
     SELECT Request_ImpressionGuid.ToUpper().Trim() AS ImpressionGuid,
-           //Query_RawQuery,
-           Query_RawQuery
+           Query_RawQuery,
            //Dataset AS dataset,
            //Request_RequestTime AS RequestTime,
-           //Request_EventsWithExtendedProperties.WhereEventTypeEquals("Event.Impression") [0].ExtendedProperties["RequestInfo/Classification/isbingatworkuser"]AS isBingATWorkUser
+           Request_EventsWithExtendedProperties.WhereEventTypeEquals("Event.Impression") [0].ExtendedProperties["RequestInfo/Classification/isbingatworkuser"]AS isBingATWorkUser
     FROM SlapiLog
     WHERE
     /* miss helper functions */
@@ -92,7 +78,7 @@ public static class Helper
 {
   public static bool Checktoken(string Query_RawQuery){
 		  
-      string rawQeryIgnoreCare = Query_RawQuery.ToLower();
+	  string rawQeryIgnoreCare = Query_RawQuery.ToLower();
 
       var values = new [] {"pptx", "ppts", "ppt", "deck" , "decks", "presentation", "presentations", "powerpoint","powerpoints",
         "power point", "slide", "slide", "spreadsheets", "workbook", "worksheet", "csv", "tsv", "note", "notes", "onenote",
@@ -108,6 +94,8 @@ public static class Helper
     
     //return Query_RawQuery.Contains("file");
     
+    //return values.Any(rawQeryIgnoreCare
+	//				  .Contains);
     return values.Any(rawQeryIgnoreCare
 					  .Contains);
   }
