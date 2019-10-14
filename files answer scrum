@@ -79,6 +79,12 @@ queryclassificationprocessing\QCSQueryLabelWithLES.exe -c d:\SearchGold\deploy\b
 // my common
 .\QCSQueryLabelWithLES.exe -i E:\CoreScienceDataStaging\evaluation\AnnotationSetsConverted\Validating\Validating_Teams_20190716-20190831_3k.tsv --queryInColumn 5 --verbose --encoding utf-8 --legacyAllowUnusedParameters -c E:\searchgold\deploy\builds\data\answers\QAS12HttpQAS\  --variant files_enus_mv1  -dl files
 
+ouput 會輸出在同一個directory
+eg: output xxx.maxent.output.txt
+這個就是所謂的domain output
+Validating_Teams_20190716-20190831_3k.tsv.files.maxent.output.txt
+
+
 
 
 
