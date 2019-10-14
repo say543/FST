@@ -63,6 +63,24 @@ when I ran this, it created a link at https://cosmos09.osdinfra.net/cosmos/relev
 From the links, you can go to the “Script” tab to see the script that was run.  
 The “Job Stages” tab tells you how close the job is to completing.
 
+參考 msb_script1 or msb_script2 or msb_script3 or msb_script4
+
+似乎data teams 的data
+只有available 3個月
+
+
+用QCSQuerylabel 跑dataset q
+可以輸出一堆東西
+//calendar examoke
+queryclassificationprocessing\QCSQueryLabelWithLES.exe -c d:\SearchGold\deploy\builds\data\answers\QAS12HttpQAS --variant cortana_calendar_enus_mv8 -d calendar -i E:\src\git\Cortana\CoreScienceDataStagingKingston\evaluation\AnnotationSetsConverted\Files\UHRS_Task_3SFilesAnnotation.Trimmed.Converted.tsv --queryInColumn 5
+
+
+注意不要改放external features column 這樣會造成讀external column 但是沒有data
+// my common
+.\QCSQueryLabelWithLES.exe -i E:\CoreScienceDataStaging\evaluation\AnnotationSetsConverted\Validating\Validating_Teams_20190716-20190831_3k.tsv --queryInColumn 5 --verbose --encoding utf-8 --legacyAllowUnusedParameters -c E:\searchgold\deploy\builds\data\answers\QAS12HttpQAS\  --variant files_enus_mv1  -dl files
+
+
+
 
 
 
