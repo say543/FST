@@ -92,7 +92,7 @@ public static class Helper
 {
   public static bool Checktoken(string Query_RawQuery){
 		  
-	  var rawQeryIgnoreCare = Query_RawQuery.ToLower();
+      string rawQeryIgnoreCare = Query_RawQuery.ToLower();
 
       var values = new [] {"pptx", "ppts", "ppt", "deck" , "decks", "presentation", "presentations", "powerpoint","powerpoints",
         "power point", "slide", "slide", "spreadsheets", "workbook", "worksheet", "csv", "tsv", "note", "notes", "onenote",
