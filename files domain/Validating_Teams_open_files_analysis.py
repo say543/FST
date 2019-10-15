@@ -159,14 +159,14 @@ with codecs.open(inputFile, 'r', 'utf-8') as fin:
 with codecs.open((inputFile.split("."))[0] +'open_evaluation.tsv', 'w', 'utf-8') as fout:
 
     # if output for traing
-    fout.write("Query\tFrequency\r\n")
+    fout.write("Query\tDomain\tFrequency\r\n")
     for item in OutputOpenEvaluation:
         fout.write(item + '\r\n');
 
 with codecs.open((inputFile.split("."))[0] +'open_extention_evaluation.tsv', 'w', 'utf-8') as fout:
 
     # if output for traing
-    fout.write("Query\tFrequency\r\n")
+    fout.write("Query\tDomain\tFrequency\r\n")
     for item in OutputOpenExtentionEvaluation:
         fout.write(item + '\r\n');
 
