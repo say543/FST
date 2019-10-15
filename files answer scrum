@@ -31,6 +31,15 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 
 
 
+=============================
+qcs query level bucketize output
+
+email title
+"Re: Generating confidence buckets for answers "
+
+=============================
+
+
 
 =============================
 msb data mining
@@ -84,6 +93,7 @@ eg: output xxx.maxent.output.txt
 這個就是所謂的domain output
 Validating_Teams_20190716-20190831_3k.tsv.files.maxent.output.txt
 
+要跟sajaj 要bucketized 的code
 
 
 
