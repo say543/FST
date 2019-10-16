@@ -202,7 +202,14 @@ another one note page
 another one note page
 'How to use Kusto Explorer'
 
+
+//old
 i typically only use Dialog Reactive Host Prod
+// update
+now using  kusto_new 下面的
+Reactive Jost PPE / Reactive Jost Prod
+? 還不知道為啥我不能query sandbox
+
 
 CortexTraceMDS is the new table
 
