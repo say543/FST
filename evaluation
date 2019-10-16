@@ -91,7 +91,7 @@ to retrive top queris
 
 
 step5:
-debug with a unit test  run through coresience stage
+debug with a unit test  run through 'coresience' stage, not 'coresciencestage'
 then you can stop at breakpoints in coretxt open project evaluationNuget
 
 
