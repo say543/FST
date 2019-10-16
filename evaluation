@@ -57,6 +57,8 @@ to this
   <add key="local.ConfigsDir" value="D:\CoreScienceDataStaging_old\target\distrib\Debug\AnyCPU\Test\Data\Evaluation\configs" />
   <add key="local.DatasetsDir" value="D:\CoreScienceDataStaging_old\target\distrib\Debug\AnyCPU\Test\Data\Evaluation\AnnotationSetsConverted" />
   <add key="local.OutputBaseDir" value="D:\CoreScienceDataStaging_old\TestResults" />
+  
+  // 注意這邊要指向coresciencestage
   <add key="local.EvaluationTestConfigPath" value="D:\CoreScienceDataStaging_old\src\Evaluation.Converged.Tests\EvaluationTestConfig.xml" />
   <add key="local.QCSQueryLabelToolDir" value="%inetroot%\public\ext\QcsQueryLabel" />
   <add key="local.SearchGoldDir" value="D:\searchgold\deploy\builds\data\answers\QAS12HttpQAS" />
@@ -64,9 +66,13 @@ to this
   
 
 </commonConfiguration>
+step3-1
+rebuild evaluationNuget
+and check test explorer  
+you can see wholetest available in coresciencestage available in evalationNuget as well
 
 
-step3: set breakpoint
+step3.2: set breakpoint
 
 //old ? cannot find right know
 D:\mercury\private\PersonalAssistant\Evaluation\EvaluationsCoreLib\Modules\Runner\RankingModule.cs
@@ -84,8 +90,8 @@ to retrive top queris
 
 
 step5:
-run through coresience stage with a data set
-then you can stop at breakpoints in coretxt open project
+debug with a unit test  run through coresience stage
+then you can stop at breakpoints in coretxt open project evaluationNuget
 
 
 似乎橋梁是EvalTestRunner.cs 會在corescience 裡面
