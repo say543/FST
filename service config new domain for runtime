@@ -5,3 +5,67 @@ you need to add here for runtime
 
 append "files:files" to all lines having "teamsaction:teamsaction"
 follow PR to add reviewers.
+
+
+同樣的change 會在不同的時間點 deploy 到compliant 跟noncompliant enviornment
+email title
+RE: surfacing  files domain and teamsaction
+? 這邊說的roll out plan 不知道是compliant or non compliant
+version 管控制 參考 DRI schedule 裡面的roll out 但是這個不知道 是compliant or non compliant
+
+
+
+
+AllowDomainsOutsideDomainMap
+這個是debug 的variable
+
+eg: 解釋
+example1:
+AllowDomainsOutsideDomainMap&feature.ludomainsoutside:1=true
+
+AllowDomainsOutsideDomainMap : variable
+
+condtion 
+當feature.ludomainsoutside:1
+也就是flight ludomainsoutside 這個在test 有帶的時候  而且value = 1
+
+result 
+= true
+設成true
+
+所以這個qp 
+https://qp/?permalink=57dd4a8b
+會帶 ludomainsoutside  (qp default attach 就是1)
+這樣可以debug 如果local machine runtime 沒有update 到最新, 還是可以hit 到所有的domain
+
+對應的variable 會在這個.bond 裡面
+
+https://msasg.visualstudio.com/Cortana/_git/Core?path=%2Fruntime%2FdataSchemas%2FParallaxInterfaces%2FBing.Platform.ConversationalUnderstanding.LanguageUnderstanding.Config.ScenarioConfig.bond&version=GBmaster
+
+可以看到default 是false
+// Configuration parameter indicating whether or not the LU component can return domains outside of the ones defined in the DomainMap configuration.
+28: optional bool AllowDomainsOutsideDomainMap = false;
+
+
+example2:
+DomainMap&ipe_locale:en-AU=teams:teams,email:email,Moment:Moment,communication:communication,weather:weather,people:people,familygraph:familygraph,calendar:calendar,web:web,places:places,alarm:alarm,reminder:reminder_removed,note:note,ondevice:ondevice,mystuff:mystuff,translation:translation,navigation:navigation,capture:capture,webnavigation:webnavigation,mediacontrol:mediacontrol,entertainment:web,tv:web,orderfood:orderfood,taxi:taxi,gaming:gaming,homeautomation:homeautomation_removed,common:common,reservations:reservations,feedback:feedback,greetings:greetings,notification:notification,moments:moments_removed,events:events,inmeeting:inmeeting,teamsaction:teamsaction,files:files
+DomainMap=email:email,Moment:Moment,communication:communication,weather:weather,people:people,familygraph:familygraph,calendar:calendar,web:web,places:places,alarm:alarm,reminder:reminder,note:note,ondevice:ondevice,mystuff:mystuff,translation:translation,navigation:navigation,capture:capture,webnavigation:webnavigation,mediacontrol:mediacontrol,entertainment:web,tv:web,orderfood:orderfood,taxi:taxi,gaming:gaming,homeautomation:homeautomation,common:common,reservations:reservations,feedback:feedback,greetings:greetings,notification:notification,moments:moments,events:events,inmeeting:inmeeting,teamsaction:teamsaction,files:files
+
+
+第二行是domain value 的 defult
+
+https://msasg.visualstudio.com/Cortana/_git/Core?path=%2Fruntime%2FdataSchemas%2FParallaxInterfaces%2FBing.Platform.ConversationalUnderstanding.LanguageUnderstanding.Config.ScenarioConfig.bond&version=GBmaster
+optional map<string, string> DomainMap;
+
+default 就是string : strong
+
+第一行是如果有帶
+condition flight
+ipe_locale:en-AU
+
+就把他override 成
+=teams:teams,email:email,Moment:Moment,communication:communication,weather:weather,people:people,familygraph:familygraph,calendar:calendar,web:web,places:places,alarm:alarm,reminder:reminder_removed,note:note,ondevice:ondevice,mystuff:mystuff,translation:translation,navigation:navigation,capture:capture,webnavigation:webnavigation,mediacontrol:mediacontrol,entertainment:web,tv:web,orderfood:orderfood,taxi:taxi,gaming:gaming,homeautomation:homeautomation_removed,common:common,reservations:reservations,feedback:feedback,greetings:greetings,notification:notification,moments:moments_removed,events:events,inmeeting:inmeeting,teamsaction:teamsaction,files:files
+
+
+
+
