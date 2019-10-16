@@ -14,6 +14,7 @@ open project
 through  cortext
 
 make sure it ix x64 mode
+test -> processor -> architecture -> x64
 D:\mercury\private\PersonalAssistant\Evaluation>EvaluationNuget.sln
 
 step2:
