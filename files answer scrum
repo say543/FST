@@ -40,6 +40,16 @@ email title
 =============================
 
 
+=============================
+3s answer teams patterns
+=============================
+3s answer teams pattern
+https://msasg.visualstudio.com/Substrate/_git/SubstrateTools?path=%2Fsrc%2FTools%2FAnswerQualityTool%2FQueryGen%2FStaticContent%2FFilePositiveQueryPatternsWithSlots.txt&version=GC9da6aa8be4341cc97d4784052f27fc6b6c6337f0
+
+跟
+E:\fileAnswer_data_synthesis\CMF_training\resource\Data\file_type_measurement
+3SAnswersOfflinePR.xlsx 的pattern 是一模一樣的
+看起來沒有新的pattern
 
 =============================
 msb data mining
