@@ -5,6 +5,7 @@ https://microsoft.sharepoint.com/teams/CortanaCore/_layouts/15/WopiFrame.aspx?so
 
 =====================================
 evaluation query level analysis
+可以看domain score 跟 ClassificationLevel
 =====================================
 
 <this is for notebook flow>
@@ -66,7 +67,11 @@ to this
 
 
 step3: set breakpoint
+
+//old ? cannot find right know
 D:\mercury\private\PersonalAssistant\Evaluation\EvaluationsCoreLib\Modules\Runner\RankingModule.cs
+// new 
+D:\mercury\private\PersonalAssistant\Evaluation\EvaluationsCoreLib\Modules\Runner\OfflineQasRunner.cs
 
 var analyzedQueries = QcsQueryLabelToolInputFile.ReadAnalyzedQueries(analyzedQueryFile);
 to see all queries
@@ -77,6 +82,13 @@ D:\mercury\private\PersonalAssistant\Evaluation\EvaluationsCoreLib\Modules\Runne
 var topDomains = supportedDomains.Where(d => Math.Abs(d.DomainClassification.ConfidenceLevel - topDomainScore) < DomainScoreTolerance).OrderBy(d => d.Name).ToList();
 to retrive top queris
 
+
+step5:
+run through coresience stage with a data set
+then you can stop at breakpoints in coretxt open project
+
+
+似乎橋梁是EvalTestRunner.cs 會在corescience 裡面
 
 ========================
 evaluation local run by using search gold mirro
