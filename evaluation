@@ -54,9 +54,9 @@ to this
   -->
 
   
-  <add key="local.ModelsDir" value="D:\CoreScienceDataStaging_old\target\distrib\Debug\AnyCPU\models" />
-  <add key="local.ConfigsDir" value="D:\CoreScienceDataStaging_old\target\distrib\Debug\AnyCPU\Test\Data\Evaluation\configs" />
-  <add key="local.DatasetsDir" value="D:\CoreScienceDataStaging_old\target\distrib\Debug\AnyCPU\Test\Data\Evaluation\AnnotationSetsConverted" />
+  <add key="local.ModelsDir" value="D:\CoreScienceDataStaging_old\target\distrib\Debug\x64\models" />
+  <add key="local.ConfigsDir" value="D:\CoreScienceDataStaging_old\target\distrib\Debug\x64\Test\Data\Evaluation\configs" />
+  <add key="local.DatasetsDir" value="D:\CoreScienceDataStaging_old\target\distrib\Debug\x64\Test\Data\Evaluation\AnnotationSetsConverted" />
   <add key="local.OutputBaseDir" value="D:\CoreScienceDataStaging_old\TestResults" />
   
   // 注意這邊要指向coresciencestage
@@ -140,9 +140,9 @@ E:\CoreScienceDataStaging\src\Evaluation.Converged.Tests\Common.config
   <add key="local.EvalMergedDir" value="%EVAL_MERGED_DIR%" />
 
 // new 
-  <add key="local.ModelsDir" value="E:\CoreScienceDataStaging\target\distrib\Debug\AnyCPU\models" />
-  <add key="local.ConfigsDir" value="E:\CoreScienceDataStaging\target\distrib\Debug\AnyCPU\ConvergedTest\Data\Evaluation\Configs" />
-  <add key="local.DatasetsDir" value="E:\CoreScienceDataStaging\target\distrib\Debug\AnyCPU\ConvergedTest\Data\Evaluation\AnnotationSetsConverted" />
+  <add key="local.ModelsDir" value="E:\CoreScienceDataStaging\target\distrib\Debug\x64\models" />
+  <add key="local.ConfigsDir" value="E:\CoreScienceDataStaging\target\distrib\Debug\x64\ConvergedTest\Data\Evaluation\Configs" />
+  <add key="local.DatasetsDir" value="E:\CoreScienceDataStaging\target\distrib\Debug\x64\ConvergedTest\Data\Evaluation\AnnotationSetsConverted" />
   <add key="local.OutputBaseDir" value="E:\CoreScienceDataStaging\TestResults\Evaluation" />
   // Eval Merged Dir 這邊先給我自己給的  似乎任意填
   <add key="local.EvalMergedDir" value="E:\CoreScienceDataStaging\TestResults\EvaluationMergedDir" />
