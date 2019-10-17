@@ -1290,6 +1290,14 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 inmeeting 放到evaluation 的pr
 因乖不用改pattern 我猜
 怎麼放到inmeeting 可以參考
+10172019
+files domains has been added to this 
+
+but not to deplpy (prefer searching gold by itself)
+if want to enable deploy
+follows up this deploy in the future
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1212543?_a=files&path=%2Fsrc%2FCopyModels%2FOneRuntimeTargetConfig.xml
+
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1298564?_a=files
 
 
