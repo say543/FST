@@ -61,17 +61,17 @@ teams scrum 的test
 [Yesterday 1:34 PM] Avani Pai
     D:\CoreScience\public\ext\QcsQueryLabel\queryclassificationprocessing\QCSQueryLabelWithLES.exe 
     --externalFeaturesColumn 2 --interactive --verbose --encoding utf-8 
-    --legacyAllowUnusedParameters -c E:\mercury\target\distrib\debug\AnyCPU\models 
+    --legacyAllowUnusedParameters -c E:\mercury\target\distrib\debug\x64\models 
     --variant HttpQASDEVBOX_ML_OFFLINE_QAS_EVAL_INT.QASEXO01DS -d communication_ml --clientId ""
 ​[Yesterday 1:35 PM] Avani Pai
     run msbuild here: D:\CoreScienceDataStaging\src\CopyModels
     
 
-  每次msbuild 前要去這邊  把 AnyCpu 下面的models 給清掉
-  E:\mercury\target\distrib\debug\AnyCPU\models
+  每次msbuild 前要去這邊  把 x64 下面的models 給清掉
+  E:\mercury\target\distrib\debug\x64\models
   
   common config 要變成這個path
-  E:\mercury\target\distrib\Debug\AnyCPU\models
+  E:\mercury\target\distrib\Debug\x64\models
   否則找不到
  
 
@@ -190,7 +190,7 @@ set as x64
 domain classfiier
 ========================
 // wrong
-E:\CoreScienceDataStaging\target\distrib\Debug\AnyCPU\models\luna_190305_teams.domain.fst_lang_model.INT.pipeline.txt
+E:\CoreScienceDataStaging\target\distrib\Debug\x64\models\luna_190305_teams.domain.fst_lang_model.INT.pipeline.txt
 用intent 的pattern 來看domain
 
 
@@ -199,7 +199,7 @@ E:\CoreScienceDataStaging\target\distrib\Debug\AnyCPU\models\luna_190305_teams.d
 qd_teams_domain_fst_lang_model_intent_overwrite_featurizer
 這個featurlizer 才是domain 的ouput  
 
-E:\CoreScienceDataStaging\target\distrib\Debug\AnyCPU\models\luna_190305_teams.domain.fst_lang_model_intent_overwrite.pipeline.txt
+E:\CoreScienceDataStaging\target\distrib\Debug\x64\models\luna_190305_teams.domain.fst_lang_model_intent_overwrite.pipeline.txt
 
 luna_190305_teams.intents.fst_lang_model.tagger.bin
 
