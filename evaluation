@@ -209,7 +209,10 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequestcreate?sourceRef=users%252Fchiecha%252Fsetup_files_domain_evaluation&targetRef=master&sourceRepositoryId=47fe635e-e02b-42d3-82e7-768da61e32c0&targetRepositoryId=47fe635e-e02b-42d3-82e7-768da61e32c0
 
 all new model should be here
+// old
 E:\CoreScienceDataStaging\target\distrib\Debug\AnyCPU\models
+// new
+E:\CoreScienceDataStaging\target\distrib\Debug\x64\models
 
 2> 
 因為HttpQasProd_CortanaLU.QAS12HttpQAS_CCCtest.queryProcessingConfiguration.ini
@@ -223,7 +226,10 @@ HttpQasProd_CortanaLU.QAS12HttpQAS_CCCtest.queryProcessingConfiguration
 加上自己的client id 
 
 重新evaluation compile then  HttpQasProd_CortanaLU.QAS12HttpQAS_CCCtest.queryProcessingConfiguration 也會populate 到
+// old
 E:\CoreScienceDataStaging\target\distrib\Debug\AnyCPU\models
+// new 
+E:\CoreScienceDataStaging\target\distrib\Debug\x64\models
 
 就可以run evaluation
 
