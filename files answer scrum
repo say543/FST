@@ -998,7 +998,7 @@ PS E:\CoreScienceDataStaging\datasources\Email_my_temporary\queryclassificationp
 
 
 teams for reference
-PS E:\CoreScienceDataStaging\datasources\Teams\queryclassificationprocessing> .\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c E:\CoreScienceDataStaging\target\distrib\Debug\AnyCPU\models  --variant HttpQASINT_ML_OFFLINE_QAS_EVAL_INT.QAS01HttpQAS -d teams
+PS E:\CoreScienceDataStaging\datasources\Teams\queryclassificationprocessing> .\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c E:\CoreScienceDataStaging\target\distrib\Debug\x64\models  --variant HttpQASINT_ML_OFFLINE_QAS_EVAL_INT.QAS01HttpQAS -d teams
 
 
 files for reference
@@ -1199,7 +1199,7 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 
 integrate 之後
 用這個跑
- .\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2 --queryInColumn 1 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c E:\CoreScienceDataStaging\target\distrib\Debug\AnyCPU\files_model  --variant model -dl files --clientId EvalClientId
+ .\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2 --queryInColumn 1 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c E:\CoreScienceDataStaging\target\distrib\Debug\x64\files_model  --variant model -dl files --clientId EvalClientId
  
  
  已經建立好的PR
