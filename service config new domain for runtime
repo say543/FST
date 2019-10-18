@@ -6,7 +6,11 @@ for compliant it is in another repo which is ReactiveHost
 https://msasg.visualstudio.com/DefaultCollection/Cortana/_git/Core?path=%2Fruntime%2Fservices%2FReactiveHost%2FCortexService%2FScenarioConfig.ini&version=GBReactiveHost 
 
 
-
+10182019
+shobit 的pr
+all teams traffic will go to compilant 
+?還沒仔細研究
+https://msasg.visualstudio.com/DefaultCollection/Cortana/_git/Core/commit/5df40239d62daab08757a0c36d8c36618e2366a9?path=%2Fruntime%2Fservices%2FCortexService%2Fservice%2Fsrc%2FScenarioConfig.ini&gridItemType=2&mpath=%2Fruntime%2Fservices%2FCortexService%2Fservice%2Fsrc%2FScenarioConfig.ini&opath=%2Fruntime%2Fservices%2FCortexService%2Fservice%2Fsrc%2FScenarioConfig.ini&mversion=GC5df40239d62daab08757a0c36d8c36618e2366a9&oversion=GC52dc13565afafc32505884eec38e28a7f2d383a5&_a=compare
 
 
 append "files:files" to all lines having "teamsaction:teamsaction"
