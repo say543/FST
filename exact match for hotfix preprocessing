@@ -28,6 +28,11 @@ E:\CoreScienceDataStaging\datasources\Email> .\bin\CLU.Core.1.2.305\data_preproc
  然後preprocess output 在
  E:\CoreScienceDataStaging\datasources\Email\output_preprocess\data_preprocess_aspect\tmp\preprocess.done\domain_exact_match
  
+ 轉成正確CMF format 在這邊
+ 以files domain 為example
+ files_enus_mv1.domain.1.hotfix.txt
+ 
+ 
  
  
  
