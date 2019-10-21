@@ -133,6 +133,10 @@ ICM有ticket 都會有trade id
 
 understanding tab 會有detail 的rank 的結果  , intent score
 
+//10212019
+似乎沒辦法選enviornment 了
+https://cortanalogviewer.azurewebsites.net/query/a0d895eb333240c1b0bb6b9b50ef233b
+
 
 from title 'LU Bug for InMeeting Compliant Stack - Rejection is not recognized'
 example 的判斷
