@@ -31,6 +31,21 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 
 
 
+
+=====
+share index from 3s teams
+email title
+====
+Constraint index information:
+•	Presentation on CI here 
+•	Overview of grammar rules – here 
+•	You can find samples queries along with the actual rules here
+•	We currently allow queries on fileName, Author, FileExtension properties. We will be adding support for queries on shared by username and email (these are for attachment entities).  
+
+Regards,
+Arun
+
+
 =============================
 qcs query level bucketize output
 
