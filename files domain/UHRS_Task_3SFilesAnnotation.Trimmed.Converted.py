@@ -225,6 +225,7 @@ spellWrongButNotTags={
     'spreadsheetAshuthosh ',
     ' documentfiles ',
     'wore ',
+    'sharedabout ',
     }
 
 blackListQuerySet = {
@@ -238,7 +239,10 @@ OutputIntentEvaluation = [];
 OutputSTCAIntentEvaluation = [];
 
 
+OutputSpellFilterEvaluationOnlyFiles = [];
+
 OutputSpellFilterEvaluation = [];
+
 OutputSpellWrongFilterEvaluation = [];
 
 
@@ -275,8 +279,11 @@ with codecs.open(inputFile, 'r', 'utf-8') as fin:
         #if len(linestrs) < 11:
         #    continue;
 
-        if linestrs[5] != 'FILES':
+        # skip head
+        if linestrs[5] == 'JudgedDomain':
             continue
+
+
 
         slot = linestrs[7]
         xmlpairs = re.findall("(<.*?>.*?<\/.*?>)", slot)
@@ -334,22 +341,26 @@ with codecs.open(inputFile, 'r', 'utf-8') as fin:
             #print(line)
             OutputSpellWrongFilterEvaluation.append(line+"\t"+"contact_name_error")
         else:
+            #print(line)
+            #print(linestrs[5])
             OutputSpellFilterEvaluation.append(line)
+            if linestrs[5] == 'FILES':
+                OutputSpellFilterEvaluationOnlyFiles.append(line)
 
-            # id / message / intent / domain / constraint
-            # for training purpose's format
+                # id / message / intent / domain / constraint
+                # for training purpose's format
             
-            #OutputSlotEvaluation.append("0"+"\t"+linestrs[4]+"\t"+linestrs[6]+"\t" +linestrs[5].lower()+"\t"+linestrs[7]);
-            OutputSlotEvaluation.append("0"+"\t"+linestrs[4]+"\t"+linestrs[6]+"\t" +linestrs[5].lower()+"\t"+slot);
+                #OutputSlotEvaluation.append("0"+"\t"+linestrs[4]+"\t"+linestrs[6]+"\t" +linestrs[5].lower()+"\t"+linestrs[7]);
+                OutputSlotEvaluation.append("0"+"\t"+linestrs[4]+"\t"+linestrs[6]+"\t" +linestrs[5].lower()+"\t"+slot);
 
-            # TurnNumber / PreviousTurnIntent / query /intent
-            # for training purpose's format
-            #OutputIntentEvaluation.append("0"+"\t"+""+"\t"+linestrs[4]+"\t" +linestrs[6]);
-            OutputIntentEvaluation.append("0"+"\t"+""+"\t"+linestrs[4]+"\t" +linestrs[6]);
+                # TurnNumber / PreviousTurnIntent / query /intent
+                # for training purpose's format
+                #OutputIntentEvaluation.append("0"+"\t"+""+"\t"+linestrs[4]+"\t" +linestrs[6]);
+                OutputIntentEvaluation.append("0"+"\t"+""+"\t"+linestrs[4]+"\t" +linestrs[6]);
 
-            #UUID\tQuery\tIntent\tDomain\tSlot\r\n
-            #OutputSTCAIntentEvaluation.append("0"+"\t"+linestrs[4]+"\t" +linestrs[6]+"\t"+linestrs[5].lower()+"\t"+linestrs[7])
-            OutputSTCAIntentEvaluation.append("0"+"\t"+linestrs[4]+"\t" +linestrs[6]+"\t"+linestrs[5].lower()+"\t"+slot)
+                #UUID\tQuery\tIntent\tDomain\tSlot\r\n
+                #OutputSTCAIntentEvaluation.append("0"+"\t"+linestrs[4]+"\t" +linestrs[6]+"\t"+linestrs[5].lower()+"\t"+linestrs[7])
+                OutputSTCAIntentEvaluation.append("0"+"\t"+linestrs[4]+"\t" +linestrs[6]+"\t"+linestrs[5].lower()+"\t"+slot)
 
 """
 # comment shuffle in the first place
@@ -401,6 +412,13 @@ with codecs.open("sharemodeltest\\"+(inputFile.split("."))[0] +'intent_evaluatio
 # for spelling checking
 with codecs.open((inputFile.split("."))[0] +'_after_filtering.tsv', 'w', 'utf-8') as fout:
 
+    # if output for traing
+    fout.write("ConversationId\tMessageId\tMessageTimestamp\tMessageFrom\tMessageText\tJudgedDomain\tJudgedIntent\tJudgedConstraints\tMetaData\tConversationContext\tFrequency\tCortanaResponse\r\n")
+    for item in OutputSpellFilterEvaluationOnlyFiles:
+        fout.write(item + '\r\n');
+
+
+with codecs.open((inputFile.split("."))[0] +'_after_filtering_all.tsv', 'w', 'utf-8') as fout:
     # if output for traing
     fout.write("ConversationId\tMessageId\tMessageTimestamp\tMessageFrom\tMessageText\tJudgedDomain\tJudgedIntent\tJudgedConstraints\tMetaData\tConversationContext\tFrequency\tCortanaResponse\r\n")
     for item in OutputSpellFilterEvaluation:
