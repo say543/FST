@@ -207,6 +207,7 @@ spellWrongButNotTags={
     ' thr ',
     ' gy ',
     ' bout ',
+    ' awith ',
     'exce by',
     ' oc ',
     'oc by',
