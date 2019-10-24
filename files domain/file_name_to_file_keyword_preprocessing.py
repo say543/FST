@@ -263,7 +263,12 @@ with codecs.open('file_name.txt', 'r', 'utf-8') as fin:
         if not ignore:
             for key in reversed(sorted(fileTypeTagWDotSpaceInFileKeywordOrFileName)):
                 if line.endswith(key):
-                    ignore = True  
+                    ignore = True
+
+
+        if not ignore:
+            if line.lower().startswith("my"):
+                ignore = True
 
         if not ignore:
             outputs.append(line);
