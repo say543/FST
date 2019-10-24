@@ -46,7 +46,7 @@ teamsSlotToFileSlot = {
     "<teammeeting_title>" : "<sharetarget_name>",
     "</teammeeting_title>" : "</sharetarget_name>",
     "<teamspace_channel>" : "<sharetarget_name>",
-    "</teamspace_channel >" : "</sharetarget_name>",
+    "</teamspace_channel>" : "</sharetarget_name>",
     "<teamspace_team>" : "<sharetarget_name>",
     "</teamspace_team>" : "</sharetarget_name>",
     # preprocessing contact name or to contact name later
@@ -105,14 +105,15 @@ fileTypeTagWoDotInFileKeywordOrFileName={
     # space is important
     # order is important
 
-    ' ppt' : '<file_type> ppt </file_type> ',
     ' pptx' : '<file_type> pptx </file_type> ',
     ' ppts' : '<file_type> ppts </file_type> ',
+    ' ppt' : '<file_type> ppt </file_type> ',
     ' deck' : '<file_type> deck </file_type> ',
     ' decks' : '<file_type> decks </file_type> ',
     ' presentation' : '<file_type> presentation </file_type> ',
     ' presentations' : '<file_type> presentations </file_type> ',
     ' powerpoint' : '<file_type> powerpoint </file_type> ',
+    ' PowerPoint' : '<file_type> PowerPoint </file_type> ',
     ' powerpoints' : '<file_type> powerpoints </file_type> ',
     # add for seperate
     ' power point' : '<file_type> power point </file_type> ',
@@ -122,6 +123,11 @@ fileTypeTagWoDotInFileKeywordOrFileName={
     ' doc' : '<file_type> doc </file_type> ',
     ' docx' : '<file_type> docx </file_type> ',
     ' docs' : '<file_type> docs </file_type> ',
+    # add for upper case
+    ' Doc' : '<file_type> Doc </file_type> ',
+    ' Docx' : '<file_type> Docx </file_type> ',
+    ' Docs' : '<file_type> Docs </file_type> ',
+
     ' spec' : '<file_type> spec </file_type> ',
     ' excel' : '<file_type> excel </file_type> ',
     ' excels' : '<file_type> excels </file_type> ',
@@ -167,12 +173,13 @@ fileTypeTagWoDotInFileKeywordOrFileName={
     ' mpt' : '<file_type> mpt </file_type> ',
     # no mention in spec
     # move it to not tag
-    #' word' : '<file_type> word </file_type> ',
+    ' word' : '<file_type> word </file_type> ',
 
 
     # keep it as tag
     ' picture' : '<file_type> picture </file_type> ',
     ' music' : '<file_type> music </file_type> ',
+    ' txt' : '<file_type> txt </file_type> ',
 }
 
 
@@ -189,6 +196,7 @@ fileTypeTagWDotInFileKeywordOrFileName={
     '.presentation' : '.<file_type> presentation </file_type> ',
     '.presentations' : '.<file_type> presentations </file_type> ',
     '.powerpoint' : '.<file_type> powerpoint </file_type> ',
+    '.PowerPoint' : '.<file_type> PowerPoint </file_type> ',
     '.powerpoints' : '.<file_type> powerpoints </file_type> ',
     # add for seperate
     '.power point' : '.<file_type> power point </file_type> ',
@@ -198,6 +206,12 @@ fileTypeTagWDotInFileKeywordOrFileName={
     '.doc' : '.<file_type> doc </file_type> ',
     '.docx' : '.<file_type> docx </file_type> ',
     '.docs' : '.<file_type> docs </file_type> ',
+    # add for upper case
+    '.Doc' : '.<file_type> Doc </file_type> ',
+    '.Docx' : '.<file_type> Docx </file_type> ',
+    '.Docs' : '.<file_type> Docs </file_type> ',
+
+    
     '.spec' : '.<file_type> spec </file_type> ',
     '.excel' : '.<file_type> excel </file_type> ',
     '.excels' : '.<file_type> excels </file_type> ',
@@ -243,11 +257,12 @@ fileTypeTagWDotInFileKeywordOrFileName={
     '.mpt' : '.<file_type> mpt </file_type> ',
     # no mention in spec
     # move it to not tag
-    #'.word' : '.<file_type> word </file_type> ',
+    '.word' : '.<file_type> word </file_type> ',
 
     # keep it as tag
     '.picture' : '.<file_type> picture </file_type> ',
     '.music' : '.<file_type> music </file_type> ',
+    '.txt' : '.<file_type> txt </file_type> ',
 }
 
 fileTypeTagWDotSpaceInFileKeywordOrFileName={
@@ -263,6 +278,7 @@ fileTypeTagWDotSpaceInFileKeywordOrFileName={
     '. presentation' : '. <file_type> presentation </file_type> ',
     '. presentations' : '. <file_type> presentations </file_type> ',
     '. powerpoint' : '. <file_type> powerpoint </file_type> ',
+    '. PowerPoint' : '. <file_type> PowerPoint </file_type> ',
     '. powerpoints' : '. <file_type> powerpoints </file_type> ',
     # add for seperate
     '. power point' : '. <file_type> power point </file_type> ',
@@ -271,6 +287,11 @@ fileTypeTagWDotSpaceInFileKeywordOrFileName={
     '. doc' : '. <file_type> doc </file_type> ',
     '. docx' : '. <file_type> docx </file_type> ',
     '. docs' : '. <file_type> docs </file_type> ',
+    # add for upper case
+    '. Doc' : '. <file_type> Doc </file_type> ',
+    '. Docx' : '. <file_type> Docx </file_type> ',
+    '. Docs' : '. <file_type> Docs </file_type> ',
+
     '. spec' : '. <file_type> spec </file_type> ',
     '. excel' : '. <file_type> excel </file_type> ',
     '. excels' : '. <file_type> excels </file_type> ',
@@ -317,27 +338,51 @@ fileTypeTagWDotSpaceInFileKeywordOrFileName={
     # no mention in spec
 
     # move it to not tag
-    #'. word' : '. <file_type> word </file_type> ',
+    '. word' : '. <file_type> word </file_type> ',
 
     # keep it as tag
     '. picture': '. <file_type> picture </file_type> ',
     '. music': '. <file_type> music </file_type> ',
+    '. txt': '. <file_type> txt </file_type> ',
 }
 
-
 fileTypeNotTag={
-    ' Word',
-    ' word',
-    ' microsoft word',
-    " word's",
-    " Word's",
+    #' Word',
+    #' word',
+    #' Words',
+    #' words',
+    #" word's",
+    #" Word's",
     ' text',
     ' Text',
-    
+    ' word pad',
+    ' wordpad',
+    ' note pad',
+    ' notepad',
+    ' adobe acrobat',
+    ' xl',
     # . as word
     ' dot',
     ' Dot',
     ' scanned',    
+    }
+
+# i reverse as tag
+# might be changed in the future
+fileTypeReservedTag={
+    ' Word',
+    ' word',
+    ' Words',
+    ' words',
+    " word's",
+    " Word's",
+    ' Microsoft word',
+    ' microsoft word',
+    ' Microsoft office word',
+    ' microsoft office word',
+    ' word xml',
+    ' Excel sheet',
+    ' excel sheet',
     }
 
 
@@ -732,8 +777,9 @@ with codecs.open('teams_slot_training.tsv', 'r', 'utf-8') as fin:
                      "looking",
                      "looked",
                      "reviewed",
-                     "titled",
-                     "called",                        
+                     #"titled",
+                     #"called",
+                     "marked",
                      ])
             contactNames = ["i",
                             "I"
@@ -918,7 +964,8 @@ with codecs.open('teams_slot_training.tsv', 'r', 'utf-8') as fin:
                 # file_keyword / filename / file_typeto file_name and file_type
                 # this routine is also good for teamspace_navigate but right know teams's navigation data is filterde
                 # tune it in the future
-                if xmlpair.startswith("<file_keyword>") or xmlpair.startswith("<file_name>") or  xmlpair.startswith("<file_type>"):
+                #if xmlpair.startswith("<file_keyword>") or xmlpair.startswith("<file_name>") or  xmlpair.startswith("<file_type>"):
+                if xmlpair.startswith("<file_keyword>") or xmlpair.startswith("<file_name>"):
                     match = False
                     # with . and space fileTypeTagWDotSpaceInFileKeywordOrFileName
                     # this need to done before "no .and space from fileTypeTagWoDotInFileKeywordOrFileName" and # with . from fileTypeTagWDotInFileKeywordOrFileName
@@ -962,7 +1009,7 @@ with codecs.open('teams_slot_training.tsv', 'r', 'utf-8') as fin:
                                 #print(newName)
                                 #print(key)
                                 if len(newName) > 0:
-                                    newPair = "<file_name> " + newName + " </file_name> " + fileTypeTagWoDotInFileKeywordOrFileName[key]
+                                    newPair = "<file_keyword> " + newName + " </file_keyword> " + fileTypeTagWoDotInFileKeywordOrFileName[key]
                                 else:
                                     newPair = fileTypeTagWoDotInFileKeywordOrFileName[key]
                                 slot = slot.replace(xmlpair, newPair)
@@ -991,21 +1038,39 @@ with codecs.open('teams_slot_training.tsv', 'r', 'utf-8') as fin:
                     #if (linestrs[0] == "help me find my excel documents"):
                     #    print(xmlpair)
                     #    print(xmlValue)
-                    for key in fileTypeTagWoDotInFileKeywordOrFileName:
-                        if xmlValue == (key+ " documents ").strip():
-                            #print(slot)
-                            slot = slot.replace(xmlpair, "<file_type>" + key + " </file_type>" + " documents")
-                        elif xmlValue == (key+ " document ").strip():
-                            #print(slot)
-                            slot = slot.replace(xmlpair, "<file_type>" + key + " </file_type>" + " document")
-                            
-                    for key in fileTypeNotTag:
-                        if xmlValue == (key+ " documents ").strip():
-                            #print(slot)
-                            slot = slot.replace(xmlpair, (key+ " documents ").strip())
-                        elif xmlValue == (key+ " document ").strip():
-                            #print(slot)
-                            slot = slot.replace(xmlpair, (key+ " document ").strip())
+
+
+                    match = False
+                    if not match:
+                        for key in reversed(sorted(fileTypeTagWoDotInFileKeywordOrFileName)):
+                            if xmlValue == (key+ " documents ").strip():
+                                #print(slot)
+                                slot = slot.replace(xmlpair, "<file_type>" + key + " </file_type>" + " documents")
+                                match = True
+                            elif xmlValue == (key+ " document ").strip():
+                                #print(slot)
+                                slot = slot.replace(xmlpair, "<file_type>" + key + " </file_type>" + " document")
+                                match = True
+                    if not match:        
+                        for key in fileTypeNotTag:
+                            if xmlValue == (key+ " documents ").strip():
+                                #print(slot)
+                                slot = slot.replace(xmlpair, (key+ " documents ").strip())
+                                match = True
+                            elif xmlValue == (key+ " document ").strip():
+                                #print(slot)
+                                slot = slot.replace(xmlpair, (key+ " document ").strip())
+                                match = True
+                                
+                    if not match:        
+                        for key in fileTypeReservedTag:
+                            if xmlValue == (key+ " documents ").strip():
+                                slot = slot.replace(xmlpair, "<file_type>" + key + " </file_type>" + " documents")
+                                match = True
+                            elif xmlValue == (key+ " document ").strip():
+                                #print(slot)
+                                slot = slot.replace(xmlpair, "<file_type>" + key + " </file_type>" + " document")
+                                match = True
 
 
                 # to
@@ -1039,6 +1104,21 @@ with codecs.open('teams_slot_training.tsv', 'r', 'utf-8') as fin:
                     newPair = xmlpair.replace("<contact_name>", "<to_contact_name>")
                     newPair = newPair.replace("</contact_name>", "</to_contact_name>")
                     slot = slot.replace(xmlpair, newPair)
+
+            # file_keywrod to file_name 
+            xmlpairs = re.findall("(<.*?>.*?<\/.*?>)", slot)
+            for xmlpair in xmlpairs:
+                if  slot.find("called "+ xmlpair) != -1 or \
+                    slot.find("named "+ xmlpair) != -1 or \
+                    slot.find("titled "+ xmlpair) != -1:
+
+                    #print(slot)
+                        
+                    newPair = xmlpair.replace("<file_keyword>", "<file_name>")
+                    newPair = newPair.replace("</file_keyword>", "</file_name>")
+                    slot = slot.replace(xmlpair, newPair)
+            
+            
 
 
             # after all slot replacement
