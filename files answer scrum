@@ -700,11 +700,10 @@ slot level
           先留著等complain 再說  雖然list沒有說
      ? photographs
           先留著等complain 再說  雖然list沒有說
-	  
      ? letter /letters
        先不當作data_type 因為spec 沒有說
      ? text
-       先不當作data_type 因為spec 沒有說 
+       先留著 等complain 再說 雖然list 沒有說
      ? txt
        先留著等complain 再說  雖然list沒有說
      ? lock
