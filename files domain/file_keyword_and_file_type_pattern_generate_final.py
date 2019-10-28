@@ -58,6 +58,7 @@ def parse(slotList):
         samleOpenText(typeList, slot.replace('_', '').upper() + 'HOLDER', slotListDictionary)
     
     outputSet = [];
+    outputIntentSet = [];
     for pattern in patternSet:
 
         # update seed 
@@ -90,12 +91,20 @@ def parse(slotList):
                     slotXml = slotXml.replace(key, value[inRangeIndex]);
         
             outputSet.append('\t'.join(['0', query, intent, domain, slotXml]));
+            #TurnNumber	PreviousTurnIntent	query	intent
+            outputIntentSet.append('\t'.join(['0',"\t"+query,intent]));
 
     outputSlot = '_'.join(slotList);
     
+    # for slot
     with codecs.open('data_synthesised_' + outputSlot + '.tsv', 'w', 'utf-8') as fout:
         for item in outputSet:
             fout.write(item + '\r\n');
+
+    # for intent
+    with codecs.open('intent_data_synthesised_' + outputSlot + '.tsv', 'w', 'utf-8') as fout:
+        for item in outputIntentSet:
+            fout.write(item + '\r\n'); 
 
 
 if __name__ == '__main__':
