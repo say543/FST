@@ -479,6 +479,16 @@ blackListQuerySet = {
     "Locate savedpresentation3",
     '"Cortana, my friend sent me a saved document, where is it?"',
     "two thousand fourteen",
+    "cortana search for rose new cv word document",
+    "Rose my files.",
+    "i am trying to locate a file that i recorded an audiophile where can i look",
+    "Cortana, my friend sent me a saved document, where is it?",
+    "system32 file repository",
+    "where is my file explorer",
+    "open the p drive on my file explorer",
+    "cortana where is file explorer",
+    "Cortina, please find the test documents from 7/31/14 to 8/15/14 that state test on them and are pages 1 to 3 with Jim in the sub text.",
+    "cortana find don't drop that in my music",
     # key word to remove
     # need to check in the future
     "computer",
@@ -505,6 +515,7 @@ blackListQuerySet = {
     "review note",
     "preview notes",
     "preview note",
+    "file explorer",
     # for debug purpose
     # use regular expression to do in the futre
     "christmas list",
