@@ -2,14 +2,17 @@ import codecs;
 import random;
 from collections import defaultdict;
 
-
+# 1: slot only
+# 2: intent only
+# 5: both
+synthetic_mode = 1;
 
 # add hyper paramter if unbalanced
 # might not be enough 
 hyper_parameter = 200
 
 # multiple holder randomization
-multiple_holder_hyperparameter = 3
+multiple_holder_hyperparameter = 2
 
 
 def getListForType(filename):
@@ -103,7 +106,11 @@ def parse(slotList, removeSlotList, doubleSlotList):
             for key, value in slotListDictionary.items():
                 if key in query:
                     if key in MultipleHolderName:
-                        cnt = random.randint(0, multiple_holder_hyperparameter)+1
+                        # include
+                        #cnt = random.randint(0, multiple_holder_hyperparameter)+1
+                        cnt = random.randint(1, multiple_holder_hyperparameter)
+
+                        #print(cnt)
 
                         combineValue = ""
                         for i in range(0,cnt):
@@ -131,14 +138,19 @@ def parse(slotList, removeSlotList, doubleSlotList):
 
     outputSlot = '_'.join(slotList);
 
-    # for slot
-    with codecs.open('data_synthesised_' + outputSlot + '.tsv', 'w', 'utf-8') as fout:
-        for item in outputSet:
-            fout.write(item + '\r\n');
-    # for intent
-    with codecs.open('intent_data_synthesised_' + outputSlot + '.tsv', 'w', 'utf-8') as fout:
-        for item in outputIntentSet:
-            fout.write(item + '\r\n');            
+    if synthetic_mode == 1 or synthetic_mode == 5:
+        # for slot
+        print("generating slot synthetic...")
+        with codecs.open('data_synthesised_' + outputSlot + '.tsv', 'w', 'utf-8') as fout:
+            for item in outputSet:
+                fout.write(item + '\r\n');
+
+    if synthetic_mode == 2 or synthetic_mode == 5:
+        # for intent
+        print("generating intent synthetic...")
+        with codecs.open('intent_data_synthesised_' + outputSlot + '.tsv', 'w', 'utf-8') as fout:
+            for item in outputIntentSet:
+                fout.write(item + '\r\n');            
 
 if __name__ == '__main__':
     slotList = ['file_keyword', 'file_type', 'file_action', 'contact_name', 'file_name_verb', 'date'];
