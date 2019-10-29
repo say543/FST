@@ -34,6 +34,39 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 
 
 ==============
+lexicon bin for slot training
+
+this file name
+slots.lexicon.desc.txt
+
+
+MLGTools.exe 直接生成bin
+
+1.2.341 folder 沒有MLGTool  
+CMF 是共用底層的c++ 不用用到MLGTools.exe
+兩個行為一不一樣很難說
+
+==============
+you can use mlgtool to compile this bin directly 
+
+/? 1.2.341 no MLGTools.exe so using  1.2.301
+E:\fileAnswer_data_synthesis\CMF_training> .\bin\CLU.Core.1.2.305\MLGTools.exe feat2proc -fsrc=E:\fileAnswer_data_synthesis\CMF_training\resource\LexiconFiles\slots.lexicon.desc.txt -fbin=E:\fileAnswer_data_synthesis\CMF_training\files_enus_mv1.slot.mlg.lexicon.bin
+
+this will generate bin 
+
+已知
+// . 不work
+calendar_positive4:RegexICL(^(skype|join|connect|teams) .*?(event|meeting|appointment)s?$)
+改成
+// a-z ok
+share_targetname_positive1:RegexICL(^(skype|join|connect|teams) [a-z ]* (event|meeting|appointment)s?$)
+
+
+
+
+
+
+==============
 email title 可以之後討論
 RE: Teams client id on Mobile
 ==============
