@@ -214,6 +214,16 @@ MLG34DomainClassifier
 yue : 因為binary classfieir 不是查任何東西  就是positive 跟negative 
 
 
+=================
+teams skill triggered form
+
+https://msasg.visualstudio.com/Cortana/_git/teams-skills?path=%2Fprivate%2FTeamsSkills%2FTeams%2Fsrc%2FTaskForms%2FTeamsNavigation.json&version=GBmaster
+=================
+TeamsNavigation.json
+Triggeres 
+有很多的open_setting
+
+
 
 ==============================
 evaluation wrong information when running teamsMarch2019Test3K
