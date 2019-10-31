@@ -1,0 +1,391 @@
+{
+  /** for schema **/
+  "intent_file": "./resource/intents.txt",
+  "slot_file": "./resource/slots.txt",
+
+  /** for statistic model **/
+  "domain_train_data": "./resource/Data/Domain_Training.tsv",
+  "domain_train_data_1":"./resource/Data/positive_additional_domain.tsv",
+  "domain_train_dsat":"./resource/Data/dsat_fixes_domain_train.tsv",
+  "domain_train_data_neg_0": "./resource/Data/filter_calendar_neg.train.domain.tsv",
+  "domain_train_data_neg_1": "./resource/Data/filter_calendar_neg.train.domain.all_domain_training_data_merged.tsv",
+  "domain_train_data_neg_2":"./resource/Data/negative_additional_domain.tsv",
+  "domain_train_answers":"./resource/Data/people_answer_domain_train.tsv",
+  "intent_train_data": "./resource/Data/Intent_Training.tsv",
+  "intent_train_dsat":"./resource/Data/dsat_fixes_intent_train.tsv", 
+  "intent_train_answers":"./resource/Data/people_answer_intent_train.tsv",
+  "slot_train_data": "./resource/Data/Slot_Training.tsv",
+  "slot_train_dsat":"./resource/Data/dsat_fixes_slot_train.tsv",
+  "slot_train_answers":"./resource/Data/people_answer_slot_train.tsv",
+  "domain_evaluate_file": "./resource/Data/TargetSet_Domain_Evaluation.tsv",
+  "intent_evaluate_file": "./resource/Data/TargetSet_Intent_Evaluation.tsv",
+  "slot_evaluate_file": "./resource/Data/TargetSet_Slot_Evaluation.tsv",
+
+  /** for model lexicon & pcfg **/
+  "intent_lexicons_file": "./resource/lexicons/ipe_lu_threshold_people_enus_MV.intentsslots.lexicon.desc.txt",
+  "slot_lexicons_file": "./resource/lexicons/ipe_lu_threshold_people_enus_MV.intentsslots.lexicon.desc.txt",
+  "people_answer_grammar_file": "./resource/pcfg/people_answers_grammar_v1.xml",
+  "people_answer_lexicon_file": "./resource/pcfg/PeopleAnswersLexiconFilters.txt",
+
+  /** FST pattern match **/
+  "pattern_infile_path": "./resource/Pattern/",
+  "pattern_domain_infile_condition_file": "./resource/Pattern/domain.pattern.conditions.txt",
+  "pattern_intent_infile_condition_file": "./resource/Pattern/intent.pattern.conditions.txt",
+  "pattern_slot_infile_condition_file": "./resource/Pattern/slot.pattern.conditions.txt",
+
+  /* Carina annotated pattern tsv */
+  "annotated_domain_pattern_file": "./resources/patterns/domain.pattern.annotation.tsv",
+  "annotated_intent_pattern_file": "./resources/patterns/intent.pattern.annotation.tsv",
+  "annotated_slot_pattern_file": "./resources/patterns/slot.pattern.annotation.tsv",
+
+  /** for query match **/
+  "query_domain_file": "./resources/hotfixes/domain.hotfix.annotation.tsv",
+  "query_intent_file": "./resources/hotfixes/intent.hotfix.annotation.tsv",
+  "query_slot_file": "./resources/hotfixes/slot.hotfix.annotation.tsv",
+
+  /** for timex and metadata **/
+  "timex_grammar_file": "./resources/timex.grammar.xml",
+  "timex_datetime_slot_file": "./resources/datetime.slots.tsv",
+  "canonical_value_file": "./resources/canonical.value.tsv",
+  "canonical_slots_file": "./resources/canonical.slots.tsv",
+  "intent_external_feature_columns": ["PreviousTurnIntent"],
+  "slot_external_feature_columns": [],
+  
+
+  "common": {
+    "lu_schema": {
+      "domain": "people",
+      "intents": {
+        "intent_file": "${intent_file}",
+        "sort": false
+      },
+      "slots": {
+        "sort": false,
+        "slot_file": "${slot_file}"
+      }
+    },
+    "prefix": "cortana_people_enus_mv1",
+    "preprocess_domain": "cmfgeneric",
+    "intent_classes": "${common.prefix}.intents.classes.txt",
+    "slot_entities": "${common.prefix}.slots.config.xml"
+  },
+
+  "preprocess": {
+    "priority": 0,
+    "common": {
+      "preprocess_domain": "${common.preprocess_domain}",
+      "prefix": "cortana_${common.preprocess_domain}_enus_mv1"
+    },
+    "use_extended_lu_schema": false,
+    "preprocess_pipeline_prefix": "${preprocess.common.prefix}.preprocess",
+    "pipeline": {
+      "preprocess_fst": {
+        "name": "${preprocess.common.prefix}.preprocess.fst"
+      },
+      "timex_preprocess_fst": {
+        "name": "${preprocess.common.prefix}.timex.preprocess.fst"
+      }
+    },
+    "qas_inputs": {
+      "conditions": [
+        {
+          "feature_name": "ExternalFeatureSet:PreviousTurnDomain",
+          "type": "string"
+        },
+        {
+          "feature_name": "ExternalFeatureSet:PreviousTurnIntent",
+          "type": "string"
+        },
+        {
+          "feature_name": "ExternalFeatureSet:TaskFrameStatus",
+          "type": "string"
+        },
+        {
+          "feature_name": "ExternalFeatureSet:TaskFrameEntityStates",
+          "type": "list"
+        },
+        {
+          "feature_name": "ExternalFeatureSet:TaskFrameName",
+          "type": "string"
+        },
+        {
+          "feature_name": "ExternalFeatureSet:TaskFrameGUID",
+          "type": "string"
+        }
+      ]
+    },
+    "qas_outputs": {
+      "preprocessed_query": "${preprocess.common.prefix}_preprocessed_query",
+      "preprocessed_intertoken": "${preprocess.common.prefix}_preprocessed_intertoken",
+      "preprocessed_lowercase_query": "${preprocess.common.prefix}_preprocessed_lowercase_query",
+      "timex_preprocessed_query": "${preprocess.common.prefix}_timex_prepropcessed_query",
+      "preprocessed_conditions_union": "${preprocess.common.prefix}_preprocessed_conditions_union",
+      "preprocessed_conditions_without_query": "${preprocess.common.prefix}_preprocessed_conditions_without_query"
+    },
+    "scripts": {
+      "build": "preprocess.exe -c %processor_config% -o %final% -t %tmp%"
+    }
+  },
+
+  "data_preprocess": {
+    // this path can related to runtime
+    "preprocess_pipeline": "preprocess/final/${preprocess.preprocess_pipeline_prefix}.pipeline.txt",
+    "preprocessed_feature": "${preprocess.qas_outputs.preprocessed_lowercase_query}",
+    "external_features": "${preprocess.qas_inputs.conditions}",
+    "punctuation_extend": [],
+    "tnitn_extend": false
+  },
+
+  "data_preprocess_aspect": {
+    "scripts": {
+      "build": "data_preprocess.exe -c %build_config% -t %tmp%/preprocess -o %tmp%/preprocess.done",
+      "test": "cd"
+    }
+  },
+
+  "domain_svm": {
+    "priority": 0,
+    "common": "${common}",
+    "data_preprocess": "${data_preprocess}",
+    "use_extended_lu_schema": false,
+    "query_column": "query",
+    "class_column": "domain",
+    "external_feature_column": null,
+    "train_data": [
+      {
+        "file": "${domain_train_data}",
+        "weight": 1
+      },
+      {
+        "file": "${domain_train_data_neg_0}",
+        "weight": 1
+      },
+      {
+        "file": "${domain_train_data_neg_1}",
+        "weight": 1
+      },
+      {
+        "file": "${domain_train_data_1}",
+        "weight": 1
+      },
+      {
+        "file": "${domain_train_dsat}",
+        "weight": 1
+      },
+      {
+        "file": "${domain_train_data_neg_2}",
+        "weight": 1
+      },
+      {
+        "file": "${domain_train_answers}",
+        "weight": 1      
+      }
+    ],
+    "test_data": [
+      {
+        "file": "${domain_evaluate_file}"
+      }
+    ],
+    "lexicon_desc_file": "${intent_lexicons_file}",
+    "pcfg_grammar": {
+      "grammar_file": "${people_answer_grammar_file}",
+      "lexicon_desc_file": "${people_answer_lexicon_file}"
+    },
+    "algo": "domain_svm",
+    "qas_inputs": {
+      "preprocessed_query": "${preprocess.qas_outputs.preprocessed_lowercase_query}"
+    },
+    "qas_outputs": {
+      "output_score": "${common.prefix}_domain_svm_score"
+    },
+    "scripts": {
+      "build": "maaf_statistic_model.exe -c %processor_config% -t %tmp% -o %final%",
+      "postbuild": "maaf_statistic_model_test.exe -c %processor_config% -m %tmp%/build_tgt/domain -o %tmp%/test"
+    }
+  },
+  
+//  "domain_pattern_match": {
+//    "priority": 0,
+//    "common": "${common}",
+//    "use_extended_lu_schema": false,
+//    "type": "domain",
+//    "reference_lexicon_path": "",
+//    "compile_from_infile": {
+//      "conditions_file": "${pattern_domain_infile_condition_file}",
+//      "infile_folder": "${pattern_infile_path}"
+//    },
+//    "qas_inputs": {
+//      "preprocessed_query": "${preprocess.qas_outputs.preprocessed_lowercase_query}",
+//      "input_score": "${domain_svm.qas_outputs.output_score}",
+//      "condition_feature": "${preprocess.qas_outputs.preprocessed_conditions_union}"
+//    },
+//    "qas_outputs": {
+//      "override_score": "${common.prefix}_domain_pattern_hotifx_score"
+//    },
+//    "scripts": {
+//      "build": "pattern_match.exe -c %processor_config% -t %tmp% -o %final%"
+//    }
+//  },
+  
+  "domain_stub": {
+    "priority": 0,
+    "common": "${common}",
+    "use_extended_lu_schema": false,
+    "type": "domain",
+    "qas_inputs": {
+      "domain_score": "${domain_svm.qas_outputs.output_score}"
+    },
+    "scripts": {
+      "build": "qas_processor.exe -c %processor_config% -t %tmp% -o %final%"
+    }
+  },
+  
+  "intent_svm": {
+    "priority": 0,
+    "common": "${common}",
+    "data_preprocess": "${data_preprocess}",
+    "use_extended_lu_schema": false,
+    "external_feature_column": "${intent_external_feature_columns}",
+    "query_column": "query",
+    "class_column": "intent",
+    "train_data": [
+      {
+        "file": "${intent_train_data}",
+        "weight": 1
+      },
+      {
+        "file": "${intent_train_dsat}",
+        "weight": 1
+      },
+      {
+        "file": "${intent_train_answers}",
+        "weight": 1      
+      }
+    ],
+    "test_data": [
+      {
+        "file": "${intent_evaluate_file}"
+      }
+    ],
+    "lexicon_desc_file": "${intent_lexicons_file}",
+    "pcfg_grammar": {
+      "grammar_file": "${people_answer_grammar_file}",
+      "lexicon_desc_file": "${people_answer_lexicon_file}"
+    },
+    "algo": "intent_svm",
+    "qas_inputs": {
+      "preprocessed_query": "${preprocess.qas_outputs.preprocessed_lowercase_query}",
+      "external_feature_sets": [
+        "ExternalFeatureSet:PreviousTurnIntent"
+      ]
+    },
+    "qas_outputs": {
+      "output_score": "${common.prefix}_intent_svm_score"
+    },
+    "scripts": {
+      "build": "maaf_statistic_model.exe -c %processor_config% -t %tmp% -o %final%",
+      "postbuild": "maaf_statistic_model_test.exe -c %processor_config% -m %tmp%/build_tgt/intent -o %tmp%/test"
+    }
+  },
+/*  "intent_pattern_match": {
+    "priority": 0,
+    "common": "${common}",
+    "use_extended_lu_schema": false,
+    "type": "intent",
+    "reference_lexicon_path": "",
+    "compile_from_infile": {
+      "conditions_file": "${pattern_intent_infile_condition_file}",
+      "infile_folder": "${pattern_infile_path}"
+    },
+    "qas_inputs": {
+      "preprocessed_query": "${preprocess.qas_outputs.preprocessed_lowercase_query}",
+      "input_score": "${intent_svm.qas_outputs.output_score}",
+      "condition_feature": "${preprocess.qas_outputs.preprocessed_conditions_union}"
+    },
+    "qas_outputs": {
+      "override_score": "${common.prefix}_intent_pattern_hotfix_score"
+    },
+    "scripts": {
+      "build": "pattern_match.exe -c %processor_config% -t %tmp% -o %final%"
+    }
+  },
+*/  
+  "intent_stub": {
+    "priority": 0,
+    "common": "${common}",
+    "use_extended_lu_schema": true,
+    "type": "intent",
+    "qas_inputs": {
+      "intent_score": "${intent_svm.qas_outputs.output_score}"
+    },
+    "scripts": {
+      "build": "qas_processor.exe -c %processor_config% -t %tmp% -o %final%"
+    }
+  },
+	
+  "slot_lccrf": {
+    "priority": 0,
+    "common": "${common}",
+    "data_preprocess": "${data_preprocess}",
+    "use_extended_lu_schema": false,
+    "queryxml_column": "QueryXml",
+    "train_data": [
+      {
+        "file": "${slot_train_data}",
+        "weight": 1
+      },
+      {
+        "file": "${slot_train_dsat}",
+        "weight": 1
+      },
+      {
+        "file": "${slot_train_answers}",
+        "weight": 1      
+      }
+    ],
+    "test_data": [
+      {
+        "file": "${slot_evaluate_file}"
+      }
+    ],
+    "max_iteration": "600",
+    "lexicon_desc_file": "${slot_lexicons_file}",
+    "pcfg_grammar": {
+      "grammar_file": "${people_answer_grammar_file}",
+      "lexicon_desc_file": "${people_answer_lexicon_file}"
+    },
+    "algo": "slot_lccrf",
+    "qas_inputs": {
+      "preprocessed_query": "${preprocess.qas_outputs.preprocessed_lowercase_query}"
+    },
+    "qas_outputs": {
+      "output_score": "${common.prefix}_slot_lccrf_tag"
+    },
+    "scripts": {
+      "build": "maaf_statistic_model.exe -c %processor_config% -t %tmp% -o %final%",
+      "postbuild": "maaf_statistic_model_test.exe -c %processor_config% -m %tmp%/build_tgt/slot -o %tmp%/test"
+
+    }
+  },
+  "slot_stub": {
+    "priority": 0,
+    "common": "${common}",
+    "use_extended_lu_schema": false,
+    "type": "slot",
+    "qas_inputs": {
+      "slot_score": "${slot_lccrf.qas_outputs.output_score}",
+      "preprocessed_query": "${preprocess.qas_outputs.preprocessed_query}",
+      "preprocess_intertoken": "${preprocess.qas_outputs.preprocessed_intertoken}"
+    },
+    "scripts": {
+      "build": "qas_processor.exe -c %processor_config% -t %tmp% -o %final%"
+    }
+  },
+  
+  "post": {
+    "scripts": {
+      "build": "qas_merge.exe -c %build_config% -o %final%",
+      "test": "cd"
+    }
+  }
+}
