@@ -489,6 +489,20 @@ blackListQuerySet = {
     "cortana where is file explorer",
     "Cortina, please find the test documents from 7/31/14 to 8/15/14 that state test on them and are pages 1 to 3 with Jim in the sub text.",
     "cortana find don't drop that in my music",
+    "i need you to show me the note about my lunch date with jim.",
+
+    #  for a xxx file potentail filter-out queires
+    "search file a",
+    "Locate file A",
+    "document about a",
+    "Find Excel spread A.",
+    "view slide a and b.",
+    "documents a",
+    "notes from a broad",
+    'Find slides "A" and "B',
+    "find my notes re a c filter changes'",
+    "Please find A presentation",
+
     # key word to remove
     # need to check in the future
     "computer",
