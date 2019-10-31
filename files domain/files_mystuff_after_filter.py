@@ -493,15 +493,24 @@ blackListQuerySet = {
 
     #  for a xxx file potentail filter-out queires
     "search file a",
+    "search files a",
     "Locate file A",
     "document about a",
     "Find Excel spread A.",
     "view slide a and b.",
     "documents a",
+    "document a",
     "notes from a broad",
     'Find slides "A" and "B',
-    "find my notes re a c filter changes'",
+    "find my notes re a c filter changes",
     "Please find A presentation",
+
+
+    # problem for filekeyword and contact name
+    # potential filter
+    '''
+    "search for lee dot doc",
+    '''
 
     # key word to remove
     # need to check in the future
