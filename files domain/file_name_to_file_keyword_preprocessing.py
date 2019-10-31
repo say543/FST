@@ -266,6 +266,13 @@ with codecs.open('file_name.txt', 'r', 'utf-8') as fin:
                     ignore = True
 
 
+        # filtering meetigwith people
+        if not ignore:
+            if line.lower().startswith("meeting with") or line.lower().startswith("meetings with"):
+                print(line)
+                ignore = True
+
+        # filtering starting with my
         if not ignore:
             if line.lower().startswith("my"):
                 ignore = True
