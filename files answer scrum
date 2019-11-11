@@ -100,7 +100,14 @@ you can use mlgtool to compile this bin directly
 /? 1.2.341 no MLGTools.exe so using  1.2.301
 E:\fileAnswer_data_synthesis\CMF_training> .\bin\CLU.Core.1.2.305\MLGTools.exe feat2proc -fsrc=E:\fileAnswer_data_synthesis\CMF_training\resource\LexiconFiles\slots.lexicon.desc.txt -fbin=E:\fileAnswer_data_synthesis\CMF_training\files_enus_mv1.slot.mlg.lexicon.bin
 
-this will generate bin 
+this will generate bin  in directory
+E:\fileAnswer_data_synthesis\CMF_training\
+
+with filename
+files_enus_mv1.slot.mlg.lexicon.bin
+
+
+
 
 已知
 // . 不work
