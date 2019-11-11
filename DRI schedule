@@ -58,6 +58,15 @@ serviceTag 就可以去cortana log viewer
 query PROD (or ppe?) 來找log 看看model 有沒有被deployment 
 
 
+https://brblogs.skype.com/Logs/GetLogByContainerId?containerId=8e0cd785-df0a-42d0-a0f4-29bd9f1ec038
+這邊的teamclient log
+裡面有com.microsoft.skype.teams.dev.0.log or com.microsoft.skype.teams.dev.1.log 
+
+找serviceTag 在file 裡面最下面的 serviceTag 可能就是可以query 的traceid
+
+
+
+
 
 =================
 general inforamtion
