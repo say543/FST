@@ -39,8 +39,14 @@ copyfile("..\\Open_Text_Synthesis\\file_keyword_file_type_file_action_contact_na
 
 copyfile("..\\Open_Text_Synthesis\\file_type_and_contact_name_to_contact_name\\data_synthesised_contact_name_file_type_to_contact_name.tsv" , "data_synthesised_contact_name_file_type_to_contact_name.tsv")
 
+copyfile("..\\Open_Text_Synthesis\\file_keyword_file_type_to_contact_name\\data_synthesised_file_keyword_file_type_to_contact_name.tsv" , "data_synthesised_file_keyword_file_type_to_contact_name.tsv")
+
+
 # comment this since date should be part of file_keyword
-#copyfile("..\\Open_Text_Synthesis\\file_keyword_file_type_file_action_contact_name_date\\data_synthesised_file_keyword_file_type_file_action_contact_name_file_name_verb_date.tsv" , "data_synthesised_file_keyword_file_type_file_action_contact_name_file_name_verb_date.tsv")
+
+
+# reopen it but merge date into filekeyword into a single slots
+copyfile("..\\Open_Text_Synthesis\\file_keyword_file_type_file_action_contact_name_date\\data_synthesised_file_keyword_file_type_file_action_contact_name_file_name_verb_date.tsv" , "data_synthesised_file_keyword_file_type_file_action_contact_name_file_name_verb_date.tsv")
 
 ############################################
 # copy file from data folder directly
