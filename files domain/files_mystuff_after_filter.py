@@ -645,8 +645,22 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
         # it will override existing function
         # ? this can be improved by using set for blacklistQuery and o(1) compare
         for blackListQuery in sorted (blackListQuerySet) :
+
+
+            #print(linestrs[0])
+
+
+            # ? not sure why this cannot capture any skip for this query
+            #if linestrs[0] == 'cortana where is the speakers on my computer' and blackListQuery =='computer':
+            #    print(blackListQuery)
+            
             if linestrs[0].lower().find(blackListQuery.lower()) != -1:
-                #print(linestrs[0])
+
+                #if linestrs[0] == 'cortana where is the speakers on my computer' and blackListQuery =='computer':
+                #    print("inside")
+
+                #if blackListQuery == 'computer':
+                #    print(linestrs[0])
                 #skipQueryCandidate.add(linestrs[0])
                 skip = True
                 break
