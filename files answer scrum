@@ -246,7 +246,31 @@ FW: LU question on File skill on Windows
 selection model needs some work
 如果沒有cutoff 大概就不需要了
 
+===========================
+mutli turn
 
+===========================
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging?path=%2Fdatasources%2FInMeeting%2Fintents.txt&version=GBmaster
+根據這個link 要support multi turn
+
+confirm
+cancel
+select_none
+reject
+
+
+1> if training 
+
+calendar 的training data
+https://cosmos09.osdinfra.net/cosmos/searchRelevance.aether.store/local/public2/datasources/cd3e40bd-f2a8-44a8-82b6-ac1551933f7d/cd3e40bd-f2a8-44a8-82b6-ac1551933f7d/preprocessed/calendar.train.intentsslots.tsv?property=info
+
+ 
+
+https://cosmos09.osdinfra.net/cosmos/searchRelevance.aether.store/local/public2/datasources/cd3e40bd-f2a8-44a8-82b6-ac1551933f7d/cd3e40bd-f2a8-44a8-82b6-ac1551933f7d/preprocessed/calendar.train.intentsslots.generated.tsv?property=info
+
+
+2> if using common domian
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging?path=%2Fmodels%2Finmeeting%2Fcortana_inmeeting_enus_mv1.domain_intents.multiturn.pipeline.txt&version=GBmaster
 
 ===========================
 retrun in selfhost ring
