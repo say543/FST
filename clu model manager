@@ -1,0 +1,27 @@
+
+如何pull model
+
+[5:48 PM] Yue Ma
+    Add model => QAS model
+​[5:48 PM] Yue Ma
+    然后选相应的client ID
+​[5:48 PM] Yue Ma
+    
+
+
+carina/modelmanager
+
+
+Edited​[5:50 PM] Chieh-Chun Chang
+    
+​[5:50 PM] Chieh-Chun Chang
+    你是說選這邊嗎
+​[5:52 PM] Yue Ma
+    对
+​[5:52 PM] Yue Ma
+    virtual service "CortanaLU"
+
+
+要選clu teams 跟選藥的domain 然後fork
+
+就可以download somewhere
