@@ -30,3 +30,5 @@ param:ClassesBaseFilename=cortana_inmeeting_enus_mv1.intents.
 param:ProbabilitiesInInput=false
 false: 這個是多加最後會normalized  , intent socre 就不會是1
 true: 這個case mapped 的intent score 會變成1
+
+p.s 似乎CMF default 生成就會加的樣子  不用做任何改動
