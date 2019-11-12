@@ -1,0 +1,13 @@
+
+從clu studio pull model 下來
+
+
+PS E:\CoreScienceDataStaging\datasources\InMeeting\queryclassificationprocessing> .\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c E:\inmeeting_data_analysis  --variant cortanamsteams -d inmeeting
+
+
+
+==========================
+看cancel 等等的multi turn behavior
+==========================
+--pdebug qd_inmeeting_common_domain_intent_featurizer
+用這個
