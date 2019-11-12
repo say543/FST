@@ -11,3 +11,22 @@ PS E:\CoreScienceDataStaging\datasources\InMeeting\queryclassificationprocessing
 ==========================
 --pdebug qd_inmeeting_common_domain_intent_featurizer
 用這個
+
+這個有common domain 的intente mapping 
+可以用來對照
+什麼common intent 要map 到哪個domain 的intent
+基本上是同名的intent map
+cortana_common_enus_mv3.intents.Classes.txt
+
+[qd_inmeeting_domaintaxonomy]
+implementationclassname=MLG34DomainTaxonomyClassifier
+input=inmeeting_intents_hotfix
+param:PassThroughCategoriesInInput=false
+param:ProbabilitiesInInput=false
+param:ConfidenceLevelThreshold=-10000.0
+param:ReferenceClassPresent=false
+param:ClassesBaseFilename=cortana_inmeeting_enus_mv1.intents.
+
+param:ProbabilitiesInInput=false
+false: 這個是多加最後會normalized  , intent socre 就不會是1
+true: 這個case mapped 的intent score 會變成1
