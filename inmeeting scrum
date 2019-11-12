@@ -18,6 +18,26 @@ PS E:\CoreScienceDataStaging\datasources\InMeeting\queryclassificationprocessing
 基本上是同名的intent map
 cortana_common_enus_mv3.intents.Classes.txt
 
+0	cancel
+1	confirm
+2	finish_task
+3	go_back
+4	reject
+5	repeat
+6	show_next
+7	show_previous
+8	start_over
+9	stop
+10	help
+11	repeat_slowly
+12	repeat_user
+13	appreciation
+14	depreciation
+15	select_none
+16	select_any
+17	select_item
+
+
 [qd_inmeeting_domaintaxonomy]
 implementationclassname=MLG34DomainTaxonomyClassifier
 input=inmeeting_intents_hotfix
@@ -32,3 +52,9 @@ false: 這個是多加最後會normalized  , intent socre 就不會是1
 true: 這個case mapped 的intent score 會變成1
 
 p.s 似乎CMF default 生成就會加的樣子  不用做任何改動
+
+
+test case 
+cancel   PreviousTurnDomain      0       1       inmeeting       1.0     -1      -1
+
+
