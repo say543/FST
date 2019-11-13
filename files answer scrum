@@ -272,6 +272,23 @@ https://cosmos09.osdinfra.net/cosmos/searchRelevance.aether.store/local/public2/
 2> if using common domian
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging?path=%2Fmodels%2Finmeeting%2Fcortana_inmeeting_enus_mv1.domain_intents.multiturn.pipeline.txt&version=GBmaster
 
+目前只有調intent
+domain score 不管  反正打算把cut0off 一起拿掉
+//cancel
+cancel\tPreviousTurnDomain\t0\t1\tfiles\t1.0\t-1      -1
+
+//reject 
+no thank you\tPreviousTurnDomain\t0\t1\tfiles\t1.0\t-1      -1
+
+//confirm
+add it\tPreviousTurnDomain\t0\t1\tfiles\t1.0\t-1      -1
+
+// select_none
+none of these\tPreviousTurnDomain\t0\t1\tfiles\t1.0\t-1      -1
+
+
+
+
 ===========================
 retrun in selfhost ring
 ===========================
