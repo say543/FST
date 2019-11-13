@@ -55,7 +55,7 @@ p.s 似乎CMF default 生成就會加的樣子  不用做任何改動
 
 
 test case 
-cancel   PreviousTurnDomain      0       1       inmeeting       1.0     -1      -1
+cancel\tPreviousTurnDomain\t0\t1\tinmeeting\t1.0\t-1\t-1
 
 
 ==========================
@@ -98,6 +98,9 @@ cortana_inmeeting_enus_mv1.slots.pattern.default.bin
 假的以前dmitry
 可以copy 到files 直接用
 rename 成files_enus_mv1.slots.pattern.default.bin
+
+
+
 
 
 
