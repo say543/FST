@@ -59,7 +59,7 @@ cancel   PreviousTurnDomain      0       1       inmeeting       1.0     -1     
 
 
 ==========================
-PromptedForSelection
+PromptedForValue
 also 考慮files 怎麼用
 ==========================
 
@@ -83,7 +83,7 @@ rename 成files_enus_mv1.slots.pattern.default.bin
 
 
 
-xxx: promptedForSelection
+xxx: PromptedForValue
 先不管inmeeting 
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging?path=%2Fdatasources%2FTeams%2Fresources%2Finfiles%2FMultiTurn%2Fslot.taskframe.file_title.promptedForValue.infile&version=GBmaster
 用teams 的file_title 來 取代file_keyword
