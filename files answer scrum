@@ -286,7 +286,8 @@ add it\tPreviousTurnDomain\t0\t1\tfiles\t1.0\t-1      -1
 // select_none
 none of these\tPreviousTurnDomain\t0\t1\tfiles\t1.0\t-1      -1
 
-
+//position_ref
+不管事single or multi turn 只要train 的對舊型
 
 
 ===========================
