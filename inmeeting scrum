@@ -58,3 +58,13 @@ test case
 cancel   PreviousTurnDomain      0       1       inmeeting       1.0     -1      -1
 
 
+==========================
+PromptedForSelection
+==========================
+
+
+[qd_inmeeting_slot_pattern_featurizer] 
+
+是一個獨立的 然後其他的fst
+
+
