@@ -288,6 +288,20 @@ none of these\tPreviousTurnDomain\t0\t1\tfiles\t1.0\t-1      -1
 
 //position_ref
 不管事single or multi turn 只要train 的對舊型
+ten one  PreviousTurnDomain      0       1       files   1.0     -1      -1
+
+
+promotedForValue for filekeyword
+marketing slide\tPreviousTurnDomain\t0\t1\tfiles\t1.0\t-1\t-1\tTaskFrameEntityStates\t0\t1\tfile_keyword:PromptedForValue\t1\t-1\t-1
+
+11302019
+no promptedFroValue 是 什麼都沒有tag ( ? 這個行為有bug因為slide 因該是要正確的type 以後確認)
+有provide 後
+整個 變成filekeyword (? 這個行為有bug 因為不知道什麼pattern 要support)
+
+但是這樣可以verify promotedForValue 是可以work的
+
+
 
 
 ===========================
