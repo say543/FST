@@ -60,11 +60,34 @@ cancel   PreviousTurnDomain      0       1       inmeeting       1.0     -1     
 
 ==========================
 PromptedForSelection
+also 考慮files 怎麼用
 ==========================
 
 
 [qd_inmeeting_slot_pattern_featurizer] 
 
 是一個獨立的 然後其他的fst
+
+
+promptedForSelection
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging?path=%2Fdatasources%2FTeams%2Fresources%2Finfiles%2FMultiTurn%2Fslot.taskframe.promptForSelection.infile&version=GBmaster
+
+參照teams 的source code
+我已經在slot partial 裡面放了覺得沒有必要
+
+cortana_inmeeting_enus_mv1.slots.pattern.default.bin
+假的以前dmitry
+可以copy 到files 直接用
+rename 成files_enus_mv1.slots.pattern.default.bin
+
+
+
+
+xxx: promptedForSelection
+先不管inmeeting 
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging?path=%2Fdatasources%2FTeams%2Fresources%2Finfiles%2FMultiTurn%2Fslot.taskframe.file_title.promptedForValue.infile&version=GBmaster
+用teams 的file_title 來 取代file_keyword
+file_name 的pattern不一樣 目前先不管   
+
 
 
