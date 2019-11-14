@@ -217,6 +217,7 @@ with codecs.open('teams_intent_training.tsv', 'r', 'utf-8') as fin:
                         "browsing ",
                         "see ",
                         "seeing ",
+                        # send is file_share
                         #"send ",
                         #"sending ",
                         "make up ",
