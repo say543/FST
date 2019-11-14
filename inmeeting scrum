@@ -90,6 +90,9 @@ slide_number:PromptedForValue		cortana_inmeeting_enus_mv1.slots.taskframe.slide_
 先不管inmeeting 的
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging?path=%2Fdatasources%2FTeams%2Fresources%2Finfiles%2FMultiTurn%2Fslot.taskframe.file_title.promptedForValue.infile&version=GBmaster
 用teams 的file_title 來 取代file_keyword
+? 跟yong 討論過後  那就先不放 把它拿掉
+
+
 file_name 的pattern不一樣 目前先不管   
 
 
