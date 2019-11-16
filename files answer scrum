@@ -356,10 +356,11 @@ processabovedomainconfidencethreshold=0.4
 must configure by yourself, cannot use CMF
 
 adding to those
-[qd_files_intent_featurizer]
 [qd_files_slot_featurizer]
 [qd_files_slot_partial_pattern_featurizer]
 
+for [qd_files_slot_featurizer]
+this is added for common domain so do not apply cutoff
 
 after short pattern boost 
 
