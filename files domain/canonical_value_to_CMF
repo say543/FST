@@ -24,7 +24,10 @@ domain = "files"
 cano={
     }
 
-canofiles = glob.glob(r"*.txt");
+#
+#canofiles = glob.glob(r"*.txt");
+canofiles = ["file_recency.txt", "file_type.txt", "order_ref.txt", "position_ref.txt", "sharetarget_type.txt"];
+
 outputFile = 'files.canonical.value.tsv'
 for file in canofiles:
 
