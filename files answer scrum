@@ -140,6 +140,8 @@ calendar_positive4:RegexICL(^(skype|join|connect|teams) .*?(event|meeting|appoin
 share_targetname_positive1:RegexICL(^(skype|join|connect|teams) [a-z ]* (event|meeting|appointment)s?$)
 
 
+? 但是用CMF 生成 比直接compile lexicon bin 生成比較多的東西
+最好用direct compile 測試  但是用CMF 最後生成一次  比較好
 
 
 
