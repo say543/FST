@@ -309,7 +309,8 @@ blackListQuerySet = {
 cano={
     }
 
-canofiles = glob.glob(r"../canonical_collect/*.txt");
+#canofiles = glob.glob(r"../canonical_collect/*.txt");
+canofiles = ["file_recency.txt", "file_type.txt", "order_ref.txt", "position_ref.txt", "sharetarget_type.txt"];
 for file in canofiles:
     filestr = os.path.basename(file)
     filestr = filestr.split('.');
