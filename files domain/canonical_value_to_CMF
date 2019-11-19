@@ -41,7 +41,7 @@ for file in canofiles:
 
     
 
-    print("collecting: " + file + "for" + key );
+    print("collecting: " + file + " for:" + key );
     with codecs.open(file, 'r', 'utf-8') as fin:
         for line in fin:
             line = line.strip();
@@ -62,6 +62,8 @@ with codecs.open(outputFile, 'w', 'utf-8') as fout:
     fout.write("Domain\tSlotName\tSlotValue\tCanonicalValue\r\n")
     for slot in cano:
         for slotValue in cano[slot]:
+            #print(slot)
+            #print(slotValue)
             fout.write(domain + '\t' + slot + '\t' + slotValue + '\t' + cano[slot][slotValue] + '\r\n');
 
 #######################
