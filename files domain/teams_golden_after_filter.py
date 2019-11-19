@@ -9,12 +9,17 @@ import math
 import re
 import sys
 
+import json 
+
 # add hyper paramter if unbalanced
 hyper_parameter = 200
 
 
 
 fileDomainRelatedIntent = ['file_search', 'file_open', 'file_share', 'file_download', 'file_other', 'file_navigate', "teamspace_search"]
+
+fileDomainPreviousRelatedIntent = ['file_search', 'file_open', 'file_share', 'file_download', 'file_other', 'file_navigate', "teamspace_search"]
+
 
 teamsDomainToFileDomain = {
     "teams" : "files",
@@ -356,6 +361,10 @@ fileActionCandidateSet = set()
 
 orderRefCandidateSet = set()
 
+
+taskFrameDialogEntities = set()
+taskFrameEntityStates = set()
+
 # deduplication
 skipQueryCandidateSet = set()
 
@@ -364,6 +373,7 @@ Output = [];
 OutputSlotEvaluation = [];
 
 OutputIntentEvaluation = [];
+
 
 with codecs.open('Teams-golden.tsv', 'r', 'utf-8') as fin:
     for line in fin:
@@ -378,9 +388,74 @@ with codecs.open('Teams-golden.tsv', 'r', 'utf-8') as fin:
             continue;
 
 
+
+        # processing conversation context for multi turn
+        # here file_title alawys go to file_keyword
+        # update it later
+
+
+        conversationContext = '{}'
+        if len(linestrs[9]) > 0 and linestrs[9] != "ConversationContext":        
+
+
+            for key in sorted (teamsSlotToFileSlot.keys()):
+                if not key.startswith(" </") and not key.startswith("</"):
+                    value = teamsSlotToFileSlot[key]
+                    valueWoParenthese = (value.strip())[1:len(value.strip())-1]
+                    keyWoParenthese = (key.strip())[1:len(key.strip())-1]
+                    linestrs[9] = linestrs[9].replace(keyWoParenthese, valueWoParenthese)
+
+            if len(linestrs[9]) >0:
+                #print(linestrs[9])
+                conversationContext = json.loads(linestrs[9])
+
+                
+
+            # map teams domain to files domain
+            #if 'PreviousTurnDomain' in conversationContext:
+                #print(conversationContext['PreviousTurnDomain'])
+                #conversationContext['PreviousTurnDomain'] = teamsDomainToFileDomain[conversationContext['PreviousTurnDomain'][0]]
+
+            #if 'TaskFrameDialogEntities' in  conversationContext:
+            #    conversationContext['PreviousTurnDomain']
+
+        
+
+
+
         # skip multi turn query
         if linestrs[0].startswith("Teams-Multiturn"):
+            #conversationContext = json.loads(linestrs[9])
+            #print(conversationContext)
+
+            #print(conversationContext['TaskFrameDialogEntities'])
+
+
+
+            if 'TaskFrameDialogEntities' in  conversationContext:
+                taskFrameDialogEntities.add('\t'.join(conversationContext['TaskFrameDialogEntities']))
+
+            if 'TaskFrameEntityStates' in  conversationContext:
+                taskFrameEntityStates.add('\t'.join(conversationContext['TaskFrameEntityStates']))
+
+            '''
+            # if ont in valid
+            
+            if len(conversationContext['PreviousTurnIntent']) >0 and conversationContext['PreviousTurnIntent'][0] not in fileDomainPreviousRelatedIntent:
+                continue
+            if len(conversationContext['TaskFrameDialogEntities']) >0 and \
+                len((conversationContext['TaskFrameDialogEntities'][0].split(":"))) >=2 and \ 
+                (conversationContext['TaskFrameDialogEntities'][0].split(":"))[0] not in fileDomainPreviousRelatedIntent:
+                continue
+            if len(conversationContext['TaskFrameEntityStates']) >0 and \
+                len((conversationContext['TaskFrameEntityStates'][0].split(":"))) >=2 and \ 
+                (conversationContext['TaskFrameEntityStates'][0].split(":"))[0] not in fileDomainPreviousRelatedIntent:
+                continue
+            '''
+
             continue
+
+
 
         # make sure it is find_my_stuff intent
         if linestrs[6] in fileDomainRelatedIntent:
@@ -389,8 +464,6 @@ with codecs.open('Teams-golden.tsv', 'r', 'utf-8') as fin:
             # for further analysis
             # skip it at first
             if linestrs[6] == "teamspace_search":
-                
-
                 # having problem or tab
                 # then skip
                 if linestrs[4].find("program") != -1 or \
@@ -978,6 +1051,16 @@ with codecs.open('teams_slot_training_after_filtering_order_ref.tsv', 'w', 'utf-
     for item in orderRefCandidateSet:
         fout.write(item + '\r\n');
 '''
+
+with codecs.open('teams_slot_training_after_filtering_task_frame_dialog.tsv', 'w', 'utf-8') as fout:
+    for item in taskFrameDialogEntities:
+        fout.write(item + '\r\n');
+
+with codecs.open('teams_slot_training_after_filtering_task_frame_entity.tsv', 'w', 'utf-8') as fout:
+    for item in taskFrameEntityStates:
+        fout.write(item + '\r\n');
+
+
 
 #######################
 # query replacement revert
