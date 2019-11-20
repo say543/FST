@@ -278,6 +278,23 @@ Validating_Teams_20190716-20190831_3k.tsv.files.maxent.output.txt
 
 
 
+'Build measurement set for 3S answers using MSB logs'
+Just to clarify the purpose of this evaluation set for 3S after our offline sync.
+1.	This 3S measurement set is aiming to represent the real user query distributions in MSB. After bucketize sampling, weight of each bucket will need to be included when creating this set.
+2.	However, the target sampling that I’m working on is to create target sets that are aiming to have large coverage on data variance. The query pool for target sampling can be from multiple data sources. Frequency doesn’t play too much critical role here. Hence frequency/weight will not be included in this case.
+
+Since 3S measurement set is prepared per domain, hence domain confidence score will be used for bucketize sampling. And we can get three sets in one run. There will be no need to use the semantic similarity approach (very time consuming when the pool is huge and this approach is not aether friendly).
+
+Here are the steps:
+1.	Build an aether pipeline to generate three raw measurements for annotation. Data source can be changed whenever needed. ( aether://experiments/eaf0f62c-9e59-4370-b3d7-d92c92b87800)
+2.	Annotation pipeline to annotate each set independently for each domain (These annotation task will be scheduled after our first batch of Nov Teams and OMC data, ETA is around end of Nov)
+3.	Check in CSDS repo. No DA review required for this case. Though it is measurement set, it will still be open for you to play with given this is the first set. 
+
+Mode details can be found in this page. MSB Data Sampling  (Web view)
+
+Please let me know if there is any question.
+
+
 
 
 
