@@ -13,7 +13,9 @@ for training data
 
 \\DESKTOP-3J7614O\sharemodeltest\Validating_Teams_20190716-20190831_16kslot_evaluation.tsv
 \\DESKTOP-3J7614O\sharemodeltest\Validating_Teams_20190716-20190831_16kintent_evaluation.tsv
-\\DESKTOP-3J7614O\sharemodeltest\Validating_Teams_20191001-20191031_7k.tsv
+
+\\DESKTOP-3J7614O\sharemodeltest\Validating_Teams_20191001-20191031_7kintent_evaluation.tsv
+\\DESKTOP-3J7614O\sharemodeltest\Validating_Teams_20191001-20191031_7kslot_evaluation.tsv
 
 
 \\DESKTOP-3J7614O\sharemodeltest\Validating_Teams_JulyToSep_slot_evaluation.tsv
