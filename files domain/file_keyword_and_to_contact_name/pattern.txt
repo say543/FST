@@ -1,0 +1,3 @@
+0	show FILEKEYWORDHOLDER with TOCONTACTNAMEHOLDER	file_share	files	show <file_keyword> FILEKEYWORDHOLDER </file_keyword> <to_contact_name> TOCONTACTNAMEHOLDER </to_contact_name>
+0	Show FILEKEYWORDHOLDER with TOCONTACTNAMEHOLDER	file_share	files	show <file_keyword> FILEKEYWORDHOLDER </file_keyword> <to_contact_name> TOCONTACTNAMEHOLDER </to_contact_name>
+0	Show this file with TOCONTACTNAMEHOLDER	file_share	files	show <file_keyword> this </file_keyword> file with <to_contact_name> TOCONTACTNAMEHOLDER </to_contact_name>
