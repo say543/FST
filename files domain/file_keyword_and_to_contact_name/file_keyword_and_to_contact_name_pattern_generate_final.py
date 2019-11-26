@@ -2,7 +2,10 @@ import codecs;
 import random;
 from collections import defaultdict;
 
-
+# 1: slot only
+# 2: intent only
+# 5: both
+synthetic_mode = 1;
 
 # add hyper paramter if unbalanced
 hyper_parameter = 200
@@ -96,14 +99,19 @@ def parse(slotList):
 
     outputSlot = '_'.join(slotList);
 
-    # for slot
-    with codecs.open('data_synthesised_' + outputSlot + '.tsv', 'w', 'utf-8') as fout:
-        for item in outputSet:
-            fout.write(item + '\r\n');
-    # for intent
-    with codecs.open('intent_data_synthesised_' + outputSlot + '.tsv', 'w', 'utf-8') as fout:
-        for item in outputIntentSet:
-            fout.write(item + '\r\n');            
+    if synthetic_mode == 1 or synthetic_mode == 5:
+        # for slot
+        print("generating slot synthetic...")
+        with codecs.open('data_synthesised_' + outputSlot + '.tsv', 'w', 'utf-8') as fout:
+            for item in outputSet:
+                fout.write(item + '\r\n');
+
+    if synthetic_mode == 2 or synthetic_mode == 5:
+        # for intent
+        print("generating intent synthetic...")
+        with codecs.open('intent_data_synthesised_' + outputSlot + '.tsv', 'w', 'utf-8') as fout:
+            for item in outputIntentSet:
+                fout.write(item + '\r\n');             
 
 if __name__ == '__main__':
     slotList = ['to_contact_name', 'file_keyword'];
