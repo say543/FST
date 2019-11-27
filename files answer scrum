@@ -26,8 +26,9 @@ for training data
 \\DESKTOP-3J7614O\sharemodeltest\UHRS_Task_3SFilesAnnotationslot_evaluation.tsv
 
 
-
-
+for blind to training data
+\\DESKTOP-3J7614O\sharemodeltest\Reporting_Teams_20190716-20190831_3kslot_evaluation.tsv
+\\DESKTOP-3J7614O\sharemodeltest\Reporting_Teams_20190716-20190831_3kintent_evaluation.tsv
 
 
 
@@ -42,6 +43,12 @@ not yet deploy change starting from 11262019
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1392301?path=%2Fsrc%2FEvaluation.Converged.Tests%2FEvaluationTestConfig.xml&_a=overview
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1394178?path=%2Fsrc%2FEvaluation.Converged.Tests%2FEvaluationTestConfig.xml&_a=overview
 
+
+========================
+E:\CoreScienceDataStaging\evaluation\AnnotationSetsConverted\Teams\OfficialSets
+offical set name
+========================
+Reporting_Teams_20190716-20190831_3k
 
 ========================
 sharepoint DF   enpoint possible result
