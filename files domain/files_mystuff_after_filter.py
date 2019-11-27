@@ -539,6 +539,7 @@ blackListQuerySet = {
     "preview notes",
     "preview note",
     "file explorer",
+    "windows",
     # for debug purpose
     # use regular expression to do in the futre
     "christmas list",
@@ -604,12 +605,19 @@ blackListQuerySet = {
     "show my pictures of sunset from kim",
     "locate the letters i wrote to cecilia between march 27th , 2013 and september 9th , 2013",
     "thomson holidays my bookings my documents",
+    "cortana, can i see the presentation labeled richard's presentation?",
+    "Where's the pdf for my presentation on Friday?",
+    "Find presentations with John Johnson in the content",
+    "find the clip with john",
+    "Where is the note about my call with John?",
     }
 
 
 
 fileKeywordfileNameNotUpdateblackListQuerySet = {
     "cortana, can i see the presentation labeled richard's presentation?",
+    # more examples
+    "Where's the pdf for my presentation on Friday?",
     }
 
 
