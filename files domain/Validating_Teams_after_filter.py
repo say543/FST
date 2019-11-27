@@ -32,8 +32,9 @@ OutputIntentEvaluation = [];
 
 OutputSTCAIntentEvaluation = [];
 
-#
-inputFile = "Validating_Teams_20190716-20190831_16k.tsv"
+#change input for different-month validation set
+inputFile = "Validating_Teams_20191001-20191031_7k.tsv"
+#inputFile = "Validating_Teams_20190716-20190831_16k.tsv"
 #inputFile = "Validating_Teams_20190901-20190930_3k.tsv"
 
 #with codecs.open('Teams-golden.tsv', 'r', 'utf-8') as fin:
