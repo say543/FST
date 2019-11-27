@@ -79,6 +79,12 @@ deck_name:PromptedForSelection		cortana_teams_enus_mv1.slots.taskframe.promptFor
 slide_name:PromptedForSelection		cortana_teams_enus_mv1.slots.taskframe.promptForSelection.fst
 slide_number:PromptedForSelection		cortana_teams_enus_mv1.slots.taskframe.promptForSelection.fst
 這三個找不到selection 之後問yue
+因該九是從teams 來的
+
+如何測設
+the first one\tPreviousTurnDomain\t0\t1\tinmeeting\t1.0\t-1\t-1\tTaskFrameEntityStates\t0\t1\tdeck_name:PromptedForSelection\t1\t-1\t-1
+目前三個共享一樣的  但是基本上就是pattern
+p.s in files schema 原本就用slot.partial 來cover 所以不用
 
 
 
@@ -86,6 +92,11 @@ slide_number:PromptedForSelection		cortana_teams_enus_mv1.slots.taskframe.prompt
 deck_name:PromptedForValue		cortana_inmeeting_enus_mv1.slots.taskframe.deck_name.promptedForValue.fst
 slide_name:PromptedForValue		cortana_inmeeting_enus_mv1.slots.taskframe.slide_name.promptedForValue.fst
 slide_number:PromptedForValue		cortana_inmeeting_enus_mv1.slots.taskframe.slide_number.promptedForValue.fst
+
+
+如何測試
+marketing slide\tPreviousTurnDomain\t0\t1\tinmeeting\t1.0\t-1\t-1\tTaskFrameEntityStates\t0\t1\tdeck_name:PromptedForValue\t1\t-1\t-1
+
 
 先不管inmeeting 的
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging?path=%2Fdatasources%2FTeams%2Fresources%2Finfiles%2FMultiTurn%2Fslot.taskframe.file_title.promptedForValue.infile&version=GBmaster
