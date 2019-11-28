@@ -62,8 +62,8 @@ for file in files:
         continue;
 
     # skip dsat training at first
-    if file == dsatTraining:
-        continue;
+    #if file == dsatTraining:
+    #    continue;
     
     
     print("collecting: " + file);
