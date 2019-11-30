@@ -31,7 +31,7 @@ def samleOpenText(holderList, HolderName, slotListDictionary):
     #print(wordList)
     slotListDictionary[HolderName] = wordList;
 
-def parse(slotList, synthetic_mode):
+def parse(slotList):
     # slot / holder order needs to be consistent
     numSlots = len(slotList);
     HolderName = [];
@@ -131,4 +131,4 @@ def parse(slotList, synthetic_mode):
 if __name__ == '__main__':
     slotList = ['file_keyword', 'sharetarget_type', 'sharetarget_name', 'file_type', 'to_contact_name'];
     #parse(slotList, hyper_parameter);
-    parse(slotList, synthetic_mode);
+    parse(slotList);
