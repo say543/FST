@@ -110,6 +110,8 @@ file_name 的pattern不一樣 目前先不管
 目前決定用 teasm 的這個來做 改成file_keyword 來做
 但是參考slot.taskframe.deck_name.promptedForValue.infile 多加 deck and presentation 來拿掉他們在內容中的tag
 slot.taskframe.file_title.promptedForValue.infile
+如何測試
+marketing deck\tPreviousTurnDomain\t0\t1\tfiles\t1.0\t-1\t-1\tTaskFrameEntityStates\t0\t1\tfile_keyword:PromptedForValue\t1\t-1\t-1
 
 
 
