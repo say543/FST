@@ -65,6 +65,9 @@ with codecs.open(inputFile, 'r', 'utf-8') as fin:
         OutputIntentEvaluation.append("0"+"\t"+""+"\t"+linestrs[4]+"\t" +linestrs[6]);
 
         #UUID\tQuery\tIntent\tDomain\tSlot\r\n
+        #OutputSTCAIntentEvaluation.append("0"+"\t"+linestrs[4]+"\t" +linestrs[6]+"\t"+linestrs[5].lower()+"\t"+linestrs[7])
+
+        #id\tquery\tintent\tdomain\tQueryXml\r\n"
         OutputSTCAIntentEvaluation.append("0"+"\t"+linestrs[4]+"\t" +linestrs[6]+"\t"+linestrs[5].lower()+"\t"+linestrs[7])
 
 """
@@ -104,11 +107,15 @@ with codecs.open((inputFile.split("."))[0] +'intent_evaluation.tsv', 'w', 'utf-8
     for item in OutputIntentEvaluation:
         fout.write(item + '\r\n');
 
-# for STCAevaluation 
+# for STCAevaluation
+
 with codecs.open("sharemodeltest\\"+(inputFile.split("."))[0] +'intent_evaluation.tsv', 'w', 'utf-8') as fout:
 
+    print("sharemodeltest\\"+(inputFile.split("."))[0] +'intent_evaluation.tsv')
+
     # if output for traing
-    fout.write("UUID\tQuery\tIntent\tDomain\tSlot\r\n")
+    #fout.write("UUID\tQuery\tIntent\tDomain\tSlot\r\n")
+    fout.write("id\tquery\tintent\tdomain\tQueryXml\r\n")
     for item in OutputSTCAIntentEvaluation:
         fout.write(item + '\r\n');
 
