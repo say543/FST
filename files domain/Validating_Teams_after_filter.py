@@ -33,7 +33,8 @@ OutputIntentEvaluation = [];
 OutputSTCAIntentEvaluation = [];
 
 #change input for different-month validation set
-inputFile = "Validating_Teams_20191001-20191031_7k.tsv"
+inputFile = "Reporting_Teams_20190716-20190831_3k.tsv"
+#inputFile = "Validating_Teams_20191001-20191031_7k.tsv"
 #inputFile = "Validating_Teams_20190716-20190831_16k.tsv"
 #inputFile = "Validating_Teams_20190901-20190930_3k.tsv"
 
