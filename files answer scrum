@@ -145,6 +145,9 @@ intent ,slot ,domian 都可以train
  sajal path 
  \\SAJAL-DESKTOP\model_train_people_Answers\resource\pcfg
  
+ new location
+ \\SAJAL-DESKTOP\people_answer_grammar
+ 
  
 saja 可能有自己改  等有用到在看
 
