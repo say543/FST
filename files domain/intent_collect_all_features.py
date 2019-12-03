@@ -75,7 +75,9 @@ copyfile("..\\Open_Text_Synthesis\\file_type\\intent_data_synthesised_file_type.
 copyfile("..\\files_other_training_after_rewrite.tsv", "files_other_training_after_rewrite.tsv")
 copyfile("..\\files_dataset_intent.tsv" , "files_dataset_intent.tsv")
 #remove copy my stuff data since no improvement so no update
+# add back to extra modified intent result but change source
 #copyfile("..\\files_mystuff_after_filtering_intent.tsv" , "files_mystuff_after_filtering_intent.tsv")
+copyfile("..\\files_mystuff_after_filtering_intent_modify_intent.tsv" , "files_mystuff_after_filtering_intent.tsv")
 
 
 copyfile("..\\teams_intent_training_after_filtering.tsv" , "teams_intent_training_after_filtering.tsv")
