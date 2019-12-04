@@ -1,0 +1,24 @@
+
+email title
+FW: 2179537 - [TeamsTracking] [LU] Cortana can't disambiguate with full file name when sharing file
+
+
+selection model 是一個runtime 的model
+
+套用到所有的domains
+
+跟model output 沒關西
+
+skill team get query -> go to production model  ->  go to selection model(selection model will have semantic frameresult)
+
+selection 是個decision trees 的result
+有很多的feature
+
+這個case 是因為
+
+aaa dot txt
+
+沒有train 好  所以 沒辦法選到好的aaa 的  
+
+
+
