@@ -153,10 +153,22 @@ saja 可能有自己改  等有用到在看
 
 
 目前只有3s answer 有用 cortana 並沒有用
+in 3s 
+cortana_people_enus_mv1.intent.model.pipeline.txt
+it has 
+people_answers_grammar_v1.xml
+cortana_people_enus_mv1.intent.mlg.pcfg.xml
+兩個file 內容都是依樣的
+ ? 可能要問sajal 為啥要這樣做 有啥好處
+ ? 前者用來generate intent
+ ? 後來用來生成feature for intent svm
 
-for all *.snt files
+
+
+for all *.snt files provided by London teams
 But they say MSIT tenant CI Index
-? 可能files answer 也可以以後問一下 有沒有用
+? 可能files answer team 也可以問一下  能不能也generate 這個
+
 
 
 
