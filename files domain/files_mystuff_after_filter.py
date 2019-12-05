@@ -610,6 +610,10 @@ blackListQuerySet = {
     "Find presentations with John Johnson in the content",
     "find the clip with john",
     "Where is the note about my call with John?",
+    "execute word dot exe",
+    "search for lee dot doc",
+    "find one note dot exe",
+    "find avery dot comback_slash templates",
     }
 
 
