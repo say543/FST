@@ -12,3 +12,8 @@ for  "pptx' : '<file_type> pptx </file_type> ',"  to replace tail
 
 
 \\*\.doc
+
+
+//replace \t with tag
+
+share the (.*) file with (.*) meeting\t
