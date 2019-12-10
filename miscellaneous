@@ -55,6 +55,31 @@ control tower 有50% 50% 的feature / flight 的append
 這個主要是for AB test
 
 
+12102019
+control tower document
+ECS ControlTower flight
+https://cortanawiki.azurewebsites.net/engineering/featurerolloutandexperimentation/ct-ecs.html
+email title
+Re: Discuss the release plan to separate in-meeting intents outside of Teams domain
+
+
+12102019
+schema migration
+new flight in ranker
+rankerruleforfilesteamsaction
+The release plan that Eric and I talked about is that:
+•         Step 1: Sign off E2E for the new LU schema, incl. both skill code, LU model and HRS ranker rules
+•         Step 2: Roll out all related flights, incl. both the ranker flights and the skill layer flights to default production traffic. In other words, all R0 and R1 user queries will have the flights ID attached
+•         Step 3: Skill code remove the flights
+•         Step 4: HRS ranker rules remove the flights.
+
+          p.s 這邊之後我就可以把files  的cusotmized featurizer 拿掉了
+
+Note: Unfortunately that with the above plan, we don’t support switch to new LU schema scenario by scenario. 
+
+
+
+
 
 teams client 的 UI
 
