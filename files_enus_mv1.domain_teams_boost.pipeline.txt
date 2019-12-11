@@ -1,0 +1,28 @@
+# teams:teams_domain_final:ExternalInput1
+# teams:teams_intents_hotfix:ExternalInput2
+# files_domain_exact_match_score:ExternalInput3
+
+# Trigger files domain to be domain score 1.0 and teams intent as 
+# 0	file_download
+# 1	file_navigate
+# 2	file_open
+# 3 file_share
+
+# get top intent from teams
+TopN --in=ExternalInput2 --out=top_intent_id  --n=1 --order=desc
+# check if it is of four intents 
+FeatureSimpleFilter --in=top_intent_id --out=file_related_intent --keepTags=0,1,2,3
+# transfrom from  0[-1,-1]= 1 1[-1,-1]  2[-1,-1] to 3[-1,-1] to 0[-1,-1] = 1
+# otherwise output 0[-1,-1]= 0
+FeatureValueAggregator --in=file_related_intent --out=valid_intent_feature --algo=count --default=0
+
+# check if teams domain is>=0.9
+# if yes, socre to 1.0
+FeatureNormalizer --in=ExternalInput1 --out=teams_domain_scaled --norm=sign --cutoff=0.9
+
+# do filter based on teams_domains and if intent is valid  
+# if yes, append new tag 0[-1,-1] =1 to the output
+FeatureSetFilter --in=teams_domain_scaled,valid_intent_feature --out=files_enus_mv1_domain_teams_boost --filterTagId=0 --filterWeight=1 -keepTagFeatures=1
+
+# keep old input domain as default
+FeatureNormalizer --in=ExternalInput3 --out=files_enus_mv1_domain_teams_boost --norm=identity
