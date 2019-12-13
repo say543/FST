@@ -9,7 +9,8 @@
 0	share FILEKEYWORDHOLDER on SHARETARGETNAMEHOLDER SHARETARGETTYPEHOLDER	file_share	files	share <file_keyword> FILEKEYWORDHOLDER </file_keyword> on <sharetarget_name> SHARETARGETNAMEHOLDER </sharetarget_name> <sharetarget_type> SHARETARGETTYPEHOLDER </sharetarget_type>
 0	share FILEKEYWORDHOLDER FILETYPEHOLDER SHARETARGETNAMEHOLDER	file_share	files	share <file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> FILETYPEHOLDER </file_type> <sharetarget_name> SHARETARGETNAMEHOLDER </sharetarget_name>
 0	share FILEKEYWORDHOLDER file SHARETARGETNAMEHOLDER	file_share	files	share <file_keyword> FILEKEYWORDHOLDER </file_keyword> file <sharetarget_name> SHARETARGETNAMEHOLDER </sharetarget_name>
-0	share FILEKEYWORDHOLDER with TOCONTACTNAMEHOLDER SHARETARGETTYPEHOLDER	file_share	files	share <file_keyword> FILEKEYWORDHOLDER </file_keyword> with <to_contact_name> TOCONTACTNAMEHOLDER </to_contact_name> <sharetarget_type> SHARETARGETTYPEHOLDER </sharetarget_type>
+#useless pattern so remove it
+#0	share FILEKEYWORDHOLDER with TOCONTACTNAMEHOLDER SHARETARGETTYPEHOLDER	file_share	files	share <file_keyword> FILEKEYWORDHOLDER </file_keyword> with <to_contact_name> TOCONTACTNAMEHOLDER </to_contact_name> <sharetarget_type> SHARETARGETTYPEHOLDER </sharetarget_type>
 0	share FILEKEYWORDHOLDER here	file_share	files	share <file_keyword> FILEKEYWORDHOLDER </file_keyword> <sharetarget_name> here </sharetarget_name>
 0	share file to TOCONTACTNAMEHOLDER	file_share	files	share file to <to_contact_name> TOCONTACTNAMEHOLDER </to_contact_name>
 0	share the document FILEKEYWORDHOLDER to TOCONTACTNAMEHOLDER	file_share	files	share the document <file_keyword> FILEKEYWORDHOLDER </file_keyword> to <to_contact_name> TOCONTACTNAMEHOLDER </to_contact_name>
@@ -19,7 +20,8 @@
 0	sharefile FILEKEYWORDHOLDER in SHARETARGETNAMEHOLDER SHARETARGETTYPEHOLDER	file_share	files	share <file_keyword> FILEKEYWORDHOLDER </file_keyword> in <sharetarget_name> SHARETARGETNAMEHOLDER </sharetarget_name> <sharetarget_type> SHARETARGETTYPEHOLDER </sharetarget_type>
 0	sharefile FILEKEYWORDHOLDER on SHARETARGETNAMEHOLDER SHARETARGETTYPEHOLDER	file_share	files	share <file_keyword> FILEKEYWORDHOLDER </file_keyword> on <sharetarget_name> SHARETARGETNAMEHOLDER </sharetarget_name> <sharetarget_type> SHARETARGETTYPEHOLDER </sharetarget_type>
 0	sharefile FILEKEYWORDHOLDER FILETYPEHOLDER SHARETARGETNAMEHOLDER	file_share	files	share <file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> FILETYPEHOLDER </file_type> <sharetarget_name> SHARETARGETNAMEHOLDER </sharetarget_name>
-0	sharefile FILEKEYWORDHOLDER with TOCONTACTNAMEHOLDER SHARETARGETTYPEHOLDER	file_share	files	sharefile <file_keyword> FILEKEYWORDHOLDER </file_keyword> with <to_contact_name> TOCONTACTNAMEHOLDER </to_contact_name> <sharetarget_type> SHARETARGETTYPEHOLDER </sharetarget_type>
+#useless pattern so remove it
+#0	sharefile FILEKEYWORDHOLDER with TOCONTACTNAMEHOLDER SHARETARGETTYPEHOLDER	file_share	files	sharefile <file_keyword> FILEKEYWORDHOLDER </file_keyword> with <to_contact_name> TOCONTACTNAMEHOLDER </to_contact_name> <sharetarget_type> SHARETARGETTYPEHOLDER </sharetarget_type>
 0	sharefile FILEKEYWORDHOLDER here	file_share	files	share <file_keyword> FILEKEYWORDHOLDER </file_keyword> <sharetarget_name> here </sharetarget_name>
 0	sharefile to TOCONTACTNAMEHOLDER	file_share	files	sharefile to <to_contact_name> TOCONTACTNAMEHOLDER </to_contact_name>
 0	sharefile to SHARETARGETTYPEHOLDER	file_share	files	sharefile to <sharetarget_type> SHARETARGETTYPEHOLDER </sharetarget_type>
