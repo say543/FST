@@ -14,7 +14,7 @@ outputTrainingFolderFile = '..\\files_slot_training.tsv'
 # for STCA test
 outputSTCATrainingFolderFile = '..\\sharemodeltest\\files_slot_training.tsv'
 
-
+a
 outputFileWithSource = "files_slot_training_with_source.tsv"
 dsatTraining = "dsat_training.tsv"
 
@@ -75,8 +75,24 @@ for file in files:
             array = line.split('\t');
             if len(array) < 5:
                 print("error:" + line);
-            outputs.append(line);
-            outputsWithSource.append(line+'\t'+ file);
+
+            # skip last column for indicating which dataset
+            #if file == dsatTraining:
+            #    line ='\t'.join(array[0:len(array)-1])
+            #outputs.append(line);
+            #outputsWithSource.append(line+'\t'+ file);
+
+            # for dsatTraining
+            # replace file name with the last column
+            if file == dsatTraining:
+                newline ='\t'.join(array[0:len(array)-2])
+                newfile = array[len(array)-1]
+                outputs.append(newline);
+                outputsWithSource.append(newline+'\t'+ newfile);
+            else:
+                outputs.append(line);
+                outputsWithSource.append(line+'\t'+ file);
+            
 
 print('shuffling');
 random.seed(0.1);
