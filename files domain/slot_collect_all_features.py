@@ -14,7 +14,6 @@ outputTrainingFolderFile = '..\\files_slot_training.tsv'
 # for STCA test
 outputSTCATrainingFolderFile = '..\\sharemodeltest\\files_slot_training.tsv'
 
-a
 outputFileWithSource = "files_slot_training_with_source.tsv"
 dsatTraining = "dsat_training.tsv"
 
@@ -54,7 +53,7 @@ copyfile("..\\Open_Text_Synthesis\\file_keyword_file_type_file_action_contact_na
 copyfile("..\\files_dataset.tsv" , "files_dataset.tsv")
 copyfile("..\\files_mystuff_after_filtering.tsv" , "files_mystuff_after_filtering.tsv")
 copyfile("..\\teams_slot_training_after_filtering.tsv" , "teams_slot_training_after_filtering.tsv")
-
+copyfile("..\\dsat_training.tsv" , "dsat_training.tsv")
 
 for file in files:
 
@@ -64,7 +63,6 @@ for file in files:
     # skip dsat training at first
     #if file == dsatTraining:
     #    continue;
-    
     
     print("collecting: " + file);
     with codecs.open(file, 'r', 'utf-8') as fin:
@@ -85,7 +83,7 @@ for file in files:
             # for dsatTraining
             # replace file name with the last column
             if file == dsatTraining:
-                newline ='\t'.join(array[0:len(array)-2])
+                newline ='\t'.join(array[0:len(array)-1])
                 newfile = array[len(array)-1]
                 outputs.append(newline);
                 outputsWithSource.append(newline+'\t'+ newfile);
