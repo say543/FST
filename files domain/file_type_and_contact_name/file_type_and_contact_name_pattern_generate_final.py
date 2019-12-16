@@ -52,6 +52,10 @@ def parse(slotList, doubleSlotList):
             line = line.strip();
             if not line:
                 continue;
+
+            if line.startswith("#"):
+                continue;
+            
             patternSet.append(line);
 
 
