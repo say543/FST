@@ -1,3 +1,0 @@
-# old
-# 0	open FILETYPEHOLDER file	file_open	files	open <file_type> FILETYPEHOLDER </file_type> file
-0	Hey Cortana, open FILETYPEHOLDER file	file_open	files	Hey Cortana, open <file_type> FILETYPEHOLDER </file_type> file
