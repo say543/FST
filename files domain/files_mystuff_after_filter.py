@@ -614,6 +614,8 @@ blackListQuerySet = {
     "search for lee dot doc",
     "find one note dot exe",
     "find avery dot comback_slash templates",
+    "load store merchandising photos for xyz company.",
+    "Load store merchandising photos for XYZ Company."
     }
 
 
