@@ -1,0 +1,8 @@
+0	FILETYPEHOLDER FILEKEYWORDHOLDER	file_search	files	<file_type> FILETYPEHOLDER </file_type> <file_keyword> FILEKEYWORDHOLDER </file_keyword>
+0	FILEKEYWORDHOLDER FILETYPEHOLDER	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> FILETYPEHOLDER </file_type> 
+0	open FILEKEYWORDHOLDER FILETYPEHOLDER	file_open	files	open <file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> FILETYPEHOLDER </file_type>
+0	open the FILEKEYWORDHOLDER the FILETYPEHOLDER	file_open	files	open the <file_keyword> FILEKEYWORDHOLDER </file_keyword> the <file_type> FILETYPEHOLDER </file_type>
+#also 'here' serves as negative example to not tagged as sharetarget_type 
+#due to 3 gram it cannot learn so comment it
+0	search files FILEKEYWORDHOLDER here	file_search	files	search files <file_keyword> FILEKEYWORDHOLDER </file_keyword> here
+0	search FILEKEYWORDHOLDER file here	file_search	files	search <file_keyword> FILEKEYWORDHOLDER </file_keyword> file here
