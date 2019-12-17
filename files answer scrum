@@ -36,6 +36,26 @@ files domain 怎麼onbaord 到evaluation
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1182483?_a=files
 看這個pr
 
+
+
+===========================
+3s answer model roadmap
+===========================
+email thread
+RE: Current status of 3S files answer
+Here’s a list of Teams rings – for awareness.
+
+// 很好的list for different build
+Ring	Scope
+Container	Code complete - not merged with main.
+R0	Teams Dev
+R1	Teams PMs + Dev
+R2	Experiences and Devices Org
+R3.9	MSIT
+R3	TAP Customers
+R4	General Availability (GA)
+
+
 ===========================
 B2 column
 QasMSSearch01DS
