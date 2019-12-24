@@ -38,6 +38,19 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 
 
 ===========================
+evaluation merge directory runs qas12 totla QPC
+===========================
+provide client id
+PS E:\CoreScienceDataStaging\datasources\Files\queryclassificationprocessing> .\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c E:\CoreScienceDataStaging\TestResults\EvaluationMergedDir\59DF11DA  --variant HttpQasProd_CortanaLU.QAS12HttpQAS -d files --clientid "Microsoft_Threshold_Shell_3_enus_Test"
+
+
+--pdebug the same
+--pdebug qd_files_domain_teams_boost_featurizer
+
+
+run testing query the same 
+Share file architecture with friends meeting\tFEATURE.CLUTEAMS\t0\t1\t1\t1\t-1\t-1
+===========================
 Substrate HttpQAS Debugger Update
 ===========================
 email title
