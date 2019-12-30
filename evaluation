@@ -59,6 +59,15 @@ to this
   <add key="local.DatasetsDir" value="D:\CoreScienceDataStaging_old\target\distrib\Debug\x64\Test\Data\Evaluation\AnnotationSetsConverted" />
   <add key="local.OutputBaseDir" value="D:\CoreScienceDataStaging_old\TestResults" />
   
+  //12302019 above four lines updated
+  // \test\ to \ConvergedTest\
+  <add key="local.ModelsDir" value="E:\CoreScienceDataStaging\target\distrib\Debug\x64\models" />
+  <add key="local.ConfigsDir" value="E:\CoreScienceDataStaging\target\distrib\Debug\x64\ConvergedTest\Data\Evaluation\configs" />
+  <add key="local.DatasetsDir" value="E:\CoreScienceDataStaging\target\distrib\Debug\x64\ConvergedTest\Data\Evaluation\AnnotationSetsConverted" />
+  <add key="local.OutputBaseDir" value="E:\CoreScienceDataStaging\TestResults" />
+  
+  
+  
   // 注意這邊要指向coresciencestage
   <add key="local.EvaluationTestConfigPath" value="D:\CoreScienceDataStaging_old\src\Evaluation.Converged.Tests\EvaluationTestConfig.xml" />
   <add key="local.QCSQueryLabelToolDir" value="%inetroot%\public\ext\QcsQueryLabel" />
