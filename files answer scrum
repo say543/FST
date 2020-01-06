@@ -51,6 +51,8 @@ domain.fst_lang_model.tagger.infile has used four patterns to consume, just need
 
 search 
 waiting for teamsaction and check pr to use it in files
+
+but search pattern / find pattern need to update the same rule as well
 https://msasg.visualstudio.com/Cortana/_workitems/edit/2258354
 
 
