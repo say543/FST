@@ -127,8 +127,8 @@ fileTypeTagWoDotInFileKeywordOrFileName={
     ' Doc' : '<file_type> Doc </file_type> ',
     ' Docx' : '<file_type> Docx </file_type> ',
     ' Docs' : '<file_type> Docs </file_type> ',
-
-    ' spec' : '<file_type> spec </file_type> ',
+    # spec no longer being file_type
+    #' spec' : '<file_type> spec </file_type> ',
     ' excel' : '<file_type> excel </file_type> ',
     ' excels' : '<file_type> excels </file_type> ',
     ' xls' : '<file_type> xls </file_type> ',
@@ -211,8 +211,8 @@ fileTypeTagWDotInFileKeywordOrFileName={
     '.Docx' : '.<file_type> Docx </file_type> ',
     '.Docs' : '.<file_type> Docs </file_type> ',
 
-    
-    '.spec' : '.<file_type> spec </file_type> ',
+    # spec no longer being file_type    
+    #'.spec' : '.<file_type> spec </file_type> ',
     '.excel' : '.<file_type> excel </file_type> ',
     '.excels' : '.<file_type> excels </file_type> ',
     '.xls' : '.<file_type> xls </file_type> ',
@@ -292,7 +292,8 @@ fileTypeTagWDotSpaceInFileKeywordOrFileName={
     '. Docx' : '. <file_type> Docx </file_type> ',
     '. Docs' : '. <file_type> Docs </file_type> ',
 
-    '. spec' : '. <file_type> spec </file_type> ',
+    # spec no longer being file_type
+    #'. spec' : '. <file_type> spec </file_type> ',
     '. excel' : '. <file_type> excel </file_type> ',
     '. excels' : '. <file_type> excels </file_type> ',
     '. xls' : '. <file_type> xls </file_type> ',
