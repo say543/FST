@@ -63,6 +63,27 @@ but search pattern / find pattern need to update the same rule as well
 https://msasg.visualstudio.com/Cortana/_workitems/edit/2258354
 
 
+
+RE: 2232029 - File_navigate intent should win
+Ling's reply
+I will add case 6 into the below examples.
+
+Case 6: Different query verbs, e.g., “find”, “search for”, “show me”, “go to”, “direct me to”, …. Examples below
+-	Search for my recent files
+-	Find the files that I  created yesterday
+-	Show me all the shiproom deck
+-	Go to the recent files tab
+-	Direct me to recent files that Peter shared with me via email
+-	Look for the MS build demo scripts
+
+Current LU status:
+-	Explicit navigation word such as “go to”, “direct me to” and “navigate to” will be grouped into file_navigate intent; explicit search word such as “search for”, “find me” will be grouped into the find_search intent. Any verb that are at the boundary will be grouped into file_search intent as default, for example, “show me”, “look for”, etc. To summarize, we don’t specifically mark up verb “search for” for now. 
+
+等meeting note
+目前direct me to recent files 會生成file_search  可能會需要改
+但是看training data direct 都是file_navigate 可能是dsat 我想 
+
+
 ===========================
 reporting set / validating set
 
