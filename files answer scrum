@@ -63,7 +63,7 @@ but search pattern / find pattern need to update the same rule as well
 https://msasg.visualstudio.com/Cortana/_workitems/edit/2258354
 
 
-
+<email tile>
 RE: 2232029 - File_navigate intent should win
 Ling's reply
 I will add case 6 into the below examples.
@@ -84,6 +84,10 @@ Current LU status:
 但是看training data direct 都是file_navigate 可能是dsat 我想 
 跟yue 要一下file 看起來  也沒有特別  可能真的就是dsat 在家進去train
 
+
+<email title>
+RE: Removal of Teams domain
+teams domain can be removed - checking status update
 
 ===========================
 reporting set / validating set
