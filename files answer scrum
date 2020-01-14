@@ -130,6 +130,8 @@ this that 的canonical value 的討論
 
 https://msasg.visualstudio.com/Cortana/_workitems/edit/2258354
 search 的pattern 可以之後看teamsaction 的討論
+pr 但是看起來不太合理  是hot fix search / search .
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1447300?_a=files
 
 ===========================
 reporting set / validating set
