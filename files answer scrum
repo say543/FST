@@ -52,6 +52,8 @@ good pr following up during parental leave
 //remove all teams, and  keep inmeeting, files and teamsaction only for icm
 // also turn on deployment for files    
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1445551?path=%2Fmodels%2Ffiles%2Ffiles_enus_mv1.queryprocessingconfiguration.ini&_a=overview
+// runtime remove PR for teams doamin, good reference  
+https://msasg.visualstudio.com/Cortana/_git/Core/pullrequest/1447912
 
 
 =============================
