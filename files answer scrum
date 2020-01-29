@@ -204,6 +204,11 @@ Teams client without irrelevant domains
 lutest flight
 移除不相關的domain for testing
 
+<email_title>
+[PROD] Sev 3: ID 172805271: "Show my list called XXX" not triggering list skill
+not sure why files_domain will win 
+用shorter query 看　沒有boost 阿...   不知道為啥麼現在才發現
+
 ===========================
 reporting set / validating set
 
