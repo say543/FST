@@ -178,6 +178,13 @@ the second one      PreviousTurnDomain      0       1       files   1.0     -1  
 ? 猜測是silence 太久　然後 prevuiousTurnDomain 變成 common
 用這個測試就match 了這個description 了　　可能要follow inmeeting 的加法
 Yes\tPreviousTurnDomain\t0\t1\tcommon\t1.0\t-1\t-1
+測試inmeeting by QCS　
+不會被common trigger 而是直接本身的intent model yes 就輸出confirm 了
+要馬intent model 重train (prefer filtering inmeeting intent training data 來做)
+or 
+加入detect common in multi turn pipeline
+
+
 
 
 
@@ -314,6 +321,11 @@ timex
 Domain.QueryMetadata[0] =  <TIMEX3 tid="0" type="Date" value="2020-01-27">yesterday</TIMEX3>
 // others
 QueryEntity[0].QueryMetadata = <TIMEX3 tid="0" type="Date" value="2020-01-27">yesterday</TIMEX3>
+
+
+<email_title>
+RE: Empty QAS Response error
+這邊有sdf people 的deubg 這個可以是以後deubg 很好的參照
 
 ===========================
 reporting set / validating set
