@@ -239,6 +239,17 @@ lutest flight
 not sure why files_domain will win 
 用shorter query 看　沒有boost 阿...   不知道為啥麼現在才發現
 
+
+
+<email_title>
+3s 的query entity ., timex 討論
+RE: Files Model
+timex 
+//files
+Domain.QueryMetadata[0] =  <TIMEX3 tid="0" type="Date" value="2020-01-27">yesterday</TIMEX3>
+// others
+QueryEntity[0].QueryMetadata = <TIMEX3 tid="0" type="Date" value="2020-01-27">yesterday</TIMEX3>
+
 ===========================
 reporting set / validating set
 
