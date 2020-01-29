@@ -199,7 +199,10 @@ demo domain
 Re: [PROD] Sev 2: ID 171703129: Compliant cortana cannot get correct LU result which caused nightwatch test case failure
 can ask further information
 
-
+<email_title>
+Teams client without irrelevant domains
+lutest flight
+移除不相關的domain for testing
 
 ===========================
 reporting set / validating set
