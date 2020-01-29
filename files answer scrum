@@ -164,6 +164,16 @@ send 也automatically fix
 send (.*) to my no data
 
 
+yes in second turn does not work
+因該是common domain ?
+https://msasg.visualstudio.com/Cortana/_workitems/edit/2284405
+teamsaction 是others 但是inmeeting 卻是confirm, domain score 不重要　這邊confirm 
+https://cortanalogviewer-ppe.azurewebsites.net/query/24324ef58ca64a9aaa2980b2bb289d7b/ppe
+
+
+這個的原因還不董...
+https://msasg.visualstudio.com/Cortana/_workitems/edit/2286572
+
 
 <email tile>
 Search Keyword LU issue
