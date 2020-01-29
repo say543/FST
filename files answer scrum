@@ -153,12 +153,13 @@ to my should be to contact_name
 2:00  should be meeting_starting time
 meeting should be sharetarget
 
-改成　share 2:00 o'clock meeting 一樣faile
+改成　share 2:00 o'clock meeting 一樣fail
 share my voice 101 file to my 2:00 o'clock meeting
 
 step1:
+filx  o'clock issue  for share
 先針對share 加上　　share with o'clock meeting, share to o'clock meeting
-
+send 也automatically fix
 
 send (.*) to my no data
 
