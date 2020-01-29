@@ -79,6 +79,16 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 // look
 
 
+// client base evaluation PR
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1466674
+
+//team space keyword multi turn supported
+// refer to the future
+// 要跟 yue sync 一下
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1466714?_a=files
+
+
+
 
 =============================
 unresolved bug and email_title
@@ -115,8 +125,15 @@ https://msasg.visualstudio.com/Cortana/_workitems/edit/2292554
 https://cortanalogviewer-ppe.azurewebsites.net/query/67670e991c1e45ccbd378f341d1c6471/prod
 
 bug
+<email_title>
+RE: state of union on reliability 
+not BVT failed query
 https://msasg.visualstudio.com/Cortana/_workitems/edit/2290982?src=WorkItemMention&src-action=artifact_link
 
+
+<email tile>
+Search Keyword LU issue
+this can study further 之後跟yong sync 跟hard constraint 有關
 
 <email tile>
 RE: 2232029 - File_navigate intent should win
@@ -205,7 +222,7 @@ lu model page new test
 
 <email_title>
 LU Team Client Based Change on flight lutest for Teams tenant
-
+yue 有獎cortana log tool lutest 之後看
 
 <email_title>
 demo domain
