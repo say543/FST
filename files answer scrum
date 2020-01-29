@@ -163,7 +163,7 @@ send 也automatically fix
 
 send (.*) to my no data
 
-
+bug
 <checking_email_to_follow_up>
 yes in second turn does not work
 因該是common domain ?
@@ -175,12 +175,25 @@ Yes      PreviousTurnDomain      0       1       files   1.0     -1      -1
 是會return confirm 的
 the second one      PreviousTurnDomain      0       1       files   1.0     -1      -1
 這個也是有　position_ref 的tag
-? 猜測是silence 太久　然後 變成first turn
+? 猜測是silence 太久　然後 prevuiousTurnDomain 變成 common
+用這個測試就match 了這個description 了　　可能要follow inmeeting 的加法
+Yes\tPreviousTurnDomain\t0\t1\tcommon\t1.0\t-1\t-1
 
 
 
 這個的原因還不董...
 https://msasg.visualstudio.com/Cortana/_workitems/edit/2286572
+
+bug
+<email tile>
+RE: ICM sev3: mystuff domain
+原因是現在的files 用mv5 from mystuff 然後　　prod 用 mv4
+所以 'what is there on my todo list'  files domain 才會比my stuff 高　　否則因該一樣
+solution:
+1>
+move files to client=base1
+2> my stuff hotfix
+3> files domain blacklist
 
 
 <email tile>
