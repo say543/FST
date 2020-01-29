@@ -71,6 +71,7 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1462006?_a=files
 //知道可以研究一下
+// 因該是 skill teams 要做multi turn behavior 所以只有search 也要support 只好hotfix
 //search
 //search for
 // looking for
@@ -91,10 +92,15 @@ files 目前的ke
 "RE: Search Keyword LU issue"
 有hard constraint or soft constraint  dictation 的constraint
 
-dictation 會家. 並且把整個當成一個slot
+dictation 把整個當成一個slot (. 是被 給加上去的)
 hardward 只會用到doamin 的result
-https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1466714?_a=files
 
+我猜因該是search for files(files domain) / search for (teams domains)
+first turn 所以files  domain 因該已經support 
+? 因該是train 還好　　有file_type 的還是有support 
+雖然  slot.taskframe.file_keyword.promptedForValue.infile  有些support 但是沒完整　　最好把file_type 都加完整
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1466714?_a=files
+配合file name
 
 
 
@@ -137,6 +143,25 @@ bug
 RE: state of union on reliability 
 not BVT failed query
 https://msasg.visualstudio.com/Cortana/_workitems/edit/2290982?src=WorkItemMention&src-action=artifact_link
+Send Saurabh Choudhury my voice design document.
+Saurabh Choudhury should be to_contact_name but file_keyword, lexicon does have it
+add my synthesis traninig data
+
+
+Send my voice 101 file to my 2:00 o'clock meeting.
+to my should be to contact_name
+2:00  should be meeting_starting time
+meeting should be sharetarget
+
+改成　share 2:00 o'clock meeting 一樣faile
+share my voice 101 file to my 2:00 o'clock meeting
+
+step1:
+先針對share 加上　　share with o'clock meeting, share to o'clock meeting
+
+
+send (.*) to my no data
+
 
 
 <email tile>
