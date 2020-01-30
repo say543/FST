@@ -444,12 +444,9 @@ Hey Cortana share the attached PowerPoint.\tFEATURE.CLUTEAMS\t0\t1\t1\t1\t-1\t-1
 not yet deploy change starting from 11262019
 ========================
 
-//pr done and merge
-https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1428638?path=%2Fsrc%2FEvaluation.Converged.Tests%2FEvaluationTestConfig.xml&_a=overview
-// ini file,  pr done and merge , wait for deployment
-https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1429443?_a=overview
-// pr done and merge , updated search for pattern as well as another, waiitting for deployment
-https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1431055
+<pr done and merge>
+wait for deployment and close related tickets
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1469744?path=%2Fsrc%2FEvaluation.Converged.Tests%2FEvaluationTestConfig.xml&_a=overview
 
 
 <not yet check in>
