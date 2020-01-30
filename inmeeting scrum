@@ -119,7 +119,8 @@ cortana_inmeeting_enus_mv1.slots.pattern.default.bin
 假的以前dmitry
 可以copy 到files 直接用
 rename 成files_enus_mv1.slots.pattern.default.bin
-
+最後在files domain 完成的pr for reference
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1399243?_a=files
 
 
 
