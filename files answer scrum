@@ -165,11 +165,16 @@ send (.*) to my no data
 
 bug
 <checking_email_to_follow_up>
+i can deploy once this ticket is triaged.
 yes in second turn does not work
 因該是common domain ?
 https://msasg.visualstudio.com/Cortana/_workitems/edit/2284405
 teamsaction 是others 但是inmeeting 卻是confirm, domain score 不重要　這邊confirm 
 https://cortanalogviewer-ppe.azurewebsites.net/query/24324ef58ca64a9aaa2980b2bb289d7b/ppe
+
+PR location
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1469744?path=%2Fsrc%2FEvaluation.Converged.Tests%2FEvaluationTestConfig.xml&_a=overview
+
 但是實際在QAS run 的時候
 Yes      PreviousTurnDomain      0       1       files   1.0     -1      -1
 是會return confirm 的
@@ -189,7 +194,17 @@ or
 
 
 這個的原因還不董...
+但是
 https://msasg.visualstudio.com/Cortana/_workitems/edit/2286572
+
+
+bug
+<email_title>
+Files LU slots issue with "dot" in the query
+因該是multi turn 的時候　dot 需要被拿掉
+但是first turn 也要加這個 feature for traning 就是所謂的doc ... doc 的feautre     
+
+
 
 bug
 <email tile>
