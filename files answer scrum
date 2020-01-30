@@ -137,6 +137,31 @@ https://domoreexp.visualstudio.com/MSTeams/_workitems/edit/745833?src=WorkItemMe
 要用manasi  flow 找raw query
 https://msasg.visualstudio.com/Cortana/_workitems/edit/2292554
 https://cortanalogviewer-ppe.azurewebsites.net/query/67670e991c1e45ccbd378f341d1c6471/prod
+根據email_title
+RE: Can’t find user query for Cortana DSAT? Here’s how.
+1.	Find the traceid. Let's assume that the query happened on October 18th, 2019.
+   here is 01242020
+   
+	Navigate to: https://cosmos11.osdinfra.net/cosmos/science.prod/local/Projects/CEP/PROD/Cortana/Speech/2019-11-18/Teams.Sessionized.Kusto.Joined.Data.ss?property=info. If the query happened on a different day, then you would change the date in the path of the URL.
+2.	In the "Custom Filter" field, enter either
+	CivPTraceId == "<trace_id_in_lower_case>" For example: CivPTraceId == "ada3c4653ada4965ba60ef1dd80733d5" 
+OR
+	'UxoEventTraceId=="<trace_id_in_lower_case>"'. For example, you might enter in "UxoEventTraceId=="588435ac15de4e5b9cb563c9f644ab06"
+	using  CivPTraceId == "67670e991c1e45ccbd378f341d1c6471" 
+	uxo event 是一樣的
+	using  UxoEventTraceId=="67670e991c1e45ccbd378f341d1c6471"
+	
+4.	Click the "Filter" button.
+
+raw query 是
+Send Saurabh Choudhury my voice design document.
+跟　
+https://msasg.visualstudio.com/Cortana/_workitems/edit/2290982?src=WorkItemMention&src-action=artifact_link
+其中的一個fail query 是一樣的
+  
+
+
+
 
 bug
 <email_title>
@@ -192,10 +217,34 @@ or
 
 
 
-
-這個的原因還不董...
+bug
+這個的原因還不董 但是可能是common silence 造成的問題
 但是
 https://msasg.visualstudio.com/Cortana/_workitems/edit/2286572
+https://cortanalogviewer-ppe.azurewebsites.net/query/aae2e3887cc5408fab27a0a05ec1a20e/prod
+
+using  01-16 2020 to filter
+
+turn 1
+CivPTraceId == "aae2e3887cc5408fab27a0a05ec1a20e"
+aae2e3887cc5408fab27a0a05ec1a20e
+UxoEventTraceId=="aae2e3887cc5408fab27a0a05ec1a20e"
+https://cosmos11.osdinfra.net/cosmos/science.prod/local/Projects/CEP/PROD/Cortana/Speech/2020-01-16/Teams.Sessionized.Kusto.Joined.Data.ss?property=info
+raw query
+Send my voice 101 file to A.J.
+slot tagger no problem, all correct
+
+
+turn 2
+https://cortanalogviewer-ppe.azurewebsites.net/query/53ddbda4705548bb9c5d0d6eada1e176/prod
+出現position ref
+可能是selection
+
+turn 3
+common silence 所以fail 
+
+
+
 
 
 bug
