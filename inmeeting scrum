@@ -120,6 +120,11 @@ cortana_inmeeting_enus_mv1.slots.pattern.default.bin
 可以copy 到files 直接用
 rename 成files_enus_mv1.slots.pattern.default.bin
 最後在files domain 完成的pr for reference
+加到file files_enus_mv1.slots.pattern.pipeline.txt 中間
+
+
+./files_enus_mv1.slots.pattern.pipeline.txt:7:NLPConditionalFSTApplier --in=singletoken_query,ExternalInput2 --out=SlotMatchedName,SlotMatchedType,SlotMatchedStartChar,SlotMatchedLength --mode=matcher --config=files_enus_mv1.slots.pattern.conditions.txt
+
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1399243?_a=files
 
 
