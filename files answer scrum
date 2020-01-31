@@ -91,6 +91,8 @@ files 目前的ke
 配合這個
 "RE: Search Keyword LU issue"
 有hard constraint or soft constraint  dictation 的constraint
+參考page
+https://cortanawiki.azurewebsites.net/engineering/gettingstarted/1pbfLuConstraints.html
 
 dictation:
 　　　　　lu runtime 把　lu result ignore lu runtime 會把整個string 當成一個slot
