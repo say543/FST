@@ -413,6 +413,10 @@ Discuss extend the current files domain schema to support shared/attached files 
 attached 的相關support 需要schema 的redefine
 要follow up 可能的meeting note
 
+<email_title>
+Some tips to reduce LU model memory
+b2 memor reduction tip
+
 ===========================
 reporting set / validating set
 
