@@ -123,12 +123,18 @@ rename 成files_enus_mv1.slots.pattern.default.bin
 加到file files_enus_mv1.slots.pattern.pipeline.txt 中間
 
 01302020
-目前只有presentation / deck 會被tag 成file_type
+目前只有presentation / deck 加上沒有dot 跟. 會被tag 成file_type
 worked case
 xxx presentation , xxx deck
 failed case
 xxx.presentation, xxx.deck
+xxx dot presentation, xxx dot deck
+
 xxx doc , xxx docs
+xxx.docs, xxx.doc
+xxx dot docs, xxx dot doc
+
+
 
 但是根據 <email_title>
 Files LU slots issue with "dot" in the query
