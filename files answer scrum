@@ -93,11 +93,11 @@ files 目前的ke
 有hard constraint or soft constraint  dictation 的constraint
 
 dictation:
-　　　　　skill 把　lu result ignore lu runtime 會把整個string 當成一個slot
+　　　　　lu runtime 把　lu result ignore lu runtime 會把整個string 當成一個slot
 　　　　　result here:
 　　　　　把default整個string 當成一個slot (. 是被 speech recogation給加上去的) 然後lu result 會被filter
 hard:
-        skill 把　lu result 根據skill 提供的list 來filter 
+        lu runtime 把　lu result 根據skill 提供的list 來filter 
         只會用到lu 的result
 soft:
         基本上沒有dictation 沒有hard 產生的功能
