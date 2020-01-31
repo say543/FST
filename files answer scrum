@@ -250,8 +250,23 @@ common silence 所以fail
 bug
 <email_title>
 Files LU slots issue with "dot" in the query
+// my exaplanantion
 因該是multi turn 的時候　dot 需要被拿掉
 但是first turn 也要加這個 feature for traning 就是所謂的doc ... doc 的feautre     
+
+現在的prompt by file_keyword 只有
+目前只有presentation / deck 加上沒有dot 跟. 會被tag 成file_type
+worked case
+xxx presentation , xxx deck
+failed case
+xxx.presentation, xxx.deck
+xxx dot presentation, xxx dot deck
+
+xxx doc , xxx docs
+xxx.docs, xxx.doc
+xxx dot docs, xxx dot doc
+? 這個decision 可能要在revisit
+? 有必要這個可能會拿掉
 
 
 
