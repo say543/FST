@@ -193,6 +193,7 @@ send <to_contact_name>  <contact_name> <file_keyword> <file_type> 要加synthesi
 發現synthesys script 沒有辦法　handle to_contact_name pretty well...
 send TOsonwabiso   to 是額外的東西
 必須要先parse TOCONTACTNAMEHOLDER then CONTACTNAMEHOLDER 因為substring 的關西
+只修改這邊　　原本已經錯的synthesys 的data 就不動了ㄖ　以後再說
 
 
 
