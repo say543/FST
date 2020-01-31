@@ -127,9 +127,10 @@ rename 成files_enus_mv1.slots.pattern.default.bin
 worked case
 xxx presentation , xxx deck
 failed case
-xxx.presentation, xxx.deck
-xxx dot presentation, xxx dot deck
+xxx.presentation (.presentation as file_type)  , xxx.deck (.deck as file_type)
+xxx dot presentation (xxx dot as file_keyword), xxx dot deck (xxx dot as file_keyword)
 
+// all string being  file_keyword
 xxx doc , xxx docs
 xxx.docs, xxx.doc
 xxx dot docs, xxx dot doc
