@@ -427,6 +427,11 @@ attached 的相關support 需要schema 的redefine
 Some tips to reduce LU model memory
 b2 memor reduction tip
 
+
+<email_title>
+Fw: [Announcement] ONNX Runtime v 1.1.0 available on QAS
+ONNX 可以goolge 研究下
+
 ===========================
 reporting set / validating set
 
