@@ -190,7 +190,9 @@ step2:
 met1
 用open_text_synthesis 試試看
 send <to_contact_name>  <contact_name> <file_keyword> <file_type> 要加synthesis data 
-
+發現synthesys script 沒有辦法　handle to_contact_name pretty well...
+send TOsonwabiso   to 是額外的東西
+必須要先parse TOCONTACTNAMEHOLDER then CONTACTNAMEHOLDER 因為substring 的關西
 
 
 
