@@ -184,9 +184,15 @@ share my voice 101 file to my 2:00 o'clock meeting
 step1:
 filx  o'clock issue  for share
 先針對share 加上　　share with o'clock meeting, share to o'clock meeting
-send 也automatically fix
+一個failed 的query "Send my voice 101 file to my 2:00 o'clock meeting." 也automatically fix
 
-send (.*) to my no data
+step2:
+met1
+用open_text_synthesis 試試看
+send <to_contact_name>  <contact_name> <file_keyword> <file_type> 要加synthesis data 
+
+
+
 
 bug
 <checking_email_to_follow_up>
