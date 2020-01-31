@@ -259,6 +259,10 @@ common silence 所以fail
 bug
 <email_title>
 Files LU slots issue with "dot" in the query
+files 的tax form (yong 提供的　　不知道哪邊找的)
+https://msasg.visualstudio.com/Cortana/_git/teams-skills?path=%2Fprivate%2FTeamsSkills%2FTeams%2Fsrc%2FTaskForms%2FTeamsOpenFile.json&version=GBmaster&_a=contents
+
+
 // my exaplanantion
 因該是multi turn 的時候　dot 需要被拿掉
 但是first turn 也要加這個 feature for traning 就是所謂的doc ... doc 的feautre     
