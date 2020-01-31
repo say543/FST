@@ -557,6 +557,7 @@ not yet deploy change starting from 11262019
 <pr done and merge>
 wait for deployment and close related tickets
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1469744?path=%2Fsrc%2FEvaluation.Converged.Tests%2FEvaluationTestConfig.xml&_a=overview
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1471100?path=%2Fsrc%2FEvaluation.Converged.Tests%2FEvaluationTestConfig.xml&_a=overview
 
 
 <not yet check in>
