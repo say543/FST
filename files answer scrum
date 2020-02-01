@@ -300,6 +300,14 @@ xxx dot docs, xxx dot doc
 ? 有必要這個可能會拿掉
 
 
+saliesh 的task form 
+https://msasg.visualstudio.com/Cortana/_git/teams-skills?path=%2Fprivate%2FTeamsSkills%2FTeams%2Fsrc%2FTaskForms%2FTeamsOpenFile.json&version=GBmaster&_a=contents
+LUConstraints
+if from Dictation to Hard
+lu result 必須是correct 
+also,　即使加上file_type
+根據lu constraints , contexual lu 因該也還是可以trigger
+
 
 bug
 <email tile>
