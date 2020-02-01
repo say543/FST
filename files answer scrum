@@ -43,6 +43,10 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 
 
 
+==============================
+files domain task form
+==============================
+https://msasg.visualstudio.com/Cortana/_git/teams-skills?path=%2Fprivate%2FTeamsSkills%2FTeams%2Fsrc%2FTaskForms%2FTeamsOpenFile.json&version=GBmaster&_a=contents
 
 ==============================
 good pr following up during parental leave
@@ -93,7 +97,8 @@ files 目前的ke
 有hard constraint or soft constraint  dictation 的constraint
 參考page
 https://cortanawiki.azurewebsites.net/engineering/gettingstarted/1pbfLuConstraints.html
-'LU runtime perform filter/override action for constraints' 的整理　　(不同constraint by different components to consume 有不同的結果)
+'LU runtime perform filter/override action for constraints' 的整理　　(不同constraint by different components to consume 有不同的結果, 
+這邊是postprocessing slot constraint 的討論)
 
 dictation:
 　　　　　lu runtime 把　lu result ignore lu runtime 會把整個string 當成一個slot
