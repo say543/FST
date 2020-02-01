@@ -104,6 +104,7 @@ dictation:
 　　　　　lu runtime 把　lu result ignore lu runtime 會把整個string 當成一個slot
 　　　　　result here:
 　　　　　把default整個string 當成一個slot (. 是被 speech recogation給加上去的) 然後lu result 會被filter
+         所以是把SR 的整個input 所以才有.
 hard:
         lu runtime 把　lu result 根據skill 提供的list 來filter 
         只會用到lu 的result
