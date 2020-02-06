@@ -149,7 +149,8 @@ open review deck
 fix is checked in but only for review xxx types, need to think if more synthetic data is needed
 https://domoreexp.visualstudio.com/MSTeams/_workitems/edit/745833?src=WorkItemMention&src-action=artifact_link
 
-
+bug
+<2/4 files auto deployment is opened but deployment happens early, so it will go 2/6>
 //production bug
 要用manasi  flow 找raw query
 https://msasg.visualstudio.com/Cortana/_workitems/edit/2292554
@@ -181,6 +182,7 @@ https://msasg.visualstudio.com/Cortana/_workitems/edit/2290982?src=WorkItemMenti
 
 
 bug
+<2/4 files auto deployment is opened but deployment happens early, so it will go 2/6>
 <email_title>
 RE: state of union on reliability 
 not BVT failed query
@@ -215,7 +217,7 @@ send TOsonwabiso   to 是額外的東西
 
 
 bug
-<checking_email_to_follow_up>
+<2/4 files auto deployment is opened but deployment happens early, so it will go 2/6>
 i can deploy once this ticket is triaged.
 yes in second turn does not work
 因該是common domain ?
@@ -281,7 +283,7 @@ bug
 Files LU slots issue with "dot" in the query
 files 的tax form (yong 提供的　　不知道哪邊找的)
 https://msasg.visualstudio.com/Cortana/_git/teams-skills?path=%2Fprivate%2FTeamsSkills%2FTeams%2Fsrc%2FTaskForms%2FTeamsOpenFile.json&version=GBmaster&_a=contents
-
+?ashkay alawyas replies something unused
 
 // my exaplanantion
 因該是multi turn 的時候　dot 需要被拿掉
