@@ -68,6 +68,11 @@ https://msasg.visualstudio.com/Cortana/_git/Core/pullrequest/1447912
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1451373
 到時候知道retrain 的時候要注意這個 已經被yong 給update
 
+//hotfix update
+// 新的client base 也是有ondevice
+// 所以這邊只好ranker 做一些調整
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1477575?_a=files&path=%2Fmodels%2Ffiles%2Ffiles_enus_mv1.domain.1.hotfix.txt
+
 
 //cast my planning presentation to this display
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1451545?_a=files
@@ -150,6 +155,7 @@ fix is checked in but only for review xxx types, need to think if more synthetic
 https://domoreexp.visualstudio.com/MSTeams/_workitems/edit/745833?src=WorkItemMention&src-action=artifact_link
 
 bug
+<comment on resolved 2/6>
 <2/4 files auto deployment is opened but deployment happens early, so it will go 2/6>
 //production bug
 要用manasi  flow 找raw query
@@ -182,6 +188,7 @@ https://msasg.visualstudio.com/Cortana/_workitems/edit/2290982?src=WorkItemMenti
 
 
 bug
+<comment on resolved 2/6>
 <2/4 files auto deployment is opened but deployment happens early, so it will go 2/6>
 <email_title>
 RE: state of union on reliability 
