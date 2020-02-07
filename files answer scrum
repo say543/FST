@@ -283,6 +283,8 @@ bug
 https://msasg.visualstudio.com/Cortana/_workitems/edit/2286583
 open excel 因該是on device or files 終於要討論的
 ? client base 可能就可以解
+finaly decision:
+for queries like open excel, open word, etc. And we want Files to win on Teams (Mohit confirmed this) and OnDevice to win on UWP.
 
 
 bug
