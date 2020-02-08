@@ -474,6 +474,12 @@ yong 哥有很detail 說哪個service 沒有roll out 成功　　也有QAS DRI �
 Discuss extend the current files domain schema to support shared/attached files scenarios
 attached 的相關support 需要schema 的redefine
 要follow up 可能的meeting note
+new intent
+attach_file in the schema and LU guideline. 
+data source to support
+attachment
+data source to support 
+attached (? 這個感覺因該是file _action 不太確定   )
 
 <email_title>
 Some tips to reduce LU model memory
