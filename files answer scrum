@@ -62,16 +62,21 @@ https://msasg.visualstudio.com/Cortana/_git/Core/pullrequest/1447912
 
 
 
-
+<need to sync local>
 //canonical value update 
 // this that here -> reference
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1451373
 到時候知道retrain 的時候要注意這個 已經被yong 給update
 
+<need to sync local>
 //hotfix update
 // 新的client base 也是有ondevice
 // 所以這邊只好ranker 做一些調整
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1477575?_a=files&path=%2Fmodels%2Ffiles%2Ffiles_enus_mv1.domain.1.hotfix.txt
+
+<need to sync local>
+// negative patterns 避免跟communication overlap
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1484027?_a=files&path=%2Fdatasources%2FFiles%2Fresource%2Finfiles%2Fdomain.negative.infile
 
 
 //cast my planning presentation to this display
@@ -278,6 +283,13 @@ https://cortanalogviewer-ppe.azurewebsites.net/query/53ddbda4705548bb9c5d0d6eada
 turn 3
 common silence 所以fail 
 
+
+
+bug 
+https://domoreexp.visualstudio.com/MSTeams/_workitems/edit/778156
+sure and share 都要是confirm intent
+之前的兩個只有sure
+可能要加share for hotfix intent
 
 bug
 https://msasg.visualstudio.com/Cortana/_workitems/edit/2286583
@@ -532,6 +544,15 @@ good, should take a look
 <email_title>
 Contextual LU - File Open Voice Skill - Update
 contextual LU 的demo 結果
+
+
+<email_title>
+Inconsistent domain scores for files LU models resulting in over-triggering
+有一些queries
+可能要retrain model or  加negative pattern
+要跟yong 討論一下
+有些可以加上negative pattern
+有些可以retrain domain
 
 
 ===========================
