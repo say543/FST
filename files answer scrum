@@ -194,7 +194,8 @@ https://msasg.visualstudio.com/Cortana/_workitems/edit/2290982?src=WorkItemMenti
 
 bug
 <comment on resolved 2/6>
-<2/4 files auto deployment is opened but deployment happens early, so it will go 2/6>
+<go deploy to voce skill>
+<3s go 2/11 manually >
 <email_title>
 RE: state of union on reliability 
 not BVT failed query
@@ -229,13 +230,15 @@ send TOsonwabiso   to 是額外的東西
 
 
 bug
-<2/4 files auto deployment is opened but deployment happens early, so it will go 2/6>
+<go deploy to voce skill>
+<3s go 2/11 manually >
 i can deploy once this ticket is triaged.
 yes in second turn does not work
 因該是common domain ?
 https://msasg.visualstudio.com/Cortana/_workitems/edit/2284405
 teamsaction 是others 但是inmeeting 卻是confirm, domain score 不重要　這邊confirm 
 https://cortanalogviewer-ppe.azurewebsites.net/query/24324ef58ca64a9aaa2980b2bb289d7b/ppe
+
 
 PR location
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1469744?path=%2Fsrc%2FEvaluation.Converged.Tests%2FEvaluationTestConfig.xml&_a=overview
@@ -284,11 +287,18 @@ turn 3
 common silence 所以fail 
 
 
+bug
+"Show me the last presentation I opened" gives very low score, whereas
+"Show me the last ppt I opened" gives a high score and works as expected
+可能是pattern 寫得不夠好　　　需要修改
+https://msasg.visualstudio.com/Cortana/_workitems/edit/2320709
+
+
 
 bug 
 https://domoreexp.visualstudio.com/MSTeams/_workitems/edit/778156
-sure and share 都要是confirm intent
-之前的兩個只有sure
+sure / share 都要是confirm intent
+之前的retrain只有sure
 可能要加share for hotfix intent
 
 bug
