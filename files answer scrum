@@ -568,11 +568,15 @@ contextual LU 的demo 結果
 
 <email_title>
 Inconsistent domain scores for files LU models resulting in over-triggering
+
+我已經email 有回了　　需要提供feedback
 有一些queries
 可能要retrain model or  加negative pattern
 要跟yong 討論一下
 有些可以加上negative pattern
 有些可以retrain domain
+可能要真的retrain domain
+
 
 
 ===========================
