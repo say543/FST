@@ -301,6 +301,16 @@ sure / share 都要是confirm intent
 之前的retrain只有sure
 可能要加share for hotfix intent
 
+sure 比較簡單 因該已經work
+share 需要
+first turn 還是share
+後面的turn 
+需要用external set 來 train second trun
+加到train data 就可以
+可以參考一下calendar data 怎麼用　　這樣就可以resolve
+
+
+
 bug
 https://msasg.visualstudio.com/Cortana/_workitems/edit/2286583
 open excel 因該是on device or files 終於要討論的
