@@ -328,6 +328,13 @@ first turn 還是share
 加到train data 就可以
 可以參考一下calendar data 怎麼用　　這樣就可以resolve
 
+這邊data
+share / files/ file_share => confirm
+share / common/ anyintent => confirm
+原本share 還是keep share
+
+files_intent_training_01232020_PreviousCommon_work.tsv
+
 
 
 bug
