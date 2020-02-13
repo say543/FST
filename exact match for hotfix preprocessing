@@ -21,6 +21,10 @@ E:\CoreScienceDataStaging\datasources\Email> .\bin\CLU.Core.1.2.305\data_preproc
  
  要用另外一個json
  .\clu.exe run -c .domain_exact_match.json -o output_preprocess
+ 
+ 02122020 因該是這個完整的
+ PS E:\fileAnswer_data_synthesis\CMF_training> .\clu.exe run -c domain_exact_match.json -o output_preprocess
+ 
  buid_config 是整個看到的json
  
  會抓到domain_exact_match 的依賴
