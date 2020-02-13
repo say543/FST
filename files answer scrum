@@ -312,10 +312,13 @@ Files from Chad about semantic machines
 https://msasg.visualstudio.com/Cortana/_workitems/edit/2324148
 
 bug 
+//old bug
 https://domoreexp.visualstudio.com/MSTeams/_workitems/edit/778156
+// new bug
+https://msasg.visualstudio.com/Cortana/_workitems/edit/2319870
 sure / share 都要是confirm intent
 之前的retrain只有sure
-可能要加share for hotfix intent
+可能要加share f
 
 sure 比較簡單 因該已經work
 share 需要
