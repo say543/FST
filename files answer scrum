@@ -62,7 +62,7 @@ https://msasg.visualstudio.com/Cortana/_git/Core/pullrequest/1447912
 
 
 
-<need to sync local>
+<done sync local>
 //canonical value update 
 // this that here -> reference
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1451373
@@ -70,6 +70,7 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 
 <need to sync local>
 //hotfix update
+//yue
 // 新的client base 也是有ondevice
 // 所以這邊只好ranker 做一些調整
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1477575?_a=files&path=%2Fmodels%2Ffiles%2Ffiles_enus_mv1.domain.1.hotfix.txt
