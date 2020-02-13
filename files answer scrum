@@ -334,6 +334,8 @@ share / common/ anyintent => confirm
 原本share 還是keep share
 
 files_intent_training_01232020_PreviousCommon_work.tsv
+//folder 有相關的結果
+output_adhoc_intent_02122020_previousDomain_feature_train
 
 
 
