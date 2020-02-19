@@ -605,6 +605,25 @@ Inconsistent domain scores for files LU models resulting in over-triggering
 有些可以retrain domain
 可能要真的retrain domain
 
+<email_title>
+Presentation for FlexGram/NER + DP
+https://web.microsoftstream.com/video/064fe97b-e8f1-428d-a395-98a1cec79e21
+不知道是啥  之後看
+
+
+<email_title>
+LU deployment through rings?
+還不太確定  這個的 mapping 是啥意思
+原本沒有ring 這邊新增ring 了
+UXO	QAS Clients	Status	Jarvis traffic
+Developer	Microsoft_OMC_enus_Developer	Ready	https://jarvis-west.dc.ad.msft.net/dashboard/share/1B855EC8
+
+Microsoft	Microsoft_OMC_enus_Microsoft	50% Ready	https://jarvis-west.dc.ad.msft.net/dashboard/share/C5AC616B
+
+Preview	Microsoft_OMC_enus_Preview	Ready	https://jarvis-west.dc.ad.msft.net/dashboard/share/AD0A91E3
+
+Public	Microsoft_OMC_enus_Public	Ready	https://jarvis-west.dc.ad.msft.net/dashboard/share/1D94D75F
+
 
 
 ===========================
