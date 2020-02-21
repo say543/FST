@@ -641,6 +641,10 @@ January 2020: Teams Voice Skill Data Sets - 2/18/2020
 Re: Introducing a new, memory-efficient sparse linear model for language understanding
 another memory comparison
 
+<email_title>
+Help collecting feedback for Teams Client Based LU
+可以研究一下什麼時候fall back will win  condition 是很暴力的
+
 ===========================
 reporting set / validating set
 
