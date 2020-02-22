@@ -397,6 +397,9 @@ p.s
 在coresciencestage 找 的grep command
 grep -ri --include \*.infile regex .
 
+也是可以轉成正常的fst 參照這個
+luna_communication_enus_mv1.slots.contactPromptedForValue.infile
+
 
 
 
