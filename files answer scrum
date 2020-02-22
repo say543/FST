@@ -393,6 +393,13 @@ xxx dot docs, xxx dot doc
 ? 這個decision 可能要在revisit
 ? 有必要這個可能會拿掉
 
+p.s 
+在coresciencestage 找 的grep command
+grep -ri --include \*.infile regex .
+
+
+
+
 
 saliesh 的task form 
 https://msasg.visualstudio.com/Cortana/_git/teams-skills?path=%2Fprivate%2FTeamsSkills%2FTeams%2Fsrc%2FTaskForms%2FTeamsOpenFile.json&version=GBmaster&_a=contents
