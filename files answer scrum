@@ -669,6 +669,12 @@ another memory comparison
 Help collecting feedback for Teams Client Based LU
 可以研究一下什麼時候fall back will win  condition 是很暴力的
 
+
+<email_title>
+Model flighting is ready to use for Teams, OMC, and UWP
+這個因該per ring 的change
+之後可以研究一下
+
 ===========================
 reporting set / validating set
 
