@@ -310,11 +310,24 @@ https://msasg.visualstudio.com/Cortana/_workitems/edit/2320709
 
 
 
-bug 
+bug <pr done check in, not yet deploy for both 02262020>
 show xxx deck
 現在是negative pattern (by inmeeting 給cancel 掉)
 要跟2320709 一起討論看看  或是client base 才能解
+02262020
+現在把show xxx deck 放到
+
 https://msasg.visualstudio.com/Cortana/_workitems/edit/2321204
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1500742?_a=files
+
+
+bug
+canonical value
+excel sheet => excel
+https://msasg.visualstudio.com/Cortana/_workitems/edit/2349055
+
+powerpoint presentation => ppt
+https://msasg.visualstudio.com/Cortana/_workitems/edit/2349052
 
 
 
@@ -323,6 +336,8 @@ show me my file
 show me my recent files 
 都需要有file navigate.... shit 先不管吧
 https://msasg.visualstudio.com/Cortana/_workitems/edit/2330092
+
+
 
 bug 
 3s
