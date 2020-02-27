@@ -310,7 +310,8 @@ https://msasg.visualstudio.com/Cortana/_workitems/edit/2320709
 
 
 
-bug <pr done check in, not yet deploy for both 02262020>
+bug <pr done check in, DRI deploy 02262020, need to deploy to 3s as well>
+
 show xxx deck
 現在是negative pattern (by inmeeting 給cancel 掉)
 要跟2320709 一起討論看看  或是client base 才能解
@@ -319,6 +320,12 @@ show xxx deck
 
 https://msasg.visualstudio.com/Cortana/_workitems/edit/2321204
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1500742?_a=files
+
+
+bug 
+ranker 的'open text' 的東西
+因為ranker 不想train.... 有空要follow up 一下
+https://msasg.visualstudio.com/Cortana/_workitems/edit/2349062?src=WorkItemMention&src-action=artifact_link
 
 
 bug
