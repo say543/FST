@@ -44,6 +44,10 @@ def parse(slotList):
             line = line.strip();
             if not line:
                 continue;
+
+            # skip comment with #
+            if line.startswith('#'):
+                continue
             patternSet.append(line);
 
 

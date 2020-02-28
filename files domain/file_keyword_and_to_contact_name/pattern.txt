@@ -1,3 +1,7 @@
-0	show FILEKEYWORDHOLDER with TOCONTACTNAMEHOLDER	file_share	files	show <file_keyword> FILEKEYWORDHOLDER </file_keyword> <to_contact_name> TOCONTACTNAMEHOLDER </to_contact_name>
-0	Show FILEKEYWORDHOLDER with TOCONTACTNAMEHOLDER	file_share	files	show <file_keyword> FILEKEYWORDHOLDER </file_keyword> <to_contact_name> TOCONTACTNAMEHOLDER </to_contact_name>
-0	Show this file with TOCONTACTNAMEHOLDER	file_share	files	show <file_keyword> this </file_keyword> file with <to_contact_name> TOCONTACTNAMEHOLDER </to_contact_name>
+# section has been generated
+#0	show FILEKEYWORDHOLDER with TOCONTACTNAMEHOLDER	file_share	files	show <file_keyword> FILEKEYWORDHOLDER </file_keyword> <to_contact_name> TOCONTACTNAMEHOLDER </to_contact_name>
+#0	Show FILEKEYWORDHOLDER with TOCONTACTNAMEHOLDER	file_share	files	show <file_keyword> FILEKEYWORDHOLDER </file_keyword> <to_contact_name> TOCONTACTNAMEHOLDER </to_contact_name>
+#0	Show this file with TOCONTACTNAMEHOLDER	file_share	files	show <file_keyword> this </file_keyword> file with <to_contact_name> TOCONTACTNAMEHOLDER </to_contact_name>
+
+0	send TOCONTACTNAMEHOLDER the FILEKEYWORDHOLDER file	file_share	files	send <to_contact_name> TOCONTACTNAMEHOLDER </to_contact_name> the <file_keyword> FILEKEYWORDHOLDER </file_keyword> file
+0	share TOCONTACTNAMEHOLDER the FILEKEYWORDHOLDER file	file_share	files	share <to_contact_name> TOCONTACTNAMEHOLDER </to_contact_name> the <file_keyword> FILEKEYWORDHOLDER </file_keyword> file
