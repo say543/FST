@@ -102,7 +102,16 @@ def parse(slotList):
         
             outputSet.append('\t'.join(['0', query, intent, domain, slotXml]));
             #TurnNumber	PreviousTurnIntent	query	intent
-            outputIntentSet.append('\t'.join(['0',"\t"+query,intent]));
+            #outputIntentSet.append('\t'.join(['0',"\t"+query,intent]));
+
+            # add
+            # "PreviousTurnDomain"
+            # "PreviousTurnIntent"
+            # as
+            # 'TurnNumber', PREVIOUSTURNINTENT, 'query', 'intent',PREVIOUSTURNDOMAIN])
+            # append empty at first
+            #outputIntentSet.append('\t'.join(['0',"\t"+query,intent]));
+            outputIntentSet.append('\t'.join(['0',"\t"+query,intent,""]));
 
     outputSlot = '_'.join(slotList);
 
