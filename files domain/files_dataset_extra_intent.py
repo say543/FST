@@ -38,6 +38,7 @@ with codecs.open('files_dataset.tsv', 'r', 'utf-8') as fin:
 """
 
 with codecs.open('files_dataset_intent.tsv', 'w', 'utf-8') as fout:
+    fout.write('\t'.join(['TurnNumber', 'PreviousTurnIntent', 'query', 'intent','PreviousTurnDomain'])+'\r\n');
     for item in OutputSet:
         fout.write(item + '\r\n');
 
