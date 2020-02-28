@@ -44,7 +44,7 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 
 
 ==============================
-files domain task form
+files domain task form  repository
 ==============================
 https://msasg.visualstudio.com/Cortana/_git/teams-skills?path=%2Fprivate%2FTeamsSkills%2FTeams%2Fsrc%2FTaskForms%2FTeamsOpenFile.json&version=GBmaster&_a=contents
 
@@ -82,8 +82,10 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1484027?_a=files&path=%2Fdatasources%2FFiles%2Fresource%2Finfiles%2Fdomain.negative.infile
 
 
+
+<目前yue  hotfix 只在QAS12....  不打算sync 到QasBat...  但是我也不認為task from 要被 update>
 // 需要到時候revert 等到task form 切成file_seach instead of file_navigatefor show my recent files
-correct one
+// correct one pr
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1496916?_a=files
 //wrong
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1495781?_a=files
@@ -92,7 +94,7 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1451545?_a=files
 看起來現在這個算是inmeeting 了
 
-https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1462006?_a=files
+//teamspace
 //知道可以研究一下
 // 因該是 skill teams 要做multi turn behavior 所以只有search 也要support 只好hotfix
 //search
@@ -101,9 +103,12 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 // looking
 // look for
 // look
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1462006?_a=files
 
 
-// client base evaluation PR
+
+//client base 新的teams id 的  有相關的domains list for teamsclient
+//client base evaluation PR 
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1466674
 
 //team space keyword multi turn supported
