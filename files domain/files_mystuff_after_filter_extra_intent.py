@@ -434,6 +434,7 @@ random.shuffle(Output);
 # to match with teams intent total data
 index = 0
 with codecs.open('files_mystuff_after_filtering_intent.tsv', 'w', 'utf-8') as fout:
+    fout.write('\t'.join(['TurnNumber', 'PreviousTurnIntent', 'query', 'intent','PreviousTurnDomain'])+'\r\n');
     for item in Output:
         if index < upper_cnt:
             fout.write(item + '\r\n');
