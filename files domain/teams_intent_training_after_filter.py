@@ -468,9 +468,19 @@ with codecs.open('teams_intent_training.tsv', 'r', 'utf-8') as fin:
 
             
 
-            for i in range(0,repated_time):
+            #for i in range(0,repated_time):
                 # TurnNumber	PreviousTurnIntent	query	intent
-                Output.append(linestrs[0]+"\t"+linestrs[1]+"\t"+linestrs[2]+"\t"+linestrs[3]);
+                #Output.append(linestrs[0]+"\t"+linestrs[1]+"\t"+linestrs[2]+"\t"+linestrs[3]);
+
+
+            # add
+            # "PreviousTurnDomain"
+            # "PreviousTurnIntent"
+            # as
+            # 'TurnNumber', PREVIOUSTURNINTENT, 'query', 'intent',PREVIOUSTURNDOMAIN])
+            # append empty at first
+            for i in range(0,repated_time):
+                Output.append(linestrs[0]+"\t"+linestrs[1]+"\t"+linestrs[2]+"\t"+linestrs[3]+"\t");
 
 """
 # comment shuffle in the first place
@@ -482,6 +492,7 @@ with codecs.open('teams_intent_training.tsv', 'r', 'utf-8') as fin:
 # intent level output
 #######################
 with codecs.open('teams_intent_training_after_filtering.tsv', 'w', 'utf-8') as fout:
+    fout.write('\t'.join(['TurnNumber', 'PreviousTurnIntent', 'query', 'intent','PreviousTurnDomain'])+'\r\n');
     for item in Output:
         fout.write(item + '\r\n');
 
