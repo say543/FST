@@ -82,7 +82,9 @@ copyfile("..\\files_mystuff_after_filtering_intent_modify_intent.tsv" , "files_m
 
 copyfile("..\\teams_intent_training_after_filtering.tsv" , "teams_intent_training_after_filtering.tsv")
 
-
+# add common intent data from inmeeting and calendar
+copyfile("..\\inmeeting_intent_training_after_extract.tsv" , "inmeeting_intent_training_after_extract.tsv")
+copyfile("..\\calendar_intent_training_after_extract.tsv" , "calendar_intent_training_after_extract.tsv")
 
 
 
