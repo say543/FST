@@ -28,7 +28,7 @@ with codecs.open('calendar.train.intentsslots.generated.tsv', 'r', 'utf-8') as f
         if not line:
             continue;
         linestrs = line.split("\t")
-        if len(linestrs) < 4:
+        if len(linestrs) < 5:
             continue;
 
 
