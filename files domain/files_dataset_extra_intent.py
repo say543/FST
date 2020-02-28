@@ -5,7 +5,7 @@ import random;
 hyper_parameter = 200
 
 # add repeated times
-repated_time = 10
+repated_time = 30
 
 
 fileDomainRelatedIntent = ['file_search', 'file_open', 'file_share', 'file_download', 'file_other']
