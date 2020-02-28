@@ -56,6 +56,7 @@ with codecs.open('calendar.train.intentsslots.generated.tsv', 'r', 'utf-8') as f
 #random.shuffle(OutputSet);
 
 with codecs.open('calendar_intent_training_after_extract.tsv', 'w', 'utf-8') as fout:
+    fout.write('\t'.join(['TurnNumber', 'PreviousTurnIntent', 'query', 'intent','PreviousTurnDomain'])+'\r\n');
     for item in OutputSet:
         fout.write(item + '\r\n');
 
