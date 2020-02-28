@@ -1,0 +1,3 @@
+TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain
+0	file_share	share	confirm	files
+multiturn_0		share	confirm	common
