@@ -413,8 +413,8 @@ with codecs.open('files_mystuff_after_filtering.tsv', 'r', 'utf-8') as fin:
                 #print("new:"+intent)
             linestrs[2] = intent
         
-        for i in range(0,repated_time):
-            Output.append(linestrs[0]+"\t\t"+linestrs[1]+"\t"+linestrs[2]);
+        #for i in range(0,repated_time):
+        #    Output.append(linestrs[0]+"\t\t"+linestrs[1]+"\t"+linestrs[2]);
 
         # add
         # "PreviousTurnDomain"
