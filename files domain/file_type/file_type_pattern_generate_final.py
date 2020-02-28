@@ -7,7 +7,7 @@ from collections import defaultdict;
 # 1: slot only
 # 2: intent only
 # 5: both
-synthetic_mode = 2;
+synthetic_mode = 1;
 
 
 # add hyper paramter if unbalanced
@@ -126,6 +126,7 @@ def parse(slotList):
         # for intent
         print("generating intent synthetic...")
         with codecs.open('intent_data_synthesised_' + outputSlot + '.tsv', 'w', 'utf-8') as fout:
+            fout.write('\t'.join(['TurnNumber', 'PreviousTurnIntent', 'query', 'intent','PreviousTurnDomain'])+'\r\n');
             for item in outputIntentSet:
                 fout.write(item + '\r\n');            
 
