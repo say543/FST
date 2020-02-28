@@ -337,7 +337,10 @@ with codecs.open('teams_intent_training.tsv', 'r', 'utf-8') as fin:
             #print(linestrs[1])
 
             intent = linestrs[3]
-            if linestrs[3] == "file_search" or linestrs[3] == "file_navigate":
+
+            # also file_open
+            #if linestrs[3] == "file_search" or linestrs[3] == "file_navigate":
+            if linestrs[3] == "file_search" or linestrs[3] == "file_navigate" or linestrs[3] == "file_open":
 
                 # start
                 match = False
@@ -462,7 +465,7 @@ with codecs.open('teams_intent_training.tsv', 'r', 'utf-8') as fin:
                 #print("new:"+intent)
             linestrs[3] = intent
                 
-    
+
             
 
             for i in range(0,repated_time):
