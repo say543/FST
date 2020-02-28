@@ -123,6 +123,7 @@ def parse(slotList):
         # for intent
         print("generating intent synthetic...")
         with codecs.open('intent_data_synthesised_' + outputSlot + '.tsv', 'w', 'utf-8') as fout:
+            fout.write('\t'.join(['TurnNumber', 'PreviousTurnIntent', 'query', 'intent','PreviousTurnDomain'])+'\r\n');
             for item in outputIntentSet:
                 fout.write(item + '\r\n');             
 
