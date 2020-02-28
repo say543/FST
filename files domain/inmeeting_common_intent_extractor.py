@@ -32,8 +32,16 @@ with codecs.open('InMeeting_Intent_Training_01292020v1.tsv', 'r', 'utf-8') as fi
             continue;
 
         # make sure it is in common intent
+
+        # add
+        # "PreviousTurnDomain"
+        # "PreviousTurnIntent"
+        # as
+        # 'TurnNumber', PREVIOUSTURNINTENT, 'query', 'intent',PREVIOUSTURNDOMAIN])
+        # append empty at first
         if linestrs[3] in commonDomainRelatedIntent:        
-            OutputSet.append(linestrs[0]+"\t\t"+linestrs[2]+"\t"+linestrs[3]);        
+            OutputSet.append(linestrs[0]+"\t\t"+linestrs[2]+"\t"+linestrs[3]+"\t");
+
 
 # commna shuffle at first
 #random.shuffle(OutputSet);
