@@ -416,6 +416,15 @@ with codecs.open('files_mystuff_after_filtering.tsv', 'r', 'utf-8') as fin:
         for i in range(0,repated_time):
             Output.append(linestrs[0]+"\t\t"+linestrs[1]+"\t"+linestrs[2]);
 
+        # add
+        # "PreviousTurnDomain"
+        # "PreviousTurnIntent"
+        # as
+        # 'TurnNumber', PREVIOUSTURNINTENT, 'query', 'intent',PREVIOUSTURNDOMAIN])
+        # append empty at first
+        for i in range(0,repated_time):
+            Output.append(linestrs[0]+"\t\t"+linestrs[1]+"\t"+linestrs[2]+"\t");
+
 # my stuff is too many so shuffle
 print('shuffling');
 random.seed(0.1);
