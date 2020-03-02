@@ -11,6 +11,11 @@ files = glob.glob("*.tsv");
 outputs = [];
 outputsWithSource = [];
 
+PREVIOUSTURNDOMAIN = "PreviousTurnDomain"
+PREVIOUSTURNINTENT = "PreviousTurnIntent"
+
+TARGETNUMCOLUMNS = 5
+
 
 
 ############################################
@@ -33,14 +38,75 @@ synlists = set([
 
 for synlist in synlists:
     copyfile("..\\Intent_Synthesis\\"+synlist , synlist)
+
+
+    print("collecting: " + synlist);
+    isHeadColumn = True
+    headColumnList =[] 
+
+    
     temp =[]
     with codecs.open(synlist, 'r', 'utf-8') as fin:
         for line in fin:
+
+
+
+
+            
+            #line = line.strip();
+            #if not line:
+            #    continue;
+
+            #temp.append(line);
+
+
+            
+
+            #skip headcolumn and check if valid
+            if (isHeadColumn):
+                line = line.strip();
+                if not line:
+                    continue;
+                headColumnList = line.split('\t');
+                if len(headColumnList) < TARGETNUMCOLUMNS:
+                    print("error header for file: " + file);
+                    
+                isHeadColumn = False
+                continue
+
+            
             line = line.strip();
             if not line:
                 continue;
+            array = line.split('\t');
 
-            temp.append(line);
+            # append space is smaller than target length
+            lineWithFill = line
+            if len(array) < TARGETNUMCOLUMNS:
+
+                lineWithFill =""
+                for index in range(0,TARGETNUMCOLUMNS):
+
+                    if index >= len(array):
+                        #print(index)
+                        if headColumnList[index] == PREVIOUSTURNDOMAIN:
+                            lineWithFill = lineWithFill
+                        else:
+                            print("error:" + line);
+                    else:
+                        lineWithFill = lineWithFill+array[index]
+
+                    if index < TARGETNUMCOLUMNS-1:
+                        lineWithFill+="\t";
+                    
+
+                        
+                        #lineWithFill = "\t"+lineWithFill+array[index]
+
+
+                #lineWithFill = lineWithFill.rstrip()
+            temp.append(lineWithFill)
+                    
 
         print('shuffling:'+synlist);
         random.seed(0.1);
@@ -75,7 +141,7 @@ copyfile("..\\Open_Text_Synthesis\\file_type\\intent_data_synthesised_file_type.
 copyfile("..\\files_other_training_after_rewrite.tsv", "files_other_training_after_rewrite.tsv")
 copyfile("..\\files_dataset_intent.tsv" , "files_dataset_intent.tsv")
 #remove copy my stuff data since no improvement so no update
-# add back to extra modified intent result but change source
+# add back to extra modified intent result but change source to only has 7000 in case any wrong edtied operation
 #copyfile("..\\files_mystuff_after_filtering_intent.tsv" , "files_mystuff_after_filtering_intent.tsv")
 copyfile("..\\files_mystuff_after_filtering_intent_modify_intent.tsv" , "files_mystuff_after_filtering_intent.tsv")
 
@@ -86,6 +152,10 @@ copyfile("..\\teams_intent_training_after_filtering.tsv" , "teams_intent_trainin
 copyfile("..\\inmeeting_intent_training_after_extract.tsv" , "inmeeting_intent_training_after_extract.tsv")
 copyfile("..\\calendar_intent_training_after_extract.tsv" , "calendar_intent_training_after_extract.tsv")
 
+
+# add multiturn training DASt files
+# new column PREVIOUSTURNDOMAIN for the last one (PreviousTurnIntent  has already existed)
+copyfile("..\\intent_dsat_training.tsv" , "intent_dsat_training.tsv")
 
 
 ############################################
@@ -108,25 +178,80 @@ for file in files:
         continue
     
     print("collecting: " + file);
+    isHeadColumn = True
+    headColumnList =[] 
     with codecs.open(file, 'r', 'utf-8') as fin:
         for line in fin:
+
+            #skip headcolumn and check if valid
+            if (isHeadColumn):
+                line = line.strip();
+                if not line:
+                    continue;
+                headColumnList = line.split('\t');
+                if len(headColumnList) < TARGETNUMCOLUMNS:
+                    print("error header for file: " + file);
+                    
+                isHeadColumn = False
+                continue
+
+            
             line = line.strip();
             if not line:
                 continue;
             array = line.split('\t');
-            if len(array) < 4:
-                print("error:" + line);
+
+
+            # append space is smaller than target length
+            lineWithFill = line
+            if len(array) < TARGETNUMCOLUMNS:
+
+                lineWithFill =""
+                for index in range(0,TARGETNUMCOLUMNS):
+
+                    if index >= len(array):
+                        #print(index)
+                        if headColumnList[index] == PREVIOUSTURNDOMAIN:
+                            lineWithFill = lineWithFill
+                        else:
+                            print("error:" + line);
+                    else:
+                        lineWithFill = lineWithFill+array[index]
+
+                    if index < TARGETNUMCOLUMNS-1:
+                        lineWithFill+="\t";
+
+
+                #lineWithFill = lineWithFill.rstrip()
+                    
+            # miss column PreviousTurnDomain
+            # append empty as default
+            #if PREVIOUSTURNDOMAIN not in array:
+            #    line = '\t'.join([line, ""])
+
+            # miss column PreviousTurnDomain
+            # append empty as default
+            #if  not in array:
+            #    line = '\t'.join([line, ""])
+
+                        
+            #outputs.append(line);            
+            #outputsWithSource.append(line+'\t'+ file);
+
             
-            outputs.append(line);            
-            outputsWithSource.append(line+'\t'+ file);
+            outputs.append(lineWithFill);            
+            outputsWithSource.append(lineWithFill+'\t'+ file);
+
 
 print('shuffling');
 random.seed(0.1);
 random.shuffle(outputs);
 
-#TurnNumber	PreviousTurnIntent	query	intent
-outputs = ['\t'.join(['TurnNumber', 'PreviousTurnIntent', 'query', 'intent'])] + outputs;
-outputsWithSource = ['\t'.join(['TurnNumber', 'PreviousTurnIntent', 'query', 'intent', 'source'])] + outputsWithSource;
+#TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain
+#outputs = ['\t'.join(['TurnNumber', 'PreviousTurnIntent', 'query', 'intent'])] + outputs;
+#outputsWithSource = ['\t'.join(['TurnNumber', 'PreviousTurnIntent', 'query', 'intent', 'source'])] + outputsWithSource;
+outputs = ['\t'.join(['TurnNumber', PREVIOUSTURNINTENT, 'query', 'intent',PREVIOUSTURNDOMAIN])] + outputs;
+outputsWithSource = ['\t'.join(['TurnNumber', PREVIOUSTURNINTENT, 'query', 'intent', PREVIOUSTURNDOMAIN,'source'])] + outputsWithSource;
 
 
 with codecs.open(outputFile, 'w', 'utf-8') as fout:
