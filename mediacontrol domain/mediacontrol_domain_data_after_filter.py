@@ -18,6 +18,89 @@ hyper_parameter = 200
 
 fileDomainRelatedIntent = ['file_search', 'file_open', 'file_share', 'file_download', 'file_other', 'file_navigate', "teamspace_search"]
 
+#borrow from files_mystuff_after_filter.py
+fileTypeTagWoDotInFileKeywordOrFileName={
+
+    # space is important
+    # order is important
+
+    'pptx' : '<file_type> pptx </file_type> ',
+    'ppts' : '<file_type> ppts </file_type> ',
+    'ppt' : '<file_type> ppt </file_type> ',
+    'deck' : '<file_type> deck </file_type> ',
+    'decks' : '<file_type> decks </file_type> ',
+    'presentation' : '<file_type> presentation </file_type> ',
+    'presentations' : '<file_type> presentations </file_type> ',
+    'powerpoint' : '<file_type> powerpoint </file_type> ',
+    'PowerPoint' : '<file_type> PowerPoint </file_type> ',
+    'powerpoints' : '<file_type> powerpoints </file_type> ',
+    # add for seperate
+    'power point' : '<file_type> power point </file_type> ',
+    
+    'slide' : '<file_type> slides </file_type> ',
+    'slides' : '<file_type> slides </file_type> ',
+    'doc' : '<file_type> doc </file_type> ',
+    'docx' : '<file_type> docx </file_type> ',
+    'docs' : '<file_type> docs </file_type> ',
+    # add for upper case
+    'Doc' : '<file_type> Doc </file_type> ',
+    'Docx' : '<file_type> Docx </file_type> ',
+    'Docs' : '<file_type> Docs </file_type> ',
+    # spec no longer being file_type
+    #' spec' : '<file_type> spec </file_type> ',
+    'excel' : '<file_type> excel </file_type> ',
+    'excels' : '<file_type> excels </file_type> ',
+    'xls' : '<file_type> xls </file_type> ',
+    'xlsx' : '<file_type> xlsx </file_type> ',
+    'spreadsheet' : '<file_type> spreadsheet </file_type> ',
+    'spreadsheets' : '<file_type> spreadsheets </file_type> ',
+    'workbook' : '<file_type> workbook </file_type> ',
+    'worksheet' : '<file_type> worksheet </file_type> ',
+    'csv' : '<file_type> csv </file_type> ',
+    'tsv' : '<file_type> tsv </file_type> ',
+    'note' : '<file_type> note </file_type> ',
+    'notes' : '<file_type> notes </file_type> ',
+    'onenote' : '<file_type> onenote </file_type> ',
+    'onenotes' : '<file_type> onenotes </file_type> ',
+    # add for upper case
+    'OneNote' : '<file_type> OneNote </file_type> ',
+    'notebook' : '<file_type> notebook </file_type> ',
+    'notebooks' : '<file_type> notebooks </file_type> ',
+    'pdf' : '<file_type> pdf </file_type> ',
+    'pdfs' : '<file_type> pdfs </file_type> ',
+    # add for upper case
+    'PDF' : '<file_type> PDF </file_type> ',
+    'jpg' : '<file_type> jpg </file_type> ',
+    'jpeg' : '<file_type> jpeg </file_type> ',
+    'gif' : '<file_type> gif </file_type> ',
+    'png' : '<file_type> png </file_type> ',
+    'image' : '<file_type> image </file_type> ',
+    'msg' : '<file_type> msg </file_type> ',
+    'ics' : '<file_type> ics </file_type> ',
+    'vcs' : '<file_type> vcs </file_type> ',
+    'vsdx' : '<file_type> vsdx </file_type> ',
+    'vssx' : '<file_type> vssx </file_type> ',
+    'vstx' : '<file_type> vstx </file_type> ',
+    'vsdm' : '<file_type> vsdm </file_type> ',
+    'vssm' : '<file_type> vssm </file_type> ',
+    'vstm' : '<file_type> vstm </file_type> ',
+    'vsd' : '<file_type> vsd </file_type> ',
+    'vdw' : '<file_type> vdw </file_type> ',
+    'vss' : '<file_type> vss </file_type> ',
+    'vst' : '<file_type> vst </file_type> ',
+    'mpp' : '<file_type> mpp </file_type> ',
+    'mpt' : '<file_type> mpt </file_type> ',
+    # no mention in spec
+    # move it to not tag
+    'word' : '<file_type> word </file_type> ',
+
+
+    # keep it as tag
+    'picture' : '<file_type> picture </file_type> ',
+    'music' : '<file_type> music </file_type> ',
+    'txt' : '<file_type> txt </file_type> ',
+}
+
 
 filterDomainDic =set([
     "mystuff"
@@ -121,26 +204,53 @@ for domain, rows in domainListDictionary.items():
     print("rows\t" + str(len(rows)));
     with codecs.open((inputFile.split("."))[0] +'_'+domain+'.tsv', 'w', 'utf-8') as fout:
         # header
-        fout.write("TurnNumber\PreviousTurnDomain\tquery\domain\r\n")
+        fout.write("TurnNumber\tPreviousTurnDomain\tquery\tdomain\r\n")
         for row in rows:
             fout.write(row + '\r\n');
 
 
-# filter mystuff data to output
+# filter igonre domain list to output
+outputdomainIgnoreListDuetoFileType = []
 with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8') as fout:
-    for domain, rows in domainListDictionary.items():
+    # header
+    fout.write("TurnNumber\tPreviousTurnDomain\tquery\tdomain\r\n")
+    for domain, lines in domainListDictionary.items():
+
+
+        print(domain)
+        
         # skip igonre domain
-        if domain in filterDomainDic:
-            continue;
-                     
-        # header
-        fout.write("TurnNumber\PreviousTurnDomain\tquery\domain\r\n")
-        for row in rows:
-            fout.write(row + '\r\n');
+        if domain.lower() in filterDomainDic:
+    
+            for line in lines:
+                line = line.strip();
+                if not line:
+                    continue;
+                linestrs = line.split("\t");
+
+                hasFileType = False;
+                for linstr in linestrs:
+                    if linstr.lower() in fileTypeTagWoDotInFileKeywordOrFileName:
+                        hasFileType = True
+                        break
+                if hasFileType:
+                    fout.write(line + '\r\n');
+                else:
+                    outputdomainIgnoreListDuetoFileType.append(line)
+
+            #print(len(rows))
+            #continue;
+
+        for line in lines:
+            fout.write(line + '\r\n');
 
             
         
-
+with codecs.open((inputFile.split("."))[0] +'_wo_filter_type'+'.tsv', 'w', 'utf-8') as fout:
+    # header
+    fout.write("TurnNumber\tPreviousTurnDomain\tquery\tdomain\r\n")
+    for item in outputdomainIgnoreListDuetoFileType:
+        fout.write(item + '\r\n');
 
 # for judge trainer format
 #with codecs.open('teams_golden_after_filtering.tsv', 'w', 'utf-8') as fout:
