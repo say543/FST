@@ -2156,6 +2156,24 @@ https://microsoft-my.sharepoint-df.com/:w:/r/personal/chiecha_microsoft_com/_lay
 
 
 
+=====================
+domian training 打算  03022020
+=====================
+
+build.files.domain.json
+run.build.domain.cmd
+
+執行command
+.\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2 --queryInColumn 1 --interactive --verbose --encoding utf-8 -c  E:\fileAnswer_data_synthesis\CMF_training\output_domain\post\final  --variant model  -dl files
+
+
+step1: <這個已經打通了flow with domain score>
+media control data
+mystuff
+只留著with file type
+其他 domain 都留著
+E:\fileAnswer_data_synthesis\CMF_training\output_domain_only_mediacontrol_03022020v1
+also training data inside
 
 =====================
 domian pattern 打算  07252019
