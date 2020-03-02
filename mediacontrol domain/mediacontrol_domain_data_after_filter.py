@@ -18,6 +18,12 @@ hyper_parameter = 200
 
 fileDomainRelatedIntent = ['file_search', 'file_open', 'file_share', 'file_download', 'file_other', 'file_navigate', "teamspace_search"]
 
+
+filterDomainDic =set([
+    "mystuff"
+    ])
+domainIgnoreList = {}
+
 teamsDomainToFileDomain = {
     # carina need small but bellevue needs big
     "teams" : "files",
@@ -42,10 +48,27 @@ domainListDictionary = defaultdict(list);
 inputFile = "mediacontrol_domain_train.tsv"
 
 
-#with codecs.open('Teams-golden.tsv', 'r', 'utf-8') as fin:
+
+
+isHeadColumn = True
+headColumnList =[]
+totalRows = 0
 with codecs.open(inputFile, 'r', 'utf-8') as fin:
     
     for line in fin:
+
+        #skip headcolumn and check if valid
+        if (isHeadColumn):
+            line = line.strip();
+            if not line:
+                continue;
+            #headColumnList = line.split('\t');
+            #if len(headColumnList) < TARGETNUMCOLUMNS:
+            #    print("error header for file: " + file);
+                    
+            isHeadColumn = False
+            continue
+        
         line = line.strip();
         if not line:
             continue;
@@ -56,7 +79,7 @@ with codecs.open(inputFile, 'r', 'utf-8') as fin:
         if len(linestrs) < 4:
             continue;
 
-
+        totalRows+=1
         domain = linestrs[3]
 
         if domain not in domainListDictionary:
@@ -85,7 +108,7 @@ with codecs.open(inputFile, 'r', 'utf-8') as fin:
 
 
 
-        
+print("total valid row\t" + str(totalRows));  
 
 """
 # comment shuffle in the first place
@@ -94,11 +117,29 @@ with codecs.open(inputFile, 'r', 'utf-8') as fin:
 
 # outout to different bucket for analysis
 for domain, rows in domainListDictionary.items():
+    print("domain\t" + domain);
+    print("rows\t" + str(len(rows)));
     with codecs.open((inputFile.split("."))[0] +'_'+domain+'.tsv', 'w', 'utf-8') as fout:
         # header
         fout.write("TurnNumber\PreviousTurnDomain\tquery\domain\r\n")
         for row in rows:
             fout.write(row + '\r\n');
+
+
+# filter mystuff data to output
+for domain, rows in domainListDictionary.items():
+    with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8') as fout:
+
+        # skip igonre domain
+        if domain in filterDomainDic:
+            continue;
+                     
+        # header
+        fout.write("TurnNumber\PreviousTurnDomain\tquery\domain\r\n")
+        for row in rows:
+            fout.write(row + '\r\n');
+
+            
         
 
 
