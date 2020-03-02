@@ -19,6 +19,7 @@ hyper_parameter = 200
 fileDomainRelatedIntent = ['file_search', 'file_open', 'file_share', 'file_download', 'file_other', 'file_navigate', "teamspace_search"]
 
 #borrow from files_mystuff_after_filter.py
+'''
 fileTypeTagWoDotInFileKeywordOrFileName={
 
     # space is important
@@ -100,11 +101,77 @@ fileTypeTagWoDotInFileKeywordOrFileName={
     'music' : '<file_type> music </file_type> ',
     'txt' : '<file_type> txt </file_type> ',
 }
+'''
 
-
-filterDomainDic =set([
-    "mystuff"
+fileTypeDomanBoost =set([
+    'pptx',
+    'ppts',
+    'ppt',
+    'deck',
+    'decks',
+    'presentation',
+    'presentations',
+    'powerpoint',
+    'powerpoints',
+    'power point',
+    'slide',
+    'slides',
+    'doc',
+    'docx',
+    'docs',
+    'spec',
+    'excel',
+    'excels',
+    'xls',
+    'xlsx',
+    'spreadsheet',
+    'spreadsheets',
+    'workbook',
+    'worksheet',
+    'csv',
+    'tsv',
+    'note',
+    'notes',
+    'onenote',
+    'onenotes',
+    'onenote',
+    'notebook',
+    'notebooks',
+    'pdf',
+    'pdfs',
+    'pdf',
+    'jpg',
+    'jpeg',
+    'gif',
+    'png',
+    'image',
+    'msg',
+    'ics',
+    'vcs',
+    'vsdx',
+    'vssx',
+    'vstx',
+    'vsdm',
+    'vssm',
+    'vstm',
+    'vsd',
+    'vdw',
+    'vss',
+    'vst',
+    'mpp',
+    'mpt',
+    'word',
+    'words',
+    'document',
+    'documents',
+    'file',
+    'files'
     ])
+
+#filterDomainDic =set([
+#    "mystuff"
+#    ])
+
 domainIgnoreList = {}
 
 teamsDomainToFileDomain = {
@@ -217,20 +284,38 @@ with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8'
     for domain, lines in domainListDictionary.items():
 
 
-        print(domain)
+        # for debug
+        #print(domain)
         
-        # skip igonre domain
-        if domain.lower() in filterDomainDic:
-    
+        # skip igonre domain based fileTypeDomanBoost
+        #if domain.lower() in filterDomainDic:
+        if domain.lower() == "mystuff":
+
             for line in lines:
                 line = line.strip();
                 if not line:
                     continue;
+
+                # replace all . with \t
+                
                 linestrs = line.split("\t");
+                query = linestrs[2]
+
+                # replace all  ./space/,/?/! with \t
+                # not deal with PDF's
+                # do it in the future
+                
+                query = str.replace(query, " ", "\t")
+                query = str.replace(query, ".", "\t")
+                query = str.replace(query, ",", "\t")
+                query = str.replace(query, "?", "\t")
+                query = str.replace(query, "!", "\t")
+
+                querytrs = query.split("\t");
 
                 hasFileType = False;
-                for linstr in linestrs:
-                    if linstr.lower() in fileTypeTagWoDotInFileKeywordOrFileName:
+                for querystr in querytrs:
+                    if querystr.lower() in fileTypeDomanBoost:
                         hasFileType = True
                         break
                 if hasFileType:
