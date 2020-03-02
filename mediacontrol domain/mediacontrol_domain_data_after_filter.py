@@ -127,9 +127,8 @@ for domain, rows in domainListDictionary.items():
 
 
 # filter mystuff data to output
-for domain, rows in domainListDictionary.items():
-    with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8') as fout:
-
+with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8') as fout:
+    for domain, rows in domainListDictionary.items():
         # skip igonre domain
         if domain in filterDomainDic:
             continue;
