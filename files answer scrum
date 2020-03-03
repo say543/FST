@@ -391,6 +391,18 @@ first turn 還是share
 share / files/ file_share => confirm
 share / common/ anyintent => confirm
 原本share 還是keep share
+//03032020
+這樣會fail
+需要看
+https://msasg.visualstudio.com/Cortana/_git/Core?path=%2Fruntime%2Fcomponents%2FInterfaces%2Fsrc%2FSkills%2FSkillStatus.cs&version=GBmaster&_a=contents
+TaskFrameStatus
+InProgress
+這樣才是multi turn
+要多加column 跟用這個
+
+
+
+
 
 files_intent_training_01232020_PreviousCommon_work.tsv
 //folder 有相關的結果
