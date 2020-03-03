@@ -12,6 +12,16 @@ hyper_parameter = 200
 
 
 
+
+PREVIOUSTURNDOMAIN = "PreviousTurnDomain"
+PREVIOUSTURNINTENT = "PreviousTurnIntent"
+TASKFRAMESTATUS = "TaskFrameStatus"
+TASKFRAMEENTITYSTATES = "TaskFrameEntityStates"
+TASKFRAMEGUID = "TaskFrameGUID"
+SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES = "SpeechPeopleDisambiguationGrammarMatches"
+CONVERSATIONALCONTEXT = "ConversationalContext",
+
+
 commonDomainRelatedIntent = ['cancel','confirm','reject','select_none']
 
 #inmeetingDomainToFileDomain = {
@@ -56,7 +66,7 @@ with codecs.open('calendar.train.intentsslots.generated.tsv', 'r', 'utf-8') as f
 #random.shuffle(OutputSet);
 
 with codecs.open('calendar_intent_training_after_extract.tsv', 'w', 'utf-8') as fout:
-    fout.write('\t'.join(['TurnNumber', 'PreviousTurnIntent', 'query', 'intent','PreviousTurnDomain'])+'\r\n');
+    fout.write('\t'.join(['TurnNumber', PREVIOUSTURNINTENT, 'query', 'intent',PREVIOUSTURNDOMAIN, TASKFRAMESTATUS, TASKFRAMEENTITYSTATES, TASKFRAMEGUID, SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES, CONVERSATIONALCONTEXT])+'\r\n');
     for item in OutputSet:
         fout.write(item + '\r\n');
 
