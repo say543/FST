@@ -14,6 +14,15 @@ synthetic_mode = 1;
 hyper_parameter = 200
 
 
+
+PREVIOUSTURNDOMAIN = "PreviousTurnDomain"
+PREVIOUSTURNINTENT = "PreviousTurnIntent"
+TASKFRAMESTATUS = "TaskFrameStatus"
+TASKFRAMEENTITYSTATES = "TaskFrameEntityStates"
+TASKFRAMEGUID = "TaskFrameGUID"
+SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES = "SpeechPeopleDisambiguationGrammarMatches"
+CONVERSATIONALCONTEXT = "ConversationalContext"
+
 def getListForType(filename):
     # read open text content
     holderList = [];
@@ -126,7 +135,7 @@ def parse(slotList):
         # for intent
         print("generating intent synthetic...")
         with codecs.open('intent_data_synthesised_' + outputSlot + '.tsv', 'w', 'utf-8') as fout:
-            fout.write('\t'.join(['TurnNumber', 'PreviousTurnIntent', 'query', 'intent','PreviousTurnDomain'])+'\r\n');
+            fout.write('\t'.join(['TurnNumber', PREVIOUSTURNINTENT, 'query', 'intent',PREVIOUSTURNDOMAIN, TASKFRAMESTATUS, TASKFRAMEENTITYSTATES, TASKFRAMEGUID, SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES, CONVERSATIONALCONTEXT])+'\r\n');
             for item in outputIntentSet:
                 fout.write(item + '\r\n');            
 
