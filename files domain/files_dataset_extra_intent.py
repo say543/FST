@@ -10,6 +10,15 @@ repated_time = 30
 
 fileDomainRelatedIntent = ['file_search', 'file_open', 'file_share', 'file_download', 'file_other']
 
+
+PREVIOUSTURNDOMAIN = "PreviousTurnDomain"
+PREVIOUSTURNINTENT = "PreviousTurnIntent"
+TASKFRAMESTATUS = "TaskFrameStatus"
+TASKFRAMEENTITYSTATES = "TaskFrameEntityStates"
+TASKFRAMEGUID = "TaskFrameGUID"
+SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES = "SpeechPeopleDisambiguationGrammarMatches"
+CONVERSATIONALCONTEXT = "ConversationalContext",
+
 OutputSet = [];
 
 with codecs.open('files_dataset.tsv', 'r', 'utf-8') as fin:
@@ -38,7 +47,7 @@ with codecs.open('files_dataset.tsv', 'r', 'utf-8') as fin:
 """
 
 with codecs.open('files_dataset_intent.tsv', 'w', 'utf-8') as fout:
-    fout.write('\t'.join(['TurnNumber', 'PreviousTurnIntent', 'query', 'intent','PreviousTurnDomain'])+'\r\n');
+    fout.write('\t'.join(['TurnNumber', PREVIOUSTURNINTENT, 'query', 'intent',PREVIOUSTURNDOMAIN, TASKFRAMESTATUS, TASKFRAMEENTITYSTATES, TASKFRAMEGUID, SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES, CONVERSATIONALCONTEXT])+'\r\n');
     for item in OutputSet:
         fout.write(item + '\r\n');
 
