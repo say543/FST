@@ -3,6 +3,17 @@ evaluation 可能遇到的bug page
 https://microsoft.sharepoint.com/teams/CortanaCore/_layouts/15/WopiFrame.aspx?sourcedoc={6d6ae133-c9c8-400d-bfd8-ae8feec6ff9f}&action=edit&wd=target%28LU%20Tooling%2C%20Platform%20and%20Runtime%2FDev%20handbook%2FDevelopment.one%7C167a6855-2d14-4555-a326-affc6c35fa6f%2FModel%20Repository%20-%20Enlist%2C%20Setup%20and%20Structure%7C7e1929a0-cb51-4324-b4c4-97a79eda7d64%2F%29
 
 
+
+=====================================
+evaluation query level analysis
+remote download 03032020
+do it in the future
+=====================================
+
+Chieh-Chun Chang to download logs, please follow these newer instructions: 
+onenote:https://microsoft.sharepoint.com/teams/CortanaCore/Shared%20Documents/Core%20Science/Cortana%20Core%20Science/LU%20Tooling,%20Platform%20and%20Runtime/Dev%20handbook/Development.one#How%20to%20get%20the%20EvalDiff&section-id=%7B167A6855-2D14-4555-A326-AFFC6C35FA6F%7D&page-id=%7BE4F5B133-8B89-4D54-B8BF-3EE1A509B99C%7D&end 
+They are going to deprecate the old UI portal. The new instructions download the logs faster as well.
+
 =====================================
 evaluation query level analysis
 可以看domain score 跟 ClassificationLevel
