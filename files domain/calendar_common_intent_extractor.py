@@ -19,7 +19,7 @@ TASKFRAMESTATUS = "TaskFrameStatus"
 TASKFRAMEENTITYSTATES = "TaskFrameEntityStates"
 TASKFRAMEGUID = "TaskFrameGUID"
 SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES = "SpeechPeopleDisambiguationGrammarMatches"
-CONVERSATIONALCONTEXT = "ConversationalContext",
+CONVERSATIONALCONTEXT = "ConversationalContext"
 
 
 commonDomainRelatedIntent = ['cancel','confirm','reject','select_none']
