@@ -395,10 +395,34 @@ share / common/ anyintent => confirm
 這樣會fail
 需要看
 https://msasg.visualstudio.com/Cortana/_git/Core?path=%2Fruntime%2Fcomponents%2FInterfaces%2Fsrc%2FSkills%2FSkillStatus.cs&version=GBmaster&_a=contents
+
+
 TaskFrameStatus
 InProgress
 這樣才是multi turn
 要多加column 跟用這個
+
+但是這樣還是不夠  藥用calendar 裡面的
+ConversationalContext
+這個必須用這個format 
+PreviousTurnDomain(calendar)TaskFrameStatus(inprogress)
+ans : CMF是把所有类似PreviousTurnDomain(calendar)TaskFrameStatus(inprogress)的字符串都打包成一个字典bin文件，然后在线上直接那输入的字符串和那个字典bin做match
+也就是說
+TaskFrameStatus(inprogress)PreviousTurnDomain(calendar)
+不能work
+
+question 為何不要用兩個seperateed feature   PreviousTurnDomain   TaskFrameStatus  分別填1?
+CMF 算法的限制
+目前的算法只要看见有1就会可能有加分，所以最终的效果就是如果只有一个是1另一个为0的情况下，你的domain score也会增加，但理想情况是希望在这种情况下不加分，甚至最好减分
+如果两个feature一个在+1，另一个-1，也不能保证最终合并在一起的时候+1的那个效果超过了-1的，最后其实还是在加分……
+
+
+最好還是用合併的feature 缺保  satifsied case =1.  unsatisfed case = 0  一定拉的開
+
+
+
+
+
 
 
 
