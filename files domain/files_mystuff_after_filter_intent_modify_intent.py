@@ -465,9 +465,18 @@ with codecs.open('files_mystuff_after_filtering_intent.tsv', 'r', 'utf-8') as fi
 
             
 
+            #for i in range(0,repated_time):
+            #    # TurnNumber	PreviousTurnIntent	query	intent
+            #    Output.append(linestrs[0]+"\t"+linestrs[1]+"\t"+linestrs[2]+"\t"+linestrs[3]);
+
+            # add
+            # "PreviousTurnDomain"
+            # "PreviousTurnIntent"
+            # as
+            # 'TurnNumber', PREVIOUSTURNINTENT, 'query', 'intent',PREVIOUSTURNDOMAIN])
+            # append empty at first
             for i in range(0,repated_time):
-                # TurnNumber	PreviousTurnIntent	query	intent
-                Output.append(linestrs[0]+"\t"+linestrs[1]+"\t"+linestrs[2]+"\t"+linestrs[3]);
+                Output.append(linestrs[0]+"\t"+linestrs[1]+"\t"+linestrs[2]+"\t"+linestrs[3]+"\t");
 
 """
 # comment shuffle in the first place
@@ -479,6 +488,7 @@ with codecs.open('files_mystuff_after_filtering_intent.tsv', 'r', 'utf-8') as fi
 # intent level output
 #######################
 with codecs.open('files_mystuff_after_filtering_intent_modify_intent.tsv', 'w', 'utf-8') as fout:
+    fout.write('\t'.join(['TurnNumber', 'PreviousTurnIntent', 'query', 'intent','PreviousTurnDomain'])+'\r\n');
     for item in Output:
         fout.write(item + '\r\n');
 
