@@ -111,6 +111,8 @@ for synlist in synlists:
         print('shuffling:'+synlist);
         random.seed(0.1);
         random.shuffle(temp);
+
+        print(len(temp))
         
         for i in range(0,min(syn_hyperparameter, len(temp))):
             outputs.append(temp[i]);            
@@ -206,11 +208,23 @@ for file in files:
             lineWithFill = line
             if len(array) < TARGETNUMCOLUMNS:
 
+
+
+
                 lineWithFill =""
                 for index in range(0,TARGETNUMCOLUMNS):
 
+
+                    #for debug
+                    if file == 'files_mystuff_after_filtering_intent.tsv' and line == '0		"Cortana, I would like to view Minerals Slides saved last week."	file_open	':
+                        for index in range(0,len(array)):
+                            print(array[index])
+
                     if index >= len(array):
+                        # for deubg
                         #print(index)
+                        #if file == 'files_mystuff_after_filtering_intent.tsv':
+                        #    print (line)
                         if headColumnList[index] == PREVIOUSTURNDOMAIN:
                             lineWithFill = lineWithFill
                         else:
