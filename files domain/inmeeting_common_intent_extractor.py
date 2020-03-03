@@ -20,6 +20,17 @@ commonDomainRelatedIntent = ['cancel','confirm','reject','select_none']
 
 
 
+PREVIOUSTURNDOMAIN = "PreviousTurnDomain"
+PREVIOUSTURNINTENT = "PreviousTurnIntent"
+TASKFRAMESTATUS = "TaskFrameStatus"
+TASKFRAMEENTITYSTATES = "TaskFrameEntityStates"
+TASKFRAMEGUID = "TaskFrameGUID"
+SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES = "SpeechPeopleDisambiguationGrammarMatches"
+CONVERSATIONALCONTEXT = "ConversationalContext",
+
+
+
+
 
 OutputSet = [];
 with codecs.open('InMeeting_Intent_Training_01292020v1.tsv', 'r', 'utf-8') as fin:
@@ -47,7 +58,7 @@ with codecs.open('InMeeting_Intent_Training_01292020v1.tsv', 'r', 'utf-8') as fi
 #random.shuffle(OutputSet);
 
 with codecs.open('inmeeting_intent_training_after_extract.tsv', 'w', 'utf-8') as fout:
-    fout.write('\t'.join(['TurnNumber', 'PreviousTurnIntent', 'query', 'intent','PreviousTurnDomain'])+'\r\n');
+    fout.write('\t'.join(['TurnNumber', PREVIOUSTURNINTENT, 'query', 'intent',PREVIOUSTURNDOMAIN, TASKFRAMESTATUS, TASKFRAMEENTITYSTATES, TASKFRAMEGUID, SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES, CONVERSATIONALCONTEXT])+'\r\n');
     for item in OutputSet:
         fout.write(item + '\r\n');
 
