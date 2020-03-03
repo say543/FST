@@ -21,7 +21,7 @@ TASKFRAMESTATUS = "TaskFrameStatus"
 TASKFRAMEENTITYSTATES = "TaskFrameEntityStates"
 TASKFRAMEGUID = "TaskFrameGUID"
 SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES = "SpeechPeopleDisambiguationGrammarMatches"
-CONVERSATIONALCONTEXT = "ConversationalContext",
+CONVERSATIONALCONTEXT = "ConversationalContext"
 
 
 
