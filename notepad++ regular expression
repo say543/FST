@@ -1,6 +1,8 @@
 https://gerardnico.com/_detail/ide/notepad/notepad_replace_regular_expression.jpg?id=ide%3Anotepad%3Areplace
 
 
+open (.*) doc
+
 open (.*)	file_search
 
 
