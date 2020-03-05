@@ -420,6 +420,13 @@ CMF 算法的限制
 最好還是用合併的feature 缺保  satifsied case =1.  unsatisfed case = 0  一定拉的開
 
 
+如果要判斷有沒有debug 
+E:\fileAnswer_data_synthesis\CMF_training\output_adhoc_intent\intent_svm\tmp\train.tsv
+external2 , external 3 , external 4 對應到你自己的 column 可能的value 
+E:\fileAnswer_data_synthesis\CMF_training\output_adhoc_intent\intent_svm\tmp\unbuilt\intent.PreviousTurnDomain\build.json
+不同的feature 這邊不因該是空的  因該要有指定的column
+的說明  如果folder 是空的代表有問題 
+
 
 
 
