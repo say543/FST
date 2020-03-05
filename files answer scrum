@@ -427,6 +427,7 @@ E:\fileAnswer_data_synthesis\CMF_training\output_adhoc_intent\intent_svm\tmp\unb
 不同的feature 這邊不因該是空的  因該要有指定的column
 的說明  如果folder 是空的代表有問題 
 
+please do\tPreviousTurnDomain\t0\t1\tcommon\t1\t-1\t1\tTaskFrameStatus\t0\t1\tInProgress\t1\t-1\t1
 
 
 
