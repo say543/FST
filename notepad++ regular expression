@@ -1,6 +1,9 @@
 https://gerardnico.com/_detail/ide/notepad/notepad_replace_regular_expression.jpg?id=ide%3Anotepad%3Areplace
 
 
+open (.*)	file_search
+
+
 file_sharetarget> (.*) <teammeeting_title>
 
 show (.*) to <contact_name> (.*) </contact_name>
