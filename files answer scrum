@@ -1121,6 +1121,11 @@ email title
 相關的command for yong
 d:\qas\app\queryclassificationprocessing\QCSQueryLabelWithLES.exe -c d:\SearchGold\deploy\builds\data\answers\QAS12HttpQAS --variant cortana_calendar_enus_mv8 -d calendar -i E:\src\git\Cortana\CoreScienceDataStagingKingston\evaluation\AnnotationSetsConverted\Files\UHRS_Task_3SFilesAnnotation.Trimmed.Converted.tsv --queryInColumn 5
 
+如果要改成files 在這邊
+.\QCSQueryLabelWithLES.exe -c E:\CoreScienceDataStaging\models\files --variant files_enus_mv1  -d files -i E:\fileAnswer_data_synthesis\CMF_training\resource\Data\UHRS_Task_3SFilesAnnotation_after_filtering.tsv --queryInColumn 5
+
+
+
 這個path 下有所以目前做過的分析
 E:\fileAnswer_data_synthesis\CMF_training\analysis
 
