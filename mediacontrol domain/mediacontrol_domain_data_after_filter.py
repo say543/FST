@@ -174,10 +174,10 @@ fileTypeDomanBoost =set([
 
 domainIgnoreList = {}
 
-teamsDomainToFileDomain = {
+domainToFileDomain = {
     # carina need small but bellevue needs big
-    "teams" : "files",
-    "TEAMS" : "FILES"
+    "mystuff" : "files",
+    "MYSTUFF" : "FILES"
 }
 
 
@@ -265,7 +265,7 @@ print("total valid row\t" + str(totalRows));
 #random.shuffle(OutputSet);
 """
 
-# outout to different bucket for analysis
+# outout to different bucket for analysis(without anyfilter)
 for domain, rows in domainListDictionary.items():
     print("domain\t" + domain);
     print("rows\t" + str(len(rows)));
@@ -277,7 +277,13 @@ for domain, rows in domainListDictionary.items():
 
 
 # filter igonre domain list to output
-outputdomainIgnoreListDuetoFileType = []
+
+# store ignore data
+outputMystuffIgnoreListDuetoFileType = []
+outputMyStuffAfterFileTypeFilter= []
+
+# output all domains other than mystuff
+# mystuff will filter based on file type
 with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8') as fout:
     # header
     fout.write("TurnNumber\tPreviousTurnDomain\tquery\tdomain\r\n")
@@ -318,24 +324,45 @@ with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8'
                     if querystr.lower() in fileTypeDomanBoost:
                         hasFileType = True
                         break
+
+
+                # if really want to use this as domian initial data
+                # follow up items
+                # ? may be adding file close or end as filter since do not support close xxx or end ... save
+
+                    
                 if hasFileType:
-                    fout.write(line + '\r\n');
+                    # store original
+                    outputMyStuffAfterFileTypeFilter.append(line)
+
+                    # rename mystuff to files fo rtesting
+                    #fout.write(line + '\r\n');
+                    fout.write(linestrs[0]+'\t'+linestrs[1]+'\t'+linestrs[2]+'\t'+domainToFileDomain[linestrs[3]]+'\r\n');
+                    
                 else:
-                    outputdomainIgnoreListDuetoFileType.append(line)
+                    outputMystuffIgnoreListDuetoFileType.append(line)
 
             #print(len(rows))
-            #continue;
-
-        for line in lines:
-            fout.write(line + '\r\n');
+        else:
+            
+            for line in lines:
+                fout.write(line + '\r\n');
 
             
-        
-with codecs.open((inputFile.split("."))[0] +'_wo_filter_type'+'.tsv', 'w', 'utf-8') as fout:
+# output mystuff queres without file tpye
+with codecs.open((inputFile.split("."))[0] +'_mystuff_wo_filter_type'+'.tsv', 'w', 'utf-8') as fout:
     # header
     fout.write("TurnNumber\tPreviousTurnDomain\tquery\tdomain\r\n")
-    for item in outputdomainIgnoreListDuetoFileType:
+    for item in outputMystuffIgnoreListDuetoFileType:
         fout.write(item + '\r\n');
+
+# output mystuff queres with file tpye
+with codecs.open((inputFile.split("."))[0] +'_mystuff_with_filter_type'+'.tsv', 'w', 'utf-8') as fout:
+    # header
+    fout.write("TurnNumber\tPreviousTurnDomain\tquery\tdomain\r\n")
+    for item in outputMyStuffAfterFileTypeFilter:
+        fout.write(item + '\r\n');
+        
 
 # for judge trainer format
 #with codecs.open('teams_golden_after_filtering.tsv', 'w', 'utf-8') as fout:
@@ -349,7 +376,7 @@ with codecs.open((inputFile.split("."))[0] +'_wo_filter_type'+'.tsv', 'w', 'utf-
 '''
 with codecs.open((inputFile.split("."))[0] +'slot_evaluation.tsv', 'w', 'utf-8') as fout:
 
-    # if output for traing
+    # if output for traingfout.write(item + '\r\n');
     fout.write("id\tquery\tintent\tdomain\tQueryXml\r\n")
     for item in OutputSlotEvaluation:
         fout.write(item + '\r\n');
