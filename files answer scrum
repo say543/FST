@@ -43,6 +43,18 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 
 
 
+
+==============================
+model d
+==============================
+
+compliant
+GriffinSdf_Cortana.QAS12HttpQAS.queryProcessingConfiguration.ini
+基本上都看這個吧  
+
+noncompliant
+HttpQasProd_CortanaLU.QAS12HttpQAS.queryProcessingConfiguration.ini
+
 ==============================
 files domain task form  repository
 ==============================
