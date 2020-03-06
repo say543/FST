@@ -2254,6 +2254,24 @@ mystuff
 E:\fileAnswer_data_synthesis\CMF_training\output_domain_only_mediacontrol_03022020v1
 also training data inside
 
+測試pattern domain score
+
+
+E:\fileAnswer_data_synthesis\CMF_training\resource\Data\sharemodel
+// without any patterns
+
+// old model
+.\QCSQueryLabelWithLES.exe -c E:\fileAnswer_data_synthesis\CMF_training\resource\Data\sharemodel\ --variant files_enus_mv2  -d files -i E:\fileAnswer_data_synthesis\CMF_training\resource\Data\UHRS_Task_3SFilesAnnotation_after_filtering_all.tsv --queryInColumn 5
+
+
+// new model
+.\QCSQueryLabelWithLES.exe -c E:\fileAnswer_data_synthesis\CMF_training\resource\Data\domain_retrain\ --variant files_enus_mv2  -d files -i E:\fileAnswer_data_synthesis\CMF_training\resource\Data\UHRS_Task_3SFilesAnnotation_after_filtering_all.tsv --queryInColumn 5
+
+
+files_enus_mv2.queryprocessingconfiguration.ini
+
+// with pattern
+
 =====================
 domian pattern 打算  07252019
 =====================
