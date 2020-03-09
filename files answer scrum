@@ -55,6 +55,35 @@ GriffinSdf_Cortana.QAS12HttpQAS.queryProcessingConfiguration.ini
 noncompliant
 HttpQasProd_CortanaLU.QAS12HttpQAS.queryProcessingConfiguration.ini
 
+
+===========================
+person contact grammar
+==========================
+
+https://cortanalogviewer.azurewebsites.net/query/0eaf338fbb974833bc87f576a5b1d053
+understanding -> QAS parameter -> QAS Featurization Outputs
+有
+previousTurnDomain
+UserContacts"
+UserFileNamesKeyPhrases
+....
+
+每一個hit QAS 都會傳這個一大包的informaiton
+然後不同doamin extract
+
+03092020
+1> CMF supports 嗎?
+要看是不是要自己家pipeline or 像previousTurndomain CMF 會幫你家
+
+2> 
+跟tom 的contexual lu 完全不一樣的路線
+希望 userContact 跟fileName 都可以用同樣的方式來使用
+有個intern 再用CMF_V2 在做
+
+可以定期跟zhiguo sync
+
+
+
 ==============================
 files domain task form  repository
 ==============================
