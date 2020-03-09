@@ -24,6 +24,13 @@ teamsDomainToFileDomain = {
 
 
 
+domainToNotSureDomain = {
+    # carina need small but bellevue needs big
+    "files" : "NOTSURE",
+    "FILES" : "NOTSURE"
+}
+
+
 
 spellWrongButNotTags={
     'udocument ',
@@ -232,6 +239,73 @@ spellWrongButNotTags={
 blackListQuerySet = {
     "go to my desktop",
 }
+
+
+fileTypeDomanBoost =set([
+    'pptx',
+    'ppts',
+    'ppt',
+    'deck',
+    'decks',
+    'presentation',
+    'presentations',
+    'powerpoint',
+    'powerpoints',
+    'power point',
+    'slide',
+    'slides',
+    'doc',
+    'docx',
+    'docs',
+    'spec',
+    'excel',
+    'excels',
+    'xls',
+    'xlsx',
+    'spreadsheet',
+    'spreadsheets',
+    'workbook',
+    'worksheet',
+    'csv',
+    'tsv',
+    'note',
+    'notes',
+    'onenote',
+    'onenotes',
+    'onenote',
+    'notebook',
+    'notebooks',
+    'pdf',
+    'pdfs',
+    'pdf',
+    'jpg',
+    'jpeg',
+    'gif',
+    'png',
+    'image',
+    'msg',
+    'ics',
+    'vcs',
+    'vsdx',
+    'vssx',
+    'vstx',
+    'vsdm',
+    'vssm',
+    'vstm',
+    'vsd',
+    'vdw',
+    'vss',
+    'vst',
+    'mpp',
+    'mpt',
+    'word',
+    'words',
+    'document',
+    'documents',
+    'file',
+    'files'
+    ])
+
     
 OutputSlotEvaluation = [];
 
@@ -240,9 +314,15 @@ OutputIntentEvaluation = [];
 OutputSTCAIntentEvaluation = [];
 
 
+# only files by judge annotation
 OutputSpellFilterEvaluationOnlyFiles = [];
-
 OutputSpellFilterEvaluation = [];
+
+# only files by judge annotation, adding file_type filter to correct annotation
+OutputSpellFilterEvaluationOnlyFilesDomainFileTypeFilter = [];
+OutputSpellFilterEvaluationDomainFileTypeFilter = [];
+
+
 
 OutputSpellWrongFilterEvaluation = [];
 
@@ -283,6 +363,29 @@ with codecs.open(inputFile, 'r', 'utf-8') as fin:
         # skip head
         if linestrs[5] == 'JudgedDomain':
             continue
+
+
+        # replace all . with \t
+                
+        query = linestrs[4]
+
+        # replace all  ./space/,/?/! with \t
+        # not deal with PDF's
+        # do it in the future
+                
+        query = str.replace(query, " ", "\t")
+        query = str.replace(query, ".", "\t")
+        query = str.replace(query, ",", "\t")
+        query = str.replace(query, "?", "\t")
+        query = str.replace(query, "!", "\t")
+
+        querytrs = query.split("\t");
+
+        hasFileType = False;
+        for querystr in querytrs:
+            if querystr.lower() in fileTypeDomanBoost:
+                hasFileType = True
+                break
 
 
 
@@ -345,7 +448,18 @@ with codecs.open(inputFile, 'r', 'utf-8') as fin:
             #print(line)
             #print(linestrs[5])
             OutputSpellFilterEvaluation.append(line)
-            if linestrs[5] == 'FILES':
+
+
+            # in this case, modify doomains to NOTSURE so no need to add onlyFiles
+            if not hasFileType and linestrs[5].lower() == 'files':
+                #fout.write(linestrs[0]+'\t'+linestrs[1]+'\t'+linestrs[2]+'\t'+linestrs[3]+'\t'+linestrs[4]+'\t'+domainToFileDomainlinestrs[linestrs[5].lower()]+'\r\n');
+                OutputSpellFilterEvaluationDomainFileTypeFilter.append(linestrs[0]+'\t'+linestrs[1]+'\t'+linestrs[2]+'\t'+linestrs[3]+'\t'+linestrs[4]+'\t'+domainToNotSureDomain[linestrs[5].lower()])
+            else:
+                if linestrs[5].lower() == 'files':
+                    OutputSpellFilterEvaluationOnlyFilesDomainFileTypeFilter.append(linestrs[0]+'\t'+linestrs[1]+'\t'+linestrs[2]+'\t'+linestrs[3]+'\t'+linestrs[4]+'\t'+linestrs[5])
+                OutputSpellFilterEvaluationDomainFileTypeFilter.append(linestrs[0]+'\t'+linestrs[1]+'\t'+linestrs[2]+'\t'+linestrs[3]+'\t'+linestrs[4]+'\t'+linestrs[5])
+            
+            if linestrs[5].lower() == 'files':
                 OutputSpellFilterEvaluationOnlyFiles.append(line)
 
                 # id / message / intent / domain / constraint
@@ -418,12 +532,32 @@ with codecs.open((inputFile.split("."))[0] +'_after_filtering.tsv', 'w', 'utf-8'
     for item in OutputSpellFilterEvaluationOnlyFiles:
         fout.write(item + '\r\n');
 
-
 with codecs.open((inputFile.split("."))[0] +'_after_filtering_all.tsv', 'w', 'utf-8') as fout:
     # if output for traing
     fout.write("ConversationId\tMessageId\tMessageTimestamp\tMessageFrom\tMessageText\tJudgedDomain\tJudgedIntent\tJudgedConstraints\tMetaData\tConversationContext\tFrequency\tCortanaResponse\r\n")
     for item in OutputSpellFilterEvaluation:
         fout.write(item + '\r\n');
+
+
+
+
+with codecs.open((inputFile.split("."))[0] +'_after_filtering_domain_with_file_type_correction.tsv', 'w', 'utf-8') as fout:
+
+    # if output for traing
+    fout.write("ConversationId\tMessageId\tMessageTimestamp\tMessageFrom\tMessageText\tJudgedDomain\r\n")
+    for item in OutputSpellFilterEvaluationOnlyFilesDomainFileTypeFilter:
+        fout.write(item + '\r\n');
+
+with codecs.open((inputFile.split("."))[0] +'_after_filtering_all_domain_with_file_type_correction.tsv', 'w', 'utf-8') as fout:
+    # if output for traing
+    fout.write("ConversationId\tMessageId\tMessageTimestamp\tMessageFrom\tMessageText\tJudgedDomain\r\n")
+    for item in OutputSpellFilterEvaluationDomainFileTypeFilter:
+        fout.write(item + '\r\n');
+
+
+
+        
+
 
 
 with codecs.open((inputFile.split("."))[0] +'_spell_wrong.tsv', 'w', 'utf-8') as fout:
