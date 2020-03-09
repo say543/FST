@@ -2267,12 +2267,16 @@ also training data inside
 E:\fileAnswer_data_synthesis\CMF_training\resource\Data\sharemodel
 // without any patterns
 
+跟新data set
+E:\fileAnswer_data_synthesis\CMF_training\resource\Data\UHRS_Task_3SFilesAnnotation_after_filtering_all_domain_with_file_type_correction.tsv
+因為有query 沒有file type 也被標成files
+
 // old model
-.\QCSQueryLabelWithLES.exe -c E:\fileAnswer_data_synthesis\CMF_training\resource\Data\sharemodel\ --variant files_enus_mv2  -d files -i E:\fileAnswer_data_synthesis\CMF_training\resource\Data\UHRS_Task_3SFilesAnnotation_after_filtering_all.tsv --queryInColumn 5
+.\QCSQueryLabelWithLES.exe -c E:\fileAnswer_data_synthesis\CMF_training\resource\Data\sharemodel\ --variant files_enus_mv2  -d files -i E:\fileAnswer_data_synthesis\CMF_training\resource\Data\UHRS_Task_3SFilesAnnotation_after_filtering_all_domain_with_file_type_correction.tsv --queryInColumn 5
 
 
 // new model
-.\QCSQueryLabelWithLES.exe -c E:\fileAnswer_data_synthesis\CMF_training\resource\Data\domain_retrain\ --variant files_enus_mv2  -d files -i E:\fileAnswer_data_synthesis\CMF_training\resource\Data\UHRS_Task_3SFilesAnnotation_after_filtering_all.tsv --queryInColumn 5
+.\QCSQueryLabelWithLES.exe -c E:\fileAnswer_data_synthesis\CMF_training\resource\Data\domain_retrain\ --variant files_enus_mv2  -d files -i E:\fileAnswer_data_synthesis\CMF_training\resource\Data\UHRS_Task_3SFilesAnnotation_after_filtering_all_domain_with_file_type_correction.tsv --queryInColumn 5
 
 
 files_enus_mv2.queryprocessingconfiguration.ini
