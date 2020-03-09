@@ -15,6 +15,14 @@ from collections import defaultdict;
 hyper_parameter = 200
 
 
+PREVIOUSTURNDOMAIN = "PreviousTurnDomain"
+PREVIOUSTURNINTENT = "PreviousTurnIntent"
+TASKFRAMESTATUS = "TaskFrameStatus"
+TASKFRAMEENTITYSTATES = "TaskFrameEntityStates"
+TASKFRAMEGUID = "TaskFrameGUID"
+SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES = "SpeechPeopleDisambiguationGrammarMatches"
+CONVERSATIONALCONTEXT = "ConversationalContext"
+
 
 fileDomainRelatedIntent = ['file_search', 'file_open', 'file_share', 'file_download', 'file_other', 'file_navigate', "teamspace_search"]
 
@@ -237,6 +245,7 @@ with codecs.open(inputFile, 'r', 'utf-8') as fin:
         domainListDictionary[domain].append(line)
         
         
+        
 
 
         # TurnNumber / PreviousTurnIntent / query /intent
@@ -271,7 +280,8 @@ for domain, rows in domainListDictionary.items():
     print("rows\t" + str(len(rows)));
     with codecs.open((inputFile.split("."))[0] +'_'+domain+'.tsv', 'w', 'utf-8') as fout:
         # header
-        fout.write("TurnNumber\tPreviousTurnDomain\tquery\tdomain\r\n")
+        #fout.write("TurnNumber\tPreviousTurnDomain\tquery\tdomain\r\n")
+        fout.write('\t'.join(['TurnNumber', PREVIOUSTURNINTENT, 'query', 'domain',PREVIOUSTURNDOMAIN, TASKFRAMESTATUS, TASKFRAMEENTITYSTATES, TASKFRAMEGUID, SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES, CONVERSATIONALCONTEXT])+'\r\n');
         for row in rows:
             fout.write(row + '\r\n');
 
@@ -286,7 +296,8 @@ outputMyStuffAfterFileTypeFilter= []
 # mystuff will filter based on file type
 with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8') as fout:
     # header
-    fout.write("TurnNumber\tPreviousTurnDomain\tquery\tdomain\r\n")
+    #fout.write("TurnNumber\tPreviousTurnDomain\tquery\tdomain\r\n")
+    fout.write('\t'.join(['TurnNumber', PREVIOUSTURNINTENT, 'query', 'domain',PREVIOUSTURNDOMAIN, TASKFRAMESTATUS, TASKFRAMEENTITYSTATES, TASKFRAMEGUID, SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES, CONVERSATIONALCONTEXT])+'\r\n');
     for domain, lines in domainListDictionary.items():
 
 
@@ -352,14 +363,16 @@ with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8'
 # output mystuff queres without file tpye
 with codecs.open((inputFile.split("."))[0] +'_mystuff_wo_filter_type'+'.tsv', 'w', 'utf-8') as fout:
     # header
-    fout.write("TurnNumber\tPreviousTurnDomain\tquery\tdomain\r\n")
+    #fout.write("TurnNumber\tPreviousTurnDomain\tquery\tdomain\r\n")
+    fout.write('\t'.join(['TurnNumber', PREVIOUSTURNINTENT, 'query', 'domain',PREVIOUSTURNDOMAIN, TASKFRAMESTATUS, TASKFRAMEENTITYSTATES, TASKFRAMEGUID, SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES, CONVERSATIONALCONTEXT])+'\r\n');
     for item in outputMystuffIgnoreListDuetoFileType:
         fout.write(item + '\r\n');
 
 # output mystuff queres with file tpye
 with codecs.open((inputFile.split("."))[0] +'_mystuff_with_filter_type'+'.tsv', 'w', 'utf-8') as fout:
     # header
-    fout.write("TurnNumber\tPreviousTurnDomain\tquery\tdomain\r\n")
+    #fout.write("TurnNumber\tPreviousTurnDomain\tquery\tdomain\r\n")
+    fout.write('\t'.join(['TurnNumber', PREVIOUSTURNINTENT, 'query', 'domain',PREVIOUSTURNDOMAIN, TASKFRAMESTATUS, TASKFRAMEENTITYSTATES, TASKFRAMEGUID, SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES, CONVERSATIONALCONTEXT])+'\r\n');
     for item in outputMyStuffAfterFileTypeFilter:
         fout.write(item + '\r\n');
         
