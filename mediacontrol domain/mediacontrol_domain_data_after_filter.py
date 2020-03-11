@@ -22,7 +22,7 @@ TASKFRAMEENTITYSTATES = "TaskFrameEntityStates"
 TASKFRAMEGUID = "TaskFrameGUID"
 SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES = "SpeechPeopleDisambiguationGrammarMatches"
 CONVERSATIONALCONTEXT = "ConversationalContext"
-
+SOURCE= 'Source'
 
 fileDomainRelatedIntent = ['file_search', 'file_open', 'file_share', 'file_download', 'file_other', 'file_navigate', "teamspace_search"]
 
@@ -281,7 +281,7 @@ for domain, rows in domainListDictionary.items():
     with codecs.open((inputFile.split("."))[0] +'_'+domain+'.tsv', 'w', 'utf-8') as fout:
         # header
         #fout.write("TurnNumber\tPreviousTurnDomain\tquery\tdomain\r\n")
-        fout.write('\t'.join(['TurnNumber', PREVIOUSTURNINTENT, 'query', 'domain',PREVIOUSTURNDOMAIN, TASKFRAMESTATUS, TASKFRAMEENTITYSTATES, TASKFRAMEGUID, SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES, CONVERSATIONALCONTEXT])+'\r\n');
+        fout.write('\t'.join(['TurnNumber', PREVIOUSTURNINTENT, 'query', 'domain',PREVIOUSTURNDOMAIN, TASKFRAMESTATUS, TASKFRAMEENTITYSTATES, TASKFRAMEGUID, SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES, CONVERSATIONALCONTEXT, SOURCE])+'\r\n');
         for row in rows:
             fout.write(row + '\r\n');
 
@@ -297,7 +297,7 @@ outputMyStuffAfterFileTypeFilter= []
 with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8') as fout:
     # header
     #fout.write("TurnNumber\tPreviousTurnDomain\tquery\tdomain\r\n")
-    fout.write('\t'.join(['TurnNumber', PREVIOUSTURNINTENT, 'query', 'domain',PREVIOUSTURNDOMAIN, TASKFRAMESTATUS, TASKFRAMEENTITYSTATES, TASKFRAMEGUID, SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES, CONVERSATIONALCONTEXT])+'\r\n');
+    fout.write('\t'.join(['TurnNumber', PREVIOUSTURNINTENT, 'query', 'domain',PREVIOUSTURNDOMAIN, TASKFRAMESTATUS, TASKFRAMEENTITYSTATES, TASKFRAMEGUID, SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES, CONVERSATIONALCONTEXT, SOURCE])+'\r\n');
     for domain, lines in domainListDictionary.items():
 
 
@@ -344,27 +344,27 @@ with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8'
                     
                 if hasFileType:
                     # store original
-                    outputMyStuffAfterFileTypeFilter.append(line)
+                    outputMyStuffAfterFileTypeFilter.append(line+'\t\t\t\t\t\t\t'+inputFile)
 
                     # rename mystuff to files fo rtesting
                     #fout.write(line + '\r\n');
-                    fout.write(linestrs[0]+'\t'+linestrs[1]+'\t'+linestrs[2]+'\t'+domainToFileDomain[linestrs[3]]+'\r\n');
+                    fout.write(linestrs[0]+'\t'+linestrs[1]+'\t'+linestrs[2]+'\t'+domainToFileDomain[linestrs[3]]+'\t\t\t\t\t\t\t'+inputFile+'r\n');
                     
                 else:
-                    outputMystuffIgnoreListDuetoFileType.append(line)
+                    outputMystuffIgnoreListDuetoFileType.append(line+'\t\t\t\t\t\t\t'+inputFile)
 
             #print(len(rows))
         else:
             
             for line in lines:
-                fout.write(line + '\r\n');
+                fout.write(line +'\t\t\t\t\t\t\t'+inputFile+'\r\n');
 
             
 # output mystuff queres without file tpye
 with codecs.open((inputFile.split("."))[0] +'_mystuff_wo_filter_type'+'.tsv', 'w', 'utf-8') as fout:
     # header
     #fout.write("TurnNumber\tPreviousTurnDomain\tquery\tdomain\r\n")
-    fout.write('\t'.join(['TurnNumber', PREVIOUSTURNINTENT, 'query', 'domain',PREVIOUSTURNDOMAIN, TASKFRAMESTATUS, TASKFRAMEENTITYSTATES, TASKFRAMEGUID, SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES, CONVERSATIONALCONTEXT])+'\r\n');
+    fout.write('\t'.join(['TurnNumber', PREVIOUSTURNINTENT, 'query', 'domain',PREVIOUSTURNDOMAIN, TASKFRAMESTATUS, TASKFRAMEENTITYSTATES, TASKFRAMEGUID, SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES, CONVERSATIONALCONTEXT, SOURCE])+'\r\n');
     for item in outputMystuffIgnoreListDuetoFileType:
         fout.write(item + '\r\n');
 
@@ -372,7 +372,7 @@ with codecs.open((inputFile.split("."))[0] +'_mystuff_wo_filter_type'+'.tsv', 'w
 with codecs.open((inputFile.split("."))[0] +'_mystuff_with_filter_type'+'.tsv', 'w', 'utf-8') as fout:
     # header
     #fout.write("TurnNumber\tPreviousTurnDomain\tquery\tdomain\r\n")
-    fout.write('\t'.join(['TurnNumber', PREVIOUSTURNINTENT, 'query', 'domain',PREVIOUSTURNDOMAIN, TASKFRAMESTATUS, TASKFRAMEENTITYSTATES, TASKFRAMEGUID, SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES, CONVERSATIONALCONTEXT])+'\r\n');
+    fout.write('\t'.join(['TurnNumber', PREVIOUSTURNINTENT, 'query', 'domain',PREVIOUSTURNDOMAIN, TASKFRAMESTATUS, TASKFRAMEENTITYSTATES, TASKFRAMEGUID, SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES, CONVERSATIONALCONTEXT, SOURCE])+'\r\n');
     for item in outputMyStuffAfterFileTypeFilter:
         fout.write(item + '\r\n');
         
