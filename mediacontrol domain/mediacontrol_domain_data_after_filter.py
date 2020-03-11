@@ -180,7 +180,7 @@ fileTypeDomanBoostRemove =set([
     'note',
     'notes',
     'notebook',
-    'notebooks',
+    'notebooks'
     ])
 
 
@@ -349,7 +349,7 @@ with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8'
 
                     # if one in remove list, set it false and early terminate
                     if querystr.lower() in fileTypeDomanBoostRemove:
-                        hasFileType = True
+                        hasFileType = False
                         break;
 
 
