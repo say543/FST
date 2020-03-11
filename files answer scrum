@@ -885,10 +885,26 @@ R4	General Availability (GA)
 ===========================
 B2 column
 QasMSSearch01DS
+
+memory 要profiling 才可以上b2
 ===========================
 
 email thread with title
 CR - Deploy files and calendar LU models to QasMSSearch... - 1471778 (Yong Ni)
+
+memori profiling 
+onenote:https://microsoft.sharepoint.com/teams/CortanaCore/Shared%20Documents/Core%20Science/Cortana%20Core%20Science/LU%20Modeling%20and%20Partners/B2%20Deployment.one#3/5/2020%20local%20memory%20profiling&section-id=%7B5F498291-A459-40E5-A0CE-F96E0FBF0C37%7D&page-id=%7B2CD4CD73-7886-42C8-A7E8-428CFD9E0E4D%7D&end
+https://microsoft.sharepoint.com/:o:/r/teams/CortanaCore/_layouts/15/WopiFrame.aspx?sourcedoc={6d6ae133-c9c8-400d-bfd8-ae8feec6ff9f}&action=edit&wd=target%28LU%20Modeling%20and%20Partners%2FB2%20Deployment%2Eone%7C5F498291%2DA459%2D40E5%2DA0CE%2DF96E0FBF0C37%2F3%5C%2F5%5C%2F2020%20local%20memory%20profiling%7C2CD4CD73%2D7886%2D42C8%2DA7E8%2D428CFD9E0E4D%2F%29
+[Yesterday 3:17 PM] Yong Ni
+    
+可以，需要本地跑一下memory profiling，following 3/5/2020 local memory profiling  (Web view)，
+​[Yesterday 3:17 PM] Yong Ni
+    如果没有明显增加内存消耗，就可以直接上B2
+​[Yesterday 3:22 PM] Chieh-Chun Chang
+    如果增加就不行嗎?  我是還沒跑...
+​[Yesterday 4:09 PM] Yong Ni
+    从感觉上说的话，增加50MB就算多了
+
 
 
 ===========================
