@@ -146,6 +146,14 @@ understanding tab 會有detail 的rank 的結果  , intent score
 似乎沒辦法選enviornment 了
 https://cortanalogviewer.azurewebsites.net/query/a0d895eb333240c1b0bb6b9b50ef233b
 
+//03112029  但是只有一周period
+這個舊的link 還可以
+https://cortanalogviewer-ppe.azurewebsites.net/query/ad2ec675a5a74684bda68e85e98aa8a1/sandbox
+
+//新的可以選cortan trace id
+https://logcollector.asgfalcon.io/searchIssue?cortanaTraceId=ad2ec675a5a74684bda68e85e98aa8a1
+
+選runtume -parselog -QASlulog -> log 有timestamp
 
 from title 'LU Bug for InMeeting Compliant Stack - Rejection is not recognized'
 example 的判斷
