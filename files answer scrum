@@ -908,8 +908,15 @@ https://microsoft.sharepoint.com/:o:/r/teams/CortanaCore/_layouts/15/WopiFrame.a
 
 QCSQueryLabelWithLES.exe --encoding utf-8 --legacyAllowUnusedParameters --verbose --loadingThreadsNum 1 --threadsNum 1 -c d:\SearchGold\deploy\builds\data\answers\QASB2PlaceHolder --variant griffinsdf_M365Search.QASB2PlaceHolder --clientId "" -i "E:\CoreScienceDataStaging\evaluation\AnnotationSetsConverted\Teams\OfficialSets\Reporting_Teams_20190716-20190831_3k.tsv" --queryInColumn 5 -o E:\CoreScienceDataStaging\evaluation\AnnotationSetsConverted\Teams\OfficialSets\QASB2PlaceHolder.Default
 
+
+//with client id
 QCSQueryLabelWithLES.exe --encoding utf-8 --legacyAllowUnusedParameters --verbose --loadingThreadsNum 1 --threadsNum 1 -c E:\searchgold\deploy\builds\data\answers\QASB2PlaceHolder --variant griffinsdf_M365Search.QASB2PlaceHolder --clientId "" -i "E:\CoreScienceDataStaging\evaluation\AnnotationSetsConverted\Teams\OfficialSets\Reporting_Teams_20190716-20190831_3k.tsv" --queryInColumn 5 -o E:\CoreScienceDataStaging\evaluation\AnnotationSetsConverted\Teams\OfficialSets\QASB2PlaceHolder.Default
 
+// no client id using single domain or no speficit doman
+.\QCSQueryLabelWithLES.exe --encoding utf-8 --legacyAllowUnusedParameters --verbose --loadingThreadsNum 1 --threadsNum 1 -c E:\searchgold\deploy\builds\data\answers\QASB2PlaceHolder --variant griffinsdf_M365Search.QASB2PlaceHolder -d files -i "E:\CoreScienceDataStaging\evaluation\AnnotationSetsConverted\Teams\OfficialSets\Reporting_Teams_20190716-20190831_3k.tsv" --queryInColumn 5 -o E:\CoreScienceDataStaging\evaluation\AnnotationSetsConverted\Teams\OfficialSets\QASB2PlaceHolder.Default
+
+
+QASB2PlaceHolder.Default.stats.output.txt 是output 的
 ===========================
 terms  for 3S / 3s answer
 ===========================
