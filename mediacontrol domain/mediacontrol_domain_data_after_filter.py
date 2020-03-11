@@ -138,13 +138,13 @@ fileTypeDomanBoost =set([
     'worksheet',
     'csv',
     'tsv',
-    'note',
-    'notes',
+    #'note',
+    #'notes',
     'onenote',
     'onenotes',
     'onenote',
-    'notebook',
-    'notebooks',
+    #'notebook',
+    #'notebooks',
     'pdf',
     'pdfs',
     'pdf',
@@ -175,6 +175,14 @@ fileTypeDomanBoost =set([
     'file',
     'files'
     ])
+
+fileTypeDomanBoostRemove =set([
+    'note',
+    'notes',
+    'notebook',
+    'notebooks',
+    ])
+
 
 #filterDomainDic =set([
 #    "mystuff"
@@ -330,11 +338,19 @@ with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8'
 
                 querytrs = query.split("\t");
 
+
+
                 hasFileType = False;
                 for querystr in querytrs:
                     if querystr.lower() in fileTypeDomanBoost:
                         hasFileType = True
-                        break
+                        # no early terminate and keep checking
+                        #break;
+
+                    # if one in remove list, set it false and early terminate
+                    if querystr.lower() in fileTypeDomanBoostRemove:
+                        hasFileType = True
+                        break;
 
 
                 # if really want to use this as domian initial data
