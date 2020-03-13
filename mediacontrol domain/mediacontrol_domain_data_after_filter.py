@@ -193,7 +193,10 @@ domainIgnoreList = {}
 domainToFileDomain = {
     # carina need small but bellevue needs big
     "mystuff" : "files",
-    "MYSTUFF" : "FILES"
+    "MYSTUFF" : "FILES",
+    "ondevice" : "files",
+    "ONDEVICE" : "FILES",
+
 }
 
 
@@ -300,6 +303,10 @@ for domain, rows in domainListDictionary.items():
 outputMystuffIgnoreListDuetoFileType = []
 outputMyStuffAfterFileTypeFilter= []
 
+outputOndeviceIgnoreListDuetoFileType = []
+outputOndeviceAfterFileTypeFilter= []
+
+
 # output all domains other than mystuff
 # mystuff will filter based on file type
 with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8') as fout:
@@ -314,6 +321,7 @@ with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8'
         
         # skip igonre domain based fileTypeDomanBoost
         #if domain.lower() in filterDomainDic:
+        # extend to ondevice snice it has many word document
         if domain.lower() == "mystuff":
 
             for line in lines:
@@ -370,19 +378,69 @@ with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8'
                     outputMystuffIgnoreListDuetoFileType.append(line+'\t\t\t\t\t\t\t'+inputFile)
 
             #print(len(rows))
+
+        elif domain.lower() == "ondevice":
+
+            for line in lines:
+                line = line.strip();
+                if not line:
+                    continue;
+
+                # replace all . with \t
+                
+                linestrs = line.split("\t");
+                query = linestrs[2]
+
+                # replace all  ./space/,/?/! with \t
+                # not deal with PDF's
+                # do it in the future
+                
+                query = str.replace(query, " ", "\t")
+                query = str.replace(query, ".", "\t")
+                query = str.replace(query, ",", "\t")
+                query = str.replace(query, "?", "\t")
+                query = str.replace(query, "!", "\t")
+
+                querytrs = query.split("\t");
+
+
+
+                hasFileType = False;
+                for querystr in querytrs:
+                    if querystr.lower() in fileTypeDomanBoost:
+                        hasFileType = True
+                        # no early terminate and keep checking
+                        #break;
+
+                    # if one in remove list, set it false and early terminate
+                    if querystr.lower() in fileTypeDomanBoostRemove:
+                        hasFileType = False
+                        break;
+
+
+                # if really want to use this as domian initial data
+                # follow up items
+                # ? may be adding file close or end as filter since do not support close xxx or end ... save
+
+                    
+                if hasFileType:
+                    # store original
+                    outputOndeviceAfterFileTypeFilter.append(line+'\t\t\t\t\t\t\t'+inputFile)
+
+                    # rename mystuff to files fo rtesting
+                    #fout.write(line + '\r\n');
+                    fout.write(linestrs[0]+'\t'+linestrs[1]+'\t'+linestrs[2]+'\t'+domainToFileDomain[linestrs[3]]+'\t\t\t\t\t\t\t'+inputFile+'r\n');
+                    
+                else:
+                    outputOndeviceIgnoreListDuetoFileType.append(line+'\t\t\t\t\t\t\t'+inputFile)
+
+            #print(len(rows))
         else:
             
             for line in lines:
                 fout.write(line +'\t\t\t\t\t\t\t'+inputFile+'\r\n');
 
-            
-# output mystuff queres without file tpye
-with codecs.open((inputFile.split("."))[0] +'_mystuff_wo_filter_type'+'.tsv', 'w', 'utf-8') as fout:
-    # header
-    #fout.write("TurnNumber\tPreviousTurnDomain\tquery\tdomain\r\n")
-    fout.write('\t'.join(['TurnNumber', PREVIOUSTURNINTENT, 'query', 'domain',PREVIOUSTURNDOMAIN, TASKFRAMESTATUS, TASKFRAMEENTITYSTATES, TASKFRAMEGUID, SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES, CONVERSATIONALCONTEXT, SOURCE])+'\r\n');
-    for item in outputMystuffIgnoreListDuetoFileType:
-        fout.write(item + '\r\n');
+
 
 # output mystuff queres with file tpye
 with codecs.open((inputFile.split("."))[0] +'_mystuff_with_filter_type'+'.tsv', 'w', 'utf-8') as fout:
@@ -391,6 +449,37 @@ with codecs.open((inputFile.split("."))[0] +'_mystuff_with_filter_type'+'.tsv', 
     fout.write('\t'.join(['TurnNumber', PREVIOUSTURNINTENT, 'query', 'domain',PREVIOUSTURNDOMAIN, TASKFRAMESTATUS, TASKFRAMEENTITYSTATES, TASKFRAMEGUID, SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES, CONVERSATIONALCONTEXT, SOURCE])+'\r\n');
     for item in outputMyStuffAfterFileTypeFilter:
         fout.write(item + '\r\n');
+
+
+
+# output mystuff queres without file tpye
+with codecs.open((inputFile.split("."))[0] +'_mystuff_wo_filter_type'+'.tsv', 'w', 'utf-8') as fout:
+    # header
+    #fout.write("TurnNumber\tPreviousTurnDomain\tquery\tdomain\r\n")
+    fout.write('\t'.join(['TurnNumber', PREVIOUSTURNINTENT, 'query', 'domain',PREVIOUSTURNDOMAIN, TASKFRAMESTATUS, TASKFRAMEENTITYSTATES, TASKFRAMEGUID, SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES, CONVERSATIONALCONTEXT, SOURCE])+'\r\n');
+    for item in outputMystuffIgnoreListDuetoFileType:
+        fout.write(item + '\r\n');
+
+
+
+# output ondevice queres with file tpye
+with codecs.open((inputFile.split("."))[0] +'_ondevice_with_filter_type'+'.tsv', 'w', 'utf-8') as fout:
+    # header
+    #fout.write("TurnNumber\tPreviousTurnDomain\tquery\tdomain\r\n")
+    fout.write('\t'.join(['TurnNumber', PREVIOUSTURNINTENT, 'query', 'domain',PREVIOUSTURNDOMAIN, TASKFRAMESTATUS, TASKFRAMEENTITYSTATES, TASKFRAMEGUID, SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES, CONVERSATIONALCONTEXT, SOURCE])+'\r\n');
+    for item in outputOndeviceAfterFileTypeFilter:
+        fout.write(item + '\r\n');
+
+
+# output ondevice queres without file tpye
+with codecs.open((inputFile.split("."))[0] +'_ondevice_wo_filter_type'+'.tsv', 'w', 'utf-8') as fout:
+    # header
+    #fout.write("TurnNumber\tPreviousTurnDomain\tquery\tdomain\r\n")
+    fout.write('\t'.join(['TurnNumber', PREVIOUSTURNINTENT, 'query', 'domain',PREVIOUSTURNDOMAIN, TASKFRAMESTATUS, TASKFRAMEENTITYSTATES, TASKFRAMEGUID, SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES, CONVERSATIONALCONTEXT, SOURCE])+'\r\n');
+    for item in outputOndeviceIgnoreListDuetoFileType:
+        fout.write(item + '\r\n');
+
+
         
 
 # for judge trainer format
