@@ -187,7 +187,56 @@ fileTypeDomanBoostRemove =set([
 
 # no folder since folder is mystuff
 
-
+blackListQuerySet = {
+    'excel',
+    'open up excel',
+    'open up excel.',
+    'open excel',
+    'open excel.',
+    'open excel again',
+    'open excel again.',
+    'go to excel',
+    'take me to excel',
+    'word',
+    'open up word',
+    'open up word.',
+    'open word',
+    'open word.',
+    'open word again',
+    'open word again.',
+    'go to word',
+    'take me to word',
+    'powerpoint',
+    'open up powerpoint',
+    'open up powerpoint.',
+    'open powerpoint',
+    'open powerpoint.',
+    'open powerpoint again',
+    'open powerpoint again.',
+    'open up powerpoint',
+    'open up powerpoint.',
+    'open powerpoint',
+    'open powerpoint.',
+    'open powerpoint again',
+    'open powerpoint again.',
+    'go to powerpoint',
+    'take me to powerpoint',
+    'onenote',
+    'open up onenote',
+    'open up onenote.',
+    'open onenote',
+    'open onenote.',
+    'open onenote again',
+    'open onenote again.',
+    'open up onenote',
+    'open up onenote.',
+    'open onenote',
+    'open onenote.',
+    'open onenote again',
+    'open onenote again.',
+    'go to onenote',
+    'take me to onenote'
+    }
 
 
 
@@ -195,11 +244,54 @@ phraseToRemove=set([
     'microsoft doc',
     'microsoft excel',
     'microsoft word',
+    'microsoft office',
+    'ms word',
     'google',
     'photoshop',
     'file explorer',
     'window',
-    'windows'
+    'windows',
+    'office word',
+    'word office',
+    'word 2016',
+    'word 2013',
+    'word 2003',
+    'word 2000',
+    'word 2010',
+    'word 2007',
+    'word 1996',
+    'word app',
+    'powerpoint 2016',
+    'powerpoint 2013',
+    'powerpoint 2003',
+    'powerpoint 2000',
+    'powerpoint 2010',
+    'powerpoint 2007',
+    'powerpoint 1996',
+    'powerpoint app',
+    'excel 2016',
+    'excel 2013',
+    'excel 2003',
+    'excel 2000',
+    'excel 2010',
+    'excel 2007',
+    'excel 1996',
+    'excel app',
+    'onenote 2016',
+    'onenote 2013',
+    'onenote 2003',
+    'onenote 2000',
+    'onenote 2010',
+    'onenote 2007',
+    'onenote 1996',
+    'onenote app',
+    'word book',
+    'app',
+    'file menu',
+    'files menu',
+    'system file',
+    'system file',
+    'word settings'
     ])
 #filterDomainDic =set([
 #    "mystuff"
@@ -385,6 +477,17 @@ with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8'
                         #if (key == 'microsoft word'):
                         #    print(originalQuery)
                         break
+
+
+                skip = False
+                # cannot use str
+                # it will override existing function
+                # ? this can be improved by using set for blacklistQuery and o(1) compare
+                for blackListQuery in sorted (blackListQuerySet) :            
+                    if originalQuery.lower() == blackListQuery.lower():
+                        #print(originalQuery)
+                        skip = True
+                        break
                    
 
                 # if really want to use this as domian initial data
@@ -395,14 +498,14 @@ with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8'
                     # store original
                     outputMyStuffAfterFileTypeFilter.append(line+'\t\t\t\t\t\t\t'+inputFile)
 
-                    if hasphraseToRemove is False:
+                    if hasphraseToRemove is False and skip is False:
                         # rename mystuff to files fo rtesting
                         #fout.write(line + '\r\n');
                         fout.write(linestrs[0]+'\t'+linestrs[1]+'\t'+linestrs[2]+'\t'+domainToFileDomain[linestrs[3]]+'\t\t\t\t\t\t\t'+inputFile+'r\n');
-                    else:
+                    #else:
                         # not append as negative scenarios since some mystuff needs to support
                         # like folder
-                        fout.write(linestrs[0]+'\t'+linestrs[1]+'\t'+linestrs[2]+'\t'+linestrs[3]+'\t\t\t\t\t\t\t'+inputFile+'r\n');
+                    #    fout.write(linestrs[0]+'\t'+linestrs[1]+'\t'+linestrs[2]+'\t'+linestrs[3]+'\t\t\t\t\t\t\t'+inputFile+'r\n');
                 else:
                     outputMystuffIgnoreListDuetoFileType.append(line+'\t\t\t\t\t\t\t'+inputFile)
 
@@ -459,6 +562,18 @@ with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8'
                         #    print(originalQuery)
                         break
 
+                skip = False
+                # cannot use str
+                # it will override existing function
+                # ? this can be improved by using set for blacklistQuery and o(1) compare
+                for blackListQuery in sorted (blackListQuerySet) :            
+                    if originalQuery.lower() == blackListQuery.lower():
+                        #print(originalQuery)
+                        skip = True
+                        break
+
+
+
                 # if really want to use this as domian initial data
                 # follow up items
                 # ? may be adding file close or end as filter since do not support close xxx or end ... save
@@ -468,7 +583,7 @@ with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8'
                     # store original
                     outputOndeviceAfterFileTypeFilter.append(line+'\t\t\t\t\t\t\t'+inputFile)
 
-                    if hasphraseToRemove is False:
+                    if hasphraseToRemove is False and skip is False:
                         # rename ondevice to files fo rtesting
                         #fout.write(line + '\r\n');
                         fout.write(linestrs[0]+'\t'+linestrs[1]+'\t'+linestrs[2]+'\t'+domainToFileDomain[linestrs[3]]+'\t\t\t\t\t\t\t'+inputFile+'r\n');
