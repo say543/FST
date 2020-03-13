@@ -53,6 +53,21 @@ compliant
 GriffinSdf_Cortana.QAS12HttpQAS.queryProcessingConfiguration.ini
 基本上都看這個吧  
 
+//yue 說改prod 先不管sdf
+GriffinProd_Cortana.QAS12HttpQAS.queryProcessingConfiguration.ini
+
+先放developer
+// from
+[query_domains:Microsoft_UWP_enus_Developer]
+deriveFromClient=Microsoft_Threshold_Shell_3_enus_CortanaSDK
+
+//to
+[query_domains:Microsoft_UWP_enus_Developer]
+deriveFromClient=Microsoft_Threshold_Shell_3_enus_CortanaSDK
+files=files_enus_mv2::qd_files
+新加一個mv12 就可以overfride 原本files  對應的files=files_enus_mv1::qd_files
+
+
 noncompliant
 HttpQasProd_CortanaLU.QAS12HttpQAS.queryProcessingConfiguration.ini
 
