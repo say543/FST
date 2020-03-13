@@ -183,12 +183,27 @@ fileTypeDomanBoostRemove =set([
     'notebooks'
     ])
 
+# <microsoft doc/ microsfot excel / microsoft word / window/ windows>
 
+# no folder since folder is mystuff
+
+
+
+
+
+phraseToRemove=set([
+    'microsoft doc',
+    'microsoft excel',
+    'microsoft word',
+    'google',
+    'photoshop',
+    'file explorer',
+    'window',
+    'windows'
+    ])
 #filterDomainDic =set([
 #    "mystuff"
 #    ])
-
-domainIgnoreList = {}
 
 domainToFileDomain = {
     # carina need small but bellevue needs big
@@ -196,7 +211,6 @@ domainToFileDomain = {
     "MYSTUFF" : "FILES",
     "ondevice" : "files",
     "ONDEVICE" : "FILES",
-
 }
 
 
@@ -321,7 +335,9 @@ with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8'
         
         # skip igonre domain based fileTypeDomanBoost
         #if domain.lower() in filterDomainDic:
-        # extend to ondevice snice it has many word document
+        # ? extend to ondevice snice it has many word document
+        # in the future word document  in mystuff or ondevice both exists
+        # if all mystuff then no need to have ondevice branch
         if domain.lower() == "mystuff":
 
             for line in lines:
@@ -332,6 +348,7 @@ with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8'
                 # replace all . with \t
                 
                 linestrs = line.split("\t");
+                originalQuery = linestrs[2]
                 query = linestrs[2]
 
                 # replace all  ./space/,/?/! with \t
@@ -350,7 +367,7 @@ with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8'
 
                 hasFileType = False;
                 for querystr in querytrs:
-                    if querystr.lower() in fileTypeDomanBoost:
+                    if querystr.lower() in reversed(sorted(fileTypeDomanBoost)):
                         hasFileType = True
                         # no early terminate and keep checking
                         #break;
@@ -360,20 +377,32 @@ with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8'
                         hasFileType = False
                         break;
 
+                hasphraseToRemove = False
+                for key in reversed(sorted(phraseToRemove)):
+
+                    if (originalQuery.lower().find(key)) != -1:
+                        hasphraseToRemove = True
+                        #if (key == 'microsoft word'):
+                        #    print(originalQuery)
+                        break
+                   
 
                 # if really want to use this as domian initial data
                 # follow up items
                 # ? may be adding file close or end as filter since do not support close xxx or end ... save
 
-                    
                 if hasFileType:
                     # store original
                     outputMyStuffAfterFileTypeFilter.append(line+'\t\t\t\t\t\t\t'+inputFile)
 
-                    # rename mystuff to files fo rtesting
-                    #fout.write(line + '\r\n');
-                    fout.write(linestrs[0]+'\t'+linestrs[1]+'\t'+linestrs[2]+'\t'+domainToFileDomain[linestrs[3]]+'\t\t\t\t\t\t\t'+inputFile+'r\n');
-                    
+                    if hasphraseToRemove is False:
+                        # rename mystuff to files fo rtesting
+                        #fout.write(line + '\r\n');
+                        fout.write(linestrs[0]+'\t'+linestrs[1]+'\t'+linestrs[2]+'\t'+domainToFileDomain[linestrs[3]]+'\t\t\t\t\t\t\t'+inputFile+'r\n');
+                    else:
+                        # not append as negative scenarios since some mystuff needs to support
+                        # like folder
+                        fout.write(linestrs[0]+'\t'+linestrs[1]+'\t'+linestrs[2]+'\t'+linestrs[3]+'\t\t\t\t\t\t\t'+inputFile+'r\n');
                 else:
                     outputMystuffIgnoreListDuetoFileType.append(line+'\t\t\t\t\t\t\t'+inputFile)
 
@@ -389,6 +418,7 @@ with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8'
                 # replace all . with \t
                 
                 linestrs = line.split("\t");
+                originalQuery = linestrs[2]
                 query = linestrs[2]
 
                 # replace all  ./space/,/?/! with \t
@@ -407,7 +437,7 @@ with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8'
 
                 hasFileType = False;
                 for querystr in querytrs:
-                    if querystr.lower() in fileTypeDomanBoost:
+                    if querystr.lower() in reversed(sorted(fileTypeDomanBoost)):
                         hasFileType = True
                         # no early terminate and keep checking
                         #break;
@@ -417,6 +447,17 @@ with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8'
                         hasFileType = False
                         break;
 
+                hasphraseToRemove = False
+                for key in reversed(sorted(phraseToRemove)):
+
+                    #print (key)
+                    #print (query.lower())
+                    #print (query.lower().find(key))
+                    if (originalQuery.lower().find(key)) != -1:
+                        hasphraseToRemove = True
+                        #if (key == 'microsoft word'):
+                        #    print(originalQuery)
+                        break
 
                 # if really want to use this as domian initial data
                 # follow up items
@@ -427,9 +468,12 @@ with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8'
                     # store original
                     outputOndeviceAfterFileTypeFilter.append(line+'\t\t\t\t\t\t\t'+inputFile)
 
-                    # rename mystuff to files fo rtesting
-                    #fout.write(line + '\r\n');
-                    fout.write(linestrs[0]+'\t'+linestrs[1]+'\t'+linestrs[2]+'\t'+domainToFileDomain[linestrs[3]]+'\t\t\t\t\t\t\t'+inputFile+'r\n');
+                    if hasphraseToRemove is False:
+                        # rename ondevice to files fo rtesting
+                        #fout.write(line + '\r\n');
+                        fout.write(linestrs[0]+'\t'+linestrs[1]+'\t'+linestrs[2]+'\t'+domainToFileDomain[linestrs[3]]+'\t\t\t\t\t\t\t'+inputFile+'r\n');
+                    else:
+                        fout.write(linestrs[0]+'\t'+linestrs[1]+'\t'+linestrs[2]+'\t'+linestrs[3]+'\t\t\t\t\t\t\t'+inputFile+'r\n');
                     
                 else:
                     outputOndeviceIgnoreListDuetoFileType.append(line+'\t\t\t\t\t\t\t'+inputFile)
