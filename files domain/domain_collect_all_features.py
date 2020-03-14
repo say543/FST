@@ -129,9 +129,12 @@ for file in files:
                     continue;
                 array = line.split('\t');
 
+                #print(len(array))
+                #print(TARGETNUMCOLUMNS)
+  
                 # append space is smaller than target length
                 lineWithFill = line
-                if len(array) < TARGETNUMCOLUMNS:
+                if len(array) != TARGETNUMCOLUMNS:
 
                     lineWithFill =""
                     for index in range(0,TARGETNUMCOLUMNS):
@@ -155,6 +158,8 @@ for file in files:
 
 
                     #lineWithFill = lineWithFill.rstrip()
+
+                #print(lineWithFill)
                 outputs.append(lineWithFill)
                 outputsWithSource.append(lineWithFill+'\t'+ file);
         
@@ -198,7 +203,7 @@ for file in files:
                 #print(lineWithFill)
 
                 array = lineWithFill.split('\t');
-                if len(array) < TARGETNUMCOLUMNS:
+                if len(array) != TARGETNUMCOLUMNS:
 
                     lineWithFill =""
                     for index in range(0,TARGETNUMCOLUMNS):
