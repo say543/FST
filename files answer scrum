@@ -463,6 +463,7 @@ https://msasg.visualstudio.com/Cortana/_git/Core?path=%2Fruntime%2Fcomponents%2F
 
 
 TaskFrameStatus
+https://msasg.visualstudio.com/Cortana/_git/Core?path=%2Fruntime%2Fcomponents%2FInterfaces%2Fsrc%2FSkills%2FSkillStatus.cs&version=GBmaster&_a=contents
 InProgress
 這樣才是multi turn
 要多加column 跟用這個
