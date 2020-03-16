@@ -155,6 +155,35 @@ https://logcollector.asgfalcon.io/searchIssue?cortanaTraceId=ad2ec675a5a74684bda
 
 選runtume -parselog -QASlulog -> log 有timestamp
 
+選runtime -> understading -> 中間選contexual information -> 
+QAS paramter
+先出現value 才出現feature name
+
+example:
+"MatchSegmentItems":[]0 items
+"StringSegmentItems":[1 item
+0:{5 items
+"SegmentBeginIdx":-1
+"SegmentEndIdx":-1
+"SegmentFeatureId":-1
+"Weight":1
+"Value":"PromptedForConfirmation" 
+}
+]
+"FeatureSetName":"TaskFrameStatus"
+"FeatureSetId":0
+"FeatureIdsSize":1
+"TokenizedQuery":[1 item
+0:"share."
+]
+"UInt32Features":NULL
+"Int64Features":NULL
+"DoubleFeatures":NULL
+"DenseUInt32Features":NULL
+"DenseUInt8Features":NULL
+"DenseFloatFeatures":NULL
+
+
 from title 'LU Bug for InMeeting Compliant Stack - Rejection is not recognized'
 example 的判斷
 https://cortanalogviewer.azurewebsites.net/query/186d68d6757f4023a474754cbdd1eb31/ppe
