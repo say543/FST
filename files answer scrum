@@ -12,6 +12,7 @@ sharemodeltest (file://DESKTOP-3J7614O/sharemodeltest)
 for training data
 \\DESKTOP-3J7614O\sharemodeltest\files_slot_training.tsv
 \\DESKTOP-3J7614O\sharemodeltest\UWP_measurement_slot_evaluation.tsv
+\\DESKTOP-3J7614O\sharemodeltest\UWP_head_slot_evaluation.tsv
 
 \\DESKTOP-3J7614O\sharemodeltest\Validating_Teams_20190716-20190831_16kslot_evaluation.tsv
 \\DESKTOP-3J7614O\sharemodeltest\Validating_Teams_20190716-20190831_16kintent_evaluation.tsv
