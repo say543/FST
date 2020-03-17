@@ -228,6 +228,12 @@ present xxx deck , prevent the recent deck
 這個是inmeeting 的  留存紀錄
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1520013?_a=files
 
+
+
+//calendar
+conditional fst
+可以研究一下 以後怎麼用
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1530630?_a=overview
 =============================
 unresolved bug and email_title
 =============================
@@ -854,6 +860,8 @@ https://substrate.microsoft.net/euclidai/projects
 <email_title>
 Fw: [Announcement]  NVIDIA Tesla M60 GPU available in Compliant QAS
 新的GPU 有空可以follow
+
+
 
 ===========================
 reporting set / validating set
