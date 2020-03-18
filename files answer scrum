@@ -105,6 +105,18 @@ yong 已經做了一些contact_name in calendar 的實驗  可以之後問yong �
 
 
 
+
+===========================
+UWP configuration
+==========================
+03182020
+E:\CoreScienceDataStaging\evaluation\Configs\AnnotationExceptions_uwp.xml
+file_other exception ignore
+<SlotIgnoreForIntent>file_other</SlotIgnoreForIntent>
+
+配合domain pattern , intent pattern, 之後可以再check 要不要移除這個
+
+
 ==============================
 files domain task form  repository
 ==============================
