@@ -13,8 +13,23 @@ outputsWithSource = [];
 
 PREVIOUSTURNDOMAIN = "PreviousTurnDomain"
 PREVIOUSTURNINTENT = "PreviousTurnIntent"
+TASKFRAMESTATUS = "TaskFrameStatus"
+TASKFRAMEENTITYSTATES = "TaskFrameEntityStates"
+TASKFRAMEGUID = "TaskFrameGUID"
+SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES = "SpeechPeopleDisambiguationGrammarMatches"
+CONVERSATIONALCONTEXT = "ConversationalContext"
 
-TARGETNUMCOLUMNS = 5
+FILLINEMPTYCOLUMN = set([
+    PREVIOUSTURNDOMAIN,
+    PREVIOUSTURNINTENT,
+    TASKFRAMESTATUS,
+    TASKFRAMEENTITYSTATES,
+    TASKFRAMEGUID,
+    SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES,
+    CONVERSATIONALCONTEXT
+    ])
+
+TARGETNUMCOLUMNS = 10
 
 
 
@@ -69,7 +84,7 @@ for synlist in synlists:
                     continue;
                 headColumnList = line.split('\t');
                 if len(headColumnList) < TARGETNUMCOLUMNS:
-                    print("error header for file: " + file);
+                    print("error header for file: " + synlist);
                     
                 isHeadColumn = False
                 continue
@@ -88,8 +103,9 @@ for synlist in synlists:
                 for index in range(0,TARGETNUMCOLUMNS):
 
                     if index >= len(array):
+                        # debug
                         #print(index)
-                        if headColumnList[index] == PREVIOUSTURNDOMAIN:
+                        if headColumnList[index] in FILLINEMPTYCOLUMN:
                             lineWithFill = lineWithFill
                         else:
                             print("error:" + line);
@@ -112,6 +128,7 @@ for synlist in synlists:
         random.seed(0.1);
         random.shuffle(temp);
 
+        #for debug
         print(len(temp))
         
         for i in range(0,min(syn_hyperparameter, len(temp))):
@@ -145,7 +162,8 @@ copyfile("..\\files_dataset_intent.tsv" , "files_dataset_intent.tsv")
 #remove copy my stuff data since no improvement so no update
 # add back to extra modified intent result but change source to only has 7000 in case any wrong edtied operation
 #copyfile("..\\files_mystuff_after_filtering_intent.tsv" , "files_mystuff_after_filtering_intent.tsv")
-copyfile("..\\files_mystuff_after_filtering_intent_modify_intent.tsv" , "files_mystuff_after_filtering_intent.tsv")
+#copyfile("..\\files_mystuff_after_filtering_intent_modify_intent.tsv" , "files_mystuff_after_filtering_intent.tsv")
+copyfile("..\\files_mystuff_after_filtering_intent_modify_intent.tsv" , "files_mystuff_after_filtering_intent_modify_intent.tsv")
 
 
 copyfile("..\\teams_intent_training_after_filtering.tsv" , "teams_intent_training_after_filtering.tsv")
@@ -171,6 +189,10 @@ for file in files:
     # my stuff needs to have to make all as search default
     #if file == "files_mystuff_after_filtering_intent.tsv" or file == "files_mystuff_after_filtering_intent_backup.tsv":
     if file == "files_mystuff_after_filtering_intent_backup.tsv":
+        continue
+
+    # has one open () * docx from vocie skill, not looks very promising query
+    if file =='Validating_Teams_20191101-20191130_10k.tsv':
         continue
 
     # skip synthesis data
@@ -216,16 +238,16 @@ for file in files:
 
 
                     #for debug
-                    if file == 'files_mystuff_after_filtering_intent.tsv' and line == '0		"Cortana, I would like to view Minerals Slides saved last week."	file_open	':
-                        for index in range(0,len(array)):
-                            print(array[index])
+                    #if file == 'files_mystuff_after_filtering_intent.tsv' and line == '0		"Cortana, I would like to view Minerals Slides saved last week."	file_open	':
+                    #    for index in range(0,len(array)):
+                    #        print(array[index])
 
                     if index >= len(array):
                         # for deubg
                         #print(index)
                         #if file == 'files_mystuff_after_filtering_intent.tsv':
                         #    print (line)
-                        if headColumnList[index] == PREVIOUSTURNDOMAIN:
+                        if headColumnList[index] in FILLINEMPTYCOLUMN:
                             lineWithFill = lineWithFill
                         else:
                             print("error:" + line);
@@ -264,8 +286,13 @@ random.shuffle(outputs);
 #TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain
 #outputs = ['\t'.join(['TurnNumber', 'PreviousTurnIntent', 'query', 'intent'])] + outputs;
 #outputsWithSource = ['\t'.join(['TurnNumber', 'PreviousTurnIntent', 'query', 'intent', 'source'])] + outputsWithSource;
-outputs = ['\t'.join(['TurnNumber', PREVIOUSTURNINTENT, 'query', 'intent',PREVIOUSTURNDOMAIN])] + outputs;
-outputsWithSource = ['\t'.join(['TurnNumber', PREVIOUSTURNINTENT, 'query', 'intent', PREVIOUSTURNDOMAIN,'source'])] + outputsWithSource;
+#outputs = ['\t'.join(['TurnNumber', PREVIOUSTURNINTENT, 'query', 'intent',PREVIOUSTURNDOMAIN])] + outputs;
+#outputsWithSource = ['\t'.join(['TurnNumber', PREVIOUSTURNINTENT, 'query', 'intent', PREVIOUSTURNDOMAIN,'source'])] + outputsWithSource;
+
+outputs = ['\t'.join(['TurnNumber', PREVIOUSTURNINTENT, 'query', 'intent',PREVIOUSTURNDOMAIN, TASKFRAMESTATUS, TASKFRAMEENTITYSTATES, TASKFRAMEGUID, SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES, CONVERSATIONALCONTEXT])] + outputs;
+outputsWithSource = ['\t'.join(['TurnNumber', PREVIOUSTURNINTENT, 'query', 'intent',PREVIOUSTURNDOMAIN, TASKFRAMESTATUS, TASKFRAMEENTITYSTATES, TASKFRAMEGUID, SPEECHPEOPLEDISAMBIGUATIONGRAMMARMATCHES, CONVERSATIONALCONTEXT])] + outputsWithSource;
+
+
 
 
 with codecs.open(outputFile, 'w', 'utf-8') as fout:
