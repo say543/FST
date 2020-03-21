@@ -5,7 +5,7 @@ from collections import defaultdict;
 # 1: slot only
 # 2: intent only
 # 5: both
-synthetic_mode = 1;
+synthetic_mode = 2;
 
 # add hyper paramter if unbalanced
 hyper_parameter = 200
@@ -73,6 +73,7 @@ def parse(slotList, doubleSlotList):
         samleOpenText(typeList, slot.replace('_', '').upper() + 'HOLDER', slotListDictionary)
     
     outputSet = [];
+    outputIntentSet = [];
     for pattern in patternSet:
 
         # update seed 
@@ -118,7 +119,10 @@ def parse(slotList, doubleSlotList):
                         query = query.replace(key, value[inRangeIndex]);
                         slotXml = slotXml.replace(key, value[inRangeIndex]);
         
-            outputSet.append('\t'.join(['0', query, intent, domain, slotXml]));
+            outputSet.append('\t'.join(['0', query, intent, domain, slotXml]))
+            #TurnNumber	PreviousTurnIntent	query	intent
+            outputIntentSet.append('\t'.join(['0',"\t"+query,intent]));
+            
 
     outputSlot = '_'.join(slotList);
     
