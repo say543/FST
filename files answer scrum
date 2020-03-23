@@ -50,6 +50,11 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 看這個pr
 
 
+==============================
+run griffin qpc with outputing related domains and with specified client id with new QCS tool
+==============================
+
+PS E:\CoreScienceDataStaging\datasources\Files\queryclassificationprocessing_new> .\QCSQueryLabelWithLES.exe --encoding utf-8 --legacyAllowUnusedParameters --verbose --loadingThreadsNum 1 --threadsNum 1 -c E:\searchgold\deploy\builds\data\answers\QAS12HttpQAS\ --variant GriffinProd_Cortana.QAS12HttpQAS --clientId "Microsoft_UWP_enus_Microsoft" -dl files,mystuff --interactive
 
 
 ==============================
