@@ -31,15 +31,32 @@ def qasFileRenamer(args):
     parser.add_option("-t", "--target", dest="targetdir", help="target directory where the output will be generated", metavar="FILE")
     parser.add_option("-r", "--replacements", dest="replacements_expression", help="things to replace in file names and inside text files of the form: source:replacement,source2:replacement2", metavar="STRING")
     (options, args) = parser.parse_args(args)
+
+    print(options)
+    print(args)
+    
     replacementdict = create_replacement_dict(options.replacements_expression)
     
+
+    '''
     try:
         os.makedirs(options.targetdir)
     except:
-        sys.stderr.write('%s already exists, not creating.\n' % options.targetdir)
+        sys.stderr.write('%s already exists, so override.\n' % options.targetdir)
+    '''
+    if os.path.exists(options.targetdir):
+        print('delete')
+        shutil.rmtree(options.targetdir)
+    try:
+        os.makedirs(options.targetdir)
+    except:
+        sys.stderr.write('%s already exists, so override.\n' % options.targetdir)
     
     # copy all files from the source dir to target dir with the new names 
     for filename in os.listdir(options.sourcedir):
+
+        print(filename)
+        
         sourcepath = os.path.join(options.sourcedir, filename)
         targetpath = os.path.join(options.targetdir, replace(filename, replacementdict))
         if os.path.isfile(sourcepath):
@@ -54,5 +71,7 @@ def qasFileRenamer(args):
                 shutil.copyfile(sourcepath, targetpath)
 
 if __name__ == '__main__':
-    cmd = ("-s . -t replaced -r cortana_fallback_enus_mv1:cortana_fallback_uwp_enus_mv1").split()
+    #cmd = ("-s . -t replaced -r cortana_fallback_enus_mv1:cortana_fallback_uwp_enus_mv1").split()
+    cmd = ("-s ..\\output_adhoc_slot\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
+    
     qasFileRenamer(cmd)
