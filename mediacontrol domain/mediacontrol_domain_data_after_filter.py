@@ -188,6 +188,7 @@ fileTypeDomanBoostRemove =set([
 # no folder since folder is mystuff
 
 blackListQuerySet = {
+    # regular group
     'excel',
     'open up excel',
     'open up excel.',
@@ -195,6 +196,8 @@ blackListQuerySet = {
     'open up a new excel.',
     'open excel',
     'open excel.',
+    'open new excel',
+    'open new excel.',
     'open a new excel',
     'open a new excel.',
     'open excel again',
@@ -210,6 +213,8 @@ blackListQuerySet = {
     'open up a new word.',
     'open word',
     'open word.',
+    'open new word',
+    'open new word.',
     'open a new word',
     'open a new word.',
     'open word again',
@@ -225,6 +230,8 @@ blackListQuerySet = {
     'open up a new powerpoint.',
     'open powerpoint',
     'open powerpoint.',
+    'open new powerpoint',
+    'open new powerpoint.',
     'open a new powerpoint',
     'open a new powerpoint.',
     'open powerpoint again',
@@ -240,6 +247,8 @@ blackListQuerySet = {
     'open up a new onenote.',
     'open onenote',
     'open onenote.',
+    'open new onenote',
+    'open new onenote.',
     'open a new onenote',
     'open a new onenote.',
     'open onenote again',
@@ -255,6 +264,8 @@ blackListQuerySet = {
     'open up a new spreadsheet.',
     'open spreadsheet',
     'open spreadsheet.',
+    'open new spreadsheet',
+    'open new spreadsheet.',
     'open a new spreadsheet',
     'open a new spreadsheet.',
     'open spreadsheet again',
@@ -263,8 +274,8 @@ blackListQuerySet = {
     'open a new spreadsheet again.',
     'go to spreadsheet',
     'take me to spreadsheet'
+    # add single query you want in the future
     }
-
 
 
 phraseToRemove=set([
