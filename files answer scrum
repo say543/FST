@@ -82,6 +82,7 @@ query suggestion
 NL alteration
      messages from Shuyin => from Shuyin
      inside VJ's modules to do that
+     ? but why we need to do that i am unsure
 
 
 possible flight throughs
@@ -93,7 +94,10 @@ possible flight throughs
 }
 
 asedebug
-
+through this onenote
+teams message form 
+https://microsoft.sharepoint.com/teams/CortanaCore/_layouts/15/Doc.aspx?sourcedoc={6d6ae133-c9c8-400d-bfd8-ae8feec6ff9f}&action=edit&wd=target%28Microsoft%20Search%2FTeams%20Search%2FDRI%20Handbook.one%7Ce06520b7-920d-4fce-88c4-7e1022ec03eb%2FDebugging%20NL%20Search%20on%20V2%7C9e28dc0e-3ac9-4b2c-ba73-1fbeaea79c45%2F%29
+Going  forward  to any issues, we can discuss what extra information can be logged through  https://asdebug snice XAP log is the only way we can monitor  issues
 
 
 
