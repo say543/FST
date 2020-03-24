@@ -73,6 +73,29 @@ for 'my recent files'
 MDP data will not be available, needing to replying on synthetic sets
 
 
+query alteration
+    query suggestion with high confidence
+query suggestion
+    query suggestion with low confidence
+    will pop up sueggestion to select
+
+NL alteration
+     messages from Shuyin => from Shuyin
+     inside VJ's modules to do that
+
+
+possible flight throughs
+{
+"experimentalClientFlight": {
+"enabled": true,
+"value": "lutmsearchmsg,luskipalterationcheck"
+}
+}
+
+asedebug
+
+
+
 
 ==============================
 model d
