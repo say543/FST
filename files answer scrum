@@ -207,7 +207,8 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 <done sync local>
 // negative patterns 避免跟communication overlap
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1484027?_a=files&path=%2Fdatasources%2FFiles%2Fresource%2Finfiles%2Fdomain.negative.infile
-
+https://msasg.visualstudio.com/Cortana/_workitems/edit/2298667
+03252020 看起來沒加好 他要mute 但是沒有mute 到全部
 
 
 <目前yue  hotfix 只在QAS12....  不打算sync 到QasBat...  但是我也不認為task from 要被 update>
