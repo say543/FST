@@ -54,7 +54,7 @@
 0	search zanaty's worksheet	file_search	files	search <contact_name> zanaty </contact_name>'s <file_type> worksheet </file_type>
 0	search navrátilová tagizade nardeau's workbook	file_search	files	search <contact_name> navrátilová tagizade nardeau </contact_name>'s <file_type> workbook </file_type>
 0	search yermochkov meligne bassin sarvarian's mpp	file_search	files	search <contact_name> yermochkov meligne bassin sarvarian </contact_name>'s <file_type> mpp </file_type>
-0	search pelekanos's spec	file_search	files	search <contact_name> pelekanos </contact_name>'s <file_type> spec </file_type>
+0	search pelekanos's word	file_search	files	search <contact_name> pelekanos </contact_name>'s <file_type> word </file_type>
 0	search funcke arauz arnao's slide	file_search	files	search <contact_name> funcke arauz arnao </contact_name>'s <file_type> slide </file_type>
 0	search gwal's notebook	file_search	files	search <contact_name> gwal </contact_name>'s <file_type> notebook </file_type>
 0	search shinnors granone fiske-harrison's xlsx	file_search	files	search <contact_name> shinnors granone fiske-harrison </contact_name>'s <file_type> xlsx </file_type>
@@ -69,7 +69,7 @@
 0	search woischnik hedeon's notebook	file_search	files	search <contact_name> woischnik hedeon </contact_name>'s <file_type> notebook </file_type>
 0	search plassio's pdf	file_search	files	search <contact_name> plassio </contact_name>'s <file_type> pdf </file_type>
 0	search cotralha topay cantello schisano's vssm	file_search	files	search <contact_name> cotralha topay cantello schisano </contact_name>'s <file_type> vssm </file_type>
-0	search borsaru po?u?a po?u?a belmahi's spec	file_search	files	search <contact_name> borsaru po?u?a po?u?a belmahi </contact_name>'s <file_type> spec </file_type>
+0	search borsaru po?u?a po?u?a belmahi's word	file_search	files	search <contact_name> borsaru po?u?a po?u?a belmahi </contact_name>'s <file_type> wprd </file_type>
 0	search shinnors poota santopoli's vstm	file_search	files	search <contact_name> shinnors poota santopoli </contact_name>'s <file_type> vstm </file_type>
 0	search time" corneille's mpt	file_search	files	search <contact_name> time" corneille </contact_name>'s <file_type> mpt </file_type>
 0	search piotrovskii granone pelekanos costine's notebook	file_search	files	search <contact_name> piotrovskii granone pelekanos costine </contact_name>'s <file_type> notebook </file_type>
@@ -126,7 +126,7 @@
 0	search l'ome schenian's spreadsheet	file_search	files	search <contact_name> l'ome schenian </contact_name>'s <file_type> spreadsheet </file_type>
 0	search lefaucheux shinnors meligne brocton's vssm	file_search	files	search <contact_name> lefaucheux shinnors meligne brocton </contact_name>'s <file_type> vssm </file_type>
 0	search missmar arnao piotrovskii's slides	file_search	files	search <contact_name> missmar arnao piotrovskii </contact_name>'s <file_type> slides </file_type>
-0	search babranyi's spec	file_search	files	search <contact_name> babranyi </contact_name>'s <file_type> spec </file_type>
+0	search babranyi's word	file_search	files	search <contact_name> babranyi </contact_name>'s <file_type> word </file_type>
 0	search kochbek's xls	file_search	files	search <contact_name> kochbek </contact_name>'s <file_type> xls </file_type>
 0	search echternkamp tiusanen's pdf	file_search	files	search <contact_name> echternkamp tiusanen </contact_name>'s <file_type> pdf </file_type>
 0	search fajkos chalanjet lambertz netuka's vsd	file_search	files	search <contact_name> fajkos chalanjet lambertz netuka </contact_name>'s <file_type> vsd </file_type>
@@ -164,7 +164,7 @@
 0	search mimoto morosuke's docx	file_search	files	search <contact_name> mimoto morosuke </contact_name>'s <file_type> docx </file_type>
 0	search dejiang's presentations	file_search	files	search <contact_name> dejiang </contact_name>'s <file_type> presentations </file_type>
 0	search adelusimi chittarath mahona's presentations	file_search	files	search <contact_name> adelusimi chittarath mahona </contact_name>'s <file_type> presentations </file_type>
-0	search borsaru ehsaan midillic's spec	file_search	files	search <contact_name> borsaru ehsaan midillic </contact_name>'s <file_type> spec </file_type>
+0	search borsaru ehsaan midillic's word	file_search	files	search <contact_name> borsaru ehsaan midillic </contact_name>'s <file_type> word </file_type>
 0	search davorijanka futsukawa's excels	file_search	files	search <contact_name> davorijanka futsukawa </contact_name>'s <file_type> excels </file_type>
 0	search bonnemoy wellburn's xlsx	file_search	files	search <contact_name> bonnemoy wellburn </contact_name>'s <file_type> xlsx </file_type>
 0	search nagakita onstine's xlsx	file_search	files	search <contact_name> nagakita onstine </contact_name>'s <file_type> xlsx </file_type>
@@ -254,7 +254,7 @@
 0	Search zanaty's worksheet	file_search	files	Search <contact_name> zanaty </contact_name>'s <file_type> worksheet </file_type>
 0	Search navrátilová tagizade nardeau's workbook	file_search	files	Search <contact_name> navrátilová tagizade nardeau </contact_name>'s <file_type> workbook </file_type>
 0	Search yermochkov meligne bassin sarvarian's mpp	file_search	files	Search <contact_name> yermochkov meligne bassin sarvarian </contact_name>'s <file_type> mpp </file_type>
-0	Search pelekanos's spec	file_search	files	Search <contact_name> pelekanos </contact_name>'s <file_type> spec </file_type>
+0	Search pelekanos's word	file_search	files	Search <contact_name> pelekanos </contact_name>'s <file_type> word </file_type>
 0	Search funcke arauz arnao's slide	file_search	files	Search <contact_name> funcke arauz arnao </contact_name>'s <file_type> slide </file_type>
 0	Search gwal's notebook	file_search	files	Search <contact_name> gwal </contact_name>'s <file_type> notebook </file_type>
 0	Search shinnors granone fiske-harrison's xlsx	file_search	files	Search <contact_name> shinnors granone fiske-harrison </contact_name>'s <file_type> xlsx </file_type>
@@ -269,7 +269,7 @@
 0	Search woischnik hedeon's notebook	file_search	files	Search <contact_name> woischnik hedeon </contact_name>'s <file_type> notebook </file_type>
 0	Search plassio's pdf	file_search	files	Search <contact_name> plassio </contact_name>'s <file_type> pdf </file_type>
 0	Search cotralha topay cantello schisano's vssm	file_search	files	Search <contact_name> cotralha topay cantello schisano </contact_name>'s <file_type> vssm </file_type>
-0	Search borsaru po?u?a po?u?a belmahi's spec	file_search	files	Search <contact_name> borsaru po?u?a po?u?a belmahi </contact_name>'s <file_type> spec </file_type>
+0	Search borsaru po?u?a po?u?a belmahi's word	file_search	files	Search <contact_name> borsaru po?u?a po?u?a belmahi </contact_name>'s <file_type> word </file_type>
 0	Search shinnors poota santopoli's vstm	file_search	files	Search <contact_name> shinnors poota santopoli </contact_name>'s <file_type> vstm </file_type>
 0	Search time" corneille's mpt	file_search	files	Search <contact_name> time" corneille </contact_name>'s <file_type> mpt </file_type>
 0	Search piotrovskii granone pelekanos costine's notebook	file_search	files	Search <contact_name> piotrovskii granone pelekanos costine </contact_name>'s <file_type> notebook </file_type>
@@ -326,7 +326,7 @@
 0	Search l'ome schenian's spreadsheet	file_search	files	Search <contact_name> l'ome schenian </contact_name>'s <file_type> spreadsheet </file_type>
 0	Search lefaucheux shinnors meligne brocton's vssm	file_search	files	Search <contact_name> lefaucheux shinnors meligne brocton </contact_name>'s <file_type> vssm </file_type>
 0	Search missmar arnao piotrovskii's slides	file_search	files	Search <contact_name> missmar arnao piotrovskii </contact_name>'s <file_type> slides </file_type>
-0	Search babranyi's spec	file_search	files	Search <contact_name> babranyi </contact_name>'s <file_type> spec </file_type>
+0	Search babranyi's word	file_search	files	Search <contact_name> babranyi </contact_name>'s <file_type> word </file_type>
 0	Search kochbek's xls	file_search	files	Search <contact_name> kochbek </contact_name>'s <file_type> xls </file_type>
 0	Search echternkamp tiusanen's pdf	file_search	files	Search <contact_name> echternkamp tiusanen </contact_name>'s <file_type> pdf </file_type>
 0	Search fajkos chalanjet lambertz netuka's vsd	file_search	files	Search <contact_name> fajkos chalanjet lambertz netuka </contact_name>'s <file_type> vsd </file_type>
@@ -364,7 +364,7 @@
 0	Search mimoto morosuke's docx	file_search	files	Search <contact_name> mimoto morosuke </contact_name>'s <file_type> docx </file_type>
 0	Search dejiang's presentations	file_search	files	Search <contact_name> dejiang </contact_name>'s <file_type> presentations </file_type>
 0	Search adelusimi chittarath mahona's presentations	file_search	files	Search <contact_name> adelusimi chittarath mahona </contact_name>'s <file_type> presentations </file_type>
-0	Search borsaru ehsaan midillic's spec	file_search	files	Search <contact_name> borsaru ehsaan midillic </contact_name>'s <file_type> spec </file_type>
+0	Search borsaru ehsaan midillic's word	file_search	files	Search <contact_name> borsaru ehsaan midillic </contact_name>'s <file_type> word </file_type>
 0	Search davorijanka futsukawa's excels	file_search	files	Search <contact_name> davorijanka futsukawa </contact_name>'s <file_type> excels </file_type>
 0	Search bonnemoy wellburn's xlsx	file_search	files	Search <contact_name> bonnemoy wellburn </contact_name>'s <file_type> xlsx </file_type>
 0	Search nagakita onstine's xlsx	file_search	files	Search <contact_name> nagakita onstine </contact_name>'s <file_type> xlsx </file_type>
@@ -454,7 +454,7 @@
 0	show zanaty's worksheet	file_search	files	show <contact_name> zanaty </contact_name>'s <file_type> worksheet </file_type>
 0	show navrátilová tagizade nardeau's workbook	file_search	files	show <contact_name> navrátilová tagizade nardeau </contact_name>'s <file_type> workbook </file_type>
 0	show yermochkov meligne bassin sarvarian's mpp	file_search	files	show <contact_name> yermochkov meligne bassin sarvarian </contact_name>'s <file_type> mpp </file_type>
-0	show pelekanos's spec	file_search	files	show <contact_name> pelekanos </contact_name>'s <file_type> spec </file_type>
+0	show pelekanos's word	file_search	files	show <contact_name> pelekanos </contact_name>'s <file_type> word </file_type>
 0	show funcke arauz arnao's slide	file_search	files	show <contact_name> funcke arauz arnao </contact_name>'s <file_type> slide </file_type>
 0	show gwal's notebook	file_search	files	show <contact_name> gwal </contact_name>'s <file_type> notebook </file_type>
 0	show shinnors granone fiske-harrison's xlsx	file_search	files	show <contact_name> shinnors granone fiske-harrison </contact_name>'s <file_type> xlsx </file_type>
@@ -469,7 +469,7 @@
 0	show woischnik hedeon's notebook	file_search	files	show <contact_name> woischnik hedeon </contact_name>'s <file_type> notebook </file_type>
 0	show plassio's pdf	file_search	files	show <contact_name> plassio </contact_name>'s <file_type> pdf </file_type>
 0	show cotralha topay cantello schisano's vssm	file_search	files	show <contact_name> cotralha topay cantello schisano </contact_name>'s <file_type> vssm </file_type>
-0	show borsaru po?u?a po?u?a belmahi's spec	file_search	files	show <contact_name> borsaru po?u?a po?u?a belmahi </contact_name>'s <file_type> spec </file_type>
+0	show borsaru po?u?a po?u?a belmahi's word	file_search	files	show <contact_name> borsaru po?u?a po?u?a belmahi </contact_name>'s <file_type> word </file_type>
 0	show shinnors poota santopoli's vstm	file_search	files	show <contact_name> shinnors poota santopoli </contact_name>'s <file_type> vstm </file_type>
 0	show time" corneille's mpt	file_search	files	show <contact_name> time" corneille </contact_name>'s <file_type> mpt </file_type>
 0	show piotrovskii granone pelekanos costine's notebook	file_search	files	show <contact_name> piotrovskii granone pelekanos costine </contact_name>'s <file_type> notebook </file_type>
@@ -526,7 +526,7 @@
 0	show l'ome schenian's spreadsheet	file_search	files	show <contact_name> l'ome schenian </contact_name>'s <file_type> spreadsheet </file_type>
 0	show lefaucheux shinnors meligne brocton's vssm	file_search	files	show <contact_name> lefaucheux shinnors meligne brocton </contact_name>'s <file_type> vssm </file_type>
 0	show missmar arnao piotrovskii's slides	file_search	files	show <contact_name> missmar arnao piotrovskii </contact_name>'s <file_type> slides </file_type>
-0	show babranyi's spec	file_search	files	show <contact_name> babranyi </contact_name>'s <file_type> spec </file_type>
+0	show babranyi's word	file_search	files	show <contact_name> babranyi </contact_name>'s <file_type> word </file_type>
 0	show kochbek's xls	file_search	files	show <contact_name> kochbek </contact_name>'s <file_type> xls </file_type>
 0	show echternkamp tiusanen's pdf	file_search	files	show <contact_name> echternkamp tiusanen </contact_name>'s <file_type> pdf </file_type>
 0	show fajkos chalanjet lambertz netuka's vsd	file_search	files	show <contact_name> fajkos chalanjet lambertz netuka </contact_name>'s <file_type> vsd </file_type>
@@ -564,7 +564,7 @@
 0	show mimoto morosuke's docx	file_search	files	show <contact_name> mimoto morosuke </contact_name>'s <file_type> docx </file_type>
 0	show dejiang's presentations	file_search	files	show <contact_name> dejiang </contact_name>'s <file_type> presentations </file_type>
 0	show adelusimi chittarath mahona's presentations	file_search	files	show <contact_name> adelusimi chittarath mahona </contact_name>'s <file_type> presentations </file_type>
-0	show borsaru ehsaan midillic's spec	file_search	files	show <contact_name> borsaru ehsaan midillic </contact_name>'s <file_type> spec </file_type>
+0	show borsaru ehsaan midillic's word	file_search	files	show <contact_name> borsaru ehsaan midillic </contact_name>'s <file_type> word </file_type>
 0	show davorijanka futsukawa's excels	file_search	files	show <contact_name> davorijanka futsukawa </contact_name>'s <file_type> excels </file_type>
 0	show bonnemoy wellburn's xlsx	file_search	files	show <contact_name> bonnemoy wellburn </contact_name>'s <file_type> xlsx </file_type>
 0	show nagakita onstine's xlsx	file_search	files	show <contact_name> nagakita onstine </contact_name>'s <file_type> xlsx </file_type>
@@ -654,7 +654,7 @@
 0	Show zanaty's worksheet	file_search	files	Show <contact_name> zanaty </contact_name>'s <file_type> worksheet </file_type>
 0	Show navrátilová tagizade nardeau's workbook	file_search	files	Show <contact_name> navrátilová tagizade nardeau </contact_name>'s <file_type> workbook </file_type>
 0	Show yermochkov meligne bassin sarvarian's mpp	file_search	files	Show <contact_name> yermochkov meligne bassin sarvarian </contact_name>'s <file_type> mpp </file_type>
-0	Show pelekanos's spec	file_search	files	Show <contact_name> pelekanos </contact_name>'s <file_type> spec </file_type>
+0	Show pelekanos's word	file_search	files	Show <contact_name> pelekanos </contact_name>'s <file_type> word </file_type>
 0	Show funcke arauz arnao's slide	file_search	files	Show <contact_name> funcke arauz arnao </contact_name>'s <file_type> slide </file_type>
 0	Show gwal's notebook	file_search	files	Show <contact_name> gwal </contact_name>'s <file_type> notebook </file_type>
 0	Show shinnors granone fiske-harrison's xlsx	file_search	files	Show <contact_name> shinnors granone fiske-harrison </contact_name>'s <file_type> xlsx </file_type>
@@ -669,7 +669,7 @@
 0	Show woischnik hedeon's notebook	file_search	files	Show <contact_name> woischnik hedeon </contact_name>'s <file_type> notebook </file_type>
 0	Show plassio's pdf	file_search	files	Show <contact_name> plassio </contact_name>'s <file_type> pdf </file_type>
 0	Show cotralha topay cantello schisano's vssm	file_search	files	Show <contact_name> cotralha topay cantello schisano </contact_name>'s <file_type> vssm </file_type>
-0	Show borsaru po?u?a po?u?a belmahi's spec	file_search	files	Show <contact_name> borsaru po?u?a po?u?a belmahi </contact_name>'s <file_type> spec </file_type>
+0	Show borsaru po?u?a po?u?a belmahi's word	file_search	files	Show <contact_name> borsaru po?u?a po?u?a belmahi </contact_name>'s <file_type> word </file_type>
 0	Show shinnors poota santopoli's vstm	file_search	files	Show <contact_name> shinnors poota santopoli </contact_name>'s <file_type> vstm </file_type>
 0	Show time" corneille's mpt	file_search	files	Show <contact_name> time" corneille </contact_name>'s <file_type> mpt </file_type>
 0	Show piotrovskii granone pelekanos costine's notebook	file_search	files	Show <contact_name> piotrovskii granone pelekanos costine </contact_name>'s <file_type> notebook </file_type>
@@ -726,7 +726,7 @@
 0	Show l'ome schenian's spreadsheet	file_search	files	Show <contact_name> l'ome schenian </contact_name>'s <file_type> spreadsheet </file_type>
 0	Show lefaucheux shinnors meligne brocton's vssm	file_search	files	Show <contact_name> lefaucheux shinnors meligne brocton </contact_name>'s <file_type> vssm </file_type>
 0	Show missmar arnao piotrovskii's slides	file_search	files	Show <contact_name> missmar arnao piotrovskii </contact_name>'s <file_type> slides </file_type>
-0	Show babranyi's spec	file_search	files	Show <contact_name> babranyi </contact_name>'s <file_type> spec </file_type>
+0	Show babranyi's word	file_search	files	Show <contact_name> babranyi </contact_name>'s <file_type> word </file_type>
 0	Show kochbek's xls	file_search	files	Show <contact_name> kochbek </contact_name>'s <file_type> xls </file_type>
 0	Show echternkamp tiusanen's pdf	file_search	files	Show <contact_name> echternkamp tiusanen </contact_name>'s <file_type> pdf </file_type>
 0	Show fajkos chalanjet lambertz netuka's vsd	file_search	files	Show <contact_name> fajkos chalanjet lambertz netuka </contact_name>'s <file_type> vsd </file_type>
@@ -764,7 +764,7 @@
 0	Show mimoto morosuke's docx	file_search	files	Show <contact_name> mimoto morosuke </contact_name>'s <file_type> docx </file_type>
 0	Show dejiang's presentations	file_search	files	Show <contact_name> dejiang </contact_name>'s <file_type> presentations </file_type>
 0	Show adelusimi chittarath mahona's presentations	file_search	files	Show <contact_name> adelusimi chittarath mahona </contact_name>'s <file_type> presentations </file_type>
-0	Show borsaru ehsaan midillic's spec	file_search	files	Show <contact_name> borsaru ehsaan midillic </contact_name>'s <file_type> spec </file_type>
+0	Show borsaru ehsaan midillic's word	file_search	files	Show <contact_name> borsaru ehsaan midillic </contact_name>'s <file_type> word </file_type>
 0	Show davorijanka futsukawa's excels	file_search	files	Show <contact_name> davorijanka futsukawa </contact_name>'s <file_type> excels </file_type>
 0	Show bonnemoy wellburn's xlsx	file_search	files	Show <contact_name> bonnemoy wellburn </contact_name>'s <file_type> xlsx </file_type>
 0	Show nagakita onstine's xlsx	file_search	files	Show <contact_name> nagakita onstine </contact_name>'s <file_type> xlsx </file_type>
@@ -854,7 +854,7 @@
 0	zanaty worksheet	file_search	files	<contact_name> zanaty </contact_name> <file_type> worksheet </file_type>
 0	navrátilová tagizade nardeau workbook	file_search	files	<contact_name> navrátilová tagizade nardeau </contact_name> <file_type> workbook </file_type>
 0	yermochkov meligne bassin sarvarian mpp	file_search	files	<contact_name> yermochkov meligne bassin sarvarian </contact_name> <file_type> mpp </file_type>
-0	pelekanos spec	file_search	files	<contact_name> pelekanos </contact_name> <file_type> spec </file_type>
+0	pelekanos ppt	file_search	files	<contact_name> pelekanos </contact_name> <file_type> ppt </file_type>
 0	funcke arauz arnao slide	file_search	files	<contact_name> funcke arauz arnao </contact_name> <file_type> slide </file_type>
 0	gwal notebook	file_search	files	<contact_name> gwal </contact_name> <file_type> notebook </file_type>
 0	shinnors granone fiske-harrison xlsx	file_search	files	<contact_name> shinnors granone fiske-harrison </contact_name> <file_type> xlsx </file_type>
@@ -869,7 +869,7 @@
 0	woischnik hedeon notebook	file_search	files	<contact_name> woischnik hedeon </contact_name> <file_type> notebook </file_type>
 0	plassio pdf	file_search	files	<contact_name> plassio </contact_name> <file_type> pdf </file_type>
 0	cotralha topay cantello schisano vssm	file_search	files	<contact_name> cotralha topay cantello schisano </contact_name> <file_type> vssm </file_type>
-0	borsaru po?u?a po?u?a belmahi spec	file_search	files	<contact_name> borsaru po?u?a po?u?a belmahi </contact_name> <file_type> spec </file_type>
+0	borsaru po?u?a po?u?a belmahi pptx	file_search	files	<contact_name> borsaru po?u?a po?u?a belmahi </contact_name> <file_type> pptx </file_type>
 0	shinnors poota santopoli vstm	file_search	files	<contact_name> shinnors poota santopoli </contact_name> <file_type> vstm </file_type>
 0	time" corneille mpt	file_search	files	<contact_name> time" corneille </contact_name> <file_type> mpt </file_type>
 0	piotrovskii granone pelekanos costine notebook	file_search	files	<contact_name> piotrovskii granone pelekanos costine </contact_name> <file_type> notebook </file_type>
@@ -926,7 +926,7 @@
 0	l'ome schenian spreadsheet	file_search	files	<contact_name> l'ome schenian </contact_name> <file_type> spreadsheet </file_type>
 0	lefaucheux shinnors meligne brocton vssm	file_search	files	<contact_name> lefaucheux shinnors meligne brocton </contact_name> <file_type> vssm </file_type>
 0	missmar arnao piotrovskii slides	file_search	files	<contact_name> missmar arnao piotrovskii </contact_name> <file_type> slides </file_type>
-0	babranyi spec	file_search	files	<contact_name> babranyi </contact_name> <file_type> spec </file_type>
+0	babranyi excel	file_search	files	<contact_name> babranyi </contact_name> <file_type> excel </file_type>
 0	kochbek xls	file_search	files	<contact_name> kochbek </contact_name> <file_type> xls </file_type>
 0	echternkamp tiusanen pdf	file_search	files	<contact_name> echternkamp tiusanen </contact_name> <file_type> pdf </file_type>
 0	fajkos chalanjet lambertz netuka vsd	file_search	files	<contact_name> fajkos chalanjet lambertz netuka </contact_name> <file_type> vsd </file_type>
@@ -964,7 +964,7 @@
 0	mimoto morosuke docx	file_search	files	<contact_name> mimoto morosuke </contact_name> <file_type> docx </file_type>
 0	dejiang presentations	file_search	files	<contact_name> dejiang </contact_name> <file_type> presentations </file_type>
 0	adelusimi chittarath mahona presentations	file_search	files	<contact_name> adelusimi chittarath mahona </contact_name> <file_type> presentations </file_type>
-0	borsaru ehsaan midillic spec	file_search	files	<contact_name> borsaru ehsaan midillic </contact_name> <file_type> spec </file_type>
+0	borsaru ehsaan midillic notebook	file_search	files	<contact_name> borsaru ehsaan midillic </contact_name> <file_type> notebook </file_type>
 0	davorijanka futsukawa excels	file_search	files	<contact_name> davorijanka futsukawa </contact_name> <file_type> excels </file_type>
 0	bonnemoy wellburn xlsx	file_search	files	<contact_name> bonnemoy wellburn </contact_name> <file_type> xlsx </file_type>
 0	nagakita onstine xlsx	file_search	files	<contact_name> nagakita onstine </contact_name> <file_type> xlsx </file_type>
@@ -1054,7 +1054,7 @@
 0	worksheet zanaty	file_search	files	<file_type> worksheet </file_type> <contact_name> zanaty </contact_name>
 0	workbook navrátilová tagizade nardeau	file_search	files	<file_type> workbook </file_type> <contact_name> navrátilová tagizade nardeau </contact_name>
 0	mpp yermochkov meligne bassin sarvarian	file_search	files	<file_type> mpp </file_type> <contact_name> yermochkov meligne bassin sarvarian </contact_name>
-0	spec pelekanos	file_search	files	<file_type> spec </file_type> <contact_name> pelekanos </contact_name>
+0	jpg pelekanos	file_search	files	<file_type> jpg </file_type> <contact_name> pelekanos </contact_name>
 0	slide funcke arauz arnao	file_search	files	<file_type> slide </file_type> <contact_name> funcke arauz arnao </contact_name>
 0	notebook gwal	file_search	files	<file_type> notebook </file_type> <contact_name> gwal </contact_name>
 0	xlsx shinnors granone fiske-harrison	file_search	files	<file_type> xlsx </file_type> <contact_name> shinnors granone fiske-harrison </contact_name>
@@ -1069,7 +1069,7 @@
 0	notebook woischnik hedeon	file_search	files	<file_type> notebook </file_type> <contact_name> woischnik hedeon </contact_name>
 0	pdf plassio	file_search	files	<file_type> pdf </file_type> <contact_name> plassio </contact_name>
 0	vssm cotralha topay cantello schisano	file_search	files	<file_type> vssm </file_type> <contact_name> cotralha topay cantello schisano </contact_name>
-0	spec borsaru po?u?a po?u?a belmahi	file_search	files	<file_type> spec </file_type> <contact_name> borsaru po?u?a po?u?a belmahi </contact_name>
+0	pdf borsaru po?u?a po?u?a belmahi	file_search	files	<file_type> pdf </file_type> <contact_name> borsaru po?u?a po?u?a belmahi </contact_name>
 0	vstm shinnors poota santopoli	file_search	files	<file_type> vstm </file_type> <contact_name> shinnors poota santopoli </contact_name>
 0	mpt time" corneille	file_search	files	<file_type> mpt </file_type> <contact_name> time" corneille </contact_name>
 0	notebook piotrovskii granone pelekanos costine	file_search	files	<file_type> notebook </file_type> <contact_name> piotrovskii granone pelekanos costine </contact_name>
@@ -1126,7 +1126,7 @@
 0	spreadsheet l'ome schenian	file_search	files	<file_type> spreadsheet </file_type> <contact_name> l'ome schenian </contact_name>
 0	vssm lefaucheux shinnors meligne brocton	file_search	files	<file_type> vssm </file_type> <contact_name> lefaucheux shinnors meligne brocton </contact_name>
 0	slides missmar arnao piotrovskii	file_search	files	<file_type> slides </file_type> <contact_name> missmar arnao piotrovskii </contact_name>
-0	spec babranyi	file_search	files	<file_type> spec </file_type> <contact_name> babranyi </contact_name>
+0	worksheet babranyi	file_search	files	<file_type> worksheet </file_type> <contact_name> babranyi </contact_name>
 0	xls kochbek	file_search	files	<file_type> xls </file_type> <contact_name> kochbek </contact_name>
 0	pdf echternkamp tiusanen	file_search	files	<file_type> pdf </file_type> <contact_name> echternkamp tiusanen </contact_name>
 0	vsd fajkos chalanjet lambertz netuka	file_search	files	<file_type> vsd </file_type> <contact_name> fajkos chalanjet lambertz netuka </contact_name>
@@ -1164,7 +1164,7 @@
 0	docx mimoto morosuke	file_search	files	<file_type> docx </file_type> <contact_name> mimoto morosuke </contact_name>
 0	presentations dejiang	file_search	files	<file_type> presentations </file_type> <contact_name> dejiang </contact_name>
 0	presentations adelusimi chittarath mahona	file_search	files	<file_type> presentations </file_type> <contact_name> adelusimi chittarath mahona </contact_name>
-0	spec borsaru ehsaan midillic	file_search	files	<file_type> spec </file_type> <contact_name> borsaru ehsaan midillic </contact_name>
+0	deck borsaru ehsaan midillic	file_search	files	<file_type> deck </file_type> <contact_name> borsaru ehsaan midillic </contact_name>
 0	excels davorijanka futsukawa	file_search	files	<file_type> excels </file_type> <contact_name> davorijanka futsukawa </contact_name>
 0	xlsx bonnemoy wellburn	file_search	files	<file_type> xlsx </file_type> <contact_name> bonnemoy wellburn </contact_name>
 0	xlsx nagakita onstine	file_search	files	<file_type> xlsx </file_type> <contact_name> nagakita onstine </contact_name>
@@ -1254,7 +1254,7 @@
 0	worksheet by zanaty	file_search	files	<file_type> worksheet </file_type> by <contact_name> zanaty </contact_name>
 0	workbook by navrátilová tagizade nardeau	file_search	files	<file_type> workbook </file_type> by <contact_name> navrátilová tagizade nardeau </contact_name>
 0	mpp by yermochkov meligne bassin sarvarian	file_search	files	<file_type> mpp </file_type> by <contact_name> yermochkov meligne bassin sarvarian </contact_name>
-0	spec by pelekanos	file_search	files	<file_type> spec </file_type> by <contact_name> pelekanos </contact_name>
+0	doc by pelekanos	file_search	files	<file_type> doc </file_type> by <contact_name> pelekanos </contact_name>
 0	slide by funcke arauz arnao	file_search	files	<file_type> slide </file_type> by <contact_name> funcke arauz arnao </contact_name>
 0	notebook by gwal	file_search	files	<file_type> notebook </file_type> by <contact_name> gwal </contact_name>
 0	xlsx by shinnors granone fiske-harrison	file_search	files	<file_type> xlsx </file_type> by <contact_name> shinnors granone fiske-harrison </contact_name>
@@ -1269,7 +1269,7 @@
 0	notebook by woischnik hedeon	file_search	files	<file_type> notebook </file_type> by <contact_name> woischnik hedeon </contact_name>
 0	pdf by plassio	file_search	files	<file_type> pdf </file_type> by <contact_name> plassio </contact_name>
 0	vssm by cotralha topay cantello schisano	file_search	files	<file_type> vssm </file_type> by <contact_name> cotralha topay cantello schisano </contact_name>
-0	spec by borsaru po?u?a po?u?a belmahi	file_search	files	<file_type> spec </file_type> by <contact_name> borsaru po?u?a po?u?a belmahi </contact_name>
+0	doc by borsaru po?u?a po?u?a belmahi	file_search	files	<file_type> doc </file_type> by <contact_name> borsaru po?u?a po?u?a belmahi </contact_name>
 0	vstm by shinnors poota santopoli	file_search	files	<file_type> vstm </file_type> by <contact_name> shinnors poota santopoli </contact_name>
 0	mpt by time" corneille	file_search	files	<file_type> mpt </file_type> by <contact_name> time" corneille </contact_name>
 0	notebook by piotrovskii granone pelekanos costine	file_search	files	<file_type> notebook </file_type> by <contact_name> piotrovskii granone pelekanos costine </contact_name>
@@ -1326,7 +1326,7 @@
 0	spreadsheet by l'ome schenian	file_search	files	<file_type> spreadsheet </file_type> by <contact_name> l'ome schenian </contact_name>
 0	vssm by lefaucheux shinnors meligne brocton	file_search	files	<file_type> vssm </file_type> by <contact_name> lefaucheux shinnors meligne brocton </contact_name>
 0	slides by missmar arnao piotrovskii	file_search	files	<file_type> slides </file_type> by <contact_name> missmar arnao piotrovskii </contact_name>
-0	spec by babranyi	file_search	files	<file_type> spec </file_type> by <contact_name> babranyi </contact_name>
+0	doc by babranyi	file_search	files	<file_type> doc </file_type> by <contact_name> babranyi </contact_name>
 0	xls by kochbek	file_search	files	<file_type> xls </file_type> by <contact_name> kochbek </contact_name>
 0	pdf by echternkamp tiusanen	file_search	files	<file_type> pdf </file_type> by <contact_name> echternkamp tiusanen </contact_name>
 0	vsd by fajkos chalanjet lambertz netuka	file_search	files	<file_type> vsd </file_type> by <contact_name> fajkos chalanjet lambertz netuka </contact_name>
@@ -1364,7 +1364,7 @@
 0	docx by mimoto morosuke	file_search	files	<file_type> docx </file_type> by <contact_name> mimoto morosuke </contact_name>
 0	presentations by dejiang	file_search	files	<file_type> presentations </file_type> by <contact_name> dejiang </contact_name>
 0	presentations by adelusimi chittarath mahona	file_search	files	<file_type> presentations </file_type> by <contact_name> adelusimi chittarath mahona </contact_name>
-0	spec by borsaru ehsaan midillic	file_search	files	<file_type> spec </file_type> by <contact_name> borsaru ehsaan midillic </contact_name>
+0	doc by borsaru ehsaan midillic	file_search	files	<file_type> doc </file_type> by <contact_name> borsaru ehsaan midillic </contact_name>
 0	excels by davorijanka futsukawa	file_search	files	<file_type> excels </file_type> by <contact_name> davorijanka futsukawa </contact_name>
 0	xlsx by bonnemoy wellburn	file_search	files	<file_type> xlsx </file_type> by <contact_name> bonnemoy wellburn </contact_name>
 0	xlsx by nagakita onstine	file_search	files	<file_type> xlsx </file_type> by <contact_name> nagakita onstine </contact_name>
@@ -1454,7 +1454,7 @@
 0	worksheet file by zanaty	file_search	files	<file_type> worksheet </file_type> by <contact_name> zanaty </contact_name>
 0	workbook file by navrátilová tagizade nardeau	file_search	files	<file_type> workbook </file_type> by <contact_name> navrátilová tagizade nardeau </contact_name>
 0	mpp file by yermochkov meligne bassin sarvarian	file_search	files	<file_type> mpp </file_type> by <contact_name> yermochkov meligne bassin sarvarian </contact_name>
-0	spec file by pelekanos	file_search	files	<file_type> spec </file_type> by <contact_name> pelekanos </contact_name>
+0	word file by pelekanos	file_search	files	<file_type> word </file_type> by <contact_name> pelekanos </contact_name>
 0	slide file by funcke arauz arnao	file_search	files	<file_type> slide </file_type> by <contact_name> funcke arauz arnao </contact_name>
 0	notebook file by gwal	file_search	files	<file_type> notebook </file_type> by <contact_name> gwal </contact_name>
 0	xlsx file by shinnors granone fiske-harrison	file_search	files	<file_type> xlsx </file_type> by <contact_name> shinnors granone fiske-harrison </contact_name>
@@ -1469,7 +1469,7 @@
 0	notebook file by woischnik hedeon	file_search	files	<file_type> notebook </file_type> by <contact_name> woischnik hedeon </contact_name>
 0	pdf file by plassio	file_search	files	<file_type> pdf </file_type> by <contact_name> plassio </contact_name>
 0	vssm file by cotralha topay cantello schisano	file_search	files	<file_type> vssm </file_type> by <contact_name> cotralha topay cantello schisano </contact_name>
-0	spec file by borsaru po?u?a po?u?a belmahi	file_search	files	<file_type> spec </file_type> by <contact_name> borsaru po?u?a po?u?a belmahi </contact_name>
+0	word file by borsaru po?u?a po?u?a belmahi	file_search	files	<file_type> word </file_type> by <contact_name> borsaru po?u?a po?u?a belmahi </contact_name>
 0	vstm file by shinnors poota santopoli	file_search	files	<file_type> vstm </file_type> by <contact_name> shinnors poota santopoli </contact_name>
 0	mpt file by time" corneille	file_search	files	<file_type> mpt </file_type> by <contact_name> time" corneille </contact_name>
 0	notebook file by piotrovskii granone pelekanos costine	file_search	files	<file_type> notebook </file_type> by <contact_name> piotrovskii granone pelekanos costine </contact_name>
@@ -1526,7 +1526,7 @@
 0	spreadsheet file by l'ome schenian	file_search	files	<file_type> spreadsheet </file_type> by <contact_name> l'ome schenian </contact_name>
 0	vssm file by lefaucheux shinnors meligne brocton	file_search	files	<file_type> vssm </file_type> by <contact_name> lefaucheux shinnors meligne brocton </contact_name>
 0	slides file by missmar arnao piotrovskii	file_search	files	<file_type> slides </file_type> by <contact_name> missmar arnao piotrovskii </contact_name>
-0	spec file by babranyi	file_search	files	<file_type> spec </file_type> by <contact_name> babranyi </contact_name>
+0	word file by babranyi	file_search	files	<file_type> word </file_type> by <contact_name> babranyi </contact_name>
 0	xls file by kochbek	file_search	files	<file_type> xls </file_type> by <contact_name> kochbek </contact_name>
 0	pdf file by echternkamp tiusanen	file_search	files	<file_type> pdf </file_type> by <contact_name> echternkamp tiusanen </contact_name>
 0	vsd file by fajkos chalanjet lambertz netuka	file_search	files	<file_type> vsd </file_type> by <contact_name> fajkos chalanjet lambertz netuka </contact_name>
@@ -1564,7 +1564,7 @@
 0	docx file by mimoto morosuke	file_search	files	<file_type> docx </file_type> by <contact_name> mimoto morosuke </contact_name>
 0	presentations file by dejiang	file_search	files	<file_type> presentations </file_type> by <contact_name> dejiang </contact_name>
 0	presentations file by adelusimi chittarath mahona	file_search	files	<file_type> presentations </file_type> by <contact_name> adelusimi chittarath mahona </contact_name>
-0	spec file by borsaru ehsaan midillic	file_search	files	<file_type> spec </file_type> by <contact_name> borsaru ehsaan midillic </contact_name>
+0	word file by borsaru ehsaan midillic	file_search	files	<file_type> word </file_type> by <contact_name> borsaru ehsaan midillic </contact_name>
 0	excels file by davorijanka futsukawa	file_search	files	<file_type> excels </file_type> by <contact_name> davorijanka futsukawa </contact_name>
 0	xlsx file by bonnemoy wellburn	file_search	files	<file_type> xlsx </file_type> by <contact_name> bonnemoy wellburn </contact_name>
 0	xlsx file by nagakita onstine	file_search	files	<file_type> xlsx </file_type> by <contact_name> nagakita onstine </contact_name>
@@ -1654,7 +1654,7 @@
 0	worksheet files by zanaty	file_search	files	<file_type> worksheet </file_type> by <contact_name> zanaty </contact_name>
 0	workbook files by navrátilová tagizade nardeau	file_search	files	<file_type> workbook </file_type> by <contact_name> navrátilová tagizade nardeau </contact_name>
 0	mpp files by yermochkov meligne bassin sarvarian	file_search	files	<file_type> mpp </file_type> by <contact_name> yermochkov meligne bassin sarvarian </contact_name>
-0	spec files by pelekanos	file_search	files	<file_type> spec </file_type> by <contact_name> pelekanos </contact_name>
+0	doc files by pelekanos	file_search	files	<file_type> doc </file_type> by <contact_name> pelekanos </contact_name>
 0	slide files by funcke arauz arnao	file_search	files	<file_type> slide </file_type> by <contact_name> funcke arauz arnao </contact_name>
 0	notebook files by gwal	file_search	files	<file_type> notebook </file_type> by <contact_name> gwal </contact_name>
 0	xlsx files by shinnors granone fiske-harrison	file_search	files	<file_type> xlsx </file_type> by <contact_name> shinnors granone fiske-harrison </contact_name>
@@ -1669,7 +1669,7 @@
 0	notebook files by woischnik hedeon	file_search	files	<file_type> notebook </file_type> by <contact_name> woischnik hedeon </contact_name>
 0	pdf files by plassio	file_search	files	<file_type> pdf </file_type> by <contact_name> plassio </contact_name>
 0	vssm files by cotralha topay cantello schisano	file_search	files	<file_type> vssm </file_type> by <contact_name> cotralha topay cantello schisano </contact_name>
-0	spec files by borsaru po?u?a po?u?a belmahi	file_search	files	<file_type> spec </file_type> by <contact_name> borsaru po?u?a po?u?a belmahi </contact_name>
+0	doc files by borsaru po?u?a po?u?a belmahi	file_search	files	<file_type> doc </file_type> by <contact_name> borsaru po?u?a po?u?a belmahi </contact_name>
 0	vstm files by shinnors poota santopoli	file_search	files	<file_type> vstm </file_type> by <contact_name> shinnors poota santopoli </contact_name>
 0	mpt files by time" corneille	file_search	files	<file_type> mpt </file_type> by <contact_name> time" corneille </contact_name>
 0	notebook files by piotrovskii granone pelekanos costine	file_search	files	<file_type> notebook </file_type> by <contact_name> piotrovskii granone pelekanos costine </contact_name>
@@ -1726,7 +1726,7 @@
 0	spreadsheet files by l'ome schenian	file_search	files	<file_type> spreadsheet </file_type> by <contact_name> l'ome schenian </contact_name>
 0	vssm files by lefaucheux shinnors meligne brocton	file_search	files	<file_type> vssm </file_type> by <contact_name> lefaucheux shinnors meligne brocton </contact_name>
 0	slides files by missmar arnao piotrovskii	file_search	files	<file_type> slides </file_type> by <contact_name> missmar arnao piotrovskii </contact_name>
-0	spec files by babranyi	file_search	files	<file_type> spec </file_type> by <contact_name> babranyi </contact_name>
+0	doc files by babranyi	file_search	files	<file_type> doc </file_type> by <contact_name> babranyi </contact_name>
 0	xls files by kochbek	file_search	files	<file_type> xls </file_type> by <contact_name> kochbek </contact_name>
 0	pdf files by echternkamp tiusanen	file_search	files	<file_type> pdf </file_type> by <contact_name> echternkamp tiusanen </contact_name>
 0	vsd files by fajkos chalanjet lambertz netuka	file_search	files	<file_type> vsd </file_type> by <contact_name> fajkos chalanjet lambertz netuka </contact_name>
@@ -1764,7 +1764,7 @@
 0	docx files by mimoto morosuke	file_search	files	<file_type> docx </file_type> by <contact_name> mimoto morosuke </contact_name>
 0	presentations files by dejiang	file_search	files	<file_type> presentations </file_type> by <contact_name> dejiang </contact_name>
 0	presentations files by adelusimi chittarath mahona	file_search	files	<file_type> presentations </file_type> by <contact_name> adelusimi chittarath mahona </contact_name>
-0	spec files by borsaru ehsaan midillic	file_search	files	<file_type> spec </file_type> by <contact_name> borsaru ehsaan midillic </contact_name>
+0	doc files by borsaru ehsaan midillic	file_search	files	<file_type> doc </file_type> by <contact_name> borsaru ehsaan midillic </contact_name>
 0	excels files by davorijanka futsukawa	file_search	files	<file_type> excels </file_type> by <contact_name> davorijanka futsukawa </contact_name>
 0	xlsx files by bonnemoy wellburn	file_search	files	<file_type> xlsx </file_type> by <contact_name> bonnemoy wellburn </contact_name>
 0	xlsx files by nagakita onstine	file_search	files	<file_type> xlsx </file_type> by <contact_name> nagakita onstine </contact_name>
