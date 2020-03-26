@@ -27,14 +27,14 @@
 0	send pick jordan up vsdm to felicides	file_share	files	send <file_keyword> pick jordan up </file_keyword> <file_type> vsdm </file_type> to <to_contact_name> felicides </to_contact_name>
 0	send free desktop vssm to subotic	file_share	files	send <file_keyword> free desktop </file_keyword> <file_type> vssm </file_type> to <to_contact_name> subotic </to_contact_name>
 0	send barbecue at michael's place spreadsheets to jerosimija seddik	file_share	files	send <file_keyword> barbecue at michael's place </file_keyword> <file_type> spreadsheets </file_type> to <to_contact_name> jerosimija seddik </to_contact_name>
-0	send biking spec to merv miesl	file_share	files	send <file_keyword> biking </file_keyword> <file_type> spec </file_type> to <to_contact_name> merv miesl </to_contact_name>
+0	send biking image to merv miesl	file_share	files	send <file_keyword> biking </file_keyword> <file_type> image </file_type> to <to_contact_name> merv miesl </to_contact_name>
 0	send computer science exam workbook to stonum	file_share	files	send <file_keyword> computer science exam </file_keyword> <file_type> workbook </file_type> to <to_contact_name> stonum </to_contact_name>
 0	send invites notebook to mancior	file_share	files	send <file_keyword> invites </file_keyword> <file_type> notebook </file_type> to <to_contact_name> mancior </to_contact_name>
 0	send mummy ' s birthday pdfs to batousek inverclyde	file_share	files	send <file_keyword> mummy ' s birthday </file_keyword> <file_type> pdfs </file_type> to <to_contact_name> batousek inverclyde </to_contact_name>
 0	send pay onenote to almoguera tagenius	file_share	files	send <file_keyword> pay </file_keyword> <file_type> onenote </file_type> to <to_contact_name> almoguera tagenius </to_contact_name>
 0	send science fair ideas xlsx to jender walman	file_share	files	send <file_keyword> science fair ideas </file_keyword> <file_type> xlsx </file_type> to <to_contact_name> jender walman </to_contact_name>
 0	send payton thirty note to gonyeau knutzen	file_share	files	send <file_keyword> payton thirty </file_keyword> <file_type> note </file_type> to <to_contact_name> gonyeau knutzen </to_contact_name>
-0	send contact advisor spec to brogniart	file_share	files	send <file_keyword> contact advisor </file_keyword> <file_type> spec </file_type> to <to_contact_name> brogniart </to_contact_name>
+0	send contact advisor doc to brogniart	file_share	files	send <file_keyword> contact advisor </file_keyword> <file_type> doc </file_type> to <to_contact_name> brogniart </to_contact_name>
 0	send hawaii docs to gilauri bacun	file_share	files	send <file_keyword> hawaii </file_keyword> <file_type> docs </file_type> to <to_contact_name> gilauri bacun </to_contact_name>
 0	send one plus one vss to knutzen	file_share	files	send <file_keyword> one plus one </file_keyword> <file_type> vss </file_type> to <to_contact_name> knutzen </to_contact_name>
 0	send boy scouts xls to almoguera basacar	file_share	files	send <file_keyword> boy scouts </file_keyword> <file_type> xls </file_type> to <to_contact_name> almoguera basacar </to_contact_name>
@@ -66,7 +66,7 @@
 0	send make cinnamon rolls xlsx to steusing batesole	file_share	files	send <file_keyword> make cinnamon rolls </file_keyword> <file_type> xlsx </file_type> to <to_contact_name> steusing batesole </to_contact_name>
 0	send call federico excel to tagenius bacun	file_share	files	send <file_keyword> call federico </file_keyword> <file_type> excel </file_type> to <to_contact_name> tagenius bacun </to_contact_name>
 0	send call federico docx to balingiyn	file_share	files	send <file_keyword> call federico </file_keyword> <file_type> docx </file_type> to <to_contact_name> balingiyn </to_contact_name>
-0	send michael ' s wedding spec to shirinski	file_share	files	send <file_keyword> michael ' s wedding </file_keyword> <file_type> spec </file_type> to <to_contact_name> shirinski </to_contact_name>
+0	send michael ' s wedding xls to shirinski	file_share	files	send <file_keyword> michael ' s wedding </file_keyword> <file_type> xls </file_type> to <to_contact_name> shirinski </to_contact_name>
 0	send memorial weekend png to kiikkala veresevic	file_share	files	send <file_keyword> memorial weekend </file_keyword> <file_type> png </file_type> to <to_contact_name> kiikkala veresevic </to_contact_name>
 0	send bmw presentation to canapville rogala	file_share	files	send <file_keyword> bmw </file_keyword> <file_type> presentation </file_type> to <to_contact_name> canapville rogala </to_contact_name>
 0	send moms doctor excels to paragioudakis goulinet	file_share	files	send <file_keyword> moms doctor </file_keyword> <file_type> excels </file_type> to <to_contact_name> paragioudakis goulinet </to_contact_name>
@@ -116,7 +116,7 @@
 0	send let's see how are you? vsdx to tachner	file_share	files	send <file_keyword> let's see how are you? </file_keyword> <file_type> vsdx </file_type> to <to_contact_name> tachner </to_contact_name>
 0	send payton thirty csv to chôko aguiati	file_share	files	send <file_keyword> payton thirty </file_keyword> <file_type> csv </file_type> to <to_contact_name> chôko aguiati </to_contact_name>
 0	send jackson's flag football game presentations to pirozhkova	file_share	files	send <file_keyword> jackson's flag football game </file_keyword> <file_type> presentations </file_type> to <to_contact_name> pirozhkova </to_contact_name>
-0	send moms doctor spec to kawabe iszakovits	file_share	files	send <file_keyword> moms doctor </file_keyword> <file_type> spec </file_type> to <to_contact_name> kawabe iszakovits </to_contact_name>
+0	send moms doctor onenote to kawabe iszakovits	file_share	files	send <file_keyword> moms doctor </file_keyword> <file_type> onenote </file_type> to <to_contact_name> kawabe iszakovits </to_contact_name>
 0	send hey jessie onenote to sochackyj	file_share	files	send <file_keyword> hey jessie </file_keyword> <file_type> onenote </file_type> to <to_contact_name> sochackyj </to_contact_name>
 0	send computer science exam jpeg to okot	file_share	files	send <file_keyword> computer science exam </file_keyword> <file_type> jpeg </file_type> to <to_contact_name> okot </to_contact_name>
 0	send go to the hospital pptx to gurda petriconi	file_share	files	send <file_keyword> go to the hospital </file_keyword> <file_type> pptx </file_type> to <to_contact_name> gurda petriconi </to_contact_name>
