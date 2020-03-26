@@ -44,7 +44,7 @@
 0	powerpoints cortana test	file_search	files	<file_type> powerpoints </file_type> <file_keyword> cortana test </file_keyword>
 0	powerpoints doctor	file_search	files	<file_type> powerpoints </file_type> <file_keyword> doctor </file_keyword>
 0	pptx guest that are coming	file_search	files	<file_type> pptx </file_type> <file_keyword> guest that are coming </file_keyword>
-0	spec holiday survival	file_search	files	<file_type> spec </file_type> <file_keyword> holiday survival </file_keyword>
+0	deck holiday survival	file_search	files	<file_type> deck </file_type> <file_keyword> holiday survival </file_keyword>
 0	onenote running club quiz	file_search	files	<file_type> onenote </file_type> <file_keyword> running club quiz </file_keyword>
 0	vstm dentist appointment for my daughter	file_search	files	<file_type> vstm </file_type> <file_keyword> dentist appointment for my daughter </file_keyword>
 0	docx stuff like that	file_search	files	<file_type> docx </file_type> <file_keyword> stuff like that </file_keyword>
@@ -107,7 +107,7 @@
 0	png carlie ' s birthday	file_search	files	<file_type> png </file_type> <file_keyword> carlie ' s birthday </file_keyword>
 0	notebooks mdra council meeting	file_search	files	<file_type> notebooks </file_type> <file_keyword> mdra council meeting </file_keyword>
 0	xls new hospital equipment	file_search	files	<file_type> xls </file_type> <file_keyword> new hospital equipment </file_keyword>
-0	spec guest that are coming	file_search	files	<file_type> spec </file_type> <file_keyword> guest that are coming </file_keyword>
+0	onenote guest that are coming	file_search	files	<file_type> onenote </file_type> <file_keyword> guest that are coming </file_keyword>
 0	pptx orthopedic surgeon	file_search	files	<file_type> pptx </file_type> <file_keyword> orthopedic surgeon </file_keyword>
 0	excels doctor white	file_search	files	<file_type> excels </file_type> <file_keyword> doctor white </file_keyword>
 0	pdfs cleaner	file_search	files	<file_type> pdfs </file_type> <file_keyword> cleaner </file_keyword>
@@ -163,7 +163,7 @@
 0	presentations actors appointment at lij	file_search	files	<file_type> presentations </file_type> <file_keyword> actors appointment at lij </file_keyword>
 0	Docs best and final	file_search	files	<file_type> Docs </file_type> <file_keyword> best and final </file_keyword>
 0	powerpoints orthopedic surgeon	file_search	files	<file_type> powerpoints </file_type> <file_keyword> orthopedic surgeon </file_keyword>
-0	spec happy hour with the girls	file_search	files	<file_type> spec </file_type> <file_keyword> happy hour with the girls </file_keyword>
+0	jpeg happy hour with the girls	file_search	files	<file_type> jpeg </file_type> <file_keyword> happy hour with the girls </file_keyword>
 0	vcs meet dad for lunch	file_search	files	<file_type> vcs </file_type> <file_keyword> meet dad for lunch </file_keyword>
 0	Doc mary	file_search	files	<file_type> Doc </file_type> <file_keyword> mary </file_keyword>
 0	excels lunch with boss	file_search	files	<file_type> excels </file_type> <file_keyword> lunch with boss </file_keyword>
@@ -185,7 +185,7 @@
 0	msg appointment with doctor wensel	file_search	files	<file_type> msg </file_type> <file_keyword> appointment with doctor wensel </file_keyword>
 0	presentations produce	file_search	files	<file_type> presentations </file_type> <file_keyword> produce </file_keyword>
 0	decks carrol dinner	file_search	files	<file_type> decks </file_type> <file_keyword> carrol dinner </file_keyword>
-0	spec mum birthday card and gift	file_search	files	<file_type> spec </file_type> <file_keyword> mum birthday card and gift </file_keyword>
+0	ics mum birthday card and gift	file_search	files	<file_type> ics </file_type> <file_keyword> mum birthday card and gift </file_keyword>
 0	vstx shirley's ac cleaned	file_search	files	<file_type> vstx </file_type> <file_keyword> shirley's ac cleaned </file_keyword>
 0	notes sunday school	file_search	files	<file_type> notes </file_type> <file_keyword> sunday school </file_keyword>
 0	Doc church appointment	file_search	files	<file_type> Doc </file_type> <file_keyword> church appointment </file_keyword>
@@ -244,7 +244,7 @@
 0	cortana test powerpoints	file_search	files	<file_keyword> cortana test </file_keyword> <file_type> powerpoints </file_type>
 0	doctor powerpoints	file_search	files	<file_keyword> doctor </file_keyword> <file_type> powerpoints </file_type>
 0	guest that are coming pptx	file_search	files	<file_keyword> guest that are coming </file_keyword> <file_type> pptx </file_type>
-0	holiday survival spec	file_search	files	<file_keyword> holiday survival </file_keyword> <file_type> spec </file_type>
+0	holiday survival msg	file_search	files	<file_keyword> holiday survival </file_keyword> <file_type> msg </file_type>
 0	running club quiz onenote	file_search	files	<file_keyword> running club quiz </file_keyword> <file_type> onenote </file_type>
 0	dentist appointment for my daughter vstm	file_search	files	<file_keyword> dentist appointment for my daughter </file_keyword> <file_type> vstm </file_type>
 0	stuff like that docx	file_search	files	<file_keyword> stuff like that </file_keyword> <file_type> docx </file_type>
@@ -307,7 +307,7 @@
 0	carlie ' s birthday png	file_search	files	<file_keyword> carlie ' s birthday </file_keyword> <file_type> png </file_type>
 0	mdra council meeting notebooks	file_search	files	<file_keyword> mdra council meeting </file_keyword> <file_type> notebooks </file_type>
 0	new hospital equipment xls	file_search	files	<file_keyword> new hospital equipment </file_keyword> <file_type> xls </file_type>
-0	guest that are coming spec	file_search	files	<file_keyword> guest that are coming </file_keyword> <file_type> spec </file_type>
+0	guest that are coming workbook	file_search	files	<file_keyword> guest that are coming </file_keyword> <file_type> workbook </file_type>
 0	orthopedic surgeon pptx	file_search	files	<file_keyword> orthopedic surgeon </file_keyword> <file_type> pptx </file_type>
 0	doctor white excels	file_search	files	<file_keyword> doctor white </file_keyword> <file_type> excels </file_type>
 0	cleaner pdfs	file_search	files	<file_keyword> cleaner </file_keyword> <file_type> pdfs </file_type>
@@ -363,7 +363,7 @@
 0	actors appointment at lij presentations	file_search	files	<file_keyword> actors appointment at lij </file_keyword> <file_type> presentations </file_type>
 0	best and final Docs	file_search	files	<file_keyword> best and final </file_keyword> <file_type> Docs </file_type>
 0	orthopedic surgeon powerpoints	file_search	files	<file_keyword> orthopedic surgeon </file_keyword> <file_type> powerpoints </file_type>
-0	happy hour with the girls spec	file_search	files	<file_keyword> happy hour with the girls </file_keyword> <file_type> spec </file_type>
+0	happy hour with the girls docx	file_search	files	<file_keyword> happy hour with the girls </file_keyword> <file_type> docx </file_type>
 0	meet dad for lunch vcs	file_search	files	<file_keyword> meet dad for lunch </file_keyword> <file_type> vcs </file_type>
 0	mary Doc	file_search	files	<file_keyword> mary </file_keyword> <file_type> Doc </file_type>
 0	lunch with boss excels	file_search	files	<file_keyword> lunch with boss </file_keyword> <file_type> excels </file_type>
@@ -385,7 +385,7 @@
 0	appointment with doctor wensel msg	file_search	files	<file_keyword> appointment with doctor wensel </file_keyword> <file_type> msg </file_type>
 0	produce presentations	file_search	files	<file_keyword> produce </file_keyword> <file_type> presentations </file_type>
 0	carrol dinner decks	file_search	files	<file_keyword> carrol dinner </file_keyword> <file_type> decks </file_type>
-0	mum birthday card and gift spec	file_search	files	<file_keyword> mum birthday card and gift </file_keyword> <file_type> spec </file_type>
+0	mum birthday card and gift slide	file_search	files	<file_keyword> mum birthday card and gift </file_keyword> <file_type> slide </file_type>
 0	shirley's ac cleaned vstx	file_search	files	<file_keyword> shirley's ac cleaned </file_keyword> <file_type> vstx </file_type>
 0	sunday school notes	file_search	files	<file_keyword> sunday school </file_keyword> <file_type> notes </file_type>
 0	church appointment Doc	file_search	files	<file_keyword> church appointment </file_keyword> <file_type> Doc </file_type>
@@ -444,7 +444,7 @@
 0	open cortana test powerpoints	file_open	files	open <file_keyword> cortana test </file_keyword> <file_type> powerpoints </file_type>
 0	open doctor powerpoints	file_open	files	open <file_keyword> doctor </file_keyword> <file_type> powerpoints </file_type>
 0	open guest that are coming pptx	file_open	files	open <file_keyword> guest that are coming </file_keyword> <file_type> pptx </file_type>
-0	open holiday survival spec	file_open	files	open <file_keyword> holiday survival </file_keyword> <file_type> spec </file_type>
+0	open holiday survival vsdx	file_open	files	open <file_keyword> holiday survival </file_keyword> <file_type> vsdx </file_type>
 0	open running club quiz onenote	file_open	files	open <file_keyword> running club quiz </file_keyword> <file_type> onenote </file_type>
 0	open dentist appointment for my daughter vstm	file_open	files	open <file_keyword> dentist appointment for my daughter </file_keyword> <file_type> vstm </file_type>
 0	open stuff like that docx	file_open	files	open <file_keyword> stuff like that </file_keyword> <file_type> docx </file_type>
@@ -507,7 +507,7 @@
 0	open carlie ' s birthday png	file_open	files	open <file_keyword> carlie ' s birthday </file_keyword> <file_type> png </file_type>
 0	open mdra council meeting notebooks	file_open	files	open <file_keyword> mdra council meeting </file_keyword> <file_type> notebooks </file_type>
 0	open new hospital equipment xls	file_open	files	open <file_keyword> new hospital equipment </file_keyword> <file_type> xls </file_type>
-0	open guest that are coming spec	file_open	files	open <file_keyword> guest that are coming </file_keyword> <file_type> spec </file_type>
+0	open guest that are coming spreadsheet	file_open	files	open <file_keyword> guest that are coming </file_keyword> <file_type> spreadsheet </file_type>
 0	open orthopedic surgeon pptx	file_open	files	open <file_keyword> orthopedic surgeon </file_keyword> <file_type> pptx </file_type>
 0	open doctor white excels	file_open	files	open <file_keyword> doctor white </file_keyword> <file_type> excels </file_type>
 0	open cleaner pdfs	file_open	files	open <file_keyword> cleaner </file_keyword> <file_type> pdfs </file_type>
@@ -563,7 +563,7 @@
 0	open actors appointment at lij presentations	file_open	files	open <file_keyword> actors appointment at lij </file_keyword> <file_type> presentations </file_type>
 0	open best and final Docs	file_open	files	open <file_keyword> best and final </file_keyword> <file_type> Docs </file_type>
 0	open orthopedic surgeon powerpoints	file_open	files	open <file_keyword> orthopedic surgeon </file_keyword> <file_type> powerpoints </file_type>
-0	open happy hour with the girls spec	file_open	files	open <file_keyword> happy hour with the girls </file_keyword> <file_type> spec </file_type>
+0	open happy hour with the girls tsv	file_open	files	open <file_keyword> happy hour with the girls </file_keyword> <file_type> tsv </file_type>
 0	open meet dad for lunch vcs	file_open	files	open <file_keyword> meet dad for lunch </file_keyword> <file_type> vcs </file_type>
 0	open mary Doc	file_open	files	open <file_keyword> mary </file_keyword> <file_type> Doc </file_type>
 0	open lunch with boss excels	file_open	files	open <file_keyword> lunch with boss </file_keyword> <file_type> excels </file_type>
@@ -585,7 +585,7 @@
 0	open appointment with doctor wensel msg	file_open	files	open <file_keyword> appointment with doctor wensel </file_keyword> <file_type> msg </file_type>
 0	open produce presentations	file_open	files	open <file_keyword> produce </file_keyword> <file_type> presentations </file_type>
 0	open carrol dinner decks	file_open	files	open <file_keyword> carrol dinner </file_keyword> <file_type> decks </file_type>
-0	open mum birthday card and gift spec	file_open	files	open <file_keyword> mum birthday card and gift </file_keyword> <file_type> spec </file_type>
+0	open mum birthday card and gift docs	file_open	files	open <file_keyword> mum birthday card and gift </file_keyword> <file_type> docs </file_type>
 0	open shirley's ac cleaned vstx	file_open	files	open <file_keyword> shirley's ac cleaned </file_keyword> <file_type> vstx </file_type>
 0	open sunday school notes	file_open	files	open <file_keyword> sunday school </file_keyword> <file_type> notes </file_type>
 0	open church appointment Doc	file_open	files	open <file_keyword> church appointment </file_keyword> <file_type> Doc </file_type>
@@ -644,7 +644,7 @@
 0	open the cortana test the powerpoints	file_open	files	open the <file_keyword> cortana test </file_keyword> the <file_type> powerpoints </file_type>
 0	open the doctor the powerpoints	file_open	files	open the <file_keyword> doctor </file_keyword> the <file_type> powerpoints </file_type>
 0	open the guest that are coming the pptx	file_open	files	open the <file_keyword> guest that are coming </file_keyword> the <file_type> pptx </file_type>
-0	open the holiday survival the spec	file_open	files	open the <file_keyword> holiday survival </file_keyword> the <file_type> spec </file_type>
+0	open the holiday survival the vssm	file_open	files	open the <file_keyword> holiday survival </file_keyword> the <file_type> vssm </file_type>
 0	open the running club quiz the onenote	file_open	files	open the <file_keyword> running club quiz </file_keyword> the <file_type> onenote </file_type>
 0	open the dentist appointment for my daughter the vstm	file_open	files	open the <file_keyword> dentist appointment for my daughter </file_keyword> the <file_type> vstm </file_type>
 0	open the stuff like that the docx	file_open	files	open the <file_keyword> stuff like that </file_keyword> the <file_type> docx </file_type>
@@ -707,7 +707,7 @@
 0	open the carlie ' s birthday the png	file_open	files	open the <file_keyword> carlie ' s birthday </file_keyword> the <file_type> png </file_type>
 0	open the mdra council meeting the notebooks	file_open	files	open the <file_keyword> mdra council meeting </file_keyword> the <file_type> notebooks </file_type>
 0	open the new hospital equipment the xls	file_open	files	open the <file_keyword> new hospital equipment </file_keyword> the <file_type> xls </file_type>
-0	open the guest that are coming the spec	file_open	files	open the <file_keyword> guest that are coming </file_keyword> the <file_type> spec </file_type>
+0	open the guest that are coming the powerpoint	file_open	files	open the <file_keyword> guest that are coming </file_keyword> the <file_type> powerpoint </file_type>
 0	open the orthopedic surgeon the pptx	file_open	files	open the <file_keyword> orthopedic surgeon </file_keyword> the <file_type> pptx </file_type>
 0	open the doctor white the excels	file_open	files	open the <file_keyword> doctor white </file_keyword> the <file_type> excels </file_type>
 0	open the cleaner the pdfs	file_open	files	open the <file_keyword> cleaner </file_keyword> the <file_type> pdfs </file_type>
@@ -763,7 +763,7 @@
 0	open the actors appointment at lij the presentations	file_open	files	open the <file_keyword> actors appointment at lij </file_keyword> the <file_type> presentations </file_type>
 0	open the best and final the Docs	file_open	files	open the <file_keyword> best and final </file_keyword> the <file_type> Docs </file_type>
 0	open the orthopedic surgeon the powerpoints	file_open	files	open the <file_keyword> orthopedic surgeon </file_keyword> the <file_type> powerpoints </file_type>
-0	open the happy hour with the girls the spec	file_open	files	open the <file_keyword> happy hour with the girls </file_keyword> the <file_type> spec </file_type>
+0	open the happy hour with the girls the mpt	file_open	files	open the <file_keyword> happy hour with the girls </file_keyword> the <file_type> mpt </file_type>
 0	open the meet dad for lunch the vcs	file_open	files	open the <file_keyword> meet dad for lunch </file_keyword> the <file_type> vcs </file_type>
 0	open the mary the Doc	file_open	files	open the <file_keyword> mary </file_keyword> the <file_type> Doc </file_type>
 0	open the lunch with boss the excels	file_open	files	open the <file_keyword> lunch with boss </file_keyword> the <file_type> excels </file_type>
@@ -785,7 +785,7 @@
 0	open the appointment with doctor wensel the msg	file_open	files	open the <file_keyword> appointment with doctor wensel </file_keyword> the <file_type> msg </file_type>
 0	open the produce the presentations	file_open	files	open the <file_keyword> produce </file_keyword> the <file_type> presentations </file_type>
 0	open the carrol dinner the decks	file_open	files	open the <file_keyword> carrol dinner </file_keyword> the <file_type> decks </file_type>
-0	open the mum birthday card and gift the spec	file_open	files	open the <file_keyword> mum birthday card and gift </file_keyword> the <file_type> spec </file_type>
+0	open the mum birthday card and gift the mpp	file_open	files	open the <file_keyword> mum birthday card and gift </file_keyword> the <file_type> mpp </file_type>
 0	open the shirley's ac cleaned the vstx	file_open	files	open the <file_keyword> shirley's ac cleaned </file_keyword> the <file_type> vstx </file_type>
 0	open the sunday school the notes	file_open	files	open the <file_keyword> sunday school </file_keyword> the <file_type> notes </file_type>
 0	open the church appointment the Doc	file_open	files	open the <file_keyword> church appointment </file_keyword> the <file_type> Doc </file_type>
