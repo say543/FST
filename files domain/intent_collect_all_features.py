@@ -153,6 +153,10 @@ copyfile("..\\Open_Text_Synthesis\\file_type\\intent_data_synthesised_file_type.
 # not too much help so ignore it
 #copyfile("..\\Open_Text_Synthesis\\file_keyword_and_file_type\\intent_data_synthesised_file_keyword_file_type.tsv", "intent_data_synthesised_file_keyword_file_type.tsv")
 
+
+# genearte new data from
+copyfile("..\\Open_Text_Synthesis\\file_type_and_contact_name_to_contact_name\\intent_data_synthesised_to_contact_name_contact_name_file_type.tsv", "intent_data_synthesised_to_contact_name_contact_name_file_type.tsv")
+
 ############################################
 # copy file from data folder directly
 ############################################
