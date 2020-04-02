@@ -157,6 +157,12 @@ copyfile("..\\Open_Text_Synthesis\\file_type\\intent_data_synthesised_file_type.
 # genearte new data from
 copyfile("..\\Open_Text_Synthesis\\file_type_and_contact_name_to_contact_name\\intent_data_synthesised_to_contact_name_contact_name_file_type.tsv", "intent_data_synthesised_to_contact_name_contact_name_file_type.tsv")
 
+
+# attachment new features for intent models
+# if features works well, turn it on as normal data
+#copyfile("..\\Open_Text_Synthesis\\contact_name_order_ref_and_file_recency\\intent_data_synthesised_contact_name_order_ref_file_recency.tsv", "intent_data_synthesised_contact_name_order_ref_file_recency.tsv")
+
+
 ############################################
 # copy file from data folder directly
 ############################################
