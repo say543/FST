@@ -36,14 +36,15 @@ copyfile("..\\Open_Text_Synthesis\\file_type_and_contact_name\\data_synthesised_
 copyfile("..\\Open_Text_Synthesis\\file_keyword_and_file_type\\data_synthesised_file_keyword_file_type.tsv" , "data_synthesised_file_keyword_file_type.tsv")
 copyfile("..\\Open_Text_Synthesis\\file_keyword_and_to_contact_name\\data_synthesised_to_contact_name_file_keyword.tsv" , "data_synthesised_to_contact_name_file_keyword.tsv")
 #? this one cannot copy even exist, not sure why?
+# need to investigate in the future
 #copyfile("..\\Open_Text_Synthesis\\file_keyword_sharetarget_type_sharetarget_name_file_type_to_contact_name\\data_synthesised_file_keyword_sharetarget_type_sharetarget_name_file_type_to_contact_name.tsv",\
-#"data_synthesised_file_keyword_sharetarget_type_sharetarget_name_file_type_to_contact_name.tsv")
+#         "data_synthesised_file_keyword_sharetarget_type_sharetarget_name_file_type_to_contact_name.tsv")
+
 copyfile("..\\Open_Text_Synthesis\\file_type_and_to_contact_name\\data_synthesised_to_contact_name_file_type.tsv" , "data_synthesised_to_contact_name_file_type.tsv")
 
 copyfile("..\\Open_Text_Synthesis\\file_keyword_and_contact_name\\data_synthesised_contact_name_file_keyword.tsv" , "data_synthesised_contact_name_file_keyword.tsv")
 
-#? this one cannot copy even exist, not sure why?
-#copyfile("..\\Open_Text_Synthesis\\file_keyword_file_type_file_action_contact_name\\data_synthesise_file_keyword_file_type_file_action_contact_name_file_name_verb.tsv" , "data_synthesised_file_keyword_file_type_file_action_contact_name_file_name_verb.tsv")
+copyfile("..\\Open_Text_Synthesis\\file_keyword_file_type_file_action_contact_name\\data_synthesised_file_keyword_file_type_file_action_contact_name_file_name_verb.tsv" , "data_synthesised_file_keyword_file_type_file_action_contact_name_file_name_verb.tsv")
 
 copyfile("..\\Open_Text_Synthesis\\file_type_and_contact_name_to_contact_name\\data_synthesised_contact_name_file_type_to_contact_name.tsv" , "data_synthesised_contact_name_file_type_to_contact_name.tsv")
 
@@ -58,6 +59,11 @@ copyfile("..\\Open_Text_Synthesis\\file_keyword_file_type_to_contact_name\\data_
 
 # reopen it but merge date into filekeyword into a single slots
 copyfile("..\\Open_Text_Synthesis\\file_keyword_file_type_contact_name_to_contact_name\\data_synthesised_file_keyword_to_contact_name_file_type_contact_name.tsv" , "data_synthesised_file_keyword_to_contact_name_file_type_contact_name.tsv")
+
+
+# attachment new features for intent models
+# if features works well, turn it on as normal data
+#copyfile("..\\Open_Text_Synthesis\\contact_name_order_ref_and_file_recency\\data_synthesised_contact_name_order_ref_file_recency.tsv", "data_synthesised_contact_name_order_ref_file_recency.tsv")
 
 
 ############################################
