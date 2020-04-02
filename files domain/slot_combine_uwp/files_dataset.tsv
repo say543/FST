@@ -1,0 +1,42 @@
+﻿0	Find my file called budget fy15	file_search	files	Find <contact_name> my </contact_name> file called <file_name> budget fy15 </file_name>
+0	File Instant answers 	file_search	files	File <file_keyword> Instant answers </file_keyword>
+0	Docs on 3S architecture 	file_search	files	<file_type> Docs </file_type> on <file_keyword> 3S architecture </file_keyword>
+0	Decks on 3S Answer 	file_search	files	<file_type> Decks </file_type> on <file_keyword> 3S Answer </file_keyword>
+0	Q4 OKRs 	file_search	files	<file_keyword> Q4 OKRs </file_keyword>
+0	Tasks UX review 	file_search	files	<file_keyword> Tasks UX review  </file_keyword>
+0	File answer.docx 	file_search	files	File <file_name> answer </file_name> . <file_type> docx </file_type>
+0	Shiproom.ppt 	file_search	files	<file_name> Shiproom </file_name> . <file_type> ppt </file_type>
+0	Task UX review.ppt 	file_search	files	<file_name> Task UX review </file_name> . <file_type> ppt </file_type>
+0	Task UX review edited by VivekSh 	file_search	files	<file_keyword> Tasks UX review  </file_keyword> <file_action> edited </file_action> by <contact_name> VivekSh </contact_name>
+0	File Answers shared by JGeorge 	file_search	files	File <file_keyword> Answers </file_keyword> <file_action> shared </file_action> by <contact_name> JGeorge </contact_name> 
+0	File answers presented in monthly review 	file_search	files	File <file_keyword> answers </file_keyword>  <file_action> presented </file_action>  in <file_action_context> monthly review </file_action_context> 
+0	Task UX review shared in email 	file_search	files	<file_keyword> Task UX review </file_keyword>  <file_action> shared </file_action> in <file_action_context> email </file_action_context>
+0	File answer in STCI Sharepoint 	file_search	files	File <file_keyword> answer </file_keyword> in STCI <data_source> Sharepoint </data_source>
+0	Excel sheet shared in shiproom 	file_search	files	<file_type> Excel sheet </file_type> <file_action> shared </file_action> in  <file_action_context> shiproom </file_action_context> 
+0	Doc discussed in LT Review 	file_search	files	<file_type> Doc </file_type>  <file_action> discussed </file_action> in <file_action_context> LT Review </file_action_context>
+0	VivekSh’s files 	file_search	files	<contact_name> VivekSh </contact_name>'s files
+0	My Files 	file_search	files	<contact_name> My </contact_name> files
+0	File Answers shared by Vivek Sharma 	file_search	files	File <file_keyword> Answers </file_keyword> <file_action> shared </file_action> by <contact_name> Vivek Sharma </contact_name> 
+0	SaGrover FY20 OKRs 	file_search	files	<contact_name> SaGrover </contact_name> <file_keyword> FY20 OKRs </file_keyword> 
+0	Specs I wrote in Dec 2016 	file_search	files	<file_keyword> Specs </file_keyword> <contact_name> I </contact_name> <file_action> wrote </file_action> in <date> Dec 2016 </date>
+0	Files I worked last week 	file_search	files	Files <contact_name> I </contact_name> <file_action> worked </file_action> <date> last week </date>
+0	Documents Jatin shared with me 	file_search	files	Documents<contact_name> Jatin </contact_name><file_action> shared </file_action> with  <to_contact_name> me </to_contact_name>
+0	Decks I worked on last week 	file_search	files	<file_type> Decks </file_type> <contact_name> I </contact_name> <file_action> worked </file_action> on <date> last week </date> 
+0	Documents I wrote in Dec 2016 	file_search	files	Documents <contact_name> I </contact_name> <file_action> wrote </file_action> in <date> Dec 2016 </date>
+0	File presented in meeting last night 	file_search	files	File <file_action> presented </file_action> in <file_action_context> meeting </file_action_context> <date> last night </date>
+0	Document shared in Team meeting last night	file_search	files	Document <file_action> shared </file_action> in <file_action_context> Team meeting </file_action_context> <date> last night </date>
+0	Files shared in emails last week 	file_search	files	Files <file_action> shared </file_action> in <file_action_context> emails </file_action_context> <date> last week </date>
+0	find my resume I was editing between 1 am and 4am this morning 	file_search	files	find <contact_name> my </contact_name> <file_keyword> resume </file_keyword> <contact_name> I </contact_name> was <file_action> editing </file_action> between <time> 1 am </time> and <time> 4am this morning </time>
+0	Show me the docs I worked on between yesterday and today	file_search	files	Show me the <file_type> docs </file_type> <contact_name> I </contact_name> <file_action> worked </file_action> on between <date> yesterday </date> and <date> today </date>
+0	What files I need to approve 	file_search	files	What files <contact_name> I </contact_name> need to approve
+0	What files I need to respond	file_search	files	What files <contact_name> I </contact_name> need to respond
+0	Files I need to reply back 	file_search	files	Files <contact_name> I </contact_name> need to reply back 
+0	Files with due comments 	file_search	files	Files with due comments
+0	Docs I need to reply 	file_search	files	<file_type> Docs </file_type> <contact_name> I </contact_name> need to reply 
+0	Deck for Tuesday shiproom 	file_search	files	<file_type> Deck </file_type> for <date> Tuesday </date> shiproom  
+0	Documents to read for meetings 	file_search	files	Documents to read for <file_action_context> meetings </file_action_context>
+0	One pager shared in email 	file_search	files	<file_keyword> One pager </file_keyword>  <file_action> shared </file_action> in <file_action_context> email </file_action_context> 
+0	File answer deck presented in shiproom meeting 	file_search	files	File <file_keyword> answer </file_keyword> <file_type> deck </file_type> <file_action> presented </file_action>  in <file_action_context> shiproom meeting </file_action_context> 
+0	Task review doc shared in email 	file_search	files	<file_keyword> Task review </file_keyword> <file_type> doc </file_type>  <file_action> shared </file_action> in <file_action_context> email </file_action_context>
+0	Show me the eighth one 	file_open	files	Show me the <position_ref> eighth </position_ref> one
+0	The number eight	file_open	files	The number <position_ref> eight </position_ref>

@@ -1,0 +1,70 @@
+0	Download file Kingston.	file_download	files	Download file <file_keyword> Kingston </file_keyword>.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Hey Cortana Open Deck Cortana.	file_open	files	Open <file_type> Deck </file_type> <file_keyword> Cortana </file_keyword>.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Hey Cortana Shell testing PowerPoint presentation.	file_search	files	<file_keyword> Shell testing </file_keyword> <file_type> PowerPoint presentation </file_type>.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Hey Cortana, Open Voice Skill Doc.	file_open	files	Hey Cortana, Open <file_keyword> Voice Skill </file_keyword> <file_type> Doc </file_type>.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Hey Cortana. Share a platform file with my meeting.	file_share	files	Hey Cortana. Share a <file_keyword> platform </file_keyword> file with <to_contact_name> my </to_contact_name> <sharetarget_type> meeting </sharetarget_type>.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Hey Cortana. Share Cortana file with my meeting.	file_share	files	Hey Cortana. Share <file_keyword> Cortana </file_keyword> file with <to_contact_name> my </to_contact_name> <sharetarget_type> meeting </sharetarget_type> .	Reporting_Teams_20190716-20190831_3k.tsv
+0	Hey Cortana. Share reason files with this person.	file_share	files	Hey Cortana. Share <file_keyword> reason </file_keyword> files with this person.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Hey Cortana. Share Testing PowerPoint file with Jotham Parker.	file_share	files	Hey Cortana. Share <file_keyword> Testing </file_keyword> <file_type> PowerPoint </file_type> file with <to_contact_name> Jotham Parker </to_contact_name>.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Open my Shiproom Doc.	file_open	files	Open <contact_name> my </contact_name> <file_keyword> Shiproom </file_keyword> <file_type> Doc </file_type>.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Open NT music.	file_open	files	Open <file_keyword> NT </file_keyword> <file_type> music </file_type>.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Open the deck chains on the go.	file_open	files	Open the <file_type> deck </file_type> <file_keyword> chains on the go </file_keyword>.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Open the tax dialogue Doc.	file_open	files	Open the <file_keyword> tax dialogue </file_keyword> <file_type> Doc </file_type>.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Open the Timeframes Doc.	file_open	files	Open the <file_keyword> Timeframes </file_keyword> <file_type> Doc </file_type>.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Search word jungle.	file_search	files	Search <file_type> word </file_type> <file_keyword> jungle </file_keyword>.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Share my battery test file with my meeting.	file_share	files	Share <contact_name> my </contact_name> <file_keyword> battery test </file_keyword> file with <to_contact_name> my </to_contact_name> <sharetarget_type> meeting </sharetarget_type>.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Share platform file with my meeting.	file_share	files	Share <file_keyword> platform </file_keyword> file with <to_contact_name> my </to_contact_name> <sharetarget_type> meeting </sharetarget_type>.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Share Tax file with ES to meeting.	file_share	files	Share <file_keyword> Tax </file_keyword> file with <sharetarget_name>ES to</sharetarget_name> <sharetarget_type> meeting </sharetarget_type>	Reporting_Teams_20190716-20190831_3k.tsv
+0	Sharefile with my next meeting.	file_share	files	Sharefile with <to_contact_name> my </to_contact_name> <meeting_starttime> next </meeting_starttime> <sharetarget_type> meeting </sharetarget_type>.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Sharefile with someone.	file_share	files	Sharefile with someone.	Validating_Teams_20191001-20191031_7k.tsv
+0	Share. Running late and join my meeting doc here.	file_share	files	Share. <file_keyword> Running late and join my meeting </file_keyword> <file_type> doc </file_type> <sharetarget_name> here </sharetarget_name>	Validating_Teams_20191001-20191031_7k.tsv
+0	Share the PowerPoint from Outlook.	file_share	files	Share the <file_type> PowerPoint </file_type> from <data_source> Outlook </data_source>	Validating_Teams_20191001-20191031_7k.tsv
+0	Open on call notebook.	file_open	files	Open <file_keyword> on call </file_keyword> <file_type> notebook </file_type>	Validating_Teams_20191001-20191031_7k.tsv
+0	Hey Cortana open the document for what should 0.	file_open	files	open the document for <file_keyword> what should 0 </file_keyword>	Validating_Teams_20191001-20191031_7k.tsv
+0	Share Names PowerPoint with Darrin?	file_share	files	Share <file_keyword> Names </file_keyword> <file_type> PowerPoint </file_type> with <to_contact_name> Darrin </to_contact_name> ?	Validating_Teams_20190716-20190831_3k.tsv
+0	Download file Kingston.	file_download	files	Download file <file_keyword> Kingston </file_keyword>.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Hey Cortana Open Deck Cortana.	file_open	files	Open <file_type> Deck </file_type> <file_keyword> Cortana </file_keyword>.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Hey Cortana Shell testing PowerPoint presentation.	file_search	files	<file_keyword> Shell testing </file_keyword> <file_type> PowerPoint presentation </file_type>.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Hey Cortana, Open Voice Skill Doc.	file_open	files	Hey Cortana, Open <file_keyword> Voice Skill </file_keyword> <file_type> Doc </file_type>.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Hey Cortana. Share a platform file with my meeting.	file_share	files	Hey Cortana. Share a <file_keyword> platform </file_keyword> file with <to_contact_name> my </to_contact_name> <sharetarget_type> meeting </sharetarget_type>.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Hey Cortana. Share Cortana file with my meeting.	file_share	files	Hey Cortana. Share <file_keyword> Cortana </file_keyword> file with <to_contact_name> my </to_contact_name> <sharetarget_type> meeting </sharetarget_type> .	Reporting_Teams_20190716-20190831_3k.tsv
+0	Hey Cortana. Share reason files with this person.	file_share	files	Hey Cortana. Share <file_keyword> reason </file_keyword> files with this person.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Hey Cortana. Share Testing PowerPoint file with Jotham Parker.	file_share	files	Hey Cortana. Share <file_keyword> Testing </file_keyword> <file_type> PowerPoint </file_type> file with <to_contact_name> Jotham Parker </to_contact_name>.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Open my Shiproom Doc.	file_open	files	Open <contact_name> my </contact_name> <file_keyword> Shiproom </file_keyword> <file_type> Doc </file_type>.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Open NT music.	file_open	files	Open <file_keyword> NT </file_keyword> <file_type> music </file_type>.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Open the deck chains on the go.	file_open	files	Open the <file_type> deck </file_type> <file_keyword> chains on the go </file_keyword>.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Open the tax dialogue Doc.	file_open	files	Open the <file_keyword> tax dialogue </file_keyword> <file_type> Doc </file_type>.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Open the Timeframes Doc.	file_open	files	Open the <file_keyword> Timeframes </file_keyword> <file_type> Doc </file_type>.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Search word jungle.	file_search	files	Search <file_type> word </file_type> <file_keyword> jungle </file_keyword>.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Share my battery test file with my meeting.	file_share	files	Share <contact_name> my </contact_name> <file_keyword> battery test </file_keyword> file with <to_contact_name> my </to_contact_name> <sharetarget_type> meeting </sharetarget_type>.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Share platform file with my meeting.	file_share	files	Share <file_keyword> platform </file_keyword> file with <to_contact_name> my </to_contact_name> <sharetarget_type> meeting </sharetarget_type>.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Share Tax file with ES to meeting.	file_share	files	Share <file_keyword> Tax </file_keyword> file with <sharetarget_name>ES to</sharetarget_name> <sharetarget_type> meeting </sharetarget_type>	Reporting_Teams_20190716-20190831_3k.tsv
+0	Sharefile with my next meeting.	file_share	files	Sharefile with <to_contact_name> my </to_contact_name> <meeting_starttime> next </meeting_starttime> <sharetarget_type> meeting </sharetarget_type>.	Reporting_Teams_20190716-20190831_3k.tsv
+0	Sharefile with someone.	file_share	files	Sharefile with someone.	Validating_Teams_20191001-20191031_7k.tsv
+0	Share. Running late and join my meeting doc here.	file_share	files	Share. <file_keyword> Running late and join my meeting </file_keyword> <file_type> doc </file_type> <sharetarget_name> here </sharetarget_name>	Validating_Teams_20191001-20191031_7k.tsv
+0	Share the PowerPoint from Outlook.	file_share	files	Share the <file_type> PowerPoint </file_type> from <data_source> Outlook </data_source>	Validating_Teams_20191001-20191031_7k.tsv
+0	Open on call notebook.	file_open	files	Open <file_keyword> on call </file_keyword> <file_type> notebook </file_type>	Validating_Teams_20191001-20191031_7k.tsv
+0	Hey Cortana open the document for what should 0.	file_open	files	open the document for <file_keyword> what should 0 </file_keyword>	Validating_Teams_20191001-20191031_7k.tsv
+0	Share Names PowerPoint with Darrin?	file_share	files	Share <file_keyword> Names </file_keyword> <file_type> PowerPoint </file_type> with <to_contact_name> Darrin </to_contact_name> ?	Validating_Teams_20190716-20190831_3k.tsv
+0	Cortana sharefile with Fan Xia?	file_share	files	Cortana sharefile with <to_contact_name>Fan Xia</to_contact_name>?	Validating_Teams_20191001-20191031_7k.tsv
+0	presentation from yesterday’s shiproom meeting	file_search	files	<file_type> presentation </file_type> from <file_keyword> yesterday's shiproom meeting </file_keyword>	dsat_training.tsv
+0	file review	file_search	files	file <file_keyword>review</file_keyword>	fileAnswer_dsat.tsv
+0	share the alpha file with give the ball to me meeting	file_share	files	share the <file_keyword>alpha</file_keyword> file with <sharetarget_name>give the ball to me</sharetarget_name> <sharetarget_type>meeting</sharetarget_type>	dsat_training.tsv
+0	share it	file_share	files	share it	dsat_training.tsv
+0	Sapna deck	file_search	files	<contact_name>Sapna</contact_name> <file_type>deck</file_type>	3s_dsat
+0	share file skills with Yue	file_share	files	share file <file_keyword>skills</file_keyword> with <to_contact_name>Yue</to_contact_name>	dsat_training.tsv
+0	Cortana share the Lt review deck here	file_share	files	cortana share the <file_keyword>Lt review</file_keyword> <file_type>deck</file_type> <sharetarget_name>here</sharetarget_name>	Desktop-Random-Feb-2019-Test-55k.tsv
+0	Find a budget planning deck. You don't need this site	file_search	files	Find a <file_keyword>budget planning</file_keyword> <file_type>deck</file_type> . You don't need this site	Desktop-Random-Feb-2019-Test-55k.tsv
+0	Download file Cortana	file_download	files	Download file <file_keyword>Cortana</file_keyword>	Desktop-Random-Feb-2019-Test-55k.tsv
+0	Open at Plaza deck	file_open	files	Open <file_keyword>at Plaza</file_keyword> <file_type> deck </file_type>	Desktop-Random-Feb-2019-Test-55k.tsv
+0	Hey Cortana. Share attached presentation	file_share	files	Hey Cortana. Share <file_action> attached </file_action> <file_type> presentation </file_type>	Desktop-Random-Feb-2019-Test-55k.tsv
+0	Open document for working session	file_open	files	Open document for <file_keyword> working session </file_keyword>	Desktop-Random-Feb-2019-Test-55k.tsv
+0	Open other file	file_open	files	Open <file_keyword> other </file_keyword> file	Desktop-Random-Feb-2019-Test-55k.tsv
+0	Share Cortana file with Abby now	file_share	files	Share <file_keyword> Cortana </file_keyword> file with <to_contact_name> Abby </to_contact_name> now	Desktop-Random-Feb-2019-Test-55k.tsv
+0	Share my list deck	file_share	files	Share <contact_name> my </contact_name> <file_keyword> list </file_keyword> <file_type> deck </file_type>	Desktop-Random-Feb-2019-Test-55k.tsv
+0	Sharefile 2 Paul Liu	file_share	files	Sharefile 2 <to_contact_name> Paul Liu </to_contact_name>	Desktop-Random-Feb-2019-Test-55k.tsv
+0	Sharing ship room deck to my next meeting	file_share	files	Sharing <file_keyword> ship room </file_keyword> <file_type> deck </file_type> to <contact_name> my </contact_name> <meeting_starttime> next </meeting_starttime> <sharetarget_type> meeting </sharetarget_type>	Desktop-Random-Feb-2019-Test-55k.tsv
+0	Show my recent attachments	file_search	files	Show <contact_name> my </contact_name> <file_recency> recent </file_recency> attachments	Desktop-Random-Feb-2019-Test-55k.tsv
+0	Son voice testing study sign up. Excel to Christine	file_search	files	<file_keyword> Son voice testing study sign up </file_keyword> . <file_type> Excel </file_type> to <to_contact_name> Christine </to_contact_name>	Desktop-Random-Feb-2019-Test-55k.tsv
+0	download folder	file_search	files	<file_folder> download </file_folder> folde	head-10k-desktop-011018-123118.tsv
+0	open download file	file_open	files	open <file_folder> download </file_folder> file	head-10k-desktop-011018-123118.tsv
