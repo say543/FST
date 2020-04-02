@@ -5,7 +5,7 @@ from collections import defaultdict;
 # 1: slot only
 # 2: intent only
 # 5: both
-synthetic_mode = 2;
+synthetic_mode = 1;
 
 # add hyper paramter if unbalanced
 sampling_hyper_paramter_each_slot = 200
@@ -15,6 +15,8 @@ numberofQuery_hyper_parameter = 3
 # multiple holder randomization
 multiple_holder_hyperparameter = 3
 
+# random seed
+# and inner loop random seed change
 rand_seed_parameter_initialization = 0.1
 rand_seed_offset = 0.01
 
