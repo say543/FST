@@ -56,7 +56,10 @@ with codecs.open('lexicon.calendar.person_names_for_training.txt', 'r', 'utf-8')
         lineNumber+=1
 
 lineNumber = 0;
-with codecs.open('calendar_peopleNames.20180119_used_for_some_patten.txt', 'r', 'utf-8') as fin:
+# will encounter utf-8 issues
+# so igmore error
+#with codecs.open('calendar_peopleNames.20180119_used_for_some_patten.txt', 'r', 'utf-8') as fin:
+with codecs.open('calendar_peopleNames.20180119_used_for_some_patten.txt', 'r', 'utf-8',errors='ignore') as fin:
 
 
     print('####start####')
@@ -66,6 +69,9 @@ with codecs.open('calendar_peopleNames.20180119_used_for_some_patten.txt', 'r', 
         line = line.strip();
         if not line:
             continue;
+
+        #for debug
+        #print(line)
 
         if line.lower() in wrongcontactname:
             print(line)
