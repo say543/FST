@@ -51,6 +51,51 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 
 
 ==============================
+flight new domain model  04032020
+==============================
+GriffinProd_Cortana.QAS12HttpQAS.ClientIdConfig.ini
+
+step1:
+
+有
+// yue setup 好的
+//他建議我用 lufeatureflight2
+; Feature flight for lufeatureflight1
+; Feature flight for lufeatureflight2
+; Feature flight for lufeatureflight3
+
+如果只想改teams 的traffic
+Microsoft_Teams_enus_LuFeatureFlightTwo=luscenario:teams&feature.lufeatureflight2:1&ipe_locale:en-us,en-gb,en-au,en-in,en-ca
+// comment below two
+;Microsoft_UWP_enus_LuFeatureFlightTwo=luscenario:uwp&feature.lufeatureflight2:1&ipe_locale:en-us,en-gb,en-au,en-in,en-ca
+;Microsoft_OMC_enus_LuFeatureFlightTwo=luscenario:outlookcommute&feature.lufeatureflight2:1&ipe_locale:en-us,en-gb,en-au,en-in,en-ca
+
+這樣帶著feature  feature.lufeatureflight2 就會fall back 到UWP  OMC 的default  developer/microsoft/preview/public 的default ring
+只有teams 的traffic 會 分percentage 一部分給  這個client id
+Microsoft_Teams_enus_LuFeatureFlightTwo
+      這個precentage 是在control tower submit request 說 percentage traffic 要帶 什麼feature (lufeatureflight2) 
+      control tower不需要知道client id 只負責加traffic
+      QAS收到featuure 在divert 在不同的 client id 
+
+
+step2:
+GriffinProd_Cortana.QAS12HttpQAS.queryProcessingConfiguration.ini
+; Feature flight for lufeatureflight2
+[query_domains:Microsoft_Teams_enus_LuFeatureFlightTwo]
+deriveFromClient=Microsoft_Teams_enus_Public
+
+override 一個新的files_domain_model 就可以 (參照 [query_domains:Microsoft_UWP_enus_Microsoft] 的config 就行)
+用一個新的version 來做就可以
+
+
+
+
+
+
+
+
+
+==============================
 run griffin qpc with outputing related domains and with specified client id with new QCS tool
 ==============================
 
