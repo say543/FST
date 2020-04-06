@@ -1,0 +1,4 @@
+0	FILETYPEHOLDER from CONTACTNAMEHOLDER DATEHOLDER	file_search	files	<file_type> FILETYPEHOLDER </file_type> from <contact_name> CONTACTNAMEHOLDER </contact_name> <date> DATEHOLDER </date>
+0	file from CONTACTNAMEHOLDER DATEHOLDER	file_search	files	file from <contact_name> CONTACTNAMEHOLDER </contact_name> <date> DATEHOLDER </date>
+0	files from CONTACTNAMEHOLDER DATEHOLDER	file_search	files	files from <contact_name> CONTACTNAMEHOLDER </contact_name> <date> DATEHOLDER </date>
+
