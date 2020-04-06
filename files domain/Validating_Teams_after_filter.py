@@ -34,10 +34,15 @@ OutputSTCAIntentEvaluation = [];
 
 #change input for different-month validation set
 # reporting opened dataset
+#inputFile = "Reporting_Teams_20191001-20191031_7k.tsv"
+#inputFile = "Reporting_Teams_20190716-20190831_3k.tsv"
 #inputFile = "Reporting_Teams_20190716-20190831_3k.tsv"
 
+
 # validaitng opened dataset
-inputFile = "Validating_Teams_20191101-20191130_10k.tsv"
+
+inputFile = "Validating_Teams_20191201-20192131_7k.tsv"
+#inputFile = "Validating_Teams_20191101-20191130_10k.tsv"
 #inputFile = "Validating_Teams_20191001-20191031_7k.tsv"
 #inputFile = "Validating_Teams_20190716-20190831_16k.tsv"
 #inputFile = "Validating_Teams_20190901-20190930_3k.tsv"
@@ -58,6 +63,7 @@ with codecs.open(inputFile, 'r', 'utf-8') as fin:
 
         if linestrs[5] != 'FILES':
             continue
+
 
         # id / message / intent / domain / constraint
         # for training purpose's format
