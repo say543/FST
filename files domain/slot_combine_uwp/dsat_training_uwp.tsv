@@ -53,18 +53,16 @@
 0	share it	file_share	files	share it	dsat_training.tsv
 0	Sapna deck	file_search	files	<contact_name>Sapna</contact_name> <file_type>deck</file_type>	3s_dsat
 0	share file skills with Yue	file_share	files	share file <file_keyword>skills</file_keyword> with <to_contact_name>Yue</to_contact_name>	dsat_training.tsv
-0	Cortana share the Lt review deck here	file_share	files	cortana share the <file_keyword>Lt review</file_keyword> <file_type>deck</file_type> <sharetarget_name>here</sharetarget_name>	Desktop-Random-Feb-2019-Test-55k.tsv
-0	Find a budget planning deck. You don't need this site	file_search	files	Find a <file_keyword>budget planning</file_keyword> <file_type>deck</file_type> . You don't need this site	Desktop-Random-Feb-2019-Test-55k.tsv
-0	Download file Cortana	file_download	files	Download file <file_keyword>Cortana</file_keyword>	Desktop-Random-Feb-2019-Test-55k.tsv
-0	Open at Plaza deck	file_open	files	Open <file_keyword>at Plaza</file_keyword> <file_type> deck </file_type>	Desktop-Random-Feb-2019-Test-55k.tsv
-0	Hey Cortana. Share attached presentation	file_share	files	Hey Cortana. Share <file_action> attached </file_action> <file_type> presentation </file_type>	Desktop-Random-Feb-2019-Test-55k.tsv
-0	Open document for working session	file_open	files	Open document for <file_keyword> working session </file_keyword>	Desktop-Random-Feb-2019-Test-55k.tsv
-0	Open other file	file_open	files	Open <file_keyword> other </file_keyword> file	Desktop-Random-Feb-2019-Test-55k.tsv
-0	Share Cortana file with Abby now	file_share	files	Share <file_keyword> Cortana </file_keyword> file with <to_contact_name> Abby </to_contact_name> now	Desktop-Random-Feb-2019-Test-55k.tsv
-0	Share my list deck	file_share	files	Share <contact_name> my </contact_name> <file_keyword> list </file_keyword> <file_type> deck </file_type>	Desktop-Random-Feb-2019-Test-55k.tsv
-0	Sharefile 2 Paul Liu	file_share	files	Sharefile 2 <to_contact_name> Paul Liu </to_contact_name>	Desktop-Random-Feb-2019-Test-55k.tsv
-0	Sharing ship room deck to my next meeting	file_share	files	Sharing <file_keyword> ship room </file_keyword> <file_type> deck </file_type> to <contact_name> my </contact_name> <meeting_starttime> next </meeting_starttime> <sharetarget_type> meeting </sharetarget_type>	Desktop-Random-Feb-2019-Test-55k.tsv
-0	Show my recent attachments	file_search	files	Show <contact_name> my </contact_name> <file_recency> recent </file_recency> attachments	Desktop-Random-Feb-2019-Test-55k.tsv
-0	Son voice testing study sign up. Excel to Christine	file_search	files	<file_keyword> Son voice testing study sign up </file_keyword> . <file_type> Excel </file_type> to <to_contact_name> Christine </to_contact_name>	Desktop-Random-Feb-2019-Test-55k.tsv
-0	download folder	file_search	files	<file_folder> download </file_folder> folde	head-10k-desktop-011018-123118.tsv
-0	open download file	file_open	files	open <file_folder> download </file_folder> file	head-10k-desktop-011018-123118.tsv
+0	share O365 roadmap spreadsheet with House, Kreera	file_share	files	share <file_keyword>O365 roadmap</file_keyword> <file_type>spreadsheet</file_type> with <to_contact_name>House</to_contact_name>, <to_contact_name>Kreera</to_contact_name>	dsat_training.tsv
+0	share reference ppt with Ana Carolina de Souza Mendes	file_share	files	share <file_keyword>reference</file_keyword> <file_type>ppt</file_type> with <to_contact_name>Ana Carolina de Sousza Mendes</to_contact_name>	dsat_training.tsv
+0	find download files	file_search	files	find <file_folder>download</file_folder> files	Validating_UWP_AllDomain_CIVPrime_RandomSampling_Feb-2019_Test-55k.tsv
+0	kinder court quickbooks file	file_search	files	<file_keyword>kinder court quickbooks</file_keyword> file	Validating_UWP_AllDomain_CIVPrime_RandomSampling_Feb-2019_Test-55k.tsv
+0	pamplin park in documents	file_search	files	<file_keyword>pamplin park</file_keyword> in documents	Validating_UWP_AllDomain_CIVPrime_RandomSampling_Feb-2019_Test-55k.tsv
+0	pull up another pdf	file_search	files	pull up another <file_type>pdf</file_type>	Validating_UWP_AllDomain_CIVPrime_RandomSampling_Feb-2019_Test-55k.tsv
+0	show me my most recently viewed document	file_search	files	show me <contact_name>my</contact_name> most <file_recency>recently</file_recency> <file_action>viewed</file_action> document	Validating_UWP_AllDomain_CIVPrime_RandomSampling_Feb-2019_Test-55k.tsv
+0	video files	file_search	files	<file_type>video</file_type> files	Validating_UWP_AllDomain_CIVPrime_RandomSampling_Feb-2019_Test-55k.tsv
+0	where are my videos kept on this computer	file_search	files	where are <contact_name>my</contact_name> <file_type>videos</file_type> kept on this <data_source>computer</data_source>	Validating_UWP_AllDomain_CIVPrime_RandomSampling_Feb-2019_Test-55k.tsv
+0	would you please save this on the computer this page	file_download	files	would you please save <file_keyword>this</file_keyword> on the <data_source>computer</data_source> this page	Validating_UWP_AllDomain_CIVPrime_RandomSampling_Feb-2019_Test-55k.tsv
+0	find word excel	file_search	files	find <file_type>word excel</file_type>	Validating_UWP_AllDomain_CIVPrime_RandomSampling_Feb-2019_Test-55k.tsv
+0	download folder	file_search	files	<file_folder> download </file_folder> folde	Validating_UWP_Head_CIVPrime_RandomSampling_011018-123118-10k.tsv
+0	open download file	file_open	files	open <file_folder>download</file_folder> file	Validating_UWP_Head_CIVPrime_RandomSampling_011018-123118-10k.tsv
