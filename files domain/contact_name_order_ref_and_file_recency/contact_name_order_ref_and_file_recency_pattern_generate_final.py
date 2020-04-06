@@ -9,7 +9,10 @@ synthetic_mode = 1;
 
 # add hyper paramter if unbalanced
 sampling_hyper_paramter_each_slot = 200
-numberofQuery_hyper_parameter = 3
+# for intent using to prevent too many
+#numberofQuery_hyper_parameter = 3
+# for slot using 20
+numberofQuery_hyper_parameter = 20
 
 
 # multiple holder randomization
