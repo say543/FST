@@ -50,6 +50,13 @@ copyfile("..\\Open_Text_Synthesis\\file_keyword_file_type_to_contact_name\\data_
 # reopen it but merge date into filekeyword into a single slots
 copyfile("..\\Open_Text_Synthesis\\file_keyword_file_type_contact_name_to_contact_name\\data_synthesised_file_keyword_to_contact_name_file_type_contact_name.tsv" , "data_synthesised_file_keyword_to_contact_name_file_type_contact_name.tsv")
 
+
+# attachment new features for intent models
+# if features works well, turn it on as normal data
+#copyfile("..\\Open_Text_Synthesis\\contact_name_order_ref_and_file_recency\\data_synthesised_contact_name_order_ref_file_recency.tsv", "data_synthesised_contact_name_order_ref_file_recency.tsv")
+
+
+
 ############################################
 # copy file from data folder directly
 ############################################
