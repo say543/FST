@@ -1101,7 +1101,7 @@ QCSQueryLabelWithLES.exe --encoding utf-8 --legacyAllowUnusedParameters --verbos
 .\QCSQueryLabelWithLES.exe --encoding utf-8 --legacyAllowUnusedParameters --verbose --loadingThreadsNum 1 --threadsNum 1 -c E:\searchgold\deploy\builds\data\answers\QASB2PlaceHolder --variant griffinsdf_M365Search.QASB2PlaceHolder -d files -i "E:\CoreScienceDataStaging\evaluation\AnnotationSetsConverted\Teams\OfficialSets\Reporting_Teams_20190716-20190831_3k.tsv" --queryInColumn 5 -o E:\CoreScienceDataStaging\evaluation\AnnotationSetsConverted\Teams\OfficialSets\QASB2PlaceHolder.Default
 
 // new data set location with all domains
-.\QCSQueryLabelWithLES.exe --encoding utf-8 --legacyAllowUnusedParameters --verbose --loadingThreadsNum 1 --threadsNum 1 -c E:\searchgold\deploy\builds\data\answers\QASB2PlaceHolder --variant griffinsdf_M365Search.QASB2PlaceHolder -i "E:\CoreScienceDataStaging\datasets\TeamsVoiceSkills\Train\Reporting_Teams_AllDomain_SRgap_RandomSampling_20190716-20190831_3k.tsv" --queryInColumn 5 -o E:\CoreScienceDataStaging\TestResults\Evaluation\all.Default
+.\QCSQueryLabelWithLES.exe --encoding utf-8 --legacyAllowUnusedParameters --verbose --loadingThreadsNum 1 --threadsNum 1 -c E:\searchgold\deploy\builds\data\answers\QASB2PlaceHolder --variant griffinsdf_M365Search.QASB2PlaceHolder -i "E:\CoreScienceDataStaging\datasets\TeamsVoiceSkills\Train\Reporting_Teams_AllDomain_SR_RandomSampling_20190716-20190831_3k.tsv" --queryInColumn 5 -o E:\CoreScienceDataStaging\TestResults\Evaluation\all.Default
 
 
 QASB2PlaceHolder.Default.stats.output.txt 是output 的
