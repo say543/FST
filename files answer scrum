@@ -1021,6 +1021,13 @@ new QAS documentation
 <email_title>
 RE: First step - NL File Search on SPO
 vijay 的第一步可以看一下怎麼用
+另外 file answer 這邊有提到
+We have flighted files answer integration in MSIT (.2% in coverage) and got a flat scorecard. 
+
+On endpoints like Outlook mobile where there is a files answer, our main goal to integrate with Query API is to ensure there is continuity in results when users navigate from answer to files tab to see all results. Files tab will be powered using Query API.
+
+On endpoints like TM where there is no files answer (yet), we are using this integration to bootstrap NL file search requirements given the LU integration is not yet prioritized. @Mayank Chadha/@Hao Zhang (MSAI) as FYI. 
+
 
 
 <email_title>
