@@ -51,6 +51,12 @@ copyfile("..\\Open_Text_Synthesis\\file_keyword_file_type_to_contact_name\\data_
 copyfile("..\\Open_Text_Synthesis\\file_keyword_file_type_contact_name_to_contact_name\\data_synthesised_file_keyword_to_contact_name_file_type_contact_name.tsv" , "data_synthesised_file_keyword_to_contact_name_file_type_contact_name.tsv")
 
 
+
+# file SERP file_type from contact name date
+copyfile("..\\Open_Text_Synthesis\\file_type_contact_name_date_and_time\\data_synthesised_file_type_contact_name_date_time.tsv" , "data_synthesised_file_type_contact_name_date_time.tsv")
+
+
+
 # attachment new features for intent models
 # if features works well, turn it on as normal data
 #copyfile("..\\Open_Text_Synthesis\\contact_name_order_ref_and_file_recency\\data_synthesised_contact_name_order_ref_file_recency.tsv", "data_synthesised_contact_name_order_ref_file_recency.tsv")
