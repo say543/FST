@@ -10,7 +10,9 @@ from shutil import copyfile
 
 outputFile = 'files_domain_training_answer.tsv'
 # replace directly
-outputTrainingFolderFile = '..\\files_domain_training_answer.tsv'
+#outputTrainingFolderFile = '..\\files_domain_training_answer.tsv'
+outputTrainingFolderFile = '..\\files_domain_training_answer_temp.tsv'
+
 # for STCA test
 outputSTCATrainingFolderFile = '..\\sharemodeltest\\files_domain_training_answer.tsv'
 
@@ -75,12 +77,12 @@ TARGETNUMCOLUMNS = 10
 
 # reopen it but merge date into filekeyword into a single slots
 # open it for domain training
+# ? not sure why cannot find file
 copyfile("..\\Open_Text_Synthesis\\file_keyword_file_type_file_action_contact_name_date\\domain_data_synthesised_file_keyword_file_type_file_action_contact_name_file_name_verb_date.tsv" , "domain_data_synthesised_file_keyword_file_type_file_action_contact_name_file_name_verb_date.tsv")
-
+copyfile("..\\Open_Text_Synthesis\\file_keyword_file_type_file_action_contact_name\\domain_data_synthesised_file_keyword_file_type_file_action_contact_name_file_name_verb.tsv", "domain_data_synthesised_file_keyword_file_type_file_action_contact_name_file_name_verb.tsv")
 # add new domain traing data for anser
 copyfile("..\\Open_Text_Synthesis\\file_keyword_and_file_type\\domain_data_synthesised_file_keyword_file_type.tsv" , "domain_data_synthesised_file_keyword_file_type.tsv")
 copyfile("..\\Open_Text_Synthesis\\file_type_and_contact_name\\domain_data_synthesised_contact_name_file_type.tsv" , "domain_data_synthesised_contact_name_file_type.tsv")
-copyfile("..\\Open_Text_Synthesis\\domain_data_synthesised_file_keyword_file_type_file_action_contact_name_file_name_verb.tsv", "domain_data_synthesised_file_keyword_file_type_file_action_contact_name_file_name_verb.tsv")
 
 ############################################
 # copy file from data folder directly
