@@ -60,6 +60,17 @@ https://microsoft.sharepoint.com/teams/CortanaCore/_layouts/15/Doc.aspx?sourcedo
 https://microsoft.sharepoint.com/teams/CortanaCore/_layouts/15/Doc.aspx?sourcedoc={6d6ae133-c9c8-400d-bfd8-ae8feec6ff9f}&action=edit&wd=target%28FY20%20Planning.one%7C274fbacb-b9ee-4eb5-a46b-41b55553ba23%2FFinal%20Version%7Cbe413904-bcfb-4b26-a57d-cdc0d50f378e%2F%29
 
 
+
+==============================
+QASBatStatic   04142020
+==============================
+griffinsdf_M365Exp.QasBatW.queryprocessingconfiguration.ini
+griffinprod_M365Search.QasBatW.queryprocessingconfiguration.ini
+
+這兩個有 import 用grep 找到
+但是這兩個master qpc 除非把所有的dolphin 都註解掉  否則跑步起來 (還沒試過  反正以後也不會用這個了)
+
+
 ==============================
 MSW query set   04062020
 ==============================
