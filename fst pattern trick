@@ -1,4 +1,30 @@
 ============================
+case do not work
+==============================
+
+04152020
+case 1
+# remove picture / pictures / from share file presentation because of UWP
+#?  this two line does not work, not sure why
+#define ShareFileFileDescription [FileDescription - {picture}];
+#define ShareFileFileDescriptionPlural [FileDescriptionPl - {pictures}];
+define ShareFileFileDescription [PropertyFileTypeIgnoreCase - {picture}];
+define ShareFileFileDescriptionPlural [PropertyFileTypeIgnoreCase - {pictures}];
+
+有什麼減法會減的不好
+
+另外  
+optimize net 
+可能會讓原本work 的case 變成不work 因為optimize
+
+// 上面換成下面  可能會比較好
+//? 這個還要跟yue confirm
+NLPFSTApplier --in=preprocess_output_0 --out=preprocess_output_1 --fst=files_enus_mv1.domain.pattern.preprocess.fst --mode=transducer 
+NLPFSMApplier --in=preprocess_output_0 --out=preprocess_output_1 --fst=files_enus_mv1.domain.pattern.preprocess.fst --mode=transducer 
+
+
+
+============================
 onte note
 
 'name'
