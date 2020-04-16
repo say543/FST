@@ -1365,9 +1365,9 @@ E:\fileAnswer_data_synthesis\CMF_training\resource\pcfg\pcfg_study.xlsx has all 
 
 //v2
 also specify different example location
-.\bin\CLU.Core.1.2.305\MLGTools.exe feat2proc -fsrc=E:\fileAnswer_data_synthesis\CMF_training\resource\pcfg\pcfg_domain_examples\pcfg_v2\pcfg.domain.lexicon.txt -fbin=E:\fileAnswer_data_synthesis\CMF_training\resource\pcfg\pcfg_domain_examples\pcfg_v2\files_enus_mv1.pcfg.domain.mlg.lexicon.bin
+.\bin\CLU.Core.1.2.305\MLGTools.exe feat2proc -fsrc=E:\fileAnswer_data_synthesis\CMF_training\resource\pcfg\pcfg_domain_examples\pcfg_v2\pcfg.domain.lexicon.txt -fbin=E:\fileAnswer_data_synthesis\CMF_training\resource\pcfg\pcfg_domain_examples\pcfg_v2\files_enus_mv1.domain.mlg.pcfg.lexicon.bin
 //v3
-.\bin\CLU.Core.1.2.305\MLGTools.exe feat2proc -fsrc=E:\fileAnswer_data_synthesis\CMF_training\resource\pcfg\pcfg_domain_examples\pcfg_v3\pcfg.domain.lexicon.txt -fbin=E:\fileAnswer_data_synthesis\CMF_training\resource\pcfg\pcfg_domain_examples\pcfg_v3\files_enus_mv1.pcfg.domain.mlg.lexicon.bin
+.\bin\CLU.Core.1.2.305\MLGTools.exe feat2proc -fsrc=E:\fileAnswer_data_synthesis\CMF_training\resource\pcfg\pcfg_domain_examples\pcfg_v3\pcfg.domain.lexicon.txt -fbin=E:\fileAnswer_data_synthesis\CMF_training\resource\pcfg\pcfg_domain_examples\pcfg_v3\files_enus_mv1.domain.mlg.pcfg.lexicon.bin
 
 
 
