@@ -1618,7 +1618,7 @@
 0	doctor word	file_search	files	<file_keyword> doctor </file_keyword> <file_type> word </file_type>
 0	guest that are coming word	file_search	files	<file_keyword> guest that are coming </file_keyword> <file_type> word </file_type>
 0	stuff like that word	file_search	files	<file_keyword> stuff like that </file_keyword> <file_type> word </file_type>
-0	harper ' s appointment words	file_search	files	<file_keyword> harper ' s appointment </file_keyword> <file_type> words </file_type>
+0	harper ' s appointment word	file_search	files	<file_keyword> harper ' s appointment </file_keyword> <file_type> word </file_type>
 0	neck tight shoulders word	file_search	files	<file_keyword> neck tight shoulders </file_keyword> <file_type> word </file_type>
 0	heroes reborn start word	file_search	files	<file_keyword> heroes reborn start </file_keyword> <file_type> word </file_type>
 0	unit one discussion 2 word	file_search	files	<file_keyword> unit one discussion 2 </file_keyword> <file_type> word </file_type>
@@ -1630,7 +1630,7 @@
 0	testing out word	file_search	files	<file_keyword> testing out </file_keyword> <file_type> word </file_type>
 0	page appointment word	file_search	files	<file_keyword> page appointment </file_keyword> <file_type> word </file_type>
 0	orthopedic surgeon word	file_search	files	<file_keyword> orthopedic surgeon </file_keyword> <file_type> word </file_type>
-0	cleaner words	file_search	files	<file_keyword> cleaner </file_keyword> <file_type> words </file_type>
+0	cleaner word	file_search	files	<file_keyword> cleaner </file_keyword> <file_type> word </file_type>
 0	home depot invoice word	file_search	files	<file_keyword> home depot invoice </file_keyword> <file_type> word </file_type>
 0	hurricanes word	file_search	files	<file_keyword> hurricanes </file_keyword> <file_type> word </file_type>
 0	quiet hours word	file_search	files	<file_keyword> quiet hours </file_keyword> <file_type> word </file_type>
@@ -1648,8 +1648,8 @@
 0	best and final word	file_search	files	<file_keyword> best and final </file_keyword> <file_type> word </file_type>
 0	orthopedic surgeon word	file_search	files	<file_keyword> orthopedic surgeon </file_keyword> <file_type> word </file_type>
 0	happy hour with the girls word	file_search	files	<file_keyword> happy hour with the girls </file_keyword> <file_type> word </file_type>
-0	car inspection d m v words	file_search	files	<file_keyword> car inspection d m v </file_keyword> <file_type> words </file_type>
-0	wine words	file_search	files	<file_keyword> wine </file_keyword> <file_type> words </file_type>
+0	car inspection d m v word	file_search	files	<file_keyword> car inspection d m v </file_keyword> <file_type> word </file_type>
+0	wine word	file_search	files	<file_keyword> wine </file_keyword> <file_type> word </file_type>
 0	sunday school word	file_search	files	<file_keyword> sunday school </file_keyword> <file_type> word </file_type>
 0	car inspection d m v word	file_search	files	<file_keyword> car inspection d m v </file_keyword> <file_type> word </file_type>
 0	team lead meeting word	file_search	files	<file_keyword> team lead meeting </file_keyword> <file_type> word </file_type>
@@ -1658,3 +1658,99 @@
 0	swim class appointment word	file_search	files	<file_keyword> swim class appointment </file_keyword> <file_type> word </file_type>
 0	page appointment word	file_search	files	<file_keyword> page appointment </file_keyword> <file_type> word </file_type>
 0	arthropods word	file_search	files	<file_keyword> arthropods </file_keyword> <file_type> word </file_type>
+0	show appointment with kimberly clark paul word	file_open	files	show <file_keyword> appointment with kimberly clark paul </file_keyword> <file_type> word </file_type>
+0	show appointment with adam word	file_open	files	show <file_keyword> appointment with adam </file_keyword> <file_type> word </file_type>
+0	show listen to podcast word	file_open	files	show <file_keyword> listen to podcast </file_keyword> <file_type> word </file_type>
+0	show glise word	file_open	files	show <file_keyword> glise </file_keyword> <file_type> word </file_type>
+0	show water country word	file_open	files	show <file_keyword> water country </file_keyword> <file_type> word </file_type>
+0	show brother's birthday word	file_open	files	show <file_keyword> brother's birthday </file_keyword> <file_type> word </file_type>
+0	show hockey game word	file_open	files	show <file_keyword> hockey game </file_keyword> <file_type> word </file_type>
+0	show tick all day event word	file_open	files	show <file_keyword> tick all day event </file_keyword> <file_type> word </file_type>
+0	show meeting stephanie word	file_open	files	show <file_keyword> meeting stephanie </file_keyword> <file_type> word </file_type>
+0	show field trip to fine lake park word	file_open	files	show <file_keyword> field trip to fine lake park </file_keyword> <file_type> word </file_type>
+0	show vet appointment for baby word	file_open	files	show <file_keyword> vet appointment for baby </file_keyword> <file_type> word </file_type>
+0	show copy it word	file_open	files	show <file_keyword> copy it </file_keyword> <file_type> word </file_type>
+0	show closing training word	file_open	files	show <file_keyword> closing training </file_keyword> <file_type> word </file_type>
+0	show help diana word	file_open	files	show <file_keyword> help diana </file_keyword> <file_type> word </file_type>
+0	show trail appliances word	file_open	files	show <file_keyword> trail appliances </file_keyword> <file_type> word </file_type>
+0	show dan ' s taxes word	file_open	files	show <file_keyword> dan ' s taxes </file_keyword> <file_type> word </file_type>
+0	show listen to podcast word	file_open	files	show <file_keyword> listen to podcast </file_keyword> <file_type> word </file_type>
+0	show doctor tom birch word	file_open	files	show <file_keyword> doctor tom birch </file_keyword> <file_type> word </file_type>
+0	show appointment for hank word	file_open	files	show <file_keyword> appointment for hank </file_keyword> <file_type> word </file_type>
+0	show vet appointment for baby word	file_open	files	show <file_keyword> vet appointment for baby </file_keyword> <file_type> word </file_type>
+0	show pertg mac word	file_open	files	show <file_keyword> pertg mac </file_keyword> <file_type> word </file_type>
+0	show grammas birthday word	file_open	files	show <file_keyword> grammas birthday </file_keyword> <file_type> word </file_type>
+0	show there is graduation party word	file_open	files	show <file_keyword> there is graduation party </file_keyword> <file_type> word </file_type>
+0	show kenneth ' s birthday word	file_open	files	show <file_keyword> kenneth ' s birthday </file_keyword> <file_type> word </file_type>
+0	show appointment paula word	file_open	files	show <file_keyword> appointment paula </file_keyword> <file_type> word </file_type>
+0	show appointment with doctor pascal word	file_open	files	show <file_keyword> appointment with doctor pascal </file_keyword> <file_type> word </file_type>
+0	show annual leave word	file_open	files	show <file_keyword> annual leave </file_keyword> <file_type> word </file_type>
+0	show jay ' s flight word	file_open	files	show <file_keyword> jay ' s flight </file_keyword> <file_type> word </file_type>
+0	show jordan has speech word	file_open	files	show <file_keyword> jordan has speech </file_keyword> <file_type> word </file_type>
+0	show appointment for hank word	file_open	files	show <file_keyword> appointment for hank </file_keyword> <file_type> word </file_type>
+0	show gary chiropracter word	file_open	files	show <file_keyword> gary chiropracter </file_keyword> <file_type> word </file_type>
+0	show songs word	file_open	files	show <file_keyword> songs </file_keyword> <file_type> word </file_type>
+0	show academic counseling meeting word	file_open	files	show <file_keyword> academic counseling meeting </file_keyword> <file_type> word </file_type>
+0	show appointment with doctor pascal word	file_open	files	show <file_keyword> appointment with doctor pascal </file_keyword> <file_type> word </file_type>
+0	show doctor perez word	file_open	files	show <file_keyword> doctor perez </file_keyword> <file_type> word </file_type>
+0	show bootres dot dll word	file_open	files	show <file_keyword> bootres dot dll </file_keyword> <file_type> word </file_type>
+0	show meet with john word	file_open	files	show <file_keyword> meet with john </file_keyword> <file_type> word </file_type>
+0	show ways to save more money word	file_open	files	show <file_keyword> ways to save more money </file_keyword> <file_type> word </file_type>
+0	show massage with deb word	file_open	files	show <file_keyword> massage with deb </file_keyword> <file_type> word </file_type>
+0	show con call word	file_open	files	show <file_keyword> con call </file_keyword> <file_type> word </file_type>
+0	show vacation day word	file_open	files	show <file_keyword> vacation day </file_keyword> <file_type> word </file_type>
+0	show hair app word	file_open	files	show <file_keyword> hair app </file_keyword> <file_type> word </file_type>
+0	show meet j . word	file_open	files	show <file_keyword> meet j . </file_keyword> <file_type> word </file_type>
+0	show grammas birthday word	file_open	files	show <file_keyword> grammas birthday </file_keyword> <file_type> word </file_type>
+0	show doctor appointment for ellen word	file_open	files	show <file_keyword> doctor appointment for ellen </file_keyword> <file_type> word </file_type>
+0	show getting up word	file_open	files	show <file_keyword> getting up </file_keyword> <file_type> word </file_type>
+0	show movie three hundred word	file_open	files	show <file_keyword> movie three hundred </file_keyword> <file_type> word </file_type>
+0	show brother's birthday word	file_open	files	show <file_keyword> brother's birthday </file_keyword> <file_type> word </file_type>
+0	show the appointment with kimberly clark paul the word	file_open	files	show the <file_keyword> appointment with kimberly clark paul </file_keyword> the <file_type> word </file_type>
+0	show the appointment with adam the word	file_open	files	show the <file_keyword> appointment with adam </file_keyword> the <file_type> word </file_type>
+0	show the listen to podcast the word	file_open	files	show the <file_keyword> listen to podcast </file_keyword> the <file_type> word </file_type>
+0	show the glise the word	file_open	files	show the <file_keyword> glise </file_keyword> the <file_type> word </file_type>
+0	show the water country the word	file_open	files	show the <file_keyword> water country </file_keyword> the <file_type> word </file_type>
+0	show the brother's birthday the word	file_open	files	show the <file_keyword> brother's birthday </file_keyword> the <file_type> word </file_type>
+0	show the hockey game the word	file_open	files	show the <file_keyword> hockey game </file_keyword> the <file_type> word </file_type>
+0	show the tick all day event the word	file_open	files	show the <file_keyword> tick all day event </file_keyword> the <file_type> word </file_type>
+0	show the meeting stephanie the word	file_open	files	show the <file_keyword> meeting stephanie </file_keyword> the <file_type> word </file_type>
+0	show the field trip to fine lake park the word	file_open	files	show the <file_keyword> field trip to fine lake park </file_keyword> the <file_type> word </file_type>
+0	show the vet appointment for baby the word	file_open	files	show the <file_keyword> vet appointment for baby </file_keyword> the <file_type> word </file_type>
+0	show the copy it the word	file_open	files	show the <file_keyword> copy it </file_keyword> the <file_type> word </file_type>
+0	show the closing training the word	file_open	files	show the <file_keyword> closing training </file_keyword> the <file_type> word </file_type>
+0	show the help diana the word	file_open	files	show the <file_keyword> help diana </file_keyword> the <file_type> word </file_type>
+0	show the trail appliances the word	file_open	files	show the <file_keyword> trail appliances </file_keyword> the <file_type> word </file_type>
+0	show the dan ' s taxes the word	file_open	files	show the <file_keyword> dan ' s taxes </file_keyword> the <file_type> word </file_type>
+0	show the listen to podcast the word	file_open	files	show the <file_keyword> listen to podcast </file_keyword> the <file_type> word </file_type>
+0	show the doctor tom birch the word	file_open	files	show the <file_keyword> doctor tom birch </file_keyword> the <file_type> word </file_type>
+0	show the appointment for hank the word	file_open	files	show the <file_keyword> appointment for hank </file_keyword> the <file_type> word </file_type>
+0	show the vet appointment for baby the word	file_open	files	show the <file_keyword> vet appointment for baby </file_keyword> the <file_type> word </file_type>
+0	show the pertg mac the word	file_open	files	show the <file_keyword> pertg mac </file_keyword> the <file_type> word </file_type>
+0	show the grammas birthday the word	file_open	files	show the <file_keyword> grammas birthday </file_keyword> the <file_type> word </file_type>
+0	show the there is graduation party the word	file_open	files	show the <file_keyword> there is graduation party </file_keyword> the <file_type> word </file_type>
+0	show the kenneth ' s birthday the word	file_open	files	show the <file_keyword> kenneth ' s birthday </file_keyword> the <file_type> word </file_type>
+0	show the appointment paula the word	file_open	files	show the <file_keyword> appointment paula </file_keyword> the <file_type> word </file_type>
+0	show the appointment with doctor pascal the word	file_open	files	show the <file_keyword> appointment with doctor pascal </file_keyword> the <file_type> word </file_type>
+0	show the annual leave the word	file_open	files	show the <file_keyword> annual leave </file_keyword> the <file_type> word </file_type>
+0	show the jay ' s flight the word	file_open	files	show the <file_keyword> jay ' s flight </file_keyword> the <file_type> word </file_type>
+0	show the jordan has speech the word	file_open	files	show the <file_keyword> jordan has speech </file_keyword> the <file_type> word </file_type>
+0	show the appointment for hank the word	file_open	files	show the <file_keyword> appointment for hank </file_keyword> the <file_type> word </file_type>
+0	show the gary chiropracter the word	file_open	files	show the <file_keyword> gary chiropracter </file_keyword> the <file_type> word </file_type>
+0	show the songs the word	file_open	files	show the <file_keyword> songs </file_keyword> the <file_type> word </file_type>
+0	show the academic counseling meeting the word	file_open	files	show the <file_keyword> academic counseling meeting </file_keyword> the <file_type> word </file_type>
+0	show the appointment with doctor pascal the word	file_open	files	show the <file_keyword> appointment with doctor pascal </file_keyword> the <file_type> word </file_type>
+0	show the doctor perez the word	file_open	files	show the <file_keyword> doctor perez </file_keyword> the <file_type> word </file_type>
+0	show the bootres dot dll the word	file_open	files	show the <file_keyword> bootres dot dll </file_keyword> the <file_type> word </file_type>
+0	show the meet with john the word	file_open	files	show the <file_keyword> meet with john </file_keyword> the <file_type> word </file_type>
+0	show the ways to save more money the word	file_open	files	show the <file_keyword> ways to save more money </file_keyword> the <file_type> word </file_type>
+0	show the massage with deb the word	file_open	files	show the <file_keyword> massage with deb </file_keyword> the <file_type> word </file_type>
+0	show the con call the word	file_open	files	show the <file_keyword> con call </file_keyword> the <file_type> word </file_type>
+0	show the vacation day the word	file_open	files	show the <file_keyword> vacation day </file_keyword> the <file_type> word </file_type>
+0	show the hair app the word	file_open	files	show the <file_keyword> hair app </file_keyword> the <file_type> word </file_type>
+0	show the meet j . the word	file_open	files	show the <file_keyword> meet j . </file_keyword> the <file_type> word </file_type>
+0	show the grammas birthday the word	file_open	files	show the <file_keyword> grammas birthday </file_keyword> the <file_type> word </file_type>
+0	show the doctor appointment for ellen the word	file_open	files	show the <file_keyword> doctor appointment for ellen </file_keyword> the <file_type> word </file_type>
+0	show the getting up the word	file_open	files	show the <file_keyword> getting up </file_keyword> the <file_type> word </file_type>
+0	show the movie three hundred the word	file_open	files	show the <file_keyword> movie three hundred </file_keyword> the <file_type> word </file_type>
+0	show the brother's birthday the word	file_open	files	show the <file_keyword> brother's birthday </file_keyword> the <file_type> word </file_type>
