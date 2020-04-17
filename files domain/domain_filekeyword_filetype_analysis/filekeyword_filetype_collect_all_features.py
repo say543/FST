@@ -17,6 +17,8 @@ rand_seed_offset = 0.01
 
 
 outputFile = 'filekeyword_filetype_training.tsv'
+
+outputFileUnique = 'filekeyword_filetype_unique_training.tsv'
 # replace directly
 #outputTrainingFolderFile = '..\\files_slot_training.tsv'
 # for STCA test
@@ -31,6 +33,8 @@ dsatTraining = "dsat_training.tsv"
 
 files = glob.glob("*.tsv");
 outputs = [];
+outputsSet = set([]);
+
 outputsWithSource = [];
 
 
@@ -74,7 +78,7 @@ rand_seed_parameter = rand_seed_parameter_initialization
 
 for file in files:
 
-    if file == outputFile or file == outputFileWithSource:
+    if file == outputFile or file == outputFileWithSource or file == outputFileUnique:
         continue;
 
     # skip dsat training at first
@@ -147,9 +151,11 @@ for file in files:
             if fileKeyWordAndFileNameXml is not None:
 
                 # generate filetype if missed
+                # for those cases they are do not have xml_tag
                 if fileTypeXml is None:
                     indexInRange = random.randint(0, len(defaultFileTypeifMissed)-1)
-                    fileTypeXml =  "<file_type>" +  defaultFileTypeifMissed[indexInRange] + "</file_type>"
+                    #fileTypeXml =  "<file_type>" +  defaultFileTypeifMissed[indexInRange] + "</file_type>"
+                    fileTypeXml =  defaultFileTypeifMissed[indexInRange]
                     fileType = defaultFileTypeifMissed[indexInRange]
                 
                 
@@ -165,8 +171,12 @@ for file in files:
                 if fileKeyWordAndFileNameXml is not None and fileTypeXml is not None:
                     #'id', 'query', 'intent', 'domain', 'QueryXml'
                     outputs.append(array[0]+'\t'+ fileKeyWordAndFileName + " " + fileType +'\t' + "file_search" + '\t' + array[3] + '\t' + fileKeyWordAndFileNameXml + " " + fileTypeXml);
+
+                    #unique for dedup
+                    outputsSet.add(array[0]+'\t'+ fileKeyWordAndFileName + " " + fileType +'\t' + "file_search" + '\t' + array[3] + '\t' + fileKeyWordAndFileNameXml + " " + fileTypeXml);
+                    
                     #'id', 'query', 'intent', 'domain', 'QueryXml','source'
-                    outputs.append(array[0]+'\t'+ fileKeyWordAndFileName + " " + fileType +'\t' + "file_search" + '\t' + array[3] + '\t' + fileKeyWordAndFileNameXml + " " + fileTypeXml+'\t'+file);
+                    outputsWithSource.append(array[0]+'\t'+ fileKeyWordAndFileName + " " + fileType +'\t' + "file_search" + '\t' + array[3] + '\t' + fileKeyWordAndFileNameXml + " " + fileTypeXml+'\t'+file);
                 
                 #outputs.append(line);
                 #outputsWithSource.append(line+'\t'+ file);
@@ -178,8 +188,9 @@ for file in files:
 #outputs = ['\t'.join(['id', 'query', 'intent', 'domain', 'QueryXml', 'id', '0'])] + outputs;
 #outputsWithSource = ['\t'.join(['id', 'query', 'intent', 'domain', 'QueryXml', 'id', '0', 'source'])] + outputsWithSource;
 
-outputs = ['\t'.join(['id', 'query', 'intent', 'domain', 'QueryXml'])] + outputs;
-outputsWithSource = ['\t'.join(['id', 'query', 'intent', 'domain', 'QueryXml', 'source'])] + outputsWithSource;
+# output soted order for easy check
+outputs = ['\t'.join(['id', 'query', 'intent', 'domain', 'QueryXml'])] + sorted(outputs);
+outputsWithSource = ['\t'.join(['id', 'query', 'intent', 'domain', 'QueryXml', 'source'])] + sorted(outputsWithSource);
 
 
 
@@ -188,6 +199,16 @@ with codecs.open(outputFile, 'w', 'utf-8') as fout:
     for item in outputs:
         fout.write(item + '\r\n');
 
+
+print("dedup size = ")
+print(len(outputsSet))
+with codecs.open(outputFileUnique, 'w', 'utf-8') as fout:
+    fout.write('\t'.join(['id', 'query', 'intent', 'domain', 'QueryXml']) + '\r\n');
+    for item in sorted(outputsSet):
+        fout.write(item + '\r\n');
+
+
+print(len(outputsSet))
 with codecs.open(outputFileWithSource, 'w', 'utf-8') as fout:
     for item in outputsWithSource:
         fout.write(item + '\r\n');
