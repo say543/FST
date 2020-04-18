@@ -189,9 +189,11 @@ fileTypeDomanBoostRemove =set([
 
 blackListQuerySet = {
     # regular group
+    #excel
     'excel',
     'open up excel',
     'open up excel.',
+    'hey cortana open up excel',
     'open up a new excel',
     'open up a new excel.',
     'open excel',
@@ -206,9 +208,11 @@ blackListQuerySet = {
     'open a new excel again.',
     'go to excel',
     'take me to excel',
+    #word
     'word',
     'open up word',
     'open up word.',
+    'hey cortana open up word',
     'open up a new word',
     'open up a new word.',
     'open word',
@@ -223,9 +227,30 @@ blackListQuerySet = {
     'open a new word again.',
     'go to word',
     'take me to word',
+    #words
+    'words',
+    'open up words',
+    'open up words.',
+    'hey cortana open up words',
+    'open up a new words',
+    'open up a new words.',
+    'open words',
+    'open words.',
+    'open new words',
+    'open new words.',
+    'open a new words',
+    'open a new words.',
+    'open words again',
+    'open words again.',
+    'open a new words again',
+    'open a new words again.',
+    'go to words',
+    'take me to words',    
+    #powerpoint
     'powerpoint',
     'open up powerpoint',
     'open up powerpoint.',
+    'hey cortana open up powerpoint',
     'open up a new powerpoint',
     'open up a new powerpoint.',
     'open powerpoint',
@@ -240,9 +265,11 @@ blackListQuerySet = {
     'open a new powerpoint again.',
     'go to powerpoint',
     'take me to powerpoint',
+    #onenote
     'onenote',
     'open up onenote',
     'open up onenote.',
+    'hey cortana open up onenote',
     'open up a new onenote',
     'open up a new onenote.',
     'open onenote',
@@ -257,11 +284,13 @@ blackListQuerySet = {
     'open a new onenote again.',
     'go to onenote',
     'take me to onenote',
+    #spreadsheet
     'spreadsheet',
     'open up spreadsheet',
     'open up spreadsheet.',
     'open up a new spreadsheet',
     'open up a new spreadsheet.',
+    'hey cortana open up spreadsheet',
     'open spreadsheet',
     'open spreadsheet.',
     'open new spreadsheet',
@@ -339,7 +368,13 @@ phraseToRemove=set([
     'documents settings',
     'file settings',
     'files settings',
-    'program'
+    'program',
+    # filter all print related queries as possible queries
+    'print',
+    # filter all print related queries as possible queries
+    'scan',
+    # a phrase should be ondevice 
+    'Open word for me'
     ])
 #filterDomainDic =set([
 #    "mystuff"
@@ -353,6 +388,53 @@ domainToFileDomain = {
     "ONDEVICE" : "FILES",
 }
 
+
+# queries might be any domains
+# this one has highest priority compare to phrase, key any application
+queriesToFiles=set([
+    #video file, mystuff treats it as file_type so also add to train
+    'Video files.',
+    'Video files',
+    'Where are my video files',
+    'Find video files',
+    'Find video file',
+    # program file, mystuff treats it as keyword so also add to train
+    'open program file',
+    'open program files',
+    'program files',
+    'program file',
+    'show program files',
+    'show program file',
+    'where are my program files',
+    # open note, limited cases and extract most mystuff querestion
+    'Open note on my computer',
+    'Open note for Walbaums grocery',
+    'where do you think i can you open note please?',
+    'open note with subject...',
+    'open note of errands',
+    "open note titled brother's name",
+    'Open note from yesterday.',
+    'Open note with subject of restaurant.',
+    'open note love note',
+    'open note restaurant',
+    'open note regarding',
+    'open note from yesterday.',
+    # open note,
+    'open notes on desktop',
+    'open notes for meeting',
+    'Open notes for meeting',
+    'Open notes about trip',
+    'Open notes about grocery shopping',
+    "Open notes for my car's issues.",
+    'open notes about upcoming trip',
+    'open notes for christmas',
+    'open notes for chores',
+    'open notes about tasks',
+    'open notes relating to party'
+    ])
+queriesToFilesLowCase = set(query.lower() for query in queriesToFiles)
+# for debug
+#print(queriesToFilesLowCase)
 
 
 
@@ -542,7 +624,13 @@ with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8'
                 # follow up items
                 # ? may be adding file close or end as filter since do not support close xxx or end ... save
 
-                if hasFileType:
+                if originalQuery.lower() in queriesToFilesLowCase:
+                    # store original
+                    outputMyStuffAfterFileTypeFilter.append(line+'\t\t\t\t\t\t\t'+inputFile)
+                    # rename mystuff to files fo rtesting
+                    #fout.write(line + '\r\n');
+                    fout.write(linestrs[0]+'\t'+linestrs[1]+'\t'+linestrs[2]+'\t'+'files'+'\t\t\t\t\t\t\t'+inputFile+'r\n');
+                elif hasFileType:
                     # store original
                     outputMyStuffAfterFileTypeFilter.append(line+'\t\t\t\t\t\t\t'+inputFile)
 
@@ -626,7 +714,12 @@ with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8'
                 # follow up items
                 # ? may be adding file close or end as filter since do not support close xxx or end ... save
 
-                    
+                if originalQuery.lower() in queriesToFilesLowCase:
+                    # store original
+                    outputOndeviceAfterFileTypeFilter.append(line+'\t\t\t\t\t\t\t'+inputFile)
+                    # rename ondeice to files fo rtesting
+                    #fout.write(line + '\r\n');
+                    fout.write(linestrs[0]+'\t'+linestrs[1]+'\t'+linestrs[2]+'\t'+'files'+'\t\t\t\t\t\t\t'+inputFile+'r\n');
                 if hasFileType:
                     # store original
                     outputOndeviceAfterFileTypeFilter.append(line+'\t\t\t\t\t\t\t'+inputFile)
@@ -645,7 +738,21 @@ with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8'
         else:
             
             for line in lines:
-                fout.write(line +'\t\t\t\t\t\t\t'+inputFile+'\r\n');
+
+                if not line:
+                    continue;
+
+                linestrs = line.split("\t");
+                originalQuery = linestrs[2]
+                
+                if originalQuery.lower() in queriesToFilesLowCase:
+                    # not sure which domain so do not store original
+                    #outputOndeviceAfterFileTypeFilter.append(line+'\t\t\t\t\t\t\t'+inputFile)
+                    # rename xxx domain to files fo rtesting
+                    #fout.write(line + '\r\n');
+                    fout.write(linestrs[0]+'\t'+linestrs[1]+'\t'+linestrs[2]+'\t'+'files'+'\t\t\t\t\t\t\t'+inputFile+'r\n');
+                else:
+                    fout.write(line +'\t\t\t\t\t\t\t'+inputFile+'\r\n');
 
 
 
