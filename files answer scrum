@@ -285,6 +285,17 @@ https://msasg.visualstudio.com/Cortana/_git/teams-skills?path=%2Fprivate%2FTeams
 
 <email_title> RE: Correct slots not getting produced
 04202020
+
+// 這個代表prompt for value
+"MissingValue": "FileMissingDialogAct",	
+// 這邊代表prompt for selection
+selection 也可以做prompted for value 
+if user says positon_refe, 選擇
+if users says "string", generic model 會做string 的fuzzy search
+"Disambiguation": "FileDisambiguationDialogAct",
+
+
+
 openfileV1
 from 
 "SlotConstraintType": "Hard",
