@@ -274,6 +274,16 @@ https://msasg.visualstudio.com/Cortana/_git/teams-skills?path=%2Fprivate%2FTeams
 
 https://msasg.visualstudio.com/Cortana/_git/teams-skills?path=%2Fprivate%2FTeamsSkills%2FTeams%2Fsrc%2FTaskForms%2FTeamsOpenFileV2.json&version=GBmaster&line=189&lineEnd=207&lineStartColumn=5&lineEndColumn=6&lineStyle=plain
 
+04202020
+openfileV1
+from 
+"SlotConstraintType": "Hard",
+"SlotNames": [ "position_ref" ]
+to
+openfilev2
+"SlotConstraintType": "Soft",
+"SlotNames": [ "position_ref", "file_name", "file_keyword", "file_type" ]
+
 
 ==============================
 good pr following up during parental leave
