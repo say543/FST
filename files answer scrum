@@ -292,6 +292,33 @@ openfilev2
 "SlotConstraintType": "Soft",
 "SlotNames": [ "position_ref", "file_name", "file_keyword", "file_type" ]
 
+When users say  ‘the first one’ then  generic selection will consume  position_ref.( here I confirm lu does generate correct slot)
+When users say string, then lu slot does not affect result so generic selection will use that to do filter.
+Thus, you should use Hard constraint to align with above scenario.
+"SlotConstraintType": "hard",
+"SlotNames": [ "position_ref" ]
+    ?code 怎麼process 還不太懂
+    
+一旦generic take over  除了position_ref slot 會被filter 其他的slot 因該會被generic selection mode l給忽略
+TCP Signals
+tcp 是個platform
+
+taskfrom Entitirys 代表是上個turn 的結果
+eg:  "file_keyword",
+"State" : "PromptedForSelection",
+"Value" : "skills"
+   代表上個turn 有填入的skills
+   
+LU Constraints
+    這邊有cinstraunt type 還有盯著的slot
+    
+TaskFrame Status
+    代表task form 有沒有continue
+
+
+
+一班看log
+https://cortanalogviewer.azurewebsites.net/query/5b332d12483d4c42953561235371654d
 
 ==============================
 good pr following up during parental leave
