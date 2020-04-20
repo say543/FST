@@ -26,6 +26,18 @@ SOURCE= 'Source'
 
 fileDomainRelatedIntent = ['file_search', 'file_open', 'file_share', 'file_download', 'file_other', 'file_navigate', "teamspace_search"]
 
+
+activeDomain = set([
+    'ondevice',
+    'reminder',
+    'note',
+    'alarm',
+    'calendar',
+    'common',
+    'communication',
+    'web'
+    ])
+
 #borrow from files_mystuff_after_filter.py
 '''
 fileTypeTagWoDotInFileKeywordOrFileName={
@@ -735,7 +747,10 @@ with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8'
                     outputOndeviceIgnoreListDuetoFileType.append(line+'\t\t\t\t\t\t\t'+inputFile)
 
             #print(len(rows))
-        else:
+
+        # only add actie domains    
+        #else:
+        elif domain.lower() in activeDomain:
             
             for line in lines:
 
