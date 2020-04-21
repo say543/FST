@@ -66,6 +66,13 @@ contexul lu
 File contextual evaluation set V1
 having dataset
 
+
+怎麼跑?
+不记得files的那几个external feature名字叫什么了，user contacts的就是一个叫"UserContacts"的列表，加到那个"Metadata" column里就行，跟那些PreviousTurnDomain什么的放一起
+例子，
+
+https://dev.azure.com/msasg/Cortana/_git/CoreScienceDataStaging?path=%2Fdatasets%2FDefault%2FTest%2FNonOfficial_Default_Communication_Synthetic_SRNBest_All.tsv
+
 =================
 measurement set create possible documents
 =================
