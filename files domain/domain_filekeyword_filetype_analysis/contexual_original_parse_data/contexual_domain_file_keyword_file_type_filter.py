@@ -14,6 +14,12 @@ hyper_parameter = 200
 
 
 
+# random seed
+# and inner loop random seed change
+rand_seed_parameter_initialization = 0.1
+rand_seed_offset = 0.01
+
+
 fileDomainRelatedIntent = ['file_search', 'file_open', 'file_share', 'file_download', 'file_other', 'file_navigate', "teamspace_search"]
 
 teamsDomainToFileDomain = {
@@ -24,6 +30,80 @@ teamsDomainToFileDomain = {
 
 
 
+defaultFileTypeifMissed =[
+        'document',
+	'documents',
+	'file',
+	'files',
+	'powerpoints',
+	'power point',
+	'slide',
+	'slides',
+	'doc',
+	'docx',
+	'docs',
+	'spec',
+	'excel',
+	'excels',
+	'xls',
+	'xlsx',
+	'spreadsheet',
+	'spreadsheets',
+	'workbook',
+	'worksheet',
+	'csv',
+	'tsv',
+	'note',
+	'notes',
+	'onenote',
+	'onenotes',
+	'onenote',
+	'notebook',
+	'notebooks',
+	'pdf',
+	'pdfs',
+	'pdf',
+	'jpg',
+	'jpeg',
+	'gif',
+	'png',
+	'image',
+	'msg',
+	'ics',
+	'vcs',
+	'vsdx',
+	'vssx',
+	'vstx',
+	'vsdm',
+	'vssm',
+	'vstm',
+	'vsd',
+	'vdw',
+	'vss',
+	'vst',
+	'mpp',
+	'mpt',
+	'word',
+	'words'
+#    'file',
+#    'files',
+#    'document',
+#    'documents'
+]
+
+
+outputs = [];
+outputsSet = set([]);
+
+outputsWithSource = [];
+
+
+
+
+
+
+fileKeyWordAndFileNameCandidateSet = set()
+
 
 OutputSlotEvaluation = [];
 
@@ -33,10 +113,33 @@ OutputIntentEvaluation = [];
 OutputSTCAIntentEvaluation = [];
 
 
+
+# leave it but actually it is not being used
+dsatTraining = "dsat_training.tsv"
+
+
+outputFile = 'contexual_filekeyword_filetype_training.tsv'
+
+outputFileUnique = 'contexual_filekeyword_filetype_unique_training.tsv'
+# replace directly
+#outputTrainingFolderFile = '..\\files_slot_training.tsv'
+# for STCA test
+#outputSTCATrainingFolderFile = '..\\sharemodeltest\\files_slot_training.tsv'
+
+outputFileWithSource = "contexual_filekeyword_filetype_training_with_source.tsv"
+
+outputFileKeyWordAndFileNameLexiconFilfe = 'contexual_filekeyword_filename_lexicon.txt'
+
+
 # validaitng opened dataset
 # old format work
 inputFile = "files_file_keyword_positive.tsv"
 
+
+
+
+#initial rand seed
+rand_seed_parameter = rand_seed_parameter_initialization
 
 
 #with codecs.open('Teams-golden.tsv', 'r', 'utf-8') as fin:
@@ -46,17 +149,104 @@ with codecs.open(inputFile, 'r', 'utf-8') as fin:
         line = line.strip();
         if not line:
             continue;
-        linestrs = line.split("\t");
+        array = line.split('\t');
 
         # make sure it at least has
         # Query	ExternalFeature	Weight	Intent	Domain	Slot
-        if len(linestrs) < 6:
+        if len(array) < 6:
             continue;
 
-        if linestrs[1] != 'FILES':
+        if array[1] != 'FILES':
             continue
 
+        # update seed for each query
+        rand_seed_parameter=rand_seed_parameter+rand_seed_offset;
+        random.seed(rand_seed_parameter);
 
+        #add new here
+        slot = array[3]
+        # for extra target slot you want
+        xmlpairs = re.findall("(<.*?>.*?<\/.*?>)", slot)
+
+
+        # heuristic solution
+        # for one query
+        # only extra a pair of file_keyword/ file_name and file_type
+
+
+        # default using null
+        fileKeyWordAndFileNameXml = None
+        fileTypeXml = None
+        fileKeyWordAndFileName = None
+        fileType = None
+            
+        for xmlpair in xmlpairs:
+
+            # extra type and value for xml tag
+            xmlTypeEndInd = xmlpair.find(">")
+
+            xmlType = xmlpair[1:xmlTypeEndInd]
+
+            xmlValue = xmlpair.replace("<"+xmlType+">", "")
+            xmlValue = xmlValue.replace("</"+xmlType+">", "")
+            xmlValue = xmlValue.strip()
+
+
+                
+            if xmlType.lower() == "file_keyword" or xmlType.lower() == "file_name":
+                fileKeyWordAndFileNameCandidateSet.add(xmlValue)
+                if fileKeyWordAndFileNameXml is None:
+                    fileKeyWordAndFileNameXml = xmlpair
+                    fileKeyWordAndFileName = xmlValue
+
+            # file type might be noise in originla dataset but it is fine
+            if xmlType.lower() == "file_type":
+                if fileTypeXml is None:
+                    fileTypeXml = xmlpair
+                    fileType = xmlValue
+
+        # document if filekeyword or filename exist
+        if fileKeyWordAndFileNameXml is not None:
+
+            # generate filetype if missed
+            # for those cases they are do not have xml_tag
+            if fileTypeXml is None:
+                indexInRange = random.randint(0, len(defaultFileTypeifMissed)-1)
+
+                if indexInRange >=0 and indexInRange <=3:
+                    fileTypeXml =  defaultFileTypeifMissed[indexInRange]
+                else:
+                    fileTypeXml =  "<file_type>" +  defaultFileTypeifMissed[indexInRange] + "</file_type>"
+                fileType = defaultFileTypeifMissed[indexInRange]
+                
+                
+        # for dsatTraining
+        # replace file name with the last column
+        if inputFile == dsatTraining:
+            newline ='\t'.join(array[0:len(array)-1])
+            newfile = array[len(array)-1]
+            outputs.append(newline);
+            outputsWithSource.append(newline+'\t'+ newfile);
+        else:
+
+            if fileKeyWordAndFileNameXml is not None and fileTypeXml is not None:
+                #'id', 'MessageText', 'JudgedIntent', 'JudgedDomain', 'JudgedConstraints', 'ConversationContext', 'Cat'
+                
+                outputs.append("0"+'\t'+ fileKeyWordAndFileName + " " + fileType +'\t' + "file_search" + '\t' + array[1] + '\t' + fileKeyWordAndFileNameXml + " " + fileTypeXml+ '\t'+array[4]+'\t'+array[5]);
+
+                #unique for dedup
+                outputsSet.add("0"+'\t'+ fileKeyWordAndFileName + " " + fileType +'\t' + "file_search" + '\t' + array[1] + '\t' + fileKeyWordAndFileNameXml + " " + fileTypeXml+ '\t'+array[4]+'\t'+array[5]);
+                    
+                #'id', 'query', 'intent', 'domain', 'QueryXml','source'
+                outputsWithSource.append("0"+'\t'+ fileKeyWordAndFileName + " " + fileType +'\t' + "file_search" + '\t' + array[1] + '\t' + fileKeyWordAndFileNameXml + " " + fileTypeXml+ '\t'+array[4]+'\t'+array[5]+'\t'+inputFile);
+                
+            #outputs.append(line);
+            #outputsWithSource.append(line+'\t'+ file);
+            
+
+
+        
+        '''
         # id / message / intent / domain / constraint / ConversationContext / cat
         # for training purpose's format
             
@@ -71,27 +261,58 @@ with codecs.open(inputFile, 'r', 'utf-8') as fin:
 
         #id\tquery\tintent\tdomain\tQueryXml\ConversationContext\tcat \r\n"
         OutputSTCAIntentEvaluation.append("0"+"\t"+linestrs[0]+"\t"+linestrs[2]+"\t" +linestrs[1].lower()+"\t"+linestrs[3]+"\t"+linestrs[4]+"\t"+linestrs[5])
+        '''
 
 """
 # comment shuffle in the first place
 #random.shuffle(OutputSet);
 """
 
-# for judge trainer format
-#with codecs.open('teams_golden_after_filtering.tsv', 'w', 'utf-8') as fout:
-#
-#    # if outout originla format
-#    fout.write("ConversationId\tMessageId\tMessageTimestamp\tMessageFrom\tMessageText\tJudgedDomain\tJudgedIntent\tJudgedConstraints\tMetaData\tConversationContext\tFrequency\tImplicitConstraints\r\n")
-#    for item in Output:
-#        fout.write(item + '\r\n');
+
+# output soted order for easy check
+#outputs = ['\t'.join(['id', 'query', 'intent', 'domain', 'QueryXml'])] + sorted(outputs);
+#outputsWithSource = ['\t'.join(['id', 'query', 'intent', 'domain', 'QueryXml', 'source'])] + sorted(outputsWithSource);
+
+#MessageText	JudgedDomain	JudgedIntent	JudgedConstraints	ConversationContext	Cat
+outputs = ['\t'.join(['id', 'MessageText', 'JudgedIntent', 'JudgedDomain', 'JudgedConstraints', 'ConversationContext', 'Cat'])] + sorted(outputs);
+outputsWithSource = ['\t'.join(['id', 'MessageText', 'JudgedIntent', 'JudgedDomain', 'JudgedConstraints', 'ConversationContext', 'Cat', 'source'])] + sorted(outputsWithSource);
+
+
+
+with codecs.open(outputFile, 'w', 'utf-8') as fout:
+    for item in outputs:
+        fout.write(item + '\r\n');
+
+
+print("dedup size = ")
+print(len(outputsSet))
+with codecs.open(outputFileUnique, 'w', 'utf-8') as fout:
+    fout.write('\t'.join(['id', 'MessageText', 'JudgedIntent', 'JudgedDomain', 'JudgedConstraints', 'ConversationContext', 'Cat']) + '\r\n');
+    for item in sorted(outputsSet):
+        fout.write(item + '\r\n');
+
+
+print(len(outputsSet))
+with codecs.open(outputFileWithSource, 'w', 'utf-8') as fout:
+    for item in outputsWithSource:
+        fout.write(item + '\r\n');
+
+with codecs.open(outputFileKeyWordAndFileNameLexiconFilfe, 'w', 'utf-8') as fout:
+    # sort it to easy check
+    for item in sorted(fileKeyWordAndFileNameCandidateSet):
+        fout.write(item + '\r\n');
+
+
 
 # for CMF slot evaluation format
-with codecs.open((inputFile.split("."))[0] +'slot_evaluation.tsv', 'w', 'utf-8') as fout:
+#with codecs.open((inputFile.split("."))[0] +'slot_evaluation.tsv', 'w', 'utf-8') as fout:
+#
+#    # if output for traing
+#    fout.write("id\tquery\tintent\tdomain\tQueryXml\tConversationContex\tcat\r\n")
+#    for item in OutputSlotEvaluation:
+#        fout.write(item + '\r\n');
+#
 
-    # if output for traing
-    fout.write("id\tquery\tintent\tdomain\tQueryXml\tConversationContex\tcat\r\n")
-    for item in OutputSlotEvaluation:
-        fout.write(item + '\r\n');
 
 '''
 # for STCA evaluation
