@@ -81,6 +81,14 @@ having dataset
 
 https://dev.azure.com/msasg/Cortana/_git/CoreScienceDataStaging?path=%2Fdatasets%2FDefault%2FTest%2FNonOfficial_Default_Communication_Synthetic_SRNBest_All.tsv
 
+
+negative example (not sure why it does not work)
+review summary vstm      UserFileNames    0       1       review summary  1       -1      1
+
+positve case
+
+Perf OKRs jpeg      UserFileNames    0       1       Perf OKRs  1       -1      1
+
 =================
 measurement set create possible documents
 =================
