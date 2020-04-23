@@ -124,6 +124,8 @@ None of these, None, No
    ? generic selection 可以吃intent 嗎?
    可以的  可以吃select_other 跟select_none
    communication 已經有用  可以問eran
+   
+   這個是generic selection 的code 可以看到有用select_other select_none 的example
    https://dev.azure.com/msasg/Cortana/_git/Core?path=%2Fruntime%2Fservices%2FReactiveHost%2FSelection%2FGenericSelection%2FProcessor%2FPreSelectionProcessor.cs&version=GBmaster&line=106&lineEnd=106&lineStartColumn=27&lineEndColumn=44&lineStyle=plain
    
    
