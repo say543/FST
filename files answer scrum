@@ -73,6 +73,9 @@ https://ml.azure.com/fileexplorerAzNB?wsid=/subscriptions/ddb33dc4-889c-4fa1-90c
     你新建一个compute，然后把code upload上去，直接开terminal跑就行 (smile)
 ​[4/15 4:04 PM] Yue Ma
     
+    
+    
+documents    
 https://docs.microsoft.com/en-us/azure/machine-learning/tutorial-1st-experiment-sdk-setup
 Tutorial: Create your first ML experiment - Azure Machine LearningIn this tutorial, you'll to get started with the Azure Machine Learning Python SDK running in Jupyter notebooks.  In Part 1, you create a workspace in which you'll manage experiments and ML models.docs.microsoft.com
 
