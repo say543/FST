@@ -122,8 +122,21 @@ None of these, None, No
    這個時候可能就需要intent  有提到select_other 這種name
    
    ? generic selection 可以吃intent 嗎?
+   可以的  可以吃select_other 跟select_none
+   communication 已經有用  可以問eran
+   https://dev.azure.com/msasg/Cortana/_git/Core?path=%2Fruntime%2Fservices%2FReactiveHost%2FSelection%2FGenericSelection%2FProcessor%2FPreSelectionProcessor.cs&version=GBmaster&line=106&lineEnd=106&lineStartColumn=27&lineEndColumn=44&lineStyle=plain
    
    
+disambigation不管3.4 
+都需要兩個turn
+trun 1:
+i want a different file / show me more  讓generic selection stop 然後  cortan 再問一句  what you want to open
+trun 2:
+lt revew deck, 這個時候 skill owns 了 才可以繼續
+
+confirmation turn
+不管3,4 都做不到continue task form
+只吃confirm yes, no  必須要end task form 才可以下一個
 
 
 
