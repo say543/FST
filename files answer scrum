@@ -55,6 +55,8 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 ===================
 people name lexicon
 ===================
+
+<email_title>
 People name from https://who/
 有gunjan 的lexicon as well
 
@@ -63,6 +65,55 @@ People name from https://who/
 hard constraint , sof constraint 的  lu constraint 的processing code
 =================
 https://msasg.visualstudio.com/Cortana/_git/cortana-lu-engine?path=%2FLUEngine%2Fslu%2FSimpleFilteringPolicy.cs&version=GBmaster&_a=contents
+
+
+by meeting (自己記憶)
+
+1> show the file i was working  on
+i wants canonical value
+? not sure the purpose but can check
+
+show the file we were wrking on
+? has mentioned we do not support relation name
+
+主要在
+3.allow correcting the file name
+disambiguation - what file do you want
+confirmation turn - do you want to share this?
+
+? generic selection 大概不能work
+
+// slot support 就可以 intent 可能還好  
+i want xxx 
+lt review deck
+i want a different file
+
+? 問一下communication 怎麼support call 的
+
+
+4. show fakkback options to create likeihood of success 
+disambiguation - what file do you want
+confirmation turn - do you want to share this?
+
+None of these, None, No
+   這個時候task form 不會complete
+   
+"show me more" etc. will result in further exhausting of MRU files 
+   ? none 的case 沒有清楚 , none 可能是上一個
+   這個時候可能就需要intent  有提到select_other 這種name
+   
+   ? generic selection 可以吃intent 嗎?
+   
+   
+
+
+
+
+=================
+multi turn scenario 04232020
+=================
+https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FTeamsxCortana431%2F_layouts%2FOneNote.aspx%3Fid%3D%252Fteams%252FTeamsxCortana431%252FShared%2520Documents%252FVoice%2520Skills%252FMicrosoft%2520Assistant%2520in%2520Teams%26wd%3Dtarget%2528Workstream%2520status%2520and%2520details.one%257CD3FCEC4A-92F6-4E42-B6C9-F1B144677CD8%252FFile%2520skill%2520improvements%257CA33A7B74-70AB-408D-B4BB-E256DA6983AB%252F%2529&data=04%7C01%7CChiehChun.Chang%40microsoft.com%7Cc42b300eed794702c6ab08d7e666bd55%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637231201367577121%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C-1&sdata=mQ1wVTu%2FNzBPiKIbZbMh81a%2FujjpRClqAZqHE3AEqwQ%3D&reserved=0
+
 
 
 
