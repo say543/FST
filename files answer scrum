@@ -89,6 +89,15 @@ positve case
 
 Perf OKRs jpeg      UserFileNames    0       1       Perf OKRs  1       -1      1
 
+
+positive case
+// make sure feature names are correct
+// by UserFileNamesKeyPhrases
+review summary vstm      UserFileNames   0       1       Perf OKRs       1       -1      1       UserFileNamesKeyPhrases 0       1       review summary  1       -1      1
+// by UserFileNames
+UserFileNamesKeyPhrases
+review summary vstm      UserFileNames   0       1       review summary  1       -1      1       UserFileNamesKeyPhrases 0       1       Pref OKRS       1       -1      1
+
 =================
 measurement set create possible documents
 =================
