@@ -322,7 +322,7 @@ blackListQuerySet = {
 
 
 
-
+# this can affect mystuff / ondevice, not other domains
 phraseToRemove=set([
     'microsoft doc',
     'microsoft excel',
@@ -390,7 +390,11 @@ phraseToRemove=set([
     # filter all print related queries as possible queries
     'scan',
     # a phrase should be ondevice 
-    'Open word for me'
+    'Open word for me',
+    # zip file all igonre including  'zip file' no verb starts
+    'zip file',
+    # word perfect all ignored including  'zip file' no verb starts
+    'word perfect'
     ])
 #filterDomainDic =set([
 #    "mystuff"
