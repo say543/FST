@@ -148,6 +148,35 @@ confirmation turn
 
 
 
+by eran communication domain
+有select_none 跟select_other
+(command 只有select_none)
+
+//intent pattern for generating select_none, select_other
+luna_communication_enus_mv1.intents.selectNoneSendText.infile
+luna_communication_enus_mv1.intents.selectNoneSendText.bin
+related to conditional file
+
+不確定是哪一個
+可以再問eran
+luna_190226_communication_enus_mv1.intent.pattern.conditions.hotfix
+luna_190226_communication_enus_mv3_4.intent.pattern.conditions.hotfix.txt
+
+
+    
+// provide contact name  pattern
+// using lexicon to match
+luna_communication_enus_mv1.slots.contactNameOrPositionRef.infile
+luna_communication_enus_mv1.slots.contactNameOrPositionRef.fst
+同時可以prompted 的結果
+
+conditional file
+luna_190614_communication_enus_mv1.slot.pattern.conditions.hotfix.txt
+可以再對應看一下怎麼work
+
+
+
+
 
 =================
 multi turn scenario 04232020
