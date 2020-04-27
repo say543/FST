@@ -269,6 +269,9 @@ Fw: New compliance guidance for Substrate Intelligence Platform
 ==============================
 flight new domain model  04032020
 ==============================
+
+正常程序先改flight 再改control tower(needing yubi key)
+
 GriffinProd_Cortana.QAS12HttpQAS.ClientIdConfig.ini
 
 step1:
@@ -302,6 +305,8 @@ deriveFromClient=Microsoft_Teams_enus_Public
 
 override 一個新的files_domain_model 就可以 (參照 [query_domains:Microsoft_UWP_enus_Microsoft] 的config 就行)
 用一個新的version 來做就可以
+
+
 
 
 step3:
