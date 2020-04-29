@@ -180,7 +180,14 @@ https://msasg.visualstudio.com/Cortana/_workitems/edit/2002299
 
 
 
+=================
+timex canonical value analysis
+=================
+//add new feature 
+Oslo workshop on metrics deck in November        ClientContext_ReferenceTime     0       1       2020-04-16T09:30:55     1.0     -1      -1
 
+output 
+Oslo workshop on metrics deck in November       0:Timex:<!-- NOMATCH -->        1:Timex:<!-- NOMATCH -->        2:Timex:<!-- NOMATCH -->        3:Timex:<TIMEX3 tid="0" type="Date" value="XXXX-11">november</TIMEX3>   4:CanonicalEntity:ppt
 
 =================
 multi turn scenario 04232020
