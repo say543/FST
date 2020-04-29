@@ -65,7 +65,12 @@ OutputSTCAIntentEvaluation = [];
 #inputFile = "Validating_Teams_AllDomain_SR_RandomSampling_20191101-20191130_10k.tsv"
 #inputFile = "Validating_Teams_AllDomain_SR_RandomSampling_20191201-20191231_7k.tsv"
 #inputFile = "Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv"
-inputFile = "Validating_Teams_AllDomain_SR_RandomSampling_20200201-20200229_7k.tsv"
+#inputFile = "Validating_Teams_AllDomain_SR_RandomSampling_20200201-20200229_7k.tsv"
+
+
+
+#search dataset
+inputFile = "Validating_SnA_SR_OutlookMobile_FileSearch_20200304-20200331.tsv"
 
 
 #with codecs.open('Teams-golden.tsv', 'r', 'utf-8') as fin:
