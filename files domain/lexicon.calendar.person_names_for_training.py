@@ -34,7 +34,8 @@ wrongcontactname = set([
     'deck',
     'now',
     'sure',
-    'kinder'
+    'kinder',
+    'pamplin',
     ])
 
 
