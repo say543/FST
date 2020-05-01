@@ -10,8 +10,7 @@ from shutil import copyfile
 
 outputFile = 'files_domain_training_answer.tsv'
 # replace directly
-#outputTrainingFolderFile = '..\\files_domain_training_answer.tsv'
-outputTrainingFolderFile = '..\\files_domain_training_answer_temp.tsv'
+outputTrainingFolderFile = '..\\files_domain_training_answer.tsv'
 
 # for STCA test
 outputSTCATrainingFolderFile = '..\\sharemodeltest\\files_domain_training_answer.tsv'
