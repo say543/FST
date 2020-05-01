@@ -8,7 +8,16 @@ from collections import defaultdict;
 synthetic_mode = 1;
 
 # add hyper paramter if unbalanced
-hyper_parameter = 200
+sampling_hyper_paramter_each_slot = 200
+# for intent using to prevent too many
+#numberofQuery_hyper_parameter = 3
+# here needs to generate data so numberofQuery_hyper_parameter == sampling_hyper_paramter_each_slot
+numberofQuery_hyper_parameter = 200
+
+# random seed
+# and inner loop random seed change
+rand_seed_parameter_initialization = 0.1
+rand_seed_offset = 0.01
 
 
 def getListForType(filename):
@@ -24,7 +33,7 @@ def getListForType(filename):
 
 def samleOpenText(holderList, HolderName, slotListDictionary):
     # sample the open text
-    wordList = random.sample(holderList, k=min(hyper_parameter, len(holderList)));
+    wordList = random.sample(holderList, k=min(sampling_hyper_paramter_each_slot, len(holderList)));
     #print(wordList)
     slotListDictionary[HolderName] = wordList;
 
@@ -62,13 +71,17 @@ def parse(slotList):
     for slot, slotHolderName in zip(slotList, HolderName):
         typeList = getListForType("..\\"+slot+".txt")
         samleOpenText(typeList, slot.replace('_', '').upper() + 'HOLDER', slotListDictionary)
+
+    #initial rand seed	
+    rand_seed_parameter = rand_seed_parameter_initialization
     
     outputSet = [];
     outputIntentSet = [];
     for pattern in patternSet:
 
-        # update seed 
-        random.seed(0.1);
+	# update seed fpr each pattern	
+        rand_seed_parameter=rand_seed_parameter+rand_seed_offset;	
+        random.seed(rand_seed_parameter);
 
 
         
@@ -83,7 +96,8 @@ def parse(slotList):
         domain = array[3];
         originalSlotXml = array[4];
 
-        for idx in range(hyper_parameter):
+	# prevent duplication so use low bound of numberofQuery_hyper_parameter / sampling_hyper_paramter_each_slot	
+        for idx in range(min(numberofQuery_hyper_parameter,sampling_hyper_paramter_each_slot)):
             query = originalQuery;
             slotXml = originalSlotXml;
 

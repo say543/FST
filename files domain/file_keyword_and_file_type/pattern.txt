@@ -1,3 +1,68 @@
+
+
+### no enough data so add one pattern for each file_type
+0	FILEKEYWORDHOLDER pptx	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> pptx </file_type>
+0	FILEKEYWORDHOLDER ppts	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> ppts </file_type>
+0	FILEKEYWORDHOLDER ppt	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> ppt </file_type>
+0	FILEKEYWORDHOLDER deck	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> deck </file_type>
+0	FILEKEYWORDHOLDER decks	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> decks </file_type>
+0	FILEKEYWORDHOLDER presentation	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> presentation </file_type>
+0	FILEKEYWORDHOLDER presentations	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> presentations </file_type>
+0	FILEKEYWORDHOLDER powerpoint	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> powerpoint </file_type>
+0	FILEKEYWORDHOLDER powerpoints	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> powerpoints </file_type>
+0	FILEKEYWORDHOLDER power point	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> power point </file_type>
+0	FILEKEYWORDHOLDER slide	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> slide </file_type>
+0	FILEKEYWORDHOLDER slides	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> slides </file_type>
+0	FILEKEYWORDHOLDER doc	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> doc </file_type>
+0	FILEKEYWORDHOLDER docx	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> docx </file_type>
+0	FILEKEYWORDHOLDER docs	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> docs </file_type>
+0	FILEKEYWORDHOLDER spec	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> spec </file_type>
+0	FILEKEYWORDHOLDER excel	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> excel </file_type>
+0	FILEKEYWORDHOLDER excels	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> excels </file_type>
+0	FILEKEYWORDHOLDER xls	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> xls </file_type>
+0	FILEKEYWORDHOLDER xlsx	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> xlsx </file_type>
+0	FILEKEYWORDHOLDER spreadsheet	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> spreadsheet </file_type>
+0	FILEKEYWORDHOLDER spreadsheets	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> spreadsheets </file_type>
+0	FILEKEYWORDHOLDER workbook	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> workbook </file_type>
+0	FILEKEYWORDHOLDER worksheet	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> worksheet </file_type>
+0	FILEKEYWORDHOLDER csv	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> csv </file_type>
+0	FILEKEYWORDHOLDER tsv	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> tsv </file_type>
+0	FILEKEYWORDHOLDER note	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> note </file_type>
+0	FILEKEYWORDHOLDER notes	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> notes </file_type>
+0	FILEKEYWORDHOLDER onenote	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> onenote </file_type>
+0	FILEKEYWORDHOLDER onenotes	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> onenotes </file_type>
+0	FILEKEYWORDHOLDER notebook	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> notebook </file_type>
+0	FILEKEYWORDHOLDER notebooks	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> notebooks </file_type>
+0	FILEKEYWORDHOLDER pdf	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> pdf </file_type>
+0	FILEKEYWORDHOLDER pdfs	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> pdfs </file_type>
+0	FILEKEYWORDHOLDER jpg	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> jpg </file_type>
+0	FILEKEYWORDHOLDER jpeq	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> jpeg </file_type>
+0	FILEKEYWORDHOLDER gif	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> gif </file_type>
+0	FILEKEYWORDHOLDER png	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> png </file_type>
+0	FILEKEYWORDHOLDER image	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> image </file_type>
+0	FILEKEYWORDHOLDER msg	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> msg </file_type>
+0	FILEKEYWORDHOLDER ics	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> ics </file_type>
+0	FILEKEYWORDHOLDER vcs	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> vcs </file_type>
+0	FILEKEYWORDHOLDER vsdx	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> vsdx </file_type>
+0	FILEKEYWORDHOLDER vssx	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> vssx </file_type>
+0	FILEKEYWORDHOLDER vstx	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> vstx </file_type>
+0	FILEKEYWORDHOLDER vsdm	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> vsdm </file_type>
+0	FILEKEYWORDHOLDER vssm	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> vssm </file_type>
+0	FILEKEYWORDHOLDER vstm	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> vstm </file_type>
+0	FILEKEYWORDHOLDER vsd	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> vsd </file_type>
+0	FILEKEYWORDHOLDER vdw	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> vdw </file_type>
+0	FILEKEYWORDHOLDER vss	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> vss </file_type>
+0	FILEKEYWORDHOLDER vst	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> vst </file_type>
+0	FILEKEYWORDHOLDER mpp	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> mpp </file_type>
+0	FILEKEYWORDHOLDER mpt	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> mpt </file_type>
+0	FILEKEYWORDHOLDER word	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> word </file_type>
+0	FILEKEYWORDHOLDER words	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> words </file_type>
+0	FILEKEYWORDHOLDER document	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> document
+0	FILEKEYWORDHOLDER dcouments	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> dcouments
+0	FILEKEYWORDHOLDER file	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> file
+0	FILEKEYWORDHOLDER files	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> files
+
+
 ##0	FILETYPEHOLDER FILEKEYWORDHOLDER	file_search	files	<file_type> FILETYPEHOLDER </file_type> <file_keyword> FILEKEYWORDHOLDER </file_keyword>
 ##0	FILEKEYWORDHOLDER FILETYPEHOLDER	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> FILETYPEHOLDER </file_type> 
 ##0	open FILEKEYWORDHOLDER FILETYPEHOLDER	file_open	files	open <file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> FILETYPEHOLDER </file_type>
