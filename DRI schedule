@@ -152,6 +152,10 @@ https://cortanalogviewer-ppe.azurewebsites.net/query/ad2ec675a5a74684bda68e85e98
 
 //新的可以選cortan trace id
 https://logcollector.asgfalcon.io/searchIssue?cortanaTraceId=ad2ec675a5a74684bda68e85e98aa8a1
+要加group才行
+<email_title>
+RE: Acecss to the Kusto ConversationalPlatform database
+
 
 選runtume -parselog -QASlulog -> log 有timestamp
 
