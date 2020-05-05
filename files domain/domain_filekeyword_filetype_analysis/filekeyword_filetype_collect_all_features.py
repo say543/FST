@@ -78,7 +78,7 @@ rand_seed_parameter = rand_seed_parameter_initialization
 
 for file in files:
 
-    if file == outputFile or file == outputFileWithSource:
+    if file == outputFile or file == outputFileWithSource or file == outputFileUnique:
         continue;
 
     # skip dsat training at first
