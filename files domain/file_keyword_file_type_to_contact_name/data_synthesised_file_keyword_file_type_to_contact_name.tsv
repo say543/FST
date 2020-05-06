@@ -66,7 +66,7 @@
 0	send make cinnamon rolls xlsx to steusing batesole	file_share	files	send <file_keyword> make cinnamon rolls </file_keyword> <file_type> xlsx </file_type> to <to_contact_name> steusing batesole </to_contact_name>
 0	send call federico excel to tagenius bacun	file_share	files	send <file_keyword> call federico </file_keyword> <file_type> excel </file_type> to <to_contact_name> tagenius bacun </to_contact_name>
 0	send call federico docx to balingiyn	file_share	files	send <file_keyword> call federico </file_keyword> <file_type> docx </file_type> to <to_contact_name> balingiyn </to_contact_name>
-0	send michael ' s wedding xls to shirinski	file_share	files	send <file_keyword> michael ' s wedding </file_keyword> <file_type> xls </file_type> to <to_contact_name> shirinski </to_contact_name>
+0	send michael ' s wedding xls to shirinski	file_share	files	send <contact_name> michael </contact_name> ' s <file_keyword> wedding </file_keyword> <file_type> xls </file_type> to <to_contact_name> shirinski </to_contact_name>
 0	send memorial weekend png to kiikkala veresevic	file_share	files	send <file_keyword> memorial weekend </file_keyword> <file_type> png </file_type> to <to_contact_name> kiikkala veresevic </to_contact_name>
 0	send bmw presentation to canapville rogala	file_share	files	send <file_keyword> bmw </file_keyword> <file_type> presentation </file_type> to <to_contact_name> canapville rogala </to_contact_name>
 0	send moms doctor excels to paragioudakis goulinet	file_share	files	send <file_keyword> moms doctor </file_keyword> <file_type> excels </file_type> to <to_contact_name> paragioudakis goulinet </to_contact_name>
@@ -89,7 +89,7 @@
 0	send mummy ' s birthday spreadsheet to fusasato stonum	file_share	files	send <file_keyword> mummy ' s birthday </file_keyword> <file_type> spreadsheet </file_type> to <to_contact_name> fusasato stonum </to_contact_name>
 0	send made phone call to dad vstx to misat motykova	file_share	files	send <file_keyword> made phone call to dad </file_keyword> <file_type> vstx </file_type> to <to_contact_name> misat motykova </to_contact_name>
 0	send bring electronics to dumps vsdm to veresevic hinokarume	file_share	files	send <file_keyword> bring electronics to dumps </file_keyword> <file_type> vsdm </file_type> to <to_contact_name> veresevic hinokarume </to_contact_name>
-0	send michael ' s wedding presentations to bizamcer lenkeith	file_share	files	send <file_keyword> michael ' s wedding </file_keyword> <file_type> presentations </file_type> to <to_contact_name> bizamcer lenkeith </to_contact_name>
+0	send michael ' s wedding presentations to bizamcer lenkeith	file_share	files	send <contact_name> michael </contact_name> ' s <file_keyword> wedding </file_keyword> <file_type> presentations </file_type> to <to_contact_name> bizamcer lenkeith </to_contact_name>
 0	send m a super cross csv to veresevic tachner	file_share	files	send <file_keyword> m a super cross </file_keyword> <file_type> csv </file_type> to <to_contact_name> veresevic tachner </to_contact_name>
 0	send talon morris' birthday ppts to tiezheng	file_share	files	send <file_keyword> talon morris' birthday </file_keyword> <file_type> ppts </file_type> to <to_contact_name> tiezheng </to_contact_name>
 0	send cheerleading schedule excel to boenickhausen-eiffel	file_share	files	send <file_keyword> cheerleading schedule </file_keyword> <file_type> excel </file_type> to <to_contact_name> boenickhausen-eiffel </to_contact_name>
