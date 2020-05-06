@@ -38,7 +38,16 @@ wrongcontactname = set([
     'pamplin',
     'greenland',
     'skills',
-    'spring'
+    # single word not contact name but combined with others YES
+    # but spring cao is a valid name for chinese people
+    'spring',
+    'can',
+    'you',
+    'said',
+    'si',
+    'such',
+    'turn',
+    'ok'
     ])
 
 
@@ -47,6 +56,8 @@ wrongcontactname = set([
 ###########
 peopleOriginalSet = set([]);
 peopleOutputsSetAfterPreprocessing = set([]);
+peopleOriginalSetWithSource = set([]);
+peopleOutputsSetAfterPreprocessingWithSource = set([]);
 peopleLexiconFile = 'people_NameListMSFT.txt'
 with codecs.open('people_NameListMSFT.txt', 'r', 'utf-8') as fin:
 
@@ -60,10 +71,13 @@ with codecs.open('people_NameListMSFT.txt', 'r', 'utf-8') as fin:
             continue;
 
         peopleOriginalSet.add(line.lower())
+        peopleOriginalSetWithSource.add(line.lower()+'\t'+peopleLexiconFile)
+        
 
         array = line.split(' ');
         for i in range(len(array)):
             peopleOutputsSetAfterPreprocessing.add(array[i].lower())
+            peopleOutputsSetAfterPreprocessingWithSource.add(array[i].lower()+'\t'+peopleLexiconFile)
 
 
 ### if want to output peopleOutputsSetAfterPreprocessing
@@ -74,8 +88,10 @@ with codecs.open('people_NameListMSFT.txt', 'r', 'utf-8') as fin:
 #        fout.write(item + '\r\n');
 
 
+
             
 trainingAndPatternCombineSet= set([]);
+trainingAndPatternCombineSetWithSource = set([]);
 
 
 trainingLexiconFile = 'lexicon.calendar.person_names_for_training.txt'
@@ -95,6 +111,7 @@ with codecs.open(trainingLexiconFile, 'r', 'utf-8') as fin:
             print(lineNumber)
         else:
             trainingAndPatternCombineSet.add(line.lower())
+            trainingAndPatternCombineSetWithSource.add(array[i].lower()+'\t'+trainingLexiconFile)
 
         lineNumber+=1
 
@@ -123,6 +140,7 @@ with codecs.open(patternLexiconFile, 'r', 'utf-8',errors='ignore') as fin:
             print(lineNumber)
         else:
             trainingAndPatternCombineSet.add(line.lower())
+            trainingAndPatternCombineSetWithSource.add(array[i].lower()+'\t'+patternLexiconFile)
 
         lineNumber+=1
 
@@ -140,18 +158,53 @@ trainingAndPatternCombineSetAfterFilter= set([]);
 trainingAndPatternCombineSetBeingFilter = set([]);
 
 
+trainingAndPatternCombineSetAfterFilterWithSource= set([]);
+trainingAndPatternCombineSetBeingFilterWithSource = set([]);
+
+
 for lexicon in trainingAndPatternCombineSet:
     if lexicon in peopleOriginalSet or lexicon in peopleOutputsSetAfterPreprocessing:
         trainingAndPatternCombineSetAfterFilter.add(lexicon)
+        trainingAndPatternCombineSetAfterFilterWithSource.add(lexicon+'\t'+peopleLexiconFile+'#'+trainingLexiconFile+'#'+patternLexiconFile)
     else:
         trainingAndPatternCombineSetBeingFilter.add(lexicon)
+        trainingAndPatternCombineSetBeingFilterWithSource.add(lexicon+'\t'+trainingLexiconFile+'#'+patternLexiconFile)
 
 #step2
-#augmentation based on single word
+#augmentation based on double word only
+# single word leaf to check in the futrue
 #peopleOutputsSetAfterPreprocessing = set([]);
-for lexicon in peopleOriginalSet:
+#for lexicon in peopleOutputsSetAfterPreprocessing:
+for lexicon in peopleOriginalSet:   
     trainingAndPatternCombineSetAfterFilter.add(lexicon)
+    trainingAndPatternCombineSetAfterFilterWithSource.add(lexicon+'\t'+peopleLexiconFile)
 
+
+#step3
+# add dsat lexicon
+dsatLexiconFile = 'dsat_lexicon.txt'
+with codecs.open(dsatLexiconFile, 'r', 'utf-8',errors='ignore') as fin:
+
+    print('####start####')
+    print(fin.name)
+    print('####start####')
+    for line in fin:
+        line = line.strip();
+        if not line:
+            continue;
+
+        #for debug
+        #print(line)
+
+        if line.lower() in wrongcontactname:
+            print(line)
+            print(lineNumber)
+        else:
+            print("add")
+            trainingAndPatternCombineSetAfterFilter.add(line)
+            trainingAndPatternCombineSetAfterFilterWithSource.add(line+'\t'+dsatLexiconFile)
+
+        lineNumber+=1
 
 
 trainingAndPatternCombineSetAfterFilterAndAugmentFile = 'combine_lexicon.txt'
@@ -166,6 +219,19 @@ with codecs.open(trainingAndPatternCombineSetAfterFilterAndAugmentFile, 'w', 'ut
         fout.write(item + '\r\n');
 
 
+trainingAndPatternCombineSetAfterFilterAndAugmentFileWithSource = 'combine_lexicon_with_source.txt'
+
+with codecs.open(trainingAndPatternCombineSetAfterFilterAndAugmentFileWithSource, 'w', 'utf-8') as fout:
+
+    print('####start####')
+    print(trainingAndPatternCombineSetAfterFilterAndAugmentFileWithSource)
+    print(len(trainingAndPatternCombineSetAfterFilterWithSource))
+    print('####start####')
+    for item in sorted(trainingAndPatternCombineSetAfterFilterWithSource):
+        fout.write(item + '\r\n');
+
+
+
 # for debug
 with codecs.open((trainingAndPatternCombineSetAfterFilterAndAugmentFile.split("."))[0] +'_deprecated.tsv', 'w', 'utf-8') as fout:
 
@@ -175,6 +241,17 @@ with codecs.open((trainingAndPatternCombineSetAfterFilterAndAugmentFile.split(".
     print('####start####')
     
     for item in sorted(trainingAndPatternCombineSetBeingFilter):
+        fout.write(item + '\r\n');
+
+
+with codecs.open((trainingAndPatternCombineSetAfterFilterAndAugmentFileWithSource.split("."))[0] +'_deprecated.tsv', 'w', 'utf-8') as fout:
+
+    print('####start####')
+    print((trainingAndPatternCombineSetAfterFilterAndAugmentFileWithSource.split("."))[0] +'_deprecated.tsv')
+    print(len(trainingAndPatternCombineSetBeingFilterWithSource))
+    print('####start####')
+    
+    for item in sorted(trainingAndPatternCombineSetBeingFilterWithSource):
         fout.write(item + '\r\n');
 
 
