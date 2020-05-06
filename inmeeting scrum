@@ -148,7 +148,8 @@ Files LU slots issue with "dot" in the query
 ./files_enus_mv1.slots.pattern.pipeline.txt:7:NLPConditionalFSTApplier --in=singletoken_query,ExternalInput2 --out=SlotMatchedName,SlotMatchedType,SlotMatchedStartChar,SlotMatchedLength --mode=matcher --config=files_enus_mv1.slots.pattern.conditions.txt
 
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1399243?_a=files
-
+05062020
+remove from file_enus_mv1 and file_enus_mv3 to resolve bugs
 
 
 
