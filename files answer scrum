@@ -326,6 +326,15 @@ dev 50% 依次submit change ,  100% 依次submit change (50%  可以configure �
 microsoft 50% 依次submit change ,  100% 依次submit change (50%  可以configure 但是一班就走50)
 preview / public 一班都部submit 
 
+
+p.s 一班developer 100% 就把 把main qpc改过来，deploy之后stage那里就可以停了
+    
+bootcamp 說stop 會有問題是lutest那个flight，stop其实也没问题(因為會divert 到microsoft 的traffic as yue said)
+
+但是這邊我測的是feature flight (優先及大於lutest)
+
+
+
 一旦dev microsoft ready
 就可以停掉flight then
 either
