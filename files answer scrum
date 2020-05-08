@@ -286,6 +286,11 @@ Fw: New compliance guidance for Substrate Intelligence Platform
 flight new domain model  04032020
 ==============================
 
+flight 的link
+https://exp.microsoft.com/a/feature/d672a5df-4708-4f77-94a8-893c29e3e153
+
+
+
 正常程序先改flight 再改control tower(needing yubi key)
 
 GriffinProd_Cortana.QAS12HttpQAS.ClientIdConfig.ini
