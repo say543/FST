@@ -92,6 +92,10 @@ defaultFileTypeifMissed =[
 ]
 
 
+# for o(1) loook up
+defaultFileTypeifMissedSet = set(defaultFileType.lower() for defaultFileType in defaultFileTypeifMissed)
+
+
 outputs = [];
 outputsSet = set([]);
 
@@ -140,6 +144,10 @@ inputFile = "files_file_keyword_positive.tsv"
 
 #initial rand seed
 rand_seed_parameter = rand_seed_parameter_initialization
+
+
+ConversationIdPrefix = 'contexual_filekeyword_fileType'
+ConversationId = 0;
 
 
 #with codecs.open('Teams-golden.tsv', 'r', 'utf-8') as fin:
@@ -218,6 +226,16 @@ with codecs.open(inputFile, 'r', 'utf-8') as fin:
                 else:
                     fileTypeXml =  "<file_type>" +  defaultFileTypeifMissed[indexInRange] + "</file_type>"
                 fileType = defaultFileTypeifMissed[indexInRange]
+            else:
+                # if invalid file, modified
+                if fileType not in defaultFileTypeifMissedSet:
+                    indexInRange = random.randint(0, len(defaultFileTypeifMissed)-1)
+
+                    if indexInRange >=0 and indexInRange <=3:
+                        fileTypeXml =  defaultFileTypeifMissed[indexInRange]
+                    else:
+                        fileTypeXml =  "<file_type>" +  defaultFileTypeifMissed[indexInRange] + "</file_type>"
+                    fileType = defaultFileTypeifMissed[indexInRange]                    
                 
                 
         # for dsatTraining
@@ -230,15 +248,41 @@ with codecs.open(inputFile, 'r', 'utf-8') as fin:
         else:
 
             if fileKeyWordAndFileNameXml is not None and fileTypeXml is not None:
-                #'id', 'MessageText', 'JudgedIntent', 'JudgedDomain', 'JudgedConstraints', 'ConversationContext', 'Cat'
+
+
+                '''
+                #ConversationId,	MessageId, 'MessageText', 'JudgedIntent', 'JudgedDomain', 'JudgedConstraints', 'ConversationContext', 'Cat'
                 
-                outputs.append("0"+'\t'+ fileKeyWordAndFileName + " " + fileType +'\t' + "file_search" + '\t' + array[1] + '\t' + fileKeyWordAndFileNameXml + " " + fileTypeXml+ '\t'+array[4]+'\t'+array[5]);
+                #outputs.append("0"+'\t'+ fileKeyWordAndFileName + " " + fileType +'\t' + "file_search" + '\t' + array[1] + '\t' + fileKeyWordAndFileNameXml + " " + fileTypeXml+ '\t'+array[4]+'\t'+array[5]);
+                outputs.append(ConversationIdPrefix +"_"+str(ConversationId)+'\t' +"0"+'\t'+ fileKeyWordAndFileName + " " + fileType +'\t' + "file_search" + '\t' + array[1] + '\t' + fileKeyWordAndFileNameXml + " " + fileTypeXml+ '\t'+array[4]+'\t'+array[5]);
 
                 #unique for dedup
-                outputsSet.add("0"+'\t'+ fileKeyWordAndFileName + " " + fileType +'\t' + "file_search" + '\t' + array[1] + '\t' + fileKeyWordAndFileNameXml + " " + fileTypeXml+ '\t'+array[4]+'\t'+array[5]);
+                #outputsSet.add("0"+'\t'+ fileKeyWordAndFileName + " " + fileType +'\t' + "file_search" + '\t' + array[1] + '\t' + fileKeyWordAndFileNameXml + " " + fileTypeXml+ '\t'+array[4]+'\t'+array[5]);
+                outputsSet.add(ConversationIdPrefix +"_"+str(ConversationId)+'\t' +"0"+'\t'+ fileKeyWordAndFileName + " " + fileType +'\t' + "file_search" + '\t' + array[1] + '\t' + fileKeyWordAndFileNameXml + " " + fileTypeXml+ '\t'+array[4]+'\t'+array[5]);
                     
                 #'id', 'query', 'intent', 'domain', 'QueryXml','source'
-                outputsWithSource.append("0"+'\t'+ fileKeyWordAndFileName + " " + fileType +'\t' + "file_search" + '\t' + array[1] + '\t' + fileKeyWordAndFileNameXml + " " + fileTypeXml+ '\t'+array[4]+'\t'+array[5]+'\t'+inputFile);
+                #outputsWithSource.append("0"+'\t'+ fileKeyWordAndFileName + " " + fileType +'\t' + "file_search" + '\t' + array[1] + '\t' + fileKeyWordAndFileNameXml + " " + fileTypeXml+ '\t'+array[4]+'\t'+array[5]+'\t'+inputFile);
+                outputsWithSource.append(ConversationIdPrefix +"_"+str(ConversationId)+'\t' +"0"+'\t'+ fileKeyWordAndFileName + " " + fileType +'\t' + "file_search" + '\t' + array[1] + '\t' + fileKeyWordAndFileNameXml + " " + fileTypeXml+ '\t'+array[4]+'\t'+array[5]+'\t'+inputFile);
+                '''
+
+                #ConversationId,	MessageId, MessageTimestamp, MessageFrom, 'MessageText', 'JudgedIntent', 'JudgedDomain', 'JudgedConstraints', 'ConversationContext', 'MetaData', 'Frequency'  'Cat'
+                
+                #outputs.append("0"+'\t'+ fileKeyWordAndFileName + " " + fileType +'\t' + "file_search" + '\t' + array[1] + '\t' + fileKeyWordAndFileNameXml + " " + fileTypeXml+ '\t'+array[4]+'\t'+array[5]);
+                outputs.append(ConversationIdPrefix +"_"+str(ConversationId)+'\t' +"0"+'\t'+'\t'+'user'+'\t'+ fileKeyWordAndFileName + " " + fileType +'\t' + "file_search" + '\t' + array[1] + '\t' + fileKeyWordAndFileNameXml + " " + fileTypeXml+ '\t'+array[4]+'\t'+'[]'+'\t'+'1'+'\t'+array[5]);
+
+                #unique for dedup
+                #outputsSet.add("0"+'\t'+ fileKeyWordAndFileName + " " + fileType +'\t' + "file_search" + '\t' + array[1] + '\t' + fileKeyWordAndFileNameXml + " " + fileTypeXml+ '\t'+array[4]+'\t'+array[5]);
+                outputsSet.add(ConversationIdPrefix +"_"+str(ConversationId)+'\t' +"0"+'\t'+'\t'+'user'+'\t'+ fileKeyWordAndFileName + " " + fileType +'\t' + "file_search" + '\t' + array[1] + '\t' + fileKeyWordAndFileNameXml + " " + fileTypeXml+ '\t'+array[4]+'\t'+'[]'+'\t'+'1'+'\t'+array[5]);
+                    
+                #'id', 'query', 'intent', 'domain', 'QueryXml','source'
+                #outputsWithSource.append("0"+'\t'+ fileKeyWordAndFileName + " " + fileType +'\t' + "file_search" + '\t' + array[1] + '\t' + fileKeyWordAndFileNameXml + " " + fileTypeXml+ '\t'+array[4]+'\t'+array[5]+'\t'+inputFile);
+                outputsWithSource.append(ConversationIdPrefix +"_"+str(ConversationId)+'\t' +"0"+'\t'+'\t'+'user'+'\t'+ fileKeyWordAndFileName + " " + fileType +'\t' + "file_search" + '\t' + array[1] + '\t' + fileKeyWordAndFileNameXml + " " + fileTypeXml+ '\t'+array[4]+'\t'+'[]'+'\t'+'1'+'\t'+array[5]+'\t'+inputFile);
+
+
+
+
+
+                ConversationId= ConversationId+1;
                 
             #outputs.append(line);
             #outputsWithSource.append(line+'\t'+ file);
@@ -274,8 +318,8 @@ with codecs.open(inputFile, 'r', 'utf-8') as fin:
 #outputsWithSource = ['\t'.join(['id', 'query', 'intent', 'domain', 'QueryXml', 'source'])] + sorted(outputsWithSource);
 
 #MessageText	JudgedDomain	JudgedIntent	JudgedConstraints	ConversationContext	Cat
-outputs = ['\t'.join(['id', 'MessageText', 'JudgedIntent', 'JudgedDomain', 'JudgedConstraints', 'ConversationContext', 'Cat'])] + sorted(outputs);
-outputsWithSource = ['\t'.join(['id', 'MessageText', 'JudgedIntent', 'JudgedDomain', 'JudgedConstraints', 'ConversationContext', 'Cat', 'source'])] + sorted(outputsWithSource);
+outputs = ['\t'.join(['ConversationId','MessageId','MessageTimestamp', 'MessageFrom', 'MessageText', 'JudgedIntent', 'JudgedDomain', 'JudgedConstraints', 'ConversationContext', 'MetaData','Frequency','Cat'])] + sorted(outputs);
+outputsWithSource = ['\t'.join(['ConversationId', 'MessageId','MessageTimestamp', 'MessageFrom', 'MessageText','JudgedIntent', 'JudgedDomain', 'JudgedConstraints', 'ConversationContext', 'MetaData', 'Frequency','Cat','source'])] + sorted(outputsWithSource);
 
 
 
@@ -287,7 +331,7 @@ with codecs.open(outputFile, 'w', 'utf-8') as fout:
 print("dedup size = ")
 print(len(outputsSet))
 with codecs.open(outputFileUnique, 'w', 'utf-8') as fout:
-    fout.write('\t'.join(['id', 'MessageText', 'JudgedIntent', 'JudgedDomain', 'JudgedConstraints', 'ConversationContext', 'Cat']) + '\r\n');
+    fout.write('\t'.join(['ConversationId','MessageId','MessageTimestamp','MessageFrom', 'MessageText', 'JudgedIntent', 'JudgedDomain', 'JudgedConstraints', 'ConversationContext', 'MetaData','Frequency','Cat']) + '\r\n');
     for item in sorted(outputsSet):
         fout.write(item + '\r\n');
 
