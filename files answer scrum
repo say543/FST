@@ -465,6 +465,26 @@ teams message form
 https://microsoft.sharepoint.com/teams/CortanaCore/_layouts/15/Doc.aspx?sourcedoc={6d6ae133-c9c8-400d-bfd8-ae8feec6ff9f}&action=edit&wd=target%28Microsoft%20Search%2FTeams%20Search%2FDRI%20Handbook.one%7Ce06520b7-920d-4fce-88c4-7e1022ec03eb%2FDebugging%20NL%20Search%20on%20V2%7C9e28dc0e-3ac9-4b2c-ba73-1fbeaea79c45%2F%29
 Going  forward  to any issues, we can discuss what extra information can be logged through  https://asdebug snice XAP log is the only way we can monitor  issues
 
+rankder 
+
+WPR: whole page rank
+L1/L2 : entity specific ranking ? 但是我猜這個不是domain only 因該要全部一起ranker 才行  我猜
+vijay 沒有doucment
+
+
+[11:43 AM] Vijay Rajagopal
+
+
+    teams message will also go through WPR.. WPR is more about how to rank among multiple entity type results.. files, messages, people relevantly to the user
+​[11:44 AM] Vijay Rajagopal
+    while L1\l2 will focus on entity specific ranking..within file domain; how to rank relevant results (time ordered or relevance ordered)
+
+
+
+
+
+
+
 
 
 ==============================
