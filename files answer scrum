@@ -84,6 +84,32 @@ People name from https://who/
 
 
 
+===================
+outlook mobile search - email  related task form
+===================
+
+//discuss with Eric
+有一個叫做 task form chaining 
+可以從email task from 裡面 call 到另外一個 skill 像stack 的方式  做完在跳回來
+task form 就可以不會cancel 就會continue
+concrete examples 就是 email task from 裡面call note 做add_note
+
+
+
+// potential issue
+另外cortana session 裡面的 time 以前是 15minutes 現在好像是40 minutess
+也就是說taskfrom state = compelte 不一定代表一個session 已經finished
+有可能之前的 previous turn/ previous intent 會繼續向後傳
+這也解釋我在COW 上面看到 有些query 有之前的previous domain/ previous intent 即使task form 面已經complete
+但是這個目前沒有解
+
+
+
+
+
+
+
+
 =================
 voice skill analyzing report
 =================
