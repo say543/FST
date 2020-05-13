@@ -136,6 +136,8 @@ Tutorial: Create your first ML experiment - Azure Machine LearningIn this tutori
 
 =================
 hard constraint , sof constraint 的  lu constraint 的processing code
+
+files lu 的case 的meeting discusion  04232020
 =================
 https://msasg.visualstudio.com/Cortana/_git/cortana-lu-engine?path=%2FLUEngine%2Fslu%2FSimpleFilteringPolicy.cs&version=GBmaster&_a=contents
 
@@ -148,6 +150,7 @@ i wants canonical value
 
 show the file we were wrking on
 ? has mentioned we do not support relation name
+? need to discuss wtih Tao
 
 主要在
 3.allow correcting the file name
@@ -159,6 +162,7 @@ confirmation turn - do you want to share this?
 // slot support 就可以 intent 可能還好  
 i want xxx 
 lt review deck
+// ?但是這個可能要 intent
 i want a different file
 
 ? 問一下communication 怎麼support call 的
@@ -194,6 +198,48 @@ confirmation turn
 不管3,4 都做不到continue task form
 只吃confirm yes, no  必須要end task form 才可以下一個
 
+05132020
+update detailed dialog examples
+https://microsoft-my.sharepoint.com/:w:/r/personal/akshbhat_ntdev_microsoft_com/_layouts/15/guestaccess.aspx?e=HQcfm7&share=EQYD2Uc4z7BEsEG53oF9y5cBWTHLLl_dyCS3drbiJHJULg
+
+
+3. User rejects the matches presented 
+only intent i guess
+None of these,  
+None,  
+No  ? 覺得有點問題 那以後怎麼reject form
+None of these, show me more  
+No, show me more 
+
+4. User explicitly asks for more results 
+only intent i guess
+Show me more 
+Get more results 
+Show more files 
+
+5. User wants to change the file name queried, but doesn’t specify which one in the same turn 
+only intent i guess
+I want a different file 
+I want a different power point 
+I want a different one  
+None of these, I want a different file 
+No, I want a different file 
+
+
+6. User wants to change the file name queried and specifies it in the same turn 
+not sure intent, i think file_name 
+no need promoted and it is supported now
+? not sure how it works  might be just slot is enough
+Marketing review deck; 
+I want marketing review deck 
+None of these, I want marketing review deck 
+
+
+8. User wants to share the file with a person 
+
+? this is already support
+
+
 
 
 by eran communication domain
@@ -227,6 +273,9 @@ originla communicagtion ticket
 https://msasg.visualstudio.com/Cortana/_workitems/edit/2002299
 
 
+
+<email_title>
+LU/Cortex support for Teams file skill improvements
 
 =================
 timex canonical value analysis
