@@ -104,6 +104,15 @@ Discuss and nail down design for selection model - meeting note (7/25)
 
 有一相關的slide for selection model
 
+
+design_doc directory
+TCPBrownBag.ppt
+p9-p11
+parameters 有講到 parameters 很多states 包含 prompted.value
+
+
+
+
 =================
 ranker rule
 
