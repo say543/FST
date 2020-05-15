@@ -71,6 +71,9 @@ https://microsoft.sharepoint.com/teams/LUKnowledgeandSearchRelevanceLUKAS/_layou
 這邊需要人的來donate 然後請他們用tool 打cortana 然後輸出trace
 撈trace 出來分析cl
 
+要有positive example
+negative example
+
 benefit:
 
 1> run e2e
@@ -78,10 +81,14 @@ benefit:
     抓trace 出來分析
    麻煩是每個人都要用tool 打query 但是一次可以打多個
    也可以看看recall 有沒有明顯的上升
+   skill 可能要思考怎麼log 把information show 出來  因為production
+   redempted 什麼都看不到
+   
+   
 2> 這個set 也可以向zhiguo 的contexual lu set 一樣  單獨跑QAS (不過這個case 跟zhiguo 的solution 功能就重疊了) 
 
    
-   
+zhiguo 有說這樣要避免biase   
      
 
 
