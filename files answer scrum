@@ -560,9 +560,11 @@ MDP data will not be available, needing to replying on synthetic sets
 
 query alteration
     query suggestion with high confidence
+    cost less latency
 query suggestion
     query suggestion with low confidence
     will pop up sueggestion to select
+    cost more latency
 
 NL alteration
      messages from Shuyin => from Shuyin
@@ -601,8 +603,67 @@ vijay 沒有doucment
 
 
 
+connect component
+    other shard for indexing  files for other system
+    but users can also accees its own files
+    
+    
+turing result
+    deep learning  running in parallel , (it should be BERT)
+    late binding 
+    
 
+altered query
+    qeury lateration
+    not every endpoint default takes it
+    
+Xrank operator
+   boost score?
+   
+   
+LSSservice
+  group shard
 
+portable rankder
+   L1 L2
+   care about this
+   we might be able to convince rankder teams to retrain based on QAS output
+   
+   
+Fusion Ranker (L3 L4)
+    whole page ranking
+    
+    
+    
+
+xrank  metaword:
+   key column
+   
+   
+big funnel
+ ?    
+
+ECS
+  purely controled by client team, another flight
+  client  control
+  
+  
+  
+server side 
+   we still reply on control tower
+  
+  
+  
+  
+
+R0, R1, R2 , R3 ,R4
+
+SDF MSIT 
+
+recourse link
+  有個link 讓user link
+  
+  
 
 
 
