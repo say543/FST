@@ -72,6 +72,14 @@ Tutorial: Create your first ML experiment - Azure Machine LearningIn this tutori
     这个script可以submit到azure，不过直接在上面跑比较容易
 Edited[azure_ml.py] (https://microsoft-my.sharepoint-df.com/personal/yum_microsoft_com/Documents/Microsoft Teams Chat Files/azure_ml.py)
 
+[10/8/19 12:52 PM] Haoda Chu
+    load weight是dnnprocessor支持的
+​[10/8/19 12:53 PM] Haoda Chu
+    但是bert需要input那边也变
+​[10/8/19 12:53 PM] Haoda Chu
+    所以要一个新的tokenizer 和新的postprocessing
+
+
 
 ===================
 people name lexicon
