@@ -51,6 +51,43 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 
 
 
+==============================
+personal grammar files e2e evaluation meassurement set
+==============================
+
+yong 哥覺得我們要這樣build
+
+https://asdebug/InternalData
+Personalized Grammars
+裡面的file entity, file key phrase
+(這邊是cortana log 前的原始data)
+只要user 選擇這邊login 就可以download
+
+E2E evaluation meeting notes  (Web view)
+https://microsoft.sharepoint.com/teams/LUKnowledgeandSearchRelevanceLUKAS/_layouts/OneNote.aspx?id=%2Fteams%2FLUKnowledgeandSearchRelevanceLUKAS%2FSiteAssets%2FLU%2C%20Knowledge%20and%20Search%20Relevance%20%28LUKAS%29%20Notebook&wd=target%28N-Best%20Name.one%7C56C366DE-E79B-403D-AF6E-BDC7D7150701%2FE2E%20evaluation%20meeting%20notes%7CC0D73E7F-89E6-4C63-8F4B-65BC8278F1CD%2F%29
+
+SR n-best step3
+https://microsoft.sharepoint.com/teams/LUKnowledgeandSearchRelevanceLUKAS/_layouts/OneNote.aspx?id=%2Fteams%2FLUKnowledgeandSearchRelevanceLUKAS%2FSiteAssets%2FLU%2C%20Knowledge%20and%20Search%20Relevance%20%28LUKAS%29%20Notebook&wd=target%28N-Best%20Name.one%7C56C366DE-E79B-403D-AF6E-BDC7D7150701%2FSR%20N-best%20evaluation%20data%7C2663D2F7-D3BB-4772-BB5E-C31271B7E73E%2F%29
+這邊需要人的來donate 然後請他們用tool 打cortana 然後輸出trace
+撈trace 出來分析cl
+
+benefit:
+
+1> run e2e
+   每個人有自己的synthetic data set, 可以跑e2e
+    抓trace 出來分析
+   麻煩是每個人都要用tool 打query 但是一次可以打多個
+   也可以看看recall 有沒有明顯的上升
+2> 這個set 也可以向zhiguo 的contexual lu set 一樣  單獨跑QAS (不過這個case 跟zhiguo 的solution 功能就重疊了) 
+
+   
+   
+     
+
+
+
+
+
 ===================
 AML
 ===================
@@ -655,15 +692,35 @@ server side
   
   
   
-
+client
 R0, R1, R2 , R3 ,R4
 
-SDF MSIT 
+server
+SDF MSIT ww external 
+search server  side 也可以flight 了
+
+client 的ring 可以做configuration 道不同的server
+但是沒辦法做50% 50% 的ab test
+必須依靠server side
+但是server side 的目前只有engineer 的flight, 沒有lu 的flight
+
+
 
 recourse link
   有個link 讓user link
   
   
+<email_content>
+Would like to discuss below topics in today’s meeting. Vijay is required and other folks are optional.
+    Summary of take away from meeting with WPR team
+        Followup on modifying alternative queries for sharepoint
+        Followup on connector content
+        Followup on Turing release plan and how to disable Turining workflow for NL query
+        How to best figure out how to use xrank metawords?
+    Discuss Vijay’s design doc below.
+    ​docx icon NL Alteration client contract.docx
+Thanks,
+Ling
 
 
 
