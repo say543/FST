@@ -663,6 +663,8 @@ altered query
     
 Xrank operator
    boost score?
+   <email_title>
+   XRANK operator
    
    
 LSSservice
