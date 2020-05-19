@@ -802,12 +802,22 @@ file_other exception ignore
 配合domain pattern , intent pattern, 之後可以再check 要不要移除這個
 
 
+================================
+migration document for tracking which are key scenarios
+
+================================
+https://microsoft-my.sharepoint.com/personal/annamdev_microsoft_com/_layouts/15/Doc.aspx?sourcedoc={b0f49c6f-dd5c-4524-838d-7b6487bafafc}&action=edit&wd=target%28File%20Skills.one%7C3a0cc9e2-46ee-42f8-af40-fded59ac95ff%2FNavigation%7Ce42cbb87-3589-4bd5-8e3d-1955b2047cb4%2F%29
+
+
 ==============================
 files domain task form  repository
 ==============================
 https://msasg.visualstudio.com/Cortana/_git/teams-skills?path=%2Fprivate%2FTeamsSkills%2FTeams%2Fsrc%2FTaskForms%2FTeamsOpenFile.json&version=GBmaster&_a=contents
 
 https://msasg.visualstudio.com/Cortana/_git/teams-skills?path=%2Fprivate%2FTeamsSkills%2FTeams%2Fsrc%2FTaskForms%2FTeamsOpenFileV2.json&version=GBmaster&line=189&lineEnd=207&lineStartColumn=5&lineEndColumn=6&lineStyle=plain
+
+https://msasg.visualstudio.com/Cortana/_git/teams-skills/commit/9f58032c0188ce038239d7066da499e8051b2188?refName=refs%2Fheads%2Fmaster&path=%2Fprivate%2FTeamsSkills%2FCommon%2FBase%2Fsrc%2FUtils&_a=compare
+
 
 
 <email_title> RE: Correct slots not getting produced
