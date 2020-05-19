@@ -161,7 +161,7 @@ with codecs.open(inputFile, 'r', 'utf-8') as fin:
                 break
 
         if hasFileType:
-            OutputDomainEvaluation.append("0"+"\t\t"+linestrs[0]+"\t"+"files"+"\t\t\t\t\t\t"+inputFile);
+            OutputDomainEvaluation.append("0"+"\t\t"+linestrs[0]+"\t"+"files"+"\t\t\t\t\t\t\t"+inputFile);
 
 
             
