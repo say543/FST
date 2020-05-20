@@ -111,6 +111,7 @@ OutputSpellWrongFilterEvaluation = [];
 
 
 OutputDomainEvaluation = [];
+OutputDomainFilter = [];
 
 
 lexiconSet = set()
@@ -118,6 +119,29 @@ with codecs.open('..\\LexiconFiles\\lexicon.calendar.person_names_for_training.t
     for line in fin:
         line = line.strip()
         lexiconSet.add(line)
+
+
+
+
+
+# difference
+# extra in normal boost
+# spec will be removed right know leave it becasue we want to enhance possible file type in the future
+#spec
+
+# four kinds using pattern to cover, not trainnig  since conflicting with ondevice more
+#note	
+#notes
+#notebook	
+#notebooks
+
+# eventually  all clients will not support those
+#jpg	
+#jpeg	
+#gif
+#image
+
+# so using uwp one
 
 filetypeSet = set()
 with codecs.open('..\\lexicons\\file_type_domain_boost_UWP.txt', 'r', 'utf-8') as fin:
@@ -160,8 +184,13 @@ with codecs.open(inputFile, 'r', 'utf-8') as fin:
                 hasFileType = True
                 break
 
+    
+
+
         if hasFileType:
             OutputDomainEvaluation.append("0"+"\t\t"+linestrs[0]+"\t"+"files"+"\t\t\t\t\t\t\t"+inputFile);
+        else:
+            OutputDomainFilter.append(line)
 
 
             
@@ -179,10 +208,95 @@ with codecs.open(inputFile, 'r', 'utf-8') as fin:
 #        fout.write(item + '\r\n');
 
 # for CMF slot evaluation format
+
+
+
+downloadCnt = 0
+openCnt = 0
+sendCnt = 0
+shareCnt = 0
+showCnt = 0
+
+
+downloadSet =set([])
+downloadsSet =set([])
+openSet =set([])
+sendSet =set([])
+shareSet =set([])
+showSet =set([])
+    
+
+for item in OutputDomainEvaluation:
+
+    linestrs = item.split("\t");
+
+    # for debug
+    #print (linestrs[2])
+
+    # extra space to male sure ending
+    # order does matter
+    
+    if (linestrs[2].lower().startswith('download ')):
+        downloadCnt+=1
+        downloadSet.add(item)
+
+    if (linestrs[2].lower().startswith('open ')):
+        openCnt+=1
+        openSet.add(item)
+    if (linestrs[2].lower().startswith('send ')):
+        sendCnt+=1
+        sendSet.add(item)
+    if (linestrs[2].lower().startswith('share ')):
+        shareCnt+=1
+        shareSet.add(item)
+    if (linestrs[2].lower().startswith('show ')):
+        showCnt+=1
+        showSet.add(item)
+
+print('downloadCnt:' + str(downloadCnt))
+print('openCnt:' + str(openCnt))
+print('sendCnt:' + str(sendCnt))
+print('shareCnt:' + str(shareCnt))
+print('showCnt:' + str(showCnt))
+
+print('dedup downloadCnt:' + str(len(downloadSet)))
+print('dedup openCnt:' + str(len(openSet)))
+print('dedup sendCnt:' + str(len(sendSet)))
+print('dedup shareCnt:' + str(len(shareSet)))
+print('dedup showCnt:' + str(len(showSet)))
+
+# for CMF slot evaluation format
+# using undedup data
+#with codecs.open((inputFile.split("."))[0] +'_domain_extraction.tsv', 'w', 'utf-8') as fout:
+
+    # if output for traing
+#    fout.write("TurnNumber\tPreviousTurnIntent\tquery\tdomain\tPreviousTurnDomain\tTaskFrameStatus\tTaskFrameEntityStates\tTaskFrameGUID\tSpeechPeopleDisambiguationGrammarMatches\tConversationalContext\tSource\r\n")
+    
+#    for item in OutputDomainEvaluation:
+#        fout.write(item + '\r\n');
+
+
+# usiong dedup data
 with codecs.open((inputFile.split("."))[0] +'_domain_extraction.tsv', 'w', 'utf-8') as fout:
 
     # if output for traing
     fout.write("TurnNumber\tPreviousTurnIntent\tquery\tdomain\tPreviousTurnDomain\tTaskFrameStatus\tTaskFrameEntityStates\tTaskFrameGUID\tSpeechPeopleDisambiguationGrammarMatches\tConversationalContext\tSource\r\n")
     
-    for item in OutputDomainEvaluation:
+    for item in downloadSet:
+        fout.write(item + '\r\n');
+    for item in openSet:
+        fout.write(item + '\r\n');
+    for item in sendSet:
+        fout.write(item + '\r\n');
+    for item in shareSet:
+        fout.write(item + '\r\n');
+    for item in showSet:
+        fout.write(item + '\r\n');
+
+with codecs.open((inputFile.split("."))[0] +'_filtered.tsv', 'w', 'utf-8') as fout:
+
+    # no head to for debug only
+    #fout.write("TurnNumber\tPreviousTurnIntent\tquery\tdomain\tPreviousTurnDomain\tTaskFrameStatus\tTaskFrameEntityStates\tTaskFrameGUID\tSpeechPeopleDisambiguationGrammarMatches\tConversationalContext\tSource\r\n")
+    
+    for item in OutputDomainFilter:
         fout.write(item + '\r\n');
