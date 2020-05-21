@@ -62,6 +62,10 @@ copyfile("..\\Open_Text_Synthesis\\file_type_contact_name_date_and_time\\data_sy
 copyfile("..\\Open_Text_Synthesis\\contact_name_order_ref_and_file_recency\\data_synthesised_contact_name_order_ref_file_recency.tsv", "data_synthesised_contact_name_order_ref_file_recency.tsv")
 
 
+# file_keyword_file_type_file_action_to_contact_name
+copyfile("..\\Open_Text_Synthesis\\file_keyword_file_type_file_action_to_contact_name\\data_synthesised_file_keyword_file_type_file_action_to_contact_name.tsv" , "data_synthesised_file_keyword_file_type_file_action_to_contact_name.tsv")
+
+
 
 ############################################
 # copy file from data folder directly

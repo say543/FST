@@ -81,17 +81,17 @@
 0	Union search file	file_search	files	<file_keyword>Union search</file_keyword> file	3s_dsat
 0	file search areas	file_search	files	file <file_keyword>search areas</file_keyword>	3s_dsat
 0	file search document	file_search	files	file <file_keyword>search</file_keyword> document	3s_dsat
-0	find download files	file_search	files	find <file_folder>download</file_folder> files	Validating_UWP_AllDomain_CIVPrime_RandomSampling_Feb-2019_Test-55k.tsv
+0	find download files	file_search	files	find <file_keyword>download</file_keyword> files	Validating_UWP_AllDomain_CIVPrime_RandomSampling_Feb-2019_Test-55k.tsv
 0	kinder court quickbooks file	file_search	files	<file_keyword>kinder court quickbooks</file_keyword> file	Validating_UWP_AllDomain_CIVPrime_RandomSampling_Feb-2019_Test-55k.tsv
 0	pamplin park in documents	file_search	files	<file_keyword>pamplin park</file_keyword> in documents	Validating_UWP_AllDomain_CIVPrime_RandomSampling_Feb-2019_Test-55k.tsv
 0	pull up another pdf	file_search	files	pull up another <file_type>pdf</file_type>	Validating_UWP_AllDomain_CIVPrime_RandomSampling_Feb-2019_Test-55k.tsv
 0	show me my most recently viewed document	file_search	files	show me <contact_name>my</contact_name> most <file_recency>recently</file_recency> <file_action>viewed</file_action> document	Validating_UWP_AllDomain_CIVPrime_RandomSampling_Feb-2019_Test-55k.tsv
-0	video files	file_search	files	<file_type>video</file_type> files	Validating_UWP_AllDomain_CIVPrime_RandomSampling_Feb-2019_Test-55k.tsv
-0	where are my videos kept on this computer	file_search	files	where are <contact_name>my</contact_name> <file_type>videos</file_type> kept on this <data_source>computer</data_source>	Validating_UWP_AllDomain_CIVPrime_RandomSampling_Feb-2019_Test-55k.tsv
+0	video files	file_search	files	<file_folder>video</file_folder> files	Validating_UWP_AllDomain_CIVPrime_RandomSampling_Feb-2019_Test-55k.tsv
+0	where are my videos kept on this computer	file_search	files	where are <contact_name>my</contact_name> <file_folder>videos</file_folder> kept on this <data_source>computer</data_source>	Validating_UWP_AllDomain_CIVPrime_RandomSampling_Feb-2019_Test-55k.tsv
 0	would you please save this on the computer this page	file_download	files	would you please save <file_keyword>this</file_keyword> on the <data_source>computer</data_source> this page	Validating_UWP_AllDomain_CIVPrime_RandomSampling_Feb-2019_Test-55k.tsv
 0	find word excel	file_search	files	find <file_type>word excel</file_type>	Validating_UWP_AllDomain_CIVPrime_RandomSampling_Feb-2019_Test-55k.tsv
-0	download folder	file_search	files	<file_folder> download </file_folder> folde	Validating_UWP_Head_CIVPrime_RandomSampling_011018-123118-10k.tsv
-0	open download file	file_open	files	open <file_folder>download</file_folder> file	Validating_UWP_Head_CIVPrime_RandomSampling_011018-123118-10k.tsv
+0	download folder	file_search	files	download folder	Validating_UWP_Head_CIVPrime_RandomSampling_011018-123118-10k.tsv
+0	open download file	file_open	files	open <file_keyword>download</file_keyword> file	Validating_UWP_Head_CIVPrime_RandomSampling_011018-123118-10k.tsv
 0	spreadsheet Upadhyaya	file_search	files	<file_type>spreadsheet</file_type> <contact_name>Upadhyaya</contact_name>	Validating_SnA_Files_CrowdSource_3SFilesAnnotation_after_filtering.tsv
 0	spreadsheet Ashuthosh	file_search	files	<file_type>spreadsheet</file_type> <contact_name>Ashuthosh</contact_name>	Validating_SnA_Files_CrowdSource_3SFilesAnnotation_after_filtering.tsv
 0	doc Yaram	file_search	files	<file_type>doc</file_type> <contact_name>Yaram</contact_name>	Validating_SnA_Files_CrowdSource_3SFilesAnnotation_after_filtering.tsv
@@ -102,4 +102,7 @@
 0	word Venkata shared	file_search	files	<file_type>word</file_type> <contact_name>Venkata</contact_name> <file_action>shared</file_action>	Validating_SnA_Files_CrowdSource_3SFilesAnnotation_after_filtering.tsv
 0	word Yaram	file_search	files	<file_type>word</file_type> <contact_name>Yaram</contact_name>	Validating_SnA_Files_CrowdSource_3SFilesAnnotation_after_filtering.tsv
 0	spreadsheet Ashuthosh Upadhyaya	file_search	files	<file_type>spreadsheet</file_type> <contact_name>Ashuthosh Upadhyaya</contact_name>	Validating_SnA_Files_CrowdSource_3SFilesAnnotation_after_filtering.tsv
+0	open the TAP100: document	file_open	files	open the <file_keyword>TAP100</file_keyword>: document	dsat_training.tsv
+0	Share the Cortana in Teams Lt review deck with Yujia	file_share	files	Share the <file_keyword>Cortana in Teams Lt review</file_keyword> <file_type>deck</file_type> with <to_contact_name>Yujia</to_contact_name>	Validating_Teams_AllDomain_SR_RandomSampling_20200201-20200229_7k.tsv
+
 
