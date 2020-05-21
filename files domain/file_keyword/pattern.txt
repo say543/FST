@@ -1,0 +1,6 @@
+
+
+# remove file_type for default file_keywrod tag
+0	FILEKEYWORDHOLDER	file_search	files	<file_keyword> FILEKEYWORDHOLDER </file_keyword>
+
+
