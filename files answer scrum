@@ -909,6 +909,8 @@ TeamsFileResolver
 
 second turn
 https://cortanalogviewer.azurewebsites.net/query/44bce6706c104d4183f1a3b25d9e9a69
+? need to ask adding LU constraint how does it do
+Adding LU constraint. Domain: files, task : TeamsOpenFileV2GUID, currentTF.Guid : TeamsOpenFileV2GUID
 
 ==============================
 good pr following up during parental leave
