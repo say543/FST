@@ -884,6 +884,29 @@ TaskFrame Status
 一班看log
 https://cortanalogviewer.azurewebsites.net/query/5b332d12483d4c42953561235371654d
 
+
+cortana log viewer 的討論
+resolver
+first turn
+https://cortanalogviewer.azurewebsites.net/query/19f6d9689e30483cbbfce5ba897b91b2
+skill run time ->winner skill -> execution detail
+可以看很多的resolver
+
+
+Preparing slots for functor TeamsFileResolver. prepareUnreferencedSlots False, maintainSCO: True, Sending the following slots to resolver: Files: ; Slots available in current task frame: file_keywordFileResultsInfo: ; Slots available in current task frame: file_keyword
+execution of functor TeamsFileResolver succeeded... processing output parameters now Functor TeamsFileResolver OutputParameterNames is not null Processing resolver TeamsFileResolver response: parameter Files has state Resolved Updated parameter Files status from None to Resolved because resolver produced state Resolved with 5 value(s). Processing resolver TeamsFileResolver response: parameter FileResultsInfo has state Resolved Updated parameter FileResultsInfo status from None to Resolved because resolver produced state Resolved with 1 value(s). Parameter FileResultsInfo was successfully converted to bond type StringListItem. Updated parameter FileResultsInfo status from Resolved to Filled because resolver produced a value with no children
+
+Functors
+Functors (click to view)
+IsSkillEnabledResolver
+FileSemanticFrameResolver
+MRUS2SResolver
+TeamsFileResolver
+    teasmfileResolver 看起來是最上游的resolver 會選擇 跑出幾個
+
+second turn
+https://cortanalogviewer.azurewebsites.net/query/44bce6706c104d4183f1a3b25d9e9a69
+
 ==============================
 good pr following up during parental leave
 ==============================
