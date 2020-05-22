@@ -1301,6 +1301,11 @@ ans : CMF是把所有类似PreviousTurnDomain(calendar)TaskFrameStatus(inprogres
 TaskFrameStatus(inprogress)PreviousTurnDomain(calendar)
 不能work
 E:\fileAnswer_data_synthesis\CMF_training\cortana_calendar_enus_mv9.domain.model.pipeline.txt
+在這個pipeline 為什麼要自己加pipeline
+因為off line training CMY是可以的
+但是online external column data 沒辦法來  需要自己組裝(只要不是原生support 的feature 都是需要組裝) 
+這邊自己加pipeline 把PreviousTurnDomain() TaskFrameStatus() 自己組裝成一個single string representation 
+
 
 
 question 為何不要用兩個seperateed feature   PreviousTurnDomain   TaskFrameStatus  分別填1?
