@@ -56,6 +56,14 @@ defaultFileTypeifMissed =[
 ]
 
 
+blackListQuerySet = {
+    # & should replace then work but filter it 
+    'Join PM & Design weekly.',
+    'Hey Cortana. What was the value of the S&P 501 year ago?',
+    'Hey Cortana. What was the value of S&P 501 year ago?',
+    'Add 454211650.'
+    }
+
 
 fileKeyWordAndFileNameCandidateSet = set()
 # no need to collect file type. if needed, open it in the fturue
@@ -79,6 +87,10 @@ rand_seed_parameter = rand_seed_parameter_initialization
 ConversationIdPrefix = 'files_domain_measurement'
 ConversationId = 0;
 
+
+
+queriesetPerDomain = {}
+
 for file in files:
 
     if file == outputFile or file == outputFileWithSource or file == outputFileUnique:
@@ -98,6 +110,22 @@ for file in files:
             if len(array) < 5:
                 print("error:" + line);
 
+
+            # skip those non important domain
+            if array[3].upper() == 'DOMAIN' or  array[3].upper() == 'JUDGEDDOMAIN' or  array[3].upper() == 'COMMON' or array[3].upper() == 'FEEDBACK':
+                continue
+
+            #query with format wrong
+            if array[1] in blackListQuerySet:
+                continue
+
+
+            # categories unique query amount for each domain
+            try:
+                queriesetPerDomain[array[3].upper()].add(line)
+            except KeyError:
+                queriesetPerDomain[array[3].upper()] = {line}
+            
 
             
 
@@ -123,6 +151,11 @@ outputsWithSource = ['\t'.join(['ConversationId', 'MessageId','MessageTimestamp'
 
 
 
+print(len(queriesetPerDomain))
+for domainLower, queryset in queriesetPerDomain.items():
+    print("domain  name = "+ domainLower +", query cnt="+str(len(queryset)))
+
+
 
 with codecs.open(outputFile, 'w', 'utf-8') as fout:
     for item in outputs:
@@ -141,6 +174,11 @@ print(len(outputsSet))
 with codecs.open(outputFileWithSource, 'w', 'utf-8') as fout:
     for item in outputsWithSource:
         fout.write(item + '\r\n');
+
+
+
+
+
 
 
 #with codecs.open(outputFileKeyWordAndFileNameLexiconFilfe, 'w', 'utf-8') as fout:
