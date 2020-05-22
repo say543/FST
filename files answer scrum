@@ -1297,6 +1297,8 @@ ans : CMF是把所有类似PreviousTurnDomain(calendar)TaskFrameStatus(inprogres
 也就是說
 TaskFrameStatus(inprogress)PreviousTurnDomain(calendar)
 不能work
+E:\fileAnswer_data_synthesis\CMF_training\cortana_calendar_enus_mv9.domain.model.pipeline.txt
+
 
 question 為何不要用兩個seperateed feature   PreviousTurnDomain   TaskFrameStatus  分別填1?
 CMF 算法的限制
