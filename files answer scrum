@@ -895,6 +895,9 @@ https://cortanalogviewer.azurewebsites.net/query/5b332d12483d4c42953561235371654
 
 
 cortana log viewer 的討論
+
+這邊是slot 是runtime 之後的結果  不是qas 原生的結果 (qas 原生要看 bing intent  or carina debug)
+
 resolver
 first turn
 https://cortanalogviewer.azurewebsites.net/query/19f6d9689e30483cbbfce5ba897b91b2
