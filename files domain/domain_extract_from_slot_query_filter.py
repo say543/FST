@@ -10,8 +10,12 @@ import re
 import sys
 
 # add hyper paramter if unbalanced
-hyper_parameter = 200
+sampling_hyper_paramter_each_cat = 50
 
+#test
+#repeat_times = 200
+
+extra_amount_list = [1000,1500,2000,2500,3000,3500,4000,4500,5000,5500,6000,6500,7000,7500,8000]
 
 
 fileDomainRelatedIntent = ['file_search', 'file_open', 'file_share', 'file_download', 'file_other', 'file_navigate', "teamspace_search"]
@@ -87,6 +91,23 @@ fileTypeDomanBoost =set([
     'file',
     'files'
     ])
+
+
+
+def extractBybound(catset, holderList):
+    # read open text content
+
+    # 
+    bound = min(len(catset),sampling_hyper_paramter_each_cat)
+
+    cnt = 0
+    for item in catset:
+        if cnt >= bound:
+            break
+        holderList.append(item)
+        cnt+=1
+    
+    return holderList
 
     
 OutputSlotEvaluation = [];
@@ -212,19 +233,91 @@ with codecs.open(inputFile, 'r', 'utf-8') as fin:
 
 
 downloadCnt = 0
+downloadmyCnt = 0
+downloadthisCnt = 0
+downloadtheCnt = 0
+downloadCnt = 0
+downloadsCnt = 0
+downloadedCnt = 0
+
+opentheCnt = 0
+openupCnt = 0
+openmyCnt = 0
 openCnt = 0
+
+
+sendtheCnt = 0
 sendCnt = 0
+
+
+sharetheCnt = 0
+sharemyCnt = 0
 shareCnt = 0
+
+
+showtheCnt = 0
+showmeCnt = 0
+showmyCnt = 0
 showCnt = 0
 
 
 downloadSet =set([])
+downloadmySet =set([])
+downloadthisSet =set([])
+downloadtheSet =set([])
 downloadsSet =set([])
+downloadedSet =set([])
+
+opentheSet =set([])
+openupSet =set([])
+openmySet =set([])
 openSet =set([])
+
+
+sendtheSet =set([])
 sendSet =set([])
+
+
+sharetheSet =set([])
+sharemySet =set([])
 shareSet =set([])
+
+
+showtheSet =set([])
+showmeSet =set([])
+showmySet =set([])
 showSet =set([])
-    
+
+
+catSetlist = []
+
+catSetlist.append(downloadSet)
+catSetlist.append(downloadmySet)
+catSetlist.append(downloadthisSet)
+catSetlist.append(downloadtheSet)
+catSetlist.append(downloadsSet)
+catSetlist.append(downloadedSet)
+
+catSetlist.append(opentheSet)
+catSetlist.append(openupSet)
+catSetlist.append(openmySet)
+catSetlist.append(openSet)
+
+catSetlist.append(sendtheSet)
+catSetlist.append(sendSet)
+
+catSetlist.append(sharetheSet)
+catSetlist.append(sharemySet)
+catSetlist.append(shareSet)
+
+catSetlist.append(showtheSet)
+catSetlist.append(showmeSet)
+catSetlist.append(showmySet)
+catSetlist.append(showSet)
+
+
+
+
 
 for item in OutputDomainEvaluation:
 
@@ -236,10 +329,65 @@ for item in OutputDomainEvaluation:
     # extra space to male sure ending
     # order does matter
     
-    if (linestrs[2].lower().startswith('download ')):
+    if (linestrs[2].lower().startswith('downloads ')):
+        downloadsCnt+=1
+        downloadsSet.add(item)
+    elif (linestrs[2].lower().startswith('download my ')):
+        downloadmyCnt+=1
+        downloadmySet.add(item)
+    elif (linestrs[2].lower().startswith('download this ')):
+        downloadthisCnt+=1
+        downloadthisSet.add(item)
+    elif (linestrs[2].lower().startswith('download the ')):
+        downloadtheCnt+=1
+        downloadtheSet.add(item)        
+    elif (linestrs[2].lower().startswith('download ')):
         downloadCnt+=1
         downloadSet.add(item)
-
+    elif (linestrs[2].lower().startswith('downloaded ')):
+        downloadedCnt+=1
+        downloadedSet.add(item)
+    elif (linestrs[2].lower().startswith('open the ')):
+        opentheCnt+=1
+        opentheSet.add(item)
+    elif (linestrs[2].lower().startswith('open up ')):
+        openupCnt+=1
+        openupSet.add(item)
+    elif (linestrs[2].lower().startswith('open my ')):
+        openmyCnt+=1
+        openmySet.add(item)
+    elif (linestrs[2].lower().startswith('open ')):
+        openCnt+=1
+        openSet.add(item)
+    elif (linestrs[2].lower().startswith('send the')):
+        sendtheCnt+=1
+        sendtheSet.add(item)
+    elif (linestrs[2].lower().startswith('send ')):
+        sendCnt+=1
+        sendSet.add(item)
+    elif (linestrs[2].lower().startswith('share the ')):
+        sharetheCnt+=1
+        sharetheSet.add(item)
+    elif (linestrs[2].lower().startswith('share my ')):
+        sharemyCnt+=1
+        sharemySet.add(item)
+    elif (linestrs[2].lower().startswith('share ')):
+        shareCnt+=1
+        shareSet.add(item)
+    elif (linestrs[2].lower().startswith('show the ')):
+        showtheCnt+=1
+        showtheSet.add(item)
+    elif (linestrs[2].lower().startswith('show me ')):
+        showmeCnt+=1
+        showmeSet.add(item)
+    elif (linestrs[2].lower().startswith('show my ')):
+        showmyCnt+=1
+        showmySet.add(item)
+    elif (linestrs[2].lower().startswith('show ')):
+        showCnt+=1
+        showSet.add(item)
+        
+    '''
     if (linestrs[2].lower().startswith('open ')):
         openCnt+=1
         openSet.add(item)
@@ -252,18 +400,42 @@ for item in OutputDomainEvaluation:
     if (linestrs[2].lower().startswith('show ')):
         showCnt+=1
         showSet.add(item)
+    '''
 
-print('downloadCnt:' + str(downloadCnt))
-print('openCnt:' + str(openCnt))
-print('sendCnt:' + str(sendCnt))
-print('shareCnt:' + str(shareCnt))
-print('showCnt:' + str(showCnt))
+#print('downloadCnt:' + str(downloadCnt))
+#print('openCnt:' + str(openCnt))
+#print('sendCnt:' + str(sendCnt))
+#print('shareCnt:' + str(shareCnt))
+#print('showCnt:' + str(showCnt))
 
 print('dedup downloadCnt:' + str(len(downloadSet)))
+print('dedup downloadmySet:' + str(len(downloadmySet)))
+print('dedup downloadthisSet:' + str(len(downloadthisSet)))
+print('dedup downloadtheSet:' + str(len(downloadtheSet)))
+print('dedup downloadsSet:' + str(len(downloadsSet)))
+print('dedup downloadedSet:' + str(len(downloadedSet)))
+
+print('dedup opentheSet:' + str(len(opentheSet)))
+print('dedup openupSet:' + str(len(openupSet)))
+print('dedup openmySet:' + str(len(openmySet)))
 print('dedup openCnt:' + str(len(openSet)))
+
+
+
+print('dedup sendtheSet:' + str(len(sendtheSet)))
 print('dedup sendCnt:' + str(len(sendSet)))
+
+
+print('dedup sharetheSet:' + str(len(sharetheSet)))
+print('dedup sharemySet:' + str(len(sharemySet)))
 print('dedup shareCnt:' + str(len(shareSet)))
+
+
+print('dedup showtheSet:' + str(len(showtheSet)))
+print('dedup showmeSet:' + str(len(showmeSet)))
+print('dedup showmySet:' + str(len(showmySet)))
 print('dedup showCnt:' + str(len(showSet)))
+
 
 # for CMF slot evaluation format
 # using undedup data
@@ -276,22 +448,76 @@ print('dedup showCnt:' + str(len(showSet)))
 #        fout.write(item + '\r\n');
 
 
+
+
+for extra_amount in extra_amount_list:
+    with codecs.open((inputFile.split("."))[0] +'_domain_extraction.tsv', 'w', 'utf-8') as fout, codecs.open((inputFile.split("."))[0] +'_domain_extraction_'+str(extra_amount)+'.tsv', 'w', 'utf-8') as fout2:
+
+        # if output for traing
+        fout.write("TurnNumber\tPreviousTurnIntent\tquery\tdomain\tPreviousTurnDomain\tTaskFrameStatus\tTaskFrameEntityStates\tTaskFrameGUID\tSpeechPeopleDisambiguationGrammarMatches\tConversationalContext\tSource\r\n")
+        fout2.write("TurnNumber\tPreviousTurnIntent\tquery\tdomain\tPreviousTurnDomain\tTaskFrameStatus\tTaskFrameEntityStates\tTaskFrameGUID\tSpeechPeopleDisambiguationGrammarMatches\tConversationalContext\tSource\r\n")
+
+        # each set select extra_amount
+        for eleset in catSetlist:
+            cnt = 0 
+            while cnt < extra_amount:
+                for item in eleset:
+                    fout.write(item + '\r\n');
+                    fout2.write(item + '\r\n');
+                    cnt+=1
+                    if cnt >= extra_amount:
+                        break
+
+'''
 # usiong dedup data
 with codecs.open((inputFile.split("."))[0] +'_domain_extraction.tsv', 'w', 'utf-8') as fout:
 
     # if output for traing
     fout.write("TurnNumber\tPreviousTurnIntent\tquery\tdomain\tPreviousTurnDomain\tTaskFrameStatus\tTaskFrameEntityStates\tTaskFrameGUID\tSpeechPeopleDisambiguationGrammarMatches\tConversationalContext\tSource\r\n")
+
     
-    for item in downloadSet:
-        fout.write(item + '\r\n');
-    for item in openSet:
-        fout.write(item + '\r\n');
-    for item in sendSet:
-        fout.write(item + '\r\n');
-    for item in shareSet:
-        fout.write(item + '\r\n');
-    for item in showSet:
-        fout.write(item + '\r\n');
+    # no shuffle right now
+    # extra sampling_hyper_paramter_each_cat
+    # if less than that, extra all
+    #holderList = []
+    #for eleset in catSetlist:
+    #    holderList = extractBybound(eleset, holderList)
+     
+    #for item in holderList:
+    #    fout.write(item + '\r\n');
+
+
+    # for unique queries
+    # testing repeat times
+    for eleset in catSetlist:
+        for item in eleset:
+
+
+            
+
+            # repeat = 100
+            # 2400000
+            # test repeat time for each query
+            for index in range(repeat_times):
+                fout.write(item + '\r\n');
+    
+
+    # using originla data
+    
+    #for item in downloadSet:
+    #    fout.write(item + '\r\n');
+    #for item in openSet:
+    #    fout.write(item + '\r\n');
+    #for item in sendSet:
+    #    fout.write(item + '\r\n');
+    #for item in shareSet:
+    #    fout.write(item + '\r\n');
+    #for item in showSet:
+    #    fout.write(item + '\r\n');
+   
+'''
+
+
 
 with codecs.open((inputFile.split("."))[0] +'_filtered.tsv', 'w', 'utf-8') as fout:
 
