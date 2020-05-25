@@ -15,7 +15,9 @@ sampling_hyper_paramter_each_cat = 50
 #test
 #repeat_times = 200
 
-extra_amount_list = [1000,1500,2000,2500,3000,3500,4000,4500,5000,5500,6000,6500,7000,7500,8000]
+#extra_amount_list = [1000,1500,2000,2500,3000,3500,4000,4500,5000,5500,6000,6500,7000,7500,8000]
+
+extra_amount_list = [100,200,300,400,500,600,700,800,900]
 
 
 fileDomainRelatedIntent = ['file_search', 'file_open', 'file_share', 'file_download', 'file_other', 'file_navigate', "teamspace_search"]
