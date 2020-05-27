@@ -40,6 +40,7 @@ wrongcontactname = set([
     'skills',
     # single word not contact name but combined with others YES
     # but spring cao is a valid name for chinese people
+    'kingston',
     'spring',
     'can',
     'you',
