@@ -50,6 +50,30 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 看這個pr
 
 
+
+=================
+LU constraint 的filtering in lu runtime (lu runtime 是cortex 的一部分)
+=================
+
+https://cortanawiki.azurewebsites.net/engineering/gettingstarted/1PBFLuConstraints.html?q=constraint
+
+https://msasg.visualstudio.com/Cortana/_git/Core?path=%2Fruntime%2Fcomponents%2FUnderstanding%2FLanguageUnderstandingComponent%2Fsrc%2FLueAdaptation%2FMultiTurnQasEngine.cs&version=GBmaster
+
+
+multi turn engine
+ var extendedLuResult = lueAdapter.Understand(qasAnalyzedQuery, annotatedQuery, conversationContext, currTurnId);
+
+annotatedQuery 就是lu constraint
+
+qasAnalyzedQuery 就是qas 的output
+
+extendedLuResult　就是filter 的結果 
+
+log 可能看不到　　cortax 也沒有log filter 前跟後的結果　　只能用斷點
+
+但是cortana viewer 是 extendedLuResult 的結果了　　這個已經confirm
+
+
 =================
 eligiblie ability for Rufous (compliant AML) onboading
 =================
