@@ -41,12 +41,16 @@ OutputSTCAIntentEvaluation = [];
 
 # validaitng opened dataset
 
-inputFile = "Validating_Teams_20200101-20200123_6k.tsv"
+#inputFile = "Validating_Teams_20200101-20200123_6k.tsv"
 #inputFile = "Validating_Teams_20191201-20192131_7k.tsv"
 #inputFile = "Validating_Teams_20191101-20191130_10k.tsv"
 #inputFile = "Validating_Teams_20191001-20191031_7k.tsv"
 #inputFile = "Validating_Teams_20190716-20190831_16k.tsv"
 #inputFile = "Validating_Teams_20190901-20190930_3k.tsv"
+
+# uwp data set
+inputFile = "Validating_UWP_AllDomain_CIVPrime_RandomSampling_Feb-2019_Test-55k.tsv"
+
 
 #with codecs.open('Teams-golden.tsv', 'r', 'utf-8') as fin:
 with codecs.open(inputFile, 'r', 'utf-8') as fin:
