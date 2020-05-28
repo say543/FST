@@ -1,4 +1,4 @@
-TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain
+TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	TaskFrameEntityStates	TaskFrameGUID	SpeechPeopleDisambiguationGrammarMatches	ConversationalContext
 0		send the checked file to gambararo	file_share	
 0		send the checked file to gambararo	file_share	
 0		send the altar server meeting file to jinzang	file_share	

@@ -1,0 +1,3 @@
+#this query does not look good, do not use but keep it track
+TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	TaskFrameEntityStates	TaskFrameGUID	SpeechPeopleDisambiguationGrammarMatches	ConversationalContext
+0		Open Bangalore, Hyderabad. Docx.	file_open

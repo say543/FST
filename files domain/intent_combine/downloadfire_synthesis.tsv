@@ -1,4 +1,4 @@
-TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain
+TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	TaskFrameEntityStates	TaskFrameGUID	SpeechPeopleDisambiguationGrammarMatches	ConversationalContext
 0		Download fire instance answers.	file_download	
 0		Download fire instance answers.	file_download	
 0		Download fire instance answers.	file_download	

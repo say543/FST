@@ -1,4 +1,4 @@
-TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain
+TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	TaskFrameEntityStates	TaskFrameGUID	SpeechPeopleDisambiguationGrammarMatches	ConversationalContext
 0		hey cortana, share the file.	file_share	
 0		hey cortana, share the file.	file_share	
 0		hey cortana, share the file.	file_share	

@@ -1,16 +1,16 @@
-TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain
-0		Hey Cortana share presentation testing PowerPoint.	file_share	
-0		Hey Cortana share presentation testing PowerPoint.	file_share	
-0		Hey Cortana share presentation testing PowerPoint.	file_share	
-0		Hey Cortana share presentation testing PowerPoint.	file_share	
-0		Hey Cortana share presentation testing PowerPoint.	file_share	
-0		Show my file with Kayla.	file_share	
-0		Show my file with Kayla.	file_share	
-0		Show my file with Kayla.	file_share	
-0		Show my file with Kayla.	file_share	
-0		Show my file with Kayla.	file_share	
-0		Hey Cortana, download a file.	file_download	
-0		Hey Cortana, download a file.	file_download	
-0		Hey Cortana, download a file.	file_download	
-0		Hey Cortana, download a file.	file_download	
-0		Hey Cortana, download a file.	file_download	
+TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	TaskFrameEntityStates	TaskFrameGUID	SpeechPeopleDisambiguationGrammarMatches	ConversationalContext
+0		Hey Cortana share presentation testing PowerPoint.	file_share		
+0		Hey Cortana share presentation testing PowerPoint.	file_share		
+0		Hey Cortana share presentation testing PowerPoint.	file_share		
+0		Hey Cortana share presentation testing PowerPoint.	file_share		
+0		Hey Cortana share presentation testing PowerPoint.	file_share		
+0		Show my file with Kayla.	file_share		
+0		Show my file with Kayla.	file_share		
+0		Show my file with Kayla.	file_share		
+0		Show my file with Kayla.	file_share		
+0		Show my file with Kayla.	file_share		
+0		Hey Cortana, download a file.	file_download		
+0		Hey Cortana, download a file.	file_download		
+0		Hey Cortana, download a file.	file_download		
+0		Hey Cortana, download a file.	file_download		
+0		Hey Cortana, download a file.	file_download		

@@ -1,4 +1,4 @@
-TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain
+TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	TaskFrameEntityStates	TaskFrameGUID	SpeechPeopleDisambiguationGrammarMatches	ConversationalContext
 0		cortana open with roger	file_share	
 0		cortana Open lt review with this meeting attendees	file_share	
 0		cortana open with my 10 pm on Wednesday meeting	file_share	

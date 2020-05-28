@@ -1,0 +1,19 @@
+TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	TaskFrameEntityStates	TaskFrameGUID	SpeechPeopleDisambiguationGrammarMatches	ConversationalContext
+0		cancel	cancel	
+0		yes	confirm	
+0		sure	confirm	
+0		none of them	select_none	
+0		none of the above	select_none	
+0		no	reject	
+0		cancel	cancel	
+0		yes	confirm	
+0		sure	confirm	
+0		none of them	select_none	
+0		none of the above	select_none	
+0		no	reject	
+0		cancel	cancel	
+0		yes	confirm	
+0		sure	confirm	
+0		none of them	select_none	
+0		none of the above	select_none	
+0		no	reject	

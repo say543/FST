@@ -1,12 +1,12 @@
-TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain
-0		send the file	file_share	
-0		send the file	file_share	
-0		send the file	file_share	
-0		send the file	file_share	
-0		send the file	file_share	
-0		Resend PowerPoint file	file_share	
-0		Resend PowerPoint file	file_share	
-0		Resend PowerPoint file	file_share	
-0		Resend PowerPoint file	file_share	
-0		Resend PowerPoint file	file_share	
-0		Resend PowerPoint file	file_share	
+TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	TaskFrameEntityStates	TaskFrameGUID	SpeechPeopleDisambiguationGrammarMatches	ConversationalContext
+0		send the file	file_share		
+0		send the file	file_share		
+0		send the file	file_share		
+0		send the file	file_share		
+0		send the file	file_share		
+0		Resend PowerPoint file	file_share		
+0		Resend PowerPoint file	file_share		
+0		Resend PowerPoint file	file_share		
+0		Resend PowerPoint file	file_share		
+0		Resend PowerPoint file	file_share		
+0		Resend PowerPoint file	file_share		

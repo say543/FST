@@ -1,0 +1,1407 @@
+TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	TaskFrameEntityStates	TaskFrameGUID	SpeechPeopleDisambiguationGrammarMatches	ConversationalContext
+1		cancel this	cancel	
+1		cancel this	cancel	
+1		cancel it	cancel	
+1		cancel	cancel	
+1		cancel this	cancel	
+1		cancel this	cancel	
+1		cancel it	cancel	
+1		cancel	cancel	
+1		confirm it	confirm	
+1		confirm	confirm	
+1		yes	confirm	
+1		yes	confirm	
+1		okay	confirm	
+1		okay	confirm	
+1		that's it	confirm	
+1		that's it	confirm	
+1		ok	confirm	
+1		ok	confirm	
+1		confirm it	confirm	
+1		confirm	confirm	
+1		yes	confirm	
+1		yes	confirm	
+1		okay	confirm	
+1		okay	confirm	
+1		that's it	confirm	
+1		that's it	confirm	
+1		ok	confirm	
+1		ok	confirm	
+1		no	reject	
+1		nope	reject	
+1		forget it	reject	
+1		nevermind	reject	
+1		no	reject	
+1		nope	reject	
+1		forget it	reject	
+1		nevermind	reject	
+1		select none	select_none	
+1		select nothing	select_none	
+1		none of these	select_none	
+1		select none of these	select_none	
+1		select none	select_none	
+1		select nothing	select_none	
+1		none of these	select_none	
+1		select none of these	select_none	
+1		cancel this	cancel	
+1		cancel this	cancel	
+1		cancel it	cancel	
+1		cancel it	cancel	
+1		cancel this	cancel	
+1		cancel this	cancel	
+1		cancel it	cancel	
+1		cancel it	cancel	
+1		confirm it	confirm	
+1		confirm it	confirm	
+1		yes	confirm	
+1		yes	confirm	
+1		okay	confirm	
+1		okay	confirm	
+1		that's it	confirm	
+1		that's it	confirm	
+1		ok	confirm	
+1		ok	confirm	
+1		confirm it	confirm	
+1		confirm it	confirm	
+1		yes	confirm	
+1		yes	confirm	
+1		okay	confirm	
+1		okay	confirm	
+1		that's it	confirm	
+1		that's it	confirm	
+1		ok	confirm	
+1		ok	confirm	
+1		no	reject	
+1		nope	reject	
+1		forget it	reject	
+1		nevermind	reject	
+1		no	reject	
+1		nope	reject	
+1		forget it	reject	
+1		nevermind	reject	
+1		select none	select_none	
+1		select nothing	select_none	
+1		none of these	select_none	
+1		select none of these	select_none	
+1		select none	select_none	
+1		select nothing	select_none	
+1		none of these	select_none	
+1		select none of these	select_none	
+1		cancel this	cancel	
+1		cancel this	cancel	
+1		cancel it	cancel	
+1		cancel	cancel	
+1		cancel this	cancel	
+1		cancel this	cancel	
+1		cancel it	cancel	
+1		cancel	cancel	
+1		confirm it	confirm	
+1		confirm	confirm	
+1		yes	confirm	
+1		yes	confirm	
+1		okay	confirm	
+1		okay	confirm	
+1		that's it	confirm	
+1		that's it	confirm	
+1		ok	confirm	
+1		ok	confirm	
+1		confirm it	confirm	
+1		confirm	confirm	
+1		yes	confirm	
+1		yes	confirm	
+1		okay	confirm	
+1		okay	confirm	
+1		that's it	confirm	
+1		that's it	confirm	
+1		ok	confirm	
+1		ok	confirm	
+1		no	reject	
+1		nope	reject	
+1		forget it	reject	
+1		nevermind	reject	
+1		no	reject	
+1		nope	reject	
+1		forget it	reject	
+1		nevermind	reject	
+1		select none	select_none	
+1		select nothing	select_none	
+1		none of these	select_none	
+1		select none of these	select_none	
+1		select none	select_none	
+1		select nothing	select_none	
+1		none of these	select_none	
+1		select none of these	select_none	
+1		cancel this	cancel	
+1		cancel this	cancel	
+1		cancel it	cancel	
+1		cancel it	cancel	
+1		cancel this	cancel	
+1		cancel this	cancel	
+1		cancel it	cancel	
+1		cancel it	cancel	
+1		confirm it	confirm	
+1		confirm it	confirm	
+1		yes	confirm	
+1		yes	confirm	
+1		okay	confirm	
+1		okay	confirm	
+1		that's it	confirm	
+1		that's it	confirm	
+1		ok	confirm	
+1		ok	confirm	
+1		confirm it	confirm	
+1		confirm it	confirm	
+1		yes	confirm	
+1		yes	confirm	
+1		okay	confirm	
+1		okay	confirm	
+1		that's it	confirm	
+1		that's it	confirm	
+1		ok	confirm	
+1		ok	confirm	
+1		no	reject	
+1		nope	reject	
+1		forget it	reject	
+1		nevermind	reject	
+1		no	reject	
+1		nope	reject	
+1		forget it	reject	
+1		nevermind	reject	
+1		select none	select_none	
+1		select nothing	select_none	
+1		none of these	select_none	
+1		select none of these	select_none	
+1		select none	select_none	
+1		select nothing	select_none	
+1		none of these	select_none	
+1		select none of these	select_none	
+1		cancel	cancel	
+1		yes	confirm	
+1		no	reject	
+1		abort that	reject	
+1		add it	confirm	
+1		add the appointment	confirm	
+1		alright	confirm	
+1		and that 's correct	confirm	
+1		awesome	confirm	
+1		bing cancel	cancel	
+1		blow	reject	
+1		brilliant	confirm	
+1		but not this calendar	reject	
+1		can you cancel that	cancel	
+1		cancel	cancel	
+1		cancel	reject	
+1		cancel all	cancel	
+1		cancel appointment	cancel	
+1		cancel bell on my way	cancel	
+1		cancel call for ladona tomorrow	cancel	
+1		cancel can you don't do that please	cancel	
+1		cancel cancel	cancel	
+1		cancel cancel cancel	cancel	
+1		cancel cancel cancel cancel	cancel	
+1		cancel cancel it	cancel	
+1		cancel don't worry	cancel	
+1		cancel dot	cancel	
+1		cancel flowers dot com has this	cancel	
+1		cancel it	cancel	
+1		cancel it cancel it	cancel	
+1		cancel it i don ' t want that	cancel	
+1		cancel it please	cancel	
+1		cancel my 4 o'clock	cancel	
+1		cancel my appointment for october 4	reject	
+1		cancel my dentist appointment	cancel	
+1		cancel no	cancel	
+1		cancel please	cancel	
+1		cancel tess	cancel	
+1		cancel that	cancel	
+1		cancel that cancel that cancel it	cancel	
+1		cancel that please	cancel	
+1		cancel the	cancel	
+1		cancel the event	cancel	
+1		cancel the no subject	cancel	
+1		cancel the one fifteen appointment	cancel	
+1		cancel the untitled event	cancel	
+1		cancel this	cancel	
+1		cancel what i have to do in the afternoon	cancel	
+1		cancel win	cancel	
+1		change	reject	
+1		change calendar	reject	
+1		change event name	reject	
+1		change that to march 1st	reject	
+1		change the time	reject	
+1		change the time to eight oh one am	reject	
+1		change video 2	reject	
+1		chris mann is spelled incorrect	reject	
+1		confirm	confirm	
+1		confirm	confirm	
+1		cool	confirm	
+1		correct	confirm	
+1		correct yes	confirm	
+1		council	cancel	
+1		counseling no	reject	
+1		course not	reject	
+1		create an appointment	confirm	
+1		da	confirm	
+1		disregard	reject	
+1		do it ?	confirm	
+1		don't	reject	
+1		don't schedule it cancel	cancel	
+1		edit time	reject	
+1		excellent	confirm	
+1		fantastic	confirm	
+1		forget cancel	reject	
+1		forget it	reject	
+1		forget it	cancel	
+1		good	confirm	
+1		good thank you	confirm	
+1		good yes	confirm	
+1		great	confirm	
+1		great i've added it	confirm	
+1		guess	confirm	
+1		ha no	reject	
+1		have cancel	reject	
+1		help	reject	
+1		hugs yes	confirm	
+1		i cancel	cancel	
+1		i change	reject	
+1		i didn't say that	reject	
+1		i don't think so	reject	
+1		i know	reject	
+1		i never mind	cancel	
+1		i was lying	reject	
+1		i'd like to edit it please	reject	
+1		i'm cancel	cancel	
+1		i'm great	confirm	
+1		i'm not asking about music	reject	
+1		is it okay can you dismiss it yeah	cancel	
+1		it is indeed although i will be tentative not busy	confirm	
+1		it 's good	confirm	
+1		it 's good thank you	confirm	
+1		it 's not	reject	
+1		it 's not a note	reject	
+1		it 's not v 8 is ve	reject	
+1		it 's ok cancel event	cancel	
+1		it 's okay	confirm	
+1		january 10th no	reject	
+1		just cancel	cancel	
+1		like no	reject	
+1		looks good	confirm	
+1		looks good thank you	confirm	
+1		make senses	reject	
+1		maybe you can cancel it	cancel	
+1		n o	reject	
+1		nah	reject	
+1		ne	reject	
+1		neither	reject	
+1		never	cancel	
+1		never	reject	
+1		never mind	reject	
+1		never mind	cancel	
+1		never mind cancel that	cancel	
+1		never mind cortana could you cancel that	cancel	
+1		never mind thanks cortana	cancel	
+1		nevermind	reject	
+1		new cancel	cancel	
+1		nice okay	confirm	
+1		no	reject	
+1		no	reject	
+1		no alarm	reject	
+1		no all day	reject	
+1		no alright	reject	
+1		no but make a f****** playing with the bus plunged rest	reject	
+1		no can cancel	cancel	
+1		no can you change it to	reject	
+1		no cancel	cancel	
+1		no cancel	reject	
+1		no cancel cancel	cancel	
+1		no cancel it	cancel	
+1		no cancel it shut up	cancel	
+1		no cancel it what no no	cancel	
+1		no cancel that	cancel	
+1		no change it to 11 pm	reject	
+1		no delete it	reject	
+1		no edit	reject	
+1		no from	reject	
+1		no girl	reject	
+1		no golf golf	reject	
+1		no i don ' t wanna make an appointment ohh forget it	reject	
+1		no i just cancel it	cancel	
+1		no it ' s for today	reject	
+1		no it ' s on monday	reject	
+1		no it doesn't	reject	
+1		no it isn't	reject	
+1		no it 's july 25th	reject	
+1		no it 's not	reject	
+1		no it 's not right	reject	
+1		no it 's not today	reject	
+1		no it 's only for one day the monday	reject	
+1		no it was but neither of the other two	reject	
+1		no its	reject	
+1		no its ok	confirm	
+1		no just cancel it	cancel	
+1		no just today	reject	
+1		no make it today	reject	
+1		no make that around 5	reject	
+1		no never mind	reject	
+1		no no	reject	
+1		no no	cancel	
+1		no no cancel	cancel	
+1		no no cancel it for monday	reject	
+1		no no careful	reject	
+1		no no half nine	reject	
+1		no no no	reject	
+1		no no no cancel please	cancel	
+1		no no no no no no no no	reject	
+1		no no no no no stop it	reject	
+1		no no no rip at that rip at that	reject	
+1		no no no you don't get it i don't see a damn thing	reject	
+1		no no zero one	reject	
+1		no not today	reject	
+1		no not two oh eight am	reject	
+1		no one	reject	
+1		no send it for 3 30	reject	
+1		no send the time	reject	
+1		no should be rehearsal	reject	
+1		no start time	reject	
+1		no stupid this is completely different	reject	
+1		no thank you	reject	
+1		no thanks	reject	
+1		no that ' s wrong	reject	
+1		no that is not correct	reject	
+1		no that is not right	reject	
+1		no that is wrong	reject	
+1		no that 's wrong	reject	
+1		no the appointment is september 20 3rd	reject	
+1		no the day after tomorrow	reject	
+1		no the from is wrong	reject	
+1		no third third of you	reject	
+1		no this is not correct cortana	reject	
+1		no time at all	reject	
+1		no title	reject	
+1		no windows	reject	
+1		no you misunderstood	reject	
+1		noleen oh clock	reject	
+1		nope	reject	
+1		nope	reject	
+1		not	reject	
+1		not appointments	reject	
+1		not cancel	cancel	
+1		not exactly	reject	
+1		not for this weekend	reject	
+1		not now	reject	
+1		not today no no cancel just forget it cortana you use it shipped	cancel	
+1		not today not today friday	reject	
+1		nothing	reject	
+1		nothing cancel	cancel	
+1		nothing cancel i made a mistake	cancel	
+1		nothing just cancel	cancel	
+1		nude cancel ?	cancel	
+1		of course	confirm	
+1		of course yes	confirm	
+1		oh	reject	
+1		oh cancel	cancel	
+1		oh no	reject	
+1		oh no no	reject	
+1		oh now	reject	
+1		oh yes	confirm	
+1		ohh no	reject	
+1		ohh no cancel it	cancel	
+1		ohh sorry yes	confirm	
+1		ohh yes	confirm	
+1		ok	confirm	
+1		ok anything will pan out	confirm	
+1		ok never mind	reject	
+1		ok with that	confirm	
+1		okay	confirm	
+1		okay now	confirm	
+1		okay thank you	confirm	
+1		okay thank you cortana	confirm	
+1		okay thanks	confirm	
+1		okay then	confirm	
+1		other time cancel cancel cancel cancel	cancel	
+1		perfect	confirm	
+1		perfect thank you	confirm	
+1		piss off	reject	
+1		please	confirm	
+1		please cancel	cancel	
+1		please cancel all of them	cancel	
+1		please cancel it	cancel	
+1		probably	confirm	
+1		right	confirm	
+1		say yes	confirm	
+1		scratch that	reject	
+1		scratch that	cancel	
+1		shore	confirm	
+1		something wrong	reject	
+1		sound good	confirm	
+1		sounds good	confirm	
+1		sounds good okay	confirm	
+1		sounds good to me	confirm	
+1		sounds good yes	confirm	
+1		sounds great	confirm	
+1		sounds great thank you	confirm	
+1		sounds perfect	confirm	
+1		stop stop stop stop stop	cancel	
+1		sure	confirm	
+1		sure go ahead	confirm	
+1		sure is	confirm	
+1		sure it 's okay	confirm	
+1		thank you	confirm	
+1		thank you cortana	confirm	
+1		thank you yes	confirm	
+1		thanks	confirm	
+1		that ' s correct	confirm	
+1		that ' s fine	confirm	
+1		that ' s good	confirm	
+1		that ' s right	confirm	
+1		that is correct	confirm	
+1		that right yes	confirm	
+1		that 's awesome	confirm	
+1		that 's correct	confirm	
+1		that 's fine	confirm	
+1		that 's good	confirm	
+1		that 's great	confirm	
+1		that 's not right	reject	
+1		that 's right	confirm	
+1		that 's right thank you	confirm	
+1		that 's wrong erase	reject	
+1		this is my yes	confirm	
+1		this is perfect	confirm	
+1		three no no no no	reject	
+1		try again	reject	
+1		uh huh	confirm	
+1		what today no	reject	
+1		wrong	reject	
+1		yea	confirm	
+1		yeah	confirm	
+1		yeah add that	confirm	
+1		yeah baby	confirm	
+1		yeah baby i love you	confirm	
+1		yeah cancel	cancel	
+1		yeah cancel it	cancel	
+1		yeah it 's good	confirm	
+1		yeah okay	confirm	
+1		yeah recurring	confirm	
+1		yeah sounds great	confirm	
+1		yeah thank you	confirm	
+1		yeah that 's great	confirm	
+1		yeah that 's right thank you	confirm	
+1		yeah what is it	confirm	
+1		yeah why not	confirm	
+1		yep	confirm	
+1		yep , perfect	confirm	
+1		yep good	confirm	
+1		yep it 's projected	confirm	
+1		yep that ' s right	confirm	
+1		yep that 's good	confirm	
+1		yep that 's odd	confirm	
+1		yes	confirm	
+1		yes , cortana	confirm	
+1		yes , it does	confirm	
+1		yes , please	confirm	
+1		yes , thank you	confirm	
+1		yes , thank you cortana	confirm	
+1		yes . can you add this to the google calendar ?	confirm	
+1		yes absolutely	confirm	
+1		yes add	confirm	
+1		yes add it	confirm	
+1		yes add please	confirm	
+1		yes and saturday please	confirm	
+1		yes at	confirm	
+1		yes at location	confirm	
+1		yes but i want this to be a task	confirm	
+1		yes can i get a reminder	confirm	
+1		yes can you notify me an hour beforehand	confirm	
+1		yes can you set a alarm thirty minutes prior	confirm	
+1		yes cancel that	cancel	
+1		yes cortana	confirm	
+1		yes cortana thank you	confirm	
+1		yes girl	confirm	
+1		yes good	confirm	
+1		yes guess	confirm	
+1		yes here 's my sharpie	confirm	
+1		yes i have	confirm	
+1		yes i need to make an appointment on my schedule calendar	confirm	
+1		yes i was right	confirm	
+1		yes i'm good	confirm	
+1		yes indeed	confirm	
+1		yes is great	confirm	
+1		yes it does	confirm	
+1		yes it is	confirm	
+1		yes it is thank you	confirm	
+1		yes it it worked right	confirm	
+1		yes it 's an all day event	confirm	
+1		yes let 's play	confirm	
+1		yes maam	confirm	
+1		yes ma'am	confirm	
+1		yes no	reject	
+1		yes of course	confirm	
+1		yes or	confirm	
+1		yes perfect	confirm	
+1		yes please	confirm	
+1		yes put this on my calendar	confirm	
+1		yes remind me before	confirm	
+1		yes remind me the day before	confirm	
+1		yes reminder please	confirm	
+1		yes sir	confirm	
+1		yes sirree bob one oh one	confirm	
+1		yes skip	confirm	
+1		yes sounds good	confirm	
+1		yes sounds good thanks	confirm	
+1		yes sounds great	confirm	
+1		yes thank you	confirm	
+1		yes thank you add	confirm	
+1		yes thank you cortana	confirm	
+1		yes thanks	confirm	
+1		yes that ' s correct	confirm	
+1		yes that ' s fine	confirm	
+1		yes that ' s great thank you	confirm	
+1		yes that ' s right	confirm	
+1		yes that 's awesome	confirm	
+1		yes that 's okay	confirm	
+1		yes that 's perfect	confirm	
+1		yes that 's right	confirm	
+1		yes that sounds good	confirm	
+1		yes very good	confirm	
+1		yes wow	confirm	
+1		yes yes	confirm	
+1		yes yes add all	confirm	
+1		yes yes all day event	confirm	
+1		yes yes bitch	confirm	
+1		yes yes yes	confirm	
+1		yes you	confirm	
+1		yes you're fine	confirm	
+1		yesh	confirm	
+1		yet	confirm	
+1		you	confirm	
+1		you are correct	confirm	
+1		you bet	confirm	
+1		you betcha	confirm	
+1		you got it wrong	reject	
+1		you have my permission	confirm	
+1		you have the wrong date	reject	
+1		you're not getting it	reject	
+1		yup	confirm	
+1		yup add	confirm	
+1		edit attendees	reject	
+1		no send the contact name	reject	
+1		change the contact name to eight oh one am	reject	
+1		change the contact name	reject	
+1		abort that	reject	
+1		add it	confirm	
+1		add the appointment	confirm	
+1		alright	confirm	
+1		and that 's correct	confirm	
+1		awesome	confirm	
+1		bing cancel	cancel	
+1		blow	reject	
+1		brilliant	confirm	
+1		but not this calendar	reject	
+1		can you cancel that	cancel	
+1		cancel	cancel	
+1		cancel	reject	
+1		cancel all	cancel	
+1		cancel appointment	cancel	
+1		cancel bell on my way	cancel	
+1		cancel call for ladona tomorrow	cancel	
+1		cancel can you don't do that please	cancel	
+1		cancel cancel	cancel	
+1		cancel cancel cancel	cancel	
+1		cancel cancel cancel cancel	cancel	
+1		cancel cancel it	cancel	
+1		cancel don't worry	cancel	
+1		cancel dot	cancel	
+1		cancel flowers dot com has this	cancel	
+1		cancel it	cancel	
+1		cancel it cancel it	cancel	
+1		cancel it i don ' t want that	cancel	
+1		cancel it please	cancel	
+1		cancel my 4 o'clock	cancel	
+1		cancel my appointment for october 4	reject	
+1		cancel my dentist appointment	cancel	
+1		cancel no	cancel	
+1		cancel please	cancel	
+1		cancel tess	cancel	
+1		cancel that	cancel	
+1		cancel that cancel that cancel it	cancel	
+1		cancel that please	cancel	
+1		cancel the	cancel	
+1		cancel the event	cancel	
+1		cancel the no subject	cancel	
+1		cancel the one fifteen appointment	cancel	
+1		cancel the untitled event	cancel	
+1		cancel this	cancel	
+1		cancel what i have to do in the afternoon	cancel	
+1		cancel win	cancel	
+1		change	reject	
+1		change calendar	reject	
+1		change event name	reject	
+1		change that to march 1st	reject	
+1		change the time	reject	
+1		change the time to eight oh one am	reject	
+1		change video 2	reject	
+1		chris mann is spelled incorrect	reject	
+1		confirm	confirm	
+1		confirm	confirm	
+1		cool	confirm	
+1		correct	confirm	
+1		correct yes	confirm	
+1		council	cancel	
+1		counseling no	reject	
+1		course not	reject	
+1		create an appointment	confirm	
+1		da	confirm	
+1		disregard	reject	
+1		do it ?	confirm	
+1		don't	reject	
+1		don't schedule it cancel	cancel	
+1		edit time	reject	
+1		excellent	confirm	
+1		fantastic	confirm	
+1		forget cancel	reject	
+1		forget it	reject	
+1		forget it	cancel	
+1		good	confirm	
+1		good thank you	confirm	
+1		good yes	confirm	
+1		great	confirm	
+1		great i've added it	confirm	
+1		guess	confirm	
+1		ha no	reject	
+1		have cancel	reject	
+1		help	reject	
+1		hugs yes	confirm	
+1		i cancel	cancel	
+1		i change	reject	
+1		i didn't say that	reject	
+1		i don't think so	reject	
+1		i know	reject	
+1		i need to change the title	reject	
+1		i never mind	cancel	
+1		i was lying	reject	
+1		i'd like to edit it please	reject	
+1		i'm cancel	cancel	
+1		i'm great	confirm	
+1		i'm not asking about music	reject	
+1		is it okay can you dismiss it yeah	cancel	
+1		it is indeed although i will be tentative not busy	confirm	
+1		it 's good	confirm	
+1		it 's good thank you	confirm	
+1		it 's not	reject	
+1		it 's not a note	reject	
+1		it 's not v 8 is ve	reject	
+1		it 's ok cancel event	cancel	
+1		it 's okay	confirm	
+1		january 10th no	reject	
+1		just cancel	cancel	
+1		like no	reject	
+1		looks good	confirm	
+1		looks good thank you	confirm	
+1		make senses	reject	
+1		maybe you can cancel it	cancel	
+1		n o	reject	
+1		nah	reject	
+1		ne	reject	
+1		neither	reject	
+1		never	cancel	
+1		never	reject	
+1		never mind	reject	
+1		never mind	cancel	
+1		never mind cancel that	cancel	
+1		never mind cortana could you cancel that	cancel	
+1		never mind thanks cortana	cancel	
+1		nevermind	reject	
+1		new cancel	cancel	
+1		nice okay	confirm	
+1		no	reject	
+1		no	reject	
+1		no alarm	reject	
+1		no all day	reject	
+1		no alright	reject	
+1		no but make a f****** playing with the bus plunged rest	reject	
+1		no can cancel	cancel	
+1		no can you change it to	reject	
+1		no cancel	cancel	
+1		no cancel	reject	
+1		no cancel cancel	cancel	
+1		no cancel it	cancel	
+1		no cancel it shut up	cancel	
+1		no cancel it what no no	cancel	
+1		no cancel that	cancel	
+1		no change it to 11 pm	reject	
+1		no change the time	reject	
+1		no change the title	reject	
+1		no change this	reject	
+1		no delete it	reject	
+1		no edit	reject	
+1		no from	reject	
+1		no girl	reject	
+1		no golf golf	reject	
+1		no i don ' t wanna make an appointment ohh forget it	reject	
+1		no i just cancel it	cancel	
+1		no it ' s for today	reject	
+1		no it ' s on monday	reject	
+1		no it doesn't	reject	
+1		no it isn't	reject	
+1		no it 's july 25th	reject	
+1		no it 's not	reject	
+1		no it 's not right	reject	
+1		no it 's not today	reject	
+1		no it 's only for one day the monday	reject	
+1		no it was but neither of the other two	reject	
+1		no its	reject	
+1		no its ok	confirm	
+1		no just cancel it	cancel	
+1		no just today	reject	
+1		no make it today	reject	
+1		no make that around 5	reject	
+1		no never mind	reject	
+1		no no	reject	
+1		no no	cancel	
+1		no no cancel	cancel	
+1		no no cancel it for monday	reject	
+1		no no careful	reject	
+1		no no half nine	reject	
+1		no no no	reject	
+1		no no no cancel please	cancel	
+1		no no no no no no no no	reject	
+1		no no no no no stop it	reject	
+1		no no no rip at that rip at that	reject	
+1		no no no you don't get it i don't see a damn thing	reject	
+1		no no zero one	reject	
+1		no not today	reject	
+1		no not two oh eight am	reject	
+1		no one	reject	
+1		no send it for 3 30	reject	
+1		no send the time	reject	
+1		no should be rehearsal	reject	
+1		no start time	reject	
+1		no stupid this is completely different	reject	
+1		no thank you	reject	
+1		no thanks	reject	
+1		no that ' s wrong	reject	
+1		no that is not correct	reject	
+1		no that is not right	reject	
+1		no that is wrong	reject	
+1		no that 's wrong	reject	
+1		no the appointment is september 20 3rd	reject	
+1		no the day after tomorrow	reject	
+1		no the from is wrong	reject	
+1		no third third of you	reject	
+1		no this is not correct cortana	reject	
+1		no time at all	reject	
+1		no title	reject	
+1		no windows	reject	
+1		no you misunderstood	reject	
+1		noleen oh clock	reject	
+1		nope	reject	
+1		nope	reject	
+1		not	reject	
+1		not appointments	reject	
+1		not cancel	cancel	
+1		not exactly	reject	
+1		not for this weekend	reject	
+1		not now	reject	
+1		not today no no cancel just forget it cortana you use it shipped	cancel	
+1		not today not today friday	reject	
+1		nothing	reject	
+1		nothing cancel	cancel	
+1		nothing cancel i made a mistake	cancel	
+1		nothing just cancel	cancel	
+1		nude cancel ?	cancel	
+1		of course	confirm	
+1		of course yes	confirm	
+1		oh	reject	
+1		oh cancel	cancel	
+1		oh no	reject	
+1		oh no no	reject	
+1		oh now	reject	
+1		oh yes	confirm	
+1		ohh no	reject	
+1		ohh no cancel it	cancel	
+1		ohh sorry yes	confirm	
+1		ohh yes	confirm	
+1		ok	confirm	
+1		ok anything will pan out	confirm	
+1		ok never mind	reject	
+1		ok with that	confirm	
+1		okay	confirm	
+1		okay now	confirm	
+1		okay thank you	confirm	
+1		okay thank you cortana	confirm	
+1		okay thanks	confirm	
+1		okay then	confirm	
+1		other time cancel cancel cancel cancel	cancel	
+1		perfect	confirm	
+1		perfect thank you	confirm	
+1		piss off	reject	
+1		please	confirm	
+1		please cancel	cancel	
+1		please cancel all of them	cancel	
+1		please cancel it	cancel	
+1		probably	confirm	
+1		right	confirm	
+1		say yes	confirm	
+1		scratch that	reject	
+1		scratch that	cancel	
+1		shore	confirm	
+1		something wrong	reject	
+1		sound good	confirm	
+1		sounds good	confirm	
+1		sounds good okay	confirm	
+1		sounds good to me	confirm	
+1		sounds good yes	confirm	
+1		sounds great	confirm	
+1		sounds great thank you	confirm	
+1		sounds perfect	confirm	
+1		stop stop stop stop stop	cancel	
+1		sure	confirm	
+1		sure go ahead	confirm	
+1		sure is	confirm	
+1		sure it 's okay	confirm	
+1		thank you	confirm	
+1		thank you cortana	confirm	
+1		thank you yes	confirm	
+1		thanks	confirm	
+1		that ' s correct	confirm	
+1		that ' s fine	confirm	
+1		that ' s good	confirm	
+1		that ' s right	confirm	
+1		that is correct	confirm	
+1		that right yes	confirm	
+1		that 's awesome	confirm	
+1		that 's correct	confirm	
+1		that 's fine	confirm	
+1		that 's good	confirm	
+1		that 's great	confirm	
+1		that 's not right	reject	
+1		that 's right	confirm	
+1		that 's right thank you	confirm	
+1		that 's wrong erase	reject	
+1		this is my yes	confirm	
+1		this is perfect	confirm	
+1		three no no no no	reject	
+1		try again	reject	
+1		uh huh	confirm	
+1		what today no	reject	
+1		wrong	reject	
+1		yea	confirm	
+1		yeah	confirm	
+1		yeah add that	confirm	
+1		yeah baby	confirm	
+1		yeah baby i love you	confirm	
+1		yeah cancel	cancel	
+1		yeah cancel it	cancel	
+1		yeah it 's good	confirm	
+1		yeah okay	confirm	
+1		yeah recurring	confirm	
+1		yeah sounds great	confirm	
+1		yeah thank you	confirm	
+1		yeah that 's great	confirm	
+1		yeah that 's right thank you	confirm	
+1		yeah what is it	confirm	
+1		yeah why not	confirm	
+1		yep	confirm	
+1		yep , perfect	confirm	
+1		yep good	confirm	
+1		yep it 's projected	confirm	
+1		yep that ' s right	confirm	
+1		yep that 's good	confirm	
+1		yep that 's odd	confirm	
+1		yes	confirm	
+1		yes , cortana	confirm	
+1		yes , it does	confirm	
+1		yes , please	confirm	
+1		yes , thank you	confirm	
+1		yes , thank you cortana	confirm	
+1		yes . can you add this to the google calendar ?	confirm	
+1		yes absolutely	confirm	
+1		yes add	confirm	
+1		yes add it	confirm	
+1		yes add please	confirm	
+1		yes and saturday please	confirm	
+1		yes at	confirm	
+1		yes at location	confirm	
+1		yes but i want this to be a task	confirm	
+1		yes can i get a reminder	confirm	
+1		yes can you notify me an hour beforehand	confirm	
+1		yes can you set a alarm thirty minutes prior	confirm	
+1		yes cancel that	cancel	
+1		yes cortana	confirm	
+1		yes cortana thank you	confirm	
+1		yes girl	confirm	
+1		yes good	confirm	
+1		yes guess	confirm	
+1		yes here 's my sharpie	confirm	
+1		yes i have	confirm	
+1		yes i need to make an appointment on my schedule calendar	confirm	
+1		yes i was right	confirm	
+1		yes i'm good	confirm	
+1		yes indeed	confirm	
+1		yes is great	confirm	
+1		yes it does	confirm	
+1		yes it is	confirm	
+1		yes it is thank you	confirm	
+1		yes it it worked right	confirm	
+1		yes it 's an all day event	confirm	
+1		yes let 's play	confirm	
+1		yes maam	confirm	
+1		yes ma'am	confirm	
+1		yes no	reject	
+1		yes of course	confirm	
+1		yes or	confirm	
+1		yes perfect	confirm	
+1		yes please	confirm	
+1		yes put this on my calendar	confirm	
+1		yes remind me before	confirm	
+1		yes remind me the day before	confirm	
+1		yes reminder please	confirm	
+1		yes sir	confirm	
+1		yes sirree bob one oh one	confirm	
+1		yes skip	confirm	
+1		yes sounds good	confirm	
+1		yes sounds good thanks	confirm	
+1		yes sounds great	confirm	
+1		yes thank you	confirm	
+1		yes thank you add	confirm	
+1		yes thank you cortana	confirm	
+1		yes thanks	confirm	
+1		yes that ' s correct	confirm	
+1		yes that ' s fine	confirm	
+1		yes that ' s great thank you	confirm	
+1		yes that ' s right	confirm	
+1		yes that 's awesome	confirm	
+1		yes that 's okay	confirm	
+1		yes that 's perfect	confirm	
+1		yes that 's right	confirm	
+1		yes that sounds good	confirm	
+1		yes very good	confirm	
+1		yes wow	confirm	
+1		yes yes	confirm	
+1		yes yes add all	confirm	
+1		yes yes all day event	confirm	
+1		yes yes bitch	confirm	
+1		yes yes yes	confirm	
+1		yes you	confirm	
+1		yes you're fine	confirm	
+1		yesh	confirm	
+1		yet	confirm	
+1		you	confirm	
+1		you are correct	confirm	
+1		you bet	confirm	
+1		you betcha	confirm	
+1		you got it wrong	reject	
+1		you have my permission	confirm	
+1		you have the wrong date	reject	
+1		you're not getting it	reject	
+1		yup	confirm	
+1		yup add	confirm	
+1		abort that	reject	
+1		add it	confirm	
+1		add the appointment	confirm	
+1		alright	confirm	
+1		and that 's correct	confirm	
+1		awesome	confirm	
+1		bing cancel	cancel	
+1		blow	reject	
+1		brilliant	confirm	
+1		but not this calendar	reject	
+1		can you cancel that	cancel	
+1		cancel	cancel	
+1		cancel	reject	
+1		cancel all	cancel	
+1		cancel appointment	cancel	
+1		cancel bell on my way	cancel	
+1		cancel call for ladona tomorrow	cancel	
+1		cancel can you don't do that please	cancel	
+1		cancel cancel	cancel	
+1		cancel cancel cancel	cancel	
+1		cancel cancel cancel cancel	cancel	
+1		cancel cancel it	cancel	
+1		cancel don't worry	cancel	
+1		cancel dot	cancel	
+1		cancel flowers dot com has this	cancel	
+1		cancel it	cancel	
+1		cancel it cancel it	cancel	
+1		cancel it i don ' t want that	cancel	
+1		cancel it please	cancel	
+1		cancel my 4 o'clock	cancel	
+1		cancel my appointment for october 4	reject	
+1		cancel my dentist appointment	cancel	
+1		cancel no	cancel	
+1		cancel please	cancel	
+1		cancel tess	cancel	
+1		cancel that	cancel	
+1		cancel that cancel that cancel it	cancel	
+1		cancel that please	cancel	
+1		cancel the	cancel	
+1		cancel the event	cancel	
+1		cancel the no subject	cancel	
+1		cancel the one fifteen appointment	cancel	
+1		cancel the untitled event	cancel	
+1		cancel this	cancel	
+1		cancel what i have to do in the afternoon	cancel	
+1		cancel win	cancel	
+1		change	reject	
+1		change calendar	reject	
+1		change event name	reject	
+1		change that to march 1st	reject	
+1		change the time	reject	
+1		change the time to eight oh one am	reject	
+1		change video 2	reject	
+1		chris mann is spelled incorrect	reject	
+1		confirm	confirm	
+1		confirm	confirm	
+1		cool	confirm	
+1		correct	confirm	
+1		correct yes	confirm	
+1		council	cancel	
+1		counseling no	reject	
+1		course not	reject	
+1		create an appointment	confirm	
+1		da	confirm	
+1		disregard	reject	
+1		do it ?	confirm	
+1		don't	reject	
+1		don't schedule it cancel	cancel	
+1		edit time	reject	
+1		excellent	confirm	
+1		fantastic	confirm	
+1		forget cancel	reject	
+1		forget it	reject	
+1		forget it	cancel	
+1		good	confirm	
+1		good thank you	confirm	
+1		good yes	confirm	
+1		great	confirm	
+1		great i've added it	confirm	
+1		guess	confirm	
+1		ha no	reject	
+1		have cancel	reject	
+1		help	reject	
+1		hugs yes	confirm	
+1		i cancel	cancel	
+1		i change	reject	
+1		i didn't say that	reject	
+1		i don't think so	reject	
+1		i know	reject	
+1		i need to change the title	reject	
+1		i never mind	cancel	
+1		i was lying	reject	
+1		i'd like to edit it please	reject	
+1		i'm cancel	cancel	
+1		i'm great	confirm	
+1		i'm not asking about music	reject	
+1		is it okay can you dismiss it yeah	cancel	
+1		it is indeed although i will be tentative not busy	confirm	
+1		it 's good	confirm	
+1		it 's good thank you	confirm	
+1		it 's not	reject	
+1		it 's not a note	reject	
+1		it 's not v 8 is ve	reject	
+1		it 's ok cancel event	cancel	
+1		it 's okay	confirm	
+1		january 10th no	reject	
+1		just cancel	cancel	
+1		like no	reject	
+1		looks good	confirm	
+1		looks good thank you	confirm	
+1		make senses	reject	
+1		maybe you can cancel it	cancel	
+1		n o	reject	
+1		nah	reject	
+1		ne	reject	
+1		neither	reject	
+1		never	cancel	
+1		never	reject	
+1		never mind	reject	
+1		never mind	cancel	
+1		never mind cancel that	cancel	
+1		never mind cortana could you cancel that	cancel	
+1		never mind thanks cortana	cancel	
+1		nevermind	reject	
+1		new cancel	cancel	
+1		nice okay	confirm	
+1		no	reject	
+1		no	reject	
+1		no alarm	reject	
+1		no all day	reject	
+1		no alright	reject	
+1		no but make a f****** playing with the bus plunged rest	reject	
+1		no can cancel	cancel	
+1		no can you change it to	reject	
+1		no cancel	cancel	
+1		no cancel	reject	
+1		no cancel cancel	cancel	
+1		no cancel it	cancel	
+1		no cancel it shut up	cancel	
+1		no cancel it what no no	cancel	
+1		no cancel that	cancel	
+1		no change it to 11 pm	reject	
+1		no change the time	reject	
+1		no change the title	reject	
+1		no change this	reject	
+1		no delete it	reject	
+1		no edit	reject	
+1		no from	reject	
+1		no girl	reject	
+1		no golf golf	reject	
+1		no i don ' t wanna make an appointment ohh forget it	reject	
+1		no i just cancel it	cancel	
+1		no it ' s for today	reject	
+1		no it ' s on monday	reject	
+1		no it doesn't	reject	
+1		no it isn't	reject	
+1		no it 's july 25th	reject	
+1		no it 's not	reject	
+1		no it 's not right	reject	
+1		no it 's not today	reject	
+1		no it 's only for one day the monday	reject	
+1		no it was but neither of the other two	reject	
+1		no its	reject	
+1		no its ok	confirm	
+1		no just cancel it	cancel	
+1		no just today	reject	
+1		no make it today	reject	
+1		no make that around 5	reject	
+1		no never mind	reject	
+1		no no	reject	
+1		no no	cancel	
+1		no no cancel	cancel	
+1		no no cancel it for monday	reject	
+1		no no careful	reject	
+1		no no half nine	reject	
+1		no no no	reject	
+1		no no no cancel please	cancel	
+1		no no no no no no no no	reject	
+1		no no no no no stop it	reject	
+1		no no no rip at that rip at that	reject	
+1		no no no you don't get it i don't see a damn thing	reject	
+1		no no zero one	reject	
+1		no not today	reject	
+1		no not two oh eight am	reject	
+1		no one	reject	
+1		no send it for 3 30	reject	
+1		no send the time	reject	
+1		no should be rehearsal	reject	
+1		no start time	reject	
+1		no stupid this is completely different	reject	
+1		no thank you	reject	
+1		no thanks	reject	
+1		no that ' s wrong	reject	
+1		no that is not correct	reject	
+1		no that is not right	reject	
+1		no that is wrong	reject	
+1		no that 's wrong	reject	
+1		no the appointment is september 20 3rd	reject	
+1		no the day after tomorrow	reject	
+1		no the from is wrong	reject	
+1		no third third of you	reject	
+1		no this is not correct cortana	reject	
+1		no time at all	reject	
+1		no title	reject	
+1		no windows	reject	
+1		no you misunderstood	reject	
+1		noleen oh clock	reject	
+1		nope	reject	
+1		nope	reject	
+1		not	reject	
+1		not appointments	reject	
+1		not cancel	cancel	
+1		not exactly	reject	
+1		not for this weekend	reject	
+1		not now	reject	
+1		not today no no cancel just forget it cortana you use it shipped	cancel	
+1		not today not today friday	reject	
+1		nothing	reject	
+1		nothing cancel	cancel	
+1		nothing cancel i made a mistake	cancel	
+1		nothing just cancel	cancel	
+1		nude cancel ?	cancel	
+1		of course	confirm	
+1		of course yes	confirm	
+1		oh	reject	
+1		oh cancel	cancel	
+1		oh no	reject	
+1		oh no no	reject	
+1		oh now	reject	
+1		oh yes	confirm	
+1		ohh no	reject	
+1		ohh no cancel it	cancel	
+1		ohh sorry yes	confirm	
+1		ohh yes	confirm	
+1		ok	confirm	
+1		ok anything will pan out	confirm	
+1		ok never mind	reject	
+1		ok with that	confirm	
+1		okay	confirm	
+1		okay now	confirm	
+1		okay thank you	confirm	
+1		okay thank you cortana	confirm	
+1		okay thanks	confirm	
+1		okay then	confirm	
+1		other time cancel cancel cancel cancel	cancel	
+1		perfect	confirm	
+1		perfect thank you	confirm	
+1		piss off	reject	
+1		please	confirm	
+1		please cancel	cancel	
+1		please cancel all of them	cancel	
+1		please cancel it	cancel	
+1		probably	confirm	
+1		right	confirm	
+1		say yes	confirm	
+1		scratch that	reject	
+1		scratch that	cancel	
+1		shore	confirm	
+1		something wrong	reject	
+1		sound good	confirm	
+1		sounds good	confirm	
+1		sounds good okay	confirm	
+1		sounds good to me	confirm	
+1		sounds good yes	confirm	
+1		sounds great	confirm	
+1		sounds great thank you	confirm	
+1		sounds perfect	confirm	
+1		stop stop stop stop stop	cancel	
+1		sure	confirm	
+1		sure go ahead	confirm	
+1		sure is	confirm	
+1		sure it 's okay	confirm	
+1		thank you	confirm	
+1		thank you cortana	confirm	
+1		thank you yes	confirm	
+1		thanks	confirm	
+1		that ' s correct	confirm	
+1		that ' s fine	confirm	
+1		that ' s good	confirm	
+1		that ' s right	confirm	
+1		that is correct	confirm	
+1		that right yes	confirm	
+1		that 's awesome	confirm	
+1		that 's correct	confirm	
+1		that 's fine	confirm	
+1		that 's good	confirm	
+1		that 's great	confirm	
+1		that 's not right	reject	
+1		that 's right	confirm	
+1		that 's right thank you	confirm	
+1		that 's wrong erase	reject	
+1		this is my yes	confirm	
+1		this is perfect	confirm	
+1		three no no no no	reject	
+1		try again	reject	
+1		uh huh	confirm	
+1		what today no	reject	
+1		wrong	reject	
+1		yea	confirm	
+1		yeah	confirm	
+1		yeah add that	confirm	
+1		yeah baby	confirm	
+1		yeah baby i love you	confirm	
+1		yeah cancel	cancel	
+1		yeah cancel it	cancel	
+1		yeah it 's good	confirm	
+1		yeah okay	confirm	
+1		yeah recurring	confirm	
+1		yeah sounds great	confirm	
+1		yeah thank you	confirm	
+1		yeah that 's great	confirm	
+1		yeah that 's right thank you	confirm	
+1		yeah what is it	confirm	
+1		yeah why not	confirm	
+1		yep	confirm	
+1		yep , perfect	confirm	
+1		yep good	confirm	
+1		yep it 's projected	confirm	
+1		yep that ' s right	confirm	
+1		yep that 's good	confirm	
+1		yep that 's odd	confirm	
+1		yes	confirm	
+1		yes , cortana	confirm	
+1		yes , it does	confirm	
+1		yes , please	confirm	
+1		yes , thank you	confirm	
+1		yes , thank you cortana	confirm	
+1		yes . can you add this to the google calendar ?	confirm	
+1		yes absolutely	confirm	
+1		yes add	confirm	
+1		yes add it	confirm	
+1		yes add please	confirm	
+1		yes and saturday please	confirm	
+1		yes at	confirm	
+1		yes at location	confirm	
+1		yes but i want this to be a task	confirm	
+1		yes can i get a reminder	confirm	
+1		yes can you notify me an hour beforehand	confirm	
+1		yes can you set a alarm thirty minutes prior	confirm	
+1		yes cancel that	cancel	
+1		yes cortana	confirm	
+1		yes cortana thank you	confirm	
+1		yes girl	confirm	
+1		yes good	confirm	
+1		yes guess	confirm	
+1		yes here 's my sharpie	confirm	
+1		yes i have	confirm	
+1		yes i need to make an appointment on my schedule calendar	confirm	
+1		yes i was right	confirm	
+1		yes i'm good	confirm	
+1		yes indeed	confirm	
+1		yes is great	confirm	
+1		yes it does	confirm	
+1		yes it is	confirm	
+1		yes it is thank you	confirm	
+1		yes it it worked right	confirm	
+1		yes it 's an all day event	confirm	
+1		yes let 's play	confirm	
+1		yes maam	confirm	
+1		yes ma'am	confirm	
+1		yes no	reject	
+1		yes of course	confirm	
+1		yes or	confirm	
+1		yes perfect	confirm	
+1		yes please	confirm	
+1		yes put this on my calendar	confirm	
+1		yes remind me before	confirm	
+1		yes remind me the day before	confirm	
+1		yes reminder please	confirm	
+1		yes sir	confirm	
+1		yes sirree bob one oh one	confirm	
+1		yes skip	confirm	
+1		yes sounds good	confirm	
+1		yes sounds good thanks	confirm	
+1		yes sounds great	confirm	
+1		yes thank you	confirm	
+1		yes thank you add	confirm	
+1		yes thank you cortana	confirm	
+1		yes thanks	confirm	
+1		yes that ' s correct	confirm	
+1		yes that ' s fine	confirm	
+1		yes that ' s great thank you	confirm	
+1		yes that ' s right	confirm	
+1		yes that 's awesome	confirm	
+1		yes that 's okay	confirm	
+1		yes that 's perfect	confirm	
+1		yes that 's right	confirm	
+1		yes that sounds good	confirm	
+1		yes very good	confirm	
+1		yes wow	confirm	
+1		yes yes	confirm	
+1		yes yes add all	confirm	
+1		yes yes all day event	confirm	
+1		yes yes bitch	confirm	
+1		yes yes yes	confirm	
+1		yes you	confirm	
+1		yes you're fine	confirm	
+1		yesh	confirm	
+1		yet	confirm	
+1		you	confirm	
+1		you are correct	confirm	
+1		you bet	confirm	
+1		you betcha	confirm	
+1		you got it wrong	reject	
+1		you have my permission	confirm	
+1		you have the wrong date	reject	
+1		you're not getting it	reject	
+1		yup	confirm	
+1		yup add	confirm	

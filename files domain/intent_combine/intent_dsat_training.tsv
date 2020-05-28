@@ -1,5 +1,19 @@
-TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain
-multiturn_03032020_1	file_share	share	confirm	files
-multiturn_03032020_2	file_share	share it	confirm	files
-multiturn_03032020_3		share	confirm	common
-multiturn_03032020_4		share it	confirm	common
+TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	TaskFrameEntityStates	TaskFrameGUID	SpeechPeopleDisambiguationGrammarMatches	ConversationalContext
+multiturn_03032020_1		share	confirm	files	InProgress			PreviousTurnDomain(files)TaskFrameStatus(inprogress)
+multiturn_03032020_2		share	confirm	common	InProgress			PreviousTurnDomain(common)TaskFrameStatus(inprogress)
+multiturn_03032020_3		share it	confirm	files	InProgress			PreviousTurnDomain(files)TaskFrameStatus(inprogress)
+multiturn_03032020_4		share it	confirm	common	InProgress			PreviousTurnDomain(common)TaskFrameStatus(inprogress)
+multiturn_03032020_5		please do	confirm	files	InProgress			PreviousTurnDomain(files)TaskFrameStatus(inprogress)
+multiturn_03032020_6		please do	confirm	common	InProgress			PreviousTurnDomain(common)TaskFrameStatus(inprogress)
+multiturn_03202020_1		share	confirm	files	PromptedForConfirmation			PreviousTurnDomain(files)TaskFrameStatus(promptedforconfirmation)
+multiturn_03202020_2		share	confirm	common	PromptedForConfirmation			PreviousTurnDomain(common)TaskFrameStatus(promptedforconfirmation)
+multiturn_03202020_3		share it	confirm	files	PromptedForConfirmation			PreviousTurnDomain(files)TaskFrameStatus(promptedforconfirmation)
+multiturn_03202020_4		share it	confirm	common	PromptedForConfirmation			PreviousTurnDomain(common)TaskFrameStatus(promptedforconfirmation)
+multiturn_03202020_5		please do	confirm	files	PromptedForConfirmation			PreviousTurnDomain(files)TaskFrameStatus(promptedforconfirmation)
+multiturn_03202020_6		please do	confirm	common	PromptedForConfirmation			PreviousTurnDomain(common)TaskFrameStatus(promptedforconfirmation)
+multiturn_03202020_7		sure	confirm	files	PromptedForConfirmation			PreviousTurnDomain(files)TaskFrameStatus(promptedforconfirmation)
+multiturn_03202020_8		sure	confirm	common	PromptedForConfirmation			PreviousTurnDomain(common)TaskFrameStatus(promptedforconfirmation)
+multiturn_03202020_9		yes	confirm	files	PromptedForConfirmation			PreviousTurnDomain(files)TaskFrameStatus(promptedforconfirmation)
+multiturn_03202020_10		yes	confirm	common	PromptedForConfirmation			PreviousTurnDomain(common)TaskFrameStatus(promptedforconfirmation)
+multiturn_03202020_11		ok	confirm	files	PromptedForConfirmation			PreviousTurnDomain(files)TaskFrameStatus(promptedforconfirmation)
+multiturn_03202020_12		ok	confirm	common	PromptedForConfirmation			PreviousTurnDomain(common)TaskFrameStatus(promptedforconfirmation)
