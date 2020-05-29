@@ -65,6 +65,21 @@ https://microsoft.sharepoint.com/teams/LUKnowledgeandSearchRelevanceLUKAS/_layou
 https://microsoft.sharepoint.com/teams/LUKnowledgeandSearchRelevanceLUKAS/_layouts/15/Doc.aspx?sourcedoc={866833bb-4952-49c8-8f5a-3cb9305b2d2f}&action=edit&wd=target%28N-Best%20Name.one%7C153c80ea-697c-4779-9a67-0a4f2ef70d24%2FEvaluation%20data%7C27feb8e4-8b64-47f1-b87f-f7bd80c21940%2F%29
 
 
+i change to file name then try
+
+PS E:\fileAnswer_data_synthesis\CMF_training> .\bin\CLU.Core.1.2.305\MLGTools.exe feat2proc -fsrc=E:\fileAnswer_data_synthesis\CMF_training\resource\pcfg\pcfg.intent.lexicon.txt -fbin=E:\fileAnswer_data_synthesis\CMF_training\resource\pcfg\files_enus_mv1.pcfg.intent.mlg.lexicon.bin
+
+//using one one being used by PCFG to test
+file_keyword_or_file_name:Trie(.\resource\LexiconFiles\filekeyword_filename_lexicon.txt)
+
+
+could only use
+specificiy files name to generate
+https://microsoft.sharepoint.com/teams/LUKnowledgeandSearchRelevanceLUKAS/_layouts/15/Doc.aspx?sourcedoc={866833bb-4952-49c8-8f5a-3cb9305b2d2f}&action=edit&wd=target%28N-Best%20Name.one%7C153c80ea-697c-4779-9a67-0a4f2ef70d24%2FPersonalized%5C%2FContextual%20LU%20experiments%7C6c93cc47-2fc9-455d-9ee9-8731cec6c835%2F%29
+
+// create feature 
+E:\fileAnswer_data_synthesis\CMF_training> .\bin\CLU.Core.1.2.305\MLGTools.exe feat2proc -fsrc=E:\fileAnswer_data_synthesis\CMF_training\resource\personal_grammar\files.static.domain.lexicon.txt -fbin=E:\fileAnswer_data_synthesis\CMF_training\resource\personal_grammar\files.static.lex.desc.bin
+
 
 =================
 Debug B2 WW is Impossible
