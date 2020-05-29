@@ -87,6 +87,12 @@ https://microsoft.sharepoint.com/teams/LUKnowledgeandSearchRelevanceLUKAS/_layou
 PS E:\fileAnswer_data_synthesis\CMF_training> .\bin\CLU.Core.1.2.305\MLGTools.exe feat2proc -fsrc=E:\fileAnswer_data_synthesis\CMF_training\resource\personal_grammar\filekeywordOrfilename.static.domain.lexicon.txt -fbin=E:\fileAnswer_data_synthesis\CMF_training\resource\personal_grammar\filekeywordOrfilename.static.lex.desc.bin
 
 
+
+
+//dynamic folder
+//E:\fileAnswer_data_synthesis\CMF_training\resource\personal_grammar
+//dynamic command test
+
 =================
 Debug B2 WW is Impossible
 =================
