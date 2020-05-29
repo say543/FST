@@ -490,7 +490,7 @@ blackListQuerySet = {
     "Cortina, please find the test documents from 7/31/14 to 8/15/14 that state test on them and are pages 1 to 3 with Jim in the sub text.",
     "cortana find don't drop that in my music",
     "i need you to show me the note about my lunch date with jim.",
-
+    "locate messages from skip view presentation watch me",
     #  for a xxx file potentail filter-out queires
     "search file a",
     "search files a",
