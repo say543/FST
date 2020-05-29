@@ -1818,6 +1818,14 @@ also applies to UWP
 Potential conflict between note, email, files and communication domain on CoW
 
 
+conclusion
+Send a|<none> note à communication domain
+Examples: “send a note to Michael”, “send Michael a note”, “send a polite note to Michael”
+Send the|my note à file domain
+Share a|the|my|<none> à files domain
+
+
+
 ===========================
 reporting set / validating set
 
