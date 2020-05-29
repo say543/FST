@@ -78,7 +78,6 @@ specificiy files name to generate
 https://microsoft.sharepoint.com/teams/LUKnowledgeandSearchRelevanceLUKAS/_layouts/15/Doc.aspx?sourcedoc={866833bb-4952-49c8-8f5a-3cb9305b2d2f}&action=edit&wd=target%28N-Best%20Name.one%7C153c80ea-697c-4779-9a67-0a4f2ef70d24%2FPersonalized%5C%2FContextual%20LU%20experiments%7C6c93cc47-2fc9-455d-9ee9-8731cec6c835%2F%29
 
 // create static bin
-注意裡面的名稱　　跟實際的bin 的名稱可能要一樣　　才可以　　因為不像pcfg 有grammar 的support
 PS E:\fileAnswer_data_synthesis\CMF_training> .\bin\CLU.Core.1.2.305\MLGTools.exe feat2proc -fsrc=E:\fileAnswer_data_synthesis\CMF_training\resource\personal_grammar\filekeywordOrfilename.static.domain.lexicon.txt -fbin=E:\fileAnswer_data_synthesis\CMF_training\resource\personal_grammar\filekeywordOrfilename.static.lex.desc.bin
 
 
