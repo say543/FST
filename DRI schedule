@@ -195,6 +195,15 @@ https://cortanalogviewer.azurewebsites.net/query/186d68d6757f4023a474754cbdd1eb3
  PPE 才有log,  prod 沒有  有空要問一下 
 
 
+06012020
+<email_title>
+Diagnosis tool(CLV) has been seperated into two versions
+For compliant traffic, please still visit https://cortanalogviewer.azurewebsites.net/.
+
+For non-compliant traffic, please visit https://cortanalogviewer-ppe.azurewebsites.net/ instead.
+
+ 
+
 
 
 carina bing intent
