@@ -51,6 +51,11 @@ def parse(slotList, doubleSlotList):
     with codecs.open('pattern.txt', 'r', 'utf-8') as fin:
         for line in fin:
             line = line.strip();
+
+            # skip comment with #
+            if line.startswith('#'):
+                continue
+            
             if not line:
                 continue;
             patternSet.append(line);
