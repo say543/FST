@@ -38,6 +38,10 @@ for training data
 \\DESKTOP-3J7614O\sharemodeltest\Validating_Teams_AllDomain_SR_RandomSampling_20200401-20200430slot_evaluation.tsv
 
 
+\\DESKTOP-3J7614O\sharemodeltest\Validating_SnA_SR_OutlookMobile_FileSearch_20200304-20200430intent_evaluation.tsv
+\\DESKTOP-3J7614O\sharemodeltest\Validating_SnA_SR_OutlookMobile_FileSearch_20200304-20200430slot_evaluation.tsv
+
+
 
 \\DESKTOP-3J7614O\sharemodeltest\Validating_Teams_JulyToSep_slot_evaluation.tsv
 
@@ -60,6 +64,21 @@ files domain 怎麼onbaord 到evaluation
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1182483?_a=files
 看這個pr
 
+
+=================
+modelers weekly sync
+=================
+06022020
+https://microsoft.sharepoint.com/teams/CortanaCore/_layouts/OneNote.aspx?id=%2Fteams%2FCortanaCore%2FShared%20Documents%2FCore%20Science%2FCortana%20Core%20Science&wd=target%28LU%20Modeling%20and%20Partners%2FTeams%20Client%20Based%20LU.one%7CB373474B-B526-4264-950A-612B9F61A8A9%2F20200602%20-Zhiguo%7C4831CEDA-57B2-40FC-8333-7D95CB4D03B3%2F%29
+
+
+
+
+=================
+unigram bigram library trying to see
+=================
+bi gram frequency
+google ngram index
 
 
 
