@@ -66,6 +66,10 @@ copyfile("..\\Open_Text_Synthesis\\contact_name_order_ref_and_file_recency\\data
 copyfile("..\\Open_Text_Synthesis\\file_keyword_file_type_file_action_to_contact_name\\data_synthesised_file_keyword_file_type_file_action_to_contact_name.tsv" , "data_synthesised_file_keyword_file_type_file_action_to_contact_name.tsv")
 
 
+# add file_keyword
+#not too much help so comment it at first
+#copyfile("..\\Open_Text_Synthesis\\file_keyword\\data_synthesised_file_keyword.tsv" , "data_synthesised_file_keyword.tsv")
+
 
 ############################################
 # copy file from data folder directly
