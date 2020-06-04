@@ -724,7 +724,8 @@ stop developer feature flight
 
 
 
-
+06042020
+microsoft ring 沒有到100% 直接stop 因為devicecontrol 的限制　　之後直接就replace 掉就好
 
 conlufilename and conlufilenamekp are flights for full file name and file name key phrases respectively. 
 The former is enabled in 50% of Microsoft Ring, the latter in 100% of Developer ring
