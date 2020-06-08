@@ -36,12 +36,14 @@ TARGETNUMCOLUMNS = 10
 ############################################
 # copy file from synthetic data
 # eg : copyfile("..\\Open_Text_Synthesis\\file_keyword_and_file_type\\data_synthesised_file_keyword_file_type.tsv" , "data_synthesised_file_keyword_file_type.tsv")
+
 ############################################
 # cancel each one if you do n
 #syn_hyperparameter = 2000
 syn_hyperparameter = 500
 
 synlists = set([
+    # will be capped by syn_hyperparameter. so rerun it might create problem 
     "sharefile_synthesis.tsv",
     "share_synthesis.tsv",
     "send_synthesis.tsv",
