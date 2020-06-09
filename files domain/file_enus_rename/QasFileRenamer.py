@@ -123,6 +123,10 @@ if __name__ == '__main__':
     #cmd = ("-s ..\\output_domain_answer_05012020v3_use_pcfg_v3_domain_cut_some_uesless_domains_negative_cases\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
     #cmd = ("-s ..\\output_domain_answer_05012020v3_use_pcfg_v3_domain_cut_some_uesless_domains_negative_cases\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
 
+    #cmd = ("-s ..\\output_domain_answer_05142020v2_use_pcfg_v3_domain_cut_some_uesless_domains_negative_cases\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
+
+    #cmd = ("-s ..\\output_domain_answer_05242020v1_300\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
 
     ###########
     ### checked in intent model ###
@@ -132,17 +136,85 @@ if __name__ == '__main__':
     #cmd = ("-s ..\\output_adhoc_intent_05042020v3\\intent_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
 
 
+    #cmd = ("-s ..\\output_adhoc_intent_05292020v2\\intent_svm\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
+
+
     ###########
     ### checked in slot model ###
     ###########
 
-    cmd = ("-s ..\\output_adhoc_slot_05062020v3\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
+    # this version use some uwp random set query(but their annotation might be wrong, update it in the future)
+    #cmd = ("-s ..\\output_adhoc_slot_05062020v3\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
+
+
+    #cmd = ("-s ..\\output_adhoc_slot_05202020v2\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
+
+
+    #cmd = ("-s ..\\output_adhoc_slot_05272020v1\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
+
+    #cmd = ("-s ..\\output_adhoc_slot_05272020v1\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
+
+    #cmd = ("-s ..\\output_adhoc_slot_05282020v1\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
+
+
+    #cmd = ("-s ..\\output_adhoc_slot_05292020v1\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
+
+
+    # this one attached / attachment might have wrong scheme, need to revisit in the future
+    # golden queire might need to check
+    cmd = ("-s ..\\output_adhoc_slot_06052020v1\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
+    
 
 
     ###########
     ### other try fine-tune experience
     ###########
+
+    #cmd = ("-s ..\\output_adhoc_intent_05292020v2\\intent_svm\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
+
+
+    #cmd = ("-s ..\\output_adhoc_slot_06052020v1\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
+
+
+    # basically add all
+    #cmd = ("-s ..\\output_domain_answer_05182020v1_use_pcfg_v3_domain_cut_some_uesless_domains_negative_cases\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
+    #cmd = ("-s ..\\output_domain_answer_05202020v2_use_pcfg_v3_domain_cut_some_uesless_domains_negative_cases\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
+
+    #cmd = ("-s ..\\output_domain_answer_05232020v1_100\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
+    #cmd = ("-s ..\\output_domain_answer_05232020v1_200\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
+    #cmd = ("-s ..\\output_domain_answer_05232020v1_300\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
+
+
+    #cmd = ("-s ..\\output_domain_answer_05242020v1_100\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
+
+    #cmd = ("-s ..\\output_domain_answer_05242020v1_200\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
     
+
+    #cmd = ("-s ..\\output_domain_answer_05222020v1_1000\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
+    #cmd = ("-s ..\\output_domain_answer_05222020v1_1500\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
+    #cmd = ("-s ..\\output_domain_answer_05222020v1_2000\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
+    
+    #cmd = ("-s ..\\output_domain_answer_05222020v1_2500\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
+    #cmd = ("-s ..\\output_domain_answer_05222020v1_1500\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
+
+    #cmd = ("-s ..\\output_adhoc_slot_05212020v1\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
+
+    #cmd = ("-s ..\\output_adhoc_slot_05202020v2\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
+
+    #cmd = ("-s ..\\output_adhoc_slot\\canonical_processor\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
 
 
     #cmd = ("-s E:\\files_mv1_mv3_ready_for_teams_flight -t replaced -r files_enus_mv1:files_enus_mv3").split()
