@@ -273,8 +273,9 @@ with codecs.open('teams_intent_training.tsv', 'r', 'utf-8') as fin:
             openverbs = set([
                         "open ",
                         "opening ",
+                        # 05042020 requested by skill team to support file_navigate, need to initial
                         "view ",
-                        "viewing ",
+                        "viewing "
                         ])
 
             # add ing as verb
@@ -310,12 +311,14 @@ with codecs.open('teams_intent_training.tsv', 'r', 'utf-8') as fin:
                         "bring to ",
                         "bringing to ",
                         # above section and move to file_search
+                        # 05042020 requested by skill team to support file_navigate, need to initial
                         # below section and move to file_search
                         "take ",
                         "taking ",
                         "take me ",
                         "taking me ",
                         "took me ",
+                               
                         "take me to ",
                         "taking me to ",
                         "take me out to ",
