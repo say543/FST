@@ -114,6 +114,16 @@ observation  variants then you can find
 
 
 
+
+test on local qas
+open feedback    UserFileNames   0       1       feedback        1       -1      1
+
+bing intent
+UserFileNames
+[feedback]
+
+then it triggers domain score as 1
+
 ==========================
 MSAI entity stack
 
