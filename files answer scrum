@@ -66,6 +66,53 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 
 
 
+==========================
+contexual lu  pipeline rules overtrigger
+==========================
+
+originla two bugs
+Bug 2781208: [LU]Teams iOS DF - Cortana brings files to choose when query “Open Feedback”
+Bug 2824349: [LU] [CortanaProblems] DF: Cortana opens Reminder_feedback xls with query "Open Feedback"
+
+tester failed trace with matched file_name
+3d7333b2b36f4cb2ad2d9f43b8073dc2
+
+https://logcollector.asgfalcon.io/searchIssue?cortanaTraceId=3d7333b2b36f4cb2ad2d9f43b8073dc2
+search trace 
+
+
+//both only see speech grammar format
+// need to figure out how to explain this grammar format
+
+//originla query 
+UxoRequest | where UxoRequestId in~ ('3d7333b2b36f4cb2ad2d9f43b8073dc2')
+    | join UxoConnection on CorrelationId | where MicrosoftEyesOnCortanaLogs == 1
+    | project CorrelationId
+    | take 1
+        | join DebugPersonalInfo on $left.CorrelationId == $right.EventTraceId
+        | project EventTraceId, TIMESTAMP, UserId, TenantId, DocId, DocType, TotalPages, PageId, Payload
+        | order by DocType asc, PageId asc
+        | summarize  make_list(Payload) by DocType
+        | extend grammar = strcat_array(list_Payload,'')
+        | project DocType, grammar
+
+//shobit will s
+UxoRequest | where UxoRequestId in~ ('3d7333b2b36f4cb2ad2d9f43b8073dc2')
+    | join UxoConnection on CorrelationId | where MicrosoftEyesOnCortanaLogs == 1
+    | project CorrelationId
+//    | take 1
+        | join DebugPersonalInfo on $left.CorrelationId == $right.EventTraceId
+
+
+mohit correct trace without matched filename
+
+
+
+if want to see flights,  see cortan log
+https://cortanalogviewer.azurewebsites.net/query/3d7333b2b36f4cb2ad2d9f43b8073dc2
+observation  variants then you can find
+
+
 
 ==========================
 MSAI entity stack
