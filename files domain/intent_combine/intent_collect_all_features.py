@@ -42,6 +42,11 @@ TARGETNUMCOLUMNS = 10
 #syn_hyperparameter = 2000
 syn_hyperparameter = 500
 
+
+
+
+# replace this routine by fixing a dataset
+
 synlists = set([
     # will be capped by syn_hyperparameter. so rerun it might create problem 
     "sharefile_synthesis.tsv",
@@ -52,7 +57,7 @@ synlists = set([
     "openwith_synthesis.tsv",
     ])
 
-
+'''
 for synlist in synlists:
     copyfile("..\\Intent_Synthesis\\"+synlist , synlist)
 
@@ -136,7 +141,80 @@ for synlist in synlists:
         for i in range(0,min(syn_hyperparameter, len(temp))):
             outputs.append(temp[i]);            
             outputsWithSource.append(temp[i]+'\t'+ synlist);
- 
+'''
+
+
+
+syn_fix_file = 'six_synthesis_selected_fix.tsv'
+print("collecting: " + syn_fix_file);
+isHeadColumn = True
+headColumnList =[]
+temp =[]
+with codecs.open(syn_fix_file, 'r', 'utf-8') as fin:
+    for line in fin:
+  
+        #line = line.strip();
+        #if not line:
+        #    continue;
+
+        #temp.append(line);
+
+
+        
+
+        #skip headcolumn and check if valid
+        if (isHeadColumn):
+            line = line.strip();
+            if not line:
+                continue;
+            headColumnList = line.split('\t');
+            if len(headColumnList) < TARGETNUMCOLUMNS:
+                print("error header for file: " + synlist);
+            
+            isHeadColumn = False
+            continue
+
+        
+        line = line.strip();
+        if not line:
+            continue;
+        array = line.split('\t');
+
+        # append space is smaller than target length
+        lineWithFill = line
+        if len(array) < TARGETNUMCOLUMNS:
+
+            lineWithFill =""
+            for index in range(0,TARGETNUMCOLUMNS):
+
+                if index >= len(array):
+                    # debug
+                    #print(index)
+                    if headColumnList[index] in FILLINEMPTYCOLUMN:
+                        lineWithFill = lineWithFill
+                    else:
+                        print("error:" + line);
+                else:
+                     lineWithFill = lineWithFill+array[index]
+
+                if index < TARGETNUMCOLUMNS-1:
+                    lineWithFill+="\t";
+
+            
+            #lineWithFill = "\t"+lineWithFill+array[index]
+
+
+        #lineWithFill = lineWithFill.rstrip()
+        temp.append(lineWithFill)
+            
+    #for debug
+    #print(len(temp))
+    
+    for i in range(0, len(temp)):
+        outputs.append(temp[i]);        
+        outputsWithSource.append(temp[i]+'\t'+ syn_fix_file);
+
+
 
 #copyfile("..\\Intent_Synthesis\\sharefile_synthesis.tsv" , "sharefile_synthesis.tsv")
 #copyfile("..\\Intent_Synthesis\\share_synthesis.tsv" , "share_synthesis.tsv")
@@ -162,7 +240,7 @@ copyfile("..\\Open_Text_Synthesis\\file_type_and_contact_name_to_contact_name\\i
 
 # attachment new features for intent models
 # if features works well, turn it on as normal data
-#copyfile("..\\Open_Text_Synthesis\\contact_name_order_ref_and_file_recency\\intent_data_synthesised_contact_name_order_ref_file_recency.tsv", "intent_data_synthesised_contact_name_order_ref_file_recency.tsv")
+copyfile("..\\Open_Text_Synthesis\\contact_name_order_ref_and_file_recency\\intent_data_synthesised_contact_name_order_ref_file_recency.tsv", "intent_data_synthesised_contact_name_order_ref_file_recency.tsv")
 
 
 ############################################
@@ -210,7 +288,7 @@ for file in files:
     # skip synthesis data
     #if file == "sharefile_synthesis.tsv" or file == "share_synthesis.tsv" or file == "send_synthesis.tsv" \
     #or file == "downloadfire_synthesis.tsv" or file == "showwith_synthesis.tsv" or file == "openwith_synthesis.tsv":
-    if file in synlists:
+    if file in synlists or file == syn_fix_file:
         continue
     
     print("collecting: " + file);
