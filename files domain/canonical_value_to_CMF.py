@@ -26,7 +26,10 @@ cano={
 
 #
 #canofiles = glob.glob(r"*.txt");
-canofiles = ["file_recency.txt", "file_type.txt", "order_ref.txt", "position_ref.txt", "sharetarget_type.txt", "file_folder.txt","file_keyword.txt","sharetarget_name.txt"];
+#canofiles = ["file_recency.txt", "file_type.txt", "order_ref.txt", "position_ref.txt", "sharetarget_type.txt", "file_folder.txt","file_keyword.txt","sharetarget_name.txt"];
+# add contact_name , to_contact_name
+canofiles = ["file_recency.txt", "file_type.txt", "order_ref.txt", "position_ref.txt", "sharetarget_type.txt", "file_folder.txt","file_keyword.txt","sharetarget_name.txt","contact_name.txt","to_contact_name.txt"];
+
 
 outputFile = 'files.canonical.value.tsv'
 for file in canofiles:
