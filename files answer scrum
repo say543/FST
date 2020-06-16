@@ -67,6 +67,16 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 
 
 
+================================
+aether onboard
+================================
+
+execuate locally
+// only one argument
+py .\teams_slot_training_after_filter_aether.py 
+teams_slot_training.tsv
+
+
 ===========================
 QAS Tester
 ===========================
