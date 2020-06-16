@@ -72,6 +72,11 @@ b2 ww model run command
 
 .\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2 --queryInColumn 1 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c  E:\searchgold\deploy\builds\data\answers\QasMSSearch01DS  --variant griffinsdf_M365Search.QasMSSearch01DS  -dl file
 
+model onenote 
+https://microsoft.sharepoint.com/teams/CortanaCore/_layouts/15/Doc.aspx?sourcedoc={6d6ae133-c9c8-400d-bfd8-ae8feec6ff9f}&action=edit&wd=target%28LU%20Modeling%20and%20Partners%2FB2%20Deployment.one%7C5f498291-a459-40e5-a0ce-f96e0fbf0c37%2FProcess%7C9852204a-5c23-4548-ba92-7724a6428576%2F%29
+promote or upate exsiting model
+
+
 ================================
 aether onboard
 ================================
