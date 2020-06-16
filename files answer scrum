@@ -65,6 +65,24 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 看這個pr
 
 
+
+
+===========================
+QAS Tester
+===========================
+[5:19 PM] Suri Shen
+    
+https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2FQueryProcessing%2FProcessing%2Fsrc%2Fpython%2Finterface
+​[5:21 PM] Suri Shen
+    
+https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2FQueryProcessing%2FProcessing%2Fsrc%2Fpython%2Finterface%2Fgolden_set_test_examples%2Fgoldenset_GriffinProd_12_cortana.py
+​[5:22 PM] Suri Shen
+    
+
+Python -m qastest goldenset_GriffinProd_12_cortana.py  --enable_tracing --url=https://httpqas12-qas-prod-mw1p.qas.binginternal.com/httpqas
+
+
+
 ===========================
 good ppt / pictures can be used for presentation
 ===========================
