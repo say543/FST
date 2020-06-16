@@ -66,6 +66,11 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 
 
 
+============================
+b2 ww model run command
+==========================
+
+.\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2 --queryInColumn 1 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c  E:\searchgold\deploy\builds\data\answers\QasMSSearch01DS  --variant griffinsdf_M365Search.QasMSSearch01DS  -dl file
 
 ================================
 aether onboard
