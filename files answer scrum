@@ -73,6 +73,9 @@ instaill from here
 https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2FQueryProcessing%2FProcessing%2Fsrc%2Fpython%2Finterface
 
 
+endpoint 直接call
+https://httpqas12-qas-prod-mw1p.qas.binginternal.com/httpqas?query=set%20volume%20to%2050%20percent&vs=Cortana&debug=true&version=2&vc=caac:cortanasdk|ipe_locale:en-us|luscenario:teams|feature.luselfhost:1
+
 
 ======================
 teasm message try out how to setup
