@@ -92,7 +92,7 @@
 0	share file skills with mohit	file_share	files	share file <file_keyword> skills </file_keyword> with <to_contact_name> mohit </to_contact_name>
 0	share discuss rules deck	file_open	files	share <file_keyword> discuss rules </file_keyword> <file_type> deck </file_type>
 0	send the elizabeth arden file to clausing	file_open	files	send the <file_keyword> elizabeth arden </file_keyword> file to <to_contact_name> clausing </to_contact_name>
-0	share voice skills file in my 10 pm on Wednesday design sync chat	file_share	files	share <file_keyword> voice skills </file_keyword> file in my <meeting_starttime> 10 pm on Wednesday </meeting_starttime> <sharetarget_name> design sync </sharetarget_name> <sharetarget_type> chat </sharetarget_type>
+0	share voice skills file in my 10 pm on Wednesday design sync chat	file_share	files	share <file_keyword> voice skills </file_keyword> file in <contact_name> my <contact_name> <meeting_starttime> 10 pm on Wednesday </meeting_starttime> <sharetarget_name> design sync </sharetarget_name> <sharetarget_type> chat </sharetarget_type>
 0	pull up potomac nationals game file	file_open	files	pull up <file_keyword> potomac nationals game </file_keyword> file
 0	I need you re-open the document I worked on	file_open	files	I need you re-open the document <contact_name> I </contact_name> <file_action> worked </file_action> on
 0	open special judge guidelines	file_open	files	open <file_keyword> special judge guidelines </file_keyword>
@@ -395,7 +395,7 @@
 0	make up my tax powerpoint deck.	file_navigate	files	make up my <file_keyword> tax </file_keyword> <file_type> powerpoint deck </file_type>.
 0	show the file cello lesson	file_open	files	show the file <file_keyword> cello lesson </file_keyword>
 0	list my recently open document	file_navigate	files	list <contact_name> my </contact_name> <file_recency> recently </file_recency> open document
-0	Show in my powerpoint deck	file_navigate	files	Show in my <file_type> powerpoint deck </file_type>
+0	Show in my powerpoint deck	file_navigate	files	Show in <contact_name> my </contact_name> <file_type> powerpoint deck </file_type>
 0	opened my insurance deck again	file_open	files	opened my <file_keyword> insurance </file_keyword> <file_type> deck </file_type> again
 0	share file doc put cat out with this chat	file_open	files	share file <file_type> doc </file_type> <file_keyword> put cat out </file_keyword> with <sharetarget_name> this </sharetarget_name> <sharetarget_type> chat </sharetarget_type>
 0	download pictures	file_share	files	download <file_type> pictures </file_type>
@@ -916,7 +916,7 @@
 0	please go to my I was working on recently file.	file_navigate	files	please go to <contact_name> my </contact_name> <contact_name> I </contact_name> was <file_action> working </file_action> on <file_recency> recently </file_recency> file.
 0	Share this file.	file_share	files	Share <file_keyword> this </file_keyword> file.
 0	show me collision file	file_open	files	show me <file_keyword> collision </file_keyword> file
-0	Hey can you please direct me in my last files last active?	file_navigate	files	Hey can you please direct me in my <order_ref> last </order_ref> files <order_ref> last </order_ref> active?
+0	Hey can you please direct me in my last files last active?	file_navigate	files	Hey can you please direct me in <contact_name> my </contact_name> <order_ref> last </order_ref> files <order_ref> last </order_ref> active?
 0	going back to previous document	file_navigate	files	going back to previous document
 0	send the proventil file to pilhwa	file_open	files	send the <file_keyword> proventil </file_keyword> file to <to_contact_name> pilhwa </to_contact_name>
 0	Open the file titled windows 10	file_open	files	Open the file titled <file_name> windows 10 </file_name>
@@ -1192,7 +1192,7 @@
 0	show me my word files	file_navigate	files	show me <contact_name> my </contact_name> <file_type> word </file_type> files
 0	show the file nature of computing	file_open	files	show the file <file_keyword> nature of computing </file_keyword>
 0	Open the file titled private lessons	file_open	files	Open the file titled <file_name> private lessons </file_name>
-0	Hey could you please direct me in my last files I had up before?	file_navigate	files	Hey could you please direct me in my <order_ref> last </order_ref> files <contact_name> I </contact_name> had <file_action> up </file_action> before?
+0	Hey could you please direct me in my last files I had up before?	file_navigate	files	Hey could you please direct me in <contact_name> my </contact_name> <order_ref> last </order_ref> files <contact_name> I </contact_name> had <file_action> up </file_action> before?
 0	Find science shiproom deck	file_search	files	Find <file_keyword> science shiproom </file_keyword> <file_type> deck </file_type>
 0	share file xyz with my meeting at 10 pm on Wednesday	file_share	files	share file <file_keyword> xyz </file_keyword> with <to_contact_name> my </to_contact_name> <sharetarget_type> meeting </sharetarget_type> at <meeting_starttime> 10 pm on Wednesday </meeting_starttime>
 0	send the work party file to genady	file_open	files	send the <file_keyword> work party </file_keyword> file to <to_contact_name> genady </to_contact_name>
@@ -1325,7 +1325,7 @@
 0	share the malcolm's birthday deck	file_open	files	share the <file_keyword> malcolm's birthday </file_keyword> <file_type> deck </file_type>
 0	Hey can you resume the document I previously worked for?	file_open	files	Hey can you resume the document I previously worked for?
 0	send the business 2 file to leel	file_open	files	send the <file_keyword> business 2 </file_keyword> file to <to_contact_name> leel </to_contact_name>
-0	what is my newly opened files	file_navigate	files	what is my newly opened files
+0	what is my newly opened files	file_navigate	files	what is <contact_name> my </contact_name> newly <file_action> opened </file_action> files
 0	showing me my downloaded files	file_navigate	files	showing me my <file_folder> downloaded </file_folder> files
 0	share file doc baby show list	file_open	files	share file <file_type> doc </file_type> <file_keyword> baby show list </file_keyword>
 0	take me out to the file I was working on recently.	file_navigate	files	take me out to the file <contact_name> I </contact_name> was <file_action> working </file_action> on <file_recency> recently </file_recency>.
@@ -1725,7 +1725,7 @@
 0	Go the files	file_navigate	files	Go the files
 0	Share LT review discussion file in this conversation	file_share	files	Share <file_keyword> LT review discussion </file_keyword> file in <sharetarget_name>this</sharetarget_name> <sharetarget_type> conversation </sharetarget_type>
 0	saving that I created picture	file_download	files	saving <file_keyword> that I created </file_keyword> picture
-0	what is my newly opened files	file_navigate	files	what is my newly opened files
+0	what is my newly opened files	file_navigate	files	what is <contact_name> my </contact_name> newly <file_action> opened </file_action> files
 0	Open up the embryo injection file	file_open	files	Open up the <file_keyword> embryo injection </file_keyword> file
 0	share the lt review deck with john	file_share	files	share the <file_keyword> lt review </file_keyword> <file_type> deck </file_type> with <to_contact_name> john </to_contact_name>
 0	share the meet tom deck with skylstead	file_open	files	share the <file_keyword> meet tom </file_keyword> <file_type> deck </file_type> with <to_contact_name> skylstead </to_contact_name>
@@ -2129,7 +2129,7 @@
 0	Open up my have day off file	file_open	files	Open up <contact_name> my </contact_name> <file_keyword> have day off </file_keyword> file
 0	find all hands deck	file_search	files	find <file_keyword> all hands </file_keyword> <file_type> deck </file_type>
 0	Open file titled meet her new baby	file_open	files	Open file named <file_name> meet her new baby </file_name>
-0	Hey can you please direct me in my last files I uploaded?	file_navigate	files	Hey can you please direct me in my <order_ref> last </order_ref> files <contact_name> I </contact_name> <file_action> uploaed </file_action>?
+0	Hey can you please direct me in my last files I uploaded?	file_navigate	files	Hey can you please direct me in <contact_name> my </contact_name> <order_ref> last </order_ref> files <contact_name> I </contact_name> <file_action> uploaed </file_action>?
 0	show me meet her new baby file	file_open	files	show me <file_keyword> meet her new baby </file_keyword> file
 0	Share the document I've recently used in the meeting	file_share	files	Share the document <contact_name> I </contact_name> 've <file_recency> recently </file_recency> <file_action> used </file_action> in the <sharetarget_type> meeting </sharetarget_type>
 0	share file document dexter ' s veterinary appointment all creatures	file_open	files	share file document <file_keyword> dexter ' s veterinary appointment all creatures </file_keyword>
@@ -2173,7 +2173,7 @@
 0	Open my butt blood file	file_open	files	Open <file_keyword> my butt blood </file_keyword> file
 0	show the file call mason	file_open	files	show the file <file_keyword> call mason </file_keyword>
 0	Search for query.	file_search	files	Search for <file_keyword> query </file_keyword>.
-0	Hey could you please direct me in my last files I last edited?	file_navigate	files	Hey could you please direct me in my <order_ref> last </order_ref> files <contact_name> I </contact_name> <order_ref> last </order_ref> <file_action> edited </file_action>?
+0	Hey could you please direct me in my last files I last edited?	file_navigate	files	Hey could you please direct me in <contact_name> my </contact_name> <order_ref> last </order_ref> files <contact_name> I </contact_name> <order_ref> last </order_ref> <file_action> edited </file_action>?
 0	could you show my the last used files.	file_navigate	files	could you show my the <order_ref> last </order_ref> <file_action> used </file_action> files.
 0	Share insurance spreadsheet I last edited of the meeting participants	file_share	files	Share <file_keyword> insurance </file_keyword> <file_type> spreadsheet </file_type> <contact_name> I </contact_name> <order_ref> last </order_ref> <file_action> edited </file_action> of the <sharetarget_type> meeting participants </sharetarget_type>
 0	Hey show me my recently modifications	file_navigate	files	Hey show me <contact_name> my </contact_name> <file_recency> recently </file_recency> modifications
@@ -2205,7 +2205,7 @@
 0	Open file spa date	file_open	files	Open file <file_keyword> spa date </file_keyword>
 0	Open my planning info document	file_open	files	Open <contact_name> my </contact_name> <file_keyword> planning </file_keyword> info document
 0	Open LT review discussion file	file_open	files	Open <file_keyword> LT review discussion </file_keyword> file
-0	Hey could you please direct me in my last files I worked on?	file_navigate	files	Hey could you please direct me in my <order_ref> last </order_ref> files <contact_name> I </contact_name> <file_action> worked </file_action> on?
+0	Hey could you please direct me in my last files I worked on?	file_navigate	files	Hey could you please direct me in <contact_name> my </contact_name> <order_ref> last </order_ref> files <contact_name> I </contact_name> <file_action> worked </file_action> on?
 0	Open the file appointment with adam	file_open	files	Open the file <file_keyword> appointment with adam </file_keyword>
 0	show me my recent files	file_navigate	files	show me <contact_name> my </contact_name> <file_recency> recent </file_recency> files
 0	share file document go to	file_open	files	share file document <file_keyword> go to </file_keyword>
@@ -2292,7 +2292,7 @@
 0	share file doc stopwatch with this chat	file_open	files	share file <file_type> doc </file_type> <file_keyword> stopwatch </file_keyword> with <sharetarget_name> this </sharetarget_name> <sharetarget_type> chat </sharetarget_type>
 0	Open shared launch back ppt.	file_open	files	Open <file_keyword> shared launch back </file_keyword> <file_type> ppt </file_type>.
 0	share files with my meeting attendees in next	file_share	files	share files with <to_contact_name> my </to_contact_name> <sharetarget_type> meeting attendees </sharetarget_type> in <meeting_starttime> next </meeting_starttime>
-0	Go in my downloaded files	file_navigate	files	Go in my <file_folder> downloaded </file_folder> files
+0	Go in my downloaded files	file_navigate	files	Go in <contact_name> my </contact_name> <file_folder> downloaded </file_folder> files
 0	Can you open my I had been working on files to me	file_open	files	Can you open <contact_name> my </contact_name> <contact_name> I </contact_name> have been <file_action> working </file_action> on files to me
 0	share the sync shopping deck with dequidt	file_open	files	share the <file_keyword> sync shopping </file_keyword> <file_type> deck </file_type> with <to_contact_name> dequidt </to_contact_name>
 0	Share preview test plan document excel I've recently used to tomorrow meeting participants	file_share	files	Share <file_keyword> preview test plan </file_keyword> document <file_type> excel </file_type> <contact_name> I </contact_name> 've <file_recency> recently </file_recency> <file_action> used </file_action> to <meeting_starttime> tomorrow </meeting_starttime> <sharetarget_type> meeting participants </sharetarget_type>
@@ -2359,7 +2359,7 @@
 0	Open up my seven and ten file	file_open	files	Open up <contact_name> my </contact_name> <file_keyword> seven and ten </file_keyword> file
 0	Open that dr	file_open	files	Open <file_keyword> that </file_keyword> dr
 0	Open the picking peaches file	file_open	files	Open the <file_keyword> picking peaches </file_keyword> file
-0	share voice skills file in my next voice skills stand up chat	file_share	files	share <file_keyword> voice skills </file_keyword> file in my <meeting_starttime> next </meeting_starttime> <sharetarget_name> voice skills stand up </sharetarget_name> <sharetarget_type> chat </sharetarget_type>
+0	share voice skills file in my next voice skills stand up chat	file_share	files	share <file_keyword> voice skills </file_keyword> file in <contact_name> my <contact_name> <meeting_starttime> next </meeting_starttime> <sharetarget_name> voice skills stand up </sharetarget_name> <sharetarget_type> chat </sharetarget_type>
 0	I need to display my that was closed files.	file_navigate	files	I need to display <contact_name> my </contact_name> that was <file_action> used </file_action> files.
 0	share the new car deck	file_open	files	share the <file_keyword> new car </file_keyword> <file_type> deck </file_type>
 0	Share the file of this chat	file_share	files	Share the file of <sharetarget_name> this </sharetarget_name> <sharetarget_type> chat </sharetarget_type>
@@ -2368,7 +2368,7 @@
 0	open until nearby	file_open	files	open until nearby
 0	Open the potomac nationals game document	file_open	files	Open the <file_keyword> potomac nationals game </file_keyword> document
 0	Bring up a document I was last working on.	file_navigate	files	Bring up a document <contact_name> I </contact_name> was <order_ref> last </order_ref> <file_action> working </file_action> on.
-0	share brownbag file in my 10 pm on Wednesday this conversation	file_share	files	share <file_keyword> brownbag </file_keyword> file in my <meeting_starttime> 10 pm on Wednesday </meeting_starttime> <sharetarget_name> this </sharetarget_name> <sharetarget_type> conversation </sharetarget_type>
+0	share brownbag file in my 10 pm on Wednesday this conversation	file_share	files	share <file_keyword> brownbag </file_keyword> file in <contact_name> my <contact_name> <meeting_starttime> 10 pm on Wednesday </meeting_starttime> <sharetarget_name> this </sharetarget_name> <sharetarget_type> conversation </sharetarget_type>
 0	Open up the watch a movie file	file_open	files	Open up the <file_keyword> watch a movie </file_keyword> file
 0	Open the driving lesson document	file_open	files	Open the <file_keyword> driving lesson </file_keyword> document
 0	open abc One Note	file_download	files	open <file_keyword> abc </file_keyword> <file_type> One Note </file_type>
@@ -2428,7 +2428,7 @@
 0	Share this file with my current meeting	file_share	files	Share <file_keyword> this </file_keyword> file with <to_contact_name> my </to_contact_name> <meeting_starttime> current </meeting_starttime> <sharetarget_type> meeting </sharetarget_type>
 0	Share the paper I've recently used in this meeting	file_share	files	Share the paper <contact_name> I </contact_name> 've <file_recency> recently </file_recency> <file_action> used </file_action> in <sharetarget_name> this </sharetarget_name> <sharetarget_type> meeting </sharetarget_type>
 0	Open the file named appointment with bunny	file_open	files	Open the file named <file_name> appointment with bunny </file_name>
-0	Hey could you please direct me in my last files that was closed?	file_navigate	files	Hey could you please direct me in my <order_ref> last </order_ref> files that was <file_action> used </file_action>?
+0	Hey could you please direct me in my last files that was closed?	file_navigate	files	Hey could you please direct me in <contact_name> my </contact_name> <order_ref> last </order_ref> files that was <file_action> used </file_action>?
 0	Hey could you please direct me to the my last files I was working on recently?	file_navigate	files	Hey could you please direct me to the my <order_ref> last </order_ref> files <contact_name> I </contact_name> was <file_action> working </file_action> on <file_recency> recently </file_recency>?
 0	Open the file titled team retreat	file_open	files	Open the file titled <file_name> team retreat </file_name>
 0	Open that hey sam's club file	file_open	files	Open that <file_keyword> hey sam's club </file_keyword> file
@@ -2895,7 +2895,7 @@
 0	Open up windows 10 document	file_open	files	Open up <file_keyword> windows 10 </file_keyword> document
 0	share file doc windows 10	file_open	files	share file <file_type> doc </file_type> <file_keyword> windows 10 </file_keyword>
 0	Open paper I was working on recently	file_open	files	Open paper <contact_name> I </contact_name> was <file_action> working </file_action> on <file_recency> recently </file_recency>
-0	Show in my PPT	file_navigate	files	Show in my <file_type> PPT </file_type>
+0	Show in my PPT	file_navigate	files	Show in <contact_name> my </contact_name> <file_type> PPT </file_type>
 0	share the magazine designing deck	file_open	files	share the <file_keyword> magazine designing </file_keyword> <file_type> deck </file_type>
 0	Open the last documents last active	file_open	files	Open the <order_ref> last </order_ref> documents <order_ref> last </order_ref> active
 0	Share the Cortana workstream document on this chat.	file_share	files	Share the <file_keyword> Cortana workstream </file_keyword> document on <sharetarget_name>this</sharetarget_name> <sharetarget_type> chat </sharetarget_type>.
@@ -3037,7 +3037,7 @@
 0	show file the eat italian food	file_open	files	show file the <file_keyword> eat italian food </file_keyword>
 0	open a file lt review	file_open	files	open a file <file_keyword> lt review </file_keyword>
 0	brought up my preview test plan document ppt.	file_navigate	files	brought up my <file_keyword> preview test plan </file_keyword> document <file_type> ppt </file_type>.
-0	Show in my powerpoint deck	file_navigate	files	Show in my <file_type> powerpoint deck </file_type>
+0	Show in my powerpoint deck	file_navigate	files	Show in <contact_name> my </contact_name> <file_type> powerpoint deck </file_type>
 0	Share the deck I was working on.	file_share	files	Share the <file_type> deck </file_type> <contact_name> I </contact_name> was <file_action> working </file_action> on.
 0	keep planning document	file_download	files	keep <file_keyword> planning </file_keyword> document
 0	share file with meeting tomorrow	file_share	files	share file with <sharetarget_type> meeting </sharetarget_type> <meeting_starttime> tomorrow </meeting_starttime>
@@ -3096,7 +3096,7 @@
 0	Navigate for files	file_navigate	files	Navigate for files
 0	Open my at 9 presentation	file_open	files	Open <contact_name> my </contact_name> <file_keyword> at 9 </file_keyword> <file_type> presentation </file_type>
 0	download check the book in the study deck	file_open	files	download <file_keyword> check the book in the study </file_keyword> <file_type> deck </file_type>
-0	what is my newly opened files	file_navigate	files	what is my newly opened files
+0	what is my newly opened files	file_navigate	files	what is <contact_name> my </contact_name> newly <file_action> opened </file_action> files
 0	Open chat	file_share	files	Open chat
 0	share the most recently used download to this meeting	file_share	files	share the <file_keyword> most recently used </file_keyword> <file_folder> download </file_folder> to <sharetarget_name> this </sharetarget_name> <sharetarget_type> meeting </sharetarget_type>
 0	Open dead ends Jamboree file.	file_open	files	Open <file_keyword> dead ends Jamboree </file_keyword> file.
@@ -4339,7 +4339,7 @@
 0	share this file with jay ongg	file_share	files	share <file_keyword> this </file_keyword> file with <to_contact_name> jay ongg </to_contact_name>
 0	Open london cross capital presentation	file_open	files	Open <file_keyword> london cross capital </file_keyword> <file_type> presentation </file_type>
 0	Find my assistant and search file.	file_search	files	Find <contact_name> my </contact_name> <file_keyword> assistant and search file </file_keyword> .
-0	what is my newly opened files	file_navigate	files	what is my newly opened files
+0	what is my newly opened files	file_navigate	files	what is <contact_name> my </contact_name> newly <file_action> opened </file_action> files
 0	Open up chloe is my best friend document	file_open	files	Open up <file_keyword> chloe is my best friend </file_keyword> document
 0	please go to my I had been working on files.	file_navigate	files	please go to <contact_name> my </contact_name> <contact_name> I </contact_name> have been <file_action> working </file_action> on files.
 0	show the file running club quiz	file_open	files	show the file <file_keyword> running club quiz </file_keyword>
@@ -4409,7 +4409,7 @@
 0	Share the PowerPoint I had up before using the meeting attendees	file_share	files	Share the <file_type> PowerPoint </file_type> <contact_name> I </contact_name> had <file_action> up </file_action> before using the <sharetarget_type> meeting attendees </sharetarget_type>
 0	Open file search document.	file_open	files	Open file <file_keyword> search </file_keyword> document.
 0	I need a document to open that I updated.	file_open	files	I need a document to open that <contact_name> I </contact_name> <file_action> updated </file_action>.
-0	what is my newly opened files	file_navigate	files	what is my newly opened files
+0	what is my newly opened files	file_navigate	files	what is <contact_name> my </contact_name> newly <file_action> opened </file_action> files
 0	show me my ppt	file_navigate	files	show me <contact_name> my </contact_name> <file_type> ppt </file_type>
 0	Open monkey monkey monkey file.	file_open	files	Open <file_keyword> monkey monkey monkey </file_keyword> file.
 0	Open reading book appointment file	file_open	files	Open <file_keyword> reading book appointment </file_keyword> file
@@ -4595,7 +4595,7 @@
 0	Open file titled spa date	file_open	files	Open file named <file_name> spa date </file_name>
 0	saving this paper	file_download	files	saving <file_keyword> this </file_keyword> paper
 0	Pull up workplace dok	file_open	files	Pull up <file_keyword> workplace </file_keyword> dok
-0	what is my recently opened files	file_navigate	files	what is my recently opened files
+0	what is my recently opened files	file_navigate	files	what is <contact_name> my </contact_name> <file_recency> recently </file_recency>  <file_action> opened </file_action> files
 0	share the work party deck with genady	file_open	files	share the <file_keyword> work party </file_keyword> <file_type> deck </file_type> with <to_contact_name> genady </to_contact_name>
 0	share the grocery items to pick up deck with lstrand	file_open	files	share the <file_keyword> grocery items to pick up </file_keyword> <file_type> deck </file_type> with <to_contact_name> lstrand </to_contact_name>
 0	Share the document I uploaded with the meeting attendees	file_share	files	Share the document <contact_name> I </contact_name> <file_action> uploaed </file_action> with the <sharetarget_type> meeting attendees </sharetarget_type>
@@ -4642,7 +4642,7 @@
 0	pull up one on west file	file_open	files	pull up <file_keyword> one on west </file_keyword> file
 0	Show to my files	file_navigate	files	Show to <contact_name> my </contact_name> files
 0	open the paper that was closed.	file_open	files	open the paper that was <file_action> used </file_action>.
-0	Go in my downloads	file_navigate	files	Go in my <file_folder> downloads </file_folder>
+0	Go in my downloads	file_navigate	files	Go in <contact_name> my </contact_name> <file_folder> downloads </file_folder>
 0	Please open the last paper I uploaded	file_open	files	Please open the <order_ref> last </order_ref> paper <contact_name> I </contact_name> <file_action> uploaed </file_action>
 0	send the altar server meeting file to jinzang	file_open	files	send the <file_keyword> altar server meeting </file_keyword> file to <to_contact_name> jinzang </to_contact_name>
 0	brought up my deployment timeline spreadsheet.	file_navigate	files	brought up my <file_keyword> deployment timeline </file_keyword> <file_type> spreadsheet </file_type>.
@@ -4919,7 +4919,7 @@
 0	Can you please open a document I used most recently?	file_open	files	Can you please open a document <contact_name> I </contact_name> <file_action> used </file_action> most <file_recency> recent </file_recency>?
 0	Please opened my that document	file_open	files	Please opened my <file_keyword> that </file_keyword> document
 0	Bring up the document I uploaded.	file_navigate	files	Bring up the document <contact_name> I </contact_name> <file_action> uploaed </file_action>.
-0	Show in my OneNote	file_navigate	files	Show in my <file_type> OneNote </file_type>
+0	Show in my OneNote	file_navigate	files	Show in <contact_name> my </contact_name> <file_type> OneNote </file_type>
 0	saving this file	file_download	files	saving <file_keyword> this </file_keyword> file
 0	Go of files	file_navigate	files	Go of files
 0	upload lt review downloads	file_download	files	upload <file_keyword> lt review </file_keyword> <file_folder> downloads </file_folder>
@@ -4947,7 +4947,7 @@
 0	I want to see the most recent files I you made	file_navigate	files	I want to see the most recent files I you made
 0	Navigate to a file	file_navigate	files	Navigate to a file
 0	show me play klein meeting file	file_open	files	show me <file_keyword> play klein meeting </file_keyword> file
-0	Show in my ppt	file_navigate	files	Show in my <file_type> ppt </file_type>
+0	Show in my ppt	file_navigate	files	Show in <contact_name> my </contact_name> <file_type> ppt </file_type>
 0	Open my projected revenues for king presentation	file_open	files	Open <contact_name> my </contact_name> <file_keyword> projected revenues for king </file_keyword> <file_type> presentation </file_type>
 0	I would like to see in my I was just working on files please.	file_navigate	files	I would like to see in <contact_name> my </contact_name> <contact_name> I </contact_name> was <file_recency> just </file_recency> <file_action> working </file_action> on files please.
 0	share file bot with minefee	file_share	files	share file <file_keyword> bot </file_keyword> with <to_contact_name> minefee </to_contact_name>
@@ -5054,7 +5054,7 @@
 0	opens my that PowerPoint again	file_open	files	opens my <file_keyword> that </file_keyword> <file_type> PowerPoint </file_type> again
 0	Open deck template	file_open	files	Open <file_type> deck template </file_type>
 0	share the grocery items to pick up file	file_share	files	share the <file_keyword> grocery items to pick up </file_keyword> file
-0	Hey can you please direct me in my last files I just edited?	file_navigate	files	Hey can you please direct me in my <order_ref> last </order_ref> files <contact_name> I </contact_name> <file_recency> just </file_recency> <file_action> edited </file_action>?
+0	Hey can you please direct me in my last files I just edited?	file_navigate	files	Hey can you please direct me in <contact_name> my </contact_name> <order_ref> last </order_ref> files <contact_name> I </contact_name> <file_recency> just </file_recency> <file_action> edited </file_action>?
 0	open the business 2 deck	file_open	files	open the <file_keyword> business 2 </file_keyword> <file_type> deck </file_type>
 0	Share insurance paper I last edited with the meeting participants	file_share	files	Share <file_keyword> insurance </file_keyword> paper <contact_name> I </contact_name> <order_ref> last </order_ref> <file_action> edited </file_action> with the <sharetarget_type> meeting participants </sharetarget_type>
 0	share the after work meeting file	file_share	files	share the <file_keyword> after work meeting </file_keyword> file
@@ -5209,7 +5209,7 @@
 0	Take me where I can see all of my recent files	file_navigate	files	Take me where I can see all of <contact_name> my </contact_name> <file_recency> recent </file_recency> files
 0	Navigate the files	file_navigate	files	Navigate the files
 0	Open up the magazine designing file	file_open	files	Open up the <file_keyword> magazine designing </file_keyword> file
-0	share the file in my tomorrow design sync conversation	file_share	files	share the file in my <meeting_starttime> tomorrow </meeting_starttime> <sharetarget_name> design sync </sharetarget_name> <sharetarget_type> conversation </sharetarget_type>
+0	share the file in my tomorrow design sync conversation	file_share	files	share the file in <contact_name> my <contact_name> <meeting_starttime> tomorrow </meeting_starttime> <sharetarget_name> design sync </sharetarget_name> <sharetarget_type> conversation </sharetarget_type>
 0	I need to see my I was working on recently files.	file_navigate	files	I need to see <contact_name> my </contact_name> <contact_name> I </contact_name> was <file_action> working </file_action> on <file_recency> recently </file_recency> files.
 0	Share the word I was using with the chat	file_share	files	Share the <file_type> word </file_type> <contact_name> I </contact_name> was <file_action> using </file_action> with the <sharetarget_type> chat </sharetarget_type>
 0	continue working on document last opened	file_open	files	continue working on document last opened
@@ -5223,7 +5223,7 @@
 0	share a file with my meeting attendees at 10 pm on Wednesday	file_share	files	share a file with <to_contact_name> my </to_contact_name> <sharetarget_type> meeting attendees </sharetarget_type> at <meeting_starttime> 10 pm on Wednesday </meeting_starttime>
 0	open recently documentation.	file_open	files	open <file_recency> recently </file_recency> documentation.
 0	share the enclosed deck	file_share	files	share the enclosed  <file_type> deck </file_type>
-0	Hey can you please direct me in my last files recently?	file_navigate	files	Hey can you please direct me in my <order_ref> last </order_ref> files <file_recency> recently </file_recency>?
+0	Hey can you please direct me in my last files recently?	file_navigate	files	Hey can you please direct me in <contact_name> my </contact_name> <order_ref> last </order_ref> files <file_recency> recently </file_recency>?
 0	send a file to mary kay	file_download	files	send a file to <to_contact_name> mary kay </to_contact_name>
 0	Open the file sync shopping	file_open	files	Open the file <file_keyword> sync shopping </file_keyword>
 0	it is jay ongg	file_download	files	it is <contact_name> jay ongg </contact_name>
@@ -5242,7 +5242,7 @@
 0	open my that I created ppt again	file_open	files	open <contact_name> my </contact_name> <file_keyword> that I created </file_keyword> <file_type> ppt </file_type> again
 0	Find the file that I added a model	file_navigate	files	Find the file that <contact_name> I </contact_name> <file_action> added </file_action> a model
 0	What can I do with Cortana?	file_navigate	files	What can I do with Cortana?
-0	what is my newly opened files	file_navigate	files	what is my newly opened files
+0	what is my newly opened files	file_navigate	files	what is <contact_name> my </contact_name> newly <file_action> opened </file_action> files
 0	show me file elizabeth arden	file_open	files	show me file <file_keyword> elizabeth arden </file_keyword>
 0	Open my tax details document	file_open	files	Open <contact_name> my </contact_name> <file_keyword> tax </file_keyword> details document
 0	please bring up the I have recently opened document	file_navigate	files	please bring up the <contact_name> I </contact_name> have <file_recency> recently </file_recency> <file_action> opened </file_action> document
@@ -5288,7 +5288,7 @@
 0	go to slides 12	file_navigate	files	go to slides 12
 0	Open that two hundred two hundred file	file_open	files	Open that <file_keyword> two hundred two hundred </file_keyword> file
 0	open the go gold ' s gym deck	file_open	files	open the <file_keyword> go gold ' s gym </file_keyword> <file_type> deck </file_type>
-0	lt review deck	file_download	files	lt review  deck
+0	lt review deck	file_download	files	<file_keyword> lt review </file_keyword> <file_type> deck </file_type>
 0	Open file search document.	file_open	files	Open file <file_keyword> search </file_keyword> document.
 0	Go to files that was closed.	file_navigate	files	Go to files that was <file_action> used </file_action>.
 0	Open the file cake recipe	file_open	files	Open the file <file_keyword> cake recipe </file_keyword>
@@ -5321,7 +5321,7 @@
 0	go to voice skills	file_open	files	go to voice skills
 0	Share my word	file_share	files	Share <contact_name> my </contact_name> <file_type> word </file_type>
 0	un-favorite this team	file_navigate	files	un-favorite <sharetarget_name> this </sharetarget_name> team
-0	share lt review file in my tomorrow design sync chat	file_share	files	share <file_keyword> lt review </file_keyword> file in my <meeting_starttime> tomorrow </meeting_starttime> <sharetarget_name> design sync </sharetarget_name> <sharetarget_type> chat </sharetarget_type>
+0	share lt review file in my tomorrow design sync chat	file_share	files	share <file_keyword> lt review </file_keyword> file in <contact_name> my <contact_name> <meeting_starttime> tomorrow </meeting_starttime> <sharetarget_name> design sync </sharetarget_name> <sharetarget_type> chat </sharetarget_type>
 0	Open the file call mason	file_open	files	Open the file <file_keyword> call mason </file_keyword>
 0	show the file appointment for todd	file_open	files	show the file <file_keyword> appointment for todd </file_keyword>
 0	Open the walmart list document	file_open	files	Open the <file_keyword> walmart list </file_keyword> document
@@ -5547,7 +5547,7 @@
 0	share file doc c. s. m. work	file_open	files	share file <file_type> doc </file_type> <file_keyword> c. s. m. work </file_keyword>
 0	Open science ship room ppt.	file_open	files	Open <file_keyword> science ship room </file_keyword> <file_type> PPT </file_type>.
 0	visit my the last used files.	file_navigate	files	visit my the <order_ref> last </order_ref> <file_action> used </file_action> files.
-0	Show in my spreadsheet	file_navigate	files	Show in my <file_type> spreadsheet </file_type>
+0	Show in my spreadsheet	file_navigate	files	Show in <contact_name> my </contact_name> <file_type> spreadsheet </file_type>
 0	Open eat at ruby tuesdays file	file_open	files	Open <file_keyword> eat at ruby tuesdays </file_keyword> file
 0	Find files I added.	file_navigate	files	Find files <contact_name> I </contact_name> <file_action> added </file_action>.
 0	send the i don't this is an a****** file to ayamune	file_open	files	send the <file_keyword> i don't this is an a****** </file_keyword> file to <to_contact_name> ayamune </to_contact_name>
@@ -5670,7 +5670,7 @@
 0	share file with current meeting	file_share	files	share file with <meeting_starttime> current </meeting_starttime> <sharetarget_type> meeting </sharetarget_type>
 0	I want to see my most recent files please.	file_navigate	files	I want to see <contact_name> my </contact_name> most <file_recency> recent </file_recency> files please.
 0	save brownbag file	file_download	files	save <file_keyword> brownbag </file_keyword> file
-0	Hey can you please direct me in my last files I was last working on?	file_navigate	files	Hey can you please direct me in my <order_ref> last </order_ref> files <contact_name> I </contact_name> was <order_ref> last </order_ref> <file_action> working </file_action> on?
+0	Hey can you please direct me in my last files I was last working on?	file_navigate	files	Hey can you please direct me in <contact_name> my </contact_name> <order_ref> last </order_ref> files <contact_name> I </contact_name> was <order_ref> last </order_ref> <file_action> working </file_action> on?
 0	mark my status as free	file_share	files	mark my status as free
 0	share file document embryo injection	file_open	files	share file document <file_keyword> embryo injection </file_keyword>
 0	share the oscar deck	file_open	files	share the <file_keyword> oscar </file_keyword> <file_type> deck </file_type>
@@ -6335,7 +6335,7 @@
 0	share go gold ' s gym deck	file_open	files	share <file_keyword> go gold ' s gym </file_keyword> <file_type> deck </file_type>
 0	Open my buckle appointment presentation	file_open	files	Open <contact_name> my </contact_name> <file_keyword> buckle appointment </file_keyword> <file_type> presentation </file_type>
 0	Open running club quiz file	file_open	files	Open <file_keyword> running club quiz </file_keyword> file
-0	what is my recently opened files	file_navigate	files	what is my recently opened files
+0	what is my recently opened files	file_navigate	files	what is <contact_name> my </contact_name> <file_recency> recently </file_recency>  <file_action> opened </file_action> files
 0	download the meet glenn file	file_open	files	download the <file_keyword> meet glenn </file_keyword> file
 0	Open the paper I worked on	file_open	files	Open the paper <contact_name> I </contact_name> <file_action> worked </file_action> on
 0	saving payroll spreadsheet	file_download	files	saving <file_keyword> payroll </file_keyword> <file_type> spreadsheet </file_type>
@@ -6579,7 +6579,7 @@
 0	Find me everything about " music playlist "	file_search	files	Find me everything about " <file_keyword> music playlist </file_keyword> "
 0	brought up my deployment timeline PowerPoint.	file_navigate	files	brought up my <file_keyword> deployment timeline </file_keyword> <file_type> PowerPoint </file_type>.
 0	Open brandon workout presentation	file_open	files	Open <file_keyword> brandon workout </file_keyword> <file_type> presentation </file_type>
-0	Hey can you please direct me in my last files I was working on?	file_navigate	files	Hey can you please direct me in my <order_ref> last </order_ref> files <contact_name> I </contact_name> was <file_action> working </file_action> on?
+0	Hey can you please direct me in my last files I was working on?	file_navigate	files	Hey can you please direct me in <contact_name> my </contact_name> <order_ref> last </order_ref> files <contact_name> I </contact_name> was <file_action> working </file_action> on?
 0	opening the last document I was editing.	file_open	files	opening the <order_ref> last </order_ref> document <contact_name> I </contact_name> was <file_action> editing </file_action>.
 0	open recent paper.	file_open	files	open <file_recency> recent </file_recency> paper.
 0	share file doc parents are arriving	file_open	files	share file <file_type> doc </file_type> <file_keyword> parents are arriving </file_keyword>
@@ -6675,7 +6675,7 @@
 0	show the file fifteen to ten	file_open	files	show the file <file_keyword> fifteen to ten </file_keyword>
 0	send a file to john	file_download	files	send a file to <to_contact_name> john </to_contact_name>
 0	open navigate to slide	file_open	files	open <file_keyword> navigate to </file_keyword> <file_type> slides </file_type>
-0	Navigate in my the last used files	file_navigate	files	Navigate in my the <order_ref> last </order_ref> <file_action> used </file_action> files
+0	Navigate in my the last used files	file_navigate	files	Navigate in <contact_name>my</contact_name> the <order_ref> last </order_ref> <file_action> used </file_action> files
 0	Launch that document I to compose	file_open	files	Launch <file_keyword> that </file_keyword> document <contact_name> I </contact_name> to compose
 0	pull up utorrent file	file_open	files	pull up <file_keyword> utorrent </file_keyword> file
 0	Open the document the last used	file_open	files	Open the document the <order_ref> last </order_ref> <file_action> used </file_action>
@@ -6712,7 +6712,7 @@
 0	share file document d . d . c .	file_open	files	share file document <file_keyword> d . d . c . </file_keyword>
 0	open ruhi's team	file_open	files	open <file_keyword> ruhi's team </file_keyword>
 0	I want to see the most recent files I have	file_navigate	files	I want to see the most recent files I have
-0	Hey could you please direct me in my last files recently?	file_navigate	files	Hey could you please direct me in my <order_ref> last </order_ref> files <file_recency> recently </file_recency>?
+0	Hey could you please direct me in my last files recently?	file_navigate	files	Hey could you please direct me in <contact_name> my </contact_name> <order_ref> last </order_ref> files <file_recency> recently </file_recency>?
 0	share the interview at texas roadhouse file	file_share	files	share the <file_keyword> interview at texas roadhouse </file_keyword> file
 0	Find the file science shiproom back	file_search	files	Find the file <file_keyword> science shiproom back </file_keyword>
 0	showing me my ppt files	file_navigate	files	showing me my <file_type> ppt </file_type> files
@@ -6796,7 +6796,7 @@
 0	Open file titled oscar	file_open	files	Open file titled <file_name> oscar </file_name>
 0	open new fst applier	file_open	files	open <file_keyword> new fst applier </file_keyword>
 0	show file the stopwatch	file_open	files	show file the <file_keyword> stopwatch </file_keyword>
-0	Go in my PPT	file_navigate	files	Go in my <file_type> PPT </file_type>
+0	Go in my PPT	file_navigate	files	Go in <contact_name> my </contact_name> <file_type> PPT </file_type>
 0	Open the file titled dave's birthday	file_open	files	Open the file titled <file_name> dave's birthday </file_name>
 0	pull up dave's birthday file	file_open	files	pull up <file_keyword> dave's birthday </file_keyword> file
 0	share the team retreat file	file_share	files	share the <file_keyword> team retreat </file_keyword> file
@@ -7114,7 +7114,7 @@
 0	Open that I created downloads	file_open	files	Open <file_keyword> that I created </file_keyword> <file_folder> downloads </file_folder>
 0	Open Cortana deck PowerPoint.	file_open	files	Open <file_keyword> Cortana </file_keyword> <file_type> deck PowerPoint </file_type>.
 0	Open at 9 file	file_open	files	Open <file_keyword> at 9 </file_keyword> file
-0	Hey could you please direct me in my last files I uploaded?	file_navigate	files	Hey could you please direct me in my <order_ref> last </order_ref> files <contact_name> I </contact_name> <file_action> uploaed </file_action>?
+0	Hey could you please direct me in my last files I uploaded?	file_navigate	files	Hey could you please direct me in <contact_name> my </contact_name> <order_ref> last </order_ref> files <contact_name> I </contact_name> <file_action> uploaed </file_action>?
 0	show me my most recent PPT files.	file_navigate	files	show me <contact_name> my </contact_name> most <file_recency> recent </file_recency> <file_type> PPT </file_type> files.
 0	share the nature of computing deck	file_open	files	share the <file_keyword> nature of computing </file_keyword> <file_type> deck </file_type>
 0	Share the document the last used with the conversation	file_share	files	Share the document the <order_ref> last </order_ref> <file_action> used </file_action> with the <sharetarget_type> conversation </sharetarget_type>
@@ -7174,7 +7174,7 @@
 0	share voice skills file using jay ongg	file_share	files	share <file_keyword> voice skills </file_keyword> file using <contact_name> jay ongg </contact_name>
 0	Open the files working hard.	file_open	files	Open the files <file_keyword> working hard </file_keyword>.
 0	share the file with roger	file_share	files	share the file with <to_contact_name> roger </to_contact_name>
-0	what is my newly opened files	file_navigate	files	what is my newly opened files
+0	what is my newly opened files	file_navigate	files	what is <contact_name> my </contact_name> newly <file_action> opened </file_action> files
 0	Take me where I can see all of my latest files	file_navigate	files	Take me where I can see all of my latest files
 0	Open up my badminton tournament file	file_open	files	Open up <contact_name> my </contact_name> <file_keyword> badminton tournament </file_keyword> file
 0	Share the deck.	file_share	files	Share the <file_type> deck </file_type>.
@@ -7314,7 +7314,7 @@
 0	Open file titled add on folder	file_open	files	Open file titled <file_name> add on folder </file_name>
 0	Open up the tottenham ' s fixtures file	file_open	files	Open up the <file_keyword> tottenham ' s fixtures </file_keyword> file
 0	open my invoice doucments again	file_open	files	open <contact_name> my </contact_name> invoice doucments again
-0	Show in my excel	file_navigate	files	Show in my <file_type> excel </file_type>
+0	Show in my excel	file_navigate	files	Show in <contact_name> my </contact_name> <file_type> excel </file_type>
 0	Can you open my I was using files for me	file_open	files	Can you open <contact_name> my </contact_name> <contact_name> I </contact_name> was <file_action> using </file_action> files for me
 0	Go to files I worked on.	file_navigate	files	Go to files <contact_name> I </contact_name> <file_action> worked </file_action> on.
 0	Hey Cortana I need to continue with the paper newest.	file_open	files	Hey Cortana I need to continue with the paper <order_ref> newest </order_ref>.
@@ -7333,7 +7333,7 @@
 0	sharing the file	file_share	files	sharing the file
 0	Please bring back up the last document I are open	file_navigate	files	Please bring back up the <order_ref> last </order_ref> document <contact_name> I </contact_name> are <file_action> open </file_action>
 0	open spotify	file_open	files	open spotify
-0	Go in my OneNote	file_navigate	files	Go in my <file_type> OneNote </file_type>
+0	Go in my OneNote	file_navigate	files	Go in <contact_name> my </contact_name> <file_type> OneNote </file_type>
 0	Share file insurance to voice skills stand up conversation	file_share	files	Share file <file_keyword> insurance </file_keyword> to <sharetarget_name> voice skills stand up </sharetarget_name> <sharetarget_type> conversation </sharetarget_type>
 0	Open file appointment with adam	file_open	files	Open file <file_keyword> appointment with adam </file_keyword>
 0	Share voice skills OneNote most recent in next meeting attendees	file_share	files	Share <file_keyword> voice skills </file_keyword> <file_type> OneNote </file_type> most <file_recency> recent </file_recency> in <meeting_starttime> next </meeting_starttime> <sharetarget_type> meeting attendees </sharetarget_type>
@@ -7681,7 +7681,7 @@
 0	Share my files.	file_share	files	Share <contact_name> my </contact_name> files.
 0	share this file with yue ma	file_share	files	share <file_keyword> this </file_keyword> file with <to_contact_name> yue ma </to_contact_name>
 0	Open that picture day at school file	file_open	files	Open that <file_keyword> picture day at school </file_keyword> file
-0	Hey could you please direct me in my last files I updated?	file_navigate	files	Hey could you please direct me in my <order_ref> last </order_ref> files <contact_name> I </contact_name> <file_action> updated </file_action>?
+0	Hey could you please direct me in my last files I updated?	file_navigate	files	Hey could you please direct me in <contact_name> my </contact_name> <order_ref> last </order_ref> files <contact_name> I </contact_name> <file_action> updated </file_action>?
 0	show me carving file	file_open	files	show me <file_keyword> carving </file_keyword> file
 0	Launch that document I was composing	file_open	files	Launch <file_keyword> that </file_keyword> document <contact_name> I </contact_name> was <file_action> composing </file_action>
 0	show file the meetings for john	file_open	files	show file the <file_keyword> meetings for john </file_keyword>
@@ -7848,7 +7848,7 @@
 0	show file the grocery items to pick up	file_open	files	show file the <file_keyword> grocery items to pick up </file_keyword>
 0	Open the file named ball game	file_open	files	Open the file named <file_name> ball game </file_name>
 0	show file the meet tim spaniol for lunch	file_open	files	show file the <file_keyword> meet tim spaniol for lunch </file_keyword>
-0	what is my recently opened files	file_navigate	files	what is my recently opened files
+0	what is my recently opened files	file_navigate	files	what is <contact_name> my </contact_name> <file_recency> recently </file_recency>  <file_action> opened </file_action> files
 0	Open the file named go to walmart	file_open	files	Open the file named <file_name> go to walmart </file_name>
 0	Open deck template	file_open	files	Open <file_type> deck template </file_type>
 0	Search for moon.	file_search	files	Search for <file_keyword> moon </file_keyword>.
@@ -8027,7 +8027,7 @@
 0	send the meet tim spaniol for lunch file to ayamudo	file_open	files	send the <file_keyword> meet tim spaniol for lunch </file_keyword> file to <to_contact_name> ayamudo </to_contact_name>
 0	Open the file titled rant	file_open	files	Open the file titled <file_name> rant </file_name>
 0	pull up put cat out file	file_open	files	pull up <file_keyword> put cat out </file_keyword> file
-0	Show in my pictures	file_navigate	files	Show in my <file_type> pictures </file_type>
+0	Show in my pictures	file_navigate	files	Show in <contact_name> my </contact_name> <file_type> pictures </file_type>
 0	return to previous document	file_navigate	files	return to previous document
 0	search my all hands deck please.	file_search	files	search <contact_name> my </contact_name> <file_keyword> all hands </file_keyword> <file_type> deck </file_type> please.
 0	Open the file titled commotion	file_open	files	Open the file titled <file_name> commotion </file_name>
@@ -8123,7 +8123,7 @@
 0	Open voice skills ppt	file_open	files	Open <file_keyword> voice skills </file_keyword> <file_type> ppt </file_type>
 0	share picking peaches deck	file_open	files	share <file_keyword> picking peaches </file_keyword> <file_type> deck </file_type>
 0	show me colleague ' s get together party file	file_open	files	show me <file_keyword> colleague ' s get together party </file_keyword> file
-0	Show in my excel	file_navigate	files	Show in my <file_type> excel </file_type>
+0	Show in my excel	file_navigate	files	Show in <contact_name> my </contact_name> <file_type> excel </file_type>
 0	open onenote file	file_share	files	open <file_type> onenote </file_type> file
 0	Share file with next meeting.	file_share	files	Share file with <meeting_starttime> next </meeting_starttime> <sharetarget_type> meeting </sharetarget_type>.
 0	Take me to where I can see all my recent files	file_navigate	files	Take me to where I can see all <contact_name> my </contact_name> <file_recency> recent </file_recency> files
@@ -8710,7 +8710,7 @@
 0	Go of the files recent.	file_navigate	files	Go of the files <file_recency> recent </file_recency>.
 0	Open turkey presentation	file_open	files	Open <file_keyword> turkey </file_keyword> <file_type> presentation </file_type>
 0	share file doc malcolm's birthday with this chat	file_open	files	share file <file_type> doc </file_type> <file_keyword> malcolm's birthday </file_keyword> with <sharetarget_name> this </sharetarget_name> <sharetarget_type> chat </sharetarget_type>
-0	what is my recently opened files	file_navigate	files	what is my recently opened files
+0	what is my recently opened files	file_navigate	files	what is <contact_name> my </contact_name> <file_recency> recently </file_recency>  <file_action> opened </file_action> files
 0	Share the paper I used most recently in shiproom meeting attendees	file_share	files	Share the paper <contact_name> I </contact_name> <file_action> used </file_action> most <file_recency> recent </file_recency> in <sharetarget_name> shiproom </sharetarget_name> <sharetarget_type> meeting attendees </sharetarget_type>
 0	share my walmart list file	file_share	files	share <contact_name> my </contact_name> <file_keyword> walmart list </file_keyword> file
 0	send the check the book in the study file to ravlin	file_open	files	send the <file_keyword> check the book in the study </file_keyword> file to <to_contact_name> ravlin </to_contact_name>
@@ -8816,7 +8816,7 @@
 0	What are the files I was last working in	file_navigate	files	What are the files <contact_name> I </contact_name> was <order_ref> last </order_ref> <file_action> working </file_action> in
 0	share file doc work party with this chat	file_open	files	share file <file_type> doc </file_type> <file_keyword> work party </file_keyword> with <sharetarget_name> this </sharetarget_name> <sharetarget_type> chat </sharetarget_type>
 0	Open the file that shared with me.	file_open	files	Open the file that <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>.
-0	what is my newly opened files	file_navigate	files	what is my newly opened files
+0	what is my newly opened files	file_navigate	files	what is <contact_name> my </contact_name> newly <file_action> opened </file_action> files
 0	I you need to reopen the document I have recently opened	file_open	files	I you need to reopen the document <contact_name> I </contact_name> have <file_recency> recently </file_recency> <file_action> opened </file_action>
 0	start whiteboard	file_open	files	start whiteboard
 0	Please open my brownbag document	file_open	files	Please open <contact_name> my </contact_name> <file_keyword> brownbag </file_keyword> document
@@ -9283,7 +9283,7 @@
 0	Share this file.	file_share	files	Share <file_keyword> this </file_keyword> file.
 0	share file doc elizabeth arden with this chat	file_open	files	share file <file_type> doc </file_type> <file_keyword> elizabeth arden </file_keyword> with <sharetarget_name> this </sharetarget_name> <sharetarget_type> chat </sharetarget_type>
 0	Go to a file	file_navigate	files	Go to a file
-0	share voice skills file in my tomorrow design sync meeting participants	file_share	files	share <file_keyword> voice skills </file_keyword> file in my <meeting_starttime> tomorrow </meeting_starttime> <sharetarget_name> design sync </sharetarget_name> <sharetarget_type> meeting participants </sharetarget_type>
+0	share voice skills file in my tomorrow design sync meeting participants	file_share	files	share <file_keyword> voice skills </file_keyword> file in <contact_name> my <contact_name> <meeting_starttime> tomorrow </meeting_starttime> <sharetarget_name> design sync </sharetarget_name> <sharetarget_type> meeting participants </sharetarget_type>
 0	share file doc buckle appointment with this chat	file_open	files	share file <file_type> doc </file_type> <file_keyword> buckle appointment </file_keyword> with <sharetarget_name> this </sharetarget_name> <sharetarget_type> chat </sharetarget_type>
 0	Open file the	file_open	files	Open file the
 0	share file with current meeting	file_share	files	share file with <meeting_starttime> current </meeting_starttime> <sharetarget_type> meeting </sharetarget_type>
@@ -9399,7 +9399,7 @@
 0	Go the files	file_navigate	files	Go the files
 0	share the appointment with adam file	file_share	files	share the <file_keyword> appointment with adam </file_keyword> file
 0	share the tax PPT to this meeting	file_share	files	share the <file_keyword> tax </file_keyword> <file_type> PPT </file_type> to <sharetarget_name> this </sharetarget_name> <sharetarget_type> meeting </sharetarget_type>
-0	Go in my word	file_navigate	files	Go in my <file_type> word </file_type>
+0	Go in my word	file_navigate	files	Go in <contact_name> my </contact_name> <file_type> word </file_type>
 0	Find the file.	file_search	files	Find file.
 0	share the my butt blood deck	file_open	files	share the <file_keyword> my butt blood </file_keyword> <file_type> deck </file_type>
 0	show the colleagues meeting file	file_open	files	show the <file_keyword> colleagues meeting </file_keyword> file
@@ -9622,7 +9622,7 @@
 0	Find the document I was just working on and open it please.	file_open	files	Find the document <contact_name> I </contact_name> was <file_recency> just </file_recency> <file_action> working </file_action> on and open it please.
 0	Show me my files.	file_navigate	files	Show me <contact_name> my </contact_name> files.
 0	Open up my doctor visit text	file_open	files	Open up <contact_name> my </contact_name> <file_keyword> doctor visit </file_keyword> <file_type> text </file_type>
-0	Hey can you please direct me in my last files I was using?	file_navigate	files	Hey can you please direct me in my <order_ref> last </order_ref> files <contact_name> I </contact_name> was <file_action> using </file_action>?
+0	Hey can you please direct me in my last files I was using?	file_navigate	files	Hey can you please direct me in <contact_name> my </contact_name> <order_ref> last </order_ref> files <contact_name> I </contact_name> was <file_action> using </file_action>?
 0	share file document running club quiz	file_open	files	share file document <file_keyword> running club quiz </file_keyword>
 0	show file the conor	file_open	files	show file the <file_keyword> conor </file_keyword>
 0	saving voice skills image	file_download	files	saving <file_keyword> voice skills </file_keyword> image
@@ -9709,7 +9709,7 @@
 0	Share that file of this meeting participants	file_share	files	Share <file_keyword> that </file_keyword> file of this <sharetarget_type> meeting participants </sharetarget_type>
 0	share file document normal scout meeting	file_open	files	share file document <file_keyword> normal scout meeting </file_keyword>
 0	Share the file of this conversation	file_share	files	Share the file of this <sharetarget_type> conversation </sharetarget_type>
-0	what is my recently opened files	file_navigate	files	what is my recently opened files
+0	what is my recently opened files	file_navigate	files	what is <contact_name> my </contact_name> <file_recency> recently </file_recency>  <file_action> opened </file_action> files
 0	Please pulling up my the last used document	file_navigate	files	Please pulling up my the <order_ref> last </order_ref> <file_action> used </file_action> document
 0	Go to pictures	file_navigate	files	Go to <file_type> pictures </file_type>
 0	Send the document.	file_share	files	Send  the document.
@@ -9832,7 +9832,7 @@
 0	take me to the file I was just working on.	file_navigate	files	take me to the file <contact_name> I </contact_name> was <file_recency> just </file_recency> <file_action> working </file_action> on.
 0	Share file lt review of this meeting participants	file_share	files	Share file <file_keyword> lt review </file_keyword> of <sharetarget_name> this </sharetarget_name> <sharetarget_type> meeting participants </sharetarget_type>
 0	Open file titled go to take a shower	file_open	files	Open file titled <file_name> go to take a shower </file_name>
-0	Go in my download	file_navigate	files	Go in my <file_folder> download </file_folder>
+0	Go in my download	file_navigate	files	Go in <contact_name> my </contact_name> <file_folder> download </file_folder>
 0	show the file ebook ideas	file_open	files	show the file <file_keyword> ebook ideas </file_keyword>
 0	Xent the PowerPoint that I was working on.	file_share	files	Xent the <file_type> PowerPoint </file_type> that <contact_name> I </contact_name> was <file_action> working </file_action> on.
 0	share my bowling night file	file_share	files	share <contact_name> my </contact_name> <file_keyword> bowling night </file_keyword> file
@@ -10061,7 +10061,7 @@
 0	show me files that was closed.	file_navigate	files	show me files that was <file_action> used </file_action>.
 0	stand up meeting	file_download	files	<sharetarget_name> stand up </sharetarget_name> meeting
 0	Open bot framework Cortana file.	file_open	files	Open <file_keyword> bot framework Cortana </file_keyword> file.
-0	share brownbag file in my 10 pm on Wednesday design sync meeting attendees	file_share	files	share <file_keyword> brownbag </file_keyword> file in my <meeting_starttime> 10 pm on Wednesday </meeting_starttime> <sharetarget_name> design sync </sharetarget_name> <sharetarget_type> meeting attendees </sharetarget_type>
+0	share brownbag file in my 10 pm on Wednesday design sync meeting attendees	file_share	files	share <file_keyword> brownbag </file_keyword> file in <contact_name> my <contact_name> <meeting_starttime> 10 pm on Wednesday </meeting_starttime> <sharetarget_name> design sync </sharetarget_name> <sharetarget_type> meeting attendees </sharetarget_type>
 0	Go of my download	file_navigate	files	Go of my <file_folder> download </file_folder>
 0	Please opens the last document I updated	file_open	files	Please opens the <order_ref> last </order_ref> document <contact_name> I </contact_name> <file_action> updated </file_action>
 0	Open instant answer file.	file_open	files	Open <file_keyword> instant answer </file_keyword> file.
@@ -10377,7 +10377,7 @@
 0	show the file eat italian food	file_open	files	show the file <file_keyword> eat italian food </file_keyword>
 0	Open up britney ' s dentist appointment document	file_open	files	Open up <file_keyword> britney ' s dentist appointment </file_keyword> document
 0	Open the colleagues meeting document	file_open	files	Open the <file_keyword> colleagues meeting </file_keyword> document
-0	Go in my PowerPoint	file_navigate	files	Go in my <file_type> PowerPoint </file_type>
+0	Go in my PowerPoint	file_navigate	files	Go in <contact_name> my </contact_name> <file_type> PowerPoint </file_type>
 0	Show me the last document I made modifications	file_navigate	files	Show me the <order_ref> last </order_ref> document <contact_name> I </contact_name> <file_action> made </file_action> modifications
 0	Please bring back up the last document I are open	file_navigate	files	Please bring back up the <order_ref> last </order_ref> document <contact_name> I </contact_name> are <file_action> open </file_action>
 0	Open the last document in I just edited	file_open	files	Open the <order_ref> last </order_ref> document in <contact_name> I </contact_name> <file_recency> just </file_recency> <file_action> edited </file_action>
@@ -10856,7 +10856,7 @@
 0	Please bring back up the last document I was opened	file_navigate	files	Please bring back up the <order_ref> last </order_ref> document <contact_name> I </contact_name> was <file_action> open </file_action>ed
 0	Open tax paper	file_open	files	Open <file_keyword> tax </file_keyword> paper
 0	show me file potomac nationals game	file_open	files	show me file <file_keyword> potomac nationals game </file_keyword>
-0	what is my recently opened files	file_navigate	files	what is my recently opened files
+0	what is my recently opened files	file_navigate	files	what is <contact_name> my </contact_name> <file_recency> recently </file_recency>  <file_action> opened </file_action> files
 0	Hey can you please show me the files I was editing this week?	file_navigate	files	Hey can you please show me the files <contact_name> I </contact_name> was <file_action> editing </file_action> this week?
 0	share the tangerine deck with liestl	file_open	files	share the <file_keyword> tangerine </file_keyword> <file_type> deck </file_type> with <to_contact_name> liestl </to_contact_name>
 0	re-open the last document I worked on.	file_open	files	re-open the <order_ref> last </order_ref> document <contact_name> I </contact_name> <file_action> worked </file_action> on.
@@ -11028,7 +11028,7 @@
 0	Open up the bffs birthday file	file_open	files	Open up the <file_keyword> bffs birthday </file_keyword> file
 0	I need that document I was working on recently open.	file_open	files	I need that document <contact_name> I </contact_name> was <file_action> working </file_action> on <file_recency> recently </file_recency> open.
 0	show me file stopwatch	file_open	files	show me file <file_keyword> stopwatch </file_keyword>
-0	Go in my Excel	file_navigate	files	Go in my <file_type> Excel </file_type>
+0	Go in my Excel	file_navigate	files	Go in <contact_name> my </contact_name> <file_type> Excel </file_type>
 0	Open pension meeting presentation	file_open	files	Open <file_keyword> pension meeting </file_keyword> <file_type> presentation </file_type>
 0	Please bring back up the last document I was open	file_navigate	files	Please bring back up the <order_ref> last </order_ref> document <contact_name> I </contact_name> was <file_action> open </file_action>
 0	list of my recently opened documents	file_navigate	files	list of <contact_name> my </contact_name> <file_recency> recently </file_recency> opened documents
@@ -11285,7 +11285,7 @@
 0	open the i don't this is an a****** deck	file_open	files	open the <file_keyword> i don't this is an a****** </file_keyword> <file_type> deck </file_type>
 0	share deployment timeline file using jay ongg	file_share	files	share <file_keyword> deployment timeline </file_keyword> file using <contact_name> jay ongg </contact_name>
 0	Open file.	file_open	files	Open file.
-0	what is my newly opened files	file_navigate	files	what is my newly opened files
+0	what is my newly opened files	file_navigate	files	what is <contact_name> my </contact_name> newly <file_action> opened </file_action> files
 0	Open file collision	file_open	files	Open file <file_keyword> collision </file_keyword>
 0	Please open the last document I last edited	file_open	files	Please open the <order_ref> last </order_ref> document <contact_name> I </contact_name> <order_ref> last </order_ref> <file_action> edited </file_action>
 0	Open the file file shiproom.	file_open	files	Open the file file <file_keyword> shiproom </file_keyword>.
@@ -11465,9 +11465,9 @@
 0	show the file team retreat	file_open	files	show the file <file_keyword> team retreat </file_keyword>
 0	Can you open the my I was writing file for me	file_open	files	Can you open the <contact_name> my </contact_name> <contact_name> I </contact_name> was <file_action> writing </file_action> file for me
 0	Look up STH.	file_search	files	Look up <file_keyword> STH </file_keyword>.
-0	what is my newly opened files	file_navigate	files	what is my newly opened files
+0	what is my newly opened files	file_navigate	files	what is <contact_name> my </contact_name> newly <file_action> opened </file_action> files
 0	open the file i was working on	file_open	files	open the file <contact_name> i </contact_name> was <file_action> working </file_action> on
-0	Hey could you please direct me in my last files I was working on recently?	file_navigate	files	Hey could you please direct me in my <order_ref> last </order_ref> files <contact_name> I </contact_name> was <file_action> working </file_action> on <file_recency> recently </file_recency>?
+0	Hey could you please direct me in my last files I was working on recently?	file_navigate	files	Hey could you please direct me in <contact_name> my </contact_name> <order_ref> last </order_ref> files  <contact_name> I </contact_name> was <file_action> working </file_action> on <file_recency> recently </file_recency>?
 0	Open the file kitty	file_open	files	Open the file <file_keyword> kitty </file_keyword>
 0	download preview test plan document downloaded files	file_download	files	download <file_keyword> preview test plan </file_keyword> document <file_folder> downloaded </file_folder> files
 0	shows the document I was editing.	file_navigate	files	shows the document <contact_name> I </contact_name> was <file_action> editing </file_action>.
@@ -11520,7 +11520,7 @@
 0	saving lt review file	file_download	files	saving <file_keyword> lt review </file_keyword> file
 0	Open ball state college visit presentation	file_open	files	Open <file_keyword> ball state college visit </file_keyword> <file_type> presentation </file_type>
 0	Open the file titled bowling night	file_open	files	Open the file titled <file_name> bowling night </file_name>
-0	lt review deck	file_download	files	lt review  deck
+0	lt review deck	file_download	files	<file_keyword> lt review </file_keyword> <file_type> deck </file_type>
 0	share the i don't this is an a****** deck	file_open	files	share the <file_keyword> i don't this is an a****** </file_keyword> <file_type> deck </file_type>
 0	Look for " all hands deck "	file_search	files	Look for " <file_keyword> all hands </file_keyword> <file_type> deck </file_type> "
 0	Please opened the last document recent	file_open	files	Please opened the <order_ref> last </order_ref> document <file_recency> recent </file_recency>
@@ -11768,7 +11768,7 @@
 0	share badminton tournament deck	file_open	files	share <file_keyword> badminton tournament </file_keyword> <file_type> deck </file_type>
 0	share my i don't this is an a****** file	file_share	files	share <contact_name> my </contact_name> <file_keyword> i don't this is an a****** </file_keyword> file
 0	Open file titled private lessons	file_open	files	Open file named <file_name> private lessons </file_name>
-0	Hey can you please direct me in my last files most recent?	file_navigate	files	Hey can you please direct me in my <order_ref> last </order_ref> files most <file_recency> recent </file_recency>?
+0	Hey can you please direct me in my last files most recent?	file_navigate	files	Hey can you please direct me in <contact_name> my </contact_name> <order_ref> last </order_ref> files most <file_recency> recent </file_recency>?
 0	Search for my file.	file_navigate	files	Search for <contact_name> my </contact_name> file.
 0	Open the file titled business 2	file_open	files	Open the file titled <file_name> business 2 </file_name>
 0	pull up watch a movie file	file_open	files	pull up <file_keyword> watch a movie </file_keyword> file
@@ -11826,7 +11826,7 @@
 0	upload LT review discussion file	file_download	files	upload <file_keyword> LT review discussion </file_keyword> file
 0	Pull up the document I just edited	file_navigate	files	Pull up the document <contact_name> I </contact_name> <file_recency> just </file_recency> <file_action> edited </file_action>
 0	show the file bowling night	file_open	files	show the file <file_keyword> bowling night </file_keyword>
-0	share payroll file in my 10 pm on Wednesday design sync chat	file_share	files	share <file_keyword> payroll </file_keyword> file in my <meeting_starttime> 10 pm on Wednesday </meeting_starttime> <sharetarget_name> design sync </sharetarget_name> <sharetarget_type> chat </sharetarget_type>
+0	share payroll file in my 10 pm on Wednesday design sync chat	file_share	files	share <file_keyword> payroll </file_keyword> file in <contact_name> my <contact_name> <meeting_starttime> 10 pm on Wednesday </meeting_starttime> <sharetarget_name> design sync </sharetarget_name> <sharetarget_type> chat </sharetarget_type>
 0	taking me to the file I had up before.	file_navigate	files	taking me to the file <contact_name> I </contact_name> had <file_action> up </file_action> before.
 0	Open up my rant file	file_open	files	Open up <contact_name> my </contact_name> <file_keyword> rant </file_keyword> file
 0	share this file with my next shiproom meeting	file_share	files	share <file_keyword> this </file_keyword> file with <to_contact_name> my </to_contact_name> <meeting_starttime> next </meeting_starttime> <sharetarget_name> shiproom </sharetarget_name> <sharetarget_type> meeting </sharetarget_type>
@@ -12042,7 +12042,7 @@
 0	Please opens the last document I was using	file_open	files	Please opens the <order_ref> last </order_ref> document <contact_name> I </contact_name> was <file_action> using </file_action>
 0	I want to see the most recent files I you made	file_navigate	files	I want to see the most recent files I you made
 0	upload voice skills file	file_download	files	upload <file_keyword> voice skills </file_keyword> file
-0	what is my recently opened files	file_navigate	files	what is my recently opened files
+0	what is my recently opened files	file_navigate	files	what is <contact_name> my </contact_name> <file_recency> recently </file_recency>  <file_action> opened </file_action> files
 0	open john's activity	file_share	files	open <contact_name> john </contact_name> 's activity
 0	show the bday dinner for nephew file	file_open	files	show the <file_keyword> bday dinner for nephew </file_keyword> file
 0	number two	file_download	files	number <position_ref> two </position_ref>
@@ -12148,7 +12148,7 @@
 0	open the memos paper recently	file_open	files	open the <file_type> memos </file_type> paper <file_recency> recently </file_recency>
 0	slides two	file_download	files	slides two
 0	share file document malcolm's birthday	file_open	files	share file document <file_keyword> malcolm's birthday </file_keyword>
-0	Hey can you please direct me in my last files I was last working on?	file_navigate	files	Hey can you please direct me in my <order_ref> last </order_ref> files <contact_name> I </contact_name> was <order_ref> last </order_ref> <file_action> working </file_action> on?
+0	Hey can you please direct me in my last files I was last working on?	file_navigate	files	Hey can you please direct me in <contact_name> my </contact_name> <order_ref> last </order_ref> files <contact_name> I </contact_name> was <order_ref> last </order_ref> <file_action> working </file_action> on?
 0	find word documents	file_share	files	find <file_type> word </file_type> documents
 0	Open lt review paper recent	file_open	files	Open <file_keyword> lt review </file_keyword> paper <file_recency> recent </file_recency>
 0	open the paper I was composing.	file_open	files	open the paper <contact_name> I </contact_name> was <file_action> composing </file_action>.
@@ -12233,7 +12233,7 @@
 0	show file the altar server meeting	file_open	files	show file the <file_keyword> altar server meeting </file_keyword>
 0	Can you please open the document recently?	file_open	files	Can you please open the document <file_recency> recently </file_recency>?
 0	Hey Cortana I need to continue the document recently.	file_open	files	Hey Cortana I need to continue the document <file_recency> recently </file_recency>.
-0	Hey can you please direct me in my last files the last used?	file_navigate	files	Hey can you please direct me in my <order_ref> last </order_ref> files the <order_ref> last </order_ref> <file_action> used </file_action>?
+0	Hey can you please direct me in my last files the last used?	file_navigate	files	Hey can you please direct me in <contact_name> my </contact_name> <order_ref> last </order_ref> files the <order_ref> last </order_ref> <file_action> used </file_action>?
 0	pull up hey sam's club file	file_open	files	pull up <file_keyword> hey sam's club </file_keyword> file
 0	Open the one on west document	file_open	files	Open the <file_keyword> one on west </file_keyword> document
 0	download deck	file_share	files	download <file_type> deck </file_type>
@@ -12461,7 +12461,7 @@
 0	Recent files.	file_navigate	files	<file_recency> Recent </file_recency> files.
 0	Show my latest documents.	file_navigate	files	Show <contact_name> my </contact_name> <order_ref> latest </order_ref> documents.
 0	share my doctor visit file	file_share	files	share <contact_name> my </contact_name> <file_keyword> doctor visit </file_keyword> file
-0	what is my recently opened files	file_navigate	files	what is my recently opened files
+0	what is my recently opened files	file_navigate	files	what is <contact_name> my </contact_name> <file_recency> recently </file_recency>  <file_action> opened </file_action> files
 0	open I was working on recently documentation.	file_open	files	open <contact_name> I </contact_name> was <file_action> working </file_action> on <file_recency> recently </file_recency> documentation.
 0	Open my have day off presentation	file_open	files	Open <contact_name> my </contact_name> <file_keyword> have day off </file_keyword> <file_type> presentation </file_type>
 0	download tax file	file_download	files	download <file_keyword> tax </file_keyword> file
@@ -12472,7 +12472,7 @@
 0	Can you open my last active files for me	file_open	files	Can you open <contact_name> my </contact_name> <order_ref> last </order_ref> active files for me
 0	Share tax document the last used with the conversation	file_share	files	Share <file_keyword> tax </file_keyword> document the <order_ref> last </order_ref> <file_action> used </file_action> with the <sharetarget_type> conversation </sharetarget_type>
 0	share and r deck	file_open	files	share <file_keyword> and r </file_keyword> <file_type> deck </file_type>
-0	what is my recently opened files	file_navigate	files	what is my recently opened files
+0	what is my recently opened files	file_navigate	files	what is <contact_name> my </contact_name> <file_recency> recently </file_recency>  <file_action> opened </file_action> files
 0	show my spreadsheet files	file_navigate	files	show <contact_name> my </contact_name> <file_type> spreadsheet </file_type> files
 0	open file LT review deck	file_navigate	files	open file <file_keyword> LT review </file_keyword> <file_type> deck </file_type>
 0	Open up my lily no lobo note	file_open	files	Open up <contact_name> my </contact_name> <file_keyword> lily no lobo </file_keyword> <file_type> note </file_type>
@@ -12507,7 +12507,7 @@
 0	show the file london cross capital	file_open	files	show the file <file_keyword> london cross capital </file_keyword>
 0	pull up lawyer advice coming file	file_open	files	pull up <file_keyword> lawyer advice coming </file_keyword> file
 0	Open proactive slimer document.	file_open	files	Open <file_keyword> proactive slimer </file_keyword> document.
-0	share that file in my 11AM this conversation	file_share	files	share <file_keyword> that </file_keyword> file in my <meeting_starttime> 11AM </meeting_starttime> <sharetarget_name> this </sharetarget_name> <sharetarget_type> conversation </sharetarget_type>
+0	share that file in my 11AM this conversation	file_share	files	share <file_keyword> that </file_keyword> file in <contact_name> my <contact_name> <meeting_starttime> 11AM </meeting_starttime> <sharetarget_name> this </sharetarget_name> <sharetarget_type> conversation </sharetarget_type>
 0	Share deployment timeline spreadsheet of the 11AM conversation	file_share	files	Share <file_keyword> deployment timeline </file_keyword> <file_type> spreadsheet </file_type> of the <meeting_starttime> 11AM </meeting_starttime> <sharetarget_type> conversation </sharetarget_type>
 0	Open 'voice skills' doc	file_open	files	Open '<file_keyword> voice skills </file_keyword>' doc
 0	view my I was working on recently files.	file_navigate	files	view <contact_name> my </contact_name> <contact_name> I </contact_name> was <file_action> working </file_action> on <file_recency> recently </file_recency> files.
@@ -12750,7 +12750,7 @@
 0	share the triage process document on this chat	file_share	files	share the <file_keyword> triage process </file_keyword> document on <sharetarget_name>this</sharetarget_name> <sharetarget_type> chat </sharetarget_type>
 0	Open the Cortana architecture file.	file_open	files	Open the <file_keyword> Cortana architecture </file_keyword> file.
 0	share the bowling night deck	file_open	files	share the <file_keyword> bowling night </file_keyword> <file_type> deck </file_type>
-0	lt review deck	file_download	files	lt review  deck
+0	lt review deck	file_download	files	<file_keyword> lt review </file_keyword> <file_type> deck </file_type>
 0	Show me the files that I was only using	file_navigate	files	Show me the files that I was only using
 0	I last edited a document , please open your document.	file_open	files	<contact_name> I </contact_name> <order_ref> last </order_ref> <file_action> edited </file_action> a document , please open your document.
 0	Show in my I was creating files	file_navigate	files	Show in <contact_name> my </contact_name> <contact_name> I </contact_name> was <file_action> creating </file_action> files
@@ -12834,7 +12834,7 @@
 0	open the file I was creating.	file_open	files	open the file <contact_name> I </contact_name> was <file_action> creating </file_action>.
 0	Show me the files that I was just use	file_navigate	files	Show me the files that I was just use
 0	open intent notebook	file_open	files	open <file_keyword> intent </file_keyword> <file_type> notebook </file_type>
-0	Hey could you please direct me in my last files I worked on?	file_navigate	files	Hey could you please direct me in my <order_ref> last </order_ref> files <contact_name> I </contact_name> <file_action> worked </file_action> on?
+0	Hey could you please direct me in my last files I worked on?	file_navigate	files	Hey could you please direct me in <contact_name> my </contact_name> <order_ref> last </order_ref> files <contact_name> I </contact_name> <file_action> worked </file_action> on?
 0	Open LT review deck.	file_open	files	Open <file_keyword> LT review </file_keyword> <file_type> deck </file_type>.
 0	show me my Word archives	file_navigate	files	show me <contact_name> my </contact_name> <file_type> Word </file_type> archives
 0	Open the size ship file.	file_open	files	Open the <file_keyword> size ship </file_keyword> file.
@@ -12944,7 +12944,7 @@
 0	Open the last document that I uploaded	file_open	files	Open the <order_ref> last </order_ref> document that <contact_name> I </contact_name> <file_action> uploaed </file_action>
 0	open the eat italian food deck	file_open	files	open the <file_keyword> eat italian food </file_keyword> <file_type> deck </file_type>
 0	Take me to where I can see all my recent files	file_navigate	files	Take me to where I can see all <contact_name> my </contact_name> <file_recency> recent </file_recency> files
-0	Go in my PowerPoint	file_navigate	files	Go in my <file_type> PowerPoint </file_type>
+0	Go in my PowerPoint	file_navigate	files	Go in <contact_name> my </contact_name> <file_type> PowerPoint </file_type>
 0	sharing the insurance Word with this conversation	file_share	files	sharing the <file_keyword> insurance </file_keyword> <file_type> Word </file_type> with <sharetarget_name> this </sharetarget_name> <sharetarget_type> conversation </sharetarget_type>
 0	share file doc buy one for maticks	file_open	files	share file <file_type> doc </file_type> <file_keyword> buy one for maticks </file_keyword>
 0	Open the last documents I was editing	file_open	files	Open the <order_ref> last </order_ref> documents <contact_name> I </contact_name> was <file_action> editing </file_action>
@@ -12953,7 +12953,7 @@
 0	Navigate in my last active files	file_navigate	files	Navigate in <contact_name> my </contact_name> <order_ref> last </order_ref> active files
 0	close file 'LT review discussion'	file_open	files	close file '<file_keyword> LT review discussion </file_keyword>'
 0	Share file insurance to shiproom meeting	file_share	files	Share file <file_keyword> insurance </file_keyword> to <sharetarget_name> shiproom </sharetarget_name> <sharetarget_type> meeting </sharetarget_type>
-0	Go in my Excel	file_navigate	files	Go in my <file_type> Excel </file_type>
+0	Go in my Excel	file_navigate	files	Go in <contact_name> my </contact_name> <file_type> Excel </file_type>
 0	bring up the document I was working on before the telephone call interrupted me.	file_navigate	files	bring up the document <contact_name> I </contact_name> was <file_action> working </file_action> on before the telephone call interrupted me.
 0	Open file titled embryo injection	file_open	files	Open file titled <file_name> embryo injection </file_name>
 0	Open the file named lily no lobo	file_open	files	Open the file named <file_name> lily no lobo </file_name>
@@ -13037,7 +13037,7 @@
 0	Open up the ball game file	file_open	files	Open up the <file_keyword> ball game </file_keyword> file
 0	show me utorrent file	file_open	files	show me <file_keyword> utorrent </file_keyword> file
 0	display the document I was just working on.	file_navigate	files	display the document <contact_name> I </contact_name> was <file_recency> just </file_recency> <file_action> working </file_action> on.
-0	share preview test plan document file in my 10 pm on Wednesday design sync meeting attendees	file_share	files	share <file_keyword> preview test plan </file_keyword> document file in my <meeting_starttime> 10 pm on Wednesday </meeting_starttime> <sharetarget_name> design sync </sharetarget_name> <sharetarget_type> meeting attendees </sharetarget_type>
+0	share preview test plan document file in my 10 pm on Wednesday design sync meeting attendees	file_share	files	share <file_keyword> preview test plan </file_keyword> document file in <contact_name> my <contact_name> <meeting_starttime> 10 pm on Wednesday </meeting_starttime> <sharetarget_name> design sync </sharetarget_name> <sharetarget_type> meeting attendees </sharetarget_type>
 0	Hey Cortana I necessary to continue with the document I was using.	file_open	files	Hey Cortana I necessary to continue with the document <contact_name> I </contact_name> was <file_action> using </file_action>.
 0	share file magazine designing with petz	file_share	files	share file <file_keyword> magazine designing </file_keyword> with <to_contact_name> petz </to_contact_name>
 0	Open file c. s. m. work	file_open	files	Open file <file_keyword> c. s. m. work </file_keyword>
@@ -13134,7 +13134,7 @@
 0	show my files from yesterday.	file_navigate	files	show <contact_name> my </contact_name> files from <date> yesterday </date>.
 0	share hotel reservation deck	file_open	files	share <file_keyword> hotel reservation </file_keyword> <file_type> deck </file_type>
 0	Open the file potomac nationals game	file_open	files	Open the file <file_keyword> potomac nationals game </file_keyword>
-0	what is my recently opened files	file_navigate	files	what is my recently opened files
+0	what is my recently opened files	file_navigate	files	what is <contact_name> my </contact_name> <file_recency> recently </file_recency>  <file_action> opened </file_action> files
 0	Open lt review document I was writing	file_open	files	Open <file_keyword> lt review </file_keyword> document <contact_name> I </contact_name> was <file_action> writing </file_action>
 0	Open the lawyer advice coming file	file_open	files	Open the <file_keyword> lawyer advice coming </file_keyword> file
 0	share file doc green city	file_open	files	share file <file_type> doc </file_type> <file_keyword> green city </file_keyword>
@@ -13199,7 +13199,7 @@
 0	I want to see the most recent files I've made	file_navigate	files	I want to see the most recent files I've made
 0	Navigate the files	file_navigate	files	Navigate the files
 0	Open my running club quiz presentation	file_open	files	Open <contact_name> my </contact_name> <file_keyword> running club quiz </file_keyword> <file_type> presentation </file_type>
-0	Show in my OneNote	file_navigate	files	Show in my <file_type> OneNote </file_type>
+0	Show in my OneNote	file_navigate	files	Show in <contact_name> my </contact_name> <file_type> OneNote </file_type>
 0	Open my that I created info document	file_open	files	Open <contact_name> my </contact_name> <file_keyword> that I created </file_keyword> info document
 0	share file document have day off	file_open	files	share file document <file_keyword> have day off </file_keyword>
 0	Hey can you please show me the files I just edited yesterday?	file_navigate	files	Hey can you please show me the files <contact_name> I </contact_name> <file_recency> just </file_recency> <file_action> edited </file_action> <date> yesterday </date>?
@@ -13277,7 +13277,7 @@
 0	Show me of my I just edited files	file_navigate	files	Show me of <contact_name> my </contact_name> <contact_name> I </contact_name> <file_recency> just </file_recency> <file_action> edited </file_action> files
 0	Open that go to walmart file	file_open	files	Open that <file_keyword> go to walmart </file_keyword> file
 0	Share brownbag document I updated with shiproom meeting participants	file_share	files	Share <file_keyword> brownbag </file_keyword> document <contact_name> I </contact_name> <file_action> updated </file_action> with <sharetarget_name> shiproom </sharetarget_name> <sharetarget_type> meeting participants </sharetarget_type>
-0	Hey could you please direct me in my last files I was working on?	file_navigate	files	Hey could you please direct me in my <order_ref> last </order_ref> files <contact_name> I </contact_name> was <file_action> working </file_action> on?
+0	Hey could you please direct me in my last files I was working on?	file_navigate	files	Hey could you please direct me in <contact_name> my </contact_name> <order_ref> last </order_ref> files <contact_name> I </contact_name> was <file_action> working </file_action> on?
 0	share file document appointment with the board of education	file_open	files	share file document <file_keyword> appointment with the board of education </file_keyword>
 0	Share the deck.	file_share	files	Share the <file_type> deck </file_type>.
 0	upload lt review Excel	file_download	files	upload <file_keyword> lt review </file_keyword> <file_type> Excel </file_type>

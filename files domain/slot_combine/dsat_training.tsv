@@ -104,5 +104,49 @@
 0	spreadsheet Ashuthosh Upadhyaya	file_search	files	<file_type>spreadsheet</file_type> <contact_name>Ashuthosh Upadhyaya</contact_name>	Validating_SnA_Files_CrowdSource_3SFilesAnnotation_after_filtering.tsv
 0	open the TAP100: document	file_open	files	open the <file_keyword>TAP100</file_keyword>: document	dsat_training.tsv
 0	Share the Cortana in Teams Lt review deck with Yujia	file_share	files	Share the <file_keyword>Cortana in Teams Lt review</file_keyword> <file_type>deck</file_type> with <to_contact_name>Yujia</to_contact_name>	Validating_Teams_AllDomain_SR_RandomSampling_20200201-20200229_7k.tsv
+0	Open files I want to get up	file_open	files	Open files <file_keyword>I want to get up</file_keyword>	Reporting_Teams_20200101-20200123_6k.tsv
+0	Open Radical Word document	file_open	files	Open <file_keyword>Radical</file_keyword> <file_type>Word</file_type> document	Reporting_Teams_20200101-20200123_6k.tsv
+0	Open skills file with Mohit	file_open	files	Open <file_keyword>skills</file_keyword> file with <contact_name>Mohit</contact_name>	Reporting_Teams_20200101-20200123_6k.tsv
+0	Open the Bug Template and other useful info Word document	file_open	files	Open the <file_keyword>Bug Template and other useful info</file_keyword> <file_type>Word</file_type> document	Reporting_Teams_20200101-20200123_6k.tsv
+0	Share Cortana file with Ping at the 4:30	file_share	files	Share <file_keyword>Cortana</file_keyword> file with <to_contact_name>Ping</to_contact_name> at the <time>4:30</time>	Reporting_Teams_20200101-20200123_6k.tsv
+0	Share file Teams I was skilled elopment spreadsheet	file_share	files	Share file <file_keyword Teams I was skilled elopment</file_keyword> <file_type>spreadsheet</file_type>	Reporting_Teams_20200101-20200123_6k.tsv
+0	Share the Free Sample PPT with all is well meeting	file_share	files	Share the <file_keyword>Free Sample</file_keyword> <file_type>PPT</file_type> with <sharetarget_name>all is well</sharetarget_name> <sharetarget_type>meeting</sharetarget_type>	Reporting_Teams_20200101-20200123_6k.tsv
+0	Share the Onboarding & Training documents with Nick Cruise	file_share	files	Share the <file_keyword>Onboarding &amp; Training</file_keyword> documents with <to_contact_name>Nick Cruise</to_contact_name>	Reporting_Teams_20200101-20200123_6k.tsv
+0	Share the Reference PPT with all is well meeting	file_share	files	Share the <file_keyword>Reference</file_keyword> <file_type>PPT</file_type> with <sharetarget_name>all is well</sharetarget_name> <sharetarget_type>meeting</sharetarget_type>	Reporting_Teams_20200101-20200123_6k.tsv
+0	Shared free sample file with Wall Street meeting	file_share	files	Shared <file_keyword>free sample</file_keyword> file with <sharetarget_name>Wall Street</sharetarget_name> <sharetarget_type>meeting</sharetarget_type>	Reporting_Teams_20200101-20200123_6k.tsv
+0	Shared the tools and travels Excel with rainy day meeting	file_share	files	Shared the <file_keyword>tools and travels</file_keyword> <file_type>Excel</file_type> with <sharetarget_name>rainy day</sharetarget_name> <sharetarget_type>meeting</sharetarget_type>	Reporting_Teams_20200101-20200123_6k.tsv
+0	Find me the queue for planning documents	file_search	files	Find me the <file_keyword>queue for planning</file_keyword> documents	Reporting_Teams_20200101-20200123_6k.tsv
+0	Open make it unique Word document	file_open	files	Open <file_keyword>make it unique</file_keyword> <file_type>Word</file_type> document	Validating_Teams_AllDomain_SR_RandomSampling_20200401-20200430.tsv
+0	Search Core Lt Review deck	file_search	files	Search <file_keyword>Core Lt Review</file_keyword> <file_type>deck</file_type>	Validating_Teams_AllDomain_SR_RandomSampling_20200401-20200430.tsv
+0	Search for OK a document	file_search	files	Search for <file_keyword>OK</file_keyword>a document	Validating_Teams_AllDomain_SR_RandomSampling_20200401-20200430.tsv
+0	Sent the doc I was working on with Xinan	file_share	files	Sent the <file_type>doc</file_type> <contact_name>I</contact_name> was <file_action>working</file_action> on with <to_contact_name>Xinan</to_contact_name>	Validating_Teams_AllDomain_SR_RandomSampling_20200401-20200430.tsv
+0	Share documents with Idan	file_share	files	Share documents with <to_contact_name>Idan</to_contact_name>	Validating_Teams_AllDomain_SR_RandomSampling_20200401-20200430.tsv
+0	share the Cortana in Kingston teams display one note here	file_share	files	share the <file_keyword>Cortana in Kingston teams display</file_keyword> <file_type>one note</file_type> <sharetarget_name>here</sharetarget_name>	Validating_Teams_AllDomain_SR_RandomSampling_20200401-20200430.tsv
+0	Share the deck I was working on with weekly kickup meeting	file_share	files	Share the <file_type> deck </file_type> <contact_name>I</contact_name> was <file_action>working</file_action> on with <meeting_starttime>weekly</meeting_starttime> <sharetarget_name>kickup</sharetarget_name> <sharetarget_type>meeting</sharetarget_type>	Validating_Teams_AllDomain_SR_RandomSampling_20200401-20200430.tsv
+0	Share the document I was working on with Thursday catch up meeting	file_share	files	Share the document <contact_name>I</contact_name> was <file_action>working</file_action> on with <meeting_starttime>Thursday</meeting_starttime> <sharetarget_name>catch up</sharetarget_name> <sharetarget_type>meeting</sharetarget_type>	Validating_Teams_AllDomain_SR_RandomSampling_20200401-20200430.tsv
+0	Share the presentation I was working on with weekly meeting	file_share	files	Share the <file_type>presentation</file_type> <contact_name>I</contact_name> was <file_action>working</file_action> on with <meeting_starttime>weekly</meeting_starttime> <sharetarget_type>meeting</sharetarget_type>	Validating_Teams_AllDomain_SR_RandomSampling_20200401-20200430.tsv
+0	Shared xls I was working on with Tom Cruise	file_share	files	Shared <file_type>xls</file_type> <contact_name>I</contact_name> was <file_action>working</file_action> on with <to_contact_name>Tom Cruise</to_contact_name>	Validating_Teams_AllDomain_SR_RandomSampling_20200401-20200430.tsv
+0	share the Kingston-WorkingDeck deck here	file_share	files	share the <file_keyword>Kingston-WorkingDeck</file_keyword> <file_type>deck</file_type> <sharetarget_name>here</sharetarget_name>	dsat_training.tsv
+0	share the Kingston-WorkingDeck deck here	file_share	files	share the <file_keyword>Kingston-WorkingDeck</file_keyword> <file_type>deck</file_type> <sharetarget_name>here</sharetarget_name>	dsat_training.tsv
+0	Skills on endpoints Excel	file_search	files	<file_keyword>Skills on endpoints</file_keyword> <file_type>Excel</file_type>	Validating_SnA_SR_OutlookMobile_FileSearch_20200304-20200430.tsv
+0	Shiproom deck for Malik	file_search	files	<file_keyword>Shiproom</file_keyword> <file_type>deck</file_type> for <contact_name>Malik</contact_name>	Validating_SnA_SR_OutlookMobile_FileSearch_20200304-20200430.tsv
+0	share file skills list with Malik	file_share	files	share file <file_keyword>skills list</file_keyword> with <to_contact_name>Malik</to_contact_name>	dsat_training.tsv
+0	Share file architecture with friends meeting	file_share	files	Share file <file_keyword>architecture</file_keyword> with <sharetarget_name>friends</sharetarget_name> <sharetarget_type>meeting</sharetarget_type>	dsat_training.tsv
+0	i want a different file	select_more	files	i want a different file	dsat_training.tsv
+0	i want different files	select_more	files	i want different files	dsat_training.tsv
+0	i want a different one	select_more	files	i want a different one	dsat_training.tsv
+0	i want different ones	select_more	files	i want different ones	dsat_training.tsv
+0	no, I want a different file	select_more	files	no, I want a different file	dsat_training.tsv
+0	no, I want different files	select_more	files	no, I want different files	dsat_training.tsv
+0	none of these, I want a different file	select_more	files	none of these, I want a different file	dsat_training.tsv
+0	none of these, I want different files	select_more	files	none of these, I want different files	dsat_training.tsv
+0	none of these, I want a different one	select_more	files	none of these, I want a different one	dsat_training.tsv
+0	none of these, I want different ones	select_more	files	none of these, I want different ones	dsat_training.tsv
+0	no, I want a different one	select_more	files	no, I want a different one	dsat_training.tsv
+0	no, I want different ones	select_more	files	no, I want different ones	dsat_training.tsv
+
+
+
+
 
 
