@@ -76,6 +76,12 @@ model onenote
 https://microsoft.sharepoint.com/teams/CortanaCore/_layouts/15/Doc.aspx?sourcedoc={6d6ae133-c9c8-400d-bfd8-ae8feec6ff9f}&action=edit&wd=target%28LU%20Modeling%20and%20Partners%2FB2%20Deployment.one%7C5f498291-a459-40e5-a0ce-f96e0fbf0c37%2FProcess%7C9852204a-5c23-4548-ba92-7724a6428576%2F%29
 promote or upate exsiting model
 
+<email>
+RE: Randomly missing QAS B2 domains - TeamsMessage & Files
+atomic 是dataset 而不是change list
+似乎 最好要好要分兩steps  先做哪個還可以再討論   
+
+
 
 ================================
 aether onboard
