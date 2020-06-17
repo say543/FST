@@ -71,6 +71,11 @@ copyfile("..\\Open_Text_Synthesis\\file_keyword_file_type_file_action_to_contact
 #copyfile("..\\Open_Text_Synthesis\\file_keyword\\data_synthesised_file_keyword.tsv" , "data_synthesised_file_keyword.tsv")
 
 
+# file_boost_file_action_file_keyword_file_recency_contact_name_to_contact_name
+# cannot find so rename to domain
+#copyfile("..\\Open_Text_Synthesis\\file_boost_file_action_file_keyword_file_recency_contact_name_to_contact_name\\data_synthesised_file_boost_file_action_file_keyword_file_recency_to_contact_name_contact_name.tsv" , "data_synthesised_file_boost_file_action_file_keyword_file_recency_to_contact_name_contact_name.tsv")
+copyfile("..\\Open_Text_Synthesis\\file_boost_file_action_file_keyword_file_recency_contact_name_to_contact_name\\domain.tsv" , "data_synthesised_file_boost_file_action_file_keyword_file_recency_to_contact_name_contact_name.tsv")
+
 ############################################
 # copy file from data folder directly
 ############################################
