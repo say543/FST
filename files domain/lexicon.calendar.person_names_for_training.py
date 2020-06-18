@@ -48,7 +48,15 @@ wrongcontactname = set([
     'si',
     'such',
     'turn',
-    'ok'
+    'ok',
+    'jump',
+    'too',
+    'down',
+    'so',
+    'start',
+    'fire',
+    'for',
+    'por'
     ])
 
 
