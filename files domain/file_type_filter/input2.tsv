@@ -1,0 +1,742 @@
+ConversationId	MessageId	MessageTimestamp	MessageFrom	MessageText	JudgedDomain	JudgedIntent	JudgedConstraints	MetaData	ConversationContext	Frequency	CortanaResponse
+177873293	0		user	serial.txt	FILES	file_search	<file_name> serial </file_name> .<file_type> txt </file_type>	[]		1	
+177873294	0		user	schedule.xlsx	FILES	file_search	<file_name> schedule </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873295	0		user	pw.txt	FILES	file_search	<file_name> pw </file_name> .<file_type> txt </file_type>	[]		1	
+177873296	0		user	Tina.jpeg 2012	FILES	file_search	<file_name> Tina </file_name> .<file_type> jpeg </file_type>  <date> 2012 </date>	[]		1	
+177873297	0		user	wsfs.txt	FILES	file_search	<file_name> wsfs </file_name> .<file_type> txt </file_type>	[]		1	
+177873298	0		user	file.txt	FILES	file_search	<file_name> file </file_name> .<file_type> txt </file_type>	[]		1	
+177873299	0		user	2015_expenses.xlsx	FILES	file_search	<file_name> 2015_expenses </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873300	0		user	msinfo.txt	FILES	file_search	<file_name> msinfo </file_name> .<file_type> txt </file_type>	[]		1	
+177873301	0		user	shark.jpg	FILES	file_search	<file_name> shark </file_name> .<file_type> jpg </file_type>	[]		1	
+177873302	0		user	resume.doc	FILES	file_search	<file_name> resume </file_name> .<file_type> doc </file_type>	[]		1	
+177873303	0		user	altchivala.txt	FILES	file_search	<file_name> altchivala </file_name> .<file_type> txt </file_type>	[]		1	
+177873304	0		user	tod.xls	FILES	file_search	<file_name> tod </file_name> .<file_type> xls </file_type>	[]		1	
+177873305	0		user	cv.docx	FILES	file_search	<file_name> cv </file_name> .<file_type> docx </file_type>	[]		1	
+177873306	0		user	c:\passwords.txt	FILES	file_search	<file_name> c:\passwords </file_name> .<file_type> txt </file_type>	[]		1	
+177873307	0		user	shark.jpg	FILES	file_search	<file_name> shark </file_name> .<file_type> jpg </file_type>	[]		1	
+177873308	0		user	cc.txt	FILES	file_search	<file_name> cc </file_name> .<file_type> txt </file_type>	[]		1	
+177873309	0		user	readme.doc	FILES	file_search	<file_name> readme </file_name> .<file_type> doc </file_type>	[]		1	
+177873310	0		user	csharp.docx	FILES	file_search	<file_name> csharp </file_name> .<file_type> docx </file_type>	[]		1	
+177873311	0		user	dokuwiki.txt mortgage amortization calculator excel extra payment	FILES	file_search	<file_name> dokuwiki </file_name> .<file_type> txt </file_type>  <file_keyword> mortgage amortization calculator </file_keyword> <file_type> excel </file_type> <file_keyword> extra payment </file_keyword>	[]		1	
+177873312	0		user	schedulign.xlsx	FILES	file_search	<file_name> schedulign </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873313	0		user	angeloni.txt	FILES	file_search	<file_name> angeloni </file_name> .<file_type> txt </file_type>	[]		1	
+177873314	0		user	log.txt	FILES	file_search	<file_name> log </file_name> .<file_type> txt </file_type>	[]		1	
+177873315	0		user	76.jpg	FILES	file_search	<file_name> 76 </file_name> .<file_type> jpg </file_type>	[]		1	
+177873316	0		user	2015.jpg	FILES	file_search	<file_name> 2015 </file_name> .<file_type> jpg </file_type>	[]		1	
+177873317	0		user	id.txt file	FILES	file_search	<file_name> id </file_name> .<file_type> txt </file_type>  file	[]		1	
+177873318	0		user	passwords.txt	FILES	file_search	<file_name> passwords </file_name> .<file_type> txt </file_type>	[]		1	
+177873319	0		user	weather.txt	FILES	file_search	<file_name> weather </file_name> .<file_type> txt </file_type>	[]		1	
+177873320	0		user	76.jpg	FILES	file_search	<file_name> 76 </file_name> .<file_type> jpg </file_type>	[]		1	
+177873321	0		user	plan.ppt	FILES	file_search	<file_name> plan </file_name> .<file_type> ppt </file_type>	[]		1	
+177873322	0		user	c:\babs\immersion\mihr\pwd.txt	FILES	file_search	<file_name> c:\babs\immersion\mihr\pwd </file_name> .<file_type> txt </file_type>	[]		1	
+177873323	0		user	xdp critical issues-vikas.docx	FILES	file_search	<file_name> xdp critical issues-vikas </file_name> .<file_type> docx </file_type>	[]		1	
+177873324	0		user	todo.txt	FILES	file_search	<file_name> todo </file_name> .<file_type> txt </file_type>	[]		1	
+177873325	0		user	build.txt	FILES	file_search	<file_name> build </file_name> .<file_type> txt </file_type>	[]		1	
+177873326	0		user	whatsnew.txt	FILES	file_search	<file_name> whatsnew </file_name> .<file_type> txt </file_type>	[]		1	
+177873327	0		user	table.jpg	FILES	file_search	<file_name> table </file_name> .<file_type> jpg </file_type>	[]		1	
+177873328	0		user	sa.txt	FILES	file_search	<file_name> sa </file_name> .<file_type> txt </file_type>	[]		1	
+177873329	0		user	schedule.xls	FILES	file_search	<file_name> schedule </file_name> .<file_type> xls </file_type>	[]		1	
+177873330	0		user	outline.docx	FILES	file_search	<file_name> outline </file_name> .<file_type> docx </file_type>	[]		1	
+177873331	0		user	msft q1 2013 - thankyou awards 19 dec 2012.xls	FILES	file_search	<file_name> msft q1 2013 - thankyou awards 19 dec 2012 </file_name> .<file_type> xls </file_type>	[]		1	
+177873332	0		user	p.txt	FILES	file_search	<file_name> p </file_name> .<file_type> txt </file_type>	[]		1	
+177873333	0		user	password.txt	FILES	file_search	<file_name> password </file_name> .<file_type> txt </file_type>	[]		1	
+177873334	0		user	twitch.txt	FILES	file_search	<file_name> twitch </file_name> .<file_type> txt </file_type>	[]		1	
+177873335	0		user	tmscripts.txt	FILES	file_search	<file_name> tmscripts </file_name> .<file_type> txt </file_type>	[]		1	
+177873336	0		user	h:\note.txt	FILES	file_search	<file_name> h:\note </file_name> .<file_type> txt </file_type>	[]		1	
+177873337	0		user	outline.docx	FILES	file_search	<file_name> outline </file_name> .<file_type> docx </file_type>	[]		1	
+177873338	0		user	vlc.txt	FILES	file_search	<file_name> vlc </file_name> .<file_type> txt </file_type>	[]		1	
+177873339	0		user	sicoob.txt	FILES	file_search	<file_name> sicoob </file_name> .<file_type> txt </file_type>	[]		1	
+177873340	0		user	DOC-20171116-WA0004(1).pdf	FILES	file_search	<file_name> DOC-20171116-WA0004(1) </file_name> .<file_type> pdf </file_type>	[]		1	
+177873341	0		user	12.txt	FILES	file_search	<file_name> 12 </file_name> .<file_type> txt </file_type>	[]		1	
+177873342	0		user	samson.docx	FILES	file_search	<file_name> samson </file_name> .<file_type> docx </file_type>	[]		1	
+177873343	0		user	c:\passwords.txt	FILES	file_search	<file_name> c:\passwords </file_name> .<file_type> txt </file_type>	[]		1	
+177873344	0		user	notepad.txt	FILES	file_search	<file_name> notepad </file_name> .<file_type> txt </file_type>	[]		1	
+177873345	0		user	c:\passwords.txt	FILES	file_search	<file_name> c:\passwords </file_name> .<file_type> txt </file_type>	[]		1	
+177873346	0		user	codes.docx	FILES	file_search	<file_name> codes </file_name> .<file_type> docx </file_type>	[]		1	
+177873347	0		user	weather.txt	FILES	file_search	<file_name> weather </file_name> .<file_type> txt </file_type>	[]		1	
+177873348	0		user	schedule.xlsx	FILES	file_search	<file_name> schedule </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873349	0		user	master.docx	FILES	file_search	<file_name> master </file_name> .<file_type> docx </file_type>	[]		1	
+177873350	0		user	images (1).jpg	FILES	file_search	<file_name> images (1) </file_name> .<file_type> jpg </file_type>	[]		1	
+177873351	0		user	imp.txt	FILES	file_search	<file_name> imp </file_name> .<file_type> txt </file_type>	[]		1	
+177873352	0		user	wsfs.txt	FILES	file_search	<file_name> wsfs </file_name> .<file_type> txt </file_type>	[]		1	
+177873353	0		user	jack.docs	FILES	file_search	<file_name> jack </file_name> .<file_type> docs </file_type>	[]		1	
+177873354	0		user	expenses.xls	FILES	file_search	<file_name> expenses </file_name> .<file_type> xls </file_type>	[]		1	
+177873355	0		user	serial.txt	FILES	file_search	<file_name> serial </file_name> .<file_type> txt </file_type>	[]		1	
+177873356	0		user	en.txt	FILES	file_search	<file_name> en </file_name> .<file_type> txt </file_type>	[]		1	
+177873357	0		user	dxdiag.txt	FILES	file_search	<file_name> dxdiag </file_name> .<file_type> txt </file_type>	[]		1	
+177873358	0		user	c:\passwords.txt	FILES	file_search	<file_name> c:\passwords </file_name> .<file_type> txt </file_type>	[]		1	
+177873359	0		user	address.doc	FILES	file_search	<file_name> address </file_name> .<file_type> doc </file_type>	[]		1	
+177873360	0		user	*sow*.doc	FILES	file_search	<file_name> *sow* </file_name> .<file_type> doc </file_type>	[]		1	
+177873361	0		user	file.txt	FILES	file_search	<file_name> file </file_name> .<file_type> txt </file_type>	[]		1	
+177873362	0		user	hello.docx	FILES	file_search	<file_name> hello </file_name> .<file_type> docx </file_type>	[]		1	
+177873363	0		user	ti4o.txt	FILES	file_search	<file_name> ti4o </file_name> .<file_type> txt </file_type>	[]		1	
+177873364	0		user	h:\note.txt	FILES	file_search	<file_name> h:\note </file_name> .<file_type> txt </file_type>	[]		1	
+177873365	0		user	hello.docx	FILES	file_search	<file_name> hello </file_name> .<file_type> docx </file_type>	[]		1	
+177873366	0		user	address.doc	FILES	file_search	<file_name> address </file_name> .<file_type> doc </file_type>	[]		1	
+177873367	0		user	friends.txt	FILES	file_search	<file_name> friends </file_name> .<file_type> txt </file_type>	[]		1	
+177873368	0		user	server.txt	FILES	file_search	<file_name> server </file_name> .<file_type> txt </file_type>	[]		1	
+177873369	0		user	hot2xp*.xls	FILES	file_search	<file_name> hot2xp* </file_name> .<file_type> xls </file_type>	[]		1	
+177873370	0		user	listahan.xls	FILES	file_search	<file_name> listahan </file_name> .<file_type> xls </file_type>	[]		1	
+177873371	0		user	listahan.xls	FILES	file_search	<file_name> listahan </file_name> .<file_type> xls </file_type>	[]		1	
+177873372	0		user	hi*.txt	FILES	file_search	<file_name> hi* </file_name> .<file_type> txt </file_type>	[]		1	
+177873373	0		user	friends.txt	FILES	file_search	<file_name> friends </file_name> .<file_type> txt </file_type>	[]		1	
+177873374	0		user	file.txt	FILES	file_search	<file_name> file </file_name> .<file_type> txt </file_type>	[]		1	
+177873375	0		user	samson.doc	FILES	file_search	<file_name> samson </file_name> .<file_type> doc </file_type>	[]		1	
+177873376	0		user	bugs-underlying-wow64 scorecared.xlsx	FILES	file_search	<file_name> bugs-underlying-wow64 scorecared </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873377	0		user	pvr.txt	FILES	file_search	<file_name> pvr </file_name> .<file_type> txt </file_type>	[]		1	
+177873378	0		user	codes.docx	FILES	file_search	<file_name> codes </file_name> .<file_type> docx </file_type>	[]		1	
+177873379	0		user	example.txt	FILES	file_search	<file_name> example </file_name> .<file_type> txt </file_type>	[]		1	
+177873380	0		user	ben .pptx	FILES	file_search	<file_name> ben </file_name> .<file_type> pptx </file_type>	[]		1	
+177873381	0		user	c:\babs\immersion\mihr\pwd.txt	FILES	file_search	<file_name> c:\babs\immersion\mihr\pwd </file_name> .<file_type> txt </file_type>	[]		1	
+177873382	0		user	76.jpg	FILES	file_search	<file_name> 76 </file_name> .<file_type> jpg </file_type>	[]		1	
+177873383	0		user	demo plan.ppt	FILES	file_search	<file_name> demo plan </file_name> .<file_type> ppt </file_type>	[]		1	
+177873384	0		user	ben .pptx	FILES	file_search	<file_name> ben </file_name> .<file_type> pptx </file_type>	[]		1	
+177873385	0		user	temp.txt	FILES	file_search	<file_name> temp </file_name> .<file_type> txt </file_type>	[]		1	
+177873386	0		user	osap.txt	FILES	file_search	<file_name> osap </file_name> .<file_type> txt </file_type>	[]		1	
+177873387	0		user	outline.docx	FILES	file_search	<file_name> outline </file_name> .<file_type> docx </file_type>	[]		1	
+177873388	0		user	address.doc	FILES	file_search	<file_name> address </file_name> .<file_type> doc </file_type>	[]		1	
+177873389	0		user	temp.txt	FILES	file_search	<file_name> temp </file_name> .<file_type> txt </file_type>	[]		1	
+177873390	0		user	spaaace.jpg	FILES	file_search	<file_name> spaaace </file_name> .<file_type> jpg </file_type>	[]		1	
+177873391	0		user	jack.docx	FILES	file_search	<file_name> jack </file_name> .<file_type> docx </file_type>	[]		1	
+177873392	0		user	ti4o.txt	FILES	file_search	<file_name> ti4o </file_name> .<file_type> txt </file_type>	[]		1	
+177873393	0		user	msft q1 2013 - thankyou awards 19 dec 2012.xls	FILES	file_search	<file_name> msft q1 2013 - thankyou awards 19 dec 2012 </file_name> .<file_type> xls </file_type>	[]		1	
+177873394	0		user	76.jpg	FILES	file_search	<file_name> 76 </file_name> .<file_type> jpg </file_type>	[]		1	
+177873395	0		user	outline.docx	FILES	file_search	<file_name> outline </file_name> .<file_type> docx </file_type>	[]		1	
+177873396	0		user	msinfo.txt	FILES	file_search	<file_name> msinfo </file_name> .<file_type> txt </file_type>	[]		1	
+177873397	0		user	password.txt	FILES	file_search	<file_name> password </file_name> .<file_type> txt </file_type>	[]		1	
+177873398	0		user	finite_dungeon_tables.txt	FILES	file_search	<file_name> finite_dungeon_tables </file_name> .<file_type> txt </file_type>	[]		1	
+177873399	0		user	schedulign.xlsx	FILES	file_search	<file_name> schedulign </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873400	0		user	rhonda.txt	FILES	file_search	<file_name> rhonda </file_name> .<file_type> txt </file_type>	[]		1	
+177873401	0		user	federaltaxes2014.pdf	FILES	file_search	<file_name> federaltaxes2014 </file_name> .<file_type> pdf </file_type>	[]		1	
+177873402	0		user	taxes.xlsx	FILES	file_search	<file_name> taxes </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873403	0		user	wireless.txt	FILES	file_search	<file_name> wireless </file_name> .<file_type> txt </file_type>	[]		1	
+177873404	0		user	log.txt	FILES	file_search	<file_name> log </file_name> .<file_type> txt </file_type>	[]		1	
+177873405	0		user	id.txt file	FILES	file_search	<file_name> id </file_name> .<file_type> txt </file_type>  file	[]		1	
+177873406	0		user	2015_expenses.xlsx	FILES	file_search	<file_name> 2015_expenses </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873407	0		user	june2012.doc	FILES	file_search	<file_name> june2012 </file_name> .<file_type> doc </file_type>	[]		1	
+177873408	0		user	server.txt	FILES	file_search	<file_name> server </file_name> .<file_type> txt </file_type>	[]		1	
+177873409	0		user	047.jpg	FILES	file_search	<file_name> 047 </file_name> .<file_type> jpg </file_type>	[]		1	
+177873410	0		user	ti4o.txt	FILES	file_search	<file_name> ti4o </file_name> .<file_type> txt </file_type>	[]		1	
+177873411	0		user	azure sql db kpi reference (recovered) (2015_01_18 01_06_18 utc).docx sever	FILES	file_search	<file_name> azure sql db kpi reference (recovered) (2015_01_18 01_06_18 utc) </file_name> .<file_type> docx </file_type>  sever	[]		1	
+177873412	0		user	e.txt	FILES	file_search	<file_name> e </file_name> .<file_type> txt </file_type>	[]		1	
+177873413	0		user	dr.notes	FILES	file_search	<file_name> dr </file_name> .<file_type> notes </file_type>	[]		1	
+177873414	0		user	outline.docx	FILES	file_search	<file_name> outline </file_name> .<file_type> docx </file_type>	[]		1	
+177873415	0		user	davidsr1.jpg	FILES	file_search	<file_name> davidsr1 </file_name> .<file_type> jpg </file_type>	[]		1	
+177873416	0		user	office07.txt	FILES	file_search	<file_name> office07 </file_name> .<file_type> txt </file_type>	[]		1	
+177873417	0		user	Project2.Docs for editing.	FILES	file_search	<file_name> Project2 </file_name> .<file_type> Docs </file_type>  for editing.	[]		1	
+177873418	0		user	charter house.docx	FILES	file_search	<file_name> charter house </file_name> .<file_type> docx </file_type>	[]		1	
+177873419	0		user	todo.txt	FILES	file_search	<file_name> todo </file_name> .<file_type> txt </file_type>	[]		1	
+177873420	0		user	new lol.txt	FILES	file_search	<file_name> new lol </file_name> .<file_type> txt </file_type>	[]		1	
+177873421	0		user	birthday2012.ppt	FILES	file_search	<file_name> birthday2012 </file_name> .<file_type> ppt </file_type>	[]		1	
+177873422	0		user	schedule.xls	FILES	file_search	<file_name> schedule </file_name> .<file_type> xls </file_type>	[]		1	
+177873423	0		user	altchivala.txt	FILES	file_search	<file_name> altchivala </file_name> .<file_type> txt </file_type>	[]		1	
+177873424	0		user	taxes.xlsx	FILES	file_search	<file_name> taxes </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873425	0		user	whatsnew.txt	FILES	file_search	<file_name> whatsnew </file_name> .<file_type> txt </file_type>	[]		1	
+177873426	0		user	conan.xls	FILES	file_search	<file_name> conan </file_name> .<file_type> xls </file_type>	[]		1	
+177873427	0		user	bugs-underlying-wow64 scorecared.xlsx	FILES	file_search	<file_name> bugs-underlying-wow64 scorecared </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873428	0		user	expenses.xls	FILES	file_search	<file_name> expenses </file_name> .<file_type> xls </file_type>	[]		1	
+177873429	0		user	devmgmt.msg	FILES	file_search	<file_name> devmgmt </file_name> .<file_type> msg </file_type>	[]		1	
+177873430	0		user	ben .pptx	FILES	file_search	<file_name> ben </file_name> .<file_type> pptx </file_type>	[]		1	
+177873431	0		user	dokuwiki.txt mortgage amortization calculator excel extra payment	FILES	file_search	<file_name> dokuwiki </file_name> .<file_type> txt </file_type>  <file_keyword> mortgage amortization calculator </file_keyword> <file_type> excel </file_type> <file_keyword> extra payment </file_keyword>	[]		1	
+177873432	0		user	jack.docx	FILES	file_search	<file_name> jack </file_name> .<file_type> docx </file_type>	[]		1	
+177873433	0		user	12.txt	FILES	file_search	<file_name> 12 </file_name> .<file_type> txt </file_type>	[]		1	
+177873434	0		user	DOC-20171116-WA0004(1).pdf	FILES	file_search	<file_name> DOC-20171116-WA0004(1) </file_name> .<file_type> pdf </file_type>	[]		1	
+177873435	0		user	imp.txt	FILES	file_search	<file_name> imp </file_name> .<file_type> txt </file_type>	[]		1	
+177873436	0		user	samson.doc	FILES	file_search	<file_name> samson </file_name> .<file_type> doc </file_type>	[]		1	
+177873437	0		user	cc.txt	FILES	file_search	<file_name> cc </file_name> .<file_type> txt </file_type>	[]		1	
+177873438	0		user	ben .pptx	FILES	file_search	<file_name> ben </file_name> .<file_type> pptx </file_type>	[]		1	
+177873439	0		user	msinfo.txt	FILES	file_search	<file_name> msinfo </file_name> .<file_type> txt </file_type>	[]		1	
+177873440	0		user	c:\programdata\dell\updatepackage\log\chipset_driver_gy99k_wn_4.10.55_a00_3.txt	FILES	file_search	<file_name> c:\programdata\dell\updatepackage\log\chipset_driver_gy99k_wn_4.10.55_a00_3 </file_name> .<file_type> txt </file_type>	[]		1	
+177873441	0		user	msinfo.txt	FILES	file_search	<file_name> msinfo </file_name> .<file_type> txt </file_type>	[]		1	
+177873442	0		user	osap.txt	FILES	file_search	<file_name> osap </file_name> .<file_type> txt </file_type>	[]		1	
+177873443	0		user	c:\programdata\dell\updatepackage\log\chipset_driver_gy99k_wn_4.10.55_a00_3.txt	FILES	file_search	<file_name> c:\programdata\dell\updatepackage\log\chipset_driver_gy99k_wn_4.10.55_a00_3 </file_name> .<file_type> txt </file_type>	[]		1	
+177873444	0		user	ron chase invoice #1.xls	FILES	file_search	<file_name> ron chase invoice #1 </file_name> .<file_type> xls </file_type>	[]		1	
+177873445	0		user	resume.doc	FILES	file_search	<file_name> resume </file_name> .<file_type> doc </file_type>	[]		1	
+177873446	0		user	pw.txt	FILES	file_search	<file_name> pw </file_name> .<file_type> txt </file_type>	[]		1	
+177873447	0		user	schedulign.xlsx	FILES	file_search	<file_name> schedulign </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873448	0		user	pvr.txt	FILES	file_search	<file_name> pvr </file_name> .<file_type> txt </file_type>	[]		1	
+177873449	0		user	*code*.txt	FILES	file_search	<file_name> *code* </file_name> .<file_type> txt </file_type>	[]		1	
+177873450	0		user	finance.xlsx	FILES	file_search	<file_name> finance </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873451	0		user	Sano.ppt presentation	FILES	file_search	<file_name> Sano </file_name> .<file_type> ppt </file_type>  <file_type> presentation </file_type>	[]		1	
+177873452	0		user	codes.docx	FILES	file_search	<file_name> codes </file_name> .<file_type> docx </file_type>	[]		1	
+177873453	0		user	shark.jpg	FILES	file_search	<file_name> shark </file_name> .<file_type> jpg </file_type>	[]		1	
+177873454	0		user	taxes.xlsx	FILES	file_search	<file_name> taxes </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873455	0		user	wireless.txt	FILES	file_search	<file_name> wireless </file_name> .<file_type> txt </file_type>	[]		1	
+177873456	0		user	passwords.doc	FILES	file_search	<file_name> passwords </file_name> .<file_type> doc </file_type>	[]		1	
+177873457	0		user	listahan.xls	FILES	file_search	<file_name> listahan </file_name> .<file_type> xls </file_type>	[]		1	
+177873458	0		user	pvr.txt	FILES	file_search	<file_name> pvr </file_name> .<file_type> txt </file_type>	[]		1	
+177873459	0		user	20 ways to save money .doc	FILES	file_search	<file_name> 20 ways to save money </file_name> .<file_type> doc </file_type>	[]		1	
+177873460	0		user	altchivala.txt	FILES	file_search	<file_name> altchivala </file_name> .<file_type> txt </file_type>	[]		1	
+177873461	0		user	csharp.docx	FILES	file_search	<file_name> csharp </file_name> .<file_type> docx </file_type>	[]		1	
+177873462	0		user	weights.xls	FILES	file_search	<file_name> weights </file_name> .<file_type> xls </file_type>	[]		1	
+177873463	0		user	temp.txt	FILES	file_search	<file_name> temp </file_name> .<file_type> txt </file_type>	[]		1	
+177873464	0		user	dokuwiki.txt mortgage amortization calculator excel extra payment	FILES	file_search	<file_name> dokuwiki </file_name> .<file_type> txt </file_type>  <file_keyword> mortgage amortization calculator </file_keyword> <file_type> excel </file_type> <file_keyword> extra payment </file_keyword>	[]		1	
+177873465	0		user	id.txt file	FILES	file_search	<file_name> id </file_name> .<file_type> txt </file_type>  file	[]		1	
+177873466	0		user	*code*.txt	FILES	file_search	<file_name> *code* </file_name> .<file_type> txt </file_type>	[]		1	
+177873467	0		user	slot_patts.doc	FILES	file_search	<file_name> slot_patts </file_name> .<file_type> doc </file_type>	[]		1	
+177873468	0		user	cc.txt	FILES	file_search	<file_name> cc </file_name> .<file_type> txt </file_type>	[]		1	
+177873469	0		user	ben .ppt	FILES	file_search	<file_name> ben </file_name> .<file_type> ppt </file_type>	[]		1	
+177873470	0		user	serial.txt	FILES	file_search	<file_name> serial </file_name> .<file_type> txt </file_type>	[]		1	
+177873471	0		user	charter house.docx	FILES	file_search	<file_name> charter house </file_name> .<file_type> docx </file_type>	[]		1	
+177873472	0		user	birthday2012.ppt	FILES	file_search	<file_name> birthday2012 </file_name> .<file_type> ppt </file_type>	[]		1	
+177873473	0		user	finance.xlsx	FILES	file_search	<file_name> finance </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873474	0		user	allaboutwine.doc	FILES	file_search	<file_name> allaboutwine </file_name> .<file_type> doc </file_type>	[]		1	
+177873475	0		user	allaboutwine.doc	FILES	file_search	<file_name> allaboutwine </file_name> .<file_type> doc </file_type>	[]		1	
+177873476	0		user	federaltaxes2014.pdf	FILES	file_search	<file_name> federaltaxes2014 </file_name> .<file_type> pdf </file_type>	[]		1	
+177873477	0		user	cultureshock.ppt	FILES	file_search	<file_name> cultureshock </file_name> .<file_type> ppt </file_type>	[]		1	
+177873478	0		user	osap.txt	FILES	file_search	<file_name> osap </file_name> .<file_type> txt </file_type>	[]		1	
+177873479	0		user	model.txt	FILES	file_search	<file_name> model </file_name> .<file_type> txt </file_type>	[]		1	
+177873480	0		user	office07.txt	FILES	file_search	<file_name> office07 </file_name> .<file_type> txt </file_type>	[]		1	
+177873481	0		user	davidsr0.jpg	FILES	file_search	<file_name> davidsr0 </file_name> .<file_type> jpg </file_type>	[]		1	
+177873482	0		user	jack.doc	FILES	file_search	<file_name> jack </file_name> .<file_type> doc </file_type>	[]		1	
+177873483	0		user	cv.docx	FILES	file_search	<file_name> cv </file_name> .<file_type> docx </file_type>	[]		1	
+177873484	0		user	daddy *.doc	FILES	file_search	<file_name> daddy * </file_name> .<file_type> doc </file_type>	[]		1	
+177873485	0		user	csharp.doc	FILES	file_search	<file_name> csharp </file_name> .<file_type> doc </file_type>	[]		1	
+177873486	0		user	wireless.txt	FILES	file_search	<file_name> wireless </file_name> .<file_type> txt </file_type>	[]		1	
+177873487	0		user	history.txt	FILES	file_search	<file_name> history </file_name> .<file_type> txt </file_type>	[]		1	
+177873488	0		user	passme.txt	FILES	file_search	<file_name> passme </file_name> .<file_type> txt </file_type>	[]		1	
+177873489	0		user	visa.txt	FILES	file_search	<file_name> visa </file_name> .<file_type> txt </file_type>	[]		1	
+177873490	0		user	serial.txt	FILES	file_search	<file_name> serial </file_name> .<file_type> txt </file_type>	[]		1	
+177873491	0		user	internet.txt	FILES	file_search	<file_name> internet </file_name> .<file_type> txt </file_type>	[]		1	
+177873492	0		user	schedulin.xlsx	FILES	file_search	<file_name> schedulin </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873493	0		user	master.docx	FILES	file_search	<file_name> master </file_name> .<file_type> docx </file_type>	[]		1	
+177873494	0		user	angeloni.txt	FILES	file_search	<file_name> angeloni </file_name> .<file_type> txt </file_type>	[]		1	
+177873495	0		user	davidsr0.jpg	FILES	file_search	<file_name> davidsr0 </file_name> .<file_type> jpg </file_type>	[]		1	
+177873496	0		user	listahan.xls	FILES	file_search	<file_name> listahan </file_name> .<file_type> xls </file_type>	[]		1	
+177873497	0		user	gameinfo.txt	FILES	file_search	<file_name> gameinfo </file_name> .<file_type> txt </file_type>	[]		1	
+177873498	0		user	federaltaxes2014.pdf	FILES	file_search	<file_name> federaltaxes2014 </file_name> .<file_type> pdf </file_type>	[]		1	
+177873499	0		user	pass.txt	FILES	file_search	<file_name> pass </file_name> .<file_type> txt </file_type>	[]		1	
+177873500	0		user	resume.doc	FILES	file_search	<file_name> resume </file_name> .<file_type> doc </file_type>	[]		1	
+177873501	0		user	something.txt	FILES	file_search	<file_name> something </file_name> .<file_type> txt </file_type>	[]		1	
+177873502	0		user	altchivala.txt	FILES	file_search	<file_name> altchivala </file_name> .<file_type> txt </file_type>	[]		1	
+177873503	0		user	msinfo.txt	FILES	file_search	<file_name> msinfo </file_name> .<file_type> txt </file_type>	[]		1	
+177873504	0		user	2015.jpg	FILES	file_search	<file_name> 2015 </file_name> .<file_type> jpg </file_type>	[]		1	
+177873505	0		user	d:\license\text\system.txt	FILES	file_search	<file_name> d:\license\text\system </file_name> .<file_type> txt </file_type>	[]		1	
+177873506	0		user	samson.docx	FILES	file_search	<file_name> samson </file_name> .<file_type> docx </file_type>	[]		1	
+177873507	0		user	fr.txt	FILES	file_search	<file_name> fr </file_name> .<file_type> txt </file_type>	[]		1	
+177873508	0		user	exct.txt	FILES	file_search	<file_name> exct </file_name> .<file_type> txt </file_type>	[]		1	
+177873509	0		user	address.doc	FILES	file_search	<file_name> address </file_name> .<file_type> doc </file_type>	[]		1	
+177873510	0		user	Tina.jpeg 2012	FILES	file_search	<file_name> Tina </file_name> .<file_type> jpeg </file_type>  <date> 2012 </date>	[]		1	
+177873511	0		user	todo.txt	FILES	file_search	<file_name> todo </file_name> .<file_type> txt </file_type>	[]		1	
+177873512	0		user	c:\babs\immersion\mihr\pwd.txt	FILES	file_search	<file_name> c:\babs\immersion\mihr\pwd </file_name> .<file_type> txt </file_type>	[]		1	
+177873513	0		user	snipbaptist.jpg	FILES	file_search	<file_name> snipbaptist </file_name> .<file_type> jpg </file_type>	[]		1	
+177873514	0		user	p.txt	FILES	file_search	<file_name> p </file_name> .<file_type> txt </file_type>	[]		1	
+177873515	0		user	test.pdf	FILES	file_search	<file_name> test </file_name> .<file_type> pdf </file_type>	[]		1	
+177873516	0		user	bk.ppt	FILES	file_search	<file_name> bk </file_name> .<file_type> ppt </file_type>	[]		1	
+177873517	0		user	devmgmt.msg	FILES	file_search	<file_name> devmgmt </file_name> .<file_type> msg </file_type>	[]		1	
+177873518	0		user	c:\programdata\dell\updatepackage\log\chipset_driver_gy99k_wn_4.10.55_a00_3.txt	FILES	file_search	<file_name> c:\programdata\dell\updatepackage\log\chipset_driver_gy99k_wn_4.10.55_a00_3 </file_name> .<file_type> txt </file_type>	[]		1	
+177873519	0		user	harmony.jpg	FILES	file_search	<file_name> harmony </file_name> .<file_type> jpg </file_type>	[]		1	
+177873520	0		user	devmgmt.msg	FILES	file_search	<file_name> devmgmt </file_name> .<file_type> msg </file_type>	[]		1	
+177873521	0		user	test.pdf	FILES	file_search	<file_name> test </file_name> .<file_type> pdf </file_type>	[]		1	
+177873522	0		user	vte.txt	FILES	file_search	<file_name> vte </file_name> .<file_type> txt </file_type>	[]		1	
+177873523	0		user	finite_dungeon_tables.txt	FILES	file_search	<file_name> finite_dungeon_tables </file_name> .<file_type> txt </file_type>	[]		1	
+177873524	0		user	victoria 3.jpg	FILES	file_search	<file_name> victoria 3 </file_name> .<file_type> jpg </file_type>	[]		1	
+177873525	0		user	azure sql db kpi reference (recovered) (2015_01_18 01_06_18 utc).docx	FILES	file_search	<file_name> azure sql db kpi reference (recovered) (2015_01_18 01_06_18 utc) </file_name> .<file_type> docx </file_type>	[]		1	
+177873526	0		user	whatsnew.txt	FILES	file_search	<file_name> whatsnew </file_name> .<file_type> txt </file_type>	[]		1	
+177873527	0		user	costsofbeers.xlsx	FILES	file_search	<file_name> costsofbeers </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873528	0		user	feedback.doc	FILES	file_search	<file_name> feedback </file_name> .<file_type> doc </file_type>	[]		1	
+177873529	0		user	shark.jpg	FILES	file_search	<file_name> shark </file_name> .<file_type> jpg </file_type>	[]		1	
+177873530	0		user	imp.txt	FILES	file_search	<file_name> imp </file_name> .<file_type> txt </file_type>	[]		1	
+177873531	0		user	csharp.docx	FILES	file_search	<file_name> csharp </file_name> .<file_type> docx </file_type>	[]		1	
+177873532	0		user	ben .ppt	FILES	file_search	<file_name> ben </file_name> .<file_type> ppt </file_type>	[]		1	
+177873533	0		user	047.jpg	FILES	file_search	<file_name> 047 </file_name> .<file_type> jpg </file_type>	[]		1	
+177873534	0		user	password.txt	FILES	file_search	<file_name> password </file_name> .<file_type> txt </file_type>	[]		1	
+177873535	0		user	facebook.txt	FILES	file_search	<file_name> facebook </file_name> .<file_type> txt </file_type>	[]		1	
+177873536	0		user	vte.txt	FILES	file_search	<file_name> vte </file_name> .<file_type> txt </file_type>	[]		1	
+177873537	0		user	notes.txt	FILES	file_search	<file_name> notes </file_name> .<file_type> txt </file_type>	[]		1	
+177873538	0		user	bk.ppt	FILES	file_search	<file_name> bk </file_name> .<file_type> ppt </file_type>	[]		1	
+177873539	0		user	vte.txt	FILES	file_search	<file_name> vte </file_name> .<file_type> txt </file_type>	[]		1	
+177873540	0		user	master.docx	FILES	file_search	<file_name> master </file_name> .<file_type> docx </file_type>	[]		1	
+177873541	0		user	cc.txt	FILES	file_search	<file_name> cc </file_name> .<file_type> txt </file_type>	[]		1	
+177873542	0		user	notes.txt	FILES	file_search	<file_name> notes </file_name> .<file_type> txt </file_type>	[]		1	
+177873543	0		user	test.txt	FILES	file_search	<file_name> test </file_name> .<file_type> txt </file_type>	[]		1	
+177873544	0		user	charter house.doc	FILES	file_search	<file_name> charter house </file_name> .<file_type> doc </file_type>	[]		1	
+177873545	0		user	hi*.txt	FILES	file_search	<file_name> hi* </file_name> .<file_type> txt </file_type>	[]		1	
+177873546	0		user	*sow*.doc	FILES	file_search	<file_name> *sow* </file_name> .<file_type> doc </file_type>	[]		1	
+177873547	0		user	dns.txt	FILES	file_search	<file_name> dns </file_name> .<file_type> txt </file_type>	[]		1	
+177873548	0		user	charter house.doc	FILES	file_search	<file_name> charter house </file_name> .<file_type> doc </file_type>	[]		1	
+177873549	0		user	scott.jpg	FILES	file_search	<file_name> scott </file_name> .<file_type> jpg </file_type>	[]		1	
+177873550	0		user	weight.xls	FILES	file_search	<file_name> weight </file_name> .<file_type> xls </file_type>	[]		1	
+177873551	0		user	victoria 3.jpg	FILES	file_search	<file_name> victoria 3 </file_name> .<file_type> jpg </file_type>	[]		1	
+177873552	0		user	test.txt	FILES	file_search	<file_name> test </file_name> .<file_type> txt </file_type>	[]		1	
+177873553	0		user	master.doc	FILES	file_search	<file_name> master </file_name> .<file_type> doc </file_type>	[]		1	
+177873554	0		user	allaboutwine.doc	FILES	file_search	<file_name> allaboutwine </file_name> .<file_type> doc </file_type>	[]		1	
+177873555	0		user	federaltaxes2014.pdf	FILES	file_search	<file_name> federaltaxes2014 </file_name> .<file_type> pdf </file_type>	[]		1	
+177873556	0		user	sa.txt	FILES	file_search	<file_name> sa </file_name> .<file_type> txt </file_type>	[]		1	
+177873557	0		user	finite_dungeon_tables.txt	FILES	file_search	<file_name> finite_dungeon_tables </file_name> .<file_type> txt </file_type>	[]		1	
+177873558	0		user	demo plan.ppt	FILES	file_search	<file_name> demo plan </file_name> .<file_type> ppt </file_type>	[]		1	
+177873559	0		user	options.txt	FILES	file_search	<file_name> options </file_name> .<file_type> txt </file_type>	[]		1	
+177873560	0		user	list.txt	FILES	file_search	<file_name> list </file_name> .<file_type> txt </file_type>	[]		1	
+177873561	0		user	schedule.xlsx	FILES	file_search	<file_name> schedule </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873562	0		user	rgb.txt	FILES	file_search	<file_name> rgb </file_name> .<file_type> txt </file_type>	[]		1	
+177873563	0		user	something.txt	FILES	file_search	<file_name> something </file_name> .<file_type> txt </file_type>	[]		1	
+177873564	0		user	weight.xls	FILES	file_search	<file_name> weight </file_name> .<file_type> xls </file_type>	[]		1	
+177873565	0		user	friends.txt	FILES	file_search	<file_name> friends </file_name> .<file_type> txt </file_type>	[]		1	
+177873566	0		user	altchivala.txt	FILES	file_search	<file_name> altchivala </file_name> .<file_type> txt </file_type>	[]		1	
+177873567	0		user	costsofbeers.xlsx	FILES	file_search	<file_name> costsofbeers </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873568	0		user	commands.txt	FILES	file_search	<file_name> commands </file_name> .<file_type> txt </file_type>	[]		1	
+177873569	0		user	contas.xls	FILES	file_search	<file_name> contas </file_name> .<file_type> xls </file_type>	[]		1	
+177873570	0		user	jack.docs	FILES	file_search	<file_name> jack </file_name> .<file_type> docs </file_type>	[]		1	
+177873571	0		user	budget.xls	FILES	file_search	<file_name> budget </file_name> .<file_type> xls </file_type>	[]		1	
+177873572	0		user	slot_patts.doc	FILES	file_search	<file_name> slot_patts </file_name> .<file_type> doc </file_type>	[]		1	
+177873573	0		user	outline.docx	FILES	file_search	<file_name> outline </file_name> .<file_type> docx </file_type>	[]		1	
+177873574	0		user	example.txt	FILES	file_search	<file_name> example </file_name> .<file_type> txt </file_type>	[]		1	
+177873575	0		user	msft q1 2013 - thankyou awards 19 dec 2012.xls	FILES	file_search	<file_name> msft q1 2013 - thankyou awards 19 dec 2012 </file_name> .<file_type> xls </file_type>	[]		1	
+177873576	0		user	server.txt	FILES	file_search	<file_name> server </file_name> .<file_type> txt </file_type>	[]		1	
+177873577	0		user	info.xlsx	FILES	file_search	<file_name> info </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873578	0		user	rhonda.txt	FILES	file_search	<file_name> rhonda </file_name> .<file_type> txt </file_type>	[]		1	
+177873579	0		user	jack.doc	FILES	file_search	<file_name> jack </file_name> .<file_type> doc </file_type>	[]		1	
+177873580	0		user	fr.txt	FILES	file_search	<file_name> fr </file_name> .<file_type> txt </file_type>	[]		1	
+177873581	0		user	contas.xlsx	FILES	file_search	<file_name> contas </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873582	0		user	tod.xlsx	FILES	file_search	<file_name> tod </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873583	0		user	facebook.txt	FILES	file_search	<file_name> facebook </file_name> .<file_type> txt </file_type>	[]		1	
+177873584	0		user	snipbaptist.jpg	FILES	file_search	<file_name> snipbaptist </file_name> .<file_type> jpg </file_type>	[]		1	
+177873585	0		user	outline.docx	FILES	file_search	<file_name> outline </file_name> .<file_type> docx </file_type>	[]		1	
+177873586	0		user	victoria 3.jpg	FILES	file_search	<file_name> victoria 3 </file_name> .<file_type> jpg </file_type>	[]		1	
+177873587	0		user	sano.ppt presentation	FILES	file_search	<file_name> sano </file_name> .<file_type> ppt </file_type>  <file_type> presentation </file_type>	[]		1	
+177873588	0		user	en.txt	FILES	file_search	<file_name> en </file_name> .<file_type> txt </file_type>	[]		1	
+177873589	0		user	en.txt	FILES	file_search	<file_name> en </file_name> .<file_type> txt </file_type>	[]		1	
+177873590	0		user	tina.jpeg 2012	FILES	file_search	<file_name> tina </file_name> .<file_type> jpeg </file_type>  <date> 2012 </date>	[]		1	
+177873591	0		user	devmgmt.msg	FILES	file_search	<file_name> devmgmt </file_name> .<file_type> msg </file_type>	[]		1	
+177873592	0		user	address.doc	FILES	file_search	<file_name> address </file_name> .<file_type> doc </file_type>	[]		1	
+177873593	0		user	outline.docx	FILES	file_search	<file_name> outline </file_name> .<file_type> docx </file_type>	[]		1	
+177873594	0		user	msft q1 2013 - thankyou awards 19 dec 2012.xls	FILES	file_search	<file_name> msft q1 2013 - thankyou awards 19 dec 2012 </file_name> .<file_type> xls </file_type>	[]		1	
+177873595	0		user	rhonda.txt	FILES	file_search	<file_name> rhonda </file_name> .<file_type> txt </file_type>	[]		1	
+177873596	0		user	costsofbeers.xlsx	FILES	file_search	<file_name> costsofbeers </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873597	0		user	options.txt	FILES	file_search	<file_name> options </file_name> .<file_type> txt </file_type>	[]		1	
+177873598	0		user	dns.txt	FILES	file_search	<file_name> dns </file_name> .<file_type> txt </file_type>	[]		1	
+177873599	0		user	temp.txt	FILES	file_search	<file_name> temp </file_name> .<file_type> txt </file_type>	[]		1	
+177873600	0		user	password.txt	FILES	file_search	<file_name> password </file_name> .<file_type> txt </file_type>	[]		1	
+177873601	0		user	finance.xlsx	FILES	file_search	<file_name> finance </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873602	0		user	build.txt	FILES	file_search	<file_name> build </file_name> .<file_type> txt </file_type>	[]		1	
+177873603	0		user	devmgmt.msg	FILES	file_search	<file_name> devmgmt </file_name> .<file_type> msg </file_type>	[]		1	
+177873604	0		user	gameinfo.txt	FILES	file_search	<file_name> gameinfo </file_name> .<file_type> txt </file_type>	[]		1	
+177873605	0		user	msinfo.txt	FILES	file_search	<file_name> msinfo </file_name> .<file_type> txt </file_type>	[]		1	
+177873606	0		user	sicoob.txt	FILES	file_search	<file_name> sicoob </file_name> .<file_type> txt </file_type>	[]		1	
+177873607	0		user	azure sql db kpi reference (recovered) (2015_01_18 01_06_18 utc).docx	FILES	file_search	<file_name> azure sql db kpi reference (recovered) (2015_01_18 01_06_18 utc) </file_name> .<file_type> docx </file_type>	[]		1	
+177873608	0		user	sendafax.doc	FILES	file_search	<file_name> sendafax </file_name> .<file_type> doc </file_type>	[]		1	
+177873609	0		user	project2.docs for editing.	FILES	file_search	<file_name> project2 </file_name> .<file_type> docs </file_type>  for editing.	[]		1	
+177873610	0		user	schedulign.xlsx	FILES	file_search	<file_name> schedulign </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873611	0		user	hello.docx	FILES	file_search	<file_name> hello </file_name> .<file_type> docx </file_type>	[]		1	
+177873612	0		user	azure sql db kpi reference (recovered) (2015_01_18 01_06_18 utc).docx sever	FILES	file_search	<file_name> azure sql db kpi reference (recovered) (2015_01_18 01_06_18 utc) </file_name> .<file_type> docx </file_type>  sever	[]		1	
+177873613	0		user	wsfs.txt	FILES	file_search	<file_name> wsfs </file_name> .<file_type> txt </file_type>	[]		1	
+177873614	0		user	osap.txt	FILES	file_search	<file_name> osap </file_name> .<file_type> txt </file_type>	[]		1	
+177873615	0		user	schedule.xlsx	FILES	file_search	<file_name> schedule </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873616	0		user	shark.jpg	FILES	file_search	<file_name> shark </file_name> .<file_type> jpg </file_type>	[]		1	
+177873617	0		user	master.docx	FILES	file_search	<file_name> master </file_name> .<file_type> docx </file_type>	[]		1	
+177873618	0		user	c:\babs\immersion\mihr\pwd.txt	FILES	file_search	<file_name> c:\babs\immersion\mihr\pwd </file_name> .<file_type> txt </file_type>	[]		1	
+177873619	0		user	test.pdf	FILES	file_search	<file_name> test </file_name> .<file_type> pdf </file_type>	[]		1	
+177873620	0		user	spaaace.jpg	FILES	file_search	<file_name> spaaace </file_name> .<file_type> jpg </file_type>	[]		1	
+177873621	0		user	list.txt	FILES	file_search	<file_name> list </file_name> .<file_type> txt </file_type>	[]		1	
+177873622	0		user	2015_expenses.xlsx	FILES	file_search	<file_name> 2015_expenses </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873623	0		user	altchivala.txt	FILES	file_search	<file_name> altchivala </file_name> .<file_type> txt </file_type>	[]		1	
+177873624	0		user	password.txt	FILES	file_search	<file_name> password </file_name> .<file_type> txt </file_type>	[]		1	
+177873625	0		user	davidsr1.jpg	FILES	file_search	<file_name> davidsr1 </file_name> .<file_type> jpg </file_type>	[]		1	
+177873626	0		user	charter house.docx	FILES	file_search	<file_name> charter house </file_name> .<file_type> docx </file_type>	[]		1	
+177873627	0		user	*sow*.doc	FILES	file_search	<file_name> *sow* </file_name> .<file_type> doc </file_type>	[]		1	
+177873628	0		user	c:\temp\legacyteststorun.txt	FILES	file_search	<file_name> c:\temp\legacyteststorun </file_name> .<file_type> txt </file_type>	[]		1	
+177873629	0		user	server.txt	FILES	file_search	<file_name> server </file_name> .<file_type> txt </file_type>	[]		1	
+177873630	0		user	jadual.xls	FILES	file_search	<file_name> jadual </file_name> .<file_type> xls </file_type>	[]		1	
+177873631	0		user	june2012.doc	FILES	file_search	<file_name> june2012 </file_name> .<file_type> doc </file_type>	[]		1	
+177873632	0		user	images (1).jpg	FILES	file_search	<file_name> images (1) </file_name> .<file_type> jpg </file_type>	[]		1	
+177873633	0		user	birthday2012.ppt	FILES	file_search	<file_name> birthday2012 </file_name> .<file_type> ppt </file_type>	[]		1	
+177873634	0		user	twitch.txt	FILES	file_search	<file_name> twitch </file_name> .<file_type> txt </file_type>	[]		1	
+177873635	0		user	test.txt	FILES	file_search	<file_name> test </file_name> .<file_type> txt </file_type>	[]		1	
+177873636	0		user	cc.txt	FILES	file_search	<file_name> cc </file_name> .<file_type> txt </file_type>	[]		1	
+177873637	0		user	serial.txt	FILES	file_search	<file_name> serial </file_name> .<file_type> txt </file_type>	[]		1	
+177873638	0		user	ed.txt	FILES	file_search	<file_name> ed </file_name> .<file_type> txt </file_type>	[]		1	
+177873639	0		user	2015.jpg	FILES	file_search	<file_name> 2015 </file_name> .<file_type> jpg </file_type>	[]		1	
+177873640	0		user	angeloni.txt	FILES	file_search	<file_name> angeloni </file_name> .<file_type> txt </file_type>	[]		1	
+177873641	0		user	federaltaxes2014.pdf	FILES	file_search	<file_name> federaltaxes2014 </file_name> .<file_type> pdf </file_type>	[]		1	
+177873642	0		user	12.txt	FILES	file_search	<file_name> 12 </file_name> .<file_type> txt </file_type>	[]		1	
+177873643	0		user	id.txt file	FILES	file_search	<file_name> id </file_name> .<file_type> txt </file_type>  file	[]		1	
+177873644	0		user	bk.ppt	FILES	file_search	<file_name> bk </file_name> .<file_type> ppt </file_type>	[]		1	
+177873645	0		user	info.xlsx	FILES	file_search	<file_name> info </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873646	0		user	hi*.txt	FILES	file_search	<file_name> hi* </file_name> .<file_type> txt </file_type>	[]		1	
+177873647	0		user	ti4o.txt	FILES	file_search	<file_name> ti4o </file_name> .<file_type> txt </file_type>	[]		1	
+177873648	0		user	options.txt	FILES	file_search	<file_name> options </file_name> .<file_type> txt </file_type>	[]		1	
+177873649	0		user	cover letter - office assistant.docx	FILES	file_search	<file_name> cover letter - office assistant </file_name> .<file_type> docx </file_type>	[]		1	
+177873650	0		user	codes.docx	FILES	file_search	<file_name> codes </file_name> .<file_type> docx </file_type>	[]		1	
+177873651	0		user	test.pdf	FILES	file_search	<file_name> test </file_name> .<file_type> pdf </file_type>	[]		1	
+177873652	0		user	cover letter - office assistant.docx	FILES	file_search	<file_name> cover letter - office assistant </file_name> .<file_type> docx </file_type>	[]		1	
+177873653	0		user	serial.txt	FILES	file_search	<file_name> serial </file_name> .<file_type> txt </file_type>	[]		1	
+177873654	0		user	sicoob.txt	FILES	file_search	<file_name> sicoob </file_name> .<file_type> txt </file_type>	[]		1	
+177873655	0		user	file.txt	FILES	file_search	<file_name> file </file_name> .<file_type> txt </file_type>	[]		1	
+177873656	0		user	ron chase invoice #1.xls	FILES	file_search	<file_name> ron chase invoice #1 </file_name> .<file_type> xls </file_type>	[]		1	
+177873657	0		user	exct.txt	FILES	file_search	<file_name> exct </file_name> .<file_type> txt </file_type>	[]		1	
+177873658	0		user	davidsr.jpg	FILES	file_search	<file_name> davidsr </file_name> .<file_type> jpg </file_type>	[]		1	
+177873659	0		user	hello.docx	FILES	file_search	<file_name> hello </file_name> .<file_type> docx </file_type>	[]		1	
+177873660	0		user	c:\passwords.txt	FILES	file_search	<file_name> c:\passwords </file_name> .<file_type> txt </file_type>	[]		1	
+177873661	0		user	*sow*.doc	FILES	file_search	<file_name> *sow* </file_name> .<file_type> doc </file_type>	[]		1	
+177873662	0		user	angeloni.txt	FILES	file_search	<file_name> angeloni </file_name> .<file_type> txt </file_type>	[]		1	
+177873663	0		user	DOC-20171116-WA0004(1).pdf	FILES	file_search	<file_name> DOC-20171116-WA0004(1) </file_name> .<file_type> pdf </file_type>	[]		1	
+177873664	0		user	xdp critical issues-vikas.docx	FILES	file_search	<file_name> xdp critical issues-vikas </file_name> .<file_type> docx </file_type>	[]		1	
+177873665	0		user	scheduling.xlsx	FILES	file_search	<file_name> scheduling </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873666	0		user	options.txt	FILES	file_search	<file_name> options </file_name> .<file_type> txt </file_type>	[]		1	
+177873667	0		user	cc.txt	FILES	file_search	<file_name> cc </file_name> .<file_type> txt </file_type>	[]		1	
+177873668	0		user	list.txt	FILES	file_search	<file_name> list </file_name> .<file_type> txt </file_type>	[]		1	
+177873669	0		user	whatsnew.txt	FILES	file_search	<file_name> whatsnew </file_name> .<file_type> txt </file_type>	[]		1	
+177873670	0		user	davidsr0.jpg	FILES	file_search	<file_name> davidsr0 </file_name> .<file_type> jpg </file_type>	[]		1	
+177873671	0		user	12.txt	FILES	file_search	<file_name> 12 </file_name> .<file_type> txt </file_type>	[]		1	
+177873672	0		user	commands.txt	FILES	file_search	<file_name> commands </file_name> .<file_type> txt </file_type>	[]		1	
+177873673	0		user	jadual.xls	FILES	file_search	<file_name> jadual </file_name> .<file_type> xls </file_type>	[]		1	
+177873674	0		user	047.jpg	FILES	file_search	<file_name> 047 </file_name> .<file_type> jpg </file_type>	[]		1	
+177873675	0		user	serial.txt	FILES	file_search	<file_name> serial </file_name> .<file_type> txt </file_type>	[]		1	
+177873676	0		user	spaaace.jpg	FILES	file_search	<file_name> spaaace </file_name> .<file_type> jpg </file_type>	[]		1	
+177873677	0		user	liz.txt	FILES	file_search	<file_name> liz </file_name> .<file_type> txt </file_type>	[]		1	
+177873678	0		user	sendafax.doc	FILES	file_search	<file_name> sendafax </file_name> .<file_type> doc </file_type>	[]		1	
+177873679	0		user	charter house.doc	FILES	file_search	<file_name> charter house </file_name> .<file_type> doc </file_type>	[]		1	
+177873680	0		user	DOC-20171116-WA0004(1).pdf	FILES	file_search	<file_name> DOC-20171116-WA0004(1) </file_name> .<file_type> pdf </file_type>	[]		1	
+177873681	0		user	2015.jpg	FILES	file_search	<file_name> 2015 </file_name> .<file_type> jpg </file_type>	[]		1	
+177873682	0		user	master.doc	FILES	file_search	<file_name> master </file_name> .<file_type> doc </file_type>	[]		1	
+177873683	0		user	manh.txt	FILES	file_search	<file_name> manh </file_name> .<file_type> txt </file_type>	[]		1	
+177873684	0		user	listahan.xls	FILES	file_search	<file_name> listahan </file_name> .<file_type> xls </file_type>	[]		1	
+177873685	0		user	codes.docx	FILES	file_search	<file_name> codes </file_name> .<file_type> docx </file_type>	[]		1	
+177873686	0		user	cultureshock.ppt	FILES	file_search	<file_name> cultureshock </file_name> .<file_type> ppt </file_type>	[]		1	
+177873687	0		user	csharp.doc	FILES	file_search	<file_name> csharp </file_name> .<file_type> doc </file_type>	[]		1	
+177873688	0		user	june2012.doc	FILES	file_search	<file_name> june2012 </file_name> .<file_type> doc </file_type>	[]		1	
+177873689	0		user	conan.xls	FILES	file_search	<file_name> conan </file_name> .<file_type> xls </file_type>	[]		1	
+177873690	0		user	expenses.xls	FILES	file_search	<file_name> expenses </file_name> .<file_type> xls </file_type>	[]		1	
+177873691	0		user	en.txt	FILES	file_search	<file_name> en </file_name> .<file_type> txt </file_type>	[]		1	
+177873692	0		user	passwords.doc	FILES	file_search	<file_name> passwords </file_name> .<file_type> doc </file_type>	[]		1	
+177873693	0		user	federaltaxes2014.pdf	FILES	file_search	<file_name> federaltaxes2014 </file_name> .<file_type> pdf </file_type>	[]		1	
+177873694	0		user	expenses.xls	FILES	file_search	<file_name> expenses </file_name> .<file_type> xls </file_type>	[]		1	
+177873695	0		user	pw.txt	FILES	file_search	<file_name> pw </file_name> .<file_type> txt </file_type>	[]		1	
+177873696	0		user	scheduling.xlsx	FILES	file_search	<file_name> scheduling </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873697	0		user	feedback.doc	FILES	file_search	<file_name> feedback </file_name> .<file_type> doc </file_type>	[]		1	
+177873698	0		user	serial.txt	FILES	file_search	<file_name> serial </file_name> .<file_type> txt </file_type>	[]		1	
+177873699	0		user	altchivala.txt	FILES	file_search	<file_name> altchivala </file_name> .<file_type> txt </file_type>	[]		1	
+177873700	0		user	h:\note.txt	FILES	file_search	<file_name> h:\note </file_name> .<file_type> txt </file_type>	[]		1	
+177873701	0		user	schedule.xls	FILES	file_search	<file_name> schedule </file_name> .<file_type> xls </file_type>	[]		1	
+177873702	0		user	taxes.xlsx	FILES	file_search	<file_name> taxes </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873703	0		user	cover letter - office assistant.docx	FILES	file_search	<file_name> cover letter - office assistant </file_name> .<file_type> docx </file_type>	[]		1	
+177873704	0		user	rgb.txt	FILES	file_search	<file_name> rgb </file_name> .<file_type> txt </file_type>	[]		1	
+177873705	0		user	visa.txt	FILES	file_search	<file_name> visa </file_name> .<file_type> txt </file_type>	[]		1	
+177873706	0		user	Sano.ppt presentation	FILES	file_search	<file_name> Sano </file_name> .<file_type> ppt </file_type>  <file_type> presentation </file_type>	[]		1	
+177873707	0		user	harmony.jpg	FILES	file_search	<file_name> harmony </file_name> .<file_type> jpg </file_type>	[]		1	
+177873708	0		user	azure sql db kpi reference (recovered) (2015_01_18 01_06_18 utc).docx	FILES	file_search	<file_name> azure sql db kpi reference (recovered) (2015_01_18 01_06_18 utc) </file_name> .<file_type> docx </file_type>	[]		1	
+177873709	0		user	p.txt	FILES	file_search	<file_name> p </file_name> .<file_type> txt </file_type>	[]		1	
+177873710	0		user	slot_patts.doc	FILES	file_search	<file_name> slot_patts </file_name> .<file_type> doc </file_type>	[]		1	
+177873711	0		user	taxes.xlsx	FILES	file_search	<file_name> taxes </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873712	0		user	ben .ppt	FILES	file_search	<file_name> ben </file_name> .<file_type> ppt </file_type>	[]		1	
+177873713	0		user	tmscripts.txt	FILES	file_search	<file_name> tmscripts </file_name> .<file_type> txt </file_type>	[]		1	
+177873714	0		user	plan.ppt	FILES	file_search	<file_name> plan </file_name> .<file_type> ppt </file_type>	[]		1	
+177873715	0		user	msft q1 2013 - thankyou awards 19 dec 2012.xls	FILES	file_search	<file_name> msft q1 2013 - thankyou awards 19 dec 2012 </file_name> .<file_type> xls </file_type>	[]		1	
+177873716	0		user	taxes.xlsx	FILES	file_search	<file_name> taxes </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873717	0		user	passme.txt	FILES	file_search	<file_name> passme </file_name> .<file_type> txt </file_type>	[]		1	
+177873718	0		user	047.jpg	FILES	file_search	<file_name> 047 </file_name> .<file_type> jpg </file_type>	[]		1	
+177873719	0		user	master.doc	FILES	file_search	<file_name> master </file_name> .<file_type> doc </file_type>	[]		1	
+177873720	0		user	e.txt	FILES	file_search	<file_name> e </file_name> .<file_type> txt </file_type>	[]		1	
+177873721	0		user	federaltaxes2014.pdf	FILES	file_search	<file_name> federaltaxes2014 </file_name> .<file_type> pdf </file_type>	[]		1	
+177873722	0		user	cc.txt	FILES	file_search	<file_name> cc </file_name> .<file_type> txt </file_type>	[]		1	
+177873723	0		user	passwords.txt	FILES	file_search	<file_name> passwords </file_name> .<file_type> txt </file_type>	[]		1	
+177873724	0		user	vte.txt	FILES	file_search	<file_name> vte </file_name> .<file_type> txt </file_type>	[]		1	
+177873725	0		user	facebook.txt	FILES	file_search	<file_name> facebook </file_name> .<file_type> txt </file_type>	[]		1	
+177873726	0		user	ron chase invoice #1.xls	FILES	file_search	<file_name> ron chase invoice #1 </file_name> .<file_type> xls </file_type>	[]		1	
+177873727	0		user	history.txt	FILES	file_search	<file_name> history </file_name> .<file_type> txt </file_type>	[]		1	
+177873728	0		user	table.jpg	FILES	file_search	<file_name> table </file_name> .<file_type> jpg </file_type>	[]		1	
+177873729	0		user	cv.docx	FILES	file_search	<file_name> cv </file_name> .<file_type> docx </file_type>	[]		1	
+177873730	0		user	codes.docx	FILES	file_search	<file_name> codes </file_name> .<file_type> docx </file_type>	[]		1	
+177873731	0		user	snipbaptist.jpg	FILES	file_search	<file_name> snipbaptist </file_name> .<file_type> jpg </file_type>	[]		1	
+177873732	0		user	azure sql db kpi reference (recovered) (2015_01_18 01_06_18 utc).docx sever	FILES	file_search	<file_name> azure sql db kpi reference (recovered) (2015_01_18 01_06_18 utc) </file_name> .<file_type> docx </file_type>  sever	[]		1	
+177873733	0		user	schedulin.xlsx	FILES	file_search	<file_name> schedulin </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873734	0		user	friends.txt	FILES	file_search	<file_name> friends </file_name> .<file_type> txt </file_type>	[]		1	
+177873735	0		user	fi*.excel	FILES	file_search	<file_name> fi* </file_name> .<file_type> excel </file_type>	[]		1	
+177873736	0		user	victoria 3.jpg	FILES	file_search	<file_name> victoria 3 </file_name> .<file_type> jpg </file_type>	[]		1	
+177873737	0		user	allaboutwine.doc	FILES	file_search	<file_name> allaboutwine </file_name> .<file_type> doc </file_type>	[]		1	
+177873738	0		user	harmony.jpg	FILES	file_search	<file_name> harmony </file_name> .<file_type> jpg </file_type>	[]		1	
+177873739	0		user	notes.txt	FILES	file_search	<file_name> notes </file_name> .<file_type> txt </file_type>	[]		1	
+177873740	0		user	*sow*.doc	FILES	file_search	<file_name> *sow* </file_name> .<file_type> doc </file_type>	[]		1	
+177873741	0		user	taxes.xlsx	FILES	file_search	<file_name> taxes </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873742	0		user	dxdiag.txt	FILES	file_search	<file_name> dxdiag </file_name> .<file_type> txt </file_type>	[]		1	
+177873743	0		user	ed.txt	FILES	file_search	<file_name> ed </file_name> .<file_type> txt </file_type>	[]		1	
+177873744	0		user	davidsr1.jpg	FILES	file_search	<file_name> davidsr1 </file_name> .<file_type> jpg </file_type>	[]		1	
+177873745	0		user	dxdiag.txt	FILES	file_search	<file_name> dxdiag </file_name> .<file_type> txt </file_type>	[]		1	
+177873746	0		user	master.doc	FILES	file_search	<file_name> master </file_name> .<file_type> doc </file_type>	[]		1	
+177873747	0		user	outline.docx	FILES	file_search	<file_name> outline </file_name> .<file_type> docx </file_type>	[]		1	
+177873748	0		user	jack.docs	FILES	file_search	<file_name> jack </file_name> .<file_type> docs </file_type>	[]		1	
+177873749	0		user	conan.xls	FILES	file_search	<file_name> conan </file_name> .<file_type> xls </file_type>	[]		1	
+177873750	0		user	cover letter - office assistant.docx	FILES	file_search	<file_name> cover letter - office assistant </file_name> .<file_type> docx </file_type>	[]		1	
+177873751	0		user	resume.doc	FILES	file_search	<file_name> resume </file_name> .<file_type> doc </file_type>	[]		1	
+177873752	0		user	readme.txt	FILES	file_search	<file_name> readme </file_name> .<file_type> txt </file_type>	[]		1	
+177873753	0		user	finite_dungeon_tables.txt	FILES	file_search	<file_name> finite_dungeon_tables </file_name> .<file_type> txt </file_type>	[]		1	
+177873754	0		user	something.txt	FILES	file_search	<file_name> something </file_name> .<file_type> txt </file_type>	[]		1	
+177873755	0		user	vte.txt	FILES	file_search	<file_name> vte </file_name> .<file_type> txt </file_type>	[]		1	
+177873756	0		user	demo plan.ppt	FILES	file_search	<file_name> demo plan </file_name> .<file_type> ppt </file_type>	[]		1	
+177873757	0		user	costsofbeers.xlsx	FILES	file_search	<file_name> costsofbeers </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873758	0		user	rhonda.txt	FILES	file_search	<file_name> rhonda </file_name> .<file_type> txt </file_type>	[]		1	
+177873759	0		user	budget.xls	FILES	file_search	<file_name> budget </file_name> .<file_type> xls </file_type>	[]		1	
+177873760	0		user	azure sql db kpi reference (recovered) (2015_01_18 01_06_18 utc).docx sever	FILES	file_search	<file_name> azure sql db kpi reference (recovered) (2015_01_18 01_06_18 utc) </file_name> .<file_type> docx </file_type>  sever	[]		1	
+177873761	0		user	manh.txt	FILES	file_search	<file_name> manh </file_name> .<file_type> txt </file_type>	[]		1	
+177873762	0		user	twitch.txt	FILES	file_search	<file_name> twitch </file_name> .<file_type> txt </file_type>	[]		1	
+177873763	0		user	conan.xls	FILES	file_search	<file_name> conan </file_name> .<file_type> xls </file_type>	[]		1	
+177873764	0		user	tmscripts.txt	FILES	file_search	<file_name> tmscripts </file_name> .<file_type> txt </file_type>	[]		1	
+177873765	0		user	azure sql db kpi reference (recovered) (2015_01_18 01_06_18 utc).docx	FILES	file_search	<file_name> azure sql db kpi reference (recovered) (2015_01_18 01_06_18 utc) </file_name> .<file_type> docx </file_type>	[]		1	
+177873766	0		user	cover letter - office assistant.docx	FILES	file_search	<file_name> cover letter - office assistant </file_name> .<file_type> docx </file_type>	[]		1	
+177873767	0		user	slot_patts.doc	FILES	file_search	<file_name> slot_patts </file_name> .<file_type> doc </file_type>	[]		1	
+177873768	0		user	internet.txt	FILES	file_search	<file_name> internet </file_name> .<file_type> txt </file_type>	[]		1	
+177873769	0		user	passwords.txt	FILES	file_search	<file_name> passwords </file_name> .<file_type> txt </file_type>	[]		1	
+177873770	0		user	facebook.txt	FILES	file_search	<file_name> facebook </file_name> .<file_type> txt </file_type>	[]		1	
+177873771	0		user	notes.txt	FILES	file_search	<file_name> notes </file_name> .<file_type> txt </file_type>	[]		1	
+177873772	0		user	passwords.doc	FILES	file_search	<file_name> passwords </file_name> .<file_type> doc </file_type>	[]		1	
+177873773	0		user	hot2xp*.xls	FILES	file_search	<file_name> hot2xp* </file_name> .<file_type> xls </file_type>	[]		1	
+177873774	0		user	taxes.xlsx	FILES	file_search	<file_name> taxes </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873775	0		user	exct.txt	FILES	file_search	<file_name> exct </file_name> .<file_type> txt </file_type>	[]		1	
+177873776	0		user	readme.txt	FILES	file_search	<file_name> readme </file_name> .<file_type> txt </file_type>	[]		1	
+177873777	0		user	finance.xlsx	FILES	file_search	<file_name> finance </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873778	0		user	office07.txt	FILES	file_search	<file_name> office07 </file_name> .<file_type> txt </file_type>	[]		1	
+177873779	0		user	snipbaptist.jpg	FILES	file_search	<file_name> snipbaptist </file_name> .<file_type> jpg </file_type>	[]		1	
+177873780	0		user	history.txt	FILES	file_search	<file_name> history </file_name> .<file_type> txt </file_type>	[]		1	
+177873781	0		user	p.txt	FILES	file_search	<file_name> p </file_name> .<file_type> txt </file_type>	[]		1	
+177873782	0		user	ben .pptx	FILES	file_search	<file_name> ben </file_name> .<file_type> pptx </file_type>	[]		1	
+177873783	0		user	*sow*.doc	FILES	file_search	<file_name> *sow* </file_name> .<file_type> doc </file_type>	[]		1	
+177873784	0		user	*code*.txt	FILES	file_search	<file_name> *code* </file_name> .<file_type> txt </file_type>	[]		1	
+177873785	0		user	options.txt	FILES	file_search	<file_name> options </file_name> .<file_type> txt </file_type>	[]		1	
+177873786	0		user	vlc.txt	FILES	file_search	<file_name> vlc </file_name> .<file_type> txt </file_type>	[]		1	
+177873787	0		user	dxdiag.txt	FILES	file_search	<file_name> dxdiag </file_name> .<file_type> txt </file_type>	[]		1	
+177873788	0		user	exct.txt	FILES	file_search	<file_name> exct </file_name> .<file_type> txt </file_type>	[]		1	
+177873789	0		user	weights.xls	FILES	file_search	<file_name> weights </file_name> .<file_type> xls </file_type>	[]		1	
+177873790	0		user	rgb.txt	FILES	file_search	<file_name> rgb </file_name> .<file_type> txt </file_type>	[]		1	
+177873791	0		user	wireless.txt	FILES	file_search	<file_name> wireless </file_name> .<file_type> txt </file_type>	[]		1	
+177873792	0		user	schedule.xls	FILES	file_search	<file_name> schedule </file_name> .<file_type> xls </file_type>	[]		1	
+177873793	0		user	expenses.xls	FILES	file_search	<file_name> expenses </file_name> .<file_type> xls </file_type>	[]		1	
+177873794	0		user	2015.jpg	FILES	file_search	<file_name> 2015 </file_name> .<file_type> jpg </file_type>	[]		1	
+177873795	0		user	Project2.Docs for editing.	FILES	file_search	<file_name> Project2 </file_name> .<file_type> Docs </file_type>  for editing.	[]		1	
+177873796	0		user	password.txt	FILES	file_search	<file_name> password </file_name> .<file_type> txt </file_type>	[]		1	
+177873797	0		user	dr.notes	FILES	file_search	<file_name> dr </file_name> .<file_type> notes </file_type>	[]		1	
+177873798	0		user	victoria 3.jpg	FILES	file_search	<file_name> victoria 3 </file_name> .<file_type> jpg </file_type>	[]		1	
+177873799	0		user	csharp.doc	FILES	file_search	<file_name> csharp </file_name> .<file_type> doc </file_type>	[]		1	
+177873800	0		user	scheduling.xlsx	FILES	file_search	<file_name> scheduling </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873801	0		user	allaboutwine.doc	FILES	file_search	<file_name> allaboutwine </file_name> .<file_type> doc </file_type>	[]		1	
+177873802	0		user	me.jpg	FILES	file_search	<file_name> me </file_name> .<file_type> jpg </file_type>	[]		1	
+177873803	0		user	codes.docx	FILES	file_search	<file_name> codes </file_name> .<file_type> docx </file_type>	[]		1	
+177873804	0		user	outline.docx	FILES	file_search	<file_name> outline </file_name> .<file_type> docx </file_type>	[]		1	
+177873805	0		user	wireless.txt	FILES	file_search	<file_name> wireless </file_name> .<file_type> txt </file_type>	[]		1	
+177873806	0		user	costsofbeers.xlsx	FILES	file_search	<file_name> costsofbeers </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873807	0		user	dr.notes	FILES	file_search	<file_name> dr </file_name> .<file_type> notes </file_type>	[]		1	
+177873808	0		user	images (1).jpg	FILES	file_search	<file_name> images (1) </file_name> .<file_type> jpg </file_type>	[]		1	
+177873809	0		user	harmony.jpg	FILES	file_search	<file_name> harmony </file_name> .<file_type> jpg </file_type>	[]		1	
+177873810	0		user	sicoob.txt	FILES	file_search	<file_name> sicoob </file_name> .<file_type> txt </file_type>	[]		1	
+177873811	0		user	internet.txt	FILES	file_search	<file_name> internet </file_name> .<file_type> txt </file_type>	[]		1	
+177873812	0		user	*sow*.doc	FILES	file_search	<file_name> *sow* </file_name> .<file_type> doc </file_type>	[]		1	
+177873813	0		user	new lol.txt	FILES	file_search	<file_name> new lol </file_name> .<file_type> txt </file_type>	[]		1	
+177873814	0		user	en.txt	FILES	file_search	<file_name> en </file_name> .<file_type> txt </file_type>	[]		1	
+177873815	0		user	sa.txt	FILES	file_search	<file_name> sa </file_name> .<file_type> txt </file_type>	[]		1	
+177873816	0		user	passwords.txt	FILES	file_search	<file_name> passwords </file_name> .<file_type> txt </file_type>	[]		1	
+177873817	0		user	charter house.doc	FILES	file_search	<file_name> charter house </file_name> .<file_type> doc </file_type>	[]		1	
+177873818	0		user	codes.docx	FILES	file_search	<file_name> codes </file_name> .<file_type> docx </file_type>	[]		1	
+177873819	0		user	gameinfo.txt	FILES	file_search	<file_name> gameinfo </file_name> .<file_type> txt </file_type>	[]		1	
+177873820	0		user	master.doc	FILES	file_search	<file_name> master </file_name> .<file_type> doc </file_type>	[]		1	
+177873821	0		user	notes.txt	FILES	file_search	<file_name> notes </file_name> .<file_type> txt </file_type>	[]		1	
+177873822	0		user	office07.txt	FILES	file_search	<file_name> office07 </file_name> .<file_type> txt </file_type>	[]		1	
+177873823	0		user	sicoob.txt	FILES	file_search	<file_name> sicoob </file_name> .<file_type> txt </file_type>	[]		1	
+177873824	0		user	me.jpg	FILES	file_search	<file_name> me </file_name> .<file_type> jpg </file_type>	[]		1	
+177873825	0		user	visa.txt	FILES	file_search	<file_name> visa </file_name> .<file_type> txt </file_type>	[]		1	
+177873826	0		user	vlc.txt	FILES	file_search	<file_name> vlc </file_name> .<file_type> txt </file_type>	[]		1	
+177873827	0		user	commands.txt	FILES	file_search	<file_name> commands </file_name> .<file_type> txt </file_type>	[]		1	
+177873828	0		user	azure sql db kpi reference (recovered) (2015_01_18 01_06_18 utc).docx sever	FILES	file_search	<file_name> azure sql db kpi reference (recovered) (2015_01_18 01_06_18 utc) </file_name> .<file_type> docx </file_type>  sever	[]		1	
+177873829	0		user	passme.txt	FILES	file_search	<file_name> passme </file_name> .<file_type> txt </file_type>	[]		1	
+177873830	0		user	vlc.txt	FILES	file_search	<file_name> vlc </file_name> .<file_type> txt </file_type>	[]		1	
+177873831	0		user	me.jpg	FILES	file_search	<file_name> me </file_name> .<file_type> jpg </file_type>	[]		1	
+177873832	0		user	samson.docx	FILES	file_search	<file_name> samson </file_name> .<file_type> docx </file_type>	[]		1	
+177873833	0		user	tod.xls	FILES	file_search	<file_name> tod </file_name> .<file_type> xls </file_type>	[]		1	
+177873834	0		user	table.jpg	FILES	file_search	<file_name> table </file_name> .<file_type> jpg </file_type>	[]		1	
+177873835	0		user	readme.doc	FILES	file_search	<file_name> readme </file_name> .<file_type> doc </file_type>	[]		1	
+177873836	0		user	readme.doc	FILES	file_search	<file_name> readme </file_name> .<file_type> doc </file_type>	[]		1	
+177873837	0		user	Tina.jpeg 2012	FILES	file_search	<file_name> Tina </file_name> .<file_type> jpeg </file_type>  <date> 2012 </date>	[]		1	
+177873838	0		user	sa.txt	FILES	file_search	<file_name> sa </file_name> .<file_type> txt </file_type>	[]		1	
+177873839	0		user	budget.xls	FILES	file_search	<file_name> budget </file_name> .<file_type> xls </file_type>	[]		1	
+177873840	0		user	imp.txt	FILES	file_search	<file_name> imp </file_name> .<file_type> txt </file_type>	[]		1	
+177873841	0		user	passme.txt	FILES	file_search	<file_name> passme </file_name> .<file_type> txt </file_type>	[]		1	
+177873842	0		user	e.txt	FILES	file_search	<file_name> e </file_name> .<file_type> txt </file_type>	[]		1	
+177873843	0		user	davidsr01.jpg	FILES	file_search	<file_name> davidsr01 </file_name> .<file_type> jpg </file_type>	[]		1	
+177873844	0		user	commands.txt	FILES	file_search	<file_name> commands </file_name> .<file_type> txt </file_type>	[]		1	
+177873845	0		user	readme.txt	FILES	file_search	<file_name> readme </file_name> .<file_type> txt </file_type>	[]		1	
+177873846	0		user	todo.txt	FILES	file_search	<file_name> todo </file_name> .<file_type> txt </file_type>	[]		1	
+177873847	0		user	table.jpg	FILES	file_search	<file_name> table </file_name> .<file_type> jpg </file_type>	[]		1	
+177873848	0		user	info.xlsx	FILES	file_search	<file_name> info </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873849	0		user	temp.txt	FILES	file_search	<file_name> temp </file_name> .<file_type> txt </file_type>	[]		1	
+177873850	0		user	shark.jpg	FILES	file_search	<file_name> shark </file_name> .<file_type> jpg </file_type>	[]		1	
+177873851	0		user	jack.docx	FILES	file_search	<file_name> jack </file_name> .<file_type> docx </file_type>	[]		1	
+177873852	0		user	altchivala.txt	FILES	file_search	<file_name> altchivala </file_name> .<file_type> txt </file_type>	[]		1	
+177873853	0		user	images (1).jpg	FILES	file_search	<file_name> images (1) </file_name> .<file_type> jpg </file_type>	[]		1	
+177873854	0		user	exct.txt	FILES	file_search	<file_name> exct </file_name> .<file_type> txt </file_type>	[]		1	
+177873855	0		user	test.pdf	FILES	file_search	<file_name> test </file_name> .<file_type> pdf </file_type>	[]		1	
+177873856	0		user	davidsr.jpg	FILES	file_search	<file_name> davidsr </file_name> .<file_type> jpg </file_type>	[]		1	
+177873857	0		user	conan.xls	FILES	file_search	<file_name> conan </file_name> .<file_type> xls </file_type>	[]		1	
+177873858	0		user	me.jpg	FILES	file_search	<file_name> me </file_name> .<file_type> jpg </file_type>	[]		1	
+177873859	0		user	weather.txt	FILES	file_search	<file_name> weather </file_name> .<file_type> txt </file_type>	[]		1	
+177873860	0		user	fr.txt	FILES	file_search	<file_name> fr </file_name> .<file_type> txt </file_type>	[]		1	
+177873861	0		user	schedulin.xlsx	FILES	file_search	<file_name> schedulin </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873862	0		user	readme.doc	FILES	file_search	<file_name> readme </file_name> .<file_type> doc </file_type>	[]		1	
+177873863	0		user	scott.jpg	FILES	file_search	<file_name> scott </file_name> .<file_type> jpg </file_type>	[]		1	
+177873864	0		user	build.txt	FILES	file_search	<file_name> build </file_name> .<file_type> txt </file_type>	[]		1	
+177873865	0		user	something.txt	FILES	file_search	<file_name> something </file_name> .<file_type> txt </file_type>	[]		1	
+177873866	0		user	samson.docx	FILES	file_search	<file_name> samson </file_name> .<file_type> docx </file_type>	[]		1	
+177873867	0		user	temp.txt	FILES	file_search	<file_name> temp </file_name> .<file_type> txt </file_type>	[]		1	
+177873868	0		user	notes.txt	FILES	file_search	<file_name> notes </file_name> .<file_type> txt </file_type>	[]		1	
+177873869	0		user	hot2xp*.xls	FILES	file_search	<file_name> hot2xp* </file_name> .<file_type> xls </file_type>	[]		1	
+177873870	0		user	h:\note.txt	FILES	file_search	<file_name> h:\note </file_name> .<file_type> txt </file_type>	[]		1	
+177873871	0		user	slot_patts.doc	FILES	file_search	<file_name> slot_patts </file_name> .<file_type> doc </file_type>	[]		1	
+177873872	0		user	scott.jpg	FILES	file_search	<file_name> scott </file_name> .<file_type> jpg </file_type>	[]		1	
+177873873	0		user	hi*.txt	FILES	file_search	<file_name> hi* </file_name> .<file_type> txt </file_type>	[]		1	
+177873874	0		user	daddy *.doc	FILES	file_search	<file_name> daddy * </file_name> .<file_type> doc </file_type>	[]		1	
+177873875	0		user	readme.doc	FILES	file_search	<file_name> readme </file_name> .<file_type> doc </file_type>	[]		1	
+177873876	0		user	feedback.doc	FILES	file_search	<file_name> feedback </file_name> .<file_type> doc </file_type>	[]		1	
+177873877	0		user	tmscripts.txt	FILES	file_search	<file_name> tmscripts </file_name> .<file_type> txt </file_type>	[]		1	
+177873878	0		user	master.docx	FILES	file_search	<file_name> master </file_name> .<file_type> docx </file_type>	[]		1	
+177873879	0		user	me.jpg	FILES	file_search	<file_name> me </file_name> .<file_type> jpg </file_type>	[]		1	
+177873880	0		user	june2012.doc	FILES	file_search	<file_name> june2012 </file_name> .<file_type> doc </file_type>	[]		1	
+177873881	0		user	birthday2012.ppt	FILES	file_search	<file_name> birthday2012 </file_name> .<file_type> ppt </file_type>	[]		1	
+177873882	0		user	Project2.Docs for editing.	FILES	file_search	<file_name> Project2 </file_name> .<file_type> Docs </file_type>  for editing.	[]		1	
+177873883	0		user	plan.ppt	FILES	file_search	<file_name> plan </file_name> .<file_type> ppt </file_type>	[]		1	
+177873884	0		user	visa.txt	FILES	file_search	<file_name> visa </file_name> .<file_type> txt </file_type>	[]		1	
+177873885	0		user	davidsr01.jpg	FILES	file_search	<file_name> davidsr01 </file_name> .<file_type> jpg </file_type>	[]		1	
+177873886	0		user	notes.txt	FILES	file_search	<file_name> notes </file_name> .<file_type> txt </file_type>	[]		1	
+177873887	0		user	sendafax.doc	FILES	file_search	<file_name> sendafax </file_name> .<file_type> doc </file_type>	[]		1	
+177873888	0		user	*sow*.doc	FILES	file_search	<file_name> *sow* </file_name> .<file_type> doc </file_type>	[]		1	
+177873889	0		user	serial.txt	FILES	file_search	<file_name> serial </file_name> .<file_type> txt </file_type>	[]		1	
+177873890	0		user	davidsr.jpg	FILES	file_search	<file_name> davidsr </file_name> .<file_type> jpg </file_type>	[]		1	
+177873891	0		user	readme-mcp.txt	FILES	file_search	<file_name> readme-mcp </file_name> .<file_type> txt </file_type>	[]		1	
+177873892	0		user	test.txt	FILES	file_search	<file_name> test </file_name> .<file_type> txt </file_type>	[]		1	
+177873893	0		user	harmony.jpg	FILES	file_search	<file_name> harmony </file_name> .<file_type> jpg </file_type>	[]		1	
+177873894	0		user	costsofbeers.xlsx	FILES	file_search	<file_name> costsofbeers </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873895	0		user	fr.txt	FILES	file_search	<file_name> fr </file_name> .<file_type> txt </file_type>	[]		1	
+177873896	0		user	example.txt	FILES	file_search	<file_name> example </file_name> .<file_type> txt </file_type>	[]		1	
+177873897	0		user	spaaace.jpg	FILES	file_search	<file_name> spaaace </file_name> .<file_type> jpg </file_type>	[]		1	
+177873898	0		user	images (1).jpg	FILES	file_search	<file_name> images (1) </file_name> .<file_type> jpg </file_type>	[]		1	
+177873899	0		user	altchivala.txt	FILES	file_search	<file_name> altchivala </file_name> .<file_type> txt </file_type>	[]		1	
+177873900	0		user	password.txt	FILES	file_search	<file_name> password </file_name> .<file_type> txt </file_type>	[]		1	
+177873901	0		user	demo plan.ppt	FILES	file_search	<file_name> demo plan </file_name> .<file_type> ppt </file_type>	[]		1	
+177873902	0		user	readme.txt	FILES	file_search	<file_name> readme </file_name> .<file_type> txt </file_type>	[]		1	
+177873903	0		user	federaltaxes2014.pdf	FILES	file_search	<file_name> federaltaxes2014 </file_name> .<file_type> pdf </file_type>	[]		1	
+177873904	0		user	dr.notes	FILES	file_search	<file_name> dr </file_name> .<file_type> notes </file_type>	[]		1	
+177873905	0		user	build.txt	FILES	file_search	<file_name> build </file_name> .<file_type> txt </file_type>	[]		1	
+177873906	0		user	imp.txt	FILES	file_search	<file_name> imp </file_name> .<file_type> txt </file_type>	[]		1	
+177873907	0		user	internet.txt	FILES	file_search	<file_name> internet </file_name> .<file_type> txt </file_type>	[]		1	
+177873908	0		user	readme-mcp.txt	FILES	file_search	<file_name> readme-mcp </file_name> .<file_type> txt </file_type>	[]		1	
+177873909	0		user	tod.xlsx	FILES	file_search	<file_name> tod </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873910	0		user	dxdiag.txt	FILES	file_search	<file_name> dxdiag </file_name> .<file_type> txt </file_type>	[]		1	
+177873911	0		user	feedback.doc	FILES	file_search	<file_name> feedback </file_name> .<file_type> doc </file_type>	[]		1	
+177873912	0		user	notes.txt	FILES	file_search	<file_name> notes </file_name> .<file_type> txt </file_type>	[]		1	
+177873913	0		user	*sow*.doc	FILES	file_search	<file_name> *sow* </file_name> .<file_type> doc </file_type>	[]		1	
+177873914	0		user	ron chase invoice #1.xls	FILES	file_search	<file_name> ron chase invoice #1 </file_name> .<file_type> xls </file_type>	[]		1	
+177873915	0		user	hello.docx	FILES	file_search	<file_name> hello </file_name> .<file_type> docx </file_type>	[]		1	
+177873916	0		user	ed.txt	FILES	file_search	<file_name> ed </file_name> .<file_type> txt </file_type>	[]		1	
+177873917	0		user	e.txt	FILES	file_search	<file_name> e </file_name> .<file_type> txt </file_type>	[]		1	
+177873918	0		user	internet.txt	FILES	file_search	<file_name> internet </file_name> .<file_type> txt </file_type>	[]		1	
+177873919	0		user	DOC-20171116-WA0004(1).pdf	FILES	file_search	<file_name> DOC-20171116-WA0004(1) </file_name> .<file_type> pdf </file_type>	[]		1	
+177873920	0		user	msde technical faq.doc	FILES	file_search	<file_name> msde technical faq </file_name> .<file_type> doc </file_type>	[]		1	
+177873921	0		user	history.txt	FILES	file_search	<file_name> history </file_name> .<file_type> txt </file_type>	[]		1	
+177873922	0		user	scheduling.xlsx	FILES	file_search	<file_name> scheduling </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873923	0		user	cultureshock.ppt	FILES	file_search	<file_name> cultureshock </file_name> .<file_type> ppt </file_type>	[]		1	
+177873924	0		user	whatsnew.txt	FILES	file_search	<file_name> whatsnew </file_name> .<file_type> txt </file_type>	[]		1	
+177873925	0		user	internet.txt	FILES	file_search	<file_name> internet </file_name> .<file_type> txt </file_type>	[]		1	
+177873926	0		user	readme-mcp.txt	FILES	file_search	<file_name> readme-mcp </file_name> .<file_type> txt </file_type>	[]		1	
+177873927	0		user	jack.doc	FILES	file_search	<file_name> jack </file_name> .<file_type> doc </file_type>	[]		1	
+177873928	0		user	twitch.txt	FILES	file_search	<file_name> twitch </file_name> .<file_type> txt </file_type>	[]		1	
+177873929	0		user	samson.doc	FILES	file_search	<file_name> samson </file_name> .<file_type> doc </file_type>	[]		1	
+177873930	0		user	pvr.txt	FILES	file_search	<file_name> pvr </file_name> .<file_type> txt </file_type>	[]		1	
+177873931	0		user	images (1).jpg	FILES	file_search	<file_name> images (1) </file_name> .<file_type> jpg </file_type>	[]		1	
+177873932	0		user	facebook.txt	FILES	file_search	<file_name> facebook </file_name> .<file_type> txt </file_type>	[]		1	
+177873933	0		user	azure sql db kpi reference (recovered) (2015_01_18 01_06_18 utc).docx sever	FILES	file_search	<file_name> azure sql db kpi reference (recovered) (2015_01_18 01_06_18 utc) </file_name> .<file_type> docx </file_type>  sever	[]		1	
+177873934	0		user	davidsr01.jpg	FILES	file_search	<file_name> davidsr01 </file_name> .<file_type> jpg </file_type>	[]		1	
+177873935	0		user	csharp.docx	FILES	file_search	<file_name> csharp </file_name> .<file_type> docx </file_type>	[]		1	
+177873936	0		user	rgb.txt	FILES	file_search	<file_name> rgb </file_name> .<file_type> txt </file_type>	[]		1	
+177873937	0		user	server.txt	FILES	file_search	<file_name> server </file_name> .<file_type> txt </file_type>	[]		1	
+177873938	0		user	pvr.txt	FILES	file_search	<file_name> pvr </file_name> .<file_type> txt </file_type>	[]		1	
+177873939	0		user	vte.txt	FILES	file_search	<file_name> vte </file_name> .<file_type> txt </file_type>	[]		1	
+177873940	0		user	contas.xls	FILES	file_search	<file_name> contas </file_name> .<file_type> xls </file_type>	[]		1	
+177873941	0		user	codes.docx	FILES	file_search	<file_name> codes </file_name> .<file_type> docx </file_type>	[]		1	
+177873942	0		user	example.txt	FILES	file_search	<file_name> example </file_name> .<file_type> txt </file_type>	[]		1	
+177873943	0		user	dr.notes	FILES	file_search	<file_name> dr </file_name> .<file_type> notes </file_type>	[]		1	
+177873944	0		user	imp.txt	FILES	file_search	<file_name> imp </file_name> .<file_type> txt </file_type>	[]		1	
+177873945	0		user	charter house.docx	FILES	file_search	<file_name> charter house </file_name> .<file_type> docx </file_type>	[]		1	
+177873946	0		user	passwords.doc	FILES	file_search	<file_name> passwords </file_name> .<file_type> doc </file_type>	[]		1	
+177873947	0		user	jadual.xls	FILES	file_search	<file_name> jadual </file_name> .<file_type> xls </file_type>	[]		1	
+177873948	0		user	model.txt	FILES	file_search	<file_name> model </file_name> .<file_type> txt </file_type>	[]		1	
+177873949	0		user	notes.txt	FILES	file_search	<file_name> notes </file_name> .<file_type> txt </file_type>	[]		1	
+177873950	0		user	daddy *.doc	FILES	file_search	<file_name> daddy * </file_name> .<file_type> doc </file_type>	[]		1	
+177873951	0		user	wsfs.txt	FILES	file_search	<file_name> wsfs </file_name> .<file_type> txt </file_type>	[]		1	
+177873952	0		user	hi*.txt	FILES	file_search	<file_name> hi* </file_name> .<file_type> txt </file_type>	[]		1	
+177873953	0		user	todo.txt	FILES	file_search	<file_name> todo </file_name> .<file_type> txt </file_type>	[]		1	
+177873954	0		user	fi*.excel	FILES	file_search	<file_name> fi* </file_name> .<file_type> excel </file_type>	[]		1	
+177873955	0		user	jack.doc	FILES	file_search	<file_name> jack </file_name> .<file_type> doc </file_type>	[]		1	
+177873956	0		user	davidsr01.jpg	FILES	file_search	<file_name> davidsr01 </file_name> .<file_type> jpg </file_type>	[]		1	
+177873957	0		user	cv.docx	FILES	file_search	<file_name> cv </file_name> .<file_type> docx </file_type>	[]		1	
+177873958	0		user	password.txt	FILES	file_search	<file_name> password </file_name> .<file_type> txt </file_type>	[]		1	
+177873959	0		user	scott.jpg	FILES	file_search	<file_name> scott </file_name> .<file_type> jpg </file_type>	[]		1	
+177873960	0		user	liz.txt	FILES	file_search	<file_name> liz </file_name> .<file_type> txt </file_type>	[]		1	
+177873961	0		user	log.txt	FILES	file_search	<file_name> log </file_name> .<file_type> txt </file_type>	[]		1	
+177873962	0		user	twitch.txt	FILES	file_search	<file_name> twitch </file_name> .<file_type> txt </file_type>	[]		1	
+177873963	0		user	schedulin.xlsx	FILES	file_search	<file_name> schedulin </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873964	0		user	june2012.doc	FILES	file_search	<file_name> june2012 </file_name> .<file_type> doc </file_type>	[]		1	
+177873965	0		user	osap.txt	FILES	file_search	<file_name> osap </file_name> .<file_type> txt </file_type>	[]		1	
+177873966	0		user	manh.txt	FILES	file_search	<file_name> manh </file_name> .<file_type> txt </file_type>	[]		1	
+177873967	0		user	e.txt	FILES	file_search	<file_name> e </file_name> .<file_type> txt </file_type>	[]		1	
+177873968	0		user	readme.txt	FILES	file_search	<file_name> readme </file_name> .<file_type> txt </file_type>	[]		1	
+177873969	0		user	passwords.doc	FILES	file_search	<file_name> passwords </file_name> .<file_type> doc </file_type>	[]		1	
+177873970	0		user	p.txt	FILES	file_search	<file_name> p </file_name> .<file_type> txt </file_type>	[]		1	
+177873971	0		user	taxes.xlsx	FILES	file_search	<file_name> taxes </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873972	0		user	dokuwiki.txt mortgage amortization calculator excel extra payment	FILES	file_search	<file_name> dokuwiki </file_name> .<file_type> txt </file_type>  <file_keyword> mortgage amortization calculator </file_keyword> <file_type> excel </file_type> <file_keyword> extra payment </file_keyword>	[]		1	
+177873973	0		user	pw.txt	FILES	file_search	<file_name> pw </file_name> .<file_type> txt </file_type>	[]		1	
+177873974	0		user	sa.txt	FILES	file_search	<file_name> sa </file_name> .<file_type> txt </file_type>	[]		1	
+177873975	0		user	wireless.txt	FILES	file_search	<file_name> wireless </file_name> .<file_type> txt </file_type>	[]		1	
+177873976	0		user	options.txt	FILES	file_search	<file_name> options </file_name> .<file_type> txt </file_type>	[]		1	
+177873977	0		user	2015.jpg	FILES	file_search	<file_name> 2015 </file_name> .<file_type> jpg </file_type>	[]		1	
+177873978	0		user	schedulin.xlsx	FILES	file_search	<file_name> schedulin </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873979	0		user	c:\programdata\dell\updatepackage\log\chipset_driver_gy99k_wn_4.10.55_a00_3.txt	FILES	file_search	<file_name> c:\programdata\dell\updatepackage\log\chipset_driver_gy99k_wn_4.10.55_a00_3 </file_name> .<file_type> txt </file_type>	[]		1	
+177873980	0		user	Sano.ppt presentation	FILES	file_search	<file_name> Sano </file_name> .<file_type> ppt </file_type>  <file_type> presentation </file_type>	[]		1	
+177873981	0		user	rhonda.txt	FILES	file_search	<file_name> rhonda </file_name> .<file_type> txt </file_type>	[]		1	
+177873982	0		user	d:\license\text\system.txt	FILES	file_search	<file_name> d:\license\text\system </file_name> .<file_type> txt </file_type>	[]		1	
+177873983	0		user	pw.txt	FILES	file_search	<file_name> pw </file_name> .<file_type> txt </file_type>	[]		1	
+177873984	0		user	passwords.txt	FILES	file_search	<file_name> passwords </file_name> .<file_type> txt </file_type>	[]		1	
+177873985	0		user	DOC-20171116-WA0004(1).pdf	FILES	file_search	<file_name> DOC-20171116-WA0004(1) </file_name> .<file_type> pdf </file_type>	[]		1	
+177873986	0		user	federaltaxes2014.pdf	FILES	file_search	<file_name> federaltaxes2014 </file_name> .<file_type> pdf </file_type>	[]		1	
+177873987	0		user	angeloni.txt	FILES	file_search	<file_name> angeloni </file_name> .<file_type> txt </file_type>	[]		1	
+177873988	0		user	h:\note.txt	FILES	file_search	<file_name> h:\note </file_name> .<file_type> txt </file_type>	[]		1	
+177873989	0		user	jack.docx	FILES	file_search	<file_name> jack </file_name> .<file_type> docx </file_type>	[]		1	
+177873990	0		user	scheduling.xlsx	FILES	file_search	<file_name> scheduling </file_name> .<file_type> xlsx </file_type>	[]		1	
+177873991	0		user	cc.txt	FILES	file_search	<file_name> cc </file_name> .<file_type> txt </file_type>	[]		1	
+177873992	0		user	resume.doc	FILES	file_search	<file_name> resume </file_name> .<file_type> doc </file_type>	[]		1	
+177873993	0		user	fr.txt	FILES	file_search	<file_name> fr </file_name> .<file_type> txt </file_type>	[]		1	
+177873994	0		user	harmony.jpg	FILES	file_search	<file_name> harmony </file_name> .<file_type> jpg </file_type>	[]		1	
+177873995	0		user	visa.txt	FILES	file_search	<file_name> visa </file_name> .<file_type> txt </file_type>	[]		1	
+177873996	0		user	notepad.txt	FILES	file_search	<file_name> notepad </file_name> .<file_type> txt </file_type>	[]		1	
+177873997	0		user	harmony.jpg	FILES	file_search	<file_name> harmony </file_name> .<file_type> jpg </file_type>	[]		1	
+177873998	0		user	friends.txt	FILES	file_search	<file_name> friends </file_name> .<file_type> txt </file_type>	[]		1	
+177873999	0		user	daddy *.doc	FILES	file_search	<file_name> daddy * </file_name> .<file_type> doc </file_type>	[]		1	
+177874000	0		user	rgb.txt	FILES	file_search	<file_name> rgb </file_name> .<file_type> txt </file_type>	[]		1	
+177874001	0		user	ben .pptx	FILES	file_search	<file_name> ben </file_name> .<file_type> pptx </file_type>	[]		1	
+177874002	0		user	info.xlsx	FILES	file_search	<file_name> info </file_name> .<file_type> xlsx </file_type>	[]		1	
+177874003	0		user	twitch.txt	FILES	file_search	<file_name> twitch </file_name> .<file_type> txt </file_type>	[]		1	
+177874004	0		user	scheduling.xlsx	FILES	file_search	<file_name> scheduling </file_name> .<file_type> xlsx </file_type>	[]		1	
+177874005	0		user	dns.txt	FILES	file_search	<file_name> dns </file_name> .<file_type> txt </file_type>	[]		1	
+177874006	0		user	bk.ppt	FILES	file_search	<file_name> bk </file_name> .<file_type> ppt </file_type>	[]		1	
+177874007	0		user	curl.txt	FILES	file_search	<file_name> curl </file_name> .<file_type> txt </file_type>	[]		1	
+177874008	0		user	list.txt	FILES	file_search	<file_name> list </file_name> .<file_type> txt </file_type>	[]		1	
+177874009	0		user	jack.docs	FILES	file_search	<file_name> jack </file_name> .<file_type> docs </file_type>	[]		1	
+177874010	0		user	facebook.txt	FILES	file_search	<file_name> facebook </file_name> .<file_type> txt </file_type>	[]		1	
+177874011	0		user	d:\license\text\system.txt	FILES	file_search	<file_name> d:\license\text\system </file_name> .<file_type> txt </file_type>	[]		1	
+177874012	0		user	2015_expenses.xlsx	FILES	file_search	<file_name> 2015_expenses </file_name> .<file_type> xlsx </file_type>	[]		1	
+177874013	0		user	liz.txt	FILES	file_search	<file_name> liz </file_name> .<file_type> txt </file_type>	[]		1	
+177874014	0		user	spaaace.jpg	FILES	file_search	<file_name> spaaace </file_name> .<file_type> jpg </file_type>	[]		1	
+177874015	0		user	d:\license\text\system.txt	FILES	file_search	<file_name> d:\license\text\system </file_name> .<file_type> txt </file_type>	[]		1	
+177874016	0		user	rgb.txt	FILES	file_search	<file_name> rgb </file_name> .<file_type> txt </file_type>	[]		1	
+177874017	0		user	12.txt	FILES	file_search	<file_name> 12 </file_name> .<file_type> txt </file_type>	[]		1	
+177874018	0		user	gameinfo.txt	FILES	file_search	<file_name> gameinfo </file_name> .<file_type> txt </file_type>	[]		1	
+177874019	0		user	ed.txt	FILES	file_search	<file_name> ed </file_name> .<file_type> txt </file_type>	[]		1	
+177874020	0		user	test.txt	FILES	file_search	<file_name> test </file_name> .<file_type> txt </file_type>	[]		1	
+177874021	0		user	weather.txt	FILES	file_search	<file_name> weather </file_name> .<file_type> txt </file_type>	[]		1	
+177874022	0		user	jadual.xls	FILES	file_search	<file_name> jadual </file_name> .<file_type> xls </file_type>	[]		1	
+177874023	0		user	build.txt	FILES	file_search	<file_name> build </file_name> .<file_type> txt </file_type>	[]		1	
+177874024	0		user	id.txt file	FILES	file_search	<file_name> id </file_name> .<file_type> txt </file_type>  file	[]		1	
+177874025	0		user	log.txt	FILES	file_search	<file_name> log </file_name> .<file_type> txt </file_type>	[]		1	
+177874026	0		user	example.txt	FILES	file_search	<file_name> example </file_name> .<file_type> txt </file_type>	[]		1	
+177874027	0		user	weather.txt	FILES	file_search	<file_name> weather </file_name> .<file_type> txt </file_type>	[]		1	
+177874028	0		user	\\back\scratch\vijayar\transfer.txt	FILES	file_search	<file_name> \\back\scratch\vijayar\transfer </file_name> .<file_type> txt </file_type>	[]		1	
+177874029	0		user	DOC-20171116-WA0004(1).pdf	FILES	file_search	<file_name> DOC-20171116-WA0004(1) </file_name> .<file_type> pdf </file_type>	[]		1	
+177874030	0		user	pass.txt	FILES	file_search	<file_name> pass </file_name> .<file_type> txt </file_type>	[]		1	
+177874031	0		user	c:\babs\immersion\mihr\pwd.txt	FILES	file_search	<file_name> c:\babs\immersion\mihr\pwd </file_name> .<file_type> txt </file_type>	[]		1	
+177874032	0		user	ben .ppt	FILES	file_search	<file_name> ben </file_name> .<file_type> ppt </file_type>	[]		1	
+177874033	0		user	dokuwiki.txt mortgage amortization calculator excel extra payment	FILES	file_search	<file_name> dokuwiki </file_name> .<file_type> txt </file_type>  <file_keyword> mortgage amortization calculator </file_keyword> <file_type> excel </file_type> <file_keyword> extra payment </file_keyword>	[]		1	
