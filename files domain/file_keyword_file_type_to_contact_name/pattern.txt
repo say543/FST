@@ -1,3 +1,8 @@
-#intent is not sure , only for slot training
-0	send FILEKEYWORDHOLDER FILETYPEHOLDER to TOCONTACTNAMEHOLDER	file_share	files	send <file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> FILETYPEHOLDER </file_type> to <to_contact_name> TOCONTACTNAMEHOLDER </to_contact_name>
 
+
+#0	open FILEKEYWORDHOLDER FILETYPEHOLDER by CONTACTNAMEHOLDER	file_open	files	open <file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> FILETYPEHOLDER </file_type> by <contact_name> CONTACTNAMEHOLDER </contact_name>
+0	open FILEKEYWORDHOLDER FILEBOOSTHOLDER by CONTACTNAMEHOLDER	file_open	files	open <file_keyword> FILEKEYWORDHOLDER </file_keyword> FILEBOOSTHOLDER by <contact_name> CONTACTNAMEHOLDER </contact_name>
+
+
+# used pattern
+#0	send TOCONTACTNAMEHOLDER my FILEKEYWORDHOLDER FILETYPEHOLDER	file_share	files	send <to_contact_name> TOCONTACTNAMEHOLDER </to_contact_name> <contact_name> my </contact_name> <file_keyword> FILEKEYWORDHOLDER </file_keyword> <file_type> FILETYPEHOLDER </file_type> 
