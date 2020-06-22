@@ -1261,6 +1261,13 @@ Adding LU constraint. Domain: files, task : TeamsOpenFileV2GUID, currentTF.Guid 
 good pr following up during parental leave
 ==============================
 
+
+
+//pr
+// device control contact name tester?
+// 可以問一下yue 這個功能是什麼
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1688502?path=%2Fsrc%2FTools%2FContactNameTester%2FContactNameTester.sln&_a=files
+
 // PR
 //remove all teams, and  keep inmeeting, files and teamsaction only for icm
 // also turn on deployment for files    
