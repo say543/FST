@@ -138,6 +138,8 @@ if __name__ == '__main__':
 
     #cmd = ("-s ..\\output_adhoc_intent_05292020v2\\intent_svm\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
 
+    #cmd = ("-s ..\\output_adhoc_intent_06112020v4\\intent_svm\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
+
 
     ###########
     ### checked in slot model ###
@@ -145,6 +147,8 @@ if __name__ == '__main__':
 
     # this version use some uwp random set query(but their annotation might be wrong, update it in the future)
     #cmd = ("-s ..\\output_adhoc_slot_05062020v3\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
+
+    cmd = ("-s ..\\output_adhoc_slot_05062020v3\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
 
 
     #cmd = ("-s ..\\output_adhoc_slot_05202020v2\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
@@ -162,7 +166,10 @@ if __name__ == '__main__':
 
     # this one attached / attachment might have wrong scheme, need to revisit in the future
     # golden queire might need to check
-    cmd = ("-s ..\\output_adhoc_slot_06052020v1\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
+    #cmd = ("-s ..\\output_adhoc_slot_06052020v1\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
+
+
+    #cmd = ("-s ..\\output_adhoc_slot_06182020v1\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
     
 
 
@@ -170,10 +177,8 @@ if __name__ == '__main__':
     ### other try fine-tune experience
     ###########
 
-    #cmd = ("-s ..\\output_adhoc_intent_05292020v2\\intent_svm\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
+    #cmd = ("-s ..\\output_adhoc_intent_06092020v1\\intent_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
 
-
-    #cmd = ("-s ..\\output_adhoc_slot_06052020v1\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
 
 
     # basically add all
