@@ -1,0 +1,357 @@
+patterns	source 
+<file_keyword> <file_boost>	kan_shan_analysis
+<file_keyword> <file_boost>	kan_shan_analysis
+<file_keyword>	kan_shan_analysis
+<file_keyword> <file_type> 	kan_shan_analysis
+<file_keyword> <file_type> with <contact_name>	kan_shan_analysis
+<file_keyword> <file_boost>	kan_shan_analysis
+<file_keyword> <file_boost>  with <contact_name>	kan_shan_analysis
+<file_keyword> <file_type>  to <contact_name>	kan_shan_analysis
+<file_keyword> <file_type>  to <contact_name>	kan_shan_analysis
+<file_keyword> <file_boost>	kan_shan_analysis
+<file_keyword> <file_boost>  with <contact_name>	kan_shan_analysis
+<file_keyword> <file_boost>  with <contact_name>	kan_shan_analysis
+<file_keyword> <file_boost>  with <contact_name>	kan_shan_analysis
+<file_keyword> <file_boost>	kan_shan_analysis
+<file_keyword> <file_type> 	kan_shan_analysis
+<file_keyword> <file_type> 	kan_shan_analysis
+<file_keyword> <file_type>  with <contact_name>	kan_shan_analysis
+<file_keyword> <file_type> 	kan_shan_analysis
+<file_keyword> <file_type> 	kan_shan_analysis
+<file_keyword> <file_type>  with <contact_name>	kan_shan_analysis
+<file_keyword> <file_type> 	kan_shan_analysis
+<file_recency> <file_type> <file_boost>	kan_shan_analysis
+<file_type> in <file_boost>	kan_shan_analysis
+bring up <file_keyword> <file_type>	kan_shan_analysis
+bring up <file_keyword> <file_type>	kan_shan_analysis
+bring up my <file_keyword> <file_type> from <date>	kan_shan_analysis
+can you find <contact_name> <order_ref> <file_type>	kan_shan_analysis
+can you open <file_keyword> <file_boost>	kan_shan_analysis
+download <file_keyword> <file_type> 	kan_shan_analysis
+download <file_keyword> <file_type> 	kan_shan_analysis
+download <file_keyword> <file_boost>	kan_shan_analysis
+download <file_keyword> <file_type>	kan_shan_analysis
+download  <file_type> 	kan_shan_analysis
+download  <file_type> <file_boost>	kan_shan_analysis
+download  a <file_boost>	kan_shan_analysis
+download  <file_boost>	kan_shan_analysis
+download  <file_boost> <file_keyword>	kan_shan_analysis
+download  <file_boost>	kan_shan_analysis
+download  <file_type> 	kan_shan_analysis
+<file_boost> <contact_name> was <file_action> on	kan_shan_analysis
+<file_boost> <file_type> 	kan_shan_analysis
+find <contact_name> <file_action>  <file_boost>	kan_shan_analysis
+find <contact_name> <file_boost>	kan_shan_analysis
+find <file_keyword> <file_type> 	kan_shan_analysis
+find <file_keyword> <file_boost>	kan_shan_analysis
+find <file_keyword> <file_boost>	kan_shan_analysis
+find <file_keyword> <file_type> 	kan_shan_analysis
+find <file_keyword> <file_type> 	kan_shan_analysis
+find <file_recency> <file_boost>	kan_shan_analysis
+find  a <file_boost>	kan_shan_analysis
+find <file_boost>	kan_shan_analysis
+find  <file_boost> <file_keyword>	kan_shan_analysis
+find <file_boost>	kan_shan_analysis
+find <file_boost> from <contact_name>	kan_shan_analysis
+find me <file_keyword> <file_boost>	kan_shan_analysis
+find my <file_keyword> <file_boost>	kan_shan_analysis
+find <file_type>  from <contact_name>	kan_shan_analysis
+go to downloads	kan_shan_analysis
+go to <file_recency> files	kan_shan_analysis
+go to files	kan_shan_analysis
+go to  files	kan_shan_analysis
+go to my <file_recency> files	kan_shan_analysis
+my <file_recency> <file_boost> 	kan_shan_analysis
+navigate to <file_boost> 	kan_shan_analysis
+navigate to <file_boost> 	kan_shan_analysis
+open <contact_name> <file_type>	kan_shan_analysis
+open <contact_name> <file_boost>	kan_shan_analysis
+open <contact_name> <file_boost>	kan_shan_analysis
+open <contact_name> <file_boost>	kan_shan_analysis
+open <file_keyword>	kan_shan_analysis
+open <file_keyword> <file_type>	kan_shan_analysis
+open <file_keyword> <file_boost>	kan_shan_analysis
+open <file_keyword> <file_boost> named <file_boost> 	kan_shan_analysis
+open <file_keyword> <file_type> <file_boost>  	kan_shan_analysis
+open <file_recency> <file_type> 	kan_shan_analysis
+open <file_recency> <file_boost> I was <file_action> on 	kan_shan_analysis
+open <file_recency> <file_boost> 	kan_shan_analysis
+open <file_type> <file_boost>  	kan_shan_analysis
+open a <file_boost>	kan_shan_analysis
+open a <file_boost> named <file_keyword>	kan_shan_analysis
+open <file_type> <file_keyword>  	kan_shan_analysis
+open <file_type> from <contact_name>	kan_shan_analysis
+open <file_boost>	kan_shan_analysis
+open <file_boost> <contact_name> <file_action> me	kan_shan_analysis
+open <file_boost> <file_keyword>	kan_shan_analysis
+open <file_type> by <contact_name>	kan_shan_analysis
+open <file_boost> for <file_keyword>	kan_shan_analysis
+open <file_type> <contact_name> was <file_action> on	kan_shan_analysis
+open <file_type>  <file_boost> <contact_name> was <file_action> on	kan_shan_analysis
+open <file_boost>	kan_shan_analysis
+open <file_boost> <file_keyword>	kan_shan_analysis
+open <file_boost> <file_keyword> <file_type>	kan_shan_analysis
+open <file_boost> <file_keyword> <file_boost>	kan_shan_analysis
+open <file_boost> <file_keyword> <file_boost>	kan_shan_analysis
+open <file_boost> <file_keyword> <file_type>	kan_shan_analysis
+open <file_boost> <file_boost>	kan_shan_analysis
+open <file_boost> <file_boost>	kan_shan_analysis
+open <file_boost> <file_boost> <file_keyword>	kan_shan_analysis
+open <file_boost> for <file_keyword>	kan_shan_analysis
+open <file_boost> from <contact_name>	kan_shan_analysis
+open <file_boost>	kan_shan_analysis
+open <file_boost> <contact_name> <file_action>	kan_shan_analysis
+open <file_boost> <contact_name> was <file_action> on	kan_shan_analysis
+open <file_boost> <file_keyword>	kan_shan_analysis
+open <file_boost> from <contact_name>	kan_shan_analysis
+open <order_ref> <file_keyword>	kan_shan_analysis
+open <order_ref> <file_boost> <contact_name> was <file_action> on	kan_shan_analysis
+open <order_ref> <file_boost> from <contact_name>	kan_shan_analysis
+open <order_ref> <file_type> <contact_name> was <file_action> on	kan_shan_analysis
+open <order_ref> <file_type> that <contact_name> was <file_action> on	kan_shan_analysis
+open <file_keyword> dot <file_type> with <to_contact_name>	kan_shan_analysis
+open  my <file_recency> <file_type> 	kan_shan_analysis
+open  my <file_recency> <file_boost> 	kan_shan_analysis
+open <file_type> that <contact_name> was <file_action> on	kan_shan_analysis
+open <file_type> <file_boost> <contact_name> was <file_action> on	kan_shan_analysis
+open <file_type> <file_boost> <file_keyword>	kan_shan_analysis
+open <file_type> from <contact_name>	kan_shan_analysis
+open that <file_keyword> <file_type>	kan_shan_analysis
+pull up <file_keyword> <file_type>	kan_shan_analysis
+resend <file_type> <file_boost>	kan_shan_analysis
+search <file_keyword> <file_boost> here	kan_shan_analysis
+search <file_recency> <file_boost> named <file_keyword> 	kan_shan_analysis
+search <file_type>	kan_shan_analysis
+search for <file_keyword> <file_type>	kan_shan_analysis
+search for <file_keyword> <file_boost>	kan_shan_analysis
+search for <file_keyword> <file_boost>	kan_shan_analysis
+search for <file_boost>	kan_shan_analysis
+search <file_type> <file_keyword>	kan_shan_analysis
+send <file_keyword> <file_boost>	kan_shan_analysis
+send <file_keyword> <file_boost>	kan_shan_analysis
+send <file_keyword> <file_boost> to <to_contact_name>	kan_shan_analysis
+send <file_keyword> <file_boost> with <to_contact_name>	kan_shan_analysis
+send <file_type>	kan_shan_analysis
+send <to_contact_name> a <file_type>	kan_shan_analysis
+send a <file_type>	kan_shan_analysis
+send a <file_type>	kan_shan_analysis
+send a <file_boost> <file_keyword>	kan_shan_analysis
+send a <file_boost> to <to_contact_name>	kan_shan_analysis
+send <file_boost> to <to_contact_name>	kan_shan_analysis
+send <to_contact_name> <file_type>	kan_shan_analysis
+send <to_contact_name> <file_type>	kan_shan_analysis
+send <file_boost>	kan_shan_analysis
+send <file_boost> <contact_name> was <file_action> on	kan_shan_analysis
+send <file_boost> <file_keyword>	kan_shan_analysis
+send a <file_boost> to <to_contact_name>	kan_shan_analysis
+share <contact_name> <file_boost>	kan_shan_analysis
+share <contact_name> <file_boost> to <to_contact_name>	kan_shan_analysis
+share <contact_name> <file_boost> with <to_contact_name>	kan_shan_analysis
+share <contact_name> <order_ref> <file_boost>	kan_shan_analysis
+share <contact_name> <order_ref> <file_boost> to <to_contact_name>	kan_shan_analysis
+share <contact_name> <file_keyword> <file_type>	kan_shan_analysis
+share <file_action> <file_type>	kan_shan_analysis
+share <file_action> <file_type>	kan_shan_analysis
+share <file_action> <file_type>	kan_shan_analysis
+share <file_keyword> <file_type>	kan_shan_analysis
+share <file_keyword> <file_type> here	kan_shan_analysis
+share <file_keyword> <file_type> on this <sharetarget_type>	kan_shan_analysis
+share <file_keyword> <file_type> with this <sharetarget_type>	kan_shan_analysis
+share <file_keyword> <file_type> with this <sharetarget_type>	kan_shan_analysis
+share <file_keyword> <file_type> in this <sharetarget_type>	kan_shan_analysis
+share <file_keyword> <file_type> to <to_contact_name>	kan_shan_analysis
+share <file_keyword> <file_boost>	kan_shan_analysis
+share <file_keyword> <file_boost> for this <sharetarget_type>	kan_shan_analysis
+share <file_keyword> <file_boost> here	kan_shan_analysis
+share <file_keyword> <file_boost> in this <sharetarget_type>	kan_shan_analysis
+share <file_keyword> <file_boost> to <to_contact_name>	kan_shan_analysis
+share <file_keyword> <file_boost> to this <sharetarget_type>	kan_shan_analysis
+share <file_keyword> <file_boost> with <to_contact_name> now	kan_shan_analysis
+share <file_keyword> <file_boost> with <sharetarget_name> <sharetarget_type>	kan_shan_analysis
+share <file_keyword> <file_boost> with this <sharetarget_type>	kan_shan_analysis
+share <file_keyword> <file_boost> with <to_contact_name>	kan_shan_analysis
+share <file_keyword> <file_type> with <to_contact_name>	kan_shan_analysis
+share <file_keyword> <file_type> with <to_contact_name>	kan_shan_analysis
+share <file_keyword> <file_type> <file_boost> here	kan_shan_analysis
+share <file_keyword> <file_type> <file_boost> in this <sharetarget_type>	kan_shan_analysis
+share <file_keyword> <file_type> <file_boost> with <to_contact_name>	kan_shan_analysis
+share <file_keyword> here	kan_shan_analysis
+share <file_keyword> <file_type> in this <sharetarget_type>	kan_shan_analysis
+share <file_keyword> <file_type> now	kan_shan_analysis
+share <file_keyword> <file_type> on this <sharetarget_type>	kan_shan_analysis
+share <file_keyword> <file_boost> here	kan_shan_analysis
+share <file_type>	kan_shan_analysis
+share <file_type> here	kan_shan_analysis
+share a <file_keyword> <file_boost> here	kan_shan_analysis
+share a <file_keyword> <file_boost> with <to_contact_name>	kan_shan_analysis
+share a <file_recency> <file_type> with <to_contact_name>	kan_shan_analysis
+share a <file_type>	kan_shan_analysis
+share a <file_boost> with <to_contact_name>	kan_shan_analysis
+share a <file_boost> with <to_contact_name>	kan_shan_analysis
+share a <file_boost>	kan_shan_analysis
+share a <file_boost> <file_keyword>	kan_shan_analysis
+share a <file_boost> with this <sharetarget_type>	kan_shan_analysis
+share a <file_keyword> <file_boost> with my <meeting_starttime> <sharetarget_type>	kan_shan_analysis
+share attached <file_type>	kan_shan_analysis
+share <file_type> <contact_name> was <file_action> on	kan_shan_analysis
+share <file_type> <contact_name> was <file_action> on	kan_shan_analysis
+share <file_type> <file_boost > with <to_contact_name>	kan_shan_analysis
+share <file_type> i was <file_action> on	kan_shan_analysis
+share <file_type> to this <sharetarget_type>	kan_shan_analysis
+share <file_type> <file_keyword> with <to_contact_name>	kan_shan_analysis
+share <file_boost>	kan_shan_analysis
+share <file_boost> <file_keyword>	kan_shan_analysis
+share <file_boost> <file_keyword> to <to_contact_name>	kan_shan_analysis
+share <file_boost> with <to_contact_name>	kan_shan_analysis
+share a <file_keyword> <file_boost> with this <sharetarget_type>	kan_shan_analysis
+share <file_boost>	kan_shan_analysis
+share <file_boost> <contact_name> was <file_action> on	kan_shan_analysis
+share <file_boost> <contact_name> was <file_action> on with <to_contact_name>	kan_shan_analysis
+share <file_boost> <file_keyword>	kan_shan_analysis
+share <file_boost> <file_keyword> with <to_contact_name>	kan_shan_analysis
+share <file_boost> with <meeting_starttime> <sharetarget_type>	kan_shan_analysis
+share <file_boost> with <to_contact_name>	kan_shan_analysis
+share <file_boost> with <to_contact_name> now	kan_shan_analysis
+share <file_boost> with my <meeting_starttime> <sharetarget_type>	kan_shan_analysis
+share <file_boost> with my <sharetarget_type> at <meeting_starttime>	kan_shan_analysis
+share <file_boost>	kan_shan_analysis
+share <file_boost> <file_keyword>	kan_shan_analysis
+share <file_boost> to <to_contact_name>	kan_shan_analysis
+share <file_boost> with <to_contact_name>	kan_shan_analysis
+share <file_boost> with this <sharetarget_type>	kan_shan_analysis
+share my <file_keyword> <file_type>	kan_shan_analysis
+share my <file_keyword> <file_boost>	kan_shan_analysis
+share my <file_recency> <file_boost> to this <sharetarget_type>	kan_shan_analysis
+share my <file_recency> <file_boost> with <to_contact_name>	kan_shan_analysis
+share my <file_recency> <file_boost> with this <sharetarget_type>	kan_shan_analysis
+share my <file_recency> <file_type>	kan_shan_analysis
+share of <file_boost>	kan_shan_analysis
+share of <file_boost> with <to_contact_name>	kan_shan_analysis
+share <file_boost> with my <meeting_starttime> <sharetarget_type>	kan_shan_analysis
+share <file_boost> to my <meeting_starttime> <sharetarget_type>	kan_shan_analysis
+share <file_type> <contact_name> was <file_action> on	kan_shan_analysis
+share <file_type> with <to_contact_name>	kan_shan_analysis
+share <file_type> with <to_contact_name>	kan_shan_analysis
+share <file_type> <contact_name> was <file_action> on	kan_shan_analysis
+share <file_type> <file_keyword> with <to_contact_name>	kan_shan_analysis
+share <file_type> with <to_contact_name>	kan_shan_analysis
+share this <file_boost>  with this <sharetarget_type>	kan_shan_analysis
+show <contact_name> downloads	kan_shan_analysis
+show <contact_name> <file_boost> with <to_contact_name>	kan_shan_analysis
+show <contact_name> <file_boost>	kan_shan_analysis
+show <contact_name> <file_boost> for <meeting_starttime> <sharetarget_type>	kan_shan_analysis
+show <contact_name> <file_keyword> <file_type>	kan_shan_analysis
+show <file_keyword> <file_type>	kan_shan_analysis
+show <file_keyword> <file_boost>	kan_shan_analysis
+show <file_keyword> <file_boost> to this <sharetarget_type>	kan_shan_analysis
+show <file_keyword> <file_boost> with my <sharetarget_type>	kan_shan_analysis
+show <file_keyword> <file_boost> with <to_contact_name>	kan_shan_analysis
+show <file_keyword> <file_boost> to <to_contact_name>	kan_shan_analysis
+show <file_recency> <file_boost>	kan_shan_analysis
+show me <contact_name> <file_boost>	kan_shan_analysis
+show me <file_keyword> <file_boost>	kan_shan_analysis
+show me <file_keyword> <file_boost>	kan_shan_analysis
+show me <file_recency> <file_boost>	kan_shan_analysis
+show me all files that <contact_name> has <file_action>	kan_shan_analysis
+show me <file_type> <contact_name> was <file_action> on	kan_shan_analysis
+show me my <file_recency> <file_boost>	kan_shan_analysis
+show me my <file_boost> <contact_name> was <file_action> on	kan_shan_analysis
+show me some files	kan_shan_analysis
+show my <file_recency> <file_boost>	kan_shan_analysis
+show my <file_recency> <file_type>	kan_shan_analysis
+try again search <file_boost> that i was <file_action> on	kan_shan_analysis
+where is my downloads	kan_shan_analysis
+<file_type> with <contact_name>with <contact_name>	kan_shan_analysis
+I want <file_keyword> <file_type>	my_ser_pattern
+I want different <file_type>	my_ser_pattern
+no, I want <file_keyword> <file_type>	my_ser_pattern
+no,  I want different <file_type>	my_ser_pattern
+none of these, I want <file_keyword> <file_type>	my_ser_pattern
+none of these,  I want different <file_type>	my_ser_pattern
+<file_boost> about <file_keyword> from <contact_name>	my_ser_pattern
+<file_boost> <file_action> from <contact_name> to <to_contact_name>	my_ser_pattern
+<file_boost>  <contact_name> <file_action> to <to_contact_name>	my_ser_pattern
+find <file_boost> from  <contact_name>	my_ser_pattern
+show me my <file_recency> <file_action> <file_boost> named <file_name> <file_boost>	my_ser_pattern
+find <file_boost> <file_keyword>	my_ser_pattern
+<file_boost> from <contact_name>	my_ser_pattern
+<file_type> named <file_keyword> 	my_ser_pattern
+<file_boost> named <file_keyword> 	my_ser_pattern
+what are my <file_boost>	my_ser_pattern
+what are my <file_type>	my_ser_pattern
+<file_boost> in my <data_source>	my_ser_pattern
+<file_type> in my <data_source>	my_ser_pattern
+what is the <order_ref> <file_boost> <file_action> by <contact_name>	my_ser_pattern
+what is the <order_ref> <file_type> <file_action> by <contact_name>	my_ser_pattern
+<file_boost> on <file_keyword>	my_ser_pattern
+<file_type> on <file_keyword> 	my_ser_pattern
+<contact_name> 's <file_boost> on <file_keyword> 	my_ser_pattern
+<contact_name> 's <file_type> on <file_keyword> 	my_ser_pattern
+<file_boost> about <file_keyword>	my_ser_pattern
+<file_type> about <file_keyword> 	my_ser_pattern
+my <file_keyword> <file_boost> I <file_action>	my_ser_pattern
+my <file_keyword> <file_type> I <file_action>	my_ser_pattern
+can you find the <file_keyword> <file_type>	my_ser_pattern
+can you find the <file_keyword> <file_boost>	my_ser_pattern
+<file_keyword> <file_boost> I <file_action>	my_ser_pattern
+<file_keyword> <file_type> I <file_action>	my_ser_pattern
+open <file_keyword> <file_type> by <contact_name>	my_ser_pattern
+open <file_keyword> <file_boost> by <contact_name>	my_ser_pattern
+<contact_name> <file_type>	my_ser_pattern
+<contact_name> <file_boost>	my_ser_pattern
+<contact_name> 's <file_type> <file_boost> <file_action> with me	my_ser_pattern
+<file_type> <contact_name> 	my_ser_pattern
+<file_boost> <contact_name> 	my_ser_pattern
+<file_type> <contact_name> <file_action> 	my_ser_pattern
+<file_boost> <contact_name> <file_action> 	my_ser_pattern
+<file_type> <contact_name> <file_action> about <file_keyword> 	my_ser_pattern
+<file_boost>  <contact_name> <file_action> about <file_keyword> 	my_ser_pattern
+<file_type> by <contact_name> 	my_ser_pattern
+<file_boost> by <contact_name> 	my_ser_pattern
+<file_type> by <contact_name> <file_action> about <file_keyword> 	my_ser_pattern
+<file_boost>  by <contact_name> <file_action> about <file_keyword> 	my_ser_pattern
+<file_type> by <contact_name> called <file_keyword> 	my_ser_pattern
+<file_boost>  by <contact_name> called <file_keyword> 	my_ser_pattern
+<file_type> by <contact_name> named <file_keyword> 	my_ser_pattern
+<file_boost>  by <contact_name> named <file_keyword> 	my_ser_pattern
+<file_type> called <file_keyword> 	my_ser_pattern
+<file_boost> called <file_keyword> 	my_ser_pattern
+<file_type> <file_action> by <contact_name> 	my_ser_pattern
+<file_boost> <file_action> by <contact_name> 	my_ser_pattern
+<file_type> <file_boost> <contact_name> <file_action> 	my_ser_pattern
+<file_type> <file_boost> by <contact_name>	my_ser_pattern
+<file_type> <file_boost>	my_ser_pattern
+<file_type> named <file_keyword> 	my_ser_pattern
+<file_boost> named <file_keyword> 	my_ser_pattern
+<file_keyword> <file_type> 	my_ser_pattern
+<file_keyword> <file_boost> 	my_ser_pattern
+<file_keyword> <file_type> by <contact_name>	my_ser_pattern
+<file_keyword> <file_boost> by <contact_name>	my_ser_pattern
+<file_keyword> <file_boost> 	my_ser_pattern
+<file_keyword> <file_boost> of type <file_type> 	my_ser_pattern
+can you find the <file_keyword> <file_type> by <contact_name>	my_ser_pattern
+can you find the <file_keyword> <file_boost> by <contact_name>	my_ser_pattern
+<file_boost> titled <file_keyword>	my_ser_pattern
+<file_boost> titled <file_keyword> <file_action> by <contact_name> 	my_ser_pattern
+<file_type> titled <file_keyword>	my_ser_pattern
+<file_type> titled <file_keyword> <file_action> by <contact_name> 	my_ser_pattern
+<file_boost> titled <file_keyword> of type <file_type> 	my_ser_pattern
+<file_boost> titled <file_keyword> of type <file_type> <file_action> by <contact_name>  	my_ser_pattern
+find <file_keyword> <file_type>	my_ser_pattern
+find <file_keyword> <file_boost>	my_ser_pattern
+find the <file_keyword> <file_type>	my_ser_pattern
+find the <file_keyword> <file_boost>	my_ser_pattern
+find me <file_keyword> <file_type> by <contact_name> 	my_ser_pattern
+find me <file_keyword> <file_boost> by <contact_name> 	my_ser_pattern
+find me the <file_keyword> <file_type> by <contact_name> 	my_ser_pattern
+find me the <file_keyword> <file_boost> by <contact_name> 	my_ser_pattern
+find the <file_keyword> <file_type>	my_ser_pattern
+find the <file_keyword> <file_boost>	my_ser_pattern
+open <file_keyword> <file_type>	my_ser_pattern
+open <file_keyword> <file_boost>	my_ser_pattern
+open <file_keyword> <file_type> by <contact_name>	my_ser_pattern
+open <file_keyword> <file_boost> by <contact_name>	my_ser_pattern
+show me <file_keyword> <file_type> by <contact_name> 	my_ser_pattern
+show me <file_keyword> <file_boost> by <contact_name> 	my_ser_pattern
+show the <file_keyword> <file_type>	my_ser_pattern
+show the <file_keyword> <file_boost>	my_ser_pattern
