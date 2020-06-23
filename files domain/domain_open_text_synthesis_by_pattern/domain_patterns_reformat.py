@@ -13,8 +13,12 @@ import string
 outputFile = 'pattern.txt'
 normal_tokens_files = 'normal_token.txt'
 
-outputs = [];
-outputsWithSource = [];
+# deduplication and sort
+#outputs = [];
+#outputsWithSource = [];
+
+outputs = set()
+outputsWithSource = set()
 
 
 tags = ['sharetarget_name', 'file_name', 'file_type', 'sharetarget_type', 'order_ref', 'to_contact_name', 'date', 'files_keyword',
@@ -125,19 +129,20 @@ with codecs.open('patterns_no_placeholder.txt', 'r', 'utf-8') as fin:
 
         if isvalid:
             # here intent is default file_search not sure since for domain
-            outputs.append('0'+'\t'+query.strip()+ '\t'+ 'file_search' + '\t' +'files' +'\t' +xml.strip())
+            #outputs.append('0'+'\t'+query.strip()+ '\t'+ 'file_search' + '\t' +'files' +'\t' +xml.strip())
+            outputs.add('0'+'\t'+query.strip()+ '\t'+ 'file_search' + '\t' +'files' +'\t' +xml.strip())
 
 
 
 with codecs.open(normal_tokens_files, 'w', 'utf-8') as fout:
-    for item in outputs:
+    for item in sorted(normal_tokens):
         fout.write(item + '\r\n');
 
 
 #outputs = ['\t'.join(['id', 'query', 'intent', 'domain', 'QueryXml'])] + outputs;
 
 with codecs.open(outputFile, 'w', 'utf-8') as fout:
-    for item in outputs:
+    for item in sorted(outputs):
         fout.write(item + '\r\n');
 
 

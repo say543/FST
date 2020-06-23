@@ -21,7 +21,7 @@ patterns	source
 <file_keyword> <file_type> 	kan_shan_analysis
 <file_recency> <file_type> <file_boost>	kan_shan_analysis
 <file_type> in <file_boost>	kan_shan_analysis
-bring up <file_keyword> <file_type>	kan_shan_analysis
+bring up <file_keyword> <file_boost>	kan_shan_analysis
 bring up <file_keyword> <file_type>	kan_shan_analysis
 bring up my <file_keyword> <file_type> from <date>	kan_shan_analysis
 can you find <contact_name> <order_ref> <file_type>	kan_shan_analysis
@@ -260,7 +260,7 @@ show my <file_recency> <file_boost>	kan_shan_analysis
 show my <file_recency> <file_type>	kan_shan_analysis
 try again search <file_boost> that i was <file_action> on	kan_shan_analysis
 where is my downloads	kan_shan_analysis
-<file_type> with <contact_name>with <contact_name>	kan_shan_analysis
+<file_type> with <contact_name>	kan_shan_analysis
 I want <file_keyword> <file_type>	my_ser_pattern
 I want different <file_type>	my_ser_pattern
 no, I want <file_keyword> <file_type>	my_ser_pattern
@@ -354,3 +354,135 @@ show me <file_keyword> <file_type> by <contact_name> 	my_ser_pattern
 show me <file_keyword> <file_boost> by <contact_name> 	my_ser_pattern
 show the <file_keyword> <file_type>	my_ser_pattern
 show the <file_keyword> <file_boost>	my_ser_pattern
+all <file_boost>	my_ser_pattern
+all <file_type>	my_ser_pattern
+bring up <file_boost>	my_ser_pattern
+bring up <file_type>	my_ser_pattern
+can you look for the <file_recency> <file_boost> that i <file_action>	my_ser_pattern
+can you look for the <file_recency> <file_type> that i <file_action>	my_ser_pattern
+open up <file_boost>	my_ser_pattern
+open up <file_type>	my_ser_pattern
+find the <file_type> <file_keyword> 	my_ser_pattern
+find the <file_boost> <file_keyword> 	my_ser_pattern
+open the <file_boost>	my_ser_pattern
+open the <file_type>	my_ser_pattern
+find a <file_boost>	my_ser_pattern
+find a <file_type>	my_ser_pattern
+locate the <file_type> <file_keyword> 	my_ser_pattern
+locate the <file_boost> <file_keyword> 	my_ser_pattern
+take me to <file_keyword> <file_boost>	my_ser_pattern
+take me to <file_keyword> <file_type>	my_ser_pattern
+navigate to my <file_boost>	my_ser_pattern
+take me to my <file_boost>	my_ser_pattern
+take me to <file_boost>	my_ser_pattern
+go to my <file_boost>	my_ser_pattern
+pull up <file_boost> <contact_name> was <file_action> on	my_ser_pattern
+pull up <file_type> <contact_name> was <file_action> on	my_ser_pattern
+pull up <file_boost> <contact_name> am <file_action> on	my_ser_pattern
+pull up <file_type> <contact_name> am <file_action> on	my_ser_pattern
+pull up <file_keyword> <file_boost> <contact_name> was <file_action> on	my_ser_pattern
+pull up <file_keyword> <file_type> <contact_name> was <file_action> on	my_ser_pattern
+pull up <file_keyword> <file_boost> <contact_name> am <file_action> on	my_ser_pattern
+pull up <file_keyword> <file_type> <contact_name> am <file_action> on	my_ser_pattern
+pull up my <file_keyword> <file_boost> <contact_name> was <file_action> on	my_ser_pattern
+pull up my <file_keyword> <file_type> <contact_name> was <file_action> on	my_ser_pattern
+pull up my <file_keyword> <file_boost> <contact_name> am <file_action> on	my_ser_pattern
+pull up my <file_keyword> <file_type> <contact_name> am <file_action> on	my_ser_pattern
+pull up my <file_keyword> <file_boost>	my_ser_pattern
+pull up my <file_keyword> <file_type>	my_ser_pattern
+pull up the <file_boost> <contact_name> was <file_action> on	my_ser_pattern
+pull up the <file_type> <contact_name> was <file_action> on	my_ser_pattern
+pull up the  <file_boost> <contact_name> am <file_action> on	my_ser_pattern
+pull up the  <file_type> <contact_name> am <file_action> on	my_ser_pattern
+pull up the  <file_keyword> <file_boost> <contact_name> was <file_action> on	my_ser_pattern
+pull up the <file_keyword> <file_type> <contact_name> was <file_action> on	my_ser_pattern
+pull up the <file_keyword> <file_boost> <contact_name> am <file_action> on	my_ser_pattern
+pull up the <file_keyword> <file_type> <contact_name> am <file_action> on	my_ser_pattern
+pull up a <file_keyword> <file_boost> <contact_name> was <file_action> on	my_ser_pattern
+pull up a <file_keyword> <file_type> <contact_name> was <file_action> on	my_ser_pattern
+pull up a <file_keyword> <file_boost> <contact_name> am <file_action> on	my_ser_pattern
+pull up a <file_keyword> <file_type> <contact_name> am <file_action> on	my_ser_pattern
+pull up a <file_keyword> <file_boost>	my_ser_pattern
+pull up a <file_keyword> <file_type>	my_ser_pattern
+pull up the <file_boost> <contact_name> was <file_action> on	my_ser_pattern
+pull up the <file_type> <contact_name> was <file_action> on	my_ser_pattern
+pull up the  <file_boost> <contact_name> am <file_action> on	my_ser_pattern
+pull up the  <file_type> <contact_name> am <file_action> on	my_ser_pattern
+pull up the  <file_keyword> <file_boost> <contact_name> was <file_action> on	my_ser_pattern
+pull up the <file_keyword> <file_type> <contact_name> was <file_action> on	my_ser_pattern
+pull up the <file_keyword> <file_boost> <contact_name> am <file_action> on	my_ser_pattern
+pull up the <file_keyword> <file_type> <contact_name> am <file_action> on	my_ser_pattern
+bring up <file_boost> <contact_name> was <file_action> on	my_ser_pattern
+bring up <file_type> <contact_name> was <file_action> on	my_ser_pattern
+bring up <file_boost> <contact_name> am <file_action> on	my_ser_pattern
+bring up <file_type> <contact_name> am <file_action> on	my_ser_pattern
+bring up <file_keyword> <file_boost> <contact_name> was <file_action> on	my_ser_pattern
+bring up <file_keyword> <file_type> <contact_name> was <file_action> on	my_ser_pattern
+bring up <file_keyword> <file_boost> <contact_name> am <file_action> on	my_ser_pattern
+bring up <file_keyword> <file_type> <contact_name> am <file_action> on	my_ser_pattern
+bring up my <file_keyword> <file_boost> <contact_name> was <file_action> on	my_ser_pattern
+bring up my <file_keyword> <file_type> <contact_name> was <file_action> on	my_ser_pattern
+bring up my <file_keyword> <file_boost> <contact_name> am <file_action> on	my_ser_pattern
+bring up my <file_keyword> <file_type> <contact_name> am <file_action> on	my_ser_pattern
+bring up my <file_keyword> <file_boost>	my_ser_pattern
+bring up my <file_keyword> <file_type>	my_ser_pattern
+bring up a <file_keyword> <file_boost> <contact_name> was <file_action> on	my_ser_pattern
+bring up a <file_keyword> <file_type> <contact_name> was <file_action> on	my_ser_pattern
+bring up a <file_keyword> <file_boost> <contact_name> am <file_action> on	my_ser_pattern
+bring up a <file_keyword> <file_type> <contact_name> am <file_action> on	my_ser_pattern
+bring up a <file_keyword> <file_boost>	my_ser_pattern
+bring up a <file_keyword> <file_type>	my_ser_pattern
+bring up the <file_boost> <contact_name> was <file_action> on	my_ser_pattern
+bring up the <file_type> <contact_name> was <file_action> on	my_ser_pattern
+bring up the  <file_boost> <contact_name> am <file_action> on	my_ser_pattern
+bring up the  <file_type> <contact_name> am <file_action> on	my_ser_pattern
+bring up the  <file_keyword> <file_boost> <contact_name> was <file_action> on	my_ser_pattern
+bring up the <file_keyword> <file_type> <contact_name> was <file_action> on	my_ser_pattern
+bring up the <file_keyword> <file_boost> <contact_name> am <file_action> on	my_ser_pattern
+bring up the <file_keyword> <file_type> <contact_name> am <file_action> on	my_ser_pattern
+open <file_boost> <contact_name> was <file_action> on	my_ser_pattern
+open <file_type> <contact_name> was <file_action> on	my_ser_pattern
+open my <file_keyword> <file_boost> <contact_name> was <file_action> on	my_ser_pattern
+open my <file_keyword> <file_type> <contact_name> was <file_action> on	my_ser_pattern
+open my <file_keyword> <file_boost> <contact_name> am <file_action> on	my_ser_pattern
+open my <file_keyword> <file_type> <contact_name> am <file_action> on	my_ser_pattern
+open my <file_keyword> <file_boost>	my_ser_pattern
+open my <file_keyword> <file_type>	my_ser_pattern
+open the <file_boost> <contact_name> was <file_action> on	my_ser_pattern
+open the <file_type> <contact_name> was <file_action> on	my_ser_pattern
+open the  <file_boost> <contact_name> am <file_action> on	my_ser_pattern
+open the  <file_type> <contact_name> am <file_action> on	my_ser_pattern
+open the  <file_keyword> <file_boost> <contact_name> was <file_action> on	my_ser_pattern
+open the <file_keyword> <file_type> <contact_name> was <file_action> on	my_ser_pattern
+open the <file_keyword> <file_boost> <contact_name> am <file_action> on	my_ser_pattern
+open the <file_keyword> <file_type> <contact_name> am <file_acti>on> on	my_ser_pattern
+open up my <file_keyword> <file_boost> <contact_name> was <file_action> on	my_ser_pattern
+open up my <file_keyword> <file_type> <contact_name> was <file_action> on	my_ser_pattern
+open up my <file_keyword> <file_boost> <contact_name> am <file_action> on	my_ser_pattern
+open up my <file_keyword> <file_type> <contact_name> am <file_action> on	my_ser_pattern
+open up my <file_keyword> <file_boost>	my_ser_pattern
+open up my <file_keyword> <file_type>	my_ser_pattern
+find my <file_type> by <contact_name>	my_ser_pattern
+find my <file_boost> by <contact_name>	my_ser_pattern
+<file_boost> titled with <file_keyword>	my_ser_pattern
+<file_type> titled with <file_keyword>	my_ser_pattern
+find  <file_type> by <contact_name>	my_ser_pattern
+find  <file_boost> by <contact_name>	my_ser_pattern
+open up <contact_name> 's <file_keyword> <file_boost>	my_ser_pattern
+open up <contact_name> 's <file_keyword> <file_type>	my_ser_pattern
+open the  <file_keyword> <file_boost> 	my_ser_pattern
+open the <file_keyword> <file_type>	my_ser_pattern
+find <file_type> <file_keyword> 	my_ser_pattern
+find <file_boost> <file_keyword> 	my_ser_pattern
+open my <order_ref> <file_boost>	my_ser_pattern
+open my <order_ref> <file_type>	my_ser_pattern
+open up <file_boost> by <contact_name>	my_ser_pattern
+open up <file_type> by <contact_name>	my_ser_pattern
+find my <file_boost> from <date>	my_ser_pattern
+find my <file_type> from <date>	my_ser_pattern
+find <file_keyword> <file_boost>  by <contact_name>	my_ser_pattern
+find <file_keyword> <file_type>  by <contact_name>	my_ser_pattern
+where are <file_boost> about <file_keyword>	my_ser_pattern
+where are <file_type> about <file_keyword>	my_ser_pattern
+open up my <order_ref> <file_boost>	my_ser_pattern
+open up my <order_ref> <file_type>	my_ser_pattern
