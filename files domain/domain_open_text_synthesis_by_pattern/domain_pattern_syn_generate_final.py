@@ -27,13 +27,18 @@ synthetic_mode = 1;
 #p from [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1] 
 #N from [ 20, 50, 100, 200, 300, 400, 500, 600, 700]
 # starting with 300
-#sampling_hyper_paramter_each_slot = 3000
+sampling_hyper_paramter_each_slot = 100
 #sampling_hyper_paramter_each_slot = 6000
-sampling_hyper_paramter_each_slot = 9000
+#sampling_hyper_paramter_each_slot = 9000
 # for intent using to prevent too many
-#numberofQuery_hyper_parameter = 3000
+
+
+numberofQuery_hyper_parameter = 100
+
+
+
 #numberofQuery_hyper_parameter = 6000
-numberofQuery_hyper_parameter = 9000
+#numberofQuery_hyper_parameter = 9000
 
 # for slot using 20
 #numberofQuery_hyper_parameter = 40
@@ -150,7 +155,8 @@ def parse(slotList, doubleSlotList):
         originalSlotXml = array[4];
 
 	# prevent duplication so use low bound of numberofQuery_hyper_parameter / sampling_hyper_paramter_each_slot	
-        for idx in range(min(numberofQuery_hyper_parameter,sampling_hyper_paramter_each_slot)):
+        for idx in range(numberofQuery_hyper_parameter):
+            sampling_hyper_paramter_each_slot
             query = originalQuery;
             slotXml = originalSlotXml;
 
@@ -193,17 +199,20 @@ def parse(slotList, doubleSlotList):
 
                         
                         #for debug
+
+
+
                         #print(query)
-        
-            outputSet.append('\t'.join(['0', query, intent, domain, slotXml]));
-            # add	
-            # "PreviousTurnDomain"	
-            # "PreviousTurnIntent"	
-            # as	
-            # 'TurnNumber', PREVIOUSTURNINTENT, 'query', 'intent',PREVIOUSTURNDOMAIN])	
-            # append empty at first	
-            #outputIntentSet.append('\t'.join(['0',"\t"+query,intent]));	
-            outputIntentSet.append('\t'.join(['0',"\t"+query,intent,""]));
+            for n in range(sampling_hyper_paramter_each_slot):
+                outputSet.append('\t'.join(['0', query, intent, domain, slotXml]));
+                # add	
+                # "PreviousTurnDomain"	
+                # "PreviousTurnIntent"	
+                # as	
+                # 'TurnNumber', PREVIOUSTURNINTENT, 'query', 'intent',PREVIOUSTURNDOMAIN])	
+                # append empty at first	
+                #outputIntentSet.append('\t'.join(['0',"\t"+query,intent]));	
+                outputIntentSet.append('\t'.join(['0',"\t"+query,intent,""]));
 
     outputSlot = '_'.join(slotList);
 
