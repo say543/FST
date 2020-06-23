@@ -1,7 +1,6 @@
 patterns	source 
 <file_keyword> <file_boost>	kan_shan_analysis
 <file_keyword> <file_boost>	kan_shan_analysis
-<file_keyword>	kan_shan_analysis
 <file_keyword> <file_type> 	kan_shan_analysis
 <file_keyword> <file_type> with <contact_name>	kan_shan_analysis
 <file_keyword> <file_boost>	kan_shan_analysis
