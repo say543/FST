@@ -533,3 +533,244 @@ TurnNumber	PreviousTurnIntent	query	domain	PreviousTurnDomain	TaskFrameStatus	Ta
 0		open bcis experiments in word	web							Desktop-Random-Feb-2019-Test-55k.tsv
 0		open bcis experiments in word	web							Desktop-Random-Feb-2019-Test-55k.tsv
 0		open bcis experiments in word	web							Desktop-Random-Feb-2019-Test-55k.tsv
+0		pull up file I am working on	files							Validating_UWP_AllDomain_QueryExpansion.tsv
+0		pull up file I am working on	files							Validating_UWP_AllDomain_QueryExpansion.tsv
+0		pull up file I am working on	files							Validating_UWP_AllDomain_QueryExpansion.tsv
+0		pull up file I am working on	files							Validating_UWP_AllDomain_QueryExpansion.tsv
+0		pull up file I am working on	files							Validating_UWP_AllDomain_QueryExpansion.tsv
+0		pull up a file	files							Validating_UWP_AllDomain_QueryExpansion.tsv
+0		pull up a file	files							Validating_UWP_AllDomain_QueryExpansion.tsv
+0		pull up a file	files							Validating_UWP_AllDomain_QueryExpansion.tsv
+0		pull up a file	files							Validating_UWP_AllDomain_QueryExpansion.tsv
+0		pull up a file	files							Validating_UWP_AllDomain_QueryExpansion.tsv
+0		shiproom deck	files							3s_dsat
+0		shiproom deck	files							3s_dsat
+0		shiproom deck	files							3s_dsat
+0		shiproom deck	files							3s_dsat
+0		shiproom deck	files							3s_dsat
+0		show me latest windows deck	files							UWP_dsat
+0		show me latest windows deck	files							UWP_dsat
+0		show me latest windows deck	files							UWP_dsat
+0		show me latest windows deck	files							UWP_dsat
+0		show me latest windows deck	files							UWP_dsat
+0		show me latest windows deck	files							UWP_dsat
+0		show me latest windows deck	files							UWP_dsat
+0		show me latest windows deck	files							UWP_dsat
+0		show me latest windows deck	files							UWP_dsat
+0		show me latest windows deck	files							UWP_dsat
+0		open notes	ondevice							Desktop-Random-Feb-2019-Test-55k.tsv
+0		open notes	ondevice							Desktop-Random-Feb-2019-Test-55k.tsv
+0		open notes	ondevice							Desktop-Random-Feb-2019-Test-55k.tsv
+0		open notes	ondevice							Desktop-Random-Feb-2019-Test-55k.tsv
+0		open notes	ondevice							Desktop-Random-Feb-2019-Test-55k.tsv
+0		open notes	ondevice							Desktop-Random-Feb-2019-Test-55k.tsv
+0		open notes	ondevice							Desktop-Random-Feb-2019-Test-55k.tsv
+0		open notes	ondevice							Desktop-Random-Feb-2019-Test-55k.tsv
+0		open notes	ondevice							Desktop-Random-Feb-2019-Test-55k.tsv
+0		open notes	ondevice							Desktop-Random-Feb-2019-Test-55k.tsv
+0		Isn't the reference presentation	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		Isn't the reference presentation	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		Isn't the reference presentation	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		Isn't the reference presentation	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		Isn't the reference presentation	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		Isn't the reference presentation	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		Isn't the reference presentation	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		Isn't the reference presentation	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		Isn't the reference presentation	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		doc named cortana skills	files							UWP_dsat
+0		doc named cortana skills	files							UWP_dsat
+0		doc named cortana skills	files							UWP_dsat
+0		doc named cortana skills	files							UWP_dsat
+0		doc named cortana skills	files							UWP_dsat
+0		doc named cortana skills	files							UWP_dsat
+0		doc named cortana skills	files							UWP_dsat
+0		doc named cortana skills	files							UWP_dsat
+0		doc named cortana skills	files							UWP_dsat
+0		doc named cortana skills	files							UWP_dsat
+0		doc named cortana skills	files							UWP_dsat
+0		doc named cortana skills	files							UWP_dsat
+0		doc named cortana skills	files							UWP_dsat
+0		doc named cortana skills	files							UWP_dsat
+0		doc named cortana skills	files							UWP_dsat
+0		doc named cortana skills	files							UWP_dsat
+0		doc named cortana skills	files							UWP_dsat
+0		doc named cortana skills	files							UWP_dsat
+0		doc named cortana skills	files							UWP_dsat
+0		doc named cortana skills	files							UWP_dsat
+0		excel titled cortana skills	files							UWP_dsat
+0		excel titled cortana skills	files							UWP_dsat
+0		excel titled cortana skills	files							UWP_dsat
+0		excel titled cortana skills	files							UWP_dsat
+0		excel titled cortana skills	files							UWP_dsat
+0		excel titled cortana skills	files							UWP_dsat
+0		excel titled cortana skills	files							UWP_dsat
+0		excel titled cortana skills	files							UWP_dsat
+0		excel titled cortana skills	files							UWP_dsat
+0		excel titled cortana skills	files							UWP_dsat
+0		skills.ppt	files							UWP_dsat
+0		skills.ppt	files							UWP_dsat
+0		skills.ppt	files							UWP_dsat
+0		skills.ppt	files							UWP_dsat
+0		skills.ppt	files							UWP_dsat
+0		skills.ppt	files							UWP_dsat
+0		skills.ppt	files							UWP_dsat
+0		skills.ppt	files							UWP_dsat
+0		skills.ppt	files							UWP_dsat
+0		skills.ppt	files							UWP_dsat
+0		document called cortana skills	files							UWP_dsat
+0		document called cortana skills	files							UWP_dsat
+0		document called cortana skills	files							UWP_dsat
+0		document called cortana skills	files							UWP_dsat
+0		document called cortana skills	files							UWP_dsat
+0		document called cortana skills	files							UWP_dsat
+0		document called cortana skills	files							UWP_dsat
+0		document called cortana skills	files							UWP_dsat
+0		document called cortana skills	files							UWP_dsat
+0		document called cortana skills	files							UWP_dsat
+0		file by govind named cortana skills	files							UWP_dsat
+0		file by govind named cortana skills	files							UWP_dsat
+0		file by govind named cortana skills	files							UWP_dsat
+0		file by govind named cortana skills	files							UWP_dsat
+0		file by govind named cortana skills	files							UWP_dsat
+0		file by govind named cortana skills	files							UWP_dsat
+0		file by govind named cortana skills	files							UWP_dsat
+0		file by govind named cortana skills	files							UWP_dsat
+0		file by govind named cortana skills	files							UWP_dsat
+0		file by govind named cortana skills	files							UWP_dsat
+0		doc Govind shared	files							UWP_dsat
+0		doc Govind shared	files							UWP_dsat
+0		doc Govind shared	files							UWP_dsat
+0		doc Govind shared	files							UWP_dsat
+0		doc Govind shared	files							UWP_dsat
+0		doc Govind shared	files							UWP_dsat
+0		doc Govind shared	files							UWP_dsat
+0		doc Govind shared	files							UWP_dsat
+0		doc Govind shared	files							UWP_dsat
+0		doc Govind shared	files							UWP_dsat
+0		doc Govind shared	files							UWP_dsat
+0		doc Govind shared	files							UWP_dsat
+0		doc Govind shared	files							UWP_dsat
+0		doc Govind shared	files							UWP_dsat
+0		doc Govind shared	files							UWP_dsat
+0		doc Govind shared	files							UWP_dsat
+0		doc Govind shared	files							UWP_dsat
+0		doc Govind shared	files							UWP_dsat
+0		doc Govind shared	files							UWP_dsat
+0		doc Govind shared	files							UWP_dsat
+0		file on cortana skills	files							UWP_dsat
+0		file on cortana skills	files							UWP_dsat
+0		file on cortana skills	files							UWP_dsat
+0		file on cortana skills	files							UWP_dsat
+0		file on cortana skills	files							UWP_dsat
+0		file on cortana skills	files							UWP_dsat
+0		file on cortana skills	files							UWP_dsat
+0		file on cortana skills	files							UWP_dsat
+0		file on cortana skills	files							UWP_dsat
+0		file on cortana skills	files							UWP_dsat
+0		file on cortana skills	files							UWP_dsat
+0		file on cortana skills	files							UWP_dsat
+0		file on cortana skills	files							UWP_dsat
+0		file on cortana skills	files							UWP_dsat
+0		file on cortana skills	files							UWP_dsat
+0		file on cortana skills	files							UWP_dsat
+0		file on cortana skills	files							UWP_dsat
+0		file on cortana skills	files							UWP_dsat
+0		file on cortana skills	files							UWP_dsat
+0		file on cortana skills	files							UWP_dsat
+0		file on cortana skills	files							UWP_dsat
+0		file on cortana skills	files							UWP_dsat
+0		file on cortana skills	files							UWP_dsat
+0		file on cortana skills	files							UWP_dsat
+0		file on cortana skills	files							UWP_dsat
+0		file on cortana skills	files							UWP_dsat
+0		file on cortana skills	files							UWP_dsat
+0		file on cortana skills	files							UWP_dsat
+0		file on cortana skills	files							UWP_dsat
+0		file on cortana skills	files							UWP_dsat
+0		govind's file on cortana skills	files							UWP_dsat
+0		govind's file on cortana skills	files							UWP_dsat
+0		govind's file on cortana skills	files							UWP_dsat
+0		govind's file on cortana skills	files							UWP_dsat
+0		govind's file on cortana skills	files							UWP_dsat
+0		govind's file on cortana skills	files							UWP_dsat
+0		govind's file on cortana skills	files							UWP_dsat
+0		govind's file on cortana skills	files							UWP_dsat
+0		govind's file on cortana skills	files							UWP_dsat
+0		govind's file on cortana skills	files							UWP_dsat
+0		doc called shiproom	files							UWP_dsat
+0		doc called shiproom	files							UWP_dsat
+0		doc called shiproom	files							UWP_dsat
+0		doc called shiproom	files							UWP_dsat
+0		doc called shiproom	files							UWP_dsat
+0		doc called shiproom	files							UWP_dsat
+0		doc called shiproom	files							UWP_dsat
+0		doc called shiproom	files							UWP_dsat
+0		doc called shiproom	files							UWP_dsat
+0		doc called shiproom	files							UWP_dsat
+0		document about cortana skills	files							UWP_dsat
+0		document about cortana skills	files							UWP_dsat
+0		document about cortana skills	files							UWP_dsat
+0		document about cortana skills	files							UWP_dsat
+0		document about cortana skills	files							UWP_dsat
+0		document about cortana skills	files							UWP_dsat
+0		document about cortana skills	files							UWP_dsat
+0		document about cortana skills	files							UWP_dsat
+0		document about cortana skills	files							UWP_dsat
+0		document about cortana skills	files							UWP_dsat
+0		my calendar skill ppt I created	files							UWP_dsat
+0		my calendar skill ppt I created	files							UWP_dsat
+0		my calendar skill ppt I created	files							UWP_dsat
+0		my calendar skill ppt I created	files							UWP_dsat
+0		my calendar skill ppt I created	files							UWP_dsat
+0		my calendar skill ppt I created	files							UWP_dsat
+0		my calendar skill ppt I created	files							UWP_dsat
+0		my calendar skill ppt I created	files							UWP_dsat
+0		my calendar skill ppt I created	files							UWP_dsat
+0		my calendar skill ppt I created	files							UWP_dsat
+0		can you find my recent .ppt	files							UWP_dsat
+0		can you find my recent .ppt	files							UWP_dsat
+0		can you find my recent .ppt	files							UWP_dsat
+0		can you find my recent .ppt	files							UWP_dsat
+0		can you find my recent .ppt	files							UWP_dsat
+0		can you find my recent .ppt	files							UWP_dsat
+0		can you find my recent .ppt	files							UWP_dsat
+0		can you find my recent .ppt	files							UWP_dsat
+0		can you find my recent .ppt	files							UWP_dsat
+0		can you find my recent .ppt	files							UWP_dsat
+0		docs created	files							UWP_dsat
+0		docs created	files							UWP_dsat
+0		docs created	files							UWP_dsat
+0		docs created	files							UWP_dsat
+0		docs created	files							UWP_dsat
+0		docs created	files							UWP_dsat
+0		docs created	files							UWP_dsat
+0		docs created	files							UWP_dsat
+0		docs created	files							UWP_dsat
+0		docs created	files							UWP_dsat
+0		Resume the deck.	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		Resume the deck.	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		Resume the deck.	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		Resume the deck.	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		Resume the deck.	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		Resume the deck.	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		Resume the deck.	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		Resume the deck.	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		Resume the deck.	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		Hey Cortana end a file to Joey.	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		Hey Cortana end a file to Joey.	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		Hey Cortana end a file to Joey.	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		Hey Cortana end a file to Joey.	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		Hey Cortana end a file to Joey.	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		Hey Cortana end a file to Joey.	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		Hey Cortana end a file to Joey.	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		Hey Cortana end a file to Joey.	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		Hey Cortana end a file to Joey.	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		The doc file is working on.	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		The doc file is working on.	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		The doc file is working on.	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		The doc file is working on.	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		The doc file is working on.	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		The doc file is working on.	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		The doc file is working on.	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		The doc file is working on.	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
+0		The doc file is working on.	web							Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
