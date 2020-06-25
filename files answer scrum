@@ -4,6 +4,7 @@ share path
 
 
 //old one
+E:\fileAnswer_data_synthesis\CMF_training\resource\Data\sharemodel
 \\DESKTOP-3J7614O\sharemodel
 sharemodel (file://DESKTOP-3J7614O/sharemodel)
 
@@ -34,12 +35,19 @@ for training data
 
 \\DESKTOP-3J7614O\sharemodeltest\Validating_Teams_20200101-20200123_6kintent_evaluation.tsv
 
+
+\\DESKTOP-3J7614O\sharemodeltest\Validating_TVS_AllDomain_SR_20200501-20200531intent_evaluation
+
+
 \\DESKTOP-3J7614O\sharemodeltest\Validating_Teams_AllDomain_SR_RandomSampling_20200401-20200430intent_evaluation.tsv
 \\DESKTOP-3J7614O\sharemodeltest\Validating_Teams_AllDomain_SR_RandomSampling_20200401-20200430slot_evaluation.tsv
 
 
 \\DESKTOP-3J7614O\sharemodeltest\Validating_SnA_SR_OutlookMobile_FileSearch_20200304-20200430intent_evaluation.tsv
 \\DESKTOP-3J7614O\sharemodeltest\Validating_SnA_SR_OutlookMobile_FileSearch_20200304-20200430slot_evaluation.tsv
+
+
+
 
 
 
