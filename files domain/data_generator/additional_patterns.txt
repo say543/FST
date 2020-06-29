@@ -1,0 +1,80 @@
+open file <filekeyword>	in this meeting
+open <filekeyword> file	in this meeting
+open my file <filekeyword> in this meeting
+open my <filekeyword> in this meeting
+send <filekeyword> with this meeting
+share <filekeyword> <filetype> with this meeting
+share <filekeyword> file with this meeting
+share <filetype> with this meeting
+send <filekeyword> deck to this meeting
+send <filekeyword> file to this meeting
+send <filekeyword> to this meeting
+send <filekeyword> <filetype> to this meeting
+send <filekeyword> file to this meeting
+send <filetype> to this meeting
+show <filekeyword> to this meeting
+show <filekeyword> <filetype> to this meeting
+
+open file <filekeyword>	with my meeting
+open <filekeyword> file	with my meeting
+open my file <filekeyword> in my meeting
+open my <filekeyword> in my meeting
+send <filekeyword> with my meeting
+share <filekeyword> <filetype> with my meeting
+share <filekeyword> file with my meeting
+share <filetype> with my meeting
+send <filekeyword> deck to my meeting
+send <filekeyword> file to my meeting
+send <filekeyword> to my meeting
+send <filekeyword> <filetype> to my meeting
+send <filekeyword> file to my meeting
+send <filetype> to my meeting
+show <filekeyword> to my meeting
+show <filekeyword> <filetype> to my meeting
+
+
+open file <filekeyword>	with my next meeting
+open <filekeyword> file	with my next meeting
+open my file <filekeyword> with my next meeting
+open my <filekeyword> with my next meeting
+send <filekeyword> with my next meeting
+share <filekeyword> <filetype> with my next meeting
+share <filekeyword> file with my next meeting
+share <filetype> with my next meeting
+send <filekeyword> deck to my next meeting
+send <filekeyword> file to my next meeting
+send <filekeyword> to my next meeting
+send <filekeyword> <filetype> to my next meeting
+send <filekeyword> file to my next meeting
+send <filetype> to my next meeting
+show <filekeyword> to my meeting
+show <filekeyword> <filetype> to my next meeting
+
+share <filekeyword> with <sharetargetname> <sharetargettype>
+share <filekeyword> <filetype> with <sharetargetname> <sharetargettype>
+
+send <filekeyword> to <contactname>
+send <filekeyword> <filekeyword> to <contactname>
+
+where is <filekeyword>
+where is <filekeyword> <filetype>
+find file created <date>
+find file shared by <contactname>
+find file similar to <filekeyword>
+find file <filekeyword>
+find <filetype>
+find documents for <contactname>
+download <filekeyword>
+download <filekeyword> <filetype>
+download file shared by <contactname>
+
+jump to <filekeyword>
+jump to <filekeyword> <filetype>
+jump to <filekeyword> shared by <contactname>
+jump to my <filekeyword>
+jump to my <filekeyword> <filetype>
+jump to my <filekeyword> shared by <contactname>
+
+send <contactname> a copy of file <filekeyword>
+send <contactname> a copy of file <filekeyword> <filetype>
+

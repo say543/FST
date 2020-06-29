@@ -1,0 +1,870 @@
+open file <filekeyword>	108
+open <filekeyword> file	86
+open <filekeyword> deck	69
+share <filekeyword> file	49
+sharefile with <tocontactname>	48
+open <filekeyword> powerpoint	42
+share <filekeyword> presentation	34
+share <filekeyword> file with my meeting	31
+share <filekeyword> file with this chat	31
+share <filetype>	30
+open <filekeyword> doc	30
+open <filekeyword> document	29
+share <filekeyword> file with rose	25
+open <filekeyword>	24
+open file	24
+share <filekeyword> deck	20
+share <filekeyword> powerpoint here	19
+share <filekeyword> powerpoint with jotham parker	19
+share files with <tocontactname>	18
+open <filetype>	18
+open <filekeyword> ppt	17
+show me my <filerecency> files	16
+download <filekeyword> file	16
+open files	16
+open <filekeyword> excel	15
+share <filekeyword> presentation here	14
+open <filekeyword> presentation	14
+show me <contactname> files	14
+share file with <tocontactname>	14
+go to my <filerecency> files	14
+open a file	14
+share <filetype> from outlook	13
+share <filekeyword> file with mohit	13
+share <filekeyword> powerpoint	13
+share <fileaction> deck	12
+sharefile <filekeyword> here	12
+go to <filerecency> files	12
+open <filekeyword> spreadsheet	12
+share <filekeyword> file here	11
+share files to <tocontactname>	11
+download file <filekeyword>	11
+share <filekeyword> file with jotham parker	10
+navigate to files	10
+show my <filerecency> files	9
+share a <filekeyword> file with my meeting	9
+sharefile <filekeyword>	9
+share <filekeyword> file with shwetambari	9
+share <filekeyword> file to this meeting	8
+download file	8
+share a file with <tocontactname>	8
+share <filekeyword> presentation with jotham parker	8
+open my <filerecency> files	8
+share file	8
+sharefile	8
+share <filekeyword> file with abhinav	8
+share <filekeyword> file with test meeting	8
+go to files	8
+<filekeyword> open file <filekeyword>	8
+open file <contactname> was working on	8
+share <filekeyword> file with	7
+navigate <filetype>	7
+share a file	7
+sharefile <filekeyword> with this chat	7
+share specs file with <meetingstarttime> meeting	7
+share <filekeyword> doc	6
+share <fileaction> powerpoint	6
+<filekeyword> share <filekeyword> file with rose	6
+share <filekeyword> powerpoint with shwetambari	6
+open <contactname> last document	6
+share <filekeyword> to this meeting	5
+share deck <contactname> was working on	5
+share <filekeyword> file with this meeting	5
+share <filekeyword> file with john lopez	5
+share <filekeyword> file with sailesh	5
+sharefile <filekeyword> with sailesh	5
+share <filekeyword> file with aditya	5
+share presentation <filekeyword> powerpoint	5
+my <filerecency> files	5
+search word <filekeyword>	5
+share files with this <sharetargettype>	5
+share my <filerecency> files	5
+share powerpoint <contactname> was working on	5
+share files	5
+share <filekeyword> deck here	5
+share <filekeyword> file to this chat	5
+sharefile with this <sharetargettype>	5
+share <filekeyword> file with jotham	5
+share <filekeyword> powerpoint with darren	5
+open <filekeyword> one note	5
+open <filekeyword> powerpoint file	5
+open <filetype> file	5
+open <contactname> file	5
+open <filerecency> files	5
+open <contactname> last file	5
+open <filekeyword> notebook	4
+<filekeyword> file	4
+open powerpoint file <filekeyword>	4
+share files <sharetargetname>	4
+share <filekeyword> file to	4
+share files <filekeyword>	4
+share <filekeyword> presentation with ana mendes	4
+find <filekeyword> document	4
+share <filekeyword> file to chat	4
+sharefile to <tocontactname>	4
+share <filekeyword> document	4
+share file <filekeyword>	4
+share <filekeyword> here	4
+share <filekeyword> presentation with shwetambari	4
+open <orderref> file	4
+<filekeyword> powerpoint	4
+open <contactname> files	4
+send a file to <tocontactname>	4
+share files with <sharetargettype>	4
+share <filekeyword>	4
+share <filekeyword> spreadsheet	4
+share <filekeyword> file with angelina	4
+share attached <filetype>	4
+share <filekeyword> powerpoint with jotham	4
+open <contactname> deck	4
+share <filekeyword> with chris yoon	3
+sharefile <filekeyword> with rose	3
+show <filerecency> files	3
+open <orderref> document	3
+sharefile <filekeyword> with jotham parker	3
+share <filekeyword> file with move it	3
+share <filekeyword> powerpoint with ana mendes	3
+<filekeyword> deck	3
+share a <filekeyword> file her	3
+send a files to <tocontactname>	3
+share <filekeyword> file to lina	3
+share <filekeyword> deck with ashok	3
+open last file <contactname> was working on	3
+share file <contactname> was working on with netalee	3
+share <filekeyword> file with shravan	3
+download a file	3
+share <filekeyword> file to this post	3
+share <filekeyword> file with ana mendes	3
+share <fileaction> presentation	3
+search for <filekeyword> deck	3
+<filekeyword> download <filekeyword> file	3
+share document	3
+share <filekeyword> ppt	3
+share presentation with <tocontactname>	3
+share <filekeyword> file with naseem	3
+open <filekeyword> files	3
+find <filekeyword> file	3
+show me <filerecency> files	3
+show <contactname> files	3
+sharefile with my <meetingstarttime> meeting	3
+show <filekeyword> file with my meeting	3
+send a file	3
+share <filekeyword> spreadsheet with simon	3
+sharefile with <sharetargettype>	3
+sharefile <filekeyword> powerpoint with jotham	3
+share <filekeyword> powerpoint with angelina	3
+<filekeyword> share <filekeyword> file with my meeting	3
+share document <filekeyword> in meeting	3
+sharefile with <tocontactname> meeting	3
+open excel <contactname> was working on	3
+show <filetype> from outlook	2
+share file with <tocontactname> now	2
+share powerpoint with <tocontactname>	2
+share <filekeyword> deck with aliza	2
+sharefile <filekeyword> with mohit	2
+share a <filekeyword> file with rose	2
+share <filekeyword> file with void	2
+share <filekeyword> file with harris	2
+share <filekeyword> file with rahul	2
+sharefile <filekeyword> powerpoint here	2
+share <filekeyword> powerpoint file with jotham	2
+sharefile <filekeyword> with test meeting	2
+navigate to <filerecency> files	2
+go to <filefolder>	2
+open files from <contactname>	2
+<filekeyword> share file <filekeyword> with rose	2
+sharefile <filekeyword> to this meeting	2
+share <filekeyword> file to this	2
+open excel file <contactname> was working on	2
+share <filekeyword> file with mark rubinstein	2
+share <filekeyword> file her	2
+share a document with <tocontactname>	2
+share <filekeyword> deck with abhinav chauhan	2
+share file with my <meetingstarttime> meeting	2
+share a <filekeyword> file here	2
+share test file with my <meetingstarttime> meeting	2
+open deck <fileaction>	2
+share file with my meeting at <meetingstarttime>	2
+share file with <meetingstarttime> meeting	2
+show <filekeyword> file with netalee golan	2
+download <filekeyword> doc	2
+share <filekeyword> doc with emma	2
+share <filekeyword> file with jon lopez	2
+share <filekeyword> powerpoint with jonathan	2
+share <filekeyword> file with calvin	2
+share <filekeyword> powerpoint with ana carolina	2
+share <filekeyword> deck with sarah	2
+sharefile <filekeyword> powerpoint with jotham parker	2
+send <tocontactname> a note	2
+open document for <filekeyword>	2
+open document <filekeyword>	2
+open powerpoint file <contactname> was working on	2
+send <filekeyword> file to adi miller	2
+share fat <filetype>	2
+send ashok <filekeyword> deck	2
+share <filekeyword> file with binu	2
+share <filekeyword> file with abby know	2
+open last document <contactname> was working on	2
+share <filekeyword> file to lina kuang	2
+share <filekeyword> file with jonathan parker	2
+share <filekeyword> file to also	2
+open <filekeyword> notes	2
+find my <filerecency> files	2
+<filekeyword> presentation	2
+share <filekeyword> document with harris	2
+share document <filekeyword>	2
+share <filekeyword> spec file	2
+share <filekeyword> file to paul liu	2
+share <filekeyword> file with arun mehta	2
+share <filekeyword> file with abraham jacob	2
+share file <sharetargetname>	2
+share <filekeyword> with naseem	2
+share a platform file with my <meetingstarttime> meeting	2
+share document with <tocontactname>	2
+share <filekeyword> file with paul liu	2
+share <filekeyword> file with haim somech	2
+share <filekeyword> powerpoint on this chat	2
+<filekeyword> file with my meeting	2
+share <filekeyword> file with eran yariv	2
+share my <filerecency> files to this chat	2
+share <contactname> files	2
+share <filekeyword> file with akshay	2
+<filekeyword> share <filekeyword> file with this chat	2
+share <filekeyword> powerpoint with abraham jacob	2
+send file to <tocontactname>	2
+download <filetype>	2
+download files	2
+navigate to <filetype>	2
+show <contactname> downloads	2
+<filename>	2
+open powerpoint <contactname> was working on	2
+open 3s file <filekeyword>	2
+open <filetype> files	2
+share file with <sharetargetname>	1
+share <filename> file here	1
+send <filekeyword> file to ori barak	1
+share <filekeyword> with pengxia	1
+open kingston working deck work	1
+share tea flavors powerpoint <filekeyword>	1
+send <filekeyword> file to haim somech	1
+share files <tocontactname>	1
+share <filekeyword> file to recap	1
+share <filekeyword> powerpoint move shwetambari	1
+<filekeyword> files	1
+share <filekeyword> doc with senthil roger on	1
+share <filekeyword> file with shawn chang	1
+share file <contactname> was working on with	1
+send <filekeyword> file to jotham parker	1
+sharefile <filekeyword> file with this meeting	1
+find powerpoint deck from <contactname>	1
+share <filekeyword> powerpoint with jotham file	1
+share <filekeyword> files to this meeting	1
+share <filekeyword> document to sarah	1
+share file with	1
+send file <contactname> was working on to netalee	1
+open food groups presentation	1
+share <filekeyword> with scheurer	1
+open document <contactname> sent me	1
+share files <filekeyword> this chat	1
+share <filekeyword> deck with allison	1
+share deck to this <sharetargettype>	1
+share <filekeyword> file with mobile	1
+find <contactname> files	1
+sharefile <filekeyword> with this meeting	1
+sharefile <filekeyword> in here	1
+<filekeyword> file with rally	1
+send expended logging file to <tocontactname>	1
+share <filekeyword> file with muhnot	1
+share <filekeyword> file with peter	1
+share powerpoint <fileaction> on	1
+open <filekeyword> onenote	1
+share this file <filekeyword>	1
+open <contactname> documents	1
+share <filekeyword> powerpoint with john lopez	1
+name open <filekeyword> excel	1
+search <filerecency> file named shiprock	1
+share <filekeyword> file with actually but	1
+share <filekeyword> file with wit	1
+open <filetype> out	1
+share <filekeyword> powerpoint with an a	1
+share <filekeyword> powerpoint with should embody	1
+show <contactname> files for tomorrows meeting	1
+send <filekeyword> dr boaz sapir	1
+<filekeyword> share <filekeyword> file here	1
+<filekeyword> file with sarah	1
+share <filekeyword> file with ana carolina	1
+share <filekeyword> doc with ryan	1
+share <filekeyword> with shweta	1
+share <filekeyword> files with peter	1
+send <filekeyword> document	1
+sharefile <filekeyword> with shawn chang	1
+share <filekeyword> file with and	1
+open last powerpoint deck <contactname> was working on	1
+sharefile <filekeyword> with shalach	1
+sure <filetype> from outlook	1
+open file <filekeyword> word doc	1
+share <filekeyword> powerpoint deck with jing guan	1
+share <filekeyword> spreadsheet with ryan	1
+<contactname> file	1
+show <filekeyword> file with shira weinberg	1
+share tea flavors <filetype>	1
+<filekeyword> powerpoint with tom cruise	1
+send <filekeyword> file to gauravi	1
+open <contactname> latest open file	1
+share <filekeyword> file with peter morris	1
+<contactname> sample dialogues document	1
+open <filetype> ument <filetype>	1
+share it with <tocontactname>	1
+open file that allows sent <tocontactname>	1
+sharefile specs with <tocontactname>	1
+share of file with <tocontactname>	1
+sharefile <filekeyword> file to this meeting	1
+share <filekeyword> presentation with ana	1
+share <filekeyword> this meeting	1
+find <filekeyword> spreadsheet	1
+sure <filekeyword> files with peter	1
+share <filekeyword> file with ana	1
+share <contactname> file with tosin	1
+share <fileaction> a powerpoint	1
+<filetype> in files	1
+share files with <filekeyword> now	1
+share file <contactname> was working on with omri	1
+share <filekeyword> file with lina kuang	1
+share <contactname> file with michaela	1
+share <filekeyword> deck with this meeting	1
+sharefile with someone	1
+share <filekeyword> with peter	1
+share skills file which <contactname>	1
+sharefile with	1
+share <filekeyword> file with this track	1
+share <filekeyword> excel to christine	1
+share <filekeyword> deck with uh	1
+share <filekeyword> powerpoint with vinnakota	1
+open morning active dot csv with <tocontactname>	1
+share <filekeyword> file with short dragon parker	1
+share <filekeyword> file to be now	1
+<filekeyword> share <filekeyword> file	1
+open <contactname> apps file	1
+<filekeyword> share <filekeyword> file with this meeting	1
+share <filekeyword> presentation with ana carolina	1
+share <filekeyword> with ana carolina	1
+share <filekeyword> file with saoji	1
+sharefile <sharetargetname>	1
+<filekeyword> share <filekeyword> file with ming yang	1
+share <filekeyword> file with mohd	1
+share <filekeyword> with jotham parker	1
+share test <filekeyword> her	1
+share <filekeyword> file with brown	1
+share <filekeyword> file with with	1
+open clothes <contactname> files	1
+so my <filerecency> files	1
+share <filekeyword> file with <filekeyword> meeting	1
+open deck in <fileactioncontext>	1
+share <filekeyword> file with brandel	1
+open file <contactname> sent me	1
+share <filekeyword> file to celsius	1
+share <filekeyword> doc with chris yoon	1
+show <filekeyword> file with sharat	1
+share <filekeyword> doc back with chris yoon	1
+open doc from <contactname>	1
+share <filekeyword> with emma	1
+share <filekeyword> powerpoint is jotham parker	1
+show <contactname> file with omri dvir	1
+im files from <contactname>	1
+show <contactname> file with kayla	1
+search for <filekeyword> file	1
+open deck attached to this <fileactioncontext>	1
+share skills file <filekeyword>	1
+sharefile crash game with <tocontactname>	1
+share <filekeyword> powerpoint with shorter	1
+share file <contactname> was working on with shira	1
+send <filetype>	1
+sharefile <filekeyword> powerpoint with shravan chava	1
+<filekeyword> file with mohit	1
+show me all <tocontactname> files	1
+<filekeyword> deck with sarah	1
+bring up <filekeyword> file	1
+open <filekeyword> file with my meeting	1
+share <filekeyword> doc here	1
+share <filekeyword> file with ave	1
+share <filekeyword> file to peter	1
+shared <filetype> from outlook	1
+share <filekeyword> presentation with jonathan	1
+share <filekeyword> excel file with john lopez	1
+whats my most <filerecency> file	1
+share <filekeyword> with shawn chang	1
+open <filekeyword> word document	1
+open fell <filekeyword> in teams	1
+share <filekeyword> presentation with abraham jacob	1
+<tocontactname> share file with <tocontactname>	1
+<filekeyword> share <filekeyword> file with mohit	1
+find files	1
+show me skill texas measurement dog that <contactname> sent	1
+please share file with with <sharetargetname>	1
+show files	1
+bring up <contactname> fy20 ok r	1
+search <filekeyword> file with this chat	1
+find file <filekeyword>	1
+show <contactname> files from yesterdays meeting	1
+show <filekeyword> deck with mirror	1
+<contactname> answer file	1
+seattle document to <filekeyword>	1
+<contactname> files	1
+share a document	1
+share <filekeyword> powerpoint now	1
+share <filekeyword> excel with naseem	1
+share <filekeyword> excel file with waleed	1
+share <filekeyword> file with darryl	1
+share <filekeyword> file with jim xu	1
+sharefile <filekeyword> with register	1
+share <filekeyword> file with anju	1
+sharefile <filekeyword> with jim	1
+show <filekeyword> file to this chat	1
+share file <filekeyword> with	1
+share document <filekeyword> to kiki hu	1
+share file <contactname> was working on with lisa	1
+<filekeyword> file with test meeting	1
+share <filekeyword> spreadsheet to this meeting	1
+share <filekeyword> powerpoint presentation with jotham parker	1
+share first file with this <sharetargettype>	1
+send <filekeyword> deck to center	1
+share <filekeyword> file with alexa	1
+send her <filekeyword> powerpoint	1
+share <filekeyword> powerpoint file with jotham parker	1
+share <filekeyword> deck with hao	1
+show kickoff script to meeting	1
+show <filekeyword> files to polo	1
+share human signals and device intelligence dot ppt x with <tocontactname>	1
+share <contactname> shadow file sample dialogue stock with brian bilby	1
+send files	1
+send site and dock deck to aj	1
+share <filekeyword> file with amena kanchwala	1
+share <filekeyword> deck with shelley	1
+select <filekeyword> document to harris	1
+send file <contactname> was working on with ryan	1
+share <filekeyword> document with harish	1
+share <filekeyword> deck with moji	1
+sharefile to <sharetargettype>	1
+share <filekeyword> document in this chat	1
+share <filekeyword> file with onkar	1
+share <filekeyword> powerpoint file here	1
+share <orderref> file	1
+ill close president share <filekeyword> powerpoint	1
+share <filekeyword> doc with eugene	1
+share <filekeyword> powerpoint in this chat	1
+share <filekeyword> document with std	1
+court share <filekeyword> word file with same	1
+share <filekeyword> spreadsheet with timer	1
+open ts file <filekeyword>	1
+open <contactname> spreadsheet	1
+open all <filetype> files	1
+open <filekeyword> docx	1
+open <filekeyword> word doc	1
+open 3 years file <filekeyword>	1
+open last powerpoint that <contactname> was working on	1
+open file <filekeyword> deck	1
+open file document	1
+open document	1
+should open <filekeyword> powerpoint	1
+open <filekeyword> ppt x	1
+open excel document <contactname> was working on	1
+open my <filerecency> deck	1
+open <filerecency> excel	1
+open files <filekeyword>	1
+open file <filekeyword> document	1
+show me <filekeyword> document	1
+<filekeyword> document	1
+find documents in files	1
+word powerpoint with <contactname>	1
+<filerecency> ppt files	1
+<contactname> casting deck	1
+try again search file that i <filerecency> worked on	1
+search for <filekeyword> slide deck	1
+show me <filekeyword> files	1
+<filekeyword> spec	1
+search <filekeyword> file here	1
+find <contactname> files shared with single	1
+<filekeyword>	1
+search for <filekeyword>	1
+search files please <filekeyword>	1
+testing dot <filetype>	1
+show <filekeyword> file with fan	1
+share <filekeyword> deck with lisa	1
+<filekeyword> share <filekeyword> file with meeting	1
+share <filekeyword> file with shira weinberg	1
+share <filekeyword> powerpoints file here	1
+attach share <filetype>	1
+send a document	1
+sharefile <filekeyword> file with test meeting	1
+share <filekeyword> file with yongdong wang	1
+share <filekeyword> file with nir	1
+share planning file with my <meetingstarttime> meeting	1
+send <filekeyword> file	1
+share <filekeyword> deck with chad	1
+share <filekeyword> deck with ankur agarwal	1
+send file	1
+sharefile <filekeyword> deck meeting	1
+share a file <filekeyword>	1
+share <filekeyword> powerpoint with shwetambari mokadam	1
+share <filekeyword> file with my manager	1
+share <filekeyword> file with my test meeting	1
+sharefile <filekeyword> on this chat	1
+sharefile <filekeyword> with vivek	1
+share <filekeyword> deck with idan haim	1
+share <filekeyword> powerpoint with darrin	1
+sharefile <filekeyword> to this chat	1
+phone share water powerpoint with <tocontactname>	1
+share presentation <date>	1
+share <filekeyword> file with felix	1
+share <filekeyword> powerpoint file in this chat window	1
+share <filekeyword> powerpoint deck with yujia zhao	1
+share <filekeyword> slide file with itamar	1
+share <filekeyword> document with boaz sapir	1
+share a <filerecency> deck with abhinav chauhan	1
+share files with someone	1
+share <filekeyword> file with sorrow	1
+share <filekeyword> file with abraham	1
+share <filetype> here	1
+share <filekeyword> file in this chat	1
+sharefile <filekeyword> with aditya chandran	1
+share explosion file with this <sharetargettype>	1
+send a picture to <tocontactname>	1
+share spreadsheet with <tocontactname>	1
+download <filekeyword> deck	1
+download file <filekeyword> spec	1
+well you go to <contactname> downloads	1
+whats my <filerecency> files	1
+open <contactname> shiproom document	1
+open <filekeyword> spreadsheet with jim	1
+open <filekeyword> documents	1
+open <contactname> word doc	1
+what i would suggest is open file <filekeyword>	1
+open files <contactname> downloaded	1
+open file called <filename>	1
+so open file	1
+open file document <filekeyword>	1
+open my <filerecency> ppt	1
+open file documentorg its	1
+open <filekeyword> word file	1
+open last excel spreadsheet <contactname> was working on	1
+goodbye speech with word open file <filekeyword>	1
+open <filerecency> file i was working on	1
+open just open a file	1
+open file from <contactname>	1
+show presentation <filekeyword> powerpoint	1
+sharing ship room deck to my <meetingstarttime> meeting	1
+open file <contactname> shared with arun mehta	1
+share <filekeyword> excel file here	1
+share <filekeyword> excel file with shelley	1
+open first file in this page	1
+share <contactname> skills if you file to this meeting	1
+share doc <filekeyword> with chris yoon	1
+share file to	1
+find a <filekeyword> deck you dont need this site	1
+open design doc for <filekeyword>	1
+find <filekeyword> deck	1
+share <filekeyword> file with sanika	1
+share <filekeyword> file with this post	1
+share <contactname> list deck	1
+show me excel <contactname> was working on	1
+open <filekeyword> file named document	1
+share <filekeyword> file to xiaoming	1
+open files <contactname> was working on	1
+sharefile 2 <tocontactname>	1
+share <filekeyword> file to charlotte	1
+show me all files that <contactname> has shared	1
+search <filetype>	1
+share <filekeyword> file with matt shadbolt	1
+share <filekeyword> file with xiaojie	1
+share <filekeyword> file with sharat	1
+share <fileaction>	1
+share <filekeyword> file with schwidder	1
+yeah <filekeyword> file with my meeting	1
+share <filekeyword> file with blake shepard	1
+share file <contactname> was working on	1
+open document <contactname> shared with eran	1
+share <filekeyword> file with emma	1
+share <filekeyword> file for this meeting	1
+share <filekeyword> file with pratik	1
+share <filekeyword> file to shelter	1
+find <filekeyword> powerpoint	1
+sharefile <filekeyword> presentation here	1
+send <filekeyword> to adi miller	1
+<filekeyword> share <filekeyword> file with abby know	1
+done uh a share <contactname> last word deck	1
+share <filekeyword> file with akshay bhat	1
+open <filekeyword> s presentation	1
+your file	1
+search for files	1
+share <filekeyword> file with graham sheldon	1
+such my <filerecency> files	1
+share cleanup spreadsheet <filekeyword>	1
+share <filekeyword> file with august	1
+pull up <filekeyword> powerpoint	1
+open that <filekeyword> doc	1
+share file with <tocontactname> meeting	1
+open <contactname> latest open a file	1
+open tea flavors <filetype>	1
+bring up <filekeyword> powerpoint	1
+open <filekeyword> sheet	1
+share <filekeyword> file this	1
+share <filekeyword> file toshiba	1
+send file <filekeyword>	1
+search for <filekeyword> document	1
+share <filekeyword> files with mike	1
+share <contactname> last file with	1
+share <filekeyword> powerpoint with trader	1
+open <filekeyword> in teams	1
+<filekeyword> pdf file here	1
+share <filekeyword> file with shravan kumar chava	1
+share this file with this chat	1
+share groups <filetype>	1
+share <filekeyword> file with random	1
+share <filekeyword> file it up now	1
+show me <contactname> powerpoint from input summit	1
+open powerpoint from <contactname>	1
+send latest <filekeyword> file to boil	1
+send allison <filekeyword> deck	1
+show me my files <contactname> was working on	1
+navigate to file	1
+open a file named <filename>	1
+find me <filekeyword> file	1
+<filekeyword> spreadsheet	1
+check <contactname> file	1
+sharefile skills fa to this <sharetargettype>	1
+share file <contactname> was working on with david	1
+share speaks file with <meetingstarttime> meeting	1
+file <contactname> was working on	1
+her <filekeyword> file with rahul	1
+share <contactname> last file to yujia	1
+share <filekeyword> file with ankur	1
+find a file	1
+bring up my <filekeyword> deck from today	1
+<filekeyword> excel to christian	1
+open <contactname> fhl demo deck	1
+open quick notes for <contactname>	1
+share <filekeyword> file with joey	1
+send <filekeyword> file to baoyao	1
+share <contactname> planets presentation	1
+share <filekeyword> file with you	1
+share <filekeyword> file with with ambry mcadam	1
+share <filekeyword> presentation with jonathan parker	1
+send <filekeyword> file to netalee golan	1
+show <filekeyword> doc	1
+share <filekeyword> file with john smith	1
+share <filekeyword> powerpoint with jordan body	1
+share <filekeyword> deck with sara	1
+open file <filekeyword> file	1
+share deck <contactname> was working	1
+find <filerecency> file	1
+open <filetype> document	1
+open <filekeyword> xl sheet	1
+share a file with someone	1
+send <filekeyword> file with adi miller	1
+sheriff <filekeyword> powerpoint with ana mendes	1
+find files from <contactname>	1
+open <filekeyword> docume	1
+show my <filerecency> attachments	1
+<filekeyword> download file <filekeyword>	1
+open last file from <tocontactname>	1
+share testing powerpoint with <filekeyword> to	1
+download presentation	1
+go to files <contactname> was working on	1
+share <contactname> ice cream flavors presentation	1
+share <contactname> presentation	1
+share this file <contactname>	1
+send <filekeyword> file to climb solver	1
+share <filekeyword> file with me know	1
+sharefile <filekeyword> with move it	1
+share <filekeyword> powerpoint with tom cruise	1
+share <filekeyword> powerpoint with shweta	1
+show me <filekeyword> file	1
+sharefile specs <filekeyword>	1
+share of file	1
+can you open <filekeyword> document	1
+what are <filerecency> files shared by anyone	1
+<filekeyword> excel to christine	1
+share <filekeyword> file with latency	1
+show me <contactname> input summit files	1
+share <filekeyword> file to me	1
+<tocontactname> sharefile to <tocontactname>	1
+share presentation <filekeyword> with abraham jacob	1
+share voice kills file with this <sharetargettype>	1
+open word file <contactname> was working on	1
+sharefile <filekeyword> powerpoint with shwetambari	1
+share <filekeyword> file with yuhua	1
+show me word <contactname> was working on	1
+share <filekeyword> file with abby now	1
+share <filekeyword> file with anand	1
+share <filekeyword> if a file to this meeting	1
+share <filekeyword> powerpoint with shravan	1
+share <filekeyword> file to my job	1
+sharefile <filekeyword> file with mohit	1
+open document dot doc	1
+open <filekeyword> slide deck	1
+share <filekeyword> excel with chris yoon	1
+navigate me <contactname> files	1
+open <contactname> documents i dont know why	1
+open <contactname> fhl demo powerpoint	1
+share presentation <contactname> was working on	1
+open word i was <fileaction> on	1
+share <contactname> file	1
+share <filekeyword> file with rally	1
+find ship room template <filetype>	1
+share <filekeyword> file it up enough	1
+share <contactname> last file	1
+find file	1
+show <filerecency> fires to chat	1
+file <filekeyword>	1
+<filekeyword> ppt	1
+where is <contactname> downloads	1
+show me <filefolder> profile	1
+<filekeyword> presentation with strawberry markham	1
+help me find <filerecency> documents	1
+share <filekeyword> doc x	1
+share <filekeyword> file with puneet	1
+share <filekeyword> word file with naseem	1
+share file <filekeyword> with rahul	1
+share <contactname> file to edward	1
+<filekeyword> document with harris	1
+share <filekeyword> with jim boyle	1
+right yeah ok share <filekeyword> powerpoint	1
+share <filekeyword> presentation with shawn	1
+sharefile in <sharetargetname>	1
+share <filekeyword> with brent	1
+show <filekeyword> fire to church	1
+share <filekeyword> to daniel chu	1
+share ppt with <tocontactname>	1
+share specs file <filekeyword>	1
+share <filekeyword> file with nishant	1
+share <filekeyword> files to paul liu	1
+share excel document with <tocontactname>	1
+share <filekeyword> file with abhinav chauhan	1
+sharefile <filekeyword> file	1
+share <filekeyword> file in open chat window	1
+shared <filekeyword> deck	1
+show <filerecency> files to church	1
+share <filekeyword> document with sharat	1
+shell <filekeyword> file to chat	1
+share <filekeyword> deck with center	1
+share <filekeyword> with a join andy	1
+sharefile <filekeyword> with anju	1
+share <filekeyword> deck with hasya	1
+share <filekeyword> file with my meeting to 2	1
+sharefile <filekeyword> with mohammad	1
+sharefile with <contactname> 955 am meeting	1
+share <contactname> sample dialogue stock file with brian bilby	1
+share a file with this <sharetargettype>	1
+share a <filetype>	1
+<filekeyword> share <filekeyword> powerpoint presentation	1
+share my <filekeyword> presentation	1
+open hedra bod <filetype>	1
+open <filekeyword> spec file	1
+open meeting decks and <filekeyword> doc	1
+open my <filerecency>	1
+open <filekeyword> exel	1
+open easy file <filekeyword>	1
+<filekeyword> open <filekeyword> file	1
+open word document <contactname> was working on	1
+open <filekeyword> docs	1
+open <filekeyword> a file	1
+go to <contactname> checklist why you ji a	1
+go to <contactname> downloads	1
+go to <filerecency> fires	1
+go to file	1
+go to <filekeyword>	1
+share <filekeyword> with abraham jacob	1
+show me <contactname> file	1
+check <contactname> hero skill deck	1
+show my <filerecency> spreadsheet	1
+sure <filekeyword> document	1
+can you find <contactname> latest powerpoint presentation	1
+search file <filekeyword> notes	1
+show <contactname> hero skills deck	1
+search <filekeyword> file with	1
+sheriff file with <contactname>	1
+show <filekeyword> file	1
+show me some files	1
+search <filekeyword>	1
+say my <filerecency> files	1
+<filekeyword> powerpoint presentation	1
+those are deck i was <filerecency> working on	1
+share <filekeyword> files with this person	1
+share <filekeyword> file with mishra	1
+share <filekeyword> word documentword document here	1
+share <filekeyword> file with neil	1
+share <filekeyword> doc on this chat	1
+send file to <tocontactname> send file to <tocontactname>	1
+share rl doc <filekeyword> document	1
+<filekeyword> sharefile <filekeyword> to rose	1
+share <filekeyword> deck on this chat	1
+share <filekeyword> file with yujia zhao	1
+share <filekeyword> file bit	1
+share <filekeyword> with yujia zhao	1
+share my <filerecency> files with simon	1
+share deck i was <fileaction> on	1
+share <filekeyword> deck hunger chat	1
+share <contactname> mapping file with sheeran ive night	1
+sharefile <filekeyword> powerpoint with jot	1
+sharefile <filekeyword> with abhinav	1
+share <filekeyword> excel is here	1
+share <filekeyword> file with simon	1
+share my <filerecency> spreadsheet	1
+share <filekeyword> deck with yuzhe zhou	1
+share <filekeyword> with this chat	1
+share october 15th <filekeyword> with moe	1
+share <filekeyword> file to a detail	1
+show <filekeyword> with moheet	1
+share <filekeyword> file with deepthi	1
+resend <filetype> file	1
+share <contactname> battery test file with <contactname> meeting	1
+share <filekeyword> file with darren	1
+share <filekeyword> file to you talk to	1
+<filekeyword> cortona share <filekeyword> file to death	1
+sharefile <filekeyword> with jotham	1
+sharefile <filekeyword> powerpoint at gotten	1
+sheer container test dot xslx with <tocontactname>	1
+share <filekeyword> file with idan haim	1
+share files with <filekeyword> file	1
+sharefile <filekeyword> power point here	1
+share fell <filekeyword>	1
+share <filekeyword> doc with angus	1
+share slide file with <tocontactname>	1
+share <filekeyword> fell with fun	1
+share deck file with <tocontactname>	1
+share file <filekeyword> with itamar	1
+share <filekeyword> with sweet ambery	1
+share <filekeyword> doc with boaz sapir	1
+share <filekeyword> file with itamar	1
+share <filekeyword> deck with this chat	1
+send a file <filekeyword>	1
+share <filekeyword> fell to this chat	1
+share	1
+share this with <tocontactname>	1
+sharefile with test <sharetargettype>	1
+share <tocontactname> fine	1
+<filekeyword> spreadsheet to this channel	1
+share a platform file with <tocontactname> meeting	1
+share platform fans to my <meetingstarttime> meeting	1
+sharefile <filekeyword> with darren	1
+share my <filerecency> files with this chat	1
+share <filekeyword> file with es to meeting	1
+share <filekeyword> file with shiva naidu	1
+share <filekeyword> with yuhua	1
+share <filekeyword> with kate	1
+chill <filekeyword> file with my meeting	1
+share <filekeyword> file with felix zhang	1
+sharefile with <meetingstarttime> meeting	1
+download <filekeyword> presentation	1
+download <filetype> file	1
+find <contactname> downloaded files	1
+go to <contactname> files	1
+show me <filerecency> fires	1
+<filekeyword> open deck <filekeyword>	1
+open file for <filekeyword>	1
+open deck <filekeyword>	1
+open <contactname> shiproom doc	1
+open document by <contactname>	1
+open file in <fileactioncontext>	1
+open last <filekeyword>	1
+open <fileskeyword>	1
