@@ -123,8 +123,11 @@ class Data(object):
 
         ## also loading addtional_patterns.txt but this is not passed as an argument
         ## ? better to have its own functionality 
+        ## change to my own source
+
         print("Loading additional patterns.")
-        self._load_additional_positive_patterns('additional_patterns.txt', self.max_freq)
+        #self._load_additional_positive_patterns('additional_patterns.txt', self.max_freq)
+        self._load_additional_positive_patterns('additional_patterns_chiecha.txt', self.max_freq)
         # self._augment_patterns()
 
     def split_positive_patterns(self, pattern_selection_threshold=0.05):
@@ -142,11 +145,21 @@ class Data(object):
         # plt.show()
 
         ## ? not sure how this frequency work
-        ## since freq does not matter , so here doing nothing
+        ## it seems like originla pattern 's freq still matter
         split_freq = int(self.max_freq * pattern_selection_threshold)
+
+
+        print("Generating positive data from patterns.")
+        print("split_freq: {}".format(
+            split_freq))
 
         ## for pattern frequency >= split_freq, cap it with 
         for pattern, freq in self.patterns.items():
+
+            # for debug
+            print("pattern: {}, freq: {} ".format(
+            pattern, freq))
+
             if freq >= split_freq:
                 self.high_freq_patterns[pattern] = freq
             else:
@@ -239,8 +252,19 @@ class Data(object):
         else:
             freq = int(freq * len(tags) * self.posdata_scale_multiplier)
 
+        ## for debug
+        ## for high frequency patterns : 
+        ## posdata_scale_multiplier(defualt 1000) * len(tags) * high_freq_multiplier(9)
+        ## for lower frequency patterns: 
+        ## posdata_scale_multiplier(defualt 1000) * len(tags) * low_freq_multiplier(1) 
+
+        # but finally there is a place to remove duplicate queries       
+        print("pattern: {}, generate_freq: {}".format(
+            pattern, freq))
+
         queries = []
-        for _ in range(freq):
+        #for _ in range(freq):
+        for iter in range(freq):
 
             ## use pattern as originla query
             query = pattern
@@ -274,13 +298,24 @@ class Data(object):
                     if tag in ['filekeyword', 'fileskeyword', 'filename']:
                         self._add_tagvalue_to_keylist(random_tag)
 
+                    ##for debug
+                    #print("random_tag: {}, iteration {}".format(
+            #random_tag,iter))
+
                     query = query.replace("<{}>".format(tag), random_tag)
 
                     # append salutions randomly
                     prefix = random.choices(salutations, k=1)[0]
                     query = prefix + query
 
-            queries.append(query)
+
+
+            ##for debug
+            #print("query: {}".format(query))
+            #queries.append(query)
+
+        #print("len: {}".format(len(queries)))
+
 
         return queries
 
@@ -292,6 +327,12 @@ class Data(object):
             queries.extend(self._get_randomtag_queries(
                 # pattern, freq*freq_multiplier)) # Removed dataset freq to give equal importance
                 pattern, freq_multiplier))
+
+        ##for debug
+        print("number of queries: {}".format(
+            len(queries)))
+
+
         return queries
 
     def get_positive_data(self, high_freq_multiplier=9, low_freq_multiplier=1):
@@ -310,7 +351,8 @@ class Data(object):
         self.positive_data.extend(self._get_queries(
             self.low_freq_patterns, low_freq_multiplier))
 
-        ## do deuplication for positive_data : list of list
+        ## do deduplication for positive_data : list of list
+        ## here perform deduplication for all positive generated data
         self.positive_data = set(self.positive_data)
 
         ## keylist stores what filekeyword / fileskeyword/ filesname selected through positive data generating
