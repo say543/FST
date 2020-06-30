@@ -28,7 +28,7 @@ def clean_query(query):
     return " ".join(query_filtered).replace("< ","<").replace(" >",">")
 
 
-def process_tagged_queries(queries, annotated_queries):
+def process_tagged_queries(queries, annotated_queries, domain):
     # assert(len(annotated_queries)==len(queries), "Invalid query, annotation set")
     
     # if needed, change this to list to also store list of queries under a pattern
@@ -159,7 +159,7 @@ for domain in ['FILES', 'CALENDAR', 'PEOPLE', 'EMAIL', 'TEAMSMESSAGE', 'NOTE', '
 ##     ? not sure if data frame will perform deduplication
     pos_queries_cnt += len(target_df)
     
-    patterns_dict, tag_values = process_tagged_queries(target_df.MessageText, target_df.JudgedConstraints)
+    patterns_dict, tag_values = process_tagged_queries(target_df.MessageText, target_df.JudgedConstraints, domain)
     
     #collecting all the tags
     for tag, values in tag_values.items():
@@ -177,8 +177,8 @@ for domain in ['FILES', 'CALENDAR', 'PEOPLE', 'EMAIL', 'TEAMSMESSAGE', 'NOTE', '
         for pattern, count in reversed(sorted(all_patterns.items(), key=lambda x: x[1])):
             f.write('{}\t{}\n'.format(pattern, count))
 
+    ## if needing to output tags, open here
     ##print('Total postive queries found: {} | Total patterns: {}'.format(pos_queries_cnt, len(all_patterns)))
-
     ##for tag, values in all_tags.items():
     ##    with open('./placeholder_tags_chiecha/{}.txt'.format(tag.replace("_","")), 'w', encoding='utf-8') as f:
     ##        for value in set(values):
