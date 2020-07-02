@@ -134,6 +134,17 @@ prefixWtihVerbWithMy =set([
     "",
     ])
 
+
+blackListQuerySet = {
+    # should be file_search
+    "lt review deck",
+    "lt review discussion",
+    # shoule be file_open
+    "Open the file that shared with me.",
+    'Open the file that I shared with me new.',
+    "Open the file I worked with Elizabeth on."
+    }
+
 with codecs.open('teams_intent_training.tsv', 'r', 'utf-8') as fin:
     for line in fin:
         line = line.strip();
@@ -367,11 +378,18 @@ with codecs.open('teams_intent_training.tsv', 'r', 'utf-8') as fin:
                     for prefix in prefixWtihVerbWithMy:
                         for verb in openverbs:
                             if linestrs[2].lower().startswith((prefix+verb).lower()):
-                                if ((verb.lower().startswith('open')) and linestrs[2].lower().find("with") != -1):
+                                if ((verb.lower().startswith('open')) and linestrs[2].lower().find("with") != -1) and linestrs[2].lower():
                                     print(linestrs[2])
+
+                                    # 06102020, open with person,  open xxx wtih file is hard to tell
+                                    # typical examples
+                                    # open files with mohit , potential file_share
+                                    # open files with fruit ppt, potential file open,open xxx wit xxx ppt  , add feature for this 
+                                    # Open the file that shared with me, all shars
+
+                                    # to prevent regression,  do not change training data so far
                                     intent = "file_share"
                                 else:
-                                    #print(linestrs[2])
                                     intent = "file_open"
                                 match = True
                                 break
@@ -404,7 +422,12 @@ with codecs.open('teams_intent_training.tsv', 'r', 'utf-8') as fin:
                                     print(linestrs[2])
                                     intent = "file_share"
                                 else:
-                                    #print(linestrs[2])
+                                    # review will overtrigger for this query and change to open
+                                    # so ading to blacklist
+                                    #if linestrs[2].lower() == 'lt review deck':
+                                    #    print(prefix+verb)
+                                    #    print('mode112')
+                                    #    print(linestrs[2])
                                     intent = "file_open"
                                 match = True
                                 break
@@ -422,7 +445,11 @@ with codecs.open('teams_intent_training.tsv', 'r', 'utf-8') as fin:
                                 match = True
                                 break
 
-                        
+                # for deubg
+                #if linestrs[2].lower() == 'lt review deck':
+                #    print(linestrs[2])
+                #    print(linestrs[3])
+                #    print(intent)
                 
 
             '''
@@ -466,15 +493,20 @@ with codecs.open('teams_intent_training.tsv', 'r', 'utf-8') as fin:
                         break
             '''
 
+
+            # for debug
+            #if linestrs[2] == 'Open the file that shared with me.':
+            #    print(linestrs[2].lower() not in blackListQuerySet)
+
             # teams has more kinds of intent so do not use file_search as intent                   
             
-            if intent != linestrs[3]:
+            if intent != linestrs[3] and linestrs[2] not in blackListQuerySet:
 
                 updateQuery.add(linestrs[2]+"\t"+linestrs[3] + "\t" + intent)
                 #print(linestrs[2])
                 #print("orig:"+linestrs[3])
                 #print("new:"+intent)
-            linestrs[3] = intent
+                linestrs[3] = intent
                 
 
             
