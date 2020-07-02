@@ -1,3 +1,5 @@
 TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	TaskFrameEntityStates	TaskFrameGUID	SpeechPeopleDisambiguationGrammarMatches	ConversationalContext
 0		PPT I was working on with Jay.	file_search
 0		Please send recent deck.	file_share
+0		Send A.J. a copy of the NPR slides.	file_share
+0		Open file with Cortana.	file_open

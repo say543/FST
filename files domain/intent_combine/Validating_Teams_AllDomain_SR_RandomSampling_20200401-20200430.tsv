@@ -1,0 +1,8 @@
+TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	TaskFrameEntityStates	TaskFrameGUID	SpeechPeopleDisambiguationGrammarMatches	ConversationalContext
+0		share the Cortana in Kingston teams display one note here.	file_share
+0		Open the document I shared with Mohit.	file_open
+0		Open the PowerPoint that Jack Huang shared with me.	file_open
+0		Open the file I share with Yujia Zhao.	file_open
+0		Open Mac pptx with Rose.	file_share
+0		Open the file I shared with Graham.	file_open
+0		Random PPT.	file_search

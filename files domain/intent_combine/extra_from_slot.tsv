@@ -1,0 +1,4 @@
+TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	TaskFrameEntityStates	TaskFrameGUID	SpeechPeopleDisambiguationGrammarMatches	ConversationalContext
+0		share the triage process document here	file_share
+0		share the Kingston-WorkingDeck deck here	file_share
+0		share the ppt I am working on here	file_share

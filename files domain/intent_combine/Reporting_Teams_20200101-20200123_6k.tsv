@@ -1,0 +1,3 @@
+TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	TaskFrameEntityStates	TaskFrameGUID	SpeechPeopleDisambiguationGrammarMatches	ConversationalContext
+0		Open skills file with Mohit.	file_open
+0		Open the Onboarding & Training documents with Riti.	file_open

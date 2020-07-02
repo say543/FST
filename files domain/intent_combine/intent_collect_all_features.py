@@ -243,6 +243,10 @@ copyfile("..\\Open_Text_Synthesis\\file_type_and_contact_name_to_contact_name\\i
 copyfile("..\\Open_Text_Synthesis\\contact_name_order_ref_and_file_recency\\intent_data_synthesised_contact_name_order_ref_file_recency.tsv", "intent_data_synthesised_contact_name_order_ref_file_recency.tsv")
 
 
+# new open patterns
+copyfile("..\\Open_Text_Synthesis\\file_keyword_file_type_contact_name_to_contact_name\\intent.tsv", "intent_data_synthesised_file_keyword_to_contact_name_file_type_file_boost_contact_name.tsv")
+
+
 ############################################
 # copy file from data folder directly
 ############################################
