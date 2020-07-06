@@ -269,7 +269,6 @@ with codecs.open((trainingAndPatternCombineSetAfterFilterAndAugmentFileWithSourc
 comment at first not a one being used for training or pattern
 lineNumber = 0;
 with codecs.open('calendar_contactName_FST_pattern.txt', 'r', 'utf-8') as fin:
-
     print('####start####')
     print(fin.name)
     print('####start####')
@@ -277,11 +276,8 @@ with codecs.open('calendar_contactName_FST_pattern.txt', 'r', 'utf-8') as fin:
         line = line.strip();
         if not line:
             continue;
-
         if line.lower() in wrongcontactname:
             print(line)
             print(lineNumber)
-
         lineNumber+=1
-'''     
-            
+'''   
