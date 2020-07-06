@@ -2544,7 +2544,7 @@ E:\fileAnswer_data_synthesis\CMF_training\resource\Data\file_type_measurement
 看起來沒有新的pattern
 
 =============================
-msb data mining
+msb data mining, SLAPI bing at work
 =============================
 參考sajal 的discusssion 之後整理
 scope studio 安裝整理
@@ -2597,7 +2597,8 @@ Validating_Teams_20190716-20190831_3k.tsv.files.maxent.output.txt
 
 要跟sajaj 要bucketized 的code
 
-
+<email_title>
+Build measurement set for 3S answers using MSB logs
 
 'Build measurement set for 3S answers using MSB logs'
 Just to clarify the purpose of this evaluation set for 3S after our offline sync.
