@@ -74,6 +74,20 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 
 
 
+
+=======================
+multi turn evaluation
+=======================
+<email_title>
+Multi-turn evaluation sets
+Given the conflict - it is a MUST for almost all domains and we CANNOT get this value from CIV’ in cosmos.
+
+Here is what we will do:
+
+    For CoW and TVS, stop multi-turn annotation going forward
+    For existing data of CoW and TVS, only run eval and report numbes on first-turn
+    For PME, keep as is, otherwise we will NOT have any data
+
 ===================
 multilingual platform
 ===================
