@@ -57,9 +57,9 @@ teamsSlotToFileSlot = {
     # so check space version then no space
     "</deck_location> " : "",
     "</deck_location>" : "",
-    "<deck_name> " : "",
-    "</deck_name> " : "",
-    "</deck_name>" : "",
+    "<deck_name> " : "<file_keyword> ",
+    "</deck_name> " : "</file_keyword> ",
+    "</deck_name>" : "</file_keyword>",
     "<slide_name> " : "",
     "</slide_name> " : "",
     "</slide_name>" : "",
