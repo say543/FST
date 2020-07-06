@@ -2599,6 +2599,10 @@ Validating_Teams_20190716-20190831_3k.tsv.files.maxent.output.txt
 
 <email_title>
 Build measurement set for 3S answers using MSB logs
+aether pipeline
+We are building measurement sets for calendar/files/people search using MSB data. The logic described here. MSB Data Sampling  (Web view)
+one note page
+https://microsoft.sharepoint.com/teams/CortanaCore/_layouts/15/Doc.aspx?sourcedoc={6d6ae133-c9c8-400d-bfd8-ae8feec6ff9f}&action=edit&wd=target%28LU%20Modeling%20and%20Partners%2FLU%20Data%20and%20Measurement%2FData%20Sampling.one%7Cae861c1a-99e0-4034-ae5f-0d62624356b1%2FMSB%20Data%20Sampling%7C00d09628-128b-4080-b03a-979e1d3cf867%2F%29
 
 'Build measurement set for 3S answers using MSB logs'
 Just to clarify the purpose of this evaluation set for 3S after our offline sync.
