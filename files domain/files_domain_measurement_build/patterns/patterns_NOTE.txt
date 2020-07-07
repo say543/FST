@@ -1,0 +1,67 @@
+<note_text>	11	NOTE	<note_text>	add_to_note
+add <note_text> to my pancake list	7	NOTE	add <note_text> to my <title> pancake </title> <data_type> list </data_type>	add_to_note
+add <note_text>	5	NOTE	add <note_text>	add_to_note
+create a list	4	NOTE	create a <data_type> list </data_type>	create_note
+create a list called pancake	4	NOTE	create a <data_type> list </data_type> called <title> pancake </title>	create_note
+create a list called pancakes	3	NOTE	create a <data_type> list </data_type> called <title> pancakes </title>	create_note
+add <note_text> to my festival list	2	NOTE	add <note_text> to my <title> festival </title> <data_type> list </data_type>	add_to_note
+create a baking list	2	NOTE	create a <title> baking </title> <data_type> list </data_type>	create_note
+no	2	NOTE	no	reject
+add <note_text> to shopping list	2	NOTE	add <note_text> to <title> shopping </title> <data_type> list </data_type>	add_to_note
+add <note_text> to my task list	2	NOTE	add <note_text> to my <title> task </title> <data_type> list </data_type>	add_to_note
+create a shopping list	2	NOTE	create a <title> shopping </title> <data_type> list </data_type>	create_note
+add baking powder salt and <note_text> to my pancake list	2	NOTE	add <note_text> and <note_text> to my <title> pancake </title> <data_type> list </data_type>	add_to_note
+add <note_text> to my list	2	NOTE	add <note_text> to my <data_type> list </data_type>	add_to_note
+remove <note_text> from my baking list	2	NOTE	remove <note_text> from my <title> baking </title> <data_type> list </data_type>	delete_note_item
+delete my grocery list	1	NOTE	delete my <title> grocery </title> <data_type> list </data_type>	delete_note
+add <note_text> to my ignore list	1	NOTE	add <note_text> to my <title> ignore </title> <data_type> list </data_type>	add_to_note
+festival	1	NOTE	<title> festival </title>	create_note
+create a list called	1	NOTE	create a <data_type> list </data_type> called	create_note
+create a task	1	NOTE	create a <note_category> task </note_category>	create_note
+ignore	1	NOTE	ignore	reject
+remove <note_text> from my nonexistent list	1	NOTE	remove <note_text> from my <title> nonexistent </title> <data_type> list </data_type>	delete_note_item
+add list too	1	NOTE	add <data_type> list </data_type> too	create_note
+add task	1	NOTE	add <note_category> task </note_category>	add_to_note
+add <note_text> to it	1	NOTE	add <note_text> to it	add_to_note
+create a list called baking	1	NOTE	create a <data_type> list </data_type> called <title> baking </title>	create_note
+nothing	1	NOTE	nothing	cancel
+add to my task list	1	NOTE	add to my <title> task </title> <data_type> list </data_type>	add_to_note
+add to do task	1	NOTE	add <title> to do </title> <note_category> task </note_category>	create_note
+create a list for pancakes	1	NOTE	create a <data_type> list </data_type> for <title> pancakes </title>	create_note
+add milk eggs orange juice and <note_text> to my grocery list	1	NOTE	add <note_text> and <note_text> to my <title> grocery </title> <data_type> list </data_type>	add_to_note
+create a grocery list	1	NOTE	create a <title> grocery </title> <data_type> list </data_type>	create_note
+add <note_text> into my task list	1	NOTE	add <note_text> into my <title> task </title> <data_type> list </data_type>	add_to_note
+cleaning supplies	1	NOTE	<title> cleaning supplies </title>	create_note
+delete my personal work list	1	NOTE	delete my <title> personal work </title> <data_type> list </data_type>	delete_note
+add <note_text> my pancake list	1	NOTE	add <note_text> my <title> pancake </title> <data_type> list </data_type>	add_to_note
+create a to do list	1	NOTE	create a <title> to do </title> <data_type> list </data_type>	create_note
+add <note_text> to my packing list	1	NOTE	add <note_text> to my <title> packing </title> <data_type> list </data_type>	add_to_note
+add <note_text> to my tasks list	1	NOTE	add <note_text> to my <title> tasks </title> <data_type> list </data_type>	add_to_note
+add <note_text> to my bathroom list	1	NOTE	add <note_text> to my <title> bathroom </title> <data_type> list </data_type>	add_to_note
+type in microsoft	1	NOTE	type in <app_name> microsoft </app_name>	create_note
+type in notepad	1	NOTE	type in <app_name> notepad </app_name>	create_note
+add <note_text> to my personal work list	1	NOTE	add <note_text> to my <title> personal work </title> <data_type> list </data_type>	add_to_note
+add <note_text> to my wunderlist	1	NOTE	add <note_text> to my <app_name> wunderlist </app_name>	add_to_note
+remove everything from my grocery list	1	NOTE	remove <quantifier> everything </quantifier> from my <title> grocery </title> <data_type> list </data_type>	clear_note
+create a homework list	1	NOTE	create a <title> homework </title> <data_type> list </data_type>	create_note
+create a list called by standard	1	NOTE	create a <data_type> list </data_type> called <title> by standard </title>	create_note
+yes please	1	NOTE	yes please	confirm
+add <note_text> to my to do today to do list	1	NOTE	add <note_text> to my <title> to do today to do </title> <data_type> list </data_type>	add_to_note
+at a <note_text> to my to do list	1	NOTE	at a <note_text> to my <title> to do </title> <data_type> list </data_type>	create_note
+yes	1	NOTE	yes	confirm
+add flour honey and <note_text> to my pancake list	1	NOTE	add <note_text> <note_text> and <note_text> to my <title> pancake </title> <data_type> list </data_type>	add_to_note
+create a pancake list	1	NOTE	create a <title> pancake </title> <data_type> list </data_type>	create_note
+remove <note_text> from my ignore list	1	NOTE	remove <note_text> from my <title> ignore </title> <data_type> list </data_type>	delete_note_item
+play personal work list	1	NOTE	play <title> personal work </title> <data_type> list </data_type>	read_aloud
+remove <note_text> from grocery list	1	NOTE	remove <note_text> from <title> grocery </title> <data_type> list </data_type>	delete_note_item
+create a personal work list	1	NOTE	create a <title> personal work </title> <data_type> list </data_type>	create_note
+it did not take only	1	NOTE	it did not take only	note_other
+add to my library list	1	NOTE	add to my <title> library </title> <data_type> list </data_type>	add_to_note
+cancel	1	NOTE	cancel	cancel
+read out my to do list	1	NOTE	read out my <title> to do </title> <data_type> list </data_type>	read_aloud
+add <note_text> to	1	NOTE	add <note_text> to	add_to_note
+add <note_text> to my baking list	1	NOTE	add <note_text> to my <title> baking </title> <data_type> list </data_type>	add_to_note
+remove <note_text> from shopping list	1	NOTE	remove <note_text> from <title> shopping </title> <data_type> list </data_type>	delete_note_item
+remove <note_text> from my cleaning list	1	NOTE	remove <note_text> from my <title> cleaning </title> <data_type> list </data_type>	delete_note_item
+add baking powder salt and <note_text> to my baking list pancake list	1	NOTE	add <note_text> and <note_text> to my <title> baking </title> <data_type> list </data_type> <title> pancake </title> <data_type> list </data_type>	add_to_note
+delete hybrid list	1	NOTE	delete <title> hybrid </title> <data_type> list </data_type>	delete_note
