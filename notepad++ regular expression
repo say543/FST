@@ -33,3 +33,6 @@ for  "pptx' : '<file_type> pptx </file_type> ',"  to replace tail
 </keyword> list .
 
 share the (.*) file with (.*) meeting\t
+
+
+</file_keyword> \. <file_type>
