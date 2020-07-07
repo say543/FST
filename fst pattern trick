@@ -220,3 +220,18 @@ fst  for generic processing
 one note page
 ========================
 對generic processing 的code 有幫助
+
+
+
+============================
+file domain preprocessort
+==============================
+.o.
+执行的顺序是 从后往前，所以两个位置换一下就work了。
+
+link reference
+https://microsoft.sharepoint.com/teams/stca/ipe/blue/_layouts/OneNote.aspx?id=%2Fteams%2Fstca%2Fipe%2Fblue%2FShared%20Documents%2FProject%20Jupiter%2FProject%20Carina&wd=target%28SG_Platform%2FModel%20Self-Serve.one%7C06E740B9-8998-4705-ADD5-4D3C38589922%2FFst%20Manual%20Card%7C0C038FFA-EF69-49C3-91F9-9C5963807BC7%2F%29
+https://carina/wiki/articles/CMF/Fst-Cheatsheet-Transduce.html
+
+graph 是non-whitespace symbol
+define tokenizeFileSearchOperatorForAllFileNames Tab ... Tab <-@ {.} || [.#. | graph+] _ ["A-Za-z" | digit | {_} | {-} | {*}]+ [{ } | .#.];
