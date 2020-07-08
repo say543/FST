@@ -140,6 +140,8 @@ if __name__ == '__main__':
 
     #cmd = ("-s ..\\output_adhoc_intent_06112020v4\\intent_svm\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
 
+    #cmd = ("-s ..\\output_adhoc_intent_07012020v1\\intent_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
 
     ###########
     ### checked in slot model ###
@@ -148,8 +150,28 @@ if __name__ == '__main__':
     # this version use some uwp random set query(but their annotation might be wrong, update it in the future)
     #cmd = ("-s ..\\output_adhoc_slot_05062020v3\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
 
-    cmd = ("-s ..\\output_adhoc_slot_05062020v3\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
+    #cmd = ("-s ..\\output_domain_synthetic_06222020v1\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
 
+    #cmd = ("-s ..\\output_domain_synthetic_06222020v2\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
+
+    #cmd = ("-s ..\\output_domain_synthetic_06222020v3\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
+    #cmd = ("-s ..\\output_domain_synthetic_06232020v4\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
+    #cmd = ("-s ..\\output_domain_synthetic_06232020v5\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
+    # cloud test this
+    #cmd = ("-s ..\\output_domain_synthetic_06242020v3\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
+
+    #cmd = ("-s ..\\output_domain_synthetic_06252020v1\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
+
+
+    # kashan replicate models
+    #cmd = ("-s E:\\kathan\\FileTest\\exp_06262020v1\\domain_svm\\final -t replaced -r cortana_files_enus_mv1:files_enus_mv1").split()
+
+    
+    
+    #cmd = ("-s ..\\output_domain_synthetic_06242020v5\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
 
     #cmd = ("-s ..\\output_adhoc_slot_05202020v2\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
 
