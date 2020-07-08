@@ -79,7 +79,8 @@ select_more test commoand
 Query: show me more     PreviousTurnDomain      0       1       files   1.0     -1      -1      PreviousTurnIntent        0       1       file_open       1.0     -1      -1      TaskFrameStatus 0 
         1       InProgress      1.0     -1      -1
 	
-	
+none of these, show me more     PreviousTurnDomain      0       1       files   1.0     -1      -1      PreviousTurnIntent      0       1       file_navigate   1.0     -1
+        -1      TaskFrameStatus 0       1       PromptedForConfirmation 1.0     -1      -1	
 	
 
 
