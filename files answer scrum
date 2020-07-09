@@ -72,6 +72,24 @@ files domain 怎麼onbaord 到evaluation
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1182483?_a=files
 看這個pr
 
+
+
+=======================
+intent 新增intent 的注意事項
+=======================
+files_enus_mv2.domain_intent.multiturn.def.txt (common domain only)
+files_enus_mv3.domain_intents.multiturn.pipeline.txt 的 output feature 要調整 numOutputs 配合intent 的個數
+RandomFeature --in=BodySurfaceStream --out=zero_intent --rv=constant --val=0 --tagidval=0 --fromval=-1 --toval=-1 --numOutputs=10 --outputZeroValueFeatures=true
+
+
+
+files_enus_mv1.intents.classes
+files_enus_mv1.intent.classes.txt
+
+這三個cases 都要對才行
+
+
+
 =======================
 select_more test commoand
 =======================
