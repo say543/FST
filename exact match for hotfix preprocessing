@@ -50,6 +50,8 @@ E:\CoreScienceDataStaging\datasources\Email> .\bin\CLU.Core.1.2.305\data_preproc
 PS E:\CoreScienceDataStaging\datasources\Email> .\clu.exe run -c intent_exact_match.json -o output_preprocess
  
  
+ 07082020
+ 遺失了 files domain 不知道怎麼preprocessing 了  必須要再問
  
  
  
