@@ -96,13 +96,30 @@ files_enus_mv3.domain_intents.multiturn.pipeline.txt 的 output feature 要調�
 RandomFeature --in=BodySurfaceStream --out=zero_intent --rv=constant --val=0 --tagidval=0 --fromval=-1 --toval=-1 --numOutputs=10 --outputZeroValueFeatures=true
 
 
-
 files_enus_mv1.intents.classes
 files_enus_mv1.intent.classes.txt
 
 這三個cases 都要對才行
 
+=======================
+新增intent pipeline 注意事項
+=======================
 
+
+files_enus_mv3.intent.pattern.pipeline.txt
+files_enus_mv3.intent_svm_override.pipeline.txt
+files_enus_mv3.intent.pattern.conditions.hotfix.txt
+files_enus_mv3.intent.pattern.preprocess.fst
+
+files_enus_mv3.intent.pattern.entities.config.xml
+add new intent for select_more
+
+
+files_enus_mv3.intent.pattern.map.txt
+add 10 to map to include all intent
+
+
+files_enus_mv3.intent.pattern.bin
 
 =======================
 select_more test commoand
