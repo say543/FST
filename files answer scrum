@@ -100,6 +100,9 @@ Query: show me more     PreviousTurnDomain      0       1       files   1.0     
 none of these, show me more     PreviousTurnDomain      0       1       files   1.0     -1      -1      PreviousTurnIntent      0       1       file_navigate   1.0     -1
         -1      TaskFrameStatus 0       1       PromptedForConfirmation 1.0     -1      -1	
 	
+	
+none of these, show me more\tPreviousTurnDomain\t0\t1\tfiles\t1.0\t-1\t-1\tPreviousTurnIntent\t0\t1\tfile_navigate\t1.0\t-1\t-1\tTaskFrameStatus\t0\t1\tPromptedForConfirmation\t1.0\t-1\t-1	
+	
 
 
 =======================
