@@ -1296,6 +1296,10 @@ https://microsoft-my.sharepoint.com/personal/annamdev_microsoft_com/_layouts/15/
 ==============================
 files domain task form  repository
 ==============================
+
+// cortan response 的link 可以看一下
+https://msasg.visualstudio.com/Cortana/_git/teams-skills?path=%2Fprivate%2FTeamsSkills%2FTeams%2Fsrc%2FLgDataFiles%2FVaTeamsSkills.rad&version=GBmaster
+
 https://msasg.visualstudio.com/Cortana/_git/teams-skills?path=%2Fprivate%2FTeamsSkills%2FTeams%2Fsrc%2FTaskForms%2FTeamsOpenFile.json&version=GBmaster&_a=contents
 
 https://msasg.visualstudio.com/Cortana/_git/teams-skills?path=%2Fprivate%2FTeamsSkills%2FTeams%2Fsrc%2FTaskForms%2FTeamsOpenFileV2.json&version=GBmaster&line=189&lineEnd=207&lineStartColumn=5&lineEndColumn=6&lineStyle=plain
