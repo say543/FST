@@ -51,10 +51,12 @@ PS E:\CoreScienceDataStaging\datasources\Email> .\clu.exe run -c intent_exact_ma
  
  
  07082020
- 遺失了 files domain 不知道怎麼preprocessing 了  必須要再問
+
+
+ PS E:\fileAnswer_data_synthesis\CMF_training> .\clu.exe run -c intent_exact_match.json -o output_preprocess
  
+ output 在
+  files domain
+ E:\fileAnswer_data_synthesis\CMF_training\output_preprocess\intent_exact_match\final\files_enus_mv1.domain.1.hotfix.txt
  
- 
- 
- 
- 
+compile error not in correct schema
