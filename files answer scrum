@@ -73,6 +73,13 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 看這個pr
 
 
+=======================
+hotfix condition problem
+=======================
+// files is reverse word cannot be match...
+PreviousTurnDomain(files)		files_enus_mv3.intent.2.hotfix.txt
+// but file can, only file is possbile....   discuss tomorrow
+PreviousTurnDomain(file)		files_enus_mv3.intent.2.hotfix.txt
 
 =======================
 intent 新增intent 的注意事項
