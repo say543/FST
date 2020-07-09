@@ -263,13 +263,15 @@ with codecs.open('files_mystuff_after_filtering_intent.tsv', 'r', 'utf-8') as fi
                         "going ",
                         "direct ",
                         "directing ",
-                        "list "
+                        "list ",
                         "listing "
-                        "what is ",
-                        "what was ",
-                        "what are ",
-                        "what was ",
-                        "what were ",
+                        # remove below section and move to file_search
+                        #"what is ",
+                        #"what was ",
+                        #"what are ",
+                        #"what was ",
+                        #"what were "
+                        # remove below section and move to file_search
                         ])
 
             openverbs = set([
@@ -326,7 +328,14 @@ with codecs.open('files_mystuff_after_filtering_intent.tsv', 'r', 'utf-8') as fi
                         "taking up ",
                         # above section and move to file_search
                         "locate ",
-                        "locate ",   
+                        "locate ",
+                        # below section and move to file_search
+                        "what is ",
+                        "what was ",
+                        "what are ",
+                        "what was ",
+                        "what were "
+                        # above section and move to file_search
                         ])
 
             # add first one , second one.....
