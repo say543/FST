@@ -95,6 +95,8 @@ copyfile("..\\Open_Text_Synthesis\\file_type_and_contact_name\\domain_data_synth
 copyfile("..\\mediacontrol_domain\\mediacontrol_domain_train_after_filter.tsv" , "mediacontrol_domain_train_after_filter.tsv")
 copyfile("..\\domain_dsat_training.tsv" , "domain_dsat_training.tsv")
 
+copyfile("..\\domain_extract_from_slot_query_domain_extraction.tsv" , "domain_extract_from_slot_query_domain_extraction.tsv")
+
 for file in files:
 
     if file == outputFile or file == outputFileWithSource:
@@ -109,7 +111,7 @@ for file in files:
     print("collecting: " + file);
     with codecs.open(file, 'r', 'utf-8') as fin:
 
-        if file == 'mediacontrol_domain_train_after_filter.tsv' or file == 'domain_dsat_training.tsv':
+        if file == 'mediacontrol_domain_train_after_filter.tsv' or file == 'domain_dsat_training.tsv' or  file == 'domain_extract_from_slot_query_domain_extraction.tsv' :
 
             isHeadColumn = True
             headColumnList =[] 
@@ -119,9 +121,15 @@ for file in files:
                     line = line.strip();
                     if not line:
                         continue;
+                   
                     headColumnList = line.split('\t');
+
+                    # for debug
+                    #print(file)
+                    #print(headColumnList)
+                    
                     if len(headColumnList) < TARGETNUMCOLUMNS:
-                        print("error header for file: " + synlist);
+                        print("error header for file: " + str(len(headColumnList)));
                     
                     isHeadColumn = False
                     continue
