@@ -142,6 +142,8 @@ if __name__ == '__main__':
 
     #cmd = ("-s ..\\output_adhoc_intent_07012020v1\\intent_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
 
+    #cmd = ("-s ..\\output_adhoc_intent_07082020v1\\intent_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
 
     ###########
     ### checked in slot model ###
@@ -199,9 +201,17 @@ if __name__ == '__main__':
     ### other try fine-tune experience
     ###########
 
-    #cmd = ("-s ..\\output_adhoc_intent_06092020v1\\intent_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
 
 
+
+
+    #
+    #cmd = ("-s ..\\output_adhoc_slot_07092020v1\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
+    cmd = ("-s ..\\output_adhoc_slot_07092020v2\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
+
+
+    #cmd = ("-s E:\\files_bat_model_before_add_intent_model -t replaced -r files_enus_mv1:files_enus_mv3").split()
 
     # basically add all
     #cmd = ("-s ..\\output_domain_answer_05182020v1_use_pcfg_v3_domain_cut_some_uesless_domains_negative_cases\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
