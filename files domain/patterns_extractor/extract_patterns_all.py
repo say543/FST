@@ -96,8 +96,19 @@ def process_tagged_queries(queries, annotated_queries, intents, domain, DomainTo
 
             # only extra certain slots to form pattens
             if domain in DomainToSlotsProcess and xmlType.lower() in DomainToSlotsProcess[domain]:
+
+                
+                #if xmlType.lower() == 'message_type':
+                #    print('{}'.format(xmlValue))
+                #    print('{}'.format(new_query))
+
                 tag_values[xmlType].extend(xmlValue)
-                new_query = query.replace(xmlValue, '<{}>'.format(xmlType.lower()))
+                new_query = new_query.replace(xmlValue, '<{}>'.format(xmlType.lower()))
+
+                #if xmlType.lower() == 'message_type':
+                #    print('{}'.format(new_query))
+                #    print('{}'.format(clean_query(new_query)))
+
                 new_annotation = new_annotation.replace(xmlpair, '<{}>'.format(xmlType.lower()))
 
         # old routine, all tags being processed
@@ -116,6 +127,10 @@ def process_tagged_queries(queries, annotated_queries, intents, domain, DomainTo
                 new_query = query.replace(kw, '<{}>'.format(tag))
 
         '''
+
+        #for debug
+        #print('{}'.format(new_query))
+        #print('{}'.format(clean_query(new_query)))
 
         pattern_queries[clean_query(new_query)] += 1
 
@@ -149,6 +164,14 @@ extract_additional_tags("additionalfilenameskeyphrases.tsv")
 
 # customized logic processing
 DomainToSlotsProcess = defaultdict(set)
+DomainToSlotsProcess['EMAILSEARCH'].add('message_type')
+DomainToSlotsProcess['EMAILSEARCH'].add('attachment_type')
+# attachment will be confused with attachment_type when replacement. leave it to data generation
+#DomainToSlotsProcess['EMAILSEARCH'].add('attachment')
+
+
+
+'''
 DomainToSlotsProcess['CALENDAR'].add('title')
 #DomainToSlotsProcess['PEOPLE'].add('peopleattribute')
 DomainToSlotsProcess['PEOPLE'].add('people_attribute')
@@ -163,6 +186,7 @@ DomainToSlotsProcess['NOTE'].add('note_text')
 DomainToSlotsProcess['REMINDER'].add('reminder_text')
 DomainToSlotsProcess['FILES'].add('file_keyword')
 DomainToSlotsProcess['FILES'].add('file_name')
+'''
 
 
 
@@ -214,9 +238,9 @@ for domain in ['EMAILSEARCH']:
 
     # customer EMAILSEARCH filter logic
     # (?i) : ignore cases
-    #target_df = target_df[target_df['MessageText'].str.contains("(?i)attachment|attachments")]
-    #
     target_df = target_df[target_df['MessageText'].str.contains("(?i)attachment|attachments")]
+    #
+    #target_df = target_df[target_df['MessageText'].str.contains("(?i)attached")]
     
 ##     ? not sure if data frame will perform deduplication
     pos_queries_cnt += len(target_df)
