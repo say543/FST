@@ -13,8 +13,7 @@ synthetic_mode = 1;
 # add hyper paramter if unbalanced
 hyper_parameter = 200
 
-
-
+
 PREVIOUSTURNDOMAIN = "PreviousTurnDomain"
 PREVIOUSTURNINTENT = "PreviousTurnIntent"
 TASKFRAMESTATUS = "TaskFrameStatus"
