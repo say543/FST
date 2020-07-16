@@ -27,13 +27,19 @@ synthetic_mode = 1;
 #p from [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1] 
 #N from [ 20, 50, 100, 200, 300, 400, 500, 600, 700]
 # starting with 300
-sampling_hyper_paramter_each_slot = 100
+# limit each one to repeast 20 only since more pattern
+sampling_hyper_paramter_each_slot = 20
 #sampling_hyper_paramter_each_slot = 6000
 #sampling_hyper_paramter_each_slot = 9000
 # for intent using to prevent too many
 
 
+
+#numberofQuery_hyper_parameter = 200
+#numberofQuery_hyper_parameter = 400
 numberofQuery_hyper_parameter = 100
+#numberofQuery_hyper_parameter = 50
+#numberofQuery_hyper_parameter = 25
 
 
 
@@ -226,7 +232,7 @@ def parse(slotList, doubleSlotList):
                 fout.write(item + '\r\n');
 
         # for record, using .txt as extention so it will not being picked up
-        with codecs.open('domain_synthesised_' + 'n_'+ str(numberofQuery_hyper_parameter) + '.txt', 'w', 'utf-8') as fout:         
+        with codecs.open('domain_synthesised_' + 'n_'+ str(numberofQuery_hyper_parameter) + '_r_' + str(sampling_hyper_paramter_each_slot) +'.txt', 'w', 'utf-8') as fout:         
             for item in outputSet:
                 fout.write(item + '\r\n');        
     
@@ -246,11 +252,53 @@ def parse(slotList, doubleSlotList):
 
 if __name__ == '__main__':
 
-
-    # use search term to replace file_keyword
+    # option 1
+    # use search term to replace file_keyword and dedup
+    '''
     copyfile("..\\..\LexiconFiles\\kaggle_searchterm_lexicon.txt" , "file_keyword.txt")
     copyfile("..\\..\LexiconFiles\\kaggle_searchterm_lexicon.txt" , "file_name.txt")
     copyfile("..\\..\LexiconFiles\\kaggle_searchterm_lexicon.txt" , "sharetarget_name.txt")
+    '''
+
+
+    # optn 2
+    # use search term to replace file_keyword and dedup
+    # also filter by <= 3 gram
+    '''
+    copyfile("..\\..\LexiconFiles\\kaggle_searchterm_lexicon.txt", "temp.txt");
+    dedup = set()
+    with codecs.open('temp.txt', 'r', 'utf-8') as fin:
+
+        for line in fin:
+            line = line.strip();
+            if not line:
+                continue;
+
+            array = line.split()
+
+            # only three gram features so limit to short
+            if len(array) <=3: 
+                dedup.add(line)
+
+    with codecs.open('temp2.txt', 'w', 'utf-8') as fout:
+        for item in sorted(dedup):
+            fout.write(item + '\r\n');
+
+    copyfile("temp2.txt" , "file_keyword.txt")
+    copyfile("temp2.txt" , "file_name.txt")
+    copyfile("temp2.txt" , "sharetarget_name.txt")
+    '''
+
+
+    # option 3
+    # using original open text synthetic copy directly
+
+    
+
+
+
+    
+    
     
     
     #slotList = ['contact_name', 'file_type', 'to_contact_name', "file_keyword"];

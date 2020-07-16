@@ -5,7 +5,8 @@ import os
 from shutil import copyfile
 
 
-
+mediaControlNegativeFile = 'mediacontrol_neg_examples.txt'
+mediaControlNegative = []
 
 
 outputFile = 'files_domain_training_new_synthesis.tsv'
@@ -147,6 +148,10 @@ for file in files:
                 if file == 'mediacontrol_domain_train_after_filter.tsv' and array[3].lower() == 'files':
                     continue;
 
+                #recode negative example
+                if file == 'mediacontrol_domain_train_after_filter.tsv' and array[3].lower() != 'files':
+                    mediaControlNegative.append(line)
+
 
                 #print(len(array))
                 #print(TARGETNUMCOLUMNS)
@@ -269,6 +274,10 @@ with codecs.open(outputFile, 'w', 'utf-8') as fout:
 
 with codecs.open(outputFileWithSource, 'w', 'utf-8') as fout:
     for item in outputsWithSource:
+        fout.write(item + '\r\n');
+
+with codecs.open(mediaControlNegativeFile, 'w', 'utf-8') as fout:
+    for item in mediaControlNegative:
         fout.write(item + '\r\n');
 
 
