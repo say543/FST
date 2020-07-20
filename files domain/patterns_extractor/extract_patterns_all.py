@@ -103,13 +103,18 @@ def process_tagged_queries(queries, annotated_queries, intents, domain, DomainTo
                 #    print('{}'.format(new_query))
 
                 tag_values[xmlType].extend(xmlValue)
-                new_query = new_query.replace(xmlValue, '<{}>'.format(xmlType.lower()))
 
-                #if xmlType.lower() == 'message_type':
-                #    print('{}'.format(new_query))
-                #    print('{}'.format(clean_query(new_query)))
+                if xmlType == 'message_type':
+                    new_query = new_query.replace(xmlValue, '')
+                    new_annotation = new_annotation.replace(xmlpair, '')
+                else:
+                    new_query = new_query.replace(xmlValue, '<{}>'.format(xmlType.lower()))
 
-                new_annotation = new_annotation.replace(xmlpair, '<{}>'.format(xmlType.lower()))
+                    #if xmlType.lower() == 'message_type':
+                    #    print('{}'.format(new_query))
+                    #    print('{}'.format(clean_query(new_query)))
+
+                    new_annotation = new_annotation.replace(xmlpair, '<{}>'.format(xmlType.lower()))
 
         # old routine, all tags being processed
         '''
