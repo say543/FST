@@ -122,7 +122,7 @@ class Data(object):
         tag = os.path.basename(file).replace('.txt', '')
 
         # for debug
-        print("tag {}".format(tag))
+        #print("tag {}".format(tag))
 
         ## remain head / tailing spaces
         with open(file, encoding='utf-8') as f:
@@ -151,6 +151,8 @@ class Data(object):
 
 
             pattern_data = [line.strip() for line in f.readlines()]
+
+
             #addtional patterns frequency is decided by main extra patterns
             # so igonre its frequency
             # freq sorted by high to lower, so using the first one to record frequency
@@ -169,7 +171,10 @@ class Data(object):
 
                 # debug
                 #print("pattern: {}".format(p))
-                self.patterns[(p.split('\t')[0])] = int(p.split('\t')[1])
+
+                #addtional patterns frequency is decided by main extra patterns
+                # so igonre its frequency                
+                self.patterns[(p.split('\t')[0])] = self.max_freq
 
                 self.patterns_domain[(p.split('\t')[0])] = domain
 
@@ -196,9 +201,13 @@ class Data(object):
                 if not pattern_data:
                     raise Exception('No positive patterns loaded!')
 
-                # freq sorted by high to lower, so using the first one to record frequency
-                self.max_freq = int(pattern_data[0].split('\t')[1])
+                #consider loading more patterns files
 
+                # freq sorted by high to lower, so using the first one to record frequency
+                #self.max_freq = int(pattern_data[0].split('\t')[1])
+
+                #consider loading more patterns files
+                self.max_freq = max(self.max_freq, (int)(pattern_data[0].split('\t')[1]))
 
                 domain = pattern_data[0].split('\t')[2]
 
@@ -212,7 +221,7 @@ class Data(object):
                 for p in pattern_data:
 
                     # debug
-                    #print("pattern: {}".format(p))
+                    print("pattern: {}".format(p))
 
                     self.patterns[(p.split('\t')[0])] = int(p.split('\t')[1])
 
@@ -220,6 +229,13 @@ class Data(object):
 
                     self.patterns_annotated_queries[(p.split('\t')[0])] = p.split('\t')[3]
                     self.patterns_intent[(p.split('\t')[0])] = p.split('\t')[4]
+
+                    # for debug
+                    print("patterns num = {}".format(len(self.patterns)))
+
+                # for debug 
+                #print("patterns num = {}".format(len(self.patterns)))
+                
 
     '''
     def load_positive_patterns(self, file, **kwargs):
@@ -249,7 +265,8 @@ class Data(object):
         ## self._augment_patterns()
     '''
     def load_addtional_patterns(self, file):
-        print("Loading additional patterns.")
+        print("Loading additional patterns.with {}".format(
+            self.max_freq))
         #self._load_additional_positive_patterns('additional_patterns.txt', self.max_freq)
         self._load_additional_positive_patterns(file, self.max_freq)
         # self._augment_patterns()     
@@ -270,6 +287,9 @@ class Data(object):
 
         ## ? not sure how this frequency work
         ## it seems like originla pattern 's freq still matter
+        # reason we split between high freq and low freq patterns initially 
+        # is bacause of such behaviour:
+        # Notice annotation in CSDS repo in teams data is brokem for such low freq patterns
         split_freq = int(self.max_freq * pattern_selection_threshold)
 
 
@@ -281,8 +301,8 @@ class Data(object):
         for pattern, freq in self.patterns.items():
 
             # for debug
-            #print("pattern: {}, freq: {} ".format(
-            #pattern, freq))
+            print("pattern: {}, freq: {} ".format(
+            pattern, freq))
 
             if freq >= split_freq:
                 self.high_freq_patterns[pattern] = freq
@@ -764,6 +784,7 @@ class Data(object):
 
     def _preprocess_negative_data(self):
         # _clean_query : preprocessing queries to get ngram feature
+        # here dedup
         self.negative_data = list(set([self._clean_query(query) for query in tqdm(self.negative_data)]))
 
     def _filter_negative_data(self):
@@ -918,8 +939,8 @@ data.load_patterns(all_patterns_files)
 
 
 #kanshan extra pattern but slot reformated with _
-#data.load_addtional_patterns('additional_patterns.txt')
-data.load_addtional_patterns('additional_patterns_1.txt')
+data.load_addtional_patterns('additional_patterns.txt')
+#data.load_addtional_patterns('additional_patterns_1.txt')
 
 # my extra patterns
 #move it to pattern directory
