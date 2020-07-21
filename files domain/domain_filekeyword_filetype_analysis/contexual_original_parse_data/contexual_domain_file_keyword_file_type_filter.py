@@ -9,6 +9,8 @@ import math
 import re
 import sys
 
+import json
+
 # add hyper paramter if unbalanced
 hyper_parameter = 200
 
@@ -101,7 +103,7 @@ outputsSet = set([]);
 
 outputsWithSource = [];
 
-
+outputFileKeyWordAndFileNameUserContext = set([]);
 
 
 
@@ -133,6 +135,9 @@ outputFileUnique = 'contexual_filekeyword_filetype_unique_training.tsv'
 outputFileWithSource = "contexual_filekeyword_filetype_training_with_source.tsv"
 
 outputFileKeyWordAndFileNameLexiconFilfe = 'contexual_filekeyword_filename_lexicon.txt'
+
+
+outputFileKeyWordAndFileNameUserContextFiles = 'user_filekeyword_filename.txt'
 
 
 # validaitng opened dataset
@@ -283,6 +288,45 @@ with codecs.open(inputFile, 'r', 'utf-8') as fin:
 
 
                 ConversationId= ConversationId+1;
+
+
+
+
+                # extra from json
+
+                # to prevent from inside content apostrophy
+
+                fileKeyWordAndFileNameXmlPostProcessing = array[4]
+
+                #{'
+                #':
+                #['
+                #',
+                #, '
+                #']
+                # typical example
+                #{'UserFileNames': ['Running Experiments', 'OneNote_DeletedPages', 'Running Experiments   
+                
+                fileKeyWordAndFileNameXmlPostProcessing = fileKeyWordAndFileNameXmlPostProcessing.replace("{'","{\"")
+                fileKeyWordAndFileNameXmlPostProcessing = fileKeyWordAndFileNameXmlPostProcessing.replace("':","\":")
+                fileKeyWordAndFileNameXmlPostProcessing = fileKeyWordAndFileNameXmlPostProcessing.replace("['","[\"")
+                fileKeyWordAndFileNameXmlPostProcessing = fileKeyWordAndFileNameXmlPostProcessing.replace("',","\",")
+                fileKeyWordAndFileNameXmlPostProcessing = fileKeyWordAndFileNameXmlPostProcessing.replace(", '",", \"")
+                fileKeyWordAndFileNameXmlPostProcessing = fileKeyWordAndFileNameXmlPostProcessing.replace("']","\"]")
+
+
+
+                # for deubg
+                #print(fileKeyWordAndFileNameXmlPostProcessing)
+       
+                fileKeyWordAndFileNameXmlJson = json.loads(fileKeyWordAndFileNameXmlPostProcessing)
+
+                #print(fileKeyWordAndFileNameXmlJson['UserFileNames'])
+
+                #print(type(fileKeyWordAndFileNameXmlJson['UserFileNames']))
+
+                for element in fileKeyWordAndFileNameXmlJson['UserFileNames']:
+                    outputFileKeyWordAndFileNameUserContext.add(element)            
                 
             #outputs.append(line);
             #outputsWithSource.append(line+'\t'+ file);
@@ -347,6 +391,11 @@ with codecs.open(outputFileKeyWordAndFileNameLexiconFilfe, 'w', 'utf-8') as fout
         fout.write(item + '\r\n');
 
 
+
+with codecs.open(outputFileKeyWordAndFileNameUserContextFiles, 'w', 'utf-8') as fout:
+    # sort it to easy check
+    for item in sorted(outputFileKeyWordAndFileNameUserContext):
+        fout.write(item + '\r\n');
 
 # for CMF slot evaluation format
 #with codecs.open((inputFile.split("."))[0] +'slot_evaluation.tsv', 'w', 'utf-8') as fout:
