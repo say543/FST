@@ -128,6 +128,11 @@ if __name__ == '__main__':
 
     #cmd = ("-s ..\\output_domain_answer_05242020v1_300\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
 
+    #cmd = ("-s ..\\output_domain_answer_07132020v1_300\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
+
+
+        cmd = ("-s ..\\output_domain_answer_07162020v1_300\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
     ###########
     ### checked in intent model ###
     ###########
@@ -194,7 +199,9 @@ if __name__ == '__main__':
 
 
     #cmd = ("-s ..\\output_adhoc_slot_06182020v1\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
-    
+
+
+    #cmd = ("-s ..\\output_adhoc_slot_07092020v2\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
 
 
     ###########
@@ -203,12 +210,9 @@ if __name__ == '__main__':
 
 
 
-
-
-    #
+    
     #cmd = ("-s ..\\output_adhoc_slot_07092020v1\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
 
-    cmd = ("-s ..\\output_adhoc_slot_07092020v2\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
 
 
     #cmd = ("-s E:\\files_bat_model_before_add_intent_model -t replaced -r files_enus_mv1:files_enus_mv3").split()
