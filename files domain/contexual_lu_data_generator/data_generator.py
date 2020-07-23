@@ -16,6 +16,7 @@ import string
 import nltk
 from nltk.tokenize import word_tokenize
 from nltk.util import ngrams
+import codecs;
 
 TEST = False
 
@@ -82,6 +83,19 @@ class Data(object):
 
         self.da = DataAugmentation()
 
+        # read filetype
+        # using uwp one to remove picture file
+        #self.filetype = []
+        self.fileboost = []
+        #with codecs.open('..\\resource\\lexicons\\file_type_domain_boost.txt', 'r', 'utf-8') as fin:
+        with codecs.open('..\\resource\\lexicons\\file_type_domain_boost_UWP.txt', 'r', 'utf-8') as fin:
+            for line in fin:
+                line = line.strip()
+                if line.lower() == 'documents' or line.lower() == 'document' or line.lower() == 'file' or line.lower() == 'files':
+                    self.fileboost.append(line)
+                #else:
+                    #self.filetype.append(line)
+
 
         # comment this since prefer original slot for evaluation
         self.domain_slot_process = defaultdict(set)
@@ -100,22 +114,31 @@ class Data(object):
         self.domain_slot_process['REMINDER'].add('remindertext')
         self.domain_slot_process['FILES'].add('filekeyword')
         self.domain_slot_process['FILES'].add('filename')
-
+        '''
 
 
         # tag mapped logic
         self.tag_originalTag = defaultdict(defaultdict)
-        self.tag_originalTag['CALENDAR']['title'] = 'title'
-        self.tag_originalTag['PEOPLE']['peopleattribute'] = 'people_attribute'
-        self.tag_originalTag['TEAMSMESSAGE']['keyword'] = 'keyword'
-        self.tag_originalTag['EMAIL']['emailsubject'] = 'email_subject'
-        self.tag_originalTag['EMAIL']['message'] = 'message'
-        self.tag_originalTag['EMAIL']['keyword'] = 'keyword'
-        self.tag_originalTag['NOTE']['notetext'] = 'note_text'
-        self.tag_originalTag['REMINDER']['remindertext'] = 'reminder_text'
-        self.tag_originalTag['FILES']['filekeyword'] = 'file_keyword'
-        self.tag_originalTag['FILES']['filename'] = 'file_name'
-        '''
+        # attachment is only token in query pattern (has pair in annotation), no need to map
+        #self.tag_originalTag['EMAILSEARCH']['attachment'] = 'attachment'
+        self.tag_originalTag['EMAILSEARCH']['attachment_type'] = 'file_type'
+        # message_type do not map, map to dedicated tokens
+        #self.tag_originalTag['EMAILSEARCH']['message_type'] = 'keyword'
+        self.tag_originalTag['EMAILSEARCH']['contact_name'] = 'contact_name'
+        self.tag_originalTag['EMAILSEARCH']['from_contact_name'] = 'contact_name'
+        self.tag_originalTag['EMAILSEARCH']['contact_name_to'] = 'to_contact_name'
+        self.tag_originalTag['EMAILSEARCH']['email_state'] = 'file_action'
+        self.tag_originalTag['EMAILSEARCH']['email_subject '] = 'file_keyword'
+        self.tag_originalTag['EMAILSEARCH']['end_date'] = 'date'
+        self.tag_originalTag['EMAILSEARCH']['end_time'] = 'time'
+        self.tag_originalTag['EMAILSEARCH']['keyword'] = 'file_keyword'
+        self.tag_originalTag['EMAILSEARCH']['message_category'] = 'file_keyword'
+        # order rer leave it to two possible cases, file_recency or originla tag
+        #self.tag_originalTag['EMAILSEARCH']['order_ref'] = 'keyword'
+        self.tag_originalTag['EMAILSEARCH']['start_date'] = 'date'
+        self.tag_originalTag['EMAILSEARCH']['start_time'] = 'time'
+        # without_attachment then cancel it directly
+        # emailsearch_other  then cancel it direclty
 
 
     def load_tags_data(self, file):
@@ -173,7 +196,9 @@ class Data(object):
                 #print("pattern: {}".format(p))
 
                 #addtional patterns frequency is decided by main extra patterns
-                # so igonre its frequency                
+                # since it it decided by int(freq * len(tags) * self.posdata_scale_multiplier)
+                # so igonre its frequency and setup as original patterns extracted max_freq
+                # in this way, all additinoal patterns are treated as high_frequency patterns                
                 self.patterns[(p.split('\t')[0])] = self.max_freq
 
                 self.patterns_domain[(p.split('\t')[0])] = domain
@@ -269,8 +294,92 @@ class Data(object):
             self.max_freq))
         #self._load_additional_positive_patterns('additional_patterns.txt', self.max_freq)
         self._load_additional_positive_patterns(file, self.max_freq)
-        # self._augment_patterns()     
-   
+        # self._augment_patterns()
+        # 
+
+    def append_attachment_patterns(self, file, newdomain, newintent):
+        print("append additional attachment patterns.with {}".format(
+            self.max_freq))
+        with open(file, encoding='utf-8') as f:
+
+
+            pattern_data = [line.strip() for line in f.readlines()]
+
+
+            #addtional patterns frequency is decided by main extra patterns
+            # so igonre its frequency
+            # freq sorted by high to lower, so using the first one to record frequency
+            #self.max_freq = int(pattern_data[0].split('\t')[1])
+
+            for p in pattern_data:
+
+                query = p.split('\t')[0]
+                domain = p.split('\t')[2]
+                annotation = p.split('\t')[3]
+                intent = p.split('\t')[4]
+                
+                # for debug
+                #print("mapped domain from domain {} to {}".format(domain, newdomain))
+                #print("mapped intent from intent {} to {}".format(intent, newintent))
+
+                # finding tags in a query
+                tags = re.findall(r'<(.*?)>', (p.split('\t')[0]))
+                for tag in tags:
+                    if tag not in self.tag_originalTag[domain]:
+                        if tag == 'attachment':
+                            continue
+                        elif tag == 'message_type':
+                            inRangeIndex = random.randint(0, len(self.fileboost)-1)
+
+                            random_tag = self.fileboost[inRangeIndex]
+                            query = query.replace("<{}>".format(tag), random_tag)
+                            # file boost xml is removed here
+                            annotation = annotation.replace("<{}>".format(tag), 
+                            " {} ".format(random_tag))
+                        elif tag == 'order_ref':
+                            inRangeIndex = random.randint(0, 2)
+                            # 0.5 prob being replaced with file_recency
+                            if inRangeIndex == 1: 
+                                query = query.replace("<{}>".format(tag, 'file_recency'))
+                                # file boost xml is removed here
+                                annotation = annotation.replace("<{}>".format(tag), 
+                                    "<{}>".format('file_recency'))
+                        # no exist in pattern                      
+                        #else if tag == 'without_attachment' or  tag == 'emailsearch_other':
+                        else:
+                            raise Exception('Unknown tag {} found in the appended query pattern {}'.format(tag, p))
+
+
+                        '''
+                        elif tag == 'keyword':
+                            query = query.replace("<{}>".format(tag, 'file_keyword'))
+                            # file boost xml is removed here
+                            annotation = annotation.replace("<{}>".format(tag), 
+                                "<{}>".format('file_keyword'))
+                        '''
+
+                    else:
+                        query = query.replace("<{}>".format(tag), "<{}>".format(self.tag_originalTag[domain][tag]))
+                        # file boost xml is removed here
+                        annotation = annotation.replace("<{}>".format(tag), 
+                            "<{}>".format(self.tag_originalTag[domain][tag]))
+
+                # debug
+                print("mapped query pattern: {}".format(query))
+
+                #addtional patterns frequency is decided by main extra patterns
+                # since it it decided by int(freq * len(tags) * self.posdata_scale_multiplier)
+                # so igonre its frequency and setup as original patterns extracted max_freq
+                # in this way, all additinoal patterns are treated as high_frequency patterns                
+                self.patterns[query] = self.max_freq
+
+                self.patterns_domain[query] = newdomain
+
+                self.patterns_annotated_queries[query] = annotation
+                self.patterns_intent[query] = newintent
+
+
+        
     def split_patterns(self, pattern_selection_threshold=0.05):
         """ splits the positive patterns into high freq and low freq patterns
 
@@ -301,8 +410,8 @@ class Data(object):
         for pattern, freq in self.patterns.items():
 
             # for debug
-            print("pattern: {}, freq: {} ".format(
-            pattern, freq))
+            #print("pattern: {}, freq: {} ".format(
+            #pattern, freq))
 
             if freq >= split_freq:
                 self.high_freq_patterns[pattern] = freq
@@ -922,8 +1031,8 @@ for tag_file in tqdm(all_tags_files):
 ## negative_corpus.txt
 ## coming from my negative examples
 ## but have not been preprocessing and deduplicting
-#data.load_negative_data('negative_corpus.txt')
-data.load_negative_data('negative_corpus_1.txt')
+data.load_negative_data('negative_corpus.txt')
+#data.load_negative_data('negative_corpus_1.txt')
 # using my own negative data then change to this one
 #data.load_negative_data('mediacontrol_domain_train_after_filter_dedup.txt')
 
@@ -938,9 +1047,21 @@ all_patterns_files = glob('./patterns/*.txt')
 data.load_patterns(all_patterns_files)
 
 
-#kanshan extra pattern but slot reformated with _
+#kanshan extra pattern but slot reformated with _ by myself
 data.load_addtional_patterns('additional_patterns.txt')
 #data.load_addtional_patterns('additional_patterns_1.txt')
+
+#files search related patterns
+data.load_addtional_patterns('patterns_FILES.txt')
+
+
+
+# without keyword mapped to file_keyword
+#data.append_attachment_patterns('patterns_EMAILSEARCH_attachment_after_bug_fix.txt','FILES', 'file_search')
+# with keyword mapped to file_keyword
+data.append_attachment_patterns('patterns_EMAILSEARCH_attachment_add_keyword_after_bug_fix.txt','FILES', 'file_search')
+
+
 
 # my extra patterns
 #move it to pattern directory
