@@ -94,7 +94,7 @@ def process_tagged_queries(queries, annotated_queries, intents, domain, DomainTo
             # only extra certain slots to form pattens
             if domain in DomainToSlotsProcess and xmlType.lower() in DomainToSlotsProcess[domain]:
                 tag_values[xmlType].extend(xmlValue)
-                new_query = query.replace(xmlValue, '<{}>'.format(xmlType.lower()))
+                new_query = new_query.replace(xmlValue, '<{}>'.format(xmlType.lower()))
                 new_annotation = new_annotation.replace(xmlpair, '<{}>'.format(xmlType.lower()))
 
         # old routine, all tags being processed
@@ -160,6 +160,7 @@ DomainToSlotsProcess['NOTE'].add('note_text')
 DomainToSlotsProcess['REMINDER'].add('reminder_text')
 DomainToSlotsProcess['FILES'].add('file_keyword')
 DomainToSlotsProcess['FILES'].add('file_name')
+
 
 
 

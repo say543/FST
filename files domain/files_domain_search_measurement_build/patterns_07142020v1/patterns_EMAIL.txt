@@ -1,0 +1,223 @@
+no	14	EMAIL	no	reject
+send an email	12	EMAIL	send an <message_type> email </message_type>	send_email
+change message	8	EMAIL	change <slot_attribute> message </slot_attribute>	send_email
+<message>	8	EMAIL	<message>	send_email
+myself	6	EMAIL	<relationship_name> myself </relationship_name>	send_email
+change recipient	5	EMAIL	change <slot_attribute> recipient </slot_attribute>	send_email
+kapil manchanda	4	EMAIL	<contact_name> kapil manchanda </contact_name>	send_email
+<email_subject>	4	EMAIL	<email_subject>	send_email
+read my emails	2	EMAIL	read my <message_type> emails </message_type>	search_email
+devesh sati	2	EMAIL	<contact_name> devesh sati </contact_name>	send_email
+cancel	2	EMAIL	cancel	cancel
+send email	2	EMAIL	send <message_type> email </message_type>	send_email
+send a mail to rajesh that <message>	2	EMAIL	send a <message_type> mail </message_type> to <contact_name> rajesh </contact_name> that <message>	send_email
+send a mail to satya that <message>	2	EMAIL	send a <message_type> mail </message_type> to <contact_name> satya </contact_name> that <message>	send_email
+send a mail to nitin that <message>	2	EMAIL	send a <message_type> mail </message_type> to <contact_name> nitin </contact_name> that <message>	send_email
+send a mail to andrew that <message>	2	EMAIL	send a <message_type> mail </message_type> to <contact_name> andrew </contact_name> that <message>	send_email
+send a mail to craig that <message>	2	EMAIL	send a <message_type> mail </message_type> to <contact_name> craig </contact_name> that <message>	send_email
+send a mail to beryl that <message>	2	EMAIL	send a <message_type> mail </message_type> to <contact_name> beryl </contact_name> that <message>	send_email
+send a mail to jose that <message>	2	EMAIL	send a <message_type> mail </message_type> to <contact_name> jose </contact_name> that <message>	send_email
+send a mail to perry that <message>	2	EMAIL	send a <message_type> mail </message_type> to <contact_name> perry </contact_name> that <message>	send_email
+send a mail to ashok that <message>	2	EMAIL	send a <message_type> mail </message_type> to <contact_name> ashok </contact_name> that <message>	send_email
+send a mail to chad that <message>	2	EMAIL	send a <message_type> mail </message_type> to <contact_name> chad </contact_name> that <message>	send_email
+send a mail to allison that <message>	2	EMAIL	send a <message_type> mail </message_type> to <contact_name> allison </contact_name> that <message>	send_email
+send mail to rajesh that <message>	2	EMAIL	send <message_type> mail </message_type> to <contact_name> rajesh </contact_name> that <message>	send_email
+send mail to satya that <message>	2	EMAIL	send <message_type> mail </message_type> to <contact_name> satya </contact_name> that <message>	send_email
+send mail to nitin that <message>	2	EMAIL	send <message_type> mail </message_type> to <contact_name> nitin </contact_name> that <message>	send_email
+send mail to andrew that <message>	2	EMAIL	send <message_type> mail </message_type> to <contact_name> andrew </contact_name> that <message>	send_email
+send mail to craig that <message>	2	EMAIL	send <message_type> mail </message_type> to <contact_name> craig </contact_name> that <message>	send_email
+send mail to beryl that <message>	2	EMAIL	send <message_type> mail </message_type> to <contact_name> beryl </contact_name> that <message>	send_email
+send mail to jose that <message>	2	EMAIL	send <message_type> mail </message_type> to <contact_name> jose </contact_name> that <message>	send_email
+send mail to perry that <message>	2	EMAIL	send <message_type> mail </message_type> to <contact_name> perry </contact_name> that <message>	send_email
+send mail to ashok that <message>	2	EMAIL	send <message_type> mail </message_type> to <contact_name> ashok </contact_name> that <message>	send_email
+send mail to chad that <message>	2	EMAIL	send <message_type> mail </message_type> to <contact_name> chad </contact_name> that <message>	send_email
+send mail to allison that <message>	2	EMAIL	send <message_type> mail </message_type> to <contact_name> allison </contact_name> that <message>	send_email
+mail rajesh <message>	2	EMAIL	mail <contact_name> rajesh </contact_name> <message>	send_email
+mail satya <message>	2	EMAIL	mail <contact_name> satya </contact_name> <message>	send_email
+mail nitin <message>	2	EMAIL	mail <contact_name> nitin </contact_name> <message>	send_email
+mail andrew <message>	2	EMAIL	mail <contact_name> andrew </contact_name> <message>	send_email
+mail craig <message>	2	EMAIL	mail <contact_name> craig </contact_name> <message>	send_email
+mail beryl <message>	2	EMAIL	mail <contact_name> beryl </contact_name> <message>	send_email
+mail jose <message>	2	EMAIL	mail <contact_name> jose </contact_name> <message>	send_email
+mail perry <message>	2	EMAIL	mail <contact_name> perry </contact_name> <message>	send_email
+mail ashok <message>	2	EMAIL	mail <contact_name> ashok </contact_name> <message>	send_email
+mail chad <message>	2	EMAIL	mail <contact_name> chad </contact_name> <message>	send_email
+mail allison <message>	2	EMAIL	mail <contact_name> allison </contact_name> <message>	send_email
+send a note to rajesh <message>	2	EMAIL	send a <message_type> note </message_type> to <contact_name> rajesh </contact_name> <message>	send_email
+send a note to satya <message>	2	EMAIL	send a <message_type> note </message_type> to <contact_name> satya </contact_name> <message>	send_email
+send a note to nitin <message>	2	EMAIL	send a <message_type> note </message_type> to <contact_name> nitin </contact_name> <message>	send_email
+send a note to andrew <message>	2	EMAIL	send a <message_type> note </message_type> to <contact_name> andrew </contact_name> <message>	send_email
+send a note to craig <message>	2	EMAIL	send a <message_type> note </message_type> to <contact_name> craig </contact_name> <message>	send_email
+send a note to beryl <message>	2	EMAIL	send a <message_type> note </message_type> to <contact_name> beryl </contact_name> <message>	send_email
+send a note to jose <message>	2	EMAIL	send a <message_type> note </message_type> to <contact_name> jose </contact_name> <message>	send_email
+send a note to perry <message>	2	EMAIL	send a <message_type> note </message_type> to <contact_name> perry </contact_name> <message>	send_email
+send a note to ashok <message>	2	EMAIL	send a <message_type> note </message_type> to <contact_name> ashok </contact_name> <message>	send_email
+send a note to chad <message>	2	EMAIL	send a <message_type> note </message_type> to <contact_name> chad </contact_name> <message>	send_email
+send a note to allison <message>	2	EMAIL	send a <message_type> note </message_type> to <contact_name> allison </contact_name> <message>	send_email
+send an email to rajesh that <message>	2	EMAIL	send an <message_type> email </message_type> to <contact_name> rajesh </contact_name> that <message>	send_email
+send an email to satya that <message>	2	EMAIL	send an <message_type> email </message_type> to <contact_name> satya </contact_name> that <message>	send_email
+send an email to nitin that <message>	2	EMAIL	send an <message_type> email </message_type> to <contact_name> nitin </contact_name> that <message>	send_email
+send an email to andrew that <message>	2	EMAIL	send an <message_type> email </message_type> to <contact_name> andrew </contact_name> that <message>	send_email
+send an email to craig that <message>	2	EMAIL	send an <message_type> email </message_type> to <contact_name> craig </contact_name> that <message>	send_email
+send an email to beryl that <message>	2	EMAIL	send an <message_type> email </message_type> to <contact_name> beryl </contact_name> that <message>	send_email
+send an email to jose that <message>	2	EMAIL	send an <message_type> email </message_type> to <contact_name> jose </contact_name> that <message>	send_email
+send an email to perry that <message>	2	EMAIL	send an <message_type> email </message_type> to <contact_name> perry </contact_name> that <message>	send_email
+send an email to ashok that <message>	2	EMAIL	send an <message_type> email </message_type> to <contact_name> ashok </contact_name> that <message>	send_email
+send an email to chad that <message>	2	EMAIL	send an <message_type> email </message_type> to <contact_name> chad </contact_name> that <message>	send_email
+send an email to allison that <message>	2	EMAIL	send an <message_type> email </message_type> to <contact_name> allison </contact_name> that <message>	send_email
+send email to rajesh that <message>	2	EMAIL	send <message_type> email </message_type> to <contact_name> rajesh </contact_name> that <message>	send_email
+send email to satya that <message>	2	EMAIL	send <message_type> email </message_type> to <contact_name> satya </contact_name> that <message>	send_email
+send email to nitin that <message>	2	EMAIL	send <message_type> email </message_type> to <contact_name> nitin </contact_name> that <message>	send_email
+send email to andrew that <message>	2	EMAIL	send <message_type> email </message_type> to <contact_name> andrew </contact_name> that <message>	send_email
+send email to craig that <message>	2	EMAIL	send <message_type> email </message_type> to <contact_name> craig </contact_name> that <message>	send_email
+send email to beryl that <message>	2	EMAIL	send <message_type> email </message_type> to <contact_name> beryl </contact_name> that <message>	send_email
+send email to jose that <message>	2	EMAIL	send <message_type> email </message_type> to <contact_name> jose </contact_name> that <message>	send_email
+send email to perry that <message>	2	EMAIL	send <message_type> email </message_type> to <contact_name> perry </contact_name> that <message>	send_email
+send email to ashok that <message>	2	EMAIL	send <message_type> email </message_type> to <contact_name> ashok </contact_name> that <message>	send_email
+send email to chad that <message>	2	EMAIL	send <message_type> email </message_type> to <contact_name> chad </contact_name> that <message>	send_email
+send email to allison that <message>	2	EMAIL	send <message_type> email </message_type> to <contact_name> allison </contact_name> that <message>	send_email
+play my emails	1	EMAIL	play my <message_type> emails </message_type>	search_email
+read my latest email	1	EMAIL	read my <position_ref> latest </position_ref> <message_type> email </message_type>	search_email
+add subject	1	EMAIL	add <slot_attribute> subject </slot_attribute>	send_email
+hello kitty	1	EMAIL	<contact_name> hello kitty </contact_name>	send_email
+send email to rachael tan	1	EMAIL	send <message_type> email </message_type> to <contact_name> rachael tan </contact_name>	send_email
+aman verma	1	EMAIL	<contact_name> aman verma </contact_name>	send_email
+show emails from other day	1	EMAIL	show <message_type> emails </message_type> from <start_date> other day </start_date>	search_email
+do i have any email from kamal	1	EMAIL	do i have <quantifier> any </quantifier> <message_type> email </message_type> from <from_contact_name> kamal </from_contact_name>	search_email
+read my email	1	EMAIL	read my <message_type> email </message_type>	search_email
+new emails	1	EMAIL	<message_category> new </message_category> <message_type> emails </message_type>	search_email
+hi kitty	1	EMAIL	<message_type> hi kitty </message_type>	send_email
+do i have any emails	1	EMAIL	do i have <quantifier> any </quantifier> <message_type> emails </message_type>	search_email
+show emails from aditya jain	1	EMAIL	show <message_type> emails </message_type> from <from_contact_name> aditya jain </from_contact_name>	search_email
+compose an email	1	EMAIL	compose an <message_type> email </message_type>	send_email
+do i have an email from barry	1	EMAIL	do i have an <message_type> email </message_type> from <from_contact_name> barry </from_contact_name>	search_email
+email valerie	1	EMAIL	<message_type> email </message_type> <contact_name> valerie </contact_name>	send_email
+email it como city phoenix	1	EMAIL	<message_type> email </message_type> it <contact_name> como city phoenix </contact_name>	send_email
+please read my last email	1	EMAIL	please read my <position_ref> last </position_ref> <message_type> email </message_type>	search_email
+email skill testing	1	EMAIL	<message_type> email </message_type> <contact_name> skill testing </contact_name>	send_email
+yeah myself	1	EMAIL	yeah <relationship_name> myself </relationship_name>	send_email
+play my emails in outlook mobile	1	EMAIL	play my <message_type> emails </message_type> in <source_platform> outlook mobile </source_platform>	search_email
+check if there is any emails from kitty	1	EMAIL	check if there is <quantifier> any </quantifier> <message_type> emails </message_type> from <from_contact_name> kitty </from_contact_name>	search_email
+whats on my email	1	EMAIL	whats on my <message_type> email </message_type>	search_email
+show my emails	1	EMAIL	show my <message_type> emails </message_type>	search_email
+kapil	1	EMAIL	<contact_name> kapil </contact_name>	send_email
+message	1	EMAIL	<slot_attribute> message </slot_attribute>	send_email
+change	1	EMAIL	change	send_email
+change subject	1	EMAIL	change <slot_attribute> subject </slot_attribute>	send_email
+kirti	1	EMAIL	<contact_name> kirti </contact_name>	send_email
+at this subject	1	EMAIL	at this <slot_attribute> subject </slot_attribute>	send_email
+devesh	1	EMAIL	<contact_name> devesh </contact_name>	send_email
+what emails do i have	1	EMAIL	what <message_type> emails </message_type> do i have	search_email
+send	1	EMAIL	send	confirm
+add a subject	1	EMAIL	add a <slot_attribute> subject </slot_attribute>	send_email
+read my new emails	1	EMAIL	read my <message_category> new </message_category> <message_type> emails </message_type>	search_email
+can you try to help me find word <keyword> in this email i have open	1	EMAIL	can you try to help me find word <keyword> in this <message_type> email </message_type> i have open	search_email
+end	1	EMAIL	end	confirm
+<keyword>	1	EMAIL	<keyword>	send_email
+send an email to myself	1	EMAIL	send an <message_type> email </message_type> to <relationship_name> myself </relationship_name>	send_email
+email valerie wang	1	EMAIL	<message_type> email </message_type> <contact_name> valerie wang </contact_name>	send_email
+send an email to yong	1	EMAIL	send an <message_type> email </message_type> to <contact_name> yong </contact_name>	send_email
+write an email	1	EMAIL	write an <message_type> email </message_type>	send_email
+can you send emails	1	EMAIL	can you send <message_type> emails </message_type>	send_email
+send it	1	EMAIL	send it	confirm
+dmitriy chernyak	1	EMAIL	<contact_name> dmitriy chernyak </contact_name>	send_email
+compose an email to mary ann	1	EMAIL	compose an <message_type> email </message_type> to <contact_name> mary ann </contact_name>	send_email
+what email do i have	1	EMAIL	what <message_type> email </message_type> do i have	search_email
+please show me mail i have not opened yet	1	EMAIL	please show me <message_type> mail </message_type> i have not opened yet	search_email
+do i have any email from my manager	1	EMAIL	do i have <quantifier> any </quantifier> <message_type> email </message_type> from <from_relationship_name> my manager </from_relationship_name>	search_email
+can you read my emails	1	EMAIL	can you read my <message_type> emails </message_type>	search_email
+email with subject <email_subject>	1	EMAIL	email with subject <email_subject>	send_email
+email titled <email_subject>	1	EMAIL	email titled <email_subject>	send_email
+email about <email_subject>	1	EMAIL	email about <email_subject>	send_email
+send email subject <email_subject>	1	EMAIL	send <message_type> email </message_type> subject <email_subject>	send_email
+send email with subject <email_subject>	1	EMAIL	send <message_type> email </message_type> with subject <email_subject>	send_email
+send email titled <email_subject>	1	EMAIL	send <message_type> email </message_type> titled <email_subject>	send_email
+create mail	1	EMAIL	create <message_type> mail </message_type>	send_email
+create a mail	1	EMAIL	create a <message_type> mail </message_type>	send_email
+create a new email	1	EMAIL	create a <message_category> new </message_category> <message_type> email </message_type>	send_email
+create email	1	EMAIL	create <message_type> email </message_type>	send_email
+start new mail	1	EMAIL	start <message_category> new </message_category> <message_type> mail </message_type>	send_email
+compose mail	1	EMAIL	compose <message_type> mail </message_type>	send_email
+write mail	1	EMAIL	write <message_type> mail </message_type>	send_email
+send mail	1	EMAIL	send <message_type> mail </message_type>	send_email
+start new email	1	EMAIL	start <message_category> new </message_category> <message_type> email </message_type>	send_email
+compose email	1	EMAIL	compose <message_type> email </message_type>	send_email
+write email	1	EMAIL	write <message_type> email </message_type>	send_email
+email	1	EMAIL	email	send_email
+send a mail to rajesh	1	EMAIL	send a <message_type> mail </message_type> to <contact_name> rajesh </contact_name>	send_email
+send a mail to satya	1	EMAIL	send a <message_type> mail </message_type> to <contact_name> satya </contact_name>	send_email
+send a mail to nitin	1	EMAIL	send a <message_type> mail </message_type> to <contact_name> nitin </contact_name>	send_email
+send a mail to andrew	1	EMAIL	send a <message_type> mail </message_type> to <contact_name> andrew </contact_name>	send_email
+send a mail to craig	1	EMAIL	send a <message_type> mail </message_type> to <contact_name> craig </contact_name>	send_email
+send a mail to beryl	1	EMAIL	send a <message_type> mail </message_type> to <contact_name> beryl </contact_name>	send_email
+send a mail to jose	1	EMAIL	send a <message_type> mail </message_type> to <contact_name> jose </contact_name>	send_email
+send a mail to perry	1	EMAIL	send a <message_type> mail </message_type> to <contact_name> perry </contact_name>	send_email
+send a mail to ashok	1	EMAIL	send a <message_type> mail </message_type> to <contact_name> ashok </contact_name>	send_email
+send a mail to chad	1	EMAIL	send a <message_type> mail </message_type> to <contact_name> chad </contact_name>	send_email
+send a mail to allison	1	EMAIL	send a <message_type> mail </message_type> to <contact_name> allison </contact_name>	send_email
+send mail to rajesh	1	EMAIL	send <message_type> mail </message_type> to <contact_name> rajesh </contact_name>	send_email
+send mail to satya	1	EMAIL	send <message_type> mail </message_type> to <contact_name> satya </contact_name>	send_email
+send mail to nitin	1	EMAIL	send <message_type> mail </message_type> to <contact_name> nitin </contact_name>	send_email
+send mail to andrew	1	EMAIL	send <message_type> mail </message_type> to <contact_name> andrew </contact_name>	send_email
+send mail to craig	1	EMAIL	send <message_type> mail </message_type> to <contact_name> craig </contact_name>	send_email
+send mail to beryl	1	EMAIL	send <message_type> mail </message_type> to <contact_name> beryl </contact_name>	send_email
+send mail to jose	1	EMAIL	send <message_type> mail </message_type> to <contact_name> jose </contact_name>	send_email
+send mail to perry	1	EMAIL	send <message_type> mail </message_type> to <contact_name> perry </contact_name>	send_email
+send mail to ashok	1	EMAIL	send <message_type> mail </message_type> to <contact_name> ashok </contact_name>	send_email
+send mail to chad	1	EMAIL	send <message_type> mail </message_type> to <contact_name> chad </contact_name>	send_email
+send mail to allison	1	EMAIL	send <message_type> mail </message_type> to <contact_name> allison </contact_name>	send_email
+mail rajesh	1	EMAIL	mail <contact_name> rajesh </contact_name>	send_email
+mail satya	1	EMAIL	mail <contact_name> satya </contact_name>	send_email
+mail nitin	1	EMAIL	mail <contact_name> nitin </contact_name>	send_email
+mail andrew	1	EMAIL	mail <contact_name> andrew </contact_name>	send_email
+mail craig	1	EMAIL	mail <contact_name> craig </contact_name>	send_email
+mail beryl	1	EMAIL	mail <contact_name> beryl </contact_name>	send_email
+mail jose	1	EMAIL	mail <contact_name> jose </contact_name>	send_email
+mail perry	1	EMAIL	mail <contact_name> perry </contact_name>	send_email
+mail ashok	1	EMAIL	mail <contact_name> ashok </contact_name>	send_email
+mail chad	1	EMAIL	mail <contact_name> chad </contact_name>	send_email
+mail allison	1	EMAIL	mail <contact_name> allison </contact_name>	send_email
+send an email to rajesh	1	EMAIL	send an <message_type> email </message_type> to <contact_name> rajesh </contact_name>	send_email
+send an email to satya	1	EMAIL	send an <message_type> email </message_type> to <contact_name> satya </contact_name>	send_email
+send an email to nitin	1	EMAIL	send an <message_type> email </message_type> to <contact_name> nitin </contact_name>	send_email
+send an email to andrew	1	EMAIL	send an <message_type> email </message_type> to <contact_name> andrew </contact_name>	send_email
+send an email to craig	1	EMAIL	send an <message_type> email </message_type> to <contact_name> craig </contact_name>	send_email
+send an email to beryl	1	EMAIL	send an <message_type> email </message_type> to <contact_name> beryl </contact_name>	send_email
+send an email to jose	1	EMAIL	send an <message_type> email </message_type> to <contact_name> jose </contact_name>	send_email
+send an email to perry	1	EMAIL	send an <message_type> email </message_type> to <contact_name> perry </contact_name>	send_email
+send an email to ashok	1	EMAIL	send an <message_type> email </message_type> to <contact_name> ashok </contact_name>	send_email
+send an email to chad	1	EMAIL	send an <message_type> email </message_type> to <contact_name> chad </contact_name>	send_email
+send an email to allison	1	EMAIL	send an <message_type> email </message_type> to <contact_name> allison </contact_name>	send_email
+send email to rajesh	1	EMAIL	send <message_type> email </message_type> to <contact_name> rajesh </contact_name>	send_email
+send email to satya	1	EMAIL	send <message_type> email </message_type> to <contact_name> satya </contact_name>	send_email
+send email to nitin	1	EMAIL	send <message_type> email </message_type> to <contact_name> nitin </contact_name>	send_email
+send email to andrew	1	EMAIL	send <message_type> email </message_type> to <contact_name> andrew </contact_name>	send_email
+send email to craig	1	EMAIL	send <message_type> email </message_type> to <contact_name> craig </contact_name>	send_email
+send email to beryl	1	EMAIL	send <message_type> email </message_type> to <contact_name> beryl </contact_name>	send_email
+send email to jose	1	EMAIL	send <message_type> email </message_type> to <contact_name> jose </contact_name>	send_email
+send email to perry	1	EMAIL	send <message_type> email </message_type> to <contact_name> perry </contact_name>	send_email
+send email to ashok	1	EMAIL	send <message_type> email </message_type> to <contact_name> ashok </contact_name>	send_email
+send email to chad	1	EMAIL	send <message_type> email </message_type> to <contact_name> chad </contact_name>	send_email
+send email to allison	1	EMAIL	send <message_type> email </message_type> to <contact_name> allison </contact_name>	send_email
+email rajesh	1	EMAIL	email <contact_name> rajesh </contact_name>	send_email
+email satya	1	EMAIL	email <contact_name> satya </contact_name>	send_email
+email nitin	1	EMAIL	email <contact_name> nitin </contact_name>	send_email
+email andrew	1	EMAIL	email <contact_name> andrew </contact_name>	send_email
+email craig	1	EMAIL	email <contact_name> craig </contact_name>	send_email
+email beryl	1	EMAIL	email <contact_name> beryl </contact_name>	send_email
+email jose	1	EMAIL	email <contact_name> jose </contact_name>	send_email
+email perry	1	EMAIL	email <contact_name> perry </contact_name>	send_email
+email ashok	1	EMAIL	email <contact_name> ashok </contact_name>	send_email
+email chad	1	EMAIL	email <contact_name> chad </contact_name>	send_email
+email allison	1	EMAIL	email <contact_name> allison </contact_name>	send_email
+email rajesh <message>	1	EMAIL	email <contact_name> rajesh </contact_name> <message>	send_email
+email satya <message>	1	EMAIL	email <contact_name> satya </contact_name> <message>	send_email
+email nitin <message>	1	EMAIL	email <contact_name> nitin </contact_name> <message>	send_email
+email andrew <message>	1	EMAIL	email <contact_name> andrew </contact_name> <message>	send_email
+email craig <message>	1	EMAIL	email <contact_name> craig </contact_name> <message>	send_email
+email beryl <message>	1	EMAIL	email <contact_name> beryl </contact_name> <message>	send_email
+email jose <message>	1	EMAIL	email <contact_name> jose </contact_name> <message>	send_email
+email perry <message>	1	EMAIL	email <contact_name> perry </contact_name> <message>	send_email
+email ashok <message>	1	EMAIL	email <contact_name> ashok </contact_name> <message>	send_email
+email chad <message>	1	EMAIL	email <contact_name> chad </contact_name> <message>	send_email
+email allison <message>	1	EMAIL	email <contact_name> allison </contact_name> <message>	send_email
