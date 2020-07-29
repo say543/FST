@@ -113,7 +113,7 @@ class NLTKPreprocessor(BaseEstimator, TransformerMixin):
                 if token in self.stopwords or all(char in self.punct for char in token):
                     continue
 
-                # Lemmatize the token and yield
+                #Lemmatize the token and yield
                 lemma = self.lemmatize(token, tag)
                 yield lemma
 
