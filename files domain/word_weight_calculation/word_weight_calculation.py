@@ -168,7 +168,7 @@ def build_and_evaluate(X, y, classifier=SGDClassifier, outpath=None, verbose=Tru
             ('classifier', classifier),
         ])'''
         model = Pipeline([
-            ('vectorizer', CountVectorizer(ngram_range=(2, 2))),
+            ('vectorizer', CountVectorizer(ngram_range=(1, 3))),
             ('classifier', classifier),
         ])
 
@@ -300,6 +300,9 @@ if __name__ == "__main__":
     if not os.path.exists(PATH):
         # using subset to test . and it still working
     
+
+        #routine1
+        '''
         X = []
         y = []
         from nltk.corpus import movie_reviews as reviews
@@ -321,7 +324,31 @@ if __name__ == "__main__":
             if index >=1600 and index <= 1800:
                 y.append(reviews.categories(ele)[0])
             index+=1
+        '''
 
+        
+        X = []
+        y = []
+        with open('files_domain_training_answer_temp.tsv', 'r', encoding='utf-8') as fin:
+        #with open('files_domain_training_contexual_answer.tsv', 'r', encoding='utf-8') as fin: 
+            for line in fin:
+                arr = line.split('\t')
+                # for debug
+                #print(arr[2])
+                #print(arr[3])
+
+                X.append(arr[2])
+
+                if arr[3] != 'files':
+                    # for debug
+                    #print('not_files')
+                    y.append('not_files')
+                else:
+                    # for debug
+                    #print(arr[3])
+                    y.append(arr[3])
+
+        print('-I-: x {}, y {}'.format(len(X),len(y)))
 
         model = build_and_evaluate(X,y, outpath=PATH)
     else:
