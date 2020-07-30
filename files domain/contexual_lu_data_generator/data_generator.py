@@ -614,6 +614,8 @@ class Data(object):
                     elif tag in ['file_keyword', 'files_keyword', 'file_name'] and filetag_src == 'Random Tag':
                         random_tag = self._get_random_generated_filetag()
                         self.random_filetag_selection_cnt += 1
+                    elif tag in ['contact_name'] or tag in ['to_contact_name']:
+                        random_tag = self.tags['combine_lexicon'].get_random_value()
                     else:
                         random_tag = self.tags[tag].get_random_value()
 
@@ -1048,9 +1050,11 @@ for tag_file in tqdm(all_tags_files):
 ## coming from my negative examples
 ## but have not been preprocessing and deduplicting
 data.load_negative_data('negative_corpus.txt')
+#data.load_negative_data('negative_corpus_1.txt')
 # if including extra negative data, using this one
 #data.load_negative_data('negative_corpus.txt', 'additional_neg_data_in_query_form.txt')
-#data.load_negative_data('negative_corpus_1.txt')
+
+
 # using my own negative data then change to this one
 #data.load_negative_data('mediacontrol_domain_train_after_filter_dedup.txt')
 
@@ -1069,7 +1073,9 @@ data.load_addtional_patterns('additional_patterns.txt')
 #data.load_addtional_patterns('additional_patterns_1.txt')
 
 #files search related patterns
-data.load_addtional_patterns('patterns_FILES.txt')
+# add variety for contact_name and to_contact_name
+#data.load_addtional_patterns('patterns_FILES.txt')
+data.load_addtional_patterns('patterns_FILES_contact_name.txt')
 
 
 
