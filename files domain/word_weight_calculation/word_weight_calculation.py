@@ -23,6 +23,8 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import LabelEncoder
 from sklearn.linear_model import SGDClassifier
 from sklearn.linear_model import LogisticRegression
+#https://stackabuse.com/implementing-svm-and-kernel-svm-with-pythons-scikit-learn/
+from sklearn.svm import SVC
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.metrics import classification_report as clsr
 #
@@ -134,6 +136,11 @@ class NLTKPreprocessor(BaseEstimator, TransformerMixin):
 
 
 @timeit
+
+# SVM cannot calculate weight, not sure why
+#def build_and_evaluate(X, y, classifier=SVC(kernel='linear'), outpath=None, verbose=True):
+#def build_and_evaluate(X, y, classifier=SVC(kernel='sigmoid'), outpath=None, verbose=True):
+#def build_and_evaluate(X, y, classifier=LogisticRegression, outpath=None, verbose=True):
 def build_and_evaluate(X, y, classifier=SGDClassifier, outpath=None, verbose=True):
     """
     Builds a classifer for the given list of documents and targets in two
@@ -184,12 +191,31 @@ def build_and_evaluate(X, y, classifier=SGDClassifier, outpath=None, verbose=Tru
         return model
 
     # Label encode the targets
+    # data input order 
+    # neg first then pos 
+    # so here label seqeuncing 
+    # neg become 0 and pos becomes 1
     labels = LabelEncoder()
     y = labels.fit_transform(y)
 
+
+    # for debug
+    index = 0
+    for ele in y:
+        if index >= 422000 and index < 42000:
+            print('{}: {}'.format(index, ele))
+        index+=1
+
     # Begin evaluation
     if verbose: print("Building for evaluation")
-    X_train, X_test, y_train, y_test = tts(X, y, test_size=0.2)
+    #X_train, X_test, y_train, y_test = tts(X, y, test_size=0.2)
+
+    #using test set directly snice do not care evaluation result
+    X_train = X
+    X_test = X
+    y_train = y
+    y_test = y
+
     model, secs = build(classifier, X_train, y_train)
 
     if verbose: print("Evaluation model fit in {:0.3f} seconds".format(secs))
@@ -242,13 +268,14 @@ def show_most_informative_features(model, text=None, n=20):
     # for debug
     # this will oupit all features
     #https://wizardforcel.gitbooks.io/scipycon-2018-sklearn-tut/content/11.html
-
+    '''
+    print('number of features {}'.format(len(vectorizer.get_feature_names())))
     index = 0
     for ele in vectorizer.get_feature_names():
         if index < 200:
             print('{}: {}'.format(index, ele))
         index+=1
-    
+    '''
 
 
     # Zip the feature names with the coefs and sort
@@ -271,8 +298,14 @@ def show_most_informative_features(model, text=None, n=20):
     # Create two columns with most negative and most positive features.
     for (cp, fnp), (cn, fnn) in topn:
         output.append(
-            "{:0.4f}{: >15}    {:0.4f}{: >15}".format(cp, fnp, cn, fnn)
+            "{:0.4f}\t{: >15}\t{:0.4f}\t{: >15}".format(cp, fnp, cn, fnn)
         )
+
+    with open('feature.txt', 'w', encoding='utf-8') as fout:
+        for item in output:
+            fout.write(item + '\r\n');
+
+
 
     return "\n".join(output)
 
@@ -297,11 +330,17 @@ if __name__ == "__main__":
         with open(PATH, 'rb') as f:
             model = pickle.load(f)
     '''
+
     if not os.path.exists(PATH):
         # using subset to test . and it still working
     
 
         #routine1
+        # label output 0  or 1
+        # pos 1 and negative 0
+
+        # data input order 
+        # neg first then pos 
         '''
         X = []
         y = []
@@ -318,21 +357,37 @@ if __name__ == "__main__":
         index = 0
         for ele in reviews.fileids():
             if index < 200:
-                #print('{}: {}'.format(index, ele))
+                print('{}: {}'.format(index, reviews.categories(ele)[0]))
                 y.append(reviews.categories(ele)[0])
 
             if index >=1600 and index <= 1800:
+                print('{}: {}'.format(index, reviews.categories(ele)[0]))
                 y.append(reviews.categories(ele)[0])
             index+=1
         '''
 
-        
+
+
+        # file comes first 
+        # so label as 
+        # pos : 0
+        # neg: 1
+        # so negative coefficient means important features for files
         X = []
         y = []
-        with open('files_domain_training_answer_temp.tsv', 'r', encoding='utf-8') as fin:
-        #with open('files_domain_training_contexual_answer.tsv', 'r', encoding='utf-8') as fin: 
+
+        dedup = set()
+        # for speed up test
+        #with open('files_domain_training_answer_temp.tsv', 'r', encoding='utf-8') as fin:
+        #with open('files_domain_training_contexual_answer_07162020v1.tsv', 'r', encoding='utf-8') as fin:
+        with open('files_domain_training_contexual_answer.tsv', 'r', encoding='utf-8') as fin: 
             for line in fin:
                 arr = line.split('\t')
+
+                # remove ending of line character
+                arr[2] = arr[2].strip()
+                arr[3] = arr[3].strip()
+
                 # for debug
                 #print(arr[2])
                 #print(arr[3])
@@ -343,15 +398,25 @@ if __name__ == "__main__":
                     # for debug
                     #print('not_files')
                     y.append('not_files')
+
+                    dedup.add('not_files')
                 else:
                     # for debug
                     #print(arr[3])
                     y.append(arr[3])
 
+                    dedup.add(arr[3])
+
         print('-I-: x {}, y {}'.format(len(X),len(y)))
+        print('-I-: y label : {}'.format(len(dedup)))
 
         model = build_and_evaluate(X,y, outpath=PATH)
-    else:
+
         with open(PATH, 'rb') as f:
             model = pickle.load(f)
         print(show_most_informative_features(model))
+    else:
+        print('model exist so loading directly {}'.format(PATH))
+        with open(PATH, 'rb') as f:
+            model = pickle.load(f)
+        print(show_most_informative_features(model, n=200))
