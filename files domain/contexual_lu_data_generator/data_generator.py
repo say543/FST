@@ -636,9 +636,10 @@ class Data(object):
                         "<{}> {} </{}>".format(tag, random_tag, tag))
 
                     # append salutions randomly
-                    prefix = random.choices(salutations, k=1)[0]
-                    query = prefix + query
-                    annotation = prefix + annotation
+                    # no saluations
+                    #prefix = random.choices(salutations, k=1)[0]
+                    #query = prefix + query
+                    #annotation = prefix + annotation
 
 
             ##for debug

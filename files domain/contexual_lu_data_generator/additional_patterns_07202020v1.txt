@@ -1,0 +1,71 @@
+open file <file_keyword> in this meeting	1	FILES	open file <file_keyword> in this meeting	file_search
+open <file_keyword> file in this meeting	1	FILES	open <file_keyword> file in this meeting	file_search
+open my file <file_keyword> in this meeting	1	FILES	open my file <file_keyword> in this meeting	file_search
+open my <file_keyword> in this meeting	1	FILES	open my <file_keyword> in this meeting	file_search
+send <file_keyword> with this meeting	1	FILES	send <file_keyword> with this meeting	file_search
+share <file_keyword> <file_type> with this meeting	1	FILES	share <file_keyword> <file_type> with this meeting	file_search
+share <file_keyword> file with this meeting	1	FILES	share <file_keyword> file with this meeting	file_search
+share <file_type> with this meeting	1	FILES	share <file_type> with this meeting	file_search
+send <file_keyword> deck to this meeting	1	FILES	send <file_keyword> deck to this meeting	file_search
+send <file_keyword> file to this meeting	1	FILES	send <file_keyword> file to this meeting	file_search
+send <file_keyword> to this meeting	1	FILES	send <file_keyword> to this meeting	file_search
+send <file_keyword> <file_type> to this meeting	1	FILES	send <file_keyword> <file_type> to this meeting	file_search
+send <file_keyword> file to this meeting	1	FILES	send <file_keyword> file to this meeting	file_search
+send <file_type> to this meeting	1	FILES	send <file_type> to this meeting	file_search
+show <file_keyword> to this meeting	1	FILES	show <file_keyword> to this meeting	file_search
+show <file_keyword> <file_type> to this meeting	1	FILES	show <file_keyword> <file_type> to this meeting	file_search
+open file <file_keyword> with my meeting	1	FILES	open file <file_keyword> with my meeting	file_search
+open <file_keyword> file with my meeting	1	FILES	open <file_keyword> file with my meeting	file_search
+open my file <file_keyword> in my meeting	1	FILES	open my file <file_keyword> in my meeting	file_search
+open my <file_keyword> in my meeting	1	FILES	open my <file_keyword> in my meeting	file_search
+send <file_keyword> with my meeting	1	FILES	send <file_keyword> with my meeting	file_search
+share <file_keyword> <file_type> with my meeting	1	FILES	share <file_keyword> <file_type> with my meeting	file_search
+share <file_keyword> file with my meeting	1	FILES	share <file_keyword> file with my meeting	file_search
+share <file_type> with my meeting	1	FILES	share <file_type> with my meeting	file_search
+send <file_keyword> deck to my meeting	1	FILES	send <file_keyword> deck to my meeting	file_search
+send <file_keyword> file to my meeting	1	FILES	send <file_keyword> file to my meeting	file_search
+send <file_keyword> to my meeting	1	FILES	send <file_keyword> to my meeting	file_search
+send <file_keyword> <file_type> to my meeting	1	FILES	send <file_keyword> <file_type> to my meeting	file_search
+send <file_keyword> file to my meeting	1	FILES	send <file_keyword> file to my meeting	file_search
+send <file_type> to my meeting	1	FILES	send <file_type> to my meeting	file_search
+show <file_keyword> to my meeting	1	FILES	show <file_keyword> to my meeting	file_search
+show <file_keyword> <file_type> to my meeting	1	FILES	show <file_keyword> <file_type> to my meeting	file_search
+open file <file_keyword> with my next meeting	1	FILES	open file <file_keyword> with my next meeting	file_search
+open <file_keyword> file with my next meeting	1	FILES	open <file_keyword> file with my next meeting	file_search
+open my file <file_keyword> with my next meeting	1	FILES	open my file <file_keyword> with my next meeting	file_search
+open my <file_keyword> with my next meeting	1	FILES	open my <file_keyword> with my next meeting	file_search
+send <file_keyword> with my next meeting	1	FILES	send <file_keyword> with my next meeting	file_search
+share <file_keyword> <file_type> with my next meeting	1	FILES	share <file_keyword> <file_type> with my next meeting	file_search
+share <file_keyword> file with my next meeting	1	FILES	share <file_keyword> file with my next meeting	file_search
+share <file_type> with my next meeting	1	FILES	share <file_type> with my next meeting	file_search
+send <file_keyword> deck to my next meeting	1	FILES	send <file_keyword> deck to my next meeting	file_search
+send <file_keyword> file to my next meeting	1	FILES	send <file_keyword> file to my next meeting	file_search
+send <file_keyword> to my next meeting	1	FILES	send <file_keyword> to my next meeting	file_search
+send <file_keyword> <file_type> to my next meeting	1	FILES	send <file_keyword> <file_type> to my next meeting	file_search
+send <file_keyword> file to my next meeting	1	FILES	send <file_keyword> file to my next meeting	file_search
+send <file_type> to my next meeting	1	FILES	send <file_type> to my next meeting	file_search
+show <file_keyword> to my meeting	1	FILES	show <file_keyword> to my meeting	file_search
+show <file_keyword> <file_type> to my next meeting	1	FILES	show <file_keyword> <file_type> to my next meeting	file_search
+share <file_keyword> with <sharetarget_name> <sharetarget_type>	1	FILES	share <file_keyword> with <sharetarget_name> <sharetarget_type>	file_search
+share <file_keyword> <file_type> with <sharetarget_name> <sharetarget_type>	1	FILES	share <file_keyword> <file_type> with <sharetarget_name> <sharetarget_type>	file_search
+send <file_keyword> to <contact_name>	1	FILES	send <file_keyword> to <contact_name>	file_search
+send <file_keyword> <file_keyword> to <contact_name>	1	FILES	send <file_keyword> <file_keyword> to <contact_name>	file_search
+where is <file_keyword>	1	FILES	where is <file_keyword>	file_search
+where is <file_keyword> <file_type>	1	FILES	where is <file_keyword> <file_type>	file_search
+find file created <date>	1	FILES	find file created <date>	file_search
+find file shared by <contact_name>	1	FILES	find file shared by <contact_name>	file_search
+find file similar to <file_keyword>	1	FILES	find file similar to <file_keyword>	file_search
+find file <file_keyword>	1	FILES	find file <file_keyword>	file_search
+find <file_type>	1	FILES	find <file_type>	file_search
+find documents for <contact_name>	1	FILES	find documents for <contact_name>	file_search
+download <file_keyword>	1	FILES	download <file_keyword>	file_search
+download <file_keyword> <file_type>	1	FILES	download <file_keyword> <file_type>	file_search
+download file shared by <contact_name>	1	FILES	download file shared by <contact_name>	file_search
+jump to <file_keyword>	1	FILES	jump to <file_keyword>	file_search
+jump to <file_keyword> <file_type>	1	FILES	jump to <file_keyword> <file_type>	file_search
+jump to <file_keyword> shared by <contact_name>	1	FILES	jump to <file_keyword> shared by <contact_name>	file_search
+jump to my <file_keyword>	1	FILES	jump to my <file_keyword>	file_search
+jump to my <file_keyword> <file_type>	1	FILES	jump to my <file_keyword> <file_type>	file_search
+jump to my <file_keyword> shared by <contact_name>	1	FILES	jump to my <file_keyword> shared by <contact_name>	file_search
+send <contact_name> a copy of file <file_keyword>	1	FILES	send <contact_name> a copy of file <file_keyword>	file_search
+send <contact_name> a copy of file <file_keyword> <file_type>	1	FILES	send <contact_name> a copy of file <file_keyword> <file_type>	file_search
