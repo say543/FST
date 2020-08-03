@@ -35,12 +35,18 @@ class Tag(object):
                 'The tag values for tag {} are empty!'.format(self.tag_name))
         return random.choices(self.tag_values, k=1)[0]
 
+    def get_values(self):
+        return self.tag_values
+
 
 class Data(object):
 
     def __init__(self):
         # positive data for data tag augmentation
         self.posdata_scale_multiplier = 1000  # multiplier to amplify the positive_dataset
+        self.overtrigger_suffix_upper_bound = 6
+        self.overtrigger_suffix_value_upper_bound = 90000
+        self.overtrigger_suffix_value_low_bound = 10000
         # probability of selecting from additional tags
         ### ? this should be file keywrod / file name only
         ### https://docs.python.org/3/library/collections.html
@@ -52,7 +58,14 @@ class Data(object):
         self.additional_filetag_selection_cnt = 0
         self.random_filetag_selection_cnt = 0
 
+        #dictionary of list
         self.tags = {}
+
+        # dictionary of dictionay 
+        self.overtrigger_tags={}
+
+        self.filekeylistwithsuffix = []
+
         self.patterns = {}  # pattern: frequency
         self.patterns_domain = {}  # pattern: Domain
         self.patterns_annotated_queries = {}  # pattern: annotated queries
@@ -151,10 +164,49 @@ class Data(object):
         with open(file, encoding='utf-8') as f:
             values = [val.strip() for val in f.readlines()]
 
+
+        # for debug 
+        print("{} before deduplication {}".format(file, len(values)))
+
+        #dedup and transfer back to list
+        values = list(set(values))
+
+        # for debug 
+        print("{} after deduplication {}".format(file, len(values)))
+
         if tag not in self.tags:
             self.tags[tag] = Tag(tag, values)
         else:
             raise Exception('Duplicate tags found for {}'.format(tag))
+
+
+    def load_overtrigger_tags_data(self, file):
+        tag = os.path.basename(file).replace('.txt', '')
+
+        # for debug
+        #print("tag {}".format(tag))
+
+        ## remain head / tailing spaces
+        with open(file, encoding='utf-8') as f:
+            values = [val.strip() for val in f.readlines()]
+
+
+        # for debug 
+        print("overtrigger {} before deduplication {}".format(file, len(values)))
+
+        #dedup and transfer back to list
+        values = list(set(values))
+
+        # for debug 
+        print("overtrigger {} after deduplication {}".format(file, len(values)))
+
+        # for debug 
+        #print("overtrigger {} ".format(len(self.overtrigger_tags)))
+
+        if tag not in self.overtrigger_tags:
+            self.overtrigger_tags[tag] = Tag(tag, values)
+        else:
+            raise Exception('Duplicate overtrigger tags found for {}'.format(tag))
 
     def _augment_patterns(self):
         similar_patterns_dict = {}
@@ -477,6 +529,32 @@ class Data(object):
                            weights=list(self.tag_selection_probabilities))[0]
         return selection
 
+
+
+    def _get_new_suffix_for_filename_with_prob(self, filename):
+
+        #for debug
+        #print("random_tag prepared for suffix {}".format(filename))
+
+        overtrigger_tags_set = set(self.overtrigger_tags['file_keyword'].get_values())
+        for i in range(len(filename)):
+            if filename[i].lower() in overtrigger_tags_set:
+
+
+                # with prob 0.7 that if will append new suffix
+                rand_prb = random.randint(0, 9)
+                if rand_prb <=self.overtrigger_suffix_upper_bound:
+                    filename[i] += str(random.randint(self.overtrigger_suffix_value_low_bound, 
+                        self.overtrigger_suffix_value_upper_bound))
+                    # for debug
+                    #print("new suffix: {}, freq: {} ".format(filename[i], " ".join(filename)))
+
+                    self.filekeylistwithsuffix.append(filename[i])
+
+        # for debug
+        #print("new filename len:{} with suffux: {}".format(len(filename),  " ".join(filename)))
+        return " ".join(filename)
+
     def _get_random_generated_filetag(self):
         # This fn checks the effects of filename/keyword selection
         random_filename = []
@@ -493,7 +571,23 @@ class Data(object):
             for _ in range(num_words):
                 random_filename.extend(random.choices(self.vocab, k=1))
 
+            # add suffix according to overtrigger tag
+            generated_filename = self._get_new_suffix_for_filename_with_prob(random_filename)
+            '''
+            overtrigger_tags_set = set(self.overtrigger_tags['file_keyword'].get_values())
+            for i in range(len(random_filename)):
+                if random_filename[i].lower() in overtrigger_tags_set:
+                    # with prob 0.7 that if will append new suffix
+                    rand_prb = random.randint(0, 9)
+                    if rand_prb <=self.overtrigger_suffix_upper_bound:
+                        random_filename[i] += str(random.randint(self.overtrigger_suffix_low_bound, self.overtrigger_suffix_upper_bound))
+                        # for debug
+                        #print("new suffix: {}, freq: {} ".format(random_filename[i], " ".join(random_filename)))
+
+                        self.filekeylistwithsuffix.append(random_filename[i])
+                        raise Exception('inside here')
             generated_filename = " ".join(random_filename)
+            '''
 
             ## if generated_filename inside negative n_grams, then igonre it and retry given max attempts
             ##? but once attempt reachs limit it it will return directly 
@@ -617,9 +711,49 @@ class Data(object):
                     elif tag in ['contact_name'] or tag in ['to_contact_name']:
                         random_tag = self.tags['combine_lexicon'].get_random_value()
                     else:
+                        # this key will key from file_keyword and it needs to add suffix
                         random_tag = self.tags[tag].get_random_value()
 
+                        # for debug
+                        #print("random_tag prepared for suffix {}".format(random_tag.split()))
+                        #print("overtrigger: {}".format(self.overtrigger_tags))
+
+                        # default using space to split
+                        random_tag = self._get_new_suffix_for_filename_with_prob(random_tag.split())
+
+                        # add suffix according to overtrigger tag
+                        '''
+                        random_tag_tokens = random_tag.split(" ")
+                        overtrigger_tags_set = set(self.overtrigger_tags['file_keyword'].get_values())
+
+
+
+
+                        for i in range(len(random_tag_tokens)):
+                            # for debug
+                           # print("new suffix: {}".format(random_tag_tokens[i]))
+
+                            if random_tag_tokens[i].lower() in overtrigger_tags_set:
+                                # with prob 0.7 that if will append new suffix
+                                rand_prb = random.randint(0, 9)
+                                
+                                # for debug
+                                #print("rand_prb: {}".format(rand_prb))
+                                if rand_prb <= self.overtrigger_suffix_upper_bound:
+                                    
+                                    # for debug
+                                    #print("suffix: {}".format(str(random.randint(1900, 2100))))
+
+                                    random_tag_tokens[i]  += str(random.randint(self.overtrigger_suffix_low_bound, self.overtrigger_suffix_upper_bound))
+                                    #print("new suffix: {}, freq: {} ".format(random_tag_tokens[i], " ".join(random_tag_tokens)))
+                                    self.filekeylistwithsuffix.append(random_tag_tokens[i])
+                        '''
+                        
+
                     if tag in ['file_keyword', 'files_keyword', 'file_name']:
+                        # for deubg
+                        #print("new random tag: {}".format(random_tag))
+
                         self._add_tagvalue_to_keylist(random_tag)
 
                     '''
@@ -991,7 +1125,7 @@ class Data(object):
 
 
 
-    def write_data(self, data_filename, neg_filename, pos_filename, keylist_filename):
+    def write_data(self, data_filename, neg_filename, pos_filename, keylist_filename, suffixkeylist_filename):
         num_pos_data = len(self.positive_data)
         num_neg_data = len(self.negative_data)
         print("Positive samples: {} | Negative samples {}".format(
@@ -1024,6 +1158,11 @@ class Data(object):
             for kw in set(self.keylist):
                 f.write("{}\n".format(kw))
 
+        print("Writing postive keylist to file: {}".format(suffixkeylist_filename))
+        with open(suffixkeylist_filename, 'w', encoding='utf-8') as f:
+            for kw in set(self.filekeylistwithsuffix):
+                f.write("{}\n".format(kw))
+
         print("Writing all data to file: {}".format(data_filename))
         with open(data_filename, 'w', encoding='utf-8') as f:
             f.write("TurnNumber\tPreviousTurnDomain\tquery\tdomain\n")
@@ -1043,15 +1182,20 @@ data = Data()
 ## change to my own solution 
 #all_tags_files = glob('./placeholder_tags/*.txt')
 all_tags_files = glob('./placeholder_tags_chiecha/*.txt')
-
 for tag_file in tqdm(all_tags_files):
     data.load_tags_data(tag_file)
+
+
+#overtrigger tags
+all_overtrigger_tags_files = glob('./overtrigger_tags/*.txt')
+for tag_file in tqdm(all_overtrigger_tags_files):
+    data.load_overtrigger_tags_data(tag_file)
 
 ## negative_corpus.txt
 ## coming from my negative examples
 ## but have not been preprocessing and deduplicting
 data.load_negative_data('negative_corpus.txt')
-#data.load_negative_data('negative_corpus_1.txt')
+##data.load_negative_data('negative_corpus_1.txt')
 # if including extra negative data, using this one
 #data.load_negative_data('negative_corpus.txt', 'additional_neg_data_in_query_form.txt')
 
@@ -1071,11 +1215,11 @@ data.load_patterns(all_patterns_files)
 
 #kanshan extra pattern but slot reformated with _ by myself
 data.load_addtional_patterns('additional_patterns.txt')
-#data.load_addtional_patterns('additional_patterns_1.txt')
+##data.load_addtional_patterns('additional_patterns_1.txt')
 
 #files search related patterns
 # add variety for contact_name and to_contact_name
-#data.load_addtional_patterns('patterns_FILES.txt')
+##data.load_addtional_patterns('patterns_FILES.txt')
 data.load_addtional_patterns('patterns_FILES_contact_name.txt')
 
 
@@ -1110,8 +1254,12 @@ data.get_data()
 #data.write_data(data_filename='Domain_Train.tsv', pos_filename='pos_data.tsv',
 #                neg_filename='neg_data.tsv', keylist_filename='filekeys.txt')
 
+#data.write_data(data_filename='files_domain_training_contexual_answer.tsv', pos_filename='pos_data_chiecha.tsv',
+#                neg_filename='neg_data_chiecha.tsv', keylist_filename='filekeys_chiecha.txt')
+
 data.write_data(data_filename='files_domain_training_contexual_answer.tsv', pos_filename='pos_data_chiecha.tsv',
-                neg_filename='neg_data_chiecha.tsv', keylist_filename='filekeys_chiecha.txt')
+                neg_filename='neg_data_chiecha.tsv', keylist_filename='filekeys_chiecha.txt', 
+                suffixkeylist_filename = 'filekeys_suffix_chiecha.txt')
 
 
 
