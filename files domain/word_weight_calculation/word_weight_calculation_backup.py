@@ -5,6 +5,7 @@
 #https://gist.github.com/bbengfort/044682e76def583a12e6c09209c664a1
 
 
+
 import os
 import time
 import string
@@ -23,8 +24,6 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import LabelEncoder
 from sklearn.linear_model import SGDClassifier
 from sklearn.linear_model import LogisticRegression
-#https://stackabuse.com/implementing-svm-and-kernel-svm-with-pythons-scikit-learn/
-from sklearn.svm import SVC
 from sklearn.base import BaseEstimator, TransformerMixin
 from sklearn.metrics import classification_report as clsr
 #
@@ -115,7 +114,7 @@ class NLTKPreprocessor(BaseEstimator, TransformerMixin):
                 if token in self.stopwords or all(char in self.punct for char in token):
                     continue
 
-                #Lemmatize the token and yield
+                # Lemmatize the token and yield
                 lemma = self.lemmatize(token, tag)
                 yield lemma
 
@@ -136,12 +135,10 @@ class NLTKPreprocessor(BaseEstimator, TransformerMixin):
 
 
 @timeit
+# change it to logistic Regression
+def build_and_evaluate(X, y, classifier=LogisticRegression, outpath=None, verbose=True):
+#def build_and_evaluate(X, y, classifier=SGDClassifier, outpath=None, verbose=True):
 
-# SVM cannot calculate weight, not sure why
-#def build_and_evaluate(X, y, classifier=SVC(kernel='linear'), outpath=None, verbose=True):
-#def build_and_evaluate(X, y, classifier=SVC(kernel='sigmoid'), outpath=None, verbose=True):
-#def build_and_evaluate(X, y, classifier=LogisticRegression, outpath=None, verbose=True):
-def build_and_evaluate(X, y, classifier=SGDClassifier, outpath=None, verbose=True):
     """
     Builds a classifer for the given list of documents and targets in two
     stages: the first does a train/test split and prints a classifier report,
@@ -166,57 +163,67 @@ def build_and_evaluate(X, y, classifier=SGDClassifier, outpath=None, verbose=Tru
 
         # using ngram as feature
         #using logistic regression
-        # error AttributeError: 'list' object has no attribute 'lower'
         '''
         model = Pipeline([
             ('preprocessor', NLTKPreprocessor()),
-            #('vectorizer', CountVectorizer(tokenizer=identity,  preprocessor=None, lowercase=False, analyzer='word', ngram_range=(1, 3))),
-            ('vectorizer', CountVectorizer(ngram_range=(1, 3))),
-            ('classifier', classifier),
-        ])'''
-        model = Pipeline([
-            ('vectorizer', CountVectorizer(ngram_range=(1, 3))),
+            ('vectorizer', CountVectorizer(analyzer='word', ngram_range=(1, 3))),
             ('classifier', classifier),
         ])
-
         '''
+
+
+        #using tfidf to build vectorize, not bag of word
+        #using SGD classfifier, SGC Classiifer
+        
         model = Pipeline([
             ('preprocessor', NLTKPreprocessor()),
             ('vectorizer', TfidfVectorizer(tokenizer=identity, preprocessor=None, lowercase=False)),
             ('classifier', classifier),
         ])
-        '''
+        
+
+
+        
 
         model.fit(X, y)
         return model
 
     # Label encode the targets
-    # data input order 
-    # neg first then pos 
-    # so here label seqeuncing 
-    # neg become 0 and pos becomes 1
+    # https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html
+    # label output 0  or 1
+    # pos 1 and negative 0
     labels = LabelEncoder()
     y = labels.fit_transform(y)
 
 
     # for debug
+    
     index = 0
     for ele in y:
-        if index >= 422000 and index < 42000:
+        if index < 2000:
             print('{}: {}'.format(index, ele))
         index+=1
+    
 
     # Begin evaluation
     if verbose: print("Building for evaluation")
+
+
+    # train split test
+    # i probabliy do not need to do that
     #X_train, X_test, y_train, y_test = tts(X, y, test_size=0.2)
 
-    #using test set directly snice do not care evaluation result
     X_train = X
     X_test = X
     y_train = y
     y_test = y
 
+
+
     model, secs = build(classifier, X_train, y_train)
+
+
+
 
     if verbose: print("Evaluation model fit in {:0.3f} seconds".format(secs))
     if verbose: print("Classification Report:\n")
@@ -265,19 +272,6 @@ def show_most_informative_features(model, text=None, n=20):
         # Otherwise simply use the coefficients
         tvec = classifier.coef_
 
-    # for debug
-    # this will oupit all features
-    #https://wizardforcel.gitbooks.io/scipycon-2018-sklearn-tut/content/11.html
-    '''
-    print('number of features {}'.format(len(vectorizer.get_feature_names())))
-    index = 0
-    for ele in vectorizer.get_feature_names():
-        if index < 200:
-            print('{}: {}'.format(index, ele))
-        index+=1
-    '''
-
-
     # Zip the feature names with the coefs and sort
     coefs = sorted(
         zip(tvec[0], vectorizer.get_feature_names()),
@@ -298,20 +292,97 @@ def show_most_informative_features(model, text=None, n=20):
     # Create two columns with most negative and most positive features.
     for (cp, fnp), (cn, fnn) in topn:
         output.append(
-            "{:0.4f}\t{: >15}\t{:0.4f}\t{: >15}".format(cp, fnp, cn, fnn)
+            "{:0.4f}{: >15}    {:0.4f}{: >15}".format(cp, fnp, cn, fnn)
         )
-
-    with open('feature.txt', 'w', encoding='utf-8') as fout:
-        for item in output:
-            fout.write(item + '\r\n');
-
-
 
     return "\n".join(output)
 
 
 if __name__ == "__main__":
     PATH = "model.pickle"
+
+
+
+    
+    from nltk.corpus import movie_reviews as reviews
+
+    X = [reviews.raw(fileid) for fileid in reviews.fileids()]
+    y = [reviews.categories(fileid)[0] for fileid in reviews.fileids()]
+
+    '''
+    # using subset to test . and it still working
+    X = []
+    y = []
+    from nltk.corpus import movie_reviews as reviews
+    index = 0
+    for ele in reviews.fileids():
+        if index < 200:
+            #print('{}: {}'.format(index, ele))
+            X.append(reviews.raw(ele))
+        if index >=1600 and index <= 1800:
+             X.append(reviews.raw(ele))
+        index+=1
+
+    index = 0
+    for ele in reviews.fileids():
+        if index < 200:
+            #print('{}: {}'.format(index, ele))
+            y.append(reviews.categories(ele)[0])
+
+        if index >=1600 and index <= 1800:
+            y.append(reviews.categories(ele)[0])
+        index+=1
+    '''
+
+
+    '''
+    X = []
+    y = []
+    with open('files_domain_training_answer_temp.tsv', 'r', encoding='utf-8') as fin:
+    #with open('files_domain_training_contexual_answer.tsv', 'r', encoding='utf-8') as fin: 
+        for line in fin:
+            arr = line.split('\t')
+            # for debug
+            #print(arr[2])
+            #print(arr[3])
+
+            X.append(arr[2])
+
+            if arr[3] != 'files':
+                # for debug
+                #print('not_files')
+                y.append('not_files')
+            else:
+                # for debug
+                #print(arr[3])
+                y.append(arr[3])
+
+    print('-I-: x {}, y {}'.format(len(X),len(y)))
+    #print('-I-: x {}'.format(X[0]))
+    #print('-I-: x {}'.format(Y[0]))
+    '''
+
+    # for x data each is a document, can replaced with single query
+    '''
+    index = 0
+    for ele in X:
+        if index < 5:
+            print('{}: {}'.format(index, ele))
+        index+=1
+    '''
+
+
+    '''
+    # for y data it is pos or neg
+    index = 0
+    for ele in y:
+        if index < 2000:
+            print('{}: {}'.format(index, ele))
+        index+=1
+    '''
+
+    model = build_and_evaluate(X,y, outpath=PATH)
+    print(show_most_informative_features(model))
 
     '''
     if not os.path.exists(PATH):
@@ -323,100 +394,11 @@ if __name__ == "__main__":
 
 
     
-
         model = build_and_evaluate(X,y, outpath=PATH)
 
     else:
         with open(PATH, 'rb') as f:
             model = pickle.load(f)
+
+    print(show_most_informative_features(model))
     '''
-
-    if not os.path.exists(PATH):
-        # using subset to test . and it still working
-    
-
-        #routine1
-        # label output 0  or 1
-        # pos 1 and negative 0
-
-        # data input order 
-        # neg first then pos 
-        '''
-        X = []
-        y = []
-        from nltk.corpus import movie_reviews as reviews
-        index = 0
-        for ele in reviews.fileids():
-            if index < 200:
-                #print('{}: {}'.format(index, ele))
-                X.append(reviews.raw(ele))
-            if index >=1600 and index <= 1800:
-                X.append(reviews.raw(ele))
-            index+=1
-
-        index = 0
-        for ele in reviews.fileids():
-            if index < 200:
-                print('{}: {}'.format(index, reviews.categories(ele)[0]))
-                y.append(reviews.categories(ele)[0])
-
-            if index >=1600 and index <= 1800:
-                print('{}: {}'.format(index, reviews.categories(ele)[0]))
-                y.append(reviews.categories(ele)[0])
-            index+=1
-        '''
-
-
-
-        # file comes first 
-        # so label as 
-        # pos : 0
-        # neg: 1
-        # so negative coefficient means important features for files
-        X = []
-        y = []
-
-        dedup = set()
-        # for speed up test
-        #with open('files_domain_training_answer_temp.tsv', 'r', encoding='utf-8') as fin:
-        #with open('files_domain_training_contexual_answer_07162020v1.tsv', 'r', encoding='utf-8') as fin:
-        with open('files_domain_training_contexual_answer.tsv', 'r', encoding='utf-8') as fin: 
-            for line in fin:
-                arr = line.split('\t')
-
-                # remove ending of line character
-                arr[2] = arr[2].strip()
-                arr[3] = arr[3].strip()
-
-                # for debug
-                #print(arr[2])
-                #print(arr[3])
-
-                X.append(arr[2])
-
-                if arr[3] != 'files':
-                    # for debug
-                    #print('not_files')
-                    y.append('not_files')
-
-                    dedup.add('not_files')
-                else:
-                    # for debug
-                    #print(arr[3])
-                    y.append(arr[3])
-
-                    dedup.add(arr[3])
-
-        print('-I-: x {}, y {}'.format(len(X),len(y)))
-        print('-I-: y label : {}'.format(len(dedup)))
-
-        model = build_and_evaluate(X,y, outpath=PATH)
-
-        with open(PATH, 'rb') as f:
-            model = pickle.load(f)
-        print(show_most_informative_features(model, n=200))
-    else:
-        print('model exist so loading directly {}'.format(PATH))
-        with open(PATH, 'rb') as f:
-            model = pickle.load(f)
-        print(show_most_informative_features(model, n=200))
