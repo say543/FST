@@ -1,42 +1,57 @@
-word
-pdf
-spec
-expended logging
-slide deck
-exel
-deck
-excel
-presentation
-word doc
-notebook
-onenote
-word document
-word deck
-excel spreadsheet
-powerpoint deck
-specs
-sheet
-photos
-docx
-xl sheet
-slide
-power point
-doc
-powerpoint
-csv
-picture
+pptx
+ppts
 ppt
-note
+deck
 decks
-ori
-docs
-spreadsheet
+presentation
+presentations
+powerpoint
 powerpoints
-photo
-ppt x
+power point
+slide
+slides
+doc
+docx
+docs
+Doc
+Docx
+Docs
+excel
+excels
+xls
+xlsx
+sheet
+sheets
+spreadsheet
+spreadsheets
+workbook
+worksheet
+csv
+tsv
+note
 notes
-word presentation
-powerpoint presentation
-platform
-doc x
-one note
+onenote
+onenotes
+OneNote
+notebook
+notebooks
+pdf
+pdfs
+PDF
+png
+msg
+ics
+vcs
+vsdx
+vssx
+vstx
+vsdm
+vssm
+vstm
+vsd
+vdw
+vss
+vst
+mpp
+mpt
+word

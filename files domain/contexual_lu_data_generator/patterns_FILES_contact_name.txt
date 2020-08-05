@@ -67,7 +67,6 @@ find <file_keyword> xls	8	FILES	find <file_keyword> <file_type> xls </file_type>
 docx shared by <contact_name>	8	FILES	<file_type> docx </file_type> <file_action> shared </file_action> by <contact_name>	file_search
 find <file_keyword> spreadsheet	8	FILES	find <file_keyword> <file_type> spreadsheet </file_type>	file_search
 find <file_keyword> file	8	FILES	find <file_keyword> file	file_search
-show files that <contact_na <to_contact_name>> sent <to_contact_name>	7	FILES	show files that <contact_name> <file_action> sent </file_action> <to_contact_name>	file_search
 docx <contact_name> shared	7	FILES	<file_type> docx </file_type> <contact_name> <file_action> shared </file_action>	file_search
 document shared by <contact_name>	7	FILES	document <file_action> shared </file_action> by <contact_name>	file_search
 word by <contact_name>	7	FILES	<file_type> word </file_type> by <contact_name>	file_search
@@ -76,19 +75,19 @@ word modified by <contact_name>	7	FILES	<file_type> word </file_type> <file_acti
 docx <contact_name>	7	FILES	<file_type> docx </file_type> <contact_name>	file_search
 find <file_keyword> docx	7	FILES	find <file_keyword> <file_type> docx </file_type>	file_search
 <file_keyword> excel	7	FILES	<file_keyword> <file_type> excel </file_type>	file_search
-<contact_na <to_contact_name>> s word files shared with <to_contact_name>	7	FILES	<contact_name> s <file_type> word </file_type> files <file_action> shared </file_action> with <to_contact_name>	file_search
+<contact_name> s word files shared with <to_contact_name>	7	FILES	<contact_name> s <file_type> word </file_type> files <file_action> shared </file_action> with <to_contact_name>	file_search
 show <file_keyword> file	7	FILES	show <file_keyword> file	file_search
 <contact_name> docx	7	FILES	<contact_name> <file_type> docx </file_type>	file_search
 find <file_keyword> document	7	FILES	find <file_keyword> document	file_search
 doc <contact_name> sent	6	FILES	<file_type> doc </file_type> <contact_name> <file_action> sent </file_action>	file_search
-<contact_na <to_contact_name>> s docu <to_contact_name> nt files shared with <to_contact_name>	6	FILES	<contact_name> s document files <file_action> shared </file_action> with <to_contact_name>	file_search
-<contact_na <to_contact_name>> s docx files shared with <to_contact_name>	6	FILES	<contact_name> s <file_type> docx </file_type> files <file_action> shared </file_action> with <to_contact_name>	file_search
+<contact_name> s docu <to_contact_name> nt files shared with <to_contact_name>	6	FILES	<contact_name> s document files <file_action> shared </file_action> with <to_contact_name>	file_search
+<contact_name> s docx files shared with <to_contact_name>	6	FILES	<contact_name> s <file_type> docx </file_type> files <file_action> shared </file_action> with <to_contact_name>	file_search
 word shared by <contact_name>	6	FILES	<file_type> word </file_type> <file_action> shared </file_action> by <contact_name>	file_search
 xls called <file_name>	6	FILES	<file_type> xls </file_type> called <file_name>	file_search
 doc shared by <contact_name>	6	FILES	<file_type> doc </file_type> <file_action> shared </file_action> by <contact_name>	file_search
 <contact_name> doc	6	FILES	<contact_name> <file_type> doc </file_type>	file_search
 docx modified by <contact_name>	6	FILES	<file_type> docx </file_type> <file_action> modified </file_action> by <contact_name>	file_search
-<contact_na <to_contact_name>> s doc files shared with <to_contact_name>	6	FILES	<contact_name> s <file_type> doc </file_type> files <file_action> shared </file_action> with <to_contact_name>	file_search
+<contact_name> s doc files shared with <to_contact_name>	6	FILES	<contact_name> s <file_type> doc </file_type> files <file_action> shared </file_action> with <to_contact_name>	file_search
 doc <contact_name> shared	6	FILES	<file_type> doc </file_type> <contact_name> <file_action> shared </file_action>	file_search
 word <contact_name>	6	FILES	<file_type> word </file_type> <contact_name>	file_search
 doc <contact_name>	6	FILES	<file_type> doc </file_type> <contact_name>	file_search
@@ -106,6 +105,7 @@ word <contact_name> sent	6	FILES	<file_type> word </file_type> <contact_name> <f
 find <file_keyword> doc	6	FILES	find <file_keyword> <file_type> doc </file_type>	file_search
 open <file_keyword> excel	6	FILES	open <file_keyword> <file_type> excel </file_type>	file_open
 open <file_keyword> deck	6	FILES	open <file_keyword> <file_type> deck </file_type>	file_open
+show files that <contact_name> sent <to_contact_name>	5	FILES	show files that <contact_name> <file_action> sent </file_action> <to_contact_name>	file_search
 <contact_name> document	5	FILES	<contact_name> document	file_search
 spreadsheet named <file_name>	5	FILES	<file_type> spreadsheet </file_type> named <file_name>	file_search
 open <file_keyword> xls	5	FILES	open <file_keyword> <file_type> xls </file_type>	file_open
@@ -163,7 +163,7 @@ excel <contact_name> sent	3	FILES	<file_type> excel </file_type> <contact_name> 
 open <file_keyword> doc	3	FILES	open <file_keyword> <file_type> doc </file_type>	file_open
 xls modified by <contact_name>	3	FILES	<file_type> xls </file_type> <file_action> modified </file_action> by <contact_name>	file_search
 document called <file_name>	3	FILES	document called <file_name>	file_search
-<contact_na <to_contact_name>> s spreadsheet files shared with <to_contact_name>	3	FILES	<contact_name> s <file_type> spreadsheet </file_type> files <file_action> shared </file_action> with <to_contact_name>	file_search
+<contact_name> s spreadsheet files shared with <to_contact_name>	3	FILES	<contact_name> s <file_type> spreadsheet </file_type> files <file_action> shared </file_action> with <to_contact_name>	file_search
 open <file_keyword> docx	3	FILES	open <file_keyword> <file_type> docx </file_type>	file_open
 open <file_keyword> word	3	FILES	open <file_keyword> <file_type> word </file_type>	file_open
 xls <contact_name>	3	FILES	<file_type> xls </file_type> <contact_name>	file_search
@@ -173,12 +173,12 @@ spreadsheet shared by <contact_name>	3	FILES	<file_type> spreadsheet </file_type
 document named <file_name>	3	FILES	document named <file_name>	file_search
 spreadsheet by <contact_name>	3	FILES	<file_type> spreadsheet </file_type> by <contact_name>	file_search
 docx named <file_name>	3	FILES	<file_type> docx </file_type> named <file_name>	file_search
-<contact_na <to_contact_name>> s excel files shared with <to_contact_name>	3	FILES	<contact_name> s <file_type> excel </file_type> files <file_action> shared </file_action> with <to_contact_name>	file_search
-<contact_na <to_contact_name>> s xls files shared with <to_contact_name>	3	FILES	<contact_name> s <file_type> xls </file_type> files <file_action> shared </file_action> with <to_contact_name>	file_search
+<contact_name> s excel files shared with <to_contact_name>	3	FILES	<contact_name> s <file_type> excel </file_type> files <file_action> shared </file_action> with <to_contact_name>	file_search
+<contact_name> s xls files shared with <to_contact_name>	3	FILES	<contact_name> s <file_type> xls </file_type> files <file_action> shared </file_action> with <to_contact_name>	file_search
 open <file_keyword> document	3	FILES	open <file_keyword> document	file_open
 spreadsheet <contact_name> shared	3	FILES	<file_type> spreadsheet </file_type> <contact_name> <file_action> shared </file_action>	file_search
 xlsx modified by <contact_name>	3	FILES	<file_type> xlsx </file_type> <file_action> modified </file_action> by <contact_name>	file_search
-<contact_na <to_contact_name>> s xlsx files shared with <to_contact_name>	3	FILES	<contact_name> s <file_type> xlsx </file_type> files <file_action> shared </file_action> with <to_contact_name>	file_search
+<contact_name> s xlsx files shared with <to_contact_name>	3	FILES	<contact_name> s <file_type> xlsx </file_type> files <file_action> shared </file_action> with <to_contact_name>	file_search
 xlsx <contact_name>	3	FILES	<file_type> xlsx </file_type> <contact_name>	file_search
 xls by <contact_name>	3	FILES	<file_type> xls </file_type> by <contact_name>	file_search
 <contact_name> xls	3	FILES	<contact_name> <file_type> xls </file_type>	file_search
@@ -189,19 +189,20 @@ find files from <contact_name>	2	FILES	find files from <contact_name>	file_searc
 find <file_keyword> ppt	2	FILES	find <file_keyword> <file_type> ppt </file_type>	file_search
 open <contact_name> <file_keyword> file	2	FILES	open <contact_name> <file_keyword> file	file_open
 show files from <contact_name>	2	FILES	show files from <contact_name>	file_search
+show files that jose go <to_contact_name> zangulo sent <to_contact_name>	2	FILES	show files that <contact_name> <file_action> sent </file_action> <to_contact_name>	file_search
 <contact_name> spreadsheet	2	FILES	<contact_name> <file_type> spreadsheet </file_type>	file_search
 open <contact_name> powerpoint files	2	FILES	open <contact_name> <file_type> powerpoint </file_type> files	file_open
 open files by <contact_name>	2	FILES	open files by <contact_name>	file_open
 recent files	2	FILES	<file_recency> recent </file_recency> files	file_search
 share <file_keyword> ppt	1	FILES	share <file_keyword> <file_type> ppt </file_type>	file_share
-show <to_contact_name> files that <contact_na <to_contact_name>> sent <to_contact_name> yesterday	1	FILES	show me files that <contact_name> <file_action> sent </file_action> <to_contact_name> <date> yesterday </date>	file_search
+show <to_contact_name> files that <contact_name> sent <to_contact_name> yesterday	1	FILES	show me files that <contact_name> <file_action> sent </file_action> <to_contact_name> <date> yesterday </date>	file_search
 could you please show me <file_keyword> files	1	FILES	could you please show me <file_keyword> files	file_search
-show <to_contact_name> file that <contact_na <to_contact_name>> sent <to_contact_name>	1	FILES	show me file that <contact_name> <file_action> sent </file_action> <to_contact_name>	file_search
+show <to_contact_name> file that <contact_name> sent <to_contact_name>	1	FILES	show me file that <contact_name> <file_action> sent </file_action> <to_contact_name>	file_search
 whats last file from <contact_name>	1	FILES	whats <order_ref> last </order_ref> file from <contact_name>	file_search
 powerpoint deck on <file_keyword>	1	FILES	<file_type> powerpoint deck </file_type> on <file_keyword>	file_search
 show files that has a <file_keyword>	1	FILES	show files that has a <file_keyword>	file_search
-show <to_contact_name> file that <contact_na <to_contact_name>> sent <to_contact_name> yesterday	1	FILES	show me file that <contact_name> <file_action> sent </file_action> <to_contact_name> <start_date> yesterday </start_date>	file_search
-would file did <contact_na <to_contact_name>> send <to_contact_name> yesterday	1	FILES	would file did <contact_name> <file_action> send </file_action> <to_contact_name> <start_date> yesterday </start_date>	file_search
+show <to_contact_name> file that <contact_name> sent <to_contact_name> yesterday	1	FILES	show me file that <contact_name> <file_action> sent </file_action> <to_contact_name> <start_date> yesterday </start_date>	file_search
+would file did <contact_name> send <to_contact_name> yesterday	1	FILES	would file did <contact_name> <file_action> send </file_action> <to_contact_name> <start_date> yesterday </start_date>	file_search
 files from <contact_name> s	1	FILES	files from <contact_name> s	file_search
 find file <contact_name> sent it to <to_contact_name>	1	FILES	find file <contact_name> <file_action> sent </file_action> it to <to_contact_name>	file_search
 <file_keyword> files	1	FILES	<file_keyword> files	file_search
@@ -230,10 +231,10 @@ show me <contact_name> recently edited file named <file_name>	1	FILES	show me <c
 files from other	1	FILES	files from other	file_search
 files last week	1	FILES	files <date> last week </date>	file_search
 files <contact_name> edited	1	FILES	files <contact_name> <file_action> edited </file_action>	file_search
-<file_keyword> exel	1	FILES	<file_keyword> <file_type> exel </file_type>	file_search
+<file_keyword> excel	1	FILES	<file_keyword> <file_type> excel </file_type>	file_search
 show me files from <contact_name>	1	FILES	show me files from <contact_name>	file_search
 recent added files	1	FILES	<file_recency> recent </file_recency> <file_action> added </file_action> files	file_search
-files <contact_na <to_contact_name>> sent to <to_contact_name> two months ago	1	FILES	files <contact_name> <file_action> sent </file_action> to <to_contact_name> <date> two months ago </date>	file_search
+files <contact_name> sent to <to_contact_name> two months ago	1	FILES	files <contact_name> <file_action> sent </file_action> to <to_contact_name> <date> two months ago </date>	file_search
 files <contact_name> edited recently	1	FILES	files <contact_name> <file_action> edited </file_action> <file_recency> recently </file_recency>	file_search
 document titled	1	FILES	document titled	file_search
 search pdf file	1	FILES	search <file_type> pdf </file_type> file	file_search
@@ -271,9 +272,9 @@ word files	1	FILES	<file_type> word </file_type> files	file_search
 docx <contact_name> sahred about <file_keyword>	1	FILES	<file_type> docx </file_type> <contact_name> <file_action> sahred </file_action> about <file_keyword>	file_search
 ufind <file_keyword> doc	1	FILES	ufind <file_keyword> <file_type> doc </file_type>	file_search
 findi me <file_keyword> xlsx by <contact_name>	1	FILES	findi me <file_keyword> <file_type> xlsx </file_type> by <contact_name>	file_search
-<contact_na <to_contact_name>> doc files shared with <to_contact_name>	1	FILES	<contact_name> <file_type> doc </file_type> files <file_action> shared </file_action> with <to_contact_name>	file_search
+<contact_name> doc files shared with <to_contact_name>	1	FILES	<contact_name> <file_type> doc </file_type> files <file_action> shared </file_action> with <to_contact_name>	file_search
 xls <contact_name> sared about <file_keyword>	1	FILES	<file_type> xls </file_type> <contact_name> <file_action> sared </file_action> about <file_keyword>	file_search
-can you find <file_keyword> spreadsheet bg <contact_name>	1	FILES	can you find <file_keyword> <file_type> spreadsheet </file_type> bg <contact_name>	file_search
+can you find <file_keyword> spreadsheet by <contact_name>	1	FILES	can you find <file_keyword> <file_type> spreadsheet </file_type> by <contact_name>	file_search
 xlsx <contact_name> cshared about <file_keyword>	1	FILES	<file_type> xlsx </file_type> <contact_name> <file_action> cshared </file_action> about <file_keyword>	file_search
 find me <file_name> xls by <contact_name>	1	FILES	find me <file_name> <file_type> xls </file_type> by <contact_name>	file_search
 spreadsheet files	1	FILES	<file_type> spreadsheet </file_type> files	file_search
@@ -282,14 +283,13 @@ spreadsheet <contact_name> shared about may april msw	1	FILES	<file_type> spread
 document <file_keyword>	1	FILES	document <file_keyword>	file_search
 find <file_keyword> xls by <contact_name>	1	FILES	find <file_keyword> <file_type> xls </file_type> by <contact_name>	file_search
 document files	1	FILES	document files	file_search
-can you fin <file_keyword> word by <contact_name>	1	FILES	can you fin <file_keyword> <file_type> word </file_type> by <contact_name>	file_search
+can you find <file_keyword> word by <contact_name>	1	FILES	can you find <file_keyword> <file_type> word </file_type> by <contact_name>	file_search
 xls files	1	FILES	<file_type> xls </file_type> files	file_search
 doc files	1	FILES	<file_type> doc </file_type> files	file_search
 xlsx files	1	FILES	<file_type> xlsx </file_type> files	file_search
 docs <contact_name> shared	1	FILES	<file_type> docs </file_type> <contact_name> <file_action> shared </file_action>	file_search
 tind me <file_keyword> word by <contact_name>	1	FILES	tind me <file_keyword> <file_type> word </file_type> by <contact_name>	file_search
 show files by <contact_name>	1	FILES	show files by <contact_name>	file_search
-where is <file_keyword> shortcut	1	FILES	where is <file_keyword> <file_type> shortcut </file_type>	file_search
 open up <contact_name> latest powerpoint presentation	1	FILES	open up <contact_name> <order_ref> latest </order_ref> <file_type> powerpoint presentation </file_type>	file_open
 find word files	1	FILES	find <file_type> word </file_type> files	file_search
 open <file_keyword> file by <contact_name>	1	FILES	open <file_keyword> file by <contact_name>	file_open

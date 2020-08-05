@@ -43,8 +43,9 @@ class Data(object):
 
     def __init__(self):
         # positive data for data tag augmentation
-        self.posdata_scale_multiplier = 1000  # multiplier to amplify the positive_dataset
-        self.overtrigger_suffix_upper_bound = 6
+        #self.posdata_scale_multiplier = 1000  # multiplier to amplify the positive_dataset
+        self.posdata_scale_multiplier = 500  # multiplier to amplify the positive_dataset
+        self.overtrigger_suffix_upper_bound = 8 # current range 0-9
         self.overtrigger_suffix_value_upper_bound = 90000
         self.overtrigger_suffix_value_low_bound = 10000
         # probability of selecting from additional tags
@@ -531,11 +532,14 @@ class Data(object):
 
 
 
-    def _get_new_suffix_for_filename_with_prob(self, filename):
+    def _get_new_suffix_for_filename_with_prob(self, filename, variationSource):
 
         #for debug
         #print("random_tag prepared for suffix {}".format(filename))
 
+        generated_filename = filename.copy()
+
+        '''
         overtrigger_tags_set = set(self.overtrigger_tags['file_keyword'].get_values())
         for i in range(len(filename)):
             if filename[i].lower() in overtrigger_tags_set:
@@ -553,9 +557,31 @@ class Data(object):
 
         # for debug
         #print("new filename len:{} with suffux: {}".format(len(filename),  " ".join(filename)))
-        return " ".join(filename)
+        #return " ".join(filename)
+        '''
 
-    def _get_random_generated_filetag(self):
+        generated_filename = filename.copy()
+        overtrigger_tags_set = set(self.overtrigger_tags['file_keyword'].get_values())
+        for i in range(len(generated_filename)):
+            if filename[i].lower() in overtrigger_tags_set:
+
+
+                # with prob overtrigger_suffix_upper_bound+1 that if will append new suffix
+                rand_prb = random.randint(0, 9)
+                if rand_prb <=self.overtrigger_suffix_upper_bound:
+                    generated_filename[i] += str(random.randint(self.overtrigger_suffix_value_low_bound, 
+                        self.overtrigger_suffix_value_upper_bound))
+                    # for debug
+                    #print("new suffix: {}, freq: {} ".format(generated_filename[i], " ".join(generated_filename)))
+
+                    self.filekeylistwithsuffix.append(variationSource + '\t'+ 
+                    " ".join(filename)+'\t'+
+                    generated_filename[i])
+
+
+        return " ".join(generated_filename)
+
+    def _get_random_generated_filetag(self, variationSource):
         # This fn checks the effects of filename/keyword selection
         random_filename = []
         num_words = random.randint(1, 4)
@@ -572,7 +598,7 @@ class Data(object):
                 random_filename.extend(random.choices(self.vocab, k=1))
 
             # add suffix according to overtrigger tag
-            generated_filename = self._get_new_suffix_for_filename_with_prob(random_filename)
+            generated_filename = self._get_new_suffix_for_filename_with_prob(random_filename, variationSource)
             '''
             overtrigger_tags_set = set(self.overtrigger_tags['file_keyword'].get_values())
             for i in range(len(random_filename)):
@@ -701,12 +727,21 @@ class Data(object):
                     ## ? having fileskeyword should be data having some issues
                     if tag in ['file_keyword', 'files_keyword'] and filetag_src == 'Additional Tag':
                         random_tag = self.tags['additionalfilenameskeyphrases'].get_random_value()
+
+                        random_tag = self._get_new_suffix_for_filename_with_prob(random_tag.split(), 'additionalfilenameskeyphrases_tag')
+
+
                         self.additional_filetag_selection_cnt += 1
                     elif tag in ['file_name'] and filetag_src == 'Additional Tag':
                         random_tag = self.tags['additionalfilenames'].get_random_value()
+
+                        random_tag = self._get_new_suffix_for_filename_with_prob(random_tag.split(), 'additionalfilenames_tag')
+
+
                         self.additional_filetag_selection_cnt += 1
                     elif tag in ['file_keyword', 'files_keyword', 'file_name'] and filetag_src == 'Random Tag':
-                        random_tag = self._get_random_generated_filetag()
+                        random_tag = self._get_random_generated_filetag("Random_Tag")
+
                         self.random_filetag_selection_cnt += 1
                     elif tag in ['contact_name'] or tag in ['to_contact_name']:
                         random_tag = self.tags['combine_lexicon'].get_random_value()
@@ -719,7 +754,7 @@ class Data(object):
                         #print("overtrigger: {}".format(self.overtrigger_tags))
 
                         # default using space to split
-                        random_tag = self._get_new_suffix_for_filename_with_prob(random_tag.split())
+                        random_tag = self._get_new_suffix_for_filename_with_prob(random_tag.split(), 'file_keyword_tag')
 
                         # add suffix according to overtrigger tag
                         '''
@@ -949,7 +984,8 @@ class Data(object):
     '''
 
     #def get_data(self, high_freq_multiplier=9, low_freq_multiplier=1):
-    def get_data(self, high_freq_multiplier=4, low_freq_multiplier=1):
+    #def get_data(self, high_freq_multiplier=4, low_freq_multiplier=1):
+    def get_data(self, high_freq_multiplier=2, low_freq_multiplier=1):
         print("Generating data from patterns.")
 
         ## positive_data : list of list

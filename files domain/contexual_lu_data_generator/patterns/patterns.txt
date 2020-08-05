@@ -660,7 +660,7 @@ share a file with someone	1	FILES	share a file with someone	file_search
 send <file_keyword> file with adi miller	1	FILES	send <file_keyword> file with adi miller	file_search
 sheriff <file_keyword> powerpoint with ana mendes	1	FILES	sheriff <file_keyword> powerpoint with ana mendes	file_search
 find files from <contact_name>	1	FILES	find files from <contact_name>	file_search
-open <file_keyword> docume	1	FILES	open <file_keyword> docume	file_search
+open <file_keyword> document	1	FILES	open <file_keyword> document	file_search
 show my <file_recency> attachments	1	FILES	show my <file_recency> attachments	file_search
 <file_keyword> download file <file_keyword>	1	FILES	<file_keyword> download file <file_keyword>	file_search
 open last file from <to_contact_name>	1	FILES	open last file from <to_contact_name>	file_search
@@ -757,13 +757,12 @@ open hedra bod <file_type>	1	FILES	open hedra bod <file_type>	file_search
 open <file_keyword> file	1	FILES	open <file_keyword> file	file_search
 open meeting decks and <file_keyword> doc	1	FILES	open meeting decks and <file_keyword> doc	file_search
 open my <file_recency>	1	FILES	open my <file_recency>	file_search
-open <file_keyword> exel	1	FILES	open <file_keyword> exel	file_search
+open <file_keyword> excel	1	FILES	open <file_keyword> excel	file_search
 open easy file <file_keyword>	1	FILES	open easy file <file_keyword>	file_search
 <file_keyword> open <file_keyword> file	1	FILES	<file_keyword> open <file_keyword> file	file_search
 open word document <contact_name> was working on	1	FILES	open word document <contact_name> was working on	file_search
 open <file_keyword> docs	1	FILES	open <file_keyword> docs	file_search
 open <file_keyword> a file	1	FILES	open <file_keyword> a file	file_search
-go to <contact_name> checklist why you ji a	1	FILES	go to <contact_name> checklist why you ji a	file_search
 go to <contact_name> downloads	1	FILES	go to <contact_name> downloads	file_search
 go to <file_recency> fires	1	FILES	go to <file_recency> fires	file_search
 go to file	1	FILES	go to file	file_search
