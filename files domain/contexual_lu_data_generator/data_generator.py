@@ -568,6 +568,13 @@ class Data(object):
 
                 # with prob overtrigger_suffix_upper_bound+1 that if will append new suffix
                 rand_prb = random.randint(0, 9)
+
+                # for debug
+                #if (filename[i].lower() == 'mswAprilMayQAS')
+                #    print("rand_prb:{}".format(len(filename)))
+                #    raise Exception('Cannot perform split with no data')
+
+
                 if rand_prb <=self.overtrigger_suffix_upper_bound:
                     generated_filename[i] += str(random.randint(self.overtrigger_suffix_value_low_bound, 
                         self.overtrigger_suffix_value_upper_bound))
