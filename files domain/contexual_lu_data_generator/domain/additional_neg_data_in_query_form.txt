@@ -1,0 +1,26 @@
+TurnNumber	PreviousTurnDomain	query	domain
+0		open facebook	not_files
+0		open instagram	not_files
+0		open google	not_files
+0		go to facebook	not_files
+0		play spotify	not_files
+0		play saavn	not_files
+0		google	not_files
+0		share my status	not_files
+0		share the status	not_files
+0		share this picture	not_files
+0		reference material is shared freely among the students	not_files
+0		we shared the money equally	not_files
+0		they share the same opinion	not_files
+0		she will receive a large share of the profits	not_files
+0		he will receive a large share of the profits	not_files
+0		it's open	not_files
+0		its open	not_files
+0		its close	not_files
+0		open fire	not_files
+0		open the gates	not_files
+0		open your mouth	not_files
+0		your bag is somehow hanging and is open from one end	not_files
+0		the water is flowing from the open creeks of Himalay	not_files
+0		open up	not_files
+0		open tiktok	not_files

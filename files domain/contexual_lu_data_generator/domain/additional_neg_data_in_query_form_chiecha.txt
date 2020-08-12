@@ -1,0 +1,11 @@
+TurnNumber	PreviousTurnDomain	query	domain
+0		's	not_files
+0		's	not_files
+0		's	not_files
+0		's	not_files
+0		's	not_files
+0		's	not_files
+0		's	not_files
+0		's	not_files
+0		's	not_files
+0		's	not_files

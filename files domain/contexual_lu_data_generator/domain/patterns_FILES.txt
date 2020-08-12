@@ -1,0 +1,814 @@
+document titled <file_name>	10	FILES	document titled <file_name>	file_search
+<file_keyword> file	10	FILES	<file_keyword> file	file_search
+find me <file_keyword> docx by suman	9	FILES	find me <file_keyword> <file_type> docx </file_type> by <contact_name> suman </contact_name>	file_search
+find me <file_keyword> excel by upadhyaya	9	FILES	find me <file_keyword> <file_type> excel </file_type> by <contact_name> upadhyaya </contact_name>	file_search
+find <file_keyword> excel	9	FILES	find <file_keyword> <file_type> excel </file_type>	file_search
+find me <file_keyword> spreadsheet by ashuthosh	9	FILES	find me <file_keyword> <file_type> spreadsheet </file_type> by <contact_name> ashuthosh </contact_name>	file_search
+find <file_keyword> xlsx	8	FILES	find <file_keyword> <file_type> xlsx </file_type>	file_search
+find me <file_keyword> xlsx by ashuthosh	8	FILES	find me <file_keyword> <file_type> xlsx </file_type> by <contact_name> ashuthosh </contact_name>	file_search
+find me <file_keyword> xls by ashuthosh	8	FILES	find me <file_keyword> <file_type> xls </file_type> by <contact_name> ashuthosh </contact_name>	file_search
+find me <file_keyword> excel by ashuthosh	8	FILES	find me <file_keyword> <file_type> excel </file_type> by <contact_name> ashuthosh </contact_name>	file_search
+find me <file_keyword> spreadsheet by upadhyaya	8	FILES	find me <file_keyword> <file_type> spreadsheet </file_type> by <contact_name> upadhyaya </contact_name>	file_search
+find me <file_keyword> xlsx by ashuthosh upadhyaya	8	FILES	find me <file_keyword> <file_type> xlsx </file_type> by <contact_name> ashuthosh upadhyaya </contact_name>	file_search
+find <file_keyword> xls	8	FILES	find <file_keyword> <file_type> xls </file_type>	file_search
+find me <file_keyword> xlsx by upadhyaya	8	FILES	find me <file_keyword> <file_type> xlsx </file_type> by <contact_name> upadhyaya </contact_name>	file_search
+find <file_keyword> spreadsheet	8	FILES	find <file_keyword> <file_type> spreadsheet </file_type>	file_search
+find me <file_keyword> spreadsheet by ashuthosh upadhyaya	8	FILES	find me <file_keyword> <file_type> spreadsheet </file_type> by <contact_name> ashuthosh upadhyaya </contact_name>	file_search
+find me <file_keyword> excel by ashuthosh upadhyaya	8	FILES	find me <file_keyword> <file_type> excel </file_type> by <contact_name> ashuthosh upadhyaya </contact_name>	file_search
+find me <file_keyword> xls by upadhyaya	8	FILES	find me <file_keyword> <file_type> xls </file_type> by <contact_name> upadhyaya </contact_name>	file_search
+find <file_keyword> file	8	FILES	find <file_keyword> file	file_search
+find me <file_keyword> xls by ashuthosh upadhyaya	7	FILES	find me <file_keyword> <file_type> xls </file_type> by <contact_name> ashuthosh upadhyaya </contact_name>	file_search
+find me <file_keyword> word by venkata	7	FILES	find me <file_keyword> <file_type> word </file_type> by <contact_name> venkata </contact_name>	file_search
+find me <file_keyword> document by yaram venkata	7	FILES	find me <file_keyword> document by <contact_name> yaram venkata </contact_name>	file_search
+find me <file_keyword> word by suman	7	FILES	find me <file_keyword> <file_type> word </file_type> by <contact_name> suman </contact_name>	file_search
+find <file_keyword> docx	7	FILES	find <file_keyword> <file_type> docx </file_type>	file_search
+find me <file_keyword> document by suman venkata	7	FILES	find me <file_keyword> document by <contact_name> suman venkata </contact_name>	file_search
+<file_keyword> excel	7	FILES	<file_keyword> <file_type> excel </file_type>	file_search
+show <file_keyword> file	7	FILES	show <file_keyword> file	file_search
+find <file_keyword> document	7	FILES	find <file_keyword> document	file_search
+find me <file_keyword> document by suman	6	FILES	find me <file_keyword> document by <contact_name> suman </contact_name>	file_search
+find me <file_keyword> docx by venkata	6	FILES	find me <file_keyword> <file_type> docx </file_type> by <contact_name> venkata </contact_name>	file_search
+find me <file_keyword> document by venkata suman yaram	6	FILES	find me <file_keyword> document by <contact_name> venkata suman yaram </contact_name>	file_search
+xls called <file_name>	6	FILES	<file_type> xls </file_type> called <file_name>	file_search
+find me <file_keyword> docx by yaram venkata	6	FILES	find me <file_keyword> <file_type> docx </file_type> by <contact_name> yaram venkata </contact_name>	file_search
+find me <file_keyword> docx by yaram	6	FILES	find me <file_keyword> <file_type> docx </file_type> by <contact_name> yaram </contact_name>	file_search
+find me <file_keyword> docx by suman venkata	6	FILES	find me <file_keyword> <file_type> docx </file_type> by <contact_name> suman venkata </contact_name>	file_search
+find me <file_keyword> word by suman venkata	6	FILES	find me <file_keyword> <file_type> word </file_type> by <contact_name> suman venkata </contact_name>	file_search
+find me <file_keyword> word by venkata suman yaram	6	FILES	find me <file_keyword> <file_type> word </file_type> by <contact_name> venkata suman yaram </contact_name>	file_search
+find me <file_keyword> word by yaram venkata	6	FILES	find me <file_keyword> <file_type> word </file_type> by <contact_name> yaram venkata </contact_name>	file_search
+find me <file_keyword> word by yaram	6	FILES	find me <file_keyword> <file_type> word </file_type> by <contact_name> yaram </contact_name>	file_search
+find <file_keyword> word	6	FILES	find <file_keyword> <file_type> word </file_type>	file_search
+find me <file_keyword> document by venkata	6	FILES	find me <file_keyword> document by <contact_name> venkata </contact_name>	file_search
+find me <file_keyword> docx by venkata suman yaram	6	FILES	find me <file_keyword> <file_type> docx </file_type> by <contact_name> venkata suman yaram </contact_name>	file_search
+find me <file_keyword> document by yaram	6	FILES	find me <file_keyword> document by <contact_name> yaram </contact_name>	file_search
+<file_keyword> document	6	FILES	<file_keyword> document	file_search
+find <file_keyword> doc	6	FILES	find <file_keyword> <file_type> doc </file_type>	file_search
+open <file_keyword> excel	6	FILES	open <file_keyword> <file_type> excel </file_type>	file_open
+open <file_keyword> deck	6	FILES	open <file_keyword> <file_type> deck </file_type>	file_open
+xlsx by ashuthosh upadhyaya about <file_keyword>	5	FILES	<file_type> xlsx </file_type> by <contact_name> ashuthosh upadhyaya </contact_name> about <file_keyword>	file_search
+xlsx by ashuthosh called <file_name>	5	FILES	<file_type> xlsx </file_type> by <contact_name> ashuthosh </contact_name> called <file_name>	file_search
+excel by upadhyaya named <file_name>	5	FILES	<file_type> excel </file_type> by <contact_name> upadhyaya </contact_name> named <file_name>	file_search
+spreadsheet by upadhyaya called <file_name>	5	FILES	<file_type> spreadsheet </file_type> by <contact_name> upadhyaya </contact_name> called <file_name>	file_search
+<file_keyword> xlsx by ashuthosh	5	FILES	<file_keyword> <file_type> xlsx </file_type> by <contact_name> ashuthosh </contact_name>	file_search
+spreadsheet named <file_name>	5	FILES	<file_type> spreadsheet </file_type> named <file_name>	file_search
+<file_keyword> spreadsheet by ashuthosh upadhyaya	5	FILES	<file_keyword> <file_type> spreadsheet </file_type> by <contact_name> ashuthosh upadhyaya </contact_name>	file_search
+<file_keyword> xlsx by upadhyaya	5	FILES	<file_keyword> <file_type> xlsx </file_type> by <contact_name> upadhyaya </contact_name>	file_search
+open <file_keyword> xls	5	FILES	open <file_keyword> <file_type> xls </file_type>	file_open
+can you find <file_keyword> excel by upadhyaya	5	FILES	can you find <file_keyword> <file_type> excel </file_type> by <contact_name> upadhyaya </contact_name>	file_search
+open <file_keyword> xlsx	5	FILES	open <file_keyword> <file_type> xlsx </file_type>	file_open
+xls by upadhyaya named <file_name>	5	FILES	<file_type> xls </file_type> by <contact_name> upadhyaya </contact_name> named <file_name>	file_search
+<file_keyword> spreadsheet	5	FILES	<file_keyword> <file_type> spreadsheet </file_type>	file_search
+spreadsheet upadhyaya shared about <file_keyword>	5	FILES	<file_type> spreadsheet </file_type> <contact_name> upadhyaya </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+xlsx by upadhyaya called <file_name>	5	FILES	<file_type> xlsx </file_type> by <contact_name> upadhyaya </contact_name> called <file_name>	file_search
+xlsx upadhyaya shared about <file_keyword>	5	FILES	<file_type> xlsx </file_type> <contact_name> upadhyaya </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+excel by ashuthosh upadhyaya called <file_name>	5	FILES	<file_type> excel </file_type> by <contact_name> ashuthosh upadhyaya </contact_name> called <file_name>	file_search
+<file_keyword> word by suman venkata	5	FILES	<file_keyword> <file_type> word </file_type> by <contact_name> suman venkata </contact_name>	file_search
+show <file_keyword> xls	5	FILES	show <file_keyword> <file_type> xls </file_type>	file_search
+open <file_keyword> spreadsheet	5	FILES	open <file_keyword> <file_type> spreadsheet </file_type>	file_open
+xlsx by ashuthosh about <file_keyword>	5	FILES	<file_type> xlsx </file_type> by <contact_name> ashuthosh </contact_name> about <file_keyword>	file_search
+xls by ashuthosh upadhyaya called <file_name>	5	FILES	<file_type> xls </file_type> by <contact_name> ashuthosh upadhyaya </contact_name> called <file_name>	file_search
+open <file_keyword> xlsx by ashuthosh upadhyaya	5	FILES	open <file_keyword> <file_type> xlsx </file_type> by <contact_name> ashuthosh upadhyaya </contact_name>	file_open
+spreadsheet by upadhyaya about <file_keyword>	5	FILES	<file_type> spreadsheet </file_type> by <contact_name> upadhyaya </contact_name> about <file_keyword>	file_search
+xlsx by upadhyaya named <file_name>	5	FILES	<file_type> xlsx </file_type> by <contact_name> upadhyaya </contact_name> named <file_name>	file_search
+open <file_keyword> file	5	FILES	open <file_keyword> file	file_open
+file for <file_keyword>	4	FILES	file for <file_keyword>	file_search
+file for <file_keyword> document	4	FILES	file for <file_keyword> document	file_search
+xlsx ashuthosh upadhyaya shared about <file_keyword>	4	FILES	<file_type> xlsx </file_type> <contact_name> ashuthosh upadhyaya </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+show <file_keyword> document	4	FILES	show <file_keyword> document	file_search
+docx suman venkata shared about <file_keyword>	4	FILES	<file_type> docx </file_type> <contact_name> suman venkata </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+open <file_keyword> word by suman venkata	4	FILES	open <file_keyword> <file_type> word </file_type> by <contact_name> suman venkata </contact_name>	file_open
+xls named <file_name>	4	FILES	<file_type> xls </file_type> named <file_name>	file_search
+can you find <file_keyword> xlsx by ashuthosh upadhyaya	4	FILES	can you find <file_keyword> <file_type> xlsx </file_type> by <contact_name> ashuthosh upadhyaya </contact_name>	file_search
+excel by upadhyaya called <file_name>	4	FILES	<file_type> excel </file_type> by <contact_name> upadhyaya </contact_name> called <file_name>	file_search
+xls upadhyaya shared about <file_keyword>	4	FILES	<file_type> xls </file_type> <contact_name> upadhyaya </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+<file_keyword> word	4	FILES	<file_keyword> <file_type> word </file_type>	file_search
+xlsx named <file_name>	4	FILES	<file_type> xlsx </file_type> named <file_name>	file_search
+<file_keyword> doc	4	FILES	<file_keyword> <file_type> doc </file_type>	file_search
+<file_keyword> xls by upadhyaya	4	FILES	<file_keyword> <file_type> xls </file_type> by <contact_name> upadhyaya </contact_name>	file_search
+<file_keyword> excel by ashuthosh	4	FILES	<file_keyword> <file_type> excel </file_type> by <contact_name> ashuthosh </contact_name>	file_search
+open <file_keyword> xls by ashuthosh upadhyaya	4	FILES	open <file_keyword> <file_type> xls </file_type> by <contact_name> ashuthosh upadhyaya </contact_name>	file_open
+excel called <file_name>	4	FILES	<file_type> excel </file_type> called <file_name>	file_search
+excel ashuthosh shared about <file_keyword>	4	FILES	<file_type> excel </file_type> <contact_name> ashuthosh </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+show <file_keyword> word	4	FILES	show <file_keyword> <file_type> word </file_type>	file_search
+open <file_keyword> word by venkata	4	FILES	open <file_keyword> <file_type> word </file_type> by <contact_name> venkata </contact_name>	file_open
+docx by suman venkata named <file_name>	4	FILES	<file_type> docx </file_type> by <contact_name> suman venkata </contact_name> named <file_name>	file_search
+can you find <file_keyword> spreadsheet by upadhyaya	4	FILES	can you find <file_keyword> <file_type> spreadsheet </file_type> by <contact_name> upadhyaya </contact_name>	file_search
+<file_keyword> excel by upadhyaya	4	FILES	<file_keyword> <file_type> excel </file_type> by <contact_name> upadhyaya </contact_name>	file_search
+docx by suman called <file_name>	4	FILES	<file_type> docx </file_type> by <contact_name> suman </contact_name> called <file_name>	file_search
+spreadsheet by ashuthosh upadhyaya called <file_name>	4	FILES	<file_type> spreadsheet </file_type> by <contact_name> ashuthosh upadhyaya </contact_name> called <file_name>	file_search
+<file_keyword> word by venkata suman yaram	4	FILES	<file_keyword> <file_type> word </file_type> by <contact_name> venkata suman yaram </contact_name>	file_search
+<file_keyword> xls by ashuthosh upadhyaya	4	FILES	<file_keyword> <file_type> xls </file_type> by <contact_name> ashuthosh upadhyaya </contact_name>	file_search
+excel by ashuthosh called <file_name>	4	FILES	<file_type> excel </file_type> by <contact_name> ashuthosh </contact_name> called <file_name>	file_search
+open <file_keyword> excel by ashuthosh upadhyaya	4	FILES	open <file_keyword> <file_type> excel </file_type> by <contact_name> ashuthosh upadhyaya </contact_name>	file_open
+xls ashuthosh upadhyaya shared about <file_keyword>	4	FILES	<file_type> xls </file_type> <contact_name> ashuthosh upadhyaya </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+excel upadhyaya shared about <file_keyword>	4	FILES	<file_type> excel </file_type> <contact_name> upadhyaya </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+spreadsheet by upadhyaya named <file_name>	4	FILES	<file_type> spreadsheet </file_type> by <contact_name> upadhyaya </contact_name> named <file_name>	file_search
+xlsx ashuthosh shared about <file_keyword>	4	FILES	<file_type> xlsx </file_type> <contact_name> ashuthosh </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+excel by upadhyaya about <file_keyword>	4	FILES	<file_type> excel </file_type> by <contact_name> upadhyaya </contact_name> about <file_keyword>	file_search
+open <file_keyword> xlsx by upadhyaya	4	FILES	open <file_keyword> <file_type> xlsx </file_type> by <contact_name> upadhyaya </contact_name>	file_open
+can you find <file_keyword> excel by ashuthosh upadhyaya	4	FILES	can you find <file_keyword> <file_type> excel </file_type> by <contact_name> ashuthosh upadhyaya </contact_name>	file_search
+<file_keyword> excel by ashuthosh upadhyaya	4	FILES	<file_keyword> <file_type> excel </file_type> by <contact_name> ashuthosh upadhyaya </contact_name>	file_search
+show <file_keyword> excel	4	FILES	show <file_keyword> <file_type> excel </file_type>	file_search
+<file_keyword> xls by ashuthosh	4	FILES	<file_keyword> <file_type> xls </file_type> by <contact_name> ashuthosh </contact_name>	file_search
+xlsx by ashuthosh upadhyaya named <file_name>	4	FILES	<file_type> xlsx </file_type> by <contact_name> ashuthosh upadhyaya </contact_name> named <file_name>	file_search
+excel by ashuthosh upadhyaya about <file_keyword>	4	FILES	<file_type> excel </file_type> by <contact_name> ashuthosh upadhyaya </contact_name> about <file_keyword>	file_search
+<file_keyword> spreadsheet by ashuthosh	4	FILES	<file_keyword> <file_type> spreadsheet </file_type> by <contact_name> ashuthosh </contact_name>	file_search
+spreadsheet by ashuthosh upadhyaya named <file_name>	4	FILES	<file_type> spreadsheet </file_type> by <contact_name> ashuthosh upadhyaya </contact_name> named <file_name>	file_search
+open <file_keyword> docx by yaram	4	FILES	open <file_keyword> <file_type> docx </file_type> by <contact_name> yaram </contact_name>	file_open
+can you find <file_keyword> xlsx by upadhyaya	4	FILES	can you find <file_keyword> <file_type> xlsx </file_type> by <contact_name> upadhyaya </contact_name>	file_search
+open <file_keyword> word by suman	4	FILES	open <file_keyword> <file_type> word </file_type> by <contact_name> suman </contact_name>	file_open
+<file_keyword> spreadsheet by upadhyaya	4	FILES	<file_keyword> <file_type> spreadsheet </file_type> by <contact_name> upadhyaya </contact_name>	file_search
+show <file_keyword> xlsx	4	FILES	show <file_keyword> <file_type> xlsx </file_type>	file_search
+can you find <file_keyword> docx by venkata	4	FILES	can you find <file_keyword> <file_type> docx </file_type> by <contact_name> venkata </contact_name>	file_search
+open <file_keyword> spreadsheet by ashuthosh upadhyaya	4	FILES	open <file_keyword> <file_type> spreadsheet </file_type> by <contact_name> ashuthosh upadhyaya </contact_name>	file_open
+excel ashuthosh upadhyaya shared about <file_keyword>	4	FILES	<file_type> excel </file_type> <contact_name> ashuthosh upadhyaya </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+can you find <file_keyword> word by suman	4	FILES	can you find <file_keyword> <file_type> word </file_type> by <contact_name> suman </contact_name>	file_search
+can you find <file_keyword> xlsx by ashuthosh	4	FILES	can you find <file_keyword> <file_type> xlsx </file_type> by <contact_name> ashuthosh </contact_name>	file_search
+excel by ashuthosh about <file_keyword>	4	FILES	<file_type> excel </file_type> by <contact_name> ashuthosh </contact_name> about <file_keyword>	file_search
+xlsx by upadhyaya about <file_keyword>	4	FILES	<file_type> xlsx </file_type> by <contact_name> upadhyaya </contact_name> about <file_keyword>	file_search
+document by yaram about <file_keyword>	4	FILES	document by <contact_name> yaram </contact_name> about <file_keyword>	file_search
+excel named <file_name>	4	FILES	<file_type> excel </file_type> named <file_name>	file_search
+can you find <file_keyword> spreadsheet by ashuthosh	4	FILES	can you find <file_keyword> <file_type> spreadsheet </file_type> by <contact_name> ashuthosh </contact_name>	file_search
+open <file_keyword> spreadsheet by upadhyaya	4	FILES	open <file_keyword> <file_type> spreadsheet </file_type> by <contact_name> upadhyaya </contact_name>	file_open
+docx yaram shared about <file_keyword>	4	FILES	<file_type> docx </file_type> <contact_name> yaram </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+document by venkata suman yaram about <file_keyword>	4	FILES	document by <contact_name> venkata suman yaram </contact_name> about <file_keyword>	file_search
+doc named <file_name>	4	FILES	<file_type> doc </file_type> named <file_name>	file_search
+word by venkata suman yaram called <file_name>	4	FILES	<file_type> word </file_type> by <contact_name> venkata suman yaram </contact_name> called <file_name>	file_search
+can you find <file_keyword> docx by suman	4	FILES	can you find <file_keyword> <file_type> docx </file_type> by <contact_name> suman </contact_name>	file_search
+spreadsheet ashuthosh shared about <file_keyword>	4	FILES	<file_type> spreadsheet </file_type> <contact_name> ashuthosh </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+spreadsheet called <file_name>	4	FILES	<file_type> spreadsheet </file_type> called <file_name>	file_search
+xls by ashuthosh named <file_name>	4	FILES	<file_type> xls </file_type> by <contact_name> ashuthosh </contact_name> named <file_name>	file_search
+spreadsheet by ashuthosh called <file_name>	4	FILES	<file_type> spreadsheet </file_type> by <contact_name> ashuthosh </contact_name> called <file_name>	file_search
+doc called <file_name>	4	FILES	<file_type> doc </file_type> called <file_name>	file_search
+xlsx called <file_name>	4	FILES	<file_type> xlsx </file_type> called <file_name>	file_search
+docx by suman venkata called <file_name>	4	FILES	<file_type> docx </file_type> by <contact_name> suman venkata </contact_name> called <file_name>	file_search
+xlsx by ashuthosh named <file_name>	4	FILES	<file_type> xlsx </file_type> by <contact_name> ashuthosh </contact_name> named <file_name>	file_search
+excel by ashuthosh named <file_name>	4	FILES	<file_type> excel </file_type> by <contact_name> ashuthosh </contact_name> named <file_name>	file_search
+xlsx by ashuthosh upadhyaya called <file_name>	4	FILES	<file_type> xlsx </file_type> by <contact_name> ashuthosh upadhyaya </contact_name> called <file_name>	file_search
+excel by ashuthosh upadhyaya named <file_name>	4	FILES	<file_type> excel </file_type> by <contact_name> ashuthosh upadhyaya </contact_name> named <file_name>	file_search
+spreadsheet by ashuthosh named <file_name>	4	FILES	<file_type> spreadsheet </file_type> by <contact_name> ashuthosh </contact_name> named <file_name>	file_search
+spreadsheet by ashuthosh about <file_keyword>	4	FILES	<file_type> spreadsheet </file_type> by <contact_name> ashuthosh </contact_name> about <file_keyword>	file_search
+can you find <file_keyword> xls by ashuthosh upadhyaya	4	FILES	can you find <file_keyword> <file_type> xls </file_type> by <contact_name> ashuthosh upadhyaya </contact_name>	file_search
+open <file_keyword> spreadsheet by ashuthosh	4	FILES	open <file_keyword> <file_type> spreadsheet </file_type> by <contact_name> ashuthosh </contact_name>	file_open
+document by venkata suman yaram called <file_name>	4	FILES	document by <contact_name> venkata suman yaram </contact_name> called <file_name>	file_search
+document venkata shared about <file_keyword>	4	FILES	document <contact_name> venkata </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+xls by ashuthosh called <file_name>	4	FILES	<file_type> xls </file_type> by <contact_name> ashuthosh </contact_name> called <file_name>	file_search
+spreadsheet ashuthosh upadhyaya shared about <file_keyword>	4	FILES	<file_type> spreadsheet </file_type> <contact_name> ashuthosh upadhyaya </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+open <file_keyword> excel by ashuthosh	4	FILES	open <file_keyword> <file_type> excel </file_type> by <contact_name> ashuthosh </contact_name>	file_open
+open <file_keyword> xls by upadhyaya	4	FILES	open <file_keyword> <file_type> xls </file_type> by <contact_name> upadhyaya </contact_name>	file_open
+xls ashuthosh shared about <file_keyword>	4	FILES	<file_type> xls </file_type> <contact_name> ashuthosh </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+xls by upadhyaya called <file_name>	4	FILES	<file_type> xls </file_type> by <contact_name> upadhyaya </contact_name> called <file_name>	file_search
+show <file_keyword> spreadsheet	4	FILES	show <file_keyword> <file_type> spreadsheet </file_type>	file_search
+xls by ashuthosh about <file_keyword>	4	FILES	<file_type> xls </file_type> by <contact_name> ashuthosh </contact_name> about <file_keyword>	file_search
+<file_keyword> xlsx	4	FILES	<file_keyword> <file_type> xlsx </file_type>	file_search
+can you find <file_keyword> excel by ashuthosh	4	FILES	can you find <file_keyword> <file_type> excel </file_type> by <contact_name> ashuthosh </contact_name>	file_search
+xls by ashuthosh upadhyaya about <file_keyword>	4	FILES	<file_type> xls </file_type> by <contact_name> ashuthosh upadhyaya </contact_name> about <file_keyword>	file_search
+document by yaram venkata about <file_keyword>	4	FILES	document by <contact_name> yaram venkata </contact_name> about <file_keyword>	file_search
+spreadsheet by ashuthosh upadhyaya about <file_keyword>	4	FILES	<file_type> spreadsheet </file_type> by <contact_name> ashuthosh upadhyaya </contact_name> about <file_keyword>	file_search
+<file_keyword> xls	4	FILES	<file_keyword> <file_type> xls </file_type>	file_search
+show <file_keyword> docx	4	FILES	show <file_keyword> <file_type> docx </file_type>	file_search
+document by yaram named <file_name>	4	FILES	document by <contact_name> yaram </contact_name> named <file_name>	file_search
+open <file_keyword> xls by ashuthosh	4	FILES	open <file_keyword> <file_type> xls </file_type> by <contact_name> ashuthosh </contact_name>	file_open
+<file_keyword> document by venkata	4	FILES	<file_keyword> document by <contact_name> venkata </contact_name>	file_search
+open <file_keyword> document by venkata	4	FILES	open <file_keyword> document by <contact_name> venkata </contact_name>	file_open
+can you find <file_keyword> spreadsheet by ashuthosh upadhyaya	4	FILES	can you find <file_keyword> <file_type> spreadsheet </file_type> by <contact_name> ashuthosh upadhyaya </contact_name>	file_search
+can you find <file_keyword> document by yaram	4	FILES	can you find <file_keyword> document by <contact_name> yaram </contact_name>	file_search
+open <file_keyword> excel by upadhyaya	4	FILES	open <file_keyword> <file_type> excel </file_type> by <contact_name> upadhyaya </contact_name>	file_open
+can you find <file_keyword> xls by upadhyaya	4	FILES	can you find <file_keyword> <file_type> xls </file_type> by <contact_name> upadhyaya </contact_name>	file_search
+can you find <file_keyword> xls by ashuthosh	4	FILES	can you find <file_keyword> <file_type> xls </file_type> by <contact_name> ashuthosh </contact_name>	file_search
+xls by ashuthosh upadhyaya named <file_name>	4	FILES	<file_type> xls </file_type> by <contact_name> ashuthosh upadhyaya </contact_name> named <file_name>	file_search
+docx venkata shared about <file_keyword>	4	FILES	<file_type> docx </file_type> <contact_name> venkata </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+<file_keyword> xlsx by ashuthosh upadhyaya	4	FILES	<file_keyword> <file_type> xlsx </file_type> by <contact_name> ashuthosh upadhyaya </contact_name>	file_search
+open <file_keyword> xlsx by ashuthosh	4	FILES	open <file_keyword> <file_type> xlsx </file_type> by <contact_name> ashuthosh </contact_name>	file_open
+xls by upadhyaya about <file_keyword>	4	FILES	<file_type> xls </file_type> by <contact_name> upadhyaya </contact_name> about <file_keyword>	file_search
+my recent files	4	FILES	<contact_name> my </contact_name> <file_recency> recent </file_recency> files	file_search
+find my recent files	4	FILES	find <contact_name> my </contact_name> <file_recency> recent </file_recency> files	file_search
+<file_keyword> deck	3	FILES	<file_keyword> <file_type> deck </file_type>	file_search
+files from jose	3	FILES	files from <contact_name> jose </contact_name>	file_search
+show files that jose sent me	3	FILES	show files that <contact_name> jose </contact_name> <file_action> sent </file_action> <to_contact_name> me </to_contact_name>	file_search
+files from shwetambari mokadam	3	FILES	files from <contact_name> shwetambari mokadam </contact_name>	file_search
+shwetambari mokadams files	3	FILES	<contact_name> shwetambari mokadam </contact_name> s files	file_search
+most recent files	3	FILES	most <file_recency> recent </file_recency> files	file_search
+document by suman venkata named <file_name>	3	FILES	document by <contact_name> suman venkata </contact_name> named <file_name>	file_search
+document by yaram venkata called <file_name>	3	FILES	document by <contact_name> yaram venkata </contact_name> called <file_name>	file_search
+document by suman called <file_name>	3	FILES	document by <contact_name> suman </contact_name> called <file_name>	file_search
+doc yaram venkata shared about <file_keyword>	3	FILES	<file_type> doc </file_type> <contact_name> yaram venkata </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+docx by suman about <file_keyword>	3	FILES	<file_type> docx </file_type> by <contact_name> suman </contact_name> about <file_keyword>	file_search
+word yaram venkata shared about <file_keyword>	3	FILES	<file_type> word </file_type> <contact_name> yaram venkata </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+docx by yaram named <file_name>	3	FILES	<file_type> docx </file_type> by <contact_name> yaram </contact_name> named <file_name>	file_search
+can you find <file_keyword> word by venkata	3	FILES	can you find <file_keyword> <file_type> word </file_type> by <contact_name> venkata </contact_name>	file_search
+open <file_keyword> word by yaram venkata	3	FILES	open <file_keyword> <file_type> word </file_type> by <contact_name> yaram venkata </contact_name>	file_open
+docx by venkata called <file_name>	3	FILES	<file_type> docx </file_type> by <contact_name> venkata </contact_name> called <file_name>	file_search
+<file_keyword> document by yaram venkata	3	FILES	<file_keyword> document by <contact_name> yaram venkata </contact_name>	file_search
+word named <file_name>	3	FILES	<file_type> word </file_type> named <file_name>	file_search
+<file_keyword> word by suman	3	FILES	<file_keyword> <file_type> word </file_type> by <contact_name> suman </contact_name>	file_search
+word by suman about <file_keyword>	3	FILES	<file_type> word </file_type> by <contact_name> suman </contact_name> about <file_keyword>	file_search
+<file_keyword> document by yaram	3	FILES	<file_keyword> document by <contact_name> yaram </contact_name>	file_search
+can you find <file_keyword> document by suman venkata	3	FILES	can you find <file_keyword> document by <contact_name> suman venkata </contact_name>	file_search
+docx by yaram called <file_name>	3	FILES	<file_type> docx </file_type> by <contact_name> yaram </contact_name> called <file_name>	file_search
+word venkata suman yaram shared about <file_keyword>	3	FILES	<file_type> word </file_type> <contact_name> venkata suman yaram </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+docx yaram venkata shared about <file_keyword>	3	FILES	<file_type> docx </file_type> <contact_name> yaram venkata </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+<file_keyword> docx by venkata suman yaram	3	FILES	<file_keyword> <file_type> docx </file_type> by <contact_name> venkata suman yaram </contact_name>	file_search
+document yaram venkata shared about <file_keyword>	3	FILES	document <contact_name> yaram venkata </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+document by venkata suman yaram named <file_name>	3	FILES	document by <contact_name> venkata suman yaram </contact_name> named <file_name>	file_search
+<file_keyword> docx by suman	3	FILES	<file_keyword> <file_type> docx </file_type> by <contact_name> suman </contact_name>	file_search
+docx by venkata suman yaram called <file_name>	3	FILES	<file_type> docx </file_type> by <contact_name> venkata suman yaram </contact_name> called <file_name>	file_search
+doc suman venkata shared about <file_keyword>	3	FILES	<file_type> doc </file_type> <contact_name> suman venkata </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+docx called <file_name>	3	FILES	<file_type> docx </file_type> called <file_name>	file_search
+document by venkata named <file_name>	3	FILES	document by <contact_name> venkata </contact_name> named <file_name>	file_search
+word by yaram venkata called <file_name>	3	FILES	<file_type> word </file_type> by <contact_name> yaram venkata </contact_name> called <file_name>	file_search
+open <file_keyword> docx by venkata	3	FILES	open <file_keyword> <file_type> docx </file_type> by <contact_name> venkata </contact_name>	file_open
+doc suman shared about <file_keyword>	3	FILES	<file_type> doc </file_type> <contact_name> suman </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+<file_keyword> docx	3	FILES	<file_keyword> <file_type> docx </file_type>	file_search
+<file_keyword> docx by yaram venkata	3	FILES	<file_keyword> <file_type> docx </file_type> by <contact_name> yaram venkata </contact_name>	file_search
+document suman venkata shared about <file_keyword>	3	FILES	document <contact_name> suman venkata </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+open <file_keyword> word by yaram	3	FILES	open <file_keyword> <file_type> word </file_type> by <contact_name> yaram </contact_name>	file_open
+document by yaram called <file_name>	3	FILES	document by <contact_name> yaram </contact_name> called <file_name>	file_search
+docx by yaram venkata about <file_keyword>	3	FILES	<file_type> docx </file_type> by <contact_name> yaram venkata </contact_name> about <file_keyword>	file_search
+word by yaram named <file_name>	3	FILES	<file_type> word </file_type> by <contact_name> yaram </contact_name> named <file_name>	file_search
+word called <file_name>	3	FILES	<file_type> word </file_type> called <file_name>	file_search
+docx suman shared about <file_keyword>	3	FILES	<file_type> docx </file_type> <contact_name> suman </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+open <file_keyword> document by yaram venkata	3	FILES	open <file_keyword> document by <contact_name> yaram venkata </contact_name>	file_open
+can you find <file_keyword> document by suman	3	FILES	can you find <file_keyword> document by <contact_name> suman </contact_name>	file_search
+docx by venkata named <file_name>	3	FILES	<file_type> docx </file_type> by <contact_name> venkata </contact_name> named <file_name>	file_search
+word by yaram venkata named <file_name>	3	FILES	<file_type> word </file_type> by <contact_name> yaram venkata </contact_name> named <file_name>	file_search
+document by suman named <file_name>	3	FILES	document by <contact_name> suman </contact_name> named <file_name>	file_search
+doc venkata shared about <file_keyword>	3	FILES	<file_type> doc </file_type> <contact_name> venkata </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+doc venkata suman yaram shared about <file_keyword>	3	FILES	<file_type> doc </file_type> <contact_name> venkata suman yaram </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+<file_keyword> docx by yaram	3	FILES	<file_keyword> <file_type> docx </file_type> by <contact_name> yaram </contact_name>	file_search
+<file_keyword> word by yaram	3	FILES	<file_keyword> <file_type> word </file_type> by <contact_name> yaram </contact_name>	file_search
+docx by venkata suman yaram about <file_keyword>	3	FILES	<file_type> docx </file_type> by <contact_name> venkata suman yaram </contact_name> about <file_keyword>	file_search
+can you find <file_keyword> document by venkata suman yaram	3	FILES	can you find <file_keyword> document by <contact_name> venkata suman yaram </contact_name>	file_search
+word by venkata called <file_name>	3	FILES	<file_type> word </file_type> by <contact_name> venkata </contact_name> called <file_name>	file_search
+document by suman about <file_keyword>	3	FILES	document by <contact_name> suman </contact_name> about <file_keyword>	file_search
+doc yaram shared about <file_keyword>	3	FILES	<file_type> doc </file_type> <contact_name> yaram </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+<file_keyword> word by venkata	3	FILES	<file_keyword> <file_type> word </file_type> by <contact_name> venkata </contact_name>	file_search
+docx by suman venkata about <file_keyword>	3	FILES	<file_type> docx </file_type> by <contact_name> suman venkata </contact_name> about <file_keyword>	file_search
+can you find <file_keyword> docx by yaram	3	FILES	can you find <file_keyword> <file_type> docx </file_type> by <contact_name> yaram </contact_name>	file_search
+open <file_keyword> document by suman	3	FILES	open <file_keyword> document by <contact_name> suman </contact_name>	file_open
+can you find <file_keyword> word by suman venkata	3	FILES	can you find <file_keyword> <file_type> word </file_type> by <contact_name> suman venkata </contact_name>	file_search
+open <file_keyword> doc	3	FILES	open <file_keyword> <file_type> doc </file_type>	file_open
+word suman venkata shared about <file_keyword>	3	FILES	<file_type> word </file_type> <contact_name> suman venkata </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+<file_keyword> document by suman	3	FILES	<file_keyword> document by <contact_name> suman </contact_name>	file_search
+document by suman venkata called <file_name>	3	FILES	document by <contact_name> suman venkata </contact_name> called <file_name>	file_search
+document called <file_name>	3	FILES	document called <file_name>	file_search
+can you find <file_keyword> docx by venkata suman yaram	3	FILES	can you find <file_keyword> <file_type> docx </file_type> by <contact_name> venkata suman yaram </contact_name>	file_search
+can you find <file_keyword> word by venkata suman yaram	3	FILES	can you find <file_keyword> <file_type> word </file_type> by <contact_name> venkata suman yaram </contact_name>	file_search
+word by yaram about <file_keyword>	3	FILES	<file_type> word </file_type> by <contact_name> yaram </contact_name> about <file_keyword>	file_search
+<file_keyword> docx by suman venkata	3	FILES	<file_keyword> <file_type> docx </file_type> by <contact_name> suman venkata </contact_name>	file_search
+open <file_keyword> docx	3	FILES	open <file_keyword> <file_type> docx </file_type>	file_open
+open <file_keyword> word	3	FILES	open <file_keyword> <file_type> word </file_type>	file_open
+word by suman named <file_name>	3	FILES	<file_type> word </file_type> by <contact_name> suman </contact_name> named <file_name>	file_search
+show <file_keyword> doc	3	FILES	show <file_keyword> <file_type> doc </file_type>	file_search
+can you find <file_keyword> docx by suman venkata	3	FILES	can you find <file_keyword> <file_type> docx </file_type> by <contact_name> suman venkata </contact_name>	file_search
+docx venkata suman yaram shared about <file_keyword>	3	FILES	<file_type> docx </file_type> <contact_name> venkata suman yaram </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+<file_keyword> document by venkata suman yaram	3	FILES	<file_keyword> document by <contact_name> venkata suman yaram </contact_name>	file_search
+document named <file_name>	3	FILES	document named <file_name>	file_search
+word venkata shared about <file_keyword>	3	FILES	<file_type> word </file_type> <contact_name> venkata </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+word by suman venkata named <file_name>	3	FILES	<file_type> word </file_type> by <contact_name> suman venkata </contact_name> named <file_name>	file_search
+word by yaram called <file_name>	3	FILES	<file_type> word </file_type> by <contact_name> yaram </contact_name> called <file_name>	file_search
+docx named <file_name>	3	FILES	<file_type> docx </file_type> named <file_name>	file_search
+docx by yaram venkata called <file_name>	3	FILES	<file_type> docx </file_type> by <contact_name> yaram venkata </contact_name> called <file_name>	file_search
+document by venkata called <file_name>	3	FILES	document by <contact_name> venkata </contact_name> called <file_name>	file_search
+can you find <file_keyword> word by yaram	3	FILES	can you find <file_keyword> <file_type> word </file_type> by <contact_name> yaram </contact_name>	file_search
+can you find <file_keyword> docx by yaram venkata	3	FILES	can you find <file_keyword> <file_type> docx </file_type> by <contact_name> yaram venkata </contact_name>	file_search
+word by yaram venkata about <file_keyword>	3	FILES	<file_type> word </file_type> by <contact_name> yaram venkata </contact_name> about <file_keyword>	file_search
+word suman shared about <file_keyword>	3	FILES	word <contact_name> suman </contact_name> shared about <file_keyword>	file_search
+word by venkata named <file_name>	3	FILES	<file_type> word </file_type> by <contact_name> venkata </contact_name> named <file_name>	file_search
+open <file_keyword> docx by venkata suman yaram	3	FILES	open <file_keyword> <file_type> docx </file_type> by <contact_name> venkata suman yaram </contact_name>	file_open
+open <file_keyword> word by venkata suman yaram	3	FILES	open <file_keyword> <file_type> word </file_type> by <contact_name> venkata suman yaram </contact_name>	file_open
+<file_keyword> docx by venkata	3	FILES	<file_keyword> <file_type> docx </file_type> by <contact_name> venkata </contact_name>	file_search
+word yaram shared about <file_keyword>	3	FILES	<file_type> word </file_type> <contact_name> yaram </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+word by venkata suman yaram named <file_name>	3	FILES	<file_type> word </file_type> by <contact_name> venkata suman yaram </contact_name> named <file_name>	file_search
+<file_keyword> document by suman venkata	3	FILES	<file_keyword> document by <contact_name> suman venkata </contact_name>	file_search
+can you find <file_keyword> word by yaram venkata	3	FILES	can you find <file_keyword> <file_type> word </file_type> by <contact_name> yaram venkata </contact_name>	file_search
+word by suman venkata about <file_keyword>	3	FILES	<file_type> word </file_type> by <contact_name> suman venkata </contact_name> about <file_keyword>	file_search
+docx by venkata about <file_keyword>	3	FILES	<file_type> docx </file_type> by <contact_name> venkata </contact_name> about <file_keyword>	file_search
+open <file_keyword> docx by yaram venkata	3	FILES	open <file_keyword> <file_type> docx </file_type> by <contact_name> yaram venkata </contact_name>	file_open
+open <file_keyword> docx by suman venkata	3	FILES	open <file_keyword> <file_type> docx </file_type> by <contact_name> suman venkata </contact_name>	file_open
+docx by yaram about <file_keyword>	3	FILES	<file_type> docx </file_type> by <contact_name> yaram </contact_name> about <file_keyword>	file_search
+open <file_keyword> document	3	FILES	open <file_keyword> document	file_open
+document by suman venkata about <file_keyword>	3	FILES	document by <contact_name> suman venkata </contact_name> about <file_keyword>	file_search
+can you find <file_keyword> document by venkata	3	FILES	can you find <file_keyword> document by <contact_name> venkata </contact_name>	file_search
+docx by suman named <file_name>	3	FILES	<file_type> docx </file_type> by <contact_name> suman </contact_name> named <file_name>	file_search
+open <file_keyword> docx by suman	3	FILES	open <file_keyword> <file_type> docx </file_type> by <contact_name> suman </contact_name>	file_open
+word by suman venkata called <file_name>	3	FILES	<file_type> word </file_type> by <contact_name> suman venkata </contact_name> called <file_name>	file_search
+document yaram shared about <file_keyword>	3	FILES	document <contact_name> yaram </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+document by venkata about <file_keyword>	3	FILES	document by <contact_name> venkata </contact_name> about <file_keyword>	file_search
+document by yaram venkata named <file_name>	3	FILES	document by <contact_name> yaram venkata </contact_name> named <file_name>	file_search
+docx by venkata suman yaram named <file_name>	3	FILES	<file_type> docx </file_type> by <contact_name> venkata suman yaram </contact_name> named <file_name>	file_search
+open <file_keyword> document by venkata suman yaram	3	FILES	open <file_keyword> document by <contact_name> venkata suman yaram </contact_name>	file_open
+document suman shared about <file_keyword>	3	FILES	document <contact_name> suman </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+open <file_keyword> document by suman venkata	3	FILES	open <file_keyword> document by <contact_name> suman venkata </contact_name>	file_open
+word by venkata about <file_keyword>	3	FILES	<file_type> word </file_type> by <contact_name> venkata </contact_name> about <file_keyword>	file_search
+word by suman called <file_name>	3	FILES	<file_type> word </file_type> by <contact_name> suman </contact_name> called <file_name>	file_search
+<file_keyword> word by yaram venkata	3	FILES	<file_keyword> <file_type> word </file_type> by <contact_name> yaram venkata </contact_name>	file_search
+word by venkata suman yaram about <file_keyword>	3	FILES	<file_type> word </file_type> by <contact_name> venkata suman yaram </contact_name> about <file_keyword>	file_search
+open <file_keyword> document by yaram	3	FILES	open <file_keyword> document by <contact_name> yaram </contact_name>	file_open
+docx by yaram venkata named <file_name>	3	FILES	<file_type> docx </file_type> by <contact_name> yaram venkata </contact_name> named <file_name>	file_search
+document venkata suman yaram shared about <file_keyword>	3	FILES	document <contact_name> venkata suman yaram </contact_name> <file_action> shared </file_action> about <file_keyword>	file_search
+find <file_keyword> files by abraham	3	FILES	find <file_keyword> files by <contact_name> abraham </contact_name>	file_search
+files from ajoy	2	FILES	files from <contact_name> ajoy </contact_name>	file_search
+joses files	2	FILES	<contact_name> jose </contact_name> s files	file_search
+find <file_keyword> ppt	2	FILES	find <file_keyword> <file_type> ppt </file_type>	file_search
+files from talon	2	FILES	files from <contact_name> talon </contact_name>	file_search
+open my <file_keyword> file	2	FILES	open <contact_name> my </contact_name> <file_keyword> file	file_open
+files from diego	2	FILES	files from <contact_name> diego </contact_name>	file_search
+files from jose gomezangulo	2	FILES	files from <contact_name> jose gomezangulo </contact_name>	file_search
+show files that jose gomezangulo sent me	2	FILES	show files that <contact_name> jose gomezangulo </contact_name> <file_action> sent </file_action> <to_contact_name> me </to_contact_name>	file_search
+can you find <file_keyword> document by yaram venkata	2	FILES	can you find <file_keyword> document by <contact_name> yaram venkata </contact_name>	file_search
+open my powerpoint files	2	FILES	open <contact_name> my </contact_name> <file_type> powerpoint </file_type> files	file_open
+recent files	2	FILES	<file_recency> recent </file_recency> files	file_search
+share <file_keyword> ppt	1	FILES	share <file_keyword> <file_type> ppt </file_type>	file_share
+show me files that ravi sent me yesterday	1	FILES	show me files that <contact_name> ravi </contact_name> <file_action> sent </file_action> <to_contact_name> me </to_contact_name> <date> yesterday </date>	file_search
+yiwen wus files	1	FILES	<contact_name> yiwen wu </contact_name> s files	file_search
+could you please show me <file_keyword> files	1	FILES	could you please show me <file_keyword> files	file_search
+show me file that vivek sent me	1	FILES	show me file that <contact_name> vivek </contact_name> <file_action> sent </file_action> <to_contact_name> me </to_contact_name>	file_search
+whats last file from rena	1	FILES	whats <order_ref> last </order_ref> file from <contact_name> rena </contact_name>	file_search
+powerpoint deck on <file_keyword>	1	FILES	<file_type> powerpoint deck </file_type> on <file_keyword>	file_search
+melissa simss files	1	FILES	<contact_name> melissa sims </contact_name> s files	file_search
+show files that has a <file_keyword>	1	FILES	show files that has a <file_keyword>	file_search
+files from katrina	1	FILES	files from <contact_name> katrina </contact_name>	file_search
+files from maggie	1	FILES	files from <contact_name> maggie </contact_name>	file_search
+files from allison	1	FILES	files from <contact_name> allison </contact_name>	file_search
+show me file that we make sent me yesterday	1	FILES	show me file that <contact_name> we make </contact_name> <file_action> sent </file_action> <to_contact_name> me </to_contact_name> <start_date> yesterday </start_date>	file_search
+files from jotham parker	1	FILES	files from <contact_name> jotham parker </contact_name>	file_search
+files from joseazen3com	1	FILES	files from <contact_name> joseazen3com </contact_name>	file_search
+would file did ravi send me yesterday	1	FILES	would file did <contact_name> ravi </contact_name> <file_action> send </file_action> <to_contact_name> me </to_contact_name> <start_date> yesterday </start_date>	file_search
+files from diegos	1	FILES	files from <contact_name> diego </contact_name> s	file_search
+find file i sent it to trevor harris	1	FILES	find file <contact_name> i </contact_name> <file_action> sent </file_action> it to <to_contact_name> trevor harris </to_contact_name>	file_search
+files from craig	1	FILES	files from <contact_name> craig </contact_name>	file_search
+show files that quazi sent me	1	FILES	show files that <contact_name> quazi </contact_name> <file_action> sent </file_action> <to_contact_name> me </to_contact_name>	file_search
+files from jennifer	1	FILES	files from <contact_name> jennifer </contact_name>	file_search
+<file_keyword> files	1	FILES	<file_keyword> files	file_search
+show my latest document	1	FILES	show <contact_name> my </contact_name> <order_ref> latest </order_ref> document	file_search
+show me powerpoint that miles was presenting	1	FILES	show me <file_type> powerpoint </file_type> that <contact_name> miles </contact_name> was <file_action> presenting </file_action>	file_search
+<file_keyword>	1	FILES	<file_keyword>	file_search
+show me <file_keyword> file	1	FILES	show me <file_keyword> file	file_search
+find me a file	1	FILES	find me a file	file_search
+files that malik sent	1	FILES	files that <contact_name> malik </contact_name> <file_action> sent </file_action>	file_search
+files that ashok sent	1	FILES	files that <contact_name> ashok </contact_name> <file_action> sent </file_action>	file_search
+show me document that miles fitzgerald made	1	FILES	show me document that <contact_name> miles fitzgerald </contact_name> <file_action> made </file_action>	file_search
+my files	1	FILES	<contact_name> my </contact_name> files	file_search
+files for <file_keyword> document	1	FILES	files for <file_keyword> document	file_search
+test presentation for <file_keyword>	1	FILES	<file_keyword> <file_type> presentation </file_type> for <file_keyword>	file_search
+<file_keyword> deck for malik	1	FILES	<file_keyword> <file_type> deck </file_type> for <contact_name> malik </contact_name>	file_search
+files that carl sent	1	FILES	files that <contact_name> carl </contact_name> <file_action> sent </file_action>	file_search
+show me file that chris park was working on	1	FILES	show me file that <contact_name> chris park </contact_name> was <file_action> working </file_action> on	file_search
+documents from saurabh	1	FILES	documents from <contact_name> saurabh </contact_name>	file_search
+files about <file_keyword> from stacey	1	FILES	files about <file_keyword> from <contact_name> stacey </contact_name>	file_search
+recent files from allison	1	FILES	<file_recency> recent </file_recency> files from <contact_name> allison </contact_name>	file_search
+files from malik	1	FILES	files from <contact_name> malik </contact_name>	file_search
+files sent from allison	1	FILES	files <file_action> sent </file_action> from <contact_name> allison </contact_name>	file_search
+show files that shwetambari sent me	1	FILES	show files that <contact_name> shwetambari </contact_name> <file_action> sent </file_action> <to_contact_name> me </to_contact_name>	file_search
+find documents from ramesh	1	FILES	find documents from <contact_name> ramesh </contact_name>	file_search
+files from chris	1	FILES	files from <contact_name> chris </contact_name>	file_search
+files to anthony tran	1	FILES	files to <to_contact_name> anthony tran </to_contact_name>	file_search
+files from shankha	1	FILES	files from <contact_name> shankha </contact_name>	file_search
+find files from madeline with an attachment	1	FILES	find files from <contact_name> madeline </contact_name> with an <data_source> attachment </data_source>	file_search
+im files from angus	1	FILES	iaposm files from <contact_name> angus </contact_name>	file_search
+open recent created file <file_keyword>	1	FILES	open <file_recency> recent </file_recency> <file_action> created </file_action> file <file_keyword>	file_open
+bring up most recent file that i have created	1	FILES	bring up most <file_recency> recent </file_recency> file that <contact_name> i </contact_name> have <file_action> created </file_action>	file_search
+shah <file_keyword> onenote	1	FILES	<contact_name> shah </contact_name> <file_keyword> <file_type> onenote </file_type>	file_search
+show me my recently edited file named <file_name>	1	FILES	show me <contact_name> my </contact_name> <file_recency> recently </file_recency> <file_action> edited </file_action> file named <file_name>	file_search
+files from other	1	FILES	files from other	file_search
+find files from carol	1	FILES	find files from <contact_name> carol </contact_name>	file_search
+files last week	1	FILES	files <date> last week </date>	file_search
+files from michael	1	FILES	files from <contact_name> michael </contact_name>	file_search
+find files from angus	1	FILES	find files from <contact_name> angus </contact_name>	file_search
+files i edited	1	FILES	files <contact_name> i </contact_name> <file_action> edited </file_action>	file_search
+files from carl	1	FILES	files from <contact_name> carl </contact_name>	file_search
+<file_keyword> exel	1	FILES	<file_keyword> <file_type> exel </file_type>	file_search
+show me files from rich mains	1	FILES	show me files from <contact_name> rich mains </contact_name>	file_search
+recent added files	1	FILES	<file_recency> recent </file_recency> <file_action> added </file_action> files	file_search
+files siobhan sent to me two months ago	1	FILES	files <contact_name> siobhan </contact_name> <file_action> sent </file_action> to <to_contact_name> me </to_contact_name> <date> two months ago </date>	file_search
+files from chad	1	FILES	files from <contact_name> chad </contact_name>	file_search
+files i edited recently	1	FILES	files <contact_name> i </contact_name> <file_action> edited </file_action> <file_recency> recently </file_recency>	file_search
+document titled	1	FILES	document titled	file_search
+search pdf file	1	FILES	search <file_type> pdf </file_type> file	file_search
+show me files that ive been working on recently	1	FILES	show me files that ive been <file_action> working </file_action> on <file_recency> recently </file_recency>	file_search
+find powerpoint	1	FILES	find <file_type> powerpoint </file_type>	file_search
+files i created recently	1	FILES	files <contact_name> i </contact_name> <file_action> created </file_action> <file_recency> recently </file_recency>	file_search
+image from richard	1	FILES	<file_type> image </file_type> from <contact_name> richard </contact_name>	file_search
+find files <file_keyword>	1	FILES	find files <file_keyword>	file_search
+yeah so show me recent files	1	FILES	yeah so show me <file_recency> recent </file_recency> files	file_search
+show me recent files	1	FILES	show me <file_recency> recent </file_recency> files	file_search
+whats last presentation from karthik	1	FILES	whataposs <order_ref> last </order_ref> <file_type> presentation </file_type> from <contact_name> karthik </contact_name>	file_search
+what was last document	1	FILES	what was <order_ref> last </order_ref> document	file_search
+show me my recently created document named my new document	1	FILES	show me <contact_name> my </contact_name> <file_recency> recently </file_recency> <file_action> created </file_action> document named <contact_name> my </contact_name> new document	file_search
+<file_keyword> in files	1	FILES	<file_keyword> in files	file_search
+find my recently added files	1	FILES	find <contact_name> my </contact_name> <file_recency> recently </file_recency> <file_action> added </file_action> files	file_search
+show files from karthik	1	FILES	show files from <contact_name> karthik </contact_name>	file_search
+show me a file i edited last week	1	FILES	show me a file <contact_name> i </contact_name> <file_action> edited </file_action> <date> last week </date>	file_search
+latest file from talon	1	FILES	<order_ref> latest </order_ref> file from <contact_name> talon </contact_name>	file_search
+files edited by me	1	FILES	files <file_action> edited </file_action> by <contact_name> me </contact_name>	file_search
+what is <file_keyword> file	1	FILES	what is <file_keyword> file	file_other
+files from jon harris	1	FILES	files from <contact_name> jon harris </contact_name>	file_search
+find a file from ramesh	1	FILES	find a file from <contact_name> ramesh </contact_name>	file_search
+what is my most recently created file which was named <file_name>	1	FILES	what is my most <file_recency> recently </file_recency> <file_action> created </file_action> file which was named <file_name>	file_search
+display recently edited file named <file_name>	1	FILES	display <file_recency> recently </file_recency> <file_action> edited </file_action> file named <file_name>	file_search
+<file_keyword> ppt	1	FILES	<file_keyword> <file_type> ppt </file_type>	file_search
+files sent from siobhan to montego	1	FILES	files <file_action> sent </file_action> from <contact_name> siobhan </contact_name> to <to_contact_name> montego </to_contact_name>	file_search
+files sent from siobhan two months ago	1	FILES	files <file_action> sent </file_action> from <contact_name> siobhan </contact_name> <date> two months ago </date>	file_search
+open recently created file my document	1	FILES	open <file_recency> recently </file_recency> <file_action> created </file_action> file my document	file_open
+recent edited files	1	FILES	<file_recency> recent </file_recency> <file_action> edited </file_action> files	file_search
+show files from diego	1	FILES	show files from <contact_name> diego </contact_name>	file_search
+files i edited last week	1	FILES	files <contact_name> i </contact_name> <file_action> edited </file_action> <date> last week </date>	file_search
+files from shankar	1	FILES	files from <contact_name> shankar </contact_name>	file_search
+find files i worked on last week	1	FILES	find files <contact_name> i </contact_name> <file_action> worked </file_action> on <date> last week </date>	file_search
+doc shared by venkata suman yaram	1	FILES	<file_type> doc </file_type> <file_action> shared </file_action> by <contact_name> venkata suman yaram </contact_name>	file_search
+excel shared by ashuthosh upadhyaya	1	FILES	<file_type> excel </file_type> <file_action> shared </file_action> by <contact_name> ashuthosh upadhyaya </contact_name>	file_search
+doc shared by yaram	1	FILES	<file_type> doc </file_type> <file_action> shared </file_action> by <contact_name> yaram </contact_name>	file_search
+excel ashuthosh upadhyaya	1	FILES	<file_type> excel </file_type> <contact_name> ashuthosh upadhyaya </contact_name>	file_search
+ashuthosh upadhyaya excel	1	FILES	<contact_name> ashuthosh upadhyaya </contact_name> <file_type> excel </file_type>	file_search
+docx usman shared	1	FILES	<file_type> docx </file_type> <contact_name> usman </contact_name> <file_action> shared </file_action>	file_search
+doc modified by yaram	1	FILES	<file_type> doc </file_type> <file_action> modified </file_action> by <contact_name> yaram </contact_name>	file_search
+open <file_keyword> document by venkata suman yara	1	FILES	open <file_keyword> document by <contact_name> venkata suman yara </contact_name>	file_open
+docx by venkata suman yaram	1	FILES	<file_type> docx </file_type> by <contact_name> venkata suman yaram </contact_name>	file_search
+venkata word	1	FILES	<contact_name> venkata </contact_name> <file_type> word </file_type>	file_search
+excel ashuthosh upadhyaya shared	1	FILES	<file_type> excel </file_type> <contact_name> ashuthosh upadhyaya </contact_name> <file_action> shared </file_action>	file_search
+word shared by venkata	1	FILES	<file_type> word </file_type> <file_action> shared </file_action> by <contact_name> venkata </contact_name>	file_search
+docx shared by suman	1	FILES	<file_type> docx </file_type> <file_action> shared </file_action> by <contact_name> suman </contact_name>	file_search
+sumans document files shared with me	1	FILES	<contact_name> suman </contact_name> s document files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+suman venkata word	1	FILES	<contact_name> suman venkata </contact_name> <file_type> word </file_type>	file_search
+venkata suman yarams word files shared with me	1	FILES	<contact_name> venkata suman yaram </contact_name> s <file_type> word </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+word shared by suman	1	FILES	<file_type> word </file_type> <file_action> shared </file_action> by <contact_name> suman </contact_name>	file_search
+suman venkata doc	1	FILES	<contact_name> suman venkata </contact_name> <file_type> doc </file_type>	file_search
+yarams word files shared with me	1	FILES	<contact_name> yaram </contact_name> s <file_type> word </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+xls upadhyaya sent	1	FILES	<file_type> xls </file_type> <contact_name> upadhyaya </contact_name> <file_action> sent </file_action>	file_search
+xlsx ashuthosh sent	1	FILES	<file_type> xlsx </file_type> <contact_name> ashuthosh </contact_name> <file_action> sent </file_action>	file_search
+docx modified by yaram	1	FILES	<file_type> docx </file_type> <file_action> modified </file_action> by <contact_name> yaram </contact_name>	file_search
+vind me <file_keyword> xlsx by upadhyaya	1	FILES	vind me <file_keyword> <file_type> xlsx </file_type> by <contact_name> upadhyaya </contact_name>	file_search
+xls ashuthosh	1	FILES	<file_type> xls </file_type> <contact_name> ashuthosh </contact_name>	file_search
+word modified by venkata suman yaram	1	FILES	<file_type> word </file_type> <file_action> modified </file_action> by <contact_name> venkata suman yaram </contact_name>	file_search
+word yaram	1	FILES	<file_type> word </file_type> <contact_name> yaram </contact_name>	file_search
+doc modified by yaram venkata	1	FILES	<file_type> doc </file_type> <file_action> modified </file_action> by <contact_name> yaram venkata </contact_name>	file_search
+doc suman sent	1	FILES	<file_type> doc </file_type> <contact_name> suman </contact_name> <file_action> sent </file_action>	file_search
+word venkata shared	1	FILES	<file_type> word </file_type> <contact_name> venkata </contact_name> <file_action> shared </file_action>	file_search
+venkatas doc files shared with me	1	FILES	<contact_name> venkata </contact_name> s <file_type> doc </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+xls shared by ashuthosh upadhyaya	1	FILES	<file_type> xls </file_type> <file_action> shared </file_action> by <contact_name> ashuthosh upadhyaya </contact_name>	file_search
+files by upadhyaya	1	FILES	files by <contact_name> upadhyaya </contact_name>	file_search
+xls ashuthosh upadhyaya	1	FILES	<file_type> xls </file_type> <contact_name> ashuthosh upadhyaya </contact_name>	file_search
+xls ashuthosh upadhyaya sent	1	FILES	<file_type> xls </file_type> <contact_name> ashuthosh upadhyaya </contact_name> <file_action> sent </file_action>	file_search
+word venkata	1	FILES	<file_type> word </file_type> <contact_name> venkata </contact_name>	file_search
+xlsx shared by ashuthosh	1	FILES	<file_type> xlsx </file_type> <file_action> shared </file_action> by <contact_name> ashuthosh </contact_name>	file_search
+upadhyayas xlsx files shared with me	1	FILES	<contact_name> upadhyaya </contact_name> s <file_type> xlsx </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+venkatas word files shared with me	1	FILES	<contact_name> venkata </contact_name> s <file_type> word </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+word modified by yaram	1	FILES	<file_type> word </file_type> <file_action> modified </file_action> by <contact_name> yaram </contact_name>	file_search
+docx files	1	FILES	<file_type> docx </file_type> files	file_search
+files by venkata	1	FILES	files by <contact_name> venkata </contact_name>	file_search
+document yaram sent	1	FILES	document <contact_name> yaram </contact_name> <file_action> sent </file_action>	file_search
+suman venkatas document files shared with me	1	FILES	<contact_name> suman venkata </contact_name> s document files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+venkata suman yaram docx	1	FILES	<contact_name> venkata suman yaram </contact_name> <file_type> docx </file_type>	file_search
+docx by suman venkata	1	FILES	<file_type> docx </file_type> by <contact_name> suman venkata </contact_name>	file_search
+document modified by venkata suman yaram	1	FILES	document <file_action> modified </file_action> by <contact_name> venkata suman yaram </contact_name>	file_search
+venkata document	1	FILES	<contact_name> venkata </contact_name> document	file_search
+document by suman venkata	1	FILES	document by <contact_name> suman venkata </contact_name>	file_search
+docx suman shared	1	FILES	<file_type> docx </file_type> <contact_name> suman </contact_name> <file_action> shared </file_action>	file_search
+excel by ashuthosh upadhyaya	1	FILES	<file_type> excel </file_type> by <contact_name> ashuthosh upadhyaya </contact_name>	file_search
+word yaram venkata	1	FILES	<file_type> word </file_type> <contact_name> yaram venkata </contact_name>	file_search
+xlsx upadhyaya shared	1	FILES	<file_type> xlsx </file_type> <contact_name> upadhyaya </contact_name> <file_action> shared </file_action>	file_search
+xlsx ashuthosh shared	1	FILES	<file_type> xlsx </file_type> <contact_name> ashuthosh </contact_name> <file_action> shared </file_action>	file_search
+docx shared by venkata	1	FILES	<file_type> docx </file_type> <file_action> shared </file_action> by <contact_name> venkata </contact_name>	file_search
+files by ashuthosh	1	FILES	files by <contact_name> ashuthosh </contact_name>	file_search
+upadhyaya excel	1	FILES	<contact_name> upadhyaya </contact_name> <file_type> excel </file_type>	file_search
+document modified by yaram venkata	1	FILES	document <file_action> modified </file_action> by <contact_name> yaram venkata </contact_name>	file_search
+yaram document	1	FILES	<contact_name> yaram </contact_name> document	file_search
+can yu find <file_keyword> word by suman venkata	1	FILES	can yu find <file_keyword> <file_type> word </file_type> by <contact_name> suman venkata </contact_name>	file_search
+suman venkatas docx files shared with me	1	FILES	<contact_name> suman venkata </contact_name> s <file_type> docx </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+docx yaram venkata sent	1	FILES	<file_type> docx </file_type> <contact_name> yaram venkata </contact_name> <file_action> sent </file_action>	file_search
+xlsx shared by ashuthosh upadhyaya	1	FILES	<file_type> xlsx </file_type> <file_action> shared </file_action> by <contact_name> ashuthosh upadhyaya </contact_name>	file_search
+excel by ashuthosh	1	FILES	<file_type> excel </file_type> by <contact_name> ashuthosh </contact_name>	file_search
+word by venkata	1	FILES	<file_type> word </file_type> by <contact_name> venkata </contact_name>	file_search
+docx suman venkata shared	1	FILES	<file_type> docx </file_type> <contact_name> suman venkata </contact_name> <file_action> shared </file_action>	file_search
+word suman	1	FILES	<file_type> word </file_type> <contact_name> suman </contact_name>	file_search
+docx yaram venkata	1	FILES	<file_type> docx </file_type> <contact_name> yaram venkata </contact_name>	file_search
+docx auman venkata	1	FILES	<file_type> docx </file_type> <contact_name> auman venkata </contact_name>	file_search
+document shared by yaram venkata	1	FILES	document <file_action> shared </file_action> by <contact_name> yaram venkata </contact_name>	file_search
+xlsx shared by upadhyaya	1	FILES	<file_type> xlsx </file_type> <file_action> shared </file_action> by <contact_name> upadhyaya </contact_name>	file_search
+ashuthosh upadhyayas excel files shared with me	1	FILES	<contact_name> ashuthosh upadhyaya </contact_name> s <file_type> excel </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+spreadsheet ashuthosh sent	1	FILES	<file_type> spreadsheet </file_type> <contact_name> ashuthosh </contact_name> <file_action> sent </file_action>	file_search
+excel upadhyaya shared	1	FILES	<file_type> excel </file_type> <contact_name> upadhyaya </contact_name> <file_action> shared </file_action>	file_search
+document yaram	1	FILES	document <contact_name> yaram </contact_name>	file_search
+doc venkata suman yaram sent	1	FILES	<file_type> doc </file_type> <contact_name> venkata suman yaram </contact_name> <file_action> sent </file_action>	file_search
+docx by venkata	1	FILES	<file_type> docx </file_type> by <contact_name> venkata </contact_name>	file_search
+doc suman venkata sent	1	FILES	<file_type> doc </file_type> <contact_name> suman venkata </contact_name> <file_action> sent </file_action>	file_search
+doc yaram shared	1	FILES	<file_type> doc </file_type> <contact_name> yaram </contact_name> <file_action> shared </file_action>	file_search
+yarams files	1	FILES	<contact_name> yaram </contact_name> s files	file_search
+docs venkata suman yaram	1	FILES	<file_type> docs </file_type> <contact_name> venkata suman yaram </contact_name>	file_search
+upadhyaya files	1	FILES	<contact_name> upadhyaya </contact_name> files	file_search
+spreadsheet by upadhyaya	1	FILES	<file_type> spreadsheet </file_type> by <contact_name> upadhyaya </contact_name>	file_search
+word modified by venkata zuman yaram	1	FILES	<file_type> word </file_type> <file_action> modified </file_action> by <contact_name> venkata zuman yaram </contact_name>	file_search
+docx venkata shared	1	FILES	<file_type> docx </file_type> <contact_name> venkata </contact_name> <file_action> shared </file_action>	file_search
+word files	1	FILES	<file_type> word </file_type> files	file_search
+upadhyaya xlsx	1	FILES	<contact_name> upadhyaya </contact_name> <file_type> xlsx </file_type>	file_search
+word by yaram	1	FILES	<file_type> word </file_type> by <contact_name> yaram </contact_name>	file_search
+spreadsheet ashuthosh upadhyaya shared	1	FILES	<file_type> spreadsheet </file_type> <contact_name> ashuthosh upadhyaya </contact_name> <file_action> shared </file_action>	file_search
+venkata suman yaram doc	1	FILES	<contact_name> venkata suman yaram </contact_name> <file_type> doc </file_type>	file_search
+excel modified by ashuthosh	1	FILES	<file_type> excel </file_type> <file_action> modified </file_action> by <contact_name> ashuthosh </contact_name>	file_search
+excel modified by ashuthosh upadhyaya	1	FILES	<file_type> excel </file_type> <file_action> modified </file_action> by <contact_name> ashuthosh upadhyaya </contact_name>	file_search
+spreadsheet ashuthosh upadhyaya	1	FILES	<file_type> spreadsheet </file_type> <contact_name> ashuthosh upadhyaya </contact_name>	file_search
+doc shared by venkata	1	FILES	<file_type> doc </file_type> <file_action> shared </file_action> by <contact_name> venkata </contact_name>	file_search
+yaram venkata files	1	FILES	<contact_name> yaram venkata </contact_name> files	file_search
+spreadsheet shared by ashuthosh	1	FILES	<file_type> spreadsheet </file_type> <file_action> shared </file_action> by <contact_name> ashuthosh </contact_name>	file_search
+suman doc	1	FILES	<contact_name> suman </contact_name> <file_type> doc </file_type>	file_search
+document venkata suman yaram shared	1	FILES	document <contact_name> venkata suman yaram </contact_name> <file_action> shared </file_action>	file_search
+doc shared by suman	1	FILES	<file_type> doc </file_type> <file_action> shared </file_action> by <contact_name> suman </contact_name>	file_search
+word yaram venkata shared	1	FILES	<file_type> word </file_type> <contact_name> yaram venkata </contact_name> <file_action> shared </file_action>	file_search
+docx shared by yaram	1	FILES	<file_type> docx </file_type> <file_action> shared </file_action> by <contact_name> yaram </contact_name>	file_search
+ashuthosh spreadsheet	1	FILES	<contact_name> ashuthosh </contact_name> <file_type> spreadsheet </file_type>	file_search
+excel ashuthosh upadhyaya sent	1	FILES	<file_type> excel </file_type> <contact_name> ashuthosh upadhyaya </contact_name> <file_action> sent </file_action>	file_search
+docx shared by venkata suman yaram	1	FILES	<file_type> docx </file_type> <file_action> shared </file_action> by <contact_name> venkata suman yaram </contact_name>	file_search
+venkata suman yarams docx files shared with me	1	FILES	<contact_name> venkata suman yaram </contact_name> s <file_type> docx </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+document yaram shared	1	FILES	document <contact_name> yaram </contact_name> <file_action> shared </file_action>	file_search
+docx suman sahred about <file_keyword>	1	FILES	<file_type> docx </file_type> <contact_name> suman </contact_name> <file_action> sahred </file_action> about <file_keyword>	file_search
+doc venkata sent	1	FILES	<file_type> doc </file_type> <contact_name> venkata </contact_name> <file_action> sent </file_action>	file_search
+document by yaram	1	FILES	document by <contact_name> yaram </contact_name>	file_search
+ufind <file_keyword> doc	1	FILES	ufind <file_keyword> <file_type> doc </file_type>	file_search
+doc yaram sent	1	FILES	<file_type> doc </file_type> <contact_name> yaram </contact_name> <file_action> sent </file_action>	file_search
+xlsx by upadhyaya	1	FILES	<file_type> xlsx </file_type> by <contact_name> upadhyaya </contact_name>	file_search
+document by syman about <file_keyword>	1	FILES	document by <contact_name> syman </contact_name> about <file_keyword>	file_search
+docx venkata sent	1	FILES	<file_type> docx </file_type> <contact_name> venkata </contact_name> <file_action> sent </file_action>	file_search
+spreadsheet ashuthosh upadhyaya sent	1	FILES	<file_type> spreadsheet </file_type> <contact_name> ashuthosh upadhyaya </contact_name> <file_action> sent </file_action>	file_search
+excel ashuthosh sent	1	FILES	<file_type> excel </file_type> <contact_name> ashuthosh </contact_name> <file_action> sent </file_action>	file_search
+sumans word files shared with me	1	FILES	<contact_name> suman </contact_name> s <file_type> word </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+files by yaram venkata	1	FILES	files by <contact_name> yaram venkata </contact_name>	file_search
+upadhyayas files	1	FILES	<contact_name> upadhyaya </contact_name> s files	file_search
+surmans word files shared with me	1	FILES	<contact_name> surman </contact_name> s <file_type> word </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+word suman venkata sent	1	FILES	<file_type> word </file_type> <contact_name> suman venkata </contact_name> <file_action> sent </file_action>	file_search
+document by suman	1	FILES	document by <contact_name> suman </contact_name>	file_search
+document by usman	1	FILES	document by <contact_name> usman </contact_name>	file_search
+xlsx modified by upadhyaya	1	FILES	<file_type> xlsx </file_type> <file_action> modified </file_action> by <contact_name> upadhyaya </contact_name>	file_search
+xls shared by ashuthosh	1	FILES	<file_type> xls </file_type> <file_action> shared </file_action> by <contact_name> ashuthosh </contact_name>	file_search
+doc suman venkata shared	1	FILES	<file_type> doc </file_type> <contact_name> suman venkata </contact_name> <file_action> shared </file_action>	file_search
+word shared by yaram	1	FILES	<file_type> word </file_type> <file_action> shared </file_action> by <contact_name> yaram </contact_name>	file_search
+yaram venkatas document files shared with me	1	FILES	<contact_name> yaram venkata </contact_name> s document files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+sumans files	1	FILES	<contact_name> suman </contact_name> s files	file_search
+excel shared by ashuthosh	1	FILES	<file_type> excel </file_type> <file_action> shared </file_action> by <contact_name> ashuthosh </contact_name>	file_search
+xls ashuthosh sent	1	FILES	<file_type> xls </file_type> <contact_name> ashuthosh </contact_name> <file_action> sent </file_action>	file_search
+upadhyayas spreadsheet files shared with me	1	FILES	<contact_name> upadhyaya </contact_name> s <file_type> spreadsheet </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+word shared by suman venkata	1	FILES	<file_type> word </file_type> <file_action> shared </file_action> by <contact_name> suman venkata </contact_name>	file_search
+excel ashuthosh shared	1	FILES	<file_type> excel </file_type> <contact_name> ashuthosh </contact_name> <file_action> shared </file_action>	file_search
+spreadsheet modified by ashuthosh upadhyaya	1	FILES	<file_type> spreadsheet </file_type> <file_action> modified </file_action> by <contact_name> ashuthosh upadhyaya </contact_name>	file_search
+doc venkata shared	1	FILES	<file_type> doc </file_type> <contact_name> venkata </contact_name> <file_action> shared </file_action>	file_search
+files by suman	1	FILES	files by <contact_name> suman </contact_name>	file_search
+doc modified by venkata	1	FILES	<file_type> doc </file_type> <file_action> modified </file_action> by <contact_name> venkata </contact_name>	file_search
+ashuthoshs xls files shared with me	1	FILES	<contact_name> ashuthosh </contact_name> s <file_type> xls </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+spreadsheet shared by ashuthosh upadhyaya	1	FILES	<file_type> spreadsheet </file_type> <file_action> shared </file_action> by <contact_name> ashuthosh upadhyaya </contact_name>	file_search
+docx shared by suman venkata	1	FILES	<file_type> docx </file_type> <file_action> shared </file_action> by <contact_name> suman venkata </contact_name>	file_search
+xlsx ashuthosh upadhyaya	1	FILES	<file_type> xlsx </file_type> <contact_name> ashuthosh upadhyaya </contact_name>	file_search
+excel by upadhyaya	1	FILES	<file_type> excel </file_type> by <contact_name> upadhyaya </contact_name>	file_search
+findi me <file_keyword> xlsx by ashuthosh	1	FILES	findi me <file_keyword> <file_type> xlsx </file_type> by <contact_name> ashuthosh </contact_name>	file_search
+spreadsheet upadhyaya shared	1	FILES	<file_type> spreadsheet </file_type> <contact_name> upadhyaya </contact_name> <file_action> shared </file_action>	file_search
+word shared by venkata suman yaram	1	FILES	<file_type> word </file_type> <file_action> shared </file_action> by <contact_name> venkata suman yaram </contact_name>	file_search
+doc suman venkata	1	FILES	<file_type> doc </file_type> <contact_name> suman venkata </contact_name>	file_search
+suman venkata doc files shared with me	1	FILES	<contact_name> suman venkata </contact_name> <file_type> doc </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+document shared by suman venkata	1	FILES	document <file_action> shared </file_action> by <contact_name> suman venkata </contact_name>	file_search
+document yaram venkata sent	1	FILES	document <contact_name> yaram venkata </contact_name> <file_action> sent </file_action>	file_search
+sumans doc files shared with me	1	FILES	<contact_name> suman </contact_name> s <file_type> doc </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+word yaram shared	1	FILES	<file_type> word </file_type> <contact_name> yaram </contact_name> <file_action> shared </file_action>	file_search
+doc venkata	1	FILES	<file_type> doc </file_type> <contact_name> venkata </contact_name>	file_search
+doc yaram venkata sent	1	FILES	<file_type> doc </file_type> <contact_name> yaram venkata </contact_name> <file_action> sent </file_action>	file_search
+word modified by venkata	1	FILES	<file_type> word </file_type> <file_action> modified </file_action> by <contact_name> venkata </contact_name>	file_search
+doc modified by suman	1	FILES	<file_type> doc </file_type> <file_action> modified </file_action> by <contact_name> suman </contact_name>	file_search
+yaram venkatas docx files shared with me	1	FILES	<contact_name> yaram venkata </contact_name> s <file_type> docx </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+ashuthoshs spreadsheet files shared with me	1	FILES	<contact_name> ashuthosh </contact_name> s <file_type> spreadsheet </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+document yaram venkata	1	FILES	document <contact_name> yaram venkata </contact_name>	file_search
+docx yaram	1	FILES	<file_type> docx </file_type> <contact_name> yaram </contact_name>	file_search
+docx suman venkata	1	FILES	<file_type> docx </file_type> <contact_name> suman venkata </contact_name>	file_search
+ashuthosh files	1	FILES	<contact_name> ashuthosh </contact_name> files	file_search
+yarams docx files shared with me	1	FILES	<contact_name> yaram </contact_name> s <file_type> docx </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+xlsx upadhyaya	1	FILES	<file_type> xlsx </file_type> <contact_name> upadhyaya </contact_name>	file_search
+xls ashuthosh upadhyaya sared about <file_keyword>	1	FILES	<file_type> xls </file_type> <contact_name> ashuthosh upadhyaya </contact_name> <file_action> sared </file_action> about <file_keyword>	file_search
+xls upadhyaya shared	1	FILES	<file_type> xls </file_type> <contact_name> upadhyaya </contact_name> <file_action> shared </file_action>	file_search
+venkata suman yaram document	1	FILES	<contact_name> venkata suman yaram </contact_name> document	file_search
+yaram word	1	FILES	<contact_name> yaram </contact_name> <file_type> word </file_type>	file_search
+can you find <file_keyword> spreadsheet bg upadhyaya	1	FILES	can you find <file_keyword> <file_type> spreadsheet </file_type> bg <contact_name> upadhyaya </contact_name>	file_search
+word suman venkata shared	1	FILES	<file_type> word </file_type> <contact_name> suman venkata </contact_name> <file_action> shared </file_action>	file_search
+ashuthosh upadhyaya files	1	FILES	<contact_name> ashuthosh upadhyaya </contact_name> files	file_search
+document shared by garam venkata	1	FILES	document <file_action> shared </file_action> by <contact_name> garam venkata </contact_name>	file_search
+spreadsheet modified by ashuthosh	1	FILES	<file_type> spreadsheet </file_type> <file_action> modified </file_action> by <contact_name> ashuthosh </contact_name>	file_search
+docx modified by venkata suman yaram	1	FILES	<file_type> docx </file_type> <file_action> modified </file_action> by <contact_name> venkata suman yaram </contact_name>	file_search
+xlsx ashuthosh upadhyaya cshared about <file_keyword>	1	FILES	<file_type> xlsx </file_type> <contact_name> ashuthosh upadhyaya </contact_name> <file_action> cshared </file_action> about <file_keyword>	file_search
+suman word	1	FILES	<contact_name> suman </contact_name> <file_type> word </file_type>	file_search
+venkata suman yarams files	1	FILES	<contact_name> venkata suman yaram </contact_name> s files	file_search
+venkatas document files shared with me	1	FILES	<contact_name> venkata </contact_name> s document files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+suman venkata document	1	FILES	<contact_name> suman venkata </contact_name> document	file_search
+xlsx ashuthosh upadhyaya shared	1	FILES	<file_type> xlsx </file_type> <contact_name> ashuthosh upadhyaya </contact_name> <file_action> shared </file_action>	file_search
+venkata suman yaram files	1	FILES	<contact_name> venkata suman yaram </contact_name> files	file_search
+find me <file_name> xls by ashuthosh upadhyaya	1	FILES	find me <file_name> <file_type> xls </file_type> by <contact_name> ashuthosh upadhyaya </contact_name>	file_search
+docx venkata suman yaram shared	1	FILES	<file_type> docx </file_type> <contact_name> venkata suman yaram </contact_name> <file_action> shared </file_action>	file_search
+yarams document files shared with me	1	FILES	<contact_name> yaram </contact_name> s document files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+spreadsheet files	1	FILES	<file_type> spreadsheet </file_type> files	file_search
+suman venkatas files	1	FILES	<contact_name> suman venkata </contact_name> s files	file_search
+document suman venkata	1	FILES	document <contact_name> suman venkata </contact_name>	file_search
+docx yaram venkata shared	1	FILES	<file_type> docx </file_type> <contact_name> yaram venkata </contact_name> <file_action> shared </file_action>	file_search
+venkata suman yarams document files shared with me	1	FILES	<contact_name> venkata suman yaram </contact_name> s document files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+spreadsheet upadhyaya sent	1	FILES	<file_type> spreadsheet </file_type> <contact_name> upadhyaya </contact_name> <file_action> sent </file_action>	file_search
+document shared by venkata suman yaram	1	FILES	document <file_action> shared </file_action> by <contact_name> venkata suman yaram </contact_name>	file_search
+word modified by suman venkata	1	FILES	<file_type> word </file_type> <file_action> modified </file_action> by <contact_name> suman venkata </contact_name>	file_search
+xls modified by ashuthosh upadhyaya	1	FILES	<file_type> xls </file_type> <file_action> modified </file_action> by <contact_name> ashuthosh upadhyaya </contact_name>	file_search
+files by yaram	1	FILES	files by <contact_name> yaram </contact_name>	file_search
+document shared by yaram	1	FILES	document <file_action> shared </file_action> by <contact_name> yaram </contact_name>	file_search
+xls shared by upadhyaya	1	FILES	<file_type> xls </file_type> <file_action> shared </file_action> by <contact_name> upadhyaya </contact_name>	file_search
+docx yaram shared	1	FILES	<file_type> docx </file_type> <contact_name> yaram </contact_name> <file_action> shared </file_action>	file_search
+<file_keyword> xls by upadhyay	1	FILES	<file_keyword> <file_type> xls </file_type> by <contact_name> upadhyay </contact_name>	file_search
+upadhyayas xls files shared with me	1	FILES	<contact_name> upadhyaya </contact_name> s <file_type> xls </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+doc suman	1	FILES	<file_type> doc </file_type> <contact_name> suman </contact_name>	file_search
+word modified by yaram venkata	1	FILES	<file_type> word </file_type> <file_action> modified </file_action> by <contact_name> yaram venkata </contact_name>	file_search
+doc shared by suman venkata	1	FILES	<file_type> doc </file_type> <file_action> shared </file_action> by <contact_name> suman venkata </contact_name>	file_search
+sumans docx files shared with me	1	FILES	<contact_name> suman </contact_name> s <file_type> docx </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+spreadsheet by ashuthosh	1	FILES	<file_type> spreadsheet </file_type> by <contact_name> ashuthosh </contact_name>	file_search
+files by venkata suman yaram	1	FILES	files by <contact_name> venkata suman yaram </contact_name>	file_search
+ashuthosh upadhyayas files	1	FILES	<contact_name> ashuthosh upadhyaya </contact_name> s files	file_search
+word by suman venkata	1	FILES	<file_type> word </file_type> by <contact_name> suman venkata </contact_name>	file_search
+document venkata shared	1	FILES	document <contact_name> venkata </contact_name> <file_action> shared </file_action>	file_search
+can you find <file_keyword> document by usman	1	FILES	can you find <file_keyword> document by <contact_name> usman </contact_name>	file_search
+venkatas docx files shared with me	1	FILES	<contact_name> venkata </contact_name> s <file_type> docx </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+ashuthosh upadhyaya xls	1	FILES	<contact_name> ashuthosh upadhyaya </contact_name> <file_type> xls </file_type>	file_search
+yaram venkata document	1	FILES	<contact_name> yaram venkata </contact_name> document	file_search
+excel modified by upadhyaya	1	FILES	<file_type> excel </file_type> <file_action> modified </file_action> by <contact_name> upadhyaya </contact_name>	file_search
+xlsx by ashuthosh	1	FILES	<file_type> xlsx </file_type> by <contact_name> ashuthosh </contact_name>	file_search
+document suman venkata sent	1	FILES	document <contact_name> suman venkata </contact_name> <file_action> sent </file_action>	file_search
+docx by yaram	1	FILES	<file_type> docx </file_type> by <contact_name> yaram </contact_name>	file_search
+excel shared by upadhyaya	1	FILES	<file_type> excel </file_type> <file_action> shared </file_action> by <contact_name> upadhyaya </contact_name>	file_search
+document modified by yaram	1	FILES	document <file_action> modified </file_action> by <contact_name> yaram </contact_name>	file_search
+suman venkatas word files shared with me	1	FILES	<contact_name> suman venkata </contact_name> s <file_type> word </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+yaram venkatas files	1	FILES	<contact_name> yaram venkata </contact_name> s files	file_search
+doc modified by venkata suman yaram	1	FILES	<file_type> doc </file_type> <file_action> modified </file_action> by <contact_name> venkata suman yaram </contact_name>	file_search
+yaram venkata docx	1	FILES	<contact_name> yaram venkata </contact_name> <file_type> docx </file_type>	file_search
+word shared by yaram venkata	1	FILES	<file_type> word </file_type> <file_action> shared </file_action> by <contact_name> yaram venkata </contact_name>	file_search
+word suman sent	1	FILES	<file_type> word </file_type> <contact_name> suman </contact_name> <file_action> sent </file_action>	file_search
+venkata docx	1	FILES	<contact_name> venkata </contact_name> <file_type> docx </file_type>	file_search
+docx modified by yaram venkata	1	FILES	<file_type> docx </file_type> <file_action> modified </file_action> by <contact_name> yaram venkata </contact_name>	file_search
+xlsx modified by ashuthosh upadhyaya	1	FILES	<file_type> xlsx </file_type> <file_action> modified </file_action> by <contact_name> ashuthosh upadhyaya </contact_name>	file_search
+ashuthosh upadhyayas xlsx files shared with me	1	FILES	<contact_name> ashuthosh upadhyaya </contact_name> s <file_type> xlsx </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+word suman venkata	1	FILES	<file_type> word </file_type> <contact_name> suman venkata </contact_name>	file_search
+excel files	1	FILES	<file_type> excel </file_type> files	file_search
+document suman sent	1	FILES	document <contact_name> suman </contact_name> <file_action> sent </file_action>	file_search
+ashuthosh excel	1	FILES	<contact_name> ashuthosh </contact_name> <file_type> excel </file_type>	file_search
+spreadsheet upadhaya shared about may april msw	1	FILES	<file_type> spreadsheet </file_type> <contact_name> upadhaya </contact_name> <file_action> shared </file_action> about may april msw	file_search
+xls ashuthosh upadhyaya shared	1	FILES	<file_type> xls </file_type> <contact_name> ashuthosh upadhyaya </contact_name> <file_action> shared </file_action>	file_search
+yaram doc	1	FILES	<contact_name> yaram </contact_name> <file_type> doc </file_type>	file_search
+docx yaram sent	1	FILES	<file_type> docx </file_type> <contact_name> yaram </contact_name> <file_action> sent </file_action>	file_search
+xls by ashuthosh	1	FILES	<file_type> xls </file_type> by <contact_name> ashuthosh </contact_name>	file_search
+docx venkata	1	FILES	<file_type> docx </file_type> <contact_name> venkata </contact_name>	file_search
+excel ashuthosh	1	FILES	<file_type> excel </file_type> <contact_name> ashuthosh </contact_name>	file_search
+doc yaram venkata	1	FILES	<file_type> doc </file_type> <contact_name> yaram venkata </contact_name>	file_search
+upadhyayas excel files shared with me	1	FILES	<contact_name> upadhyaya </contact_name> s <file_type> excel </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+docx by yaram venkata	1	FILES	<file_type> docx </file_type> by <contact_name> yaram venkata </contact_name>	file_search
+open <file_keyword> document by venkata siman yaram	1	FILES	open <file_keyword> document by <contact_name> venkata siman yaram </contact_name>	file_open
+venkata files	1	FILES	<contact_name> venkata </contact_name> files	file_search
+word venkata sent	1	FILES	<file_type> word </file_type> <contact_name> venkata </contact_name> <file_action> sent </file_action>	file_search
+document shared by venkata	1	FILES	document <file_action> shared </file_action> by <contact_name> venkata </contact_name>	file_search
+venkata doc	1	FILES	<contact_name> venkata </contact_name> <file_type> doc </file_type>	file_search
+yaram venkata word	1	FILES	<contact_name> yaram venkata </contact_name> <file_type> word </file_type>	file_search
+word venkata suman yaram shared	1	FILES	<file_type> word </file_type> <contact_name> venkata suman yaram </contact_name> <file_action> shared </file_action>	file_search
+xls upadhaya sent	1	FILES	<file_type> xls </file_type> <contact_name> upadhaya </contact_name> <file_action> sent </file_action>	file_search
+word by venkata suman yaram	1	FILES	<file_type> word </file_type> by <contact_name> venkata suman yaram </contact_name>	file_search
+ashuthosh upadhyaya xlsx	1	FILES	<contact_name> ashuthosh upadhyaya </contact_name> <file_type> xlsx </file_type>	file_search
+xls ashuthosh shared	1	FILES	<file_type> xls </file_type> <contact_name> ashuthosh </contact_name> <file_action> shared </file_action>	file_search
+docx shared by suman venkat	1	FILES	<file_type> docx </file_type> <file_action> shared </file_action> by <contact_name> suman venkat </contact_name>	file_search
+excel shuthosh upadhyaya	1	FILES	<file_type> excel </file_type> <contact_name> shuthosh upadhyaya </contact_name>	file_search
+xls modified by ashuthosh	1	FILES	<file_type> xls </file_type> <file_action> modified </file_action> by <contact_name> ashuthosh </contact_name>	file_search
+suman venkatas doc files shared with me	1	FILES	<contact_name> suman venkata </contact_name> s <file_type> doc </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+doc suman shared	1	FILES	<file_type> doc </file_type> <contact_name> suman </contact_name> <file_action> shared </file_action>	file_search
+document <file_keyword>	1	FILES	document <file_keyword>	file_search
+word by suman	1	FILES	<file_type> word </file_type> by <contact_name> suman </contact_name>	file_search
+doc shared by yaram venkata	1	FILES	<file_type> doc </file_type> <file_action> shared </file_action> by <contact_name> yaram venkata </contact_name>	file_search
+docx modified by venkata	1	FILES	<file_type> docx </file_type> <file_action> modified </file_action> by <contact_name> venkata </contact_name>	file_search
+spreadsheet modified by upadhyaya	1	FILES	<file_type> spreadsheet </file_type> <file_action> modified </file_action> by <contact_name> upadhyaya </contact_name>	file_search
+find <file_keyword> xls by upadhyaya	1	FILES	find <file_keyword> <file_type> xls </file_type> by <contact_name> upadhyaya </contact_name>	file_search
+doc venkata suman yaram	1	FILES	<file_type> doc </file_type> <contact_name> venkata suman yaram </contact_name>	file_search
+document shared by suman	1	FILES	document <file_action> shared </file_action> by <contact_name> suman </contact_name>	file_search
+word yaram sent	1	FILES	<file_type> word </file_type> <contact_name> yaram </contact_name> <file_action> sent </file_action>	file_search
+suman venkata docx	1	FILES	<contact_name> suman venkata </contact_name> <file_type> docx </file_type>	file_search
+suman docx	1	FILES	<contact_name> suman </contact_name> <file_type> docx </file_type>	file_search
+document venkata sent	1	FILES	document <contact_name> venkata </contact_name> <file_action> sent </file_action>	file_search
+document by venkata suman yaram	1	FILES	document by <contact_name> venkata suman yaram </contact_name>	file_search
+excel upadhyaya sent	1	FILES	<file_type> excel </file_type> <contact_name> upadhyaya </contact_name> <file_recency> sent </file_recency>	file_search
+xls by upadhyaya	1	FILES	<file_type> xls </file_type> by <contact_name> upadhyaya </contact_name>	file_search
+document suman shared	1	FILES	document <contact_name> suman </contact_name> <file_action> shared </file_action>	file_search
+open <file_keyword> word by venkata suman aram	1	FILES	open <file_keyword> <file_type> word </file_type> by <contact_name> venkata suman aram </contact_name>	file_open
+yaram venkata doc	1	FILES	<contact_name> yaram venkata </contact_name> <file_type> doc </file_type>	file_search
+document modified by suman	1	FILES	document <file_action> modified </file_action> by <contact_name> suman </contact_name>	file_search
+xls modified by upadhyaya	1	FILES	<file_type> xls </file_type> <file_action> modified </file_action> by <contact_name> upadhyaya </contact_name>	file_search
+upadhyaya xls	1	FILES	<contact_name> upadhyaya </contact_name> <file_type> xls </file_type>	file_search
+yarams doc files shared with me	1	FILES	<contact_name> yaram </contact_name> s <file_type> doc </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+ashuthoshs files	1	FILES	<contact_name> ashuthosh </contact_name> s files	file_search
+files by ashuthosh upadhyaya	1	FILES	files by <contact_name> ashuthosh upadhyaya </contact_name>	file_search
+document files	1	FILES	document files	file_search
+yaram docx	1	FILES	<contact_name> yaram </contact_name> <file_type> docx </file_type>	file_search
+yaram venkatas doc files shared with me	1	FILES	<contact_name> yaram venkata </contact_name> s <file_type> doc </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+ashuthosh upadhyayas spreadsheet files shared with me	1	FILES	<contact_name> ashuthosh upadhyaya </contact_name> s <file_type> spreadsheet </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+word by yaram venkata	1	FILES	<file_type> word </file_type> by <contact_name> yaram venkata </contact_name>	file_search
+docx modified by suman	1	FILES	<file_type> docx </file_type> <file_action> modified </file_action> by <contact_name> suman </contact_name>	file_search
+docx modified by suman venkata	1	FILES	<file_type> docx </file_type> <file_action> modified </file_action> by <contact_name> suman venkata </contact_name>	file_search
+document modified by venkata	1	FILES	document <file_action> modified </file_action> by <contact_name> venkata </contact_name>	file_search
+xls upadhyaya	1	FILES	<file_type> xls </file_type> <contact_name> upadhyaya </contact_name>	file_search
+ashuthosh xlsx	1	FILES	<contact_name> ashuthosh </contact_name> <file_type> xlsx </file_type>	file_search
+yaram files	1	FILES	<contact_name> yaram </contact_name> files	file_search
+docx venkata suman yaram sent	1	FILES	<file_type> docx </file_type> <contact_name> venkata suman yaram </contact_name> <file_action> sent </file_action>	file_search
+doc venkata suman yaram shared	1	FILES	<file_type> doc </file_type> <contact_name> venkata suman yaram </contact_name> <file_action> shared </file_action>	file_search
+venkata suman yarams doc files shared with me	1	FILES	<contact_name> venkata suman yaram </contact_name> s <file_type> doc </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+spreadsheet shared by upadhyaya	1	FILES	<file_type> spreadsheet </file_type> <file_action> shared </file_action> by <contact_name> upadhyaya </contact_name>	file_search
+doc yaram venkata shared	1	FILES	<file_type> doc </file_type> <contact_name> yaram venkata </contact_name> <file_action> shared </file_action>	file_search
+files by suman venkata	1	FILES	files by <contact_name> suman venkata </contact_name>	file_search
+can you fin <file_keyword> word by yaram venkata	1	FILES	can you fin <file_keyword> <file_type> word </file_type> by <contact_name> yaram venkata </contact_name>	file_search
+spreadsheet by ashuthosh upadhyaya	1	FILES	<file_type> spreadsheet </file_type> by <contact_name> ashuthosh upadhyaya </contact_name>	file_search
+docx suman	1	FILES	<file_type> docx </file_type> <contact_name> suman </contact_name>	file_search
+document by yaram venkata	1	FILES	document by <contact_name> yaram venkata </contact_name>	file_search
+word yaram venkata sent	1	FILES	<file_type> word </file_type> <contact_name> yaram venkata </contact_name> <file_action> sent </file_action>	file_search
+venkatas files	1	FILES	<contact_name> venkata </contact_name> s files	file_search
+document venkata suman yaram	1	FILES	document <contact_name> venkata suman yaram </contact_name>	file_search
+word by venkata usman yaram	1	FILES	<file_type> word </file_type> by <contact_name> venkata usman yaram </contact_name>	file_search
+ashuthoshs excel files shared with me	1	FILES	<contact_name> ashuthosh </contact_name> s <file_type> excel </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+word venkata suman yaram	1	FILES	<file_type> word </file_type> <contact_name> venkata suman yaram </contact_name>	file_search
+doc yaram	1	FILES	<file_type> doc </file_type> <contact_name> yaram </contact_name>	file_search
+document by venkata	1	FILES	document by <contact_name> venkata </contact_name>	file_search
+doc modified by suman venkata	1	FILES	<file_type> doc </file_type> <file_action> modified </file_action> by <contact_name> suman venkata </contact_name>	file_search
+suman files	1	FILES	<contact_name> suman </contact_name> files	file_search
+document suman venkata shared	1	FILES	document <contact_name> suman venkata </contact_name> <file_action> shared </file_action>	file_search
+docx shared by venkata syman yaram	1	FILES	<file_type> docx </file_type> <file_action> shared </file_action> by <contact_name> venkata syman yaram </contact_name>	file_search
+word modified by suman	1	FILES	<file_type> word </file_type> <file_action> modified </file_action> by <contact_name> suman </contact_name>	file_search
+document yaram venkata shared	1	FILES	document <contact_name> yaram venkata </contact_name> <file_action> shared </file_action>	file_search
+ashuthosh upadhyayas xls files shared with me	1	FILES	<contact_name> ashuthosh upadhyaya </contact_name> s <file_type> xls </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+word suman shared	1	FILES	<file_type> word </file_type> <contact_name> suman </contact_name> <file_action> shared </file_action>	file_search
+xls files	1	FILES	<file_type> xls </file_type> files	file_search
+doc files	1	FILES	<file_type> doc </file_type> files	file_search
+docx by suman	1	FILES	<file_type> docx </file_type> by <contact_name> suman </contact_name>	file_search
+xlsx files	1	FILES	<file_type> xlsx </file_type> files	file_search
+spreadsheet ashuthosh	1	FILES	<file_type> spreadsheet </file_type> <contact_name> ashuthosh </contact_name>	file_search
+docx suman venkata sent	1	FILES	<file_type> docx </file_type> <contact_name> suman venkata </contact_name> <file_action> sent </file_action>	file_search
+document modified by suman venkata	1	FILES	document <file_action> modified </file_action> by <contact_name> suman venkata </contact_name>	file_search
+docx venkata suman yaram	1	FILES	<file_type> docx </file_type> <contact_name> venkata suman yaram </contact_name>	file_search
+spreadsheet ashuthosh shared	1	FILES	<file_type> spreadsheet </file_type> <contact_name> ashuthosh </contact_name> <file_action> shared </file_action>	file_search
+docs venkata suman yaram shared	1	FILES	<file_type> docs </file_type> <contact_name> venkata suman yaram </contact_name> <file_action> shared </file_action>	file_search
+xlsx modified by ashuthosh	1	FILES	<file_type> xlsx </file_type> <file_action> modified </file_action> by <contact_name> ashuthosh </contact_name>	file_search
+xlsx ashuthosh upadhyaya sent	1	FILES	<file_type> xlsx </file_type> <contact_name> ashuthosh upadhyaya </contact_name> <file_action> sent </file_action>	file_search
+ashuthoshs xlsx files shared with me	1	FILES	<contact_name> ashuthosh </contact_name> s <file_type> xlsx </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+docx shared by yaram venkata	1	FILES	<file_type> docx </file_type> <file_action> shared </file_action> by <contact_name> yaram venkata </contact_name>	file_search
+excel upadhyaya	1	FILES	<file_type> excel </file_type> <contact_name> upadhyaya </contact_name>	file_search
+document venkata suman yaram sent	1	FILES	document <contact_name> venkata suman yaram </contact_name> <file_action> sent </file_action>	file_search
+xlsx ashuthosh	1	FILES	<file_type> xlsx </file_type> <contact_name> ashuthosh </contact_name>	file_search
+docx suman sent	1	FILES	<file_type> docx </file_type> <contact_name> suman </contact_name> <file_action> sent </file_action>	file_search
+suman venkata files	1	FILES	<contact_name> suman venkata </contact_name> files	file_search
+document suman	1	FILES	document <contact_name> suman </contact_name>	file_search
+xls by ashuthosh upadhyaya	1	FILES	<file_type> xls </file_type> by <contact_name> ashuthosh upadhyaya </contact_name>	file_search
+ashuthosh upadhyaya spreadsheet	1	FILES	<contact_name> ashuthosh upadhyaya </contact_name> <file_type> spreadsheet </file_type>	file_search
+tind me <file_keyword> word by venkata	1	FILES	tind me <file_keyword> <file_type> word </file_type> by <contact_name> venkata </contact_name>	file_search
+ashuthosh xls	1	FILES	<contact_name> ashuthosh </contact_name> <file_type> xls </file_type>	file_search
+venkata suman yaram word	1	FILES	<contact_name> venkata suman yaram </contact_name> <file_type> word </file_type>	file_search
+xlsx upadhyaya sent	1	FILES	<file_type> xlsx </file_type> <contact_name> upadhyaya </contact_name> <file_action> sent </file_action>	file_search
+spreadsheet upadhyaya	1	FILES	<file_type> spreadsheet </file_type> <contact_name> upadhyaya </contact_name>	file_search
+word venkata suman yaram sent	1	FILES	<file_type> word </file_type> <contact_name> venkata suman yaram </contact_name> <file_action> sent </file_action>	file_search
+yaram venkatas word files shared with me	1	FILES	<contact_name> yaram venkata </contact_name> s <file_type> word </file_type> files <file_action> shared </file_action> with <to_contact_name> me </to_contact_name>	file_search
+duman docx	1	FILES	<contact_name> duman </contact_name> <file_type> docx </file_type>	file_search
+xlsx by ashuthosh upadhyaya	1	FILES	<file_type> xlsx </file_type> by <contact_name> ashuthosh upadhyaya </contact_name>	file_search
+show files by anurag	1	FILES	show files by <contact_name> anurag </contact_name>	file_search
+where is <file_keyword> shortcut	1	FILES	where is <file_keyword> <file_type> shortcut </file_type>	file_search
+find files by arun	1	FILES	find files by <contact_name> arun </contact_name>	file_search
+open up my latest powerpoint presentation	1	FILES	open up <contact_name> my </contact_name> <order_ref> latest </order_ref> <file_type> powerpoint presentation </file_type>	file_open
+find word files	1	FILES	find <file_type> word </file_type> files	file_search
+open <file_keyword> file by shravan kumar chava	1	FILES	open <file_keyword> file by <contact_name> shravan kumar chava </contact_name>	file_open
+show files sandby my manager	1	FILES	show files sandby my <contact_name> manager </contact_name>	file_search
+show my recent files	1	FILES	show <contact_name> my </contact_name> <file_recency> recent </file_recency> files	file_search
+ben open <file_keyword> file by shravan kumar chava	1	FILES	<contact_name> ben </contact_name> open <file_keyword> file by <contact_name> shravan kumar chava </contact_name>	file_open
+share <file_keyword> presentation with carrie parker	1	FILES	share <file_keyword> <file_type> presentation </file_type> with <to_contact_name> carrie parker </to_contact_name>	file_share
+find <file_keyword> on deck	1	FILES	find <file_keyword> on <file_type> deck </file_type>	file_search
+files titled <file_name>	1	FILES	files titled <file_name>	file_search
+find <file_keyword> files	1	FILES	find <file_keyword> files	file_search
+where are documents about <file_keyword>	1	FILES	where are documents about <file_keyword>	file_search
+find <file_keyword> word file	1	FILES	find <file_keyword> <file_type> word </file_type> file	file_search
+show me powerpoint that i presented earlier today	1	FILES	show me <file_type> powerpoint </file_type> that <contact_name> i </contact_name> <file_action> presented </file_action> earlier <date> today </date>	file_search
+find <file_keyword> app file	1	FILES	find <file_keyword> <file_type> app </file_type> file	file_search
+find files by abraham	1	FILES	find files by <contact_name> abraham </contact_name>	file_search
+find my powerpoint slides from last week	1	FILES	find <contact_name> my </contact_name> <file_type> powerpoint slides </file_type> from <date> last week </date>	file_search
+open up files by shravan kumar chava	1	FILES	open up files by <contact_name> shravan kumar chava </contact_name>	file_open
+open my last excel sheet	1	FILES	open <contact_name> my </contact_name> <order_ref> last </order_ref> <file_type> excel sheet </file_type>	file_open
+open powerpoint file	1	FILES	open <file_type> powerpoint </file_type> file	file_open
+document created by donovan	1	FILES	document <file_action> created </file_action> by <contact_name> donovan </contact_name>	file_search
+find presentation <file_keyword>	1	FILES	find <file_type> presentation </file_type> <file_keyword>	file_search
+find <file_keyword> files by gigi	1	FILES	find <file_keyword> files by <contact_name> gigi </contact_name>	file_search
+find presentation <file_keyword> file	1	FILES	find <file_type> presentation </file_type> <file_keyword> file	file_search
+<file_keyword> file shared by vivek	1	FILES	<file_keyword> file <file_action> shared </file_action> by <contact_name> vivek </contact_name>	file_search
+open up <file_keyword> powerpoint presentation file	1	FILES	open up <file_keyword> <file_type> powerpoint presentation </file_type> file	file_open
+find powerpoint files	1	FILES	find <file_type> powerpoint </file_type> files	file_search
+can you please open <file_keyword> file	1	FILES	can you please open <file_keyword> file	file_open
+find files by ron	1	FILES	find files by <contact_name> ron </contact_name>	file_search
+open files by ron pechmagre	1	FILES	open files by <contact_name> ron pechmagre </contact_name>	file_open
+files modified by me	1	FILES	files <file_action> modified </file_action> by <contact_name> me </contact_name>	file_search
+open <file_keyword> files by shravan kumar chava	1	FILES	open <file_keyword> files by <contact_name> shravan kumar chava </contact_name>	file_open
+find <file_keyword> files by shravan	1	FILES	find <file_keyword> files by <contact_name> shravan </contact_name>	file_search
+start my <file_keyword> spreadsheet	1	FILES	start <contact_name> my </contact_name> <file_keyword> <file_type> spreadsheet </file_type>	file_search
+show me my files from last week	1	FILES	show me <contact_name> my </contact_name> files from <date> last week </date>	file_search
+find <file_keyword> presentation file	1	FILES	find <file_keyword> <file_type> presentation </file_type> file	file_search
+find my <file_keyword> files	1	FILES	find <contact_name> my </contact_name> <file_keyword> files	file_search
+open up rons <file_keyword> file	1	FILES	open up <contact_name> ron </contact_name> s <file_keyword> file	file_open
+find my scanned documents	1	FILES	find <contact_name> my </contact_name> <file_action> scanned </file_action> documents	file_search
+find files by dwight	1	FILES	find files by <contact_name> dwight </contact_name>	file_search
+find files by gigi	1	FILES	find files by <contact_name> gigi </contact_name>	file_search
+open files by shravan	1	FILES	open files by <contact_name> shravan </contact_name>	file_open
+document titled with <file_name>	1	FILES	document titled with <file_name>	file_search
+find my files by abraham	1	FILES	find <contact_name> my </contact_name> files by <contact_name> abraham </contact_name>	file_search
+open up my <file_keyword> presentation	1	FILES	open up <contact_name> my </contact_name> <file_keyword> <file_type> presentation </file_type>	file_open
