@@ -111,7 +111,7 @@ for file in files:
     print("collecting: " + file);
     with codecs.open(file, 'r', 'utf-8') as fin:
 
-        if file == 'mediacontrol_domain_train_after_filter.tsv' or file == 'domain_dsat_training.tsv' or  file == 'domain_extract_from_slot_query_domain_extraction.tsv' :
+        if file == 'mediacontrol_domain_train_after_filter.tsv' or file == 'domain_dsat_training.tsv' or  file == 'domain_extract_from_slot_query_domain_extraction.tsv' or file == 'AttachmentData_modifiy.tsv':
 
             isHeadColumn = True
             headColumnList =[] 
