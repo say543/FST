@@ -1,0 +1,421 @@
+ConversationId	MessageId	MessageTimestamp	MessageFrom	MessageText	CortanaResponse	JudgedDomain	JudgedIntent	JudgedConstraints	MetaData	ConversationContext	Frequency
+186106395	0		user	show me mails from Allison with powerpoint		EMAILSEARCH	search_email	show me <message_type>mails</message_type> from <contact_name_from>Allison</contact_name_from> with <attachment_type>powerpoint</attachment_type>	[]		1
+186106394	0		user	find latest file from your own place		FILES	file_search	find <order_ref>latest</order_ref> file from <contact_name>your own place</contact_name>	[]		1
+186106390	0		user	what do i have today		CALENDAR	find_calendar_entry	what do i have <start_date>today</start_date>	[]		1
+186106388	0		user	who is Jon Hamaker's manager		PEOPLE	search_org_chart	who is <contact_name>Jon Hamaker</contact_name>'s <relationship_name>manager</relationship_name>	[]		1
+186106387	0		user	emails from my team		EMAILSEARCH	search_email	<message_type>emails</message_type> from <relationship_name_from>my team</relationship_name_from>	[]		1
+186106384	0		user	emails from Allison from a		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Allison</contact_name_from> from <contact_name_from>a</contact_name_from>	[]		1
+186106397	0		user	search for search for messages from Malik		EMAILSEARCH	search_email	search for search for messages from <contact_name_from>Malik</contact_name_from>	[]		1
+186106399	0		user	by carving between headphones		NOTSURE	other_domain	by carving between headphones	[]		1
+186106404	0		user	Andrew		NOTSURE	other_domain	Andrew	[]		10
+186106405	0		user	find new emails from Malik		EMAILSEARCH	search_email	find <message_category>new</message_category> <message_type>emails</message_type> from <contact_name_from>Malik</contact_name_from>	[]		1
+186106406	0		user	oh it's horrible		NOTSURE	other_domain	oh it's horrible	[]		1
+186106407	0		user	from Malik with attachments		EMAILSEARCH	search_email	from <contact_name_from>Malik</contact_name_from> with <attachment>attachments</attachment>	[]		1
+186106409	0		user	mails from Waleed		EMAILSEARCH	search_email	<message_type>mails</message_type> from <contact_name_from>Waleed</contact_name_from>	[]		1
+186106370	0		user	call		NOTSURE	other_domain	call	[]		2
+186106368	0		user	find jack huddle		PEOPLE	search_people_by_name	find <contact_name>jack huddle</contact_name>	[]		1
+186106366	0		user	great		NOTSURE	other_domain	great	[]		1
+186106425	0		user	search for something new		NOTSURE	other_domain	search for something new	[]		3
+186106426	0		user	call Steven		NOTSURE	other_domain	call Steven	[]		1
+186106428	0		user	show my show my emails from Jim Xu		EMAILSEARCH	search_email	show my show my <message_type>emails</message_type> from <contact_name_from>Jim Xu</contact_name_from>	[]		1
+186106362	0		user	next meeting with Diego		CALENDAR	find_calendar_entry	<start_time>next</start_time> meeting with <contact_name>Diego</contact_name>	[]		1
+186106359	0		user	show me emails from Ashok		EMAILSEARCH	search_email	show me <message_type>emails</message_type> from <contact_name_from>Ashok</contact_name_from>	[]		1
+186106357	0		user	look for emails from emails from		EMAILSEARCH	search_email	look for <message_type>emails</message_type> from <message_type>emails</message_type> from	[]		2
+186106355	0		user	find meeting J A C huddle		CALENDAR	find_calendar_entry	find meeting <title>J A C huddle</title>	[]		1
+186106354	0		user	show me emails from Malik with attachments in december		EMAILSEARCH	search_email	show me <message_type>emails</message_type> from <contact_name_from>Malik</contact_name_from> with <attachment>attachments</attachment> in <start_date>december</start_date>	[]		1
+186106353	0		user	mails from Allison		EMAILSEARCH	search_email	<message_type>mails</message_type> from <contact_name_from>Allison</contact_name_from>	[]		1
+186106352	0		user	ppt four		EMAILSEARCH	search_email	<attachment_type>ppt</attachment_type> <keyword>four</keyword>	[]		1
+186106375	0		user	Liska 's email		EMAILSEARCH	search_email	<contact_name>Liska</contact_name> 's <message_type>email</message_type>	[]		1
+186106374	0		user	emails from Isaac last month		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Isaac</contact_name_from> <start_date>last month</start_date>	[]		1
+186106373	0		user	find shuttle		EMAILSEARCH	search_email	find <keyword>shuttle</keyword>	[]		1
+186106372	0		user	what is Jon Hamaker's telephone number telephone number		PEOPLE	search_people_attribute	what is <contact_name>Jon Hamaker</contact_name>'s <people_attribute>telephone number telephone number</people_attribute>	[]		1
+186106418	0		user	find my recent files		FILES	file_search	find <contact_name>my</contact_name> <file_recency>recent</file_recency> files	[]		1
+186106420	0		user	show me emails i sent to shankar day		EMAILSEARCH	search_email	show me <message_type>emails</message_type> <contact_name_from>i</contact_name_from> sent to <contact_name_to>shankar day</contact_name_to>	[]		1
+186106421	0		user	Shuman		NOTSURE	other_domain	Shuman	[]		1
+186106422	0		user	bring up bring up emails from Allison		EMAILSEARCH	search_email	bring up bring up <message_type>emails</message_type> from <contact_name_from>Allison</contact_name_from>	[]		1
+186106423	0		user	files from Jon Hamaker		EMAILSEARCH	search_email	<attachment_type>files</attachment_type> from <contact_name_from>Jon Hamaker</contact_name_from>	[]		1
+186106376	0		user	Shankha Dey		NOTSURE	ambiguous	Shankha Dey	[]		1
+186106377	0		user	and we heard about results		NOTSURE	other_domain	and we heard about results	[]		1
+186106378	0		user	show me emails from Malik with attachments		EMAILSEARCH	search_email	show me <message_type>emails</message_type> from <contact_name_from>Malik</contact_name_from> with <attachment>attachments</attachment>	[]		4
+186106382	0		user	he		NOTSURE	other_domain	he	[]		1
+186106383	0		user	Silvia		NOTSURE	ambiguous	Silvia	[]		1
+186106414	0		user	show me show me bookmark answers		NOTSURE	notsure_other	show me show me bookmark answers	[]		1
+186106446	0		user	U W P test overlap		NOTSURE	ambiguous	U W P test overlap	[]		1
+186106447	0		user	what is my next appointment		CALENDAR	find_calendar_entry	what is my <start_time>next</start_time> appointment	[]		3
+186106452	0		user	show me events from Jamil		CALENDAR	find_calendar_entry	show me events from <contact_name>Jamil</contact_name>	[]		3
+186106430	0		user	show me compliance emails		EMAILSEARCH	search_email	show me <keyword>compliance</keyword> <message_type>emails</message_type>	[]		1
+186106431	0		user	email from Holly about airport		EMAILSEARCH	search_email	email from <contact_name_from>Holly</contact_name_from> about <keyword>airport</keyword>	[]		1
+186106434	0		user	emails from Harris with links		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Harris</contact_name_from> with <keyword>links</keyword>	[]		1
+186106435	0		user	is that		NOTSURE	non_sense	is that	[]		1
+186106437	0		user	show me emails from Lesley that are marked flag		EMAILSEARCH	search_email	show me <message_type>emails</message_type> from <contact_name_from>Lesley</contact_name_from> that are marked <message_category>flag</message_category>	[]		1
+186106438	0		user	where is nikhil 's office		PEOPLE	search_people_attribute	where is <contact_name>nikhil</contact_name> 's <people_attribute>office</people_attribute>	[]		1
+186106439	0		user	show event title doc review for		FILES	file_search	show <file_keyword>event title</file_keyword> <file_type>doc</file_type> <file_keyword>review</file_keyword> for	[]		1
+186106440	0		user	updates		NOTSURE	other_domain	updates	[]		1
+186106442	0		user	where is Rena 's office		PEOPLE	search_people_attribute	where is <contact_name>Rena</contact_name> 's <people_attribute>office</people_attribute>	[]		2
+186106471	0		user	email from Troels		EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Troels</contact_name_from>	[]		1
+186106472	0		user	where is Jon Hamaker 's office location		PEOPLE	search_people_attribute	where is <contact_name>Jon Hamaker</contact_name> 's <people_attribute>office location</people_attribute>	[]		2
+186106473	0		user	email from Malik containing a link		EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Malik</contact_name_from> <keyword>containing a link</keyword>	[]		1
+186106458	0		user	snooze		NOTSURE	other_domain	snooze	[]		1
+186106459	0		user	attach cortana gp are shiproom deck		NOTSURE	non_sense	attach cortana gp are shiproom deck	[]		1
+186106460	0		user	email Denis		EMAILSEARCH	search_email	<message_type>email</message_type> <contact_name>Denis</contact_name>	[]		1
+186106463	0		user	email from Carter Vogds		EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Carter Vogds</contact_name_from>	[]		1
+186106465	0		user	show emails from Diego which he sent me last week		EMAILSEARCH	search_email	show <message_type>emails</message_type> from <contact_name_from>Diego</contact_name_from> which he sent me <start_date>last week</start_date>	[]		1
+186106494	0		user	emails from Ashok with attachments		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Ashok</contact_name_from> with <attachment>attachments</attachment>	[]		1
+186106475	0		user	search last email from Gayathri		EMAILSEARCH	search_email	search <order_ref>last</order_ref> email from <contact_name_from>Gayathri</contact_name_from>	[]		1
+186106476	0		user	Jamil 's email address		PEOPLE	search_people_attribute	<contact_name>Jamil</contact_name> 's <people_attribute>email address</people_attribute>	[]		1
+186106480	0		user	emails from my husband		EMAILSEARCH	search_email	<message_type>emails</message_type> from <relationship_name_from>my husband</relationship_name_from>	[]		1
+186106481	0		user	show me events from Malik		CALENDAR	find_calendar_entry	show me events from <contact_name>Malik</contact_name>	[]		1
+186106482	0		user	Ajoy		NOTSURE	other_domain	Ajoy	[]		1
+186106486	0		user	emails from Moe		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Moe</contact_name_from>	[]		1
+186106488	0		user	find latest file from home		FILES	file_search	find <order_ref>latest</order_ref> file <keyword>from home</keyword>	[]		1
+186106489	0		user	turn off my auto reply		NOTSURE	other_domain	turn off my auto reply	[]		1
+186106490	0		user	emails from Craig Miller		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Craig Miller</contact_name_from>	[]		1
+186106513	0		user	call Liska		NOTSURE	other_domain	call Liska	[]		1
+186106514	0		user	emails from Diego		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Diego</contact_name_from>	[]		11
+186106497	0		user	email James		EMAILSEARCH	search_email	<message_type>email</message_type> <contact_name>James</contact_name>	[]		1
+186106498	0		user	email from Jon Hamaker		EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Jon Hamaker</contact_name_from>	[]		2
+186106502	0		user	email		EMAILSEARCH	search_email	email	[]		1
+186106503	0		user	Cortana IQ scope		FILES	file_open	<file_keyword>Cortana IQ scope</file_keyword>	[]		1
+186106504	0		user	find emails from Chad		EMAILSEARCH	search_email	find <message_type>emails</message_type> from <contact_name_from>Chad</contact_name_from>	[]		1
+186106508	0		user	mails from Allison last week		EMAILSEARCH	search_email	<message_type>mails</message_type> from <contact_name_from>Allison</contact_name_from> <start_date>last week</start_date>	[]		1
+186106554	0		user	show me complaints emails about semantic machines		EMAILSEARCH	search_email	show me <keyword>complaints</keyword> <message_type>emails</message_type> about <keyword>semantic machines</keyword>	[]		1
+186106556	0		user	last email from Dwight		EMAILSEARCH	search_email	<order_ref>last</order_ref> <message_type>email</message_type> from <contact_name_from>Dwight</contact_name_from>	[]		1
+186106558	0		user	call Allan		NOTSURE	other_domain	call Allan	[]		3
+186106559	0		user	switch to light theme		NOTSURE	other_domain	switch to light theme	[]		1
+186106560	0		user	crag profile		PEOPLE	search_people_by_name	<contact_name>crag</contact_name> profile	[]		1
+186106561	0		user	emails from speaker		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>speaker</contact_name_from>	[]		1
+186106565	0		user	what are the are the emails from Jon last monday		EMAILSEARCH	search_email	what are the are the <message_type>emails</message_type> from <contact_name_from>Jon</contact_name_from> <start_date>last monday</start_date>	[]		1
+186106567	0		user	emails from Shankha Dey		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Shankha Dey</contact_name_from>	[]		1
+186106538	0		user	search emails that i received on february first		EMAILSEARCH	search_email	search <message_type>emails</message_type> that <contact_name_to>i</contact_name_to> received on <start_date>february first</start_date>	[]		1
+186106539	0		user	switch to light mode		NOTSURE	other_domain	switch to light mode	[]		1
+186106540	0		user	show me emails from last year		EMAILSEARCH	search_email	show me <message_type>emails</message_type> from <start_date>last year</start_date>	[]		1
+186106518	0		user	email about MS are		EMAILSEARCH	search_email	<message_type>email</message_type> about <keyword>MS are</keyword>	[]		1
+186106519	0		user	email from Vince		EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Vince</contact_name_from>	[]		1
+186106520	0		user	display the deck powerpoint dog food testing		EMAILSEARCH	search_email	display the <attachment_type>deck powerpoint</attachment_type> <keyword>dog food testing</keyword>	[]		2
+186106526	0		user	call Talon Ireland		NOTSURE	other_domain	call Talon Ireland	[]		1
+186106527	0		user	word files that Lucia sent me		EMAILSEARCH	search_email	<attachment_type>word files</attachment_type> that <contact_name_from>Lucia</contact_name_from> sent <relationship_name_to>me</relationship_name_to>	[]		2
+186106529	0		user	the last file i worked on		FILES	file_search	the <order_ref>last</order_ref> file <contact_name>i</contact_name> <file_action>worked</file_action> on	[]		1
+186106531	0		user	what's the link for HR web		NOTSURE	other_domain	what's the link for HR web	[]		1
+186106532	0		user	emails from		EMAILSEARCH	search_email	<message_type>emails</message_type> from	[]		1
+186106541	0		user	my events		CALENDAR	find_calendar_entry	my events	[]		1
+186106543	0		user	flag it		NOTSURE	other_domain	flag it	[]		2
+186106547	0		user	show me emails from Jamil		EMAILSEARCH	search_email	show me <message_type>emails</message_type> from <contact_name_from>Jamil</contact_name_from>	[]		1
+186106548	0		user	do i have any new emails		EMAILSEARCH	search_email	do i have any <message_category>new</message_category> <message_type>emails</message_type>	[]		1
+186106551	0		user	Dwight Kruger's		PEOPLE	search_people_by_name	<contact_name>Dwight Kruger</contact_name>'s	[]		3
+186106570	0		user	show me emails from nathan MSA A		EMAILSEARCH	search_email	show me <message_type>emails</message_type> from <contact_name_from>nathan</contact_name_from> <keyword>MSA A</keyword>	[]		1
+186106572	0		user	send email to Khushboo		EMAILSEARCH	search_email	send email to <contact_name_to>Khushboo</contact_name_to>	[]		1
+186106573	0		user	show me events		CALENDAR	find_calendar_entry	show me events	[]		1
+186106574	0		user	Lesley Carmichael		PEOPLE	search_people_by_name	<contact_name>Lesley Carmichael</contact_name>	[]		1
+186106575	0		user	set my auto reply		NOTSURE	other_domain	set my auto reply	[]		1
+186106580	0		user	files from Nelson		EMAILSEARCH	search_email	<attachment_type>files</attachment_type> from <contact_name_from>Nelson</contact_name_from>	[]		1
+186106581	0		user	email Diego		EMAILSEARCH	search_email	<message_type>email</message_type> <contact_name>Diego</contact_name>	[]		2
+186106583	0		user	brenna in january		EMAILSEARCH	search_email	<contact_name>brenna</contact_name> in <start_date>january</start_date>	[]		1
+186106586	0		user	what is Jon Hamaker's alias		PEOPLE	search_people_by_name	what is <contact_name>Jon Hamaker</contact_name>'s <people_attribute>alias</people_attribute>	[]		1
+186106587	0		user	check my calendar		CALENDAR	find_calendar_entry	check my calendar	[]		1
+186106590	0		user	files for principal briefing		FILES	file_search	files for <keyword>principal briefing</keyword>	[]		1
+186106591	0		user	Robert		NOTSURE	other_domain	Robert	[]		4
+186106630	0		user	email from Lucia		EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Lucia</contact_name_from>	[]		1
+186106631	0		user	open		NOTSURE	other_domain	open	[]		1
+186106632	0		user	Dwight Kruger's Org		PEOPLE	search_people_attribute	<contact_name>Dwight Kruger</contact_name>'s <people_attribute>Org</people_attribute>	[]		2
+186106633	0		user	manager		NOTSURE	other_domain	manager	[]		1
+186106636	0		user	email from Talon Ireland		EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Talon Ireland</contact_name_from>	[]		1
+186106637	0		user	open ms ai cognition joint shiproom deck		FILES	file_open	open <file_keyword>ms ai cognition joint shiproom</file_keyword> <file_type>deck</file_type>	[]		1
+186106639	0		user	what's Jon Hamaker 's phone number		PEOPLE	search_people_attribute	what's <contact_name>Jon Hamaker</contact_name> 's <people_attribute>phone number</people_attribute>	[]		1
+186106640	0		user	mario 's contacts mail		EMAILSEARCH	search_email	<contact_name>mario</contact_name> 's <keyword>contacts</keyword> <message_type>mail</message_type>	[]		1
+186106641	0		user	when is my next meeting with Kalyan		CALENDAR	find_calendar_when	when is my <start_time>next</start_time> meeting with <contact_name>Kalyan</contact_name>	[]		1
+186106644	0		user	bring up emails from amy hood about results		EMAILSEARCH	search_email	bring up <message_type>emails</message_type> from <contact_name_from>amy hood</contact_name_from> about <keyword>results</keyword>	[]		3
+186106647	0		user	show me emails from Allison from a		EMAILSEARCH	search_email	show me <message_type>emails</message_type> from <contact_name_from>Allison</contact_name_from> from <contact_name_from>a</contact_name_from>	[]		1
+186106649	0		user	find ian todd		PEOPLE	search_people_by_name	find <contact_name>ian todd</contact_name>	[]		1
+186106650	0		user	bring up emails		EMAILSEARCH	search_email	bring up <message_type>emails</message_type>	[]		1
+186106651	0		user	what is Dwight 's phone number		PEOPLE	search_people_attribute	what is <contact_name>Dwight</contact_name> 's <people_attribute>phone number</people_attribute>	[]		1
+186106652	0		user	what is Dwight Kruger's alias		PEOPLE	search_people_attribute	what is <contact_name>Dwight Kruger</contact_name>'s <people_attribute>alias</people_attribute>	[]		1
+186106596	0		user	email sent to Kristen		EMAILSEARCH	search_email	<message_type>email</message_type> sent to <contact_name_to>Kristen</contact_name_to>	[]		1
+186106607	0		user	Allan Jiang		NOTSURE	other_domain	Allan Jiang	[]		1
+186106608	0		user	show me new emails from Jon Hamaker this monday		EMAILSEARCH	search_email	show me <message_category>new</message_category> emails from <contact_name_from>Jon Hamaker</contact_name_from> <start_date>this monday</start_date>	[]		1
+186106609	0		user	mails from Jon with attachments last week		EMAILSEARCH	search_email	<message_type>mails</message_type> from <contact_name_from>Jon</contact_name_from> with <attachment>attachments</attachment> <start_date>last week</start_date>	[]		1
+186106613	0		user	should i just did		NOTSURE	non_sense	should i just did	[]		1
+186106614	0		user	find the find the shiproom deck		FILES	file_search	find the find the <file_keyword>shiproom</file_keyword> <file_type>deck</file_type>	[]		8
+186106616	0		user	show me earnings emails		EMAILSEARCH	search_email	show me <keyword>earnings</keyword> <message_type>emails</message_type>	[]		1
+186106617	0		user	emails from Scott Stiles		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Scott Stiles</contact_name_from>	[]		1
+186106619	0		user	show me the email with the SDK operating model		EMAILSEARCH	search_email	show me the email with the <keyword>SDK operating model</keyword>	[]		1
+186106621	0		user	look for emails from Lisa		EMAILSEARCH	search_email	look for <message_type>emails</message_type> from <contact_name_from>Lisa</contact_name_from>	[]		1
+186106622	0		user	to light mode		NOTSURE	other_domain	to light mode	[]		1
+186106626	0		user	emails from Ajoy sent to Shankha		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Ajoy</contact_name_from> sent to <contact_name_to>Shankha</contact_name_to>	[]		1
+186106598	0		user	send email to Denis		NOTSURE	other_domain	send email to Denis	[]		2
+186106600	0		user	Dan Blood		NOTSURE	other_domain	Dan Blood	[]		1
+186106603	0		user	what is Dwight cellular telephone number		PEOPLE	search_people_attribute	what is <contact_name>Dwight</contact_name> <people_attribute>cellular telephone number</people_attribute>	[]		1
+186106604	0		user	Kruger email		EMAILSEARCH	search_email	<contact_name>Kruger</contact_name> <message_type>email</message_type>	[]		1
+186106606	0		user	files i modified yesterday		FILES	file_search	files <contact_name>i</contact_name> <file_action>modified</file_action> <date>yesterday</date>	[]		1
+186106660	0		user	show me emails from last month about cognition		EMAILSEARCH	search_email	show me <message_type>emails</message_type> from <start_date>last month</start_date> about <keyword>cognition</keyword>	[]		1
+186106661	0		user	next		NOTSURE	other_domain	next	[]		1
+186106662	0		user	emails from Jon Hamaker		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Jon Hamaker</contact_name_from>	[]		2
+186106663	0		user	nothing		NOTSURE	other_domain	nothing	[]		1
+186106664	0		user	change theme to dark mode		NOTSURE	other_domain	change theme to dark mode	[]		1
+186106666	0		user	find email from Diego		EMAILSEARCH	search_email	find <message_type>email</message_type> from <contact_name_from>Diego</contact_name_from>	[]		1
+186106672	0		user	vacation vacation		NOTSURE	other_domain	vacation vacation	[]		1
+186106674	0		user	show me show me invites from Jamil		NOTSURE	other_domain	show me show me <message_type>invites</message_type> from <contact_name_from>Jamil</contact_name_from>	[]		2
+186106655	0		user	when is Lucia available		CALENDAR	check_availability	when is <contact_name>Lucia</contact_name> <availability>available</availability>	[]		1
+186106657	0		user	ms ai presentation series		NOTSURE	ambiguous	ms ai presentation series	[]		2
+186106659	0		user	excel dog food testing document		EMAILSEARCH	search_email	<attachment_type>excel</attachment_type> <keyword>dog food testing</keyword> <attachment_type>document</attachment_type>	[]		1
+186106677	0		user	is it working now		NOTSURE	non_sense	is it working now	[]		1
+186106678	0		user	files from Allison		EMAILSEARCH	search_email	<attachment_type>files</attachment_type> from <contact_name_from>Allison</contact_name_from>	[]		1
+186106679	0		user	open cortana GDP r shiproom deck		FILES	file_open	open <file_keyword>cortana GDP r shiproom</file_keyword> <file_type>deck</file_type>	[]		1
+186106684	0		user	email from Jon Hamaker to Victoria Taranov		EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Jon Hamaker</contact_name_from> to <start_date>Victoria Taranov</start_date>	[]		1
+186106685	0		user	emails from Suntian about cementing machines		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Suntian</contact_name_from> about <keyword>cementing machines</keyword>	[]		1
+186106687	0		user	show me emails from Allison from may		EMAILSEARCH	search_email	show me <message_type>emails</message_type> from <contact_name_from>Allison</contact_name_from> from <start_date>may</start_date>	[]		1
+186106691	0		user	where is that deck from Malik		EMAILSEARCH	search_email	where is that <attachment_type>deck</attachment_type> from <contact_name_from>Malik</contact_name_from>	[]		1
+186106696	0		user	calendar		CALENDAR	find_calendar_entry	calendar	[]		1
+186106698	0		user	show doc review for		FILES	file_search	show <file_type>doc</file_type> <file_keyword>review for</file_keyword>	[]		2
+186106692	0		user	open the ship room template slides november two zero one nine deck		FILES	file_open	open the <file_keyword>ship room template slides november two zero one nine</file_keyword> <file_type>deck</file_type>	[]		2
+186106732	0		user	Lucia Andrew		NOTSURE	ambiguous	Lucia Andrew	[]		1
+186106733	0		user	show me new emails from Nitin Agarwal ms ai		EMAILSEARCH	search_email	show me <message_category>new</message_category> <message_type>emails</message_type> from <contact_name_from>Nitin Agarwal ms ai</contact_name_from>	[]		1
+186106716	0		user	word dog food testing		NOTSURE	ambiguous	word dog food testing	[]		2
+186106717	0		user	show emails from Talon		EMAILSEARCH	search_email	show <message_type>emails</message_type> from <contact_name_from>Talon</contact_name_from>	[]		1
+186106719	0		user	what's up babe		NOTSURE	other_domain	what's up babe	[]		1
+186106721	0		user	send email to Diego Carlomagno		NOTSURE	other_domain	send email to Diego Carlomagno	[]		1
+186106722	0		user	emails from my manager		EMAILSEARCH	search_email	<message_type>emails</message_type> from <relationship_name_from>my manager</relationship_name_from>	[]		1
+186106723	0		user	send an email to Sharat		NOTSURE	other_domain	send an email to Sharat	[]		1
+186106724	0		user	we in		NOTSURE	non_sense	we in	[]		1
+186106726	0		user	when is Lucia Andrei available		CALENDAR	check_availability	when is <contact_name>Lucia Andrei</contact_name> <availability>available</availability>	[]		1
+186106729	0		user	when is my next meeting		CALENDAR	find_calendar_when	when is my <start_time>next</start_time> meeting	[]		2
+186106738	0		user	send email to shambo		EMAILSEARCH	search_email	send email to <contact_name_to>shambo</contact_name_to>	[]		1
+186106735	0		user	hello		NOTSURE	notsure_other	hello	[]		1
+186106699	0		user	show my meetings		CALENDAR	find_calendar_entry	show my meetings	[]		1
+186106702	0		user	what's my next appointment		CALENDAR	find_calendar_entry	what's my <start_time>next</start_time> appointment	[]		1
+186106703	0		user	show me emails from Joe		EMAILSEARCH	search_email	show me <message_type>emails</message_type> from <contact_name_from>Joe</contact_name_from>	[]		1
+186106706	0		user	hey cortana archives it		NOTSURE	other_domain	hey cortana archives it	[]		1
+186106713	0		user	like word		NOTSURE	non_sense	like word	[]		1
+186106714	0		user	what's Jamil 's email address		PEOPLE	search_people_attribute	what's <contact_name>Jamil</contact_name> 's <people_attribute>email address</people_attribute>	[]		2
+186106742	0		user	anti disestablishmentarianism		NOTSURE	other_domain	anti disestablishmentarianism	[]		1
+186106744	0		user	just don't show him		NOTSURE	other_domain	just don't show him	[]		1
+186106708	0		user	send email to Chad		NOTSURE	other_domain	send email to Chad	[]		12
+186106709	0		user	emails from Shuman		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Shuman</contact_name_from>	[]		1
+186106710	0		user	Chad with attachments		EMAILSEARCH	search_email	<contact_name>Chad</contact_name> with <attachment>attachments</attachment>	[]		1
+186106712	0		user	this thread made me wonder if the language understanding team could actually surface the slots as ways to think about the		NOTSURE	non_sense	this thread made me wonder if the language understanding team could actually surface the slots as ways to think about the	[]		1
+186106756	0		user	emails from Saurabh about bluetooth delap's		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Saurabh</contact_name_from> about <keyword>bluetooth delap&apos;s</keyword>	[]		3
+186106757	0		user	show me the latest		EMAILSEARCH	search_email	show me the <order_ref>latest</order_ref>	[]		1
+186106758	0		user	email from Lesley		EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Lesley</contact_name_from>	[]		1
+186106760	0		user	Jon		NOTSURE	ambiguous	Jon	[]		1
+186106764	0		user	delbild		NOTSURE	other_domain	delbild	[]		1
+186106746	0		user	email from Rich about prix brief document		EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Rich</contact_name_from> about <keyword>prix brief document</keyword>	[]		1
+186106747	0		user	Barry 's phone number		PEOPLE	search_people_attribute	<contact_name>Barry</contact_name> 's <people_attribute>phone number</people_attribute>	[]		1
+186106748	0		user	email from Krister about vikram		EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Krister</contact_name_from> about <keyword>vikram</keyword>	[]		1
+186106750	0		user	show emails from Michael		EMAILSEARCH	search_email	show <message_type>emails</message_type> from <contact_name_from>Michael</contact_name_from>	[]		1
+186106751	0		user	the weather		NOTSURE	other_domain	the weather	[]		1
+186106753	0		user	send hannon		NOTSURE	other_domain	send hannon	[]		1
+186106767	0		user	make a new search		NOTSURE	other_domain	make a new search	[]		4
+186106768	0		user	hey cortana delete it		NOTSURE	ambiguous	hey cortana delete it	[]		1
+186106769	0		user	what's Jamil 's email		FILES	search_people_attribute	what's <contact_name>Jamil</contact_name> 's <people_attribute>email</people_attribute>	[]		1
+186106770	0		user	emails from Allison about ship room		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Allison</contact_name_from> about <keyword>ship room</keyword>	[]		1
+186106772	0		user	find email from Lucia this month		EMAILSEARCH	search_email	find <message_type>email</message_type> from <contact_name_from>Lucia</contact_name_from> <start_date>this month</start_date>	[]		1
+186106773	0		user	send email to Jim Gilsinan		NOTSURE	other_domain	send email to Jim Gilsinan	[]		1
+186106776	0		user	Ajoy and Dwight		NOTSURE	ambiguous	Ajoy and Dwight	[]		1
+186106780	0		user	find emails from Diego which he sent me last week		EMAILSEARCH	search_email	find <message_type>emails</message_type> from <contact_name_from>Diego</contact_name_from> which he sent me <start_date>last week</start_date>	[]		1
+186106781	0		user	find emails sent to Rachel		EMAILSEARCH	search_email	find <message_type>emails</message_type> sent to <contact_name_to>Rachel</contact_name_to>	[]		1
+186106786	0		user	show my last email with Jon Hamaker		EMAILSEARCH	search_email	show my <order_ref>last</order_ref> <message_type>email</message_type> with <contact_name>Jon Hamaker</contact_name>	[]		1
+186106788	0		user	of showed up finally		NOTSURE	other_domain	of showed up finally	[]		1
+186106793	0		user	no push back at all		NOTSURE	non_sense	no push back at all	[]		1
+186106796	0		user	emails from amy about results		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>amy</contact_name_from> about <keyword>results</keyword>	[]		1
+186106797	0		user	show me emails from Nitin		EMAILSEARCH	search_email	show me emails from <contact_name_from>Nitin</contact_name_from>	[]		1
+186106800	0		user	i can't help		NOTSURE	non_sense	i can't help	[]		1
+186106802	0		user	what's Chad 's email address		PEOPLE	search_people_attribute	what's <contact_name>Chad</contact_name> 's <people_attribute>email address</people_attribute>	[]		1
+186106803	0		user	emails from Ajoy Nandi		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Ajoy Nandi</contact_name_from>	[]		2
+186106804	0		user	Allison		PEOPLE	search_people_by_name	<contact_name>Allison</contact_name>	[]		2
+186106805	0		user	attach cortana GDP are shiproom deck		NOTSURE	other_domain	attach cortana GDP are shiproom deck	[]		1
+186106822	0		user	tests		NOTSURE	non_sense	tests	[]		1
+186106824	0		user	emails from Liska		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Liska</contact_name_from>	[]		1
+186106826	0		user	emails		EMAILSEARCH	search_email	<message_type>emails</message_type>	[]		1
+186106830	0		user	send email to Diego		NOTSURE	other_domain	send email to Diego	[]		42
+186106832	0		user	cortex		NOTSURE	non_sense	cortex	[]		1
+186106806	0		user	show me show me flagged emails from Lesley		EMAILSEARCH	search_email	show me show me <message_category>flagged</message_category> <message_type>emails</message_type> from <contact_name_from>Lesley</contact_name_from>	[]		1
+186106807	0		user	mails from Carter		EMAILSEARCH	search_email	<message_type>mails</message_type> from <contact_name_from>Carter</contact_name_from>	[]		1
+186106811	0		user	awesome can you send around the build number that is the appropriate store build number for iOS and android so we can all use it		NOTSURE	non_sense	awesome can you send around the build number that is the appropriate store build number for iOS and android so we can all use it	[]		1
+186106812	0		user	who is Perry 's boss		PEOPLE	search_org_chart	who is <contact_name>Perry</contact_name> 's <relationship_name>boss</relationship_name>	[]		1
+186106813	0		user	cortana gp are shiproom deck		FILES	file_search	cortana <file_keyword>gp are shiproom</file_keyword> <file_type>deck</file_type>	[]		1
+186106817	0		user	searching for stuff		NOTSURE	non_sense	searching for stuff	[]		1
+186106818	0		user	when is my next meeting with Nitin		CALENDAR	find_calendar_when	when is my <start_time>next</start_time> meeting with <contact_name>Nitin</contact_name>	[]		1
+186106820	0		user	emails from Diego Carlomagno		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Diego Carlomagno</contact_name_from>	[]		1
+186106834	0		user	show my sentiments to Jim		NOTSURE	notsure_other	show my sentiments to Jim	[]		1
+186106821	0		user	email from Dwight Kruger with powerpoint attachments		EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Dwight Kruger</contact_name_from> with <attachment_type>powerpoint</attachment_type> <attachment>attachments</attachment>	[]		2
+186106843	0		user	files from Diego		EMAILSEARCH	search_email	<attachment_type>files</attachment_type> from <contact_name_from>Diego</contact_name_from>	[]		1
+186106845	0		user	find new emails from Allison		EMAILSEARCH	search_email	find <message_category>new</message_category> <message_type>emails</message_type> from <contact_name_from>Allison</contact_name_from>	[]		1
+186106847	0		user	emails from Nitin speech		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Nitin speech</contact_name_from>	[]		1
+186106849	0		user	create a meeting with Lisa at eleven o'clock		CALENDAR	create_calendar_entry	create a meeting with <contact_name>Lisa</contact_name> at <start_time>eleven</start_time> o'clock	[]		1
+186106850	0		user	Jeff Stock		PEOPLE	search_people_by_name	<contact_name>Jeff Stock</contact_name>	[]		1
+186106851	0		user	ppt from Kieran		EMAILSEARCH	search_email	<attachment_type>ppt</attachment_type> from <contact_name_from>Kieran</contact_name_from>	[]		1
+186106837	0		user	expense		NOTSURE	ambiguous	expense	[]		1
+186106838	0		user	is this working		NOTSURE	other_domain	is this working	[]		1
+186106840	0		user	better map		NOTSURE	other_domain	better map	[]		1
+186106842	0		user	show me events from cortana ship room		CALENDAR	find_calendar_entry	show me events from <contact_name>cortana ship room</contact_name>	[]		1
+186106874	0		user	suppose you new stuff		NOTSURE	non_sense	suppose you new stuff	[]		1
+186106875	0		user	emails from Maryam		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Maryam</contact_name_from>	[]		1
+186106877	0		user	show me emails about delays		EMAILSEARCH	search_email	show me <message_type>emails</message_type> about <keyword>delays</keyword>	[]		1
+186106878	0		user	Thea		NOTSURE	ambiguous	Thea	[]		1
+186106879	0		user	files from Jon		EMAILSEARCH	search_email	<attachment_type>files</attachment_type> from <contact_name_from>Jon</contact_name_from>	[]		1
+186106880	0		user	powerpoint for AI three sixty five review		EMAILSEARCH	search_email	<attachment_type>powerpoint</attachment_type> for <keyword>AI three sixty five review</keyword>	[]		1
+186106881	0		user	emails from Talon		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Talon</contact_name_from>	[]		2
+186106883	0		user	pull up emails from Allison to Diego		EMAILSEARCH	search_email	pull up <message_type>emails</message_type> from <contact_name_from>Allison</contact_name_from> to <contact_name_to>Diego</contact_name_to>	[]		2
+186106885	0		user	show my last email with Jason		EMAILSEARCH	search_email	show my <order_ref>last</order_ref> <message_type>email</message_type> with <contact_name>Jason</contact_name>	[]		1
+186106857	0		user	share the link to it		NOTSURE	other_domain	share the link to it	[]		1
+186106862	0		user	email from Jon Hamaker between january first in january thirtieth		EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Jon Hamaker</contact_name_from> between <start_date>january first</start_date> in <end_date>january thirtieth</end_date>	[]		1
+186106869	0		user	then is Fisenko		NOTSURE	non_sense	then is Fisenko	[]		1
+186106870	0		user	text message daughter		NOTSURE	other_domain	text message daughter	[]		1
+186106871	0		user	time in reporting		NOTSURE	other_domain	time in reporting	[]		1
+186106886	0		user	emails from Allison from october		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Allison</contact_name_from> from <start_date>october</start_date>	[]		1
+186106890	0		user	phone number		NOTSURE	other_domain	phone number	[]		1
+186106928	0		user	emails from Daria last year		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Daria</contact_name_from> <start_date>last year</start_date>	[]		1
+186106929	0		user	add yesterday		CALENDAR	create_calendar_entry	add <start_date>yesterday</start_date>	[]		1
+186106931	0		user	scarf assessment		NOTSURE	non_sense	scarf assessment	[]		1
+186106932	0		user	ship room		NOTSURE	notsure_other	ship room	[]		1
+186106893	0		user	messages from Nitin in speech		EMAILSEARCH	search_email	messages from <contact_name_from>Nitin in speech</contact_name_from>	[]		1
+186106899	0		user	Jim 's office number		PEOPLE	search_people_attribute	<contact_name>Jim</contact_name> 's <attribute_type>office</attribute_type> <people_attribute>number</people_attribute>	[]		1
+186106900	0		user	what is Jon Hamaker 's phone number		PEOPLE	search_people_attribute	what is <contact_name>Jon Hamaker</contact_name> 's <people_attribute>phone number</people_attribute>	[]		5
+186106901	0		user	messages from Lucia		EMAILSEARCH	search_email	messages from <contact_name_from>Lucia</contact_name_from>	[]		1
+186106904	0		user	dog cat		NOTSURE	other_domain	dog cat	[]		3
+186106905	0		user	show my emails from two weeks ago		EMAILSEARCH	search_email	show my <message_type>emails</message_type> from <start_date>two weeks ago</start_date>	[]		1
+186106910	0		user	show my sent emails to shovers		EMAILSEARCH	search_email	show my <email_state>sent</email_state> <message_type>emails</message_type> to <contact_name_to>shovers</contact_name_to>	[]		1
+186106911	0		user	where is HR web		EMAILSEARCH	search_email	where is <keyword>HR web</keyword>	[]		2
+186106912	0		user	word S A testing		EMAILSEARCH	search_email	<attachment_type>word</attachment_type> <keyword>S A testing</keyword>	[]		1
+186106913	0		user	email from Rajiv		EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Rajiv</contact_name_from>	[]		1
+186106915	0		user	show me new emails from Allison with attachments		EMAILSEARCH	search_email	show me <message_category>new</message_category> <message_type>emails</message_type> from <contact_name_from>Allison</contact_name_from> with <attachment>attachments</attachment>	[]		1
+186106916	0		user	files that Lucia sent me		EMAILSEARCH	search_email	<attachment_type>files</attachment_type> that <contact_name_from>Lucia</contact_name_from> sent <relationship_name_to>me</relationship_name_to>	[]		3
+186106917	0		user	find emails from Diana		EMAILSEARCH	search_email	find <message_type>emails</message_type> from <contact_name_from>Diana</contact_name_from>	[]		2
+186106918	0		user	emails from Allison about Chad		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Allison</contact_name_from> about <keyword>Chad</keyword>	[]		1
+186106919	0		user	bring up the up the shiproom deck		FILES	file_open	bring up the up the <file_keyword>shiproom</file_keyword> <file_type>deck</file_type>	[]		1
+186106920	0		user	maybe even saturday		NOTSURE	ambiguous	maybe even saturday	[]		1
+186106922	0		user	bring up emails from babyhood about results		EMAILSEARCH	search_email	bring up <message_type>emails</message_type> from <contact_name_from>babyhood</contact_name_from> about <keyword>results</keyword>	[]		1
+186106925	0		user	play my emails		EMAILSEARCH	search_email	play my <message_type>emails</message_type>	[]		3
+186106966	0		user	email from Rich about prix beef document		EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Rich</contact_name_from> about <keyword>prix beef document</keyword>	[]		1
+186106926	0		user	O M design review		FILES	file_search	<file_keyword>O M design review</file_keyword>	[]		1
+186106927	0		user	mails from Diego		EMAILSEARCH	search_email	<message_type>mails</message_type> from <contact_name_from>Diego</contact_name_from>	[]		1
+186106891	0		user	Jon Hamaker's org		PEOPLE	search_org_chart	<contact_name>Jon Hamaker</contact_name>'s org	[]		1
+186106935	0		user	show me emails from Rachel Ng		EMAILSEARCH	search_email	show me <message_type>emails</message_type> from <contact_name_from>Rachel Ng</contact_name_from>	[]		1
+186106941	0		user	find emails from Allan		EMAILSEARCH	search_email	find <message_type>emails</message_type> from <contact_name_from>Allan</contact_name_from>	[]		2
+186106942	0		user	Jamil 's office		PEOPLE	search_people_attribute	<contact_name>Jamil</contact_name> 's <people_attribute>office</people_attribute>	[]		1
+186106945	0		user	craig profile		PEOPLE	search_people_by_name	<contact_name>craig</contact_name> profile	[]		1
+186106946	0		user	emails from a bunch of people		EMAILSEARCH	search_email	<message_type>emails</message_type> from <keyword>a bunch of people</keyword>	[]		1
+186106947	0		user	show me cortana ship room		NOTSURE	other_domain	show me cortana ship room	[]		1
+186106948	0		user	change theme		NOTSURE	other_domain	change theme	[]		2
+186106950	0		user	find joe belfiore		PEOPLE	search_people_by_name	find <contact_name>joe belfiore</contact_name>	[]		1
+186106951	0		user	emails from Lucia Andrei		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Lucia Andrei</contact_name_from>	[]		2
+186106952	0		user	emails from Chad between january twentieth in january thirtieth		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Chad</contact_name_from> between <start_date>january twentieth</start_date> in <end_date>january thirtieth</end_date>	[]		1
+186106953	0		user	emails from michael thomas		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>michael thomas</contact_name_from>	[]		1
+186106956	0		user	thirty minutes it would be years		NOTSURE	non_sense	thirty minutes it would be years	[]		1
+186106957	0		user	email from Rajiv about my trip		EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Rajiv</contact_name_from> about <keyword>my trip</keyword>	[]		1
+186106958	0		user	emails from Satyan on ai		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Satyan</contact_name_from> on <keyword>ai</keyword>	[]		1
+186106959	0		user	is my boss		NOTSURE	non_sense	is my boss	[]		1
+186106963	0		user	who is Lucia Andrei 's manager		PEOPLE	search_org_chart	who is <contact_name>Lucia Andrei</contact_name> 's <relationship_name>manager</relationship_name>	[]		1
+186106964	0		user	Lucia Andrei		NOTSURE	other_domain	Lucia Andrei	[]		4
+186106933	0		user	mail from Jeff Teper		EMAILSEARCH	search_email	<message_type>mail</message_type> from <contact_name_from>Jeff Teper</contact_name_from>	[]		1
+186106974	0		user	Beryl 's email		EMAILSEARCH	search_email	<contact_name>Beryl</contact_name> 's <message_type>email</message_type>	[]		1
+186106975	0		user	really really really		NOTSURE	other_domain	really really really	[]		1
+186106977	0		user	show emails from Diego		EMAILSEARCH	search_email	show <message_type>emails</message_type> from <contact_name_from>Diego</contact_name_from>	[]		4
+186106979	0		user	turn on dark mode		NOTSURE	other_domain	turn on dark mode	[]		2
+186106980	0		user	powerpoint for principal briefing		EMAILSEARCH	search	<attachment_type>powerpoint</attachment_type> for <keyword>principal briefing</keyword>	[]		1
+186106983	0		user	hamburger		NOTSURE	non_sense	hamburger	[]		1
+186106988	0		user	Talon 's phone number		PEOPLE	search_people_attribute	<contact_name>Talon</contact_name> 's <people_attribute>phone number</people_attribute>	[]		1
+186106990	0		user	H R web		NOTSURE	ambiguous	H R web	[]		1
+186106991	0		user	files from Lucia from yesterday		EMAILSEARCH	search_email	<attachment_type>files</attachment_type> from <contact_name_from>Lucia</contact_name_from> from <start_date>yesterday</start_date>	[]		1
+186106993	0		user	show me mails from Jason with attachments		EMAILSEARCH	search_email	show me <message_type>mails</message_type> from <contact_name_from>Jason</contact_name_from> with <attachment>attachments</attachment>	[]		1
+186106995	0		user	launch		NOTSURE	other_domain	launch	[]		1
+186106996	0		user	call Lesley		NOTSURE	other_domain	call Lesley	[]		6
+186106997	0		user	hey cortana archive this conversation		NOTSURE	other_domain	hey cortana archive this conversation	[]		1
+186106999	0		user	show me emails from nathan speech		EMAILSEARCH	search_email	show me <message_type>emails</message_type> from <contact_name_from>nathan speech</contact_name_from>	[]		1
+186106972	0		user	what is Jamil 's email address		PEOPLE	search_people_attribute	what is <contact_name>Jamil</contact_name> 's <people_attribute>email address</people_attribute>	[]		1
+186107006	0		user	siri siri siri		NOTSURE	non_sense	siri siri siri	[]		1
+186107007	0		user	Shawn Chang		PEOPLE	search_people_by_name	<contact_name>Shawn Chang</contact_name>	[]		1
+186107008	0		user	Adarsh Sridhar		PEOPLE	search_people_by_name	<contact_name>Adarsh Sridhar</contact_name>	[]		1
+186107009	0		user	email Allison		EMAILSEARCH	search_email	<message_type>email</message_type> <contact_name>Allison</contact_name>	[]		20
+186107011	0		user	show me the mails from Jon with attachments last week		EMAILSEARCH	search_email	show me the <message_type>mails</message_type> from <contact_name_from>Jon</contact_name_from> with <attachment>attachments</attachment> <start_date>last week</start_date>	[]		1
+186107012	0		user	find emails from Talon		EMAILSEARCH	search_email	find <message_type>emails</message_type> from <contact_name_from>Talon</contact_name_from>	[]		8
+186107013	0		user	emails from Allison from last week		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Allison</contact_name_from> from <start_date>last week</start_date>	[]		1
+186107014	0		user	send email to Jim		NOTSURE	other_domain	send email to Jim	[]		5
+186107018	0		user	meet with Allison		CALENDAR	create_calendar_entry	meet with <contact_name>Allison</contact_name>	[]		22
+186107020	0		user	email James telling him that i'm traveling back today		NOTSURE	other_domain	email James telling him that i'm traveling back today	[]		1
+186107021	0		user	email from Jon Hamaker with attachments		EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Jon Hamaker</contact_name_from> with <attachment>attachments</attachment>	[]		2
+186107022	0		user	OK		NOTSURE	other_domain	OK	[]		1
+186107023	0		user	show sync KW 's roles		NOTSURE	other_domain	show sync KW 's roles	[]		1
+186107028	0		user	emails from Scott Stiles about promotions		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Scott Stiles</contact_name_from> about <keyword>promotions</keyword>	[]		1
+186107029	0		user	interesting show me emails from Malik with attachments		EMAILSEARCH	search_email	interesting show me <message_type>emails</message_type> from <contact_name_from>Malik</contact_name_from> with <attachment>attachments</attachment>	[]		1
+186107030	0		user	Allison 's phone number		PEOPLE	search_people_attribute	<contact_name>Allison</contact_name> 's <people_attribute>phone number</people_attribute>	[]		4
+186107001	0		user	this is a long search via voice this is a long search		NOTSURE	non_sense	this is a long search via voice this is a long search	[]		1
+186107002	0		user	show me bookmarks		NOTSURE	other_domain	show me bookmarks	[]		1
+186107004	0		user	call Allison		NOTSURE	other_domain	call Allison	[]		24
+186107005	0		user	emails from Jennifer		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Jennifer</contact_name_from>	[]		2
+186107039	0		user	send email to Sharat		NOTSURE	other_domain	send email to Sharat	[]		1
+186107042	0		user	show me my calendar items		CALENDAR	find_calendar_entry	show me my calendar items	[]		1
+186107046	0		user	show my show my emails from Ajoy		EMAILSEARCH	search_email	show my show my <message_type>emails</message_type> from <contact_name_from>Ajoy</contact_name_from>	[]		1
+186107078	0		user	files from Vanessa		EMAILSEARCH	search_email	<attachment_type>files</attachment_type> from <contact_name_from>Vanessa</contact_name_from>	[]		1
+186107050	0		user	send email to John		EMAILSEARCH	search_email	send email to <contact_name_to>John</contact_name_to>	[]		1
+186107052	0		user	emails from ali al V		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>ali al V</contact_name_from>	[]		1
+186107054	0		user	show files that Lucia Andrei sent me		EMAILSEARCH	search_email	show <attachment_type>files</attachment_type> that <contact_name_from>Lucia Andrei</contact_name_from> sent <relationship_name_to>me</relationship_name_to>	[]		1
+186107033	0		user	emails from Craig		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Craig</contact_name_from>	[]		1
+186107034	0		user	Andrew Shuman		PEOPLE	search_people_by_name	<contact_name>Andrew Shuman</contact_name>	[]		1
+186107070	0		user	send an email		NOTSURE	other_domain	send an email	[]		1
+186107076	0		user	emails about cousteau cloris		EMAILSEARCH	search_email	<message_type>emails</message_type> about <keyword>cousteau cloris</keyword>	[]		1
+186107055	0		user	emails from this monday		EMAILSEARCH	search_email	<message_type>emails</message_type> from <start_date>this monday</start_date>	[]		1
+186107102	0		user	emails from nathan to patty		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>nathan</contact_name_from> to <contact_name_to>patty</contact_name_to>	[]		1
+186107104	0		user	what's the latest presentation from Ramesh		EMAILSEARCH	search_email	what's the <order_ref>latest</order_ref> <attachment_type>presentation</attachment_type> from <contact_name_from>Ramesh</contact_name_from>	[]		1
+186107105	0		user	blah blah blah		NOTSURE	other_domain	blah blah blah	[]		1
+186107106	0		user	email from Chad		EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Chad</contact_name_from>	[]		1
+186107108	0		user	show sync capabilities roles		NOTSURE	other_domain	show sync capabilities roles	[]		1
+186107115	0		user	emails from Allison with attachments		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Allison</contact_name_from> with <attachment>attachments</attachment>	[]		1
+186107116	0		user	search santosh andrea weekly one on one on next monday		CALENDAR	find_calendar_entry	search <contact_name>santosh andrea</contact_name> <title>weekly one on one</title> on <start_date>next monday</start_date>	[]		1
+186107056	0		user	emails from Scott Stiles about org		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Scott Stiles</contact_name_from> about <keyword>org</keyword>	[]		1
+186107057	0		user	what is Craig 's contact		PEOPLE	search_people_attribute	what is <contact_name>Craig</contact_name> 's <people_attribute>contact</people_attribute>	[]		1
+186107059	0		user	show me emails from Emma		EMAILSEARCH	search_email	show me <message_type>emails</message_type> from <contact_name_from>Emma</contact_name_from>	[]		3
+186107061	0		user	you know		NOTSURE	non_sense	you know	[]		1
+186107064	0		user	show my inbox		NOTSURE	other_domain	show my inbox	[]		1
+186107068	0		user	search emails from george harrison		EMAILSEARCH	search_email	search <message_type>emails</message_type> from <contact_name_from>george harrison</contact_name_from>	[]		1
+186107095	0		user	show me emails about flighting		EMAILSEARCH	search_email	show me <message_type>emails</message_type> about <keyword>flighting</keyword>	[]		1
+186107096	0		user	show me emails sent to Allison		EMAILSEARCH	search_email	show me <message_type>emails</message_type> <email_state>sent</email_state> to <contact_name_to>Allison</contact_name_to>	[]		1
+186107098	0		user	emails from Nitin Agrawal		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Nitin Agrawal</contact_name_from>	[]		1
+186107100	0		user	find emails sent to Diego last week		EMAILSEARCH	search_email	find <message_type>emails</message_type> sent to <contact_name_to>Diego</contact_name_to> <start_date>last week</start_date>	[]		1
+186107079	0		user	what is the last attachment that Lucia Andrei sent me		EMAILSEARCH	search_email	what is the <order_ref>last</order_ref> <attachment>attachment</attachment> that <contact_name_from>Lucia Andrei</contact_name_from> sent <contact_name_to>me</contact_name_to>	[]		1
+186107080	0		user	character for paragraphs		NOTSURE	non_sense	character for paragraphs	[]		1
+186107081	0		user	emails from last year		EMAILSEARCH	search_email	<message_type>emails</message_type> from <start_date>last year</start_date>	[]		1
+186107082	0		user	find rajesh NPR		EMAILSEARCH	search_email	find <contact_name>rajesh</contact_name> NPR	[]		1
+186107084	0		user	what's my first meeting		CALENDAR	find_calendar_entry	what's my <order_ref>first</order_ref> meeting	[]		1
+186107086	0		user	show me emails from samantha deleted items		EMAILSEARCH	search_email	show me <message_type>emails</message_type> from <contact_name_from>samantha</contact_name_from> <destination_folder>deleted items</destination_folder>	[]		1
+186107087	0		user	show me new emails from nathan MSA		EMAILSEARCH	search_email	show me <message_category>new</message_category> <message_type>emails</message_type> from <contact_name_from>nathan MSA</contact_name_from>	[]		1
+186107088	0		user	who is Jim		PEOPLE	search_people_by_name	who is <contact_name>Jim</contact_name>	[]		1
+186107091	0		user	traits from Jamil		EMAILSEARCH	search_email	<keyword>traits</keyword> from <contact_name_from>Jamil</contact_name_from>	[]		1
+186107092	0		user	what is Jon Hamaker 's contact info		PEOPLE	search_people_attribute	what is <contact_name>Jon Hamaker</contact_name> 's <people_attribute>contact info</people_attribute>	[]		1
+186107135	0		user	this is a very long query to demonstrate that the search box cuts off		NOTSURE	other_domain	this is a very long query to demonstrate that the search box cuts off	[]		1
+186107121	0		user	emails from Suntian about semantic machines		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Suntian</contact_name_from> about <keyword>semantic machines</keyword>	[]		1
+186107161	0		user	show me emails from Rajesh Jha		EMAILSEARCH	search_email	show me <message_type>emails</message_type> from <contact_name_from>Rajesh Jha</contact_name_from>	[]		1
+186107163	0		user	files from Ajoy		EMAILSEARCH	search_email	<attachment_type>files</attachment_type> from <contact_name_from>Ajoy</contact_name_from>	[]		1
+186107164	0		user	emails from Rich Mains		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Rich Mains</contact_name_from>	[]		1
+186107166	0		user	find emails sent to Allison last week		EMAILSEARCH	search_email	find <message_type>emails</message_type> sent to <contact_name_to>Allison</contact_name_to> <start_date>last week</start_date>	[]		1
+186107167	0		user	when is my next meeting with danish		CALENDAR	find_calendar_when	when is my <start_time>next</start_time> meeting with <contact_name>danish</contact_name>	[]		1
+186107168	0		user	emails from Allison from the month of june		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Allison</contact_name_from> from the month of <start_date>june</start_date>	[]		1
+186107171	0		user	that is Vijay 's office		NOTSURE	other_domain	that is Vijay 's office	[]		1
+186107172	0		user	find new emails from Steven with attachments		EMAILSEARCH	search_email	find <message_category>new</message_category> <message_type>emails</message_type> from <contact_name_from>Steven</contact_name_from> with <attachment>attachments</attachment>	[]		1
+186107173	0		user	emails from last friday		EMAILSEARCH	search_email	<message_type>emails</message_type> from <start_date>last friday</start_date>	[]		1
+186107122	0		user	when you guys move over to the maelstrom assured put their edgmont		NOTSURE	non_sense	when you guys move over to the maelstrom assured put their edgmont	[]		1
+186107124	0		user	show me emails where diego san last week in town is only thing has some attachment in something else blah blah blah		EMAILSEARCH	search_email	show me <message_type>emails</message_type> where <contact_name>diego san</contact_name> <start_date>last week</start_date> <keyword>in town is only thing has some</keyword> <attachment>attachment</attachment> <keyword>in something else blah blah blah</keyword>	[]		1
+186107126	0		user	the last file i modified		FILES	file_search	the <order_ref>last</order_ref> file <contact_name>i</contact_name> <file_action>modified</file_action>	[]		1
+186107127	0		user	search emails i received on february first		EMAILSEARCH	search_email	search <message_type>emails</message_type> <contact_name_to>i</contact_name_to> received on <start_date>february first</start_date>	[]		1
+186107130	0		user	emails from Calvin		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Calvin</contact_name_from>	[]		1
+186107131	0		user	theme to light		NOTSURE	non_sense	theme to light	[]		1
+186107157	0		user	HR web		NOTSURE	ambiguous	HR web	[]		5
+186107136	0		user	we get this thing you get their hands		NOTSURE	other_domain	we get this thing you get their hands	[]		1
+186107137	0		user	what is my next meeting		CALENDAR	find_calendar_entry	what is my <start_time>next</start_time> meeting	[]		3
+186107139	0		user	meeting		CALENDAR	find_calendar_entry	meeting	[]		1
+186107144	0		user	files i worked on yesterday		FILES	file_search	files <contact_name>i</contact_name> <file_action>worked</file_action> on <date>yesterday</date>	[]		1
+186107147	0		user	meetings with Talon		CALENDAR	find_calendar_entry	meetings with <contact_name>Talon</contact_name>	[]		2
+186107148	0		user	whatever		NOTSURE	other_domain	whatever	[]		1
+186107149	0		user	Allison O'Mahony		PEOPLE	search_people_by_name	<project_name>Allison O&apos;Mahony</project_name>	[]		1
+186107158	0		user	email from Jim Boyle with powerpoint attachments		EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Jim Boyle</contact_name_from> with <attachment_type>powerpoint</attachment_type> <attachment>attachments</attachment>	[]		2
+186107150	0		user	change theme to light		NOTSURE	other_domain	change theme to light	[]		14
+186107151	0		user	this is a very long query to demonstrate the search box puts a little bit of buffer at the end		NOTSURE	non_sense	this is a very long query to demonstrate the search box puts a little bit of buffer at the end	[]		1
+186107153	0		user	show me emails about bluetooth delays		EMAILSEARCH	search_email	show me <message_type>emails</message_type> about <keyword>bluetooth delays</keyword>	[]		1
+186107155	0		user	email sent to Shankha		EMAILSEARCH	search_email	<message_type>email</message_type> sent to <contact_name_to>Shankha</contact_name_to>	[]		1
+186107189	0		user	find Jain		PEOPLE	search_people_by_name	find <contact_name>Jain</contact_name>	[]		1
+186107176	0		user	find emails from Allison		EMAILSEARCH	search_email	find <message_type>emails</message_type> from <contact_name_from>Allison</contact_name_from>	[]		3
+186107177	0		user	meetings with Ashok		CALENDAR	find_calendar_entry	meetings with <contact_name>Ashok</contact_name>	[]		2
+186107178	0		user	emails from showing		EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>showing</contact_name_from>	[]		1
+186107180	0		user	mails to Luke Knight		EMAILSEARCH	search_email	<message_type>mails</message_type> to <contact_name_to>Luke Knight</contact_name_to>	[]		1
+186107186	0		user	send email to Hanjiang		NOTSURE	other_domain	send email to Hanjiang	[]		1
+186107187	0		user	Jon Hamaker's alias		PEOPLE	search_people_attribute	<contact_name>Jon Hamaker</contact_name>'s <people_attribute>alias</people_attribute>	[]		1
+186107188	0		user	find emails from someone		EMAILSEARCH	search_email	find <message_type>emails</message_type> from <contact_name_from>someone</contact_name_from>	[]		1

@@ -1,0 +1,594 @@
+ConversationId	MessageId	MessageTimestamp	MessageFrom	MessageText	JudgedDomain	JudgedIntent	JudgedConstraints	MetaData	ConversationContext	Frequency
+180297508	0		user	From Brian about Christmas plans	EMAILSEARCH	search_email	From <contact_name_from>Brian</contact_name_from> about <keyword>Christmas plans</keyword>	[]		1
+179898280	0		user	last week's messages with attachments	EMAILSEARCH	search_email	<start_date>last week</start_date>'s messages with <attachment>attachments</attachment>	[]		1
+179898272	0		user	Kunal about Multi-turn annotation 	EMAILSEARCH	search_email	<contact_name>Kunal</contact_name> about <keyword>Multi-turn annotation</keyword> 	[]		1
+179762464	0		user	from siri	EMAILSEARCH	search_email	from <contact_name_from>siri</contact_name_from>	[]		1
+179762259	0		user	performance report 2 weeks ago	EMAILSEARCH	search_email	<keyword>performance report</keyword> <start_date>2 weeks ago</start_date>	[]		1
+179762632	0		user	gt in queue from Jyotsna	EMAILSEARCH	search_email	<keyword>gt in queue</keyword> from <contact_name_from>Jyotsna</contact_name_from>	[]		1
+179762231	0		user	email from september 1st accuracy report	EMAILSEARCH	search_email	<message_type>email</message_type> from <start_date>september 1st</start_date> <keyword>accuracy report</keyword>	[]		1
+180297616	0		user	tuesday from tina	EMAILSEARCH	search_email	<start_date>tuesday</start_date> from <contact_name_from>tina</contact_name_from>	[]		1
+180297506	0		user	thanksgiving get together on Thursday	EMAILSEARCH	search_email	<keyword>thanksgiving get together</keyword> on <start_date>Thursday</start_date>	[]		1
+179898154	0		user	email cced yeyi	EMAILSEARCH	search_email	<message_type>email</message_type> cced <contact_name_cc>yeyi</contact_name_cc>	[]		1
+179762401	0		user	Missed Conversation yesterday abily	EMAILSEARCH	search_email	<keyword>Missed Conversation</keyword> <start_date>yesterday</start_date> <contact_name>abily</contact_name>	[]		1
+180297598	0		user	emails about work this week from Harry	EMAILSEARCH	search_email	<message_type>emails</message_type> about <keyword>work</keyword> <start_date>this week</start_date> from <contact_name_from>Harry</contact_name_from>	[]		1
+179898035	0		user	With attachment from Kunal	EMAILSEARCH	search_email	With <attachment>attachment</attachment> from <contact_name_from>Kunal</contact_name_from>	[]		1
+179762160	0		user	email from siri with attachments	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>siri</contact_name_from> with <attachment>attachments</attachment>	[]		1
+179762422	0		user	kumari jyotsna email about  Search Measurement Set	EMAILSEARCH	search_email	<contact_name>kumari jyotsna</contact_name> <message_type>email</message_type> about  <keyword>Search Measurement Set</keyword>	[]		1
+180297628	0		user	attachments from Jet	EMAILSEARCH	search_email	<attachment>attachments</attachment> from <contact_name_from>Jet</contact_name_from>	[]		1
+179898041	0		user	Kartik's email with attachment	EMAILSEARCH	search_email	<contact_name>Kartik</contact_name>'s email with <attachment>attachment</attachment>	[]		1
+179762303	0		user	emails about mb assignment on monday	EMAILSEARCH	search_email	<message_type>emails</message_type> about <keyword>mb assignment</keyword> on <contact_name_from>monday</contact_name_from>	[]		1
+179762538	0		user	Pending GT'S on 25-09-2019	EMAILSEARCH	search_email	<keyword>Pending GT'S</keyword> on <start_date>25-09-2019</start_date>	[]		1
+179762135	0		user	Pending GT's on Wednesday	EMAILSEARCH	search_email	<keyword>Pending GT's</keyword> on <start_date>Wednesday</start_date>	[]		1
+179762285	0		user	DC nominations required on Wednesday	EMAILSEARCH	search_email	<keyword>DC nominations required</keyword> on <start_date>Wednesday</start_date>	[]		1
+179898178	0		user	replies to the meeting today at 2pm 	EMAILSEARCH	search_email	<keyword>replies to the meeting</keyword> <start_date>today</start_date> at <start_time>2pm</start_time> 	[]		1
+179898145	0		user	kunal sharma data delivery	NOTSURE	other_domain	<contact_name>kunal sharma</contact_name> <keyword>data delivery</keyword>	[]		1
+179762498	0		user	model building scrum 2 months back	EMAILSEARCH	search_email	<keyword>model building scrum</keyword> <start_date>2 months back</start_date>	[]		1
+179762355	0		user	emails in June about hackathon 	EMAILSEARCH	search_email	<message_type>emails</message_type> in <start_date>June</start_date> about <keyword>hackathon</keyword> 	[]		1
+179762423	0		user	abily mails  from sept1 to sept 29	EMAILSEARCH	search_email	<contact_name>abily</contact_name> <message_type>mails</message_type>  from <start_date>sept1</start_date> to <end_date>sept 29</end_date>	[]		1
+179762554	0		user	from anu.Thomas@microsoft.com last week	EMAILSEARCH	search_email	from <contact_name_from>anu.Thomas@microsoft.com</contact_name_from> <start_date>last week</start_date>	[]		1
+179762204	0		user	mails from dapriy	EMAILSEARCH	search_email	<message_type>mails</message_type> from <contact_name_from>dapriy</contact_name_from>	[]		1
+180297502	0		user	Mary between June and July	EMAILSEARCH	search_email	<contact_name>Mary</contact_name> between <start_date>June</start_date> and <end_date>July</end_date>	[]		1
+179898269	0		user	Tao's deep dive meeting yesterday	EMAILSEARCH	search_email	<contact_name>Tao</contact_name>'s <keyword>deep dive meeting</keyword> <start_date>yesterday</start_date>	[]		1
+180297573	0		user	email from october 18th on sofa purchase	EMAILSEARCH	search_email	<message_type>email</message_type> from <start_date>october 18th</start_date> on <keyword>sofa purchase</keyword>	[]		1
+179898103	0		user	shobit's torus onboardig doc	EMAILSEARCH	search_email	<contact_name>shobit</contact_name>'s <keyword>torus onboardig doc</keyword>	[]		1
+179898064	0		user	about compliance sometime this week	EMAILSEARCH	search_email	about <keyword>compliance</keyword> sometime <start_date>this week</start_date>	[]		1
+179762131	0		user	Hackathon on July 25	EMAILSEARCH	search_email	<keyword>Hackathon</keyword> on <start_date>July 25</start_date>	[]		1
+179762481	0		user	emails from suresh august 1st to august 4th	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>suresh</contact_name_from> <start_date>august 1st</start_date> to <end_date>august 4th</end_date>	[]		1
+179762624	0		user	find mails from hydchat@microsoft.com	EMAILSEARCH	search_email	find <message_type>mails</message_type> from <contact_name_from>hydchat@microsoft.com</contact_name_from>	[]		1
+179762437	0		user	updated meeting invites	NOTSURE	other_domain	<keyword>updated meeting invites</keyword>	[]		1
+179762358	0		user	Minutes of Meeting 	NOTSURE	other_domain	<keyword>Minutes of Meeting</keyword> 	[]		1
+179898057	0		user	From Kunal yesterday	EMAILSEARCH	search_email	From <contact_name_from>Kunal</contact_name_from> <start_date>yesterday</start_date>	[]		1
+179762297	0		user	emails having attachments from salva	EMAILSEARCH	search_email	<message_type>emails</message_type> having <attachment>attachments</attachment> from <contact_name_from>salva</contact_name_from>	[]		1
+179762635	0		user	email from Pallavi	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Pallavi</contact_name_from>	[]		1
+179762656	0		user	from Adity	EMAILSEARCH	search_email	from <contact_name_from>Adity</contact_name_from>	[]		1
+180297643	0		user	emails from Mom	EMAILSEARCH	search_email	<message_type>emails</message_type> from <relationship_name_from>Mom</relationship_name_from>	[]		1
+180297520	0		user	Find the email from Luke with the subject finished project.	EMAILSEARCH	search_email	Find the <message_type>email</message_type> from <contact_name_from>Luke</contact_name_from> with the subject <email_subject>finished project</email_subject>.	[]		1
+179762402	0		user	all mails from tashiva 	EMAILSEARCH	search_email	all <message_type>mails</message_type> from <contact_name_from>tashiva</contact_name_from> 	[]		1
+180297452	0		user	email to John subject New Project	EMAILSEARCH	search_email	<message_type>email</message_type> to <contact_name_to>John</contact_name_to> subject <email_subject>New Project</email_subject>	[]		1
+180297426	0		user	about movie night november from liz	EMAILSEARCH	search_email	about <keyword>movie night</keyword> <start_date>november</start_date> from <contact_name_from>liz</contact_name_from>	[]		1
+180297510	0		user	emails to Harry with the subject work this week	EMAILSEARCH	search_email	<message_type>emails</message_type> to <contact_name_to>Harry</contact_name_to> with the subject <email_subject>work this week</email_subject>	[]		1
+179762407	0		user	from 6th to 9th April mails Jyotsna	EMAILSEARCH	search_email	from <start_date>6th</start_date> to <end_date>9th April</end_date> <message_type>mails</message_type> <contact_name_from>Jyotsna</contact_name_from>	[]		1
+179898126	0		user	from sujith no more than a week ago	EMAILSEARCH	search_email	from <contact_name_from>sujith</contact_name_from> <start_date>no more than a week ago</start_date>	[]		1
+180297475	0		user	party email from last week	EMAILSEARCH	search_email	<keyword>party</keyword> <message_type>email</message_type> from <start_date>last week</start_date>	[]		1
+180297537	0		user	about vacation trip from dj	EMAILSEARCH	search_email	about <keyword>vacation trip</keyword> from <contact_name_from>dj</contact_name_from>	[]		1
+180297439	0		user	Email from Tudor about bad actors	EMAILSEARCH	search_email	<message_type>Email</message_type> from <contact_name_from>Tudor</contact_name_from> about <keyword>bad actors</keyword>	[]		1
+180297424	0		user	find email about the party from sam in june	EMAILSEARCH	search_email	find <message_type>email</message_type> about the <keyword>party</keyword> from <contact_name_from>sam</contact_name_from> in <start_date>june</start_date>	[]		1
+180297640	0		user	to Susan Smith subject appointment next week	EMAILSEARCH	search_email	to <contact_name_to>Susan Smith</contact_name_to> subject <email_subject>appointment next week</email_subject>	[]		1
+179762572	0		user	cab sharing in hydchat	NOTSURE	other_domain	<keyword>cab sharing in hydchat</keyword>	[]		1
+180297666	0		user	Mary between May 31st and June 2nd	EMAILSEARCH	search_email	<contact_name>Mary</contact_name> between <start_date>May 31st</start_date> and <end_date>June 2nd</end_date>	[]		1
+179762313	0		user	from Mark Christmas break	EMAILSEARCH	search_email	from <contact_name_from>Mark</contact_name_from> <keyword>Christmas break</keyword>	[]		1
+179762417	0		user	information on caregiver leaves by ASKHR support	EMAILSEARCH	search_email	<keyword>information on caregiver leaves</keyword> by <contact_name_from>ASKHR support</contact_name_from>	[]		1
+179762273	0		user	gt mails from abily with excel sheet	EMAILSEARCH	search_email	<keyword>gt</keyword> <message_type>mails</message_type> from <contact_name_from>abily</contact_name_from> with <attachment_type>excel sheet</attachment_type>	[]		1
+180297622	0		user	Monday email about the delivery for jackie.	EMAILSEARCH	search_email	<start_date>Monday</start_date> <message_type>email</message_type> about the <keyword>delivery</keyword> for <contact_name>jackie</contact_name>.	[]		1
+179898262	0		user	October 10th Haoda	EMAILSEARCH	search_email	<start_date>October 10th</start_date> <contact_name>Haoda</contact_name>	[]		1
+179762521	0		user	abily GT accuracy report from last week	EMAILSEARCH	search_email	<contact_name>abily</contact_name> <keyword>GT accuracy report</keyword> from <start_date>last week</start_date>	[]		1
+180297447	0		user	to Amazon with the subject your order has been shipped	EMAILSEARCH	search_email	to <contact_name_to>Amazon</contact_name_to> with the subject <email_subject>your order has been shipped</email_subject>	[]		1
+180297648	0		user	emails from Larry from July through August	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Larry</contact_name_from> from <start_date>July</start_date> through <end_date>August</end_date>	[]		1
+179898252	0		user	CJ about scope script	EMAILSEARCH	search_email	<contact_name>CJ</contact_name> about <keyword>scope script</keyword>	[]		1
+179762189	0		user	Kim about Mandatory Training from Sept 29	EMAILSEARCH	search_email	<contact_name>Kim</contact_name> about <keyword>Mandatory Training</keyword> from <start_date>Sept 29</start_date>	[]		1
+179762586	0		user	kujyotsn query seach process	NOTSURE	other_domain	<contact_name>kujyotsn</contact_name> <keyword>query seach process</keyword>	[]		1
+180297526	0		user	can i see emails November the 1st Marshia	EMAILSEARCH	search_email	can i see <message_type>emails</message_type> <start_date>November the 1st</start_date> <contact_name>Marshia</contact_name>	[]		1
+179762337	0		user	mail from joseph with subject diversity	EMAILSEARCH	search_email	<message_type>mail</message_type> from <contact_name_from>joseph</contact_name_from> with subject <email_subject>diversity</email_subject>	[]		1
+179762226	0		user	Diana about team meetings from first week of July	EMAILSEARCH	search_email	<contact_name>Diana</contact_name> about <keyword>team meetings</keyword> from <start_date>first week of July</start_date>	[]		1
+179762075	0		user	conversation with abily last week	EMAILSEARCH	search_email	<message_type>conversation</message_type> with <contact_name>abily</contact_name> <start_date>last week</start_date>	[]		1
+179762037	0		user	mb assignment mails from gayatri with pdf attachments	EMAILSEARCH	search_email	<keyword>mb assignment</keyword> <message_type>mails</message_type> from <contact_name_from>gayatri</contact_name_from> with <attachment_type>pdf</attachment_type> <attachment>attachments</attachment>	[]		1
+179898033	0		user	Shuyin emailsearch	NOTSURE	other_domain	<contact_name>Shuyin</contact_name> <keyword>emailsearch</keyword>	[]		1
+180297505	0		user	from John	EMAILSEARCH	search_email	from <contact_name_from>John</contact_name_from>	[]		1
+180297556	0		user	Lila sent email sometime between 1st and 5th of June	EMAILSEARCH	search_email	<contact_name>Lila</contact_name> sent <message_type>email</message_type> sometime between <start_date>1st</start_date> and <end_date>5th of June</end_date>	[]		1
+179762571	0		user	mails from paa with subject compliant judges	EMAILSEARCH	search_email	<message_type>mails</message_type> from <contact_name_from>paa</contact_name_from> with subject <email_subject>compliant judges</email_subject>	[]		1
+180297425	0		user	Meeting Alice for coffee	EMAILSEARCH	search_email	<keyword>Meeting</keyword> <contact_name>Alice</contact_name> for <keyword>coffee</keyword>	[]		1
+180297661	0		user	Provide the email from scott over the outline.	EMAILSEARCH	search_email	Provide the <message_type>email</message_type> from <contact_name_from>scott</contact_name_from> over the <keyword>outline</keyword>.	[]		1
+179762350	0		user	gakuncha previous week	EMAILSEARCH	search_email	<contact_name>gakuncha</contact_name> <start_date>previous week</start_date>	[]		1
+179898176	0		user	Eran about bugs this Monday	EMAILSEARCH	search_email	<contact_name>Eran</contact_name> about <keyword>bugs</keyword> <start_date>this Monday</start_date>	[]		1
+179762570	0		user	kiran on thursday	EMAILSEARCH	search_email	<contact_name>kiran</contact_name> on <start_date>thursday</start_date>	[]		1
+179762605	0		user	Salva fifth friday fun	NOTSURE	other_domain	<contact_name>Salva</contact_name> <keyword>fifth friday fun</keyword>	[]		1
+179762610	0		user	from last Saturday to next Sunday from Shweta	EMAILSEARCH	search_email	from <start_date>last Saturday</start_date> to <end_date>next Sunday</end_date> from <contact_name_from>Shweta</contact_name_from>	[]		1
+180297595	0		user	email from work about deadline	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>work</contact_name_from> about <keyword>deadline</keyword>	[]		1
+179762515	0		user	with subject schedule update	EMAILSEARCH	search_email	with subject <email_subject>schedule update</email_subject>	[]		1
+179898242	0		user	pull up all my emails from benjamin	EMAILSEARCH	search_email	pull up all my <message_type>emails</message_type> from <contact_name_from>benjamin</contact_name_from>	[]		1
+179898039	0		user	from ben to me only about data pipeline	EMAILSEARCH	search_email	from <contact_name_from>ben</contact_name_from> to <relationship_name_to>me</relationship_name_to> only about <keyword>data pipeline</keyword>	[]		1
+179898245	0		user	Grace's email about MSAI giving events	EMAILSEARCH	search_email	<contact_name>Grace</contact_name>'s <message_type>email</message_type> about <keyword>MSAI giving events</keyword>	[]		1
+179762332	0		user	give campaign mail 2 weeks back	EMAILSEARCH	search_email	<keyword>give campaign</keyword> <message_type>mail</message_type> <start_date>2 weeks back</start_date>	[]		1
+179898097	0		user	from kunal data delivery	EMAILSEARCH	search_email	from <contact_name_from>kunal</contact_name_from> <keyword>data delivery</keyword>	[]		1
+179762105	0		user	Michael about judge allacation	EMAILSEARCH	search_email	<contact_name>Michael</contact_name> about <keyword>judge allacation</keyword>	[]		1
+179762216	0		user	Data Science Event next Thursday	EMAILSEARCH	search_email	<keyword>Data Science Event</keyword> <start_date>next Thursday</start_date>	[]		1
+179762585	0		user	Rental mails from HydChat	EMAILSEARCH	search_email	<keyword>Rental</keyword> <message_type>mails</message_type> from <contact_name_from>HydChat</contact_name_from>	[]		1
+179762466	0		user	from Azure Devops Notifications	EMAILSEARCH	search_email	from <contact_name_from>Azure Devops Notifications</contact_name_from>	[]		1
+180297565	0		user	email from sam with subject concert ticket	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>sam</contact_name_from> with subject <email_subject>concert ticket</email_subject>	[]		1
+179762386	0		user	presentations shared with me from pallavi	EMAILSEARCH	search_email	<attachment_type>presentations</attachment_type> shared with <contact_name_to>me</contact_name_to> from <contact_name_from>pallavi</contact_name_from>	[]		1
+179898111	0		user	from yeyi from last 8 days	EMAILSEARCH	search_email	from <contact_name_from>yeyi</contact_name_from> from <start_date>last 8 days</start_date>	[]		1
+180297466	0		user	Concerts tickets email from lorna.	EMAILSEARCH	search_email	<keyword>Concerts tickets</keyword> <message_type>email</message_type> from <contact_name_from>lorna</contact_name_from>.	[]		1
+179898235	0		user	form john with PR in title	EMAILSEARCH	search_email	form <contact_name_from>john</contact_name_from> with <email_subject>PR</email_subject> in title	[]		1
+180297444	0		user	from Harry with work attachments	EMAILSEARCH	search_email	from <contact_name_from>Harry</contact_name_from> with <keyword>work</keyword> <attachment>attachments</attachment>	[]		1
+179898091	0		user	Minwoo last month	EMAILSEARCH	search_email	<contact_name>Minwoo</contact_name> <start_date>last month</start_date>	[]		1
+179762657	0		user	paa 3rd july	EMAILSEARCH	search_email	<contact_name>paa</contact_name> <start_date>3rd july</start_date>	[]		1
+179898055	0		user	from Seb	EMAILSEARCH	search_email	from <contact_name_from>Seb</contact_name_from>	[]		1
+179762576	0		user	pallavi  10th aug	EMAILSEARCH	search_email	<contact_name>pallavi</contact_name>  <start_date>10th aug</start_date>	[]		1
+179898108	0		user	Email from Kunal this Monday 	EMAILSEARCH	search_email	<message_type>Email</message_type> from <contact_name_from>Kunal</contact_name_from> <start_date>this Monday</start_date> 	[]		1
+180297673	0		user	dave last month	EMAILSEARCH	search_email	<contact_name>dave</contact_name> <start_date>last month</start_date>	[]		1
+179898026	0		user	Venkat from last Thursday to this Monday	EMAILSEARCH	search_email	<contact_name>Venkat</contact_name> from <start_date>last Thursday</start_date> to <end_date>this Monday</end_date>	[]		1
+180297621	0		user	John Little has a new car	NOTSURE	other_domain	<keyword>John Little has a new car</keyword>	[]		1
+179762199	0		user	STCI Giving	NOTSURE	other_domain	<keyword>STCI Giving</keyword>	[]		1
+179762622	0		user	To STCI Data-analyst	EMAILSEARCH	search_email	To <contact_name_to>STCI Data-analyst</contact_name_to>	[]		1
+180297660	0		user	Email from Jon August 1 - 5	EMAILSEARCH	search_email	<message_type>Email</message_type> from <contact_name_from>Jon</contact_name_from> <start_date>August 1</start_date> - <end_date>5</end_date>	[]		1
+179762326	0		user	excel report from priyanka	EMAILSEARCH	search_email	<attachment_type>excel</attachment_type> <keyword>report</keyword> from <contact_name_from>priyanka</contact_name_from>	[]		1
+180297501	0		user	attachment from bill	EMAILSEARCH	search_email	<attachment>attachment</attachment> from <contact_name_from>bill</contact_name_from>	[]		1
+180297570	0		user	eric between march and april	EMAILSEARCH	search_email	<contact_name>eric</contact_name> between <start_date>march</start_date> and <end_date>april</end_date>	[]		1
+179762032	0		user	mails from kalyan with attachment	EMAILSEARCH	search_email	<message_type>mails</message_type> from <contact_name_from>kalyan</contact_name_from> with <attachment>attachment</attachment>	[]		1
+179762499	0		user	gt mail from sahith january 2018 to october 2019	EMAILSEARCH	search_email	<keyword>gt</keyword> <message_type>mail</message_type> from <contact_name_from>sahith</contact_name_from> <start_date>january 2018</start_date> to <end_date>october 2019</end_date>	[]		1
+179898199	0		user	Vanket's email last Thursday	EMAILSEARCH	search_email	<contact_name>Vanket</contact_name>'s <message_type>email</message_type> <start_date>last Thursday</start_date>	[]		1
+179762093	0		user	from pallavi  last week regarding om errors	EMAILSEARCH	search_email	from <contact_name_from>pallavi</contact_name_from>  <start_date>last week</start_date> regarding <keyword>om errors</keyword>	[]		1
+180297463	0		user	search gmail about retirement party for john	EMAILSEARCH	search_email	search <emailsearch_other>gmail</emailsearch_other> about <keyword>retirement party for john</keyword>	[]		1
+179762630	0		user	09/19 regarding resourcing mail	EMAILSEARCH	search_email	<start_date>09/19</start_date> regarding <keyword>resourcing</keyword> <message_type>mail</message_type>	[]		1
+180297675	0		user	emails from mary about the party	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>mary</contact_name_from> about the <keyword>party</keyword>	[]		1
+179762314	0		user	diana About stci give last week	EMAILSEARCH	search_email	<contact_name_from>diana</contact_name_from> About <keyword>stci give</keyword> <start_date>last week</start_date>	[]		1
+179762445	0		user	latest emails from priyanka	EMAILSEARCH	search_email	<order_ref>latest</order_ref> <message_type>emails</message_type> from <contact_name_from>priyanka</contact_name_from>	[]		1
+179898225	0		user	Preliminary results from October to January	EMAILSEARCH	search_email	<keyword>Preliminary results</keyword> from <start_date>October</start_date> to <end_date>January</end_date>	[]		1
+179762042	0		user	unread mails from keerthi	EMAILSEARCH	search_email	<message_category>unread</message_category> <message_type>mails</message_type> from <contact_name_from>keerthi</contact_name_from>	[]		1
+179762272	0		user	email search excel shared by Jyotsna	EMAILSEARCH	search_email	<message_type>email</message_type> <keyword>search</keyword> <attachment_type>excel</attachment_type> shared by <contact_name_from>Jyotsna</contact_name_from>	[]		1
+180297450	0		user	email from Jim titled clothing	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Jim</contact_name_from> titled <email_subject>clothing</email_subject>	[]		1
+179762482	0		user	101 chat conversation	EMAILSEARCH	search_email	<keyword>101 chat</keyword> <message_type>conversation</message_type>	[]		1
+179898109	0		user	yesterday laser tag ye-yi	EMAILSEARCH	search_email	<start_date>yesterday</start_date> <keyword>laser tag</keyword> <contact_name>ye-yi</contact_name>	[]		1
+179762398	0		user	OM errors shared by Pallavi	EMAILSEARCH	search_email	<keyword>OM errors</keyword> shared by <contact_name_from>Pallavi</contact_name_from>	[]		1
+179762626	0		user	DC guidelines link shared by Vrinda	EMAILSEARCH	search_email	<keyword>DC guidelines link</keyword> shared by <contact_name_from>Vrinda</contact_name_from>	[]		1
+179762348	0		user	jeevan email	EMAILSEARCH	search_email	<contact_name>jeevan</contact_name> <message_type>email</message_type>	[]		1
+179898116	0		user	manasi data pipeline	NOTSURE	other_domain	<contact_name>manasi</contact_name> <keyword>data pipeline</keyword>	[]		1
+179762192	0		user	Potluck on last year	EMAILSEARCH	search_email	<keyword>Potluck</keyword> on <start_date>last year</start_date>	[]		1
+179762066	0		user	Diana last week	EMAILSEARCH	search_email	<contact_name>Diana</contact_name> <start_date>last week</start_date>	[]		1
+179762047	0		user	from september 22, 2018	EMAILSEARCH	search_email	from <start_date>september 22, 2018</start_date>	[]		1
+179762393	0		user	email from Nov 1st work allocation	EMAILSEARCH	search_email	<message_type>email</message_type> from <start_date>Nov 1st</start_date> <keyword>work allocation</keyword>	[]		1
+179762539	0		user	Spanish flight mail on tue from anishaa	EMAILSEARCH	search_email	<keyword>Spanish flight</keyword> <message_type>mail</message_type> on <start_date>tue</start_date> from <contact_name_from>anishaa</contact_name_from>	[]		1
+179762197	0		user	icici credit card from ICICI bank	EMAILSEARCH	search_email	<keyword>icici credit card</keyword> from <contact_name_from>ICICI bank</contact_name_from>	[]		1
+179762053	0		user	weekly update of last to last week	EMAILSEARCH	search_email	<keyword>weekly update</keyword> of <start_date>last to last week</start_date>	[]		1
+180297567	0		user	email with title congregation party from Robert	EMAILSEARCH	search_email	<message_type>email</message_type> with title <keyword>congregation party</keyword> from <contact_name_from>Robert</contact_name_from>	[]		1
+179762520	0		user	alignment in june	EMAILSEARCH	search_email	<keyword>alignment</keyword> in <start_date>june</start_date>	[]		1
+180297428	0		user	emails from Jet	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Jet</contact_name_from>	[]		1
+179898253	0		user	An's email about moving to Model B2	EMAILSEARCH	search_email	<contact_name>An</contact_name>'s <message_type>email</message_type> about <keyword>moving to Model B2</keyword>	[]		1
+180297470	0		user	Davis and Mary from Kae with attachment	EMAILSEARCH	search_email	<keyword>Davis and Mary</keyword> from <contact_name_from>Kae</contact_name_from> with <attachment>attachment</attachment>	[]		1
+179898093	0		user	last Thursday from sujith	EMAILSEARCH	search_email	<start_time>last Thursday</start_time> from <contact_name_from>sujith</contact_name_from>	[]		1
+179762379	0		user	high importance mail from abjose	EMAILSEARCH	search_email	<message_category>high importance</message_category> <message_type>mail</message_type> from <contact_name_from>abjose</contact_name_from>	[]		1
+179762169	0		user	about saw machine set up from Pallavi	EMAILSEARCH	search_email	about <keyword>saw machine set up</keyword> from <contact_name_from>Pallavi</contact_name_from>	[]		1
+179898090	0		user	show me unread emails from last night	EMAILSEARCH	search_email	show me <message_category>unread</message_category> <message_type>emails</message_type> from <start_time>last night</start_time>	[]		1
+180297652	0		user	boarding the dog last week	EMAILSEARCH	search_email	<keyword>boarding the dog</keyword> <start_date>last week</start_date>	[]		1
+179762488	0		user	from paa between august and oct	EMAILSEARCH	search_email	from <contact_name_from>paa</contact_name_from> between <start_date>august</start_date> and <end_date>oct</end_date>	[]		1
+179898177	0		user	John ml class	NOTSURE	other_domain	<contact_name>John</contact_name> <keyword>ml class</keyword>	[]		1
+180297555	0		user	from dee	EMAILSEARCH	search_email	from <contact_name_from>dee</contact_name_from>	[]		1
+179898062	0		user	show me the emails I sent to tao and zhiguo about offline measurement	EMAILSEARCH	search_email	show me the <message_type>emails</message_type> I sent to <contact_name_to>tao</contact_name_to> and <contact_name_to>zhiguo</contact_name_to> about <keyword>offline measurement</keyword>	[]		1
+180297591	0		user	Lou Brown last Tuesday	EMAILSEARCH	search_email	<contact_name>Lou Brown</contact_name> <start_date>last Tuesday</start_date>	[]		1
+180297651	0		user	email from sam about bbq last friday	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>sam</contact_name_from> about <keyword>bbq</keyword> <start_date>last friday</start_date>	[]		1
+179898221	0		user	zhiy emails yesterday	EMAILSEARCH	search_email	<contact_name>zhiy</contact_name> <message_type>emails</message_type> <start_date>yesterday</start_date>	[]		1
+179762301	0		user	Hackathon Sheela	NOTSURE	other_domain	<keyword>Hackathon</keyword> <contact_name>Sheela</contact_name>	[]		1
+180297590	0		user	Pattie emails sometime in May from 1st to 5th	EMAILSEARCH	search_email	<contact_name>Pattie</contact_name> <message_type>emails</message_type> sometime in <start_date>May</start_date> from <start_date>1st</start_date> to <end_date>5th</end_date>	[]		1
+179762173	0		user	abily  from may to june	EMAILSEARCH	search_email	<contact_name>abily</contact_name>  from <start_date>may</start_date> to <end_date>june</end_date>	[]		1
+179762076	0		user	sahith  15th october 2019	EMAILSEARCH	search_email	<contact_name>sahith</contact_name>  <start_date>15th october 2019</start_date>	[]		1
+179762567	0		user	received from Abily	EMAILSEARCH	search_email	received from <contact_name_from>Abily</contact_name_from>	[]		1
+179898059	0		user	Kunal last week biweekly update	EMAILSEARCH	search_email	<contact_name>Kunal</contact_name> <start_date>last week</start_date> <keyword>biweekly update</keyword>	[]		1
+180297608	0		user	emails from bob between friday and sunday	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>bob</contact_name_from> between <start_date>friday</start_date> and <end_date>sunday</end_date>	[]		1
+179762077	0		user	email about Diana's connect	EMAILSEARCH	search_email	<message_type>email</message_type> about <keyword>Diana's connect</keyword>	[]		1
+179762236	0		user	Ancy's email from data creation	EMAILSEARCH	search_email	<contact_name>Ancy</contact_name>'s <message_type>email</message_type> from <keyword>data creation</keyword>	[]		1
+179762181	0		user	from diana between monday and thursday	EMAILSEARCH	search_email	from <contact_name_from>diana</contact_name_from> between <start_date>monday</start_date> and <end_date>thursday</end_date>	[]		1
+180297635	0		user	Email from Susan	EMAILSEARCH	search_email	<message_type>Email</message_type> from <contact_name_from>Susan</contact_name_from>	[]		1
+179762594	0		user	Sundar all hands meet	NOTSURE	other_domain	<contact_name>Sundar</contact_name> <keyword>all hands meet</keyword>	[]		1
+179898141	0		user	from xin with attached excel table in september	EMAILSEARCH	search_email	from <contact_name_from>xin</contact_name_from> with attached <attachment_type>excel table</attachment_type> in <start_date>september</start_date>	[]		1
+179762315	0		user	with subject Email search data collection	EMAILSEARCH	search_email	with subject <email_subject>Email search data collection</email_subject>	[]		1
+179762548	0		user	roopa mails  between 15th aug 2019 to 20th september2019	EMAILSEARCH	search_email	<contact_name>roopa</contact_name> <message_type>mails</message_type>  between <start_date>15th aug 2019</start_date> to <end_date>20th september2019</end_date>	[]		1
+180297507	0		user	about birthday from Pat	EMAILSEARCH	search_email	about <keyword>birthday</keyword> from <contact_name_from>Pat</contact_name_from>	[]		1
+180297525	0		user	email from Raychel about deer hunting	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Raychel</contact_name_from> about <keyword>deer hunting</keyword>	[]		1
+179762310	0		user	training with high importance from my manager	EMAILSEARCH	search_email	<keyword>training</keyword> with <message_category>high importance</message_category> from <relationship_name_from>my manager</relationship_name_from>	[]		1
+179898181	0		user	board games from my team members	EMAILSEARCH	search_email	<keyword>board games</keyword> from <relationship_name_from>my team members</relationship_name_from>	[]		1
+180297503	0		user	emails from dee about storage rental	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>dee</contact_name_from> about <keyword>storage rental</keyword>	[]		1
+179898191	0		user	STCI update on 10/11	EMAILSEARCH	search_email	<keyword>STCI update</keyword> on <start_date>10/11</start_date>	[]		1
+179898166	0		user	image attachment from Han Zhang	EMAILSEARCH	search_email	<attachment_type>image</attachment_type> <attachment>attachment</attachment> from <contact_name_from>Han Zhang</contact_name_from>	[]		1
+179762607	0		user	siri between sep and oct	EMAILSEARCH	search_email	<contact_name>siri</contact_name> between <start_date>sep</start_date> and <end_date>oct</end_date>	[]		1
+180297546	0		user	sam between january and february	EMAILSEARCH	search_email	<contact_name>sam</contact_name> between <start_date>january</start_date> and <end_date>february</end_date>	[]		1
+179898207	0		user	emails from karim last week	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>karim</contact_name_from> <start_date>last week</start_date>	[]		1
+179898082	0		user	michael's welcome letter	EMAILSEARCH	search_email	<contact_name>michael</contact_name>'s <keyword>welcome letter</keyword>	[]		1
+179762262	0		user	from tao mails with attachment	EMAILSEARCH	search_email	from <contact_name_from>tao</contact_name_from> <message_type>mails</message_type> with <attachment>attachment</attachment>	[]		1
+179762049	0		user	tax declaration to me	EMAILSEARCH	search_email	<keyword>tax declaration</keyword> to <relationship_name_to>me</relationship_name_to>	[]		1
+179762620	0		user	pradeep welcome to stci	NOTSURE	other_domain	<contact_name>pradeep</contact_name> <keyword>welcome to stci</keyword>	[]		1
+179762237	0		user	from priyanka with subject guidelines	EMAILSEARCH	search_email	from <contact_name_from>priyanka</contact_name_from> with subject <email_subject>guidelines</email_subject>	[]		1
+180297569	0		user	Josh email subject is wedding party	EMAILSEARCH	search_email	<contact_name>Josh</contact_name> <message_type>email</message_type> subject is <email_subject>wedding party</email_subject>	[]		1
+179762442	0		user	mail from JoJo with subject inclusivity	EMAILSEARCH	search_email	<message_type>mail</message_type> from <contact_name_from>JoJo</contact_name_from> with subject <email_subject>inclusivity</email_subject>	[]		1
+179762193	0		user	email from Neha titled on leave from next week	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Neha</contact_name_from> titled <email_subject>on leave from next week</email_subject>	[]		1
+179762614	0		user	email from Sapna with multiple attachments	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Sapna</contact_name_from> with <keyword>multiple</keyword> <attachment>attachments</attachment>	[]		1
+179898032	0		user	From Shuyin containing attachment	EMAILSEARCH	search_email	From <contact_name_from>Shuyin</contact_name_from> containing <attachment>attachment</attachment>	[]		1
+180297483	0		user	emails that are from eric	EMAILSEARCH	search_email	<message_type>emails</message_type> that are from <contact_name_from>eric</contact_name_from>	[]		1
+179762235	0		user	attachment from Sudha	EMAILSEARCH	search_email	<attachment>attachment</attachment> from <contact_name_from>Sudha</contact_name_from>	[]		1
+179762359	0		user	emails on20th sept  STCI Give	EMAILSEARCH	search_email	<message_type>emails</message_type> on<start_date>20th sept</start_date>  <keyword>STCI Give</keyword>	[]		1
+179898113	0		user	Kunal in September	EMAILSEARCH	search_email	<contact_name>Kunal</contact_name> in <start_date>September</start_date>	[]		1
+180297597	0		user	Mary about Matthew	EMAILSEARCH	search_email	<contact_name>Mary</contact_name> about <keyword>Matthew</keyword>	[]		1
+179762364	0		user	from vishal about certificates	EMAILSEARCH	search_email	from <contact_name_from>vishal</contact_name_from> about <keyword>certificates</keyword>	[]		1
+179762061	0		user	high importance mails sent by my manager	EMAILSEARCH	search_email	<message_category>high importance</message_category> <message_type>mails</message_type> sent by <relationship_name_from>my manager</relationship_name_from>	[]		1
+179762152	0		user	Rohit 12/01	EMAILSEARCH	search_email	<contact_name>Rohit</contact_name> <start_date>12/01</start_date>	[]		1
+179762457	0		user	jyotsna email search measurement set	NOTSURE	other_domain	<contact_name>jyotsna</contact_name> <keyword>email search measurement set</keyword>	[]		1
+179762293	0		user	arvind current month data	EMAILSEARCH	search_email	<contact_name>arvind</contact_name> <start_date>current month</start_date> <keyword>data</keyword>	[]		1
+180297493	0		user	email from John titled moving	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>John</contact_name_from> titled <email_subject>moving</email_subject>	[]		1
+180297402	0		user	search emails from Robert between Tuesday and Sunday	EMAILSEARCH	search_email	search <message_type>emails</message_type> from <contact_name_from>Robert</contact_name_from> between <start_date>Tuesday</start_date> and <end_date>Sunday</end_date>	[]		1
+179762159	0		user	Unread Mails	EMAILSEARCH	search_email	<message_category>Unread</message_category> <message_type>Mails</message_type>	[]		1
+179762300	0		user	from Diana with file attached	EMAILSEARCH	search_email	from <contact_name_from>Diana</contact_name_from> with file<attachment>attached</attachment>	[]		1
+179762474	0		user	from Abily 	EMAILSEARCH	search_email	from <contact_name_from>Abily</contact_name_from> 	[]		1
+179898053	0		user	from the team with a pdf	EMAILSEARCH	search_email	from the <relationship_name>team</relationship_name> with a <attachment_type>pdf</attachment_type>	[]		1
+179762406	0		user	to Mona with subject access required	EMAILSEARCH	search_email	to <contact_name_to>Mona</contact_name_to> with subject <email_subject>access required</email_subject>	[]		1
+179762527	0		user	accepted meeting invites	NOTSURE	other_domain	<keyword>accepted meeting invites</keyword>	[]		1
+180297649	0		user	I'd like to see the email from Murray about Valentine's Day.	EMAILSEARCH	search_email	I'd like to see the <message_type>email</message_type> from <contact_name_from>Murray</contact_name_from> about <keyword>Valentine's Day</keyword>.	[]		1
+179762260	0		user	skype conversations from Chandana	EMAILSEARCH	search_email	<keyword>skype conversations</keyword> from <contact_name_from>Chandana</contact_name_from>	[]		1
+179898038	0		user	game night from Avani	EMAILSEARCH	search_email	<keyword>game night</keyword> from <contact_name_from>Avani</contact_name_from>	[]		1
+179898054	0		user	about giving campaign pancakes	EMAILSEARCH	search_email	about <keyword>giving campaign pancakes</keyword>	[]		1
+179762542	0		user	connect posted by my manager	EMAILSEARCH	search_email	<keyword>connect posted</keyword> by <relationship_name_from>my manager</relationship_name_from>	[]		1
+180297542	0		user	email from Matthew in October	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Matthew</contact_name_from> in <start_date>October</start_date>	[]		1
+179762183	0		user	email from July to September Abily	EMAILSEARCH	search_email	<message_type>email</message_type> from <start_date>July</start_date> to <end_date>September</end_date> <contact_name>Abily</contact_name>	[]		1
+179898182	0		user	language model presentation on last Wednesday	EMAILSEARCH	search_email	<keyword>language model presentation</keyword> on <start_date>last Wednesday</start_date>	[]		1
+179762495	0		user	From last week about password renewal	EMAILSEARCH	search_email	From <start_date>last week</start_date> about <keyword>password renewal</keyword>	[]		1
+179762462	0		user	chirala team outing by jyotsna	EMAILSEARCH	search_email	<keyword>chirala team outing</keyword> by <contact_name_from>jyotsna</contact_name_from>	[]		1
+179898037	0		user	permission request confirmation	NOTSURE	other_domain	<keyword>permission request confirmation</keyword>	[]		1
+179898163	0		user	japanese at microsoft yesterday	EMAILSEARCH	search_email	<keyword>japanese at microsoft</keyword> <start_date>yesterday</start_date>	[]		1
+179762092	0		user	 gt email sent by me on sept 18th	EMAILSEARCH	search_email	 <keyword>gt</keyword> <message_type>email</message_type> sent by <relationship_name_from>me</relationship_name_from> on <start_date>sept 18th</start_date>	[]		1
+180297491	0		user	Email from Calvin about dinner plans yesterday	EMAILSEARCH	search_email	<message_type>Email</message_type> from <contact_name_from>Calvin</contact_name_from> about <keyword>dinner plans</keyword> <start_date>yesterday</start_date>	[]		1
+179762221	0		user	giving on 5th oct	EMAILSEARCH	search_email	<keyword>giving</keyword> on <start_date>5th oct</start_date>	[]		1
+179762321	0		user	kiran about wedding party	EMAILSEARCH	search_email	<contact_name>kiran</contact_name> about <keyword>wedding party</keyword>	[]		1
+179762302	0		user	newsletter from Nitin	EMAILSEARCH	search_email	<keyword>newsletter</keyword> from <contact_name>Nitin</contact_name>	[]		1
+179762463	0		user	guideline shared in May	EMAILSEARCH	search_email	<keyword>guideline</keyword> shared in <start_date>May</start_date>	[]		1
+180297577	0		user	banana bread recipe Monday	EMAILSEARCH	search_email	<keyword>banana bread recipe</keyword> <start_date>Monday</start_date>	[]		1
+179762601	0		user	Emails to me from august 	EMAILSEARCH	search_email	<message_type>Emails</message_type> to <relationship_name_to>me</relationship_name_to> from <start_date>august</start_date> 	[]		1
+179762252	0		user	from my manager	EMAILSEARCH	search_email	from <relationship_name_from>my manager</relationship_name_from>	[]		1
+180297512	0		user	emails from elizabeth	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>elizabeth</contact_name_from>	[]		1
+179762085	0		user	about saw laptop access	EMAILSEARCH	search_email	about <keyword>saw laptop access</keyword>	[]		1
+179898135	0		user	Kawahi about basketball from Monday	EMAILSEARCH	search_email	<contact_name>Kawahi</contact_name> about <keyword>basketball</keyword> from <start_date>Monday</start_date>	[]		1
+180297627	0		user	email from Amazon	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Amazon</contact_name_from>	[]		1
+179762292	0		user	Uday last Friday	EMAILSEARCH	search_email	<contact_name>Uday</contact_name> <start_date>last Friday</start_date>	[]		1
+179898270	0		user	pato traffic controller	NOTSURE	other_domain	<contact_name>pato</contact_name> <keyword>traffic controller</keyword>	[]		1
+179762112	0		user	Ananya's mail with presentation attached	EMAILSEARCH	search_email	<contact_name>Ananya</contact_name>'s <message_type>mail</message_type> with <attachment_type>presentation</attachment_type> attached	[]		1
+179898188	0		user	9/4 vijayra	EMAILSEARCH	search_email	<start_date>9/4</start_date> <contact_name>vijayra</contact_name>	[]		1
+179762179	0		user	October 17th Abily	EMAILSEARCH	search_email	<start_date>October 17th</start_date> <contact_name>Abily</contact_name>	[]		1
+179898187	0		user	from Haoda	EMAILSEARCH	search_email	from <contact_name_from>Haoda</contact_name_from>	[]		1
+179898069	0		user	Ling's email on Teams Scrum	EMAILSEARCH	search_email	<contact_name_from>Ling</contact_name_from>'s <message_type>email</message_type> on <keyword>Teams Scrum</keyword>	[]		1
+179762487	0		user	from Mithila all attachments	EMAILSEARCH	search_email	from <contact_name_from>Mithila</contact_name_from> all <attachment>attachments</attachment>	[]		1
+179762155	0		user	attachments from global payroll services	EMAILSEARCH	search_email	<attachment>attachments</attachment> from <contact_name_from>global payroll services</contact_name_from>	[]		1
+179762270	0		user	search for mails from abjose	EMAILSEARCH	search_email	search for <message_type>mails</message_type> from <contact_name_from>abjose</contact_name_from>	[]		1
+179762060	0		user	sahith GT in queue	NOTSURE	other_domain	<contact_name>sahith</contact_name> <keyword>GT in queue</keyword>	[]		1
+179762132	0		user	search emails from radha	EMAILSEARCH	search_email	search <message_type>emails</message_type> from <contact_name_from>radha</contact_name_from>	[]		1
+179762095	0		user	mails from 16th june to 10th october diana	EMAILSEARCH	search_email	<message_type>mails</message_type> from <start_date>16th june</start_date> to <end_date>10th october</end_date> <contact_name>diana</contact_name>	[]		1
+179762100	0		user	idan meeting intent April 1	EMAILSEARCH	search_email	<contact_name>idan</contact_name> <keyword>meeting intent</keyword> <start_date>April 1</start_date>	[]		1
+179762551	0		user	Maheshwari football match from 01/02	EMAILSEARCH	search_email	<contact_name>Maheshwari</contact_name> <keyword>football match</keyword> from <start_date>01/02</start_date>	[]		1
+179762504	0		user	emails from abily titled adhoc task	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>abily</contact_name_from> titled <email_subject>adhoc task</email_subject>	[]		1
+180297664	0		user	Mort in january.	EMAILSEARCH	search_email	<contact_name>Mort</contact_name> in <start_date>january</start_date>.	[]		1
+179762228	0		user	emails from priyanka october 1st to october 17th	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>priyanka</contact_name_from> <start_date>october 1st</start_date> to <end_date>october 17th</end_date>	[]		1
+179898078	0		user	from kunal on Monday	EMAILSEARCH	search_email	from <contact_name_from>kunal</contact_name_from> on <start_date>Monday</start_date>	[]		1
+179898043	0		user	transition work item from Marcello	EMAILSEARCH	search_email	<keyword>transition work item</keyword> from <contact_name_from>Marcello</contact_name_from>	[]		1
+179898099	0		user	stca contract discussion	NOTSURE	other_domain	<keyword>stca contract discussion</keyword>	[]		1
+179762331	0		user	regarding cafeteria access restrictions this weekend 	EMAILSEARCH	search_email	regarding <keyword>cafeteria access restrictions</keyword> this <start_date>weekend</start_date> 	[]		1
+179762048	0		user	Gayatri on Thursday	EMAILSEARCH	search_email	<contact_name>Gayatri</contact_name> on <start_date>Thursday</start_date>	[]		1
+179762212	0		user	Raj last month	EMAILSEARCH	search_email	<contact_name>Raj</contact_name> <start_date>last month</start_date>	[]		1
+179898202	0		user	from: shuyin	EMAILSEARCH	search_email	from: <contact_name_from>shuyin</contact_name_from>	[]		1
+179762097	0		user	from siri between Tuesday and thursday	EMAILSEARCH	search_email	from <contact_name_from>siri</contact_name_from> between <start_date>Tuesday</start_date> and <end_date>thursday</end_date>	[]		1
+180297578	0		user	search for emails from Gordon about movies	EMAILSEARCH	search_email	search for <message_type>emails</message_type> from <contact_name_from>Gordon</contact_name_from> about <keyword>movies</keyword>	[]		1
+179898101	0		user	Attachment ppt from mingzhu 	EMAILSEARCH	search_email	<attachment>Attachment</attachment> <attachment_type>ppt</attachment_type> from <contact_name_from>mingzhu</contact_name_from> 	[]		1
+179762478	0		user	abjose on th oct	EMAILSEARCH	search_email	<contact_name>abjose</contact_name> on th <start_date>oct</start_date>	[]		1
+179762328	0		user	attachments from Phil	EMAILSEARCH	search_email	<attachment>attachments</attachment> from <contact_name_from>Phil</contact_name_from>	[]		1
+179762629	0		user	all attachments from icici bank	EMAILSEARCH	search_email	all <attachment>attachments</attachment> from <contact_name_from>icici bank</contact_name_from>	[]		1
+180297420	0		user	Find emails from Chris. 	EMAILSEARCH	search_email	Find <message_type>emails</message_type> from <contact_name_from>Chris</contact_name_from>. 	[]		1
+179762396	0		user	from Pradeep Rabrindranath	EMAILSEARCH	search_email	from <contact_name_from>Pradeep Rabrindranath</contact_name_from>	[]		1
+179762377	0		user	Sent: Tuesday, September 17, 2019 2:24 PM	EMAILSEARCH	search_email	Sent: <start_date>Tuesday, September 17, 2019</start_date> <start_time>2:24 PM</start_time>	[]		1
+179762311	0		user	about maternity leave from askhr	EMAILSEARCH	search_email	about <keyword>maternity leave</keyword> from <contact_name_from>askhr</contact_name_from>	[]		1
+179898183	0		user	email from michael about desks on Friday	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>michael</contact_name_from> about <keyword>desks</keyword> on <start_date>Friday</start_date>	[]		1
+180297633	0		user	Which email from josuke was about the highway project.	EMAILSEARCH	search_email	Which <message_type>email</message_type> from <contact_name_from>josuke</contact_name_from> was about the <keyword>highway project</keyword>.	[]		1
+179898167	0		user	from Kunal this morning 5 am to 10	EMAILSEARCH	search_email	from <contact_name_from>Kunal</contact_name_from> <start_time>this morning 5 am</start_time> to <end_time>10</end_time>	[]		1
+179762079	0		user	email from Jose titled leave  next week	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Jose</contact_name_from> titled <email_subject>leave  next week</email_subject>	[]		1
+180297499	0		user	emails from Sue about the party	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Sue</contact_name_from> about the <keyword>party</keyword>	[]		1
+179762205	0		user	updated schedule from transport team	EMAILSEARCH	search_email	<keyword>updated schedule</keyword> from <contact_name_from>transport team</contact_name_from>	[]		1
+180297448	0		user	email from october 31st for fun run	EMAILSEARCH	search_email	<message_type>email</message_type> from <start_date>october 31st</start_date> for <keyword>fun run</keyword>	[]		1
+179762500	0		user	between 3rd to 5th June from Shiva	EMAILSEARCH	search_email	between <start_date>3rd</start_date> to <end_date>5th June</end_date> from <contact_name_from>Shiva</contact_name_from>	[]		1
+179762308	0		user	promotions vs newsletter guidelines shared by ranganath	EMAILSEARCH	search_email	<keyword>promotions vs newsletter guidelines</keyword> shared by <contact_name_from>ranganath</contact_name_from>	[]		1
+179762646	0		user	to my manager's direct reports	EMAILSEARCH	search_email	to <relationship_name_to>my manager's direct reports</relationship_name_to>	[]		1
+180297481	0		user	Give me the email by len about seeking to it.	EMAILSEARCH	search_email	Give me the <message_type>email</message_type> by <contact_name_from>len</contact_name_from> about <keyword>seeking to it</keyword>.	[]		1
+179898217	0		user	teams weekly report from last tue	EMAILSEARCH	search_email	<keyword>teams weekly report</keyword> from <start_date>last tue</start_date>	[]		1
+179762043	0		user	emergency notices from last week	EMAILSEARCH	search_email	<keyword>emergency notices</keyword> from <start_date>last week</start_date>	[]		1
+179762449	0		user	mails between last Monday to thursady from Priyanka	EMAILSEARCH	search_email	<message_type>mails</message_type> between <start_date>last Monday</start_date> to <end_date>thursady</end_date> from <contact_name_from>Priyanka</contact_name_from>	[]		1
+179762172	0		user	emails about GT in queue STCI Data-analyst	EMAILSEARCH	search_email	<message_type>emails</message_type> about <keyword>GT in queue</keyword> <contact_name>STCI Data-analyst</contact_name>	[]		1
+180297415	0		user	Safiya today.	EMAILSEARCH	search_email	<contact_name>Safiya</contact_name> <start_date>today</start_date>.	[]		1
+179762123	0		user	email about resourcing dapriy	EMAILSEARCH	search_email	<message_type>email</message_type> about <keyword>resourcing</keyword> <contact_name>dapriy</contact_name>	[]		1
+179762170	0		user	from jaanu about birthday party	EMAILSEARCH	search_email	from <contact_name_from>jaanu</contact_name_from> about <keyword>birthday party</keyword>	[]		1
+179762562	0		user	email to priyanka titled reservation status update 	EMAILSEARCH	search_email	<message_type>email</message_type> to <contact_name_to>priyanka</contact_name_to> titled <email_subject>reservation status update</email_subject> 	[]		1
+179762286	0		user	Automatic reply from gakuncha	EMAILSEARCH	search_email	<keyword>Automatic reply</keyword> from <contact_name_from>gakuncha</contact_name_from>	[]		1
+180297551	0		user	cortana emails from Dee monday through thurday	EMAILSEARCH	search_email	cortana <message_type>emails</message_type> from <contact_name_from>Dee</contact_name_from> <start_date>monday</start_date> through <end_date>thurday</end_date>	[]		1
+179898273	0		user	titled msai give to nitin	EMAILSEARCH	search_email	titled <email_subject>msai give</email_subject> to <contact_name_to>nitin</contact_name_to>	[]		1
+179762074	0		user	Abily cortana task	NOTSURE	other_domain	<contact_name>Abily</contact_name> <keyword>cortana task</keyword>	[]		1
+179898070	0		user	Shuyin OKRs	NOTSURE	other_domain	<contact_name>Shuyin</contact_name> <keyword>OKRs</keyword>	[]		1
+179898266	0		user	avani on the 27th	EMAILSEARCH	search_email	<contact_name>avani</contact_name> on the <start_date>27th</start_date>	[]		1
+179898237	0		user	what was that email about dogs that raj had sent	EMAILSEARCH	search_email	what was that <message_type>email</message_type> about <keyword>dogs</keyword> that <contact_name_from>raj</contact_name_from> had sent	[]		1
+179762021	0		user	from diana about connect	EMAILSEARCH	search_email	from <contact_name_from>diana</contact_name_from> about <keyword>connect</keyword>	[]		1
+179898170	0		user	from April from june to july	EMAILSEARCH	search_email	from <contact_name_from>April</contact_name_from> from <start_date>june</start_date> to <end_date>july</end_date>	[]		1
+179762036	0		user	flagged mails from Anu	EMAILSEARCH	search_email	<message_category>flagged</message_category> <message_type>mails</message_type> from <contact_name_from>Anu</contact_name_from>	[]		1
+179762382	0		user	reports from Abily	EMAILSEARCH	search_email	<keyword>reports</keyword> from <contact_name_from>Abily</contact_name_from>	[]		1
+180297451	0		user	Show the email from Brent regarding teacher work days.	EMAILSEARCH	search_email	Show the <message_type>email</message_type> from <contact_name_from>Brent</contact_name_from> regarding <keyword>teacher work days</keyword>.	[]		1
+179762129	0		user	cc DA Management	EMAILSEARCH	search_email	cc <contact_name_cc>DA Management</contact_name_cc>	[]		1
+179898155	0		user	Ji on this morning 5 am	EMAILSEARCH	search_email	<contact_name>Ji</contact_name> on <start_time>this morning 5 am</start_time>	[]		1
+179762532	0		user	attachments from abily	EMAILSEARCH	search_email	<attachment>attachments</attachment> from <contact_name_from>abily</contact_name_from>	[]		1
+180297632	0		user	find me emails from Jessica	EMAILSEARCH	search_email	find me <message_type>emails</message_type> from <contact_name_from>Jessica</contact_name_from>	[]		1
+179762083	0		user	Ancy between 7 to 9 april	EMAILSEARCH	search_email	<contact_name>Ancy</contact_name> between <start_date>7</start_date> to <end_date>9 april</end_date>	[]		1
+180297407	0		user	Get the attachment from boaz.	EMAILSEARCH	search_email	Get the <attachment>attachment</attachment> from <contact_name_from>boaz</contact_name_from>.	[]		1
+179762621	0		user	Anu from may to june	EMAILSEARCH	search_email	<contact_name>Anu</contact_name> from <start_date>may</start_date> to <end_date>june</end_date>	[]		1
+179898074	0		user	Kunal from last week	EMAILSEARCH	search_email	<contact_name_from>Kunal</contact_name_from> from <start_date>last week</start_date>	[]		1
+180297513	0		user	Off goes Pete email between January and June 	EMAILSEARCH	search_email	<keyword>Off goes</keyword> <contact_name>Pete</contact_name> <message_type>email</message_type> between <start_date>January</start_date> and <end_date>June</end_date> 	[]		1
+179762324	0		user	acceptance of fittness bill	NOTSURE	other_domain	<keyword>acceptance of fittness bill</keyword>	[]		1
+179762249	0		user	from Salva	EMAILSEARCH	search_email	from <contact_name_from>Salva</contact_name_from>	[]		1
+179762317	0		user	Prerita's mail between 1st to 3rd of October	EMAILSEARCH	search_email	<contact_name>Prerita</contact_name>'s <message_type>mail</message_type> between <start_date>1st</start_date> to <end_date>3rd of October</end_date>	[]		1
+179762255	0		user	emails from idan with attachment	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>idan</contact_name_from> with <attachment>attachment</attachment>	[]		1
+180297617	0		user	email about John retirement	EMAILSEARCH	search_email	<message_type>email</message_type> about <keyword>John retirement</keyword>	[]		1
+179762374	0		user	with tables	NOTSURE	other_domain	<keyword>with tables</keyword>	[]		1
+180297490	0		user	emails about halloween party last Friday	EMAILSEARCH	search_email	<message_type>emails</message_type> about <keyword>halloween party</keyword> <start_date>last Friday</start_date>	[]		1
+180297539	0		user	from aaliyah field trip	EMAILSEARCH	search_email	from <contact_name_from>aaliyah</contact_name_from> <keyword>field trip</keyword>	[]		1
+180297612	0		user	Retrieve all emails received from patrick.	EMAILSEARCH	search_email	Retrieve <emailsearch_other>all</emailsearch_other> <message_type>emails</message_type> <email_state>received</email_state> from <contact_name_from>patrick</contact_name_from>.	[]		1
+180297536	0		user	gmail email last week about dinner from John	EMAILSEARCH	search_email	<emailsearch_other>gmail</emailsearch_other> <message_type>email</message_type> <start_date>last week</start_date> about <keyword>dinner</keyword> from <contact_name_from>John</contact_name_from>	[]		1
+179762209	0		user	siri last week	EMAILSEARCH	search_email	<contact_name>siri</contact_name> <start_date>last week</start_date>	[]		1
+179762491	0		user	Live well 365 mails with attachment	EMAILSEARCH	search_email	<keyword>Live well 365</keyword> mails with <attachment>attachment</attachment>	[]		1
+179762591	0		user	 form 16 between 1/9 to 9/9  	EMAILSEARCH	search_email	 <keyword>form 16</keyword> between <start_date>1/9</start_date> to <end_date>9/9</end_date>  	[]		1
+179762287	0		user	from my manager about feedback	EMAILSEARCH	search_email	from <relationship_name_from>my manager</relationship_name_from> about <keyword>feedback</keyword>	[]		1
+180297456	0		user	Find the email from Tony with the attachment.	EMAILSEARCH	search_email	Find the <message_type>email</message_type> from <contact_name_from>Tony</contact_name_from> with the <attachment>attachment</attachment>.	[]		1
+180297438	0		user	emails from Joe 	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Joe</contact_name_from> 	[]		1
+179898265	0		user	from ben to manasi with me in cc	EMAILSEARCH	search_email	from <contact_name_from>ben</contact_name_from> to <contact_name_to>manasi</contact_name_to> with <relationship_name_cc>me</relationship_name_cc> in cc	[]		1
+179762245	0		user	with process to get lockbox access	NOTSURE	other_domain	<keyword>with process to get lockbox access</keyword>	[]		1
+179762225	0		user	from siri groceries	EMAILSEARCH	search_email	from <contact_name_from>siri</contact_name_from> <keyword>groceries</keyword>	[]		1
+179762349	0		user	emails from jyotsna from sept 1st	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>jyotsna</contact_name_from> from <start_date>sept 1st</start_date>	[]		1
+179762024	0		user	Idan from june and august	EMAILSEARCH	search_email	<contact_name>Idan</contact_name> from <start_date>june</start_date> and <end_date>august</end_date>	[]		1
+179762421	0		user	email to Diana with header Connect Discussion	EMAILSEARCH	search_email	<message_type>email</message_type> to <contact_name_to>Diana</contact_name_to> with header <email_subject>Connect Discussion</email_subject>	[]		1
+179898040	0		user	About free food on yesterday	EMAILSEARCH	search_email	About <keyword>free food</keyword> on <start_date>yesterday</start_date>	[]		1
+180297637	0		user	emails from yesterday and today from John	EMAILSEARCH	search_email	<message_type>emails</message_type> from <start_date>yesterday</start_date> and <end_date>today</end_date> from <contact_name_from>John</contact_name_from>	[]		1
+179762454	0		user	mails with excel sheet links	EMAILSEARCH	search_email	<message_type>mails</message_type> with <keyword>excel sheet links</keyword>	[]		1
+180297678	0		user	Do I have any emails from Chris during the time frame of December 25th to January 3rd?	EMAILSEARCH	search_email	Do I have any <message_type>emails</message_type> from <contact_name_from>Chris</contact_name_from> during the time frame of <start_date>December 25th</start_date> to <end_date>January 3rd</end_date>?	[]		1
+179762167	0		user	reimbursement claims to me	EMAILSEARCH	search_email	<keyword>reimbursement claims</keyword> to <relationship_name_to>me</relationship_name_to>	[]		1
+179762509	0		user	Diana monthly meeting	NOTSURE	other_domain	<contact_name>Diana</contact_name> <keyword>monthly meeting</keyword>	[]		1
+180297500	0		user	Show me emails from Spotify for this month	EMAILSEARCH	search_email	Show me <message_type>emails</message_type> from <contact_name_from>Spotify</contact_name_from> for <start_date>this month</start_date>	[]		1
+179898051	0		user	snorkel discussion from July	EMAILSEARCH	search_email	<keyword>snorkel discussion</keyword> from <start_date>July</start_date>	[]		1
+179898193	0		user	show me ones from avani that were also sent to tao	EMAILSEARCH	search_email	show me ones from <contact_name_from>avani</contact_name_from> that were also sent to <contact_name_to>tao</contact_name_to>	[]		1
+180297553	0		user	james from last week	EMAILSEARCH	search_email	<contact_name>james</contact_name> from <start_date>last week</start_date>	[]		1
+179898129	0		user	Minwoo's email between July and September	EMAILSEARCH	search_email	<contact_name>Minwoo</contact_name>'s <message_type>email</message_type> between <start_date>July</start_date> and <end_date>September</end_date>	[]		1
+179898120	0		user	sprint invite from sharanya	EMAILSEARCH	search_email	<keyword>sprint invite</keyword> from <contact_name_from>sharanya</contact_name_from>	[]		1
+180297467	0		user	interview scheduled next Monday	NOTSURE	other_domain	<keyword>interview scheduled next Monday</keyword>	[]		1
+179898029	0		user	Shuyin Partner triage	NOTSURE	other_domain	<contact_name>Shuyin</contact_name> <keyword>Partner triage</keyword>	[]		1
+179762418	0		user	avacodo data access to pallavi	EMAILSEARCH	search_email	<keyword>avacodo data access</keyword> to <contact_name_to>pallavi</contact_name_to>	[]		1
+179898264	0		user	email from Javis  about discussion on distillation	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Javis</contact_name_from>  about <keyword>discussion on distillation</keyword>	[]		1
+179762294	0		user	from pallavi last month	EMAILSEARCH	search_email	from <contact_name_from>pallavi</contact_name_from> <start_date>last month</start_date>	[]		1
+179898107	0		user	john three days ago	EMAILSEARCH	search_email	<contact_name>john</contact_name> <start_date>three days ago</start_date>	[]		1
+179762027	0		user	from jyotsna with subject  cortana task	EMAILSEARCH	search_email	from <contact_name_from>jyotsna</contact_name_from> with subject  <email_subject>cortana task</email_subject>	[]		1
+180297603	0		user	attachments from dj	EMAILSEARCH	search_email	<attachment>attachments</attachment> from <contact_name_from>dj</contact_name_from>	[]		1
+180297607	0		user	Is there an email about Peep from food.	EMAILSEARCH	search_email	Is there an <message_type>email</message_type> about <keyword>Peep</keyword> from <contact_name_from>food</contact_name_from>.	[]		1
+179762480	0		user	Important unread mails from my manager	EMAILSEARCH	search_email	<message_category>Important</message_category> <message_category>unread</message_category> <message_type>mails</message_type> from <relationship_name_from>my manager</relationship_name_from>	[]		1
+180297657	0		user	emails from Mom May 1st to May 31st	EMAILSEARCH	search_email	<message_type>emails</message_type> from <relationship_name_from>Mom</relationship_name_from> <start_date>May 1st</start_date> to <end_date>May 31st</end_date>	[]		1
+180297530	0		user	emails between October 1 and October 21 from Lou	EMAILSEARCH	search_email	<message_type>emails</message_type> between <start_date>October 1</start_date> and <end_date>October 21</end_date> from <contact_name_from>Lou</contact_name_from>	[]		1
+179762383	0		user	designation data from 20-08-2019	EMAILSEARCH	search_email	<keyword>designation data</keyword> from <start_date>20-08-2019</start_date>	[]		1
+180297461	0		user	What was the email from hank with the attachment.	EMAILSEARCH	search_email	What was the <message_type>email</message_type> from <contact_name_from>hank</contact_name_from> with the <attachment>attachment</attachment>.	[]		1
+180297518	0		user	FInd email about Pete sent June 2nd through10th	EMAILSEARCH	search_email	FInd <message_type>email</message_type> about <keyword>Pete</keyword> sent <start_date>June 2nd</start_date> <end_date>through10th</end_date>	[]		1
+179898192	0		user	from ming from last Monday to this Friday	EMAILSEARCH	search_email	from <contact_name_from>ming</contact_name_from> from <start_date>last Monday</start_date> to <end_date>this Friday</end_date>	[]		1
+179762345	0		user	hackathon winners from June 2018	EMAILSEARCH	search_email	<keyword>hackathon winners</keyword> from <start_date>June 2018</start_date>	[]		1
+179898083	0		user	Kunal last Friday	EMAILSEARCH	search_email	<contact_name>Kunal</contact_name> <start_date>last Friday</start_date>	[]		1
+179762253	0		user	from re&f regarding maintenancework	EMAILSEARCH	search_email	from <contact_name_from>re&amp;f</contact_name_from> regarding <keyword>maintenancework</keyword>	[]		1
+179762465	0		user	regardingÂ  scrum call	EMAILSEARCH	search_email	regardingÂ  <keyword>scrum call</keyword>	[]		1
+179898132	0		user	from tao between monday and thursday	EMAILSEARCH	search_email	from <contact_name_from>tao</contact_name_from> between <start_date>monday</start_date> and <end_date>thursday</end_date>	[]		1
+180297418	0		user	reply to John Brown regarding your attachment	EMAILSEARCH	search_email	<email_state>reply</email_state> to <contact_name_to>John Brown</contact_name_to> regarding <keyword>your attachment</keyword>	[]		1
+179762431	0		user	report from abily	EMAILSEARCH	search_email	<keyword>report</keyword> from <contact_name_from>abily</contact_name_from>	[]		1
+179762119	0		user	Team meeting with high importance	EMAILSEARCH	search_email	<keyword>Team meeting</keyword> with <message_category>high importance</message_category>	[]		1
+180297495	0		user	can you show me emails sent by Fleming from Tuesday July the 9th to Tuesday July the 30th	EMAILSEARCH	search_email	can you show me <message_type>emails</message_type> sent by <contact_name_from>Fleming</contact_name_from> from <start_date>Tuesday July the 9th</start_date> to <end_date>Tuesday July the 30th</end_date>	[]		1
+179898158	0		user	MSR learning course from Xin last month	EMAILSEARCH	search_email	<keyword>MSR learning course</keyword> from <contact_name_from>Xin</contact_name_from> <start_date>last month</start_date>	[]		1
+179898204	0		user	from pato and yaroslav about last week's pipeline changes	EMAILSEARCH	search_email	from <contact_name_from>pato</contact_name_from> and <contact_name_from>yaroslav</contact_name_from> about <start_date>last week</start_date>'s <keyword>pipeline changes</keyword>	[]		1
+179762625	0		user	jyotsna about email search	EMAILSEARCH	search_email	<contact_name>jyotsna</contact_name> about <keyword>email search</keyword>	[]		1
+179762312	0		user	about leave oct Diana	EMAILSEARCH	search_email	about <keyword>leave</keyword> <start_date>oct</start_date> <contact_name_from>Diana</contact_name_from>	[]		1
+179762528	0		user	from anu with attachments	EMAILSEARCH	search_email	from <contact_name_from>anu</contact_name_from> with <attachment>attachments</attachment>	[]		1
+179762354	0		user	from last week about Adhoc Tasks	EMAILSEARCH	search_email	from <start_date>last week</start_date> about <keyword>Adhoc Tasks</keyword>	[]		1
+180297615	0		user	I'd like to see the email from two weeks ago about gym class. 	EMAILSEARCH	search_email	I'd like to see the <message_type>email</message_type> from <start_date>two weeks ago</start_date> about <keyword>gym class</keyword>. 	[]		1
+179762220	0		user	rejected meeting invite by me	NOTSURE	other_domain	<keyword>rejected meeting invite by me</keyword>	[]		1
+179762296	0		user	from jessie attachment	EMAILSEARCH	search_email	from <contact_name_from>jessie</contact_name_from> <attachment>attachment</attachment>	[]		1
+179762071	0		user	to Mona with subject access required	EMAILSEARCH	search_email	to <contact_name_to>Mona</contact_name_to> with subject <email_subject>access required</email_subject>	[]		1
+179762512	0		user	mails from paa between jan to oct	EMAILSEARCH	search_email	<messgae_type>mails</messagse_type> from <contact_name_from>paa</contact_name_from> between <start_date>jan</start_date> to <end_date>oct</end_date>	[]		1
+179898156	0		user	visa from usimmig	EMAILSEARCH	search_email	<keyword>visa</keyword> from <contact_name_from>usimmig</contact_name_from>	[]		1
+179898261	0		user	amy hood in last quarter	EMAILSEARCH	search_email	<contact_name>amy hood</contact_name> in <start_date>last quarter</start_date>	[]		1
+179762058	0		user	regarding MB scrum	EMAILSEARCH	search_email	regarding <keyword>MB scrum</keyword>	[]		1
+179898196	0		user	any emails from richard from may 10 to 10/01	EMAILSEARCH	search_email	any <message_type>emails</message_type> from <contact_name_from>richard</contact_name_from> from <start_date>may 10</start_date> to <end_date>10/01</end_date>	[]		1
+180297600	0		user	I'd like to see emails from Edward from March to June.	EMAILSEARCH	search_email	I'd like to see <message_type>emails</message_type> from <contact_name_from>Edward</contact_name_from> from <start_date>March</start_date> to <end_date>June</end_date>.	[]		1
+179762126	0		user	learning courses email from idc 	EMAILSEARCH	search_email	<keyword>learning courses</keyword> <message_type>email</message_type> from <contact_name_from>idc</contact_name_from> 	[]		1
+179898144	0		user	Vijay on Friday	EMAILSEARCH	search_email	<contact_name>Vijay</contact_name> on <start_date>Friday</start_date>	[]		1
+180297623	0		user	Samir over last weekend.	EMAILSEARCH	search_email	<contact_name>Samir</contact_name> over <start_date>last weekend</start_date>.	[]		1
+179762428	0		user	from gayatri with attachment	EMAILSEARCH	search_email	from <contact_name_from>gayatri</contact_name_from> with <attachment>attachment</attachment>	[]		1
+179762443	0		user	about sell from Raj 2nd Aug	EMAILSEARCH	search_email	about <keyword>sell</keyword> from <contact_name_from>Raj</contact_name_from> <start_date>2nd Aug</start_date>	[]		1
+179898255	0		user	model issue from Tao	EMAILSEARCH	search_email	<keyword>model issue</keyword> from <contact_name_from>Tao</contact_name_from>	[]		1
+179762138	0		user	Diana from Jan to March	EMAILSEARCH	search_email	<contact_name>Diana</contact_name> from <start_date>Jan</start_date> to <end_date>March</end_date>	[]		1
+179898254	0		user	from manasi before last week	EMAILSEARCH	search_email	from <contact_name_from>manasi</contact_name_from> <start_date>before last week</start_date>	[]		1
+179762148	0		user	Diana Previous week	NOTSURE	other_domain	<contact_name>Diana</contact_name> <keyword>Previous week</keyword>	[]		1
+179762279	0		user	substrate oct 19th	EMAILSEARCH	search_email	<keyword>substrate</keyword> <start_date>oct 19th</start_date>	[]		1
+180297457	0		user	find the email from bob about the party	EMAILSEARCH	search_email	find the <message_type>email</message_type> from <contact_name_from>bob</contact_name_from> about the <keyword>party</keyword>	[]		1
+180297587	0		user	email about Asher's boarding	EMAILSEARCH	search_email	<message_type>email</message_type> about <keyword>Asher's boarding</keyword>	[]		1
+179762473	0		user	from Ankit about sub DC	EMAILSEARCH	search_email	from <contact_name_from>Ankit</contact_name_from> about <keyword>sub DC</keyword>	[]		1
+180297563	0		user	sent from bob	EMAILSEARCH	search_email	sent from <contact_name_from>bob</contact_name_from>	[]		1
+179762490	0		user	about wi-fi in bus transport	EMAILSEARCH	search_email	about <keyword>wi-fi in bus transport</keyword>	[]		1
+179762033	0		user	invite from Abily	EMAILSEARCH	search_email	<keyword>invite</keyword> from <contact_name_from>Abily</contact_name_from>	[]		1
+179762612	0		user	GT sent on 27/08	EMAILSEARCH	search_email	<keyword>GT</keyword> sent on <start_date>27/08</start_date>	[]		1
+180297421	0		user	Tom has dies email notice 5th.	EMAILSEARCH	search_email	<keyword>Tom has dies</keyword> <message_type>email</message_type> <keyword>notice</keyword> <start_date>5th</start_date>.	[]		1
+179762089	0		user	mail having subject guideline update from Pallavi	EMAILSEARCH	search_email	<message_type>mail</message_type> having subject <email_subject>guideline update</email_subject> from <contact_name_from>Pallavi</contact_name_from>	[]		1
+180297511	0		user	emails from Diane with attachment	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Diane</contact_name_from> with <attachment>attachment</attachment>	[]		1
+179898084	0		user	ship last week	EMAILSEARCH	search_email	<keyword>ship</keyword> <start_date>last week</start_date>	[]		1
+179762107	0		user	High importance mail sent by my manager	EMAILSEARCH	search_email	<message_category>High importance</message_category> <message_type>mail</message_type> sent by <relationship_name_from>my manager</relationship_name_from>	[]		1
+180297668	0		user	from dee with attachment	EMAILSEARCH	search_email	from <contact_name_from>dee</contact_name_from> with <attachment>attachment</attachment>	[]		1
+179762516	0		user	Deleted mails of last Monday	EMAILSEARCH	search_email	<email_state>Deleted</email_state> <message_type>mails</message_type> of <start_date>last Monday</start_date>	[]		1
+179762631	0		user	from nandu with ppt	EMAILSEARCH	search_email	from <contact_name_from>nandu</contact_name_from> with <keyword>ppt</keyword>	[]		1
+179898209	0		user	emails sent to data platform from monday to last friday	EMAILSEARCH	search_email	<message_type>emails</message_type> sent to <contact_name_to>data platform</contact_name_to> from <start_date>monday</start_date> to <end_date>last friday</end_date>	[]		1
+179762497	0		user	from my manager	EMAILSEARCH	search_email	from <relationship_name_from>my manager</relationship_name_from>	[]		1
+179762444	0		user	reminder on giving last week	EMAILSEARCH	search_email	<keyword>reminder on giving</keyword> <start_date>last week</start_date>	[]		1
+179762274	0		user	diana about team outing on Nov 14	EMAILSEARCH	search_email	<contact_name>diana</contact_name> about <keyword>team outing</keyword> on <start_date>Nov 14</start_date>	[]		1
+180297471	0		user	Rachel July 1st	EMAILSEARCH	search_email	<contact_name>Rachel</contact_name> <start_date>July 1st</start_date>	[]		1
+179898066	0		user	message with a link to torus onenote	NOTSURE	other_domain	<keyword>message with a link to torus onenote</keyword>	[]		1
+179762590	0		user	email from diana on performance	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>diana</contact_name_from> on <keyword>performance</keyword>	[]		1
+180297443	0		user	Emails from Bob with an attachment	EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Bob</contact_name_from> with an <attachment>attachment</attachment>	[]		1
+179898249	0		user	emails from Donovan from september	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Donovan</contact_name_from> from <start_date>september</start_date>	[]		1
+179898173	0		user	email attachement from george	EMAILSEARCH	search_email	<message_type>email</message_type> <attachment>attachement</attachment> from <contact_name_from>george</contact_name_from>	[]		1
+179762094	0		user	from anu betweeen march to april 2019	EMAILSEARCH	search_email	from <contact_name_from>anu</contact_name_from> betweeen <start_date>march</start_date> to <end_date>april 2019</end_date>	[]		1
+179898243	0		user	giving party invite	NOTSURE	other_domain	<keyword>giving party invite</keyword>	[]		1
+179762177	0		user	jaanu about lunch from last month	EMAILSEARCH	search_email	<contact_name>jaanu</contact_name> about <email_subject>lunch</email_subject> from <start_date>last month</start_date>	[]		1
+179762448	0		user	Sirish's mails from Nov to Jan	EMAILSEARCH	search_email	<contact_name>Sirish</contact_name>'s <message_type>mails</message_type> from <start_date>Nov</start_date> to <end_date>Jan</end_date>	[]		1
+179762361	0		user	suresh between june 11th and july 30th	EMAILSEARCH	search_email	<contact_name>suresh</contact_name> between <start_date>june 11th</start_date> and <end_date>july 30th</end_date>	[]		1
+179762210	0		user	Jasmin email halloween event from 4th nov	EMAILSEARCH	search_email	<contact_name>Jasmin</contact_name> <message_type>email</message_type> <keyword>halloween event</keyword> from <start_date>4th nov</start_date>	[]		1
+179762588	0		user	email titled welcome to stci to sandeep	EMAILSEARCH	search_email	<message_type>email</message_type> titled <email_subject>welcome to stci</email_subject> to <contact_name_to>sandeep</contact_name_to>	[]		1
+179898184	0		user	proposal review from Ming	EMAILSEARCH	search_email	<keyword>proposal review</keyword> from <contact_name_from>Ming</contact_name_from>	[]		1
+179762655	0		user	email titled validation list to priyanka danam	EMAILSEARCH	search_email	<message_type>email</message_type> titled <email_subject>validation list</email_subject> to <contact_name_to>priyanka danam</contact_name_to>	[]		1
+179762218	0		user	from gakuncha@microsoft.com	EMAILSEARCH	search_email	from <contact_name_from>gakuncha@microsoft.com</contact_name_from>	[]		1
+179898211	0		user	pancake breakfast at the end of october 	EMAILSEARCH	search_email	<keyword>pancake breakfast</keyword> at the <start_date>end of october</start_date> 	[]		1
+179762031	0		user	 Ankita between 10/09 to 12/09	EMAILSEARCH	search_email	 <contact_name>Ankita</contact_name> between <start_date>10/09</start_date> to <end_date>12/09</end_date>	[]		1
+179898021	0		user	harry reorg	NOTSURE	other_domain	<contact_name>harry</contact_name> <keyword>reorg</keyword>	[]		1
+179762427	0		user	to my manager's manager	EMAILSEARCH	search_email	to <relationship_name_to>my manager's manager</relationship_name_to>	[]		1
+179762241	0		user	have due date 20/05	EMAILSEARCH	search_email	have due date <due_date>20/05</due_date>	[]		1
+179762609	0		user	emails from Abily titled GT accuracy report	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Abily</contact_name_from> titled <email_subject>GT accuracy report</email_subject>	[]		1
+179898140	0		user	email from Raj about email search project	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Raj</contact_name_from> about <keyword>email search project</keyword>	[]		1
+179762544	0		user	from AJ with subject updated data	EMAILSEARCH	search_email	from <contact_name_from>AJ</contact_name_from> with subject <email_subject>updated data</email_subject>	[]		1
+179762140	0		user	from dapriy@microsoft.com with attachments	EMAILSEARCH	search_email	from <contact_name_from>dapriy@microsoft.com</contact_name_from> with <attachment>attachments</attachment>	[]		1
+179762327	0		user	emails from diana about team meeting	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>diana</contact_name_from> about <keyword>team meeting</keyword>	[]		1
+180297557	0		user	Does email have information about dog from Pete	EMAILSEARCH	search_email	Does <message_type>email</message_type> have <keyword>information about dog</keyword> from <contact_name_from>Pete</contact_name_from>	[]		1
+179898226	0		user	MSAI presentation from March to August	EMAILSEARCH	search_email	<keyword>MSAI presentation</keyword> from <start_date>March</start_date> to <end_date>August</end_date>	[]		1
+180297442	0		user	pull up emails about susan funerals from Linda	EMAILSEARCH	search_email	pull up <message_type>emails</message_type> about <keyword>susan funerals</keyword> from <contact_name_from>Linda</contact_name_from>	[]		1
+179762573	0		user	all emails from diana titled friday fun activity	EMAILSEARCH	search_email	all <message_type>emails</message_type> from <contact_name_from>diana</contact_name_from> titled <email_subject>friday fun activity</email_subject>	[]		1
+180297543	0		user	email yesterday Lou Brown	EMAILSEARCH	search_email	<message_type>email</message_type> <start_date>yesterday</start_date> <contact_name>Lou Brown</contact_name>	[]		1
+179898106	0		user	any emails from my teammates about team bonding from avani	EMAILSEARCH	search_email	any <message_type>emails</message_type> from <relationship_name_from>my teammates</relationship_name_from> about <keyword>team bonding</keyword> from <contact_name_from>avani</contact_name_from>	[]		1
+179762508	0		user	selva office hours last month	EMAILSEARCH	search_email	<contact_name>selva</contact_name> <keyword>office hours</keyword> <start_date>last month</start_date>	[]		1
+179762158	0		user	from manager	EMAILSEARCH	search_email	from <relationship_name_from>manager</relationship_name_from>	[]		1
+179898251	0		user	emails from Kunal	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Kunal</contact_name_from>	[]		1
+180297670	0		user	Harry October 15th about work invoices	EMAILSEARCH	search_email	<contact_name>Harry</contact_name> <start_date>October 15th</start_date> about <keyword>work invoices</keyword>	[]		1
+179762653	0		user	nayada on Friday	EMAILSEARCH	search_email	<contact_name>nayada</contact_name> on <start_date>Friday</start_date>	[]		1
+179762161	0		user	Abily mails resourcing 10 June	EMAILSEARCH	search_email	<contact_name>Abily</contact_name> <message_type>mails</message_type> <keyword>resourcing</keyword> <start_date>10 June</start_date>	[]		1
+179762419	0		user	from ankit about DC Guidelines	EMAILSEARCH	search_email	from <contact_name_from>ankit</contact_name_from> about <keyword>DC Guidelines</keyword>	[]		1
+179898119	0		user	free food from becunnin	EMAILSEARCH	search_email	<keyword>free food</keyword> from <contact_name_from>becunnin</contact_name_from>	[]		1
+180297641	0		user	Return email from sora about going to concert.	EMAILSEARCH	search_email	<emailsearch_other>Return</emailsearch_other> <message_type>email</message_type> from <contact_name_from>sora</contact_name_from> about <keyword>going to concert</keyword>.	[]		1
+179898146	0		user	emails from msai lu platform	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>msai lu platform</contact_name_from>	[]		1
+179762044	0		user	Emails with images and videos	EMAILSEARCH	search_email	<message_type>Emails</message_type> with <attachment_type>images</attachment_type> and <attachment_type>videos</attachment_type>	[]		1
+180297458	0		user	The email between september and novermber from rachel.	EMAILSEARCH	search_email	The <message_type>email</message_type> between <start_date>september</start_date> and <end_date>novermber</end_date> from <contact_name_from>rachel</contact_name_from>.	[]		1
+179762174	0		user	anu thomas yesterday	EMAILSEARCH	search_email	<contact_name>anu thomas</contact_name> <start_date>yesterday</start_date>	[]		1
+179762352	0		user	Diana between July and August	EMAILSEARCH	search_email	<contact_name>Diana</contact_name> between <start_date>July</start_date> and <end_date>August</end_date>	[]		1
+179898263	0		user	data delivery from Kunal	EMAILSEARCH	search_email	<keyword>data delivery</keyword> from <contact_name_from>Kunal</contact_name_from>	[]		1
+179762039	0		user	emails from Jyotsna	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Jyotsna</contact_name_from>	[]		1
+180297541	0		user	emails from liz	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>liz</contact_name_from>	[]		1
+179762563	0		user	sunbstate day mail 20aug	EMAILSEARCH	search_email	<keyword>sunbstate day</keyword> <message_type>mail</message_type> <start_date>20aug</start_date>	[]		1
+179898257	0		user	Shuyin OKR summary first week of October	EMAILSEARCH	search_email	<contact_name>Shuyin</contact_name> <keyword>OKR summary</keyword> <start_date>first week of October</start_date>	[]		1
+179762114	0		user	mail from my teammates	EMAILSEARCH	search_email	<message_type>mail</message_type> from <relationship_name>my teammates</relationship_name>	[]		1
+179898274	0		user	Bi-weekly update 2 weeks back	EMAILSEARCH	search_email	<keyword>Bi-weekly update</keyword> <start_date>2 weeks back</start_date>	[]		1
+180297639	0		user	emails from Robert with attachments	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Robert</contact_name_from> with <attachment>attachments</attachment>	[]		1
+179898020	0		user	what are my emails from manasi	EMAILSEARCH	search_email	what are my <message_type>emails</message_type> from <contact_name_from>manasi</contact_name_from>	[]		1
+179762339	0		user	Anu last month	EMAILSEARCH	search_email	<contact_name>Anu</contact_name> <start_date>last month</start_date>	[]		1
+180297514	0		user	sam july 4	EMAILSEARCH	search_email	<contact_name>sam</contact_name> <start_date>july 4</start_date>	[]		1
+179762224	0		user	sudiana may to december	EMAILSEARCH	search_email	<contact_name>sudiana</contact_name> <start_date>may</start_date> to <end_date>december</end_date>	[]		1
+179762068	0		user	meeting invites with Ankita as participant	EMAILSEARCH	search_email	<keyword>meeting invites</keyword> with <contact_name>Ankita</contact_name> as <keyword>participant</keyword>	[]		1
+179762556	0		user	about scrum meeting from gayatri	EMAILSEARCH	search_email	about <keyword>scrum meeting</keyword> from <contact_name_from>gayatri</contact_name_from>	[]		1
+179898118	0		user	from minwooj about discussion	EMAILSEARCH	search_email	from <contact_name_from>minwooj</contact_name_from> about <keyword>discussion</keyword>	[]		1
+179762627	0		user	Jan 1st to Jan 31st from Jaya	EMAILSEARCH	search_email	<start_date>Jan 1st</start_date> to <end_date>Jan 31st</end_date> from <contact_name_from>Jaya</contact_name_from>	[]		1
+179762109	0		user	attachments from sudiana	EMAILSEARCH	search_email	<attachment>attachments</attachment> from <contact_name_from>sudiana</contact_name_from>	[]		1
+180297572	0		user	John sent an email about dogs sometime in june between Monday and Friday this week	EMAILSEARCH	search_email	<contact_name_from>John</contact_name_from> sent an <message_type>email</message_type> about <keyword>dogs sometime in june</keyword> between <start_date>Monday</start_date> and <end_date>Friday this week</end_date>	[]		1
+180297611	0		user	email from Helen about halloween party last week	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Helen</contact_name_from> about <keyword>halloween party last week</keyword>	[]		1
+179762617	0		user	Consolidate report of March	EMAILSEARCH	search_email	<keyword>Consolidate report</keyword> of <start_date>March</start_date>	[]		1
+179762395	0		user	Kevin summer vacation	NOTSURE	other_domain	<contact_name>Kevin</contact_name> <keyword>summer vacation</keyword>	[]		1
+179762550	0		user	team lunch in september	EMAILSEARCH	search_email	<keyword>team lunch</keyword> in <start_date>september</start_date>	[]		1
+179762510	0		user	Pallavi Om feedback	NOTSURE	other_domain	<contact_name>Pallavi</contact_name> <keyword>Om feedback</keyword>	[]		1
+180297679	0		user	show me emails between july4 and july 9 from eric	EMAILSEARCH	search_email	show me <message_type>emails</message_type> between <start_date>july4</start_date> and <end_date>july 9</end_date> from <contact_name_from>eric</contact_name_from>	[]		1
+179762587	0		user	GT accuracy report sent by Abily	EMAILSEARCH	search_email	<keyword>GT accuracy report</keyword> sent by <contact_name_from>Abily</contact_name_from>	[]		1
+179762127	0		user	emails from dec 2018 to feb 2019 by Tony	EMAILSEARCH	search_email	<message_type>emails</message_type> from <start_date>dec 2018</start_date> to <end_date>feb 2019</end_date> by <contact_name>Tony</contact_name>	[]		1
+180297411	0		user	Mary about California	EMAILSEARCH	search_email	<contact_name>Mary</contact_name> about <keyword>California</keyword>	[]		1
+179762360	0		user	sundar regarding  stci town hall mails Thursday	EMAILSEARCH	search_email	<contact_name>sundar</contact_name> regarding  <keyword>stci town hall mails</keyword> <start_date>Thursday</start_date>	[]		1
+179898131	0		user	form Rahul about distillation	EMAILSEARCH	search_email	form <contact_name_from>Rahul</contact_name_from> about <keyword>distillation</keyword>	[]		1
+179898200	0		user	attachment from Minwoo	EMAILSEARCH	search_email	<attachment>attachment</attachment> from <contact_name_from>Minwoo</contact_name_from>	[]		1
+180297677	0		user	Patricia last week	EMAILSEARCH	search_email	<contact_name>Patricia</contact_name> <start_date>last week</start_date>	[]		1
+179762604	0		user	gayatri mails received on 22 August	EMAILSEARCH	search_email	<contact_name>gayatri</contact_name> <message_type>mails</message_type> received on <start_date>22 August</start_date>	[]		1
+180297413	0		user	dee movie date	NOTSURE	other_domain	<contact_name>dee</contact_name> <keyword>movie date</keyword>	[]		1
+179762543	0		user	Harshit 2nd week of May	EMAILSEARCH	search_email	<contact_name>Harshit</contact_name> <start_date>2nd week of May</start_date>	[]		1
+179762493	0		user	emails from Bill about Q1 Profits	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Bill</contact_name_from> about <keyword>Q1 Profits</keyword>	[]		1
+180297473	0		user	March's email concerning the fishing expedition with matt.	EMAILSEARCH	search_email	<start_date>March</start_date>'s <message_type>email</message_type> concerning the <keyword>fishing expedition</keyword> with <contact_name>matt</contact_name>.	[]		1
+179898227	0		user	from Donovan with the title connects	EMAILSEARCH	search_email	from <contact_name_from>Donovan</contact_name_from> with the title <email_subject>connects</email_subject>	[]		1
+180297482	0		user	email with title bbq from sam	EMAILSEARCH	search_email	<message_type>email</message_type> with title <email_subject>bbq</email_subject> from <contact_name_from>sam</contact_name_from>	[]		1
+179898162	0		user	Emails from haochu 	EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>haochu</contact_name_from> 	[]		1
+179898049	0		user	Zhiguo between March and April	EMAILSEARCH	search_email	<contact_name>Zhiguo</contact_name> between <start_date>March</start_date> and <end_date>April</end_date>	[]		1
+180297522	0		user	Yield emails from the first week to the second from roscoe.	EMAILSEARCH	search_email	<keyword>Yield</keyword> <message_type>emails</message_type> from the <start_date>first week</start_date> to the <end_date>second</end_date> from <contact_name_from>roscoe</contact_name_from>.	[]		1
+180297667	0		user	What emails did yakumo send from march to april.	EMAILSEARCH	search_email	What <message_type>emails</message_type> did <contact_name_from>yakumo</contact_name_from> send from <start_date>march</start_date> to <end_date>april</end_date>.	[]		1
+179898147	0		user	last year about email segmentation model	EMAILSEARCH	search_email	<start_date>last year</start_date> about <keyword>email segmentation model</keyword>	[]		1
+179898136	0		user	from Tao with attachments from 9/1 to 9/31	EMAILSEARCH	search_email	from <contact_name_from>Tao</contact_name_from> with <attachment>attachments</attachment> from <start_date>9/1</start_date> to <end_date>9/31</end_date>	[]		1
+180297663	0		user	Rachel from October 1st to October 28th	EMAILSEARCH	search_email	<contact_name>Rachel</contact_name> from <start_date>October 1st</start_date> to <end_date>October 28th</end_date>	[]		1
+180297669	0		user	search received emails from June 6 to 12	EMAILSEARCH	search_email	search <email_state>received</email_state> <message_type>emails</message_type> from <start_date>June 6</start_date> to <end_date>12</end_date>	[]		1
+179762397	0		user	Nitin's mail on August report	EMAILSEARCH	search_email	<contact_name>Nitin</contact_name>'s <message_type>mail</message_type> on <keyword>August report</keyword>	[]		1
+179762084	0		user	Wednesday mail about Power BI Tony	EMAILSEARCH	search_email	<start_date>Wednesday</start_date> <message_type>mail</message_type> about <keyword>Power BI</keyword> <contact_name>Tony</contact_name>	[]		1
+179898068	0		user	manager's emails since october 1	EMAILSEARCH	search_email	<relationship_name_from>manager</relationship_name_from>'s <message_type>emails</message_type> since <start_date>october 1</start_date>	[]		1
+179762280	0		user	mails in bing dat user	EMAILSEARCH	search_email	<message_type>mails</message_type> in <keyword>bing dat user</keyword>	[]		1
+179762185	0		user	Sapna all hands meet	NOTSURE	other_domain	<contact_name>Sapna</contact_name> <keyword>all hands meet</keyword>	[]		1
+179762336	0		user	connect last month	EMAILSEARCH	search_email	<keyword>connect</keyword> <start_date>last month</start_date>	[]		1
+179762207	0		user	Pradeep birthday party	NOTSURE	other_domain	<contact_name>Pradeep</contact_name> <keyword>birthday party</keyword>	[]		1
+179898076	0		user	Kunal biweekly update from September	EMAILSEARCH	search_email	<contact_name>Kunal</contact_name> <keyword>biweekly update</keyword> from <start_date>September</start_date>	[]		1
+180297433	0		user	google emails from thursday to saturday	EMAILSEARCH	search_email	,<emailsearch_other>google</emailsearch_other> <message_type>emails</message_type> from <start_date>thursday</start_date> to <end_date>saturday</end_date>	[]		1
+180297554	0		user	from one week ago about game	EMAILSEARCH	search_email	from <start_date>one week ago</start_date> about <keyword>game</keyword>	[]		1
+180297400	0		user	party email from sarah	EMAILSEARCH	search_email	<keyword>party</keyword> <message_type>email</message_type> from <contact_name_from>sarah</contact_name_from>	[]		1
+179762432	0		user	mail from sudiana@microsoft.com between last Friday to 10/18	EMAILSEARCH	search_email	<message_type>mail</message_type> from <contact_name_from>sudiana@microsoft.com</contact_name_from> between <start_date>last Friday</start_date> to <end_date>10/18</end_date>	[]		1
+180297465	0		user	emails from Calvin about date night	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Calvin</contact_name_from> about <keyword>date night</keyword>	[]		1
+179762340	0		user	from rakhi emails	EMAILSEARCH	search_email	from <contact_name_from>rakhi</contact_name_from> <message_type>emails</message_type>	[]		1
+179898164	0		user	from tom Tuesday to today	EMAILSEARCH	search_email	from <contact_name_from>tom</contact_name_from> <start_date>Tuesday</start_date> to <end_date>today</end_date>	[]		1
+179762559	0		user	email from arya	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>arya</contact_name_from>	[]		1
+179762453	0		user	15th August Vaishali	EMAILSEARCH	search_email	<start_date>15th August</start_date> <contact_name>Vaishali</contact_name>	[]		1
+180297478	0		user	july 8 bill smith	EMAILSEARCH	search_email	<start_date>july 8</start_date> <contact_name>bill smith</contact_name>	[]		1
+179898060	0		user	From Shuyin	EMAILSEARCH	search_email	From <contact_name_from>Shuyin</contact_name_from>	[]		1
+180297531	0		user	patricia between april and may	EMAILSEARCH	search_email	<contact_name>patricia</contact_name> between <start_date>april</start_date> and <end_date>may</end_date>	[]		1
+179762439	0		user	tool issue on 14 august	EMAILSEARCH	search_email	<keyword>tool issue</keyword> on <start_date>14 august</start_date>	[]		1
+180297423	0		user	attachments from carla	EMAILSEARCH	search_email	<attachment>attachments</attachment> from <contact_name_from>carla</contact_name_from>	[]		1
+179762441	0		user	Pallavi mails from January to march	EMAILSEARCH	search_email	<contact_name>Pallavi</contact_name> <message_type>mails</message_type> from <start_date>January</start_date> to <end_date>march</end_date>	[]		1
+179762460	0		user	Missed conversations of skype	NOTSURE	other_domain	<keyword>Missed conversations of skype</keyword>	[]		1
+180297509	0		user	Emails from Charles this week.	EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Charles</contact_name_from> <start_date>this week</start_date>.	[]		1
+179898085	0		user	emails from raj  between yesterday and today	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>raj</contact_name_from>  between <start_date>yesterday</start_date> and <end_date>today</end_date>	[]		1
+179762254	0		user	from sudiana	EMAILSEARCH	search_email	from <contact_name_from>sudiana</contact_name_from>	[]		1
+179762438	0		user	chat of Microsoft Teams	NOTSURE	other_domain	<keyword>chat of Microsoft Teams</keyword>	[]		1
+179898224	0		user	offline measurement on Monday	EMAILSEARCH	search_email	<keyword>offline measurement</keyword> on <start_date>Monday</start_date>	[]		1
+179762424	0		user	team meeting mail on 10-09-19	EMAILSEARCH	search_email	<keyword>team meeting</keyword> <message_type>mail</message_type> on <start_date>10-09-19</start_date>	[]		1
+179762195	0		user	dapri from Jan to March	EMAILSEARCH	search_email	<contact_name_from>dapri</contact_name_from> from <start_date>Jan</start_date> to <end_date>March</end_date>	[]		1
+180297548	0		user	find tuesday emails about the party	EMAILSEARCH	search_email	find <start_date>tuesday</start_date> <message_type>emails</message_type> about the <keyword>party</keyword>	[]		1
+179762282	0		user	abjose emails from 1st oct to 10 oct	EMAILSEARCH	search_email	<contact_name>abjose</contact_name> <message_type>emails</message_type> from <start_date>1st oct</start_date> to <end_date>10 oct</end_date>	[]		1
+179762196	0		user	M2H weekly release to STCI Data-analyst	EMAILSEARCH	search_email	<keyword>M2H weekly release</keyword> to <contact_name_to>STCI Data-analyst</contact_name_to>	[]		1
+179762102	0		user	from abjose	EMAILSEARCH	search_email	from <contact_name_from>abjose</contact_name_from>	[]		1
+179762264	0		user	email from anisha titled spanish flight domain	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>anisha</contact_name_from> titled <email_subject>spanish flight domain</email_subject>	[]		1
+179898134	0		user	from:Shuyin emailsearch	EMAILSEARCH	search_email	<contact_name_from>from:Shuyin</contact_name_from> <keyword>emailsearch</keyword>	[]		1
+179898130	0		user	access granted	NOTSURE	other_domain	<keyword>access granted</keyword>	[]		1
+179762108	0		user	Booking details of march	EMAILSEARCH	search_email	<keyword>Booking details</keyword> of <start_date>march</start_date>	[]		1
+179762142	0		user	guideline attachment shared by pallavi	EMAILSEARCH	search_email	<keyword>guideline</keyword> <attachment>attachment</attachment> shared by <contact_name_from>pallavi</contact_name_from>	[]		1
+179762157	0		user	from abily resourcing 	EMAILSEARCH	search_email	from <contact_name_from>abily</contact_name_from> <keyword>resourcing</keyword> 	[]		1
+179762450	0		user	gayatri bug fixing book last week	EMAILSEARCH	search_email	<contact_name>gayatri</contact_name> <keyword>bug fixing book</keyword> <start_date>last week</start_date>	[]		1
+179762268	0		user	Emergency notices from last week	EMAILSEARCH	search_email	<keyword>Emergency notices</keyword> from <start_date>last week</start_date>	[]		1
+180297580	0		user	from Rachel with invoice attachments	EMAILSEARCH	search_email	from <contact_name_from>Rachel</contact_name_from> with <keyword>invoice</keyword> <attachment>attachments</attachment>	[]		1
+180297417	0		user	from liz with subject frozen two movie night	EMAILSEARCH	search_email	from <contact_name_from>liz</contact_name_from> with subject <email_subject>frozen two movie night</email_subject>	[]		1
+180297440	0		user	From John the big guy with attachment about Mary eamil	EMAILSEARCH	search_email	From <contact_name_from>John the big guy</contact_name_from> with <attachment>attachment</attachment> about <keyword>Mary eamil</keyword>	[]		1
+179898214	0		user	dashboard sync every Wednesday of october	EMAILSEARCH	search_email	<keyword>dashboard sync</keyword> <start_date>every Wednesday of october</start_date>	[]		1
+179898232	0		user	about birthday party from zhiy	EMAILSEARCH	search_email	about <keyword>birthday party</keyword> from <contact_name_from>zhiy</contact_name_from>	[]		1
+179898277	0		user	from ye yi with a pdf	EMAILSEARCH	search_email	from <contact_name_from>ye yi</contact_name_from> with a <attachment_type>pdf</attachment_type>	[]		1
+179762501	0		user	email from ancy titled GT in queue	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>ancy</contact_name_from> titled <email_subject>GT in queue</email_subject>	[]		1
+179898102	0		user	Haoda yesterday	EMAILSEARCH	search_email	<contact_name>Haoda</contact_name> <start_date>yesterday</start_date>	[]		1
+179762154	0		user	emails from diana	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>diana</contact_name_from>	[]		1
+180297404	0		user	Answers weeks ago.	EMAILSEARCH	search_email	<keyword>Answers</keyword> <start_date>weeks ago</start_date>.	[]		1
+179898172	0		user	Ji tomorrow	EMAILSEARCH	search_email	<contact_name>Ji</contact_name> <start_date>tomorrow</start_date>	[]		1
+179762087	0		user	STCI AI+R party on Friday	NOTSURE	other_domain	<keyword>STCI AI+R party on Friday</keyword>	[]		1
+179898072	0		user	yeyi on Monday	EMAILSEARCH	search_email	<contact_name>yeyi</contact_name> on <start_date>Monday</start_date>	[]		1
+179762507	0		user	Gt accuracy report by abjose	EMAILSEARCH	search_email	<keyword>Gt accuracy report</keyword> by <contact_name_from>abjose</contact_name_from>	[]		1
+179898047	0		user	from john between july and august with doc attached	EMAILSEARCH	search_email	from <contact_name_from>john</contact_name_from> between <start_date>july</start_date> and <end_date>august</end_date> with <attachment_type>doc</attachment_type> attached	[]		1
+179898042	0		user	shuyin november 11	EMAILSEARCH	search_email	<contact_name>shuyin</contact_name> <start_date>november 11</start_date>	[]		1
+179762430	0		user	yammer  in others inbox	EMAILSEARCH	search_email	<keyword>yammer</keyword>  in others <destination_folder>inbox</destination_folder>	[]		1
+179762180	0		user	to Sunethra Diana	EMAILSEARCH	search_email	to <contact_name_to>Sunethra Diana</contact_name_to>	[]		1
+179762099	0		user	emails from 2nd oct to 10th oct from Paa	EMAILSEARCH	search_email	<message_type>emails</message_type> from <start_date>2nd oct</start_date> to <end_date>10th oct</end_date> from <contact_name_from>Paa</contact_name_from>	[]		1
+180297645	0		user	Mom today	EMAILSEARCH	search_email	<relationship_name>Mom</relationship_name> <start_date>today</start_date>	[]		1
+180297460	0		user	Show the email from Barbara.	EMAILSEARCH	search_email	Show the <message_type>email</message_type> from <contact_name_from>Barbara</contact_name_from>.	[]		1
+179898089	0		user	patricio about dedupe	EMAILSEARCH	search_email	<contact_name>patricio</contact_name> about <keyword>dedupe</keyword>	[]		1
+179762483	0		user	Ankita report	NOTSURE	other_domain	<contact_name>Ankita</contact_name> <keyword>report</keyword>	[]		1
+179762054	0		user	from XYZ regarding car lease program	EMAILSEARCH	search_email	from <contact_name_from>XYZ</contact_name_from> regarding <keyword>car lease program</keyword>	[]		1
+179762619	0		user	gt mails from roopa	EMAILSEARCH	search_email	<keyword>gt</keyword> <message_type>mails</message_type> from <contact_name_from>roopa</contact_name_from>	[]		1
+179762211	0		user	between March 1st to Feb 20 from Gaya	EMAILSEARCH	search_email	between <start_date>March 1st</start_date> to <end_date>Feb 20</end_date> from <contact_name_from>Gaya</contact_name_from>	[]		1
+179898137	0		user	email from ji	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>ji</contact_name_from>	[]		1
+179898233	0		user	from Jun about tomorrow's deep dive	EMAILSEARCH	search_email	from <contact_name_from>Jun</contact_name_from> about <start_date>tomorrow</start_date>'s <keyword>deep dive</keyword>	[]		1
+179762623	0		user	Mon emails from substrate day	EMAILSEARCH	search_email	<start_date>Mon</start_date> <message_type>emails</message_type> from <keyword>substrate day</keyword>	[]		1
+179762101	0		user	from preaga from 3rd to 5th november	EMAILSEARCH	search_email	from <contact_name_from>preaga</contact_name_from> from <start_date>3rd</start_date> to <end_date>5th november</end_date>	[]		1
+179898159	0		user	from Marat with subject search gold mirror	EMAILSEARCH	search_email	from <contact_name_from>Marat</contact_name_from> with subject <email_subject>search gold mirror</email_subject>	[]		1
+179762535	0		user	sent mails from me about GT	EMAILSEARCH	search_email	<destination_folder>sent</destination_folder> mails from <relationship_name_from>me</relationship_name_from> about <keyword>GT</keyword>	[]		1
+179762413	0		user	OM Accuracy attachment from Abily	EMAILSEARCH	search_email	<keyword>OM Accuracy</keyword> <attachment>attachment</attachment> from <contact_name_from>Abily</contact_name_from>	[]		1
+180297524	0		user	Find the email from Christopher about baby sitting.	EMAILSEARCH	search_email	Find the <message_type>email</message_type> from <contact_name_from>Christopher</contact_name_from> about <keyword>baby sitting</keyword>.	[]		1
+179762642	0		user	Paa mails from 3rd july to 3rd august	EMAILSEARCH	search_email	<contact_name>Paa</contact_name> <message_type>mails</message_type> from <start_date>3rd july</start_date> to <end_date>3rd august</end_date>	[]		1
+179762258	0		user	all mails from priyank on 1st oct	EMAILSEARCH	search_email	all <message_type>mails</message_type> from <contact_name_from>priyank</contact_name_from> on <start_date>1st oct</start_date>	[]		1
+180297476	0		user	from dj with subject dance recital	EMAILSEARCH	search_email	from <contact_name_from>dj</contact_name_from> with subject <email_subject>dance recital</email_subject>	[]		1
+179762080	0		user	emails sent by sudha between december 4th 2017 to jan30th 2018	EMAILSEARCH	search_email	<message_type>emails</message_type> sent by <contact_name_from>sudha</contact_name_from> between <start_date>december 4th 2017</start_date> to <end_date>jan30th 2018</end_date>	[]		1
+179762146	0		user	kumari 19 january	EMAILSEARCH	search_email	<contact_name>kumari</contact_name> <start_date>19 january</start_date>	[]		1
+179762513	0		user	mails from dapriy with attachments	EMAILSEARCH	search_email	<message_type>mails</message_type> from <contact_name_from>dapriy</contact_name_from> with <attachment>attachments</attachment>	[]		1
+179762191	0		user	from diana	EMAILSEARCH	search_email	from <contact_name_from>diana</contact_name_from>	[]		1
+180297406	0		user	attachments from Patricia	EMAILSEARCH	search_email	<attachment>attachments</attachment> from <contact_name_from>Patricia</contact_name_from>	[]		1
+179762577	0		user	attachments from idan	EMAILSEARCH	search_email	<attachment>attachments</attachment> from <contact_name>idan</contact_name>	[]		1

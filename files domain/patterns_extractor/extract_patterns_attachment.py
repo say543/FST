@@ -104,7 +104,11 @@ def process_tagged_queries(queries, annotated_queries, intents, domain, DomainTo
 
                 tag_values[xmlType].extend(xmlValue)
 
-                if xmlType == 'message_type':
+                #######################
+                # version 1
+                #######################
+                '''
+                if xmlType == 'message_type' or xmlType == 'keyword':
                     new_query = new_query.replace(xmlValue, '')
                     new_annotation = new_annotation.replace(xmlpair, '')
                 else:
@@ -115,6 +119,19 @@ def process_tagged_queries(queries, annotated_queries, intents, domain, DomainTo
                     #    print('{}'.format(clean_query(new_query)))
 
                     new_annotation = new_annotation.replace(xmlpair, '<{}>'.format(xmlType.lower()))
+                '''
+
+                #######################
+                # version 2
+                #######################
+                new_query = new_query.replace(xmlValue, '<{}>'.format(xmlType.lower()))
+
+                # fro debug
+                #if xmlType.lower() == 'message_type':
+                #    print('{}'.format(new_query))
+                #    print('{}'.format(clean_query(new_query)))
+
+                new_annotation = new_annotation.replace(xmlpair, '<{}>'.format(xmlType.lower()))
 
         # old routine, all tags being processed
         '''
@@ -173,6 +190,9 @@ DomainToSlotsProcess['EMAILSEARCH'].add('message_type')
 DomainToSlotsProcess['EMAILSEARCH'].add('attachment_type')
 # attachment will be confused with attachment_type when replacement. leave it to data generation
 #DomainToSlotsProcess['EMAILSEARCH'].add('attachment')
+# add keyword for contexul lu patterns extraction
+DomainToSlotsProcess['EMAILSEARCH'].add('keyword')
+
 
 
 

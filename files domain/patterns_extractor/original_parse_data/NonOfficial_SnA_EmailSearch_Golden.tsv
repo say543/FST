@@ -1,0 +1,83 @@
+ConversationId	MessageId	MessageTimestamp	MessageFrom	MessageText	JudgedDomain	JudgedIntent	JudgedConstraints	MetaData	ConversationContext	Frequency
+178914312			user	from ming in my inbox	EMAILSEARCH	search_email	from <contact_name_from>ming</contact_name_from> in my <destination_folder>inbox</destination_folder>	[]		1
+178914311			user	shaquille o'neal on bcc	EMAILSEARCH	search_email	<contact_name_bcc>shaquille o'neal</contact_name_bcc> on bcc	[]		1
+178914310			user	before 04/01/2019	EMAILSEARCH	search_email	before <end_date>04/01/2019</end_date>	[]		1
+178914309			user	emails marked important	EMAILSEARCH	search_email	<message_type>emails</message_type> marked <message_category>important</message_category>	[]		1
+178914308			user	email with a flag 	EMAILSEARCH	search_email	email with a <message_category>flag</message_category> 	[]		1
+178914307			user	emails that are categorized as work	EMAILSEARCH	search_email	<message_type>emails</message_type> that are categorized as <user_defined_category>work</user_defined_category>	[]		1
+178914306			user	archived emails	EMAILSEARCH	search_email	<email_state>archived</email_state> <message_type>emails</message_type>	[]		1
+178914305			user	from james franco after 07/04/2019 9:47 PM	EMAILSEARCH	search_email	from <contact_name_from>james franco</contact_name_from> after <start_date>07/04/2019</start_date> <start_time>9:47 PM</start_time>	[]		1
+178914304			user	after April 1, 2019 cc mj@nba.com            	EMAILSEARCH	search_email	after <start_date>April 1, 2019</start_date> cc <contact_name_cc>mj@nba.com</contact_name_cc>            	[]		1
+178914303			user	excel shared by ming 	EMAILSEARCH	search_email	<attachment_type>excel</attachment_type> shared by <contact_name_from>ming</contact_name_from> 	[]		1
+178914302			user	between last thursday and last friday from frank underhill	EMAILSEARCH	search_email	between <start_date>last thursday</start_date> and <end_date>last friday</end_date> from <contact_name_from>frank underhill</contact_name_from>	[]		1
+178914301			user	video shared by rajkiran	EMAILSEARCH	search_email	<attachment_type>video</attachment_type> shared by <contact_name_from>rajkiran</contact_name_from>	[]		1
+178914300			user	emails with my peers 	EMAILSEARCH	search_email	<message_type>emails</message_type> with <relationship_name>my peers</relationship_name> 	[]		1
+178914299			user	from ming before noon         	EMAILSEARCH	search_email	from <contact_name_from>ming</contact_name_from> before <end_time>noon</end_time>         	[]		1
+178914298			user	emails sent to freddy diaz    	EMAILSEARCH	search_email	<message_type>emails</message_type> sent to <contact_name_to>freddy diaz</contact_name_to>    	[]		1
+178914297			user	purple category emails	EMAILSEARCH	search_email	<user_defined_category>purple</user_defined_category> category <message_type>emails</message_type>	[]		1
+178914296			user	email marked as red	EMAILSEARCH	search_email	<message_type>email</message_type> marked as <user_defined_category>red</user_defined_category>	[]		1
+178914295			user	emails with Q4 OKR in the subject 	EMAILSEARCH	search_email	<message_type>emails</message_type> with <email_subject>Q4 OKR</email_subject> in the subject 	[]		1
+178914294			user	Phil Boyle         	EMAILSEARCH	search_email	<contact_name>Phil Boyle</contact_name>         	[]		1
+178914293			user	between 10 AM and 11 AM cc josh rosen     	EMAILSEARCH	search_email	between <start_time>10 AM</start_time> and <end_time>11 AM</end_time> cc <contact_name_cc>josh rosen</contact_name_cc>     	[]		1
+178914292			user	New email marked for follow up	EMAILSEARCH	search_email	<message_category>New</message_category> <message_type>email</message_type> marked for <message_category>follow up</message_category>	[]		1
+178914291			user	show me unread emails	EMAILSEARCH	search_email	show me <message_category>unread</message_category> <message_type>emails</message_type>	[]		1
+178914290			user	between 10 AM and 11 AM cc josh rosen	EMAILSEARCH	search_email	between <start_time>10 AM</start_time> and <end_time>11 AM</end_time> cc <contact_name_cc>josh rosen</contact_name_cc>	[]		1
+178914289			user	mails with images	EMAILSEARCH	search_email	<message_category>mails</message_category> with <attachment_type>images</attachment_type>	[]		1
+178914288			user	emails with a bang	EMAILSEARCH	search_email	<message_type>emails</message_type> with a <message_category>bang</message_category>	[]		1
+178914287			user	from nandu with attachment	EMAILSEARCH	search_email	from <contact_name_from>nandu</contact_name_from> with <attachment>attachment</attachment>	[]		1
+178914286			user	from james franco after 07/04/2019 9:47 PM       	EMAILSEARCH	search_email	from <contact_name_from>james franco</contact_name_from> after <start_date>07/04/2019</start_date> <start_time>9:47 PM</start_time>       	[]		1
+178914285			user	mp4 cc wsmith@microsoft.com	EMAILSEARCH	search_email	<attachment_type>mp4</attachment_type> cc <contact_name_cc>wsmith@microsoft.com</contact_name_cc>	[]		1
+178914252			user	attachments from mike	EMAILSEARCH	search_email	<attachment>attachments</attachment> from <contact_name_from>mike</contact_name_from>	[]		1
+178914253			user	recent emails from John    	EMAILSEARCH	search_email	<order_ref>recent</order_ref> <message_type>emails</message_type> from <contact_name_from>John</contact_name_from>    	[]		1
+178914254			user	9/10 to 9/11   	EMAILSEARCH	search_email	<start_date>9/10</start_date> to <end_date>9/11</end_date>   	[]		1
+178914255			user	to freddy diaz    	EMAILSEARCH	search_email	to <contact_name_to>freddy diaz</contact_name_to>    	[]		1
+178914256			user	the thread about Q4 ETAs 	EMAILSEARCH	search_email	the <message_type>thread</message_type> about <keyword>Q4 ETAs</keyword> 	[]		1
+178914257			user	jay r	EMAILSEARCH	search_email	<contact_name>jay r</contact_name>	[]		1
+178914258			user	rajkiran Q4 OKR         	EMAILSEARCH	search_email	<contact_name>rajkiran</contact_name> <keyword>Q4 OKR</keyword>         	[]		1
+178914259			user	emails with Q4 OKR in the body 	EMAILSEARCH	search_email	<message_type>emails</message_type> with <email_body>Q4 OKR</email_body> in the body 	[]		1
+178914260			user	orange emails	EMAILSEARCH	search_email	<user_defined_category>orange</user_defined_category> <message_type>emails</message_type>	[]		1
+178914261			user	my ceo on bcc          	EMAILSEARCH	search_email	<relationship_name_bcc>my ceo</relationship_name_bcc> on bcc          	[]		1
+178914262			user	shaquille o'neal on cc	EMAILSEARCH	search_email	<contact_name_cc>shaquille o'neal</contact_name_cc> on cc	[]		1
+178914263			user	from Antonio about apples	EMAILSEARCH	search_email	from <contact_name_from>Antonio</contact_name_from> about <keyword>apples</keyword>	[]		1
+178914264			user	bcc freddy diaz   	EMAILSEARCH	search_email	bcc <contact_name_bcc>freddy diaz</contact_name_bcc>   	[]		1
+178914265			user	to my manager about Q4 OKR	EMAILSEARCH	search_email	to <relationship_name_to>my manager</relationship_name_to> about <keyword>Q4 OKR</keyword>	[]		1
+178914266			user	due on August 2019	EMAILSEARCH	search_email	due on <due_date>August 2019</due_date>	[]		1
+178914267			user	rapanuga Q4 OKR         	EMAILSEARCH	search_email	<contact_name>rapanuga</contact_name> <keyword>Q4 OKR</keyword>         	[]		1
+178914268			user	email with a due date 	EMAILSEARCH	search_email	<message_type>email</message_type> with a <message_category>due date</message_category> 	[]		1
+178914269			user	cc my report        	EMAILSEARCH	search_email	cc <relationship_name_cc>my report</relationship_name_cc>        	[]		1
+178914270			user	Zhongpeng Shao   	EMAILSEARCH	search_email	<contact_name>Zhongpeng Shao</contact_name>   	[]		1
+178914271			user	from freddy diaz  	EMAILSEARCH	search_email	from <contact_name_from>freddy diaz</contact_name_from>  	[]		1
+178914272			user	forwarded to ming 	EMAILSEARCH	search_email	<email_state>forwarded</email_state> to <contact_name_to>ming</contact_name_to> 	[]		1
+178914273			user	emails with a red bang   	EMAILSEARCH	search_email	<message_type>emails</message_type> with a <message_category>red bang</message_category>   	[]		1
+178914274			user	bcc my report        	EMAILSEARCH	search_email	bcc <relationship_name_bcc>my report</relationship_name_bcc>        	[]		1
+178914275			user	emails without any attachment	EMAILSEARCH	search_email	<message_type>emails</message_type> <without_attachment>without any attachment</without_attachment>	[]		1
+178914276			user	my manager emails this week    	EMAILSEARCH	search_email	<relationship_name>my manager</relationship_name> <message_type>emails</message_type> <start_date>this week</start_date>    	[]		1
+178914277			user	emails marked due today	EMAILSEARCH	search_email	<message_type>emails</message_type> marked due <due_date>today</due_date>	[]		1
+178914278			user	unread emails in my personal folder	EMAILSEARCH	search_email	<message_category>unread</message_category> <message_type>emails</message_type> in my <destination_folder>personal</destination_folder> folder	[]		1
+178914279			user	Send emails to my boss    	EMAILSEARCH	search_email	Send emails to <relationship_name_to>my boss</relationship_name_to>    	[]		1
+178914280			user	between Jan 1 and Feb 1   	EMAILSEARCH	search_email	between <start_date>Jan 1</start_date> and <end_date>Feb 1</end_date>   	[]		1
+178914281			user	emails from my boss 	EMAILSEARCH	search_email	<message_type>emails</message_type> from <relationship_name_from>my boss</relationship_name_from> 	[]		1
+178914282			user	send an email to myself        	EMAILSEARCH	search_email	send an email to <relationship_name_to>myself</relationship_name_to>        	[]		1
+178914283			user	excel shared by mingzhu 	EMAILSEARCH	search_email	<attachment_type>excel</attachment_type> shared by <contact_name_from>mingzhu</contact_name_from> 	[]		1
+178914284			user	my ceo on cc	EMAILSEARCH	search_email	<relationship_name_cc>my ceo</relationship_name_cc> on cc	[]		1
+178914313			user	replied to rajkiran	EMAILSEARCH	search_email	<email_state>replied</email_state> to <contact_name_to>rajkiran</contact_name_to>	[]		1
+178914314			user	Q4 OKR 	EMAILSEARCH	search_email	<keyword>Q4 OKR</keyword> 	[]		1
+178914315			user	my missed conversations    	EMAILSEARCH	search_email	my <message_category>missed</message_category> <message_type>conversations</message_type>    	[]		1
+178914316			user	the email about Q4 ETAs 	EMAILSEARCH	search_email	the <message_type>email</message_type> about <keyword>Q4 ETAs</keyword> 	[]		1
+178914317			user	unread emails marked high priority   	EMAILSEARCH	search_email	<message_category>unread</message_category> emails marked <message_category>high priority</message_category>   	[]		1
+178914318			user	deleted emails	EMAILSEARCH	search_email	<email_state>deleted</email_state> <message_type>emails</message_type>	[]		1
+178914319			user	read emails	EMAILSEARCH	search_email	<message_category>read</message_category> <message_type>emails</message_type>	[]		1
+178914320			user	excel shared by freddy diaz  	EMAILSEARCH	search_email	<attachment_type>excel</attachment_type> shared by <contact_name_from>freddy diaz</contact_name_from>  	[]		1
+178914321			user	to julio jones with ppt 	EMAILSEARCH	search_email	to <contact_name_to>julio jones</contact_name_to> with <attachment_type>ppt</attachment_type> 	[]		1
+178914322			user	cc freddy diaz	EMAILSEARCH	search_email	cc <contact_name_cc>freddy diaz</contact_name_cc>	[]		1
+178914323			user	oldest emails from John    	EMAILSEARCH	search_email	<order_ref>oldest</order_ref> <message_type>emails</message_type> from <contact_name_from>John</contact_name_from>    	[]		1
+178914324			user	to ming from 9 AM to 5 PM	EMAILSEARCH	search_email	to <contact_name_to>ming</contact_name_to> from <start_time>9 AM</start_time> to <end_time>5 PM</end_time>	[]		1
+178914325			user	latest emails from John    	EMAILSEARCH	search_email	<order_ref>latest</order_ref> <message_type>emails</message_type> from <contact_name_from>John</contact_name_from>    	[]		1
+178914326			user	to ming from 9 AM to 5 PM   	EMAILSEARCH	search_email	to <contact_name_to>ming</contact_name_to> from <start_time>9 AM</start_time> to <end_time>5 PM</end_time>   	[]		1
+178914327			user	email to John with read receipt	EMAILSEARCH	search_email	<message_type>email</message_type> to <contact_name_to>John</contact_name_to> with <message_category>read receipt</message_category>	[]		1
+178914328			user	emails with rajkiran         	EMAILSEARCH	search_email	<message_type>emails</message_type> with <contact_name>rajkiran</contact_name>         	[]		1
+178914329			user	new emails	EMAILSEARCH	search_email	<message_category>new</message_category> <message_type>emails</message_type>	[]		1
+178914330			user	emails from my manager      	EMAILSEARCH	search_email	<message_type>emails</message_type> from <relationship_name_from>my manager</relationship_name_from>      	[]		1
+178914331			user	emails without attachments	EMAILSEARCH	search_email	<message_type>emails</message_type> <without_attachment>without attachments</without_attachment>	[]		1
+178914332			user	draft email to Lucy	EMAILSEARCH	search_email	<email_state>draft</email_state> <message_type>email</message_type> to <contact_name_to>Lucy</contact_name_to>	[]		1
+178914333			user	send me an email at noon tomorrow	EMAILSEARCH	search_email	send me an email at <start_time>noon</start_time> <start_date>tomorrow</start_date>	[]		1

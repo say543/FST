@@ -1,0 +1,86 @@
+ConversationId	MessageId	MessageTimestamp	MessageFrom	MessageText	JudgedDomain	JudgedIntent	JudgedConstraints	MetaData	ConversationContext	Frequency	CortanaResponse
+180007001			user	mail i sent to vanessa with attachment	EMAILSEARCH	search_email	<message_type>mail</message_type> <contact_name_from>i</contact_name_from> sent to <contact_name_to>vanessa</contact_name_to> with <attachment>attachment</attachment>	[]		1	
+180007002			user	have i received any new emails in the last 2 hours ?	EMAILSEARCH	search_email	have i received any <message_category>new</message_category> emails in the <start_date>last 2 hours</start_date> ?	[]		1	
+180007003			user	from byungki last march	EMAILSEARCH	search_email	from <contact_name_from>byungki</contact_name_from> <start_date>last march</start_date>	[]		1	
+180007004			user	from ramesh on okr	EMAILSEARCH	search_email	from <contact_name_from>ramesh</contact_name_from> on <keyword>okr</keyword>	[]		1	
+180007005			user	to vanessa with attachment	EMAILSEARCH	search_email	to <contact_name_to>vanessa</contact_name_to> with <attachment>attachment</attachment>	[]		1	
+180007006			user	lynn robin rajesh deck 2015	EMAILSEARCH	search_email	<contact_name>lynn robin rajesh</contact_name> <attachment_type>deck</attachment_type> <start_date>2015</start_date>	[]		1	
+180007007			user	scorecard attachment from august 2017	EMAILSEARCH	search_email	<keyword>scorecard</keyword> <attachment>attachment</attachment> from <start_date>august 2017</start_date>	[]		1	
+180007008			user	from shuyin about planning with attachment last week	EMAILSEARCH	search_email	from <contact_name_from>shuyin</contact_name_from> about <keyword>planning</keyword> with <attachment>attachment</attachment> <start_date>last week</start_date>	[]		1	
+180007009			user	show me emails from jordan with powerpoint attachments	EMAILSEARCH	search_email	show me <message_type>emails</message_type> from <contact_name_from>jordan</contact_name_from> with <attachment_type>powerpoint</attachment_type> attachments	[]		1	
+180007010			user	from mark with attachment	EMAILSEARCH	search_email	from <contact_name_from>mark</contact_name_from> with <attachment>attachment</attachment>	[]		1	
+180007011			user	outlook weekly from gaurav last september	EMAILSEARCH	search_email	<keyword>outlook weekly</keyword> from <contact_name_from>gaurav</contact_name_from> <start_date>last september</start_date>	[]		1	
+180007012			user	emails from yoni@microsoft.com	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>yoni@microsoft.com</contact_name_from>	[]		1	
+180007013			user	from shuyin about planning with attachment	EMAILSEARCH	search_email	from <contact_name_from>shuyin</contact_name_from> about <keyword>planning</keyword> with <attachment>attachment</attachment>	[]		1	
+180007014			user	from sujith in the last 2 weeks	EMAILSEARCH	search_email	from <contact_name_from>sujith</contact_name_from> in the <start_date>last 2 weeks</start_date>	[]		1	
+180007015			user	emails from vijay in previous weeks	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>vijay</contact_name_from> in <start_date>previous weeks</start_date>	[]		1	
+180007016			user	from shuyin about planning with attachment in may	EMAILSEARCH	search_email	from <contact_name_from>shuyin</contact_name_from> about <keyword>planning</keyword> with <attachment>attachment</attachment> in <start_date>may</start_date>	[]		1	
+180007017			user	from minu on planning	EMAILSEARCH	search_email	from <contact_name_from>minu</contact_name_from> on <keyword>planning</keyword>	[]		1	
+180007018			user	from rajkiran 1 week ago	EMAILSEARCH	search_email	from <contact_name_from>rajkiran</contact_name_from> <keyword>1 week ago</keyword>	[]		1	
+180007019			user	from vijay in the last 24 hours	EMAILSEARCH	search_email	from <contact_name_from>vijay</contact_name_from> in the <start_date>last 24 hours</start_date>	[]		1	
+180007020			user	from yue last week	EMAILSEARCH	search_email	from <contact_name_from>yue</contact_name_from> <start_date>last week</start_date>	[]		1	
+180007021			user	from byungki in march	EMAILSEARCH	search_email	from <contact_name_from>byungki</contact_name_from> in <start_date>march</start_date>	[]		1	
+180007022			user	planning document	EMAILSEARCH	search_email	<keyword>planning</keyword> <attachment_type>document</attachment_type>	[]		1	
+180007023			user	pictures from vanessa	EMAILSEARCH	search_email	<attachment_type>pictures</attachment_type> from <contact_name_from>vanessa</contact_name_from>	[]		1	
+180007024			user	with attachments this week	EMAILSEARCH	search_email	with <attachment>attachments</attachment> <start_date>this week</start_date>	[]		1	
+180007025			user	owa scorecard with attachment	EMAILSEARCH	search_email	<keyword>owa scorecard</keyword> with <attachment>attachment</attachment>	[]		1	
+180007026			user	scorecard between 8/1/2017 and 9/1/2017	EMAILSEARCH	search_email	<keyword>scorecard</keyword> between <start_date>8/1/2017</start_date> and <end_date>9/1/2017</end_date>	[]		1	
+180007027			user	with attachments yesterday	EMAILSEARCH	search_email	with <attachment>attachments</attachment> <start_date>yesterday</start_date>	[]		1	
+180007028			user	i sent to vanessa with attachment	EMAILSEARCH	search_email	<contact_name_from>i</contact_name_from> sent to <contact_name>vanessa</contact_name> with <attachment>attachment</attachment>	[]		1	
+180007029			user	from yum	EMAILSEARCH	search_email	from <contact_name_from>yum</contact_name_from>	[]		1	
+180007030			user	from tao about eval last friday	EMAILSEARCH	search_email	from <contact_name_from>tao</contact_name_from> about <keyword>eval</keyword> <start_date>last friday</start_date>	[]		1	
+180007031			user	from cortanacs	EMAILSEARCH	search_email	from <contact_name_from>cortanacs</contact_name_from>	[]		1	
+180007032			user	scorecard from yi or ying	EMAILSEARCH	search_email	<keyword>scorecard</keyword> from <contact_name_from>yi</contact_name_from> or <contact_name_from>ying</contact_name_from>	[]		1	
+180007033			user	from ye-yi yesterday	EMAILSEARCH	search_email	from <contact_name_from>ye-yi</contact_name_from> <start_date>yesterday</start_date>	[]		1	
+180007034			user	yesterday 's slt mail	EMAILSEARCH	search_email	<start_date>yesterday</start_date> 's <keyword>slt</keyword> <message_type>mail</message_type>	[]		1	
+180007035			user	from myself	EMAILSEARCH	search_email	from <relationship_name_from>myself</relationship_name_from>	[]		1	
+180007036			user	from tao with attachment	EMAILSEARCH	search_email	from <contact_name_from>tao</contact_name_from> <attachment>with attachment</attachment>	[]		1	
+180007037			user	from garett about sprint review with attachment	EMAILSEARCH	search_email	from <contact_name_from>garett</contact_name_from> about <keyword>sprint review</keyword> with <attachment>attachment</attachment>	[]		1	
+180007038			user	from sujith in april	EMAILSEARCH	search_email	from <contact_name_from>sujith</contact_name_from> in <start_date>april</start_date>	[]		1	
+180007039			user	from ye-yi with attachment	EMAILSEARCH	search_email	from <contact_name>ye-yi</contact_name> <attachment>with attachment</attachment>	[]		1	
+180007040			user	from nidhi about answers in june	EMAILSEARCH	search_email	from <contact_name_from>nidhi</contact_name_from> about <keyword>answers</keyword> in <start_date>june</start_date>	[]		1	
+180007041			user	scorecard from august 2018	EMAILSEARCH	search_email	<keyword>scorecard</keyword> from <start_date>august 2018</start_date>	[]		1	
+180007042			user	mail on adc from vanessa	EMAILSEARCH	search_email	<message_type>mail</message_type> on <keyword>adc</keyword> from <contact_name_from>vanessa</contact_name_from>	[]		1	
+180007043			user	byungki scorecard with flag	EMAILSEARCH	search_email	<contact_name>byungki</contact_name> <keyword>scorecard</keyword> with <message_category>flag</message_category>	[]		1	
+180007044			user	what's my latest email ?	EMAILSEARCH	search_email	what's my <order_ref>latest</order_ref> <message_type>email</message_type> ?	[]		1	
+180007045			user	from byungki last week	EMAILSEARCH	search_email	from <contact_name_from>byungki</contact_name_from> <start_date>last week</start_date>	[]		1	
+180007046			user	unread emails from eric mei	EMAILSEARCH	search_email	<message_category>unread</message_category> <message_type>emails</message_type> from <contact_name_from>eric mei</contact_name_from>	[]		1	
+180007047			user	from erlevy	EMAILSEARCH	search_email	from <contact_name_from>erlevy</contact_name_from>	[]		1	
+180007048			user	sent to gayathri with attachment	EMAILSEARCH	search_email	sent to <contact_name_to>gayathri</contact_name_to> with <attachment>attachment</attachment>	[]		1	
+180007049			user	from mark planning june	EMAILSEARCH	search_email	from <contact_name_from>mark</contact_name_from> <keyword>planning</keyword> <start_date>june</start_date>	[]		1	
+180007050			user	owa scorecard attachment from august 2018	EMAILSEARCH	search_email	<keyword>owa scorecard</keyword> <attachment>attachment</attachment> from <start_date>august 2018</start_date>	[]		1	
+180007051			user	show me emails from sonia with powerpoint attachments	EMAILSEARCH	search_email	show me <message_type>emails</message_type> from <contact_name_from>sonia</contact_name_from> with <attachment_type>powerpoint</attachment_type> attachments	[]		1	
+180007052			user	from me	EMAILSEARCH	search_email	from <relationship_name>me</relationship_name>	[]		1	
+180007053			user	emails from calendar dri	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>calendar dri</contact_name_from>	[]		1	
+180007054			user	code review from azure devops in deleted items	EMAILSEARCH	search_email	<keyword>code review</keyword> from <contact_name_from>azure devops</contact_name_from> in <destination_folder>deleted items</destination_folder>	[]		1	
+180007055			user	owa scorecard attachment	EMAILSEARCH	search_email	<keyword>owa scorecard</keyword> <attachment>attachment</attachment>	[]		1	
+180007056			user	from sujith in the last week	EMAILSEARCH	search_email	from <contact_name_from>sujith</contact_name_from> in the <start_date>last week</start_date>	[]		1	
+180007057			user	bug bash from raj	EMAILSEARCH	search_email	<keyword>bug bash</keyword> from <contact_name_from>raj</contact_name_from>	[]		1	
+180007058			user	from byungki last month	EMAILSEARCH	search_email	from <contact_name_from>byungki</contact_name_from> <start_date>last month</start_date>	[]		1	
+180007059			user	data from brian	EMAILSEARCH	search_email	<keyword>data</keyword> from <contact_name_from>brian</contact_name_from>	[]		1	
+180007060			user	emails from alex	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>alex</contact_name_from>	[]		1	
+180007061			user	from ali about answers in june	EMAILSEARCH	search_email	from <contact_name_from>ali</contact_name_from> about <keyword>answers</keyword> in <start_date>june</start_date>	[]		1	
+180007062			user	what emails have i sent yong ?	EMAILSEARCH	search_email	what <message_type>emails</message_type> have <relationship_name_from>i</relationship_name_from> sent <contact_name_to>yong</contact_name_to> ?	[]		1	
+180007063			user	from ming with attachment	EMAILSEARCH	search_email	from <contact_name_from>ming</contact_name_from> with <attachment>attachment</attachment>	[]		1	
+180007064			user	onenote shared from eunice	EMAILSEARCH	search_email	<attachment_type>onenote</attachment_type> shared from <contact_name_from>eunice</contact_name_from>	[]		1	
+180007065			user	with excel	EMAILSEARCH	search_email	with <attachment_type>excel</attachment_type>	[]		1	
+180007066			user	from tao about eval last week	EMAILSEARCH	search_email	from <contact_name_from>tao</contact_name_from> about <keyword>eval</keyword> <start_date>last week</start_date>	[]		1	
+180007067			user	from byungki between 5/1 and 5/8	EMAILSEARCH	search_email	from <contact_name_from>byungki</contact_name_from> between <start_date>5/1</start_date> and <end_date>5/8</end_date>	[]		1	
+180007068			user	from jamil on promising	EMAILSEARCH	search_email	from <contact_name_from>jamil</contact_name_from> on <keyword>promising</keyword>	[]		1	
+180007069			user	byungki scorecard flagged	EMAILSEARCH	search_email	<contact_name>byungki</contact_name> <keyword>scorecard</keyword> <message_category>flagged</message_category>	[]		1	
+180007070			user	from paul last week	EMAILSEARCH	search_email	from <contact_name_from>paul</contact_name_from> <start_date>last week</start_date>	[]		1	
+180007071			user	scorecard august 2018	EMAILSEARCH	search_email	<keyword>scorecard</keyword> <start_date>august 2018</start_date>	[]		1	
+180007072			user	from nitin about planning	EMAILSEARCH	search_email	from <contact_name_from>nitin</contact_name_from> about <keyword>planning</keyword>	[]		1	
+180007073			user	from vanessa with attachment	EMAILSEARCH	search_email	from <contact_name_from>vanessa</contact_name_from> with <attachment>attachment</attachment>	[]		1	
+180007074			user	from mark knight scorecard	EMAILSEARCH	search_email	from <contact_name_from>mark knight</contact_name_from> <keyword>scorecard</keyword>	[]		1	
+180007075			user	flagged email	EMAILSEARCH	search_email	<message_category>flagged</message_category> <message_type>email</message_type>	[]		1	
+180007076			user	from mark about planning in june	EMAILSEARCH	search_email	from <contact_name_from>mark</contact_name_from> about <keyword>planning</keyword> in <start_date>june</start_date>	[]		1	
+180007077			user	from rajkiran 1 weeks ago	EMAILSEARCH	search_email	from <contact_name_from>rajkiran</contact_name_from> <start_date>1 weeks ago</start_date>	[]		1	
+180007078			user	from raj 1 week ago	EMAILSEARCH	search_email	from <contact_name_from>raj</contact_name_from> <start_date>1 week ago</start_date>	[]		1	
+180007079			user	emails from alex in september	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>alex</contact_name_from> in <start_date>september</start_date>	[]		1	
+180007080			user	from ming about evaluation	EMAILSEARCH	search_email	from <contact_name_from>ming</contact_name_from> about <keyword>evaluation</keyword>	[]		1	
+180007081			user	jason consistency deck	EMAILSEARCH	search_email	<contact_name>jason</contact_name> <keyword>consistency</keyword> <attachment_type>deck</attachment_type>	[]		1	
+180007082			user	from tao on multi-turn	EMAILSEARCH	search_email	from <contact_name_from>tao</contact_name_from> on <keyword>multi-turn</keyword>	[]		1	
+180007083			user	from shuman about planning with attachment	EMAILSEARCH	search_email	from <contact_name_from>shuman</contact_name_from> about <keyword>planning</keyword> with <attachment>attachment</attachment>	[]		1	
+180007084			user	outlook weekly from gaurav 2017	EMAILSEARCH	search_email	<keyword>outlook weekly</keyword> from <contact_name_from>gaurav</contact_name_from> <start_date>2017</start_date>	[]		1	
+180007085			user	with attachments on monday	EMAILSEARCH	search_email	with <attachment>attachments</attachment> on <start_date>monday</start_date>	[]		1	

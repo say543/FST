@@ -1,0 +1,720 @@
+ConversationId	MessageId	MessageTimestamp	MessageFrom	MessageText	JudgedDomain	JudgedIntent	JudgedConstraints	MetaData	ConversationContext	Frequency
+6	0		user	Email to Pam on Friday	EMAILSEARCH	search_email	<message_type>Email</message_type> to <contact_name_to>Pam</contact_name_to> on <start_date>Friday</start_date>	[]		1
+12	0		user	the one from Gil with photos attached	EMAILSEARCH	search_email	the one from <contact_name_from>Gil</contact_name_from> with <attachment_type>photos</attachment_type> attached	[]		1
+15	0		user	Find emails from Goku September 11th to September 12th	EMAILSEARCH	search_email	Find <message_type>emails</message_type> from <contact_name_from>Goku</contact_name_from> <start_date>September 11th</start_date> to <end_date>September 12th</end_date>	[]		1
+19	0		user	Display my emails to Ron.	EMAILSEARCH	search_email	Display my <message_type>emails</message_type> to <contact_name_to>Ron</contact_name_to>.	[]		1
+30	0		user	dad with google docs	EMAILSEARCH	search_email	<relationship_name>dad</relationship_name> with <attachment_type>google docs</attachment_type>	[]		1
+34	0		user	Emails from Connor with video	EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Connor</contact_name_from> with <attachment_type>video</attachment_type>	[]		1
+40	0		user	date night to Rachel	EMAILSEARCH	search_email	<keyword>date night</keyword> to <contact_name_to>Rachel</contact_name_to>	[]		1
+45	0		user	email from stacy	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>stacy</contact_name_from>	[]		1
+46	0		user	email to Jim about trip	EMAILSEARCH	search_email	<message_type>email</message_type> to <contact_name_to>Jim</contact_name_to> about <keyword>trip</keyword>	[]		1
+48	0		user	I had an email I kept from Jim on November 22nd.	EMAILSEARCH	search_email	I had an <message_type>email</message_type> I kept from <contact_name_from>Jim</contact_name_from> on <start_date>November 22nd</start_date>.	[]		1
+50	0		user	I want emails from joe	EMAILSEARCH	search_email	I want <message_type>emails</message_type> from <contact_name_from>joe</contact_name_from>	[]		1
+53	0		user	from Cindy attachment ZIP	EMAILSEARCH	search_email	from <contact_name_from>Cindy</contact_name_from> <attachment>attachment</attachment> <attachment_type>ZIP</attachment_type>	[]		1
+70	0		user	show emails to Dorothy about concert tickets	EMAILSEARCH	search_email	show <message_type>emails</message_type> to <contact_name_to>Dorothy</contact_name_to> about <keyword>concert tickets</keyword>	[]		1
+77	0		user	Birthday note to Jim	EMAILSEARCH	search_email	<keyword>Birthday</keyword> <attachment_type>note</attachment_type> to <contact_name_to>Jim</contact_name_to>	[]		1
+83	0		user	Messages from Mom	EMAILSEARCH	search_email	Messages from <relationship_name_from>Mom</relationship_name_from>	[]		1
+85	0		user	Give me the email to Paul with an attachment	EMAILSEARCH	search_email	Give me the <message_type>email</message_type> to <contact_name_to>Paul</contact_name_to> with an <attachment>attachment</attachment>	[]		1
+86	0		user	Lee power point file	EMAILSEARCH	search_email	<contact_name>Lee</contact_name> <attachment_type>power point file</attachment_type>	[]		1
+91	0		user	get me emails from Paul with Tuesday in the title	EMAILSEARCH	search_email	get me <message_type>emails</message_type> from <contact_name_from>Paul</contact_name_from> with <email_subject>Tuesday</email_subject> in the title	[]		1
+92	0		user	Search for the email with an attachment I sent to Paul	EMAILSEARCH	search_email	Search for the <message_type>email</message_type> with an <attachment>attachment</attachment> I sent to <contact_name_to>Paul</contact_name_to>	[]		1
+93	0		user	Pictures from Bill	EMAILSEARCH	search_email	<attachment_type>Pictures</attachment_type> from <contact_name_from>Bill</contact_name_from>	[]		1
+94	0		user	photos from joe	EMAILSEARCH	search_email	<attachment_type>photos</attachment_type> from <contact_name_from>joe</contact_name_from>	[]		1
+105	0		user	emails with gif attachments	EMAILSEARCH	search_email	<message_type>emails</message_type> with <attachment_type>gif</attachment_type> <attachment>attachments</attachment>	[]		1
+107	0		user	To: Mom concerning Birthday	EMAILSEARCH	search_email	To: <relationship_name_to>Mom</relationship_name_to> concerning <keyword>Birthday</keyword>	[]		1
+115	0		user	From Mark last August 27	EMAILSEARCH	search_email	From <contact_name_from>Mark</contact_name_from> <start_date>last August 27</start_date>	[]		1
+120	0		user	from Lia pdf attachment	EMAILSEARCH	search_email	from <contact_name_from>Lia</contact_name_from> <attachment_type>pdf</attachment_type> <attachment>attachment</attachment>	[]		1
+121	0		user	from Porter, Porter, and Associates	EMAILSEARCH	search_email	from <contact_name_from>Porter, Porter, and Associates</contact_name_from>	[]		1
+145	0		user	to Jim excel	EMAILSEARCH	search_email	to <contact_name_to>Jim</contact_name_to> <attachment_type>excel</attachment_type>	[]		1
+146	0		user	March 19th to Jim	EMAILSEARCH	search_email	<start_date>March 19th</start_date> to <contact_name_to>Jim</contact_name_to>	[]		1
+150	0		user	Do sitting from John	EMAILSEARCH	search_email	<keyword>Do sitting</keyword> from <contact_name_from>John</contact_name_from>	[]		1
+155	0		user	from Walter with photos	EMAILSEARCH	search_email	from <contact_name_from>Walter</contact_name_from> with <attachment_type>photos</attachment_type>	[]		1
+156	0		user	i have not read the warning	NOTSURE	other_domain	i have not read the warning	[]		1
+157	0		user	Show me  the email I got from John last Wednesday	EMAILSEARCH	search_email	Show me  the <message_type>email</message_type> I got from <contact_name_from>John</contact_name_from> <start_date>last Wednesday</start_date>	[]		1
+162	0		user	mails to Jane Doe to John	EMAILSEARCH	search_email	<message_type>mails</message_type> to <contact_name_to>Jane Doe</contact_name_to> to <contact_name_to>John</contact_name_to>	[]		1
+166	0		user	email from Mary about dessert	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Mary</contact_name_from> about <keyword>dessert</keyword>	[]		1
+170	0		user	Email sent to Amanda	EMAILSEARCH	search_email	<message_type>Email</message_type> sent to <contact_name_to>Amanda</contact_name_to>	[]		1
+175	0		user	from Greg excel 	EMAILSEARCH	search_email	from <contact_name_from>Greg</contact_name_from> <attachment_type>excel</attachment_type> 	[]		1
+176	0		user	Steve file	EMAILSEARCH	search_email	<contact_name>Steve</contact_name> <attachment_type>file</attachment_type>	[]		1
+177	0		user	Find an email with attachments from Paul	EMAILSEARCH	search_email	Find an <message_type>email</message_type> with <attachment>attachments</attachment> from <contact_name_from>Paul</contact_name_from>	[]		1
+183	0		user	meetings from Sir	EMAILSEARCH	search_email	<keyword>meetings</keyword> from <contact_name_from>Sir</contact_name_from>	[]		1
+184	0		user	show me messages that are from Bruce D.	EMAILSEARCH	search_email	show me <message_type>messages</message_type> that are from <contact_name_from>Bruce D</contact_name_from>.	[]		1
+185	0		user	from John with exceln	EMAILSEARCH	search_email	from <contact_name_from>John</contact_name_from> with <keyword>exceln</keyword>	[]		1
+198	0		user	From Olive in March	EMAILSEARCH	search_email	From <contact_name_from>Olive</contact_name_from> in <start_date>March</start_date>	[]		1
+212	0		user	Bring up my emails to Yannick with Excel.	EMAILSEARCH	search_email	Bring up my <message_type>emails</message_type> to <contact_name_to>Yannick</contact_name_to> with <attachment_type>Excel</attachment_type>.	[]		1
+213	0		user	Email from Susan on Sep't 12th	EMAILSEARCH	search_email	<message_type>Email</message_type> from <contact_name_from>Susan</contact_name_from> on <start_date>Sep&apos;t 12th</start_date>	[]		1
+219	0		user	messages from Jennifer last week	EMAILSEARCH	search_email	messages from <contact_name_from>Jennifer</contact_name_from> <start_date>last week</start_date>	[]		1
+224	0		user	messages to Kyle Seeback	EMAILSEARCH	search_email	messages to <contact_name_to>Kyle Seeback</contact_name_to>	[]		1
+231	0		user	To David last Thursday.	EMAILSEARCH	search_email	To <contact_name_to>David</contact_name_to> <start_date>last Thursday</start_date>.	[]		1
+234	0		user	To Jim attachment presentationn	EMAILSEARCH	search_email	To <contact_name_to>Jim</contact_name_to> <attachment>attachment</attachment> <keyword>presentationn</keyword>	[]		1
+235	0		user	from john june 14th	EMAILSEARCH	search_email	from <contact_name_from>john</contact_name_from> <start_date>june 14th</start_date>	[]		1
+236	0		user	Bring up the message from Ron about his son's graduation.	EMAILSEARCH	search_email	Bring up the message from <contact_name_from>Ron</contact_name_from> about <keyword>his son&apos;s graduation</keyword>.	[]		1
+237	0		user	dad with photo of baby	EMAILSEARCH	search_email	<relationship_name>dad</relationship_name> with <attachment_type>photo</attachment_type> of <keyword>baby</keyword>	[]		1
+239	0		user	to jane	EMAILSEARCH	search_email	to <contact_name_to>jane</contact_name_to>	[]		1
+240	0		user	from Oscar about awards	EMAILSEARCH	search_email	from <contact_name_from>Oscar</contact_name_from> about <keyword>awards</keyword>	[]		1
+246	0		user	To Sharon last 2 weeks	EMAILSEARCH	search_email	To <contact_name_to>Sharon</contact_name_to> <start_date>last 2 weeks</start_date>	[]		1
+248	0		user	Excel from John	EMAILSEARCH	search_email	<attachment_type>Excel</attachment_type> from <contact_name_from>John</contact_name_from>	[]		1
+249	0		user	from Greg photos 	EMAILSEARCH	search_email	from <contact_name_from>Greg</contact_name_from> <attachment_type>photos</attachment_type> 	[]		1
+255	0		user	Photos from Taylor.	EMAILSEARCH	search_email	<attachment_type>Photos</attachment_type> from <contact_name_from>Taylor</contact_name_from>.	[]		1
+258	0		user	its about me that you like	EMAILSEARCH	search_email	its about me that you like	[]		1
+261	0		user	i got the details	NOTSURE	other_domain	i got the details	[]		1
+266	0		user	from chris on friday	EMAILSEARCH	search_email	from <contact_name_from>chris</contact_name_from> on <start_date>friday</start_date>	[]		1
+270	0		user	Find the PDF Bill sent me.	EMAILSEARCH	search_email	Find the <attachment_type>PDF</attachment_type> <contact_name_from>Bill</contact_name_from> sent <relationship_name_to>me</relationship_name_to>.	[]		1
+277	0		user	show me email about dog sitting	EMAILSEARCH	search_email	show me <message_type>email</message_type> about <keyword>dog sitting</keyword>	[]		1
+289	0		user	homework attachment from Dylan	EMAILSEARCH	search_email	<keyword>homework</keyword> <attachment>attachment</attachment> from <contact_name_from>Dylan</contact_name_from>	[]		1
+291	0		user	I need to see emails from Gwen between the 18th and 22nd.	EMAILSEARCH	search_email	I need to see <message_type>emails</message_type> from <contact_name_from>Gwen</contact_name_from> between the <start_date>18th</start_date> and <end_date>22nd</end_date>.	[]		1
+293	0		user	its been raining since last week	EMAILSEARCH	search_email	its been raining since last week	[]		1
+310	0		user	from jill with image	EMAILSEARCH	search_email	from <contact_name_from>jill</contact_name_from> with <attachment_type>image</attachment_type>	[]		1
+311	0		user	to Tim photos	EMAILSEARCH	search_email	to <contact_name_to>Tim</contact_name_to> <attachment_type>photos</attachment_type>	[]		1
+313	0		user	September 21 to Simon	EMAILSEARCH	search_email	<start_date>September 21</start_date> to <contact_name_to>Simon</contact_name_to>	[]		1
+323	0		user	Find the email Kelly Trent sent between March 5th and March 11th about the Boston flight schedule.	EMAILSEARCH	search_email	Find the <message_type>email</message_type> <contact_name_from>Kelly Trent</contact_name_from> sent between <start_date>March 5th</start_date> and <end_date>March 11th</end_date> about the <keyword>Boston flight schedule</keyword>.	[]		1
+324	0		user	Photos of the Spring Fesitval from Kristi	EMAILSEARCH	search_email	<attachment_type>Photos</attachment_type> of the <keyword>Spring Fesitval</keyword> from <contact_name_from>Kristi</contact_name_from>	[]		1
+332	0		user	Excel to Luke	EMAILSEARCH	search_email	<attachment_type>Excel</attachment_type> to <contact_name_to>Luke</contact_name_to>	[]		1
+338	0		user	Messages to Yanni	EMAILSEARCH	search_email	Messages to <contact_name_to>Yanni</contact_name_to>	[]		1
+343	0		user	from Samantha Church	EMAILSEARCH	search_email	from <contact_name_from>Samantha Church</contact_name_from>	[]		1
+344	0		user	Jim with excel	EMAILSEARCH	search_email	<contact_name>Jim</contact_name> with <attachment_type>excel</attachment_type>	[]		1
+346	0		user	Sara doctor appointment 	NOTSURE	other_domain	Sara doctor appointment 	[]		1
+350	0		user	Email from Kat	EMAILSEARCH	search_email	<message_type>Email</message_type> from <contact_name_from>Kat</contact_name_from>	[]		1
+367	0		user	Messages addressed to Amir within the last week.	EMAILSEARCH	search_email	Messages addressed to <contact_name_to>Amir</contact_name_to> within the <start_date>last week</start_date>.	[]		1
+372	0		user	I want to see emails to Celia with Excel.	EMAILSEARCH	search_email	I want to see <message_type>emails</message_type> to <contact_name_to>Celia</contact_name_to> with <attachment_type>Excel</attachment_type>.	[]		1
+374	0		user	Jane photo attachements	EMAILSEARCH	search_email	<contact_name>Jane</contact_name> <attachment_type>photo</attachment_type> <attachment>attachements</attachment>	[]		1
+391	0		user	Find emails from Ted from last month.	EMAILSEARCH	search_email	Find <message_type>emails</message_type> from <contact_name_from>Ted</contact_name_from> from <start_date>last month</start_date>.	[]		1
+392	0		user	emails from daoe	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>daoe</contact_name_from>	[]		1
+394	0		user	get me emails from Joe Turner between last Tuesday and yesterday	EMAILSEARCH	search_email	get me <message_type>emails</message_type> from <contact_name_from>Joe Turner</contact_name_from> between <start_date>last Tuesday</start_date> and <end_date>yesterday</end_date>	[]		1
+402	0		user	to Tiffany in May 2019	EMAILSEARCH	search_email	to <contact_name_to>Tiffany</contact_name_to> in <start_date>May 2019</start_date>	[]		1
+403	0		user	Emails from Brad since Tuesday.	EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Brad</contact_name_from> since <start_date>Tuesday</start_date>.	[]		1
+406	0		user	Last Tuesday email from Jefferson.	EMAILSEARCH	search_email	<start_date>Last Tuesday</start_date> <message_type>email</message_type> from <contact_name_from>Jefferson</contact_name_from>.	[]		1
+407	0		user	To Joe with emails	EMAILSEARCH	search_email	To <contact_name_to>Joe</contact_name_to> with <message_type>emails</message_type>	[]		1
+414	0		user	Jim with photo attachment	EMAILSEARCH	search_email	<contact_name>Jim</contact_name> with <attachment_type>photo</attachment_type> <attachment>attachment</attachment>	[]		1
+425	0		user	Yesterday's messages from Amazon.	EMAILSEARCH	search_email	<start_date>Yesterday</start_date>'s messages from <keyword>Amazon</keyword>.	[]		1
+435	0		user	All  emails sent to Larry	EMAILSEARCH	search_email	All  <message_type>emails</message_type> sent to <contact_name_to>Larry</contact_name_to>	[]		1
+438	0		user	Dave eariler this morning.  	EMAILSEARCH	search_email	<contact_name>Dave</contact_name> <start_time>eariler this morning</start_time>.  	[]		1
+444	0		user	December 24 message to dad	EMAILSEARCH	search_email	<start_date>December 24</start_date> message to <relationship_name_to>dad</relationship_name_to>	[]		1
+461	0		user	find emails with Word documents from Paul	EMAILSEARCH	search_email	find <message_type>emails</message_type> with <attachment_type>Word documents</attachment_type> from <contact_name_from>Paul</contact_name_from>	[]		1
+462	0		user	Recent email to Travis requesting receipts	EMAILSEARCH	search_email	<order_ref>Recent</order_ref> <message_type>email</message_type> to <contact_name_to>Travis</contact_name_to> requesting <keyword>receipts</keyword>	[]		1
+470	0		user	Brad with doc files	EMAILSEARCH	search_email	<contact_name>Brad</contact_name> with <attachment_type>doc</attachment_type> files	[]		1
+476	0		user	attachment to pam	EMAILSEARCH	search_email	<attachment>attachment</attachment> to <contact_name_to>pam</contact_name_to>	[]		1
+481	0		user	It was on January 21, 2020	EMAILSEARCH	search_email	It was on <start_date>January 21, 2020</start_date>	[]		1
+482	0		user	From Tom on Friday	EMAILSEARCH	search_email	From <contact_name_from>Tom</contact_name_from> on <start_date>Friday</start_date>	[]		1
+487	0		user	December from Jenna with document	EMAILSEARCH	search_email	<start_date>December</start_date> from <contact_name_from>Jenna</contact_name_from> with <attachment_type>document</attachment_type>	[]		1
+495	0		user	Find emails to Diane with documents attached	EMAILSEARCH	search_email	Find <message_type>emails</message_type> to <contact_name_to>Diane</contact_name_to> with <attachment_type>documents</attachment_type> <attachment>attached</attachment>	[]		1
+496	0		user	From Corey about baseball game	EMAILSEARCH	search_email	From <contact_name_from>Corey</contact_name_from> about <keyword>baseball game</keyword>	[]		1
+497	0		user	email from Danny about hardwood estimate	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Danny</contact_name_from> about <keyword>hardwood estimate</keyword>	[]		1
+500	0		user	any emails to Jefri Bolkiah last year	EMAILSEARCH	search_email	any <message_type>emails</message_type> to <contact_name_to>Jefri Bolkiah</contact_name_to> <start_date>last year</start_date>	[]		1
+521	0		user	February 21 Jack	EMAILSEARCH	search_email	<start_date>February 21</start_date> <contact_name>Jack</contact_name>	[]		1
+530	0		user	Excel to Mark	EMAILSEARCH	search_email	<attachment_type>Excel</attachment_type> to <contact_name_to>Mark</contact_name_to>	[]		1
+536	0		user	to Mary about dad's birthday surprise	EMAILSEARCH	search_email	to <contact_name_to>Mary</contact_name_to> about <relationship_name>dad</relationship_name>'s <keyword>birthday surprise</keyword>	[]		1
+538	0		user	emails from Dad	EMAILSEARCH	search_email	<message_type>emails</message_type> from <relationship_name_from>Dad</relationship_name_from>	[]		1
+543	0		user	Emails sent on the 5th to Ryland.	EMAILSEARCH	search_email	<message_type>Emails</message_type> sent on the <start_date>5th</start_date> to <contact_name_to>Ryland</contact_name_to>.	[]		1
+546	0		user	attachment from Adam on BBQ	EMAILSEARCH	search_email	<attachment>attachment</attachment> from <contact_name_from>Adam</contact_name_from> on <keyword>BBQ</keyword>	[]		1
+553	0		user	find email from february second	EMAILSEARCH	search_email	find <message_type>email</message_type> from <start_date>february second</start_date>	[]		1
+555	0		user	Excel to Megan	EMAILSEARCH	search_email	<attachment_type>Excel</attachment_type> to <contact_name_to>Megan</contact_name_to>	[]		1
+556	0		user	I want to be shown my emails to Jason on marketing.	EMAILSEARCH	search_email	I want to be shown my <message_type>emails</message_type> to <contact_name_to>Jason</contact_name_to> on <keyword>marketing</keyword>.	[]		1
+560	0		user	From Judy photos.	EMAILSEARCH	search_email	From <contact_name_from>Judy</contact_name_from> <attachment_type>photos</attachment_type>.	[]		1
+561	0		user	messages sent to steve between monday and today	EMAILSEARCH	search_email	messages sent to <contact_name_to>steve</contact_name_to> between <start_date>monday</start_date> and <end_date>today</end_date>	[]		1
+567	0		user	Keven ask me if I can sent hi an email	EMAILSEARCH	search_email	Keven ask me if I can sent hi an email	[]		1
+568	0		user	Mark received a letter from Jon Doe last august 27.	EMAILSEARCH	search_email	Mark received a letter from Jon Doe last august 27.	[]		1
+576	0		user	all messages to Joe	EMAILSEARCH	search_email	all messages to <contact_name_to>Joe</contact_name_to>	[]		1
+606	0		user	Show me emails to Wally on sales.	EMAILSEARCH	search_email	Show me <message_type>emails</message_type> to <contact_name_to>Wally</contact_name_to> on <keyword>sales</keyword>.	[]		1
+608	0		user	Document about taxes	EMAILSEARCH	search_email	<attachment_type>Document</attachment_type> about <keyword>taxes</keyword>	[]		1
+609	0		user	show jacob the file	NOTSURE	other_domain	show jacob the file	[]		1
+614	0		user	to janine with documents	EMAILSEARCH	search_email	to <contact_name_to>janine</contact_name_to> with <attachment_type>documents</attachment_type>	[]		1
+615	0		user	To Jim attachment funny meme	EMAILSEARCH	search_email	To <contact_name_to>Jim</contact_name_to> <attachment>attachment</attachment> <keyword>funny meme</keyword>	[]		1
+623	0		user	From Michelle December 1st	EMAILSEARCH	search_email	From <contact_name_from>Michelle</contact_name_from> <start_date>December 1st</start_date>	[]		1
+625	0		user	To Sammy	EMAILSEARCH	search_email	To <contact_name_to>Sammy</contact_name_to>	[]		1
+626	0		user	to Zenia with attachment coupon	EMAILSEARCH	search_email	to <contact_name_to>Zenia</contact_name_to> with <attachment>attachment</attachment> <keyword>coupon</keyword>	[]		1
+628	0		user	Im coming tomorrow	EMAILSEARCH	search_email	Im coming tomorrow	[]		1
+629	0		user	Tina video files	EMAILSEARCH	search_email	<contact_name>Tina</contact_name> <attachment_type>video</attachment_type> files	[]		1
+635	0		user	from Mom	EMAILSEARCH	search_email	from <relationship_name_from>Mom</relationship_name_from>	[]		1
+637	0		user	Jimmy's message to me about politics	EMAILSEARCH	search_email	<contact_name_from>Jimmy</contact_name_from>'s message to <relationship_name_to>me</relationship_name_to> about <keyword>politics</keyword>	[]		1
+646	0		user	Yesterday's email to Jake	EMAILSEARCH	search_email	<start_date>Yesterday</start_date>'s <message_type>email</message_type> to <contact_name_to>Jake</contact_name_to>	[]		1
+647	0		user	view emails about billing from Jennifer	EMAILSEARCH	search_email	view <message_type>emails</message_type> about <keyword>billing</keyword> from <contact_name_from>Jennifer</contact_name_from>	[]		1
+648	0		user	list out emails from last week from Ringo McLennon	EMAILSEARCH	search_email	list out <message_type>emails</message_type> from <start_date>last week</start_date> from <contact_name_from>Ringo McLennon</contact_name_from>	[]		1
+655	0		user	sent image to steve	EMAILSEARCH	search_email	sent <attachment_type>image</attachment_type> to <contact_name_to>steve</contact_name_to>	[]		1
+679	0		user	I want to see all the emails I sent on Tuesday to Mandy.	EMAILSEARCH	search_email	I want to see all the <message_type>emails</message_type> I sent on <start_date>Tuesday</start_date> to <contact_name_to>Mandy</contact_name_to>.	[]		1
+683	0		user	from Dad about invoice changes	EMAILSEARCH	search_email	from <relationship_name_from>Dad</relationship_name_from> about <keyword>invoice changes</keyword>	[]		1
+690	0		user	my email to Cesare yesterday	EMAILSEARCH	search_email	my <message_type>email</message_type> to <contact_name_to>Cesare</contact_name_to> <start_date>yesterday</start_date>	[]		1
+696	0		user	Pull up my emails to Cindy about the merger.	EMAILSEARCH	search_email	Pull up my <message_type>emails</message_type> to <contact_name_to>Cindy</contact_name_to> about <keyword>the merger</keyword>.	[]		1
+710	0		user	Sam from Christmas	EMAILSEARCH	search_email	<contact_name>Sam</contact_name> from <keyword>Christmas</keyword>	[]		1
+720	0		user	Correspondences sent to Emily	EMAILSEARCH	search_email	Correspondences sent to <contact_name_to>Emily</contact_name_to>	[]		1
+724	0		user	all emails in July from Tara Brown	EMAILSEARCH	search_email	all <message_type>emails</message_type> in <start_date>July</start_date> from <contact_name_from>Tara Brown</contact_name_from>	[]		1
+727	0		user	Samuel's email from Friday, can you read it to me?	EMAILSEARCH	search_email	<contact_name>Samuel</contact_name>'s <message_type>email</message_type> from <start_date>Friday</start_date>, can you read it to me?	[]		1
+731	0		user	Lia to Doe	EMAILSEARCH	search_email	<contact_name_from>Lia</contact_name_from> to <contact_name_to>Doe</contact_name_to>	[]		1
+744	0		user	from Richard emails	EMAILSEARCH	search_email	from <contact_name_from>Richard</contact_name_from> <message_type>emails</message_type>	[]		1
+760	0		user	to Mike	EMAILSEARCH	search_email	to <contact_name_to>Mike</contact_name_to>	[]		1
+762	0		user	find me Bill's email with photos attached	EMAILSEARCH	search_email	find me <contact_name>Bill</contact_name>'s <message_type>email</message_type> with <attachment_type>photos</attachment_type> <attachment>attached</attachment>	[]		1
+764	0		user	email from john	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>john</contact_name_from>	[]		1
+765	0		user	Movie ticket message from Jared.	EMAILSEARCH	search_email	<keyword>Movie ticket</keyword> message from <contact_name_from>Jared</contact_name_from>.	[]		1
+767	0		user	sent it to John Doe	EMAILSEARCH	search_email	sent it to <contact_name_to>John Doe</contact_name_to>	[]		1
+773	0		user	emails to fortnite customer service	EMAILSEARCH	search_email	<message_type>emails</message_type> to <contact_name_to>fortnite customer service</contact_name_to>	[]		1
+776	0		user	Look for emails received from Connor with a Word attachment.	EMAILSEARCH	search_email	Look for <message_type>emails</message_type> received from <contact_name_from>Connor</contact_name_from> with a <attachment_type>Word</attachment_type> <attachment>attachment</attachment>.	[]		1
+785	0		user	from last night meeting	EMAILSEARCH	search_email	from <start_date>last night</start_date> <keyword>meeting</keyword>	[]		1
+788	0		user	to Dad with excel attachment	EMAILSEARCH	search_email	to <relationship_name_to>Dad</relationship_name_to> with <attachment_type>excel</attachment_type> <attachment>attachment</attachment>	[]		1
+794	0		user	Emails to Valerie	EMAILSEARCH	search_email	<message_type>Emails</message_type> to <contact_name_to>Valerie</contact_name_to>	[]		1
+795	0		user	garden email from Jennie	EMAILSEARCH	search_email	<keyword>garden</keyword> <message_type>email</message_type> from <contact_name_from>Jennie</contact_name_from>	[]		1
+797	0		user	From Lia	EMAILSEARCH	search_email	From <contact_name_from>Lia</contact_name_from>	[]		1
+806	0		user	find emails from Sara that include documents	EMAILSEARCH	search_email	find <message_type>emails</message_type> from <contact_name_from>Sara</contact_name_from> that include documents	[]		1
+809	0		user	from Watson with files on Sherlock	EMAILSEARCH	search_email	from <contact_name_from>Watson</contact_name_from> with <attachment_type>files</attachment_type> on <keyword>Sherlock</keyword>	[]		1
+812	0		user	texts from Jim	EMAILSEARCH	search_email	<keyword>texts</keyword> from <contact_name_from>Jim</contact_name_from>	[]		1
+815	0		user	Pull up the emails I sent to Randy on December 22nd.	EMAILSEARCH	search_email	Pull up the <message_type>emails</message_type> I sent to <contact_name_to>Randy</contact_name_to> on <start_date>December 22nd</start_date>.	[]		1
+819	0		user	Find the recruiting message Jim Ponder forwarded to me between August 15th and September 1st.	EMAILSEARCH	search_email	Find the <keyword>recruiting message</keyword> <contact_name_from>Jim Ponder</contact_name_from> <email_state>forwarded</email_state> to me between <start_date>August 15th</start_date> and <end_date>September 1st</end_date>.	[]		1
+822	0		user	to George King	EMAILSEARCH	search_email	to <contact_name_to>George King</contact_name_to>	[]		1
+823	0		user	Zoo trip pictures from Dan	EMAILSEARCH	search_email	<keyword>Zoo trip</keyword> <attachment_type>pictures</attachment_type> from <contact_name_from>Dan</contact_name_from>	[]		1
+827	0		user	Mia excels	EMAILSEARCH	search_email	<contact_name>Mia</contact_name> <attachment_type>excels</attachment_type>	[]		1
+828	0		user	messages from Mary	EMAILSEARCH	search_email	messages from <contact_name_from>Mary</contact_name_from>	[]		1
+832	0		user	show me emails from Gunther Electric with power point files in them	EMAILSEARCH	search_email	show me <message_type>emails</message_type> from <contact_name_from>Gunther Electric</contact_name_from> with <attachment_type>power point files</attachment_type> in them	[]		1
+835	0		user	see emails sent to Michael	EMAILSEARCH	search_email	see <message_type>emails</message_type> sent to <contact_name_to>Michael</contact_name_to>	[]		1
+840	0		user	got the minutes	NOTSURE	other_domain	got the minutes	[]		1
+845	0		user	I want to see emails sent from Greg to me on the 14th or 15th.	EMAILSEARCH	search_email	I want to see <message_type>emails</message_type> sent from <contact_name_from>Greg</contact_name_from> to <relationship_name_to>me</relationship_name_to> on the <start_date>14th</start_date> or <start_date>15th</start_date>.	[]		1
+851	0		user	to Carrie November 8 through 10	EMAILSEARCH	search_email	to <contact_name_to>Carrie</contact_name_to> <start_date>November 8</start_date> through <end_date>10</end_date>	[]		1
+854	0		user	From Uncle Joe last Tuesday	EMAILSEARCH	search_email	From <relationship_name_from>Uncle Joe</relationship_name_from> <start_date>last Tuesday</start_date>	[]		1
+874	0		user	from Max video games	EMAILSEARCH	search_email	from <contact_name_from>Max</contact_name_from> <keyword>video games</keyword>	[]		1
+897	0		user	Cover letter word document to Julia Smith	EMAILSEARCH	search_email	<keyword>Cover letter</keyword> <attachment_type>word document</attachment_type> to <contact_name_from>Julia Smith</contact_name_from>	[]		1
+901	0		user	email sent from boss	EMAILSEARCH	search_email	<message_type>email</message_type> sent from <relationship_name_from>boss</relationship_name_from>	[]		1
+905	0		user	I need to see my emails to Laila.	EMAILSEARCH	search_email	I need to see my <message_type>emails</message_type> to <contact_name_to>Laila</contact_name_to>.	[]		1
+909	0		user	Email to Jim last year	EMAILSEARCH	search_email	<message_type>Email</message_type> to <contact_name_to>Jim</contact_name_to> <start_date>last year</start_date>	[]		1
+910	0		user	From Greg last Tuesday	EMAILSEARCH	search_email	From <contact_name_from>Greg</contact_name_from> <start_date>last Tuesday</start_date>	[]		1
+911	0		user	Email to Carolyn about party	EMAILSEARCH	search_email	<message_type>Email</message_type> to <contact_name_to>Carolyn</contact_name_to> about <keyword>party</keyword>	[]		1
+912	0		user	emails from Mike 	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Mike</contact_name_from> 	[]		1
+915	0		user	To Sandy about going to movies	EMAILSEARCH	search_email	To <contact_name_to>Sandy</contact_name_to> about <keyword>going to movies</keyword>	[]		1
+917	0		user	message about anniversary reservation, Jane	EMAILSEARCH	search_email	message about <keyword>anniversary reservation</keyword>, <contact_name>Jane</contact_name>	[]		1
+918	0		user	emails from january 1- january 5	EMAILSEARCH	search_email	<message_type>emails</message_type> from <start_date>january 1</start_date>- <end_date>january 5</end_date>	[]		1
+920	0		user	messages to craig	EMAILSEARCH	search_email	messages to <contact_name_to>craig</contact_name_to>	[]		1
+925	0		user	pictures from Mom	EMAILSEARCH	search_email	<attachment_type>pictures</attachment_type> from <relationship_name_from>Mom</relationship_name_from>	[]		1
+927	0		user	the one from Bill Tuesday	EMAILSEARCH	search_email	the one from <contact_name_from>Bill</contact_name_from> <start_date>Tuesday</start_date>	[]		1
+932	0		user	from tony	EMAILSEARCH	search_email	from <contact_name_from>tony</contact_name_from>	[]		1
+933	0		user	to my mom with google docs	EMAILSEARCH	search_email	to my <relationship_name_to>mom</relationship_name_to> with <attachment_type>google docs</attachment_type>	[]		1
+938	0		user	To Laura Portland museum	EMAILSEARCH	search_email	To <contact_name_to>Laura Portland</contact_name_to> <keyword>museum</keyword>	[]		1
+939	0		user	Rose attached pictures.	EMAILSEARCH	search_email	<contact_name>Rose</contact_name> attached <attachment_type>pictures</attachment_type>.	[]		1
+942	0		user	This morning from Clyde.	EMAILSEARCH	search_email	<start_time>This morning</start_time> from <contact_name_from>Clyde</contact_name_from>.	[]		1
+943	0		user	can you send me the email	EMAILSEARCH	search_email	can you send me the email	[]		1
+945	0		user	photo from pam	EMAILSEARCH	search_email	<attachment_type>photo</attachment_type> from <contact_name_from>pam</contact_name_from>	[]		1
+951	0		user	Emily two years ago.	EMAILSEARCH	search_email	<contact_name>Emily</contact_name> <start_date>two years ago</start_date>.	[]		1
+953	0		user	Narrow down emails from July 1st and July 4th from Ashley	EMAILSEARCH	search_email	Narrow down <message_type>emails</message_type> from <start_date>July 1st</start_date> and <end_date>July 4th</end_date> from <contact_name_from>Ashley</contact_name_from>	[]		1
+959	0		user	email Jon sent me Monday	EMAILSEARCH	search_email	<message_type>email</message_type> <contact_name>Jon</contact_name> sent me <start_date>Monday</start_date>	[]		1
+967	0		user	email that came from Jim	EMAILSEARCH	search_email	<message_type>email</message_type> that came from <contact_name_from>Jim</contact_name_from>	[]		1
+969	0		user	the email from jIm with photos	EMAILSEARCH	search_email	the <message_type>email</message_type> from <contact_name_from>jIm</contact_name_from> with <attachment_type>photos</attachment_type>	[]		1
+970	0		user	to paul excel	EMAILSEARCH	search_email	to <contact_name_to>paul</contact_name_to> <attachment_type>excel</attachment_type>	[]		1
+974	0		user	to Joe Berry	EMAILSEARCH	search_email	to <contact_name_to>Joe Berry</contact_name_to>	[]		1
+989	0		user	Mail from Chris in September.	EMAILSEARCH	search_email	<message_type>Mail</message_type> from <contact_name_from>Chris</contact_name_from> in <start_date>September</start_date>.	[]		1
+990	0		user	Find my email to Jim yesterday	EMAILSEARCH	search_email	Find my <message_type>email</message_type> to <contact_name_to>Jim</contact_name_to> <start_date>yesterday</start_date>	[]		1
+991	0		user	From Wendell	EMAILSEARCH	search_email	From <contact_name_from>Wendell</contact_name_from>	[]		1
+995	0		user	Mike with the word documents	EMAILSEARCH	search_email	<contact_name>Mike</contact_name> with the <attachment_type>word documents</attachment_type>	[]		1
+997	0		user	to matt	EMAILSEARCH	search_email	to <contact_name_to>matt</contact_name_to>	[]		1
+999	0		user	everything I sent to Joe	EMAILSEARCH	search_email	everything I sent to <contact_name_to>Joe</contact_name_to>	[]		1
+1001	0		user	Bring up the emails I sent to Callie.	EMAILSEARCH	search_email	Bring up the <message_type>emails</message_type> I sent to <contact_name_to>Callie</contact_name_to>.	[]		1
+1002	0		user	emails to kelly from last 5 days	EMAILSEARCH	search_email	<message_type>emails</message_type> to <contact_name_to>kelly</contact_name_to> from <start_date>last 5 days</start_date>	[]		1
+1007	0		user	It was from keven	EMAILSEARCH	search_email	It was from <contact_name_from>keven</contact_name_from>	[]		1
+1013	0		user	To Santa.	EMAILSEARCH	search_email	To <contact_name_to>Santa</contact_name_to>.	[]		1
+1015	0		user	email about dog sitting from Jane	EMAILSEARCH	search_email	<message_type>email</message_type> about <keyword>dog sitting</keyword> from <contact_name_from>Jane</contact_name_from>	[]		1
+1020	0		user	Emails from Greg on Sunday.	EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Greg</contact_name_from> on <start_date>Sunday</start_date>.	[]		1
+1027	0		user	Pool party email from Alex.	EMAILSEARCH	search_email	<keyword>Pool party</keyword> <message_type>email</message_type> from <contact_name_from>Alex</contact_name_from>.	[]		1
+1036	0		user	Email from Jenny between June 15 and July 23.	EMAILSEARCH	search_email	<message_type>Email</message_type> from <contact_name_from>Jenny</contact_name_from> between <start_date>June 15</start_date> and <end_date>July 23</end_date>.	[]		1
+1044	0		user	Connor image file attached	EMAILSEARCH	search_email	<contact_name>Connor</contact_name> <attachment_type>image file</attachment_type> <attachment>attached</attachment>	[]		1
+1054	0		user	sent from John Smith	EMAILSEARCH	search_email	sent from <contact_name_from>John Smith</contact_name_from>	[]		1
+1056	0		user	From Jim on Monday	EMAILSEARCH	search_email	From <contact_name_from>Jim</contact_name_from> on <start_date>Monday</start_date>	[]		1
+1066	0		user	I want to see the email from Kim	EMAILSEARCH	search_email	I want to see the <message_type>email</message_type> from <contact_name_from>Kim</contact_name_from>	[]		1
+1072	0		user	Email to Phil on Friday	EMAILSEARCH	search_email	<message_type>Email</message_type> to <contact_name_to>Phil</contact_name_to> on <start_date>Friday</start_date>	[]		1
+1077	0		user	from George Clooney	EMAILSEARCH	search_email	from <contact_name_from>George Clooney</contact_name_from>	[]		1
+1081	0		user	Out of office email sent to William on July 4th	EMAILSEARCH	search_email	<keyword>Out of office</keyword> <message_type>email</message_type> sent to <contact_name_to>William</contact_name_to> on <start_date>July 4th</start_date>	[]		1
+1092	0		user	from Janet work photos	EMAILSEARCH	search_email	from <contact_name_from>Janet</contact_name_from> <keyword>work</keyword> <attachment_type>photos</attachment_type>	[]		1
+1093	0		user	 Recent email to Connor with essay folder	EMAILSEARCH	search_email	 Recent <message_type>email</message_type> to <contact_name_to>Connor</contact_name_to> with <keyword>essay folder</keyword>	[]		1
+1100	0		user	To Rita	EMAILSEARCH	search_email	To <contact_name_to>Rita</contact_name_to>	[]		1
+1101	0		user	From Jim with excel	EMAILSEARCH	search_email	From <contact_name_from>Jim</contact_name_from> with <attachment_type>excel</attachment_type>	[]		1
+1102	0		user	video links from Sultan Stanzanik	EMAILSEARCH	search_email	<keyword>video links</keyword> from <contact_name_from>Sultan Stanzanik</contact_name_from>	[]		1
+1104	0		user	emails to Shantel	EMAILSEARCH	search_email	<message_type>emails</message_type> to <contact_name_to>Shantel</contact_name_to>	[]		1
+1108	0		user	Michael word document	EMAILSEARCH	search_email	<contact_name>Michael</contact_name> <attachment_type>word document</attachment_type>	[]		1
+1111	0		user	To Luke with file attached.	EMAILSEARCH	search_email	To <contact_name_to>Luke</contact_name_to> with <attachment_type>file</attachment_type> <attachment>attached</attachment>.	[]		1
+1113	0		user	Find email about Joe's wedding	EMAILSEARCH	search_email	Find <message_type>email</message_type> about <keyword>Joe&apos;s wedding</keyword>	[]		1
+1130	0		user	emails about medication	EMAILSEARCH	search_email	<message_type>emails</message_type> about <keyword>medication</keyword>	[]		1
+1131	0		user	 email from John with attachment about dogs from June	EMAILSEARCH	search_email	 <message_type>email</message_type> from <contact_name_from>John</contact_name_from> with <attachment>attachment</attachment> about <keyword>dogs</keyword> from <start_date>June</start_date>	[]		1
+1132	0		user	Chewy email from 1/24	EMAILSEARCH	search_email	<contact_name>Chewy</contact_name> <message_type>email</message_type> from <start_date>1/24</start_date>	[]		1
+1143	0		user	Open house email with attachment	EMAILSEARCH	search_email	<keyword>Open house</keyword> <message_type>email</message_type> with <attachment>attachment</attachment>	[]		1
+1144	0		user	office party email with attachment	EMAILSEARCH	search_email	<keyword>office party</keyword> <message_type>email</message_type> with <attachment>attachment</attachment>	[]		1
+1149	0		user	doctor email	EMAILSEARCH	search_email	<keyword>doctor</keyword> <message_type>email</message_type>	[]		1
+1155	0		user	Twitter account link email	EMAILSEARCH	search_email	<keyword>Twitter account link</keyword> <message_type>email</message_type>	[]		1
+1156	0		user	emails from mom	EMAILSEARCH	search_email	<message_type>emails</message_type> from <relationship_name_from>mom</relationship_name_from>	[]		1
+1161	0		user	message from dad	EMAILSEARCH	search_email	<message_type>message</message_type> from <relationship_name_from>dad</relationship_name_from>	[]		1
+1162	0		user	mail from Uncle Steve	EMAILSEARCH	search_email	<message_type>mail</message_type> from <relationship_name_from>Uncle Steve</relationship_name_from>	[]		1
+1175	0		user	donation dropoffs	NOTSURE	notsure_other	<keyword>donation dropoffs</keyword>	[]		1
+1176	0		user	request for leave	NOTSURE	notsure_other	<keyword>request for leave</keyword>	[]		1
+1177	0		user	doctor appointment emails from January to March	EMAILSEARCH	search_email	<keyword>doctor appointment</keyword> <message_type>emails</message_type> from <start_date>January</start_date> to <end_date>March</end_date>	[]		1
+1186	0		user	all emails from Joshua	EMAILSEARCH	search_email	all <message_type>emails</message_type> from <contact_name_from>Joshua</contact_name_from>	[]		1
+1205	0		user	Alternative music attachments from October to November.	EMAILSEARCH	search_email	<keyword>Alternative music</keyword> <attachment>attachments</attachment> from <start_date>October</start_date> to <end_date>November</end_date>.	[]		1
+1208	0		user	Anna's birthday email	EMAILSEARCH	search_email	<contact_name>Anna</contact_name>'s <keyword>birthday</keyword> <message_type>email</message_type>	[]		1
+1212	0		user	webinar messages from carmen	EMAILSEARCH	search_email	<keyword>webinar</keyword> <message_type>messages</message_type> from <contact_name_from>carmen</contact_name_from>	[]		1
+1215	0		user	Meeting summary email from Luke	EMAILSEARCH	search_email	<keyword>Meeting summary</keyword> <message_type>email</message_type> from <contact_name_from>Luke</contact_name_from>	[]		1
+1218	0		user	Graduation emails from Drew	EMAILSEARCH	search_email	<keyword>Graduation</keyword> <message_type>emails</message_type> from <contact_name_from>Drew</contact_name_from>	[]		1
+1220	0		user	Birthday party email from Cindy 	EMAILSEARCH	search_email	<keyword>Birthday party</keyword> <message_type>email</message_type> from <contact_name_from>Cindy</contact_name_from> 	[]		1
+1221	0		user	anniversary email on 2nd january	EMAILSEARCH	search_email	<keyword>anniversary</keyword> <message_type>email</message_type> on <start_date>2nd january</start_date>	[]		1
+1231	0		user	any mail from Kristen	EMAILSEARCH	search_email	any <message_type>mail</message_type> from <contact_name_from>Kristen</contact_name_from>	[]		1
+1238	0		user	July 2019 emails	EMAILSEARCH	search_email	<start_date>July 2019</start_date> <message_type>emails</message_type>	[]		1
+1244	0		user	Jan emails	EMAILSEARCH	search_email	<start_date>Jan</start_date> <message_type>emails</message_type>	[]		1
+1246	0		user	november emails	EMAILSEARCH	search_email	<start_date>november</start_date> <message_type>emails</message_type>	[]		1
+1249	0		user	last months email on dogs	EMAILSEARCH	search_email	<start_date>last months</start_date> <message_type>email</message_type> on <keyword>dogs</keyword>	[]		1
+1254	0		user	February 16th email with attachment	EMAILSEARCH	search_email	<start_date>February 16th</start_date> <message_type>email</message_type> with <attachment>attachment</attachment>	[]		1
+1255	0		user	April 2019 emails with attachments	EMAILSEARCH	search_email	<start_date>April 2019</start_date> <message_type>emails</message_type> with <attachment>attachments</attachment>	[]		1
+1256	0		user	Last week email with attachment	EMAILSEARCH	search_email	<start_date>Last week</start_date> <message_type>email</message_type> with <attachment>attachment</attachment>	[]		1
+1259	0		user	April attachments	EMAILSEARCH	search_email	<start_date>April</start_date> <attachment>attachments</attachment>	[]		1
+1266	0		user	Harold emails	EMAILSEARCH	search_email	<contact_name>Harold</contact_name> <message_type>emails</message_type>	[]		1
+1271	0		user	Office party email from last week	EMAILSEARCH	search_email	<keyword>Office party</keyword> <message_type>email</message_type> from <start_date>last week</start_date>	[]		1
+1273	0		user	guidebook update email from June 30th	EMAILSEARCH	search_email	<keyword>guidebook update</keyword> <message_type>email</message_type> from <start_date>June 30th</start_date>	[]		1
+1290	0		user	attachments from Lindsey	EMAILSEARCH	search_email	<attachment>attachments</attachment> from <contact_name_from>Lindsey</contact_name_from>	[]		1
+1300	0		user	Attachment email messages	EMAILSEARCH	search_email	<attachment>Attachment</attachment> <message_type>email</message_type> messages	[]		1
+1301	0		user	attachments emails	EMAILSEARCH	search_email	<attachment>attachments</attachment> <message_type>emails</message_type>	[]		1
+1311	0		user	attachments from January	EMAILSEARCH	search_email	<attachment>attachments</attachment> from <start_date>January</start_date>	[]		1
+1312	0		user	attachments from September	EMAILSEARCH	search_email	<attachment>attachments</attachment> from <start_date>September</start_date>	[]		1
+1315	0		user	Attachments from last Tuesday	EMAILSEARCH	search_email	<attachment>Attachments</attachment> from <start_date>last Tuesday</start_date>	[]		1
+1336	0		user	attachments in my email	EMAILSEARCH	search_email	<attachment>attachments</attachment> in my <message_type>email</message_type>	[]		1
+1342	0		user	attachments received in February	EMAILSEARCH	search_email	<attachment>attachments</attachment> received in <start_date>February</start_date>	[]		1
+1350	0		user	Attachment to Mark	EMAILSEARCH	search_email	<attachment>Attachment</attachment> to <contact_name_to>Mark</contact_name_to>	[]		1
+1357	0		user	attachments March 21st to March 23rd	EMAILSEARCH	search_email	<attachment>attachments</attachment> <start_date>March 21st</start_date> to <end_date>March 23rd</end_date>	[]		1
+1358	0		user	attachments contained in email	EMAILSEARCH	search_email	<attachment>attachments</attachment> contained in <message_type>email</message_type>	[]		1
+1360	0		user	attachments for Trader Joe's in mail	EMAILSEARCH	search_email	<attachment>attachments</attachment> for <keyword>Trader Joe&apos;s</keyword> in <message_type>mail</message_type>	[]		1
+1368	0		user	attachments in mail videos	EMAILSEARCH	search_email	<attachment>attachments</attachment> in <message_type>mail</message_type> <attachment_type>videos</attachment_type>	[]		1
+1373	0		user	attachments in my sent folder	EMAILSEARCH	search_email	<attachment>attachments</attachment> in my <destination_folder>sent</destination_folder> folder	[]		1
+1374	0		user	attachments in the last week	EMAILSEARCH	search_email	<attachment>attachments</attachment> <start_date>in the last week</start_date>	[]		1
+1379	0		user	attachments sent to me	EMAILSEARCH	search_email	<attachment>attachments</attachment> sent to <relationship_name_to>me</relationship_name_to>	[]		1
+1384	0		user	Attachments within emails	EMAILSEARCH	search_email	<attachment>Attachments</attachment> within <message_type>emails</message_type>	[]		1
+1401	0		user	birthday email containing attachment	EMAILSEARCH	search_email	<keyword>birthday</keyword> <message_type>email</message_type> containing <attachment>attachment</attachment>	[]		1
+1405	0		user	work order emails with attachments from May	EMAILSEARCH	search_email	<keyword>work order</keyword> <message_type>emails</message_type> with <attachment>attachments</attachment> from <start_date>May</start_date>	[]		1
+1408	0		user	Birthday invitation from Jayson with attachment from January 1 to January 5.	EMAILSEARCH	search_email	<keyword>Birthday invitation</keyword> from <contact_name_from>Jayson</contact_name_from> with <attachment>attachment</attachment> from <start_date>January 1</start_date> to <end_date>January 5</end_date>.	[]		1
+1411	0		user	birthday message from joyce	EMAILSEARCH	search_email	<keyword>birthday message</keyword> from <contact_name_from>joyce</contact_name_from>	[]		1
+1416	0		user	Linda's email with attachment	EMAILSEARCH	search_email	<contact_name>Linda</contact_name>'s <message_type>email</message_type> with <attachment>attachment</attachment>	[]		1
+1425	0		user	bring up email from Chas shows an attachment	EMAILSEARCH	search_email	bring up <message_type>email</message_type> from <contact_name_from>Chas</contact_name_from> shows an <attachment>attachment</attachment>	[]		1
+1440	0		user	party planning mail from Mom	EMAILSEARCH	search_email	<keyword>party planning</keyword> <message_type>mail</message_type> from <relationship_name_from>Mom</relationship_name_from>	[]		1
+1441	0		user	payroll email from the last two weeks	EMAILSEARCH	search_email	<keyword>payroll</keyword> <message_type>email</message_type> from the <start_date>last two weeks</start_date>	[]		1
+1452	0		user	Cooking class emails with attachments sent from Angela between May 5 and May 20	EMAILSEARCH	search_email	<keyword>Cooking class</keyword> <message_type>emails</message_type> with <attachment>attachments</attachment> sent from <contact_name_from>Angela</contact_name_from> between <start_date>May 5</start_date> and <end_date>May 20</end_date>	[]		1
+1453	0		user	new schedule change email attachments	EMAILSEARCH	search_email	<keyword>new schedule change</keyword> <message_type>email</message_type> <attachment>attachments</attachment>	[]		1
+1457	0		user	Could you show me emails that have an image attachment?	EMAILSEARCH	search_email	Could you show me <message_type>emails</message_type> that have an <attachment_type>image</attachment_type> <attachment>attachment</attachment>?	[]		1
+1461	0		user	Data about frogs	EMAILSEARCH	search_email	Data about <keyword>frogs</keyword>	[]		1
+1463	0		user	Debut invitation with attachments from March to April.	EMAILSEARCH	search_email	<keyword>Debut invitation</keyword> with <attachment>attachments</attachment> from <start_date>March</start_date> to <end_date>April</end_date>.	[]		1
+1469	0		user	Department meeting today	NOTSURE	notsure_other	Department meeting today	[]		1
+1473	0		user	Display emails from Tom	EMAILSEARCH	search_email	Display <message_type>emails</message_type> from <contact_name_from>Tom</contact_name_from>	[]		1
+1475	0		user	Do I have emails from Dollar Shave Club that have attachments	EMAILSEARCH	search_email	Do I have <message_type>emails</message_type> from <contact_name_from>Dollar Shave Club</contact_name_from> that have <attachment>attachments</attachment>	[]		1
+1483	0		user	email from Mark with attachment from last month	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Mark</contact_name_from> with <attachment>attachment</attachment> from <start_date>last month</start_date>	[]		1
+1487	0		user	email from Jen with attachment from last year	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Jen</contact_name_from> with <attachment>attachment</attachment> from <start_date>last year</start_date>	[]		1
+1495	0		user	email about shopping from Ike	EMAILSEARCH	search_email	<message_type>email</message_type> about <keyword>shopping</keyword> from <contact_name_from>Ike</contact_name_from>	[]		1
+1499	0		user	email about birthday from joe	EMAILSEARCH	search_email	<message_type>email</message_type> about <keyword>birthday</keyword> from <contact_name_from>joe</contact_name_from>	[]		1
+1501	0		user	Emails about vaccinations from Abby	EMAILSEARCH	search_email	<message_type>Emails</message_type> about <keyword>vaccinations</keyword> from <contact_name_from>Abby</contact_name_from>	[]		1
+1502	0		user	Email about a car crash from Alyssa 	EMAILSEARCH	search_email	<message_type>Email</message_type> about a <keyword>car crash</keyword> from <contact_name_from>Alyssa</contact_name_from> 	[]		1
+1520	0		user	Mail about driving with attachment	EMAILSEARCH	search_email	<message_type>mail</message_type> about <keyword>driving</keyword> with <attachment>attachment</attachment>	[]		1
+1526	0		user	emails about quid pro quo from june to september	EMAILSEARCH	search_email	<message_type>emails</message_type> about <keyword>quid pro quo</keyword> from <start_date>june</start_date> to <end_date>september</end_date>	[]		1
+1541	0		user	email about my birthday two weeks ago	EMAILSEARCH	search_email	<message_type>email</message_type> about <keyword>my birthday</keyword> <start_date>two weeks ago</start_date>	[]		1
+1557	0		user	mail about basketball in august	EMAILSEARCH	search_email	<message_type>mail</message_type> about <keyword>basketball</keyword> in <start_date>august</start_date>	[]		1
+1558	0		user	email about writing project received last month	EMAILSEARCH	search_email	<message_type>email</message_type> about <keyword>writing project</keyword> received <start_date>last month</start_date>	[]		1
+1563	0		user	email recipe	EMAILSEARCH	search_email	<message_type>email</message_type> <keyword>recipe</keyword>	[]		1
+1568	0		user	email attachments Vons Market	EMAILSEARCH	search_email	<message_type>email</message_type> <attachment>attachments</attachment> <keyword>Vons Market</keyword>	[]		1
+1570	0		user	email attachment from Mia	EMAILSEARCH	search_email	<message_type>email</message_type> <attachment>attachment</attachment> from <contact_name_from>Mia</contact_name_from>	[]		1
+1571	0		user	email attachment from Chris	EMAILSEARCH	search_email	<message_type>email</message_type> <attachment>attachment</attachment> from <contact_name_from>Chris</contact_name_from>	[]		1
+1573	0		user	email attachment from Jacqueline	EMAILSEARCH	search_email	<message_type>email</message_type> <attachment>attachment</attachment> from <contact_name_from>Jacqueline</contact_name_from>	[]		1
+1575	0		user	email attachment from Joseph	EMAILSEARCH	search_email	<message_type>email</message_type> <attachment>attachment</attachment> from <contact_name_from>Joseph</contact_name_from>	[]		1
+1586	0		user	email attachment Sue Jones	EMAILSEARCH	search_email	<message_type>email</message_type> <attachment>attachment</attachment> <contact_name>Sue Jones</contact_name>	[]		1
+1595	0		user	emails between Thanksgiving and Christmas day	EMAILSEARCH	search_email	<message_type>emails</message_type> between <start_date>Thanksgiving</start_date> and <end_date>Christmas day</end_date>	[]		1
+1604	0		user	Emails between April 10th to April 30th	EMAILSEARCH	search_email	<message_type>Emails</message_type> between <start_date>April 10th</start_date> to <end_date>April 30th</end_date>	[]		1
+1606	0		user	Mail between May 15 to June 6	EMAILSEARCH	search_email	<message_type>Mail</message_type> between <start_date>May 15</start_date> to <end_date>June 6</end_date>	[]		1
+1608	0		user	Email bout the birthday on March 2nd with attachment	EMAILSEARCH	search_email	<message_type>Email</message_type> bout the <keyword>birthday</keyword> on <start_date>March 2nd</start_date> with <attachment>attachment</attachment>	[]		1
+1613	0		user	Mail containing attachments	EMAILSEARCH	search_email	<message_type>Mail</message_type> containing <attachment>attachments</attachment>	[]		1
+1614	0		user	Email containing attachments	EMAILSEARCH	search_email	<message_type>Email</message_type> containing <attachment>attachments</attachment>	[]		1
+1621	0		user	email containing database updates	EMAILSEARCH	search_email	<message_type>email</message_type> containing <keyword>database updates</keyword>	[]		1
+1631	0		user	email dated July 5 through July 12	EMAILSEARCH	search_email	<message_type>email</message_type> dated <start_date>July 5</start_date> through <end_date>July 12</end_date>	[]		1
+1639	0		user	email photos with attachment	EMAILSEARCH	search_email	<message_type>email</message_type> <attachment_type>photos</attachment_type> with <attachment>attachment</attachment>	[]		1
+1640	0		user	email during the month of December	EMAILSEARCH	search_email	<message_type>email</message_type> during the month of <start_date>December</start_date>	[]		1
+1642	0		user	email for open houses show attachments	EMAILSEARCH	search_email	<message_type>email</message_type> for <keyword>open houses</keyword> show <attachment>attachments</attachment>	[]		1
+1653	0		user	email from matthews	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>matthews</contact_name_from>	[]		1
+1655	0		user	emails from Steven	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Steven</contact_name_from>	[]		1
+1656	0		user	emails from Jabba	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Jabba</contact_name_from>	[]		1
+1659	0		user	email from Carla in January	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Carla</contact_name_from> in <start_date>January</start_date>	[]		1
+1661	0		user	emails from james in 2017 	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>james</contact_name_from> in <start_date>2017</start_date> 	[]		1
+1663	0		user	Mail from Alice in 2018	EMAILSEARCH	search_email	<message_type>mail</message_type> from <contact_name_from>Alice</contact_name_from> in <start_date>2018</start_date>	[]		1
+1665	0		user	email from UFCU with attachment mortgage statement	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>UFCU</contact_name_from> with <attachment>attachment</attachment> <keyword>mortgage statement</keyword>	[]		1
+1669	0		user	email from Bill with attachment	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Bill</contact_name_from> with <attachment>attachment</attachment>	[]		1
+1670	0		user	email from Greg with attachment	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Greg</contact_name_from> with <attachment>attachment</attachment>	[]		1
+1678	0		user	email from Olivia about which museum we will visit	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Olivia</contact_name_from> about <keyword>which museum we will visit</keyword>	[]		1
+1686	0		user	email from Rose about Facebook	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Rose</contact_name_from> about <keyword>Facebook</keyword>	[]		1
+1695	0		user	emails from a week ago	EMAILSEARCH	search_email	<message_type>emails</message_type> from <start_date>a week ago</start_date>	[]		1
+1709	0		user	email from barb in june about her mother	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>barb</contact_name_from> in <start_date>june</start_date> about <keyword>her mother</keyword>	[]		1
+1711	0		user	email from February to March	EMAILSEARCH	search_email	<message_type>email</message_type> from <start_date>February</start_date> to <end_date>March</end_date>	[]		1
+1712	0		user	mail from August 27 to September 1st	EMAILSEARCH	search_email	<message_type>mail</message_type> from <start_date>August 27</start_date> to <end_date>September 1st</end_date>	[]		1
+1714	0		user	emails from June 7th to July 30th	EMAILSEARCH	search_email	<message_type>emails</message_type> from <start_date>June 7th</start_date> to <end_date>July 30th</end_date>	[]		1
+1717	0		user	mail from January 2nd to January 14th	EMAILSEARCH	search_email	<message_type>mail</message_type> from <start_date>January 2nd</start_date> to <end_date>January 14th</end_date>	[]		1
+1718	0		user	mails from November to December	EMAILSEARCH	search_email	<message_type>mails</message_type> from <start_date>November</start_date> to <end_date>December</end_date>	[]		1
+1723	0		user	Email from Quinn to Jen with attachment	EMAILSEARCH	search_email	<message_type>Email</message_type> from <contact_name_from>Quinn</contact_name_from> to <contact_name_to>Jen</contact_name_to> with <attachment>attachment</attachment>	[]		1
+1726	0		user	email from Terry to Mia with attachment	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Terry</contact_name_from> to <contact_name_to>Mia</contact_name_to> with <attachment>attachment</attachment>	[]		1
+1729	0		user	email from Spock to Will with attachment	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Spock</contact_name_from> to <contact_name_to>Will</contact_name_to> with <attachment>attachment</attachment>	[]		1
+1736	0		user	Email from Jayson with attachments about pop music.	EMAILSEARCH	search_email	<message_type>Email</message_type> from <contact_name_from>Jayson</contact_name_from> with <attachment>attachments</attachment> about <keyword>pop music</keyword>.	[]		1
+1739	0		user	email from Tim with attachments about knives 	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Tim</contact_name_from> with <attachment>attachments</attachment> about <keyword>knives</keyword> 	[]		1
+1740	0		user	Email from Robert with attachment about office party 	EMAILSEARCH	search_email	<message_type>Email</message_type> from <contact_name_from>Robert</contact_name_from> with <attachment>attachment</attachment> about <keyword>office party</keyword> 	[]		1
+1742	0		user	Emails from Roger on vases	EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Roger</contact_name_from> on <keyword>vases</keyword>	[]		1
+1744	0		user	emails from clickworker on pay	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>clickworker</contact_name_from> on <keyword>pay</keyword>	[]		1
+1747	0		user	emails from Todd to Elaine	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Todd</contact_name_from> to <contact_name_to>Elaine</contact_name_to>	[]		1
+1753	0		user	emails from donald to chris	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>donald</contact_name_from> to <contact_name_to>chris</contact_name_to>	[]		1
+1758	0		user	email from Bob to Mike with attachment about office party 	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Bob</contact_name_from> to <contact_name_to>Mike</contact_name_to> with <attachment>attachment</attachment> about <keyword>office party</keyword> 	[]		1
+1763	0		user	email from Kelly between February and June about therapy	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Kelly</contact_name_from> between <start_date>February</start_date> and <end_date>June</end_date> about <keyword>therapy</keyword>	[]		1
+1787	0		user	mail from Jill last month	EMAILSEARCH	search_email	<message_type>mail</message_type> from <contact_name_from>Jill</contact_name_from> <start_date>last month</start_date>	[]		1
+1790	0		user	emails from Xena last month	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Xena</contact_name_from> <start_date>last month</start_date>	[]		1
+1791	0		user	emails from Jimbo last Tuesday	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Jimbo</contact_name_from> <start_date>last Tuesday</start_date>	[]		1
+1799	0		user	Email from Jimmy with an attachment	EMAILSEARCH	search_email	<message_type>Email</message_type> from <contact_name_from>Jimmy</contact_name_from> with an <attachment>attachment</attachment>	[]		1
+1805	0		user	mail from Juniper to George with attachment from last week	EMAILSEARCH	search_email	<message_type>mail</message_type> from <contact_name_from>Juniper</contact_name_from> to <contact_name_to>George</contact_name_to> with <attachment>attachment</attachment> from <start_date>last week</start_date>	[]		1
+1811	0		user	emails from lovey to mr. howell two months ago	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>lovey</contact_name_from> to <contact_name_to>mr. howell</contact_name_to> <start_date>two months ago</start_date>	[]		1
+1815	0		user	email from february about refund	EMAILSEARCH	search_email	<message_type>email</message_type> from <start_date>february</start_date> about <keyword>refund</keyword>	[]		1
+1818	0		user	Emails from last September about recipes	EMAILSEARCH	search_email	<message_type>Emails</message_type> from <start_date>last September</start_date> about <keyword>recipes</keyword>	[]		1
+1827	0		user	Email from Jake to Martha with portfolio attachment 	EMAILSEARCH	search_email	<message_type>Email</message_type> from <contact_name_from>Jake</contact_name_from> to <contact_name_to>Martha</contact_name_to> with <keyword>portfolio</keyword> <attachment>attachment</attachment> 	[]		1
+1829	0		user	email from Jane with attachment about cats form May	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Jane</contact_name_from> with <attachment>attachment</attachment> about <keyword>cats</keyword> form <start_date>May</start_date>	[]		1
+1830	0		user	email from Jane with attachment last month	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Jane</contact_name_from> with <attachment>attachment</attachment> <start_date>last month</start_date>	[]		1
+1834	0		user	emails from Winston Parker between November 21 and 22	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Winston Parker</contact_name_from> between <start_date>November 21</start_date> and <end_date>22</end_date>	[]		1
+1836	0		user	email from Kendal between May 1 and 31	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Kendal</contact_name_from> between <start_date>May 1</start_date> and <end_date>31</end_date>	[]		1
+1838	0		user	Mail from Comcast between January 2019 and December 2019	EMAILSEARCH	search_email	<message_type>mail</message_type> from <contact_name_from>Comcast</contact_name_from> between <start_date>January 2019</start_date> and <end_date>December 2019</end_date>	[]		1
+1840	0		user	Mail from google between january and february	EMAILSEARCH	search_email	<message_type>Mail</message_type> from <contact_name_from>google</contact_name_from> between <start_date>january</start_date> and <end_date>february</end_date>	[]		1
+1841	0		user	Mail from Donny with accounting attachment	EMAILSEARCH	search_email	<message_type>Mail</message_type> from <contact_name_from>Donny</contact_name_from> with <keyword>accounting</keyword> <attachment>attachment</attachment>	[]		1
+1844	0		user	email from Jim including an attachment	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Jim</contact_name_from> including an <attachment>attachment</attachment>	[]		1
+1849	0		user	Email from Joe regarding vacation	EMAILSEARCH	search_email	<message_type>Email</message_type> from <contact_name_from>Joe</contact_name_from> regarding <keyword>vacation</keyword>	[]		1
+1851	0		user	email from anna to bates on in-house theft	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>anna</contact_name_from> to <contact_name_to>bates</contact_name_to> on <keyword>in-house theft</keyword>	[]		1
+1857	0		user	emails from Calvin with photos	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Calvin</contact_name_from> with <attachment_type>photos</attachment_type>	[]		1
+1859	0		user	emails from Sarah with pictures 	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Sarah</contact_name_from> with <attachment_type>pictures</attachment_type> 	[]		1
+1860	0		user	emails from Daryl with pictures	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Daryl</contact_name_from> with <attachment_type>pictures</attachment_type>	[]		1
+1863	0		user	email from Lijah to Leah with word attachments	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Lijah</contact_name_from> to <contact_name_to>Leah</contact_name_to> with <attachment_type>word</attachment_type> <attachment>attachments</attachment>	[]		1
+1866	0		user	Email from May with music work attachment 	EMAILSEARCH	search_email	<message_type>Email</message_type> from <start_date>May</start_date> with <keyword>music work</keyword> <attachment>attachment</attachment> 	[]		1
+1867	0		user	Emails from September 1st with Amazon shopping link attachments	EMAILSEARCH	search_email	<message_type>Emails</message_type> from <start_date>September 1st</start_date> with <keyword>Amazon shopping link</keyword> <attachment>attachments</attachment>	[]		1
+1868	0		user	email from me to John between January and February about homework	EMAILSEARCH	search_email	<message_type>email</message_type> from me to <contact_name_to>John</contact_name_to> between <start_date>January</start_date> and <end_date>February</end_date> about <keyword>homework</keyword>	[]		1
+1879	0		user	email from Ruth and Laura with attachments about dolls	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Ruth</contact_name_from> and <contact_name_from>Laura</contact_name_from> with <attachment>attachments</attachment> about <keyword>dolls</keyword>	[]		1
+1886	0		user	mails from April with attachment	EMAILSEARCH	search_email	<message_type>mails</message_type> from <start_date>April</start_date> with <attachment>attachment</attachment>	[]		1
+1892	0		user	email from the 2nd of July	EMAILSEARCH	search_email	<message_type>email</message_type> from the <start_date>2nd of July</start_date>	[]		1
+1895	0		user	Email from this morning	EMAILSEARCH	search_email	<message_type>Email</message_type> from <start_time>this morning</start_time>	[]		1
+1900	0		user	Mail from February 5 through February 10	EMAILSEARCH	search_email	<message_type>mail</message_type> from <start_date>February 5</start_date> through <end_date>February 10</end_date>	[]		1
+1909	0		user	email has subject promotion	EMAILSEARCH	search_email	<message_type>email</message_type> has subject <email_subject>promotion</email_subject>	[]		1
+1910	0		user	email i got about vacation in may	EMAILSEARCH	search_email	<message_type>email</message_type> i got about <keyword>vacation</keyword> in <start_date>may</start_date>	[]		1
+1920	0		user	mail in the last 3 months	EMAILSEARCH	search_email	<message_type>mail</message_type> in the <start_date>last 3 months</start_date>	[]		1
+1928	0		user	Email reply from Doctor's Office	EMAILSEARCH	search_email	<message_type>Email</message_type> <keyword>reply</keyword> from <contact_name_from>Doctor&apos;s Office</contact_name_from>	[]		1
+1933	0		user	Emails from.October.l	EMAILSEARCH	search_email	<message_type>Emails</message_type> <start_date>from.October.l</start_date>	[]		1
+1936	0		user	email of Christmas list	EMAILSEARCH	search_email	<message_type>email</message_type> of <keyword>Christmas list</keyword>	[]		1
+1942	0		user	mail on cryptographer	EMAILSEARCH	search_email	<message_type>mail</message_type> on <keyword>cryptographer</keyword>	[]		1
+1944	0		user	email on spring fair	EMAILSEARCH	search_email	<message_type>email</message_type> on <keyword>spring fair</keyword>	[]		1
+1949	0		user	email on debate last month	EMAILSEARCH	search_email	<message_type>email</message_type> on <keyword>debate</keyword> <start_date>last month</start_date>	[]		1
+1952	0		user	mail on weekend	EMAILSEARCH	search_email	<message_type>mail</message_type> on <start_date>weekend</start_date>	[]		1
+1955	0		user	email on soccer between january 5 and january 9	EMAILSEARCH	search_email	<message_type>email</message_type> on <keyword>soccer</keyword> between <start_date>january 5</start_date> and <end_date>january 9</end_date>	[]		1
+1957	0		user	Email on tuberculosis from August 5 to September 7 with attachment	EMAILSEARCH	search_email	<message_type>Email</message_type> on <keyword>tuberculosis</keyword> from <start_date>August 5</start_date> to <end_date>September 7</end_date> with <attachment>attachment</attachment>	[]		1
+1961	0		user	email received between September 1 and September 15 with attachments	EMAILSEARCH	search_email	<message_type>email</message_type> received between <start_date>September 1</start_date> and <end_date>September 15</end_date> with <attachment>attachments</attachment>	[]		1
+1971	0		user	emails received last thursday	EMAILSEARCH	search_email	<message_type>emails</message_type> received <start_date>last thursday</start_date>	[]		1
+1979	0		user	mail regarding testing	EMAILSEARCH	search_email	<message_type>mail</message_type> regarding <keyword>testing</keyword>	[]		1
+1984	0		user	emails sent from Tim	EMAILSEARCH	search_email	<message_type>emails</message_type> sent from <contact_name_from>Tim</contact_name_from>	[]		1
+1985	0		user	mails sent from David	EMAILSEARCH	search_email	<message_type>mails</message_type> sent from <contact_name_from>David</contact_name_from>	[]		1
+1987	0		user	email sent in august that contained attachment	EMAILSEARCH	search_email	<message_type>email</message_type> sent in <start_date>august</start_date> that contained <attachment>attachment</attachment>	[]		1
+1989	0		user	email sent out about retirement in june	EMAILSEARCH	search_email	<message_type>email</message_type> sent out about <keyword>retirement</keyword> in <start_date>june</start_date>	[]		1
+1994	0		user	emails sent to George	EMAILSEARCH	search_email	<message_type>emails</message_type> sent to <contact_name_to>George</contact_name_to>	[]		1
+1995	0		user	Email sent to Ivan and Phoebe regarding history	EMAILSEARCH	search_email	<message_type>Email</message_type> sent to <contact_name_to>Ivan</contact_name_to> and <contact_name_to>Phoebe</contact_name_to> regarding <keyword>history</keyword>	[]		1
+2002	0		user	emails starting August	EMAILSEARCH	search_email	<message_type>emails</message_type> starting <start_date>August</start_date>	[]		1
+2006	0		user	email work photo documents with attachment	EMAILSEARCH	search_email	<message_type>email</message_type> <keyword>work photo documents</keyword> with <attachment>attachment</attachment>	[]		1
+2008	0		user	email that has an attachment and is from Gale	EMAILSEARCH	search_email	<message_type>email</message_type> that has an <attachment>attachment</attachment> and is from <contact_name_from>Gale</contact_name_from>	[]		1
+2011	0		user	Mail that has attachment	EMAILSEARCH	search_email	<message_type>mail</message_type> that has <attachment>attachment</attachment>	[]		1
+2017	0		user	email to joe about tonight	EMAILSEARCH	search_email	<message_type>email</message_type> to <contact_name_to>joe</contact_name_to> about <keyword>tonight</keyword>	[]		1
+2023	0		user	email to bill from katanga with attachment	EMAILSEARCH	search_email	<message_type>email</message_type> to <contact_name_to>bill</contact_name_to> from <contact_name_from>katanga</contact_name_from> with <attachment>attachment</attachment>	[]		1
+2026	0		user	Email to Dave with attachment	EMAILSEARCH	search_email	<message_type>Email</message_type> to <contact_name_to>Dave</contact_name_to> with <attachment>attachment</attachment>	[]		1
+2027	0		user	email to Jake with attachment 	EMAILSEARCH	search_email	<message_type>email</message_type> to <contact_name_to>Jake</contact_name_to> with <attachment>attachment</attachment> 	[]		1
+2030	0		user	email to Sara with attachment	EMAILSEARCH	search_email	<message_type>email</message_type> to <contact_name_to>Sara</contact_name_to> with <attachment>attachment</attachment>	[]		1
+2033	0		user	email to Mark 	EMAILSEARCH	search_email	<message_type>email</message_type> to <contact_name_to>Mark</contact_name_to> 	[]		1
+2035	0		user	mail to klaus	EMAILSEARCH	search_email	<message_type>mail</message_type> to <contact_name_to>klaus</contact_name_to>	[]		1
+2043	0		user	email to Dan from Megan between March to May about pets	EMAILSEARCH	search_email	<message_type>email</message_type> to <contact_name_to>Dan</contact_name_to> from <contact_name_from>Megan</contact_name_from> between <start_date>March</start_date> to <end_date>May</end_date> about <keyword>pets</keyword>	[]		1
+2045	0		user	emails to Mike from Joy	EMAILSEARCH	search_email	<message_type>emails</message_type> to <contact_name_to>Mike</contact_name_to> from <contact_name_from>Joy</contact_name_from>	[]		1
+2047	0		user	Email to David from Sarah	EMAILSEARCH	search_email	<message_type>Email</message_type> to <contact_name_to>David</contact_name_to> from <contact_name_from>Sarah</contact_name_from>	[]		1
+2049	0		user	Email to Fred from March 10 through 20 about vacation	EMAILSEARCH	search_email	<message_type>Email</message_type> to <contact_name_to>Fred</contact_name_to> from <start_date>March 10</start_date> through <end_date>20</end_date> about <keyword>vacation</keyword>	[]		1
+2050	0		user	emails to cora about dresses with attachments	EMAILSEARCH	search_email	<message_type>emails</message_type> to <contact_name_to>cora</contact_name_to> about <keyword>dresses</keyword> with <attachment>attachments</attachment>	[]		1
+2059	0		user	emails to carmen skills focus	EMAILSEARCH	search_email	<message_type>emails</message_type> to <contact_name_to>carmen</contact_name_to> <keyword>skills focus</keyword>	[]		1
+2063	0		user	email to sister about birthday	EMAILSEARCH	search_email	<message_type>email</message_type> to <relationship_name_to>sister</relationship_name_to> about <keyword>birthday</keyword>	[]		1
+2070	0		user	email with adobe pdf attachment	EMAILSEARCH	search_email	<message_type>email</message_type> with <attachment_type>adobe pdf</attachment_type> <attachment>attachment</attachment>	[]		1
+2081	0		user	emails with invoice attachments	EMAILSEARCH	search_email	<message_type>emails</message_type> with <keyword>invoice</keyword> <attachment>attachments</attachment>	[]		1
+2084	0		user	Emails with flooring attachment	EMAILSEARCH	search_email	<message_type>Emails</message_type> with <keyword>flooring</keyword> <attachment>attachment</attachment>	[]		1
+2094	0		user	emails with attachment	EMAILSEARCH	search_email	<message_type>emails</message_type> with <attachment>attachment</attachment>	[]		1
+2098	0		user	Emails with attachment about R&B singers.	EMAILSEARCH	search_email	<message_type>Emails</message_type> with <attachment>attachment</attachment> about <keyword>R&amp;B singers</keyword>.	[]		1
+2108	0		user	email with attachment between January 9 and January 16	EMAILSEARCH	search_email	<message_type>email</message_type> with <attachment>attachment</attachment> between <start_date>January 9</start_date> and <end_date>January 16</end_date>	[]		1
+2118	0		user	emails with attachment files	EMAILSEARCH	search_email	<message_type>emails</message_type> with <attachment>attachment</attachment> <attachment_type>files</attachment_type>	[]		1
+2122	0		user	emails with attachment from Roselyn	EMAILSEARCH	search_email	<message_type>emails</message_type> with <attachment>attachment</attachment> from <contact_name_from>Roselyn</contact_name_from>	[]		1
+2127	0		user	emails with attachments from david	EMAILSEARCH	search_email	<message_type>emails</message_type> with <attachment>attachments</attachment> from <contact_name_from>david</contact_name_from>	[]		1
+2128	0		user	emails with attachments from John	EMAILSEARCH	search_email	<message_type>emails</message_type> with <attachment>attachments</attachment> from <contact_name_from>John</contact_name_from>	[]		1
+2134	0		user	emails with attachment from October 2008	EMAILSEARCH	search_email	<message_type>emails</message_type> with <attachment>attachment</attachment> from <start_date>October 2008</start_date>	[]		1
+2138	0		user	Emails with attachment from August	EMAILSEARCH	search_email	<message_type>Emails</message_type> with <attachment>attachment</attachment> from <start_date>August</start_date>	[]		1
+2141	0		user	emails with attachment from last year	EMAILSEARCH	search_email	<message_type>emails</message_type> with <attachment>attachment</attachment> from <start_date>last year</start_date>	[]		1
+2149	0		user	email with attachment on bears	EMAILSEARCH	search_email	<message_type>email</message_type> with <attachment>attachment</attachment> on <keyword>bears</keyword>	[]		1
+2151	0		user	email with attachment on drawing	EMAILSEARCH	search_email	<message_type>email</message_type> with <attachment>attachment</attachment> on <keyword>drawing</keyword>	[]		1
+2152	0		user	Email with attachment on music 	EMAILSEARCH	search_email	<message_type>email</message_type> with <attachment>attachment</attachment> on <keyword>music</keyword> 	[]		1
+2156	0		user	email with attachment on video	EMAILSEARCH	search_email	<message_type>email</message_type> with <attachment>attachment</attachment> on <keyword>video</keyword>	[]		1
+2170	0		user	email with attachments received last month	EMAILSEARCH	search_email	<message_type>email</message_type> with <attachment>attachments</attachment> received <start_date>last month</start_date>	[]		1
+2175	0		user	emails with coupons	EMAILSEARCH	search_email	<message_type>emails</message_type> with <keyword>coupons</keyword>	[]		1
+2178	0		user	Emails with sound	EMAILSEARCH	search_email	<message_type>Emails</message_type> with <keyword>sound</keyword>	[]		1
+2182	0		user	email with spreadsheet	EMAILSEARCH	search_email	<message_type>email</message_type> with <attachment_type>spreadsheet</attachment_type>	[]		1
+2184	0		user	Email with image	EMAILSEARCH	search_email	<message_type>Email</message_type> with <attachment_type>image</attachment_type>	[]		1
+2185	0		user	Email with pics	EMAILSEARCH	search_email	<message_type>Email</message_type> with <attachment_type>pics</attachment_type>	[]		1
+2192	0		user	mail with surgeon update PDF attachment	EMAILSEARCH	search_email	<message_type>mail</message_type> with <keyword>surgeon update</keyword> <attachment_type>PDF</attachment_type> <attachment>attachment</attachment>	[]		1
+2193	0		user	mails with project document attachement	EMAILSEARCH	search_email	<message_type>mails</message_type> with <keyword>project</keyword> <attachment_type>document</attachment_type> <attachment>attachement</attachment>	[]		1
+2199	0		user	Email with video attachment from April 	EMAILSEARCH	search_email	<message_type>Email</message_type> with <attachment_type>video</attachment_type> <attachment>attachment</attachment> from <start_date>April</start_date> 	[]		1
+2205	0		user	emails  within the month of February	EMAILSEARCH	search_email	<message_type>emails</message_type>  within the month of <start_date>February</start_date>	[]		1
+2211	0		user	Emails about the moon from January to February 	EMAILSEARCH	search_email	<message_type>Emails</message_type> about the <keyword>moon</keyword> from <start_date>January</start_date> to <end_date>February</end_date> 	[]		1
+2214	0		user	emails beginning in january to july	EMAILSEARCH	search_email	<message_type>emails</message_type> beginning in <start_date>january</start_date> to <end_date>july</end_date>	[]		1
+2227	0		user	emails for my birthday with attachments	EMAILSEARCH	search_email	<message_type>emails</message_type> for my <keyword>birthday</keyword> with <attachment>attachments</attachment>	[]		1
+2230	0		user	email from Tim to Duke about road trip from March to June	EMAILSEARCH	search_email	<message_type>email</message_type> from <contact_name_from>Tim</contact_name_from> to <contact_name_to>Duke</contact_name_to> about <keyword>road trip</keyword> from <start_date>March</start_date> to <end_date>June</end_date>	[]		1
+2232	0		user	emails from Anna to Beth from the previous month	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Anna</contact_name_from> to <contact_name_to>Beth</contact_name_to> from the <start_date>previous month</start_date>	[]		1
+2233	0		user	emails from Monday the 6th to Tuesday the 7th from Mr. Churchill	EMAILSEARCH	search_email	<message_type>emails</message_type> from <start_date>Monday the 6th</start_date> to <end_date>Tuesday the 7th</end_date> from <contact_name_from>Mr. Churchill</contact_name_from>	[]		1
+2239	0		user	emails from March 2nd to April 15th from Kelly	EMAILSEARCH	search_email	<message_type>emails</message_type> from <start_date>March 2nd</start_date> to <end_date>April 15th</end_date> from <contact_name_from>Kelly</contact_name_from>	[]		1
+2240	0		user	emails from June 19 to June 26 from Bert	EMAILSEARCH	search_email	<message_type>emails</message_type> from <start_date>June 19</start_date> to <end_date>June 26</end_date> from <contact_name_from>Bert</contact_name_from>	[]		1
+2244	0		user	emails from between Halloween and Thanksgiving	EMAILSEARCH	search_email	<message_type>emails</message_type> from between <start_date>Halloween</start_date> and <end_date>Thanksgiving</end_date>	[]		1
+2250	0		user	emails from Doctor Sofia with attachment about health between January and March	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>Doctor Sofia</contact_name_from> with <attachment>attachment</attachment> about <keyword>health</keyword> between <start_date>January</start_date> and <end_date>March</end_date>	[]		1
+2252	0		user	Emails from Kathy to me.	EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Kathy</contact_name_from> to <relationship_name_to>me</relationship_name_to>.	[]		1
+2257	0		user	mail from June 1st to June 3rd with attachments	EMAILSEARCH	search_email	<message_type>mail</message_type> from <start_date>June 1st</start_date> to <end_date>June 3rd</end_date> with <attachment>attachments</attachment>	[]		1
+2263	0		user	Emails from Harvey from last weekend	EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Harvey</contact_name_from> from <start_date>last weekend</start_date>	[]		1
+2274	0		user	emails from last year  with attachment from Cindy	EMAILSEARCH	search_email	<message_type>emails</message_type> from <start_date>last year</start_date>  with <attachment>attachment</attachment> from <contact_name_from>Cindy</contact_name_from>	[]		1
+2275	0		user	emails from mark dated  april 1 to april 12, 1998	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>mark</contact_name_from> dated  <start_date>april 1</start_date> to <end_date>april 12, 1998</end_date>	[]		1
+2276	0		user	Emails from mom in January and February	EMAILSEARCH	search_email	<message_type>Emails</message_type> from <relationship_name_from>mom</relationship_name_from> in <start_date>January</start_date> and <end_date>February</end_date>	[]		1
+2279	0		user	Mail from Mom to Greg	EMAILSEARCH	search_email	<message_type>Mail</message_type> from <relationship_name_from>Mom</relationship_name_from> to <contact_name_to>Greg</contact_name_to>	[]		1
+2292	0		user	Emails I sent from August 22 to August 30th	EMAILSEARCH	search_email	<message_type>Emails</message_type> I sent from <start_date>August 22</start_date> to <end_date>August 30th</end_date>	[]		1
+2296	0		user	Emails in July with fireworks attachment 	EMAILSEARCH	search_email	<message_type>Emails</message_type> in <start_date>July</start_date> with <keyword>fireworks</keyword> <attachment>attachment</attachment> 	[]		1
+2299	0		user	mail including attachments 	EMAILSEARCH	search_email	<message_type>mail</message_type> including <attachment>attachments</attachment> 	[]		1
+2304	0		user	emails may 1 through may 5 with attachments	EMAILSEARCH	search_email	<message_type>emails</message_type> <start_date>may 1</start_date> through <end_date>may 5</end_date> with <attachment>attachments</attachment>	[]		1
+2307	0		user	emails only on August 15th	EMAILSEARCH	search_email	<message_type>emails</message_type> <emailsearch_other>only</emailsearch_other>on <start_date>August 15th</start_date>	[]		1
+2309	0		user	emails received April 1st to April 11th	EMAILSEARCH	search_email	<message_type>emails</message_type> received <start_date>April 1st</start_date> to <end_date>April 11th</end_date>	[]		1
+2316	0		user	emails received during December	EMAILSEARCH	search_email	<message_type>emails</message_type> received during <start_date>December</start_date>	[]		1
+2323	0		user	emails received in April.	EMAILSEARCH	search_email	<message_type>emails</message_type> received in <start_date>April</start_date>.	[]		1
+2328	0		user	emails receiver about concerts between March 6 and March 9	EMAILSEARCH	search_email	<message_type>emails</message_type> receiver about <keyword>concerts</keyword> between <start_date>March 6</start_date> and <end_date>March 9</end_date>	[]		1
+2331	0		user	emails sent by caleb	EMAILSEARCH	search_email	<message_type>emails</message_type> sent by <contact_name_from>caleb</contact_name_from>	[]		1
+2340	0		user	email sent in march, june, and october	EMAILSEARCH	search_email	<message_type>email</message_type> sent in <start_date>march, june, and october</start_date>	[]		1
+2341	0		user	emails sent June 2015 and November 2015	EMAILSEARCH	search_email	<message_type>emails</message_type> sent <start_date>June 2015</start_date> and <end_date>November 2015</end_date>	[]		1
+2342	0		user	emails sent on june 1st	EMAILSEARCH	search_email	<message_type>emails</message_type> sent on <start_date>june 1st</start_date>	[]		1
+2344	0		user	emails sent or received between last Friday and yesterday	EMAILSEARCH	search_email	<message_type>emails</message_type> sent or received between <start_date>last Friday</start_date> and <end_date>yesterday</end_date>	[]		1
+2350	0		user	Emails that contain attachments	EMAILSEARCH	search_email	<message_type>Emails</message_type> that contain <attachment>attachments</attachment>	[]		1
+2352	0		user	Emails that has six attachments	EMAILSEARCH	search_email	<message_type>Emails</message_type> that has six <attachment>attachments</attachment>	[]		1
+2369	0		user	Emails to me from Jackson	EMAILSEARCH	search_email	<message_type>Emails</message_type> to <relationship_name_to>me</relationship_name_to> from <contact_name_from>Jackson</contact_name_from>	[]		1
+2378	0		user	emails with attachment from July 1 to July 16	EMAILSEARCH	search_email	<message_type>emails</message_type> with <attachment>attachment</attachment> from <start_date>July 1</start_date> to <end_date>July 16</end_date>	[]		1
+2380	0		user	mail with attachment from May 6th to May 8th	EMAILSEARCH	search_email	<message_type>mail</message_type> with <attachment>attachment</attachment> from <start_date>May 6th</start_date> to <end_date>May 8th</end_date>	[]		1
+2382	0		user	emails with attachment included	EMAILSEARCH	search_email	<message_type>emails</message_type> with <attachment>attachment</attachment> included	[]		1
+2401	0		user	emails with attachments that I have	EMAILSEARCH	search_email	<message_type>emails</message_type> with <attachment>attachments</attachment> that I have	[]		1
+2405	0		user	emails with pdf attachments re bills from june 2016 to july 2017	EMAILSEARCH	search_email	<message_type>emails</message_type> with <attachment_type>pdf</attachment_type> <attachment>attachments</attachment> re <keyword>bills</keyword> from <start_date>june 2016</start_date> to <end_date>july 2017</end_date>	[]		1
+2413	0		user	Excel attachments from last week	EMAILSEARCH	search_email	<attachment_type>Excel</attachment_type> <attachment>attachments</attachment> from <start_date>last week</start_date>	[]		1
+2429	0		user	find all attachments	EMAILSEARCH	search_email	find all <attachment>attachments</attachment>	[]		1
+2430	0		user	find all email attachments	EMAILSEARCH	search_email	find all <message_type>email</message_type> <attachment>attachments</attachment>	[]		1
+2436	0		user	Find all the emails from Jonny that have an attachment.	EMAILSEARCH	search_email	Find all the <message_type>emails</message_type> from <contact_name_from>Jonny</contact_name_from> that have an <attachment>attachment</attachment>.	[]		1
+2447	0		user	Find attachments in my email	EMAILSEARCH	search_email	Find <attachment>attachments</attachment> in my <message_type>email</message_type>	[]		1
+2449	0		user	find birthday emails	EMAILSEARCH	search_email	find <keyword>birthday</keyword> <message_type>emails</message_type>	[]		1
+2455	0		user	find emails about conferences	EMAILSEARCH	search_email	find <message_type>emails</message_type> about <keyword>conferences</keyword>	[]		1
+2470	0		user	Find email with attachments	EMAILSEARCH	search_email	Find <message_type>email</message_type> with <attachment>attachments</attachment>	[]		1
+2474	0		user	Find emails containing attachments	EMAILSEARCH	search_email	Find <message_type>emails</message_type> containing <attachment>attachments</attachment>	[]		1
+2476	0		user	Find emails from Karen to Howard.	EMAILSEARCH	search_email	Find <message_type>emails</message_type> from <contact_name_from>Karen</contact_name_from> to <contact_name_to>Howard</contact_name_to>.	[]		1
+2477	0		user	Find emails on the new project.	EMAILSEARCH	search_email	Find <message_type>emails</message_type> on the <keyword>new project</keyword>.	[]		1
+2478	0		user	find emails regarding word orders	EMAILSEARCH	search_email	find <message_type>emails</message_type> regarding <keyword>word orders</keyword>	[]		1
+2482	0		user	find emails with an attachment	EMAILSEARCH	search_email	find <message_type>emails</message_type> with an <attachment>attachment</attachment>	[]		1
+2483	0		user	Find emails with an attachment from August.	EMAILSEARCH	search_email	Find <message_type>emails</message_type> with an <attachment>attachment</attachment> from <start_date>August</start_date>.	[]		1
+2485	0		user	Find emails with Adobe file attached	EMAILSEARCH	search_email	Find <message_type>emails</message_type> with <attachment_type>Adobe file</attachment_type> <attachment>attached</attachment>	[]		1
+2488	0		user	find mail about money last month	EMAILSEARCH	search_email	find <message_type>mail</message_type> about <keyword>money</keyword> <start_date>last month</start_date>	[]		1
+2489	0		user	find mail between November 2008 and December2008	EMAILSEARCH	search_email	find <message_type>mail</message_type> between <start_date>November 2008</start_date> and <end_date>December2008</end_date>	[]		1
+2492	0		user	Find me an email from Barb that included an attachment	EMAILSEARCH	search_email	Find me an <message_type>email</message_type> from <contact_name_from>Barb</contact_name_from> that included an <attachment>attachment</attachment>	[]		1
+2505	0		user	Find research study attachments in mail.	EMAILSEARCH	search_email	Find <keyword>research study</keyword> <attachment>attachments</attachment> in <message_type>mail</message_type>.	[]		1
+2510	0		user	Find the emails to Meghan with an attachment.	EMAILSEARCH	search_email	Find the <message_type>emails</message_type> to <contact_name_to>Meghan</contact_name_to> with an <attachment>attachment</attachment>.	[]		1
+2524	0		user	from Giselle with attachment	EMAILSEARCH	search_email	from <contact_name_from>Giselle</contact_name_from> with <attachment>attachment</attachment>	[]		1
+2525	0		user	from mark with attachment	EMAILSEARCH	search_email	from <contact_name_from>mark</contact_name_from> with <attachment>attachment</attachment>	[]		1
+2530	0		user	from Roger with attachment	EMAILSEARCH	search_email	from <contact_name_from>Roger</contact_name_from> with <attachment>attachment</attachment>	[]		1
+2534	0		user	From Mark between October 7 and October 18	EMAILSEARCH	search_email	From <contact_name_from>Mark</contact_name_from> between <start_date>October 7</start_date> and <end_date>October 18</end_date>	[]		1
+2539	0		user	From Scarlett Hamilton to Rhett Butler last month	EMAILSEARCH	search_email	From <contact_name_from>Scarlett Hamilton</contact_name_from> to <contact_name_to>Rhett Butler</contact_name_to> <start_date>last month</start_date>	[]		1
+2543	0		user	From Kennedy to Drew last month	EMAILSEARCH	search_email	From <contact_name_from>Kennedy</contact_name_from> to <contact_name_to>Drew</contact_name_to> <start_date>last month</start_date>	[]		1
+2546	0		user	from Belle to Christian last 3 months	EMAILSEARCH	search_email	from <contact_name_from>Belle</contact_name_from> to <contact_name_to>Christian</contact_name_to> <start_date>last 3 months</start_date>	[]		1
+2551	0		user	From Harry	EMAILSEARCH	search_email	From <contact_name_from>Harry</contact_name_from>	[]		1
+2561	0		user	From John Doe last month	EMAILSEARCH	search_email	From <contact_name_from>John Doe</contact_name_from> <start_date>last month</start_date>	[]		1
+2564	0		user	From John Doe II last month	EMAILSEARCH	search_email	From <contact_name_from>John Doe II</contact_name_from> <start_date>last month</start_date>	[]		1
+2568	0		user	from tim 2 months ago	EMAILSEARCH	search_email	from <contact_name_from>tim</contact_name_from> <start_date>2 months ago</start_date>	[]		1
+2570	0		user	from luke on new years day	EMAILSEARCH	search_email	from <contact_name_from>luke</contact_name_from> on <keyword>new years day</keyword>	[]		1
+2573	0		user	From John Doe on algebra	EMAILSEARCH	search_email	From <contact_name_from>John Doe</contact_name_from> on <keyword>algebra</keyword>	[]		1
+2578	0		user	from christie on yoga	EMAILSEARCH	search_email	from <contact_name_from>christie</contact_name_from> on <keyword>yoga</keyword>	[]		1
+2584	0		user	from Britney to Jon with attachment	EMAILSEARCH	search_email	from <contact_name_from>Britney</contact_name_from> to <contact_name_to>Jon</contact_name_to> with <attachment>attachment</attachment>	[]		1
+2588	0		user	From Nathan about beekeeping	EMAILSEARCH	search_email	From <contact_name_from>Nathan</contact_name_from> about <keyword>beekeeping</keyword>	[]		1
+2598	0		user	from jones to trump email	EMAILSEARCH	search_email	from <contact_name_from>jones</contact_name_from> to <contact_name_to>trump</contact_name_to> <message_type>email</message_type>	[]		1
+2599	0		user	From Todd to Jason email	EMAILSEARCH	search_email	From <contact_name_from>Todd</contact_name_from> to <contact_name_to>Jason</contact_name_to> <message_type>email</message_type>	[]		1
+2601	0		user	from Bobby to Vanessa about the office party	EMAILSEARCH	search_email	from <contact_name_from>Bobby</contact_name_from> to <contact_name_to>Vanessa</contact_name_to> about the <keyword>office party</keyword>	[]		1
+2603	0		user	from chris from 2019 	EMAILSEARCH	search_email	from <contact_name_from>chris</contact_name_from> from <start_date>2019</start_date> 	[]		1
+2616	0		user	from Miranda to Jacob	EMAILSEARCH	search_email	from <contact_name_from>Miranda</contact_name_from> to <contact_name_to>Jacob</contact_name_to>	[]		1
+2625	0		user	From Steve on the musical 	EMAILSEARCH	search_email	From <contact_name_from>Steve</contact_name_from> on the <keyword>musical</keyword> 	[]		1
+2626	0		user	From Greg on the movies 	EMAILSEARCH	search_email	From <contact_name_from>Greg</contact_name_from> on the <keyword>movies</keyword> 	[]		1
+2628	0		user	from Sylvie to Cole about immunizations	EMAILSEARCH	search_email	from <contact_name_from>Sylvie</contact_name_from> to <contact_name_to>Cole</contact_name_to> about <keyword>immunizations</keyword>	[]		1
+2629	0		user	from jonas to brian about the hospital	EMAILSEARCH	search_email	from <contact_name_from>jonas</contact_name_from> to <contact_name_to>brian</contact_name_to> about <keyword>the hospital</keyword>	[]		1
+2631	0		user	from robert to cora on the new maid's duties	EMAILSEARCH	search_email	from <contact_name_from>robert</contact_name_from> to <contact_name_to>cora</contact_name_to> on the <keyword>new maid&apos;s duties</keyword>	[]		1
+2633	0		user	From Greg to Roger on the office party	EMAILSEARCH	search_email	From <contact_name_from>Greg</contact_name_from> to <contact_name_to>Roger</contact_name_to> on the <keyword>office party</keyword>	[]		1
+2637	0		user	From Greg with email attachment on the office party	EMAILSEARCH	search_email	From <contact_name_from>Greg</contact_name_from> with <message_type>email</message_type> <attachment>attachment</attachment> on the <keyword>office party</keyword>	[]		1
+2641	0		user	from John pdf attachments	EMAILSEARCH	search_email	from <contact_name_from>John</contact_name_from> <attachment_type>pdf</attachment_type> <attachment>attachments</attachment>	[]		1
+2648	0		user	from mariam to cole attachment email	EMAILSEARCH	search_email	from <contact_name_from>mariam</contact_name_from> to <contact_name_to>cole</contact_name_to> <attachment>attachment</attachment> <message_type>email</message_type>	[]		1
+2649	0		user	from mark on the party this weekend	EMAILSEARCH	search_email	from <contact_name_from>mark</contact_name_from> on the <keyword>party</keyword> <start_date>this weekend</start_date>	[]		1
+2650	0		user	From mom on corona virus	EMAILSEARCH	search_email	From <relationship_name_from>mom</relationship_name_from> on <keyword>corona virus</keyword>	[]		1
+2653	0		user	From Steve to Trevor regarding pool in February	EMAILSEARCH	search_email	From <contact_name_from>Steve</contact_name_from> to <contact_name_to>Trevor</contact_name_to> regarding <keyword>pool</keyword> in <start_date>February</start_date>	[]		1
+2661	0		user	Zach emails to Kalei	EMAILSEARCH	search_email	<contact_name>Zach</contact_name> <message_type>emails</message_type> to <contact_name_to>Kalei</contact_name_to>	[]		1
+2664	0		user	George mails with attachment	EMAILSEARCH	search_email	<contact_name>George</contact_name> <message_type>mails</message_type> with <attachment>attachment</attachment>	[]		1
+2665	0		user	get all the emails I have with attachments	EMAILSEARCH	search_email	get all the <message_type>emails</message_type> I have with <attachment>attachments</attachment>	[]		1
+2673	0		user	Give me the email John sent yesterday.	EMAILSEARCH	search_email	Give me the <message_type>email</message_type> <contact_name>John</contact_name> sent <start_date>yesterday</start_date>.	[]		1
+2678	0		user	Halloween emails with attachment from Sydney to Luke	EMAILSEARCH	search_email	<keyword>Halloween</keyword> <message_type>emails</message_type> with <attachment>attachment</attachment> from <contact_name_from>Sydney</contact_name_from> to <contact_name_to>Luke</contact_name_to>	[]		1
+2688	0		user	I appreciate your response to my email 	NOTSURE	other_domain	I appreciate your response to my email 	[]		1
+2693	0		user	i need emails about carpentry sent in july	EMAILSEARCH	search_email	i need <message_type>emails</message_type> about <keyword>carpentry</keyword> sent in <start_date>july</start_date>	[]		1
+2708	0		user	i need to view emails fro last week	EMAILSEARCH	search_email	i need to view <message_type>emails</message_type> fro <start_date>last week</start_date>	[]		1
+2710	0		user	i recive email attachments in july	EMAILSEARCH	search_email	i recive <message_type>email</message_type> <attachment>attachments</attachment> in <start_date>july</start_date>	[]		1
+2716	0		user	I sent the email from jane	EMAILSEARCH	search_email	I sent the <message_type>email</message_type> from <contact_name_from>jane</contact_name_from>	[]		1
+2719	0		user	i sit there	NOTSURE	notsure_other	i sit there	[]		1
+2724	0		user	I want to see all the emails that came from Paul.	EMAILSEARCH	search_email	I want to see all the <message_type>emails</message_type> that came from <contact_name_from>Paul</contact_name_from>.	[]		1
+2725	0		user	I want to see any emails between January 1 and 3	EMAILSEARCH	search_email	I want to see any <message_type>emails</message_type> between <start_date>January 1</start_date> and <end_date>3</end_date>	[]		1
+2735	0		user	I want to see emails with an attachment from Cale.	EMAILSEARCH	search_email	I want to see <message_type>emails</message_type> with an <attachment>attachment</attachment> from <contact_name_from>Cale</contact_name_from>.	[]		1
+2739	0		user	I'd like to view emails from January.	EMAILSEARCH	search_email	I'd like to view <message_type>emails</message_type> from <start_date>January</start_date>.	[]		1
+2759	0		user	Robert's email	EMAILSEARCH	search_email	<contact_name>Robert</contact_name>'s <message_type>email</message_type>	[]		1
+2760	0		user	joe to john emails 	EMAILSEARCH	search_email	<contact_name_from>joe</contact_name_from> to <contact_name_to>john</contact_name_to> <message_type>emails</message_type> 	[]		1
+2768	0		user	June email me about the meeting	EMAILSEARCH	search_email	<start_date>June</start_date> <message_type>email</message_type> me about <keyword>the meeting</keyword>	[]		1
+2776	0		user	last week's email about job application	EMAILSEARCH	search_email	<start_date>last week</start_date>'s <message_type>email</message_type> about <keyword>job application</keyword>	[]		1
+2779	0		user	last month's email on bears	EMAILSEARCH	search_email	<start_date>last month</start_date>'s <message_type>email</message_type> on <keyword>bears</keyword>	[]		1
+2790	0		user	Last October email about shingles	EMAILSEARCH	search_email	<start_date>Last October</start_date> <message_type>email</message_type> about <keyword>shingles</keyword>	[]		1
+2794	0		user	last night email for primaries	EMAILSEARCH	search_email	<start_time>last night</start_time> <message_type>email</message_type> for <keyword>primaries</keyword>	[]		1
+2798	0		user	Last weeks email from Violet about outsourcing jobs.	EMAILSEARCH	search_email	<start_date>Last weeks</start_date> <message_type>email</message_type> from <contact_name_from>Violet</contact_name_from> about <keyword>outsourcing jobs</keyword>.	[]		1
+2802	0		user	last week's mail with attachments on project update	EMAILSEARCH	search_email	<start_date>last week</start_date>'s <message_type>mail</message_type> with <attachment>attachments</attachment> on <keyword>project update</keyword>	[]		1
+2815	0		user	list of emails that has attachments included	EMAILSEARCH	search_email	list of <message_type>emails</message_type> that has <attachment>attachments</attachment> included	[]		1
+2823	0		user	locate email from jay with attachment	EMAILSEARCH	search_email	locate <message_type>email</message_type> from <contact_name_from>jay</contact_name_from> with <attachment>attachment</attachment>	[]		1
+2824	0		user	locate email with attachments between december 3rd and december 12th	EMAILSEARCH	search_email	locate <message_type>email</message_type> with <attachment>attachments</attachment> between <start_date>december 3rd</start_date> and <end_date>december 12th</end_date>	[]		1
+2825	0		user	locate email with data sweep attachment	EMAILSEARCH	search_email	locate <message_type>email</message_type> with <keyword>data sweep</keyword> <attachment>attachment</attachment>	[]		1
+2827	0		user	locate emails from decemeber about basketball	EMAILSEARCH	search_email	locate <message_type>emails</message_type> from <start_date>decemeber</start_date> about <keyword>basketball</keyword>	[]		1
+2829	0		user	locate mail from bank in June 2019	EMAILSEARCH	search_email	locate <message_type>mail</message_type> from <contact_name_from>bank</contact_name_from> in <start_date>June 2019</start_date>	[]		1
+2833	0		user	Look for an email from Barb that included an attachment	EMAILSEARCH	search_email	Look for an <message_type>email</message_type> from <contact_name_from>Barb</contact_name_from> that included an <attachment>attachment</attachment>	[]		1
+2834	0		user	Look for an email that came last month from Matt about a party	EMAILSEARCH	search_email	Look for an <message_type>email</message_type> that came <start_date>last month</start_date> from <contact_name_from>Matt</contact_name_from> about a <keyword>party</keyword>	[]		1
+2841	0		user	Look for emails received in February	EMAILSEARCH	search_email	Look for <message_type>emails</message_type> received in <start_date>February</start_date>	[]		1
+2843	0		user	Look for emails with attachments sent last week	EMAILSEARCH	search_email	Look for <message_type>emails</message_type> with <attachment>attachments</attachment> sent <start_date>last week</start_date>	[]		1
+2852	0		user	Look for Power Point attachments	EMAILSEARCH	search_email	Look for <attachment_type>Power Point</attachment_type> <attachment>attachments</attachment>	[]		1
+2856	0		user	look for topic billing in mail inbox with attachment	EMAILSEARCH	search_email	look for topic <keyword>billing</keyword> in <message_type>mail</message_type> <destination_folder>inbox</destination_folder> with <attachment>attachment</attachment>	[]		1
+2861	0		user	Look up emails from Ian to Xavier.	EMAILSEARCH	search_email	Look up <message_type>emails</message_type> from <contact_name_from>Ian</contact_name_from> to <contact_name_to>Xavier</contact_name_to>.	[]		1
+2868	0		user	Look up travel emails that have an attachment.	EMAILSEARCH	search_email	Look up <keyword>travel</keyword> <message_type>emails</message_type> that have an <attachment>attachment</attachment>.	[]		1
+2871	0		user	mail about restaurants to Gary from March 2nd to 4th	EMAILSEARCH	search_email	<message_type>mail</message_type> about <keyword>restaurants</keyword> to <contact_name_to>Gary</contact_name_to> from <start_date>March 2nd</start_date> to <end_date>4th</end_date>	[]		1
+2872	0		user	mail attachment from June about the party	EMAILSEARCH	search_email	<message_type>mail</message_type> <attachment>attachment</attachment> from <start_date>June</start_date> about <keyword>the party</keyword>	[]		1
+2875	0		user	mail between January 5 and January 15 about open borders	EMAILSEARCH	search_email	<message_type>mail</message_type> between <start_date>January 5</start_date> and <end_date>January 15</end_date> about <keyword>open borders</keyword>	[]		1
+2885	0		user	mail from edith to berty about engagement with attachments about food	EMAILSEARCH	search_email	<message_type>mail</message_type> from <contact_name_from>edith</contact_name_from> to <contact_name_to>berty</contact_name_to> about <keyword>engagement</keyword> with <attachment>attachments</attachment> about <keyword>food</keyword>	[]		1
+2891	0		user	mail from june about the last week report 	EMAILSEARCH	search_email	<message_type>mail</message_type> from <start_date>june</start_date> about the <keyword>last week report</keyword> 	[]		1
+2892	0		user	Mail from me to Jane	EMAILSEARCH	search_email	<message_type>Mail</message_type> from me to <contact_name_to>Jane</contact_name_to>	[]		1
+2895	0		user	Mail from Penny to Quentin about dentist on Thursday	EMAILSEARCH	search_email	<message_type>Mail</message_type> from <contact_name_from>Penny</contact_name_from> to <contact_name_to>Quentin</contact_name_to> about <keyword>dentist</keyword> on <start_date>Thursday</start_date>	[]		1
+2896	0		user	mail from Robert to Cora from last week about The New Painting	EMAILSEARCH	search_email	<message_type>mail</message_type> from <contact_name_from>Robert</contact_name_from> to <contact_name_to>Cora</contact_name_to> from <start_date>last week</start_date> about The <keyword>New Painting</keyword>	[]		1
+2898	0		user	mail from the hr 	EMAILSEARCH	search_email	<message_type>mail</message_type> from the <contact_name_from>hr</contact_name_from> 	[]		1
+2901	0		user	mail from yesterday and today including attachments	EMAILSEARCH	search_email	<message_type>mail</message_type> from <start_date>yesterday</start_date> and <end_date>today</end_date> including <attachment>attachments</attachment>	[]		1
+2903	0		user	mail messages from Bart Spencer with attached files	EMAILSEARCH	search_email	<message_type>mail</message_type> messages from <contact_name_from>Bart Spencer</contact_name_from> with <attachment>attached</attachment> <attachment_type>files</attachment_type>	[]		1
+2908	0		user	mail on physics with attachment from august	EMAILSEARCH	search_email	<message_type>mail</message_type> on <keyword>physics</keyword> with <attachment>attachment</attachment> from <start_date>august</start_date>	[]		1
+2913	0		user	mail received since last Monday from Jenny	EMAILSEARCH	search_email	<message_type>mail</message_type> received since <start_date>last Monday</start_date> from <contact_name_from>Jenny</contact_name_from>	[]		1
+2914	0		user	mail received with attachments from Jan 1 to Jan 7, 2020	EMAILSEARCH	search_email	<message_type>mail</message_type> received with <attachment>attachments</attachment> from <start_date>Jan 1</start_date> to <end_date>Jan 7, 2020</end_date>	[]		1
+2922	0		user	mail to anna with attachments from may 2017 to may 2018	EMAILSEARCH	search_email	<message_type>mail</message_type> to <contact_name_to>anna</contact_name_to> with <attachment>attachments</attachment> from <start_date>may 2017</start_date> to <end_date>may 2018</end_date>	[]		1
+2933	0		user	mail with attachment from Kennedy about vacation	EMAILSEARCH	search_email	<message_type>mail</message_type> with <attachment>attachment</attachment> from <contact_name_from>Kennedy</contact_name_from> about <keyword>vacation</keyword>	[]		1
+2938	0		user	mail with attachment in date range June to July 2019	EMAILSEARCH	search_email	<message_type>mail</message_type> with <attachment>attachment</attachment> in date range <start_date>June</start_date> to <end_date>July 2019</end_date>	[]		1
+2939	0		user	mail with attachment inside	EMAILSEARCH	search_email	<message_type>mail</message_type> with <attachment>attachment</attachment> inside	[]		1
+2940	0		user	mail with attachment sent between August and September 2019 about jewelry	EMAILSEARCH	search_email	<message_type>mail</message_type> with <attachment>attachment</attachment> sent between <start_date>August</start_date> and <end_date>September 2019</end_date> about <keyword>jewelry</keyword>	[]		1
+2943	0		user	mail with attachments received from march 2012 to june 2012 regarding the delamo mall sale	EMAILSEARCH	search_email	<message_type>mail</message_type> with <attachment>attachments</attachment> received from <start_date>march 2012</start_date> to <end_date>june 2012</end_date> regarding the <keyword>delamo mall sale</keyword>	[]		1
+2945	0		user	mail with the topic solar panel installation	EMAILSEARCH	search_email	<message_type>mail</message_type> with the <keyword>topic solar panel installation</keyword>	[]		1
+2946	0		user	mails about new contract jobs available from March 12th to March 14th	EMAILSEARCH	search_email	<message_type>mail</message_type>s about <keyword>new contract jobs available</keyword> from <start_date>March 12th</start_date> to <end_date>March 14th</end_date>	[]		1
+2948	0		user	mails from Frans	EMAILSEARCH	search_email	<message_type>mail</message_type>s from <contact_name_from>Frans</contact_name_from>	[]		1
+2953	0		user	mails that have attachment from May	EMAILSEARCH	search_email	<message_type>mails</message_type> that have <attachment>attachment</attachment> from <start_date>May</start_date>	[]		1
+2972	0		user	message to joanne about trip	EMAILSEARCH	search_email	message to <contact_name_to>joanne</contact_name_to> about <keyword>trip</keyword>	[]		1
+2978	0		user	messages from last week	EMAILSEARCH	search_email	messages from <start_date>last week</start_date>	[]		1
+2989	0		user	messages received form Joe in June	EMAILSEARCH	search_email	messages received form <contact_name_from>Joe</contact_name_from> in <start_date>June</start_date>	[]		1
+2991	0		user	messages sent last January	EMAILSEARCH	search_email	messages sent <start_date>last January</start_date>	[]		1
+2998	0		user	Michael sent regarding bills	EMAILSEARCH	search_email	<contact_name>Michael</contact_name> sent regarding <keyword>bills</keyword>	[]		1
+3008	0		user	my emails to Ben	EMAILSEARCH	search_email	my <message_type>emails</message_type> to <contact_name_to>Ben</contact_name_to>	[]		1
+3014	0		user	Ned received attachment from Kyle	EMAILSEARCH	search_email	<contact_name_to>Ned</contact_name_to> received <attachment>attachment</attachment> from <contact_name_from>Kyle</contact_name_from>	[]		1
+3028	0		user	open email regarding crime from last week	EMAILSEARCH	search_email	open <message_type>email</message_type> regarding <keyword>crime</keyword> from <start_date>last week</start_date>	[]		1
+3034	0		user	open the attachment	EMAILSEARCH	search_email	open the <attachment>attachment</attachment>	[]		1
+3036	0		user	open up email about james harden stats with attachment	EMAILSEARCH	search_email	open up <message_type>email</message_type> about <keyword>james harden stats</keyword> with <attachment>attachment</attachment>	[]		1
+3040	0		user	opened mail with an attachment	EMAILSEARCH	search_email	opened <message_type>mail</message_type> with an <attachment>attachment</attachment>	[]		1
+3042	0		user	organize mailbox to show emails with attachments	EMAILSEARCH	search_email	<keyword>organize mailbox</keyword> to show <message_type>emails</message_type> with <attachment>attachments</attachment>	[]		1
+3052	0		user	pdf attachments from Lia	EMAILSEARCH	search_email	<attachment_type>pdf</attachment_type> <attachment>attachments</attachment> from <contact_name_from>Lia</contact_name_from>	[]		1
+3053	0		user	slides attachments from Joshua	EMAILSEARCH	search_email	<attachment_type>slides</attachment_type> <attachment>attachments</attachment> from <contact_name_from>Joshua</contact_name_from>	[]		1
+3054	0		user	PDF attachments in email from January	EMAILSEARCH	search_email	<attachment_type>PDF</attachment_type> <attachment>attachments</attachment> in <message_type>email</message_type> from <start_date>January</start_date>	[]		1
+3056	0		user	Perform a search for emails from the month of May.	EMAILSEARCH	search_email	Perform a search for <message_type>emails</message_type> from the month of <start_date>May</start_date>.	[]		1
+3058	0		user	photo attachment girls trip	EMAILSEARCH	search_email	<attachment_type>photo</attachment_type> <attachment>attachment</attachment> <keyword>girls trip</keyword>	[]		1
+3078	0		user	Pull up any emails from Greg to James between May 12th and June 5th.	EMAILSEARCH	search_email	Pull up any <message_type>emails</message_type> from <contact_name_from>Greg</contact_name_from> to <contact_name_to>James</contact_name_to> between <start_date>May 12th</start_date> and <end_date>June 5th</end_date>.	[]		1
+3079	0		user	Pull up any emails from June 3-4	EMAILSEARCH	search_email	Pull up any <message_type>emails</message_type> from <start_date>June 3-4</start_date>	[]		1
+3081	0		user	Pull up emails from last May	EMAILSEARCH	search_email	Pull up <message_type>emails</message_type> from <start_date>last May</start_date>	[]		1
+3085	0		user	Pull up emails sent by Tom to Reginald.	EMAILSEARCH	search_email	Pull up <message_type>emails</message_type> sent by <contact_name_from>Tom</contact_name_from> to <contact_name_to>Reginald</contact_name_to>.	[]		1
+3088	0		user	pull up the Email from John to Jill	EMAILSEARCH	search_email	pull up the <message_type>Email</message_type> from <contact_name_from>John</contact_name_from> to <contact_name_to>Jill</contact_name_to>	[]		1
+3089	0		user	Receipt from car repair on May 16th. 	EMAILSEARCH	search_email	<keyword>Receipt from car repair</keyword> on <start_date>May 16th</start_date>. 	[]		1
+3090	0		user	Receive by john right away	NOTSURE	other_domain	Receive by john right away	[]		1
+3092	0		user	received email with attachment from Jamie	EMAILSEARCH	search_email	received <message_type>email</message_type> with <attachment>attachment</attachment> from <contact_name_from>Jamie</contact_name_from>	[]		1
+3101	0		user	Resignation letters from the last week of april 2019	EMAILSEARCH	search_email	<keyword>Resignation letters</keyword> from the <start_date>last week of april 2019</start_date>	[]		1
+3106	0		user	Soccer practice emails sent in January	EMAILSEARCH	search_email	<keyword>Soccer practice</keyword> <message_type>emails</message_type> <email_state>sent</email_state> in <start_date>January</start_date>	[]		1
+3108	0		user	search emails about birthday with photo attachmets	EMAILSEARCH	search_email	search <message_type>emails</message_type> about <keyword>birthday</keyword> with <attachment_type>photo</attachment_type> <attachment>attachmets</attachment>	[]		1
+3109	0		user	search emails containing attachment	EMAILSEARCH	search_email	search <message_type>emails</message_type> containing <attachment>attachment</attachment>	[]		1
+3115	0		user	Search for all emails that have an attachment to them.	EMAILSEARCH	search_email	Search for all <message_type>emails</message_type> that have an <attachment>attachment</attachment> to them.	[]		1
+3117	0		user	Search for an email with an attachment sent by Barb	EMAILSEARCH	search_email	Search for an <message_type>email</message_type> with an <attachment>attachment</attachment> sent by <contact_name_from>Barb</contact_name_from>	[]		1
+3123	0		user	Search for project specific emails	EMAILSEARCH	search_email	Search for <keyword>project specific</keyword> <message_type>emails</message_type>	[]		1
+3125	0		user	search for technology emails	EMAILSEARCH	search_email	search for <keyword>technology</keyword> <message_type>emails</message_type>	[]		1
+3127	0		user	Search for email from Mom	EMAILSEARCH	search_email	Search for <message_type>email</message_type> from <relationship_name_from>Mom</relationship_name_from>	[]		1
+3141	0		user	Search for emails with a warranty inquiry	EMAILSEARCH	search_email	Search for <message_type>emails</message_type> with a <keyword>warranty inquiry</keyword>	[]		1
+3145	0		user	Search for emails with pictures attached	EMAILSEARCH	search_email	Search for <message_type>emails</message_type> with <attachment_type>pictures</attachment_type> <attachment>attached</attachment>	[]		1
+3153	0		user	Search for the weekly conference call email.	EMAILSEARCH	search_email	Search for the <keyword>weekly conference call</keyword> <message_type>email</message_type>.	[]		1
+3157	0		user	Search my email for one from Matt last month about party	EMAILSEARCH	search_email	Search my <message_type>email</message_type> for one from <contact_name_from>Matt</contact_name_from> <start_date>last month</start_date> about <keyword>party</keyword>	[]		1
+3161	0		user	Send email to Jane	NOTSURE	other_domain	Send <message_type>email</message_type> to <contact_name_to>Jane</contact_name_to>	[]		1
+3165	0		user	sent by chris	EMAILSEARCH	search_email	sent by <contact_name_from>chris</contact_name_from>	[]		1
+3168	0		user	sent emails from last week	EMAILSEARCH	search_email	<destination_folder>sent</destination_folder> <message_type>emails</message_type> from <start_date>last week</start_date>	[]		1
+3169	0		user	sent mail february	EMAILSEARCH	search_email	<destination_folder>sent</destination_folder> <message_type>mail</message_type> <start_date>february</start_date>	[]		1
+3185	0		user	Show any emails that have an attachment.	EMAILSEARCH	search_email	Show any <message_type>emails</message_type> that have an <attachment>attachment</attachment>.	[]		1
+3196	0		user	show mail from last week	EMAILSEARCH	search_email	show <message_type>mail</message_type> from <start_date>last week</start_date>	[]		1
+3202	0		user	Show emails from last Monday to Friday	EMAILSEARCH	search_email	Show <message_type>emails</message_type> from <start_date>last Monday</start_date> to <end_date>Friday</end_date>	[]		1
+3208	0		user	Show email with attachments about furniture	EMAILSEARCH	search_email	Show <message_type>email</message_type> with <attachment>attachments</attachment> about <keyword>furniture</keyword>	[]		1
+3212	0		user	Show emails from Ebay	EMAILSEARCH	search_email	Show <message_type>emails</message_type> from <contact_name_from>Ebay</contact_name_from>	[]		1
+3230	0		user	show last week's attachments	EMAILSEARCH	search_email	show <start_date>last week</start_date>'s <attachment>attachments</attachment>	[]		1
+3232	0		user	show mail containing attachments	EMAILSEARCH	search_email	show <message_type>mail</message_type> containing <attachment>attachments</attachment>	[]		1
+3233	0		user	show mail to Publishers Clearing House sent in the last two years that have attachments	EMAILSEARCH	search_email	show <message_type>mail</message_type> to <contact_name_to>Publishers Clearing House</contact_name_to> sent in the <start_date>last two years</start_date> that have <attachment>attachments</attachment>	[]		1
+3240	0		user	Show me any emails from May 20th to December 4th.	EMAILSEARCH	search_email	Show me any <message_type>emails</message_type> from <start_date>May 20th</start_date> to <end_date>December 4th</end_date>.	[]		1
+3241	0		user	Show me any emails with attachments	EMAILSEARCH	search_email	Show me any <message_type>emails</message_type> with <attachment>attachments</attachment>	[]		1
+3242	0		user	show me December 1st email	EMAILSEARCH	search_email	show me <start_date>December 1st</start_date> <message_type>email</message_type>	[]		1
+3253	0		user	show me emails sent between Wednesday the 7th to Friday the 9th from Jimmy.	EMAILSEARCH	search_email	show me <message_type>emails</message_type> <email_state>sent</email_state> between <start_date>Wednesday the 7th</start_date> to <end_date>Friday the 9th</end_date> from <contact_name_from>Jimmy</contact_name_from>.	[]		1
+3258	0		user	Show me emails with attachments from May.	EMAILSEARCH	search_email	Show me <message_type>emails</message_type> with <attachment>attachments</attachment> from <start_date>May</start_date>.	[]		1
+3261	0		user	Show me the email about baseball	EMAILSEARCH	search_email	Show me the <message_type>email</message_type> about <keyword>baseball</keyword>	[]		1
+3262	0		user	show me the email about the office party 	EMAILSEARCH	search_email	show me the <message_type>email</message_type> about <keyword>the office party</keyword> 	[]		1
+3266	0		user	Some attachment was attach to it	NOTSURE	notsure_other	Some attachment was attach to it	[]		1
+3282	0		user	the email with attachment	EMAILSEARCH	search_email	the <message_type>email</message_type> with <attachment>attachment</attachment>	[]		1
+3283	0		user	the email with attachment from Lazlo	EMAILSEARCH	search_email	the <message_type>email</message_type> with <attachment>attachment</attachment> from <contact_name_from>Lazlo</contact_name_from>	[]		1
+3284	0		user	There is a webinar scheduled for today	NOTSURE	other_domain	There is a webinar scheduled for today	[]		1
+3288	0		user	To Bernie	EMAILSEARCH	search_email	To <contact_name_to>Bernie</contact_name_to>	[]		1
+3290	0		user	to lynn from alex	EMAILSEARCH	search_email	to <contact_name_to>lynn</contact_name_to> from <contact_name_from>alex</contact_name_from>	[]		1
+3292	0		user	to david with attachment	EMAILSEARCH	search_email	to <contact_name_to>david</contact_name_to> with <attachment>attachment</attachment>	[]		1
+3305	0		user	vacation planning messages between January and February	EMAILSEARCH	search_email	<keyword>vacation planning</keyword> messages between <start_date>January</start_date> and <end_date>February</end_date>	[]		1
+3306	0		user	View all emails containing an attachment	EMAILSEARCH	search_email	View all <message_type>emails</message_type> containing an <attachment>attachment</attachment>	[]		1
+3310	0		user	view emails regarding medical records	EMAILSEARCH	search_email	view <message_type>emails</message_type> regarding <keyword>medical records</keyword>	[]		1
+3326	0		user	where can i buy it?	NOTSURE	notsure_other	where can i buy it?	[]		1
+3333	0		user	Which mail contain photo attachments	EMAILSEARCH	search_email	Which <message_type>mail</message_type> contain <attachment_type>photo</attachment_type> <attachment>attachments</attachment>	[]		1
+3337	0		user	work email from last month	EMAILSEARCH	search_email	<user_defined_category>work</user_defined_category> <message_type>email</message_type> from <start_date>last month</start_date>	[]		1
+3338	0		user	work email with guidelines attachment	EMAILSEARCH	search_email	<user_defined_category>work</user_defined_category> <message_type>email</message_type> with <keyword>guidelines</keyword> <attachment>attachment</attachment>	[]		1
+3339	0		user	yesterday attachment from Lowes	EMAILSEARCH	search_email	<start_date>yesterday</start_date> <attachment>attachment</attachment> from <contact_name_from>Lowes</contact_name_from>	[]		1
+3353	0		user	Surprise birthday email reminder	EMAILSEARCH	search_email	<keyword>Surprise birthday</keyword> <message_type>email</message_type> <keyword>reminder</keyword>	[]		1
+3363	0		user	Ricky's emails to Jim with attachments sent in July	EMAILSEARCH	search_email	<contact_name_from>Ricky</contact_name_from>'s <message_type>emails</message_type> to <contact_name_to>Jim</contact_name_to> with <attachment>attachments</attachment> sent in <start_date>July</start_date>	[]		1
+3366	0		user	Invitation was included on the attachment	EMAILSEARCH	search_email	<keyword>Invitation</keyword> was included on the <attachment>attachment</attachment>	[]		1
+3374	0		user	Receive some attachment between 1 to 2 in the afternoon	EMAILSEARCH	search_email	Receive some <attachment>attachment</attachment> between <start_time>1</start_time> to <end_time>2 in the afternoon</end_time>	[]		1
+3377	0		user	email with attachment for Emi and Stacey	EMAILSEARCH	search_email	<message_type>email</message_type> with <attachment>attachment</attachment> for <contact_name>Emi</contact_name> and <contact_name>Stacey</contact_name>	[]		1
+3388	0		user	Photos is also included on the email I sent	EMAILSEARCH	search_email	<attachment_type>Photos</attachment_type> is also included on the <message_type>email</message_type> <relationship_name_from>I</relationship_name_from> sent	[]		1
+3400	0		user	mail from fred to barney with attachments re rocks	EMAILSEARCH	search_email	<message_type>mail</message_type> from <contact_name_from>fred</contact_name_from> to <contact_name_to>barney</contact_name_to> with <attachment>attachments</attachment> re <keyword>rocks</keyword>	[]		1
+3406	0		user	attachment email emily	EMAILSEARCH	search_email	<attachment>attachment</attachment> <message_type>email</message_type> <contact_name>emily</contact_name>	[]		1
+3414	0		user	look for attachments in the response with finance topic	EMAILSEARCH	search_email	look for <attachment>attachments</attachment> in the <keyword>response with finance</keyword> topic	[]		1
+3424	0		user	Email Jared sent with product comparison attachment.	EMAILSEARCH	search_email	<message_type>Email</message_type> <contact_name_from>Jared</contact_name_from> sent with <keyword>product comparison</keyword> <attachment>attachment</attachment>.	[]		1
+3427	0		user	attachment from Mom party	EMAILSEARCH	search_email	<attachment>attachment</attachment> from <relationship_name_from>Mom</relationship_name_from> <keyword>party</keyword>	[]		1
+3447	0		user	mail from SC Johnson, but only ones with attachments	EMAILSEARCH	search_email	<message_type>mail</message_type> from <contact_name_from>SC Johnson</contact_name_from>, but only ones with <attachment>attachments</attachment>	[]		1
+3451	0		user	mail to Ray and Carol about the boat accident with attachments	EMAILSEARCH	search_email	<message_type>mail</message_type> to <contact_name_to>Ray</contact_name_to> and <contact_name_to>Carol</contact_name_to> about <keyword>the boat accident</keyword> with <attachment>attachments</attachment>	[]		1
+3454	0		user	Birthday messages containing attachments from November 15th	EMAILSEARCH	search_email	<keyword>Birthday</keyword> messages containing <attachment>attachments</attachment> from <start_date>November 15th</start_date>	[]		1
+3460	0		user	Please provide all mail with my trip topic	EMAILSEARCH	search_email	Please provide all <message_type>mail</message_type> with <keyword>my trip</keyword> topic	[]		1
+3464	0		user	mom birthday email	EMAILSEARCH	search_email	<relationship_name>mom</relationship_name> <keyword>birthday</keyword> <message_type>email</message_type>	[]		1
+3465	0		user	search emails with word tracking	EMAILSEARCH	search_email	search <message_type>emails</message_type> with <attachment_type>word</attachment_type> <keyword>tracking</keyword>	[]		1
+3466	0		user	mail from labor day until now	EMAILSEARCH	search_email	<message_type>mail</message_type> from <start_date>labor day</start_date> until <end_time>now</end_time>	[]		1
+3471	0		user	Search for the New York trip itinerary messages from the week of January 5th to January 11th. 	EMAILSEARCH	search_email	Search for the <keyword>New York trip itinerary</keyword> messages from the <start_date>week of January 5th</start_date> to <end_date>January 11th</end_date>. 	[]		1
+3478	0		user	RX order Walmart	NOTSURE	other_domain	RX order Walmart	[]		1
+3480	0		user	emails with birds in the subject	EMAILSEARCH	search_email	<message_type>emails</message_type> with <email_subject>birds</email_subject> in the subject	[]		1
+3482	0		user	labor day email with attachment and instructions	EMAILSEARCH	search_email	<keyword>labor day</keyword> <message_type>email</message_type> with <attachment>attachment</attachment> and <keyword>instructions</keyword>	[]		1
+3498	0		user	mail with attachment from Mary re fishing	EMAILSEARCH	search_email	<message_type>mail</message_type> with <attachment>attachment</attachment> from <contact_name_from>Mary</contact_name_from> re <keyword>fishing</keyword>	[]		1
+3505	0		user	Email list from Allie about the casino	EMAILSEARCH	search_email	<message_type>Email</message_type> <keyword>list</keyword> from <contact_name_from>Allie</contact_name_from> about the <keyword>casino</keyword>	[]		1
+3507	0		user	It was sent around 5 to 6 in the morning	EMAILSEARCH	search_email	It was sent around <start_time>5</start_time> to <end_time>6 in the morning</end_time>	[]		1
+3517	0		user	promo code	NOTSURE	other_domain	promo code	[]		1
+3528	0		user	Photoshop file from john	EMAILSEARCH	search_email	<keyword>Photoshop</keyword> file from <contact_name_from>john</contact_name_from>	[]		1
+3539	0		user	Related Question Duplicates Collection	NOTSURE	other_domain	Related Question Duplicates Collection	[]		1
+3540	0		user	Greg picture attachment email	EMAILSEARCH	search_email	<contact_name>Greg</contact_name> <attachment_type>picture</attachment_type> <attachment>attachment</attachment> <message_type>email</message_type>	[]		1
+3543	0		user	view bobs email with attachment	EMAILSEARCH	search_email	view <contact_name>bobs</contact_name> <message_type>email</message_type> with <attachment>attachment</attachment>	[]		1
+3545	0		user	jen tis is an email	EMAILSEARCH	search_email	<contact_name>jen tis</contact_name> is an <message_type>email</message_type>	[]		1
+3546	0		user	Emails received in January with insurance attachment 	EMAILSEARCH	search_email	<message_type>Emails</message_type> received in <start_date>January</start_date> with <keyword>insurance</keyword> <attachment>attachment</attachment> 	[]		1
+3549	0		user	show Mark's email and attachment that I forwarded to John	EMAILSEARCH	search_email	show <contact_name_from>Mark</contact_name_from>'s <message_type>email</message_type> and <attachment>attachment</attachment> that I <email_state>forwarded</email_state> to <contact_name_to>John</contact_name_to>	[]		1
+3553	0		user	doctor's email with x-ray attachment	EMAILSEARCH	search_email	<relationship_name_from>doctor</relationship_name_from>'s <message_type>email</message_type> with <keyword>x-ray</keyword> <attachment>attachment</attachment>	[]		1
+3559	0		user	keep creating	NOTSURE	notsure_other	keep creating	[]		1
+3561	0		user	request for foods	NOTSURE	other_domain	request for foods	[]		1
+3565	0		user	Topic Ranking for Entity and Survey	NOTSURE	other_domain	Topic Ranking for Entity and Survey	[]		1
+3567	0		user	accept this request and files	NOTSURE	other_domain	accept this request and files	[]		1
+3573	0		user	cancellation of booking	NOTSURE	notsure_other	cancellation of booking	[]		1
+3575	0		user	Topic Ranking for Entities	NOTSURE	notsure_other	Topic Ranking for Entities	[]		1
+3583	0		user	Not available yesterday	NOTSURE	other_domain	Not available yesterday	[]		1
+3586	0		user	form jen	EMAILSEARCH	search_email	form <contact_name_from>jen</contact_name_from>	[]		1
+3588	0		user	Good Morning mr. john	NOTSURE	notsure_other	Good Morning mr. john	[]		1
+3589	0		user	load purchase	NOTSURE	notsure_other	load purchase	[]		1

@@ -1,0 +1,156 @@
+ConversationId	MessageId	MessageTimestamp	MessageFrom	MessageText	JudgedDomain	JudgedIntent	JudgedConstraints	MetaData	ConversationContext	Frequency
+df4924a1-3205-4688-9eb5-4f14fd187c3a	0		user	.net training	NOTSURE	search_email	<keyword>.net training</keyword>	[]		1
+2d5080b8-e1ce-41d1-acac-c4cc35a08903	0		user	1:1 ankur	NOTSURE	search_email	<keyword>1:1</keyword> <contact_name>ankur</contact_name>	[]		1
+b57f459c-2578-49cd-a6b6-9a9d9dda9c7a	0		user	3s docs from dragos	EMAILSEARCH	search_email	<keyword>3s</keyword> <attachment_type>docs</attachment_type> from <contact_name_from>dragos</contact_name_from>	[]		1
+d550a7ac-713e-467c-80cb-b8d50d161ccd	0		user	3s from dragos	EMAILSEARCH	search_email	<keyword>3s</keyword> from <contact_name_from>dragos</contact_name_from>	[]		1
+4fa15b48-ca40-4886-9ff4-b32a061640b1	0		user	all emails from David	EMAILSEARCH	search_email	all <message_type>emails</message_type> from <contact_name_from>David</contact_name_from>	[]		1
+3ba52cf3-8d2e-49ba-9969-b2baa848a441	0		user	all hands by david	EMAILSEARCH	search_email	<keyword>all hands</keyword> by <contact_name_from>david</contact_name_from>	[]		1
+253ac699-d9ad-4f6b-b124-870e2c429181	0		user	approve flights has	NOTSURE	search_email	<keyword>approve flights has</keyword>	[]		1
+2bb0bca1-32b5-489e-a295-0d0575d219c1	0		user	Avocado report	NOTSURE	search_email	<keyword>Avocado report</keyword>	[]		1
+24dc242d-2ccc-43b2-aa10-2ce945f4564e	0		user	background	NOTSURE	search_email	<keyword>background</keyword>	[]		1
+acf942cd-2c4d-4f26-a5af-b4cbae4c07fa	0		user	background check	NOTSURE	search_email	<keyword>background check</keyword>	[]		1
+1ff4ed61-d6e8-473c-82f1-9fa164fe40f6	0		user	Bigfunnel rollout update from Tariq sent around Christmas	EMAILSEARCH	search_email	<keyword>Bigfunnel rollout update</keyword> from <contact_name_from>Tariq</contact_name_from> sent around <start_date>Christmas</start_date>	[]		1
+9a7bf9f3-950a-4d54-9881-41d2c86ce64a	0		user	book recommendations from bill gates	EMAILSEARCH	search_email	<keyword>book recommendations</keyword> from <contact_name_from>bill gates</contact_name_from>	[]		1
+5405c27f-2bf0-4d47-bed4-b0f3853dc801	0		user	brunch with adam	EMAILSEARCH	search_email	<keyword>brunch</keyword> with <contact_name>adam</contact_name>	[]		1
+1ef04b8b-da18-4c74-97ed-718340c40f72	0		user	bug reports on substrate	NOTSURE	search_email	<keyword>bug reports on substrate</keyword>	[]		1
+558e1987-980c-4cf4-a4ac-1b48e8df1f93	0		user	client contract	NOTSURE	search_email	<keyword>client contract</keyword>	[]		1
+26545694-cd1b-48b3-ae23-e08de962736d	0		user	code review	NOTSURE	search_email	<keyword>code review</keyword>	[]		1
+923a9ab7-903b-4a25-9ab2-1aaa544d5879	0		user	code review from yunus	EMAILSEARCH	search_email	<keyword>code review</keyword> from <contact_name_from>yunus</contact_name_from>	[]		1
+83016f1e-fe42-4df4-8c0d-7c6dc2a1faa7	0		user	Code review sent by members of 3SDevs	EMAILSEARCH	search_email	<keyword>Code review</keyword> <email_state>sent</email_state> by <contact_name_from>members of 3SDevs</contact_name_from>	[]		1
+82a7d4f1-3adb-4bb3-be4e-a57df6c0b285	0		user	codereview	NOTSURE	search_email	<keyword>codereview</keyword>	[]		1
+fcfa3f02-f5d7-4aec-be8c-31cd786e60bd	0		user	competitive analysis with google	NOTSURE	search_email	<keyword>competitive analysis with google</keyword>	[]		1
+8a6deb66-b99c-4599-84a6-89894cf3df3a	0		user	competitive review	NOTSURE	search_email	<keyword>competitive review</keyword>	[]		1
+e84d8c96-a516-4714-bb81-332bd4787559	0		user	ComposableRequest	NOTSURE	search_email	<keyword>ComposableRequest</keyword>	[]		1
+95bd6fc8-8358-4dcd-bf2b-354ad7bfa719	0		user	concur hotel	NOTSURE	search_email	<keyword>concur hotel</keyword>	[]		1
+49518587-1b69-4d0b-b505-9994d87e2110	0		user	connect request	NOTSURE	search_email	<keyword>connect request</keyword>	[]		1
+9d4ecbac-fc78-4b30-a9ce-b4a10cb7a363	0		user	customer satisfaction survey	NOTSURE	search_email	<keyword>customer satisfaction survey</keyword>	[]		1
+541a4802-6fab-440d-9aac-9ca42e723119	0		user	default datetime	NOTSURE	search_email	<keyword>default datetime</keyword>	[]		1
+95e6c2a3-b240-4868-983b-525c3f32a57e	0		user	deleted emails to 3SDevs	EMAILSEARCH	search_email	<message_category>deleted</message_category> <message_type>emails</message_type> to <keyword>3SDevs</keyword>	[]		1
+fe9b43b6-32f9-4e84-bf5a-571640b3cf3b	0		user	demo tenant	NOTSURE	search_email	<keyword>demo tenant</keyword>	[]		1
+663e3971-9b45-49b7-9756-d5b7d8a40d45	0		user	design document from sitaram	EMAILSEARCH	search_email	<keyword>design</keyword> <attachment_type>document</attachment_type> from <contact_name_from>sitaram</contact_name_from>	[]		1
+11a584de-daa7-48f8-aa80-1240506d6173	0		user	design documents for review	EMAILSEARCH	search_email	<keyword>design</keyword> <attachment_type>documents</attachment_type> for <keyword>review</keyword>	[]		1
+62694006-ef21-4df7-ad7c-98e7161ada9e	0		user	email threads with Jeff which have Mary in it	EMAILSEARCH	search_email	<message_type>email</message_type> <message_type>threads</message_type> with <contact_name>Jeff</contact_name> which have <keyword>Mary</keyword> in it	[]		1
+ca4748fb-c2bc-48ec-9400-17c865f2171d	0		user	emails deleted between 22 Jan to/till yesterday	EMAILSEARCH	search_email	<message_type>emails</message_type> deleted between <start_date>22 Jan to/till yesterday</start_date>	[]		1
+bc01ed88-0339-453b-92dc-dffc786ab090	0		user	emails from ankur gupta	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>ankur gupta</contact_name_from>	[]		1
+4dcb6194-c6ba-42c1-8a5b-5d457b40336c	0		user	emails from David	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>David</contact_name_from>	[]		1
+6911ca62-fe48-47ee-9421-4168db06b3f9	0		user	emails from David between 1 Jan to 22 Jan	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>David</contact_name_from> between <start_date>1 Jan</start_date> to <end_date>22 Jan</end_date>	[]		1
+c58535d8-38dd-4902-a5d5-74f46aa1d575	0		user	emails from David received on 2 days ago	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>David</contact_name_from> received on <start_date>2 days ago</start_date>	[]		1
+74c933b2-7a0f-4879-9cf8-a9cd6e056d1f	0		user	emails from David received on 2 days before yesterday	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>David</contact_name_from> received on <start_date>2 days before yesterday</start_date>	[]		1
+e52bfba8-11c4-45a6-888a-95081b008e52	0		user	emails from David received on at around 2AM GST	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>David</contact_name_from> received on at around <start_time>2AM GST</start_time>	[]		1
+3caf85f5-13e8-4819-85a2-f35c5bbf2b9a	0		user	emails from David received on at around 2PM	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>David</contact_name_from> received on at around <start_time>2PM</start_time>	[]		1
+902ad70c-cb5b-4e50-aa53-38db9e155e81	0		user	emails from David received on on 22 Jan	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>David</contact_name_from> received on on <start_date>22 Jan</start_date>	[]		1
+79a32111-5a15-48af-a70d-6158adaf9979	0		user	emails from David received on on 22nd Jan	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>David</contact_name_from> received on on <start_date>22nd Jan</start_date>	[]		1
+28c9459e-eca2-4fb8-b482-cd9bfd58948e	0		user	emails from David received on today	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>David</contact_name_from> received on <start_date>today</start_date>	[]		1
+5c6af1c3-1f4a-4ac5-8f06-3744be6ae797	0		user	emails from David received on yesterday	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>David</contact_name_from> received on <start_date>yesterday</start_date>	[]		1
+54b34546-349e-49a9-8c2c-4d21bc0bafda	0		user	emails from David sent 2 days ago	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>David</contact_name_from> sent <start_date>2 days ago</start_date>	[]		1
+82317c59-e80b-47c6-8fc5-7c665d59f4ef	0		user	emails from David sent 2 days before yesterday	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>David</contact_name_from> <email_state>sent</email_state> <start_date>2 days before yesterday</start_date>	[]		1
+d7470537-1c3d-479d-b4e9-30b1486991e3	0		user	emails from David sent at around 2AM GST	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>David</contact_name_from> sent at around <keyword>2AM GST</keyword>	[]		1
+38125386-d0c2-4914-b735-311d35a7b567	0		user	emails from David sent at around 2PM	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>David</contact_name_from> sent at around <start_time>2PM</start_time>	[]		1
+7befcf07-14cd-4260-9181-5d78d8bd8761	0		user	emails from David sent on 22 Jan	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>David</contact_name_from> sent on <start_date>22 Jan</start_date>	[]		1
+17f20401-b7c9-4589-b6f9-dbeb805b65c5	0		user	emails from David sent on 22nd Jan	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>David</contact_name_from> sent on <start_date>22nd Jan</start_date>	[]		1
+7a3973b0-29c7-4da6-b3a5-98906d243e57	0		user	emails from David sent today	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>David</contact_name_from> sent <start_date>today</start_date>	[]		1
+12688abd-084d-4cc4-bac0-3dd904e33ee7	0		user	emails from David sent yesterday	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>David</contact_name_from> sent <start_date>yesterday</start_date>	[]		1
+30568229-7101-4b2e-9b76-ed9e103a9736	0		user	emails from David which I replied to	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>David</contact_name_from> which I <email_state>replied</email_state> to	[]		1
+713d8c7e-e8a5-4dcd-998e-e6d37e4a7a6e	0		user	emails from David with subject Cloud	EMAILSEARCH	search_email	<message_type>emails</message_type> from <contact_name_from>David</contact_name_from> with subject <email_subject>Cloud</email_subject>	[]		1
+91c6270f-64ce-46e1-88bb-84d60d798e96	0		user	emails of release gates	EMAILSEARCH	search_email	<message_type>emails</message_type> of <keyword>release gates</keyword>	[]		1
+c04e87ef-6829-4dfa-a2aa-b66316a6e98e	0		user	emails sent by David	EMAILSEARCH	search_email	<message_type>emails</message_type> sent by <contact_name_from>David</contact_name_from>	[]		1
+29f9ba50-a5e6-42e6-a879-e6894825d222	0		user	emails sent to David	EMAILSEARCH	search_email	<message_type>emails</message_type> sent to <contact_name_to>David</contact_name_to>	[]		1
+dd1a29b8-4253-4d90-bc2f-5b279986386b	0		user	emails sent to David by me	EMAILSEARCH	search_email	<message_type>emails</message_type> sent to <contact_name_to>David</contact_name_to> by <contact_name>me</contact_name>	[]		1
+f2e44cb0-3283-49b3-9fbd-79960847f4af	0		user	emails sent to David by Nitin	EMAILSEARCH	search_email	<message_type>emails</message_type> sent to <contact_name_to>David</contact_name_to> by <contact_name_from>Nitin</contact_name_from>	[]		1
+36232f98-fd06-41eb-9250-1eda62e00966	0		user	emails sent to David from me	EMAILSEARCH	search_email	<message_type>emails</message_type> sent to <contact_name_to>David</contact_name_to> from <contact_name_from>me</contact_name_from>	[]		1
+7280e0c9-4a0c-4216-815c-6fc2caf39fe2	0		user	emails sent to David from Nitin	EMAILSEARCH	search_email	<message_type>emails</message_type> sent to <contact_name_to>David</contact_name_to> from <contact_name_from>Nitin</contact_name_from>	[]		1
+690435fe-13b8-4141-ab5c-a708b817d9ed	0		user	emails to 3SDevs that are deleted	EMAILSEARCH	search_email	<message_type>emails</message_type> to <keyword>3SDevs</keyword> that are <message_category>deleted</message_category>	[]		1
+a4a8873e-2e62-43bc-815a-78dd47ed1d28	0		user	emails to 3SDevs that got deleted	EMAILSEARCH	search_email	<message_type>emails</message_type> to <contact_name_to>3SDevs</contact_name_to> that got <message_category>deleted</message_category>	[]		1
+a37480c1-b956-45b7-a5b9-3ca310c6711e	0		user	emails to 3SDevs that I deleted	EMAILSEARCH	search_email	<message_type>emails</message_type> to <keyword>3SDevs</keyword> that I <message_category>deleted</message_category>	[]		1
+5973b572-236d-4bbb-9e4b-f2c880104112	0		user	emails to David from me after 1 Jan 	EMAILSEARCH	search_email	<message_type>emails</message_type> to <contact_name_to>David</contact_name_to> from me <start_date>after 1 Jan</start_date> 	[]		1
+b5f82c01-67cc-4b53-8f9e-966b7d7917f9	0		user	emails to David sent before 22 Jan	EMAILSEARCH	search_email	<message_type>emails</message_type> to <contact_name_to>David</contact_name_to> sent <end_date>before 22 Jan</end_date>	[]		1
+54609d0b-fa2f-4525-82a3-dd48cbaeeed2	0		user	emails to David sent before yesterday	EMAILSEARCH	search_email	<message_type>emails</message_type> to <contact_name_to>David</contact_name_to> sent <end_date>before yesterday</end_date>	[]		1
+9d6ebd27-99d4-4547-8d8d-2828465daa17	0		user	emails with release gates mentioned in them	EMAILSEARCH	search_email	<message_type>emails</message_type> with <keyword>release gates mentioned</keyword> in them	[]		1
+a2bca2e4-5dd5-4fac-a07a-9bdb24eaa2df	0		user	emails with subject Bug Bash sent by member of 3SDevs	EMAILSEARCH	search_email	<message_type>emails</message_type> with subject <email_subject>Bug Bash</email_subject> <email_state>sent</email_state> by <contact_name_from>member of 3SDevs</contact_name_from>	[]		1
+775d57cd-6a25-4367-97b6-c8e3f3c29748	0		user	enterprise	NOTSURE	search_email	<keyword>enterprise</keyword>	[]		1
+7a438d1c-a433-4f77-9dc1-b8690fd286d2	0		user	every email from David	EMAILSEARCH	search_email	every <message_type>email</message_type> from <contact_name_from>David</contact_name_from>	[]		1
+9d9bc515-aa00-4845-bac7-012753e128ea	0		user	expedia hotel	NOTSURE	search_email	<keyword>expedia hotel</keyword>	[]		1
+ac4abb86-2626-4ec4-8821-2afa294a9372	0		user	expedia travel confirmation	NOTSURE	search_email	<keyword>expedia travel confirmation</keyword>	[]		1
+c1d2c181-c253-4be3-b6a6-731666dfe4c0	0		user	expense report utkarsh	NOTSURE	search_email	<keyword>expense report utkarsh</keyword>	[]		1
+544fad36-a5c2-40a1-ad23-b0645e1a32cd	0		user	experiment expir	NOTSURE	search_email	<keyword>experiment expir</keyword>	[]		1
+3a974c32-2226-4b61-a95e-b17aecb1d443	0		user	experiment expire	NOTSURE	search_email	<keyword>experiment expire</keyword>	[]		1
+02657fba-bea1-461a-8154-008ee0f1d6ef	0		user	feedback request	NOTSURE	search_email	<keyword>feedback request</keyword>	[]		1
+2b06b9aa-ce7c-468a-a353-f11ecc9cadab	0		user	Find me all the email threads with Jeff which have Mary in it	EMAILSEARCH	search_email	Find me all the <message_type>email</message_type> threads with <contact_name>Jeff</contact_name> which have <contact_name_cc>Mary</contact_name_cc> in it	[]		1
+a5c16bf1-bd94-44e5-afe9-033ddb300983	0		user	Find me all the emails from my reports with weekly status in titles sent in the last 3 weeks	EMAILSEARCH	search_email	Find me all the <message_type>emails</message_type> from my <keyword>reports with weekly status in titles</keyword> <email_state>sent</email_state> in the <start_date>last 3 weeks</start_date>	[]		1
+12a3d32b-b140-4539-850a-e036862985d4	0		user	Find me all the oof reminder messages of people I work with	EMAILSEARCH	search_email	Find me all the <destination_folder>oof reminder</destination_folder> messages of people I work with	[]		1
+0ccafb82-372f-4722-882e-273b3d2c3a0b	0		user	Find me the first email thread on pass-through search sent by Tariq	EMAILSEARCH	search_email	Find me the <order_ref>first</order_ref> <message_type>email</message_type> thread on <keyword>pass-through</keyword> search <email_state>sent</email_state> by <contact_name_from>Tariq</contact_name_from>	[]		1
+1b5d7b8f-d25a-4f69-a55d-1447b526e238	0		user	Find me the latest status update on 3S from Mary	EMAILSEARCH	search_email	Find me the <keyword>latest status update</keyword> on <start_date>3S</start_date> from <contact_name_from>Mary</contact_name_from>	[]		1
+38575496-18df-4b8b-b401-4f600b52b804	0		user	flight boston	NOTSURE	search_email	<keyword>flight boston</keyword>	[]		1
+c54600c8-a2b2-4611-8119-dbbb7c96ee8c	0		user	flight confirmation for the spain trip	NOTSURE	search_email	<keyword>flight confirmation for the spain trip</keyword>	[]		1
+9b3fcc6c-a8e3-4f4a-adcf-41cc1de579af	0		user	Gang office.com scorecard	NOTSURE	search_email	<keyword>Gang office.com scorecard</keyword>	[]		1
+94c9b2a0-ad8b-4c18-91bb-16031c01285c	0		user	git pull request	NOTSURE	search_email	<keyword>git pull request</keyword>	[]		1
+25d65575-7839-49d9-887a-6782372e93c0	0		user	group assignment	NOTSURE	search_email	<keyword>group assignment</keyword>	[]		1
+004f8042-7862-49b4-b835-54ebcca47913	0		user	groups update	NOTSURE	search_email	<keyword>groups update</keyword>	[]		1
+2c010c7f-a5b6-47cc-bd8e-2a846bf3bf9d	0		user	hakan documents	NOTSURE	search_email	<keyword>hakan documents</keyword>	[]		1
+73c5b066-f84c-47dd-b28e-93c2e1736a29	0		user	harry sheth	NOTSURE	search_email	<keyword>harry sheth</keyword>	[]		1
+d1a427a7-dcd5-4575-bd88-522f38d498ff	0		user	hertz rental new orleans	NOTSURE	search_email	<keyword>hertz rental new orleans</keyword>	[]		1
+e06d5d81-5caa-4e03-b67b-a8b007ca5810	0		user	I need the Bigfunnel rollout update from Tariq sent around Christmas	EMAILSEARCH	search_email	I need the <keyword>Bigfunnel rollout update</keyword> from <contact_name_from>Tariq</contact_name_from> sent around <keyword>Christmas</keyword>	[]		1
+ade32480-640e-49b9-8d8f-d6ad192b9e45	0		user	important emails from last month	EMAILSEARCH	search_email	<message_category>important</message_category> <message_type>emails</message_type> from <start_date>last month</start_date>	[]		1
+0aaeef36-0a99-4b70-adbf-a7c39041cf41	0		user	inlook demo	NOTSURE	search_email	<keyword>inlook demo</keyword>	[]		1
+c5ca30b9-8942-48a4-9347-5789a41df4c3	0		user	january sales report	NOTSURE	search_email	<keyword>january sales report</keyword>	[]		1
+085f6743-96b8-4087-9548-2b1cef14af71	0		user	jin presentation	EMAILSEARCH	search_email	<keyword>jin</keyword> <attachment_type>presentation</attachment_type>	[]		1
+f77b1be9-54a4-447a-bede-170aaf6fe051	0		user	Jordan flight log	NOTSURE	search_email	<keyword>Jordan flight log</keyword>	[]		1
+e3dd8efb-4447-41f3-a3f6-a70c5e98128c	0		user	Jordan flight report	NOTSURE	search_email	<keyword>Jordan flight report</keyword>	[]		1
+4c0a81f2-95d1-49dc-914f-4c6259a5a11a	0		user	kiera ellis background	NOTSURE	search_email	<keyword>kiera ellis background</keyword>	[]		1
+ff3cd51a-8146-45f4-a96c-9e9113b6260a	0		user	kiera ellis check	NOTSURE	search_email	<contact_name>kiera ellis</contact_name> <keyword>check</keyword>	[]		1
+66745dfa-2b3b-44d6-97af-903bcdfd3d29	0		user	latest status update on 3S from Mary	EMAILSEARCH	search_email	<order_ref>latest</order_ref> <keyword>status update on 3S</keyword> from <contact_name_from>Mary</contact_name_from>	[]		1
+42210feb-ba24-4be5-8664-c2df469fdd2e	0		user	live site	NOTSURE	search_email	<keyword>live site</keyword>	[]		1
+fc9d207f-b8e7-498b-890c-cb1e5b919dd8	0		user	machine learning algorithms presentation by gabriel	EMAILSEARCH	search_email	<keyword>machine learning algorithms</keyword> <attachment_type>presentation</attachment_type> by <contact_name_from>gabriel</contact_name_from>	[]		1
+9664a11c-cda5-4d8f-becb-36acd591bd40	0		user	meeting ppt	EMAILSEARCH	search_email	<keyword>meeting</keyword> <attachment_type>ppt</attachment_type>	[]		1
+535de2a9-91ce-487e-9a1e-dec86f6a97e7	0		user	missing data	NOTSURE	search_email	<keyword>missing data</keyword>	[]		1
+978207c6-e65f-4c5e-a874-4b5d709a8be9	0		user	movie ticket	NOTSURE	search_email	<keyword>movie ticket</keyword>	[]		1
+d07d1929-286c-4886-bfaf-7b0203e8fb91	0		user	mufa	NOTSURE	search_email	<keyword>mufa</keyword>	[]		1
+4bdae8ac-4ffd-4d24-9ac2-0ddb445410f8	0		user	mufi	NOTSURE	search_email	<keyword>mufi</keyword>	[]		1
+23b22d7b-54bf-4a37-aee6-0cfc7cc14756	0		user	new operator	NOTSURE	search_email	<keyword>new operator</keyword>	[]		1
+d74359b1-bfbe-4562-8479-a12d7ebeb12a	0		user	nexus router critical	NOTSURE	search_email	<keyword>nexus router critical</keyword>	[]		1
+66088901-6e9c-4bbb-86c7-cc4eb2029da8	0		user	nitin email insights	NOTSURE	search_email	<contact_name_from>nitin</contact_name_from> <message_type>email</message_type> <keyword>insights</keyword>	[]		1
+5a9d317c-b9ff-4b83-8eb7-911bca90d2b5	0		user	odb	NOTSURE	search_email	<contact_name>odb</contact_name>	[]		1
+1bee7e37-c6f1-49c4-918f-e2b5bac15188	0		user	odb access	NOTSURE	search_email	<keyword>odb access</keyword>	[]		1
+b4aad34c-4d3e-4fb4-b564-c0af41cd22b2	0		user	odb action	NOTSURE	search_email	<keyword>odb action</keyword>	[]		1
+85cee367-e5e0-4a42-ad76-a41b3ad20cd2	0		user	office.adhoc	NOTSURE	search_email	<keyword>office.adhoc</keyword>	[]		1
+55117353-ca6f-40bb-a02f-5c99bdefa620	0		user	offsite event with DJ	NOTSURE	search_email	<keyword>offsite event</keyword> with <contact_name>DJ</contact_name>	[]		1
+10b4a837-998f-449d-a7cc-94f953f645db	0		user	owa spec	NOTSURE	search_email	<keyword>owa spec</keyword>	[]		1
+d48e80de-95fb-41cc-b4b0-23da3e2226ef	0		user	performance	NOTSURE	search_email	<keyword>performance</keyword>	[]		1
+877443b8-4fec-4923-84c8-93652f4cac60	0		user	Philip cannons	NOTSURE	search_email	<keyword>Philip cannons</keyword>	[]		1
+45bba56b-74ed-49b8-a6ee-8719dcef53e3	0		user	powerpoint on vnext	EMAILSEARCH	search_email	<attachment_type>powerpoint</attachment_type> on <keyword>vnext</keyword>	[]		1
+decc4548-f113-4dcb-a156-84efb7c186fd	0		user	presentation hasattachments:true	EMAILSEARCH	search_email	<attachment_type>presentation</attachment_type> hasattachments:true	[]		1
+b94fe7fc-6caf-4ebc-b9d9-f342a87f2d48	0		user	presentations from sitaram	EMAILSEARCH	search_email	<attachment_type>presentations</attachment_type> from <contact_name_from>sitaram</contact_name_from>	[]		1
+cea8fe10-c714-41b7-be26-f303ec6683a4	0		user	pulse survey	NOTSURE	search_email	<keyword>pulse survey</keyword>	[]		1
+1b51eebd-6a81-4ddc-b26b-f3d00718bbf6	0		user	qas config ini	NOTSURE	search_email	<contact_name>qas</contact_name> <keyword>config ini</keyword>	[]		1
+45356d23-ae54-4e84-83c3-8232059647bf	0		user	quarterly report	NOTSURE	search_email	<keyword>quarterly report</keyword>	[]		1
+6b9621ab-16ad-4418-9c2f-0cf25b9c1baa	0		user	recipes from mom	EMAILSEARCH	search_email	<keyword>recipes</keyword> from <relationship_name_from>mom</relationship_name_from>	[]		1
+703ac5e3-960c-452e-a657-2a11512eaa41	0		user	restaurant bill	NOTSURE	search_email	<keyword>restaurant bill</keyword>	[]		1
+660c69e9-d066-497e-bd93-3307dd90623b	0		user	restaurants	NOTSURE	search_email	<keyword>restaurants</keyword>	[]		1
+793f17ed-4138-4a53-a47f-0243ee066382	0		user	sales report	NOTSURE	search_email	<keyword>sales report</keyword>	[]		1
+31934e72-cb8d-44a2-9a71-c74cb8c465bc	0		user	sales report from january	EMAILSEARCH	search_email	<keyword>sales report</keyword> from <start_date>january</start_date>	[]		1
+df72c5db-e5c9-40aa-811b-1279430b3c72	0		user	sales report from third quarter	NOTSURE	search_email	<keyword>sales report from third quarter</keyword>	[]		1
+eaafc583-3070-4a32-b46e-ec8826adfdea	0		user	scrum meeting	NOTSURE	search_email	<keyword>scrum meeting</keyword>	[]		1
+12f224c7-c314-47cf-be34-3c1bf457454d	0		user	sent from my phone	EMAILSEARCH	search_email	<email_state>sent</email_state> from my <destination_folder>phone</destination_folder>	[]		1
+aa78c0d1-b412-4ff7-ac73-cd472911e175	0		user	stock	NOTSURE	search_email	<keyword>stock</keyword>	[]		1
+1ff9ad45-1ded-4a38-a521-62cb43d0d4fe	0		user	substrate from fan	EMAILSEARCH	search_email	<keyword>substrate</keyword> from <contact_name_from>fan</contact_name_from>	[]		1
+dab3dd0b-db39-4013-95c4-8f7816b41669	0		user	substrate from fan wang	EMAILSEARCH	search_email	<keyword>substrate</keyword> from <contact_name_from>fan wang</contact_name_from>	[]		1
+83067aa3-59a8-4655-8d55-98dca1e00ae5	0		user	substrate from sitaram	EMAILSEARCH	search_email	<keyword>substrate</keyword> from <contact_name_from>sitaram</contact_name_from>	[]		1
+337f3c43-b2f8-45bb-9948-384927d3ba68	0		user	substrate from sitaram lanka	EMAILSEARCH	search_email	<keyword>substrate</keyword> from <contact_name_from>sitaram lanka</contact_name_from>	[]		1
+6a19b1b0-3838-4843-bee2-9a793efe9b02	0		user	Tap in Outlook Desktop	NOTSURE	search_email	<keyword>Tap</keyword> in <keyword>Outlook</keyword> <destination_folder>Desktop</destination_folder>	[]		1
+e3985f82-7e58-4452-9828-fdf63997940c	0		user	trial by fire	NOTSURE	search_email	<keyword>trial</keyword> by fire	[]		1
+55e0007f-affa-4783-88c1-a0a2be274757	0		user	update	NOTSURE	search_email	<keyword>update</keyword>	[]		1
+6e39b674-75c0-4987-84f1-57b15b2f4797	0		user	user	NOTSURE	search_email	<keyword>user</keyword>	[]		1
+9d7deb2d-0252-4adf-8664-1fa73025e1c3	0		user	Vladimir Prasanth	NOTSURE	search_email	<contact_name>Vladimir Prasanth</contact_name>	[]		1
+4ee6b900-88ab-4ab6-a0cc-e339c87eddb0	0		user	vnext doc and ppt	NOTSURE	search_email	<keyword>vnext doc and ppt</keyword>	[]		1
+94aec12b-f7ea-43b9-bae7-f64eea1cb8c0	0		user	vova tenantid	NOTSURE	search_email	<keyword>vova tenantid</keyword>	[]		1
+a5c5aff9-27fa-43fa-b8bb-c04e0b70987b	0		user	weather in chicago	NOTSURE	search_email	<keyword>weather in chicago</keyword>	[]		1
+b213096b-a6b8-40d2-a9b5-25850c1c40ac	0		user	what is email inspector	NOTSURE	search_email	what is <message_type>email</message_type> <keyword>inspector</keyword>	[]		1
+c56ef51f-a2ba-47a3-b1da-94a0a8bdd06b	0		user	Where's the mail from Bin which had a lot of avocado links?	EMAILSEARCH	search_email	Where&apos;s the <message_type>mail</message_type> from <contact_name_from>Bin</contact_name_from> which had a lot of <keyword>avocado links</keyword>?	[]		1
+a251535c-30b9-493d-ad25-e8e8a2b669e9	0		user	wiki retirement	NOTSURE	search_email	<keyword>wiki retirement</keyword>	[]		1
+77dedf25-b344-4d72-b8cf-978c2c49da35	0		user	windows 10 release	NOTSURE	search_email	<keyword>windows 10 release</keyword>	[]		1
+680aa4a6-8b1e-42f1-9879-a83727f29e3a	0		user	windows update	NOTSURE	search_email	<keyword>windows update</keyword>	[]		1
+87a7caaf-f60d-4cd0-9a64-a8356a903351	0		user	yammer	NOTSURE	search_email	<keyword>yammer</keyword>	[]		1
+a0945383-9b65-4f40-93a6-0e67f0747be4	0		user	ye-yi nitin	NOTSURE	search_email	<contact_name>ye-yi</contact_name> <contact_name>nitin</contact_name>	[]		1
+ef2b288c-07c9-456e-9f79-02f1cda4d0cc	0		user	ying codeflow	NOTSURE	search_email	<keyword>ying codeflow</keyword>	[]		1
+9c6fc87d-4d94-45b2-8136-0efca5828275	0		user	ying nitina	NOTSURE	search_email	<contact_name>ying nitina</contact_name>	[]		1
+c8d729bb-6118-4257-9307-664c60e73932	0		user	zoom	NOTSURE	search_email	<keyword>zoom</keyword>	[]		1

@@ -1,0 +1,1001 @@
+ConversationId	MessageId	MessageTimestamp	MessageFrom	MessageText	JudgedDomain	JudgedIntent	JudgedConstraints	MetaData	ConversationContext	Frequency	Dataset	SampleType
+179422078	0		user	email with attachment sent by yong	EMAILSEARCH	search_email	<message_type>email</message_type> with <attachment>attachment</attachment> sent by <contact_name_from>yong</contact_name_from>	[]		1	outlook	Donated
+179422448	0		user	from andrea	EMAILSEARCH	search_email	from <contact_name_from>andrea</contact_name_from>	[]		1	outlook	Donated
+179421930	0		user	mail help	EMAILSEARCH	search_email	<message_type>mail</message_type> <keyword>help</keyword>	[]		1	outlook	Donated
+179422923	0		user	from Alina	EMAILSEARCH	search_email	from <contact_name_from>Alina</contact_name_from>	[]		1	outlook	Donated
+179421790	0		user	from moe	EMAILSEARCH	search_email	from <contact_name_from>moe</contact_name_from>	[]		1	outlook	Donated
+179422835	0		user	from tasun data document	EMAILSEARCH	search_email	from <contact_name_from>tasun</contact_name_from> <keyword>data document</keyword>	[]		1	outlook	Donated
+179422315	0		user	from Jamil with attachment	EMAILSEARCH	search_email	from <contact_name_from>Jamil</contact_name_from> <attachment>with attachment</attachment>	[]		1	outlook	Donated
+179422664	0		user	from tao about multi-turn	EMAILSEARCH	search_email	from <contact_name_from>tao</contact_name_from> about <keyword>multi-turn</keyword>	[]		1	outlook	Donated
+179421561	0		user	storeobjectid messages	EMAILSEARCH	search_email	<keyword>storeobjectid</keyword> messages	[]		1	outlook	Donated
+179422752	0		user	from lauren with attachment	EMAILSEARCH	search_email	from <contact_name_from>lauren</contact_name_from> with <attachment>attachment</attachment>	[]		1	outlook	Donated
+179421373	0		user	november norway	EMAILSEARCH	search_email	<start_date>november</start_date> <keyword>norway</keyword>	[]		1	outlook	Donated
+179421062	0		user	margaret at	EMAILSEARCH	search_email	<contact_name>margaret</contact_name> at	[]		1	outlook	Donated
+179421072	0		user	paddington april	EMAILSEARCH	search_email	<keyword>paddington</keyword> <start_date>april</start_date>	[]		1	outlook	Donated
+179421555	0		user	from jamil don't	EMAILSEARCH	search_email	from <contact_name_from>jamil</contact_name_from> <keyword>don't</keyword>	[]		1	outlook	Donated
+179422857	0		user	from rajkiran yesterday	EMAILSEARCH	search_email	from <contact_name_from>rajkiran</contact_name_from> <start_date>yesterday</start_date>	[]		1	outlook	Donated
+179422224	0		user	from tao about multi turn	EMAILSEARCH	search_email	from <contact_name_from>tao</contact_name_from> about <keyword>multi turn</keyword>	[]		1	outlook	Donated
+179422430	0		user	from ye-yi yesterday	EMAILSEARCH	search_email	from <contact_name_from>ye-yi</contact_name_from> <start_date>yesterday</start_date>	[]		1	outlook	Donated
+179422520	0		user	andi slides	EMAILSEARCH	search_email	<contact_name>andi</contact_name> <attachment_type>slides</attachment_type>	[]		1	outlook	Donated
+179421405	0		user	from vincent	EMAILSEARCH	search_email	from <contact_name_from>vincent</contact_name_from>	[]		1	outlook	Donated
+179422751	0		user	from ming attachment	EMAILSEARCH	search_email	from <contact_name_from>ming</contact_name_from> <attachment>attachment</attachment>	[]		1	outlook	Donated
+179422596	0		user	to yong	EMAILSEARCH	search_email	to <contact_name_to>yong</contact_name_to>	[]		1	outlook	Donated
+179422426	0		user	from aisha about interview	EMAILSEARCH	search_email	from <contact_name_from>aisha</contact_name_from> about <keyword>interview</keyword>	[]		1	outlook	Donated
+179420816	0		user	from Shuyin	EMAILSEARCH	search_email	from <contact_name_from>Shuyin</contact_name_from>	[]		1	outlook	Donated
+179421969	0		user	to Renu about annoucement	EMAILSEARCH	search_email	to <contact_name_to>Renu</contact_name_to> about <keyword>annoucement</keyword>	[]		1	outlook	Donated
+179422483	0		user	from shuyin + clyde	EMAILSEARCH	search_email	from <contact_name_from>shuyin</contact_name_from> + <contact_name>clyde</contact_name>	[]		1	outlook	Donated
+179421578	0		user	from ye-yi with attachment	EMAILSEARCH	search_email	from <contact_name_from>ye-yi</contact_name_from> with <attachment>attachment</attachment>	[]		1	outlook	Donated
+179420776	0		user	from ling tuesday	EMAILSEARCH	search_email	from <contact_name_from>ling</contact_name_from> <start_date>tuesday</start_date>	[]		1	outlook	Donated
+179422275	0		user	CHEN/ MENGEN pb action needed today	EMAILSEARCH	search_email	<contact_name>CHEN/ MENGEN</contact_name> <keyword>pb action needed</keyword> <start_date>today</start_date>	[]		1	outlook	Donated
+179422115	0		user	from yakarov	EMAILSEARCH	search_email	from <contact_name_from>yakarov</contact_name_from>	[]		1	outlook	Donated
+179422251	0		user	from tasun data quality	EMAILSEARCH	search_email	from <contact_name_from>tasun</contact_name_from> <keyword>data quality</keyword>	[]		1	outlook	Donated
+179420906	0		user	to Chris	EMAILSEARCH	search_email	to <contact_name_to>Chris</contact_name_to>	[]		1	outlook	Donated
+179421897	0		user	from manasi with attachment	EMAILSEARCH	search_email	from <contact_name_from>manasi</contact_name_from> with <attachment>attachment</attachment>	[]		1	outlook	Donated
+179422966	0		user	from ling compliance ngram	EMAILSEARCH	search_email	from <contact_name_from>ling</contact_name_from> <keyword>compliance ngram</keyword>	[]		1	outlook	Donated
+179422856	0		user	from mark on commanding	EMAILSEARCH	search_email	from <contact_name_from>mark</contact_name_from> on <keyword>commanding</keyword>	[]		1	outlook	Donated
+179422837	0		user	from Ming about eyes-off	EMAILSEARCH	search_email	from <contact_name_from>Ming</contact_name_from> about <keyword>eyes-off</keyword>	[]		1	outlook	Donated
+179422786	0		user	from lauren in april	EMAILSEARCH	search_email	from <contact_name_from>lauren</contact_name_from> in <start_date>april</start_date>	[]		1	outlook	Donated
+179421531	0		user	preethi pdf	EMAILSEARCH	search_email	<contact_name>preethi</contact_name> <attachment_type>pdf</attachment_type>	[]		1	outlook	Donated
+179422209	0		user	to Gaurish	EMAILSEARCH	search_email	to <contact_name_to>Gaurish</contact_name_to>	[]		1	outlook	Donated
+179423124	0		user	Arbitration objects from	EMAILSEARCH	search_email	<keyword>Arbitration objects</keyword> from	[]		1	outlook	Donated
+179421714	0		user	from hisami	EMAILSEARCH	search_email	from <contact_name_from>hisami</contact_name_from>	[]		1	outlook	Donated
+179422257	0		user	from malik with excel attachment	EMAILSEARCH	search_email	from <contact_name_from>malik</contact_name_from> with <attachment_type>excel</attachment_type> <attachment>attachment</attachment>	[]		1	outlook	Donated
+179421791	0		user	from Ming with photo	EMAILSEARCH	search_email	from <contact_name_from>Ming</contact_name_from> with <attachment_type>photo</attachment_type>	[]		1	outlook	Donated
+179421471	0		user	to Kunal in April	EMAILSEARCH	search_email	to <contact_name_to>Kunal</contact_name_to> in <start_date>April</start_date>	[]		1	outlook	Donated
+179421433	0		user	from Jamil on deep dive	EMAILSEARCH	search_email	from <contact_name_from>Jamil</contact_name_from> on <keyword>deep dive</keyword>	[]		1	outlook	Donated
+179422416	0		user	from Ramesh on planning	EMAILSEARCH	search_email	from <contact_name_from>Ramesh</contact_name_from> <keyword>on planning</keyword>	[]		1	outlook	Donated
+179421925	0		user	from Shuman on poll	EMAILSEARCH	search_email	from <contact_name_from>Shuman</contact_name_from> on <keyword>poll</keyword>	[]		1	outlook	Donated
+179421999	0		user	from Jamil on LU FY20	EMAILSEARCH	search_email	from <contact_name_from>Jamil</contact_name_from> on <keyword>LU FY20</keyword>	[]		1	outlook	Donated
+179423238	0		user	ELMESSILHY, Hussein / AOS Interview Scheduled for May 7th, 2019 -	EMAILSEARCH	search_email	<keyword>ELMESSILHY</keyword>, <contact_name>Hussein</contact_name> / <keyword>AOS Interview Scheduled for May 7th, 2019</keyword> -	[]		1	outlook	Donated
+179421631	0		user	from Vijay on compliance	EMAILSEARCH	search_email	from <contact_name_from>Vijay</contact_name_from> on <keyword>compliance</keyword>	[]		1	outlook	Donated
+179420912	0		user	from jamil last week	EMAILSEARCH	search_email	from <contact_name_from>jamil</contact_name_from> <start_date>last week</start_date>	[]		1	outlook	Donated
+179422724	0		user	from xi on interview	EMAILSEARCH	search_email	from <contact_name_from>xi</contact_name_from> on <keyword>interview</keyword>	[]		1	outlook	Donated
+179423241	0		user	email view id	EMAILSEARCH	search_email	<message_type>email</message_type> <keyword>view id</keyword>	[]		1	outlook	Donated
+179421582	0		user	mail transport tds james	EMAILSEARCH	search_email	<message_type>mail</message_type> <keyword>transport tds</keyword> <contact_name>james</contact_name>	[]		1	outlook	Donated
+179422601	0		user	to cortana science bellevue about meeting	EMAILSEARCH	search_email	to <contact_name_to>cortana science bellevue</contact_name_to> about <keyword>meeting</keyword>	[]		1	outlook	Donated
+179423283	0		user	debashish from brian	EMAILSEARCH	search_email	<contact_name>debashish</contact_name> from <contact_name_from>brian</contact_name_from>	[]		1	outlook	Donated
+179421119	0		user	Minu on vibranium	EMAILSEARCH	search_email	<contact_name>Minu</contact_name> on <keyword>vibranium</keyword>	[]		1	outlook	Donated
+179422457	0		user	from mark	EMAILSEARCH	search_email	from <contact_name_from>mark</contact_name_from>	[]		1	outlook	Donated
+179421563	0		user	from Ken about experiment	EMAILSEARCH	search_email	from <contact_name_from>Ken</contact_name_from> about <keyword>experiment</keyword>	[]		1	outlook	Donated
+179421147	0		user	from shawn about interview	EMAILSEARCH	search_email	from <contact_name_from>shawn</contact_name_from> about <keyword>interview</keyword>	[]		1	outlook	Donated
+179422990	0		user	from tasun data issue	EMAILSEARCH	search_email	from <contact_name_from>tasun</contact_name_from> <keyword>data issue</keyword>	[]		1	outlook	Donated
+179422696	0		user	from raj on sunday	EMAILSEARCH	search_email	from <contact_name_from>raj</contact_name_from> on <start_date>sunday</start_date>	[]		1	outlook	Donated
+179421674	0		user	From Subject Received Size	EMAILSEARCH	search_email	From Subject <email_subject>Received Size</email_subject>	[]		1	outlook	Donated
+179421104	0		user	from Jamil on Ling	EMAILSEARCH	search_email	from <contact_name_from>Jamil</contact_name_from> on <keyword>Ling</keyword>	[]		1	outlook	Donated
+179420850	0		user	tds from focus job	EMAILSEARCH	search_email	<keyword>tds</keyword> from <contact_name_from>focus job</contact_name_from>	[]		1	outlook	Donated
+179422113	0		user	from tasun domains note	EMAILSEARCH	search_email	from <contact_name_from>tasun</contact_name_from> <keyword>domains note</keyword>	[]		1	outlook	Donated
+179421224	0		user	from dmitrij	EMAILSEARCH	search_email	from <contact_name_from>dmitrij</contact_name_from>	[]		1	outlook	Donated
+179420917	0		user	from Ming about An	EMAILSEARCH	search_email	from <contact_name_from>Ming</contact_name_from> about <keyword>An</keyword>	[]		1	outlook	Donated
+179421917	0		user	example email	EMAILSEARCH	search_email	<keyword>example</keyword> <message_type>email</message_type>	[]		1	outlook	Donated
+179422903	0		user	from joji about ODIN	EMAILSEARCH	search_email	from <contact_name_from>joji</contact_name_from> about <keyword>ODIN</keyword>	[]		1	outlook	Donated
+179422297	0		user	from Ming about budget	EMAILSEARCH	search_email	from <contact_name_from>Ming</contact_name_from> about <keyword>budget</keyword>	[]		1	outlook	Donated
+179420918	0		user	from aisha	EMAILSEARCH	search_email	from <contact_name_from>aisha</contact_name_from>	[]		1	outlook	Donated
+179422062	0		user	and gilsinia	EMAILSEARCH	search_email	and <contact_name>gilsinia</contact_name>	[]		1	outlook	Donated
+179422027	0		user	from Vijay with ppt	EMAILSEARCH	search_email	from <contact_name_from>Vijay</contact_name_from> with <attachment_type>ppt</attachment_type>	[]		1	outlook	Donated
+179422069	0		user	from liyuan	EMAILSEARCH	search_email	from <contact_name_from>liyuan</contact_name_from>	[]		1	outlook	Donated
+179421031	0		user	from Raj sent yesterday	EMAILSEARCH	search_email	from <contact_name_from>Raj</contact_name_from> sent <start_date>yesterday</start_date>	[]		1	outlook	Donated
+179423098	0		user	from byungki with attachment	EMAILSEARCH	search_email	from <contact_name_from>byungki</contact_name_from> with <attachment>attachment</attachment>	[]		1	outlook	Donated
+179422465	0		user	from Ramesh to Andrew	EMAILSEARCH	search_email	from <contact_name_from>Ramesh</contact_name_from> to <contact_name_to>Andrew</contact_name_to>	[]		1	outlook	Donated
+179422944	0		user	from omar	EMAILSEARCH	search_email	from <contact_name_from>omar</contact_name_from>	[]		1	outlook	Donated
+179422051	0		user	Hussein / AOS Interview Scheduled for May 7th, 2019 -	EMAILSEARCH	search_email	<contact_name>Hussein</contact_name> / AOS Interview Scheduled for May 7th, 2019 -	[]		1	outlook	Donated
+179422186	0		user	from Shuman last week	EMAILSEARCH	search_email	from <contact_name_from>Shuman</contact_name_from> <start_date>last week</start_date>	[]		1	outlook	Donated
+179423149	0		user	from Jamil on LU deep dive	EMAILSEARCH	search_email	from <contact_name_from>Jamil</contact_name_from> on <keyword>LU deep dive</keyword>	[]		1	outlook	Donated
+179421094	0		user	from: <xiaojih@microsoft.com>	EMAILSEARCH	search_email	from: &lt;<contact_name_from>xiaojih@microsoft.com</contact_name_from>&gt;	[]		1	outlook	Donated
+179421884	0		user	from tasun annotation rules	EMAILSEARCH	search_email	from <contact_name_from>tasun</contact_name_from> <keyword>annotation rules</keyword>	[]		1	outlook	Donated
+179422912	0		user	data from brian	EMAILSEARCH	search_email	<keyword>data</keyword> from <contact_name_from>brian</contact_name_from>	[]		1	outlook	Donated
+179423255	0		user	unread email	EMAILSEARCH	search_email	<message_category>unread</message_category> <message_type>email</message_type>	[]		1	outlook	Donated
+179421133	0		user	from ye-yi with ppt	EMAILSEARCH	search_email	from <contact_name_from>ye-yi</contact_name_from> with <attachment_type>ppt</attachment_type>	[]		1	outlook	Donated
+179420974	0		user	email join	EMAILSEARCH	search_email	<message_type>email</message_type> <keyword>join</keyword>	[]		1	outlook	Donated
+179422098	0		user	from Mark with attachment	EMAILSEARCH	search_email	from <contact_name_from>Mark</contact_name_from> with <attachment>attachment</attachment>	[]		1	outlook	Donated
+179422144	0		user	create tds from focus job	EMAILSEARCH	search_email	<keyword>create tds</keyword> from <contact_name_from>focus job</contact_name_from>	[]		1	outlook	Donated
+179421113	0		user	november fast norway	EMAILSEARCH	search_email	<start_date>november</start_date> <keyword>fast norway</keyword>	[]		1	outlook	Donated
+179422728	0		user	from dwight about compliance	EMAILSEARCH	search_email	from <contact_name_from>dwight</contact_name_from> about <keyword>compliance</keyword>	[]		1	outlook	Donated
+179420744	0		user	from saurabh about outlook	EMAILSEARCH	search_email	from <contact_name_from>saurabh</contact_name_from> about <keyword>outlook</keyword>	[]		1	outlook	Donated
+179423120	0		user	from ye-yi with attachment last March	EMAILSEARCH	search_email	from <contact_name_from>ye-yi</contact_name_from> with <attachment>attachment</attachment> <start_date>last March</start_date>	[]		1	outlook	Donated
+179423051	0		user	from holly about 1-1	EMAILSEARCH	search_email	from <contact_name_from>holly</contact_name_from> about <keyword>1-1</keyword>	[]		1	outlook	Donated
+179422050	0		user	from Ling last week	EMAILSEARCH	search_email	from <contact_name_from>Ling</contact_name_from> <start_date>last week</start_date>	[]		1	outlook	Donated
+179422397	0		user	from vass	EMAILSEARCH	search_email	from <contact_name_from>vass</contact_name_from>	[]		1	outlook	Donated
+179423146	0		user	from yar	EMAILSEARCH	search_email	from <contact_name_from>yar</contact_name_from>	[]		1	outlook	Donated
+179422349	0		user	from Jamil last March	EMAILSEARCH	search_email	from <contact_name_from>Jamil</contact_name_from> <start_date>last March</start_date>	[]		1	outlook	Donated
+179422998	0		user	november fast	EMAILSEARCH	search_email	<start_date>november</start_date> <keyword>fast</keyword>	[]		1	outlook	Donated
+179422605	0		user	05/25 yang	EMAILSEARCH	search_email	<start_date>05/25</start_date> <contact_name>yang</contact_name>	[]		1	outlook	Donated
+179422441	0		user	from Yue last week	EMAILSEARCH	search_email	from <contact_name_from>Yue</contact_name_from> <start_date>last week</start_date>	[]		1	outlook	Donated
+179420875	0		user	divya pdf SPO	EMAILSEARCH	search_email	<contact_name>divya</contact_name> <attachment_type>pdf</attachment_type> <keyword>SPO</keyword>	[]		1	outlook	Donated
+179422412	0		user	from raj sent yesterday	EMAILSEARCH	search_email	from <contact_name_from>raj</contact_name_from> sent <start_date>yesterday</start_date>	[]		1	outlook	Donated
+179421377	0		user	from ming with photo	EMAILSEARCH	search_email	from <contact_name_from>ming</contact_name_from> with <attachment_type>photo</attachment_type>	[]		1	outlook	Donated
+179421248	0		user	ruofan kpe doc	EMAILSEARCH	search_email	<contact_name>ruofan</contact_name> <keyword>kpe</keyword> <attachment_type>doc</attachment_type>	[]		1	outlook	Donated
+179421050	0		user	email actions	EMAILSEARCH	search_email	<message_type>email</message_type> <keyword>actions</keyword>	[]		1	outlook	Donated
+179423022	0		user	from jamil template	EMAILSEARCH	search_email	from <contact_name_from>jamil</contact_name_from> <keyword>template</keyword>	[]		1	outlook	Donated
+179421018	0		user	scorecard from August 2018	EMAILSEARCH	search_email	<keyword>scorecard</keyword> from <start_date>August 2018</start_date>	[]		1	outlook	Donated
+179421398	0		user	from inna	EMAILSEARCH	search_email	from <contact_name_from>inna</contact_name_from>	[]		1	outlook	Donated
+179422811	0		user	from Tao on people	EMAILSEARCH	search_email	from <contact_name_from>Tao</contact_name_from> on <keyword>people</keyword>	[]		1	outlook	Donated
+179421346	0		user	from vinbel	EMAILSEARCH	search_email	from <contact_name_from>vinbel</contact_name_from>	[]		1	outlook	Donated
+179420762	0		user	civ june	EMAILSEARCH	search_email	<keyword>civ</keyword> june	[]		1	outlook	Donated
+179422611	0		user	from alexw	EMAILSEARCH	search_email	from <contact_name_from>alexw</contact_name_from>	[]		1	outlook	Donated
+179420855	0		user	from Ling yesterday	EMAILSEARCH	search_email	from <contact_name_from>Ling</contact_name_from> <start_date>yesterday</start_date>	[]		1	outlook	Donated
+179421459	0		user	from Ye-yi yesterday	EMAILSEARCH	search_email	from <contact_name_from>Ye-yi</contact_name_from> <start_date>yesterday</start_date>	[]		1	outlook	Donated
+179423002	0		user	From Subject Received Size Categories	EMAILSEARCH	search_email	From Subject <email_subject>Received Size Categories</email_subject>	[]		1	outlook	Donated
+179422921	0		user	olga and shilpa	EMAILSEARCH	search_email	<contact_name>olga</contact_name> and <contact_name>shilpa</contact_name>	[]		1	outlook	Donated
+179422792	0		user	from ming about design	EMAILSEARCH	search_email	from <contact_name_from>ming</contact_name_from> about <keyword>design</keyword>	[]		1	outlook	Donated
+179422237	0		user	sukwon deck ppt	EMAILSEARCH	search_email	<contact_name>sukwon</contact_name> <keyword>deck</keyword> <attachment_type>ppt</attachment_type>	[]		1	outlook	Donated
+179421191	0		user	to Kunal	EMAILSEARCH	search_email	to <contact_name_to>Kunal</contact_name_to>	[]		1	outlook	Donated
+179422600	0		user	messages not rolling up	EMAILSEARCH	search_email	messages <keyword>not rolling up</keyword>	[]		1	outlook	Donated
+179422435	0		user	from felipe	EMAILSEARCH	search_email	from <contact_name_from>felipe</contact_name_from>	[]		1	outlook	Donated
+179421165	0		user	from specified code page	EMAILSEARCH	search_email	from <contact_name_from>specified code page</contact_name_from>	[]		1	outlook	Donated
+179422593	0		user	to Jamil on Ling	EMAILSEARCH	search_email	to <contact_name_to>Jamil</contact_name_to> on <keyword>Ling</keyword>	[]		1	outlook	Donated
+179421513	0		user	from zhiguo	EMAILSEARCH	search_email	from <contact_name_from>zhiguo</contact_name_from>	[]		1	outlook	Donated
+179421622	0		user	torus SAW	NOTSURE	other_domain	torus SAW	[]		1	outlook	Donated
+179423082	0		user	adam levi Le	NOTSURE	other_domain	adam levi Le	[]		1	outlook	Donated
+179421414	0		user	parental leave askhr	NOTSURE	other_domain	parental leave askhr	[]		1	outlook	Donated
+179421819	0		user	machine learning	NOTSURE	other_domain	machine learning	[]		1	outlook	Donated
+179422846	0		user	Exchange Datacenter Research Access	NOTSURE	other_domain	Exchange Datacenter Research Access	[]		1	outlook	Donated
+179422125	0		user	deploy ssa	NOTSURE	other_domain	deploy ssa	[]		1	outlook	Donated
+179421971	0		user	Azure devops	NOTSURE	other_domain	Azure devops	[]		1	outlook	Donated
+179423017	0		user	QF SBS	NOTSURE	other_domain	QF SBS	[]		1	outlook	Donated
+179422434	0		user	query editing	NOTSURE	other_domain	query editing	[]		1	outlook	Donated
+179421349	0		user	azure kpe	NOTSURE	other_domain	azure kpe	[]		1	outlook	Donated
+179422345	0		user	frisbee anid	NOTSURE	other_domain	frisbee anid	[]		1	outlook	Donated
+179421789	0		user	hisami + performance	NOTSURE	other_domain	hisami + performance	[]		1	outlook	Donated
+179421245	0		user	david sbs	NOTSURE	other_domain	david sbs	[]		1	outlook	Donated
+179422885	0		user	next meeting with Nidhi	NOTSURE	other_domain	next meeting with Nidhi	[]		1	outlook	Donated
+179422643	0		user	action items	NOTSURE	other_domain	action items	[]		1	outlook	Donated
+179421907	0		user	tasun baby	NOTSURE	other_domain	tasun baby	[]		1	outlook	Donated
+179421208	0		user	install kusto explorer	NOTSURE	other_domain	install kusto explorer	[]		1	outlook	Donated
+179421832	0		user	visual studio	NOTSURE	other_domain	visual studio	[]		1	outlook	Donated
+179421606	0		user	nikita tasun ha	NOTSURE	other_domain	nikita tasun ha	[]		1	outlook	Donated
+179421229	0		user	Getting a coverage of query terms in ODB	NOTSURE	other_domain	Getting a coverage of query terms in ODB	[]		1	outlook	Donated
+179421099	0		user	yong cosmos 11	NOTSURE	other_domain	yong cosmos 11	[]		1	outlook	Donated
+179422413	0		user	rishi feature store	NOTSURE	other_domain	rishi feature store	[]		1	outlook	Donated
+179422003	0		user	byungki checkin	NOTSURE	other_domain	byungki checkin	[]		1	outlook	Donated
+179422978	0		user	xrank operator	NOTSURE	other_domain	xrank operator	[]		1	outlook	Donated
+179422116	0		user	jacob codeflow	NOTSURE	other_domain	jacob codeflow	[]		1	outlook	Donated
+179421359	0		user	uber receipts	NOTSURE	other_domain	uber receipts	[]		1	outlook	Donated
+179421675	0		user	GH RCCI Feedback Form	NOTSURE	other_domain	GH RCCI Feedback Form	[]		1	outlook	Donated
+179421788	0		user	gaurish sukwon	NOTSURE	other_domain	gaurish sukwon	[]		1	outlook	Donated
+179422425	0		user	ram ba	NOTSURE	other_domain	ram ba	[]		1	outlook	Donated
+179423257	0		user	results vassilis	NOTSURE	other_domain	results vassilis	[]		1	outlook	Donated
+179423139	0		user	iving well	NOTSURE	other_domain	iving well	[]		1	outlook	Donated
+179421920	0		user	biao he	NOTSURE	other_domain	biao he	[]		1	outlook	Donated
+179421404	0		user	abhishek recommendations	NOTSURE	other_domain	abhishek recommendations	[]		1	outlook	Donated
+179421916	0		user	consistency check	NOTSURE	other_domain	consistency check	[]		1	outlook	Donated
+179420779	0		user	ward l2	NOTSURE	other_domain	ward l2	[]		1	outlook	Donated
+179423053	0		user	hussein azure	NOTSURE	other_domain	hussein azure	[]		1	outlook	Donated
+179421457	0		user	hisami +	NOTSURE	other_domain	hisami +	[]		1	outlook	Donated
+179422654	0		user	levi melnick emnlp 2018 brief summary	NOTSURE	other_domain	levi melnick emnlp 2018 brief summary	[]		1	outlook	Donated
+179422052	0		user	lpc and loki	NOTSURE	other_domain	lpc and loki	[]		1	outlook	Donated
+179422399	0		user	dmitrij COrtana git	NOTSURE	other_domain	dmitrij COrtana git	[]		1	outlook	Donated
+179421266	0		user	internship yeyi	NOTSURE	other_domain	internship yeyi	[]		1	outlook	Donated
+179422741	0		user	Post model null	NOTSURE	other_domain	Post model null	[]		1	outlook	Donated
+179420896	0		user	bala keyphrase stamp	NOTSURE	other_domain	bala keyphrase stamp	[]		1	outlook	Donated
+179422975	0		user	azure key phrase	NOTSURE	other_domain	azure key phrase	[]		1	outlook	Donated
+179421934	0		user	doc kpe	NOTSURE	other_domain	doc kpe	[]		1	outlook	Donated
+179422036	0		user	vijay sujith FST	NOTSURE	other_domain	vijay sujith FST	[]		1	outlook	Donated
+179420925	0		user	update torus	NOTSURE	other_domain	update torus	[]		1	outlook	Donated
+179421727	0		user	Repeated user queries for Windows endpoint	NOTSURE	other_domain	Repeated user queries for Windows endpoint	[]		1	outlook	Donated
+179422986	0		user	julie hall	NOTSURE	other_domain	julie hall	[]		1	outlook	Donated
+179420761	0		user	qas validation is stuck	NOTSURE	other_domain	qas validation is stuck	[]		1	outlook	Donated
+179421109	0		user	omar khan	NOTSURE	other_domain	omar khan	[]		1	outlook	Donated
+179421144	0		user	opentable mc	NOTSURE	other_domain	opentable mc	[]		1	outlook	Donated
+179421039	0		user	Fun day	NOTSURE	other_domain	Fun day	[]		1	outlook	Donated
+179423186	0		user	mat v	NOTSURE	other_domain	mat v	[]		1	outlook	Donated
+179421309	0		user	world wide feat	NOTSURE	other_domain	world wide feat	[]		1	outlook	Donated
+179422731	0		user	tokenissuer restart	NOTSURE	other_domain	tokenissuer restart	[]		1	outlook	Donated
+179421569	0		user	priya samnerkar	NOTSURE	other_domain	priya samnerkar	[]		1	outlook	Donated
+179423074	0		user	incorrect code path	NOTSURE	other_domain	incorrect code path	[]		1	outlook	Donated
+179421308	0		user	legal brexit	NOTSURE	other_domain	legal brexit	[]		1	outlook	Donated
+179421802	0		user	version tds	NOTSURE	other_domain	version tds	[]		1	outlook	Donated
+179420880	0		user	rahul scrape	NOTSURE	other_domain	rahul scrape	[]		1	outlook	Donated
+179420782	0		user	edi changes	NOTSURE	other_domain	edi changes	[]		1	outlook	Donated
+179422980	0		user	restlogs pii	NOTSURE	other_domain	restlogs pii	[]		1	outlook	Donated
+179420952	0		user	zhiguo michael outlookcommute	NOTSURE	other_domain	zhiguo michael outlookcommute	[]		1	outlook	Donated
+179422423	0		user	oacr 68023	NOTSURE	other_domain	oacr 68023	[]		1	outlook	Donated
+179421038	0		user	meng ai crowd test join	NOTSURE	other_domain	meng ai crowd test join	[]		1	outlook	Donated
+179422896	0		user	vijay vok	NOTSURE	other_domain	vijay vok	[]		1	outlook	Donated
+179422702	0		user	teams shuyin	NOTSURE	other_domain	teams shuyin	[]		1	outlook	Donated
+179421662	0		user	git utah	NOTSURE	other_domain	git utah	[]		1	outlook	Donated
+179421142	0		user	rajpal kulhari	NOTSURE	other_domain	rajpal kulhari	[]		1	outlook	Donated
+179420874	0		user	kalyan ayloo	NOTSURE	other_domain	kalyan ayloo	[]		1	outlook	Donated
+179422081	0		user	annotation guidelines	NOTSURE	other_domain	annotation guidelines	[]		1	outlook	Donated
+179422004	0		user	l1 model	NOTSURE	other_domain	l1 model	[]		1	outlook	Donated
+179421678	0		user	utah git swafford	NOTSURE	other_domain	utah git swafford	[]		1	outlook	Donated
+179422850	0		user	ionization smoke detectors	NOTSURE	other_domain	ionization smoke detectors	[]		1	outlook	Donated
+179422205	0		user	david karl	NOTSURE	other_domain	david karl	[]		1	outlook	Donated
+179421393	0		user	Matthew Kerian	NOTSURE	other_domain	Matthew Kerian	[]		1	outlook	Donated
+179421567	0		user	codeflow code coverage	NOTSURE	other_domain	codeflow code coverage	[]		1	outlook	Donated
+179422374	0		user	company store	NOTSURE	other_domain	company store	[]		1	outlook	Donated
+179422617	0		user	KPE in Azure	NOTSURE	other_domain	KPE in Azure	[]		1	outlook	Donated
+179422598	0		user	ce ye-yi	NOTSURE	other_domain	ce ye-yi	[]		1	outlook	Donated
+179421388	0		user	perm labor	NOTSURE	other_domain	perm labor	[]		1	outlook	Donated
+179421954	0		user	sukwon joji	NOTSURE	other_domain	sukwon joji	[]		1	outlook	Donated
+179421412	0		user	ye-yi wang	NOTSURE	other_domain	ye-yi wang	[]		1	outlook	Donated
+179420751	0		user	currently we still have some data quality issue with the log uploading	NOTSURE	other_domain	currently we still have some data quality issue with the log uploading	[]		1	outlook	Donated
+179423270	0		user	logs onedrive	NOTSURE	other_domain	logs onedrive	[]		1	outlook	Donated
+179422274	0		user	meed expiry	NOTSURE	other_domain	meed expiry	[]		1	outlook	Donated
+179421397	0		user	idf script ravi	NOTSURE	other_domain	idf script ravi	[]		1	outlook	Donated
+179420858	0		user	Crowd test	NOTSURE	other_domain	Crowd test	[]		1	outlook	Donated
+179421473	0		user	jacob stevenson	NOTSURE	other_domain	jacob stevenson	[]		1	outlook	Donated
+179423059	0		user	ANID ling	NOTSURE	other_domain	ANID ling	[]		1	outlook	Donated
+179422714	0		user	vassilis lsa	NOTSURE	other_domain	vassilis lsa	[]		1	outlook	Donated
+179423101	0		user	yubi key	NOTSURE	other_domain	yubi key	[]		1	outlook	Donated
+179423224	0		user	blood type	NOTSURE	other_domain	blood type	[]		1	outlook	Donated
+179422994	0		user	privacy breach	NOTSURE	other_domain	privacy breach	[]		1	outlook	Donated
+179421510	0		user	dwight lucia	NOTSURE	other_domain	dwight lucia	[]		1	outlook	Donated
+179422509	0		user	Please stop using the existing email data	NOTSURE	other_domain	Please stop using the existing email data	[]		1	outlook	Donated
+179423134	0		user	monitor work	NOTSURE	other_domain	monitor work	[]		1	outlook	Donated
+179422198	0		user	mark knight victr	NOTSURE	other_domain	mark knight victr	[]		1	outlook	Donated
+179422127	0		user	substrate ml heron	NOTSURE	other_domain	substrate ml heron	[]		1	outlook	Donated
+179421590	0		user	tony t	NOTSURE	other_domain	tony t	[]		1	outlook	Donated
+179422887	0		user	holiday party	NOTSURE	other_domain	holiday party	[]		1	outlook	Donated
+179420997	0		user	oof message	NOTSURE	other_domain	oof message	[]		1	outlook	Donated
+179421372	0		user	byungki feature	NOTSURE	other_domain	byungki feature	[]		1	outlook	Donated
+179422491	0		user	jiji bodymediatype 3s	NOTSURE	other_domain	jiji bodymediatype 3s	[]		1	outlook	Donated
+179422830	0		user	security of fidelity site	NOTSURE	other_domain	security of fidelity site	[]		1	outlook	Donated
+179420868	0		user	Chi ma	NOTSURE	other_domain	Chi ma	[]		1	outlook	Donated
+179422968	0		user	ye-yi python	NOTSURE	other_domain	ye-yi python	[]		1	outlook	Donated
+179421997	0		user	search relevance recommendation	NOTSURE	other_domain	search relevance recommendation	[]		1	outlook	Donated
+179422895	0		user	ann query rewrite	NOTSURE	other_domain	ann query rewrite	[]		1	outlook	Donated
+179423204	0		user	levi avocado	NOTSURE	other_domain	levi avocado	[]		1	outlook	Donated
+179423116	0		user	product pillars	NOTSURE	other_domain	product pillars	[]		1	outlook	Donated
+179422343	0		user	taso contractor	NOTSURE	other_domain	taso contractor	[]		1	outlook	Donated
+179420856	0		user	rahul gaurav	NOTSURE	other_domain	rahul gaurav	[]		1	outlook	Donated
+179422874	0		user	rahul index	NOTSURE	other_domain	rahul index	[]		1	outlook	Donated
+179422182	0		user	Delete Old Cortana Aliases	NOTSURE	other_domain	Delete Old Cortana Aliases	[]		1	outlook	Donated
+179421011	0		user	treatment 16	NOTSURE	other_domain	treatment 16	[]		1	outlook	Donated
+179420844	0		user	omar status repo	NOTSURE	other_domain	omar status repo	[]		1	outlook	Donated
+179420755	0		user	rui gao	NOTSURE	other_domain	rui gao	[]		1	outlook	Donated
+179422918	0		user	Exchange Sources RW	NOTSURE	other_domain	Exchange Sources RW	[]		1	outlook	Donated
+179421123	0		user	ivan codeflow tao	NOTSURE	other_domain	ivan codeflow tao	[]		1	outlook	Donated
+179421721	0		user	codeflow warmup stevenson	NOTSURE	other_domain	codeflow warmup stevenson	[]		1	outlook	Donated
+179420815	0		user	microsoft us immigration questionnaire	NOTSURE	other_domain	microsoft us immigration questionnaire	[]		1	outlook	Donated
+179421282	0		user	action required	NOTSURE	other_domain	action required	[]		1	outlook	Donated
+179421012	0		user	ivan precision	NOTSURE	other_domain	ivan precision	[]		1	outlook	Donated
+179422729	0		user	yguu pull	NOTSURE	other_domain	yguu pull	[]		1	outlook	Donated
+179421757	0		user	omar senior ruhi	NOTSURE	other_domain	omar senior ruhi	[]		1	outlook	Donated
+179422203	0		user	flight sdfv2	NOTSURE	other_domain	flight sdfv2	[]		1	outlook	Donated
+179422380	0		user	joji oshima	NOTSURE	other_domain	joji oshima	[]		1	outlook	Donated
+179422279	0		user	feedback interview	NOTSURE	other_domain	feedback interview	[]		1	outlook	Donated
+179423192	0		user	kris approvers	NOTSURE	other_domain	kris approvers	[]		1	outlook	Donated
+179421040	0		user	vijay certificate salil	NOTSURE	other_domain	vijay certificate salil	[]		1	outlook	Donated
+179421970	0		user	suggestions providers	NOTSURE	other_domain	suggestions providers	[]		1	outlook	Donated
+179421893	0		user	abhishek divya	NOTSURE	other_domain	abhishek divya	[]		1	outlook	Donated
+179421959	0		user	tenant idf	NOTSURE	other_domain	tenant idf	[]		1	outlook	Donated
+179421554	0		user	aaron diffeo	NOTSURE	other_domain	aaron diffeo	[]		1	outlook	Donated
+179421813	0		user	joji o	NOTSURE	other_domain	joji o	[]		1	outlook	Donated
+179421176	0		user	amex card	NOTSURE	other_domain	amex card	[]		1	outlook	Donated
+179422588	0		user	griffin 2	NOTSURE	other_domain	griffin 2	[]		1	outlook	Donated
+179422154	0		user	yan yao	NOTSURE	other_domain	yan yao	[]		1	outlook	Donated
+179420986	0		user	matrix tensorboard	NOTSURE	other_domain	matrix tensorboard	[]		1	outlook	Donated
+179420777	0		user	shamrock montessori	NOTSURE	other_domain	shamrock montessori	[]		1	outlook	Donated
+179422985	0		user	cosmos file under folder	NOTSURE	other_domain	cosmos file under folder	[]		1	outlook	Donated
+179423180	0		user	machine learning	NOTSURE	other_domain	machine learning	[]		1	outlook	Donated
+179422188	0		user	andras csehi	NOTSURE	other_domain	andras csehi	[]		1	outlook	Donated
+179423208	0		user	divya vipindeep	NOTSURE	other_domain	divya vipindeep	[]		1	outlook	Donated
+179422327	0		user	l1 b	NOTSURE	other_domain	l1 b	[]		1	outlook	Donated
+179420901	0		user	fan siddarth byungki	NOTSURE	other_domain	fan siddarth byungki	[]		1	outlook	Donated
+179422959	0		user	Sathiya Keerthi	NOTSURE	other_domain	Sathiya Keerthi	[]		1	outlook	Donated
+179423052	0		user	SR-LU integration	NOTSURE	other_domain	SR-LU integration	[]		1	outlook	Donated
+179423141	0		user	eric hor	NOTSURE	other_domain	eric hor	[]		1	outlook	Donated
+179420885	0		user	tina ogimachi	NOTSURE	other_domain	tina ogimachi	[]		1	outlook	Donated
+179421855	0		user	Daniela Mauler	NOTSURE	other_domain	Daniela Mauler	[]		1	outlook	Donated
+179420965	0		user	Moving data from Cosmos to ADL-S	NOTSURE	other_domain	Moving data from Cosmos to ADL-S	[]		1	outlook	Donated
+179421630	0		user	stella word breaker	NOTSURE	other_domain	stella word breaker	[]		1	outlook	Donated
+179421190	0		user	people segment	NOTSURE	other_domain	people segment	[]		1	outlook	Donated
+179422180	0		user	ankur sip	NOTSURE	other_domain	ankur sip	[]		1	outlook	Donated
+179421684	0		user	ajoy nana	NOTSURE	other_domain	ajoy nana	[]		1	outlook	Donated
+179421029	0		user	git substrate utah dpk	NOTSURE	other_domain	git substrate utah dpk	[]		1	outlook	Donated
+179423148	0		user	people index console	NOTSURE	other_domain	people index console	[]		1	outlook	Donated
+179421807	0		user	searchgold permission	NOTSURE	other_domain	searchgold permission	[]		1	outlook	Donated
+179421685	0		user	Nick Cipollone	NOTSURE	other_domain	Nick Cipollone	[]		1	outlook	Donated
+179421448	0		user	dsat matching	NOTSURE	other_domain	dsat matching	[]		1	outlook	Donated
+179421643	0		user	bill g	NOTSURE	other_domain	bill g	[]		1	outlook	Donated
+179422454	0		user	Cortana scra	NOTSURE	other_domain	Cortana scra	[]		1	outlook	Donated
+179423091	0		user	focus test	NOTSURE	other_domain	focus test	[]		1	outlook	Donated
+179421671	0		user	substrate day	NOTSURE	other_domain	substrate day	[]		1	outlook	Donated
+179421432	0		user	Action items from Mid-point OKR meeting	NOTSURE	other_domain	Action items from Mid-point OKR meeting	[]		1	outlook	Donated
+179421529	0		user	add new rule	NOTSURE	other_domain	add new rule	[]		1	outlook	Donated
+179421949	0		user	no access to ANID	NOTSURE	other_domain	no access to ANID	[]		1	outlook	Donated
+179422226	0		user	restore OdinSubstrateHelper	NOTSURE	other_domain	restore OdinSubstrateHelper	[]		1	outlook	Donated
+179421261	0		user	omar zia	NOTSURE	other_domain	omar zia	[]		1	outlook	Donated
+179422791	0		user	msra-edi-1 power bi	NOTSURE	other_domain	msra-edi-1 power bi	[]		1	outlook	Donated
+179422922	0		user	machine learning university page	NOTSURE	other_domain	machine learning university page	[]		1	outlook	Donated
+179422208	0		user	flight settings	NOTSURE	other_domain	flight settings	[]		1	outlook	Donated
+179422187	0		user	avadhoot tasun	NOTSURE	other_domain	avadhoot tasun	[]		1	outlook	Donated
+179421989	0		user	hisami suzuki	NOTSURE	other_domain	hisami suzuki	[]		1	outlook	Donated
+179422265	0		user	ben postman	NOTSURE	other_domain	ben postman	[]		1	outlook	Donated
+179421241	0		user	jasteve checkin	NOTSURE	other_domain	jasteve checkin	[]		1	outlook	Donated
+179421697	0		user	evaluation pipeline one page	NOTSURE	other_domain	evaluation pipeline one page	[]		1	outlook	Donated
+179421547	0		user	scale jasteve	NOTSURE	other_domain	scale jasteve	[]		1	outlook	Donated
+179422234	0		user	ananth gaurav	NOTSURE	other_domain	ananth gaurav	[]		1	outlook	Donated
+179421509	0		user	invoking l	NOTSURE	other_domain	invoking l	[]		1	outlook	Donated
+179422635	0		user	samuel observe	NOTSURE	other_domain	samuel observe	[]		1	outlook	Donated
+179421342	0		user	dan + eric	NOTSURE	other_domain	dan + eric	[]		1	outlook	Donated
+179422287	0		user	consume next	NOTSURE	other_domain	consume next	[]		1	outlook	Donated
+179421729	0		user	codeflow Yaohong	NOTSURE	other_domain	codeflow Yaohong	[]		1	outlook	Donated
+179421199	0		user	tao scorecard automatic	NOTSURE	other_domain	tao scorecard automatic	[]		1	outlook	Donated
+179421910	0		user	Final Assignment_Part2_Memo	NOTSURE	other_domain	Final Assignment_Part2_Memo	[]		1	outlook	Donated
+179420800	0		user	my analy	NOTSURE	other_domain	my analy	[]		1	outlook	Donated
+179422020	0		user	iris pull	NOTSURE	other_domain	iris pull	[]		1	outlook	Donated
+179421429	0		user	folder bug	NOTSURE	other_domain	folder bug	[]		1	outlook	Donated
+179422536	0		user	girish sno	NOTSURE	other_domain	girish sno	[]		1	outlook	Donated
+179421302	0		user	subho muk	NOTSURE	other_domain	subho muk	[]		1	outlook	Donated
+179422272	0		user	Retryable transaction error in KSM	NOTSURE	other_domain	Retryable transaction error in KSM	[]		1	outlook	Donated
+179421061	0		user	'richest man'	NOTSURE	other_domain	&apos;richest man&apos;	[]		1	outlook	Donated
+179422583	0		user	Nuget package sptag	NOTSURE	other_domain	Nuget package sptag	[]		1	outlook	Donated
+179421583	0		user	exchange datacenter research access	NOTSURE	other_domain	exchange datacenter research access	[]		1	outlook	Donated
+179421193	0		user	brian vanover	NOTSURE	other_domain	brian vanover	[]		1	outlook	Donated
+179421097	0		user	steven edward	NOTSURE	other_domain	steven edward	[]		1	outlook	Donated
+179422201	0		user	speed bump	NOTSURE	other_domain	speed bump	[]		1	outlook	Donated
+179422346	0		user	pull request query substrate	NOTSURE	other_domain	pull request query substrate	[]		1	outlook	Donated
+179423161	0		user	marat deepak	NOTSURE	other_domain	marat deepak	[]		1	outlook	Donated
+179422733	0		user	chunker sai	NOTSURE	other_domain	chunker sai	[]		1	outlook	Donated
+179422531	0		user	IcM Incident Management	NOTSURE	other_domain	IcM Incident Management	[]		1	outlook	Donated
+179422505	0		user	divya jetley one pager proposal	NOTSURE	other_domain	divya jetley one pager proposal	[]		1	outlook	Donated
+179422124	0		user	Teams R0	NOTSURE	other_domain	Teams R0	[]		1	outlook	Donated
+179422055	0		user	dll deploy	NOTSURE	other_domain	dll deploy	[]		1	outlook	Donated
+179421511	0		user	self serve	NOTSURE	other_domain	self serve	[]		1	outlook	Donated
+179422138	0		user	l1 checkin	NOTSURE	other_domain	l1 checkin	[]		1	outlook	Donated
+179423125	0		user	codeflow jasteve	NOTSURE	other_domain	codeflow jasteve	[]		1	outlook	Donated
+179422746	0		user	preethi vassilis	NOTSURE	other_domain	preethi vassilis	[]		1	outlook	Donated
+179423087	0		user	byungki long	NOTSURE	other_domain	byungki long	[]		1	outlook	Donated
+179423184	0		user	brian teams	NOTSURE	other_domain	brian teams	[]		1	outlook	Donated
+179421782	0		user	Universal text classifier	NOTSURE	other_domain	Universal text classifier	[]		1	outlook	Donated
+179421347	0		user	Your Relocation to Bellevue	NOTSURE	other_domain	Your Relocation to Bellevue	[]		1	outlook	Donated
+179421166	0		user	scope jobs	NOTSURE	other_domain	scope jobs	[]		1	outlook	Donated
+179422105	0		user	tudor + conti	NOTSURE	other_domain	tudor + conti	[]		1	outlook	Donated
+179421994	0		user	tier-1 divya anthony	NOTSURE	other_domain	tier-1 divya anthony	[]		1	outlook	Donated
+179422103	0		user	query viewer module	NOTSURE	other_domain	query viewer module	[]		1	outlook	Donated
+179421649	0		user	dashboard yong tasun	NOTSURE	other_domain	dashboard yong tasun	[]		1	outlook	Donated
+179421599	0		user	paper 918	NOTSURE	other_domain	paper 918	[]		1	outlook	Donated
+179422341	0		user	sadhika scraper	NOTSURE	other_domain	sadhika scraper	[]		1	outlook	Donated
+179421140	0		user	git find build number of commit	NOTSURE	other_domain	git find build number of commit	[]		1	outlook	Donated
+179423157	0		user	qi lu	NOTSURE	other_domain	qi lu	[]		1	outlook	Donated
+179422353	0		user	from specified code page to Unicode	NOTSURE	other_domain	from specified code page to Unicode	[]		1	outlook	Donated
+179422449	0		user	sdfv2 users	NOTSURE	other_domain	sdfv2 users	[]		1	outlook	Donated
+179422962	0		user	aayush garg	NOTSURE	other_domain	aayush garg	[]		1	outlook	Donated
+179422324	0		user	anthony amatino	NOTSURE	other_domain	anthony amatino	[]		1	outlook	Donated
+179422500	0		user	chris cj	NOTSURE	other_domain	chris cj	[]		1	outlook	Donated
+179421399	0		user	frugal tip managers	NOTSURE	other_domain	frugal tip managers	[]		1	outlook	Donated
+179422898	0		user	jian wu	NOTSURE	other_domain	jian wu	[]		1	outlook	Donated
+179422389	0		user	metadata allbehaviors	NOTSURE	other_domain	metadata allbehaviors	[]		1	outlook	Donated
+179422122	0		user	all alarms doesnt give the all quantifier	NOTSURE	other_domain	all alarms doesnt give the all quantifier	[]		1	outlook	Donated
+179421194	0		user	ling yin teams voice	NOTSURE	other_domain	ling yin teams voice	[]		1	outlook	Donated
+179422379	0		user	Source code link and location for checkin	NOTSURE	other_domain	Source code link and location for checkin	[]		1	outlook	Donated
+179423085	0		user	morden history	NOTSURE	other_domain	morden history	[]		1	outlook	Donated
+179421246	0		user	sukwon annotat	NOTSURE	other_domain	sukwon annotat	[]		1	outlook	Donated
+179422259	0		user	nitin rathee	NOTSURE	other_domain	nitin rathee	[]		1	outlook	Donated
+179421127	0		user	rex xiong	NOTSURE	other_domain	rex xiong	[]		1	outlook	Donated
+179420915	0		user	codeflow warmup	NOTSURE	other_domain	codeflow warmup	[]		1	outlook	Donated
+179422290	0		user	mujtaba + status	NOTSURE	other_domain	mujtaba + status	[]		1	outlook	Donated
+179422080	0		user	ankita sharma	NOTSURE	other_domain	ankita sharma	[]		1	outlook	Donated
+179420937	0		user	merge duplicate mitaylor bybyun	NOTSURE	other_domain	merge duplicate mitaylor bybyun	[]		1	outlook	Donated
+179421476	0		user	car loan	NOTSURE	other_domain	car loan	[]		1	outlook	Donated
+179421151	0		user	The reason I closed the incidents is	NOTSURE	other_domain	The reason I closed the incidents is	[]		1	outlook	Donated
+179422013	0		user	arlo hart	NOTSURE	other_domain	arlo hart	[]		1	outlook	Donated
+179422384	0		user	shobana abhishek	NOTSURE	other_domain	shobana abhishek	[]		1	outlook	Donated
+179421098	0		user	Substrate Signal Service	NOTSURE	other_domain	Substrate Signal Service	[]		1	outlook	Donated
+179421829	0		user	yammer gr	NOTSURE	other_domain	yammer gr	[]		1	outlook	Donated
+179421181	0		user	knowledge mining	NOTSURE	other_domain	knowledge mining	[]		1	outlook	Donated
+179423243	0		user	detect handwritten circles	NOTSURE	other_domain	detect handwritten circles	[]		1	outlook	Donated
+179421445	0		user	eric li meed	NOTSURE	other_domain	eric li meed	[]		1	outlook	Donated
+179422974	0		user	yeyi ku	NOTSURE	other_domain	yeyi ku	[]		1	outlook	Donated
+179423040	0		user	emily bender	NOTSURE	other_domain	emily bender	[]		1	outlook	Donated
+179421672	0		user	messageid itemid	NOTSURE	other_domain	messageid itemid	[]		1	outlook	Donated
+179422754	0		user	substrate.office.com files	NOTSURE	other_domain	substrate.office.com files	[]		1	outlook	Donated
+179422548	0		user	Frisbee impression v	NOTSURE	other_domain	Frisbee impression v	[]		1	outlook	Donated
+179422979	0		user	marat tasun	NOTSURE	other_domain	marat tasun	[]		1	outlook	Donated
+179422352	0		user	gilad halperin dmitrij	NOTSURE	other_domain	gilad halperin dmitrij	[]		1	outlook	Donated
+179423025	0		user	weekly meeting	NOTSURE	other_domain	weekly meeting	[]		1	outlook	Donated
+179422950	0		user	missing items	NOTSURE	other_domain	missing items	[]		1	outlook	Donated
+179421575	0		user	personal page	NOTSURE	other_domain	personal page	[]		1	outlook	Donated
+179421661	0		user	python u-sql	NOTSURE	other_domain	python u-sql	[]		1	outlook	Donated
+179422313	0		user	cosmos file folder	NOTSURE	other_domain	cosmos file folder	[]		1	outlook	Donated
+179422801	0		user	odb aria	NOTSURE	other_domain	odb aria	[]		1	outlook	Donated
+179421064	0		user	good morning	NOTSURE	other_domain	good morning	[]		1	outlook	Donated
+179422108	0		user	sangam expired	NOTSURE	other_domain	sangam expired	[]		1	outlook	Donated
+179422074	0		user	Shruti Jindal	NOTSURE	other_domain	Shruti Jindal	[]		1	outlook	Donated
+179421820	0		user	brian residents	NOTSURE	other_domain	brian residents	[]		1	outlook	Donated
+179422540	0		user	Good m	NOTSURE	other_domain	Good m	[]		1	outlook	Donated
+179421519	0		user	FakeOutput for Native Account	NOTSURE	other_domain	FakeOutput for Native Account	[]		1	outlook	Donated
+179421360	0		user	action view	NOTSURE	other_domain	action view	[]		1	outlook	Donated
+179422636	0		user	ravi entity divya ankur	NOTSURE	other_domain	ravi entity divya ankur	[]		1	outlook	Donated
+179421712	0		user	oivic adam troy	NOTSURE	other_domain	oivic adam troy	[]		1	outlook	Donated
+179421370	0		user	ben sick	NOTSURE	other_domain	ben sick	[]		1	outlook	Donated
+179421067	0		user	Applying for Job	NOTSURE	other_domain	Applying for Job	[]		1	outlook	Donated
+179421570	0		user	sr lu	NOTSURE	other_domain	sr lu	[]		1	outlook	Donated
+179420982	0		user	bin wang	NOTSURE	other_domain	bin wang	[]		1	outlook	Donated
+179422299	0		user	alan thomas	NOTSURE	other_domain	alan thomas	[]		1	outlook	Donated
+179421597	0		user	lync function	NOTSURE	other_domain	lync function	[]		1	outlook	Donated
+179421065	0		user	yeyi gayathri	NOTSURE	other_domain	yeyi gayathri	[]		1	outlook	Donated
+179420954	0		user	ikea modu	NOTSURE	other_domain	ikea modu	[]		1	outlook	Donated
+179421086	0		user	Failed to download the latest QuickBuild	NOTSURE	other_domain	Failed to download the latest QuickBuild	[]		1	outlook	Donated
+179422805	0		user	Y le	NOTSURE	other_domain	Y le	[]		1	outlook	Donated
+179421430	0		user	mcgovern tax	NOTSURE	other_domain	mcgovern tax	[]		1	outlook	Donated
+179422516	0		user	Data pipeline and metrics dashboard presentation	NOTSURE	other_domain	Data pipeline and metrics dashboard presentation	[]		1	outlook	Donated
+179421912	0		user	bearer divya tool	NOTSURE	other_domain	bearer divya tool	[]		1	outlook	Donated
+179422519	0		user	Anuradha Sayanna Kotwal	NOTSURE	other_domain	Anuradha Sayanna Kotwal	[]		1	outlook	Donated
+179421148	0		user	feedback provide	NOTSURE	other_domain	feedback provide	[]		1	outlook	Donated
+179421287	0		user	wkw bug	NOTSURE	other_domain	wkw bug	[]		1	outlook	Donated
+179422240	0		user	chris levi	NOTSURE	other_domain	chris levi	[]		1	outlook	Donated
+179421130	0		user	edward guo	NOTSURE	other_domain	edward guo	[]		1	outlook	Donated
+179421975	0		user	substratesearch 948241	NOTSURE	other_domain	substratesearch 948241	[]		1	outlook	Donated
+179421105	0		user	Padma Ramanujam	NOTSURE	other_domain	Padma Ramanujam	[]		1	outlook	Donated
+179421389	0		user	Meeting between alarm/timer skill team and LU modeling team	NOTSURE	other_domain	Meeting between alarm/timer skill team and LU modeling team	[]		1	outlook	Donated
+179422481	0		user	diffeo jason	NOTSURE	other_domain	diffeo jason	[]		1	outlook	Donated
+179422012	0		user	tag streams	NOTSURE	other_domain	tag streams	[]		1	outlook	Donated
+179422883	0		user	smart building	NOTSURE	other_domain	smart building	[]		1	outlook	Donated
+179421396	0		user	yong yaoyao privacy	NOTSURE	other_domain	yong yaoyao privacy	[]		1	outlook	Donated
+179422133	0		user	coral harry	NOTSURE	other_domain	coral harry	[]		1	outlook	Donated
+179421981	0		user	install aether	NOTSURE	other_domain	install aether	[]		1	outlook	Donated
+179421651	0		user	local tool	NOTSURE	other_domain	local tool	[]		1	outlook	Donated
+179421540	0		user	pr fepan get	NOTSURE	other_domain	pr fepan get	[]		1	outlook	Donated
+179421444	0		user	gilad sampling	NOTSURE	other_domain	gilad sampling	[]		1	outlook	Donated
+179421545	0		user	OIVIC meed	NOTSURE	other_domain	OIVIC meed	[]		1	outlook	Donated
+179422612	0		user	visa stamping fee	NOTSURE	other_domain	visa stamping fee	[]		1	outlook	Donated
+179420827	0		user	cortana.token efesa	NOTSURE	other_domain	cortana.token efesa	[]		1	outlook	Donated
+179421879	0		user	Offline annotation	NOTSURE	other_domain	Offline annotation	[]		1	outlook	Donated
+179422214	0		user	Cosmos 11 streams migration	NOTSURE	other_domain	Cosmos 11 streams migration	[]		1	outlook	Donated
+179422289	0		user	spec review	NOTSURE	other_domain	spec review	[]		1	outlook	Donated
+179421952	0		user	ImpressionView dai	NOTSURE	other_domain	ImpressionView dai	[]		1	outlook	Donated
+179422969	0		user	aaron diffeo azure	NOTSURE	other_domain	aaron diffeo azure	[]		1	outlook	Donated
+179421000	0		user	Repeated user queries	NOTSURE	other_domain	Repeated user queries	[]		1	outlook	Donated
+179422899	0		user	meed oivic	NOTSURE	other_domain	meed oivic	[]		1	outlook	Donated
+179420758	0		user	my analytics	NOTSURE	other_domain	my analytics	[]		1	outlook	Donated
+179420898	0		user	handle oof	NOTSURE	other_domain	handle oof	[]		1	outlook	Donated
+179423281	0		user	steve lijing	NOTSURE	other_domain	steve lijing	[]		1	outlook	Donated
+179422304	0		user	taso contrac	NOTSURE	other_domain	taso contrac	[]		1	outlook	Donated
+179421842	0		user	Pre-Departure Consultation Summary	NOTSURE	other_domain	Pre-Departure Consultation Summary	[]		1	outlook	Donated
+179421853	0		user	health club	NOTSURE	other_domain	health club	[]		1	outlook	Donated
+179422779	0		user	entity representation	NOTSURE	other_domain	entity representation	[]		1	outlook	Donated
+179421892	0		user	sqi tds	NOTSURE	other_domain	sqi tds	[]		1	outlook	Donated
+179420743	0		user	Ivan arbitration	NOTSURE	other_domain	Ivan arbitration	[]		1	outlook	Donated
+179422252	0		user	connectors leadership	NOTSURE	other_domain	connectors leadership	[]		1	outlook	Donated
+179422258	0		user	anthony divya nitin gaurav	NOTSURE	other_domain	anthony divya nitin gaurav	[]		1	outlook	Donated
+179423227	0		user	bala TEE stamp	NOTSURE	other_domain	bala TEE stamp	[]		1	outlook	Donated
+179421616	0		user	eric li	NOTSURE	other_domain	eric li	[]		1	outlook	Donated
+179422907	0		user	divya andi	NOTSURE	other_domain	divya andi	[]		1	outlook	Donated
+179422102	0		user	Gilsinia Lopez	NOTSURE	other_domain	Gilsinia Lopez	[]		1	outlook	Donated
+179422088	0		user	byungki xc	NOTSURE	other_domain	byungki xc	[]		1	outlook	Donated
+179421941	0		user	icm sangam	NOTSURE	other_domain	icm sangam	[]		1	outlook	Donated
+179422288	0		user	experiment analysis	NOTSURE	other_domain	experiment analysis	[]		1	outlook	Donated
+179422070	0		user	meed expire	NOTSURE	other_domain	meed expire	[]		1	outlook	Donated
+179421604	0		user	who wor	NOTSURE	other_domain	who wor	[]		1	outlook	Donated
+179423117	0		user	shared parental	NOTSURE	other_domain	shared parental	[]		1	outlook	Donated
+179421950	0		user	hero skills	NOTSURE	other_domain	hero skills	[]		1	outlook	Donated
+179421126	0		user	debash resharper	NOTSURE	other_domain	debash resharper	[]		1	outlook	Donated
+179421687	0		user	matrix Gpus	NOTSURE	other_domain	matrix Gpus	[]		1	outlook	Donated
+179422618	0		user	joe shi	NOTSURE	other_domain	joe shi	[]		1	outlook	Donated
+179422424	0		user	giza feature management	NOTSURE	other_domain	giza feature management	[]		1	outlook	Donated
+179420870	0		user	user anid access	NOTSURE	other_domain	user anid access	[]		1	outlook	Donated
+179422331	0		user	425 628	NOTSURE	other_domain	425 628	[]		1	outlook	Donated
+179421216	0		user	cosmin radu	NOTSURE	other_domain	cosmin radu	[]		1	outlook	Donated
+179422689	0		user	turn off history	NOTSURE	other_domain	turn off history	[]		1	outlook	Donated
+179421856	0		user	omar gaurav flight rahul	NOTSURE	other_domain	omar gaurav flight rahul	[]		1	outlook	Donated
+179421816	0		user	ankur gupta	NOTSURE	other_domain	ankur gupta	[]		1	outlook	Donated
+179423267	0		user	Instant pot Duo mini	NOTSURE	other_domain	Instant pot Duo mini	[]		1	outlook	Donated
+179422334	0		user	edward guo	NOTSURE	other_domain	edward guo	[]		1	outlook	Donated
+179421304	0		user	applying stochastic	NOTSURE	other_domain	applying stochastic	[]		1	outlook	Donated
+179421933	0		user	SR columns	NOTSURE	other_domain	SR columns	[]		1	outlook	Donated
+179423041	0		user	open source	NOTSURE	other_domain	open source	[]		1	outlook	Donated
+179422737	0		user	angelina core pipeline	NOTSURE	other_domain	angelina core pipeline	[]		1	outlook	Donated
+179420839	0		user	add new	NOTSURE	other_domain	add new	[]		1	outlook	Donated
+179422563	0		user	Jay Teams	NOTSURE	other_domain	Jay Teams	[]		1	outlook	Donated
+179422705	0		user	machine learning	NOTSURE	other_domain	machine learning	[]		1	outlook	Donated
+179422364	0		user	omar status	NOTSURE	other_domain	omar status	[]		1	outlook	Donated
+179422669	0		user	byungki aether	NOTSURE	other_domain	byungki aether	[]		1	outlook	Donated
+179421350	0		user	share file tds	NOTSURE	other_domain	share file tds	[]		1	outlook	Donated
+179421679	0		user	ahmed hassan	NOTSURE	other_domain	ahmed hassan	[]		1	outlook	Donated
+179423057	0		user	what is the temparature of room 2105	NOTSURE	other_domain	what is the temparature of room 2105	[]		1	outlook	Donated
+179423014	0		user	sarunas spec	NOTSURE	other_domain	sarunas spec	[]		1	outlook	Donated
+179421252	0		user	outlook commute	NOTSURE	other_domain	outlook commute	[]		1	outlook	Donated
+179423206	0		user	user curated	NOTSURE	other_domain	user curated	[]		1	outlook	Donated
+179421580	0		user	machine functions	NOTSURE	other_domain	machine functions	[]		1	outlook	Donated
+179421940	0		user	tip queries list	NOTSURE	other_domain	tip queries list	[]		1	outlook	Donated
+179423008	0		user	odin long byungki	NOTSURE	other_domain	odin long byungki	[]		1	outlook	Donated
+179423110	0		user	Exchange Datacenter Basic expire	NOTSURE	other_domain	Exchange Datacenter Basic expire	[]		1	outlook	Donated
+179420882	0		user	Enabling GASv2 For Arbitration Mailboxe	NOTSURE	other_domain	Enabling GASv2 For Arbitration Mailboxe	[]		1	outlook	Donated
+179422818	0		user	automatically reply	NOTSURE	other_domain	automatically reply	[]		1	outlook	Donated
+179420959	0		user	ahmed hindam	NOTSURE	other_domain	ahmed hindam	[]		1	outlook	Donated
+179421042	0		user	scope studio 2019	NOTSURE	other_domain	scope studio 2019	[]		1	outlook	Donated
+179421380	0		user	key vault sa	NOTSURE	other_domain	key vault sa	[]		1	outlook	Donated
+179421557	0		user	angelina rules	NOTSURE	other_domain	angelina rules	[]		1	outlook	Donated
+179422360	0		user	cscerror CS2001	NOTSURE	other_domain	cscerror CS2001	[]		1	outlook	Donated
+179423032	0		user	graph token	NOTSURE	other_domain	graph token	[]		1	outlook	Donated
+179423196	0		user	compliant ngrams	NOTSURE	other_domain	compliant ngrams	[]		1	outlook	Donated
+179422270	0		user	simplified module deployment	NOTSURE	other_domain	simplified module deployment	[]		1	outlook	Donated
+179420928	0		user	jiji bodymediatype	NOTSURE	other_domain	jiji bodymediatype	[]		1	outlook	Donated
+179423194	0		user	david honghao	NOTSURE	other_domain	david honghao	[]		1	outlook	Donated
+179422064	0		user	press drive full tds	NOTSURE	other_domain	press drive full tds	[]		1	outlook	Donated
+179420861	0		user	SR impact on LU	NOTSURE	other_domain	SR impact on LU	[]		1	outlook	Donated
+179421592	0		user	left time	NOTSURE	other_domain	left time	[]		1	outlook	Donated
+179420993	0		user	cairo grill	NOTSURE	other_domain	cairo grill	[]		1	outlook	Donated
+179422106	0		user	task comment	NOTSURE	other_domain	task comment	[]		1	outlook	Donated
+179422864	0		user	brian chris	NOTSURE	other_domain	brian chris	[]		1	outlook	Donated
+179421621	0		user	wpa sanjay	NOTSURE	other_domain	wpa sanjay	[]		1	outlook	Donated
+179422753	0		user	substrate mes	NOTSURE	other_domain	substrate mes	[]		1	outlook	Donated
+179421228	0		user	access mercury.datapipeline cert	NOTSURE	other_domain	access mercury.datapipeline cert	[]		1	outlook	Donated
+179422813	0		user	OIVIC Puser is available in MEED	NOTSURE	other_domain	OIVIC Puser is available in MEED	[]		1	outlook	Donated
+179421609	0		user	native en	NOTSURE	other_domain	native en	[]		1	outlook	Donated
+179421303	0		user	submit all expense	NOTSURE	other_domain	submit all expense	[]		1	outlook	Donated
+179422815	0		user	segment cr	NOTSURE	other_domain	segment cr	[]		1	outlook	Donated
+179421911	0		user	iswar pa	NOTSURE	other_domain	iswar pa	[]		1	outlook	Donated
+179420969	0		user	Which service principal to run AdlCloud as	NOTSURE	other_domain	Which service principal to run AdlCloud as	[]		1	outlook	Donated
+179421017	0		user	onenote knut	NOTSURE	other_domain	onenote knut	[]		1	outlook	Donated
+179423095	0		user	david demo	NOTSURE	other_domain	david demo	[]		1	outlook	Donated
+179422236	0		user	packages david chen	NOTSURE	other_domain	packages david chen	[]		1	outlook	Donated
+179423220	0		user	ArgumentNullException SearchRequest	NOTSURE	other_domain	ArgumentNullException SearchRequest	[]		1	outlook	Donated
+179421073	0		user	eyeson machine	NOTSURE	other_domain	eyeson machine	[]		1	outlook	Donated
+179421633	0		user	linkedin shobana	NOTSURE	other_domain	linkedin shobana	[]		1	outlook	Donated
+179420990	0		user	vasily rad	NOTSURE	other_domain	vasily rad	[]		1	outlook	Donated
+179421083	0		user	lockbox bybyun	NOTSURE	other_domain	lockbox bybyun	[]		1	outlook	Donated
+179422068	0		user	Proactive scenario - Cortana logs	NOTSURE	other_domain	Proactive scenario - Cortana logs	[]		1	outlook	Donated
+179422567	0		user	spartans demo	NOTSURE	other_domain	spartans demo	[]		1	outlook	Donated
+179421055	0		user	rorosema reason aether	NOTSURE	other_domain	rorosema reason aether	[]		1	outlook	Donated
+179421395	0		user	gaurish zhiyong	NOTSURE	other_domain	gaurish zhiyong	[]		1	outlook	Donated
+179422493	0		user	Different messages for same internal_session_guid and same message_id	NOTSURE	other_domain	Different messages for same internal_session_guid and same message_id	[]		1	outlook	Donated
+179421277	0		user	happy birthday	NOTSURE	other_domain	happy birthday	[]		1	outlook	Donated
+179423190	0		user	collections andrei	NOTSURE	other_domain	collections andrei	[]		1	outlook	Donated
+179421799	0		user	schema mismatch	NOTSURE	other_domain	schema mismatch	[]		1	outlook	Donated
+179422139	0		user	portableranker kusto	NOTSURE	other_domain	portableranker kusto	[]		1	outlook	Donated
+179422578	0		user	globalid siteid	NOTSURE	other_domain	globalid siteid	[]		1	outlook	Donated
+179420774	0		user	substrate search	NOTSURE	other_domain	substrate search	[]		1	outlook	Donated
+179422942	0		user	xiaofeng xin	NOTSURE	other_domain	xiaofeng xin	[]		1	outlook	Donated
+179420876	0		user	poa 2	NOTSURE	other_domain	poa 2	[]		1	outlook	Donated
+179422691	0		user	aaron acronym	NOTSURE	other_domain	aaron acronym	[]		1	outlook	Donated
+179421136	0		user	gas processor	NOTSURE	other_domain	gas processor	[]		1	outlook	Donated
+179422514	0		user	gilad hardik	NOTSURE	other_domain	gilad hardik	[]		1	outlook	Donated
+179420809	0		user	Pre-Departure Consultation Su	NOTSURE	other_domain	Pre-Departure Consultation Su	[]		1	outlook	Donated
+179422087	0		user	angela hu	NOTSURE	other_domain	angela hu	[]		1	outlook	Donated
+179421936	0		user	Please complete exchange	NOTSURE	other_domain	Please complete exchange	[]		1	outlook	Donated
+179421015	0		user	pavel KPE	NOTSURE	other_domain	pavel KPE	[]		1	outlook	Donated
+179422460	0		user	related quer	NOTSURE	other_domain	related quer	[]		1	outlook	Donated
+179423069	0		user	all hands	NOTSURE	other_domain	all hands	[]		1	outlook	Donated
+179423094	0		user	L2Model brian	NOTSURE	other_domain	L2Model brian	[]		1	outlook	Donated
+179421648	0		user	rishi sdk	NOTSURE	other_domain	rishi sdk	[]		1	outlook	Donated
+179422222	0		user	carina password	NOTSURE	other_domain	carina password	[]		1	outlook	Donated
+179422951	0		user	arun ram	NOTSURE	other_domain	arun ram	[]		1	outlook	Donated
+179420931	0		user	naresh paul	NOTSURE	other_domain	naresh paul	[]		1	outlook	Donated
+179422367	0		user	tessy gao	NOTSURE	other_domain	tessy gao	[]		1	outlook	Donated
+179421024	0		user	transferring data	NOTSURE	other_domain	transferring data	[]		1	outlook	Donated
+179422763	0		user	gsam card	NOTSURE	other_domain	gsam card	[]		1	outlook	Donated
+179421220	0		user	biao olga	NOTSURE	other_domain	biao olga	[]		1	outlook	Donated
+179420971	0		user	jiji bodymediatype phrases	NOTSURE	other_domain	jiji bodymediatype phrases	[]		1	outlook	Donated
+179423263	0		user	david chen gf pipeline	NOTSURE	other_domain	david chen gf pipeline	[]		1	outlook	Donated
+179423043	0		user	rest actioninfo	NOTSURE	other_domain	rest actioninfo	[]		1	outlook	Donated
+179421839	0		user	spools search	NOTSURE	other_domain	spools search	[]		1	outlook	Donated
+179420787	0		user	Service Notifications	NOTSURE	other_domain	Service Notifications	[]		1	outlook	Donated
+179423174	0		user	chris quirk	NOTSURE	other_domain	chris quirk	[]		1	outlook	Donated
+179421071	0		user	oslo flight	NOTSURE	other_domain	oslo flight	[]		1	outlook	Donated
+179422586	0		user	lijing steve	NOTSURE	other_domain	lijing steve	[]		1	outlook	Donated
+179421814	0		user	global migration	NOTSURE	other_domain	global migration	[]		1	outlook	Donated
+179420752	0		user	vijay cosmos certificate	NOTSURE	other_domain	vijay cosmos certificate	[]		1	outlook	Donated
+179420930	0		user	dependency parser	NOTSURE	other_domain	dependency parser	[]		1	outlook	Donated
+179423067	0		user	setup rectim	NOTSURE	other_domain	setup rectim	[]		1	outlook	Donated
+179421562	0		user	ocal_LocalSearch-Blu-trTR-XPingTest_Ah LES QueryBasedWhitelist	NOTSURE	other_domain	ocal_LocalSearch-Blu-trTR-XPingTest_Ah LES QueryBasedWhitelist	[]		1	outlook	Donated
+179422474	0		user	yuchen tasun	NOTSURE	other_domain	yuchen tasun	[]		1	outlook	Donated
+179423147	0		user	sean id	NOTSURE	other_domain	sean id	[]		1	outlook	Donated
+179421100	0		user	gilsinia starspace ye-yi	NOTSURE	other_domain	gilsinia starspace ye-yi	[]		1	outlook	Donated
+179422682	0		user	printer cambridge	NOTSURE	other_domain	printer cambridge	[]		1	outlook	Donated
+179421463	0		user	Cortana LU - Provisioning requests	NOTSURE	other_domain	Cortana LU - Provisioning requests	[]		1	outlook	Donated
+179420842	0		user	travel companion	NOTSURE	other_domain	travel companion	[]		1	outlook	Donated
+179422355	0		user	access+shared data	NOTSURE	other_domain	access+shared data	[]		1	outlook	Donated
+179421478	0		user	powerbi analysis	NOTSURE	other_domain	powerbi analysis	[]		1	outlook	Donated
+179421600	0		user	benefit dental	NOTSURE	other_domain	benefit dental	[]		1	outlook	Donated
+179423163	0		user	l2 model	NOTSURE	other_domain	l2 model	[]		1	outlook	Donated
+179421332	0		user	vipin spacy	NOTSURE	other_domain	vipin spacy	[]		1	outlook	Donated
+179422459	0		user	L2Model jingtian	NOTSURE	other_domain	L2Model jingtian	[]		1	outlook	Donated
+179422072	0		user	griffin git	NOTSURE	other_domain	griffin git	[]		1	outlook	Donated
+179420960	0		user	send request to cosmos	NOTSURE	other_domain	send request to cosmos	[]		1	outlook	Donated
+179422524	0		user	git utah server	NOTSURE	other_domain	git utah server	[]		1	outlook	Donated
+179422649	0		user	tf idf yeyi	NOTSURE	other_domain	tf idf yeyi	[]		1	outlook	Donated
+179422723	0		user	copy aether azure	NOTSURE	other_domain	copy aether azure	[]		1	outlook	Donated
+179421288	0		user	two days	NOTSURE	other_domain	two days	[]		1	outlook	Donated
+179421340	0		user	Exchange Datacenter Basic el	NOTSURE	other_domain	Exchange Datacenter Basic el	[]		1	outlook	Donated
+179421506	0		user	harry shum	NOTSURE	other_domain	harry shum	[]		1	outlook	Donated
+179420929	0		user	keyphrase extraction	NOTSURE	other_domain	keyphrase extraction	[]		1	outlook	Donated
+179423261	0		user	levi fhl	NOTSURE	other_domain	levi fhl	[]		1	outlook	Donated
+179422292	0		user	andi infrastructure	NOTSURE	other_domain	andi infrastructure	[]		1	outlook	Donated
+179421259	0		user	Creating ICM team	NOTSURE	other_domain	Creating ICM team	[]		1	outlook	Donated
+179421044	0		user	qf online metrics	NOTSURE	other_domain	qf online metrics	[]		1	outlook	Donated
+179422848	0		user	top n	NOTSURE	other_domain	top n	[]		1	outlook	Donated
+179423003	0		user	T ye	NOTSURE	other_domain	T ye	[]		1	outlook	Donated
+179422690	0		user	mip friends	NOTSURE	other_domain	mip friends	[]		1	outlook	Donated
+179422841	0		user	yan r	NOTSURE	other_domain	yan r	[]		1	outlook	Donated
+179422227	0		user	jammal parker	NOTSURE	other_domain	jammal parker	[]		1	outlook	Donated
+179422958	0		user	KRIS approvers	NOTSURE	other_domain	KRIS approvers	[]		1	outlook	Donated
+179421364	0		user	sme plugin	NOTSURE	other_domain	sme plugin	[]		1	outlook	Donated
+179422833	0		user	sukwon flight scorecard	NOTSURE	other_domain	sukwon flight scorecard	[]		1	outlook	Donated
+179421908	0		user	3s api	NOTSURE	other_domain	3s api	[]		1	outlook	Donated
+179421114	0		user	frugal tip notebook	NOTSURE	other_domain	frugal tip notebook	[]		1	outlook	Donated
+179422768	0		user	KM Science Meeting	NOTSURE	other_domain	KM Science Meeting	[]		1	outlook	Donated
+179421874	0		user	david kpe	NOTSURE	other_domain	david kpe	[]		1	outlook	Donated
+179422447	0		user	thomas lin	NOTSURE	other_domain	thomas lin	[]		1	outlook	Donated
+179423100	0		user	hero skill	NOTSURE	other_domain	hero skill	[]		1	outlook	Donated
+179423222	0		user	civ june retire	NOTSURE	other_domain	civ june retire	[]		1	outlook	Donated
+179421244	0		user	life cycle	NOTSURE	other_domain	life cycle	[]		1	outlook	Donated
+179423228	0		user	aether vin	NOTSURE	other_domain	aether vin	[]		1	outlook	Donated
+179422602	0		user	byungki kql	NOTSURE	other_domain	byungki kql	[]		1	outlook	Donated
+179422042	0		user	reaz uddin	NOTSURE	other_domain	reaz uddin	[]		1	outlook	Donated
+179420895	0		user	invalid offline a	NOTSURE	other_domain	invalid offline a	[]		1	outlook	Donated
+179422646	0		user	MEED peopleEx	NOTSURE	other_domain	MEED peopleEx	[]		1	outlook	Donated
+179422183	0		user	Shared Accommodation	NOTSURE	other_domain	Shared Accommodation	[]		1	outlook	Donated
+179421310	0		user	baecke divya omar hong	NOTSURE	other_domain	baecke divya omar hong	[]		1	outlook	Donated
+179422000	0		user	chenyan aether	NOTSURE	other_domain	chenyan aether	[]		1	outlook	Donated
+179422135	0		user	Based on our discussion , the input for the new action is going to	NOTSURE	other_domain	Based on our discussion , the input for the new action is going to	[]		1	outlook	Donated
+179423201	0		user	yong duplicates	NOTSURE	other_domain	yong duplicates	[]		1	outlook	Donated
+179422044	0		user	ananth satya	NOTSURE	other_domain	ananth satya	[]		1	outlook	Donated
+179422609	0		user	ravi gaurav	NOTSURE	other_domain	ravi gaurav	[]		1	outlook	Donated
+179422278	0		user	utah git mike	NOTSURE	other_domain	utah git mike	[]		1	outlook	Donated
+179421809	0		user	output stats show 0 users no queries aether experiments	NOTSURE	other_domain	output stats show 0 users no queries aether experiments	[]		1	outlook	Donated
+179420957	0		user	chu yiwei	NOTSURE	other_domain	chu yiwei	[]		1	outlook	Donated
+179423018	0		user	perfcounter cscerror	NOTSURE	other_domain	perfcounter cscerror	[]		1	outlook	Donated
+179422025	0		user	andrea jessee	NOTSURE	other_domain	andrea jessee	[]		1	outlook	Donated
+179422615	0		user	suyah file	NOTSURE	other_domain	suyah file	[]		1	outlook	Donated
+179423278	0		user	philip topic	NOTSURE	other_domain	philip topic	[]		1	outlook	Donated
+179422028	0		user	swafford git onboarding	NOTSURE	other_domain	swafford git onboarding	[]		1	outlook	Donated
+179421479	0		user	maven training	NOTSURE	other_domain	maven training	[]		1	outlook	Donated
+179422672	0		user	azure slow	NOTSURE	other_domain	azure slow	[]		1	outlook	Donated
+179422595	0		user	model flighting	NOTSURE	other_domain	model flighting	[]		1	outlook	Donated
+179420823	0		user	alex ra	NOTSURE	other_domain	alex ra	[]		1	outlook	Donated
+179421238	0		user	access azure	NOTSURE	other_domain	access azure	[]		1	outlook	Donated
+179420949	0		user	flight feature value	NOTSURE	other_domain	flight feature value	[]		1	outlook	Donated
+179421285	0		user	vassilis polychronopoulos daily standup	NOTSURE	other_domain	vassilis polychronopoulos daily standup	[]		1	outlook	Donated
+179422249	0		user	checkin jasteve	NOTSURE	other_domain	checkin jasteve	[]		1	outlook	Donated
+179422445	0		user	pii rest	NOTSURE	other_domain	pii rest	[]		1	outlook	Donated
+179421280	0		user	stylecop warnings errors	NOTSURE	other_domain	stylecop warnings errors	[]		1	outlook	Donated
+179421274	0		user	mobile plan	NOTSURE	other_domain	mobile plan	[]		1	outlook	Donated
+179421716	0		user	choose option	NOTSURE	other_domain	choose option	[]		1	outlook	Donated
+179421184	0		user	mike vacation	NOTSURE	other_domain	mike vacation	[]		1	outlook	Donated
+179423049	0		user	focus jacob	NOTSURE	other_domain	focus jacob	[]		1	outlook	Donated
+179421752	0		user	interactive filter	NOTSURE	other_domain	interactive filter	[]		1	outlook	Donated
+179422699	0		user	session token pavel	NOTSURE	other_domain	session token pavel	[]		1	outlook	Donated
+179422439	0		user	srikanth kancharla	NOTSURE	other_domain	srikanth kancharla	[]		1	outlook	Donated
+179422919	0		user	us immi	NOTSURE	other_domain	us immi	[]		1	outlook	Donated
+179422738	0		user	flight settings pull request	NOTSURE	other_domain	flight settings pull request	[]		1	outlook	Donated
+179423048	0		user	provide feedback	NOTSURE	other_domain	provide feedback	[]		1	outlook	Donated
+179421322	0		user	native encryption	NOTSURE	other_domain	native encryption	[]		1	outlook	Donated
+179421943	0		user	Infra and Tools Weekly Scrum	NOTSURE	other_domain	Infra and Tools Weekly Scrum	[]		1	outlook	Donated
+179421725	0		user	steven le	NOTSURE	other_domain	steven le	[]		1	outlook	Donated
+179420889	0		user	meed data	NOTSURE	other_domain	meed data	[]		1	outlook	Donated
+179422560	0		user	file existence	NOTSURE	other_domain	file existence	[]		1	outlook	Donated
+179421192	0		user	trouble + james	NOTSURE	other_domain	trouble + james	[]		1	outlook	Donated
+179421092	0		user	steven files api	NOTSURE	other_domain	steven files api	[]		1	outlook	Donated
+179420945	0		user	omar oof rest	NOTSURE	other_domain	omar oof rest	[]		1	outlook	Donated
+179421899	0		user	lockbox jasteve	NOTSURE	other_domain	lockbox jasteve	[]		1	outlook	Donated
+179421624	0		user	search relevance recommendation meeting prep	NOTSURE	other_domain	search relevance recommendation meeting prep	[]		1	outlook	Donated
+179421402	0		user	nikita last_update_dt	NOTSURE	other_domain	nikita last_update_dt	[]		1	outlook	Donated
+179422131	0		user	avery varhade	NOTSURE	other_domain	avery varhade	[]		1	outlook	Donated
+179422749	0		user	office subscription	NOTSURE	other_domain	office subscription	[]		1	outlook	Donated
+179422405	0		user	Azure devops notif	NOTSURE	other_domain	Azure devops notif	[]		1	outlook	Donated
+179421831	0		user	anthony amatino ravi	NOTSURE	other_domain	anthony amatino ravi	[]		1	outlook	Donated
+179421691	0		user	omix hussein	NOTSURE	other_domain	omix hussein	[]		1	outlook	Donated
+179420770	0		user	share some	NOTSURE	other_domain	share some	[]		1	outlook	Donated
+179422551	0		user	Data Management] Data Missin	NOTSURE	other_domain	Data Management] Data Missin	[]		1	outlook	Donated
+179421106	0		user	qi wu	NOTSURE	other_domain	qi wu	[]		1	outlook	Donated
+179420792	0		user	kpe flights	NOTSURE	other_domain	kpe flights	[]		1	outlook	Donated
+179421284	0		user	Accessing User Documents	NOTSURE	other_domain	Accessing User Documents	[]		1	outlook	Donated
+179421898	0		user	flight train	NOTSURE	other_domain	flight train	[]		1	outlook	Donated
+179422162	0		user	chenyan acronyms	NOTSURE	other_domain	chenyan acronyms	[]		1	outlook	Donated
+179421955	0		user	invalid offline annotation table nikita	NOTSURE	other_domain	invalid offline annotation table nikita	[]		1	outlook	Donated
+179422395	0		user	biao he	NOTSURE	other_domain	biao he	[]		1	outlook	Donated
+179422984	0		user	privacy dmt	NOTSURE	other_domain	privacy dmt	[]		1	outlook	Donated
+179420908	0		user	git substrate documentation	NOTSURE	other_domain	git substrate documentation	[]		1	outlook	Donated
+179422184	0		user	tokens tlin	NOTSURE	other_domain	tokens tlin	[]		1	outlook	Donated
+179421612	0		user	search eyes-on data	NOTSURE	ambiguous	search eyes-on data	[]		1	outlook	Donated
+179421573	0		user	jagruti feature logging	NOTSURE	other_domain	jagruti feature logging	[]		1	outlook	Donated
+179421213	0		user	oacr warning treated as an error	NOTSURE	other_domain	oacr warning treated as an error	[]		1	outlook	Donated
+179421797	0		user	L-1B Blanket Application	NOTSURE	other_domain	L-1B Blanket Application	[]		1	outlook	Donated
+179421992	0		user	token divya tool	NOTSURE	other_domain	token divya tool	[]		1	outlook	Donated
+179421895	0		user	access masaki hisami	NOTSURE	other_domain	access masaki hisami	[]		1	outlook	Donated
+179420944	0		user	shobana harshal azure	NOTSURE	other_domain	shobana harshal azure	[]		1	outlook	Donated
+179423084	0		user	chong ae	NOTSURE	other_domain	chong ae	[]		1	outlook	Donated
+179421645	0		user	state 20k	NOTSURE	other_domain	state 20k	[]		1	outlook	Donated
+179420837	0		user	harshal scorecard	NOTSURE	other_domain	harshal scorecard	[]		1	outlook	Donated
+179422853	0		user	xts shah deploy	NOTSURE	other_domain	xts shah deploy	[]		1	outlook	Donated
+179421466	0		user	ticket info	NOTSURE	other_domain	ticket info	[]		1	outlook	Donated
+179422571	0		user	Logging bug for Skill Promotion	NOTSURE	other_domain	Logging bug for Skill Promotion	[]		1	outlook	Donated
+179423217	0		user	edward guo scorecard	NOTSURE	other_domain	edward guo scorecard	[]		1	outlook	Donated
+179421494	0		user	alter ego	NOTSURE	other_domain	alter ego	[]		1	outlook	Donated
+179422517	0		user	credentials for Jumpbox	NOTSURE	other_domain	credentials for Jumpbox	[]		1	outlook	Donated
+179421195	0		user	memory ji	NOTSURE	other_domain	memory ji	[]		1	outlook	Donated
+179422638	0		user	mark knight	NOTSURE	other_domain	mark knight	[]		1	outlook	Donated
+179421705	0		user	divya offsite	NOTSURE	other_domain	divya offsite	[]		1	outlook	Donated
+179421424	0		user	morgan stanley	NOTSURE	other_domain	morgan stanley	[]		1	outlook	Donated
+179421780	0		user	vipul divya	NOTSURE	other_domain	vipul divya	[]		1	outlook	Donated
+179422553	0		user	substratesearch 948175	NOTSURE	other_domain	substratesearch 948175	[]		1	outlook	Donated
+179421770	0		user	Tensorboard support	NOTSURE	other_domain	Tensorboard support	[]		1	outlook	Donated
+179422398	0		user	debashish requestid	NOTSURE	other_domain	debashish requestid	[]		1	outlook	Donated
+179422406	0		user	divya hussein	NOTSURE	other_domain	divya hussein	[]		1	outlook	Donated
+179422504	0		user	marcus + sophia	NOTSURE	other_domain	marcus + sophia	[]		1	outlook	Donated
+179421656	0		user	CAP DRI	NOTSURE	other_domain	CAP DRI	[]		1	outlook	Donated
+179421591	0		user	to debug the topics mining algorithm locally using your own data in topics mining Model D service	NOTSURE	other_domain	to debug the topics mining algorithm locally using your own data in topics mining Model D service	[]		1	outlook	Donated
+179421249	0		user	michael rong	NOTSURE	other_domain	michael rong	[]		1	outlook	Donated
+179423129	0		user	ward qf scraper	NOTSURE	other_domain	ward qf scraper	[]		1	outlook	Donated
+179422021	0		user	Impression View	NOTSURE	other_domain	Impression View	[]		1	outlook	Donated
+179422674	0		user	honghao dhiresh abram tenant IDF	NOTSURE	other_domain	honghao dhiresh abram tenant IDF	[]		1	outlook	Donated
+179422855	0		user	dropbox jasteve	NOTSURE	other_domain	dropbox jasteve	[]		1	outlook	Donated
+179421669	0		user	qas steve	NOTSURE	other_domain	qas steve	[]		1	outlook	Donated
+179421124	0		user	mercury datapipeline certificate	NOTSURE	other_domain	mercury datapipeline certificate	[]		1	outlook	Donated
+179423216	0		user	feedback nitin	NOTSURE	other_domain	feedback nitin	[]		1	outlook	Donated
+179421535	0		user	vc allocation	NOTSURE	other_domain	vc allocation	[]		1	outlook	Donated
+179422762	0		user	newborn head	NOTSURE	other_domain	newborn head	[]		1	outlook	Donated
+179422665	0		user	collect re	NOTSURE	other_domain	collect re	[]		1	outlook	Donated
+179423104	0		user	asp.net mvc	NOTSURE	other_domain	asp.net mvc	[]		1	outlook	Donated
+179420818	0		user	install visual studio 2019	NOTSURE	other_domain	install visual studio 2019	[]		1	outlook	Donated
+179422992	0		user	personalized search query	NOTSURE	other_domain	personalized search query	[]		1	outlook	Donated
+179421738	0		user	jer gallagher web	NOTSURE	other_domain	jer gallagher web	[]		1	outlook	Donated
+179422211	0		user	meng data loss	NOTSURE	other_domain	meng data loss	[]		1	outlook	Donated
+179421461	0		user	tasun zhiy	NOTSURE	other_domain	tasun zhiy	[]		1	outlook	Donated
+179420835	0		user	access shared data	NOTSURE	other_domain	access shared data	[]		1	outlook	Donated
+179421365	0		user	dns lookup failure	NOTSURE	other_domain	dns lookup failure	[]		1	outlook	Donated
+179423213	0		user	hardik hemant	NOTSURE	other_domain	hardik hemant	[]		1	outlook	Donated
+179422759	0		user	power bi	NOTSURE	other_domain	<keyword>power bi</keyword>	[]		1	outlook	Donated
+179421710	0		user	all hands sqi	NOTSURE	other_domain	all hands sqi	[]		1	outlook	Donated
+179422040	0		user	career coaching	NOTSURE	other_domain	career coaching	[]		1	outlook	Donated
+179422721	0		user	L1RelevanceSortRandomFeatureVector lockbox	NOTSURE	other_domain	L1RelevanceSortRandomFeatureVector lockbox	[]		1	outlook	Donated
+179421558	0		user	qp for tds	NOTSURE	other_domain	qp for tds	[]		1	outlook	Donated
+179422308	0		user	public schema code review	NOTSURE	other_domain	public schema code review	[]		1	outlook	Donated
+179422029	0		user	Joint Named Entity Recognition and Disambiguation	NOTSURE	other_domain	Joint Named Entity Recognition and Disambiguation	[]		1	outlook	Donated
+179422058	0		user	Cosmos to PowerBI data refresh options	NOTSURE	other_domain	Cosmos to PowerBI data refresh options	[]		1	outlook	Donated
+179422242	0		user	ce gao	NOTSURE	other_domain	ce gao	[]		1	outlook	Donated
+179422565	0		user	ward flight review	NOTSURE	other_domain	ward flight review	[]		1	outlook	Donated
+179421325	0		user	Onboarding HDI cluster	NOTSURE	other_domain	Onboarding HDI cluster	[]		1	outlook	Donated
+179423189	0		user	customer fabric	NOTSURE	other_domain	customer fabric	[]		1	outlook	Donated
+179421781	0		user	calendar patterns	NOTSURE	other_domain	calendar patterns	[]		1	outlook	Donated
+179423046	0		user	american ex	NOTSURE	other_domain	american ex	[]		1	outlook	Donated
+179421572	0		user	byungki brian	NOTSURE	other_domain	byungki brian	[]		1	outlook	Donated
+179421132	0		user	ahmed a	NOTSURE	other_domain	ahmed a	[]		1	outlook	Donated
+179423151	0		user	morale even	NOTSURE	other_domain	morale even	[]		1	outlook	Donated
+179423219	0		user	aether cosmos	NOTSURE	other_domain	aether cosmos	[]		1	outlook	Donated
+179423019	0		user	speech kusto access	NOTSURE	other_domain	speech kusto access	[]		1	outlook	Donated
+179421960	0		user	ann shi zhang	NOTSURE	other_domain	ann shi zhang	[]		1	outlook	Donated
+179422463	0		user	omar paper reading group	NOTSURE	other_domain	omar paper reading group	[]		1	outlook	Donated
+179421769	0		user	tianshu fan demo	NOTSURE	other_domain	tianshu fan demo	[]		1	outlook	Donated
+179423239	0		user	merge nitin	NOTSURE	ambiguous	merge nitin	[]		1	outlook	Donated
+179421935	0		user	odin talks	NOTSURE	other_domain	odin talks	[]		1	outlook	Donated
+179421058	0		user	core datastore	NOTSURE	other_domain	core datastore	[]		1	outlook	Donated
+179422653	0		user	byungki asad jasteve json	NOTSURE	other_domain	byungki asad jasteve json	[]		1	outlook	Donated
+179420807	0		user	access carina	NOTSURE	other_domain	access carina	[]		1	outlook	Donated
+179422165	0		user	data ready	NOTSURE	other_domain	data ready	[]		1	outlook	Donated
+179421279	0		user	harshal satyan vassilis	NOTSURE	other_domain	harshal satyan vassilis	[]		1	outlook	Donated
+179422338	0		user	Access Control	NOTSURE	other_domain	Access Control	[]		1	outlook	Donated
+179423133	0		user	edward yan	NOTSURE	other_domain	edward yan	[]		1	outlook	Donated
+179421644	0		user	oivic meed	NOTSURE	other_domain	oivic meed	[]		1	outlook	Donated
+179421156	0		user	git fetch other branch	NOTSURE	other_domain	git fetch other branch	[]		1	outlook	Donated
+179421201	0		user	sharing type	NOTSURE	other_domain	sharing type	[]		1	outlook	Donated
+179422167	0		user	aggregation edge cases	NOTSURE	other_domain	aggregation edge cases	[]		1	outlook	Donated
+179421198	0		user	priya samnerkar kp	NOTSURE	other_domain	priya samnerkar kp	[]		1	outlook	Donated
+179421383	0		user	jon + russ	NOTSURE	other_domain	jon + russ	[]		1	outlook	Donated
+179421657	0		user	gilad slides	NOTSURE	other_domain	gilad slides	[]		1	outlook	Donated
+179421212	0		user	checkin searchgold	NOTSURE	other_domain	checkin searchgold	[]		1	outlook	Donated
+179422002	0		user	ankur nitin	NOTSURE	other_domain	ankur nitin	[]		1	outlook	Donated
+179421475	0		user	edi usage	NOTSURE	other_domain	edi usage	[]		1	outlook	Donated
+179421221	0		user	chu huang	NOTSURE	other_domain	chu huang	[]		1	outlook	Donated
+179421717	0		user	debashish jim	NOTSURE	other_domain	debashish jim	[]		1	outlook	Donated
+179422549	0		user	travel insurance	NOTSURE	other_domain	travel insurance	[]		1	outlook	Donated
+179420983	0		user	suzhou live	NOTSURE	other_domain	suzhou live	[]		1	outlook	Donated
+179421876	0		user	anton melnikov	NOTSURE	other_domain	anton melnikov	[]		1	outlook	Donated
+179422644	0		user	NLP UW/Microsoft Symposium	NOTSURE	other_domain	NLP UW/Microsoft Symposium	[]		1	outlook	Donated
+179421386	0		user	ge gao	NOTSURE	other_domain	ge gao	[]		1	outlook	Donated
+179421033	0		user	idf rerank	NOTSURE	other_domain	idf rerank	[]		1	outlook	Donated
+179421761	0		user	working set api	NOTSURE	other_domain	working set api	[]		1	outlook	Donated
+179421894	0		user	stop gap	NOTSURE	other_domain	stop gap	[]		1	outlook	Donated
+179421888	0		user	yong ni mismatch	NOTSURE	other_domain	yong ni mismatch	[]		1	outlook	Donated
+179421232	0		user	vignesh divya	NOTSURE	other_domain	vignesh divya	[]		1	outlook	Donated
+179420863	0		user	data schema	NOTSURE	other_domain	data schema	[]		1	outlook	Donated
+179422094	0		user	gaurav ye-yi lockbox approver new	NOTSURE	other_domain	gaurav ye-yi lockbox approver new	[]		1	outlook	Donated
+179421845	0		user	fred teams	NOTSURE	other_domain	fred teams	[]		1	outlook	Donated
+179421112	0		user	conversation search	NOTSURE	other_domain	conversation search	[]		1	outlook	Donated
+179421300	0		user	sangam bat	NOTSURE	other_domain	sangam bat	[]		1	outlook	Donated
+179423249	0		user	philippe rules	NOTSURE	other_domain	philippe rules	[]		1	outlook	Donated
+179421873	0		user	research access	NOTSURE	other_domain	research access	[]		1	outlook	Donated
+179421493	0		user	utah byungki	NOTSURE	other_domain	utah byungki	[]		1	outlook	Donated
+179422312	0		user	living well	NOTSURE	other_domain	living well	[]		1	outlook	Donated
+179420964	0		user	Debashish Saha	NOTSURE	other_domain	Debashish Saha	[]		1	outlook	Donated
+179422302	0		user	sukwon l1 feature list	NOTSURE	other_domain	sukwon l1 feature list	[]		1	outlook	Donated
+179422535	0		user	gvfs sd	NOTSURE	other_domain	gvfs sd	[]		1	outlook	Donated
+179421682	0		user	first advantage	NOTSURE	other_domain	first advantage	[]		1	outlook	Donated
+179423090	0		user	selvi edward liang	NOTSURE	other_domain	selvi edward liang	[]		1	outlook	Donated
+179422143	0		user	mehdi hussein	NOTSURE	other_domain	mehdi hussein	[]		1	outlook	Donated
+179421435	0		user	green card	NOTSURE	other_domain	green card	[]		1	outlook	Donated
+179422765	0		user	parental leave	NOTSURE	other_domain	parental leave	[]		1	outlook	Donated
+179421826	0		user	torus access	NOTSURE	other_domain	torus access	[]		1	outlook	Donated
+179421926	0		user	jon +	NOTSURE	other_domain	jon +	[]		1	outlook	Donated
+179421815	0		user	levi kyra	NOTSURE	other_domain	levi kyra	[]		1	outlook	Donated
+179422641	0		user	EDI user data on date	NOTSURE	other_domain	EDI user data on date	[]		1	outlook	Donated
+179422687	0		user	byun oivic	NOTSURE	other_domain	byun oivic	[]		1	outlook	Donated
+179422879	0		user	Yan rez	NOTSURE	other_domain	Yan rez	[]		1	outlook	Donated
+179422845	0		user	chenyan gilsinia	NOTSURE	other_domain	chenyan gilsinia	[]		1	outlook	Donated
+179423038	0		user	cairo grill cult	NOTSURE	other_domain	cairo grill cult	[]		1	outlook	Donated
+179421357	0		user	cogs calculator	NOTSURE	other_domain	cogs calculator	[]		1	outlook	Donated
+179423138	0		user	wei guo	NOTSURE	other_domain	wei guo	[]		1	outlook	Donated
+179422806	0		user	sharepoint powerbi dmitrij	NOTSURE	other_domain	sharepoint powerbi dmitrij	[]		1	outlook	Donated
+179421223	0		user	gaurish meed	NOTSURE	other_domain	gaurish meed	[]		1	outlook	Donated
+179422810	0		user	yeyiwang huahme	NOTSURE	other_domain	yeyiwang huahme	[]		1	outlook	Donated
+179420860	0		user	sme extension	NOTSURE	other_domain	sme extension	[]		1	outlook	Donated
+179422937	0		user	debashish hussein	NOTSURE	other_domain	debashish hussein	[]		1	outlook	Donated
+179423024	0		user	codeflow stephan	NOTSURE	other_domain	codeflow stephan	[]		1	outlook	Donated
+179423079	0		user	gilad halperin	NOTSURE	other_domain	gilad halperin	[]		1	outlook	Donated
+179421948	0		user	people property	NOTSURE	other_domain	people property	[]		1	outlook	Donated
+179422281	0		user	skype function	NOTSURE	other_domain	skype function	[]		1	outlook	Donated
+179422461	0		user	tasun zhiguo	NOTSURE	other_domain	tasun zhiguo	[]		1	outlook	Donated
+179421696	0		user	linkedin taxonomy	NOTSURE	other_domain	linkedin taxonomy	[]		1	outlook	Donated
+179423071	0		user	do we have Aether workspace for knowledge mining	NOTSURE	other_domain	do we have Aether workspace for knowledge mining	[]		1	outlook	Donated
+179422707	0		user	ward divya ssr	NOTSURE	other_domain	ward divya ssr	[]		1	outlook	Donated
+179422704	0		user	sentence encoder	NOTSURE	other_domain	sentence encoder	[]		1	outlook	Donated
+179423233	0		user	taylor aether exe	NOTSURE	other_domain	taylor aether exe	[]		1	outlook	Donated
+179422136	0		user	keyphrase overlap aggregator	NOTSURE	other_domain	keyphrase overlap aggregator	[]		1	outlook	Donated
+179421694	0		user	qf meed	NOTSURE	other_domain	qf meed	[]		1	outlook	Donated
+179420976	0		user	jenny Jenny Salomon CELA <jensal@microsoft.com>	NOTSURE	other_domain	jenny Jenny Salomon CELA &lt;jensal@microsoft.com&gt;	[]		1	outlook	Donated
+179423103	0		user	push arbitra	NOTSURE	other_domain	push arbitra	[]		1	outlook	Donated
+179420951	0		user	tasun dmitrij	NOTSURE	other_domain	tasun dmitrij	[]		1	outlook	Donated
+179423144	0		user	Cluster o365ccmarscommonnam is not configured in Aether	NOTSURE	other_domain	Cluster o365ccmarscommonnam is not configured in Aether	[]		1	outlook	Donated
+179423026	0		user	ecs online application	NOTSURE	other_domain	ecs online application	[]		1	outlook	Donated
+179420805	0		user	juhi codeflow	NOTSURE	other_domain	juhi codeflow	[]		1	outlook	Donated
+179421775	0		user	contact perf	NOTSURE	other_domain	contact perf	[]		1	outlook	Donated
+179420978	0		user	windows hello	NOTSURE	other_domain	windows hello	[]		1	outlook	Donated
+179421275	0		user	sss csg indexes	NOTSURE	other_domain	sss csg indexes	[]		1	outlook	Donated
+179422530	0		user	tech screen	NOTSURE	other_domain	tech screen	[]		1	outlook	Donated
+179422816	0		user	karan rai	NOTSURE	other_domain	karan rai	[]		1	outlook	Donated
+179422109	0		user	namprd00 outage	NOTSURE	other_domain	namprd00 outage	[]		1	outlook	Donated
+179422580	0		user	inputtype unknown	NOTSURE	other_domain	inputtype unknown	[]		1	outlook	Donated
+179420879	0		user	know your numbers	NOTSURE	other_domain	know your numbers	[]		1	outlook	Donated
+179422168	0		user	ms poll	NOTSURE	other_domain	ms poll	[]		1	outlook	Donated
+179421811	0		user	features sukwon	NOTSURE	other_domain	features sukwon	[]		1	outlook	Donated
+179422401	0		user	zuojun shah	NOTSURE	other_domain	zuojun shah	[]		1	outlook	Donated
+179423252	0		user	tokens thomas cosmos	NOTSURE	other_domain	tokens thomas cosmos	[]		1	outlook	Donated
+179422703	0		user	gerold hintz	NOTSURE	other_domain	gerold hintz	[]		1	outlook	Donated
+179422783	0		user	101 xide	NOTSURE	other_domain	101 xide	[]		1	outlook	Donated
+179423097	0		user	zhi chen	NOTSURE	other_domain	zhi chen	[]		1	outlook	Donated
+179423266	0		user	meed renew	NOTSURE	other_domain	meed renew	[]		1	outlook	Donated
+179421753	0		user	splat mark	NOTSURE	other_domain	splat mark	[]		1	outlook	Donated
+179422467	0		user	ward SBS	NOTSURE	other_domain	ward SBS	[]		1	outlook	Donated
+179422993	0		user	fred chris efesa	NOTSURE	other_domain	fred chris efesa	[]		1	outlook	Donated
+179421878	0		user	msra-edi-1 password	NOTSURE	other_domain	msra-edi-1 password	[]		1	outlook	Donated
+179423193	0		user	edi user data	NOTSURE	other_domain	edi user data	[]		1	outlook	Donated
+179421667	0		user	girish sn	NOTSURE	other_domain	girish sn	[]		1	outlook	Donated
+179422954	0		user	health insurance	NOTSURE	other_domain	health insurance	[]		1	outlook	Donated
+179420742	0		user	ikea sofa soderhamn	NOTSURE	other_domain	ikea sofa soderhamn	[]		1	outlook	Donated
+179421924	0		user	query for	NOTSURE	other_domain	query for	[]		1	outlook	Donated
+179423007	0		user	email view action	NOTSURE	other_domain	email view action	[]		1	outlook	Donated
+179421484	0		user	json efesa	NOTSURE	other_domain	json efesa	[]		1	outlook	Donated
+179422977	0		user	jiangsheng eval	NOTSURE	other_domain	jiangsheng eval	[]		1	outlook	Donated
+179421713	0		user	Processing Aggregated Mailbox In GAS V2	NOTSURE	other_domain	Processing Aggregated Mailbox In GAS V2	[]		1	outlook	Donated
+179420872	0		user	account management	NOTSURE	other_domain	account management	[]		1	outlook	Donated
+179420946	0		user	leak dmt pii	NOTSURE	other_domain	leak dmt pii	[]		1	outlook	Donated
+179420847	0		user	odata dictionary	NOTSURE	other_domain	odata dictionary	[]		1	outlook	Donated
+179422134	0		user	OIVIC MEED	NOTSURE	other_domain	OIVIC MEED	[]		1	outlook	Donated
+179422255	0		user	Implement deduping in the Spo Lss merger	NOTSURE	other_domain	Implement deduping in the Spo Lss merger	[]		1	outlook	Donated
+179423187	0		user	lss learning	NOTSURE	other_domain	lss learning	[]		1	outlook	Donated
+179422533	0		user	For Testing Purposes Only	NOTSURE	other_domain	For Testing Purposes Only	[]		1	outlook	Donated
+179421351	0		user	code review	NOTSURE	other_domain	code review	[]		1	outlook	Donated
+179423131	0		user	gilsinia cluster	NOTSURE	other_domain	gilsinia cluster	[]		1	outlook	Donated
+179421740	0		user	zero odb ola	NOTSURE	other_domain	zero odb ola	[]		1	outlook	Donated
+179420909	0		user	email id folder move	NOTSURE	other_domain	email id folder move	[]		1	outlook	Donated
+179421066	0		user	ming wu	NOTSURE	other_domain	ming wu	[]		1	outlook	Donated
+179422652	0		user	rajesh meed	NOTSURE	other_domain	rajesh meed	[]		1	outlook	Donated
+179422910	0		user	git fetch branch	NOTSURE	other_domain	git fetch branch	[]		1	outlook	Donated
+179422273	0		user	pull request query ranking substrate	NOTSURE	other_domain	pull request query ranking substrate	[]		1	outlook	Donated
+179422436	0		user	craig mc	NOTSURE	other_domain	craig mc	[]		1	outlook	Donated
+179422973	0		user	kunal shiproom	NOTSURE	other_domain	kunal shiproom	[]		1	outlook	Donated
+179421553	0		user	master cho	NOTSURE	other_domain	master cho	[]		1	outlook	Donated
+179422147	0		user	hussein debashish	NOTSURE	other_domain	hussein debashish	[]		1	outlook	Donated
+179422248	0		user	Coral and OTG data log	NOTSURE	other_domain	Coral and OTG data log	[]		1	outlook	Donated
+179422976	0		user	chu mfcmapi	NOTSURE	other_domain	chu mfcmapi	[]		1	outlook	Donated
+179421174	0		user	Cortana Annotated Data for Calendar domain	NOTSURE	other_domain	Cortana Annotated Data for Calendar domain	[]		1	outlook	Donated
+179422711	0		user	divya people API beta	NOTSURE	other_domain	divya people API beta	[]		1	outlook	Donated
+179422793	0		user	certificate diploma	NOTSURE	other_domain	certificate diploma	[]		1	outlook	Donated
+179422172	0		user	azure KPE	NOTSURE	other_domain	azure KPE	[]		1	outlook	Donated
+179422513	0		user	codeflow warmup augmentationconfig	NOTSURE	other_domain	codeflow warmup augmentationconfig	[]		1	outlook	Donated
+179422991	0		user	jen intern	NOTSURE	other_domain	jen intern	[]		1	outlook	Donated
+179421579	0		user	eba dependency	NOTSURE	other_domain	eba dependency	[]		1	outlook	Donated
+179422192	0		user	uber expense	NOTSURE	other_domain	uber expense	[]		1	outlook	Donated
+179421336	0		user	sophia + xiao	NOTSURE	other_domain	sophia + xiao	[]		1	outlook	Donated
+179423112	0		user	personalization opportunities	NOTSURE	other_domain	personalization opportunities	[]		1	outlook	Donated
+179421291	0		user	flu shot	NOTSURE	other_domain	flu shot	[]		1	outlook	Donated
+179421235	0		user	AOS filed	NOTSURE	other_domain	AOS filed	[]		1	outlook	Donated
+179422189	0		user	Hello World!	NOTSURE	other_domain	Hello World!	[]		1	outlook	Donated
+179422101	0		user	angelina core data	NOTSURE	other_domain	angelina core data	[]		1	outlook	Donated
+179421145	0		user	shobana model	NOTSURE	other_domain	shobana model	[]		1	outlook	Donated
+179421247	0		user	harshal iris	NOTSURE	other_domain	harshal iris	[]		1	outlook	Donated
+179420854	0		user	david chen	NOTSURE	other_domain	david chen	[]		1	outlook	Donated
+179421421	0		user	tsv extractor	NOTSURE	other_domain	tsv extractor	[]		1	outlook	Donated
+179421993	0		user	dmitry patrakov	NOTSURE	other_domain	dmitry patrakov	[]		1	outlook	Donated
+179421863	0		user	ngram api	NOTSURE	other_domain	ngram api	[]		1	outlook	Donated
+179421542	0		user	qing lan	NOTSURE	other_domain	qing lan	[]		1	outlook	Donated
+179421587	0		user	craig mcintyre	NOTSURE	other_domain	craig mcintyre	[]		1	outlook	Donated
+179422026	0		user	qf segment	NOTSURE	other_domain	qf segment	[]		1	outlook	Donated
+179421841	0		user	abhishek rao	NOTSURE	other_domain	abhishek rao	[]		1	outlook	Donated
+179422800	0		user	zhiguo ben	NOTSURE	other_domain	zhiguo ben	[]		1	outlook	Donated
+179422322	0		user	gaurish dsvm	NOTSURE	other_domain	gaurish dsvm	[]		1	outlook	Donated
+179423010	0		user	Current requirements on OIVIC MEED	NOTSURE	other_domain	Current requirements on OIVIC MEED	[]		1	outlook	Donated
+179422319	0		user	ivan basov	NOTSURE	other_domain	ivan basov	[]		1	outlook	Donated
+179422671	0		user	meet ahmed	NOTSURE	other_domain	meet ahmed	[]		1	outlook	Donated
+179421376	0		user	first tech	NOTSURE	other_domain	first tech	[]		1	outlook	Donated
+179421521	0		user	ling + ananth	NOTSURE	other_domain	ling + ananth	[]		1	outlook	Donated
+179423164	0		user	Ahmad Al-Kashef <ahmal@microsoft.com>	NOTSURE	other_domain	Ahmad Al-Kashef &lt;ahmal@microsoft.com&gt;	[]		1	outlook	Donated
+179422377	0		user	Kiera Ellis	NOTSURE	other_domain	Kiera Ellis	[]		1	outlook	Donated
+179421653	0		user	eastside christian school	NOTSURE	other_domain	eastside christian school	[]		1	outlook	Donated
+179422107	0		user	skype enable	NOTSURE	other_domain	skype enable	[]		1	outlook	Donated
+179420748	0		user	build and infra team	NOTSURE	other_domain	build and infra team	[]		1	outlook	Donated
+179422854	0		user	acronyms divya	NOTSURE	other_domain	acronyms divya	[]		1	outlook	Donated
+179421084	0		user	substrate dedupe	NOTSURE	other_domain	substrate dedupe	[]		1	outlook	Donated
+179423240	0		user	divya keyphrases	NOTSURE	other_domain	divya keyphrases	[]		1	outlook	Donated
+179420801	0		user	O365EngSysDisc flight setting test	NOTSURE	other_domain	O365EngSysDisc flight setting test	[]		1	outlook	Donated
+179420851	0		user	t mobile plan	NOTSURE	other_domain	t mobile plan	[]		1	outlook	Donated
+179423042	0		user	salil vijay cosmos	NOTSURE	other_domain	salil vijay cosmos	[]		1	outlook	Donated
+179422627	0		user	repeated queries	NOTSURE	other_domain	repeated queries	[]		1	outlook	Donated
+179423178	0		user	promo congratulation	NOTSURE	other_domain	promo congratulation	[]		1	outlook	Donated
+179421108	0		user	learning session shah	NOTSURE	other_domain	learning session shah	[]		1	outlook	Donated
+179421559	0		user	curatedaction tvf	NOTSURE	other_domain	curatedaction tvf	[]		1	outlook	Donated
+179422245	0		user	datastore workfusion user feedback	NOTSURE	other_domain	datastore workfusion user feedback	[]		1	outlook	Donated
+179421082	0		user	vipin linkedin	NOTSURE	other_domain	vipin linkedin	[]		1	outlook	Donated
+179422097	0		user	office move	NOTSURE	other_domain	office move	[]		1	outlook	Donated
+179422033	0		user	suyash kpe	NOTSURE	other_domain	suyash kpe	[]		1	outlook	Donated
+179423280	0		user	jon hamaker	NOTSURE	other_domain	jon hamaker	[]		1	outlook	Donated
+179422177	0		user	divya ankur	NOTSURE	other_domain	divya ankur	[]		1	outlook	Donated
+179421615	0		user	Hanqi Yu	NOTSURE	other_domain	Hanqi Yu	[]		1	outlook	Donated
+179421890	0		user	byungki bm25 checkin	NOTSURE	other_domain	byungki bm25 checkin	[]		1	outlook	Donated
+179420766	0		user	Satish Bagalkotkar	NOTSURE	other_domain	Satish Bagalkotkar	[]		1	outlook	Donated
+179422305	0		user	derek worcester	NOTSURE	other_domain	derek worcester	[]		1	outlook	Donated
+179422832	0		user	abhishek arun	NOTSURE	other_domain	abhishek arun	[]		1	outlook	Donated
+179420845	0		user	lucia speech	NOTSURE	other_domain	lucia speech	[]		1	outlook	Donated
+179422679	0		user	lauren + driver	NOTSURE	other_domain	lauren + driver	[]		1	outlook	Donated
+179422678	0		user	tenant pmi	NOTSURE	other_domain	tenant pmi	[]		1	outlook	Donated
+179421447	0		user	bala tenant size	NOTSURE	other_domain	bala tenant size	[]		1	outlook	Donated
+179422450	0		user	hailong access	NOTSURE	other_domain	hailong access	[]		1	outlook	Donated
+179421659	0		user	xue yang	NOTSURE	other_domain	xue yang	[]		1	outlook	Donated
+179422089	0		user	ming wu	NOTSURE	other_domain	ming wu	[]		1	outlook	Donated
+179422592	0		user	H1 B	NOTSURE	other_domain	H1 B	[]		1	outlook	Donated
+179423127	0		user	Reporting Foreign Margin Gold trading account to IRS	NOTSURE	other_domain	Reporting Foreign Margin Gold trading account to IRS	[]		1	outlook	Donated
+179422840	0		user	gu oivic	NOTSURE	other_domain	gu oivic	[]		1	outlook	Donated
+179423039	0		user	jiji body	NOTSURE	other_domain	jiji body	[]		1	outlook	Donated
+179421613	0		user	us immig	NOTSURE	other_domain	us immig	[]		1	outlook	Donated
+179421708	0		user	WorkFusion carina password	NOTSURE	other_domain	WorkFusion carina password	[]		1	outlook	Donated
+179420920	0		user	david ward teams	NOTSURE	other_domain	david ward teams	[]		1	outlook	Donated
+179422440	0		user	TCP View with Conversation context+Winning domain info	NOTSURE	other_domain	TCP View with Conversation context+Winning domain info	[]		1	outlook	Donated
+179420786	0		user	sharman hussein	NOTSURE	other_domain	sharman hussein	[]		1	outlook	Donated
+179420914	0		user	guided NL	NOTSURE	other_domain	guided NL	[]		1	outlook	Donated
+179420838	0		user	siteid webid uniqueid	NOTSURE	other_domain	siteid webid uniqueid	[]		1	outlook	Donated
+179421467	0		user	nuget source	NOTSURE	other_domain	nuget source	[]		1	outlook	Donated
+179420778	0		user	tds sqi	NOTSURE	other_domain	tds sqi	[]		1	outlook	Donated
+179421178	0		user	dwight lucia redact	NOTSURE	other_domain	dwight lucia redact	[]		1	outlook	Donated
+179423276	0		user	Dmitrij petter	NOTSURE	other_domain	Dmitrij petter	[]		1	outlook	Donated
+179422246	0		user	chen offline index	NOTSURE	other_domain	chen offline index	[]		1	outlook	Donated
+179421953	0		user	compliant repo	NOTSURE	other_domain	compliant repo	[]		1	outlook	Donated
+179421410	0		user	gilsinia splat	NOTSURE	other_domain	gilsinia splat	[]		1	outlook	Donated
+179422688	0		user	kalyan byunkgi gpu	NOTSURE	other_domain	kalyan byunkgi gpu	[]		1	outlook	Donated
+179420900	0		user	Deep brownbag	NOTSURE	other_domain	Deep brownbag	[]		1	outlook	Donated
+179422212	0		user	sqi logo	NOTSURE	other_domain	sqi logo	[]		1	outlook	Donated
+179421986	0		user	aggregated kpe index	NOTSURE	other_domain	aggregated kpe index	[]		1	outlook	Donated
+179421913	0		user	mike brian idf	NOTSURE	other_domain	mike brian idf	[]		1	outlook	Donated
+179422692	0		user	zhiguo consist	NOTSURE	other_domain	zhiguo consist	[]		1	outlook	Donated
+179422694	0		user	kalyan byungki	NOTSURE	other_domain	kalyan byungki	[]		1	outlook	Donated
+179423009	0		user	rahul divya QF	NOTSURE	other_domain	rahul divya QF	[]		1	outlook	Donated
+179422120	0		user	huahme definition	NOTSURE	other_domain	huahme definition	[]		1	outlook	Donated
+179420991	0		user	SQI newsletter	NOTSURE	other_domain	SQI newsletter	[]		1	outlook	Donated
+179420936	0		user	ivan tao	NOTSURE	other_domain	ivan tao	[]		1	outlook	Donated
+179422253	0		user	codeflow bat	NOTSURE	other_domain	codeflow bat	[]		1	outlook	Donated
+179421701	0		user	fred liu	NOTSURE	other_domain	fred liu	[]		1	outlook	Donated
+179422822	0		user	of lift	NOTSURE	other_domain	of lift	[]		1	outlook	Donated
+179421639	0		user	oivic adam	NOTSURE	other_domain	oivic adam	[]		1	outlook	Donated
+179422891	0		user	Curated User	NOTSURE	other_domain	Curated User	[]		1	outlook	Donated
+179423155	0		user	john brons	NOTSURE	other_domain	john brons	[]		1	outlook	Donated
+179422342	0		user	marcus + savas	NOTSURE	other_domain	marcus + savas	[]		1	outlook	Donated
+179422547	0		user	async await task run	NOTSURE	other_domain	async await task run	[]		1	outlook	Donated
+179422836	0		user	edi user da	NOTSURE	other_domain	edi user da	[]		1	outlook	Donated
+179422928	0		user	Jim boyle	NOTSURE	other_domain	Jim boyle	[]		1	outlook	Donated
+179423028	0		user	group policy	NOTSURE	other_domain	group policy	[]		1	outlook	Donated
+179421760	0		user	chi wang	NOTSURE	other_domain	chi wang	[]		1	outlook	Donated
+179422254	0		user	sadhika sr	NOTSURE	other_domain	sadhika sr	[]		1	outlook	Donated
+179422157	0		user	hemant speech	NOTSURE	other_domain	hemant speech	[]		1	outlook	Donated
+179421162	0		user	simplified module sean	NOTSURE	other_domain	simplified module sean	[]		1	outlook	Donated
+179422117	0		user	omar sdfv2	NOTSURE	other_domain	omar sdfv2	[]		1	outlook	Donated
+179420994	0		user	hang ren	NOTSURE	other_domain	hang ren	[]		1	outlook	Donated
+179422370	0		user	vincent TCP	NOTSURE	other_domain	vincent TCP	[]		1	outlook	Donated
+179422204	0		user	real user speaker tasun meng	NOTSURE	other_domain	real user speaker tasun meng	[]		1	outlook	Donated
+179422946	0		user	rosen pl	NOTSURE	other_domain	rosen pl	[]		1	outlook	Donated
+179421680	0		user	speaker tasun	NOTSURE	other_domain	speaker tasun	[]		1	outlook	Donated
+179423247	0		user	Harshal Priyadarshi flight	NOTSURE	other_domain	Harshal Priyadarshi flight	[]		1	outlook	Donated
+179422844	0		user	masaki access	NOTSURE	other_domain	masaki access	[]		1	outlook	Donated
+179421138	0		user	sean yang	NOTSURE	other_domain	sean yang	[]		1	outlook	Donated
+179421371	0		user	yifan chen	NOTSURE	other_domain	yifan chen	[]		1	outlook	Donated
