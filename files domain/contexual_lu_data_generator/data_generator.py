@@ -44,7 +44,8 @@ class Data(object):
     def __init__(self):
         # positive data for data tag augmentation
         #self.posdata_scale_multiplier = 1000  # multiplier to amplify the positive_dataset
-        self.posdata_scale_multiplier = 500  # multiplier to amplify the positive_dataset
+        #self.posdata_scale_multiplier = 500  # multiplier to amplify the positive_dataset
+        self.posdata_scale_multiplier = 400  # multiplier to amplify the positive_dataset
         self.overtrigger_suffix_upper_bound = 8 # current range 0-9
         self.overtrigger_suffix_value_upper_bound = 90000
         self.overtrigger_suffix_value_low_bound = 10000
@@ -68,6 +69,8 @@ class Data(object):
         self.filekeylistwithsuffix = []
 
         self.patterns = {}  # pattern: frequency
+        # for duplicate pattern, frequency_offset will store the maximum one
+        self.patterns_freq_offset = {}  # pattern: frequency_offset
         self.patterns_domain = {}  # pattern: Domain
         self.patterns_annotated_queries = {}  # pattern: annotated queries
         self.patterns_intent = {}  # pattern: annotated queries
@@ -259,6 +262,10 @@ class Data(object):
                 self.patterns_annotated_queries[(p.split('\t')[0])] = p.split('\t')[3]
                 self.patterns_intent[(p.split('\t')[0])] = p.split('\t')[4]
 
+                #store freq offset
+                self.patterns_freq_offset[(p.split('\t')[0])] = int(p.split('\t')[5])
+                
+
 
 
     def load_patterns(self, all_patterns_files, **kwargs):
@@ -307,6 +314,10 @@ class Data(object):
 
                     self.patterns_annotated_queries[(p.split('\t')[0])] = p.split('\t')[3]
                     self.patterns_intent[(p.split('\t')[0])] = p.split('\t')[4]
+
+
+                    # store freq offset
+                    self.patterns_freq_offset[(p.split('\t')[0])] = int(p.split('\t')[5])
 
                     # for debug
                     print("patterns num = {}".format(len(self.patterns)))
@@ -370,6 +381,7 @@ class Data(object):
                 domain = p.split('\t')[2]
                 annotation = p.split('\t')[3]
                 intent = p.split('\t')[4]
+                freq_offset = p.split('\t')[5]
                 
                 # for debug
                 #print("mapped domain from domain {} to {}".format(domain, newdomain))
@@ -430,6 +442,9 @@ class Data(object):
 
                 self.patterns_annotated_queries[query] = annotation
                 self.patterns_intent[query] = newintent
+
+                #store freq offset
+                self.patterns_freq_offset[query] = int(freq_offset)
 
 
         
@@ -670,10 +685,23 @@ class Data(object):
         # finding tags in a query
         tags = re.findall(r'<(.*?)>', pattern)
 
+
+        #if len(tags) == 0:
+        #    freq = 1  # self.posdata_scale_multiplier
+        #else:
+        #    freq = int(freq * len(tags) * self.posdata_scale_multiplier)
+
+        # add freq offset 
+        # at least repeat one time
         if len(tags) == 0:
             freq = 1  # self.posdata_scale_multiplier
         else:
-            freq = int(freq * len(tags) * self.posdata_scale_multiplier)
+            # for deubg
+            #print("pattern: {}, patterns_freq_offset: {}".format(pattern, self.patterns_freq_offset[pattern]))
+
+            freq = int(freq * len(tags) * (max(1, self.posdata_scale_multiplier + self.patterns_freq_offset[pattern])))
+
+
 
         ## for debug
         ## for high frequency patterns : 
