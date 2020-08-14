@@ -1,0 +1,11 @@
+TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	TaskFrameEntityStates	TaskFrameGUID	SpeechPeopleDisambiguationGrammarMatches	ConversationalContext
+0		's	file_other						
+0		's	file_other						
+0		's	file_other						
+0		's	file_other						
+0		's	file_other						
+0		's	file_other						
+0		's	file_other						
+0		's	file_other						
+0		's	file_other						
+0		's	file_other						
