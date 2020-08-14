@@ -113,6 +113,84 @@ Debug B2 WW is Impossible
 <email_title>
 Debug B2 WW is Impossible
 
+if 要看answer 然後選ring
+outlook search > answer / email search 
+我只要看answer
+
+
+placeholder for teamsmessage 但是現在因該不重要
+teams search (for teamsmessage search)
+
+
+
+========================
+
+feature set in QAS
+========================
+18: MaaFGlobalIdAllocator 
+--in=intent_ngram_1gram,intent_ngram_2gram,intent_ngram_3gram,intent_mlg_lexicon,intent_PreviousTurnIntent_default,intent_PreviousTurnDomain_default,intent_TaskFrameStatus_default,filekeywordOrfilename_matches_conj 
+--out=intent_features --mapping=files_enus_mv3.intent.features.bin
+
+0 to 7 是input 的 feture order 
+files_enus_mv1.intent.features.bin
+
+// first colmun : input feature 的名子
+// secomd column : local feature 
+
+for 
+        Inputs:
+                ExternalInput1 (tag: 0, string: 2)
+                        open[0,0]=1.0
+                        def[1,1]=1.0
+        Output:
+                intent_ngram_1gram (tag: 2, string: 0)
+                        18[0,0]=1.0
+                        19[0,0]=1.0
+
+18 ,19 就是second column (在一個desc.txt)
+
+// third 
+會map 到 gloal 的global feature index
+
+
+0	22	10
+0	23	11
+0	24	12
+0	25	13
+0	26	14
+1	27	15
+1	28	16
+1	29	17
+1	30	18
+1	32	19
+1	33	20
+2	37	21
+2	40	22
+3	10	23
+3	26	24
+0	42	25
+
+
+ngram 的index 跟token
+E:\fileAnswer_data_synthesis\CMF_training\output_intent_answer_pergra\intent_svm\tmp\build_tmp\intent.ngram\1gram.txt
+
+同樣的token 會增加 begin 跟end 的 額外的features 
+
+
+BeginningOfDoc find	0
+find	1
+
+meeting	51
+meeting EndOfDoc	52
+
+
+
+
+
+========================
+Compliant QAS
+========================
+
 
 
 ========================
