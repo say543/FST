@@ -1142,6 +1142,7 @@ class Data(object):
         # add \t split to extra 'extra negative data'
         # to make sure 'extra negative data' consistent with negative data format
 
+        '''
         with open(filename, encoding='utf-8') as f:
             neg_data = [line.split('\t')[2]
                                   for line in f.readlines()[1:]]
@@ -1170,6 +1171,38 @@ class Data(object):
         with open(filename, encoding='utf-8') as f:
             negative_data_ConversationalContext = [line.split('\t')[9]
                                   for line in f.readlines()[1:]]
+        '''
+
+
+        with open(filename, encoding='utf-8') as f:
+            neg_data = [line.rstrip('\n').split('\t')[2]
+                                  for line in f.readlines()[1:]]
+        with open(filename, encoding='utf-8') as f:
+            negative_data_intent = [line.rstrip('\n').split('\t')[3]
+                                  for line in f.readlines()[1:]]
+
+        with open(filename, encoding='utf-8') as f:
+            negative_data_PreviousTurnDomain = [line.rstrip('\n').split('\t')[4]
+                                  for line in f.readlines()[1:]]
+
+        with open(filename, encoding='utf-8') as f:
+            negative_data_TaskFrameStatus = [line.rstrip('\n').split('\t')[5]
+                                  for line in f.readlines()[1:]]
+        with open(filename, encoding='utf-8') as f:
+            negative_data_TaskFrameEntityStates = [line.rstrip('\n').split('\t')[6]
+                                  for line in f.readlines()[1:]]
+        with open(filename, encoding='utf-8') as f:
+            negative_data_TaskFrameGUID = [line.rstrip('\n').split('\t')[7]
+                                  for line in f.readlines()[1:]]
+
+        with open(filename, encoding='utf-8') as f:
+            negative_data_SpeechPeopleDisambiguationGrammarMatches = [line.rstrip('\n').split('\t')[8]
+                                  for line in f.readlines()[1:]]
+
+        with open(filename, encoding='utf-8') as f:
+            negative_data_ConversationalContext = [line.rstrip('\n').split('\t')[9]
+                                  for line in f.readlines()[1:]]
+
 
         '''
         with open(filename, encoding='utf-8') as f:
@@ -1220,6 +1253,9 @@ class Data(object):
 
     def load_negative_data(self, data_filename, extra_data_filename = None):
 
+
+
+
         '''
         with open(data_filename, encoding='utf-8') as f:
             self.negative_data = [line.strip().split('\t')[2]
@@ -1250,6 +1286,35 @@ class Data(object):
         '''
 
         with open(data_filename, encoding='utf-8') as f:
+            self.negative_data = [line.rstrip('\n').split('\t')[2]
+                                  for line in f.readlines()[1:]]
+        with open(data_filename, encoding='utf-8') as f:
+            self.negative_data_intent = [line.rstrip('\n').split('\t')[3]
+                                  for line in f.readlines()[1:]]
+                              
+        with open(data_filename, encoding='utf-8') as f:
+            self.negative_data_PreviousTurnDomain = [line.rstrip('\n').split('\t')[4]
+                                  for line in f.readlines()[1:]]
+        with open(data_filename, encoding='utf-8') as f:
+            self.negative_data_TaskFrameStatus = [line.rstrip('\n').split('\t')[5]
+                                  for line in f.readlines()[1:]]
+
+        with open(data_filename, encoding='utf-8') as f:
+            self.negative_data_TaskFrameEntityStates = [line.rstrip('\n').split('\t')[6]
+                                  for line in f.readlines()[1:]]
+        with open(data_filename, encoding='utf-8') as f:
+            self.negative_data_TaskFrameGUID = [line.rstrip('\n').split('\t')[7]
+                                  for line in f.readlines()[1:]]
+        with open(data_filename, encoding='utf-8') as f:
+            self.negative_data_SpeechPeopleDisambiguationGrammarMatches = [line.rstrip('\n').split('\t')[8]
+                                  for line in f.readlines()[1:]]
+        with open(data_filename, encoding='utf-8') as f:
+            self.negative_data_ConversationalContext = [line.rstrip('\n').split('\t')[9]
+                                  for line in f.readlines()[1:]]
+
+
+        '''
+        with open(data_filename, encoding='utf-8') as f:
             self.negative_data = [line.split('\t')[2]
                                   for line in f.readlines()[1:]]
         with open(data_filename, encoding='utf-8') as f:
@@ -1275,6 +1340,7 @@ class Data(object):
         with open(data_filename, encoding='utf-8') as f:
             self.negative_data_ConversationalContext = [line.split('\t')[9]
                                   for line in f.readlines()[1:]]
+        '''
 
         #for debug 
         #print("negative data before preprocessing {}".format(self.negative_data))
