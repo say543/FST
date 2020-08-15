@@ -144,31 +144,30 @@ for
                         def[1,1]=1.0
         Output:
                 intent_ngram_1gram (tag: 2, string: 0)
-                        18[0,0]=1.0
-                        19[0,0]=1.0
+                        6[0,0]=1.0
+                        24[0,0]=1.0
 
-18 ,19 就是second column (在一個desc.txt)
+6,24 就是second column (因為是1 gram first column 會是1)
+
+在一個desc.txt  的編號還要問一下
 
 // third 
 會map 到 gloal 的global feature index
 
 
-0	22	10
-0	23	11
+0	1	0
+0	2	1
+0	3	2
+0	4	3
+0	5	4
+0	6	5
+0	7	6
+1	13	7
+3	10	8
+3	26	9
+7	10	10
+7	26	11
 0	24	12
-0	25	13
-0	26	14
-1	27	15
-1	28	16
-1	29	17
-1	30	18
-1	32	19
-1	33	20
-2	37	21
-2	40	22
-3	10	23
-3	26	24
-0	42	25
 
 
 ngram 的index 跟token
