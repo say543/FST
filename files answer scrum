@@ -190,7 +190,7 @@ features order(寫死) (starting from zero)
 1gram
 2gram
 3gram
-lexcion
+lexcion (desc,  all content inside will share the same feature set name, the first column)
 pcfg
 external feature (previous intent )
 
