@@ -186,6 +186,43 @@ meeting EndOfDoc	52
 
 
 
+features order(寫死) (starting from zero)
+1gram
+2gram
+3gram
+lexcion
+pcfg
+external feature (previous intent )
+
+additional featurization pipieline
+數組的順序  的order
+
+
+
+addtional external input 只能用
+BodySurfaceStream
+not
+
+
+external_input1 (會是empty, 不抱錯)
+
+所以要preprocessing  是必須的 
+
+不能用自己的
+
+
+yong 
+offline
+
+pattern.title.conj.pipeline.txt
+
+offline 的desc 跟online 的也不一樣
+
+
+
+
+
+
 
 ========================
 Compliant QAS
