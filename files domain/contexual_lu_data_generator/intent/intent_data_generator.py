@@ -43,11 +43,11 @@ class Data(object):
 
     def __init__(self):
         # positive data for data tag augmentation
-        #self.posdata_scale_multiplier = 1000  # multiplier to amplify the positive_dataset
+        self.posdata_scale_multiplier = 1000  # multiplier to amplify the positive_dataset
         #self.posdata_scale_multiplier = 500  # multiplier to amplify the positive_dataset
         #self.posdata_scale_multiplier = 400  # multiplier to amplify the positive_dataset
-        self.posdata_scale_multiplier = 5  # multiplier to amplify the positive_dataset
-        #self.posdata_scale_multiplier = 300  # multiplier to amplify the positive_dataset
+        #self.posdata_scale_multiplier = 5  # multiplier to amplify the positive_dataset
+        #self.posdata_scale_multiplier = 200  # multiplier to amplify the positive_dataset
         self.overtrigger_suffix_upper_bound = 8 # current range 0-9
         self.overtrigger_suffix_value_upper_bound = 90000
         self.overtrigger_suffix_value_low_bound = 10000
@@ -1030,10 +1030,10 @@ class Data(object):
         return queries
     '''
 
-    #def get_data(self, high_freq_multiplier=9, low_freq_multiplier=1):
+    def get_data(self, high_freq_multiplier=9, low_freq_multiplier=1):
     #def get_data(self, high_freq_multiplier=4, low_freq_multiplier=1):
     #def get_data(self, high_freq_multiplier=2, low_freq_multiplier=1):
-    def get_data(self, high_freq_multiplier=1, low_freq_multiplier=1):
+    #def get_data(self, high_freq_multiplier=1, low_freq_multiplier=1):
         print("Generating data from patterns.")
 
         ## positive_data : list of list
