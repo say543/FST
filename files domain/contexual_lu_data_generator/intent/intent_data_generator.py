@@ -46,7 +46,7 @@ class Data(object):
         #self.posdata_scale_multiplier = 1000  # multiplier to amplify the positive_dataset
         #self.posdata_scale_multiplier = 500  # multiplier to amplify the positive_dataset
         #self.posdata_scale_multiplier = 400  # multiplier to amplify the positive_dataset
-        self.posdata_scale_multiplier = 1  # multiplier to amplify the positive_dataset
+        self.posdata_scale_multiplier = 5  # multiplier to amplify the positive_dataset
         #self.posdata_scale_multiplier = 300  # multiplier to amplify the positive_dataset
         self.overtrigger_suffix_upper_bound = 8 # current range 0-9
         self.overtrigger_suffix_value_upper_bound = 90000
@@ -1412,7 +1412,7 @@ class Data(object):
 
 
 
-    def write_data(self, data_filename, neg_filename, pos_filename, keylist_filename, suffixkeylist_filename, teams_positve_data_filename):
+    def write_data(self, data_filename, neg_filename, pos_filename, keylist_filename, suffixkeylist_filename,  teams_positve_data_filename):
         num_pos_data = len(self.positive_data)
         num_neg_data = len(self.negative_data)
         print("Positive samples: {} | Negative samples {}".format(
@@ -1424,7 +1424,17 @@ class Data(object):
         # with open("Duplicate_queries.txt", 'w', encoding='utf-8') as f:
         #     dup_queries = [query for query, cnt in Counter(self.positive_data).items() if cnt > 100]  
         #     for query in dup_queries:
-        #         f.write('{}\n'.format(query))  
+        #         f.write('{}\n'.format(query)) 
+        # 
+        # 
+        # 
+        # 
+         
+        with open(teams_positve_data_filename, encoding='utf-8') as f:
+            teams_pos_data = [line.rstrip('\n')
+                                  for line in f.readlines()[1:]]
+
+
 
         print("Random tags selected from additional pool: {}, from random generated pool {}".format(
             self.additional_filetag_selection_cnt, self.random_filetag_selection_cnt))
@@ -1450,7 +1460,7 @@ class Data(object):
             for kw in set(self.filekeylistwithsuffix):
                 f.write("{}\n".format(kw))
 
-        print("Writing all data to file: {}".format(data_filename))
+        print("Writing all data {} to file: {}".format(len(self.positive_data) +len(teams_pos_data) + len(self.negative_data), data_filename))
         with open(data_filename, 'w', encoding='utf-8') as f:
             # new header
             #f.write("TurnNumber\tPreviousTurnDomain\tquery\tdomain\n")
@@ -1459,30 +1469,46 @@ class Data(object):
             #f.write("TurnNumber\tPreviousTurnIntent\tquery\tintent\tPreviousTurnDomain\tTaskFrameStatus\tTaskFrameEntityStates
 #TaskFrameGUID\tSpeechPeopleDisambiguationGrammarMatches\tConversationalContext\n")
 
-            '''
+
+            print("generate positve data {}".format(len(self.positive_data)))
+
             for query in tqdm(self.positive_data):
+
                 # positive files has extra doamin, intent/ annotation
                 # skip them for domain traininf
                 #f.write("0\t\t{}\tfiles\n".format(query))
+
                 # ? here assume all patterns should be file_search
-                # ? might need to filter in the future
+                # ? might need to filter more in the future
                 f.write("0\t\t{}\tfile_search\t\t\t\t\t\t\n".format((query.split('\t'))[0]))
-            '''
+
+            print("teams positve data {}".format(len(teams_pos_data)))
+            for line in tqdm(teams_pos_data):
+
+                # positive files has extra doamin, intent/ annotation
+                # skip them for domain traininf
+                #f.write("0\t\t{}\tfiles\n".format(query))
+
+                # ? here assume all patterns should be file_search
+                # ? might need to filter more in the future
+                f.write("{}\n".format(line))
+
 
             # for debug
-            print("{}".format(len(self.negative_data)))
-            print("{}".format(len(self.negative_data_intent)))
-            print("{}".format(len(self.negative_data_PreviousTurnDomain)))
-            print("{}".format(len(self.negative_data_TaskFrameStatus)))
-            print("{}".format(len(self.negative_data_TaskFrameEntityStates)))
-            print("{}".format(len(self.negative_data_TaskFrameGUID)))
-            print("{}".format(len(self.negative_data_SpeechPeopleDisambiguationGrammarMatches)))
-            print("{}".format(len(self.negative_data_ConversationalContext)))
+            print("negative data {}".format(len(self.negative_data)))
+            #print("{}".format(len(self.negative_data_intent)))
+            #print("{}".format(len(self.negative_data_PreviousTurnDomain)))
+            #print("{}".format(len(self.negative_data_TaskFrameStatus)))
+            #print("{}".format(len(self.negative_data_TaskFrameEntityStates)))
+            #print("{}".format(len(self.negative_data_TaskFrameGUID)))
+            #print("{}".format(len(self.negative_data_SpeechPeopleDisambiguationGrammarMatches)))
+            #print("{}".format(len(self.negative_data_ConversationalContext)))
+
 
             # negative data
             # extend to extra columns
             for query, intent, previousturnDomain, taskFrameStatus, taskFrameEntityStates, taskFrameGUID, speechPeopleDisambiguationGrammarMatches, ConversationalContext \
-                     in zip(self.negative_data,
+                     in tqdm(zip(self.negative_data,
                     self.negative_data_intent,
                     self.negative_data_PreviousTurnDomain,
                     self.negative_data_TaskFrameStatus,
@@ -1490,7 +1516,7 @@ class Data(object):
                     self.negative_data_TaskFrameGUID,
                     self.negative_data_SpeechPeopleDisambiguationGrammarMatches,
                     self.negative_data_ConversationalContext
-                    ):
+                    )):
                     f.write("0\t\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\n".format(
                         query, intent, previousturnDomain, taskFrameStatus, taskFrameEntityStates, 
                         taskFrameGUID, speechPeopleDisambiguationGrammarMatches, ConversationalContext))
@@ -1588,6 +1614,12 @@ data.get_data()
 
 #data.write_data(data_filename='files_domain_training_contexual_answer.tsv', pos_filename='pos_data_chiecha.tsv',
 #                neg_filename='neg_data_chiecha.tsv', keylist_filename='filekeys_chiecha.txt')
+
+
+#data.write_data(data_filename='files_intent_training_contexual_answer.tsv', pos_filename='pos_data_chiecha.tsv',
+#                neg_filename='neg_data_chiecha.tsv', keylist_filename='filekeys_intent_chiecha.txt', 
+#                suffixkeylist_filename = 'filekeys_suffix_intent_chiecha.txt'
+#                )
 
 data.write_data(data_filename='files_intent_training_contexual_answer.tsv', pos_filename='pos_data_chiecha.tsv',
                 neg_filename='neg_data_chiecha.tsv', keylist_filename='filekeys_intent_chiecha.txt', 
