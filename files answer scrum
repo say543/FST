@@ -82,6 +82,11 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 
 
 ==================
+Office 365 IDM: Your clearance validation is about to expir
+==================
+o 365 要aprrove 但是現在還沒有用....
+
+==================
 NL search debug  link
 for teamsmessage asearch , for file search 都有
 ==================
@@ -127,6 +132,8 @@ teams search (for teamsmessage search)
 
 feature set in QAS
 ========================
+
+<question>
 18: MaaFGlobalIdAllocator 
 --in=intent_ngram_1gram,intent_ngram_2gram,intent_ngram_3gram,intent_mlg_lexicon,intent_PreviousTurnIntent_default,intent_PreviousTurnDomain_default,intent_TaskFrameStatus_default,filekeywordOrfilename_matches_conj 
 --out=intent_features --mapping=files_enus_mv3.intent.features.bin
@@ -184,7 +191,8 @@ meeting EndOfDoc	52
 
 
 
-
+<question>
+feature 的order
 features order(寫死) (starting from zero)
 1gram
 2gram
@@ -197,12 +205,10 @@ additional featurization pipieline
 數組的順序  的order
 
 
-
+<question>
 addtional external input 只能用
 BodySurfaceStream
 not
-
-
 external_input1 (會是empty, 不抱錯)
 
 所以要preprocessing  是必須的 
@@ -218,6 +224,29 @@ pattern.title.conj.pipeline.txt
 offline 的desc 跟online 的也不一樣
 
 
+<question>
+有時候生成的feature set name 會沒有mapping 到global
+可能是traninnig data 太少 or CMF 
+//prune 
+E:\fileAnswer_data_synthesis\CMF_training\output_intent_answer_pergra\intent_svm\tmp\build_tgt\intent
+features.bin
+
+/unprune
+有些tranining data 
+E:\fileAnswer_data_synthesis\CMF_training\output_intent_answer_pergra\intent_svm\tmp\build_tmp\intent
+features.unpruned.bon
+
+
+
+<question>
+for external feature
+files_enus_mv1.domain.features.bin 
+	
+	Make sure it has 4 in the first column (4 is the extra feature set) 
+But not sure why it has two (0,1)
+yong 哥 說 有一定的概率會有0, 1  原因是QAS　feature set 的問題　但是因該不影響
+4 0 13 
+4 1 14 
 
 
 
