@@ -45,7 +45,7 @@ class Data(object):
         # positive data for data tag augmentation
         #self.posdata_scale_multiplier = 1000  # multiplier to amplify the positive_dataset
         #self.posdata_scale_multiplier = 500  # multiplier to amplify the positive_dataset
-        self.posdata_scale_multiplier = 400  # multiplier to amplify the positive_dataset
+        self.posdata_scale_multiplier = 1000  # multiplier to amplify the positive_dataset
         #self.posdata_scale_multiplier = 300  # multiplier to amplify the positive_dataset
         self.overtrigger_suffix_upper_bound = 8 # current range 0-9
         self.overtrigger_suffix_value_upper_bound = 90000
@@ -106,7 +106,8 @@ class Data(object):
         #self.filetype = []
         self.fileboost = []
         #with codecs.open('..\\resource\\lexicons\\file_type_domain_boost.txt', 'r', 'utf-8') as fin:
-        with codecs.open('..\\resource\\lexicons\\file_type_domain_boost_UWP.txt', 'r', 'utf-8') as fin:
+        #with codecs.open('..\\resource\\lexicons\\file_type_domain_boost_UWP.txt', 'r', 'utf-8') as fin:
+        with codecs.open('..\\..\\resource\\lexicons\\file_type_domain_boost_UWP.txt', 'r', 'utf-8') as fin:
             for line in fin:
                 line = line.strip()
                 if line.lower() == 'documents' or line.lower() == 'document' or line.lower() == 'file' or line.lower() == 'files':
@@ -1020,8 +1021,8 @@ class Data(object):
     '''
 
     #def get_data(self, high_freq_multiplier=9, low_freq_multiplier=1):
-    #def get_data(self, high_freq_multiplier=4, low_freq_multiplier=1):
-    def get_data(self, high_freq_multiplier=2, low_freq_multiplier=1):
+    def get_data(self, high_freq_multiplier=4, low_freq_multiplier=1):
+    #def get_data(self, high_freq_multiplier=2, low_freq_multiplier=1):
         print("Generating data from patterns.")
 
         ## positive_data : list of list
