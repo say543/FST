@@ -80,6 +80,12 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 看這個pr
 
 
+==================
+mv version rename
+file 常常忘記改的
+==================
+files_enus_mvx.slots.pattern.conditions.txt
+這個裡面有一個default bin 每次用都要住
 
 ==================
 Office 365 IDM: Your clearance validation is about to expir
