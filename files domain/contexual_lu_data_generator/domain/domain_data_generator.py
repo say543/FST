@@ -44,9 +44,11 @@ class Data(object):
     def __init__(self):
         # positive data for data tag augmentation
         #self.posdata_scale_multiplier = 1000  # multiplier to amplify the positive_dataset
-        #self.posdata_scale_multiplier = 500  # multiplier to amplify the positive_dataset
-        self.posdata_scale_multiplier = 1000  # multiplier to amplify the positive_dataset
+        self.posdata_scale_multiplier = 500  # multiplier to amplify the positive_dataset
+        #self.posdata_scale_multiplier = 1000  # multiplier to amplify the positive_dataset
         #self.posdata_scale_multiplier = 300  # multiplier to amplify the positive_dataset
+        #self.posdata_scale_multiplier = 1  # multiplier to amplify the positive_dataset
+
         self.overtrigger_suffix_upper_bound = 8 # current range 0-9
         self.overtrigger_suffix_value_upper_bound = 90000
         self.overtrigger_suffix_value_low_bound = 10000
@@ -1021,8 +1023,8 @@ class Data(object):
     '''
 
     #def get_data(self, high_freq_multiplier=9, low_freq_multiplier=1):
-    def get_data(self, high_freq_multiplier=4, low_freq_multiplier=1):
-    #def get_data(self, high_freq_multiplier=2, low_freq_multiplier=1):
+    #def get_data(self, high_freq_multiplier=4, low_freq_multiplier=1):
+    def get_data(self, high_freq_multiplier=2, low_freq_multiplier=1):
         print("Generating data from patterns.")
 
         ## positive_data : list of list
@@ -1220,7 +1222,7 @@ class Data(object):
 
 
 
-    def write_data(self, data_filename, neg_filename, pos_filename, keylist_filename, suffixkeylist_filename):
+    def write_data(self, data_filename, neg_filename, pos_filename, keylist_filename, suffixkeylist_filename, teams_positve_data_filename):
         num_pos_data = len(self.positive_data)
         num_neg_data = len(self.negative_data)
         print("Positive samples: {} | Negative samples {}".format(
@@ -1233,6 +1235,11 @@ class Data(object):
         #     dup_queries = [query for query, cnt in Counter(self.positive_data).items() if cnt > 100]  
         #     for query in dup_queries:
         #         f.write('{}\n'.format(query))  
+
+
+        with open(teams_positve_data_filename, encoding='utf-8') as f:
+            teams_pos_data = [line.rstrip('\n')
+                                  for line in f.readlines()[1:]]
 
         print("Random tags selected from additional pool: {}, from random generated pool {}".format(
             self.additional_filetag_selection_cnt, self.random_filetag_selection_cnt))
@@ -1261,6 +1268,19 @@ class Data(object):
         print("Writing all data to file: {}".format(data_filename))
         with open(data_filename, 'w', encoding='utf-8') as f:
             f.write("TurnNumber\tPreviousTurnDomain\tquery\tdomain\n")
+
+            # write teams positve data at first
+            print("teams positve data {}".format(len(teams_pos_data)))
+            for line in tqdm(teams_pos_data):
+
+                # positive files has extra doamin, intent/ annotation
+                # skip them for domain traininf
+                #f.write("0\t\t{}\tfiles\n".format(query))
+
+                # ? here assume all patterns should be file_search
+                # ? might need to filter more in the future
+                f.write("{}\n".format(line))
+
             for query in tqdm(self.positive_data):
                 # positive files has extra doamin, intent/ annotation
                 # skip them for domain traininf
@@ -1307,12 +1327,12 @@ data.load_negative_data('negative_corpus.txt', 'additional_neg_data_in_query_for
 #data.load_positive_patterns('patterns.txt')
 #data.load_positive_patterns('patterns_chiecha.txt')
 
-all_patterns_files = glob('./patterns/*.txt')
-data.load_patterns(all_patterns_files)
+##all_patterns_files = glob('./patterns/*.txt')
+##data.load_patterns(all_patterns_files)
 
 
 #kanshan extra pattern but slot reformated with _ by myself
-data.load_addtional_patterns('additional_patterns.txt')
+##data.load_addtional_patterns('additional_patterns.txt')
 ##data.load_addtional_patterns('additional_patterns_1.txt')
 
 #files search related patterns
@@ -1335,6 +1355,11 @@ data.append_attachment_patterns('patterns_EMAILSEARCH_attachment_add_keyword_aft
 
 ## frequency is not being used right know so this function does nothing
 #data.split_positive_patterns()
+
+# no loading pattern and addtional_patterns
+# so select max freq  = 5 then call it (number 5 does not matter)
+#data.split_positive_patterns()
+data.max_freq=5
 data.split_patterns()
 
 
@@ -1355,9 +1380,17 @@ data.get_data()
 #data.write_data(data_filename='files_domain_training_contexual_answer.tsv', pos_filename='pos_data_chiecha.tsv',
 #                neg_filename='neg_data_chiecha.tsv', keylist_filename='filekeys_chiecha.txt')
 
+#data.write_data(data_filename='files_domain_training_contexual_answer.tsv', pos_filename='pos_data_chiecha.tsv',
+#                neg_filename='neg_data_chiecha.tsv', keylist_filename='filekeys_chiecha.txt', 
+#                suffixkeylist_filename = 'filekeys_suffix_chiecha.txt')
+
+
 data.write_data(data_filename='files_domain_training_contexual_answer.tsv', pos_filename='pos_data_chiecha.tsv',
                 neg_filename='neg_data_chiecha.tsv', keylist_filename='filekeys_chiecha.txt', 
-                suffixkeylist_filename = 'filekeys_suffix_chiecha.txt')
+                suffixkeylist_filename = 'filekeys_suffix_chiecha.txt',
+                teams_positve_data_filename='oirginal_pos_files_query.txt'
+                )
+
 
 
 
