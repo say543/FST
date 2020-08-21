@@ -58,8 +58,12 @@ class Data(object):
         ### The arguments are the name of the new class and a string containing the names of the elements.
         ### create class object and string field by this factory method
         TagSelectionProb = namedtuple('TagSelectionProb', ['random_tag_prob', 'additional_tag_prob', 'orig_tag_prob'])
-        self.tag_selection_probabilities = TagSelectionProb(random_tag_prob=0.6, additional_tag_prob=0.3,
-                                                            orig_tag_prob=0.1)
+
+        #self.tag_selection_probabilities = TagSelectionProb(random_tag_prob=0.6, additional_tag_prob=0.3,
+        #                                                    orig_tag_prob=0.1)
+        self.tag_selection_probabilities = TagSelectionProb(random_tag_prob=0.9, additional_tag_prob=0.01,
+                                                            orig_tag_prob=0.09)
+
         self.additional_filetag_selection_cnt = 0
         self.random_filetag_selection_cnt = 0
 
