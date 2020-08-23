@@ -58,7 +58,7 @@ def qasFileRenamer(args):
         print(filename)
 
         # ignore those filename
-        if filename == 'filekeys.txt' or filename == 'filekeys_chiecha.txt' or filename == 'files_domain_training_contexual_answer.tsv':
+        if filename == 'filekeys.txt' or filename == 'filekeys_chiecha.txt' or  filename == 'filekeys_chiecha_07292020v1.txt' or filename == 'files_domain_training_contexual_answer.tsv':
             continue
 
         # ignore those filename
@@ -139,7 +139,7 @@ if __name__ == '__main__':
     #cmd = ("-s ..\\output_domain_answer_07132020v1_300\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
 
 
-    cmd = ("-s ..\\output_domain_answer_07162020v1_300\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+    #cmd = ("-s ..\\output_domain_answer_07162020v1_300\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
 
     ###########
     ### checked in intent model ###
@@ -156,6 +156,8 @@ if __name__ == '__main__':
     #cmd = ("-s ..\\output_adhoc_intent_07012020v1\\intent_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
 
     #cmd = ("-s ..\\output_adhoc_intent_07082020v1\\intent_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
+    cmd = ("-s ..\\output_adhoc_intent_08212020v1\\intent_svm\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
 
 
     ###########
@@ -209,16 +211,23 @@ if __name__ == '__main__':
     #cmd = ("-s ..\\output_adhoc_slot_06182020v1\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
 
 
-    #cmd = ("-s ..\\output_adhoc_slot_07092020v2\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
+    #cmd = ("-s ..\\output_adhoc_slot_08192020v1\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
+
+    #cmd = ("-s ..\\output_adhoc_slot_08202020v1\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
+
+    #cmd = ("-s ..\\output_adhoc_slot_08202020v2\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
 
 
     ###########
     ### other try fine-tune experience
     ###########
 
+    #cmd = ("-s ..\\..\\..\\files_enus_mv5 -t replaced -r files_enus_mv3:files_enus_mv5").split()
+
 
     #cmd = ("-s ..\\output_domain_answer_pergra_07212020v1\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
     #cmd = ("-s ..\\output_domain_answer_pergra_07242020v2\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+    #cmd = ("-s ..\\output_domain_answer_pergra\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
 
     # aether for domain
     #cmd = ("-s ..\\output_domain_answer_pergra_07242020v3 -t replaced -r files_enus_mv1:files_enus_mv2").split()
@@ -244,10 +253,56 @@ if __name__ == '__main__':
 
     #cmd = ("-s ..\\output_domain_answer_pergra_08122020v2 -t replaced -r files_enus_mv1:files_enus_mv2").split()
 
+    #cmd = ("-s ..\\output_domain_answer_pergra_08152020v1 -t replaced -r files_enus_mv1:files_enus_mv3").split()
+    #cmd = ("-s ..\\output_domain_answer_pergra_08182020v1 -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
+    #cmd = ("-s ..\\output_domain_answer_pergra_08192020v1 -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
+    #cmd = ("-s ..\\output_domain_answer_pergra_08192020v2 -t replaced -r files_enus_mv1:files_enus_mv3").split()
+    #cmd = ("-s ..\\output_domain_answer_pergra_08192020v3 -t replaced -r files_enus_mv1:files_enus_mv2").split()
+
+
+    #cmd = ("-s ..\\output_domain_answer_pergra_08202020v1 -t replaced -r files_enus_mv1:files_enus_mv2").split()
+
+    #cmd = ("-s ..\\output_domain_answer_pergra_08202020v2 -t replaced -r files_enus_mv1:files_enus_mv2").split()
+
+    #cmd = ("-s ..\\output_domain_answer_pergra_08212020v1 -t replaced -r files_enus_mv1:files_enus_mv2").split()
+
+    #cmd = ("-s ..\\output_domain_answer_pergra_08212020v2 -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
+    #cmd = ("-s ..\\output_domain_answer_pergra_08212020v3 -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
+    cmd = ("-s ..\\output_domain_answer_pergra_08212020v4 -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
+    # local
+    # doamin
+    #cmd = ("-s ..\\output_domain_answer_pergra_bo_08122020v2\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
+    # local intent
+    #cmd = ("-s ..\\output_intent_answer_pergra\\intent_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+    #cmd = ("-s ..\\output_intent_answer_pergra_08172020v1\\intent_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
+    #cmd = ("-s ..\\output_intent_answer_pergra_08182020v1\\intent_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+    #cmd = ("-s ..\\output_intent_answer_pergra_08182020v2\\intent_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+    #cmd = ("-s ..\\output_intent_answer_pergra_08182020v3\\intent_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+    
+
 
 
     # aether for intent
-    cmd = ("-s ..\\output_intent_answer_pergra\\intent_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+    #cmd = ("-s ..\\output_intent_answer_pergra\\intent_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+    #cmd = ("-s ..\\output_intent_answer_pergra_08182020v3\\ -t replaced -r files_enus_mv1:files_enus_mv3").split()
+    #cmd = ("-s ..\\output_intent_answer_pergra_08182020v4\\ -t replaced -r files_enus_mv1:files_enus_mv3").split()
+    #cmd = ("-s ..\\output_intent_answer_pergra_08182020v5\\intent_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
+    #cmd = ("-s ..\\output_intent_answer_pergra_08182020v6\\intent_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
+
+    #cmd = ("-s ..\\output_intent_answer_pergra_08182020v7\\intent_svm\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
+
+    #cmd = ("-s ..\\output_intent_answer_pergra_08192020v1\\intent_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
+    #cmd = ("-s ..\\output_intent_answer_pergra_08192020v2\\intent_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
 
     
     #cmd = ("-s ..\\output_adhoc_slot_07092020v1\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
