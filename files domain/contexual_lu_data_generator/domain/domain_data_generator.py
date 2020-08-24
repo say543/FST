@@ -849,9 +849,9 @@ class Data(object):
 
                     # append salutions randomly
                     # no saluations
-                    prefix = random.choices(salutations, k=1)[0]
-                    query = prefix + query
-                    annotation = prefix + annotation
+                    #prefix = random.choices(salutations, k=1)[0]
+                    #query = prefix + query
+                    #annotation = prefix + annotation
 
 
             ##for debug
@@ -1119,13 +1119,13 @@ class Data(object):
         # v3
         # do not dedup to prevent from overtriggeing
         # preprocesing ngram but negative_data not being updated
-        [self._clean_query(query) for query in tqdm(self.negative_data)]
+        #[self._clean_query(query) for query in tqdm(self.negative_data)]
 
         # v4
         # here dedup negative data
         # preprocesing ngram but negative_data not being updated
-        #self.negative_data = list(set([query for query in tqdm(self.negative_data)]))
-        #[self._clean_query(query) for query in tqdm(self.negative_data)]
+        self.negative_data = list(set([query for query in tqdm(self.negative_data)]))
+        [self._clean_query(query) for query in tqdm(self.negative_data)]
 
 
     def _filter_negative_data(self):
