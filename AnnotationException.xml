@@ -1,0 +1,82 @@
+file_keyword
+file_name
+
+
+
+create new 
+home automation
+
+
+slotMap  file_name
+
+
+slotIgnore
+
+location
+E:\CoreScienceDataStaging\evaluation\Configs
+
+AnnotationExceptions_calendarsearch.xml
+
+B2 search xml
+
+在EvaluationTestConfig.xml 這邊有一個general 的setting
+  <DefaultConfig>
+    <ModelsDir>%MODELS_DIR%</ModelsDir>
+    <QpcVariant>GriffinProd_Cortana.QAS12HttpQAS</QpcVariant>
+    <ClientIds>Microsoft_Threshold_Shell_3_enus_Test</ClientIds>
+    <DomainWhiteList>alarm,calendar,capture,common,communication,devicecontrol,email,entertainment,events,feedback,gaming,greetings,homeautomation,mediacontrol,moments,mystuff,navigation,note,notification,ondevice,orderfood,places,reminder,reservations,taxi,teams,translation,weather,web,webnavigation,inmeeting,teamsaction,files,fallback</DomainWhiteList>
+    <SkillsConsideredForOverall>Calendar,Calling,Communication,Email,Emailsearch,Teamsmessage,Files,HomeAutomation,Inmeeting,MediaControl,Messaging,Moments,Reminder,Teamsaction</SkillsConsideredForOverall>
+    <AnnotationExceptionsFile>%CONFIGS_DIR%\AnnotationExceptions.xml</AnnotationExceptionsFile>
+    <FilteringRulesFile>%CONFIGS_DIR%\FilteringRules.tsv</FilteringRulesFile>
+    <IgnorableWordsFile>%CONFIGS_DIR%\ConstraintMatchingIgnorableWords.eval2.tsv</IgnorableWordsFile>
+    <OutputBaseDir>%OUTPUT_BASE_DIR%</OutputBaseDir>
+    <RankingStrategy name="HighestScoreRankingStrategy" />
+  </DefaultConfig>
+
+
+for validation set/ reporting
+最好用共用的 裡面也有很多domain 的 setting 因為這樣的set tracking 很多個 domain 的metric
+
+for B2 you can create customize one
+  <EvaluationTest name="ValidatingOutlookSnACalendarMayJune2020">
+    <Data>
+      <ModelsDir>%MODELS_DIR%\..\b2_models</ModelsDir>
+      <RankingStrategy name="ThresholdBasedRankingStrategy">
+        <Parameter domain="calendar" key="Threshold">0.4</Parameter>
+      </RankingStrategy>
+      <QpcVariant>Prod.cortana_calendar_enus_mv10</QpcVariant>
+      <ClientIds></ClientIds>
+      <DomainWhiteList>calendar</DomainWhiteList>
+      <Dataset>%DATASETS_DIR%\SearchandAssistant\Test\Official\Validating_SnA_SR_OutlookMobile_EmailsearchCalendar_20200501-20200630.tsv</Dataset>
+      
+      // this one 是只有calendar definition
+      <AnnotationExceptionsFile>%CONFIGS_DIR%\AnnotationExceptions_calendarsearch.xml</AnnotationExceptionsFile>
+      
+      
+      <LineFilteringRule columnName="NotCallingLU" skipCondition="Equals" value="1"/>
+      <SkillsConsideredForOverall>Calendar</SkillsConsideredForOverall>
+    </Data>
+
+
+for  D
+    除非你只想要track 自己domian 的 metric
+    否則最好還是用共用的
+
+
+
+
+08242020
+增加一個新的name
+然後appy 給outlook sna 跟3S
+AnnotationExceptions_filesearch.xml
+// 說明
+if judge tag as file_name evalution 會找file_keyword 來對應
+<SlotMap name="file_name">file_keyword</SlotMap>
+<SlotMap name="attachment_type">file_type</SlotMap>
+// this needs to wait for confirmation from
+// 可不可以同時考慮兩個slots
+<SlotMap name="attachment">file_action</SlotMap>
+
+
+
+
