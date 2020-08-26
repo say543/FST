@@ -1,0 +1,382 @@
+0	reread	email_other	EMAIL	reread						
+1	read it again	email_other	EMAIL	read it again						
+2	reply to the sender	email_other	EMAIL	reply to the <relationship_name> sender </relationship_name>						
+3	reply to him	email_other	EMAIL	reply to <relationship_name> him </relationship_name>						
+4	reply to her	email_other	EMAIL	reply to <relationship_name> her </relationship_name>						
+5	change the message	email_other	EMAIL	change <message_type> message </message_type>						
+6	edit the message	email_other	EMAIL	edit <message_type> message </message_type>						
+7	i want to dictate my message again	email_other	EMAIL	i want to dictate my <message_type> message </message_type> again						
+8	i want to replace the message	email_other	EMAIL	i want to replace the <message_type> message </message_type>						
+9	Do I have new emails	email_other	EMAIL	Do I have new <message_type>emails</message_type>						
+10	next one	email_other	EMAIL	next one						
+11	previous one	email_other	EMAIL	previous one						
+12	archive	email_other	EMAIL	archive						
+13	delete	email_other	EMAIL	delete						
+14	flag	email_other	EMAIL	flag						
+15	unflag email	email_other	EMAIL	unflag <message_type>email</message_type>						
+16	Reply	email_other	EMAIL	Reply						
+17	mark unread	email_other	EMAIL	mark unread						
+18	Mark read	email_other	EMAIL	Mark read						
+19	Mark it read	email_other	EMAIL	Mark it read						
+20	Mark this read	email_other	EMAIL	Mark this read						
+21	Mark this as read	email_other	EMAIL	Mark this as read						
+22	Mark the email as read	email_other	EMAIL	Mark the <message_type>email</message_type> as read						
+23	Mark the email read	email_other	EMAIL	Mark the <message_type>email</message_type> read						
+24	Mark it read please	email_other	EMAIL	Mark it read please						
+25	Can you mark this one as read please	email_other	EMAIL	Can you mark this one as read please						
+26	Will you mark this one as read	email_other	EMAIL	Will you mark this one as read						
+27	Will you mark this one as read please	email_other	EMAIL	Will you mark this one as read please						
+28	Could you mark this one as read	email_other	EMAIL	Could you mark this one as read						
+29	Could you mark this one as read please	email_other	EMAIL	Could you mark this one as read please						
+30	Can you mark it read	email_other	EMAIL	Can you mark it read						
+31	Can you mark it read please	email_other	EMAIL	Can you mark it read please						
+32	Could you mark it read	email_other	EMAIL	Could you mark it read						
+33	Could you mark it read please	email_other	EMAIL	Could you mark it read please						
+34	I want to mark it read	email_other	EMAIL	I want to mark it read						
+35	I want to mark this read	email_other	EMAIL	I want to mark this read 						
+36	I want to mark this as read	email_other	EMAIL	I want to mark this as read						
+37	I want to mark the email as read	email_other	EMAIL	I want to mark the <message_type>email</message_type> as read						
+38	I want to mark the email read	email_other	EMAIL	I want to mark the <message_type>email</message_type> read						
+39	I want to mark it read please	email_other	EMAIL	I want to mark it read please						
+40	I want to mark this one as read	email_other	EMAIL	I want to mark this one as read						
+41	Just mark it read	email_other	EMAIL	Just mark it read						
+42	Just mark this read	email_other	EMAIL	Just mark this read						
+43	Just mark this as read	email_other	EMAIL	Just mark this as read						
+44	Just mark the email as read	email_other	EMAIL	Just mark the <message_type>email</message_type> as read						
+45	Just mark the email read	email_other	EMAIL	Just mark the <message_type>email</message_type> read						
+46	Just mark it read please	email_other	EMAIL	Just mark it read please						
+47	Just mark this one as read	email_other	EMAIL	Just mark this one as read						
+48	Mark conversation read	email_other	EMAIL	Mark <message_type>conversation</message_type> read						
+49	Mark the conversation read	email_other	EMAIL	Mark the <message_type>conversation</message_type> read						
+50	Mark the conversation as read	email_other	EMAIL	Mark the <message_type>conversation</message_type> as read						
+51	Mark this conversation read	email_other	EMAIL	Mark this <message_type>conversation</message_type> read						
+52	Mark this conversation as read	email_other	EMAIL	Mark this <message_type>conversation</message_type> as read						
+53	Can you mark conversation read	email_other	EMAIL	Can you mark <message_type>conversation</message_type> read						
+54	Can you mark the conversation read	email_other	EMAIL	Can you mark the <message_type>conversation</message_type> read						
+55	Can you mark the conversation as read	email_other	EMAIL	Can you mark the <message_type>conversation</message_type> as read						
+56	Can you mark this conversation read	email_other	EMAIL	Can you mark this <message_type>conversation</message_type> read						
+57	Can you mark this conversation as read	email_other	EMAIL	Can you mark this <message_type>conversation</message_type> as read						
+58	Could you mark conversation read	email_other	EMAIL	Could you mark <message_type>conversation</message_type> read						
+59	Could you mark the conversation read	email_other	EMAIL	Could you mark the <message_type>conversation</message_type> read						
+60	Could you mark the conversation as read	email_other	EMAIL	Could you mark the <message_type>conversation</message_type> as read						
+61	Could you mark this conversation read	email_other	EMAIL	Could you mark this <message_type>conversation</message_type> read						
+62	Could you mark this conversation as read	email_other	EMAIL	Could you mark this <message_type>conversation</message_type> as read						
+63	Could you please mark conversation read	email_other	EMAIL	Could you please mark <message_type>conversation</message_type> read						
+64	Could you please mark the conversation read	email_other	EMAIL	Could you please mark the <message_type>conversation</message_type> read						
+65	Could you please mark the conversation as read	email_other	EMAIL	Could you please mark the <message_type>conversation</message_type> as read						
+66	Could you please mark this conversation read	email_other	EMAIL	Could you please mark this <message_type>conversation</message_type> read						
+67	Could you please mark this conversation as read	email_other	EMAIL	Could you please mark this <message_type>conversation</message_type> as read						
+68	I want to mark conversation read	email_other	EMAIL	I want to mark <message_type>conversation</message_type> read						
+69	I want to mark the conversation read	email_other	EMAIL	I want to mark the <message_type>conversation</message_type> read						
+70	I want to mark the conversation as read	email_other	EMAIL	I want to mark the <message_type>conversation</message_type> as read						
+71	I want to mark this conversation read	email_other	EMAIL	I want to mark this <message_type>conversation</message_type> read						
+72	I want to mark this conversation as read	email_other	EMAIL	I want to mark this <message_type>conversation</message_type> as read						
+73	Just mark conversation read	email_other	EMAIL	Just mark <message_type>conversation</message_type> read						
+74	Just mark mark the conversation read	email_other	EMAIL	Just mark mark the <message_type>conversation</message_type> read						
+75	Just mark mark the conversation as read	email_other	EMAIL	Just mark mark the <message_type>conversation</message_type> as read						
+76	Just mark mark this conversation read	email_other	EMAIL	Just mark mark this <message_type>conversation</message_type> read						
+77	Just mark mark this conversation as read	email_other	EMAIL	Just mark mark this <message_type>conversation</message_type> as read						
+78	Mark unread	email_other	EMAIL	Mark unread						
+79	Mark conversation unread	email_other	EMAIL	Mark <message_type>conversation</message_type> unread						
+80	Mark the conversation unread	email_other	EMAIL	Mark the <message_type>conversation</message_type> unread						
+81	Mark the conversation as unread	email_other	EMAIL	Mark the <message_type>conversation</message_type> as unread						
+82	Mark this conversation unread	email_other	EMAIL	Mark this <message_type>conversation</message_type> unread						
+83	Mark this conversation as unread	email_other	EMAIL	Mark this <message_type>conversation</message_type> as unread						
+84	Can you mark conversation unread	email_other	EMAIL	Can you mark <message_type>conversation</message_type> unread						
+85	Can you mark the conversation unread	email_other	EMAIL	Can you mark the <message_type>conversation</message_type> unread						
+86	Can you mark the conversation as unread	email_other	EMAIL	Can you mark the <message_type>conversation</message_type> as unread						
+87	Can you mark this conversation unread	email_other	EMAIL	Can you mark this <message_type>conversation</message_type> unread						
+88	Can you mark this conversation as unread	email_other	EMAIL	Can you mark this <message_type>conversation</message_type> as unread						
+89	Could you mark conversation unread	email_other	EMAIL	Could you mark <message_type>conversation</message_type> unread						
+90	Could you mark the conversation unread	email_other	EMAIL	Could you mark the <message_type>conversation</message_type> unread						
+91	Could you mark the conversation as unread	email_other	EMAIL	Could you mark the <message_type>conversation</message_type> as unread						
+92	Could you mark this conversation unread	email_other	EMAIL	Could you mark this <message_type>conversation</message_type> unread						
+93	Could you mark this conversation as unread	email_other	EMAIL	Could you mark this <message_type>conversation</message_type> as unread						
+94	Could you please mark conversation unread	email_other	EMAIL	Could you please mark <message_type>conversation</message_type> unread						
+95	Could you please mark the conversation unread	email_other	EMAIL	Could you please mark the <message_type>conversation</message_type> unread						
+96	Could you please mark the conversation as unread	email_other	EMAIL	Could you please mark the <message_type>conversation</message_type> as unread						
+97	Could you please mark this conversation unread	email_other	EMAIL	Could you please mark this <message_type>conversation</message_type> unread						
+98	Could you please mark this conversation as unread	email_other	EMAIL	Could you please mark this <message_type>conversation</message_type> as unread						
+99	I want to mark conversation unread	email_other	EMAIL	I want to mark <message_type>conversation</message_type> unread						
+100	I want to mark the conversation unread	email_other	EMAIL	I want to mark the <message_type>conversation</message_type> unread						
+101	I want to mark the conversation as unread	email_other	EMAIL	I want to mark the <message_type>conversation</message_type> as unread						
+102	I want to mark this conversation unread	email_other	EMAIL	I want to mark this <message_type>conversation</message_type> unread						
+103	I want to mark this conversation as unread	email_other	EMAIL	I want to mark this <message_type>conversation</message_type> as unread						
+104	Just mark conversation unread	email_other	EMAIL	Just mark <message_type>conversation</message_type> unread						
+105	Just mark mark the conversation unread	email_other	EMAIL	Just mark mark the <message_type>conversation</message_type> unread						
+106	Just mark mark the conversation as unread	email_other	EMAIL	Just mark mark the <message_type>conversation</message_type> as unread						
+107	Just mark mark this conversation unread	email_other	EMAIL	Just mark mark this <message_type>conversation</message_type> unread						
+108	Just mark mark this conversation as unread	email_other	EMAIL	Just mark mark this <message_type>conversation</message_type> as unread						
+109	Mark it unread	email_other	EMAIL	Mark it unread						
+110	Mark this unread	email_other	EMAIL	Mark this unread						
+111	Mark this as unread	email_other	EMAIL	Mark this as unread						
+112	Mark the email as unread	email_other	EMAIL	Mark the <message_type>email</message_type> as unread						
+113	Mark the email unread	email_other	EMAIL	Mark the <message_type>email</message_type> unread						
+114	Mark it unread please	email_other	EMAIL	Mark it unread please						
+115	Can you mark this one as unread	email_other	EMAIL	Can you mark this one as unread						
+116	Can you mark this one as unread please	email_other	EMAIL	Can you mark this one as unread please						
+117	Will you mark this one as unread	email_other	EMAIL	Will you mark this one as unread						
+118	Will you mark this one as unread please	email_other	EMAIL	Will you mark this one as unread please						
+119	Could you mark this one as unread	email_other	EMAIL	Could you mark this one as unread						
+120	Could you mark this one as unread please	email_other	EMAIL	Could you mark this one as unread please						
+121	Can you mark it unread	email_other	EMAIL	Can you mark it unread						
+122	Can you mark it unread please	email_other	EMAIL	Can you mark it unread please						
+123	Could you mark it unread	email_other	EMAIL	Could you mark it unread						
+124	Could you mark it unread please	email_other	EMAIL	Could you mark it unread please						
+125	I want to mark it unread	email_other	EMAIL	I want to mark it unread						
+126	I want to mark this unread	email_other	EMAIL	I want to mark this unread						
+127	I want to mark this as unread	email_other	EMAIL	I want to mark this as unread						
+128	I want to mark the email as unread	email_other	EMAIL	I want to mark the <message_type>email</message_type> as unread						
+129	I want to mark the email unread	email_other	EMAIL	I want to mark the <message_type>email</message_type> unread						
+130	I want to mark it unread please	email_other	EMAIL	I want to mark it unread please						
+131	I want to mark this one as unread	email_other	EMAIL	I want to mark this one as unread						
+132	Just mark it unread	email_other	EMAIL	Just mark it unread						
+133	Just mark this unread	email_other	EMAIL	Just mark this unread						
+134	Just mark this as unread	email_other	EMAIL	Just mark this as unread						
+135	Just mark the email as unread	email_other	EMAIL	Just mark the <message_type>email</message_type> as unread						
+136	Just mark the email unread	email_other	EMAIL	Just mark the <message_type>email</message_type> unread						
+137	Just mark it unread please	email_other	EMAIL	Just mark it unread please						
+138	Just mark this one as unread	email_other	EMAIL	Just mark this one as unread						
+139	Flag	email_other	EMAIL	Flag						
+140	Flag it	email_other	EMAIL	Flag it						
+141	Flag it please	email_other	EMAIL	Flag it please						
+142	Flag the email	email_other	EMAIL	Flag the <message_type>email</message_type>						
+143	Flag this email	email_other	EMAIL	Flag this <message_type>email</message_type>						
+144	Can you flag it please	email_other	EMAIL	Can you flag it please						
+145	Will you flag this email please	email_other	EMAIL	Will you flag this <message_type>email</message_type> please						
+146	Will you flag the email	email_other	EMAIL	Will you flag the <message_type>email</message_type>						
+147	Could you please flag the email	email_other	EMAIL	Could you please flag the <message_type>email</message_type>						
+148	Could you flag the email please	email_other	EMAIL	Could you flag the <message_type>email</message_type> please						
+149	Just flag it	email_other	EMAIL	Just flag it						
+150	I want to flag it	email_other	EMAIL	I want to flag it						
+151	I want to flag this email	email_other	EMAIL	I want to flag this <message_type>email</message_type>						
+152	I want to flag this one	email_other	EMAIL	I want to flag this one						
+153	I am gonna flag this one	email_other	EMAIL	I am gonna flag this one						
+154	I am going to flag this one	email_other	EMAIL	I am going to flag this one						
+155	I think I am gonna flag this one	email_other	EMAIL	I think I am gonna flag this one						
+156	I think I am going to flag this one	email_other	EMAIL	I think I am going to flag this one						
+157	Flag this conversation	email_other	EMAIL	Flag this <message_type>conversation</message_type>						
+158	Flag the conversation please	email_other	EMAIL	Flag the <message_type>conversation</message_type> please						
+159	Flag the whole conversation	email_other	EMAIL	Flag the whole <message_type>conversation</message_type>						
+160	Could you flag this conversation	email_other	EMAIL	Could you flag this <message_type>conversation</message_type>						
+161	Could you please flag this conversation	email_other	EMAIL	Could you please flag this <message_type>conversation</message_type>						
+162	Will you flag this conversation	email_other	EMAIL	Will you flag this <message_type>conversation</message_type>						
+163	Will you please flag the conversation	email_other	EMAIL	Will you please flag the <message_type>conversation</message_type>						
+164	Just flag the whole conversation	email_other	EMAIL	Just flag the whole <message_type>conversation</message_type>						
+165	Just flag the conversation	email_other	EMAIL	Just flag the <message_type>conversation</message_type>						
+166	I want to flag the conversation for later	email_other	EMAIL	I want to flag the <message_type>conversation</message_type> for later						
+167	I want to flag the conversation	email_other	EMAIL	I want to flag the <message_type>conversation</message_type>						
+168	Flag the conversation for later	email_other	EMAIL	Flag the <message_type>conversation</message_type> for later						
+169	Flag the whole conversation for later	email_other	EMAIL	Flag the whole <message_type>conversation</message_type> for later						
+170	Unflag	email_other	EMAIL	Unflag						
+171	Unflag it	email_other	EMAIL	Unflag it						
+172	Unflag it please	email_other	EMAIL	Unflag it please						
+173	Unflag the email	email_other	EMAIL	Unflag the <message_type>email</message_type>						
+174	Unflag this email	email_other	EMAIL	Unflag this <message_type>email</message_type>						
+175	Unflag email	email_other	EMAIL	Unflag <message_type>email</message_type>						
+176	Can you Unflag it please	email_other	EMAIL	Can you Unflag it please						
+177	Will you Unflag this email please	email_other	EMAIL	Will you Unflag this <message_type>email</message_type> please						
+178	Will you Unflag the email	email_other	EMAIL	Will you Unflag the <message_type>email</message_type>						
+179	Could you please Unflag the email	email_other	EMAIL	Could you please Unflag the <message_type>email</message_type>						
+180	Could you Unflag the email please	email_other	EMAIL	Could you Unflag the <message_type>email</message_type> please						
+181	Just Unflag it	email_other	EMAIL	Just Unflag it						
+182	I want to Unflag it	email_other	EMAIL	I want to Unflag it						
+183	I want to Unflag this one	email_other	EMAIL	I want to Unflag this one						
+184	I am gonna Unflag this one	email_other	EMAIL	I am gonna Unflag this one						
+185	I am going to Unflag this one	email_other	EMAIL	I am going to Unflag this one						
+186	I think I am gonna Unflag this one	email_other	EMAIL	I think I am gonna Unflag this one						
+187	I think I am going to Unflag this one	email_other	EMAIL	I think I am going to Unflag this one						
+188	Unflag this conversation	email_other	EMAIL	Unflag this <message_type>conversation</message_type>						
+189	Unflag the conversation please	email_other	EMAIL	Unflag the <message_type>conversation</message_type> please						
+190	Unflag the whole conversation	email_other	EMAIL	Unflag the whole <message_type>conversation</message_type>						
+191	Could you Unflag this conversation	email_other	EMAIL	Could you Unflag this <message_type>conversation</message_type>						
+192	Could you please Unflag this conversation	email_other	EMAIL	Could you please Unflag this <message_type>conversation</message_type>						
+193	Will you Unflag this conversation	email_other	EMAIL	Will you Unflag this <message_type>conversation</message_type>						
+194	Will you please Unflag the conversation	email_other	EMAIL	Will you please Unflag the <message_type>conversation</message_type>						
+195	Just Unflag the whole conversation	email_other	EMAIL	Just Unflag the whole <message_type>conversation</message_type>						
+196	Just Unflag the conversation	email_other	EMAIL	Just Unflag the <message_type>conversation</message_type>						
+197	I want to Unflag the conversation for later	email_other	EMAIL	I want to Unflag the <message_type>conversation</message_type> for later						
+198	I want to Unflag the conversation	email_other	EMAIL	I want to Unflag the <message_type>conversation</message_type>						
+199	Unflag the conversation for later	email_other	EMAIL	Unflag the <message_type>conversation</message_type> for later						
+200	Unflag the whole conversation for later	email_other	EMAIL	Unflag the whole <message_type>conversation</message_type> for later						
+201	Archive	email_other	EMAIL	Archive						
+202	Archive it	email_other	EMAIL	Archive it						
+203	Archive it please	email_other	EMAIL	Archive it please						
+204	Archive the email	email_other	EMAIL	Archive the <message_type>email</message_type>						
+205	Archive this email	email_other	EMAIL	Archive this <message_type>email</message_type>						
+206	Can you Archive it please	email_other	EMAIL	Can you Archive it please						
+207	Will you Archive this email please	email_other	EMAIL	Will you Archive this <message_type>email</message_type> please						
+208	Will you Archive the email	email_other	EMAIL	Will you Archive the <message_type>email</message_type>						
+209	Could you please Archive the email	email_other	EMAIL	Could you please Archive the <message_type>email</message_type>						
+210	Could you Archive the email please	email_other	EMAIL	Could you Archive the <message_type>email</message_type> please						
+211	Just Archive it	email_other	EMAIL	Just Archive it						
+212	I want to Archive it	email_other	EMAIL	I want to Archive it						
+213	I want to Archive this email	email_other	EMAIL	I want to Archive this <message_type>email</message_type>						
+214	I want to Archive this one	email_other	EMAIL	I want to Archive this one						
+215	I am gonna Archive this one	email_other	EMAIL	I am gonna Archive this one						
+216	I am going to Archive this one	email_other	EMAIL	I am going to Archive this one						
+217	I think I am gonna Archive this one	email_other	EMAIL	I think I am gonna Archive this one						
+218	I think I am going to Archive this one	email_other	EMAIL	I think I am going to Archive this one						
+219	Delete	email_other	EMAIL	Delete						
+220	Delete it	email_other	EMAIL	Delete it						
+221	Delete it please	email_other	EMAIL	Delete it please						
+222	Delete the email	email_other	EMAIL	Delete the <message_type>email</message_type>						
+223	Delete this email	email_other	EMAIL	Delete this <message_type>email</message_type>						
+224	Can you Delete it please	email_other	EMAIL	Can you Delete it please						
+225	Will you Delete this email please	email_other	EMAIL	Will you Delete this <message_type>email</message_type> please						
+226	Will you Delete the email	email_other	EMAIL	Will you Delete the <message_type>email</message_type>						
+227	Could you please Delete the email	email_other	EMAIL	Could you please Delete the <message_type>email</message_type>						
+228	Could you Delete the email please	email_other	EMAIL	Could you Delete the <message_type>email</message_type> please						
+229	Just Delete it	email_other	EMAIL	Just Delete it						
+230	I want to Delete it	email_other	EMAIL	I want to Delete it						
+231	I want to Delete this email	email_other	EMAIL	I want to Delete this <message_type>email</message_type>						
+232	I want to Delete this one	email_other	EMAIL	I want to Delete this one						
+233	I am gonna Delete this one	email_other	EMAIL	I am gonna Delete this one						
+234	I am going to Delete this one	email_other	EMAIL	I am going to Delete this one						
+235	I think I am gonna Delete this one	email_other	EMAIL	I think I am gonna Delete this one						
+236	I think I am going to Delete this one	email_other	EMAIL	I think I am going to Delete this one						
+237	Archive conversation	email_other	EMAIL	Archive <message_type>conversation</message_type>						
+238	Archive this conversation	email_other	EMAIL	Archive this <message_type>conversation</message_type>						
+239	Archive the conversation please	email_other	EMAIL	Archive the <message_type>conversation</message_type> please						
+240	Archive the whole conversation	email_other	EMAIL	Archive the whole <message_type>conversation</message_type>						
+241	Could you Archive this conversation	email_other	EMAIL	Could you Archive this <message_type>conversation</message_type>						
+242	Could you please Archive this conversation	email_other	EMAIL	Could you please Archive this <message_type>conversation</message_type>						
+243	Will you Archive this conversation	email_other	EMAIL	Will you Archive this <message_type>conversation</message_type>						
+244	Will you please Archive the conversation	email_other	EMAIL	Will you please Archive the <message_type>conversation</message_type>						
+245	Just Archive the whole conversation	email_other	EMAIL	Just Archive the whole <message_type>conversation</message_type>						
+246	Just Archive the conversation	email_other	EMAIL	Just Archive the <message_type>conversation</message_type>						
+247	I want to Archive the conversation for later	email_other	EMAIL	I want to Archive the <message_type>conversation</message_type> for later						
+248	I want to Archive the conversation	email_other	EMAIL	I want to Archive the <message_type>conversation</message_type>						
+249	Archive the conversation for later	email_other	EMAIL	Archive the <message_type>conversation</message_type> for later						
+250	Archive the whole conversation for later	email_other	EMAIL	Archive the whole <message_type>conversation</message_type> for later						
+251	I am gonna Archive the conversation	email_other	EMAIL	I am gonna Archive the <message_type>conversation</message_type>						
+252	Delete conversation	email_other	EMAIL	Delete <message_type>conversation</message_type>						
+253	Delete this conversation	email_other	EMAIL	Delete this <message_type>conversation</message_type>						
+254	Delete  the conversation please	email_other	EMAIL	Delete the <message_type>conversation</message_type> please						
+255	Delete  the whole conversation	email_other	EMAIL	Delete the whole <message_type>conversation</message_type>						
+256	Could you Delete this conversation	email_other	EMAIL	Could you Delete this <message_type>conversation</message_type>						
+257	Could you please Delete this conversation	email_other	EMAIL	Could you please Delete this <message_type>conversation</message_type>						
+258	Will you Delete this conversation	email_other	EMAIL	Will you Delete this <message_type>conversation</message_type>						
+259	Will you please Delete the conversation	email_other	EMAIL	Will you please Delete the <message_type>conversation</message_type>						
+260	Just Delete the whole conversation	email_other	EMAIL	Just Delete the whole <message_type>conversation</message_type>						
+261	Just Delete the conversation	email_other	EMAIL	Just Delete the <message_type>conversation</message_type>						
+262	I want to Delete the conversation	email_other	EMAIL	I want to Delete the <message_type>conversation</message_type>						
+263	Delete the whole discussion	email_other	EMAIL	Delete the whole <message_type>discussion</message_type>						
+264	Delete the discussion	email_other	EMAIL	Delete the <message_type>discussion</message_type>						
+265	Can you please Delete the whole discussion	email_other	EMAIL	Can you please Delete the whole <message_type>discussion</message_type>						
+266	Could you please Delete this discussion	email_other	EMAIL	Could you please Delete this <message_type>discussion</message_type>						
+267	I am gonna Delete the conversation	email_other	EMAIL	I am gonna Delete the <message_type>conversation</message_type>						
+268	I think I am gonna Delete the discussion	email_other	EMAIL	I think I am gonna Delete the <message_type>discussion</message_type>						
+269	I think I am going to Delete the whole discussion	email_other	EMAIL	I think I am going to Delete the whole <message_type>discussion</message_type>						
+270	Next	email_other	EMAIL	next						
+271	Next please	email_other	EMAIL	next please						
+272	Next email	email_other	EMAIL	next <message_type>email</message_type>						
+273	Go to the next one	email_other	EMAIL	Go to the next one						
+274	Go to the next email	email_other	EMAIL	Go to the next <message_type>email</message_type>						
+275	I want to hear the next email	email_other	EMAIL	I want to hear the next <message_type>email</message_type>						
+276	Read me the next email	email_other	EMAIL	Read me the next <message_type>email</message_type>						
+277	Skip to the next email	email_other	EMAIL	Skip to the next <message_type>email</message_type>						
+278	Next one	email_other	EMAIL	next one						
+279	Next in line	email_other	EMAIL	next in line						
+280	Next one in line	email_other	EMAIL	next one in line						
+281	Next one in line please	email_other	EMAIL	next one in line please						
+282	What's next	email_other	EMAIL	What's next						
+283	What's the next email	email_other	EMAIL	What's the next <message_type>email</message_type>						
+284	Next conversation	email_other	EMAIL	next <message_type>conversation</message_type>						
+285	Next conversation please	email_other	EMAIL	next <message_type>conversation</message_type> please						
+286	Go to the Next conversation	email_other	EMAIL	Go to the next <message_type>conversation</message_type>						
+287	I want to hear the Next conversation	email_other	EMAIL	I want to hear the next <message_type>conversation</message_type>						
+288	Read me the Next conversation	email_other	EMAIL	Read me the next <message_type>conversation</message_type>						
+289	Skip to the Next conversation	email_other	EMAIL	Skip to the next <message_type>conversation</message_type>						
+290	Next conversation in line	email_other	EMAIL	next <message_type>conversation</message_type> in line						
+291	Next conversation in line please	email_other	EMAIL	next <message_type>conversation</message_type> in line please						
+292	What's the Next conversation	email_other	EMAIL	What's the next <message_type>conversation</message_type>						
+293	Previous	email_other	EMAIL	previous						
+294	Previous please	email_other	EMAIL	previous please						
+295	Previous email	email_other	EMAIL	previous <message_type>email</message_type>						
+296	Previous one please	email_other	EMAIL	previous one please						
+297	Go to the Previous one	email_other	EMAIL	Go to the previous one						
+298	Go to the Previous email	email_other	EMAIL	Go to the previous <message_type>email</message_type>						
+299	I want to hear the Previous email again	email_other	EMAIL	I want to hear the previous <message_type>email</message_type> again						
+300	Read me the Previous email again	email_other	EMAIL	Read me the previous <message_type>email</message_type> again						
+301	Go back to the previous email	email_other	EMAIL	Go back to the previous <message_type>email</message_type>						
+302	Previous one	email_other	EMAIL	previous one						
+303	What's the previous email again	email_other	EMAIL	What's the previous <message_type>email</message_type> again						
+304	Previous conversation	email_other	EMAIL	previous <message_type>conversation</message_type>						
+305	Previous conversation please	email_other	EMAIL	previous <message_type>conversation</message_type> please						
+306	Go to the Previous conversation	email_other	EMAIL	Go to the previous <message_type>conversation</message_type>						
+307	I want to hear the Previous conversation again	email_other	EMAIL	I want to hear the previous <message_type>conversation</message_type> again						
+308	Could you read me the previous conversation again	email_other	EMAIL	Could you read me the previous <message_type>conversation</message_type> again						
+309	Go back to the Previous conversation	email_other	EMAIL	Go back to the previous <message_type>conversation</message_type>						
+310	Could you please go back to the previous conversation	email_other	EMAIL	Could you please go back to the previous <message_type>conversation</message_type>						
+311	Rewind to the previous conversation	email_other	EMAIL	Rewind to the previous <message_type>conversation</message_type>						
+312	What's the Previous conversation	email_other	EMAIL	What's the previous <message_type>conversation</message_type>						
+313	What's the previous conversation again	email_other	EMAIL	What's the previous <message_type>conversation</message_type> again						
+314	Skip	email_other	EMAIL	Skip						
+315	Skip please	email_other	EMAIL	Skip please						
+316	Skip email	email_other	EMAIL	Skip <message_type>email</message_type>						
+317	Skip this one	email_other	EMAIL	Skip this one						
+318	Skip the email	email_other	EMAIL	Skip the <message_type>email</message_type>						
+319	Skip this email	email_other	EMAIL	Skip this <message_type>email</message_type>						
+320	I want to skip	email_other	EMAIL	I want to skip						
+321	I want to skip this email	email_other	EMAIL	I want to skip this <message_type>email</message_type>						
+322	Skip one	email_other	EMAIL	Skip one						
+323	Skip to the next one	email_other	EMAIL	Skip to the next one						
+324	Skip to the next one in line	email_other	EMAIL	Skip to the next one in line						
+325	Skip conversation	email_other	EMAIL	Skip <message_type>conversation</message_type>						
+326	Skip the conversation	email_other	EMAIL	Skip the <message_type>conversation</message_type>						
+327	Skip conversation please	email_other	EMAIL	Skip <message_type>conversation</message_type> please						
+328	Skip to the Next conversation	email_other	EMAIL	Skip to the next <message_type>conversation</message_type>						
+329	Skip to the next conversation please	email_other	EMAIL	Skip to the next <message_type>conversation</message_type> please						
+330	I want to skip to the next conversation	email_other	EMAIL	I want to skip to the next <message_type>conversation</message_type>						
+331	I want to skip the conversation	email_other	EMAIL	I want to skip the <message_type>conversation</message_type>						
+332	Skip this whole discussion	email_other	EMAIL	Skip this whole <message_type>discussion</message_type>						
+333	Skip the whole discussion	email_other	EMAIL	Skip the whole <message_type>discussion</message_type>						
+334	Could you please skip the whole discussion	email_other	EMAIL	Could you please skip the whole <message_type>discussion</message_type>						
+335	Reply	email_other	EMAIL	Reply						
+336	Reply to this	email_other	EMAIL	Reply to this						
+337	Reply to this email	email_other	EMAIL	Reply to this <message_type>email</message_type>						
+338	Reply to that email	email_other	EMAIL	Reply to that <message_type>email</message_type>						
+339	Send a reply	email_other	EMAIL	Send a reply						
+340	Reply to this email please	email_other	EMAIL	Reply to this <message_type>email</message_type> please						
+341	Could you please reply	email_other	EMAIL	Could you please reply						
+342	Could you send a quick reply please	email_other	EMAIL	Could you send a quick reply please						
+343	Quick reply	email_other	EMAIL	Quick reply						
+344	Reply real quick	email_other	EMAIL	Reply real quick						
+345	I would like to send a reply	email_other	EMAIL	I would like to send a reply						
+346	I want to reply	email_other	EMAIL	I want to reply						
+347	I want to reply quickly	email_other	EMAIL	I want to reply quickly						
+348	I want to send a quick reply	email_other	EMAIL	I want to send a quick reply						
+349	I want to reply briefly	email_other	EMAIL	I want to reply briefly						
+350	Play next	email_other	EMAIL	Play next						
+351	Archive the conversation	email_other	EMAIL	Archive the <message_type>conversation</message_type>						
+352	Flag the conversation	email_other	EMAIL	Flag the <message_type>conversation</message_type>						
+353	Unflag the conversation	email_other	EMAIL	Unflag the <message_type>conversation</message_type>						
+354	Delete the conversation	email_other	EMAIL	Delete the <message_type>conversation</message_type>						
+355	Forward the conversation	email_other	EMAIL	Forward the <message_type>conversation</message_type>						
+356	Archive the thread	email_other	EMAIL	Archive the <message_type>thread</message_type>						
+357	Flag the thread	email_other	EMAIL	Flag the <message_type>thread</message_type>						
+358	Unflag the thread	email_other	EMAIL	Unflag the <message_type>thread</message_type>						
+359	Delete the thread	email_other	EMAIL	Delete the <message_type>thread</message_type>						
+360	Forward the thread	email_other	EMAIL	Forward the <message_type>thread</message_type>						
+361	Archive the discussion	email_other	EMAIL	Archive the <message_type>discussion</message_type>						
+362	Flag the discussion	email_other	EMAIL	Flag the <message_type>discussion</message_type>						
+363	Unflag the discussion	email_other	EMAIL	Unflag the <message_type>discussion</message_type>						
+364	Delete the discussion	email_other	EMAIL	Delete the <message_type>discussion</message_type>						
+365	Forward the discussion	email_other	EMAIL	Forward the <message_type>discussion</message_type>						
+366	Are there any emails from my manager?	email_other	EMAIL	Are there any <message_type>emails</message_type> from my manager?						
+367	What new emails did I get in the last hour?	search_email	EMAIL	What <message_category>new</message_category> <message_type>emails</message_type> did I get in the <start_time>last hour</start_time>?						
+367	What new emails did I get in the last hour?	email_other	EMAIL	What new <message_type>emails</message_type> did I get in the last hour?						
+368	What are my new emails?	email_other	EMAIL	What are my new <message_type>emails</message_type>?						
+369	Send an email to my manager	send_email	EMAIL	Send an <message_type>email</message_type> to my <relationship_name>manager</relationship_name>						
+370	send myself an email	send_email	email	send <relationship_name>myself</relationship_name> an <message_type>email</message_type>						
+371	email me	send_email	email	email <relationship_name>me</relationship_name>						
+372	Email my manager high prio to say I'll be there in 5	send_email	email	Email my <relationship_name>manager</relationship_name> high prio to say <message>I'll be there in 5</message>						
+373	read the email again	email_other	EMAIL	read the <message_type>email</message_type> again						
+374	read email again	email_other	EMAIL	read <message_type>email</message_type> again						
+375	read the mail again	email_other	EMAIL	read the <message_type>mail</message_type> again						
+376	read mail again	email_other	EMAIL	read <message_type>mail</message_type> again						
+377	read the conversation again	email_other	EMAIL	read the <message_type>conversation</message_type> again						
+378	read conversation again	email_other	EMAIL	read <message_type>conversation</message_type> again						
+379	read the thread again	email_other	EMAIL	read the <message_type>thread</message_type> again						
+380	read thread again	email_other	EMAIL	read <message_type>thread</message_type> again						

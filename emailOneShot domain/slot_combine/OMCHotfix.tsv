@@ -1,0 +1,622 @@
+﻿0	alexa do i have any new yahoo mail	email_other	email	alexa do i have any new yahoo <message_type>mail</message_type> 						
+1	alexa show me ebay emails	email_other	email	alexa show me ebay <message_type> emails </message_type>						
+2	archive conversation	email_other	email	 archive <message_type> conversation </message_type>						
+3	archive email	email_other	email	 archive <message_type> email </message_type>						
+4	archive thread	email_other	email	 archive <message_type> thread </message_type>						
+5	flag it	email_other	email	 flag it						
+6	flag conversation	email_other	email	 flag <message_type> conversation </message_type>						
+7	unflag	email_other	email	 unflag 						
+8	flag email	email_other	email	 flag <message_type> email </message_type>						
+9	check my gmail	email_other	email	 check my gmail 						
+10	check my gmail for this week	email_other	email	 check my gmail for this week 						
+11	check my google mail	email_other	email	 check my google <message_type>mail</message_type> 						
+12	flag for today	email_other	email	 flag for today 						
+13	flag thread	email_other	email	 flag <message_type> thread </message_type>						
+14	my email	email_other	email	my <message_type> email </message_type>						
+15	next conversation	email_other	email	 next <message_type> conversation </message_type>						
+16	next email	email_other	email	 next <message_type> email </message_type>						
+17	next thread	email_other	email	 next <message_type> thread </message_type>						
+18	previous conversation	email_other	email	 previous <message_type> conversation </message_type>						
+19	previous email	email_other	email	 previous <message_type> email </message_type>						
+20	previous thread	email_other	email	 previous <message_type> thread </message_type>						
+21	send an email to samantha about test account with a message it is ready	send_email	email	 send an <message_type> email </message_type> to <contact_name> samantha </contact_name> about <email_subject> test account </email_subject> with a message <message> it is ready </message>						
+22	send draft	send_email	email	 send draft 						
+23	skip conversation	email_other	email	 skip <message_type> conversation </message_type>						
+24	skip email	email_other	email	 skip <message_type> email </message_type>						
+25	skip thread	email_other	email	 skip <message_type> thread </message_type>						
+26	tell me a new emails	email_other	email	 tell me a new <message_type> emails </message_type>						
+27	tell me my emails	email_other	email	 tell me my <message_type> emails </message_type>						
+28	tell me my first email	email_other	email	 tell me my first <message_type> email </message_type>						
+29	what ’s in my inbox work	email_other	email	what ’s in my inbox work 						
+30	what email did i have yesterday ?	search_email	email	what <message_type> email </message_type> did i have <start_date> yesterday </start_date> ?						
+30	what email did i have yesterday ?	email_other	email	what <message_type> email </message_type> did i have yesterday ?						
+31	delete all emails from prosberg	email_other	email	 delete all <message_type> emails </message_type> from prosberg 						
+32	delete all emails from this sender	email_other	email	 delete all <message_type> emails </message_type> from this sender 						
+33	delete all in inbox	email_other	email	 delete all in inbox 						
+34	delete all in spam	email_other	email	 delete all in spam 						
+35	delete all in trash	email_other	email	 delete all in trash 						
+36	delete all mail that isn't marked urgent	email_other	email	 delete all <message_type> mail </message_type> that isn't marked urgent 						
+37	delete all mail that isn't marked urgent or from work	email_other	email	 delete all <message_type> mail </message_type> that isn't marked urgent or from work 						
+38	delete any emails that are not from work	email_other	email	 delete any <message_type> emails </message_type> that are not from work 						
+39	delete draft folder	email_other	email	 delete draft folder						
+40	delete email from darian	email_other	email	 delete <message_type> email </message_type> from daryan 						
+41	delete old emails	email_other	email	 delete old <message_type> emails </message_type>						
+42	delete previous email	email_other	email	 delete  previous <message_type> email </message_type>						
+43	delete spam	email_other	email	 delete spam 						
+44	delete the attachments	email_other	email	 delete the attachments 						
+45	delete the first email	email_other	email	 delete the first <message_type>email</message_type> 						
+46	delete the last five emails	email_other	email	 delete the last five <message_type> emails </message_type>						
+47	delete this conversation	email_other	email	 delete this <message_type> conversation </message_type>						
+48	emails like this have to be deleted	email_other	email	<message_type> emails </message_type> like this have to be deleted 						
+49	flag as important	email_other	email	 flag as important 						
+50	flag email just read	email_other	email	 flag <message_type> email </message_type> just read						
+51	flag for follow up	email_other	email	 flag for follow up						
+52	flag the email for importance	email_other	email	 flag the <message_type> email </message_type> for importance 						
+53	flag the email from my boss	email_other	email	 flag the <message_type> email </message_type> from my boss 						
+54	flag the last email from mom	email_other	email	 flag the last <message_type> email </message_type> from mom 						
+55	forward now	email_other	email	 forward 						
+56	forward this email	email_other	email	 forward this <message_type> email </message_type>						
+57	forward to all	email_other	email	 forward to all 						
+58	go ahead and tag this email as unread	email_other	email	Go ahead and tag this <message_type> email </message_type> as unread 						
+59	hold on flag that email	email_other	email	hold on flag that <message_type> email </message_type>						
+60	mark all as read	email_other	email	 mark all as read 						
+61	mark everything as read	email_other	email	 mark everything as read 						
+62	move conversation to inbox folder	email_other	email	 move <message_type> conversation </message_type> to inbox folder						
+63	move conversation to to do folder	email_other	email	 move <message_type> conversation </message_type> to to do folder						
+64	move email back to inbox	email_other	email	 move <message_type> email </message_type> back to inbox 						
+65	open drafts	email_other	email	 open drafts 						
+66	please jump to the next conversation	email_other	email	please jump to the next <message_type> conversation </message_type>						
+67	reply to my last work email	email_other	email	 reply to my last work <message_type> email </message_type>						
+68	please respond to the last email	email_other	email	please respond to the last <message_type> email </message_type>						
+69	please send a reply to the last work email	email_other	email	please send a reply to the last work <message_type> email </message_type>						
+70	please skip this conversation	email_other	email	please skip this <message_type> conversation </message_type>						
+71	please tag it as read	email_other	email	please tag it as read 						
+72	read next	email_other	email	 read next						
+73	read the first one again	email_other	email	 read the first one again						
+74	remove from drafts	email_other	email	 remove from drafts 						
+75	remove star from this message	email_other	email	 remove star from this <message_type> message </message_type>						
+76	repeat that email	email_other	email	 repeat that <message_type> email </message_type>						
+77	reply all	email_other	email	 reply all 						
+78	reply to all	email_other	email	 reply to all 						
+79	return to previous message	email_other	email	 return to previous <message_type> message </message_type>						
+80	save this conversation	email_other	email	 save this <message_type> conversation </message_type>						
+81	save this draft	email_other	email	 save this <message_type> draft </message_type>						
+82	save this email	email_other	email	 save this <message_type> email </message_type>						
+83	star this email	email_other	email	 star this <message_type> email </message_type>						
+84	tag it as high importance	email_other	email	 tag it as high importance 						
+85	archive the new email from best buy	email_other	email	 archive the new <message_type> email </message_type> from best buy 						
+86	add sender to my contacts	email_other	email	 add <relationship_name> sender </relationship_name> to my contacts 						
+87	alexa can you untag an email	email_other	email	alexa can you untag an <message_type> email </message_type>						
+88	alexa please reply to the sender	email_other	email	alexa please reply to the <relationship_name> sender </relationship_name>						
+89	answer that message with no thank you	email_other	email	 answer that <message_type> message </message_type> with <message> no thank you </message>						
+90	archive all read emails	email_other	email	 archive all read <message_type> emails </message_type>						
+91	archive first message	email_other	email	 archive first <message_type> message </message_type>						
+92	archive this convo	email_other	email	 archive this <message_type> convo </message_type>						
+93	begin replying to this email	email_other	email	begin replying to this <message_type> email </message_type>						
+94	can you place this entire conversation in the bin.	email_other	email	can you place this entire <message_type> conversation </message_type> in the bin 						
+95	can you start over from the first message of the conversation	email_other	email	can you start over from the first <message_type> message </message_type> of the <message_type> conversation </message_type>						
+96	categorize these emails as advertisement	email_other	email	 categorize these <message_type> emails </message_type> as advertisement 						
+97	clear drafts	email_other	email	 clear drafts 						
+98	delete this sender	email_other	email	 delete this <relationship_name> sender </relationship_name>						
+99	Dispose of emails from this sender	email_other	email	 dispose of <message_type> emails </message_type> from this sender 						
+100	empty inbox	email_other	email	 empty inbox 						
+101	flag as spam	email_other	email	 flag as spam 						
+102	flag and save for now	email_other	email	 flag and save for now						
+103	flag for next week	email_other	email	 flag for next week 						
+104	forward this email to all team members	email_other	email	 forward this <message_type> email </message_type> to all team members 						
+105	forward this email to my outlook	email_other	email	 forward this <message_type> email </message_type> to my outlook 						
+106	forward this email to my personal account	email_other	email	 forward this <message_type> email </message_type> to my personal account 						
+107	forward this email to my work account	email_other	email	 forward this <message_type> email </message_type> to my work account 						
+108	go on to the next	email_other	email	 go on to the next 						
+109	go to the next email	email_other	email	 go to the next <message_type> email </message_type>						
+110	i need to pin this email	email_other	email	i need to pin this <message_type> email </message_type>						
+111	just erase them all	email_other	email	just erase them all 						
+112	label all conversations read	email_other	email	 label all <message_type> conversations </message_type> read 						
+113	never read a mail from this sender again	email_other	email	never read a <message_type> mail </message_type> from this sender again						
+114	pass this conversation	email_other	email	pass this <message_type> conversation </message_type>						
+115	please remove the read mark on this email	email_other	email	please remove the read mark on this <message_type> email </message_type>						
+116	reply with the documents attached	email_other	email	 reply with the documents attached						
+117	reread this conversation	email_other	email	 reread this <message_type> conversation </message_type>						
+118	save this email to favorites	email_other	email	 save this <message_type> email </message_type> to favorites 						
+119	skip all the emails from mom	email_other	email	 skip all the <message_type> emails </message_type> from mom 						
+120	skip this writer for now	email_other	email	 skip this <relationship_name> writer </relationship_name> for now						
+121	snooze this conversation	email_other	email	 snooze this <message_type> conversation </message_type>						
+122	take me to next conversation	email_other	email	 take me to next <message_type> conversation </message_type>						
+123	this conversation can be skipped	email_other	email	this <message_type> conversation </message_type> can be skipped 						
+124	go to the next one	email_other	email	 go to the next one						
+125	mark conversation as unread	email_other	email	 mark <message_type> conversation </message_type> as unread 						
+126	pause	email_other	email	 pause 						
+127	mark it read	email_other	email	 mark it read 						
+128	delete thread	email_other	email	 delete <message_type> thread </message_type>						
+129	mark it as read	email_other	email	 mark it as read 						
+130	mark it as unread	email_other	email	 mark it as unread 						
+131	last one	email_other	email	 last one						
+132	delete this thread	email_other	email	 delete this <message_type> thread </message_type>						
+133	last conversation	email_other	email	 last <message_type> conversation </message_type>						
+134	last email	email_other	email	 last <message_type> email </message_type>						
+135	mark all messages in this conversation unread	email_other	email	 mark all <message_type> messages </message_type> in this <message_type> thread </message_type> unread 						
+136	unflag it	email_other	email	 unflag it						
+137	mark as unread	email_other	email	 mark as unread 						
+138	mark as read	email_other	email	 mark as read 						
+139	archive it	email_other	email	 archive it						
+140	mark conversation unread	email_other	email	 mark <message_type> conversation </message_type> unread 						
+141	mark email as read	email_other	email	 mark <message_type> email </message_type> as read 						
+142	mark email as unread	email_other	email	 mark <message_type> email </message_type> as unread 						
+143	mark email as spam	email_other	email	 mark <message_type> email </message_type> as spam 						
+144	email this document	send_email	email	 <message_type>email</message_type> this document 						
+145	email this file	send_email	email	 <message_type>email</message_type> this file 						
+146	resume	email_other	email	 resume 						
+147	yay	email_other	email	yay						
+148	nay	email_other	email	nay						
+149	reply real quick	email_other	email	reply real quick						
+150	i am going to flag this one	email_other	email	i am going to flag this one						
+151	i think i am gonna flag this one	email_other	email	i think i am gonna flag this one						
+152	i think i am going to flag this one	email_other	email	i think i am going to flag this one						
+153	do i have new emails	email_other	email	do i have new <message_type>emails</message_type>						
+154	unflag email	email_other	email	 unflag <message_type> email </message_type>						
+155	mark the email as read	email_other	email	 mark the <message_type> email </message_type> as read 						
+156	mark the email read	email_other	email	 mark the <message_type> email </message_type> read 						
+157	i want to mark the email as read	email_other	email	i want to mark the <message_type> email </message_type> as read 						
+158	i want to mark the email read	email_other	email	i want to mark the <message_type> email </message_type> read 						
+159	just mark the email as read	email_other	email	just mark the <message_type> email </message_type> as read 						
+160	just mark the email read	email_other	email	just mark the <message_type> email </message_type> read 						
+161	mark conversation read	email_other	email	 mark <message_type> conversation </message_type> read 						
+162	mark the conversation read	email_other	email	 mark the <message_type> conversation </message_type> read 						
+163	mark the conversation as read	email_other	email	 mark the <message_type> conversation </message_type> as read 						
+164	mark this conversation read	email_other	email	 mark this <message_type> conversation </message_type> read 						
+165	mark this conversation as read	email_other	email	 mark this <message_type> conversation </message_type> as read 						
+166	can you mark conversation read	email_other	email	can you mark <message_type> conversation </message_type> read 						
+167	can you mark the conversation read	email_other	email	can you mark the <message_type> conversation </message_type> read 						
+168	can you mark the conversation as read	email_other	email	can you mark the <message_type> conversation </message_type> as read 						
+169	can you mark this conversation read	email_other	email	can you mark this <message_type> conversation </message_type> read 						
+170	can you mark this conversation as read	email_other	email	can you mark this <message_type> conversation </message_type> as read 						
+171	could you mark conversation read	email_other	email	could you mark <message_type> conversation </message_type> read 						
+172	could you mark the conversation read	email_other	email	could you mark the <message_type> conversation </message_type> read 						
+173	could you mark the conversation as read	email_other	email	could you mark the <message_type> conversation </message_type> as read 						
+174	could you mark this conversation read	email_other	email	could you mark this <message_type> conversation </message_type> read 						
+175	could you mark this conversation as read	email_other	email	could you mark this <message_type> conversation </message_type> as read 						
+176	could you please mark conversation read	email_other	email	could you please mark <message_type> conversation </message_type> read 						
+177	could you please mark the conversation read	email_other	email	could you please mark the <message_type> conversation </message_type> read 						
+178	could you please mark the conversation as read	email_other	email	could you please mark the <message_type> conversation </message_type> as read 						
+179	could you please mark this conversation read	email_other	email	could you please mark this <message_type> conversation </message_type> read 						
+180	could you please mark this conversation as read	email_other	email	could you please mark this <message_type> conversation </message_type> as read 						
+181	i want to mark conversation read	email_other	email	i want to mark <message_type> conversation </message_type> read 						
+182	i want to mark the conversation read	email_other	email	i want to mark the <message_type> conversation </message_type> read 						
+183	i want to mark the conversation as read	email_other	email	i want to mark the <message_type> conversation </message_type> as read 						
+184	i want to mark this conversation read	email_other	email	i want to mark this <message_type> conversation </message_type> read 						
+185	i want to mark this conversation as read	email_other	email	i want to mark this <message_type> conversation </message_type> as read 						
+186	just mark conversation read	email_other	email	just mark <message_type> conversation </message_type> read 						
+187	just mark mark the conversation read	email_other	email	just mark mark the <message_type> conversation </message_type> read 						
+188	just mark mark the conversation as read	email_other	email	just mark mark the <message_type> conversation </message_type> as read 						
+189	just mark mark this conversation read	email_other	email	just mark mark this <message_type> conversation </message_type> read 						
+190	just mark mark this conversation as read	email_other	email	just mark mark this <message_type> conversation </message_type> as read 						
+191	mark the conversation unread	email_other	email	 mark the <message_type> conversation </message_type> unread 						
+192	mark the conversation as unread	email_other	email	 mark the <message_type> conversation </message_type> as unread 						
+193	mark this conversation unread	email_other	email	 mark this <message_type> conversation </message_type> unread 						
+194	mark this conversation as unread	email_other	email	 mark this <message_type> conversation </message_type> as unread 						
+195	can you mark conversation unread	email_other	email	can you mark <message_type> conversation </message_type> unread 						
+196	can you mark the conversation unread	email_other	email	can you mark the <message_type> conversation </message_type> unread 						
+197	can you mark the conversation as unread	email_other	email	can you mark the <message_type> conversation </message_type> as unread 						
+198	can you mark this conversation unread	email_other	email	can you mark this <message_type> conversation </message_type> unread 						
+199	can you mark this conversation as unread	email_other	email	can you mark this <message_type> conversation </message_type> as unread 						
+200	could you mark conversation unread	email_other	email	could you mark <message_type> conversation </message_type> unread 						
+201	could you mark the conversation unread	email_other	email	could you mark the <message_type> conversation </message_type> unread 						
+202	could you mark the conversation as unread	email_other	email	could you mark the <message_type> conversation </message_type> as unread 						
+203	could you mark this conversation unread	email_other	email	could you mark this <message_type> conversation </message_type> unread 						
+204	could you mark this conversation as unread	email_other	email	could you mark this <message_type> conversation </message_type> as unread 						
+205	could you please mark conversation unread	email_other	email	could you please mark <message_type> conversation </message_type> unread 						
+206	could you please mark the conversation unread	email_other	email	could you please mark the <message_type> conversation </message_type> unread 						
+207	could you please mark the conversation as unread	email_other	email	could you please mark the <message_type> conversation </message_type> as unread 						
+208	could you please mark this conversation unread	email_other	email	could you please mark this <message_type> conversation </message_type> unread 						
+209	could you please mark this conversation as unread	email_other	email	could you please mark this <message_type> conversation </message_type> as unread 						
+210	i want to mark conversation unread	email_other	email	i want to mark <message_type> conversation </message_type> unread 						
+211	i want to mark the conversation unread	email_other	email	i want to mark the <message_type> conversation </message_type> unread 						
+212	i want to mark the conversation as unread	email_other	email	i want to mark the <message_type> conversation </message_type> as unread 						
+213	i want to mark this conversation unread	email_other	email	i want to mark this <message_type> conversation </message_type> unread 						
+214	i want to mark this conversation as unread	email_other	email	i want to mark this <message_type> conversation </message_type> as unread 						
+215	just mark conversation unread	email_other	email	just mark <message_type> conversation </message_type> unread 						
+216	just mark mark the conversation unread	email_other	email	just mark mark the <message_type> conversation </message_type> unread 						
+217	just mark mark the conversation as unread	email_other	email	just mark mark the <message_type> conversation </message_type> as unread 						
+218	just mark mark this conversation unread	email_other	email	just mark mark this <message_type> conversation </message_type> unread 						
+219	just mark mark this conversation as unread	email_other	email	just mark mark this <message_type> conversation </message_type> as unread 						
+220	mark the email as unread	email_other	email	 mark the <message_type> email </message_type> as unread 						
+221	mark the email unread	email_other	email	 mark the <message_type> email </message_type> unread 						
+222	i want to mark the email as unread	email_other	email	i want to mark the <message_type> email </message_type> as unread 						
+223	i want to mark the email unread	email_other	email	i want to mark the <message_type> email </message_type> unread 						
+224	just mark the email as unread	email_other	email	just mark the <message_type> email </message_type> as unread 						
+225	just mark the email unread	email_other	email	just mark the <message_type> email </message_type> unread 						
+226	flag the email	email_other	email	 flag the <message_type> email </message_type>						
+227	flag this email	email_other	email	 flag this <message_type> email </message_type>						
+228	will you flag this email please	email_other	email	will you flag this <message_type> email </message_type> please						
+229	will you flag the email	email_other	email	will you flag the <message_type> email </message_type>						
+230	could you please flag the email	email_other	email	could you please flag the <message_type>email</message_type>						
+231	could you flag the email please	email_other	email	could you flag the <message_type>email</message_type> please						
+232	i want to flag this email	email_other	email	i want to flag this <message_type> email </message_type>						
+233	flag this conversation	email_other	email	 flag this <message_type> conversation </message_type>						
+234	flag the conversation please	email_other	email	 flag the <message_type> conversation </message_type> please						
+235	flag the whole conversation	email_other	email	 flag the whole <message_type> conversation </message_type>						
+236	could you flag this conversation	email_other	email	could you flag this <message_type> conversation </message_type>						
+237	could you please flag this conversation	email_other	email	could you please flag this <message_type> conversation </message_type>						
+238	will you flag this conversation	email_other	email	will you flag this <message_type> conversation </message_type>						
+239	will you please flag the conversation	email_other	email	will you please flag the <message_type> conversation </message_type>						
+240	just flag the whole conversation	email_other	email	just flag the whole <message_type> conversation </message_type>						
+241	just flag the conversation	email_other	email	just flag the <message_type> conversation </message_type>						
+242	i want to flag the conversation for later	email_other	email	i want to flag the <message_type> conversation </message_type> for later						
+243	i want to flag the conversation	email_other	email	i want to flag the <message_type> conversation </message_type>						
+244	flag the conversation for later	email_other	email	 flag the <message_type> conversation </message_type> for later						
+245	flag the whole conversation for later	email_other	email	 flag the whole <message_type> conversation </message_type> for later						
+246	unflag the email	email_other	email	 unflag the <message_type> email </message_type>						
+247	unflag this email	email_other	email	 unflag this <message_type> email </message_type>						
+248	will you unflag the email	email_other	email	will you unflag the <message_type> email </message_type>						
+249	unflag this conversation	email_other	email	 unflag this <message_type> conversation </message_type>						
+250	unflag the conversation please	email_other	email	unflag the <message_type> conversation </message_type> please						
+251	unflag the whole conversation	email_other	email	unflag the whole <message_type> conversation </message_type>						
+252	could you unflag this conversation	email_other	email	could you unflag this <message_type> conversation </message_type>						
+253	could you please unflag this conversation	email_other	email	could you please unflag this <message_type> conversation </message_type>						
+254	will you unflag this conversation	email_other	email	will you unflag this <message_type> conversation </message_type>						
+255	will you please unflag the conversation	email_other	email	will you please unflag the <message_type> conversation </message_type>						
+256	just unflag the whole conversation	email_other	email	just unflag the whole <message_type> conversation </message_type>						
+257	just unflag the conversation	email_other	email	just unflag the <message_type> conversation </message_type>						
+258	i want to unflag the conversation for later	email_other	email	i want to unflag the <message_type> conversation </message_type> for later						
+259	i want to unflag the conversation	email_other	email	i want to unflag the <message_type> conversation </message_type>						
+260	unflag the conversation for later	email_other	email	unflag the <message_type> conversation </message_type> for later						
+261	unflag the whole conversation for later	email_other	email	unflag the whole <message_type> conversation </message_type> for later						
+262	archive the email	email_other	email	 archive the <message_type> email </message_type>						
+263	archive this email	email_other	email	 archive this <message_type> email </message_type>						
+264	will you archive this email please	email_other	email	will you archive this <message_type> email </message_type> please						
+265	will you archive the email	email_other	email	will you archive the <message_type> email </message_type>						
+266	could you please archive the email	email_other	email	could you please archive the <message_type> email </message_type>						
+267	could you archive the email please	email_other	email	could you archive the <message_type> email </message_type> please						
+268	i want to archive this email	email_other	email	i want to archive this <message_type> email </message_type>						
+269	delete the email	email_other	email	 delete the <message_type> email </message_type>						
+270	delete this email	email_other	email	 delete this <message_type> email </message_type>						
+271	will you delete this email please	email_other	email	will you delete this <message_type> email </message_type> please						
+272	will you delete the email	email_other	email	will you delete the <message_type> email </message_type>						
+273	could you please delete the email	email_other	email	could you please delete the <message_type> email </message_type>						
+274	could you delete the email please	email_other	email	could you delete the <message_type> email </message_type> please						
+275	i want to delete this email	email_other	email	i want to delete this <message_type> email </message_type>						
+276	archive this conversation	email_other	email	 archive this <message_type> conversation </message_type>						
+277	archive the conversation please	email_other	email	archive the <message_type> conversation </message_type> please						
+278	archive the whole conversation	email_other	email	 archive the whole <message_type> conversation </message_type>						
+279	could you archive this conversation	email_other	email	could you archive this <message_type> conversation </message_type>						
+280	could you please archive this conversation	email_other	email	could you please archive this <message_type> conversation </message_type>						
+281	will you archive this conversation	email_other	email	will you archive this <message_type> conversation </message_type>						
+282	will you please archive the conversation	email_other	email	will you please archive the <message_type> conversation </message_type>						
+283	just archive the whole conversation	email_other	email	just archive the whole <message_type> conversation </message_type>						
+284	just archive the conversation	email_other	email	just archive the <message_type> conversation </message_type>						
+285	i want to archive the conversation for later	email_other	email	i want to archive the <message_type> conversation </message_type> for later						
+286	i want to archive the conversation	email_other	email	i want to archive the <message_type> conversation </message_type>						
+287	archive the conversation for later	email_other	email	archive the <message_type> conversation </message_type> for later						
+288	archive the whole conversation for later	email_other	email	 archive the whole <message_type> conversation </message_type> for later						
+289	i am gonna archive the conversation	email_other	email	i am gonna archive the <message_type> conversation </message_type>						
+290	delete conversation	email_other	email	 delete <message_type> conversation </message_type>						
+291	delete  the conversation please	email_other	email	delete the <message_type> conversation </message_type> please						
+292	delete  the whole conversation	email_other	email	delete the whole <message_type> conversation </message_type>						
+293	could you delete this conversation	email_other	email	could you delete this <message_type> conversation </message_type>						
+294	could you please delete this conversation	email_other	email	could you please delete this <message_type> conversation </message_type>						
+295	will you delete this conversation	email_other	email	will you delete this <message_type> conversation </message_type>						
+296	will you please delete the conversation	email_other	email	will you please delete the <message_type> conversation </message_type>						
+297	just delete the whole conversation	email_other	email	just delete the whole <message_type> conversation </message_type>						
+298	just delete the conversation	email_other	email	just delete the <message_type> conversation </message_type>						
+299	i want to delete the conversation	email_other	email	i want to delete the <message_type> conversation </message_type>						
+300	delete the whole discussion	email_other	email	delete the whole <message_type> discussion </message_type>						
+301	delete the discussion	email_other	email	delete the <message_type> discussion </message_type>						
+302	can you please delete the whole discussion	email_other	email	can you please delete the whole <message_type> discussion </message_type>						
+303	could you please delete this discussion	email_other	email	could you please delete this <message_type> discussion </message_type>						
+304	i am gonna delete the conversation	email_other	email	i am gonna delete the <message_type> conversation </message_type>						
+305	i think i am gonna delete the discussion	email_other	email	i think i am gonna delete the <message_type> discussion </message_type>						
+306	i think i am going to delete the whole discussion	email_other	email	i think i am going to delete the whole <message_type> discussion </message_type>						
+307	i want to hear the next email	email_other	email	i want to hear the next <message_type> email </message_type>						
+308	read me the next email	email_other	email	read me the next <message_type> email </message_type>						
+309	skip to the next email	email_other	email	skip to the next <message_type> email </message_type>						
+310	what 's the next email	email_other	email	what 's the next <message_type> email </message_type>						
+311	next conversation please	email_other	email	 next <message_type> conversation </message_type> please						
+312	go to the next conversation	email_other	email	go to the next <message_type> conversation </message_type>						
+313	i want to hear the next conversation	email_other	email	i want to hear the next <message_type> conversation </message_type>						
+314	read me the next conversation	email_other	email	read me the next <message_type> conversation </message_type>						
+315	skip to the next conversation	email_other	email	skip to the next <message_type> conversation </message_type>						
+316	next conversation in line	email_other	email	 next <message_type> conversation </message_type> in line						
+317	next conversation in line please	email_other	email	 next <message_type> conversation </message_type> in line please						
+318	what 's the next conversation	email_other	email	what 's the next <message_type> conversation </message_type>						
+319	go to the previous email	email_other	email	go to the previous <message_type> email </message_type>						
+320	i want to hear the previous email again	email_other	email	i want to hear the previous <message_type> email </message_type> again						
+321	read me the previous email again	email_other	email	read me the previous <message_type> email </message_type> again						
+322	go back to the previous email	email_other	email	go back to the previous <message_type> email </message_type>						
+323	what 's the previous email again	email_other	email	what 's the previous <message_type> email </message_type> again						
+324	previous conversation please	email_other	email	 previous <message_type> conversation </message_type> please						
+325	go to the previous conversation	email_other	email	go to the previous <message_type> conversation </message_type>						
+326	i want to hear the previous conversation again	email_other	email	i want to hear the previous <message_type> conversation </message_type> again						
+327	could you read me the previous conversation again	email_other	email	could you read me the previous <message_type> conversation </message_type> again						
+328	go back to the previous conversation	email_other	email	go back to the previous <message_type> conversation </message_type>						
+329	could you please go back to the previous conversation	email_other	email	could you please go back to the previous <message_type> conversation </message_type>						
+330	rewind to the previous conversation	email_other	email	rewind to the previous <message_type> conversation </message_type>						
+331	what 's the previous conversation	email_other	email	what 's the previous <message_type> conversation </message_type>						
+332	what 's the previous conversation again	email_other	email	what 's the previous <message_type> conversation </message_type> again						
+333	skip the email	email_other	email	skip the <message_type> email </message_type>						
+334	skip this email	email_other	email	skip this <message_type> email </message_type>						
+335	i want to skip this email	email_other	email	i want to skip this <message_type> email </message_type>						
+336	skip the conversation	email_other	email	skip the <message_type> conversation </message_type>						
+337	skip conversation please	email_other	email	 skip <message_type> conversation </message_type> please						
+338	skip to the next conversation please	email_other	email	skip to the next <message_type> conversation </message_type> please						
+339	i want to skip to the next conversation	email_other	email	i want to skip to the next <message_type> conversation </message_type>						
+340	i want to skip the conversation	email_other	email	i want to skip the <message_type> conversation </message_type>						
+341	skip this whole discussion	email_other	email	skip this whole <message_type> discussion </message_type>						
+342	skip the whole discussion	email_other	email	skip the whole <message_type> discussion </message_type>						
+343	could you please skip the whole discussion	email_other	email	could you please skip the whole <message_type> discussion </message_type>						
+344	reply to this email	email_other	email	 reply to this <message_type> email </message_type>						
+345	reply to that email	email_other	email	 reply to that <message_type> email </message_type>						
+346	reply to this email please	email_other	email	 reply to this <message_type> email </message_type> please						
+347	archive the conversation	email_other	email	archive the <message_type> conversation </message_type>						
+348	archive the thread	email_other	email	archive the <message_type> thread </message_type>						
+349	archive the discussion	email_other	email	archive the <message_type> discussion </message_type>						
+350	flag the conversation	email_other	email	flag the <message_type> conversation </message_type>						
+351	flag the thread	email_other	email	flag the <message_type> thread </message_type>						
+352	flag the discussion	email_other	email	flag the <message_type> discussion </message_type>						
+353	unflag the conversation	email_other	email	unflag the <message_type> conversation </message_type>						
+354	unflag the thread	email_other	email	unflag the <message_type> thread </message_type>						
+355	unflag the discussion	email_other	email	unflag the <message_type> discussion </message_type>						
+356	delete the conversation	email_other	email	delete the <message_type> conversation </message_type>						
+357	delete the thread	email_other	email	delete the <message_type> thread </message_type>						
+358	forward the conversation	email_other	email	forward the <message_type> conversation </message_type>						
+359	forward the thread	email_other	email	forward the <message_type> thread </message_type>						
+360	forward the discussion	email_other	email	forward the <message_type> discussion </message_type>						
+361	flag	email_other	email	 flag 						
+362	how do i have any mails ?	email_other	email	how do i have any <message_type> mails </message_type> ?						
+363	what are those emails	email_other	email	what are those <message_type> emails </message_type> 						
+364	what are those emails ?	email_other	email	what are those <message_type> emails </message_type> ?						
+365	what can you tell me about my email	email_other	email	what can you tell me about my <message_type> email </message_type> 						
+366	what can you tell me about my email ?	email_other	email	what can you tell me about my <message_type> email </message_type> ?						
+367	what happened new emails in the last hour ?	email_other	email	what happened new <message_type> emails </message_type> in the last hour ?						
+368	what is my next email ?	email_other	email	what is my next <message_type>email</message_type> ?						
+369	what my mail do i have ?	email_other	email	what my <message_type>mail</message_type> do i have ?						
+370	what 's my next email ?	email_other	email	what 's my next <message_type>email</message_type> ?						
+371	email	email_other	email	<message_type> email </message_type> 						
+372	Email	email_other	email	<message_type> Email </message_type> 						
+373	check as read	email_other	email	check as read 						
+374	Email please	email_other	email	<message_type> Email </message_type> please						
+375	Mail please	email_other	email	<message_type> Mail </message_type> please						
+376	skip shannon's email	email_other	email	skip shannon's <message_type> email </message_type> 						
+377	skip to last email	email_other	email	skip to last <message_type> email </message_type> 						
+378	Add a contact	email_other	email	Add a <slot_attribute> contact </slot_attribute> 						
+379	Add contact	email_other	email	Add contact						
+380	add new email	email_other	email	add new <message_type> email </message_type> 						
+381	Add this sender to my contacts	email_other	email	Add this <relationship_name> sender </relationship_name> to my contacts 						
+382	Are any marked urgent?	email_other	email	Are any marked urgent ?						
+383	attnet email	email_other	email	 attnet <message_type> email </message_type> 						
+384	Begin replying to this email	email_other	email	Begin replying to this <message_type> email </message_type> 						
+385	Begin the new work emails	email_other	email	Begin the new work <message_type> emails </message_type> 						
+386	Begin this email anew	email_other	email	Begin this <message_type>email</message_type> anew						
+387	Begin work conversations	email_other	email	Begin work <message_type> conversations </message_type> 						
+388	Can I get the next message, please?	email_other	email	Can I get the next <message_type> message </message_type>, please?						
+389	can you read the last one	email_other	email	can you read the last one						
+390	Can you read this email from the beginning?	email_other	email	Can you read this <message_type>email</message_type> from the beginning?						
+391	can you tag that unread	email_other	email	can you tag that unread 						
+392	check as spam	email_other	email	check as spam 						
+393	check as unread	email_other	email	check as unread 						
+394	Connect to my email	email_other	email	Connect to my <message_type> email </message_type> 						
+395	Cortana email	email_other	email	Cortana <message_type> email </message_type> 						
+396	Crawl through email again	email_other	email	Crawl through <message_type>email</message_type> again						
+397	create a gmail	email_other	email	create a gmail 						
+398	Did they leave another email?	search_email	email	Did they leave another <message_type> email </message_type> ?						
+398	Did they leave another email?	email_other	email	Did they leave another <message_type> email </message_type> ?						
+399	Dont read me my read email	email_other	email	Dont read me my read <message_type> email </message_type> 						
+400	draft email	send_email	email	draft <message_type> email </message_type> 						
+401	email archive	email_other	email	email archive						
+402	email contact list	email_other	email	email contact list						
+403	email contacts	email_other	email	email contacts						
+404	Email contacts	email_other	email	Email contacts						
+405	email drafts	email_other	email	email drafts 						
+406	email please	email_other	email	email please						
+407	email response	email_other	email	email <message_type> response </message_type> 						
+408	Flag as high priority	email_other	email	 Flag as high priority 						
+409	Flag as read	email_other	email	 Flag as read 						
+410	flag as unread	email_other	email	 flag as unread 						
+411	Flag as unread	email_other	email	 Flag as unread 						
+412	Flag for next week	email_other	email	 Flag for next week 						
+413	flag these emails as unread	email_other	email	 flag these <message_type> emails </message_type> as unread 						
+414	Flag this as read	email_other	email	 Flag this as read 						
+415	Fly through the last email	email_other	email	Fly through the last <message_type> email </message_type> 						
+416	forward this email to mom	email_other	email	 forward this <message_type> email </message_type> to <relationship_name> mom </relationship_name>						
+417	Give the current duration for remainder of emails	email_other	email	Give the current duration for remainder of <message_type> emails </message_type> 						
+418	go ahead and tag this email as unread	email_other	email	go ahead and tag this <message_type> email </message_type> as unread 						
+419	go back to first conversation	email_other	email	go back to first <message_type> conversation </message_type> 						
+420	go back to first email	email_other	email	go back to first <message_type> email </message_type> 						
+421	go back to inbox	email_other	email	go back to inbox 						
+422	Go back to Jason's email batch	email_other	email	Go back to Jason 's <message_type> email </message_type> batch						
+423	go back to last email thread from this sender	email_other	email	go back to last <message_type> email thread </message_type> from this sender 						
+424	go back to last mail	email_other	email	go back to last <message_type> mail </message_type> 						
+425	go back to reread that last email	email_other	email	go back to reread that last <message_type> email </message_type> 						
+426	Go back to the first email	email_other	email	Go back to the first <message_type> email </message_type> 						
+427	Go down to last email	email_other	email	Go down to last <message_type> email </message_type> 						
+428	hey cortana read the next three emails	email_other	email	read the next three <message_type> emails </message_type> 						
+429	hey cortana skip over to the last two emails	email_other	email	hey cortana skip over to the last two <message_type> emails </message_type> 						
+430	hey, skip this email	email_other	email	hey, skip this <message_type> email </message_type> 						
+431	I need you to skip	email_other	email	I need you to skip						
+432	I want to start with the newest emails	email_other	email	I want to start with the newest <message_type> emails </message_type> 						
+433	I'd like you to read the fourth one again	email_other	email	I'd like you to read the fourth one again						
+434	Initiate next conversation	email_other	email	Initiate next <message_type> conversation </message_type> 						
+435	Keep this current email saved	email_other	email	Keep this current <message_type> email </message_type> saved						
+436	let's check the other mailbox for now	email_other	email	let's check the other <message_type>mail</message_type>box for now						
+437	Lose all emails from this sender	email_other	email	Lose all <message_type>emails</message_type> from this sender						
+438	Make a copy of this email for the team	email_other	email	Make a copy of this <message_type> email </message_type> for <relationship_name> the team </relationship_name> 						
+439	Mark as urgent	email_other	email	 Mark as urgent 						
+440	Mark the email from work as unread	email_other	email	Mark the <message_type> email </message_type> from work as unread 						
+441	mark the last email you read as unread	email_other	email	mark the last <message_type> email </message_type> you read as unread 						
+442	mark this as spam	email_other	email	mark this as spam 						
+443	mark this email as spam	email_other	email	 mark this <message_type> email </message_type> as spam 						
+444	Mark this important	email_other	email	 Mark this important 						
+445	message box	email_other	email	message box						
+446	Move forward two emails	email_other	email	 Move forward two <message_type> emails </message_type> 						
+447	move to archived mail	email_other	email	move to archived <message_type> mail </message_type> 						
+448	move to trash	email_other	email	 move to trash 						
+449	My Gmail account	email_other	email	My Gmail account						
+450	no need, skip this email	email_other	email	no need, skip this <message_type> email </message_type> 						
+451	no, skip that one, yes	email_other	email	no, skip that one, yes						
+452	Pass this conversation	email_other	email	Pass this <message_type> conversation </message_type> 						
+453	pause reading, and archive that one	email_other	email	pause reading, and archive that one						
+454	Pin this email	email_other	email	Pin this <message_type> email </message_type> 						
+455	Please mark the email thats titled urgent unread	email_other	email	Please mark the <message_type> email </message_type> thats titled <email_subject> urgent </email_subject> unread 						
+456	please move email to trash	email_other	email	please move <message_type> email </message_type> to trash 						
+457	please skip conversation	email_other	email	please skip <message_type> conversation </message_type> 						
+458	please skip down to the fifth email and mark read	email_other	email	please skip down to the fifth <message_type>email</message_type> and mark read 						
+459	Please skip over to the third email	email_other	email	Please skip over to the third <message_type> email </message_type> 						
+460	Please skip this email	email_other	email	Please skip this <message_type> email </message_type> 						
+461	please skip to the last email	email_other	email	please skip to the last <message_type> email </message_type> 						
+462	Please start email again	email_other	email	Please start <message_type>email</message_type> again						
+463	Please start that email over	email_other	email	Please start that <message_type> email </message_type> over						
+464	please tag that as an unread message	email_other	email	please tag that as an unread <message_type> message </message_type> 						
+465	Please tag the email marked urgent as unread	email_other	email	Please tag the <message_type> email </message_type> marked urgent as unread 						
+466	Please tag this as spam	email_other	email	Please tag this as spam 						
+467	Please tag this email as unread	email_other	email	Please tag this <message_type> email </message_type> as unread 						
+468	Please, skip the next email	email_other	email	Please, skip the next <message_type> email </message_type> 						
+469	Read all read emails again	email_other	email	Read all read <message_type>emails</message_type> again						
+470	Read me my previous email	email_other	email	Read me my previous <message_type> email </message_type> 						
+471	Read next email and flag this one	email_other	email	Read next <message_type>email</message_type> and flag this one						
+472	Read previous mail in this subject chain please	email_other	email	Read previous <message_type>mail</message_type> in this subject chain please						
+473	Read that last email for me again	email_other	email	Read that last <message_type> email </message_type> for me again						
+474	Read the email after	email_other	email	Read the <message_type>email</message_type> after						
+475	READ THE EMAIL AGAIN	email_other	email	READ THE <message_type> EMAIL </message_type> AGAIN						
+476	Read the email before	email_other	email	Read the <message_type>email</message_type> before						
+477	Read the email from Calvin again	email_other	email	Read the <message_type>email</message_type> from Calvin again						
+478	Read the first email again	email_other	email	Read the first <message_type> email </message_type> again						
+479	read the previous email	email_other	email	read the previous <message_type> email </message_type> 						
+480	Read the third one again	email_other	email	Read the third one again						
+481	Read this conversation again	email_other	email	Read this <message_type> conversation </message_type> again						
+482	read yesterdays emails again	email_other	email	read yesterdays <message_type> emails </message_type> again						
+483	Recite next conversation's mails	email_other	email	Recite next <message_type> conversation's </message_type> <message_type> mails </message_type> 						
+484	Recommence the conversation from this morning	email_other	email	Recommence the <message_type> conversation </message_type> from this morning 						
+485	Relate the previous email	email_other	email	Relate the previous <message_type> email </message_type> 						
+486	remove from outbox	email_other	email	remove from outbox 						
+487	Remove the remaining mail from this conversation	email_other	email	Remove the remaining mail from this <message_type> conversation </message_type> 						
+488	reply to this email with attachments	email_other	email	 reply to this <message_type> email </message_type> with attachments 						
+489	Reread it	email_other	email	Reread it						
+490	Reread last email	email_other	email	Reread last <message_type> email </message_type> 						
+491	reread the last email	email_other	email	reread the last <message_type> email </message_type> 						
+492	Reread the last email please	email_other	email	Reread the last <message_type> email </message_type> please						
+493	Restart from the top	email_other	email	 Restart from the top						
+494	Restart last email	email_other	email	Restart last <message_type> email </message_type> 						
+495	Save all of this sender's emails	email_other	email	Save all of this sender's <message_type> emails </message_type> 						
+496	Save this email to favorites	email_other	email	 Save this <message_type> email </message_type> to favorites 						
+497	send email	send_email	email	send <message_type> email </message_type> 						
+498	send to trash	email_other	email	send to trash 						
+499	Show all emails as read	email_other	email	Show all <message_type>emails</message_type> as read 						
+500	skip all emails within this conversation	email_other	email	skip all <message_type> emails </message_type> within this <message_type> conversation </message_type> 						
+501	skip all mail from this sender	email_other	email	skip all <message_type> mail </message_type> from this sender 						
+502	Skip all mail with this subject line for now	email_other	email	Skip all <message_type> mail </message_type> with this subject line for now						
+503	skip all replies for this subject	email_other	email	skip all replies for this subject						
+504	skip all stacy's emails	email_other	email	skip all stacy's <message_type> emails </message_type> 						
+505	Skip all the emails from mom	email_other	email	 Skip all the <message_type> emails </message_type> from mom 						
+506	Skip back to the previous email	email_other	email	Skip back to the previous <message_type> email </message_type> 						
+507	Skip conversation	email_other	email	 Skip <message_type> conversation </message_type> 						
+508	skip conversation with alex	email_other	email	 skip <message_type> conversation </message_type> with <contact_name> alex </contact_name>						
+509	skip this conversation	email_other	email	 skip this <message_type> conversation </message_type> 						
+510	Skip this conversation.	email_other	email	 Skip this <message_type> conversation </message_type> 						
+511	skip convo	email_other	email	 skip <message_type> convo </message_type> 						
+512	skip darian's email	email_other	email	skip <contact_name> darian's </contact_name> <message_type> email </message_type> 						
+513	skip email from amazon	email_other	email	 skip <message_type> email </message_type> from amazon 						
+514	skip email from darian	email_other	email	 skip <message_type> email </message_type> from darian 						
+515	skip emails from lee	email_other	email	 skip <message_type> emails </message_type> from lee 						
+516	skip emails from Prosberg	email_other	email	 skip <message_type> emails </message_type> from Prosberg 						
+517	skip emails from walmart	email_other	email	 skip <message_type> emails </message_type> from walmart 						
+518	Skip emails from wednesday	email_other	email	 Skip <message_type> emails </message_type> from wednesday 						
+519	skip instances of mail from this sender	email_other	email	skip instances of <message_type> mail </message_type> from this sender 						
+520	skip josh's emails	email_other	email	skip <contact_name> josh's </contact_name> <message_type> emails </message_type> 						
+521	Skip next email please	email_other	email	Skip next <message_type>email</message_type> please						
+522	skip next two emails	email_other	email	skip next two <message_type> emails </message_type> 						
+523	skip past this email please	email_other	email	 skip past this <message_type> email </message_type> please						
+524	Skip reading mail from this sender	email_other	email	Skip reading <message_type> mail </message_type> from this sender 						
+525	skip that email	email_other	email	 skip that <message_type> email </message_type> 						
+526	skip that email for now	email_other	email	 skip that <message_type> email </message_type> for now						
+527	Skip the email	email_other	email	Skip the <message_type> email </message_type> 						
+528	Skip the new emails	email_other	email	Skip the new <message_type> emails </message_type> 						
+529	Skip the next three conversations	email_other	email	Skip the next three <message_type> conversations </message_type> 						
+530	skip the old emails	email_other	email	skip the old <message_type> emails </message_type> 						
+531	skip these email replies for now	email_other	email	 skip these <message_type> email </message_type> replies for now						
+532	Skip these mails for now	email_other	email	 Skip these <message_type> mails </message_type> for now						
+533	Skip this conversation	email_other	email	 Skip this <message_type> conversation </message_type> 						
+534	SKIP THIS CONVERSATION	email_other	email	 SKIP THIS <message_type> CONVERSATION </message_type> 						
+535	skip to a new sender	email_other	email	skip to a new <relationship_name> sender </relationship_name>						
+536	Skip to my next new email	email_other	email	Skip to my next new <message_type> email </message_type> 						
+537	Skip to the last email	email_other	email	Skip to the last <message_type> email </message_type> 						
+538	skip to the last email for today	email_other	email	 skip to the last <message_type> email </message_type> for today 						
+539	skip to the last new email	email_other	email	skip to the last new <message_type> email </message_type> 						
+540	Skip to the last one	email_other	email	 Skip to the last one						
+541	Skip to the latest email	email_other	email	Skip to the latest <message_type> email </message_type> 						
+542	skip vanessa's email	email_other	email	skip <contact_name> vanessa's </contact_name> <message_type> email </message_type> 						
+543	Start conversation from beginning	email_other	email	Start <message_type> conversation </message_type> from beginning						
+544	Start from the beginning	email_other	email	Start from the beginning						
+545	start janice's email again	email_other	email	start janice 's <message_type> email </message_type> again						
+546	Start the email over	email_other	email	Start the <message_type> email </message_type> over						
+547	Start this email over	email_other	email	Start this <message_type> email </message_type> over						
+548	State the date this email arrived	email_other	email	State the date this <message_type> email </message_type> arrived						
+549	Store this email	email_other	email	Store this <message_type> email </message_type> 						
+550	Tag all as read	email_other	email	 Tag all as read 						
+551	tag all as unread	email_other	email	 tag all as unread 						
+552	tag all emails from John Smith	email_other	email	tag all <message_type> emails </message_type> from John Smith 						
+553	Tag all emails in this conversation as read	email_other	email	Tag all <message_type> emails </message_type> in this <message_type> conversation </message_type> as read 						
+554	tag all mails in convo as spam	email_other	email	 tag all <message_type> mails </message_type> in <message_type> convo </message_type> as spam 						
+555	Tag all messages from this sender as read	email_other	email	Tag all <message_type> messages </message_type> from this sender as read 						
+556	tag all messages in this convo as unread	email_other	email	tag all <message_type> messages </message_type> in this <message_type> convo </message_type> as unread 						
+557	tag archive	email_other	email	tag archive						
+558	tag as read	email_other	email	 tag as read 						
+559	Tag as read	email_other	email	 Tag as read 						
+560	tag as spam	email_other	email	 tag as spam 						
+561	tag as unread	email_other	email	 tag as unread 						
+562	tag conversation	email_other	email	tag <message_type> conversation </message_type> 						
+563	tag darian's email as read	email_other	email	tag darian 's <message_type> email </message_type> as read 						
+564	tag darian's email as unread	email_other	email	tag darian 's <message_type> email </message_type> as unread 						
+565	tag email as read	email_other	email	 tag <message_type> email </message_type> as read 						
+566	tag email as spam	email_other	email	 tag <message_type> email </message_type> as spam 						
+567	tag email as unread	email_other	email	 tag <message_type> email </message_type> as unread 						
+568	tag it as read	email_other	email	tag it as read 						
+569	tag it as unread	email_other	email	tag it as unread 						
+570	Tag it as unread	email_other	email	Tag it as unread 						
+571	tag it as unread please	email_other	email	tag it as unread please						
+572	Tag message as read	email_other	email	Tag <message_type> message </message_type> as read 						
+573	Tag second email as read please	email_other	email	Tag second <message_type> email </message_type> as read please						
+574	Tag sender	email_other	email	Tag sender						
+575	Tag that as an unread email	email_other	email	Tag that as an unread <message_type> email </message_type> 						
+576	tag that email	email_other	email	tag that <message_type> email </message_type> 						
+577	tag that email as unread	email_other	email	 tag that <message_type> email </message_type> as unread 						
+578	Tag that email as unread, please	email_other	email	 Tag that <message_type> email </message_type> as unread , please						
+579	tag that one as unread	email_other	email	 tag that one as unread 						
+580	tag the email as read	email_other	email	 tag the <message_type> email </message_type> as read 						
+581	tag the email as unread	email_other	email	 tag the <message_type> email </message_type> as unread 						
+582	Tag the email titled urgent as unread please	email_other	email	 Tag the <message_type> email </message_type> titled <email_subject> urgent </email_subject> as unread please						
+583	tag the previous one unread	email_other	email	tag the previous one unread						
+584	Tag the rest as unread	email_other	email	 Tag the rest as unread 						
+585	Tag the very last email unread please	email_other	email	 Tag the very last <message_type> email </message_type> unread please						
+586	tag this as read	email_other	email	tag this as read 						
+587	TAG THIS AS READ	email_other	email	TAG THIS AS READ 						
+588	tag this as spam	email_other	email	tag this as spam 						
+589	tag this as unread	email_other	email	tag this as unread 						
+590	Tag this as unread	email_other	email	Tag this as unread 						
+591	TAG THIS AS UNREAD	email_other	email	TAG THIS AS UNREAD 						
+592	tag this as unread please	email_other	email	tag this as unread please						
+593	tag this conversation as unread	email_other	email	tag this <message_type> conversation </message_type> as unread 						
+594	tag this email	email_other	email	tag this <message_type> email </message_type> 						
+595	tag this email as junk	email_other	email	 tag this <message_type> email </message_type> as junk 						
+596	Tag this email as unread	email_other	email	 Tag this <message_type> email </message_type> as unread 						
+597	tag this one important	email_other	email	tag this one important 						
+598	tag this one with an unread	email_other	email	tag this one with an unread 						
+599	Tag this sender as spam	email_other	email	Tag this <relationship_name> sender </relationship_name> as spam 						
+600	Tag todays emails as read	email_other	email	 Tag todays <message_type> emails </message_type> as read 						
+601	Tag todays emails as unread	email_other	email	 Tag todays <message_type> emails </message_type> as unread 						
+602	Tell me who the email is from	email_other	email	Tell me who the <message_type>email</message_type> is from						
+603	The first email please	email_other	email	The first <message_type> email </message_type> please						
+604	The last email, can you read it again?	email_other	email	The last <message_type> email </message_type> , can you read it again?						
+605	This email	email_other	email	This <message_type> email </message_type> 						
+606	This email can be skipped	email_other	email	This <message_type> email </message_type> can be skipped						
+607	this email I think we can skip	email_other	email	this I think we can skip						
+608	This email needs to be starred	email_other	email	This <message_type> email </message_type> needs to be starred 						
+609	this one yes, skip it, this email	email_other	email	this one yes, skip it, this <message_type> email </message_type> 						
+610	this one, delete	email_other	email	this one, delete						
+611	unflag the last email	email_other	email	 unflag the last <message_type> email </message_type> 						
+612	webmailmyccinet email	email_other	email	webmailmyccinet <message_type> email </message_type> 						
+613	What are my new email?	email_other	email	What are my new <message_type> email </message_type> ?						
+614	What's my new email?	email_other	email	What's my new <message_type> email </message_type> ?						
+615	Who sent this email?	email_other	email	Who sent this <message_type> email </message_type> ?						
+616	reread	email_other	email	reread						
+617	read it again	email_other	email	read it again						
+618	play next	email_other	email	play next 						
+619	start from the beginning	email_other	email	start from the beginning						
