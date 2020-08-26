@@ -83,6 +83,17 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 
 
 ==================
+current support file_action
+==================
+<email_title>
+RE: Follow up discussion on the Files domain schema for attachment
+ SharedKeywordSynonyms -> { "shared", "sent", "emailed", "received" };
+
+CreatedKeywordSynonyms -> { "created", "authored", "wrote", "written", "writing" };
+
+EditedKeywordSynonyms -> { "edited", "modified", "accessed", "worked", "working" };
+
+==================
 mv version rename
 file 常常忘記改的
 ==================
