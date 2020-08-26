@@ -1,0 +1,44 @@
+
+
+single shot B2 model
+E:\CoreScienceDataStaging\datasources\EmailSnA\CMF\resource
+
+
+======================
+exisitng dataset
+=====================
+
+
+// for slot discusssion
+
+//external feature
+email_crowdsource_multiturn.tsv
+
+//external feature
+email_synthetic_send_email.tsv
+
+
+// only this set weight is five
+// 但是trainnig data 沒辦法看出
+intent_and_slot_training_data/NonOfficial_SnA_Email_Dsat.tsv
+
+
+
+=============================
+slot issue
+=============================
+
+compare to exception file
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging?path=%2Fevaluation%2FConfigs%2FAnnotationExceptions_oneshot.xml
+only available slot
+contact_name
+email_subject
+message
+relationship_name
+slot attribute
+
+
+
+
+relationship name is hard
+needs to think about w
