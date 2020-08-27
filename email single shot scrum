@@ -35,7 +35,12 @@ contact_name
 email_subject
 message
 relationship_name
+
+// multi turn so probably it should be added to annotationException.xml
+
 slot attribute
+
+
 
 
 intent
