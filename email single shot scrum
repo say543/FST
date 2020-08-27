@@ -5,6 +5,19 @@ E:\CoreScienceDataStaging\datasources\EmailSnA\CMF\resource
 
 
 ======================
+annotation exception file
+=====================
+
+intent ignore rule 的時候
+這個query 就不會contribute to domain P/R 跟quer P/R
+
+slot igonre rule
+只會 影響slot P/R
+只有在這個query 沒有被intent ignore rule apply 的時候  slot ignore 才會被 contrribute to  domain P/R 跟quer P/R
+
+
+
+======================
 exisitng dataset
 =====================
 
