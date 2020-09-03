@@ -8,3 +8,26 @@ https://microsoft.sharepoint.com/teams/stca/ipe/blue/_layouts/15/Doc.aspx?source
 https://microsoftapc.sharepoint.com/teams/CLU705/_layouts/OneNote.aspx?id=%2Fteams%2FCLU705%2FShared%20Documents%2FUser%20Understanding&wd=target%28%F0%9F%8F%97%20Engineering%2F%F0%9F%9A%A8%20DRI%2F%E2%9B%93%20DRI%20duties.one%7CBB15A44A-689F-49B9-99FA-164F2DC58E16%2FExact%20match%20hotfix%20file%20format%7CE81245D4-55EA-458A-AAF1-036D8C0817F5%2F%29
 
 
+
+
+slot
+open my file	files_slot_exact_match_score	
+//first pair :
+// 3: query length = 3
+// 0 : default value, does not matter
+3	0	
+//three tokens
+// pair0
+// 0: slot = 0,
+// 1: weight =1, default = 1
+// 0: token index in the whole query
+// 0: token index in the whole query repeated again
+//pari1
+// 4: slot = 4 (in this case this is contact_name)
+// 1: weight =1, default = 1
+// 1: token index in the whole query
+// 1: token index in the whole query repeated again
+
+0	1	0	0	
+4	1	1	1	
+0	1	2	2
