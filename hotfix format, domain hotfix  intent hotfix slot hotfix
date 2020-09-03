@@ -11,6 +11,7 @@ https://microsoftapc.sharepoint.com/teams/CLU705/_layouts/OneNote.aspx?id=%2Ftea
 
 
 slot
+expected mapping ,  open <contact_name> my </contact_name> file
 open my file	files_slot_exact_match_score	
 //first pair :
 // 3: query length = 3
