@@ -4,6 +4,19 @@ single shot B2 model
 E:\CoreScienceDataStaging\datasources\EmailSnA\CMF\resource
 
 
+==================
+golden set query
+09172020
+========================
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging?path=%2Fdatasets%2FSearchAndAssistant%2FTest%2FMustpass_SnA_Email_Golden.tsv
+
+
+
+====================
+annotation exception file
+====================
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging?path=%2Fevaluation%2FConfigs%2FAnnotationExceptions_oneshot.xml
+
 ======================
 annotation exception file
 =====================
