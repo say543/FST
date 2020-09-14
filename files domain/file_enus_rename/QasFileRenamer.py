@@ -272,7 +272,12 @@ if __name__ == '__main__':
 
     #cmd = ("-s ..\\output_domain_answer_pergra_08212020v3 -t replaced -r files_enus_mv1:files_enus_mv3").split()
 
-    cmd = ("-s ..\\output_domain_answer_pergra_08212020v4 -t replaced -r files_enus_mv1:files_enus_mv3").split()
+    #cmd = ("-s ..\\output_domain_answer_pergra_08212020v4 -t replaced -r files_enus_mv1:files_enus_mv2").split()
+
+
+    #cmd = ("-s ..\\output_domain_answer_pergra_08232020v1 -t replaced -r files_enus_mv1:files_enus_mv2").split()
+
+    cmd = ("-s ..\\output_domain_answer_pergra_08242020v1 -t replaced -r files_enus_mv1:files_enus_mv2").split()
 
     # local
     # doamin
