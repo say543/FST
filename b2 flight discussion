@@ -1,0 +1,36 @@
+placeholder (MSIT SDF)  msSearch (ww)
+前著的submit request 比較寬鬆
+後者比較麻煩
+
+先用前者比較好
+
+https://dev.azure.com/msasg/Bing_and_IPG/_git/SubstrateSearch?path=%2Fprivate%2FComponents%2FQu%2FQuV2%2FSubstrateSearch.QuV2.Plugins%2FQas%2FQasB2InputCreatorConfigurationV2.ini&_a=contents&version=GBmaster
+refer 的pr 
+
+[3:14 PM] Yong Ni
+    customconstraints&FLT.PeopleEntityServeQasModelV2:true=peopletest:true
+    
+    = 後面是client
+    peopletest 是client
+    理論上也可以用http 來check 可以問一下zhiguo 怎麼用http 來check
+    
+    = 前面  到& 的是FLT.PeopleEntityServeQasModelV2  是需要的variable
+    3s 的config 需要有這個來test 
+    
+    
+     ? 不知道為啥要有第二個  要問 zhiguo    
+    customconstraints&GWSFLT.PeopleEntityServeQasModelV2:true=peopletest:true
+    
+    
+
+    
+// for ww configuration
+griffinsdf_M365Search.QasMSSearch01DS.ClientIdConfig.ini
+
+// for SDF / MSIT
+griffinsdf_M365Search.QASB2PlaceHolder.queryprocessingconfiguration
+
+
+// this will be applied ww and SDF/MSIT
+griffinsdf_M365Search.QasMSSearch01DS.ClientIdConfig.ini
+
