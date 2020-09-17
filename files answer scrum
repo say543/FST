@@ -83,6 +83,28 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 
 
 ==================
+clu studio on board for mv5 的分析
+==================
+
+
+two featurizer
+
+qd_files_slot_clustudio_partial_pattern_featurizer
+qd_files_slot_clustudio_pattern_featurizer
+
+
+files_enus_mv5.slots.config.xml
+
+要follow 這個order 來train model
+
+所以要照這個order
+        <LabelInfo Name="data_source_name" ShortcutKey="O" />
+        <LabelInfo Name="data_source_type" ShortcutKey="O" />
+	<LabelInfo Name="attachment" ShortcutKey="O" />
+
+
+
+==================
 score card 
 ==================
 
