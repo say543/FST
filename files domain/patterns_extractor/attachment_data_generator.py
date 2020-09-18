@@ -179,7 +179,9 @@ class Data(object):
                     raise Exception('No positive patterns loaded!')
 
                 # freq sorted by high to lower, so using the first one to record frequency
-                self.max_freq = int(pattern_data[0].split('\t')[1])
+                #self.max_freq = int(pattern_data[0].split('\t')[1])
+                #consider loading more patterns files so get max
+                self.max_freq = max(self.max_freq, (int)(pattern_data[0].split('\t')[1]))
 
 
                 domain = pattern_data[0].split('\t')[2]
@@ -315,6 +317,15 @@ class Data(object):
         pprint("-" * 20)
         pprint(len(self.low_freq_patterns))
     '''
+
+    def map_attachment_patterns_to_files_domain(self, patterns_map_file):
+        self.patterns[(p.split('\t')[0])] = int(p.split('\t')[1])
+
+        self.patterns_domain[(p.split('\t')[0])] = domain
+
+        self.patterns_annotated_queries[(p.split('\t')[0])] = p.split('\t')[3]
+        self.patterns_intent[(p.split('\t')[0])] = p.split('\t')[4]     
+
 
     def _add_tagvalue_to_keylist(self, tag_value):
         self.keylist.append(tag_value)
@@ -876,6 +887,9 @@ for tag_file in tqdm(all_tags_files):
 
 all_patterns_files = glob('./patterns_attachment/*.txt')
 data.load_patterns(all_patterns_files)
+
+data.patterns_slot_map()
+
 
 #commend additional pattern at first
 #data.load_addtional_patterns('additional_patterns_chiecha.txt')
