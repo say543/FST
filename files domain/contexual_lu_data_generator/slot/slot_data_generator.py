@@ -423,6 +423,17 @@ class Data(object):
                                 # file boost xml is removed here
                                 annotation = annotation.replace("<{}>".format(tag), 
                                     "<{}>".format('file_recency'))
+                        elif tag == 'contact_name_from':
+                            query = query.replace("<{}>".format(tag, 'contact_name'))
+                            # file boost xml is removed here
+                            annotation = annotation.replace("<{}>".format(tag), 
+                                "<{}>".format('contact_name'))
+                        elif tag == 'contact_name_to':
+                            query = query.replace("<{}>".format(tag, 'to_contact_name'))
+                            # file boost xml is removed here
+                            annotation = annotation.replace("<{}>".format(tag), 
+                                "<{}>".format('to_contact_name'))
+
                         # no exist in pattern                      
                         #else if tag == 'without_attachment' or  tag == 'emailsearch_other':
                         else:
@@ -621,8 +632,9 @@ class Data(object):
         random_filename = []
         num_words = random.randint(1, 4)
 
-        if not self.negative_ngrams:
-            raise Exception("Negative patterns not loaded")
+        # for slot it does not have negative data so ignore it at first
+        #if not self.negative_ngrams:
+        #    raise Exception("Negative patterns not loaded")
 
         attempt = 0
         max_attempts = 10
@@ -791,7 +803,7 @@ class Data(object):
                         random_tag = self._get_random_generated_filetag("Random_Tag")
 
                         self.random_filetag_selection_cnt += 1
-                    elif tag in ['contact_name'] or tag in ['to_contact_name']:
+                    elif tag in ['contact_name'] or tag in ['to_contact_name'] :
                         random_tag = self.tags['combine_lexicon'].get_random_value()
                     else:
                         # this key will key from file_keyword and it needs to add suffix
@@ -1464,8 +1476,9 @@ class Data(object):
         print("Writing all data {} to file: {}".format(len(self.positive_data) +len(teams_pos_data) + len(self.negative_data), data_filename))
         with open(data_filename, 'w', encoding='utf-8') as f:
             # new header
-            #f.write("TurnNumber\tPreviousTurnDomain\tquery\tdomain\n")
-            header = "TurnNumber\tPreviousTurnIntent\tquery\tintent\tPreviousTurnDomain\tTaskFrameStatus\tTaskFrameEntityStates\tTaskFrameGUID\tSpeechPeopleDisambiguationGrammarMatches\tConversationalContext\n"
+            header = "id\tquery\tintent\tdomain\tQueryXml\n"
+
+
             f.write(header)
             #f.write("TurnNumber\tPreviousTurnIntent\tquery\tintent\tPreviousTurnDomain\tTaskFrameStatus\tTaskFrameEntityStates
 #TaskFrameGUID\tSpeechPeopleDisambiguationGrammarMatches\tConversationalContext\n")
@@ -1481,7 +1494,7 @@ class Data(object):
 
                 # ? here assume all patterns should be file_search
                 # ? might need to filter more in the future
-                f.write("0\t\t{}\tfile_search\t\t\t\t\t\t\n".format((query.split('\t'))[0]))
+                f.write("0\t{}\tfile_search\tfiles\t{}\n".format((query.split('\t'))[0],(query.split('\t'))[2]))
 
             print("teams positve data {}".format(len(teams_pos_data)))
             for line in tqdm(teams_pos_data):
@@ -1496,7 +1509,7 @@ class Data(object):
 
 
             # for debug
-            print("negative data {}".format(len(self.negative_data)))
+            #print("negative data {}".format(len(self.negative_data)))
             #print("{}".format(len(self.negative_data_intent)))
             #print("{}".format(len(self.negative_data_PreviousTurnDomain)))
             #print("{}".format(len(self.negative_data_TaskFrameStatus)))
@@ -1508,19 +1521,20 @@ class Data(object):
 
             # negative data
             # extend to extra columns
-            for query, intent, previousturnDomain, taskFrameStatus, taskFrameEntityStates, taskFrameGUID, speechPeopleDisambiguationGrammarMatches, ConversationalContext \
-                     in tqdm(zip(self.negative_data,
-                    self.negative_data_intent,
-                    self.negative_data_PreviousTurnDomain,
-                    self.negative_data_TaskFrameStatus,
-                    self.negative_data_TaskFrameEntityStates,
-                    self.negative_data_TaskFrameGUID,
-                    self.negative_data_SpeechPeopleDisambiguationGrammarMatches,
-                    self.negative_data_ConversationalContext
-                    )):
-                    f.write("0\t\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\n".format(
-                        query, intent, previousturnDomain, taskFrameStatus, taskFrameEntityStates, 
-                        taskFrameGUID, speechPeopleDisambiguationGrammarMatches, ConversationalContext))
+            # for slot it does not have negative data so ignore it at first
+            ##for query, intent, previousturnDomain, taskFrameStatus, taskFrameEntityStates, taskFrameGUID, speechPeopleDisambiguationGrammarMatches, ConversationalContext \
+            ##         in tqdm(zip(self.negative_data,
+            ##        self.negative_data_intent,
+            ##        self.negative_data_PreviousTurnDomain,
+            ##        self.negative_data_TaskFrameStatus,
+            ##        self.negative_data_TaskFrameEntityStates,
+            ##        self.negative_data_TaskFrameGUID,
+            ##        self.negative_data_SpeechPeopleDisambiguationGrammarMatches,
+            ##        self.negative_data_ConversationalContext
+            ##        )):
+            ##        f.write("0\t\t{}\t{}\t{}\t{}\t{}\t{}\t{}\t{}\n".format(
+            ##            query, intent, previousturnDomain, taskFrameStatus, taskFrameEntityStates, 
+            ##            taskFrameGUID, speechPeopleDisambiguationGrammarMatches, ConversationalContext))
 
             #for query in tqdm(self.negative_data):
             #    f.write("0\t\t{}\tnot_files\n".format(query))
@@ -1617,10 +1631,13 @@ data.get_data()
 #                suffixkeylist_filename = 'filekeys_suffix_intent_chiecha.txt'
 #                )
 
-data.write_data(data_filename='files_intent_training_contexual_answer.tsv', pos_filename='pos_data_chiecha.tsv',
-                neg_filename='neg_data_chiecha.tsv', keylist_filename='filekeys_intent_chiecha.txt', 
-                suffixkeylist_filename = 'filekeys_suffix_intent_chiecha.txt',
-                teams_positve_data_filename='Positive_intent_corpus.txt'
+#Positive_slot_corpus.txt
+# if only wants to generate data for attachment pattern, leave it empty
+# otherwsise, it should be files_slot_training.tsv
+data.write_data(data_filename='files_slot_raining_contexual_answer.tsv', pos_filename='pos_data_chiecha.tsv',
+                neg_filename='neg_data_chiecha.tsv', keylist_filename='filekeys_slot_chiecha.txt', 
+                suffixkeylist_filename = 'filekeys_suffix_slot_chiecha.txt',
+                teams_positve_data_filename='Positive_slot_corpus.txt'
                 )
                 
 
