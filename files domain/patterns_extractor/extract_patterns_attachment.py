@@ -192,6 +192,12 @@ DomainToSlotsProcess['EMAILSEARCH'].add('attachment_type')
 #DomainToSlotsProcess['EMAILSEARCH'].add('attachment')
 # add keyword for contexul lu patterns extraction
 DomainToSlotsProcess['EMAILSEARCH'].add('keyword')
+# add contact name support
+# but contact_name_from will map to contact_name in files domain
+# contact_name_to will map to to_contact_name in files domain
+DomainToSlotsProcess['EMAILSEARCH'].add('contact_name_from')
+DomainToSlotsProcess['EMAILSEARCH'].add('contact_name')
+DomainToSlotsProcess['EMAILSEARCH'].add('contact_name_to')
 
 
 
