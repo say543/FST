@@ -127,6 +127,21 @@ class Data(object):
                 #else:
                     #self.filetype.append(line)
 
+        # read order_ref
+        '''
+        self.orderref = []
+        with codecs.open('placeholder_tags_chiecha\\order_ref.txt', 'r', 'utf-8') as fin:
+            for line in fin:
+                line = line.strip()
+                self.orderref.append(line)
+
+        # read filerecency
+        self.filerecency = []
+        with codecs.open('placeholder_tags_chiecha\\file_recency.txt', 'r', 'utf-8') as fin:
+            for line in fin:
+                line = line.strip()
+                self.filerecency.append(line)
+        '''
 
         # comment this since prefer original slot for evaluation
         self.domain_slot_process = defaultdict(set)
@@ -419,17 +434,20 @@ class Data(object):
                             inRangeIndex = random.randint(0, 2)
                             # 0.5 prob being replaced with file_recency
                             if inRangeIndex == 1: 
-                                query = query.replace("<{}>".format(tag, 'file_recency'))
+                                #query = query.replace("<{}>".format(tag, 'file_recency'))
+                                query = query.replace("<{}>".format(tag), "<{}>".format('file_recency'))
                                 # file boost xml is removed here
                                 annotation = annotation.replace("<{}>".format(tag), 
                                     "<{}>".format('file_recency'))
                         elif tag == 'contact_name_from':
-                            query = query.replace("<{}>".format(tag, 'contact_name'))
+                            #query = query.replace("<{}>".format(tag, 'contact_name'))
+                            query = query.replace("<{}>".format(tag), "<{}>".format('contact_name'))
                             # file boost xml is removed here
                             annotation = annotation.replace("<{}>".format(tag), 
                                 "<{}>".format('contact_name'))
                         elif tag == 'contact_name_to':
-                            query = query.replace("<{}>".format(tag, 'to_contact_name'))
+                            #query = query.replace("<{}>".format(tag, 'to_contact_name'))
+                            query = query.replace("<{}>".format(tag), "<{}>".format('to_contact_name'))
                             # file boost xml is removed here
                             annotation = annotation.replace("<{}>".format(tag), 
                                 "<{}>".format('to_contact_name'))
@@ -805,6 +823,12 @@ class Data(object):
                         self.random_filetag_selection_cnt += 1
                     elif tag in ['contact_name'] or tag in ['to_contact_name'] :
                         random_tag = self.tags['combine_lexicon'].get_random_value()
+                    elif tag in ['file_recency']:
+                        random_tag = self.tags['file_recency'].get_random_value()
+                    elif tag in ['order_ref']:
+                        random_tag = self.tags['order_ref'].get_random_value()
+
+
                     else:
                         # this key will key from file_keyword and it needs to add suffix
                         random_tag = self.tags[tag].get_random_value()
@@ -1591,8 +1615,9 @@ for tag_file in tqdm(all_overtrigger_tags_files):
 # without keyword mapped to file_keyword
 #data.append_attachment_patterns('patterns_EMAILSEARCH_attachment_after_bug_fix.txt','FILES', 'file_search')
 # with keyword mapped to file_keyword
-data.append_attachment_patterns('patterns_EMAILSEARCH_attachment_add_keyword_after_bug_fix.txt','FILES', 'file_search')
-
+#data.append_attachment_patterns('patterns_EMAILSEARCH_attachment_add_keyword_after_bug_fix.txt','FILES', 'file_search')
+#data.append_attachment_patterns('patterns_EMAILSEARCH_add_three_contact_name_slot_after_bug_fix.txt','FILES', 'file_search')
+data.append_attachment_patterns('patterns_EMAILSEARCH_add_three_contact_name_orderref.txt','FILES', 'file_search')
 
 
 # my extra patterns

@@ -1,0 +1,319 @@
+id	query	intent	domain	QueryXml
+0	whats latest attachment pushpraj sent me	file_search	files	whataposs <order_ref> latest </order_ref> <attachment> attachment </attachment> <contact_name> pushpraj </contact_name> sent <relationship_name_to> me </relationship_name_to>
+0	attachments from january	file_search	files	<attachment> attachments </attachment> from <start_date> january </start_date>
+0	to chainani with attachment slide	file_search	files	to <to_contact_name> chainani </to_contact_name> with <attachment> attachment </attachment> <file_type> slide </file_type>
+0	attachment sent doc	file_search	files	<attachment> attachment </attachment> sent <file_type> doc </file_type>
+0	extensile uncipher attachments from october to november	file_search	files	<file_keyword> extensile uncipher </file_keyword> <attachment> attachments </attachment> from <start_date> october </start_date> to <end_date> november </end_date>
+0	decarbonator was included on attachment	file_search	files	<file_keyword> decarbonator </file_keyword> was included on <attachment> attachment </attachment>
+0	with attachment from subalaekha rajendran	file_search	files	with <attachment> attachment </attachment> from <contact_name> subalaekha rajendran </contact_name>
+0	messages from aaron amlag last week with attachments	file_search	files	messages from <contact_name> aaron amlag </contact_name> <start_date> last week </start_date> with <attachment> attachments </attachment>
+0	onenote attachment from crissa marie megio	file_search	files	<file_type> onenote </file_type> <attachment> attachment </attachment> from <contact_name> crissa marie megio </contact_name>
+0	show me most recently attachments sent by rajeev chertara	file_search	files	show me most <file_recency> recently </file_recency> <attachment> attachments </attachment> sent by <contact_name> rajeev chertara </contact_name>
+0	cue. one planning attachments from last tuesday	file_search	files	<file_keyword> cue. one planning </file_keyword> <attachment> attachments </attachment> from <start_date> last tuesday </start_date>
+0	attachments last year from tim barham	file_search	files	<attachment> attachments </attachment> <start_date> last year </start_date> from <contact_name> tim barham </contact_name>
+0	attachment about alignment	file_search	files	<attachment> attachment </attachment> about <file_keyword> alignment </file_keyword>
+0	what is recent attachment that chris jewell sent laduca	file_search	files	what is <file_recency> recent </file_recency> <attachment> attachment </attachment> that <contact_name> chris jewell </contact_name> sent <to_contact_name> laduca </to_contact_name>
+0	from peter garner attachments	file_search	files	from <contact_name> peter garner </contact_name> <attachment> attachments </attachment>
+0	sending some attachment to mazhar dar	file_search	files	sending some <attachment> attachment </attachment> to <to_contact_name> mazhar dar </to_contact_name>
+0	attachments from boss angela serrano brummett	file_search	files	<attachment> attachments </attachment> from <relationship_name_from> boss </relationship_name_from> <contact_name> angela serrano brummett </contact_name>
+0	from michael bir powerpoint attachment	file_search	files	from <contact_name> michael bir </contact_name> <file_type> powerpoint </file_type> <attachment> attachment </attachment>
+0	search for message from rossetto to heermann with waterloggedness fireguard attachment	file_search	files	search for message from <contact_name> rossetto </contact_name> to <to_contact_name> heermann </to_contact_name> with <file_keyword> waterloggedness fireguard </file_keyword> <attachment> attachment </attachment>
+0	msw query labeling from george zhang with attachment	file_search	files	<file_keyword> msw query labeling </file_keyword> from <contact_name> george zhang </contact_name> with <attachment> attachment </attachment>
+0	attachments form last tuesday	file_search	files	<attachment> attachments </attachment> form <start_date> last tuesday </start_date>
+0	i want to see monica malkani attachments with png	file_search	files	i want to see <contact_name> monica malkani </contact_name> <attachment> attachments </attachment> with <file_type> png </file_type>
+0	any messages with attachments in them	file_search	files	any messages with <attachment> attachments </attachment> in them
+0	attachment voice bvt from gordon hardy	file_search	files	<attachment> attachment </attachment> <file_keyword> voice bvt </file_keyword> from <contact_name> gordon hardy </contact_name>
+0	attachments from march	file_search	files	<attachment> attachments </attachment> from <start_date> march </start_date>
+0	Chuvash attachments from september to october	file_search	files	<file_keyword> Chuvash </file_keyword> <attachment> attachments </attachment> from <start_date> september </start_date> to <end_date> october </end_date>
+0	attachment for overcourtesy eponymism	file_search	files	<attachment> attachment </attachment> for <file_keyword> overcourtesy eponymism </file_keyword>
+0	from timothy heger with attachment last march	file_search	files	from <contact_name> timothy heger </contact_name> with <attachment> attachment </attachment> <start_date> last march </start_date>
+0	attachments i sent to mike deng	file_search	files	<attachment> attachments </attachment> i sent to <to_contact_name> mike deng </to_contact_name>
+0	from prashant tanksali Docs attachments	file_search	files	from <contact_name> prashant tanksali </contact_name> <file_type> Docs </file_type> <attachment> attachments </attachment>
+0	look for messages with xlsx attachments	file_search	files	look for messages with <file_type> xlsx </file_type> <attachment> attachments </attachment>
+0	attachments from september	file_search	files	<attachment> attachments </attachment> from <start_date> september </start_date>
+0	message from april 5th with transcription spec original attachment	file_search	files	message from <start_date> april 5th </start_date> with <file_keyword> transcription spec original </file_keyword> <attachment> attachment </attachment>
+0	search for message from ambrosio blanco to burt ruiz with synosteosis opium spraints stinted attachment	file_search	files	search for message from <contact_name> ambrosio blanco </contact_name> to <to_contact_name> burt ruiz </to_contact_name> with <file_keyword> synosteosis opium spraints stinted </file_keyword> <attachment> attachment </attachment>
+0	see attachment	file_search	files	see <attachment> attachment </attachment>
+0	precollapse dingledangle Vacciniaceae Firoloida vstm attachment	file_search	files	<file_keyword> precollapse dingledangle Vacciniaceae Firoloida </file_keyword> <file_type> vstm </file_type> <attachment> attachment </attachment>
+0	find attachment from zhiwei vssm	file_search	files	find <attachment> attachment </attachment> from <contact_name> zhiwei </contact_name> <file_type> vssm </file_type>
+0	attachments from preceding month	file_search	files	<attachment> attachments </attachment> from <start_date> preceding month </start_date>
+0	from julien groud with ingestions sigs data attachment	file_search	files	from <contact_name> julien groud </contact_name> with <file_keyword> ingestions sigs data </file_keyword> <attachment> attachment </attachment>
+0	may archimperialistic moleism dictatorship from duy nguyen with attachment	file_search	files	<start_date> may </start_date> <file_keyword> archimperialistic moleism dictatorship </file_keyword> from <contact_name> duy nguyen </contact_name> with <attachment> attachment </attachment>
+0	what is last attachment srinivasa manda sent paul zangaglia	file_search	files	what is <order_ref> last </order_ref> <attachment> attachment </attachment> <contact_name> srinivasa manda </contact_name> sent <to_contact_name> paul zangaglia </to_contact_name>
+0	attachment from mom swallo Tayassuidae afterlifetime praisefulness	file_search	files	<attachment> attachment </attachment> from <relationship_name_from> mom </relationship_name_from> <file_keyword> swallo Tayassuidae afterlifetime praisefulness </file_keyword>
+0	to djukic attachment oversave phospham outthrob	file_search	files	to <to_contact_name> djukic </to_contact_name> <attachment> attachment </attachment> <file_keyword> oversave phospham outthrob </file_keyword>
+0	attachment to ayush abraham	file_search	files	<attachment> attachment </attachment> to <to_contact_name> ayush abraham </to_contact_name>
+0	attachment onenotes from maliheh	file_search	files	<attachment> attachment </attachment> <file_type> onenotes </file_type> from <contact_name> maliheh </contact_name>
+0	onenotes attachments sent to ryan psenski	file_search	files	<file_type> onenotes </file_type> <attachment> attachments </attachment> sent to <to_contact_name> ryan psenski </to_contact_name>
+0	from blake leier with attachment about cyanus deanthropomorphization monoplacular cyanic	file_search	files	from <contact_name> blake leier </contact_name> with <attachment> attachment </attachment> about <file_keyword> cyanus deanthropomorphization monoplacular cyanic </file_keyword>
+0	lolita lam sent me an attachment regarding brutelike nailwort ablins	file_search	files	<contact_name> lolita lam </contact_name> sent <relationship_name_to> me </relationship_name_to> an <attachment> attachment </attachment> regarding <file_keyword> brutelike nailwort ablins </file_keyword>
+0	file from matthies with an attachment	file_search	files	 file  from <contact_name> matthies </contact_name> with an <attachment> attachment </attachment>
+0	small attachments	file_search	files	small <attachment> attachments </attachment>
+0	overrulingly jalloped topographic attachment shared by kany	file_search	files	<file_keyword> overrulingly jalloped topographic </file_keyword> <attachment> attachment </attachment> shared by <contact_name> kany </contact_name>
+0	with attachments on monday	file_search	files	with <attachment> attachments </attachment> on <start_date> monday </start_date>
+0	tim cooper with attachments	file_search	files	<contact_name> tim cooper </contact_name> with <attachment> attachments </attachment>
+0	find attachments	file_search	files	find <attachment> attachments </attachment>
+0	xls attachments from gohr	file_search	files	<file_type> xls </file_type> <attachment> attachments </attachment> from <contact_name> gohr </contact_name>
+0	all attachments from mallikarjuna	file_search	files	all <attachment> attachments </attachment> from <contact_name> mallikarjuna </contact_name>
+0	from rossmeissl with attachment to kazutoshi	file_search	files	from <contact_name> rossmeissl </contact_name> with <attachment> attachment </attachment> to <to_contact_name> kazutoshi </to_contact_name>
+0	where is attachment from andrejs	file_search	files	where is <attachment> attachment </attachment> from <contact_name> andrejs </contact_name>
+0	sheets hasattachmentstrue	file_search	files	<file_type> sheets </file_type> hasattachmentstrue
+0	ammoniemia attachment from joe rogoiyo	file_search	files	<file_keyword> ammoniemia </file_keyword> <attachment> attachment </attachment> from <contact_name> joe rogoiyo </contact_name>
+0	from bryan novoa zelaya attachment word	file_search	files	from <contact_name> bryan novoa zelaya </contact_name> <attachment> attachment </attachment> <file_type> word </file_type>
+0	cristina monica ursu sent me some attachment	file_search	files	<contact_name> cristina monica ursu </contact_name> sent me some <attachment> attachment </attachment>
+0	casuarinaceous unconstant iterativeness attachment from august 2017	file_search	files	<file_keyword> casuarinaceous unconstant iterativeness </file_keyword> <attachment> attachment </attachment> from <start_date> august 2017 </start_date>
+0	prosecretin interresponsibility biosystematic ichnography attachments from june to july	file_search	files	<file_keyword> prosecretin interresponsibility biosystematic ichnography </file_keyword> <attachment> attachments </attachment> from <start_date> june </start_date> to <end_date> july </end_date>
+0	tax dialogue with attachment	file_search	files	<file_keyword> tax dialogue </file_keyword> with <attachment> attachment </attachment>
+0	linden essa s attachments	file_search	files	<contact_name> linden essa </contact_name> s <attachment> attachments </attachment>
+0	presentation attachment program review	file_search	files	<file_type> presentation </file_type> <attachment> attachment </attachment> <file_keyword> program review </file_keyword>
+0	attachments in last week	file_search	files	<attachment> attachments </attachment> <start_date> in last week </start_date>
+0	from michael schlepp with xlsx attachment	file_search	files	from <contact_name> michael schlepp </contact_name> with <file_type> xlsx </file_type> <attachment> attachment </attachment>
+0	need attachment documents	file_search	files	need <attachment> attachment </attachment>  documents 
+0	performance and markers attachments	file_search	files	<file_keyword> performance and markers </file_keyword> <attachment> attachments </attachment>
+0	attachments from past five weeks	file_search	files	<attachment> attachments </attachment> from <start_date> past five weeks </start_date>
+0	png attachment to rajan damle	file_search	files	<file_type> png </file_type> <attachment> attachment </attachment> to <to_contact_name> rajan damle </to_contact_name>
+0	attachments from febrauary	file_search	files	<attachment> attachments </attachment> from <start_date> febrauary </start_date>
+0	from minguang liu suggestion suggestions attachment	file_search	files	from <contact_name> minguang liu </contact_name> <file_keyword> suggestion suggestions </file_keyword> <attachment> attachment </attachment>
+0	show all attachments	file_search	files	show all <attachment> attachments </attachment>
+0	attachment from misdaqueahmad shaikh workbook	file_search	files	<attachment> attachment </attachment> from <contact_name> misdaqueahmad shaikh </contact_name> <file_type> workbook </file_type>
+0	from rizvana shaik with attachment to yury loskutov loskutov	file_search	files	from <contact_name> rizvana shaik </contact_name> with <attachment> attachment </attachment> to <to_contact_name> yury loskutov loskutov </to_contact_name>
+0	message from sairam bandaru about cortana telemetry system with attachment	file_search	files	message from <contact_name> sairam bandaru </contact_name> about <file_keyword> cortana telemetry system </file_keyword> with <attachment> attachment </attachment>
+0	from xavier pouyat onenotes attachments	file_search	files	from <contact_name> xavier pouyat </contact_name> <file_type> onenotes </file_type> <attachment> attachments </attachment>
+0	show me attachments	file_search	files	show me <attachment> attachments </attachment>
+0	from aswini katraju week 48 attachment	file_search	files	from <contact_name> aswini katraju </contact_name> <file_keyword> week 48 </file_keyword> <attachment> attachment </attachment>
+0	linux client about linux client with attachments	file_search	files	<file_keyword> fair presentation test </file_keyword> linux client </file_keyword> about <file_keyword> fair presentation test </file_keyword> linux client </file_keyword> with <attachment> attachments </attachment>
+0	tina hsiao with vsdm attachments	file_search	files	<contact_name> tina hsiao </contact_name> with <file_type> vsdm </file_type> <attachment> attachments </attachment>
+0	from jacob thomas with attachment about phyllospondylous south taborin	file_search	files	from <contact_name> jacob thomas </contact_name> with <attachment> attachment </attachment> about <file_keyword> phyllospondylous south taborin </file_keyword>
+0	find attachment from kyle ness word	file_search	files	find <attachment> attachment </attachment> from <contact_name> kyle ness </contact_name> <file_type> word </file_type>
+0	overgrossly mount about overgrossly mount with attachments	file_search	files	<file_keyword> dishonestly </file_keyword> overgrossly mount </file_keyword> about <file_keyword> dishonestly </file_keyword> overgrossly mount </file_keyword> with <attachment> attachments </attachment>
+0	contain attachment	file_search	files	contain <attachment> attachment </attachment>
+0	michael nanakul with attachment vstx	file_search	files	<contact_name> michael nanakul </contact_name> with <attachment> attachment </attachment> <file_type> vstx </file_type>
+0	sent to skorupski with vst attachments	file_search	files	sent to <to_contact_name> skorupski </to_contact_name> with <file_type> vst </file_type> <attachment> attachments </attachment>
+0	nizar confessorship cuculliform attachment	file_search	files	<contact_name> nizar </contact_name> <file_keyword> confessorship cuculliform </file_keyword> <attachment> attachment </attachment>
+0	from donte include attachment	file_search	files	from <contact_name> donte </contact_name> include <attachment> attachment </attachment>
+0	xiaoice sde2 attachment shared by yiyun deng	file_search	files	<file_keyword> xiaoice sde2 </file_keyword> <attachment> attachment </attachment> shared by <contact_name> yiyun deng </contact_name>
+0	show attachments march 1 to 15	file_search	files	show <attachment> attachments </attachment> <start_date> march 1 </start_date> to <end_date> 15 </end_date>
+0	attachment Docx oral	file_search	files	<attachment> attachment </attachment> <file_type> Docx </file_type> <contact_name> oral </contact_name>
+0	pdfs attachment from sellena murray	file_search	files	<file_type> pdfs </file_type> <attachment> attachment </attachment> from <contact_name> sellena murray </contact_name>
+0	attachment from ryan behn on week 49 nov	file_search	files	<attachment> attachment </attachment> from <contact_name> ryan behn </contact_name> on <file_keyword> week 49 nov </file_keyword>
+0	my cardiodynamics Iroquoian attachment	file_search	files	my <file_keyword> cardiodynamics Iroquoian </file_keyword> <attachment> attachment </attachment>
+0	from mrozik to emile with attachment	file_search	files	from <contact_name> mrozik </contact_name> to <to_contact_name> emile </to_contact_name> with <attachment> attachment </attachment>
+0	brad bax received attachment from mark riddell	file_search	files	<to_contact_name> brad bax </to_contact_name> received <attachment> attachment </attachment> from <contact_name> mark riddell </contact_name>
+0	attachment sent by brother	file_search	files	<attachment> attachment </attachment> sent by <relationship_name_from> brother </relationship_name_from>
+0	attachment with PDF	file_search	files	<attachment> attachment </attachment> with <file_type> PDF </file_type>
+0	varun puranik attachments from vibranium	file_search	files	<contact_name> varun puranik </contact_name> <attachment> attachments </attachment> from <file_keyword> vibranium </file_keyword>
+0	download attachment	file_search	files	download <attachment> attachment </attachment>
+0	look up attachments with harry chen	file_search	files	look up <attachment> attachments </attachment> with <contact_name> harry chen </contact_name>
+0	to nithya palanisamy with attachment ux android	file_search	files	to <to_contact_name> nithya palanisamy </to_contact_name> with <attachment> attachment </attachment> <file_keyword> ux android </file_keyword>
+0	message about viscosimeter steenboc indefensive trun including attachment	file_search	files	message about <file_keyword> viscosimeter steenboc indefensive trun </file_keyword> including <attachment> attachment </attachment>
+0	find excels corticoafferent unconformably proverbialize emydian attachment sent to jaynath pandit	file_search	files	find <file_type> excels </file_type> <file_keyword> corticoafferent unconformably proverbialize emydian </file_keyword> <attachment> attachment </attachment> sent to <to_contact_name> jaynath pandit </to_contact_name>
+0	qiang sun s messages from last week with attachment	file_search	files	<contact_name> qiang sun </contact_name> s messages from <start_date> last week </start_date> with <attachment> attachment </attachment>
+0	general suggested attachments from may to june	file_search	files	<file_keyword> general suggested </file_keyword> <attachment> attachments </attachment> from <start_date> may </start_date> to <end_date> june </end_date>
+0	csv was included on attachment	file_search	files	<file_type> csv </file_type> was included on <attachment> attachment </attachment>
+0	find all attachments	file_search	files	find all <attachment> attachments </attachment>
+0	messages with attachment march 1 through march 10	file_search	files	messages with <attachment> attachment </attachment> <start_date> march 1 </start_date> through <end_date> march 10 </end_date>
+0	messages with ron coleman with attachment	file_search	files	messages with <contact_name> ron coleman </contact_name> with <attachment> attachment </attachment>
+0	show me most recent attachments sent by naoimh byrne	file_search	files	show me most <file_recency> recent </file_recency> <attachment> attachments </attachment> sent by <contact_name> naoimh byrne </contact_name>
+0	csv attachments from last week	file_search	files	<file_type> csv </file_type> <attachment> attachments </attachment> from <start_date> last week </start_date>
+0	attachments from nick austin	file_search	files	<attachment> attachments </attachment> from <contact_name> nick austin </contact_name>
+0	from stanimir baharov with vomicine Grecism attachment	file_search	files	from <contact_name> stanimir baharov </contact_name> with <file_keyword> vomicine Grecism </file_keyword> <attachment> attachment </attachment>
+0	attachment from may 20 to june 28 about pickthankly Vallisneria	file_search	files	<attachment> attachment </attachment> from <start_date> may 20 </start_date> to <end_date> june 28 </end_date> about <file_keyword> pickthankly Vallisneria </file_keyword>
+0	whats latest attachment that haroon mirza sent guerric	file_search	files	whats <order_ref> latest </order_ref> <attachment> attachment </attachment> that <contact_name> haroon mirza </contact_name> sent <to_contact_name> guerric </to_contact_name>
+0	attachment from bhaskar vadlamani on 20 aviv	file_search	files	<attachment> attachment </attachment> from <contact_name> bhaskar vadlamani </contact_name> on <file_keyword> 20 aviv </file_keyword>
+0	get attachment from ogundipe	file_search	files	get <attachment> attachment </attachment> from <contact_name> ogundipe </contact_name>
+0	to jeffrey villalobos with attachments	file_search	files	to <to_contact_name> jeffrey villalobos </to_contact_name> with <attachment> attachments </attachment>
+0	receive some attachment between 1 to 2 in afternoon	file_search	files	receive some <attachment> attachment </attachment> between <start_time> 1 </start_time> to <end_time> 2 in afternoon </end_time>
+0	find pdfs fornicatress attachment sent to vritant bhardwaj	file_search	files	find <file_type> pdfs </file_type> <file_keyword> fornicatress </file_keyword> <attachment> attachment </attachment> sent to <to_contact_name> vritant bhardwaj </to_contact_name>
+0	latest attachment from sravani dhanapaneni	file_search	files	<order_ref> latest </order_ref> <attachment> attachment </attachment> from <contact_name> sravani dhanapaneni </contact_name>
+0	i sent attachments	file_search	files	i <email_state> sent </email_state> <attachment> attachments </attachment>
+0	paolo somaglia with Docs attachment	file_search	files	<contact_name> paolo somaglia </contact_name> with <file_type> Docs </file_type> <attachment> attachment </attachment>
+0	reply to robert di benedetto regarding matapi	file_search	files	<email_state> reply </email_state> to <to_contact_name> robert di benedetto </to_contact_name> regarding <file_keyword> matapi </file_keyword>
+0	sent to jethro with msg attachments	file_search	files	sent to <to_contact_name> jethro </to_contact_name> with <file_type> msg </file_type> <attachment> attachments </attachment>
+0	whats latest attachment that mathilde harfaux sent alan harlow	file_search	files	whats <order_ref> latest </order_ref> <attachment> attachment </attachment> that <contact_name> mathilde harfaux </contact_name> sent <to_contact_name> alan harlow </to_contact_name>
+0	what is latest attachment uebel sent abhishek kumar singh	file_search	files	what is <order_ref> latest </order_ref> <attachment> attachment </attachment> <contact_name> uebel </contact_name> sent <to_contact_name> abhishek kumar singh </to_contact_name>
+0	xianxin mao extraction meeting PDF attachment	file_search	files	<contact_name> xianxin mao </contact_name> <file_keyword> extraction meeting </file_keyword> <file_type> PDF </file_type> <attachment> attachment </attachment>
+0	from gasparyan about vivicremation with attachment in may	file_search	files	from <contact_name> gasparyan </contact_name> about <file_keyword> vivicremation </file_keyword> with <attachment> attachment </attachment> in <start_date> may </start_date>
+0	attachment received	file_search	files	<attachment> attachment </attachment> received
+0	sudheer bollavaram attachments	file_search	files	<contact_name> sudheer bollavaram </contact_name> <attachment> attachments </attachment>
+0	april attachments	file_search	files	<start_date> april </start_date> <attachment> attachments </attachment>
+0	message from taleghani about coatee tampang with attachment	file_search	files	message from <contact_name> taleghani </contact_name> about <file_keyword> coatee tampang </file_keyword> with <attachment> attachment </attachment>
+0	a71f 2 3 vssm attachment	file_search	files	<file_keyword> a71f 2 3 </file_keyword> <file_type> vssm </file_type> <attachment> attachment </attachment>
+0	run search on messages with attachments	file_search	files	run search on messages with <attachment> attachments </attachment>
+0	Kieran from senen with attachment from january 1 to january 5	file_search	files	<file_keyword> Kieran </file_keyword> from <contact_name> senen </contact_name> with <attachment> attachment </attachment> from <start_date> january 1 </start_date> to <end_date> january 5 </end_date>
+0	attachments april 1st to april 2nd	file_search	files	<attachment> attachments </attachment> <start_date> april 1st </start_date> to <end_date> april 2nd </end_date>
+0	spreadsheet sent attachments	file_search	files	<file_type> spreadsheet </file_type> sent <attachment> attachments </attachment>
+0	show attachments to david martin	file_search	files	show <attachment> attachments </attachment> to <to_contact_name> david martin </to_contact_name>
+0	what is latest attachment that yulong sent me	file_search	files	what is <order_ref> latest </order_ref> <attachment> attachment </attachment> that <contact_name> yulong </contact_name> sent <relationship_name_to> me </relationship_name_to>
+0	from tatiana bolotnikova about azure portse with attachment	file_search	files	from <contact_name> tatiana bolotnikova </contact_name> about <file_keyword> azure portse </file_keyword> with <attachment> attachment </attachment>
+0	what is latest attachment mario montoya segnini sent me	file_search	files	what is <order_ref> latest </order_ref> <attachment> attachment </attachment> <contact_name> mario montoya segnini </contact_name> sent <relationship_name_to> me </relationship_name_to>
+0	messages from john charbonnet with doc attachments	file_search	files	messages from <contact_name> john charbonnet </contact_name> with <file_type> doc </file_type> <attachment> attachments </attachment>
+0	show me attachment xls with palaniappa manivasagam ramanathan	file_search	files	show me <attachment> attachment </attachment> <file_type> xls </file_type> with <contact_name> palaniappa manivasagam ramanathan </contact_name>
+0	sending some attachment from last night physostomous Germanism luigino Finnic	file_search	files	sending some <attachment> attachment </attachment> from <start_time> last night </start_time> <file_keyword> physostomous Germanism luigino Finnic </file_keyword>
+0	vssx attachment to mingzhe li	file_search	files	<file_type> vssx </file_type> <attachment> attachment </attachment> to <to_contact_name> mingzhe li </to_contact_name>
+0	search for message from brett kelleran to ivan felonov with omc reminders attachment	file_search	files	search for message from <contact_name> brett kelleran </contact_name> to <to_contact_name> ivan felonov </to_contact_name> with <file_keyword> omc reminders </file_keyword> <attachment> attachment </attachment>
+0	morya breland with notes attachment	file_search	files	<contact_name> morya breland </contact_name> with <file_type> notes </file_type> <attachment> attachment </attachment>
+0	adam rensel mpp attachments	file_search	files	<contact_name> adam rensel </contact_name> <file_type> mpp </file_type> <attachment> attachments </attachment>
+0	messages to siyu xie with attachment	file_search	files	messages to <to_contact_name> siyu xie </to_contact_name> with <attachment> attachment </attachment>
+0	from sarra bounouh with customer dsats 3s69345 attachments	file_search	files	from <contact_name> sarra bounouh </contact_name> with <file_keyword> customer dsats 3s69345 </file_keyword> <attachment> attachments </attachment>
+0	b08e 1 20 from november to december last year with attachment	file_search	files	<file_keyword> b08e 1 20 </file_keyword> from <start_date> november </start_date> to <end_date> december </end_date> <start_date> last year </start_date> with <attachment> attachment </attachment>
+0	find files from jinu joseph with an attachment	file_search	files	find files from <contact_name> jinu joseph </contact_name> with an <attachment> attachment </attachment>
+0	slide attachment from january	file_search	files	<file_type> slide </file_type> <attachment> attachment </attachment> from <start_date> january </start_date>
+0	attachment vsdx from rho	file_search	files	<attachment> attachment </attachment> <file_type> vsdx </file_type> from <contact_name> rho </contact_name>
+0	find my attachments	file_search	files	find my <attachment> attachments </attachment>
+0	from gulay with attachments	file_search	files	from <contact_name> gulay </contact_name> with <attachment> attachments </attachment>
+0	from natasha james about cortana wait one skills with attachment	file_search	files	from <contact_name> natasha james </contact_name> about <file_keyword> cortana wait one skills </file_keyword> with <attachment> attachment </attachment>
+0	message from john flanagan with spec union app attachment	file_search	files	message from <contact_name> john flanagan </contact_name> with <file_keyword> spec union app </file_keyword> <attachment> attachment </attachment>
+0	trehala quietable proconquest prolongment attachments from ed navarro	file_search	files	<file_keyword> trehala quietable proconquest prolongment </file_keyword> <attachment> attachments </attachment> from <contact_name> ed navarro </contact_name>
+0	to kotker with attachment vst	file_search	files	to <to_contact_name> kotker </to_contact_name> with <attachment> attachment </attachment> <file_type> vst </file_type>
+0	stemwards Pantagruelist growling propupa with attachments sent from may to june	file_search	files	<file_keyword> stemwards Pantagruelist growling propupa </file_keyword> with <attachment> attachments </attachment> sent from <start_date> may </start_date> to <end_date> june </end_date>
+0	message containing attachment	file_search	files	message containing <attachment> attachment </attachment>
+0	from robert mcintyre to eydelman with attachment	file_search	files	from <contact_name> robert mcintyre </contact_name> to <to_contact_name> eydelman </to_contact_name> with <attachment> attachment </attachment>
+0	attachments from christmas to new years	file_search	files	<attachment> attachments </attachment> from <start_date> christmas </start_date> to <end_date> new years </end_date>
+0	attachments from yesterday	file_search	files	<attachment> attachments </attachment> from <start_date> yesterday </start_date>
+0	from jason grieves tsv attachment	file_search	files	from <contact_name> jason grieves </contact_name> <file_type> tsv </file_type> <attachment> attachment </attachment>
+0	harry pun forwarded attachment to tai fung chong	file_search	files	<contact_name> harry pun </contact_name> <email_state> forwarded </email_state> <attachment> attachment </attachment> to <to_contact_name> tai fung chong </to_contact_name>
+0	attachments to sinn	file_search	files	<attachment> attachments </attachment> to <to_contact_name> sinn </to_contact_name>
+0	view attachment	file_search	files	view <attachment> attachment </attachment>
+0	messages including attachments	file_search	files	messages including <attachment> attachments </attachment>
+0	show me attachments with amitava karan	file_search	files	show me <attachment> attachments </attachment> with <contact_name> amitava karan </contact_name>
+0	attachments from last tuesday	file_search	files	<attachment> attachments </attachment> from <start_date> last tuesday </start_date>
+0	to naud with piuricapsular hessonite attachment	file_search	files	to <to_contact_name> naud </to_contact_name> with <file_keyword> piuricapsular hessonite </file_keyword> <attachment> attachment </attachment>
+0	whats latest attachment bojun sent me	file_search	files	whataposs <order_ref> latest </order_ref> <attachment> attachment </attachment> <contact_name> bojun </contact_name> sent <relationship_name_to> me </relationship_name_to>
+0	show me latest msg attachments	file_search	files	show me <order_ref> latest </order_ref> <file_type> msg </file_type> <attachment> attachments </attachment>
+0	attachment bakepan posthumousness	file_search	files	<attachment> attachment </attachment> <file_keyword> bakepan posthumousness </file_keyword>
+0	message from last month with attachments	file_search	files	message from <start_date> last month </start_date> with <attachment> attachments </attachment>
+0	attachment from niranjan kulkarni abominableness rhizotic matting war	file_search	files	<attachment> attachment </attachment> from <contact_name> niranjan kulkarni </contact_name> <file_keyword> abominableness rhizotic matting war </file_keyword>
+0	attachments received in february	file_search	files	<attachment> attachments </attachment> received in <start_date> february </start_date>
+0	osteolysis inexterminable Scombresocidae with attachments from march to april	file_search	files	<file_keyword> osteolysis inexterminable Scombresocidae </file_keyword> with <attachment> attachments </attachment> from <start_date> march </start_date> to <end_date> april </end_date>
+0	attachment onenote mohamed aly	file_search	files	<attachment> attachment </attachment> <file_type> onenote </file_type> <contact_name> mohamed aly </contact_name>
+0	to elena osipova attachments	file_search	files	to <to_contact_name> elena osipova </to_contact_name> <attachment> attachments </attachment>
+0	hrafnsson forwarded attachment to brian long	file_search	files	<contact_name> hrafnsson </contact_name> <email_state> forwarded </email_state> <attachment> attachment </attachment> to <to_contact_name> brian long </to_contact_name>
+0	show me octamerism desired dislimn Major attachments with vsd	file_search	files	show me <file_keyword> octamerism desired dislimn Major </file_keyword> <attachment> attachments </attachment> with <file_type> vsd </file_type>
+0	attachment from yukio trenchant	file_search	files	<attachment> attachment </attachment> from <contact_name> yukio </contact_name> <file_keyword> trenchant </file_keyword>
+0	stephan t. lavavej with Docs attachments	file_search	files	<contact_name> stephan t. lavavej </contact_name> with <file_type> Docs </file_type> <attachment> attachments </attachment>
+0	with attachments yesterday	file_search	files	with <attachment> attachments </attachment> <start_date> yesterday </start_date>
+0	from hongli with attachment	file_search	files	from <contact_name> hongli </contact_name> <attachment> with attachment </attachment>
+0	from samantha schroff about sippingly libelous simoniac with attachment in may	file_search	files	from <contact_name> samantha schroff </contact_name> about <file_keyword> sippingly libelous simoniac </file_keyword> with <attachment> attachment </attachment> in <start_date> may </start_date>
+0	to mcgeehan onenote attachments	file_search	files	to <to_contact_name> mcgeehan </to_contact_name> <file_type> onenote </file_type> <attachment> attachments </attachment>
+0	messages with attachments	file_search	files	messages with <attachment> attachments </attachment>
+0	message attachments from ayesha sultana	file_search	files	message <attachment> attachments </attachment> from <contact_name> ayesha sultana </contact_name>
+0	what is recent attachment that hugo rodriguez muñeton sent me	file_search	files	what is <file_recency> recent </file_recency> <attachment> attachment </attachment> that <contact_name> hugo rodriguez muñeton </contact_name> sent <relationship_name_to> me </relationship_name_to>
+0	attachments march 21st to march 23rd	file_search	files	<attachment> attachments </attachment> <start_date> march 21st </start_date> to <end_date> march 23rd </end_date>
+0	attachment raspatorium from baijal	file_search	files	<attachment> attachment </attachment> <file_keyword> raspatorium </file_keyword> from <contact_name> baijal </contact_name>
+0	yesterday attachment from stacy kerns	file_search	files	<start_date> yesterday </start_date> <attachment> attachment </attachment> from <contact_name> stacy kerns </contact_name>
+0	files lfrom last week about urethragraph ricketiness with attachment	file_search	files	 files  lfrom <start_date> last week </start_date> about <file_keyword> urethragraph ricketiness </file_keyword> with <attachement> attachment </attachement>
+0	to soumya jangam spreadsheet attachment	file_search	files	to <to_contact_name> soumya jangam </to_contact_name> <file_type> spreadsheet </file_type> <attachment> attachment </attachment>
+0	attachment from william pheloung deck	file_search	files	<attachment> attachment </attachment> from <contact_name> william pheloung </contact_name> <file_type> deck </file_type>
+0	calendar speclet kingston attachments to wolfson	file_search	files	<file_keyword> calendar speclet kingston </file_keyword> <attachment> attachments </attachment> to <to_contact_name> wolfson </to_contact_name>
+0	attachments from last weekend	file_search	files	<attachment> attachments </attachment> from <start_date> last weekend </start_date>
+0	find pptx attachment	file_search	files	find <file_type> pptx </file_type> <attachment> attachment </attachment>
+0	centi with attachment	file_search	files	<contact_name> centi </contact_name> with <attachment> attachment </attachment>
+0	open attachment	file_search	files	open <attachment> attachment </attachment>
+0	eduardo vaca guerra sent me an attachment regarding Ibanag tonetic	file_search	files	<contact_name> eduardo vaca guerra </contact_name> sent <relationship_name_to> me </relationship_name_to> an <attachment> attachment </attachment> regarding <file_keyword> Ibanag tonetic </file_keyword>
+0	yael ben ari vstx attachments	file_search	files	<contact_name> yael ben ari </contact_name> <file_type> vstx </file_type> <attachment> attachments </attachment>
+0	find snarlish slide attachments from silas mendes	file_search	files	find <file_keyword> snarlish </file_keyword> <file_type> slide </file_type> <attachment> attachments </attachment> from <contact_name> silas mendes </contact_name>
+0	message from fred jeng with an attachment	file_search	files	message from <contact_name> fred jeng </contact_name> with an <attachment> attachment </attachment>
+0	sanct Daedalus bulwark attachment sent from joana alemão	file_search	files	<file_keyword> sanct Daedalus bulwark </file_keyword> <attachment> attachment </attachment> sent from <contact_name> joana alemão </contact_name>
+0	arm 7ebf attachment to vikrant minhas	file_search	files	<file_keyword> arm 7ebf </file_keyword> <attachment> attachment </attachment> to <to_contact_name> vikrant minhas </to_contact_name>
+0	show me last vssx attachments	file_search	files	show me <order_ref> last </order_ref> <file_type> vssx </file_type> <attachment> attachments </attachment>
+0	whats latest attachment that fumio nakagawa sent albert guan	file_search	files	whats <order_ref> latest </order_ref> <attachment> attachment </attachment> that <contact_name> fumio nakagawa </contact_name> sent <to_contact_name> albert guan </to_contact_name>
+0	what is recently attachment that steve ball sent me	file_search	files	what is <file_recency> recently </file_recency> <attachment> attachment </attachment> that <contact_name> steve ball </contact_name> sent <relationship_name_to> me </relationship_name_to>
+0	to salina scott attachment spinales citronella agamic enolic	file_search	files	to <to_contact_name> salina scott </to_contact_name> <attachment> attachment </attachment> <file_keyword> spinales citronella agamic enolic </file_keyword>
+0	to weizhong xue attachment sheets	file_search	files	to <to_contact_name> weizhong xue </to_contact_name> <attachment> attachment </attachment> <file_type> sheets </file_type>
+0	ku homologist charlock recognizer epithymetical note attachment	file_search	files	<contact_name> ku </contact_name> <file_keyword> homologist charlock recognizer epithymetical </file_keyword> <file_type> note </file_type> <attachment> attachment </attachment>
+0	last night unexternality moky attachment	file_search	files	<start_time> last night </start_time> <file_keyword> unexternality moky </file_keyword> <attachment> attachment </attachment>
+0	from joe degol all attachments	file_search	files	from <contact_name> joe degol </contact_name> all <attachment> attachments </attachment>
+0	to dad with slide attachment	file_search	files	to <relationship_name_to> dad </relationship_name_to> with <file_type> slide </file_type> <attachment> attachment </attachment>
+0	leslie rodriguez with attachment Doc	file_search	files	<contact_name> leslie rodriguez </contact_name> with <attachment> attachment </attachment> <file_type> Doc </file_type>
+0	erin gonzales attachments from Minnehaha	file_search	files	<contact_name> erin gonzales </contact_name> <attachment> attachments </attachment> from <file_keyword> Minnehaha </file_keyword>
+0	what is recent attachment that benjamin thai sent laura francois	file_search	files	what is <file_recency> recent </file_recency> <attachment> attachment </attachment> that <contact_name> benjamin thai </contact_name> sent <to_contact_name> laura francois </to_contact_name>
+0	march attachments	file_search	files	<start_date> march </start_date> <attachment> attachments </attachment>
+0	vukasin jovic attachments monthly goals	file_search	files	<contact_name> vukasin jovic </contact_name> <attachment> attachments </attachment> <file_keyword> monthly goals </file_keyword>
+0	nonproprietary accusative cyanomethaemoglobin agapeti from rituraj choudhary with attachment	file_search	files	<file_keyword> nonproprietary accusative cyanomethaemoglobin agapeti </file_keyword> from <contact_name> rituraj choudhary </contact_name> with <attachment> attachment </attachment>
+0	from asaf manassen about cogs and latency with attachment last week	file_search	files	from <contact_name> asaf manassen </contact_name> about <file_keyword> cogs and latency </file_keyword> with <attachment> attachment </attachment> <start_date> last week </start_date>
+0	show me attachment msg with lofranco	file_search	files	show me <attachment> attachment </attachment> <file_type> msg </file_type> with <contact_name> lofranco </contact_name>
+0	sent to siddhi pise with attachment	file_search	files	sent to <to_contact_name> siddhi pise </to_contact_name> with <attachment> attachment </attachment>
+0	attachments last year	file_search	files	<attachment> attachments </attachment> <start_date> last year </start_date>
+0	from paul dolley with attachment geomancy underbowed	file_search	files	from <contact_name> paul dolley </contact_name> with <attachment> attachment </attachment> <file_keyword> geomancy underbowed </file_keyword>
+0	ppt attachments sent to amanjee	file_search	files	<file_type> ppt </file_type> <attachment> attachments </attachment> sent to <to_contact_name> amanjee </to_contact_name>
+0	katie yao sent to katie yao w katie yao th attachment	file_search	files	<contact_name> qingpo cai </contact_name> yaobo liang </contact_name> katie yao </contact_name> sent to <contact_name> qingpo cai </contact_name> yaobo liang </contact_name> katie yao </contact_name> with <attachment> attachment </attachment>
+0	from amasaki with attachments from 9/1 to 9/31	file_search	files	from <contact_name> amasaki </contact_name> with <attachment> attachments </attachment> from <start_date> 9/1 </start_date> to <end_date> 9/31 </end_date>
+0	attachments 3f 183704f 2	file_search	files	<attachment> attachments </attachment> <file_keyword> 3f 183704f 2 </file_keyword>
+0	last attachment from jeff bishop	file_search	files	<order_ref> last </order_ref> <attachment> attachment </attachment> from <contact_name> jeff bishop </contact_name>
+0	yun-chu chen has attachment	file_search	files	<contact_name> yun-chu chen </contact_name> has <attachment> attachment </attachment>
+0	attachment from deni matos	file_search	files	<attachment> attachment </attachment> from <contact_name> deni matos </contact_name>
+0	from martin spilkin about gastropexy with attachment last week	file_search	files	from <contact_name> martin spilkin </contact_name> about <file_keyword> gastropexy </file_keyword> with <attachment> attachment </attachment> <start_date> last week </start_date>
+0	from hilliker with msg attachment	file_search	files	from <contact_name> hilliker </contact_name> with <file_type> msg </file_type> <attachment> attachment </attachment>
+0	from hebatullah shoeib with attachment list during cny	file_search	files	from <contact_name> hebatullah shoeib </contact_name> with <attachment> attachment </attachment> <file_keyword> list during cny </file_keyword>
+0	find dec dec 20 slide attachments from renjie tao	file_search	files	find <file_keyword> dec dec 20 </file_keyword> <file_type> slide </file_type> <attachment> attachments </attachment> from <contact_name> renjie tao </contact_name>
+0	what is recently attachment that frauke nauta sent hongwei tang	file_search	files	what is <file_recency> recently </file_recency> <attachment> attachment </attachment> that <contact_name> frauke nauta </contact_name> sent <to_contact_name> hongwei tang </to_contact_name>
+0	from chris charla attachment	file_search	files	from <contact_name> chris charla </contact_name> <attachment> attachment </attachment>
+0	monika ponnaganti attachments handicraftsman cytoplasm engrossedly madreporacean	file_search	files	<contact_name> monika ponnaganti </contact_name> <attachment> attachments </attachment> <file_keyword> handicraftsman cytoplasm engrossedly madreporacean </file_keyword>
+0	to mike thorsen ppt attachments	file_search	files	to <to_contact_name> mike thorsen </to_contact_name> <file_type> ppt </file_type> <attachment> attachments </attachment>
+0	find attachments from shriram lakshmi	file_search	files	find <attachment> attachments </attachment> from <contact_name> shriram lakshmi </contact_name>
+0	show last weeks attachments	file_search	files	show <start_date> last week </start_date> s <attachment> attachments </attachment>
+0	from monique pollard contains attachments	file_search	files	from <contact_name> monique pollard </contact_name> contains <attachment> attachments </attachment>
+0	anisognathism armor lunately attachment from august 2018	file_search	files	<file_keyword> anisognathism armor lunately </file_keyword> <attachment> attachment </attachment> from <start_date> august 2018 </start_date>
+0	attachments received in june	file_search	files	<attachment> attachments </attachment> received in <start_date> june </start_date>
+0	gather ashiya puletipalli all attachments	file_search	files	gather <contact_name> ashiya puletipalli </contact_name> all <attachment> attachments </attachment>
+0	attachment from last monday	file_search	files	<attachment> attachment </attachment> from <start_date> last monday </start_date>
+0	july attachments	file_search	files	<start_date> july </start_date> <attachment> attachments </attachment>
+0	pending ga work from antoccia with attachment from january 1 to january 5	file_search	files	<file_keyword> pending ga work </file_keyword> from <contact_name> antoccia </contact_name> with <attachment> attachment </attachment> from <start_date> january 1 </start_date> to <end_date> january 5 </end_date>
+0	last weeks messages with attachments	file_search	files	<start_date> last week </start_date> s messages with <attachment> attachments </attachment>
+0	look for attachments in curlicue personnel nonsupport endocyemate topic	file_search	files	look for <attachment> attachments </attachment> in <file_keyword> curlicue personnel nonsupport endocyemate </file_keyword> topic
+0	to rory carolan with attachment	file_search	files	to <to_contact_name> rory carolan </to_contact_name> with <attachment> attachment </attachment>
+0	may mentoring from alex cyphus with attachment	file_search	files	<start_date> may </start_date> <file_keyword> mentoring </file_keyword> from <contact_name> alex cyphus </contact_name> with <attachment> attachment </attachment>
+0	from wolley containing attachment	file_search	files	from <contact_name> wolley </contact_name> containing <attachment> attachment </attachment>
+0	joie sent to joie w joie th attachment	file_search	files	<contact_name> brian skurski </contact_name> sony guda </contact_name> joie </contact_name> sent to <contact_name> brian skurski </contact_name> sony guda </contact_name> joie </contact_name> with <attachment> attachment </attachment>
+0	boss sent me an attachment regarding rimfire myelospongium	file_search	files	<relationship_name_from> boss </relationship_name_from> sent <relationship_name_to> me </relationship_name_to> an <attachment> attachment </attachment> regarding <file_keyword> rimfire myelospongium </file_keyword>
+0	to santhosh v with attachment pilar hepatophyma Caesarship triphylite	file_search	files	to <to_contact_name> santhosh v </to_contact_name> with <attachment> attachment </attachment> <file_keyword> pilar hepatophyma Caesarship triphylite </file_keyword>
+0	micropathology sarcotherapy bigg Chorotega attachment	file_search	files	<file_keyword> micropathology sarcotherapy bigg Chorotega </file_keyword> <attachment> attachment </attachment>
+0	reply to mengxiong han regarding evangelion	file_search	files	<email_state> reply </email_state> to <to_contact_name> mengxiong han </to_contact_name> regarding <file_keyword> evangelion </file_keyword>
+0	attachment received in last month	file_search	files	<attachment> attachment </attachment> received in <start_date> last month </start_date>
+0	what attachments has schnell sent	file_search	files	what <attachment> attachments </attachment> has <contact_name> schnell </contact_name> sent
+0	look for decks attachments	file_search	files	look for <file_type> decks </file_type> <attachment> attachments </attachment>
+0	i want to see giorgos attachments with Docx	file_search	files	i want to see <contact_name> giorgos </contact_name> <attachment> attachments </attachment> with <file_type> Docx </file_type>
+0	attachments from july 2019	file_search	files	<attachment> attachments </attachment> from <start_date> july 2019 </start_date>
+0	what is latest attachment david kutugata sent me	file_search	files	what is <order_ref> latest </order_ref> <attachment> attachment </attachment> <contact_name> david kutugata </contact_name> sent <relationship_name_to> me </relationship_name_to>
+0	message from gunjan gupta contains attachment	file_search	files	message from <contact_name> gunjan gupta </contact_name> contains <attachment> attachment </attachment>
+0	last attachments	file_search	files	<order_ref> last </order_ref> <attachment> attachments </attachment>
+0	attachments from february 2 and today	file_search	files	<attachment> attachments </attachment> from <start_date> february 2 </start_date> and <end_date> today </end_date>
+0	attachment from sumie suzuki last week participant Cocculus tortulous	file_search	files	<attachment> attachment </attachment> from <contact_name> sumie suzuki </contact_name> <start_date> last week </start_date> <file_keyword> participant Cocculus tortulous </file_keyword>
+0	from maddock attachment worksheet	file_search	files	from <contact_name> maddock </contact_name> <attachment> attachment </attachment> <file_type> worksheet </file_type>
+0	page answers85703 messages containing attachments from november 15th	file_search	files	<file_keyword> page answers85703 </file_keyword> messages containing <attachment> attachments </attachment> from <start_date> november 15th </start_date>
+0	Doc attachment from dad	file_search	files	<file_type> Doc </file_type> <attachment> attachment </attachment> from <relationship_name_from> dad </relationship_name_from>
+0	with attachments this week	file_search	files	with <attachment> attachments </attachment> <start_date> this week </start_date>
+0	attachment from izaaz yunus last week sfc ship room	file_search	files	<attachment> attachment </attachment> from <contact_name> izaaz yunus </contact_name> <start_date> last week </start_date> <file_keyword> sfc ship room </file_keyword>
+0	attachments sent to me	file_search	files	<attachment> attachments </attachment> sent to <relationship_name_to> me </relationship_name_to>
+0	shadab ahmed breathy homotaxial remunerability premeditatingly vdw attachment	file_search	files	<contact_name> shadab ahmed </contact_name> <file_keyword> breathy homotaxial remunerability premeditatingly </file_keyword> <file_type> vdw </file_type> <attachment> attachment </attachment>
+0	attachment included	file_search	files	<attachment> attachment </attachment> included
+0	Sunnism poundcake organule forged attachment sent from joseph vasil	file_search	files	<file_keyword> Sunnism poundcake organule forged </file_keyword> <attachment> attachment </attachment> sent from <contact_name> joseph vasil </contact_name>
+0	from nagrath with barge in issue attachments	file_search	files	from <contact_name> nagrath </contact_name> with <file_keyword> barge in issue </file_keyword> <attachment> attachments </attachment>
+0	messages from morishima with vst attachments	file_search	files	messages from <contact_name> morishima </contact_name> with <file_type> vst </file_type> <attachment> attachments </attachment>
+0	vst attachments from carolina caserio	file_search	files	<file_type> vst </file_type> <attachment> attachments </attachment> from <contact_name> carolina caserio </contact_name>
+0	received from manojkumar kshirsagar including attachment	file_search	files	received from <contact_name> manojkumar kshirsagar </contact_name> including <attachment> attachment </attachment>
+0	doc attachment nominally	file_search	files	<file_type> doc </file_type> <attachment> attachment </attachment> <file_keyword> nominally </file_keyword>
+0	attachment from last week was complete	file_search	files	<attachment> attachment </attachment> from <start_date> last week </start_date> was complete
+0	to shwetha bhat attachment OneNote	file_search	files	to <to_contact_name> shwetha bhat </to_contact_name> <attachment> attachment </attachment> <file_type> OneNote </file_type>
+0	to ewout pdf attachment	file_search	files	to <to_contact_name> ewout </to_contact_name> <file_type> pdf </file_type> <attachment> attachment </attachment>
+0	harshada kshirsagar design exchange 28 attachment	file_search	files	<contact_name> harshada kshirsagar </contact_name> <file_keyword> design exchange 28 </file_keyword> <attachment> attachment </attachment>
+0	explosion attachment from pires luis	file_search	files	<file_keyword> explosion </file_keyword> <attachment> attachment </attachment> from <contact_name> pires luis </contact_name>
+0	attachments fom last monday	file_search	files	<attachment> attachments </attachment> fom <start_date> last monday </start_date>
+0	matrix 17may2018 attachments to aguilar	file_search	files	<file_keyword> matrix 17may2018 </file_keyword> <attachment> attachments </attachment> to <to_contact_name> aguilar </to_contact_name>
+0	files but only if they have an attachment	file_search	files	 files  but only if they have an <attachment> attachment </attachment>
+0	what is latest attachment that yunping yang sent me	file_search	files	what is <order_ref> latest </order_ref> <attachment> attachment </attachment> that <contact_name> yunping yang </contact_name> sent <relationship_name_to> me </relationship_name_to>
+0	to scott taladay with tragicalness cytoryctes projacient attachment	file_search	files	to <to_contact_name> scott taladay </to_contact_name> with <file_keyword> tragicalness cytoryctes projacient </file_keyword> <attachment> attachment </attachment>
+0	find impapase superangelical Docs attachments from rui melo	file_search	files	find <file_keyword> impapase superangelical </file_keyword> <file_type> Docs </file_type> <attachment> attachments </attachment> from <contact_name> rui melo </contact_name>
+0	show me zymological attachments with vstx	file_search	files	show me <file_keyword> zymological </file_keyword> <attachment> attachments </attachment> with <file_type> vstx </file_type>
+0	find sheets premolder otohemineurasthenia responsal attachment sent to tekin	file_search	files	find <file_type> sheets </file_type> <file_keyword> premolder otohemineurasthenia responsal </file_keyword> <attachment> attachment </attachment> sent to <to_contact_name> tekin </to_contact_name>
+0	tzvia rahman voda sent to tzvia rahman voda w tzvia rahman voda th attachment	file_search	files	<contact_name> qiang jin </contact_name> bob doyle </contact_name> tzvia rahman voda </contact_name> sent to <contact_name> qiang jin </contact_name> bob doyle </contact_name> tzvia rahman voda </contact_name> with <attachment> attachment </attachment>
+0	what is latest attachment fernley sent gebremichael	file_search	files	what is <order_ref> latest </order_ref> <attachment> attachment </attachment> <contact_name> fernley </contact_name> sent <to_contact_name> gebremichael </to_contact_name>
+0	brigitte yu received attachment from katherine thistlethwaite	file_search	files	<to_contact_name> brigitte yu </to_contact_name> received <attachment> attachment </attachment> from <contact_name> katherine thistlethwaite </contact_name>
+0	attachments from january 2 and january 9	file_search	files	<attachment> attachments </attachment> from <start_date> january 2 </start_date> and <end_date> january 9 </end_date>
+0	screeny enolizable homoiothermous attachments from debbie vaughan	file_search	files	<file_keyword> screeny enolizable homoiothermous </file_keyword> <attachment> attachments </attachment> from <contact_name> debbie vaughan </contact_name>
+0	message from arola with mercurate anaesthesia Johnsonianly Microscopid attachment	file_search	files	message from <contact_name> arola </contact_name> with <file_keyword> mercurate anaesthesia Johnsonianly Microscopid </file_keyword> <attachment> attachment </attachment>
+0	onenotes attachment	file_search	files	<file_type> onenotes </file_type> <attachment> attachment </attachment>
+0	attachment from pam	file_search	files	attachment from pam
+0	show me latest attachments	file_search	files	show me <order_ref> latest </order_ref> <attachment> attachments </attachment>
+0	updraft alternativeness attachment to rajath r	file_search	files	<file_keyword> updraft alternativeness </file_keyword> <attachment> attachment </attachment> to <to_contact_name> rajath r </to_contact_name>
+0	subdemonstrate unlimber nesslerize regauge attachment receipt	file_search	files	<file_keyword> subdemonstrate unlimber nesslerize regauge </file_keyword> <attachment> attachment </attachment> receipt
