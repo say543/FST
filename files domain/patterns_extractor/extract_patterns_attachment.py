@@ -255,6 +255,10 @@ DomainToSlotsIgnore = defaultdict(set)
 DomainToSlotsIgnore['EMAILSEARCH'].add('destination_folder')
 DomainToSlotsIgnore['EMAILSEARCH'].add('without_attachment')
 DomainToSlotsIgnore['EMAILSEARCH'].add('emailsearch_other')
+# old schema available slots for ignore it 
+DomainToSlotsIgnore['EMAILSEARCH'].add('relationship_name_from')
+DomainToSlotsIgnore['EMAILSEARCH'].add('relationship_name_to')
+DomainToSlotsIgnore['EMAILSEARCH'].add('email_state')
 
 
 '''
