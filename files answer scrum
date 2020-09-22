@@ -103,6 +103,10 @@ files_enus_mv5.slots.config.xml
 	<LabelInfo Name="attachment" ShortcutKey="O" />
 
 for deployment story for mv5 to b2
+參考這個git branch 
+users/chiecha/attachment_model_slot_retrain_09222020
+
+
 step1:
 only leave  
 [query_domains]
