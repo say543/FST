@@ -363,8 +363,16 @@ if specify previosuTurnDoman(file) ,  other context information will not matter,
 slot 新增slot 的注意事項
 =======================
 
+參考這個git branch 
+(users/chiecha/attachment_model_slot_retrain_09222020)
+
 files_enus_mv5.slots.config.xml
 要確保有正確的slot
+
+qd_files_queryparser
+這邊的數目也要有正確的 number
+param:TagForState 這行要自己改
+參考 generated model.queryprocessingconfiguration.ini
 
 
 =======================
