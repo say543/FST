@@ -11,7 +11,7 @@
 0	File Answers shared by JGeorge 	file_search	files	File <file_keyword> Answers </file_keyword> <file_action> shared </file_action> by <contact_name> JGeorge </contact_name> 
 0	File answers presented in monthly review 	file_search	files	File <file_keyword> answers </file_keyword>  <file_action> presented </file_action>  in <file_action_context> monthly review </file_action_context> 
 0	Task UX review shared in email 	file_search	files	<file_keyword> Task UX review </file_keyword>  <file_action> shared </file_action> in <file_action_context> email </file_action_context>
-0	File answer in STCI Sharepoint 	file_search	files	File <file_keyword> answer </file_keyword> in STCI <data_source> Sharepoint </data_source>
+0	File answer in STCI Sharepoint 	file_search	files	File <file_keyword> answer </file_keyword> in <data_source_name> STCI </data_source_name> <data_source_type> Sharepoint </data_source_type>
 0	Excel sheet shared in shiproom 	file_search	files	<file_type> Excel sheet </file_type> <file_action> shared </file_action> in  <file_action_context> shiproom </file_action_context> 
 0	Doc discussed in LT Review 	file_search	files	<file_type> Doc </file_type>  <file_action> discussed </file_action> in <file_action_context> LT Review </file_action_context>
 0	VivekSh’s files 	file_search	files	<contact_name> VivekSh </contact_name>'s files

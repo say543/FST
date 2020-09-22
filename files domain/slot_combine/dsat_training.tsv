@@ -106,7 +106,7 @@
 0	Share the Cortana in Teams Lt review deck with Yujia	file_share	files	Share the <file_keyword>Cortana in Teams Lt review</file_keyword> <file_type>deck</file_type> with <to_contact_name>Yujia</to_contact_name>	Validating_Teams_AllDomain_SR_RandomSampling_20200201-20200229_7k.tsv
 0	Open files I want to get up	file_open	files	Open files <file_keyword>I want to get up</file_keyword>	Reporting_Teams_20200101-20200123_6k.tsv
 0	Open Radical Word document	file_open	files	Open <file_keyword>Radical</file_keyword> <file_type>Word</file_type> document	Reporting_Teams_20200101-20200123_6k.tsv
-0	Open skills file with Mohit	file_open	files	Open <file_keyword>skills</file_keyword> file with <contact_name>Mohit</contact_name>	Reporting_Teams_20200101-20200123_6k.tsv
+0	Open skills file with Mohit	file_share	files	Open <file_keyword>skills</file_keyword> file with <to_contact_name>Mohit</to_contact_name>	Reporting_Teams_20200101-20200123_6k.tsv
 0	Open the Bug Template and other useful info Word document	file_open	files	Open the <file_keyword>Bug Template and other useful info</file_keyword> <file_type>Word</file_type> document	Reporting_Teams_20200101-20200123_6k.tsv
 0	Share Cortana file with Ping at the 4:30	file_share	files	Share <file_keyword>Cortana</file_keyword> file with <to_contact_name>Ping</to_contact_name> at the <time>4:30</time>	Reporting_Teams_20200101-20200123_6k.tsv
 0	Share file Teams I was skilled elopment spreadsheet	file_share	files	Share file <file_keyword Teams I was skilled elopment</file_keyword> <file_type>spreadsheet</file_type>	Reporting_Teams_20200101-20200123_6k.tsv
@@ -127,7 +127,6 @@
 0	Share the presentation I was working on with weekly meeting	file_share	files	Share the <file_type>presentation</file_type> <contact_name>I</contact_name> was <file_action>working</file_action> on with <meeting_starttime>weekly</meeting_starttime> <sharetarget_type>meeting</sharetarget_type>	Validating_Teams_AllDomain_SR_RandomSampling_20200401-20200430.tsv
 0	Shared xls I was working on with Tom Cruise	file_share	files	Shared <file_type>xls</file_type> <contact_name>I</contact_name> was <file_action>working</file_action> on with <to_contact_name>Tom Cruise</to_contact_name>	Validating_Teams_AllDomain_SR_RandomSampling_20200401-20200430.tsv
 0	share the Kingston-WorkingDeck deck here	file_share	files	share the <file_keyword>Kingston-WorkingDeck</file_keyword> <file_type>deck</file_type> <sharetarget_name>here</sharetarget_name>	dsat_training.tsv
-0	share the Kingston-WorkingDeck deck here	file_share	files	share the <file_keyword>Kingston-WorkingDeck</file_keyword> <file_type>deck</file_type> <sharetarget_name>here</sharetarget_name>	dsat_training.tsv
 0	Skills on endpoints Excel	file_search	files	<file_keyword>Skills on endpoints</file_keyword> <file_type>Excel</file_type>	Validating_SnA_SR_OutlookMobile_FileSearch_20200304-20200430.tsv
 0	Shiproom deck for Malik	file_search	files	<file_keyword>Shiproom</file_keyword> <file_type>deck</file_type> for <contact_name>Malik</contact_name>	Validating_SnA_SR_OutlookMobile_FileSearch_20200304-20200430.tsv
 0	share file skills list with Malik	file_share	files	share file <file_keyword>skills list</file_keyword> with <to_contact_name>Malik</to_contact_name>	dsat_training.tsv
@@ -144,9 +143,77 @@
 0	none of these, I want different ones	select_more	files	none of these, I want different ones	dsat_training.tsv
 0	no, I want a different one	select_more	files	no, I want a different one	dsat_training.tsv
 0	no, I want different ones	select_more	files	no, I want different ones	dsat_training.tsv
-
-
-
-
-
-
+0	none of this	select_none	files	none of this	dsat_training.tsv
+0	Search for Cortana XLS.	file_search	files	Search for <file_keyword>Cortana</file_keyword> <file_type>XLS</file_type>.	Validating_Teams_AllDomain_SR_RandomSampling_20200401-20200430.tsv
+0	files about nl search	file_search	files	files about <file_keyword>nl search</file_keyword>	SERP_dsat_training.tsv
+0	ppt vijay was working on last month	file_search	files	<file_type>ppt</file_type> <contact_name>vijay</contact_name> was <file_action>working</file_action> on <date>last month</date>	SERP_dsat_training.tsv
+0	Last week's shiproom deck	file_search	files	<date>last week</date>'s <file_keyword>shiproom</file_keyword> <file_type>deck</file_type>	SERP_dsat_training.tsv
+0	ppt cortana skills govind	file_search	files	<file_type>ppt</file_type> <file_keyword>cortana skills</file_keyword> <contact_name>govind</contact_name>	UWP_dsat_training.tsv
+0	Food for life.pptx.	file_search	files	<file_name>Food for life</file_name>.<file_type>pptx</file_type>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	review.	file_search	files	<file_keyword>review</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	convergence.	file_search	files	<file_keyword>convergence</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Hey Cortana share the coffee presentation to the review meeting.	file_share	files	Hey Cortana share the <file_keyword>coffee</file_keyword> <file_type>presentation</file_type> to the <sharetarget_name>review</sharetarget_name> <sharetarget_type>meeting</sharetarget_type>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Cortana.	file_search	files	<file_keyword>Cortana</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	test.	file_search	files	<file_keyword>test</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Teams Voice Skill - BVT Plan.docx.	file_search	files	<file_name>Teams Voice Skill - BVT Plan</file_name>.<file_type>docx</file_type>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Fatos.	file_search	files	<file_keyword>Fatos</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Send document one to Jim	file_share	files	Send document <file_keyword>one</file_keyword> to <to_contact_name>Jim</to_contact_name>	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Onboarding.	file_search	files	<file_keyword>Onboarding</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	2nd war.	file_search	files	<file_keyword>2nd war</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	City of romancer.	file_search	files	<file_keyword>City of romance</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Bugs on.	file_search	files	<file_keyword>Bugs on</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Bake the Potatoes.pptx.	file_search	files	<file_name>Bake the Potatoes</file_name>.<file_type>pptx</file_type>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Algorithm.	file_search	files	<file_keyword>Algorithm</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Disambiguation.	file_search	files	<file_keyword>Disambiguation</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Voice skills.	file_search	files	<file_keyword>Voice skills</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Plus.	file_search	files	<file_keyword>Plus</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Test accounts for name disambiguation.	file_search	files	<file_keyword>Test accounts for name disambiguation</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Teams.	file_search	files	<file_keyword>Teams</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Arriba.	file_search	files	<file_keyword>Arriba</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	On boarding and training.	file_search	files	<file_keyword>On boarding and training</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Parker.	file_search	files	<contact_name>Parker</contact_name>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Analysts.	file_search	files	<file_keyword>Analysts</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	OK our document.	file_search	files	<file_keyword>OK our</file_keyword> document.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Kingston-Device.	file_search	files	<file_keyword>Kingston-Device</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	XL.	file_search	files	<file_keyword>XL</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Bird.	file_search	files	<file_keyword>Bird</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Share the presentation I was working on with my Miller.	file_share	files	share the <file_type>presentation</file_type> <contact_name>I</contact_name> was <file_action>working</file_action> with <contact_name>my</contact_name> <to_contact_name>Miller</to_contact_name>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Mobile productivity.	file_search	files	<file_keyword>Mobile productivity</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Puzzle.	file_search	files	<file_keyword>Puzzle</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Analysts is.	file_search	files	<file_keyword>Analysts is</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Backpage Teams voice skill.	file_search	files	<file_keyword>Backpage Teams voice skill</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	MSD mslgroup channel.	file_search	files	<file_keyword>MSD mslgroup channel</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Open files in TVs group.	file_open	files	Open files in <file_keyword>TVs group</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Cat.	file_search	files	<file_keyword>Cat</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Review One Test.pptx.	file_search	files	<file_name>Review One Test</file_name>.<file_type>pptx</file_type>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Set in the war.	file_search	files	<file_keyword>Set in the war</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Pepper.	file_search	files	<file_keyword>Pepper</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Pakpassion meeting.	file_search	files	<file_keyword>Pakpassion meeting</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Intelligent.	file_search	files	<file_keyword>Intelligen</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Copy of CELA-LiveEventBugs.xlsx.	file_search	files	<file_name>Copy of CELA-LiveEventBugs</file_name>.<file_type>xlsx</file_type>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Voice Skills.	file_search	files	<file_keyword>Voice Skills</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Lost.	file_search	files	<file_keyword>Lost</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Audio off.	file_search	files	<file_keyword>Audio off</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Caesars.	file_search	files	<file_keyword>Caesars</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Adult and you.	file_search	files	<file_keyword>Adult and you</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Ms teams group channel.	file_search	files	<file_keyword>Ms teams group channel</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	OMC.	file_search	files	<file_keyword>OMC</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Apple.	file_search	files	<file_keyword>Apple</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Execution.	file_search	files	<file_keyword>Execution</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Time.	file_search	files	<file_keyword>Time</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Share the attached present file.	file_share	files	share the <attachment>attached</attachment> <file_keyword>present</file_keyword> file.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Adult.	file_search	files	<file_keyword>Adult</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Share attached presentation.	file_share	files	share <attachment>attached</attachment> <file_type>presentation</file_type>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Onboarding.	file_search	files	<file_keyword>Onboarding</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	ADB set up.	file_search	files	<file_keyword>ADB set up</file_keyword>.	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	this week's shiproom deck	file_search	files	<date>this week</date>'s <file_keyword>shiproom</file_keyword> <file_type>deck</file_type>	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	spreadsheet updated by zhongda this week	file_search	files	<file_type>spreadsheet</file_type> <file_action>updated</file_action> by <contact_name>zhongda</contact_name> <date>this week</date>	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	share my presentation with August	file_share	files	share <contact_name>my</contact_name>  <file_type>presentation</file_type> with <to_contact_name>August</to_contact_name>	dsat_training.tsv
+0	yes shared	file_share	files	yes <file_action>shared</file_action>	dsat_training.tsv
+0	oh	file_search	files	oh	dsat_training.tsv
+0	Show me the file that Vivek sent me	file_search	files	Show me the file that <contact_name>Vivek</contact_name> <file_action>sent</file_action> <to_contact_name>me</to_contact_name>	dsat_training.tsv
+0	cortana skills.ppt	file_search	files	<file_name>cortana skills</file_name>.<file_type>ppt</file_type>	dsat_training.tsv
+0	show me my file I am working on	file_search	files	show me <contact_name>my</contact_name> fIle <contact_name>I</contact_name> am <file_action>working</file_action> on	Validating_UWP_AllDomain_QueryExpansion.tsv
+0	open my PPT I am working on	file_open	files	open <contact_name>my</contact_name> <file_type>PPT</file_type> <contact_name>I</contact_name> am <file_action>working</file_action> on	Validating_UWP_AllDomain_QueryExpansion.tsv
+0	Open Food with nutrition deck	file_open	files	Open <file_keyword>Food with nutrition</file_keyword> <file_type>deck</file_type>	Validating_TVS_AllDomain_SR_20200401-20200430.tsv
+0	Open Mac pptx with Rose	file_share	files	Open <file_keyword>Mac</file_keyword> <file_type>pptx</file_type> with <to_contact_name>Rose</to_contact_name>	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
