@@ -114,11 +114,15 @@ remove cmfgeneric /common all related pipeline
 
 step3: 
 remove qd_files_domain_contextual_lu_featurizer 
+這個 ouput 會有別的featurizer cover 所以不用考慮input output renaming 直接移除就可以
+files_domain_pattern_match_score
 contexxual rule pipeline
 
 
 step4:
 remove qd_files_common_domain_intents_featurizer
+這個 ouput 會有別的featurizer cover 所以不用考慮input output renaming 直接移除就可以
+files_intent_pattern_match_score_wo_contexual_lu
 
 
 ==================
