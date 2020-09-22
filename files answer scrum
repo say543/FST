@@ -102,6 +102,23 @@ files_enus_mv5.slots.config.xml
         <LabelInfo Name="data_source_type" ShortcutKey="O" />
 	<LabelInfo Name="attachment" ShortcutKey="O" />
 
+for deployment story for mv5 to b2
+step1:
+only leave  
+[query_domains]
+files=qd_files
+
+step2:
+remove cmfgeneric /common all related pipeline
+
+
+step3: 
+remove qd_files_domain_contextual_lu_featurizer 
+contexxual rule pipeline
+
+
+step4:
+remove qd_files_common_domain_intents_featurizer
 
 
 ==================
