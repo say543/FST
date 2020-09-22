@@ -358,6 +358,15 @@ if no specify any conditon,  other context information will not matter, score wi
 if specify previosuTurnDoman(file) ,  other context information will not matter, score will be 1
 
 
+
+=======================
+slot 新增slot 的注意事項
+=======================
+
+files_enus_mv5.slots.config.xml
+要確保有正確的slot
+
+
 =======================
 intent 新增intent 的注意事項
 =======================
