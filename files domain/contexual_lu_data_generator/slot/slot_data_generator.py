@@ -46,8 +46,9 @@ class Data(object):
         #self.posdata_scale_multiplier = 1000  # multiplier to amplify the positive_dataset
         #self.posdata_scale_multiplier = 500  # multiplier to amplify the positive_dataset
         #self.posdata_scale_multiplier = 400  # multiplier to amplify the positive_dataset
+        self.posdata_scale_multiplier = 10  # multiplier to amplify the positive_dataset
         #self.posdata_scale_multiplier = 5  # multiplier to amplify the positive_dataset
-        self.posdata_scale_multiplier = 1  # multiplier to amplify the positive_dataset
+        #self.posdata_scale_multiplier = 1  # multiplier to amplify the positive_dataset
         #self.posdata_scale_multiplier = 200  # multiplier to amplify the positive_dataset
         self.overtrigger_suffix_upper_bound = 8 # current range 0-9
         self.overtrigger_suffix_value_upper_bound = 90000
