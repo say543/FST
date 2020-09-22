@@ -64,6 +64,17 @@ def process_tagged_queries(queries, annotated_queries, intents, domain, DomainTo
             'file_action', 'file_action_context', 'file_keyword', 'file_folder', 'meeting_starttime', 'contact_name', 'file_recency']
 
 
+    filterToken = {
+        "email " : "",
+        " email" : "",
+        "emails " : "",
+        " emails" : "",
+        "mail " : "",
+        " mail" : "",
+        "mails " : "",
+        " mails" : "",
+    }
+
     ## dictionary of list
     ## key : xml_name
     ## value : list of possible values inside <> </>
@@ -77,13 +88,35 @@ def process_tagged_queries(queries, annotated_queries, intents, domain, DomainTo
         new_query = query
         new_annotation = ann_query
 
+
         # for debug
         #print('annotated query {}'.format(new_annotation)) 
+
+
+        # filter query which has tokens should be ignore
+        hashTokenIgnore = False
+        for key in sorted (filterToken.keys()) :
+            if query.lower().find(key) !=-1:
+                hashTokenIgnore = True
+
+        '''
+        tokens = query.split()
+        for token in tokens:
+
+            if token.lower() in filterToken:
+                hashTokenIgnore = True
+        '''
+
+        # for debug
+        if hashTokenIgnore:
+            print('-I-: ignore query due to ignore token {}'.format(query))
+
 
         ## extract all constraints (XML pair) from ann_query
         # new routine ,extract 
         xmlpairs = re.findall("(<.*?>.*?<\/.*?>)", ann_query)
 
+        hasSlotIgnore = False
         for xmlpair in xmlpairs:
             # extra type and value for xml tag
             xmlTypeEndInd = xmlpair.find(">")
@@ -93,6 +126,10 @@ def process_tagged_queries(queries, annotated_queries, intents, domain, DomainTo
             xmlValue = xmlpair.replace("<"+xmlType+">", "")
             xmlValue = xmlValue.replace("</"+xmlType+">", "")
             xmlValue = xmlValue.strip()
+
+            # if ignored slot
+            if domain in DomainToSlotsProcess and xmlType.lower() in DomainToSlotsIgnore[domain]:
+                hasSlotIgnore = True
 
             # only extra certain slots to form pattens
             if domain in DomainToSlotsProcess and xmlType.lower() in DomainToSlotsProcess[domain]:
@@ -154,6 +191,10 @@ def process_tagged_queries(queries, annotated_queries, intents, domain, DomainTo
         #print('{}'.format(new_query))
         #print('{}'.format(clean_query(new_query)))
 
+        # if pattern has ignored slot, then remove it
+        if hashTokenIgnore or hasSlotIgnore:
+            continue
+
         pattern_queries[clean_query(new_query)] += 1
 
         pattern_queries_to_annotated_queries[clean_query(new_query)] = clean_query(new_annotation)
@@ -198,8 +239,22 @@ DomainToSlotsProcess['EMAILSEARCH'].add('keyword')
 DomainToSlotsProcess['EMAILSEARCH'].add('contact_name_from')
 DomainToSlotsProcess['EMAILSEARCH'].add('contact_name')
 DomainToSlotsProcess['EMAILSEARCH'].add('contact_name_to')
+# order ref will map to  (during slot data generator)
+# order ref
+# or
+# file_recewncy
+DomainToSlotsProcess['EMAILSEARCH'].add('order_ref')
 
 
+
+# step 3
+# ignore slots
+#  no all other slots no in DomainToSlotsProcess will be ignore
+# for example : start_date / start_time will be left and it is neither not in DomainToSlotsProcess nor DomainToSlotsProcess
+DomainToSlotsIgnore = defaultdict(set)
+DomainToSlotsIgnore['EMAILSEARCH'].add('destination_folder')
+DomainToSlotsIgnore['EMAILSEARCH'].add('without_attachment')
+DomainToSlotsIgnore['EMAILSEARCH'].add('emailsearch_other')
 
 
 '''
