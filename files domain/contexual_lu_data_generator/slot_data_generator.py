@@ -470,6 +470,56 @@ class Data(object):
 
             return query, new_annotation
 
+    '''
+    function noy yet finished, might be unncessary
+    def _attachment_patterns_file_acton_to_contact_name_refinement(self, query, annotation):
+
+
+
+            new_annotation = annotation
+
+            # ignore lowercase / upper case at first
+            verbs = set([
+                     'sent'
+                     ])
+
+
+            tocontactNames = ["me",
+                            "me"
+                            ]
+
+            # only replace annotation, do not touch original query
+            for verb in verbs:
+                for tocontactName in tocontactNames:
+                    # verb space (start with)
+                    # replace with the first occurence
+                    if annotation.startswith(verb +' '+'me'+' '): 
+                        new_annotation = "<file_action> "+verb+" </file_action>" + ' ' + new_annotation[len(verb)+1:]
+
+
+
+                    # verb space (end with)
+                    # replace with the first occurence
+
+                    if query.endswith(' '+verb): 
+                        new_annotation = new_annotation[0:len(new_annotation)-len(verb)-1] +' '+"<file_action> "+verb+" </file_action>"
+
+
+                    # return multiple occurence
+                    if annotation.find(' '+ verb +' '+'me'+' ') != -1:
+                        <file_action> sent </file_action>
+                        new_annotation = new_annotation.replace("<file_action> "+verb+" </file_action>"+" me ", "<file_action> "+verb+" </file_action>"+" <to_contact_name> me ")
+                
+
+                    # for debug
+                    #print("file_action populuted annotation from: {} to: {}".format(
+                    #    annotation, new_annotation))
+
+
+            return query, new_annotation
+    '''
+
+
     def append_attachment_patterns(self, file, newdomain, newintent):
         print("append additional attachment patterns.with {}".format(
             self.max_freq))
