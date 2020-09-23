@@ -33,6 +33,11 @@ myStuffSlotToFileSlot = {
     # rename file_location ti data source, so no need this mapping
     #"<data_source>" : "<file_location>",
     #"</data_source>" : "</file_location>",
+    # remove data_source since it will become data_source_type
+    # but clearly there is many noise data based on
+    "<data_source> " : "",
+    "</data_source> " : "",
+    "</data_source>" : "",
     # planning to have from_contact_name and contact_name at the same time
     # no need to replace anymore
     #"<contact_name>" : "<contact_name>",
@@ -54,12 +59,19 @@ myStuffSlotToFileSlot = {
     #"</file_action>" : "</file_action>",
     #"<position_ref>" : "<position_ref>",
     #"</position_ref>" : "</position_ref>",
+    
     # my stuff remove
-    "<attachment> " : "",
     # based on sorting order, having space at the end will be checked at first
     # so check space version then no space
+    # leave attachment slot since it will be supported
+    # if want to use mystuff attachment data, comment those
+    # need to target 'find_attachment' intent (most data) and open this section
+    #                 
+    "<attachment> " : "",
     "</attachment> " : "",
     "</attachment>" : "",
+    
+    
     "<data_destination> " : "",
     "</data_destination> " : "",
     "</data_destination>" : "",
@@ -699,7 +711,9 @@ blackListQuerySet = {
     "Modify idea's list to remind me to buy paper.",
     "Do I have a Fred Meyer list?",
     "cotina where is my reminders list on my computer",
-    "Show me who I have on my party list, I need to invite more."
+    "Show me who I have on my party list, I need to invite more.",
+    'find playlist "name of playlist',
+    'find my open office'
     }
 
 
@@ -720,6 +734,9 @@ orderRefCandidateSet = set()
 #fileStartTimeCandidate = set()
 fileTimeCandidateSet = set()
 fileDataSourceCandidateSet = set()
+fileDataSourceTypeCandidateSet = set()
+fileDataSourceNameCandidateSet = set()
+fileAttachmentCandidateSet = set()
 
 # deduplication
 skipQueryCandidateSet = set()
@@ -1118,6 +1135,31 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
                 if xmlValue == "daddy . doc":
                     print(xmlpair)
                     print(linestrs[0])
+
+
+                #attachment handling
+                # if want to use mystuff attachment data,
+                # need to target 'find_attachment' intent (most data) and open this section
+                #                
+                ##if xmlpair.startswith("<attachment>"):
+                ##    match = False
+                ##    if not match:
+                ##        # if not correct value then filter it out
+                ##        if xmlValue.lower() != 'attachment' and xmlValue.lower()  != 'attachments' and xmlValue.lower() != 'attached':
+                ##            newPair = xmlpair
+                ##
+                ##            ## replace by order
+                ##            ##"<attachment> " : "",
+                ##            ##"</attachment> " : "",
+                ##            ##"</attachment>" : "",
+                ##            newPair = newPair.replace("<attachment> ", "")
+                ##            newPair = newPair.replace("</attachment> ", "")
+                ##            newPair = newPair.replace("</attachment>", "")
+
+                ##            slot = slot.replace(xmlpair, newPair)
+                ##            match = True
+                ##        
+                    
                 
                 
                 # file_keywrod to file_name
@@ -1332,6 +1374,11 @@ with codecs.open('files_mystuff.tsv', 'r', 'utf-8') as fin:
                     fileTimeCandidateSet.add(xmlpair)
                 if xmlpair.startswith("<data_source>"):
                     fileDataSourceCandidateSet.add(xmlpair)
+                if xmlpair.startswith("<data_source_type>"):
+                    fileDataSourceTypeCandidateSet.add(xmlpair)
+                if xmlpair.startswith("<data_source_name>"):
+                    fileDataSourceNameCandidateSet.add(xmlpair)
+
             
             # output id	query	intent	domain	QueryXml	id	0   
             Output.append("0\t"+linestrs[0]+"\t"+myStuffIntentToFileIntent[linestrs[3]]+"\t"+myStuffDomainToFileDomain[linestrs[4]]+"\t"+slot);
@@ -1386,6 +1433,20 @@ with codecs.open('files_mystuff_after_filtering_time.tsv', 'w', 'utf-8') as fout
 with codecs.open('files_mystuff_after_filtering_data_source.tsv', 'w', 'utf-8') as fout:
     for item in fileDataSourceCandidateSet:
         fout.write(item + '\r\n');
+
+with codecs.open('files_mystuff_after_filtering_data_source_type.tsv', 'w', 'utf-8') as fout:
+    for item in fileDataSourceTypeCandidateSet:
+        fout.write(item + '\r\n');
+
+with codecs.open('files_mystuff_after_filtering_data_source_name.tsv', 'w', 'utf-8') as fout:
+    for item in fileDataSourceNameCandidateSet:
+        fout.write(item + '\r\n');
+
+
+with codecs.open('files_mystuff_after_filtering_attachment.tsv', 'w', 'utf-8') as fout:
+    for item in fileAttachmentCandidateSet:
+        fout.write(item + '\r\n');
+
 
 #######################
 # query replacement revert
