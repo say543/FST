@@ -509,6 +509,8 @@ https://dev.azure.com/msasg/Cortana/_workitems/edit/2828683
 即使是flight new model 也要選yes
 Both "Yes" --- "Existing Application" refers to httpqas.exe
 
+service name 不能選 httpqas 了  先選 HTTP stack
+
 
 // msit/SDF
 .\QCSQueryLabelWithLES.exe --encoding utf-8 --legacyAllowUnusedParameters --verbose --loadingThreadsNum 1 --threadsNum 1 -c E:\searchgold\deploy\builds\data\answers\QASB2PlaceHolder --variant griffinsdf_M365Search.QASB2PlaceHolder --clientId "filestest" -dl 
