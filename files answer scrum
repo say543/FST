@@ -504,7 +504,13 @@ Please try out NL search in Teams Mobile
 b2 ww model run command
 ==========================
 example ticket
+https://dev.azure.com/msasg/Cortana/_workitems/edit/2828683
 
+// msit/SDF
+.\QCSQueryLabelWithLES.exe --encoding utf-8 --legacyAllowUnusedParameters --verbose --loadingThreadsNum 1 --threadsNum 1 -c E:\searchgold\deploy\builds\data\answers\QASB2PlaceHolder --variant griffinsdf_M365Search.QASB2PlaceHolder --clientId "filestest" -dl 
+files --interactive
+
+// prod
 .\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2 --queryInColumn 1 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c  E:\searchgold\deploy\builds\data\answers\QasMSSearch01DS  --variant griffinsdf_M365Search.QasMSSearch01DS  -dl file
 
 
