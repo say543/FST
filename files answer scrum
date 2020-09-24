@@ -503,8 +503,13 @@ Please try out NL search in Teams Mobile
 ============================
 b2 ww model run command
 ==========================
+example ticket
 
 .\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2 --queryInColumn 1 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c  E:\searchgold\deploy\builds\data\answers\QasMSSearch01DS  --variant griffinsdf_M365Search.QasMSSearch01DS  -dl file
+
+
+yong one note for MSIT or WWdeployment
+https://microsoftapc.sharepoint.com/teams/CLU705/_layouts/15/Doc.aspx?sourcedoc={75f33d6e-4674-4c39-bd74-112bf8e821ae}&action=edit&wd=target%28%F0%9F%93%9A%20Reference%2F%F0%9F%93%95%20Dev%20Handbook%2FB2%20Deployment.one%7C04ae536d-91d7-4f54-af71-1708a12f6596%2FProcess%7C9852204a-5c23-4548-ba92-7724a6428576%2F%29
 
 model onenote 
 https://microsoft.sharepoint.com/teams/CortanaCore/_layouts/15/Doc.aspx?sourcedoc={6d6ae133-c9c8-400d-bfd8-ae8feec6ff9f}&action=edit&wd=target%28LU%20Modeling%20and%20Partners%2FB2%20Deployment.one%7C5f498291-a459-40e5-a0ce-f96e0fbf0c37%2FProcess%7C9852204a-5c23-4548-ba92-7724a6428576%2F%29
