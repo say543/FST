@@ -586,6 +586,13 @@ blackListQuerySet = {
     "my library",
     "(name of spreadsheet)",
     "my lists",
+    # overkill by contact_mame / to_contact_mame mpaing rule  in code
+    # move it to seperate files files_mystuff_extracted_manually.tsv
+    'locate file saved from hayden',
+    'cortana display document received from fred',
+    'Do you know where I saved my slides from my trip to China?',
+    'Where is the document that I saved from Carol this afternoon',
+    'Locate file saved from Hayden',
     # not sure how to annotate, skip at first
     "locate the letters i wrote to susi between january 20th, 2013 and february 7th, 2014.",
     "locate the letters i wrote to lucas between november 2, 2009 and january 3rd,2010",
