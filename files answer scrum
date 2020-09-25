@@ -88,7 +88,7 @@ attachment pr check in
 ==================
 
 revery all mv3 
-因該要push 到mv2
+因該要push 到mv2 (X 這部還沒做  因為為了要先deploy 可能之後fix bug 再一起 run evaluation for testing)
 
 順便fix build.json
 
