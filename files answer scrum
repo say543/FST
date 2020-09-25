@@ -1255,7 +1255,56 @@ Fw: New compliance guidance for Substrate Intelligence Platform
 
 
 ==============================
-flight new domain model  04032020
+flight new domain model b2  WW/MSIT 09252020
+==============================
+
+
+one note form yong (說明create ticket 跟memory profiling 的one note page)
+https://microsoftapc.sharepoint.com/teams/CLU705/_layouts/15/Doc.aspx?sourcedoc={75f33d6e-4674-4c39-bd74-112bf8e821ae}&action=edit&wd=target%28%F0%9F%93%9A%20Reference%2F%F0%9F%93%95%20Dev%20Handbook%2FB2%20Deployment.one%7C04ae536d-91d7-4f54-af71-1708a12f6596%2FProcess%7C9852204a-5c23-4548-ba92-7724a6428576%2F%29
+
+deploy ticket 
+https://msasg.visualstudio.com/Cortana/_workitems/edit/3012501/
+
+
+
+if new client (最好新增client 因為要對應)
+griffinsdf_M365Search.QASB2PlaceHolder.queryprocessingconfiguration.ini
+step1:
+
+[import]
+files=files_enus_mv5
+
+[clients]
+filestest=filestest
+
+[query_domains:filestest]
+deriveFromClient=
+files=files::qd_files
+
+
+
+
+step2:
+新增client 的對應 (prod 跟msit shares the same configuration)
+griffinsdf_M365Search.QasMSSearch01DS.ClientIdConfig.ini
+
+[global]
+filestest=filestest:true
+
+step3: (? 這個因該是answer team 要改)
+substrate search 的config
+https://dev.azure.com/msasg/Bing_and_IPG/_git/SubstrateSearch?path=%2Fprivate%2FComponents%2FQu%2FQuV2%2FSubstrateSearch.QuV2.Plugins%2FQas%2FQasB2InputCreatorConfigurationV2.ini&_a=contents&version=GBmaster
+
+people 的example
+customconstraints&FLT.PeopleEntityServeQasModelV2:true=peopletest:true
+customconstraints&GWSFLT.PeopleEntityServeQasModelV2:true=peopletest:true
+
+這兩個因該是所謂的feature flight 可以被使用的? (wait for yong 's confirmation)
+FLT.PeopleEntityServeQasModelV2
+GWSFLT.PeopleEntityServeQasModelV2  
+
+==============================
+flight new domain model  (cortana) 04032020
 ==============================
 
 flight 的link
