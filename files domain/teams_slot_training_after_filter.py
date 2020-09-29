@@ -713,13 +713,13 @@ with codecs.open('teams_slot_training.tsv', 'r', 'utf-8') as fin:
 
 
             # missed data source
-            datasources = set(["onedrive",
+            datasourcetypes = set(["onedrive",
                         ]
                        )
-            for datasource in datasources:
+            for datasourcetype in datasourcetypes:
                 # if found token but not being taked
-                if slot.find(datasource) != -1 and slot.find("<data_source> "+ datasource) == -1:
-                    slot = slot.replace(datasource, "<data_source> "+ datasource +" </data_source>")
+                if slot.find(datasourcetype) != -1 and slot.find("<data_source> "+ datasourcetype) == -1:
+                    slot = slot.replace(datasourcetype, "<data_source_type> "+ datasourcetype +" </data_source_type>")
 
             # missed time
             times = set(["this morning",
