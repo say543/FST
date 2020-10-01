@@ -116,8 +116,9 @@ class Data(object):
 
         # read filetype
         # using uwp one to remove picture file
-        #self.filetype = []
+        self.filetypeIncludeBoost = []
         self.fileboost = []
+        
         #with codecs.open('..\\resource\\lexicons\\file_type_domain_boost.txt', 'r', 'utf-8') as fin:
         #with codecs.open('..\\resource\\lexicons\\file_type_domain_boost_UWP.txt', 'r', 'utf-8') as fin:
         with codecs.open('..\\..\\resource\\lexicons\\file_type_domain_boost_UWP.txt', 'r', 'utf-8') as fin:
@@ -126,7 +127,7 @@ class Data(object):
                 if line.lower() == 'documents' or line.lower() == 'document' or line.lower() == 'file' or line.lower() == 'files':
                     self.fileboost.append(line)
                 #else:
-                    #self.filetype.append(line)
+                self.filetypeIncludeBoost.append(line)
 
         # read order_ref
         '''
@@ -188,6 +189,30 @@ class Data(object):
         # emailsearch_other  then cancel it direclty
 
 
+
+
+    def _filter_tag_date(self, tag, values):
+
+        print("{} before filter {}".format(tag, len(values)))
+
+        newvalues = []
+        if tag != 'file_type':
+            for value in values:
+                valuetokensSet = set(value.lower().split())
+
+                insidefiletypeIncludeBoost = False
+                for element in self.filetypeIncludeBoost:
+                    if element.lower() in valuetokensSet:
+                        #print("filter token:{} ".format(value))
+                        insidefiletypeIncludeBoost = True
+
+                if insidefiletypeIncludeBoost is False:
+                    newvalues.append(value)
+
+        print("{} after filter {}".format(tag, len(newvalues)))
+
+        return values
+
     def load_tags_data(self, file):
         tag = os.path.basename(file).replace('.txt', '')
 
@@ -199,11 +224,17 @@ class Data(object):
             values = [val.strip() for val in f.readlines()]
 
 
+        # filter tag
+        values = self._filter_tag_date(tag, values)
+
         # for debug 
         print("{} before deduplication {}".format(file, len(values)))
 
         #dedup and transfer back to list
         values = list(set(values))
+
+
+
 
         # for debug 
         print("{} after deduplication {}".format(file, len(values)))
@@ -391,6 +422,118 @@ class Data(object):
         # self._augment_patterns()
         # 
 
+
+
+    def _attachment_patterns_file_acton_refinement(self, query, annotation):
+
+
+
+            new_annotation = annotation
+
+            # ignore lowercase / upper case at first
+            verbs = set([
+                    #--- no present in data
+                    # "downloaded",
+                    # "worked",
+                    # "created",
+                    # "saved",
+                    # "made",
+                    # "edited",
+                    # "took",
+                    # "uploaded",
+                    # "working",
+                    #--- no present in data
+                     "shared",
+                    #--- no present in data
+                    # "wrote",
+                    # "added",
+                    # "used",
+                    # "using",
+                    # "composed",
+                    # "opened",
+                    # "composing",
+                    # "morning",
+                    # "walked",
+                    # "edited",
+                    # "updated",
+                    # "writing",
+                    # "doing",
+                    # "did",
+                    # "looking",
+                    # "looked",
+                    # "reviewed",
+                    #--- no present in data
+                    #--- not supposed to be file_action
+                    #"titled",
+                    #"called",
+                    #--- no present in data
+                     "marked",
+                    #--- no present in data
+                     'sent'
+                     ])
+
+            # only replace annotation, do not touch original query
+            for verb in verbs:
+                # verb space (start with)
+                # replace with the first occurence
+
+                if query.startswith(verb +' '): 
+                    new_annotation = "<file_action> "+verb+" </file_action>" + ' ' + new_annotation[len(verb)+1:]
+
+
+
+                # verb space (end with)
+                # replace with the first occurence
+
+                if query.endswith(' '+verb): 
+                    new_annotation = new_annotation[0:len(new_annotation)-len(verb)-1] +' '+"<file_action> "+verb+" </file_action>"
+
+                
+                # return multiple occurence
+                if query.find(' '+ verb +' ') != -1:
+                    new_annotation = new_annotation.replace(' '+ verb +' ', ' '+"<file_action> "+verb+" </file_action>"+' ')
+                
+
+                # for debug
+                #print("file_action populuted annotation from: {} to: {}".format(
+                #    annotation, new_annotation))
+
+
+            return query, new_annotation
+
+    # even appliyng this function no all cases being covered. 
+    def _attachment_patterns_date_time_map_annotation(self, query, annotation):
+        new_annotation = annotation
+
+        xmlpairs = re.findall("(<.*?>.*?<\/.*?>)", annotation)
+        for xmlpair in xmlpairs:
+            # extra type and value for xml tag
+            xmlTypeEndInd = xmlpair.find(">")
+
+            xmlType = xmlpair[1:xmlTypeEndInd]
+
+            xmlValue = xmlpair.replace("<"+xmlType+">", "")
+            xmlValue = xmlValue.replace("</"+xmlType+">", "")
+            xmlValue = xmlValue.strip()
+
+            if xmlType.lower() == 'start_date':
+                new_annotation = new_annotation.replace("<"+xmlType+">", '<{}>'.format('date'))
+                new_annotation = new_annotation.replace("</"+xmlType+">", '</{}>'.format('date'))
+
+            if xmlType.lower() == 'end_date':
+                new_annotation = new_annotation.replace("<"+xmlType+">", '<{}>'.format('date'))
+                new_annotation = new_annotation.replace("</"+xmlType+">", '</{}>'.format('date'))
+
+            if xmlType.lower() == 'start_time':
+                new_annotation = new_annotation.replace("<"+xmlType+">", '<{}>'.format('time'))
+                new_annotation = new_annotation.replace("</"+xmlType+">", '</{}>'.format('time'))
+
+            if xmlType.lower() == 'end_time':
+                new_annotation = new_annotation.replace("<"+xmlType+">", '<{}>'.format('time'))
+                new_annotation = new_annotation.replace("</"+xmlType+">", '</{}>'.format('time'))
+
+        return query, new_annotation
+
     def append_attachment_patterns(self, file, newdomain, newintent):
         print("append additional attachment patterns.with {}".format(
             self.max_freq))
@@ -413,6 +556,10 @@ class Data(object):
                 intent = p.split('\t')[4]
                 freq_offset = p.split('\t')[5]
                 
+                #populuate file_action to annotation know
+                query, annotation = self._attachment_patterns_file_acton_refinement(query, annotation)
+                query, annotation = self._attachment_patterns_date_time_map_annotation(query, annotation)
+
                 # for debug
                 #print("mapped domain from domain {} to {}".format(domain, newdomain))
                 #print("mapped intent from intent {} to {}".format(intent, newintent))
@@ -452,6 +599,7 @@ class Data(object):
                             # file boost xml is removed here
                             annotation = annotation.replace("<{}>".format(tag), 
                                 "<{}>".format('to_contact_name'))
+
 
                         # no exist in pattern                      
                         #else if tag == 'without_attachment' or  tag == 'emailsearch_other':
@@ -1618,7 +1766,7 @@ for tag_file in tqdm(all_overtrigger_tags_files):
 # with keyword mapped to file_keyword
 #data.append_attachment_patterns('patterns_EMAILSEARCH_attachment_add_keyword_after_bug_fix.txt','FILES', 'file_search')
 #data.append_attachment_patterns('patterns_EMAILSEARCH_add_three_contact_name_slot_after_bug_fix.txt','FILES', 'file_search')
-data.append_attachment_patterns('patterns_EMAILSEARCH_add_three_contact_name_orderref.txt','FILES', 'file_search')
+data.append_attachment_patterns('patterns_EMAILSEARCH_add_three_contact_name_orderref_after_bug_fix.txt','FILES', 'file_search')
 
 
 # my extra patterns
