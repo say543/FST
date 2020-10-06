@@ -192,5 +192,5 @@ that i have something with bob	1	REMINDER	that i have something with <contact_na
 remind me at 145 today that i have something with bob	1	REMINDER	remind me at <start_time> 145 </start_time> <start_date> today </start_date> that i have something with <contact_name> bob </contact_name>	create_single_reminder
 remind me in 2 minutes to <reminder_text>	1	REMINDER	remind me <start_time> in 2 minutes </start_time> to <reminder_text>	create_single_reminder
 remind me everyday at 117 to <reminder_text>	1	REMINDER	remind me <start_date> everyday </start_date> at <start_time> 117 </start_time> to <reminder_text>	create_single_reminder
-remind me to talk to bala tonight <reminder_text>	1	REMINDER	remind me to <reminder_text> <start_time> tonight </start_time> <reminder_text>	create_single_reminder
+remind me to <reminder_text> tonight <reminder_text>	1	REMINDER	remind me to <reminder_text> <start_time> tonight </start_time> <reminder_text>	create_single_reminder
 no	1	REMINDER	no	reject

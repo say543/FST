@@ -1,0 +1,43 @@
+ConversationId	MessageId	MessageTimestamp	MessageFrom	MessageText	JudgedDomain	JudgedIntent	JudgedConstraints	Frequency	MetaData	ConversationContext	ImplicitConstraints
+goldensetPeople1	0		user	give me William's manager name	PEOPLE	search_org_chart	give me <contact_name>William</contact_name>'s <relationship_name>manager</relationship_name> name	1			
+goldensetPeople2	0		user	Where is Yvonne based?	PEOPLE	search_people_attribute	Where is <contact_name>Yvonne</contact_name> <people_attribute>based</people_attribute>?	1			
+goldensetPeople3	0		user	Where does Yvonne sit?	PEOPLE	search_people_attribute	Where does <contact_name>Yvonne</contact_name> <people_attribute>sit</people_attribute>?	1			
+goldensetPeople4	0		user	What is Yvonne's desk?	PEOPLE	search_people_attribute	What is <contact_name>Yvonne</contact_name>'s <people_attribute>desk</people_attribute>?	1			
+goldensetPeople5	0		user	Where can I can find Yvonne?	PEOPLE	search_people_attribute	Where can I can find <contact_name>Yvonne</contact_name>?	1			
+goldensetPeople6	0		user	People who know about ML	PEOPLE	search_people_by_attribute	People who know about <skill_name>ML</skill_name>	1			
+goldensetPeople7	0		user	Who knows about ML 	PEOPLE	search_people_by_attribute	Who knows about <skill_name>ML</skill_name> 	1			
+goldensetPeople8	0		user	Who is familiar with ML	PEOPLE	search_people_by_attribute	Who is familiar with <skill_name>ML</skill_name>	1			
+goldensetPeople9	0		user	People familiar with ML	PEOPLE	search_people_by_attribute	People familiar with <skill_name>ML</skill_name>	1			
+goldensetPeople10	0		user	Who works in Panda	PEOPLE	search_people_by_attribute	Who works in <project_name>Panda</project_name>	1			
+goldensetPeople11	0		user	Who works in project Panda	PEOPLE	search_people_by_attribute	Who works in project <project_name>Panda</project_name>	1			
+goldensetPeople12	0		user	Yvonne the engineer in London	PEOPLE	search_people_by_name	<contact_name>Yvonne</contact_name> the <job_title>engineer</job_title> in <office_location>London</office_location>	1			
+goldensetPeople13	0		user	Yvonne the engineer in MSAI in London	PEOPLE	search_people_by_name	<contact_name>Yvonne</contact_name> the <job_title>engineer</job_title> in <org_name>MSAI</org_name> in <office_location>London</office_location>	1			
+goldensetPeople14	0		user	Paul who knows about Pandas	PEOPLE	search_people_by_name	<contact_name>Paul</contact_name> who knows about <skill_name>Pandas</skill_name>	1			
+goldensetPeople15	0		user	Paul the dev from MSAI who knows about C#	PEOPLE	search_people_by_name	<contact_name>Paul</contact_name> the <job_title>dev</job_title> from <org_name>MSAI</org_name> who knows about <skill_name>C#</skill_name>	1			
+goldensetPeople16	0		user	Yvonne's contact details	PEOPLE	search_people_by_name	<contact_name>Yvonne</contact_name>'s <people_attribute>contact details</people_attribute>	1			
+goldensetPeople17	0		user	Info about Yvonne	PEOPLE	search_people_by_name	Info about <contact_name>Yvonne</contact_name>	1			
+goldensetPeople18	0		user	Yvonne's profile	PEOPLE	search_people_by_name	<contact_name>Yvonne</contact_name>'s profile	1			
+goldensetPeople19	0		user	Who does Yvonne report to?	PEOPLE	search_org_chart	Who does <contact_name>Yvonne</contact_name> <relationship_name>report to</relationship_name>?	1			
+goldensetPeople20	0		user	Who reports to Yvonne?	PEOPLE	search_org_chart	Who <relationship_name>reports to</relationship_name> <contact_name>Yvonne</contact_name>?	1			
+goldensetPeople21	0		user	Yvonne's management chain	PEOPLE	search_org_chart	<contact_name>Yvonne</contact_name>'s <people_attribute>management chain</people_attribute>	1			
+goldensetPeople22	0		user	Yvonne's phone	PEOPLE	search_people_attribute	<contact_name>Yvonne</contact_name>'s <people_attribute>phone</people_attribute>	1			
+goldensetPeople23	0		user	Yvonne's cell	PEOPLE	search_people_attribute	<contact_name>Yvonne</contact_name>'s <people_attribute>cell</people_attribute>	1			
+goldensetPeople24	0		user	Yvonne's cell number	PEOPLE	search_people_attribute	<contact_name>Yvonne</contact_name>'s <people_attribute>cell number</people_attribute>	1			
+goldensetPeople25	0		user	Yvonne's phone number	PEOPLE	search_people_attribute	<contact_name>Yvonne</contact_name>'s <people_attribute>phone number</people_attribute>	1			
+goldensetPeople26	0		user	What is Yvonne's cell	PEOPLE	search_people_attribute	What is <contact_name>Yvonne</contact_name>'s  <people_attribute>cell </people_attribute>	1			
+goldensetPeople27	0		user	What is Yvonne's cell no	PEOPLE	search_people_attribute	What is <contact_name>Yvonne</contact_name>'s  <people_attribute>cell no</people_attribute>	1			
+goldensetPeople28	0		user	What is Yvonne's phone	PEOPLE	search_people_attribute	What is <contact_name>Yvonne</contact_name>'s <people_attribute>phone</people_attribute>	1			
+goldensetPeople29	0		user	What is Yvonne's phone no	PEOPLE	search_people_attribute	What is <contact_name>Yvonne</contact_name>'s <people_attribute>phone no</people_attribute>	1			
+goldensetPeople30	0		user	Yvonne's position	PEOPLE	search_people_attribute	<contact_name>Yvonne</contact_name>'s <people_attribute>position</people_attribute>	1			
+goldensetPeople31	0		user	Yvonne's work position	PEOPLE	search_people_attribute	<contact_name>Yvonne</contact_name>'s <attribute_type>work</attribute_type> <people_attribute>position</people_attribute>	1			
+goldensetPeople32	0		user	Yvonne's job position	PEOPLE	search_people_attribute	<contact_name>Yvonne</contact_name>'s <people_attribute>job position</people_attribute>	1			
+goldensetPeople33	0		user	Yvonne's job	PEOPLE	search_people_attribute	<contact_name>Yvonne</contact_name>'s <people_attribute>job</people_attribute>	1			
+goldensetPeople34	0		user	What is Yvonne's email	PEOPLE	search_people_attribute	What is <contact_name>Yvonne</contact_name>'s <people_attribute>email</people_attribute>	1			
+goldensetPeople35	0		user	What is the email of Yvonne	PEOPLE	search_people_attribute	What is the <people_attribute>email</people_attribute> of <contact_name>Yvonne</contact_name>	1			
+goldensetPeople36	0		user	Yvonne's email address	PEOPLE	search_people_attribute	<contact_name>Yvonne</contact_name>'s <people_attribute>email address</people_attribute>	1			
+goldensetPeople37	0		user	Yvonne's dept	PEOPLE	search_people_attribute	<contact_name>Yvonne</contact_name>'s <people_attribute>dept</people_attribute>	1			
+goldensetPeople38	0		user	Yvonne's team	PEOPLE	search_people_attribute	<contact_name>Yvonne</contact_name>'s <people_attribute>team</people_attribute>	1			
+goldensetPeople39	0		user	Yvonne's group	PEOPLE	search_people_attribute	<contact_name>Yvonne</contact_name>'s <people_attribute>group</people_attribute>	1			
+goldensetPeople40	0		user	Devs in Belevue	PEOPLE	search_people_by_attribute	<job_title>Devs</job_title> in <office_location>Belevue</office_location>	1			
+goldensetPeople41	0		user	Devs in Bellevue working in Outlook Mobile	PEOPLE	search_people_by_attribute	<job_title>Devs</job_title> in <office_location>Bellevue</office_location> working in <project_name>Outlook Mobile</project_name>	1			
+goldensetPeople42	0		user	PMs in city center	PEOPLE	search_people_by_attribute	<job_title>PMs</job_title> in <office_location>city center</office_location>	1			

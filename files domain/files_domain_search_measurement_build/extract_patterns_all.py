@@ -81,7 +81,10 @@ def process_tagged_queries(queries, annotated_queries, intents, domain, DomainTo
         # new routine ,extract 
         xmlpairs = re.findall("(<.*?>.*?<\/.*?>)", ann_query)
         
-        for xmlpair in xmlpairs:
+        # need to do to_contact_name first then contact_name
+        # so reverse order
+        #for xmlpair in xmlpairs:
+        for xmlpair in sorted(xmlpairs, reverse=True):
             # extra type and value for xml tag
             xmlTypeEndInd = xmlpair.find(">")
 
@@ -160,6 +163,11 @@ DomainToSlotsProcess['NOTE'].add('note_text')
 DomainToSlotsProcess['REMINDER'].add('reminder_text')
 DomainToSlotsProcess['FILES'].add('file_keyword')
 DomainToSlotsProcess['FILES'].add('file_name')
+# add contact / to_contact_name for files only
+# but to_contact_name needs to process earlier than contact_name to prevent problem
+DomainToSlotsProcess['FILES'].add('contact_name')
+DomainToSlotsProcess['FILES'].add('to_contact_name')
+
 
 
 

@@ -10,7 +10,7 @@ no	2	NOTE	no	reject
 add <note_text> to shopping list	2	NOTE	add <note_text> to <title> shopping </title> <data_type> list </data_type>	add_to_note
 add <note_text> to my task list	2	NOTE	add <note_text> to my <title> task </title> <data_type> list </data_type>	add_to_note
 create a shopping list	2	NOTE	create a <title> shopping </title> <data_type> list </data_type>	create_note
-add baking powder salt and <note_text> to my pancake list	2	NOTE	add <note_text> and <note_text> to my <title> pancake </title> <data_type> list </data_type>	add_to_note
+add <note_text> and <note_text> to my pancake list	2	NOTE	add <note_text> and <note_text> to my <title> pancake </title> <data_type> list </data_type>	add_to_note
 add <note_text> to my list	2	NOTE	add <note_text> to my <data_type> list </data_type>	add_to_note
 remove <note_text> from my baking list	2	NOTE	remove <note_text> from my <title> baking </title> <data_type> list </data_type>	delete_note_item
 delete my grocery list	1	NOTE	delete my <title> grocery </title> <data_type> list </data_type>	delete_note
@@ -28,7 +28,7 @@ nothing	1	NOTE	nothing	cancel
 add to my task list	1	NOTE	add to my <title> task </title> <data_type> list </data_type>	add_to_note
 add to do task	1	NOTE	add <title> to do </title> <note_category> task </note_category>	create_note
 create a list for pancakes	1	NOTE	create a <data_type> list </data_type> for <title> pancakes </title>	create_note
-add milk eggs orange juice and <note_text> to my grocery list	1	NOTE	add <note_text> and <note_text> to my <title> grocery </title> <data_type> list </data_type>	add_to_note
+add <note_text> and <note_text> to my grocery list	1	NOTE	add <note_text> and <note_text> to my <title> grocery </title> <data_type> list </data_type>	add_to_note
 create a grocery list	1	NOTE	create a <title> grocery </title> <data_type> list </data_type>	create_note
 add <note_text> into my task list	1	NOTE	add <note_text> into my <title> task </title> <data_type> list </data_type>	add_to_note
 cleaning supplies	1	NOTE	<title> cleaning supplies </title>	create_note
@@ -49,7 +49,7 @@ yes please	1	NOTE	yes please	confirm
 add <note_text> to my to do today to do list	1	NOTE	add <note_text> to my <title> to do today to do </title> <data_type> list </data_type>	add_to_note
 at a <note_text> to my to do list	1	NOTE	at a <note_text> to my <title> to do </title> <data_type> list </data_type>	create_note
 yes	1	NOTE	yes	confirm
-add flour honey and <note_text> to my pancake list	1	NOTE	add <note_text> <note_text> and <note_text> to my <title> pancake </title> <data_type> list </data_type>	add_to_note
+add <note_text> <note_text> and <note_text> to my pancake list	1	NOTE	add <note_text> <note_text> and <note_text> to my <title> pancake </title> <data_type> list </data_type>	add_to_note
 create a pancake list	1	NOTE	create a <title> pancake </title> <data_type> list </data_type>	create_note
 remove <note_text> from my ignore list	1	NOTE	remove <note_text> from my <title> ignore </title> <data_type> list </data_type>	delete_note_item
 play personal work list	1	NOTE	play <title> personal work </title> <data_type> list </data_type>	read_aloud
@@ -63,5 +63,5 @@ add <note_text> to	1	NOTE	add <note_text> to	add_to_note
 add <note_text> to my baking list	1	NOTE	add <note_text> to my <title> baking </title> <data_type> list </data_type>	add_to_note
 remove <note_text> from shopping list	1	NOTE	remove <note_text> from <title> shopping </title> <data_type> list </data_type>	delete_note_item
 remove <note_text> from my cleaning list	1	NOTE	remove <note_text> from my <title> cleaning </title> <data_type> list </data_type>	delete_note_item
-add baking powder salt and <note_text> to my baking list pancake list	1	NOTE	add <note_text> and <note_text> to my <title> baking </title> <data_type> list </data_type> <title> pancake </title> <data_type> list </data_type>	add_to_note
+add <note_text> and <note_text> to my baking list pancake list	1	NOTE	add <note_text> and <note_text> to my <title> baking </title> <data_type> list </data_type> <title> pancake </title> <data_type> list </data_type>	add_to_note
 delete hybrid list	1	NOTE	delete <title> hybrid </title> <data_type> list </data_type>	delete_note

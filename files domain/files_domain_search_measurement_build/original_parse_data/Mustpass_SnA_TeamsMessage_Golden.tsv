@@ -1,0 +1,104 @@
+ConversationId	MessageId	MessageTimestamp	MessageFrom	MessageText	JudgedDomain	JudgedIntent	JudgedConstraints	MetaData	ConversationContext	Frequency	ImplicitConstraints
+TeamsMessage-1	0		user	messages from Soumya	TEAMSMESSAGE	search_message	messages from <contact_name_from>Soumya</contact_name_from>	[]		1	
+TeamsMessage-2	0		user	messages from Soumya last week	TEAMSMESSAGE	search_message	messages from <contact_name_from>Soumya</contact_name_from> <start_date>last week</start_date>	[]		1	
+TeamsMessage-3	0		user	messages from last week	TEAMSMESSAGE	search_message	messages from <start_date>last week</start_date>	[]		1	
+TeamsMessage-4	0		user	messages from Ignite channel	TEAMSMESSAGE	search_message	messages from <channel>Ignite</channel> channel	[]		1	
+TeamsMessage-5	0		user	messages from Ignite channel about planning	TEAMSMESSAGE	search_message	messages from <channel>Ignite</channel> channel about <keyword>planning</keyword>	[]		1	
+TeamsMessage-6	0		user	messages from Soumya in Ignite channel about planning last week	TEAMSMESSAGE	search_message	messages from <contact_name_from>Soumya</contact_name_from> in <channel>Ignite</channel> channel about <keyword>planning</keyword> <start_date>last week</start_date>	[]		1	
+TeamsMessage-7	0		user	find messages from Soumya	TEAMSMESSAGE	search_message	find messages from <contact_name_from>Soumya</contact_name_from>	[]		1	
+TeamsMessage-8	0		user	Messages from Shuyin last week on OKR2	TEAMSMESSAGE	search_message	Messages from <contact_name_from>Shuyin</contact_name_from> <start_date>last week</start_date> on <keyword>OKR2</keyword>	[]		1	
+TeamsMessage-9	0		user	Messages from NL Search channel last week on scope	TEAMSMESSAGE	search_message	Messages from <channel>NL Search</channel> channel <start_date>last week</start_date> on <keyword>scope</keyword>	[]		1	
+TeamsMessage-10	0		user	Messages on Transfer learning between Sep 26 and Oct 1	TEAMSMESSAGE	search_message	Messages on <keyword>Transfer learning</keyword> between <start_date>Sep 26</start_date> and <end_date>Oct 1</end_date>	[]		1	
+TeamsMessage-11	0		user	Messages about ignite planning in LUKAS Channel	TEAMSMESSAGE	search_message	Messages about <keyword>ignite planning</keyword> in <channel>LUKAS</channel> channel	[]		1	
+TeamsMessage-12	0		user	Messages about LT review deck between Oct 1 and Oct 10	TEAMSMESSAGE	search_message	Messages about <keyword>LT review deck</keyword> between <start_date>Oct 1</start_date> and <end_date>Oct 10</end_date>	[]		1	
+TeamsMessage-13	0		user	Messages from Ling in NL Search channel	TEAMSMESSAGE	search_message	Messages from <contact_name_from>Ling</contact_name_from> in <channel>NL Search</channel> channel	[]		1	
+TeamsMessage-14	0		user	Messages from last week of sep	TEAMSMESSAGE	search_message	Messages from <start_date>last week of sep</start_date>	[]		1	
+TeamsMessage-15	0		user	Messages from Shuyin	TEAMSMESSAGE	search_message	Messages from <contact_name_from>Shuyin</contact_name_from>	[]		1	
+TeamsMessage-16	0		user	Messages to Shuyin	TEAMSMESSAGE	search_message	Messages to <contact_name_to>Shuyin</contact_name_to>	[]		1	
+TeamsMessage-17	0		user	Messages with Shuyin	TEAMSMESSAGE	search_message	Messages with <contact_name>Shuyin</contact_name>	[]		1	
+TeamsMessage-18	0		user	Messages from last week	TEAMSMESSAGE	search_message	Messages from <start_date>last week</start_date>	[]		1	
+TeamsMessage-19	0		user	Messages from Monday to Wednesday	TEAMSMESSAGE	search_message	Messages from <start_date>Monday</start_date> to <end_date>Wednesday</end_date>	[]		1	
+TeamsMessage-20	0		user	Messages from last night	TEAMSMESSAGE	search_message	Messages from <start_time>last night</start_time>	[]		1	
+TeamsMessage-21	0		user	Messages from last night to this morning	TEAMSMESSAGE	search_message	Messages from <start_time>last night</start_time> to <end_time>this morning</end_time>	[]		1	
+TeamsMessage-22	0		user	Messages about Q2 planning	TEAMSMESSAGE	search_message	Messages about <keyword>Q2 planning</keyword>	[]		1	
+TeamsMessage-23	0		user	Messages in the LUKAS channel 	TEAMSMESSAGE	search_message	Messages in the <channel>LUKAS</channel> channel 	[]		1	
+TeamsMessage-24	0		user	Messages from the lunch reading group chat 	TEAMSMESSAGE	search_message	Messages from the <chat_name>lunch reading group</chat_name> chat 	[]		1	
+TeamsMessage-25	0		user	Messages with attachments	TEAMSMESSAGE	search_message	Messages with <has_attachment>attachments</has_attachment>	[]		1	
+TeamsMessage-26	0		user	Messages from Bob	TEAMSMESSAGE	search_message	Messages from <contact_name_from>Bob</contact_name_from>	[]		1	
+TeamsMessage-27	0		user	Find messages last week about planning	TEAMSMESSAGE	search_message	Find messages <start_date>last week</start_date> about <keyword>planning</keyword>	[]		1	
+TeamsMessage-28	0		user	Search my messages	TEAMSMESSAGE	search_message	Search my messages	[]		1	
+TeamsMessage-29	0		user	Messages from Bob about planning	TEAMSMESSAGE	search_message	Messages from <contact_name_from>Bob</contact_name_from> about <keyword>planning</keyword>	[]		1	
+TeamsMessage-30	0		user	Find Messages from last week	TEAMSMESSAGE	search_message	Find Messages from <start_date>last week</start_date>	[]		1	
+TeamsMessage-31	0		user	Chats from planning channel	TEAMSMESSAGE	search_message	Chats from <channel>planning</channel> channel	[]		1	
+TeamsMessage-32	0		user	From Bob about planning	TEAMSMESSAGE	search_message	From <contact_name_from>Bob</contact_name_from> about <keyword>planning</keyword>	[]		1	
+TeamsMessage-33	0		user	Chats from Jane	TEAMSMESSAGE	search_message	Chats from <contact_name_from>Jane</contact_name_from>	[]		1	
+TeamsMessage-34	0		user	Find what Joe said about Windows	TEAMSMESSAGE	search_message	Find what <contact_name_from>Joe</contact_name_from> said about <keyword>Windows</keyword>	[]		1	
+TeamsMessage-35	0		user	Messages from Mary Johnson	TEAMSMESSAGE	search_message	Messages from <contact_name_from>Mary Johnson</contact_name_from>	[]		1	
+TeamsMessage-36	0		user	Messages by Mary in the planning channel	TEAMSMESSAGE	search_message	Messages by <contact_name_from>Mary</contact_name_from> in the <channel>planning</channel> channel	[]		1	
+TeamsMessage-37	0		user	To Bob about planning	TEAMSMESSAGE	search_message	To <contact_name_to>Bob</contact_name_to> about <keyword>planning</keyword>	[]		1	
+TeamsMessage-38	0		user	Chats to Jane	TEAMSMESSAGE	search_message	Chats to <contact_name_to>Jane</contact_name_to>	[]		1	
+TeamsMessage-39	0		user	Find what I said to Joe about Windows	TEAMSMESSAGE	search_message	Find what <contact_name_from>I</contact_name_from> said to <contact_name_to>Joe</contact_name_to> about <keyword>Windows</keyword>	[]		1	
+TeamsMessage-40	0		user	Messages to Mary Johnson	TEAMSMESSAGE	search_message	Messages to <contact_name_to>Mary Johnson</contact_name_to>	[]		1	
+TeamsMessage-41	0		user	Find my message to Bob about the demo	TEAMSMESSAGE	search_message	Find my message to <contact_name_to>Bob</contact_name_to> about the <keyword>demo</keyword>	[]		1	
+TeamsMessage-42	0		user	Messages with Bob	TEAMSMESSAGE	search_message	Messages with <contact_name>Bob</contact_name>	[]		1	
+TeamsMessage-43	0		user	Messages with Bob about planning	TEAMSMESSAGE	search_message	Messages with <contact_name>Bob</contact_name> about <keyword>planning</keyword>	[]		1	
+TeamsMessage-44	0		user	Find chat with Bob last Tuesday	TEAMSMESSAGE	search_message	Find chat with <contact_name>Bob</contact_name> <start_date>last Tuesday</start_date>	[]		1	
+TeamsMessage-45	0		user	Find messages with Bob	TEAMSMESSAGE	search_message	Find messages with <contact_name>Bob</contact_name>	[]		1	
+TeamsMessage-46	0		user	Conversations with Bob in planning channel	TEAMSMESSAGE	search_message	Conversations with <contact_name>Bob</contact_name> in <channel>planning</channel> channel	[]		1	
+TeamsMessage-47	0		user	Messages from last Wednesday	TEAMSMESSAGE	search_message	Messages from <start_date>last Wednesday</start_date>	[]		1	
+TeamsMessage-48	0		user	Find last weeks chat with John	TEAMSMESSAGE	search_message	Find <start_date>last weeks</start_date> chat with <contact_name>John</contact_name>	[]		1	
+TeamsMessage-49	0		user	Messages from Shuyin in November	TEAMSMESSAGE	search_message	Messages from <contact_name_from>Shuyin</contact_name_from> in <start_date>November</start_date>	[]		1	
+TeamsMessage-50	0		user	August 30 chats	TEAMSMESSAGE	search_message	<start_date>August 30</start_date> chats	[]		1	
+TeamsMessage-51	0		user	Yesterdays messages from Jane	TEAMSMESSAGE	search_message	<start_date>Yesterdays</start_date> messages from <contact_name_from>Jane</contact_name_from>	[]		1	
+TeamsMessage-52	0		user	Messages from before last Wednesday	TEAMSMESSAGE	search_message	Messages from before <end_date>last Wednesday</end_date>	[]		1	
+TeamsMessage-53	0		user	Find messages between June and August about planning	TEAMSMESSAGE	search_message	Find messages between <start_date>June</start_date> and <end_date>August</end_date> about <keyword>planning</keyword>	[]		1	
+TeamsMessage-54	0		user	Messages before this year	TEAMSMESSAGE	search_message	Messages before <end_date>this year</end_date>	[]		1	
+TeamsMessage-55	0		user	Chats before August 30	TEAMSMESSAGE	search_message	Chats before <end_date>August 30</end_date>	[]		1	
+TeamsMessage-56	0		user	Find message from Jerry from before June	TEAMSMESSAGE	search_message	Find message from <contact_name_from>Jerry</contact_name_from> from before <end_date>June</end_date>	[]		1	
+TeamsMessage-57	0		user	Messages since 10am	TEAMSMESSAGE	search_message	Messages since <start_time>10am</start_time>	[]		1	
+TeamsMessage-58	0		user	Find chat with John since 3pm yesterday	TEAMSMESSAGE	search_message	Find chat with <contact_name>John</contact_name> since <start_time>3pm</start_time> <start_date>yesterday</start_date>	[]		1	
+TeamsMessage-59	0		user	Messages from Bob after 1pm	TEAMSMESSAGE	search_message	Messages from <contact_name_from>Bob</contact_name_from> after <start_time>1pm</start_time>	[]		1	
+TeamsMessage-60	0		user	Messages after 1pm about planning	TEAMSMESSAGE	search_message	Messages after <start_time>1pm</start_time> about <keyword>planning</keyword>	[]		1	
+TeamsMessage-61	0		user	Messages about marketing this morning	TEAMSMESSAGE	search_message	Messages about <keyword>marketing</keyword> <start_time>this morning</start_time>	[]		1	
+TeamsMessage-62	0		user	Messages before noon	TEAMSMESSAGE	search_message	Messages before <end_time>noon</end_time>	[]		1	
+TeamsMessage-63	0		user	Find chat with John before noon yesterday	TEAMSMESSAGE	search_message	Find chat with <contact_name>John</contact_name> before <end_time>noon</end_time> <end_date>yesterday</end_date>	[]		1	
+TeamsMessage-64	0		user	Messages from Bob before 1pm	TEAMSMESSAGE	search_message	Messages from <contact_name_from>Bob</contact_name_from> before <end_time>1pm</end_time>	[]		1	
+TeamsMessage-65	0		user	Messages before 1pm about planning	TEAMSMESSAGE	search_message	Messages before <end_time>1pm</end_time> about <keyword>planning</keyword>	[]		1	
+TeamsMessage-66	0		user	Messages in team chat before 2pm	TEAMSMESSAGE	search_message	Messages in <chat_name>team</chat_name> chat before <end_time>2pm</end_time>	[]		1	
+TeamsMessage-67	0		user	Find my messages about Q2 planning	TEAMSMESSAGE	search_message	Find my messages about <keyword>Q2 planning</keyword>	[]		1	
+TeamsMessage-68	0		user	Find my planning chats	TEAMSMESSAGE	search_message	Find my <keyword>planning</keyword> chats	[]		1	
+TeamsMessage-69	0		user	Chats that mention sharks	TEAMSMESSAGE	search_message	Chats that mention <keyword>sharks</keyword>	[]		1	
+TeamsMessage-70	0		user	Messages talking about sharks	TEAMSMESSAGE	search_message	Messages talking about <keyword>sharks</keyword>	[]		1	
+TeamsMessage-71	0		user	Messages from Carrie about company picnic	TEAMSMESSAGE	search_message	Messages from <contact_name_from>Carrie</contact_name_from> about <keyword>company picnic</keyword>	[]		1	
+TeamsMessage-72	0		user	Messages from planning channel	TEAMSMESSAGE	search_message	Messages from <channel>planning</channel> channel	[]		1	
+TeamsMessage-73	0		user	Messages in the planning channel about sharks	TEAMSMESSAGE	search_message	Messages in the <channel>planning</channel> channel about <keyword>sharks</keyword>	[]		1	
+TeamsMessage-74	0		user	Shark channel messages about bull sharks	TEAMSMESSAGE	search_message	<channel>Shark</channel> channel messages about <keyword>bull sharks</keyword>	[]		1	
+TeamsMessage-75	0		user	Find messages from planning channel	TEAMSMESSAGE	search_message	Find messages from <channel>planning</channel> channel	[]		1	
+TeamsMessage-76	0		user	Messages mentioning scalability in the engineering design channel	TEAMSMESSAGE	search_message	Messages mentioning <keyword>scalability</keyword> in the <channel>engineering design</channel> channel	[]		1	
+TeamsMessage-77	0		user	Find messages in DRI chat about deployment	TEAMSMESSAGE	search_message	Find messages in <chat_name>DRI</chat_name> chat about <keyword>deployment</keyword>	[]		1	
+TeamsMessage-78	0		user	Messages from Bob in planning chat	TEAMSMESSAGE	search_message	Messages from <contact_name_from>Bob</contact_name_from> in <chat_name>planning</chat_name> chat	[]		1	
+TeamsMessage-79	0		user	Sharepoint links from last weeks brownbag lunch meeting chat	TEAMSMESSAGE	search_message	<keyword>Sharepoint links</keyword> from <start_date>last weeks</start_date> <chat_name>brownbag lunch meeting</chat_name> chat	[]		1	
+TeamsMessage-80	0		user	Messages from Joe during the planning sync chat	TEAMSMESSAGE	search_message	Messages from <contact_name_from>Joe</contact_name_from> during the <chat_name>planning sync</chat_name> chat	[]		1	
+TeamsMessage-81	0		user	Yesterdays messages in the project chat	TEAMSMESSAGE	search_message	<start_date>Yesterdays</start_date> messages in the <chat_name>project</chat_name> chat	[]		1	
+TeamsMessage-82	0		user	Find attachments from John	TEAMSMESSAGE	search_message	Find <has_attachment>attachments</has_attachment> from <contact_name_from>John</contact_name_from>	[]		1	
+TeamsMessage-83	0		user	Find messages from John with attachments	TEAMSMESSAGE	search_message	Find messages from <contact_name_from>John</contact_name_from> with <has_attachment>attachments</has_attachment>	[]		1	
+TeamsMessage-84	0		user	Show my attachments today	TEAMSMESSAGE	search_message	Show my <has_attachment>attachments</has_attachment> <start_date>today</start_date>	[]		1	
+TeamsMessage-85	0		user	Show messages with attachments	TEAMSMESSAGE	search_message	Show messages with <has_attachment>attachments</has_attachment>	[]		1	
+TeamsMessage-86	0		user	Find all the attachments from yesterdays design review chat	TEAMSMESSAGE	search_message	Find all the <has_attachment>attachments</has_attachment> from <start_date>yesterdays</start_date> <chat_name>design review</chat_name> chat	[]		1	
+TeamsMessage-87	0		user	Find messages from John without attachments	TEAMSMESSAGE	search_message	Find messages from <contact_name_from>John</contact_name_from> <no_attachment>without attachments</no_attachment>	[]		1	
+TeamsMessage-88	0		user	Show messages from yesterday that have no attachments	TEAMSMESSAGE	search_message	Show messages from <start_date>yesterday</start_date> that have <no_attachment>no attachments</no_attachment>	[]		1	
+TeamsMessage-89	0		user	Chats about q4 planning with no attachments	TEAMSMESSAGE	search_message	Chats about <keyword>q4 planning</keyword> with <no_attachment>no attachments</no_attachment>	[]		1	
+TeamsMessage-90	0		user	Messages from team general chat except attachments	TEAMSMESSAGE	search_message	Messages from <chat_name>team general</chat_name> chat <no_attachment>except attachments</no_attachment>	[]		1	
+TeamsMessage-91	0		user	Messages that do not have attachments	TEAMSMESSAGE	search_message	Messages that <no_attachment>do not have attachments</no_attachment>	[]		1	
+TeamsMessage-92	0		user	open chat with Ming	TEAMSMESSAGE	search_message	open chat with <contact_name>Ming</contact_name>	[]		1	
+TeamsMessage-93	0		user	Messages from Ye-Yi	TEAMSMESSAGE	search_message	Messages from <contact_name_from>Ye-Yi</contact_name_from>	[]		1	
+TeamsMessage-94	0		user	Messages from Zhiguo	TEAMSMESSAGE	search_message	Messages from <contact_name_from>Zhiguo</contact_name_from>	[]		1	
+TeamsMessage-95	0		user	Messages from Sharanya AND NOT (isClientSoftDeleted:TRUE)	TEAMSMESSAGE	search_message	Messages from <contact_name_from>Sharanya</contact_name_from> <metadata>AND NOT (isClientSoftDeleted:TRUE)</metadata>	[]		1	
+TeamsMessage-96	0		user	Msg from Vijay	TEAMSMESSAGE	search_message	Msg from <contact_name_from>Vijay</contact_name_from>	[]		1	
+TeamsMessage-97	0		user	messages from me to shobhit last month	TEAMSMESSAGE	search_message	messages from <contact_name_from>me</contact_name_from> to <contact_name_to>shobhit</contact_name_to> <start_date>last month</start_date>	[]		1	
+TeamsMessage-98	0		user	messages from December 1st up to this weekend	TEAMSMESSAGE	search_message	messages from <start_date>December 1st</start_date> up to <end_date>this weekend</end_date>	[]		1	
+TeamsMessage-99	0		user	today's messages from vijay until 6	TEAMSMESSAGE	search_message	<start_date>today's</start_date> messages from <contact_name_from>vijay</contact_name_from> until <end_time>6</end_time>	[]		1	
+TeamsMessage-100	0		user	messages sent by me to sujith sent today	TEAMSMESSAGE	search_message	messages sent by <contact_name_from>me</contact_name_from> to <contact_name_to>sujith</contact_name_to> sent <start_date>today</start_date>	[]		1	
+TeamsMessage-101	0		user	messages after midnight	TEAMSMESSAGE	search_message	messages after <start_time>midnight</start_time>	[]		1	
+TeamsMessage-102	0		user	messages from reaz from 2 hours ago	TEAMSMESSAGE	search_message	messages from <contact_name_from>reaz</contact_name_from> from <start_time>2 hours ago</start_time>	[]		1	
+TeamsMessage-103	0		user	messages from reaz 2 hours ago	TEAMSMESSAGE	search_message	messages from <contact_name_from>reaz</contact_name_from> <start_time>2 hours ago</start_time>	[]		1	

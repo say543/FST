@@ -1,0 +1,638 @@
+ConversationId	MessageId	MessageTimestamp	MessageFrom	MessageText	CortanaResponse	JudgedDomain	JudgedIntent	JudgedConstraints	MetaData	ConversationContext	Dataset	SampleType	Frequency	GuidelineVersion	NotCallingLU	AppFlavor
+d6bbc60d-a3f2-434f-961d-84209c0b0051	0		user	Play my emails.		NOTSURE	other_domain	Play my emails.	[]		OutlookVoiceSearch	Speech	19	1.13		
+13c97438-eef9-4af3-ac92-decb8855e0ad	0		user	Vacation.		NOTSURE	notsure_other	Vacation.	[]		OutlookVoiceSearch	Speech	8	1.13		
+c6a4e76f-c42f-45be-9619-c41636bbb0b5	0		user	Make a phone call.		NOTSURE	other_domain	Make a phone call.	[]		OutlookVoiceSearch	Speech	6	1.13		
+03e8377f-837a-4491-aeb2-c4fb1bb65bac	0		user	What is Shwetambari alias?		PEOPLE	search_people_attribute	What is <contact_name>Shwetambari</contact_name> <people_attribute>alias</people_attribute>?	[]		OutlookVoiceSearch	Speech	6	1.13		
+44cbb2e1-465a-4a7b-95c3-03325860c36d	0		user	Do I have any meetings today?		CALENDAR	find_calendar_entry	Do I have any meetings <start_date>today</start_date>?	[]		OutlookVoiceSearch	Speech	6	1.13		
+7d87ac45-1140-4874-9c59-e921f122fc37	0		user	Find email from Shwetambari Mokadam about test results.		EMAILSEARCH	search_email	Find <message_type>email</message_type> from <contact_name_from>Shwetambari Mokadam</contact_name_from> about <keyword>test results</keyword>.	[]		OutlookVoiceSearch	Speech	6	1.13		
+30a1a535-c940-48c2-843a-87c37c34aa45	0		user	Create a meeting.		CALENDAR	create_calendar_entry	Create a meeting.	[]		OutlookVoiceSearch	Speech	6	1.13		
+ed29df94-d6c4-463c-8601-a329daf1be1b	0		user	Create a meeting with Craig.		CALENDAR	create_calendar_entry	Create a meeting with <contact_name>Craig</contact_name>.	[]		OutlookVoiceSearch	Speech	6	1.13		
+89068939-84cd-4313-95ad-4ab051b8ab12	0		user	Open the unique name deck.		FILES	file_open	Open the <file_keyword>unique name</file_keyword> <file_type>deck</file_type>.	[]		OutlookVoiceSearch	Speech	6	1.13		
+04eeadcb-c868-4b43-bd33-44f781597533	0		user	Call Craig.		NOTSURE	other_domain	Call Craig.	[]		OutlookVoiceSearch	Speech	5	1.13		
+06615601-2591-444d-9fe8-7a57fe8c756c	0		user	Driving usage.		NOTSURE	other_domain	Driving usage.	[]		OutlookVoiceSearch	Speech	5	1.13		
+ec25c22c-a9f9-41d0-8ab0-353d325e675b	0		user	My next meeting.		CALENDAR	find_calendar_entry	My <start_time>next</start_time> meeting.	[]		OutlookVoiceSearch	Speech	5	1.13		
+e36b1016-97e8-47ff-badf-46f55e6ff625	0		user	Show my next appointment.		CALENDAR	find_calendar_entry	Show my <start_time>next</start_time> appointment.	[]		OutlookVoiceSearch	Speech	5	1.13		
+b079c317-7181-4828-9c72-a2fa77890e91	0		user	What meetings do I have today?		CALENDAR	find_calendar_entry	What meetings do I have <start_date>today</start_date>?	[]		OutlookVoiceSearch	Speech	5	1.13		
+368a69ce-df88-4219-ba97-bce4a871c6fd	0		user	Tell me my next meeting.		CALENDAR	find_calendar_entry	Tell me my <start_time>next</start_time> meeting.	[]		OutlookVoiceSearch	Speech	5	1.13		
+aea3bf15-acfe-478b-ad18-e0c7237ca956	0		user	Email Diego.		EMAILSEARCH	search_email	<message_type>Email</message_type> <contact_name>Diego</contact_name>.	[]		OutlookVoiceSearch	Speech	5	1.13		
+79436d74-39fb-428b-8853-a787f811950e	0		user	File for test dog document.		FILES	file_search	File for <file_keyword>test dog</file_keyword> document.	[]		OutlookVoiceSearch	Speech	5	1.13		
+537c9fe0-9489-40bf-8fb5-43f833a49359	0		user	File for test dog.		FILES	file_search	File for <file_keyword>test dog</file_keyword>.	[]		OutlookVoiceSearch	Speech	5	1.13		
+b0557fc3-aa52-4831-986d-6f89fb29da6f	0		user	When was my last meeting with Shwetambari Mokadam?		CALENDAR	find_calendar_when	When was my <order_ref>last</order_ref> meeting with <contact_name>Shwetambari Mokadam</contact_name>?	[]		OutlookVoiceSearch	Speech	5	1.13		
+e4e0ff6d-ac5e-4c8d-90a8-dd4a7152ca07	0		user	Make a call.		NOTSURE	other_domain	Make a call.	[]		OutlookVoiceSearch	Speech	4	1.13		
+73c33958-23b0-41dc-978c-a8a0e83e42bc	0		user	Hello hello.		NOTSURE	other_domain	Hello hello.	[]		OutlookVoiceSearch	Speech	4	1.13		
+5dea85be-0316-4f29-a146-c547c9404a70	0		user	What's up?		NOTSURE	other_domain	What's up?	[]		OutlookVoiceSearch	Speech	4	1.13		
+99b3b4f5-6a30-4548-930a-4a2424b99201	0		user	Send email to Allison.		NOTSURE	other_domain	Send email to Allison.	[]		OutlookVoiceSearch	Speech	4	1.13		
+fd9d9cf9-4a67-47ba-ac3f-71f61fdce330	0		user	Shwetambari email address.		PEOPLE	search_people_attribute	<contact_name>Shwetambari</contact_name> <people_attribute>email address</people_attribute>.	[]		OutlookVoiceSearch	Speech	4	1.13		
+fc3d78bc-2cdd-422d-b2ec-59836812d2c7	0		user	What is Jose alias?		PEOPLE	search_people_attribute	What is <contact_name>Jose</contact_name> <people_attribute>alias</people_attribute>?	[]		OutlookVoiceSearch	Speech	4	1.13		
+4f3df97d-8098-4016-87fd-6c1630736ab2	0		user	What is Shwetambari's phone number?		PEOPLE	search_people_attribute	What is <contact_name>Shwetambari</contact_name>'s <people_attribute>phone number</people_attribute>?	[]		OutlookVoiceSearch	Speech	4	1.13		
+d8365f31-6673-43f0-be78-276682e98290	0		user	Show my meetings for today.		CALENDAR	find_calendar_entry	Show my meetings for <start_date>today</start_date>.	[]		OutlookVoiceSearch	Speech	4	1.13		
+7ee872d9-503f-414f-9bd8-0473509dfb87	0		user	What is my next meeting?		CALENDAR	find_calendar_entry	What is my <start_time>next</start_time> meeting?	[]		OutlookVoiceSearch	Speech	4	1.13		
+2a6529c6-774e-4cb8-9b6c-46c25de391bf	0		user	Find my next meeting.		CALENDAR	find_calendar_entry	Find my <start_time>next</start_time> meeting.	[]		OutlookVoiceSearch	Speech	4	1.13		
+a7e0fc33-b124-41ab-8c21-4a3733512914	0		user	Next meeting.		CALENDAR	find_calendar_entry	<start_time>Next</start_time> meeting.	[]		OutlookVoiceSearch	Speech	4	1.13		
+e4ffff0e-0bd0-4fd8-a192-40b4d684c99d	0		user	Do I have any evening meetings tonight?		CALENDAR	find_calendar_entry	Do I have any <start_time>evening</start_time> meetings <start_time>tonight</start_time>?	[]		OutlookVoiceSearch	Speech	4	1.13		
+27ede95a-ddd4-43c2-921f-908be610fc10	0		user	What's my next meeting?		CALENDAR	find_calendar_entry	What's my <start_time>next</start_time> meeting?	[]		OutlookVoiceSearch	Speech	4	1.13		
+5c0d738a-799a-47e5-acef-c55ff5014468	0		user	Do I have any late night meetings today?		CALENDAR	find_calendar_entry	Do I have any <start_time>late night</start_time> meetings <start_date>today</start_date>?	[]		OutlookVoiceSearch	Speech	4	1.13		
+bc50f313-2040-405c-80e1-f8e935cb4fb5	0		user	Show files that Jose sent me.		FILES	file_search	Show files that <contact_name>Jose</contact_name> <file_action>sent</file_action> <to_contact_name>me</to_contact_name>.	[]		OutlookVoiceSearch	Speech	4	1.13		
+a91599c2-5010-421a-b1fc-5cb779a0e261	0		user	Find email from Jose about Christmas vacation.		EMAILSEARCH	search_email	Find <message_type>email</message_type> from <contact_name_from>Jose</contact_name_from> about <keyword>Christmas vacation</keyword>.	[]		OutlookVoiceSearch	Speech	4	1.13		
+9fa7236f-1eb8-4b31-87be-a312fd3e2ce3	0		user	New meeting.		CALENDAR	create_calendar_entry	New meeting.	[]		OutlookVoiceSearch	Speech	4	1.13		
+d7883bf5-2767-46aa-b222-e5a3d270fa43	0		user	Most recent files.		FILES	file_search	Most <file_recency>recent</file_recency> files.	[]		OutlookVoiceSearch	Speech	4	1.13		
+5a6499af-34f1-4d7d-8e36-c3a2dc422bbf	0		user	When is my next meeting with Shwetambari Mokadam?		CALENDAR	find_calendar_when	When is my <start_time>next</start_time> meeting with <contact_name>Shwetambari Mokadam</contact_name>?	[]		OutlookVoiceSearch	Speech	4	1.13		
+7d97d4b9-b149-4c7c-be5b-a31424747777	0		user	Join my next meeting.		CALENDAR	connect_to_meeting	Join my <start_time>next</start_time> meeting.	[]		OutlookVoiceSearch	Speech	4	1.13		
+4941b9a9-7337-47a8-acc0-5d854b2e7f06	0		user	Send Allison an email about Demo.		NOTSURE	other_domain	Send Allison an email about Demo.	[]		OutlookVoiceSearch	Speech	3	1.13		
+9df0080e-5165-49d1-b5c2-328897749ec5	0		user	Call Shwetambari.		NOTSURE	other_domain	Call Shwetambari.	[]		OutlookVoiceSearch	Speech	3	1.13		
+f50473c5-2af2-4de4-9c17-d410b9473f87	0		user	Send an email.		NOTSURE	other_domain	Send an email.	[]		OutlookVoiceSearch	Speech	3	1.13		
+1b0dcd74-c7d6-43fa-b972-423a824d3b74	0		user	Find Ryan.		NOTSURE	other_domain	Find Ryan.	[]		OutlookVoiceSearch	Speech	3	1.13		
+7de2ed4d-59f9-46ce-9af7-56f6bf5b430d	0		user	Send email to Diego am running late.		NOTSURE	other_domain	Send email to Diego am running late.	[]		OutlookVoiceSearch	Speech	3	1.13		
+209422fa-e55f-4510-bb17-8c7de42aabef	0		user	Call Steven.		NOTSURE	other_domain	Call Steven.	[]		OutlookVoiceSearch	Speech	3	1.13		
+dd37c235-cabb-418c-815f-a5d758bcbd4f	0		user	Send myself a note.		NOTSURE	other_domain	Send myself a note.	[]		OutlookVoiceSearch	Speech	3	1.13		
+2e125773-766f-4040-aa7f-1339a5ba15a7	0		user	Call Diego.		NOTSURE	other_domain	Call Diego.	[]		OutlookVoiceSearch	Speech	3	1.13		
+a219c70f-ab7a-413c-91d6-11118bbf033b	0		user	What is Shwetambari Mokadam's contact?		PEOPLE	search_people_attribute	What is <contact_name>Shwetambari Mokadam</contact_name>'s <people_attribute>contact</people_attribute>?	[]		OutlookVoiceSearch	Speech	3	1.13		
+d17d755e-fc39-4301-bd5b-173a403410e2	0		user	What is Shwetambari Mokadam's phone number?		PEOPLE	search_people_attribute	What is <contact_name>Shwetambari Mokadam</contact_name>'s <people_attribute>phone number</people_attribute>?	[]		OutlookVoiceSearch	Speech	3	1.13		
+9c9bb676-c299-4c33-bc28-386b8424f774	0		user	What's next?		CALENDAR	find_calendar_entry	What's <start_time>next</start_time>?	[]		OutlookVoiceSearch	Speech	3	1.13		
+4b47837e-0ae6-4242-9295-f9bd2bdb3a1a	0		user	Show today's meetings.		CALENDAR	find_calendar_entry	Show <start_date>today</start_date>'s meetings.	[]		OutlookVoiceSearch	Speech	3	1.13		
+153bba50-7865-4b4a-a1ed-e6a07a93b97f	0		user	Email from Melissa last month.		EMAILSEARCH	search_email	<message_type>Email</message_type> from <contact_name_from>Melissa</contact_name_from> <start_date>last month</start_date>.	[]		OutlookVoiceSearch	Speech	3	1.13		
+1461b4ff-2848-4015-aa2d-1ae004d711e7	0		user	Email from Shwetambari Mokadam.		EMAILSEARCH	search_email	<message_type>Email</message_type> from <contact_name_from>Shwetambari Mokadam</contact_name_from>.	[]		OutlookVoiceSearch	Speech	3	1.13		
+f94e26b5-564c-41c3-9b14-a702e6a2bcf8	0		user	Shwetambari Mokadam email.		EMAILSEARCH	search_email	<contact_name>Shwetambari Mokadam</contact_name> <message_type>email</message_type>.	[]		OutlookVoiceSearch	Speech	3	1.13		
+2668410c-d9e6-43ad-9b7a-86f14b56bc63	0		user	Search for mails from Shwetambari Mokadam.		EMAILSEARCH	search_email	Search for <message_type>mails</message_type> from <contact_name_from>Shwetambari Mokadam</contact_name_from>.	[]		OutlookVoiceSearch	Speech	3	1.13		
+1c06a8ed-a942-4ffe-8754-95d1ab0d8d19	0		user	Emails from Shankha.		EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Shankha</contact_name_from>.	[]		OutlookVoiceSearch	Speech	3	1.13		
+39bcfaee-f41f-4698-af0d-5cd427946b16	0		user	Jose Gomez-Angulo email.		EMAILSEARCH	search_email	<contact_name>Jose Gomez-Angulo</contact_name> <message_type>email</message_type>.	[]		OutlookVoiceSearch	Speech	3	1.13		
+806b150d-2764-46d1-8a8c-e27fd49b604a	0		user	Emails from Diego.		EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Diego</contact_name_from>.	[]		OutlookVoiceSearch	Speech	3	1.13		
+415b1d4f-e12e-4d68-b5ce-d991d9ec7c17	0		user	Email from Shwetambari Mokadam to Jose Gomez-Angulo.		EMAILSEARCH	search_email	<message_type>Email</message_type> from <contact_name_from>Shwetambari Mokadam</contact_name_from> to <contact_name_to>Jose Gomez-Angulo</contact_name_to>.	[]		OutlookVoiceSearch	Speech	3	1.13		
+8780856f-ce47-4fa1-a023-a0680b2b25a5	0		user	Show me recent attachments.		EMAILSEARCH	search_email	Show me <order_ref>recent</order_ref> <attachment>attachments</attachment>.	[]		OutlookVoiceSearch	Speech	3	1.13		
+5a836780-ee31-4fbb-bd3e-aa1fb95079c3	0		user	Files from Shwetambari Mokadam.		FILES	file_search	Files from <contact_name>Shwetambari Mokadam</contact_name>.	[]		OutlookVoiceSearch	Speech	3	1.13		
+b39f93c5-34c6-43db-b88a-6aacc77736d9	0		user	Shwetambari email.		EMAILSEARCH	search_email	<contact_name>Shwetambari</contact_name> <message_type>email</message_type>.	[]		OutlookVoiceSearch	Speech	3	1.13		
+69d8d7e6-66ce-4181-8b7a-809706f5310f	0		user	Shwetambari info.		PEOPLE	search_people_by_name	<contact_name>Shwetambari</contact_name> info.	[]		OutlookVoiceSearch	Speech	3	1.13		
+557cc908-6d3f-424c-9481-bad5d6639a53	0		user	Shwetambari Mokadam's files.		FILES	file_search	<contact_name>Shwetambari Mokadam</contact_name>'s files.	[]		OutlookVoiceSearch	Speech	3	1.13		
+26f50fd7-dc9e-464d-b9a3-4b61347af3d2	0		user	Shiproom files.		FILES	file_search	<file_keyword>Shiproom</file_keyword> files.	[]		OutlookVoiceSearch	Speech	3	1.13		
+c2156e3a-03f4-4663-97e7-2be9acbbd3b2	0		user	Find my recent files.		FILES	file_search	Find <contact_name>my</contact_name> <file_recency>recent</file_recency> files.	[]		OutlookVoiceSearch	Speech	3	1.13		
+aa675a88-0b76-48c6-bd2c-122c6dbdecc5	0		user	Launch time.		NOTSURE	notsure_other	Launch time.	[]		OutlookVoiceSearch	Speech	3	1.13		
+f509570b-9af2-4236-b852-e9ef1c6bdf6b	0		user	Show my next meeting.		CALENDAR	calendar_other	Show my <start_time>next</start_time> meeting.	[]		OutlookVoiceSearch	Speech	3	1.13		
+015f89d4-750a-4454-9d78-27ed20186f48	0		user	Email Claire Mills.		NOTSURE	other_domain	Email Claire Mills.	[]		OutlookVoiceSearch	Speech	2	1.13		
+3c83f0fe-b0e9-4252-ac60-6968d343e853	0		user	She profiles.		NOTSURE	other_domain	She profiles.	[]		OutlookVoiceSearch	Speech	2	1.13		
+028b5cac-ba8e-4085-bc9b-08f4b9ccc32b	0		user	Could you please call Talon?		NOTSURE	other_domain	Could you please call Talon?	[]		OutlookVoiceSearch	Speech	2	1.13		
+6853ceb9-319c-4424-b5b1-5e7c4656c13e	0		user	Call Jon Lopez.		NOTSURE	other_domain	Call Jon Lopez.	[]		OutlookVoiceSearch	Speech	2	1.13		
+5e47aec8-d716-4ad3-bb62-37131a2a5b01	0		user	Send email to Malik.		NOTSURE	other_domain	Send email to Malik.	[]		OutlookVoiceSearch	Speech	2	1.13		
+b4d41f6c-7c75-450e-a654-1cd1ffaf51b6	0		user	Send myself an email to remember to walk the dog.		NOTSURE	other_domain	Send myself an email to remember to walk the dog.	[]		OutlookVoiceSearch	Speech	2	1.13		
+2f35a2e8-2de3-4930-bc1e-2274bf79f8e9	0		user	Hello.		NOTSURE	other_domain	Hello.	[]		OutlookVoiceSearch	Speech	2	1.13		
+4a03840b-fbf6-4233-9b8c-803375a5df74	0		user	Call Beryl.		NOTSURE	other_domain	Call Beryl.	[]		OutlookVoiceSearch	Speech	2	1.13		
+8bab9ffc-53e1-4271-a4b5-4d5ee7074004	0		user	Call Allison on teams.		NOTSURE	other_domain	Call Allison on teams.	[]		OutlookVoiceSearch	Speech	2	1.13		
+9fd92835-e685-45f9-92c8-d77adf498dd3	0		user	Send me an email about walking the dog.		NOTSURE	other_domain	Send me an email about walking the dog.	[]		OutlookVoiceSearch	Speech	2	1.13		
+a68b1835-f228-491d-825d-3cea9e16d544	0		user	Send note to Beryl.		NOTSURE	other_domain	Send note to Beryl.	[]		OutlookVoiceSearch	Speech	2	1.13		
+0e58c047-a4e4-4e99-9956-56e75f2d88bf	0		user	Email EMI.		NOTSURE	other_domain	Email EMI.	[]		OutlookVoiceSearch	Speech	2	1.13		
+6e822c61-868b-405f-9925-158b9e8fc412	0		user	Send myself an email to walk the dog.		NOTSURE	other_domain	Send myself an email to walk the dog.	[]		OutlookVoiceSearch	Speech	2	1.13		
+4f1c0b4d-0ed6-4032-b2fc-3bae9b31e350	0		user	Send an email to Beryl.		NOTSURE	other_domain	Send an email to Beryl.	[]		OutlookVoiceSearch	Speech	2	1.13		
+9b60eef3-d117-4f3c-887d-7eadb928ffe8	0		user	Testing testing.		NOTSURE	other_domain	Testing testing.	[]		OutlookVoiceSearch	Speech	2	1.13		
+bd51a125-8f37-4867-b129-6b78cb29665d	0		user	Blah blah blah.		NOTSURE	other_domain	Blah blah blah.	[]		OutlookVoiceSearch	Speech	2	1.13		
+bf6c91e2-d99c-4f51-930e-4ab2ebff5dab	0		user	Phone Shwetambari.		NOTSURE	other_domain	Phone Shwetambari.	[]		OutlookVoiceSearch	Speech	2	1.13		
+16762b50-3e27-4b86-b05e-e17d24f3d018	0		user	Call Jaclyn.		NOTSURE	other_domain	Call Jaclyn.	[]		OutlookVoiceSearch	Speech	2	1.13		
+0834beca-c8a3-4470-b2a0-8fac16da7783	0		user	Call Jose.		NOTSURE	other_domain	Call Jose.	[]		OutlookVoiceSearch	Speech	2	1.13		
+373d8957-cdb9-4f50-8651-41deb9806e76	0		user	Call Craig McIntyre.		NOTSURE	other_domain	Call Craig McIntyre.	[]		OutlookVoiceSearch	Speech	2	1.13		
+73402062-af63-4447-8c66-70812aa24dce	0		user	Email Beryl.		NOTSURE	other_domain	Email Beryl.	[]		OutlookVoiceSearch	Speech	2	1.13		
+888f62c6-1f12-48ee-8023-15423b9a2492	0		user	Send note to EMI.		NOTSURE	other_domain	Send note to EMI.	[]		OutlookVoiceSearch	Speech	2	1.13		
+332569de-6565-4cc5-95a4-3a0a1c0f7ed4	0		user	Call Harris.		NOTSURE	other_domain	Call Harris.	[]		OutlookVoiceSearch	Speech	2	1.13		
+a878277a-d7cc-4af4-a598-3708699d7dbf	0		user	Send note to me I'm running late.		NOTSURE	other_domain	Send note to me I'm running late.	[]		OutlookVoiceSearch	Speech	2	1.13		
+732a04ea-e725-4ced-8e2b-a7b1a47ba442	0		user	Contact Shwetambari.		NOTSURE	other_domain	Contact Shwetambari.	[]		OutlookVoiceSearch	Speech	2	1.13		
+e4312681-5ad8-496a-a6b3-061ac61e954d	0		user	Hey.		NOTSURE	other_domain	Hey.	[]		OutlookVoiceSearch	Speech	2	1.13		
+203ee5dd-3c2a-44b8-8d0c-e78a20814fb9	0		user	Find Shwetambari contact information.		PEOPLE	search_people_attribute	Find <contact_name>Shwetambari</contact_name> <people_attribute>contact information</people_attribute>.	[]		OutlookVoiceSearch	Speech	2	1.13		
+be01cfc1-0496-4707-b6aa-0da56f82cbfa	0		user	Abraham email address.		PEOPLE	search_people_attribute	<contact_name>Abraham</contact_name> <people_attribute>email address</people_attribute>.	[]		OutlookVoiceSearch	Speech	2	1.13		
+79c7eb21-d61d-42de-8fb3-6c4080ee4b2f	0		user	What is Jose's number?		PEOPLE	search_people_attribute	What is <contact_name>Jose</contact_name>'s <people_attribute>number</people_attribute>?	[]		OutlookVoiceSearch	Speech	2	1.13		
+22e200fd-7f04-46eb-9878-3816d579e045	0		user	Craig's phone number.		PEOPLE	search_people_attribute	<contact_name>Craig</contact_name>'s <people_attribute>phone number</people_attribute>.	[]		OutlookVoiceSearch	Speech	2	1.13		
+3ba522dc-e91e-4476-9b7d-3dda2800ea06	0		user	What is Shwetambari contact?		PEOPLE	search_people_attribute	What is <contact_name>Shwetambari</contact_name> <people_attribute>contact</people_attribute>?	[]		OutlookVoiceSearch	Speech	2	1.13		
+dd38f6f2-d122-4bf7-a537-85d867439436	0		user	What is Jose's phone number?		PEOPLE	search_people_attribute	What is <contact_name>Jose</contact_name>'s <people_attribute>phone number</people_attribute>?	[]		OutlookVoiceSearch	Speech	2	1.13		
+89d54b49-593a-4ec2-a8bc-d404219d8622	0		user	What is Abraham's phone number?		PEOPLE	search_people_attribute	What is <contact_name>Abraham</contact_name>'s <people_attribute>phone number</people_attribute>?	[]		OutlookVoiceSearch	Speech	2	1.13		
+7928acc9-43b2-495c-9033-849b8a81bb76	0		user	What is Shwetambari number?		PEOPLE	search_people_attribute	What is <contact_name>Shwetambari</contact_name> <people_attribute>number</people_attribute>?	[]		OutlookVoiceSearch	Speech	2	1.13		
+7a5a2ff3-a776-4079-b0b1-512e2f06f2fa	0		user	Show my recurring meetings for next week.		CALENDAR	find_calendar_entry	Show my recurring meetings for <start_date>next week</start_date>.	[]		OutlookVoiceSearch	Speech	2	1.13		
+6f73f9ac-009f-4682-a7d0-7be91192e8e1	0		user	Do I have any evening meetings?		CALENDAR	find_calendar_entry	Do I have any <start_time>evening</start_time> meetings?	[]		OutlookVoiceSearch	Speech	2	1.13		
+91250a50-2104-4962-99c9-b026824ed73a	0		user	Emails from Jason.		EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Jason</contact_name_from>.	[]		OutlookVoiceSearch	Speech	2	1.13		
+71c2cd5b-b181-4df6-8e9a-94fe7f5046fe	0		user	Email from Shwetambari to Jose.		EMAILSEARCH	search_email	<message_type>Email</message_type> from <contact_name_from>Shwetambari</contact_name_from> to <contact_name_to>Jose</contact_name_to>.	[]		OutlookVoiceSearch	Speech	2	1.13		
+08b8deb8-ef07-4cdd-be43-9bb549fb8dcd	0		user	Files from Jennifer.		FILES	file_search	Files from <contact_name>Jennifer</contact_name>.	[]		OutlookVoiceSearch	Speech	2	1.13		
+edc4aa96-8b6d-491c-93a1-a436d21d637f	0		user	Email from Melissa in April.		EMAILSEARCH	search_email	<message_type>Email</message_type> from <contact_name_from>Melissa</contact_name_from> in <start_date>April</start_date>.	[]		OutlookVoiceSearch	Speech	2	1.13		
+9385b5ae-3ffc-4b55-8518-eb7a7f20f0c5	0		user	Emails from Craig.		EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Craig</contact_name_from>.	[]		OutlookVoiceSearch	Speech	2	1.13		
+194e9d00-2bcb-41f9-9c61-4c36d94421c9	0		user	Set up a meeting with Diego.		CALENDAR	create_calendar_entry	Set up a meeting with <contact_name>Diego</contact_name>.	[]		OutlookVoiceSearch	Speech	2	1.13		
+2a02a3eb-3efe-430a-a134-bc345c6172a0	0		user	Set up an appointment.		CALENDAR	create_calendar_entry	Set up an appointment.	[]		OutlookVoiceSearch	Speech	2	1.13		
+56becac9-17d3-4c39-af48-86e77b3c3682	0		user	Create a meeting with Diego.		CALENDAR	create_calendar_entry	Create a meeting with <contact_name>Diego</contact_name>.	[]		OutlookVoiceSearch	Speech	2	1.13		
+9221943f-411b-4866-9715-8242266a1835	0		user	Create a meeting with Chad.		CALENDAR	create_calendar_entry	Create a meeting with <contact_name>Chad</contact_name>.	[]		OutlookVoiceSearch	Speech	2	1.13		
+828bf6fd-29cb-4f59-8d90-781298a99b13	0		user	Jose info.		NOTSURE	ambiguous	Jose info.	[]		OutlookVoiceSearch	Speech	2	1.13		
+8802a302-4d86-4d6a-bd19-4586049a31b2	0		user	Launch.		NOTSURE	ambiguous	Launch.	[]		OutlookVoiceSearch	Speech	2	1.13		
+6812655e-2483-463a-9a90-c77dc680373a	0		user	Melton Malik.		NOTSURE	ambiguous	Melton Malik.	[]		OutlookVoiceSearch	Speech	2	1.13		
+8502250f-3f80-4979-a12d-c588b2213450	0		user	Find Shwetambari.		PEOPLE	search_people_by_name	Find <contact_name>Shwetambari</contact_name>.	[]		OutlookVoiceSearch	Speech	2	1.13		
+441419a9-b95b-4368-8b36-6a8733a133de	0		user	Find Anuja.		PEOPLE	search_people_by_name	Find <contact_name>Anuja</contact_name>.	[]		OutlookVoiceSearch	Speech	2	1.13		
+f54ec2dd-7f80-4768-90bf-f8876843fcbe	0		user	Who is Shwetambari?		PEOPLE	search_people_by_name	Who is <contact_name>Shwetambari</contact_name>?	[]		OutlookVoiceSearch	Speech	2	1.13		
+f90db039-5032-4954-88ce-40f68fa6852d	0		user	Who is Dexter?		PEOPLE	search_people_by_name	Who is <contact_name>Dexter</contact_name>?	[]		OutlookVoiceSearch	Speech	2	1.13		
+19061140-61b3-47d5-8a10-9ec1c74c0ef0	0		user	Find Jon.		PEOPLE	search_people_by_name	Find <contact_name>Jon</contact_name>.	[]		OutlookVoiceSearch	Speech	2	1.13		
+14764765-26b5-4806-a1f6-31da2f8ea635	0		user	Email Ashok.		NOTSURE	notsure_other	Email Ashok.	[]		OutlookVoiceSearch	Speech	2	1.13		
+6b6696a3-038f-4ab2-9645-add1158cad97	0		user	Could you please find time with Beryl?		CALENDAR	check_availability	Could you please find time with <contact_name>Beryl</contact_name>?	[]		OutlookVoiceSearch	Speech	2	1.13		
+04929bd7-ba35-4524-997d-92f1b206ecab	0		user	Email Chad Estes and say thank you for the feedback on Jaclyn.		NOTSURE	other_domain	Email Chad Estes and say thank you for the feedback on Jaclyn.	[]		OutlookVoiceSearch	Speech	1	1.13		
+40fb47e9-a9e7-4c74-8361-fc86a61c30ce	0		user	Jason Voldseth.		NOTSURE	other_domain	Jason Voldseth.	[]		OutlookVoiceSearch	Speech	1	1.13		
+5ffbfacf-c018-43a5-aac6-4f4f08209b29	0		user	Email Chad please.		NOTSURE	other_domain	Email Chad please.	[]		OutlookVoiceSearch	Speech	1	1.13		
+ba7a8223-34d2-4e2f-941e-4723dbe827b6	0		user	Send a quick message to Craig.		NOTSURE	other_domain	Send a quick message to Craig.	[]		OutlookVoiceSearch	Speech	1	1.13		
+0e3fdace-ce7e-453b-8bd4-570a4f5406a6	0		user	Open the unique name that.		NOTSURE	other_domain	Open the unique name that.	[]		OutlookVoiceSearch	Speech	1	1.13		
+899cfaec-77b8-4730-ac5c-badf601344dd	0		user	Get Carl on the call.		NOTSURE	other_domain	Get Carl on the call.	[]		OutlookVoiceSearch	Speech	1	1.13		
+5dd11215-9a1c-4746-af6c-e308c3e2c6fb	0		user	Send email to barrel subject bug bash saying no bugs.		NOTSURE	other_domain	Send email to barrel subject bug bash saying no bugs.	[]		OutlookVoiceSearch	Speech	1	1.13		
+df4e9c5b-55f1-4ad3-bdcd-d969087f78fd	0		user	Send email to Purvi that I am running late.		NOTSURE	other_domain	Send email to Purvi that I am running late.	[]		OutlookVoiceSearch	Speech	1	1.13		
+dbf48552-9d1d-4d3a-9f9f-cf3260edcfee	0		user	Ling.		NOTSURE	other_domain	Ling.	[]		OutlookVoiceSearch	Speech	1	1.13		
+3083f28e-f4d4-4f6d-9a96-f965286b6aba	0		user	Find Shankha.		NOTSURE	other_domain	Find Shankha.	[]		OutlookVoiceSearch	Speech	1	1.13		
+bda334b7-fdc2-4ac4-8706-260ac4aadbff	0		user	Send email to Beryl saying no bugs.		NOTSURE	other_domain	Send email to Beryl saying no bugs.	[]		OutlookVoiceSearch	Speech	1	1.13		
+dcc614dc-e506-46f4-b42f-84cdf6f2b713	0		user	Call Purvi.		NOTSURE	other_domain	Call Purvi.	[]		OutlookVoiceSearch	Speech	1	1.13		
+26bb15e5-49e4-485a-b7c0-d1229b89232e	0		user	New La La.		NOTSURE	other_domain	New La La.	[]		OutlookVoiceSearch	Speech	1	1.13		
+6d4e87b5-5d40-4f4c-a168-4bfe71630d32	0		user	An email to Diego this is great.		NOTSURE	other_domain	An email to Diego this is great.	[]		OutlookVoiceSearch	Speech	1	1.13		
+e3ec9422-2cd4-416f-bf6a-7be81831e559	0		user	And with Beryl.		NOTSURE	other_domain	And with Beryl.	[]		OutlookVoiceSearch	Speech	1	1.13		
+bad93f01-dc50-466a-96af-da3b49539ca0	0		user	Play Jason.		NOTSURE	other_domain	Play Jason.	[]		OutlookVoiceSearch	Speech	1	1.13		
+21c105ae-c5d5-45f8-aff7-b7d8fbb92c5c	0		user	Email Chad talk to Andy.		NOTSURE	other_domain	Email Chad talk to Andy.	[]		OutlookVoiceSearch	Speech	1	1.13		
+583ea290-a7a9-4693-91a3-97c8f069dff9	0		user	Call John.		NOTSURE	other_domain	Call John.	[]		OutlookVoiceSearch	Speech	1	1.13		
+1d65ae96-53c3-44f4-9284-987c0653105e	0		user	Email me talk to Ashok.		NOTSURE	other_domain	Email me talk to Ashok.	[]		OutlookVoiceSearch	Speech	1	1.13		
+9059eb3c-e2cd-4672-9f4e-01b68e06253a	0		user	Transfer this call to my mobile.		NOTSURE	other_domain	Transfer this call to my mobile.	[]		OutlookVoiceSearch	Speech	1	1.13		
+8de3eb3f-95c6-41ae-87de-3286a43f1bf1	0		user	Jason.		NOTSURE	other_domain	Jason.	[]		OutlookVoiceSearch	Speech	1	1.13		
+cc39cb62-8e2d-45cf-b39b-6934e3479a31	0		user	Email Craig about a new subject.		NOTSURE	other_domain	Email Craig about a new subject.	[]		OutlookVoiceSearch	Speech	1	1.13		
+3396b654-9d72-4a62-8e40-47f01c9a5050	0		user	Share death.		NOTSURE	other_domain	Share death.	[]		OutlookVoiceSearch	Speech	1	1.13		
+17a41f31-6e99-4613-b180-4b1a431f0889	0		user	Hello hello hello.		NOTSURE	other_domain	Hello hello hello.	[]		OutlookVoiceSearch	Speech	1	1.13		
+eacd24af-9785-4789-8745-35de6361afed	0		user	Send an email to Spencer.		NOTSURE	other_domain	Send an email to Spencer.	[]		OutlookVoiceSearch	Speech	1	1.13		
+423d25d3-ec4a-471c-8fe1-d2dcc486bea4	0		user	Could you please please please call Harris?		NOTSURE	other_domain	Could you please please please call Harris?	[]		OutlookVoiceSearch	Speech	1	1.13		
+235081f5-e75b-4233-b017-62e78bb0fdcc	0		user	Send an email to Dolly.		NOTSURE	other_domain	Send an email to Dolly.	[]		OutlookVoiceSearch	Speech	1	1.13		
+91fa5fd8-3156-49ca-84c5-e848ed0b016b	0		user	Send a note to Beryl I am running late.		NOTSURE	other_domain	Send a note to Beryl I am running late.	[]		OutlookVoiceSearch	Speech	1	1.13		
+d360280a-7777-47f3-bc5e-460e35c9b5ea	0		user	Call Jim at work.		NOTSURE	other_domain	Call Jim at work.	[]		OutlookVoiceSearch	Speech	1	1.13		
+5d6cc8ea-6350-479d-a051-1b4d89edc406	0		user	Awesome.		NOTSURE	other_domain	Awesome.	[]		OutlookVoiceSearch	Speech	1	1.13		
+bdf16795-325d-4432-ad61-0a6cfe33f6c4	0		user	Call Home Depot.		NOTSURE	other_domain	Call Home Depot.	[]		OutlookVoiceSearch	Speech	1	1.13		
+c179e9e1-a801-4c88-83e5-cc3bed8d3676	0		user	Send me an email to go grocery shopping.		NOTSURE	other_domain	Send me an email to go grocery shopping.	[]		OutlookVoiceSearch	Speech	1	1.13		
+3cc7054c-cbc2-411f-ab23-470470c0db83	0		user	Call portee.		NOTSURE	other_domain	Call portee.	[]		OutlookVoiceSearch	Speech	1	1.13		
+87c77644-c221-419d-98ee-8836751ff9e4	0		user	Call Pizza Hut.		NOTSURE	other_domain	Call Pizza Hut.	[]		OutlookVoiceSearch	Speech	1	1.13		
+3bb4fb19-b164-4a22-aa1d-cba7c10dd9ab	0		user	Email Diego about a new subject that I am running late.		NOTSURE	other_domain	Email Diego about a new subject that I am running late.	[]		OutlookVoiceSearch	Speech	1	1.13		
+91169a1f-ebab-46b5-8f13-b5be28b315c4	0		user	Email Andrew about feedback.		NOTSURE	other_domain	Email Andrew about feedback.	[]		OutlookVoiceSearch	Speech	1	1.13		
+08ddb6e7-909d-4407-b342-802f58f11aea	0		user	Email myself a note.		NOTSURE	other_domain	Email myself a note.	[]		OutlookVoiceSearch	Speech	1	1.13		
+27c5b228-3dbc-4ee0-8c72-5b1bee6be303	0		user	Email Chad saying.		NOTSURE	other_domain	Email Chad saying.	[]		OutlookVoiceSearch	Speech	1	1.13		
+ccc85610-a361-494c-b5bb-da7722c78ca6	0		user	Send an email to allison@microsoft.com.		NOTSURE	other_domain	Send an email to allison@microsoft.com.	[]		OutlookVoiceSearch	Speech	1	1.13		
+c308455f-d506-47c8-ad20-4ba519077af6	0		user	Call Raj.		NOTSURE	other_domain	Call Raj.	[]		OutlookVoiceSearch	Speech	1	1.13		
+b410e490-2953-4850-90db-c0479bb15dd0	0		user	Pradip.		NOTSURE	other_domain	Pradip.	[]		OutlookVoiceSearch	Speech	1	1.13		
+38936a31-6867-4c3e-b998-b7c1ad22906e	0		user	Send email to Diego I'm running late.		NOTSURE	other_domain	Send email to Diego I'm running late.	[]		OutlookVoiceSearch	Speech	1	1.13		
+337cc532-5049-4b5b-8e40-0df72dd3478f	0		user	Katrina.		NOTSURE	other_domain	Katrina.	[]		OutlookVoiceSearch	Speech	1	1.13		
+e4c35076-e65d-46d8-bd4d-50e31e5df1a2	0		user	Send email to Diego that I want to work on a document by Craig Allison Chad Malik Ashok and Jon Harris and finish it by tomorrow.		NOTSURE	other_domain	Send email to Diego that I want to work on a document by Craig Allison Chad Malik Ashok and Jon Harris and finish it by tomorrow.	[]		OutlookVoiceSearch	Speech	1	1.13		
+aefe22ab-4543-4fab-88bc-78aa402dffe5	0		user	Send an email to Diego.		NOTSURE	other_domain	Send an email to Diego.	[]		OutlookVoiceSearch	Speech	1	1.13		
+4e21ac6c-800b-465a-8f67-307c7dd5d766	0		user	Email Diego Foo bar Foo bar.		NOTSURE	other_domain	Email Diego Foo bar Foo bar.	[]		OutlookVoiceSearch	Speech	1	1.13		
+21ab4592-46ae-4059-8622-287d23ce677b	0		user	Call Allison poopy pants.		NOTSURE	other_domain	Call Allison poopy pants.	[]		OutlookVoiceSearch	Speech	1	1.13		
+fc93d197-f377-4d29-be20-a2259f28fdd3	0		user	Send an email to myself on call mom.		NOTSURE	other_domain	Send an email to myself on call mom.	[]		OutlookVoiceSearch	Speech	1	1.13		
+890899a3-4581-4f90-97cd-aa9d7190e1d9	0		user	Email Harris.		NOTSURE	other_domain	Email Harris.	[]		OutlookVoiceSearch	Speech	1	1.13		
+1993f61f-30b9-41cf-8474-eb91e7ce5254	0		user	Email Beryl and Andrew.		NOTSURE	other_domain	Email Beryl and Andrew.	[]		OutlookVoiceSearch	Speech	1	1.13		
+826ae6b1-7ae8-4505-ba1a-bf0d35bb33f8	0		user	Send email to Diego let's talk about Mail from Allison.		NOTSURE	other_domain	Send email to Diego let's talk about Mail from Allison.	[]		OutlookVoiceSearch	Speech	1	1.13		
+0ea8969a-4a01-4113-99e0-d23aaac42ea5	0		user	Send myself a note that I need to catch up on that work I was talking about.		NOTSURE	other_domain	Send myself a note that I need to catch up on that work I was talking about.	[]		OutlookVoiceSearch	Speech	1	1.13		
+8a9d5ac0-3a4b-4224-b698-6a14dd4b14cf	0		user	Shwetambari Angus.		NOTSURE	other_domain	Shwetambari Angus.	[]		OutlookVoiceSearch	Speech	1	1.13		
+b9068270-8c80-4483-a87c-a0c22bcc476b	0		user	Send me an email walk the dog.		NOTSURE	other_domain	Send me an email walk the dog.	[]		OutlookVoiceSearch	Speech	1	1.13		
+59319706-fec5-4723-b2d9-768b6681754f	0		user	Find Stefan.		NOTSURE	other_domain	Find Stefan.	[]		OutlookVoiceSearch	Speech	1	1.13		
+4539d959-4b32-4998-bac5-716a58c27523	0		user	Send email to Diego is the most awesome feature.		NOTSURE	other_domain	Send email to Diego is the most awesome feature.	[]		OutlookVoiceSearch	Speech	1	1.13		
+9ed73ac3-448a-48cc-b7ea-63e59f862b74	0		user	Co Diego.		NOTSURE	other_domain	Co Diego.	[]		OutlookVoiceSearch	Speech	1	1.13		
+7937895e-79db-4a37-9b6a-18b7ce557a55	0		user	Who am I?		NOTSURE	other_domain	Who am I?	[]		OutlookVoiceSearch	Speech	1	1.13		
+7e72f46a-845e-4ce2-98bb-a8f4acb46cc0	0		user	Call Talon.		NOTSURE	other_domain	Call Talon.	[]		OutlookVoiceSearch	Speech	1	1.13		
+0c6c6eff-cade-4338-a1c9-e687c80f9ae9	0		user	Send an email to tally.		NOTSURE	other_domain	Send an email to tally.	[]		OutlookVoiceSearch	Speech	1	1.13		
+d5659b37-9ea8-4b22-b3dc-ed118a17cfa0	0		user	Email Craig.		NOTSURE	other_domain	Email Craig.	[]		OutlookVoiceSearch	Speech	1	1.13		
+7e3f6bb3-b89f-4a77-9dc0-76948acd0ac3	0		user	Send email to Diego this is great.		NOTSURE	other_domain	Send email to Diego this is great.	[]		OutlookVoiceSearch	Speech	1	1.13		
+c24bd725-fa4d-457d-9c48-c5383badb906	0		user	Send Chad an email let's get lunch sometime.		NOTSURE	other_domain	Send Chad an email let's get lunch sometime.	[]		OutlookVoiceSearch	Speech	1	1.13		
+6ba4d731-7a06-4ed5-87ef-fb97e5320b75	0		user	Send an email to Shaker alias.		NOTSURE	other_domain	Send an email to Shaker alias.	[]		OutlookVoiceSearch	Speech	1	1.13		
+1fc88890-c9cc-45bc-946b-1559b20a3c16	0		user	Send an email to tally rod that I'm running late.		NOTSURE	other_domain	Send an email to tally rod that I'm running late.	[]		OutlookVoiceSearch	Speech	1	1.13		
+59d46987-557b-454a-9613-9a93f77b8bb8	0		user	Send email to Allison that this is great.		NOTSURE	other_domain	Send email to Allison that this is great.	[]		OutlookVoiceSearch	Speech	1	1.13		
+14d53331-e765-4cb0-bc28-ed0ef9f03114	0		user	Email Mil.		NOTSURE	other_domain	Email Mil.	[]		OutlookVoiceSearch	Speech	1	1.13		
+83b6d794-5b60-4a37-951a-0edd84c17c24	0		user	Call my office.		NOTSURE	other_domain	Call my office.	[]		OutlookVoiceSearch	Speech	1	1.13		
+3f0afd06-5e72-4711-9956-4ec4abf900a2	0		user	Send a note to EMI.		NOTSURE	other_domain	Send a note to EMI.	[]		OutlookVoiceSearch	Speech	1	1.13		
+cace6764-6fe9-4d49-907a-be891a03182f	0		user	Email Allison about the Demo meeting.		NOTSURE	other_domain	Email Allison about the Demo meeting.	[]		OutlookVoiceSearch	Speech	1	1.13		
+ff51bb30-8870-4782-8393-9e30db263530	0		user	Send a message to Jon.		NOTSURE	other_domain	Send a message to Jon.	[]		OutlookVoiceSearch	Speech	1	1.13		
+9c0763ab-dae2-4d7f-a731-695219a3ff98	0		user	Shwetambari information.		NOTSURE	other_domain	Shwetambari information.	[]		OutlookVoiceSearch	Speech	1	1.13		
+433dfda6-d208-41fc-bd38-91c8bda45658	0		user	Send email to Diego let's talk about Chad's document.		NOTSURE	other_domain	Send email to Diego let's talk about Chad's document.	[]		OutlookVoiceSearch	Speech	1	1.13		
+c06312a7-5dc0-4296-93f0-94a663fc9f7c	0		user	Phone Shwetambari Mokadam.		NOTSURE	other_domain	Phone Shwetambari Mokadam.	[]		OutlookVoiceSearch	Speech	1	1.13		
+bb2cc3ed-c164-4c67-8c14-1bc047376fee	0		user	Food.		NOTSURE	other_domain	Food.	[]		OutlookVoiceSearch	Speech	1	1.13		
+69dc6f9b-2a95-42d5-aabb-1a486a00d0a4	0		user	You start speaking so that it recognizes your voice and then eventually when you're done.		NOTSURE	other_domain	You start speaking so that it recognizes your voice and then eventually when you're done.	[]		OutlookVoiceSearch	Speech	1	1.13		
+ca60c2bb-4d6e-48cc-91ca-012dd92e00a4	0		user	Call tally Roth.		NOTSURE	other_domain	Call tally Roth.	[]		OutlookVoiceSearch	Speech	1	1.13		
+0a53c17c-de40-4050-954d-19b629f77463	0		user	Call Jim.		NOTSURE	other_domain	Call Jim.	[]		OutlookVoiceSearch	Speech	1	1.13		
+f35c0d8e-a1fc-472a-b689-c59ed4e27f7a	0		user	Shobana Balakrishnan.		NOTSURE	other_domain	Shobana Balakrishnan.	[]		OutlookVoiceSearch	Speech	1	1.13		
+063e8631-66d1-4b4e-9a07-d30a8e117b07	0		user	Testing usage.		NOTSURE	other_domain	Testing usage.	[]		OutlookVoiceSearch	Speech	1	1.13		
+ca51a6a7-4cf9-4a14-84ec-228fd98446b7	0		user	Send email to Karl.		NOTSURE	other_domain	Send email to Karl.	[]		OutlookVoiceSearch	Speech	1	1.13		
+bb6f724a-b3e7-469a-a00f-a53c9e275d55	0		user	What's up Sir?		NOTSURE	other_domain	What's up Sir?	[]		OutlookVoiceSearch	Speech	1	1.13		
+c7d162a9-512f-4805-970f-fe9f9315b935	0		user	Message Chad sang and blade.		NOTSURE	other_domain	Message Chad sang and blade.	[]		OutlookVoiceSearch	Speech	1	1.13		
+534f1ffc-0540-49a6-b527-03bc20545653	0		user	Call Allison.		NOTSURE	other_domain	Call Allison.	[]		OutlookVoiceSearch	Speech	1	1.13		
+4ccbb8e0-9732-49ef-9c98-09b1827ca363	0		user	Send me an email.		NOTSURE	other_domain	Send me an email.	[]		OutlookVoiceSearch	Speech	1	1.13		
+d09af442-0003-4d4c-9a18-010d8b253c6f	0		user	Call Allison on cell.		NOTSURE	other_domain	Call Allison on cell.	[]		OutlookVoiceSearch	Speech	1	1.13		
+882f93a1-309a-48a6-9d71-33b8e81fa1cc	0		user	Email Chad how's everything going Sir.		NOTSURE	other_domain	Email Chad how's everything going Sir.	[]		OutlookVoiceSearch	Speech	1	1.13		
+3c2cfb0f-61fa-4a27-b070-9cad055c0e27	0		user	Upcoming flight.		NOTSURE	other_domain	Upcoming flight.	[]		OutlookVoiceSearch	Speech	1	1.13		
+23cbd2e9-be35-45e3-917d-5d9ed289ac27	0		user	Play my email.		NOTSURE	other_domain	Play <contact_name>my</contact_name> <message_type>email</message_type>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+271c3c70-7367-4a0c-af7e-492607add95d	0		user	Tell Craig I will do the flip Creed tomorrow.		NOTSURE	other_domain	Tell Craig I will do the flip Creed tomorrow.	[]		OutlookVoiceSearch	Speech	1	1.13		
+67350b0c-60c8-44fa-b738-56b6c373224d	0		user	Email Andrew.		NOTSURE	other_domain	Email Andrew.	[]		OutlookVoiceSearch	Speech	1	1.13		
+dced7ed4-4a58-4aa2-bff1-6e88c88095c6	0		user	Send a message.		NOTSURE	other_domain	Send a message.	[]		OutlookVoiceSearch	Speech	1	1.13		
+177dbfb1-3607-441c-9981-16d266a4655b	0		user	Mr Doolittle.		NOTSURE	other_domain	Mr Doolittle.	[]		OutlookVoiceSearch	Speech	1	1.13		
+fa641fe4-2586-4438-97bf-495dcb9f27a2	0		user	Email Steven about H2.		NOTSURE	other_domain	Email Steven about H2.	[]		OutlookVoiceSearch	Speech	1	1.13		
+eb7ddd82-0c59-46f2-8538-6515b7b18ba9	0		user	Call Jon.		NOTSURE	other_domain	Call Jon.	[]		OutlookVoiceSearch	Speech	1	1.13		
+634ce8df-0f6b-4585-a600-2f1ecc5f23c7	0		user	Send an email to Beryl about Bugbash:.		NOTSURE	other_domain	Send an email to Beryl about Bugbash:.	[]		OutlookVoiceSearch	Speech	1	1.13		
+c185ae57-7637-4b0f-b8a5-1ba1f9cf7f1e	0		user	Send email to Diego.		NOTSURE	other_domain	Send email to Diego.	[]		OutlookVoiceSearch	Speech	1	1.13		
+0eaeb474-5393-47b1-91df-32fd6a2ef3ad	0		user	Email Malik am running late.		NOTSURE	other_domain	Email Malik am running late.	[]		OutlookVoiceSearch	Speech	1	1.13		
+4a76922b-8e96-44b5-ba53-c62676bf8614	0		user	Call Christian.		NOTSURE	other_domain	Call Christian.	[]		OutlookVoiceSearch	Speech	1	1.13		
+701511dd-5383-42d0-b881-78a0da7d4976	0		user	Send email to Diego let's talk about Chad.		NOTSURE	other_domain	Send email to Diego let's talk about Chad.	[]		OutlookVoiceSearch	Speech	1	1.13		
+2829d4ac-0992-474d-aacb-a35c001418ed	0		user	Patrician.		NOTSURE	other_domain	Patrician.	[]		OutlookVoiceSearch	Speech	1	1.13		
+ce9d956d-857d-4f2a-9c5a-4858d50735c2	0		user	Send an email to Craig asking if there are any calling bugs from the bug bash.		NOTSURE	other_domain	Send an email to Craig asking if there are any calling bugs from the bug bash.	[]		OutlookVoiceSearch	Speech	1	1.13		
+c4f924b7-88e8-4f40-afef-06b36a4122c7	0		user	Email Chad let's have lunch sometime.		NOTSURE	other_domain	Email Chad let's have lunch sometime.	[]		OutlookVoiceSearch	Speech	1	1.13		
+74de7765-f0ba-4d31-835f-220028b94c9f	0		user	Send email to Diego that I want to work on that document that Craig sent yesterday and see if we can finish it by tomorrow.		NOTSURE	other_domain	Send email to Diego that I want to work on that document that Craig sent yesterday and see if we can finish it by tomorrow.	[]		OutlookVoiceSearch	Speech	1	1.13		
+e453d7f3-30de-4941-a9a0-b2764f98c747	0		user	Call charla.		NOTSURE	other_domain	Call charla.	[]		OutlookVoiceSearch	Speech	1	1.13		
+f1f42e79-25e5-4698-8205-34b188e23313	0		user	What's the weather?		NOTSURE	other_domain	What's the weather?	[]		OutlookVoiceSearch	Speech	1	1.13		
+47d9e705-6a45-4439-a151-3bb71a1912c6	0		user	Email Carl i really like your hair style.		NOTSURE	other_domain	Email Carl i really like your hair style.	[]		OutlookVoiceSearch	Speech	1	1.13		
+314dd135-2d9b-4a38-8ded-04b5e40fc5f5	0		user	Email Jon Harris.		NOTSURE	other_domain	Email Jon Harris.	[]		OutlookVoiceSearch	Speech	1	1.13		
+5a81faca-2a3f-4e70-8571-098d49cb9c13	0		user	Send a note to Craig let's talk about that issue you turn to Mr Dey.		NOTSURE	other_domain	Send a note to Craig let's talk about that issue you turn to Mr Dey.	[]		OutlookVoiceSearch	Speech	1	1.13		
+1b5ae7c4-8284-4088-acdc-c341f336c95f	0		user	Email Beryl hey this is fun.		NOTSURE	other_domain	Email Beryl hey this is fun.	[]		OutlookVoiceSearch	Speech	1	1.13		
+b6081484-bc4d-4ea3-a31e-a72b59f80bc1	0		user	Send email to Diego and Craig.		NOTSURE	other_domain	Send email to Diego and Craig.	[]		OutlookVoiceSearch	Speech	1	1.13		
+958a18ed-3111-457b-87f6-585fde754bc7	0		user	Call Spencer.		NOTSURE	other_domain	Call Spencer.	[]		OutlookVoiceSearch	Speech	1	1.13		
+cbe4835e-2e1c-4605-8499-d12912317dbd	0		user	To me reminder to get groceries.		NOTSURE	other_domain	To me reminder to get groceries.	[]		OutlookVoiceSearch	Speech	1	1.13		
+a3190f9d-0be1-4b33-beb1-8027059048df	0		user	Send a note to Diego that I'll be running late today.		NOTSURE	other_domain	Send a note to Diego that I'll be running late today.	[]		OutlookVoiceSearch	Speech	1	1.13		
+df5fb98a-568c-4435-87a5-9d1f1b82531c	0		user	Message Chad saying I'm late.		NOTSURE	other_domain	Message Chad saying I'm late.	[]		OutlookVoiceSearch	Speech	1	1.13		
+7a6ddf77-eb2c-4c02-b745-d7ae55390cfb	0		user	Email Steven great job on present hold.		NOTSURE	other_domain	Email Steven great job on present hold.	[]		OutlookVoiceSearch	Speech	1	1.13		
+e94bdf48-dec3-48f4-a29b-91fce2478fc7	0		user	Send email to Beryl this is awesome.		NOTSURE	other_domain	Send email to Beryl this is awesome.	[]		OutlookVoiceSearch	Speech	1	1.13		
+61fec844-037b-48ab-8d6e-0abf2e1c0878	0		user	Send an email to Allison about Demo.		NOTSURE	other_domain	Send an email to Allison about Demo.	[]		OutlookVoiceSearch	Speech	1	1.13		
+d2b75b6b-b954-46af-8560-4389accd90c6	0		user	Email myself.		NOTSURE	other_domain	Email myself.	[]		OutlookVoiceSearch	Speech	1	1.13		
+aa6a8468-92b6-4389-b184-cc65ea22b062	0		user	Email Diego about a new subject I am running late.		NOTSURE	other_domain	Email Diego about a new subject I am running late.	[]		OutlookVoiceSearch	Speech	1	1.13		
+91b266db-0051-4fdd-823c-5f38522fd4c8	0		user	Send email to S+A Core Lt.		NOTSURE	other_domain	Send email to S+A Core Lt.	[]		OutlookVoiceSearch	Speech	1	1.13		
+b9ec9603-cd45-44f9-8089-2707feb20e53	0		user	Send an email to myself buy milk.		NOTSURE	other_domain	Send an email to myself buy milk.	[]		OutlookVoiceSearch	Speech	1	1.13		
+f6ae304b-7cd4-43c8-a6dc-d7c5581c61a0	0		user	Email Carl I like your hair style.		NOTSURE	other_domain	Email Carl I like your hair style.	[]		OutlookVoiceSearch	Speech	1	1.13		
+abf690ce-4fb0-44d6-9558-0b6400ce2e45	0		user	Note to self.		NOTSURE	other_domain	Note to self.	[]		OutlookVoiceSearch	Speech	1	1.13		
+54d84107-ff88-4b30-aef9-ca1150c69624	0		user	Email Chad.		NOTSURE	other_domain	Email Chad.	[]		OutlookVoiceSearch	Speech	1	1.13		
+25e6bfc4-975c-4967-8ac4-a2ed3a08c12b	0		user	Telephone Jose.		NOTSURE	other_domain	Telephone Jose.	[]		OutlookVoiceSearch	Speech	1	1.13		
+ba36e81f-d545-489a-9df6-771743cf7a0d	0		user	Find Kathy.		NOTSURE	other_domain	Find Kathy.	[]		OutlookVoiceSearch	Speech	1	1.13		
+3b9cd6c4-643d-4050-bf7b-cf23ac48b39b	0		user	Apple ID here.		NOTSURE	other_domain	Apple ID here.	[]		OutlookVoiceSearch	Speech	1	1.13		
+3fe49a24-1cf3-4b6a-b652-f9a86ec94ca0	0		user	Call Darren.		NOTSURE	other_domain	Call Darren.	[]		OutlookVoiceSearch	Speech	1	1.13		
+3ef6b98b-9364-4b1d-97da-944dd14c3ca7	0		user	Send email to Allison this is great.		NOTSURE	other_domain	Send email to Allison this is great.	[]		OutlookVoiceSearch	Speech	1	1.13		
+70c7130a-7b46-4344-9304-304f656b80a5	0		user	Send email to Allison about feature launch.		NOTSURE	other_domain	Send email to Allison about feature launch.	[]		OutlookVoiceSearch	Speech	1	1.13		
+9cafb9c2-f466-476f-a3ed-75e46b8bfbfa	0		user	Call Chad.		NOTSURE	other_domain	Call Chad.	[]		OutlookVoiceSearch	Speech	1	1.13		
+85a16ffd-f664-434f-80af-84227aa2fa68	0		user	Email Diego Foo bar.		NOTSURE	other_domain	Email Diego Foo bar.	[]		OutlookVoiceSearch	Speech	1	1.13		
+eab409cd-3199-44fb-bf03-0b25f1fcad2c	0		user	Telephone Shwetambari.		NOTSURE	other_domain	Telephone Shwetambari.	[]		OutlookVoiceSearch	Speech	1	1.13		
+a352a748-d27c-40d8-8e59-a72ec096832d	0		user	Amazing amazing.		NOTSURE	other_domain	Amazing amazing.	[]		OutlookVoiceSearch	Speech	1	1.13		
+e24eaf98-92f1-4cac-aec6-089b4687ffbe	0		user	Email try what's up Sir.		NOTSURE	other_domain	Email try what's up Sir.	[]		OutlookVoiceSearch	Speech	1	1.13		
+b341abe9-046a-4c7f-b9d4-15cd1e1491ba	0		user	Gates Foundation.		NOTSURE	other_domain	Gates Foundation.	[]		OutlookVoiceSearch	Speech	1	1.13		
+aac045f6-1f35-45fc-996e-0794ca01a33a	0		user	Email Carl about Prada launch.		NOTSURE	other_domain	Email Carl about Prada launch.	[]		OutlookVoiceSearch	Speech	1	1.13		
+6519cfc1-e962-4cca-b41a-c5d7d1fc204a	0		user	Email Craig about.		NOTSURE	other_domain	Email Craig about.	[]		OutlookVoiceSearch	Speech	1	1.13		
+45bfe1a9-e1dc-401b-b014-d872df14ec4e	0		user	Send a note to Enrique Mitchell.		NOTSURE	other_domain	Send a note to Enrique Mitchell.	[]		OutlookVoiceSearch	Speech	1	1.13		
+d151d10e-4991-42fd-b60b-1eda210b3292	0		user	Send an email to Ashok dad thanks for the feedback.		NOTSURE	other_domain	Send an email to Ashok dad thanks for the feedback.	[]		OutlookVoiceSearch	Speech	1	1.13		
+1e9a00d7-0382-4456-a046-80408af2c5cd	0		user	Make the second search.		NOTSURE	other_domain	Make the second search.	[]		OutlookVoiceSearch	Speech	1	1.13		
+9493d8f6-dd50-4e4e-8fbd-874f11b36efa	0		user	Send an email to Jaclyn that I am trying this out.		NOTSURE	other_domain	Send an email to Jaclyn that I am trying this out.	[]		OutlookVoiceSearch	Speech	1	1.13		
+f19a90d2-3ef2-4269-a08b-dccb51c87d70	0		user	Call McIntyre.		NOTSURE	other_domain	Call McIntyre.	[]		OutlookVoiceSearch	Speech	1	1.13		
+049f61b9-974c-40ed-8e30-17c23341cc30	0		user	Email Craig about monthly meeting.		NOTSURE	other_domain	Email Craig about monthly meeting.	[]		OutlookVoiceSearch	Speech	1	1.13		
+7b62b8e7-9c23-44ca-9f12-4555af67681a	0		user	Send email to Diego did you see Chad's document.		NOTSURE	other_domain	Send email to Diego did you see Chad's document.	[]		OutlookVoiceSearch	Speech	1	1.13		
+3360a82b-6b8d-4431-a9b8-f838aaeffdda	0		user	Email Madeleine to prepared the meeting this afternoon.		NOTSURE	other_domain	Email Madeleine to prepared the meeting this afternoon.	[]		OutlookVoiceSearch	Speech	1	1.13		
+0efbc1bd-174b-4504-904a-a5f8f266e187	0		user	Naomi.		NOTSURE	other_domain	Naomi.	[]		OutlookVoiceSearch	Speech	1	1.13		
+e84fda91-3db2-418a-8ad5-47224eb2140c	0		user	Call Craig Miller.		NOTSURE	other_domain	Call Craig Miller.	[]		OutlookVoiceSearch	Speech	1	1.13		
+a3022ba2-6a60-4cc4-94de-6fd64b5ce2cd	0		user	Show me Moscow retention.		NOTSURE	other_domain	Show me Moscow retention.	[]		OutlookVoiceSearch	Speech	1	1.13		
+2ffc2f3a-9154-4809-b4c9-808220a160aa	0		user	Call Perry.		NOTSURE	other_domain	Call Perry.	[]		OutlookVoiceSearch	Speech	1	1.13		
+4b260a45-be0d-4009-ba65-6c02ba0f59d0	0		user	Call Robert.		NOTSURE	other_domain	Call Robert.	[]		OutlookVoiceSearch	Speech	1	1.13		
+d764c6d9-7009-4506-9a7c-b0efd5029d81	0		user	Call office.		NOTSURE	other_domain	Call office.	[]		OutlookVoiceSearch	Speech	1	1.13		
+391b6ec5-683a-48fd-9bfd-e65b45ace7f2	0		user	Send email to Tobias.		NOTSURE	other_domain	Send email to Tobias.	[]		OutlookVoiceSearch	Speech	1	1.13		
+fe098bc9-bf8d-485e-9d64-d0b334e632d8	0		user	What's up guys?		NOTSURE	other_domain	What's up guys?	[]		OutlookVoiceSearch	Speech	1	1.13		
+559c093a-8651-4842-b5e2-f47b915fc3b9	0		user	Send an email to Ashok.		NOTSURE	other_domain	Send an email to Ashok.	[]		OutlookVoiceSearch	Speech	1	1.13		
+4d29b275-2305-4b03-ad1f-44d65e356150	0		user	Send email to Purvi.		NOTSURE	other_domain	Send email to Purvi.	[]		OutlookVoiceSearch	Speech	1	1.13		
+3adbe68b-a73e-43be-b9ca-a0d966a7fb65	0		user	Send email to Diego let's talk about what Jim said yesterday.		NOTSURE	other_domain	Send email to Diego let's talk about what Jim said yesterday.	[]		OutlookVoiceSearch	Speech	1	1.13		
+f7962652-faea-422a-b6b3-06a54dd6ebd6	0		user	Send email to tally.		NOTSURE	other_domain	Send email to tally.	[]		OutlookVoiceSearch	Speech	1	1.13		
+69302feb-9193-48f0-b9bd-422a6ecbbda6	0		user	Call James.		NOTSURE	other_domain	Call James.	[]		OutlookVoiceSearch	Speech	1	1.13		
+1627d7b8-7573-4c51-9329-7188d56cb7fa	0		user	Call Craig McIntyre discount desks test.		NOTSURE	other_domain	Call Craig McIntyre discount desks test.	[]		OutlookVoiceSearch	Speech	1	1.13		
+fd038b13-a1b4-4da8-ad64-def6240e9d99	0		user	Email myself to follow up with Ashok.		NOTSURE	other_domain	Email myself to follow up with Ashok.	[]		OutlookVoiceSearch	Speech	1	1.13		
+ca076984-6741-49d6-963e-6ec5e69778a5	0		user	Lunchtime.		NOTSURE	other_domain	Lunchtime.	[]		OutlookVoiceSearch	Speech	1	1.13		
+5f3155a2-3143-4b6a-bce2-16f68bb014c1	0		user	Send an email to myself get a gift for Lydia.		NOTSURE	other_domain	Send an email to myself get a gift for Lydia.	[]		OutlookVoiceSearch	Speech	1	1.13		
+3dcaccfd-94f7-4286-8033-bb92bf89945d	0		user	Send email to Diego and running late.		NOTSURE	other_domain	Send email to Diego and running late.	[]		OutlookVoiceSearch	Speech	1	1.13		
+bc6fb020-c881-4ce5-9609-05026d66f73c	0		user	Go to feed.		NOTSURE	other_domain	Go to feed.	[]		OutlookVoiceSearch	Speech	1	1.13		
+226608c7-5dda-4bb4-8b16-51cef320c4d6	0		user	Search for a ship room.		NOTSURE	other_domain	Search for a ship room.	[]		OutlookVoiceSearch	Speech	1	1.13		
+54b34125-b0a2-406d-89c2-670c18b6ee99	0		user	Email Malik org late.		NOTSURE	other_domain	Email Malik org late.	[]		OutlookVoiceSearch	Speech	1	1.13		
+f9f660cc-a96d-4c53-8d54-8f3304efb665	0		user	Send an email to Madeleine.		NOTSURE	other_domain	Send an email to Madeleine.	[]		OutlookVoiceSearch	Speech	1	1.13		
+e9bd3b67-d33c-46cd-a7dc-dce45c7d6594	0		user	Talk.		NOTSURE	other_domain	Talk.	[]		OutlookVoiceSearch	Speech	1	1.13		
+2fd66d5a-0cfb-481c-a043-d47a39746592	0		user	Send email to Diego that this is the most amazing awesome grade freaking amazing most amazing most amazing most most most amazing and the most amazing and most amazing feature off after all.		NOTSURE	other_domain	Send email to Diego that this is the most amazing awesome grade freaking amazing most amazing most amazing most most most amazing and the most amazing and most amazing feature off after all.	[]		OutlookVoiceSearch	Speech	1	1.13		
+af59752a-44c2-47fb-a450-3a88decd013d	0		user	Send a message to Diego that I will be working tomorrow with gregge on.		NOTSURE	other_domain	Send a message to Diego that I will be working tomorrow with gregge on.	[]		OutlookVoiceSearch	Speech	1	1.13		
+1fadda6f-1d9c-49db-9224-79d96527f3b3	0		user	Send an email to Steven.		NOTSURE	other_domain	Send an email to Steven.	[]		OutlookVoiceSearch	Speech	1	1.13		
+49cd08b2-60a6-43a7-a4ee-bf2682b1e600	0		user	Send quick note to barrel I'm running late.		NOTSURE	other_domain	Send quick note to barrel I'm running late.	[]		OutlookVoiceSearch	Speech	1	1.13		
+1cb053f3-2be4-455f-8850-53b4c58e4226	0		user	Call Malik P.		NOTSURE	other_domain	Call Malik P.	[]		OutlookVoiceSearch	Speech	1	1.13		
+d428ed90-047f-475b-9030-3c2227af3c1e	0		user	Email Rich.		NOTSURE	other_domain	Email Rich.	[]		OutlookVoiceSearch	Speech	1	1.13		
+b13827bf-5d60-4288-8dbb-379c1872262d	0		user	Send email to James this is great.		NOTSURE	other_domain	Send email to James this is great.	[]		OutlookVoiceSearch	Speech	1	1.13		
+134c6e57-83c6-4567-8552-d35882ca0cec	0		user	Send an email to Craig this is a test message from OM iOS single shot command in feature flag let me see how long I can speak to this thing but so far so good for quick messages.		NOTSURE	other_domain	Send an email to Craig this is a test message from OM iOS single shot command in feature flag let me see how long I can speak to this thing but so far so good for quick messages.	[]		OutlookVoiceSearch	Speech	1	1.13		
+3ee8e36c-ab0f-4a3b-adfc-6a6470120acf	0		user	Email Ming.		NOTSURE	other_domain	Email Ming.	[]		OutlookVoiceSearch	Speech	1	1.13		
+3731f70b-c3b9-4262-9f02-dd1ba3523ba7	0		user	Select all mark as read.		NOTSURE	other_domain	Select all mark as read.	[]		OutlookVoiceSearch	Speech	1	1.13		
+bc97b069-3c85-4faa-bb37-760f68cc75b6	0		user	Send me a reminder to walk the dog.		NOTSURE	other_domain	Send me a reminder to walk the dog.	[]		OutlookVoiceSearch	Speech	1	1.13		
+fcec61c8-3df2-448a-815c-5033fc9cdf9f	0		user	Send an email to Diego that I want to 123456789 ten 1112 thirteen 1415 sixteen 1718 nineteen 2021 hundred 300 and 44145 percent 49 fifty 5154 live 1660.		NOTSURE	other_domain	Send an email to Diego that I want to 123456789 ten 1112 thirteen 1415 sixteen 1718 nineteen 2021 hundred 300 and 44145 percent 49 fifty 5154 live 1660.	[]		OutlookVoiceSearch	Speech	1	1.13		
+b1a3a38b-f854-4956-943b-ec5373de106b	0		user	Send email to Diego I am running late.		NOTSURE	other_domain	Send email to Diego I am running late.	[]		OutlookVoiceSearch	Speech	1	1.13		
+1b2a9a8a-030a-430b-8343-130af1c4d312	0		user	Call Allison O'Mahony.		NOTSURE	other_domain	Call Allison O'Mahony.	[]		OutlookVoiceSearch	Speech	1	1.13		
+8611eec5-a180-4e7f-8d79-c33613f69a56	0		user	Send Ashok an email.		NOTSURE	other_domain	Send Ashok an email.	[]		OutlookVoiceSearch	Speech	1	1.13		
+63289a4a-32df-48ec-85e2-43b1219c5be4	0		user	Send a quick note to Chad.		NOTSURE	other_domain	Send a quick note to Chad.	[]		OutlookVoiceSearch	Speech	1	1.13		
+1b30a444-e302-4a3a-b55a-dc7d21c2c49d	0		user	Email Steven about H2 planning hey Mendes to this.		NOTSURE	other_domain	Email Steven about H2 planning hey Mendes to this.	[]		OutlookVoiceSearch	Speech	1	1.13		
+a7901f6d-fc97-4252-b461-b1a068cebb62	0		user	Send an email to Jose.		NOTSURE	other_domain	Send an email to Jose.	[]		OutlookVoiceSearch	Speech	1	1.13		
+6565fa18-9661-4581-899f-79b749401136	0		user	Send email to Lydia about taxes.		NOTSURE	other_domain	Send email to Lydia about taxes.	[]		OutlookVoiceSearch	Speech	1	1.13		
+4caed845-c5c4-4b1b-b0db-af5437934261	0		user	True care.		NOTSURE	other_domain	True care.	[]		OutlookVoiceSearch	Speech	1	1.13		
+6394275f-a196-4976-a3bd-695ae7909972	0		user	Telephone mother.		NOTSURE	other_domain	Telephone mother.	[]		OutlookVoiceSearch	Speech	1	1.13		
+cdeecec1-6a55-493f-873b-995572acb90f	0		user	Send email to Harris thanks for your help in K yp.		NOTSURE	other_domain	Send email to Harris thanks for your help in K yp.	[]		OutlookVoiceSearch	Speech	1	1.13		
+9e2ac423-b6c6-4227-b917-807bb263b561	0		user	Call poppy poppy.		NOTSURE	other_domain	Call poppy poppy.	[]		OutlookVoiceSearch	Speech	1	1.13		
+07b1a486-a248-4097-8681-e155a068a3d4	0		user	Call Rich.		NOTSURE	other_domain	Call Rich.	[]		OutlookVoiceSearch	Speech	1	1.13		
+d7651657-411a-4e47-a2f9-5cbe3561a72b	0		user	Email Chad says I will be late.		NOTSURE	other_domain	Email Chad says I will be late.	[]		OutlookVoiceSearch	Speech	1	1.13		
+9ba3b405-4538-4930-af85-f3875378f8bc	0		user	Send an email to Lisa.		NOTSURE	other_domain	Send an email to Lisa.	[]		OutlookVoiceSearch	Speech	1	1.13		
+a2ee9c88-0e82-4997-a44e-de6141e2eb57	0		user	Email Diego I'm running late.		NOTSURE	other_domain	Email Diego I'm running late.	[]		OutlookVoiceSearch	Speech	1	1.13		
+097147f1-3ad0-4a8f-9a13-4fdce19342ae	0		user	Send email to Jim this is great.		NOTSURE	other_domain	Send email to Jim this is great.	[]		OutlookVoiceSearch	Speech	1	1.13		
+c22d7142-98d4-44fb-9367-8bafbdd30e1b	0		user	Phone call.		NOTSURE	other_domain	Phone call.	[]		OutlookVoiceSearch	Speech	1	1.13		
+85400e38-43e7-4cf2-9f88-1a3694b1b450	0		user	Quick note to self.		NOTSURE	other_domain	Quick note to self.	[]		OutlookVoiceSearch	Speech	1	1.13		
+6e0aca73-2a07-4f74-b380-5224722b6ce2	0		user	Call Ellen.		NOTSURE	other_domain	Call Ellen.	[]		OutlookVoiceSearch	Speech	1	1.13		
+3123b222-2c14-4b9f-ad8e-6537f4010be2	0		user	Send an email to Harris Syed that I need to get his help real soon.		NOTSURE	other_domain	Send an email to Harris Syed that I need to get his help real soon.	[]		OutlookVoiceSearch	Speech	1	1.13		
+970c831b-eab0-4714-b814-7ea008982b32	0		user	Send an email to Diego and Jim that I'll be running late today.		NOTSURE	other_domain	Send an email to Diego and Jim that I'll be running late today.	[]		OutlookVoiceSearch	Speech	1	1.13		
+7574a01a-0b7b-4ca2-951e-b3265f0dc641	0		user	What's the weather going to be today today today today today today?		NOTSURE	other_domain	What's the weather going to be today today today today today today?	[]		OutlookVoiceSearch	Speech	1	1.13		
+13f733fe-1eeb-433d-b5fb-2a5691fdf7b8	0		user	Send a quick note to Craig list talk about that issue you told me yesterday.		NOTSURE	other_domain	Send a quick note to Craig list talk about that issue you told me yesterday.	[]		OutlookVoiceSearch	Speech	1	1.13		
+e4c03f38-42f7-4d03-a494-10ab747af52f	0		user	Could you please send an email to Anuja?		NOTSURE	other_domain	Could you please send an email to Anuja?	[]		OutlookVoiceSearch	Speech	1	1.13		
+13cd93a2-0298-4105-ba7f-abc904fbb2c1	0		user	An email to Diego this is good.		NOTSURE	other_domain	An email to Diego this is good.	[]		OutlookVoiceSearch	Speech	1	1.13		
+81eb0e78-3a66-4fcd-8fe6-53204b54c3b3	0		user	Send an email to Allison how we set up a meeting tomorrow at 2:00 PM.		NOTSURE	other_domain	Send an email to Allison how we set up a meeting tomorrow at 2:00 PM.	[]		OutlookVoiceSearch	Speech	1	1.13		
+7f265ab5-bae2-40e7-8ef5-f8b860091732	0		user	Send an email to Akshay am running late.		NOTSURE	other_domain	Send an email to Akshay am running late.	[]		OutlookVoiceSearch	Speech	1	1.13		
+f1efec50-a7fc-474a-8bc8-9fe6021b3fa0	0		user	Call Foo bar.		NOTSURE	other_domain	Call Foo bar.	[]		OutlookVoiceSearch	Speech	1	1.13		
+62b78e31-f9fd-460c-9c21-51cd763308ef	0		user	Email Diego am running late for lunch.		NOTSURE	other_domain	Email Diego am running late for lunch.	[]		OutlookVoiceSearch	Speech	1	1.13		
+d7913fe3-d9ca-44e3-90e5-e8fff1ce6de4	0		user	Send an email to myself remind me to buy milk.		NOTSURE	other_domain	Send an email to myself remind me to buy milk.	[]		OutlookVoiceSearch	Speech	1	1.13		
+d2d699b0-d867-45ff-b6a9-6ce31a2f3eb2	0		user	Send a message to be ornstein.		NOTSURE	other_domain	Send a message to be ornstein.	[]		OutlookVoiceSearch	Speech	1	1.13		
+32ec8883-97bb-4dc1-9761-9624bfb05633	0		user	Call poopy pants.		NOTSURE	other_domain	Call poopy pants.	[]		OutlookVoiceSearch	Speech	1	1.13		
+40a739f5-06bb-4cba-8272-0e06bada8e3e	0		user	Send an email to Harris i really need to work through this problem it's just getting on man I need to do something about it soon.		NOTSURE	other_domain	Send an email to Harris i really need to work through this problem it's just getting on man I need to do something about it soon.	[]		OutlookVoiceSearch	Speech	1	1.13		
+3da4ea5b-5754-4088-9d54-1df2f644d6cb	0		user	Send email to Jim that I am going to talk to Diego about this tomorrow and will follow up with you and then we will talk to Craig.		NOTSURE	other_domain	Send email to Jim that I am going to talk to Diego about this tomorrow and will follow up with you and then we will talk to Craig.	[]		OutlookVoiceSearch	Speech	1	1.13		
+5c1fdb01-1cff-406b-9961-21470c8fc3ed	0		user	Craig Finkelstein.		NOTSURE	other_domain	Craig Finkelstein.	[]		OutlookVoiceSearch	Speech	1	1.13		
+a12cc858-aed5-4a95-92ae-818f44dc5712	0		user	Email myself a balance.		NOTSURE	other_domain	Email myself a balance.	[]		OutlookVoiceSearch	Speech	1	1.13		
+6264e715-bfae-48a6-b028-4baeffd096a7	0		user	Priorities.		NOTSURE	other_domain	Priorities.	[]		OutlookVoiceSearch	Speech	1	1.13		
+ffffaaca-667e-423e-9908-615ff0c342b0	0		user	Send email to Lydia.		NOTSURE	other_domain	Send email to Lydia.	[]		OutlookVoiceSearch	Speech	1	1.13		
+12f870b0-d0b2-44fd-b557-1c091b72c4d1	0		user	Send an email to Harris.		NOTSURE	other_domain	Send an email to Harris.	[]		OutlookVoiceSearch	Speech	1	1.13		
+2ed692a2-483a-44cb-bfa2-ac817471ef61	0		user	Show David Stewart's contact info.		PEOPLE	search_people_attribute	Show <contact_name>David Stewart</contact_name>'s <people_attribute>contact info</people_attribute>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+720c1250-c217-44bf-8d4b-dcc93df777bf	0		user	Craig phone.		PEOPLE	search_people_attribute	<contact_name>Craig</contact_name> <people_attribute>phone</people_attribute>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+0f330e48-c4d2-4feb-97db-c58fc97a7f87	0		user	Shwetambari Mokadam alias.		PEOPLE	search_people_attribute	<contact_name>Shwetambari Mokadam</contact_name> <people_attribute>alias</people_attribute>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+f4903f84-ca8f-4f01-a791-25e4730ec62d	0		user	What is Shwetambari Mokadam alias?		PEOPLE	search_people_attribute	What is <contact_name>Shwetambari Mokadam</contact_name> <people_attribute>alias</people_attribute>?	[]		OutlookVoiceSearch	Speech	1	1.13		
+879cca68-2405-4222-a9c4-33a832769774	0		user	Malik's phone number.		PEOPLE	search_people_attribute	<contact_name>Malik</contact_name>'s <people_attribute>phone number</people_attribute>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+b1ab4a44-cc0b-4c11-a159-7cae43a7cc73	0		user	Show me Craig's phone number.		PEOPLE	search_people_attribute	Show me <contact_name>Craig</contact_name>'s <people_attribute>phone number</people_attribute>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+c8e4ff55-2733-4dd6-967b-047a8c42f310	0		user	Jose contact.		PEOPLE	search_people_attribute	<contact_name>Jose</contact_name> <people_attribute>contact</people_attribute>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+3c5e92f0-5475-437a-a0ef-6ed8bdc3863f	0		user	Anuja phone number.		PEOPLE	search_people_attribute	<contact_name>Anuja</contact_name> <people_attribute>phone number</people_attribute>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+3f46b87d-fee8-4535-849f-6f8a142420c9	0		user	What's David Stewart's email address?		PEOPLE	search_people_attribute	What's <contact_name>David Stewart</contact_name>'s <people_attribute>email address</people_attribute>?	[]		OutlookVoiceSearch	Speech	1	1.13		
+5f050fe1-082c-426e-a4ce-6fd25c663a76	0		user	Shwetambari contact.		PEOPLE	search_people_attribute	<contact_name>Shwetambari</contact_name> <people_attribute>contact</people_attribute>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+d3b69be6-c60f-4b85-9224-235aeee5da7b	0		user	Find Jose contact info.		PEOPLE	search_people_attribute	Find <contact_name>Jose</contact_name> <people_attribute>contact info</people_attribute>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+3c9d900d-bc39-4e9b-be51-a1599ca72054	0		user	Melissa Sims alias.		PEOPLE	search_people_attribute	<contact_name>Melissa Sims</contact_name> <people_attribute>alias</people_attribute>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+842514a8-e28c-4c97-9b5e-f9b9973b6fed	0		user	What is Abraham's email address?		PEOPLE	search_people_attribute	What is <contact_name>Abraham</contact_name>'s <people_attribute>email address</people_attribute>?	[]		OutlookVoiceSearch	Speech	1	1.13		
+642c355c-2074-4e8a-aef0-d7a946437074	0		user	Shwetambari Mokadam email address.		PEOPLE	search_people_attribute	<contact_name>Shwetambari Mokadam</contact_name> <people_attribute>email address</people_attribute>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+03f967e9-5ce6-47c2-a09c-8e35b3f5fe2f	0		user	Where is Christian Gero?		PEOPLE	search_people_attribute	Where is <contact_name>Christian Gero</contact_name>?	[]		OutlookVoiceSearch	Speech	1	1.13		
+1bd966cd-90f2-439b-9f5e-8fbb6f96a0c8	0		user	Fine Jose's contact info.		PEOPLE	search_people_attribute	Fine <contact_name>Jose</contact_name>'s <people_attribute>contact info</people_attribute>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+7a1ae4d0-49e9-4b70-b132-1aaee75d66ce	0		user	What's Yiwen Wu's 80th?		PEOPLE	search_people_attribute	What's <contact_name>Yiwen Wu</contact_name>'s <people_attribute>80th</people_attribute>?	[]		OutlookVoiceSearch	Speech	1	1.13		
+6ce0dc72-7c5b-4e3f-b381-4e93b1a515ea	0		user	What is Jose Gomez-Angulo's phone number?		PEOPLE	search_people_attribute	What is <contact_name>Jose Gomez-Angulo</contact_name>'s <people_attribute>phone number</people_attribute>?	[]		OutlookVoiceSearch	Speech	1	1.13		
+5f508688-f9da-4264-93b5-0aa79bbc069f	0		user	Find Jose's contact information.		PEOPLE	search_people_attribute	Find <contact_name>Jose</contact_name>'s <people_attribute>contact information</people_attribute>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+e132b38c-9a86-41b7-8331-c9c8c1cbc6f9	0		user	What is Shwetambari Mokadam's number?		PEOPLE	search_people_attribute	What is <contact_name>Shwetambari Mokadam</contact_name>'s <people_attribute>number</people_attribute>?	[]		OutlookVoiceSearch	Speech	1	1.13		
+04d70feb-cecc-438f-8677-07b48e7a4007	0		user	Diego phone number.		PEOPLE	search_people_attribute	<contact_name>Diego</contact_name> <people_attribute>phone number</people_attribute>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+adb3d8eb-5024-41cc-af3a-926439a7d278	0		user	Abraham info.		PEOPLE	search_people_attribute	<contact_name>Abraham</contact_name> <people_attribute>info</people_attribute>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+a60bf02b-6fa1-45e8-9f0e-dbaec01a6bd5	0		user	It's been 2 days Jose profile.		PEOPLE	search_people_attribute	It's been 2 days <contact_name>Jose</contact_name> <people_attribute>profile</people_attribute>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+21adc6d2-7bb6-49d7-b71a-58e8cf3c1f2c	0		user	Abraham contact.		PEOPLE	search_people_attribute	<contact_name>Abraham</contact_name> <people_attribute>contact</people_attribute>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+aca56148-2e12-45d1-8803-0a5339c91046	0		user	What is Chelsea Bode's phone number?		PEOPLE	search_people_attribute	What is <contact_name>Chelsea Bode</contact_name>'s <people_attribute>phone number</people_attribute>?	[]		OutlookVoiceSearch	Speech	1	1.13		
+f3c9d7e7-0e01-484f-84b6-b8e657bb1357	0		user	What is Shwetambari's number?		PEOPLE	search_people_attribute	What is <contact_name>Shwetambari</contact_name>'s <people_attribute>number</people_attribute>?	[]		OutlookVoiceSearch	Speech	1	1.13		
+c3a4055d-6bbc-47d1-a7a0-bd55cf71b46f	0		user	Shwetambari alias.		PEOPLE	search_people_attribute	<contact_name>Shwetambari</contact_name> <people_attribute>alias</people_attribute>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+8ecd25b5-5014-4778-90c4-0de5feee14ec	0		user	Dan Evans phone number.		PEOPLE	search_people_attribute	<contact_name>Dan Evans</contact_name> <people_attribute>phone number</people_attribute>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+7fc3dd22-b239-418c-ba27-ab283a96fe63	0		user	Meetings today.		CALENDAR	find_calendar_entry	Meetings <start_date>today</start_date>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+ff31d997-e3f2-4046-b76a-710e98038b8f	0		user	Next meeting with Nitin.		CALENDAR	find_calendar_entry	<start_time>Next</start_time> meeting with <contact_name>Nitin</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+aa30eed3-7943-4977-b7e4-32260e808baa	0		user	My past scrum meeting.		CALENDAR	find_calendar_entry	My past <title>scrum meeting</title>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+2e227223-d0d0-4b32-aa5f-6cd02aa4f1d1	0		user	Meetings with Ryan.		CALENDAR	find_calendar_entry	Meetings with <contact_name>Ryan</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+3f7b58b8-8d17-4933-9720-0da13ea4fcd2	0		user	What's my schedule on Monday?		CALENDAR	find_calendar_entry	What's my schedule on <start_date>Monday</start_date>?	[]		OutlookVoiceSearch	Speech	1	1.13		
+e4e7df43-6d4d-48eb-beee-24538598312d	0		user	What's next on my calendar?		CALENDAR	find_calendar_entry	What's <start_time>next</start_time> on my calendar?	[]		OutlookVoiceSearch	Speech	1	1.13		
+df9a8514-a445-4b3a-9551-f054a391720b	0		user	Go to calendar.		CALENDAR	find_calendar_entry	Go to calendar.	[]		OutlookVoiceSearch	Speech	1	1.13		
+a047834e-b1dc-4886-bb35-a76542d51164	0		user	Meetings with Jennifer.		CALENDAR	find_calendar_entry	Meetings with <contact_name>Jennifer</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+254976d8-a0fa-4ab1-be12-cc4886415085	0		user	Cold Steven about meeting.		CALENDAR	find_calendar_entry	Cold <contact_name>Steven</contact_name> about meeting.	[]		OutlookVoiceSearch	Speech	1	1.13		
+69a60821-598e-420c-afa4-ed40fc63bff7	0		user	What meetings do I have tomorrow?		CALENDAR	find_calendar_entry	What meetings do I have <start_date>tomorrow</start_date>?	[]		OutlookVoiceSearch	Speech	1	1.13		
+6228cdd1-d903-4361-a7ad-400a5ea5c7b6	0		user	Do I have any meetings tonight?		CALENDAR	find_calendar_entry	Do I have any meetings <start_time>tonight</start_time>?	[]		OutlookVoiceSearch	Speech	1	1.13		
+1f2a35ae-dba0-4f89-beae-59805b6f11b5	0		user	My last scrum meeting.		CALENDAR	find_calendar_entry	My <order_ref>last</order_ref> <title>scrum meeting</title>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+75b45168-cdd6-448c-a4ea-f29f810d003d	0		user	Ring Steven about meeting.		CALENDAR	find_calendar_entry	<contact_name>Ring Steven</contact_name> about meeting.	[]		OutlookVoiceSearch	Speech	1	1.13		
+c255ea0b-4c19-486b-af0f-ccb005a7d2c8	0		user	Said I meeting with Diego.		CALENDAR	find_calendar_entry	Said I meeting with <contact_name>Diego</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+72b74edf-9991-4bba-b4b4-1882194ebb39	0		user	Next meeting with Mil.		CALENDAR	find_calendar_entry	<start_time>Next</start_time> meeting with <contact_name>Mil</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+5fc802de-591c-46cf-9792-46b78d21f391	0		user	What's my agenda for today?		CALENDAR	find_calendar_entry	What's my agenda for <start_date>today</start_date>?	[]		OutlookVoiceSearch	Speech	1	1.13		
+e942537e-2fa0-42bb-b7e5-c7671829cf14	0		user	Show meetings for today.		CALENDAR	find_calendar_entry	Show meetings for <start_date>today</start_date>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+6fc2a601-6678-42dc-bb95-6d2b5fae49c9	0		user	It's our meeting.		CALENDAR	find_calendar_entry	It's our meeting.	[]		OutlookVoiceSearch	Speech	1	1.13		
+274e7696-0108-4a7e-8987-b12e04960a04	0		user	Doctors appointment tomorrow at 5:00 PM.		CALENDAR	find_calendar_entry	<title>Doctors appointment</title> <start_date>tomorrow</start_date> at <start_time>5:00 PM</start_time>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+d9e4b45b-637a-4d95-8f29-4f3317e9914c	0		user	Meeting with Ajoy.		CALENDAR	find_calendar_entry	Meeting with <contact_name>Ajoy</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+c181d6f8-d5da-4c49-a26a-e3397a64493a	0		user	ATA meeting.		CALENDAR	find_calendar_entry	<title>ATA meeting</title>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+4964233e-7644-4faf-86eb-4551dd990100	0		user	Testing events.		CALENDAR	find_calendar_entry	<title>Testing events</title>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+865fde3d-8245-41ea-a68f-e4a94deda005	0		user	Meeting with Katrina.		CALENDAR	find_calendar_entry	Meeting with <contact_name>Katrina</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+d4ce9ed3-0312-4573-8660-a3577a3eb00b	0		user	My next one on one with Craig.		CALENDAR	find_calendar_entry	My <start_time>next</start_time> <title>one on one</title> with <contact_name>Craig</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+b6edf637-aab5-4819-b43d-83163bae2c10	0		user	Do I have any meetings?		CALENDAR	find_calendar_entry	Do I have any meetings?	[]		OutlookVoiceSearch	Speech	1	1.13		
+c69be559-893a-4a05-b807-df0f4e04a987	0		user	Meeting with Mil.		CALENDAR	find_calendar_entry	Meeting with <contact_name>Mil</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+4b8ad851-1568-4985-9d6e-e12ca9c2fb7c	0		user	Meeting some servers.		CALENDAR	find_calendar_entry	Meeting some servers.	[]		OutlookVoiceSearch	Speech	1	1.13		
+260c5b5a-b382-4fba-a802-2abf4c96b39c	0		user	Meetings with so much.		CALENDAR	find_calendar_entry	Meetings with <contact_name>so much</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+0b90d11b-886c-4d40-a397-48eb525c15aa	0		user	What do I have today?		CALENDAR	find_calendar_entry	What do I have <start_date>today</start_date>?	[]		OutlookVoiceSearch	Speech	1	1.13		
+0cba14e1-27c1-4514-bb29-9095313a5ccb	0		user	What's my next appointment?		CALENDAR	find_calendar_entry	What's my <start_time>next</start_time> appointment?	[]		OutlookVoiceSearch	Speech	1	1.13		
+867f77ae-9457-47dd-ba83-6694785be860	0		user	What's on my calendar?		CALENDAR	find_calendar_entry	What's on my calendar?	[]		OutlookVoiceSearch	Speech	1	1.13		
+fcea79c9-f795-49a5-b1d5-23b65c829265	0		user	Do I have any evening or late night meetings today?		CALENDAR	find_calendar_entry	Do I have any <start_time>evening</start_time> or <start_time>late night</start_time> meetings <start_date>today</start_date>?	[]		OutlookVoiceSearch	Speech	1	1.13		
+e1db3694-f646-4259-99b9-8a1fccbdea99	0		user	Meeting with Phillip.		CALENDAR	find_calendar_entry	Meeting with <contact_name>Phillip</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+4a3368cb-33de-40fe-bcbb-52ced72d8ab8	0		user	Meetings with Ajoy.		CALENDAR	find_calendar_entry	Meetings with <contact_name>Ajoy</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+f038bc6e-8b04-43a0-8174-172b68f24868	0		user	Meetings with Sneha.		CALENDAR	find_calendar_entry	Meetings with <contact_name>Sneha</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+0ae5df2e-d2e9-451d-84da-412812379ea9	0		user	Said meeting with Lydia next week.		CALENDAR	find_calendar_entry	Said meeting with <contact_name>Lydia</contact_name> <start_date>next week</start_date>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+d0b02eb6-8a01-4a2f-b548-2503b7ba9804	0		user	Isaacs meetings.		CALENDAR	find_calendar_entry	<contact_name>Isaacs</contact_name> meetings.	[]		OutlookVoiceSearch	Speech	1	1.13		
+ccfa3d17-4073-4ab9-bfcf-aec260656b13	0		user	Find new emails from Talon.		EMAILSEARCH	search_email	Find <message_category>new</message_category> <message_type>emails</message_type> from <contact_name_from>Talon</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+8ebf51f2-f72a-413f-8424-93538cd19ec4	0		user	Emails for a manager.		EMAILSEARCH	search_email	<message_type>Emails</message_type> for a <contact_name_to>manager</contact_name_to>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+9f43977a-77d0-46a5-beda-9a0035d514ed	0		user	Find emails from Ajoy.		EMAILSEARCH	search_email	Find <message_type>emails</message_type> from <contact_name_from>Ajoy</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+28f5edc8-6926-48db-888e-2f20d6217390	0		user	Emails from Enrique about QF.		EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Enrique</contact_name_from> about <keyword>QF</keyword>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+67916fa6-59af-48f3-aba9-b13c15e5ca8b	0		user	Emails from Mani Ramamoorthy with attachments.		EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Mani Ramamoorthy</contact_name_from> with <attachment>attachments</attachment>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+c38db302-4005-46a4-8a79-7feb1bbc4359	0		user	Message from Shankha.		EMAILSEARCH	search_email	<message_type>Message</message_type> from <contact_name_from>Shankha</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+9c2fb82c-6d4a-4caf-b4d1-99fed5a06d8b	0		user	Emails about retention.		EMAILSEARCH	search_email	<message_type>Emails</message_type> about <keyword>retention</keyword>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+3180cb35-13b8-46ea-9774-0f7f6a70341f	0		user	Show files that Quazi sent me.		FILES	file_search	Show files that <contact_name>Quazi</contact_name> <file_action>sent</file_action> <to_contact_name>me</to_contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+874e843f-c5f6-45fb-ac39-bb302f1d8209	0		user	Find emails from God of serene.		EMAILSEARCH	search_email	Find <message_type>emails</message_type> from <contact_name_from>God of serene</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+b82bda08-bda8-4924-bb35-d24d4ef1fc36	0		user	Show me emails from Amy about results.		EMAILSEARCH	search_email	Show me <message_type>emails</message_type> from <contact_name_from>Amy</contact_name_from> about <keyword>results</keyword>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+bc0d52ab-f4ee-4ea5-8198-631e0a95a4c1	0		user	Images from grease.		EMAILSEARCH	search_email	<attachment_type>Images</attachment_type> from <contact_name_from>grease</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+49ef0238-f1d5-42b0-a5bf-d7a1ca38fefe	0		user	Emails from Carl with attachments.		EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Carl</contact_name_from> with <attachment>attachments</attachment>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+ded0f854-32fa-44db-bc96-84d6493a5c0b	0		user	Files from Craig.		FILES	file_search	Files from <contact_name>Craig</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+f9f30575-5dc3-4e63-a121-da5684443b09	0		user	Show me emails on S500 guidance.		EMAILSEARCH	search_email	Show me <message_type>emails</message_type> on <keyword>S500 guidance</keyword>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+e6f18d28-5b7c-45cd-af49-303c9883bc4a	0		user	Find deck from Allison.		EMAILSEARCH	search_email	Find <attachment_type>deck</attachment_type> from <contact_name_from>Allison</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+c0b75746-77ee-40c3-8bac-dcdc6f129781	0		user	Email from Shwetambari Choo Jose.		EMAILSEARCH	search_email	<message_type>Email</message_type> from <contact_name_from>Shwetambari Choo Jose</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+db355766-1381-467d-8d2f-af7069e874d5	0		user	Emails from Ashok on Gaurav.		EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Ashok</contact_name_from> on <contact_name_from>Gaurav</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+df42bd38-5054-4fd6-bb58-67e809ba7505	0		user	Show me emails from Mike Brown with attachments.		EMAILSEARCH	search_email	Show me <message_type>emails</message_type> from <contact_name_from>Mike Brown</contact_name_from> with <attachment>attachments</attachment>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+1df7640b-5134-40a2-89c7-45df3786a1a5	0		user	Mails from Shankha.		EMAILSEARCH	search_email	<message_type>Mails</message_type> from <contact_name_from>Shankha</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+45b5a365-6a7f-4898-96ef-77f7542b02f5	0		user	Find emails from Diego that have attachments that don't do this and do that and yes it works perfectly.		EMAILSEARCH	search_email	Find <message_type>emails</message_type> from <contact_name_from>Diego</contact_name_from> that have <attachment>attachments</attachment> that don't do this and do that and yes it works perfectly.	[]		OutlookVoiceSearch	Speech	1	1.13		
+62586bfe-e9ff-4d0b-a91b-7636a706405c	0		user	Find the file I sent it to Trevor Harris.		FILES	file_search	Find the file <contact_name>I</contact_name> <file_action>sent</file_action> it to <to_contact_name>Trevor Harris</to_contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+120aadd8-9b6f-4841-b827-d02181410deb	0		user	Files from Diego's.		FILES	file_search	Files from <contact_name>Diego</contact_name>'s.	[]		OutlookVoiceSearch	Speech	1	1.13		
+8675656c-342f-4a5b-9bd5-e898909773f3	0		user	Emails from Ashok on topic.		EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Ashok</contact_name_from> on <keyword>topic</keyword>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+e154cea1-ffc6-4c47-923a-1c2126bbca33	0		user	Emails from Shwetambari between March 1st 2020 and April 1st 2020.		EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Shwetambari</contact_name_from> between <start_date>March 1st 2020</start_date> and <end_date>April 1st 2020</end_date>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+7b950a45-3a6a-42c0-b609-c8de537a35d4	0		user	Search for mails from Melissa.		EMAILSEARCH	search_email	Search for <message_type>mails</message_type> from <contact_name_from>Melissa</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+a125ad81-eaca-4870-8c0b-bb61f84a6a61	0		user	Find emails from beyond.		EMAILSEARCH	search_email	Find <message_type>emails</message_type> from <contact_name_from>beyond</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+1dcc4b18-2c4d-4e26-8cf2-fe9d2860a8c9	0		user	Email from Melissa in may.		EMAILSEARCH	search_email	<message_type>Email</message_type> from <contact_name_from>Melissa</contact_name_from> in <start_date>may</start_date>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+ee1cdec2-bb74-41df-a9da-3bbce9809f23	0		user	Mails from Diego.		EMAILSEARCH	search_email	<message_type>Mails</message_type> from <contact_name_from>Diego</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+43055c1b-f125-4cf8-a913-825be9db441f	0		user	Search for mails from Jose.		EMAILSEARCH	search_email	Search for <message_type>mails</message_type> from <contact_name_from>Jose</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+a1e7652b-f90b-4f92-817c-6ed01c22330d	0		user	Emails from Pradip.		EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Pradip</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+81cfe7ff-571a-4c2b-a393-d87886fa70aa	0		user	Email about things meeting to Mary.		EMAILSEARCH	search_email	<message_type>Email</message_type> about <keyword>things meeting</keyword> to <contact_name_to>Mary</contact_name_to>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+3e2e2f41-85c0-47fd-909e-a71eda7fb942	0		user	Email from Shwetambari.		EMAILSEARCH	search_email	<message_type>Email</message_type> from <contact_name_from>Shwetambari</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+2269e20c-34c2-4e64-bed7-bd6adaf0a976	0		user	Would file did Ravi send me yesterday?		FILES	file_search	Would file did <contact_name>Ravi</contact_name> <file_action>send</file_action> <to_contact_name>me</to_contact_name> <start_date>yesterday</start_date>?	[]		OutlookVoiceSearch	Speech	1	1.13		
+a59bdc40-4550-44a9-8e48-be89251291f9	0		user	Search for emails from Donna Liu.		EMAILSEARCH	search_email	Search for <message_type>emails</message_type> from <contact_name_from>Donna Liu</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+a21ce3c6-ab19-4596-8153-425234b3c48b	0		user	Emails from Jon Hamaker.		EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Jon Hamaker</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+b5cba234-1a7b-4f0f-820b-e7f315fdbcd8	0		user	Files from jose.a@zen3.com.		FILES	file_search	Files from <contact_name>jose.a@zen3.com</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+5ddba0f7-4f33-444f-afe2-de497b9a5e3a	0		user	Messages from Shokouhi for me.		EMAILSEARCH	search_email	<message_type>Messages</message_type> from <contact_name_from>Shokouhi</contact_name_from> for me.	[]		OutlookVoiceSearch	Speech	1	1.13		
+72b73865-2208-4bbe-a726-bb91e6416b3d	0		user	Show me emails from my manager.		EMAILSEARCH	search_email	Show me <message_type>emails</message_type> from <contact_name_from>my manager</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+8c64a9c1-d0d0-405f-b823-8bf8f3f55db0	0		user	Emails from Ashok.		EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Ashok</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+4c5aa415-bca6-452a-a746-43256f6d3753	0		user	Files from Jotham Parker.		FILES	file_search	Files from <contact_name>Jotham Parker</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+5136b3a3-65d0-4c8c-838c-8e6e944f3c16	0		user	Email Steven about present home.		EMAILSEARCH	search_email	<message_type>Email</message_type> <contact_name>Steven</contact_name> about <keyword>present home</keyword>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+4613f3d7-dd72-44e7-b652-f68d0ed2bf25	0		user	Show me the file that we make sent me yesterday.		FILES	file_search	Show me the file that <contact_name>we make</contact_name> <file_action>sent</file_action> <to_contact_name>me</to_contact_name> <start_date>yesterday</start_date>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+7f7cb8e8-ebcc-423a-a157-9fcde2081781	0		user	Newest emails today.		EMAILSEARCH	search_email	<order_ref>Newest</order_ref> <message_type>emails</message_type> <start_date>today</start_date>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+0ae0b684-6c73-4948-a28a-0e3e89a98868	0		user	Show me emails from John Stanzione about RSM.		EMAILSEARCH	search_email	Show me <message_type>emails</message_type> from <contact_name_from>John Stanzione</contact_name_from> about <keyword>RSM</keyword>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+689a2e39-bd94-4575-9dd0-b0d7dfe2a006	0		user	Email I sent to Simon.		EMAILSEARCH	search_email	<message_type>Email</message_type> I sent to <contact_name_to>Simon</contact_name_to>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+ec5f7091-6fe6-457c-b65e-e0ae9d032103	0		user	E mails from Jose Gomez-Angulo to Shwetambari Mokadam.		EMAILSEARCH	search_email	<message_type>E mails</message_type> from <contact_name_from>Jose Gomez-Angulo</contact_name_from> to <contact_name_to>Shwetambari Mokadam</contact_name_to>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+e623d6db-3ba2-47db-a228-60f5d240e197	0		user	Find Shwetambari's email.		EMAILSEARCH	search_email	Find <contact_name>Shwetambari</contact_name>'s <message_type>email</message_type>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+330deca9-413e-43ab-9bd8-af15f85c0408	0		user	Find emails from Kirsten with attachments.		EMAILSEARCH	search_email	Find <message_type>emails</message_type> from <contact_name_from>Kirsten</contact_name_from> with <attachment>attachments</attachment>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+6a4d6ef1-36f3-405b-9a45-bf696d528248	0		user	Emails from Shwetambari Mokadam.		EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Shwetambari Mokadam</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+de2225c6-8ff4-4337-bcc5-518bb2eb146e	0		user	Quick note to Malik.		EMAILSEARCH	search_email	<keyword>Quick</keyword> <attachment_type>note</attachment_type> to <contact_name_to>Malik</contact_name_to>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+6c7715e8-68fb-46d1-ab55-170d230c1471	0		user	Erika from Redmond.		EMAILSEARCH	search_email	<contact_name>Erika</contact_name> from <contact_name_from>Redmond</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+a093d38c-b6c1-4688-8155-02bb929e1370	0		user	Emails from Diego on quaas.		EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Diego</contact_name_from> on <keyword>quaas</keyword>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+9e71728b-4a37-4804-aa21-3524088cd12a	0		user	Find emails about gora.		EMAILSEARCH	search_email	Find <message_type>emails</message_type> about <keyword>gora</keyword>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+ca8cb562-19b7-4fea-b63f-761bfff5f953	0		user	Email from Jose.		EMAILSEARCH	search_email	<message_type>Email</message_type> from <contact_name_from>Jose</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+9abde0e6-8ff3-4f2f-8bba-64d9f081a511	0		user	Files from Allison.		FILES	file_search	Files from <contact_name>Allison</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+edc81b00-be44-4dc3-942c-48b265f49cdf	0		user	Mail to Malik.		EMAILSEARCH	search_email	<message_type>Mail</message_type> to <contact_name_to>Malik</contact_name_to>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+21e86c49-04c4-4c95-9441-0650193d2c39	0		user	Email Steven about H2 planning.		EMAILSEARCH	search_email	<message_type>Email</message_type> <contact_name>Steven</contact_name> about <keyword>H2 planning</keyword>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+06f586f5-fcd0-4372-a777-296512fbf2f8	0		user	Emails from Diego on S+A.		EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Diego</contact_name_from> on <keyword>S+A</keyword>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+51931a1e-354b-4715-aa6a-8a2724888305	0		user	Show me emails from my direct reports.		EMAILSEARCH	search_email	Show me <message_type>emails</message_type> from <contact_name_from>my direct reports</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+c857c091-d7e4-41c7-8a4b-bbd89a00f6fa	0		user	Show me emails from Alex Hu.		EMAILSEARCH	search_email	Show me <message_type>emails</message_type> from <contact_name_from>Alex Hu</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+c197719c-17af-484c-a576-ea9d3cad9aa0	0		user	Emails from Jose battery March 1st 2020 and April 1st 2020.		EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Jose battery</contact_name_from> <start_date>March 1st 2020</start_date> and <end_date>April 1st 2020</end_date>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+492d905d-1bf0-4c4d-84da-fe54edcd242c	0		user	Emails from Shwetambari Mokadam between March 1st 2020 and April 1st 2020.		EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Shwetambari Mokadam</contact_name_from> between <start_date>March 1st 2020</start_date> and <end_date>April 1st 2020</end_date>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+770b5cf4-9129-4c67-9b33-c66857805cab	0		user	Find new emails from Jose about Christmas vacation.		EMAILSEARCH	search_email	Find <message_category>new</message_category> <message_type>emails</message_type> from <contact_name_from>Jose</contact_name_from> about <keyword>Christmas vacation</keyword>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+d6827af5-d206-48f0-9557-c092558339c8	0		user	Search for mails from Shwetambari.		EMAILSEARCH	search_email	Search for <message_type>mails</message_type> from <contact_name_from>Shwetambari</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+cbb06593-cc99-4201-a5b1-3ac76a80f8fa	0		user	Vacation reporting.		EMAILSEARCH	search_email	<keyword>Vacation reporting</keyword>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+2a4cbe1c-2ed5-448d-9353-15b454f88f5e	0		user	Emails at go honey.		EMAILSEARCH	search_email	<message_type>Emails</message_type> at <keyword>go honey</keyword>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+649845b6-4003-41ca-85df-18377f3faefe	0		user	Files from Jose.		FILES	file_search	Files from <contact_name>Jose</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+525610ce-d8a3-4cdc-a99f-b60771cc186b	0		user	Emails from Nitin.		EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Nitin</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+b0b544cf-5388-4660-9d32-798cd950d01c	0		user	Show me emails from Vijay.		EMAILSEARCH	search_email	Show me <message_type>emails</message_type> from <contact_name_from>Vijay</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+14510d42-380a-4b69-b42b-f3b8133d2487	0		user	Find new emails from Anuja.		EMAILSEARCH	search_email	Find <message_category>new</message_category> <message_type>emails</message_type> from <contact_name_from>Anuja</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+dfbf1477-d26e-47fb-856f-5f10dc97f058	0		user	Show me emails from Diego.		EMAILSEARCH	search_email	Show me <message_type>emails</message_type> from <contact_name_from>Diego</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+50f77fc1-af64-4dc9-831c-8813d1a12e55	0		user	Search mails from Shwetambari Mokadam.		EMAILSEARCH	search_email	Search <message_type>mails</message_type> from <contact_name_from>Shwetambari Mokadam</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+4f076b7d-4b83-47e5-bf70-db6f3668dbca	0		user	Yiwen Wu serious.		EMAILSEARCH	search_email	<contact_name>Yiwen Wu</contact_name> <keyword>serious</keyword>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+2f5b8634-bf9a-4ff2-b1da-70b569c045ba	0		user	Emails from Shwetambari last month.		EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Shwetambari</contact_name_from> <start_date>last month</start_date>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+d6a7eee2-cb8a-494a-9ce1-b33c247bc959	0		user	Abraham Jacob email.		EMAILSEARCH	search_email	<contact_name>Abraham Jacob</contact_name> <message_type>email</message_type>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+34fb898d-b56a-40af-8c8f-25a7aa1ee894	0		user	Emails from this week with attachments.		EMAILSEARCH	search_email	<message_type>Emails</message_type> from <start_date>this week</start_date> with <attachment>attachments</attachment>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+6fa3f0c8-39ce-4d61-b3ac-186622cfa794	0		user	Show me emails from Craig.		EMAILSEARCH	search_email	Show me <message_type>emails</message_type> from <contact_name_from>Craig</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+83007f68-61ab-4d01-8b5e-46682bb94306	0		user	Email from Shwetambari in March.		EMAILSEARCH	search_email	<message_type>Email</message_type> from <contact_name_from>Shwetambari</contact_name_from> in <start_date>March</start_date>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+b572ea45-c92a-44ac-8ce9-53aa98c17bb3	0		user	Find new emails from Tasha.		EMAILSEARCH	search_email	Find <message_category>new</message_category> <message_type>emails</message_type> from <contact_name_from>Tasha</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+32f0612e-1133-4e20-af50-c98dd5f29365	0		user	Message from JD Ferre about Polymer deployment.		EMAILSEARCH	search_email	Message from <contact_name_from>JD Ferre</contact_name_from> about <keyword>Polymer deployment</keyword>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+2fa9f328-ff70-4fee-8196-ff18dded4ca9	0		user	Find emails from Shelley Bjornstad.		EMAILSEARCH	search_email	Find <message_type>emails</message_type> from <contact_name_from>Shelley Bjornstad</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+a5499fa0-9d2f-4d65-990f-77024f36c236	0		user	I usually find email from Jose about Christmas vacation.		EMAILSEARCH	search_email	I usually find <message_type>email</message_type> from <contact_name_from>Jose</contact_name_from> about <keyword>Christmas vacation</keyword>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+317c0f3d-38e2-44e0-b06f-6124bfad4cb8	0		user	Find emails from Brian with attachments.		EMAILSEARCH	search_email	Find <message_type>emails</message_type> from <contact_name_from>Brian</contact_name_from> with <attachment>attachments</attachment>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+086406cf-cf4d-4039-b762-6b8d237196e0	0		user	Email from Jose in March.		EMAILSEARCH	search_email	<message_type>Email</message_type> from <contact_name_from>Jose</contact_name_from> in <start_date>March</start_date>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+079ee7d5-e80f-4fb5-8b9d-4d04759cd234	0		user	Show me all emails from Dominic LaGiglia in the last month.		EMAILSEARCH	search_email	Show me all <message_type>emails</message_type> from <contact_name_from>Dominic LaGiglia</contact_name_from> in the <start_date>last month</start_date>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+a77d844e-f01e-48a0-8e8b-907afa0c395c	0		user	Files from Ajoy.		FILES	file_search	Files from <contact_name>Ajoy</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+10e378f5-f1a6-421d-85ba-a9cb0defa895	0		user	Emails from Ana.		EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Ana</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+024d50a4-76c6-48b3-9ac7-7b1032ecb440	0		user	Find emails from Malia Douglas.		EMAILSEARCH	search_email	Find <message_type>emails</message_type> from <contact_name_from>Malia Douglas</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+bd465b6c-da78-4876-9221-220ff1bdb3d6	0		user	Vacation scanning of ember 2021.		EMAILSEARCH	search_email	<keyword>Vacation scanning of ember 2021</keyword>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+05bd8a4f-b850-45a5-82e0-a8dd4f708ee5	0		user	Emails from Ramesh.		EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Ramesh</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+a98d33b8-df65-4054-9b92-5e70ab6cbaa2	0		user	Email from Ramesh.		EMAILSEARCH	search_email	<message_type>Email</message_type> from <contact_name_from>Ramesh</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+5c1faba6-77ef-4ae7-8ba8-4026a9086c5c	0		user	ML Christian with the message queue IP.		EMAILSEARCH	search_email	<contact_name>ML Christian</contact_name> with the <message_type>message</message_type> <keyword>queue IP</keyword>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+67d7e0e3-bf6c-4333-9ac3-341dc7ec2d5c	0		user	Emails from Shwetambari with attachments.		EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Shwetambari</contact_name_from> with <attachment>attachments</attachment>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+c5b6c230-7295-4aeb-ac9e-66860d974351	0		user	Email from Shwetambari last month.		EMAILSEARCH	search_email	<message_type>Email</message_type> from <contact_name_from>Shwetambari</contact_name_from> <start_date>last month</start_date>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+8f3ff4ca-553a-4559-834c-08103e1f648d	0		user	Email from Shwetambari Mokadam in March.		EMAILSEARCH	search_email	<message_type>Email</message_type> from <contact_name_from>Shwetambari Mokadam</contact_name_from> in <start_date>March</start_date>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+c755b399-6ce4-4778-8737-66cdb8aa172a	0		user	Dec from Allison.		EMAILSEARCH	search_email	<start_date>Dec</start_date> from <contact_name_from>Allison</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+8e850cc2-ad8d-4703-9bab-096fdf8cef01	0		user	Emails from Rich.		EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Rich</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+b0337623-d0ba-4e24-8118-ebc5f5006a6c	0		user	Files from Maggie.		FILES	file_search	Files from <contact_name>Maggie</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+f320bb09-1bca-478f-9f1f-1f1b23f474e7	0		user	Find Shwetambari email.		EMAILSEARCH	search_email	Find <contact_name>Shwetambari</contact_name> <message_type>email</message_type>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+fed14782-7642-4197-85b8-6c436e42121a	0		user	Emails from Ron Drake in the past week.		EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Ron Drake</contact_name_from> in the <start_date>past week</start_date>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+1a4934db-ef96-4c8b-a138-44b32fc096d7	0		user	Email from Shwetambari Mokadam between March 1st few on the 20 and April 1st 2020.		EMAILSEARCH	search_email	<message_type>Email</message_type> from <contact_name_from>Shwetambari Mokadam</contact_name_from> between <start_date>March 1st</start_date> few on the <start_date>20</start_date> and <end_date>April 1st 2020</end_date>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+ca0d7667-eac0-4312-9943-8ef8fb1b3b02	0		user	Emails from Mani Ramamoorthy.		EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Mani Ramamoorthy</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+0fc78e7f-5490-4b33-bdc3-a70a0f72bd21	0		user	Email from Melissa.		EMAILSEARCH	search_email	<message_type>Email</message_type> from <contact_name_from>Melissa</contact_name_from>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+716be22c-47ca-462f-bf2a-b7e4d0d992e0	0		user	Emails from Ashok on El you.		EMAILSEARCH	search_email	<message_type>Emails</message_type> from <contact_name_from>Ashok</contact_name_from> on <keyword>El you</keyword>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+81be26c5-04d0-4c8b-8a81-9143553a5c9f	0		user	Find it Shwetambari email.		EMAILSEARCH	search_email	Find it <contact_name>Shwetambari</contact_name> <message_type>email</message_type>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+0cf1f30a-01a7-4195-9e72-f9c0afa5b2c8	0		user	Show me emails from Mike Brown between January 1st in January 18th with attachments.		EMAILSEARCH	search_email	Show me <message_type>emails</message_type> from <contact_name_from>Mike Brown</contact_name_from> between <start_date>January 1st</start_date> in <end_date>January 18th</end_date> with <attachment>attachments</attachment>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+2fa8ed8d-c40a-4416-914f-d3e1c437a6dc	0		user	Any message from Craig?		EMAILSEARCH	search_email	Any <message_type>message</message_type> from <contact_name_from>Craig</contact_name_from>?	[]		OutlookVoiceSearch	Speech	1	1.13		
+3c98163d-bb40-4c9b-be15-549acee7fa93	0		user	Abraham email.		EMAILSEARCH	search_email	<contact_name>Abraham</contact_name> <message_type>email</message_type>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+da371d30-1e21-4f68-9386-662907720a3e	0		user	Find emails about QAS.		EMAILSEARCH	search_email	Find <message_type>emails</message_type> about <keyword>QAS</keyword>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+057fc2fd-c240-40df-a8ed-32829f756bd9	0		user	Files from Katrina.		FILES	file_search	Files from <contact_name>Katrina</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+37e075f2-4e95-43ee-a9b6-01b71b3d1439	0		user	Schedule a meeting with Saketh.		CALENDAR	create_calendar_entry	Schedule a meeting with <contact_name>Saketh</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+8a721c65-d825-428a-b815-e6ed8db9b5f8	0		user	Set up a teams meeting.		CALENDAR	create_calendar_entry	Set up a <meeting_type>teams</meeting_type> meeting.	[]		OutlookVoiceSearch	Speech	1	1.13		
+0ed6d348-930e-4f97-b492-469f65f4a3fd	0		user	Schedule a meeting with Robin Thomas.		CALENDAR	create_calendar_entry	Schedule a meeting with <contact_name>Robin Thomas</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+ba896848-654d-452c-b8f6-cc8f3f06fdb6	0		user	Set up a meeting with Chad.		CALENDAR	create_calendar_entry	Set up a meeting with <contact_name>Chad</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+1a258ce5-3d09-4343-9272-bf66db79ff4b	0		user	Create a meeting with Lydia.		CALENDAR	create_calendar_entry	Create a meeting with <contact_name>Lydia</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+4ef4da00-8d14-4d26-b17c-1f9fd2a8d458	0		user	Create a meeting today.		CALENDAR	create_calendar_entry	Create a meeting <start_date>today</start_date>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+bcbaa428-51cc-4fa2-ae22-ecb4e450967f	0		user	Set up an appointment tomorrow at 5:00 PM.		CALENDAR	create_calendar_entry	Set up an appointment <start_date>tomorrow</start_date> at <start_time>5:00 PM</start_time>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+7834cab6-e39b-4345-aafb-986f0f1decab	0		user	Set up a meeting with Talon.		CALENDAR	create_calendar_entry	Set up a meeting with <contact_name>Talon</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+a66abe6b-6ee2-43e4-881f-acd1891dde52	0		user	Set up a meeting with Nathan.		CALENDAR	create_calendar_entry	Set up a meeting with <contact_name>Nathan</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+80f63104-9c72-4b10-a17d-f113fdb7e069	0		user	Set up a meeting about model B.		CALENDAR	create_calendar_entry	Set up a meeting about <title>model B</title>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+83a36b50-b822-4cc3-bfdf-767ee7415a89	0		user	Create a doctors appointment.		CALENDAR	create_calendar_entry	Create a <title>doctors appointment</title>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+029104a4-10e2-4e6f-8d0f-2100750d66d4	0		user	Set up a meeting with Chad in the mid tomorrow.		CALENDAR	create_calendar_entry	Set up a meeting with <contact_name>Chad</contact_name> in the mid <start_date>tomorrow</start_date>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+5f7c53ec-4956-47b3-8509-e4e8bcd94acb	0		user	Create a meeting invite for Allison.		CALENDAR	create_calendar_entry	Create a meeting invite for <contact_name>Allison</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+b3d1f144-7cb9-4066-bb3a-2007a3ade757	0		user	Schedule a new meeting with Saku.		CALENDAR	create_calendar_entry	Schedule a new meeting with <contact_name>Saku</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+0e6f049c-5afd-4ff8-b125-0434626c9fc2	0		user	Add doctors appointment to my calendar.		CALENDAR	create_calendar_entry	Add <title>doctors appointment</title> to my calendar.	[]		OutlookVoiceSearch	Speech	1	1.13		
+aa919096-f821-4846-a23f-0504e3b234b2	0		user	Create a meeting with Adarsh.		CALENDAR	create_calendar_entry	Create a meeting with <contact_name>Adarsh</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+3af96a68-5425-43bc-ab91-5093f8984a6f	0		user	Set up time with August for next Thursday.		CALENDAR	create_calendar_entry	Set up time with <contact_name>August</contact_name> for <start_date>next Thursday</start_date>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+8fccf3cc-e830-42ba-9ece-e6950de6701a	0		user	Set up a meeting with Jon.		CALENDAR	create_calendar_entry	Set up a meeting with <contact_name>Jon</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+695d7738-9f63-4d8a-8b93-1b6dd03737f1	0		user	Set up meeting with Allison.		CALENDAR	create_calendar_entry	Set up meeting with <contact_name>Allison</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+b859dd6f-195c-44bb-a059-737f643734e0	0		user	Schedule a new meeting.		CALENDAR	create_calendar_entry	Schedule a new meeting.	[]		OutlookVoiceSearch	Speech	1	1.13		
+2bf62439-2aed-4a16-871f-c6faf1625d75	0		user	Create a meeting with Narendra.		CALENDAR	create_calendar_entry	Create a meeting with <contact_name>Narendra</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+44e0cb80-7797-44f6-8f70-0c7770815fda	0		user	Set up a meeting with Adarsh.		CALENDAR	create_calendar_entry	Set up a meeting with <contact_name>Adarsh</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+7581a056-12dd-4c2c-8a30-f87a54cf4c31	0		user	Set up a meeting.		CALENDAR	create_calendar_entry	Set up a meeting.	[]		OutlookVoiceSearch	Speech	1	1.13		
+5e671e49-5b13-4379-b486-6c8a4a72efe7	0		user	Create a meeting with Beryl.		CALENDAR	create_calendar_entry	Create a meeting with <contact_name>Beryl</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+7b54d146-2025-431c-bce3-19847e64b184	0		user	Create a meeting with Rich.		CALENDAR	create_calendar_entry	Create a meeting with <contact_name>Rich</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+f983cd17-69ba-4a45-8a04-05390101f15f	0		user	Set up a meeting with Allison.		CALENDAR	create_calendar_entry	Set up a meeting with <contact_name>Allison</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+50d86330-bfea-4386-9da0-adff4c93784b	0		user	Set up a meeting with EMI.		CALENDAR	create_calendar_entry	Set up a meeting with <contact_name>EMI</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+03da507a-250f-43c7-a9bd-1f8bbe7fbfcd	0		user	Right now we don't support meeting schedule set up a meeting at.		CALENDAR	create_calendar_entry	Right now we don't support meeting schedule set up a meeting at.	[]		OutlookVoiceSearch	Speech	1	1.13		
+c440d92c-efee-4bd7-9523-ddc99cf99ca8	0		user	Create a meeting with this thread.		CALENDAR	create_calendar_entry	Create a meeting with this thread.	[]		OutlookVoiceSearch	Speech	1	1.13		
+48677e1c-aee8-49e7-9ae4-0fbcc013cea8	0		user	Set up meeting with Carl.		CALENDAR	create_calendar_entry	Set up meeting with <contact_name>Carl</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+4dd38a9c-d2da-418a-a282-e0a222decff4	0		user	Now can fall into their marketing efforts around their printing devices so I set up meeting with Carl.		CALENDAR	create_calendar_entry	Now can fall into their marketing efforts around their printing devices so I set up meeting with <contact_name>Carl</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+adc6db79-46d8-4628-81b6-6a76a068c023	0		user	Set a meeting with Lydia tomorrow at 2:00 PM.		CALENDAR	create_calendar_entry	Set a meeting with <contact_name>Lydia</contact_name> <start_date>tomorrow</start_date> at <start_time>2:00 PM</start_time>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+2ae8c97f-282a-4813-8614-e65a82d07b2a	0		user	June 6th.		NOTSURE	ambiguous	June 6th.	[]		OutlookVoiceSearch	Speech	1	1.13		
+434eeb55-9024-4852-be8b-e3a76ab8b3e4	0		user	Find me.		NOTSURE	ambiguous	Find me.	[]		OutlookVoiceSearch	Speech	1	1.13		
+a278fadd-9601-43c5-897f-c364b7b669f4	0		user	Yiwen Wu.		NOTSURE	ambiguous	Yiwen Wu.	[]		OutlookVoiceSearch	Speech	1	1.13		
+dfd5e455-df7e-4539-8e38-0da657c56e1b	0		user	Show me.		NOTSURE	ambiguous	Show me.	[]		OutlookVoiceSearch	Speech	1	1.13		
+3d196b95-37a1-411f-ab74-11ea96ecbded	0		user	Rajesh Jha.		NOTSURE	ambiguous	Rajesh Jha.	[]		OutlookVoiceSearch	Speech	1	1.13		
+3fba5fac-ec39-4ddf-83d6-28fb31009dfe	0		user	Give me John.		NOTSURE	ambiguous	Give me John.	[]		OutlookVoiceSearch	Speech	1	1.13		
+ad6cc6cf-065a-483a-9ac7-1f39d84617fb	0		user	Find.		NOTSURE	ambiguous	Find.	[]		OutlookVoiceSearch	Speech	1	1.13		
+3a593bb4-936f-4a0e-945b-88f42836192b	0		user	Expenses.		NOTSURE	ambiguous	Expenses.	[]		OutlookVoiceSearch	Speech	1	1.13		
+33b0229f-6088-4fc8-a991-00dbb344cbc4	0		user	Jose contact information.		NOTSURE	ambiguous	Jose contact information.	[]		OutlookVoiceSearch	Speech	1	1.13		
+ec096434-0cdd-41ea-b88b-2502178df982	0		user	Tomorrow at lunchtime.		NOTSURE	ambiguous	Tomorrow at lunchtime.	[]		OutlookVoiceSearch	Speech	1	1.13		
+30124cc1-62f7-456a-931b-f19fde6fb84f	0		user	Shwetambari compact.		NOTSURE	ambiguous	Shwetambari compact.	[]		OutlookVoiceSearch	Speech	1	1.13		
+f1e2e473-3811-436a-9e0a-e4a4fc607de6	0		user	Find Jose.		PEOPLE	search_people_by_name	Find <contact_name>Jose</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+50e079a9-e5fd-4253-9215-3561b935dd0d	0		user	Gaurav Anand.		PEOPLE	search_people_by_name	Gaurav Anand.	[]		OutlookVoiceSearch	Speech	1	1.13		
+5f0f41ee-1d95-4b86-9db8-1b96c480268b	0		user	Find Dwight.		PEOPLE	search_people_by_name	Find <contact_name>Dwight</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+baccf34d-152e-4818-a75e-aa202771c615	0		user	Show me most about Gaurav.		PEOPLE	search_people_by_name	Show me most about <contact_name>Gaurav</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+59f71c3f-47c7-47c4-b097-4e3d268eb3e0	0		user	Who is Michael Anderson?		PEOPLE	search_people_by_name	Who is <contact_name>Michael Anderson</contact_name>?	[]		OutlookVoiceSearch	Speech	1	1.13		
+db5aad8b-ee43-41da-8022-ea564f6f77bf	0		user	Who is Jennifer?		PEOPLE	search_people_by_name	Who is <contact_name>Jennifer</contact_name>?	[]		OutlookVoiceSearch	Speech	1	1.13		
+83e5edbb-e105-4b9d-84ed-49a93cd1455f	0		user	Craig Miller.		PEOPLE	search_people_by_name	<contact_name>Craig Miller</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+fa2ca56a-a38d-46fe-98e8-59ef328b624e	0		user	Abraham profile.		PEOPLE	search_people_by_name	<contact_name>Abraham</contact_name> profile.	[]		OutlookVoiceSearch	Speech	1	1.13		
+0e7fc980-7568-4f92-b869-fd8bb7e33fc9	0		user	Who's David Stewart?		PEOPLE	search_people_by_name	Who's <contact_name>David Stewart</contact_name>?	[]		OutlookVoiceSearch	Speech	1	1.13		
+6300fd7d-a0aa-4880-858d-1cbfd11f77b4	0		user	Ajoy Nandi.		PEOPLE	search_people_by_name	Ajoy Nandi.	[]		OutlookVoiceSearch	Speech	1	1.13		
+e492fcb5-a257-4782-a50b-b0ac5e7a9a47	0		user	Who is Nitin?		PEOPLE	search_people_by_name	Who is <contact_name>Nitin</contact_name>?	[]		OutlookVoiceSearch	Speech	1	1.13		
+3bead2ac-083b-4169-baca-f3e9a9a30e69	0		user	Who's Steven Reese?		PEOPLE	search_people_by_name	Who's <contact_name>Steven Reese</contact_name>?	[]		OutlookVoiceSearch	Speech	1	1.13		
+69207f54-7560-4fda-8323-c10654279921	0		user	Find Ajoy.		PEOPLE	search_people_by_name	Find <contact_name>Ajoy</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+ce1d7814-dc05-4988-a5d5-f8c9405996bd	0		user	Who's Bill Morris?		PEOPLE	search_people_by_name	Who's <contact_name>Bill Morris</contact_name>?	[]		OutlookVoiceSearch	Speech	1	1.13		
+6bb33a83-ed17-40de-b76a-2a16d96aa3db	0		user	Find Katrina.		PEOPLE	search_people_by_name	Find <contact_name>Katrina</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+c5e66f27-84bf-4e44-b32e-c34276b7a078	0		user	Show files that has a century.		FILES	file_search	Show files that has a <file_keyword>century</file_keyword>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+7937a635-14a6-43e3-8629-97ee4587a18e	0		user	Jose's files.		FILES	file_search	<contact_name>Jose</contact_name>'s files.	[]		OutlookVoiceSearch	Speech	1	1.13		
+5ad37546-f19b-4808-8551-632651366cd9	0		user	Melissa Sims's files.		FILES	file_search	<contact_name>Melissa Sims</contact_name>'s files.	[]		OutlookVoiceSearch	Speech	1	1.13		
+b73b7e4a-59d2-4da9-8b21-b8b6ecc894e1	0		user	PowerPoint deck on Ms Poll.		FILES	file_search	<file_type>PowerPoint deck</file_type> on <file_keyword>Ms Poll</file_keyword>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+53665ebb-f850-4f57-86c2-cbbd39dbbadc	0		user	Answers 3S Answer mentation file.		FILES	file_search	<file_keyword>Answers 3S Answer mentation</file_keyword> file.	[]		OutlookVoiceSearch	Speech	1	1.13		
+e82d205f-1e0d-41f1-a5e4-960b6ffdf78e	0		user	What's the last file from Rena?		FILES	file_search	What's the <order_ref>last</order_ref> file from <contact_name>Rena</contact_name>?	[]		OutlookVoiceSearch	Speech	1	1.13		
+a290e868-633e-47ca-94a6-7a9b017b6fcb	0		user	Show me the file that Vivek sent me.		FILES	file_search	Show me the file that <contact_name>Vivek</contact_name> <file_action>sent</file_action> <to_contact_name>me</to_contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+9fc6edb8-4af9-4882-967f-e64b9c4175eb	0		user	Document titled file for task bug.		FILES	file_search	Document titled <file_name>file for task bug</file_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+ece6261c-1b69-4cfe-a305-058095abf968	0		user	Document titled file for test dog.		FILES	file_search	Document titled <file_name>file for test dog</file_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+a1424d80-f4ff-4aa3-8c31-0b2b76e9978a	0		user	Find Food for Children PPT.		FILES	file_search	Find <file_keyword>Food for Children</file_keyword> <file_type>PPT</file_type>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+e0848ddb-9d80-4cc4-af6e-51e9db29d5d2	0		user	Could you please show me the shiproom files?		FILES	file_search	Could you please show me the <file_keyword>shiproom</file_keyword> files?	[]		OutlookVoiceSearch	Speech	1	1.13		
+98229903-2533-4c74-a3d4-8cdb00c92b39	0		user	Yiwen Wu's files.		FILES	file_search	<contact_name>Yiwen Wu</contact_name>'s files.	[]		OutlookVoiceSearch	Speech	1	1.13		
+6b2b14d3-cb02-4a03-9f88-4b81283584e5	0		user	Show me the files that Ravi sent me yesterday.		FILES	file_search	Show me the files that <contact_name>Ravi</contact_name> <file_action>sent</file_action> <to_contact_name>me</to_contact_name> <date>yesterday</date>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+06568a20-ced1-4951-bdf4-6a08eebbba20	0		user	Forward this to Enrique.		CALENDAR	add_attendee	Forward this to <contact_name>Enrique</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+9f7adfe1-cca4-4844-9564-fb7229dcf9e5	0		user	When's my next meeting?		CALENDAR	find_calendar_when	When's my <start_time>next</start_time> meeting?	[]		OutlookVoiceSearch	Speech	1	1.13		
+cd55bf67-8f3f-446e-add7-e19e9421a047	0		user	When's the next ESC meeting?		CALENDAR	find_calendar_when	When's the <start_time>next</start_time> <title>ESC meeting</title>?	[]		OutlookVoiceSearch	Speech	1	1.13		
+9fb3d908-73e7-4a79-b567-e3bb61a30eb2	0		user	When's my next meeting with my manager?		CALENDAR	find_calendar_when	When's my <start_time>next</start_time> meeting with my <relationship_name>manager</relationship_name>?	[]		OutlookVoiceSearch	Speech	1	1.13		
+da409dce-1ad2-4d68-9c12-cb9cfa51e7eb	0		user	When is my next meeting with Tom Trimper?		CALENDAR	find_calendar_when	When is my <start_time>next</start_time> meeting with <contact_name>Tom Trimper</contact_name>?	[]		OutlookVoiceSearch	Speech	1	1.13		
+ca9d8b00-5274-47d6-8069-15f11bab36e8	0		user	When is my next meeting with National fuel?		CALENDAR	find_calendar_when	When is my <start_time>next</start_time> meeting with <contact_name>National fuel</contact_name>?	[]		OutlookVoiceSearch	Speech	1	1.13		
+a6f1dd6c-522b-4096-8376-55d0c1e5a39d	0		user	When's my next meeting with Pat?		CALENDAR	find_calendar_when	When's my <start_time>next</start_time> meeting with <contact_name>Pat</contact_name>?	[]		OutlookVoiceSearch	Speech	1	1.13		
+e446efb5-546d-4161-b67e-b79b4221f2f5	0		user	When is my next meeting?		CALENDAR	find_calendar_when	When is my <start_time>next</start_time> meeting?	[]		OutlookVoiceSearch	Speech	1	1.13		
+2d05a568-fa79-4dd8-af79-822c7a14b38d	0		user	They will do whatever it higher for test dog.		NOTSURE	notsure_other	They will do whatever it higher for test dog.	[]		OutlookVoiceSearch	Speech	1	1.13		
+62bf4689-690d-449c-b47e-743586a12773	0		user	What?		NOTSURE	notsure_other	What?	[]		OutlookVoiceSearch	Speech	1	1.13		
+697fdfab-53da-492f-8aeb-35c31011da8d	0		user	Play mouse.		NOTSURE	notsure_other	Play mouse.	[]		OutlookVoiceSearch	Speech	1	1.13		
+5cb6e91d-ffe4-4f0a-be07-e0287d58f720	0		user	Stevens form.		NOTSURE	notsure_other	Stevens form.	[]		OutlookVoiceSearch	Speech	1	1.13		
+a6bd919a-c619-40b3-b293-90b447959460	0		user	Email Diego that I am running late.		NOTSURE	notsure_other	Email Diego that I am running late.	[]		OutlookVoiceSearch	Speech	1	1.13		
+4d613313-f782-4c79-967c-d846dbb0f5b4	0		user	He's trying.		NOTSURE	notsure_other	He's trying.	[]		OutlookVoiceSearch	Speech	1	1.13		
+547f5fc7-d0b4-414f-b563-0583c9b0d893	0		user	Have lunch?		NOTSURE	notsure_other	Have lunch?	[]		OutlookVoiceSearch	Speech	1	1.13		
+39dc64f6-f107-4dfe-a042-d12b60e71031	0		user	Send myself an email.		NOTSURE	notsure_other	Send myself an email.	[]		OutlookVoiceSearch	Speech	1	1.13		
+67b87261-02ba-4c0c-ab91-43023cd4ff56	0		user	What's up man?		NOTSURE	notsure_other	What's up man?	[]		OutlookVoiceSearch	Speech	1	1.13		
+bfbae64a-a0d5-41a5-a164-3c684585f6be	0		user	I'm scared for damary information.		NOTSURE	notsure_other	I'm scared for damary information.	[]		OutlookVoiceSearch	Speech	1	1.13		
+99835a23-265e-4804-8a0b-6fe783415e11	0		user	Email Talon.		NOTSURE	notsure_other	Email Talon.	[]		OutlookVoiceSearch	Speech	1	1.13		
+b574d2e1-6c90-41fc-ad81-ced0d15630ab	0		user	PowerPoint.		NOTSURE	notsure_other	PowerPoint.	[]		OutlookVoiceSearch	Speech	1	1.13		
+e24b1154-1a5a-49a4-9a92-24a36c294156	0		user	Close button.		NOTSURE	notsure_other	Close button.	[]		OutlookVoiceSearch	Speech	1	1.13		
+aae5bdf2-42b1-4b47-a5fd-fcdf5211242a	0		user	Find time for me this afternoon at 4:00 PM for design review.		CALENDAR	check_availability	Find time for me <start_time>this afternoon</start_time> at <start_time>4:00 PM</start_time> for <title>design review</title>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+3e158a66-c4a9-4d4b-a275-edfa05b45326	0		user	Find time for me and Saketh to go over presentation.		CALENDAR	check_availability	Find time for me and <contact_name>Saketh</contact_name> to <title>go over presentation</title>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+ca0293c1-0d87-4180-95b3-281a6015f557	0		user	Find free time.		CALENDAR	check_availability	Find <availability>free</availability> time.	[]		OutlookVoiceSearch	Speech	1	1.13		
+9bd74054-0a0e-4525-a059-8d745aaa6a7a	0		user	Find free time with Carlomagno.		CALENDAR	check_availability	Find <availability>free</availability> time with <contact_name>Carlomagno</contact_name>.	[]		OutlookVoiceSearch	Speech	1	1.13		
+39164499-3eab-43b7-8565-2d91267735cc	0		user	Yiwen was alias.		NOTSURE	non_sense	Yiwen was alias.	[]		OutlookVoiceSearch	Speech	1	1.13		
+a27fc848-82e6-4d7d-a7c9-11e17980157a	0		user	Find Android test result present.		NOTSURE	non_sense	Find Android test result present.	[]		OutlookVoiceSearch	Speech	1	1.13		
+a5c1043a-cc78-457d-ae23-e6289dc14ce2	0		user	UN serious.		NOTSURE	non_sense	UN serious.	[]		OutlookVoiceSearch	Speech	1	1.13		
+834f861a-2227-4a9e-9759-67cdcb43d10e	0		user	Send email to your arm.		NOTSURE	non_sense	Send email to your arm.	[]		OutlookVoiceSearch	Speech	1	1.13		
+bb344f09-962b-42ea-b22b-34490c522af9	0		user	Tally rough.		NOTSURE	non_sense	Tally rough.	[]		OutlookVoiceSearch	Speech	1	1.13		
+cd0d05a9-d870-4ee6-8838-78dc260d4ef1	0		user	Making the first search.		NOTSURE	non_sense	Making the first search.	[]		OutlookVoiceSearch	Speech	1	1.13		
+937601a6-559e-4612-9e00-7f268871f4a6	0		user	You mention.		NOTSURE	non_sense	You mention.	[]		OutlookVoiceSearch	Speech	1	1.13		
+581c0f21-65c7-40e7-a9ca-b885a100ece6	0		user	Email Diego married Li.		NOTSURE	non_sense	Email Diego married Li.	[]		OutlookVoiceSearch	Speech	1	1.13		
+9ea9f602-1f8a-4a11-bbb6-4ab2ff8abd48	0		user	The male with Venky and Bo.		NOTSURE	non_sense	The male with Venky and Bo.	[]		OutlookVoiceSearch	Speech	1	1.13		
+74c0f288-33f2-40a5-b5aa-6e00cbe0fe71	0		user	Laconia you do what is your purpose in life the what wildlife demo.		NOTSURE	non_sense	Laconia you do what is your purpose in life the what wildlife demo.	[]		OutlookVoiceSearch	Speech	1	1.13		
+c69734e9-5482-4a55-9f65-fd7c2fc66b68	0		user	Testing testing testing.		NOTSURE	non_sense	Testing testing testing.	[]		OutlookVoiceSearch	Speech	1	1.13		
+92a4d40d-26dc-4df7-b82d-2ef5896faeb5	0		user	Lunch.		NOTSURE	non_sense	Lunch.	[]		OutlookVoiceSearch	Speech	1	1.13		
+bdb2583c-8c19-4343-8ca2-345611e9558d	0		user	What is?		NOTSURE	non_sense	What is?	[]		OutlookVoiceSearch	Speech	1	1.13		
+57b13007-e5ab-4483-9e5f-cc460ee1d5cd	0		user	When's David Stewart's next freeze time slot?		NOTSURE	non_sense	When's David Stewart's next freeze time slot?	[]		OutlookVoiceSearch	Speech	1	1.13		
+5670b569-c5dc-48e1-bbc8-8d5ecf0e5d12	0		user	I know banana.		NOTSURE	non_sense	I know banana.	[]		OutlookVoiceSearch	Speech	1	1.13		
+d5f25fa0-d694-4079-918d-c3e4a1dd8dde	0		user	Rainbow.		NOTSURE	non_sense	Rainbow.	[]		OutlookVoiceSearch	Speech	1	1.13		
+3d7aa9a1-d8bc-489e-9f26-8b112618c66a	0		user	Press and hold.		NOTSURE	non_sense	Press and hold.	[]		OutlookVoiceSearch	Speech	1	1.13		
+dc3cdaa0-1ff4-44e8-98ba-94e76849fefa	0		user	My recent files.		FILES	file_search	<contact_name>My</contact_name> <file_recency>recent</file_recency> files.	[]		OutlookVoiceSearch	Speech	1	1.13		
+8179f437-1536-45ee-ad13-1c02f58b877b	0		user	Block time off.		CALENDAR	block_time	Block time off.	[]		OutlookVoiceSearch	Speech	1	1.13		
+842fd4e7-3244-43e2-b39a-d627f0b6a38c	0		user	Who is my manager?		PEOPLE	search_org_chart	Who is my <relationship_name>manager</relationship_name>?	[]		OutlookVoiceSearch	Speech	1	1.13		
+33db3926-b37b-4b3e-a6c0-c61a8c4843c3	0		user	Jose information.		PEOPLE	search_org_chart	<contact_name>Jose</contact_name> information.	[]		OutlookVoiceSearch	Speech	1	1.13		
+95f7722c-2a91-4bfd-8354-d8026217a061	0		user	Share the Food for life PPT.		FILES	file_share	Share the <file_keyword>Food for life</file_keyword> <file_type>PPT</file_type>.	[]		OutlookVoiceSearch	Speech	1	1.13		
