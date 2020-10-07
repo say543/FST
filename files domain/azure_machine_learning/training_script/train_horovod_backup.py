@@ -4,16 +4,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 import joblib
 import os, argparse, time, random
-
-###############
-#remote
-###############
-
-
 import torch
 from torch.utils.data import TensorDataset, DataLoader
 from torch.utils.data.distributed import DistributedSampler
-
 from transformers import DistilBertTokenizer
 from transformers import DistilBertForSequenceClassification, AdamW, DistilBertConfig
 from transformers import get_linear_schedule_with_warmup
@@ -21,17 +14,12 @@ import horovod.torch as hvd
 
 from azureml.core import Workspace, Run, Dataset
 
-
-
-
 parser = argparse.ArgumentParser()
 parser.add_argument('--dataset_name', type=str, dest='dataset_name', default='')
 parser.add_argument('--batch_size', type=int, dest='batch_size', default=32)
 parser.add_argument('--learning_rate', type=float, dest='learning_rate', default=1e-5)
 parser.add_argument('--adam_epsilon', type=float, dest='adam_epsilon', default=1e-8)
 parser.add_argument('--num_epochs', type=int, dest='num_epochs', default=5)
-
-
 
 args = parser.parse_args()
 
@@ -41,35 +29,12 @@ learning_rate = args.learning_rate
 adam_epsilon = args.adam_epsilon
 num_epochs = args.num_epochs
 
-
 run = Run.get_context()
 workspace = run.experiment.workspace
 
 dataset = Dataset.get_by_name(workspace, name=dataset_name)
-
 file_name = dataset.download()[0]
-
-# for original data: CSV
-#df = pd.read_csv(file_name)
-# for files doamin data : tsv
-df = pd.read_csv(file_name, sep='\t', encoding="utf-8")
-
-
-###############
-#local
-###############
-'''
-# ouput only three column
-#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/complaints_after.tsv', sep='\t', encoding="utf-8")
-df = pd.read_csv('E:/azure_ml_notebook/azureml_data/files_domain_training_contexual_answer_small.tsv', sep='\t', encoding="utf-8")
-#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/complaints_sampled_after.csv', encoding="utf-8")
-'''
-
-# for debug
-print('top head data {}'.format(df.head()))
-
-
-# old data format
+df = pd.read_csv(file_name)
 '''
 label_counts = pd.DataFrame(df['Product'].value_counts())
 label_values = list(label_counts.index)
@@ -78,33 +43,10 @@ label_values = [l for _,l in sorted(zip(order, label_values))]
 
 texts = df['Complaint'].values
 labels = df['Product_Label'].values
-'''
-
-# new format
-# label_counts  / label values are useless unless treating them as features
-#label_counts = pd.DataFrame(df['Product'].value_counts())
-#label_values = list(label_counts.index)
-#order = list(pd.DataFrame(df['Product_Label'].value_counts()).index)
-#label_values = [l for _,l in sorted(zip(order, label_values))]
-
-texts = df['query'].values
-labels = df['domain'].values
-
-# for debug
-# label_counts  / label values are useless unless treating them as features
-#print('label_counts {}'.format(label_counts))
-#print('label_values after sorted {}'.format(label_values))
-print('labels {}'.format(labels))
-
-
-
 
 tokenizer = DistilBertTokenizer.from_pretrained('distilbert-base-uncased', do_lower_case=True)
 
 text_ids = [tokenizer.encode(text, max_length=300, pad_to_max_length=True) for text in texts]
-
-
-
 
 att_masks = []
 for ids in text_ids:
@@ -266,3 +208,5 @@ if hvd.rank() == 0:
         joblib.dump(val_losses, f)
 
     run.log('validation loss', avg_val_loss)
+
+'''
