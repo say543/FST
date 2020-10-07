@@ -1,0 +1,126 @@
+data_source
+
+
+//degrecate
+from FILES Domain
+Open to judges 
+Description:
+ A location where the files/documents should be found. (e.g: sharepoint, onedrive, computer,  etc).
+
+Multi-turn Only:
+Original Slot:
+
+
+Example Queries
+Positive Examples
+Query
+Comment
+Action
+search onedrive for doc
+Michael's file on SharePoint
+open computer file
+
+
+negative example
+Pull up all OneNote created in July
+
+
+
+//deprecate
+file_action_context
+from FILES Domain
+Open to judges 
+Description:
+ To represent an entity that is associated with file_action.
+
+Multi-turn Only:
+Original Slot:
+Example Queries
+Positive ExamplesNegative Examples
+Query
+Comment
+Action
+documents to read for meetings
+File answer deck presented in shiproom meeting
+One pager shared in email
+
+
+
+
+
+
+//new slot
+Open to judges 
+Description:
+a data source type which indicates where files can be searched from.(e.g: chat, channel, onedrive,etc). data_source_type is used for search related queries.
+
+Multi-turn Only:
+Original Slot:
+Example Queries
+Positive ExamplesNegative Examples
+Query
+Comment
+Action
+file Alex shared in DRI channel
+file from STCI chat
+
+
+Negative Examples
+share the file on STCI chat
+here 'chat' is marked as share_target_type since this query does not search file from 'chat' but intents to share file with specific 'chat'
+share the file with voice skill channel
+here 'channel' is marked as share_target_type since this query does not search file from 'channel' but intents to share file with specific 'channel'
+
+
+//
+data_source_name
+from FILES Domain
+Open to judges 
+Description:
+To specify the name of data source type from which users are trying to search files. data_source_name is used for search related queries.
+
+Multi-turn Only:
+Original Slot:
+Example Queries
+Positive ExamplesNegative Examples
+Query
+Comment
+Action
+file Alex shared in DRI channel
+DRI is the name of the channel and channel will be data_source_type slot.
+ppt from STCI chat
+STCI is the name of the chat and chat will be data_source_type slot.
+
+
+Negative Examples
+Query
+Comment
+Action
+share the file on STCI chat
+here 'STCI' is marked as share_target_name since this query does not search file from 'chat' but intents to share file with specific chat
+share the xls with voice skill channel
+here 'voice skill' is marked as share_target_name since this query does not search file from 'channel' but intents to share file with specific channel
+
+
+//trying to add file_search query but it does not work. so do it in the future 
+file from STCI chat
+file shared by alex 
+
+
+
+also add 
+
+
+sharetarget_name
+//negative example
+file from STCI chat
+here 'STCI' is marked as data_source_name since this query does not share file with specific chat but intents to search file from specific chat
+file Alex shared in DRI channel
+here 'DRI' is marked as data_source_name since this query does not share file with specific channel but intents to search file from specific channel
+
+sharetarget_type
+//negative examples
+file Alex shared in DRI channel
+here 'channel' is marked as data_source_type since this query does not share file with specific channel but intents to search file from specific channel
+file from STCI chat
+here 'chat' is marked as data_source_type since this query does not share file with specific chat but intents to search file from specific chat

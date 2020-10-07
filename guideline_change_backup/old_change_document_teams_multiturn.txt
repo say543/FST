@@ -1,0 +1,1049 @@
+<confirm intent>
+Positive example change:
+Query	Comment
+
+
+=======================================================
+====file_keyword provided, contact_name provided====
+=======================================================
+
+// file_keyword provided, contact_name provided
+// but it seems file cannot be found so cortana ask again
+Share the sales presentation with Nick Cruise.	FILES	file_share	Alright, which PowerPoint should I share?
+Quarterly Sales Review.pptx.	FILES	file_share	Should I share this?
+ans: confirm intent
+
+// but it seems file cannot be found so cortana ask again
+Share the Reference PPT with Ayantu Gemechu.	FILES	file_share	Alright, which PowerPoint should I share?	F
+Reference point.	FILES	file_share	Should I share this?	T
+ans: confirm intent
+
+// file_keyword provided, contact_name provided
+// first turn files found but users say again in the next turn
+// ? hard to tell based on cortana response and this might not be a valid case
+Hey Cortana share the morning time presentation I was working on with Sha.	FILES	file_share	Should I share this?
+Hey Cortana share the time presentation in I was working on their the Robinsons.	FILES	file_share	OK, which PowerPoint should I share?
+
+
+// file_keyword provided, contact_name provided
+// but it seems file cannot be found so cortana ask again
+Share file skills with Yue.	FILES	file_share	Alright, which file should I share?
+Seasons.	FILES	file_share	Sure thing, I'll bring up the presentation.
+ans: confirm intent
+
+// file_keyword provided, contact_name provided
+// slot fail so it trigers multi turn
+// ? not sure it is a valid multurn snice slot fails at the first
+Hey Cortana share the coffee presentation to the review meeting.	FILES	file_share	Working on it
+Review.	FILES	file_share	Should I share this?
+Convergence.	FILES	file_share	Which one did you want to share?
+Audit deck.	FILES	file_share	OK, who do you wanna share it with?
+John.	FILES	file_share	Should I share this?
+
+
+// file_keyword provided, contact_name provided
+//? not sure it is a valid multurn snice slot fails at the first
+Share the tools and travels XLS with Maya.	FILES	file_share	Which Maya should I share with?
+Interview.	FILES	file_share	OK, I'll pull up the presentation.
+
+// file_keyword provided, contact_name provided
+// file cannot find in the first turn
+// but it should be confirm
+// ? 8 should be bye but speech error so do not document it
+Share the Ice xls with Ayantu Gemechu.	FILES	file_share	Which Excel should I share?
+Presentation one.	FILES	file_share	I couldn't find that PowerPoint.
+8	FILES	file_share	Share that with which one?
+Nick Cruise.	FILES	file_share	Should I share this?
+
+// file_keyword provided, contact_name provided
+//? not sure it is a valid multurn snice slot fails at the first
+Share Skills file with Sailesh.	FILES	file_share	Which file should I share?
+Cortana.	FILES	file_open	. 
+Text.	FILES	file_search	. 
+Doc.	FILES	file_search	Which file should I share?
+
+// file_keyword provided, contact_name provided
+//? not sure it is a valid multurn snice slot fails at the second turn 
+// but it should be confirm
+Share Teams file with Rose.	FILES	file_share	Which file should I share?	F
+Test.	FILES	file_share	Which one did you want to share?	T
+ans: confirm intent
+
+// file_keyword provided, contact_name provided
+// ? not sure it is a valid multurn snice my meeting is not supported
+// but it should be confirm, leave it at first
+Share the calling doc with my meeting.	FILES	file_share	Sorry, I'm not able to help with this one.	F
+Warning holding on.	FILES	file_open	Which one did you want?	T
+
+// file_keyword provided, contact_name provided
+// ? not sure it is a valid multurn snice my meeting is not supported
+// but it should be confirm, leave it at first
+Hey Cortana share the sample file to my meeting.	FILES	file_share	Working on it
+Blue doc.	FILES	file_search	I'll look up '%SearchString%'.
+
+
+
+// file_keyword provided, contact_name provided
+// ? not sure if 7th should be order ref
+// but it should be confirm, leave it at first
+Hey Cortana share the Kingston Shiproom deck deck here.	FILES	file_share	I couldn't find that file.
+7th.	FILES	file_share	Alright, who do you wanna share it with?
+
+
+// file_keyword provided, contact_name provided
+// file_keyword ask at frist
+// slot second trun has issue
+// but it should be confirm,
+Share the Food PPT with Maya Robinson.	FILES	file_share	Which PowerPoint should I share?
+Food for life.pptx.	FILES	file_share	Should I share this?
+ans: confirm intent
+
+
+// file_keyword provided, contact_name provided
+// not sure how this works can ask
+// but it should be confirm,
+Hey Cortana share this file with Shankha Dey.	FILES	file_share	Should I share this?
+Coffee.	FILES	file_share	Should I share this?
+ans: confirm intent
+
+// file_keyword provided, contact_name provided
+// why model outpus search needs to investigate
+Share the bug template doc with Maya.
+Excel file.
+ans: confirm intent
+
+// file_keyword provided, contact_name provided
+// ? not sure if this is a valid case but should be confirm intent
+Open Mac pptx with Rose.	FILES	file_share	Should I share this?
+Wang Lao.	FILES	file_share	Which file should I share?
+ans: confirm intent
+
+// file_keyword provided, contact_name provided
+// ? not sure if this is a valid case but should be confirm intent
+Share Lt Review deck with Mohit.	FILES	file_share	Which PowerPoint should I share?
+Hey Cortana open recent files.	FILES	file_open	Which one did you want?
+ans: confirm intent
+
+// file_keyword provided, contact_name provided
+//file_keyword will ask first
+Hey Cortana share the CoW presentation with Carrie Parker.	FILES	file_share	I couldn't find that PowerPoint, but here are some recent ones.	F
+Sample.	FILES	file_share	Alright, who do you wanna share it with?	T
+Fatos.	FILES	file_share	Share that with which one?	T
+ans: confirm intent
+
+// file_keyword provided, contact_name provided
+Hey Cortana share the Analysis presentation with Sha Li.	FILES	file_share	Which Sha Li should I share with?
+Inside Sales Summary.pptx.	FILES	file_share	Share that with which one?
+Sawyer Miller.	FILES	file_share	Should I share this?
+ans: confirm intent
+
+// file_keyword provided, contact_name provided
+// slot has issue
+//but should be confirm intent
+Hey Cortana share the presentation I was working on with Sha.	FILES	file_share	Alright, which PowerPoint should I share?
+Onboarding.	FILES	file_share	Should I share this?
+ans: confirm intent
+
+// file_keyword provided, contact_name provided
+// not sure why asking connect name directy, might be file it is directly matched
+//but should be confirm intent
+Share the Reference point Plus presentation with Maya.	FILES	file_share	Which Maya should I share with?
+Ana Carolina de Souza Mendes.	FILES	file_share	Should I share this?
+ans: confirm intent
+
+
+// file_keyword provided, contact_name provided
+// file keyword ask at first
+// ? not sure if this is valid mutltiturn snice conversation does not make sense
+// but should be confirm intent
+Share the books doc with Miller.	FILES	file_share	Alright, which Word doc should I share?	F
+Toby Miller.	FILES	file_share	Should I share this?	T
+Point plus.	FILES	file_share	I'll bring up the presentation.	T
+Coffee.	FILES	file_share	Which Sha Li should I share with?	T
+Sha Li's entry infosolutions.	FILES	file_share	I couldn't find that file, but here are some recent ones.	T
+ans: confirm intent
+
+
+// file_keyword provided, contact_name provided
+// ? not sure if this is valid mutltiturn
+Share the pic the potatoes presentation with Gigi Joseph.	FILES	file_share	Should I share this?
+Test Amazon 1.	FILES	file_share	Sure, I'll pull up the presentation.
+ans: confirm intent
+
+// file_keyword provided, contact_name provided
+// first of all might be should be position_ref ? not sure about correct schema
+// ? not sure if this is valid mutltiturn
+Share the Reference PPT with Ana Carolina de Souza Mendes.	FILES	file_share	Which PowerPoint should I share?
+First of all.	FILES	file_open	. 
+Voice Skills presentation.	FILES	file_search	OK, which PowerPoint should I share?
+
+// file_keyword provided, contact_name provided
+Share the earthy inspiration presentation with Maya.	FILES	file_share	Which Maya should I share with?
+Robinson.	FILES	file_share	Should I share this?
+ans: confirm intent
+
+// file_keyword provided, contact_name provided
+// ? not sure how to handle 2nd war. speech error
+Share the sales deck with Gigi.	FILES	file_share	OK, which PowerPoint should I share?	F
+2nd war.	FILES	file_open	. 	T
+
+// file_keyword provided, contact_name provided
+// ? not sure how to handle 2nd war 
+// it seems filename and contact all lock
+// ? not sure a valid multi turn but it should be confirm intent
+Share Voice Skills presentation with Mohit.	FILES	file_share	Should I share this?	F
+Tattoo euler.	FILES	file_share	Sorry, I couldn't find anyone called Tattoo euler.	T
+51	FILES	file_download	Which one did you want?	T
+621	FILES	file_download	I'm sorry, I'm not getting it.	T
+
+
+// file_keyword provided, contact_name provided
+Cortana share my Kingston deck here.	FILES	file_share	Which file should I share?	F
+2020 Cortana in Kingston Walking Deck.pptx.	FILES	file_share	Should I share this?	T
+ans: confirm intent
+
+
+
+// file_keyword provided, contact_name provided
+// ? not sure if this is a correct multi turn
+Share the Food presentation with Shwetambari Mokadam.	FILES	file_share	OK, which PowerPoint should I share?
+Food for life.pptx.	FILES	file_share	Should I share this?
+Sha Li.	FILES	file_share	Share that with which one?
+
+// file_keyword provided, contact_name provided
+// ? not sure if this is a correct multi turn
+Share file skills with Arnita.	FILES	file_share	OK, which file should I share?
+Universal.	FILES	file_open	. 
+
+
+// file_keyword provided, contact_name provided
+Hey Cortana share the garden design presentation with Jon.	FILES	file_share	Which Jon should I share with?
+Teams Mobile Voice.	FILES	file_open	. 
+ans: confirm intent
+
+
+// file_keyword provided, contact_name provided
+Share the romance PPT with Gigi.	FILES	file_share	OK, which PowerPoint should I share?
+Great Books for Interview.	FILES	file_share	OK, who do you wanna share it with?
+Ayantu Gemechu.	FILES	file_share	Should I share this?
+ans: confirm intent
+
+// file_keyword provided, contact_name provided
+Share the Reference point Plus presentation with Gemechu.	FILES	file_share	Share that with which one?
+Ms teams group.	FILES	file_share	Should I share this?
+ans: confirm intent
+
+// file_keyword provided, contact_name provided
+Share the rises doc with Nick cruise.	FILES	file_share	Which Word doc should I share?
+The Sun Also Rises.docx.	FILES	file_share	Should I share this?
+ans: confirm intent
+
+
+// file_keyword provided, contact_name provided
+// jim contact name fail
+Send document one to Jim.	FILES	file_share	I couldn't find that file, but here are some recent ones.
+Presentation.	FILES	file_share	Which PowerPoint should I share?
+ans: confirm intent
+
+
+// file_keyword provided, contact_name provided
+// new feature scenario but leave it as confrim intent should be fine
+Share the Mac PPT with Rose.	FILES	file_share	Should I share this?
+I want performance review deck.	FILES	file_download	Alright, which file should I download?
+
+
+// file_keyword provided, contact_name provided
+Share the ice XLS with Cruise.	FILES	file_share	Which Excel should I share?	F
+Reference pointless.	FILES	file_share	Sure thing, I'll pull up the presentation.	T
+ans: confirm intent
+
+// file_keyword provided, contact_name provided
+// not sure if this is a valid multi turn
+Share the Garden Design deck with Gigi.	FILES	file_share	Should I share this?	F
+Test.	FILES	file_share	Which file should I share?	T
+Share file skills.	FILES	file_share	Sorry, Which one did you want to share?	T
+Share file specs.	FILES	file_share	I'm sorry, I'm not getting it.	T
+
+
+// file_keyword provided, contact_name provided
+// not sure if this is a valid multi turn
+Hey Cortana share the Analysis presentation with Sha Li.	FILES	file_share	I couldn't find that PowerPoint, but here are some recent ones.
+Share test deck on this chat.	FILES	file_share	I couldn't find that PowerPoint.
+
+
+=======================================================
+====no file_keyword provided, no contact_name provided====
+=======================================================
+
+// no file_keyword provided, no contact_name provided
+// file_keyword will be asked at first
+Share the PPT.	FILES	file_share	OK, which PowerPoint should I share?
+Food for.	FILES	file_share	Alright, who do you wanna share it with?
+ans: confirm intent
+
+
+// no file_keyword provided, no contact_name provided
+// file_keyword will be asked at first
+Open file.	FILES	file_open	OK, what file would you like to open?
+Excel.	FILES	file_open	OK, which Excel should I open?
+ans: confirm intent
+
+// no file_keyword provided, no contact_name provided
+// file_keyword will be asked at first
+Open the doc I was working on.	FILES	file_open	Alright, which Word doc should I open?
+Blue World.docx.	FILES	file_open	. 
+ans: confirm intent
+
+
+// no file_keyword provided, no contact_name provided
+// ? not a valid case we do not support the meeting
+Hey Cortana share a presentation to the meeting.	FILES	file_share	Working on it
+Time.	FILES	file_share	Alright, share with which meeting?
+BBT test.	FILES	file_share	Should I share this?
+
+// no file_keyword provided, no contact_name provided
+// ? not a valid case we do not support the meeting
+Hey Cortana share the presentation to the meeting.	FILES	file_share	Working on it
+Sample.	FILES	file_share	Which one did you want to share?
+Coffee.	FILES	file_share	Alright, share with which meeting?
+
+// no file_keyword provided, no contact_name provided
+// ? not a valid case we do not support the meeting
+Hey Cortana share the presentation to the meeting at 4:30 PM.	FILES	file_share	Working on it	F
+Coffee.	FILES	file_share	Should I share this?	T
+
+
+
+
+
+// no file_keyword provided, no contact_name provided
+// new feature scenario but leave it as confrim intent should be fine
+// ? but intent Show more. should be select more
+// ? 'show all' is another utterance, can leave but it might become bug
+Hey Cortana open files.	FILES	file_open	Which file should I open?
+Show more.	FILES	file_open	Which one did you want?
+Show all.	FILES	file_open	Sorry, Which one did you want?
+
+// no file_keyword provided, no contact_name provided
+// file_keyword will be asked at first
+Share a document.	FILES	file_share	Alright, Which file should I share?	F
+Blue whale.	FILES	file_share	Who do you wanna share it with?	T
+Nick Cruise.	FILES	file_share	Should I share this?	T
+ans: confirm intent
+
+// no file_keyword provided, no contact_name provided
+// file_keyword will be asked at first
+Share the doc.	FILES	file_share	Which Word doc should I share?
+Blue World.docx.	FILES	file_share	Who do you wanna share it with?
+Fatos Gemechu.	FILES	file_share	Should I share this?
+ans: confirm intent
+
+// no file_keyword provided, no contact_name provided
+// ? not sure if 7th should be position ref
+// but intent should be confirm
+Download the doc I was working on.	FILES	file_download	Which Word doc should I download?
+7th.	FILES	file_download	. 
+ans: confirm intent
+
+// no file_keyword provided, no contact_name provided
+// file_keyword will be asked at first
+Search for a file.	FILES	file_search	What file do you want to search for?
+Hello world.	FILES	file_search	I'll look up '%SearchString%'.
+ans: confirm intent
+
+
+// no file_keyword provided, no contact_name provided
+Open my recent PowerPoint.	FILES	file_open	OK, which PowerPoint should I open?
+Ledger Ingestion Overview.pptx.	FILES	file_open	. 
+ans: confirm intent
+
+
+// no file_keyword provided, no contact_name provided
+// ? not sure if 7th should be position ref
+// but intent should be confirm
+Share XLS.	FILES	file_share	OK, which Excel should I share?	F
+7th.	FILES	file_share	Share that with which one?	T
+ans: confirm intent
+
+// no file_keyword provided, no contact_name provided
+// it seems found but user decide to change direction
+// but intent should be confirm
+Share the PPT with Felix.	FILES	file_share	Should I share this?
+Kingston axe LS.	FILES	file_search	I'll look up '%SearchString%'.
+ans: confirm intent
+
+// no file_keyword provided, no contact_name provided
+// file_keyword will be asked at first
+// and can ask multiple time
+// but intent should be confirm
+Share the PPT I was working on.	FILES	file_share	Sure thing, which presentation?
+Christina.	FILES	file_share	OK, which presentation?
+Algorithm.	FILES	file_share	Sure, I'll pull up the presentation.
+ans: confirm intent
+
+// no file_keyword provided, no contact_name provided
+// file_keyword will be asked at first
+// but intent should be confirm
+Hey Cortana search files for.	FILES	file_search	OK, what file do you want to search for?
+Windows.	FILES	file_search	I'll look that up.
+ans: confirm intent
+
+
+// no file_keyword provided, no contact_name provided
+//  not sure it is a valid turn
+// but it should be confirm intent,
+// slot in the first trun fails
+// leave it right nkw
+Share the attached present file.	FILES	file_share	Alright, Which file should I share?
+Test present.	FILES	file_share	OK, who do you wanna share it with?
+Bella.	FILES	file_share	Should I share this?
+
+// no file_keyword provided, no contact_name provided
+// ? not sure it is a valid turn since file found or not
+Search for Cortana XLS.	FILES	file_search	I'll look that up.
+Automaten scale.	FILES	file_share	Sure, I'll pull up the presentation.
+ans: confirm intent
+
+
+
+// no file_keyword provided, no contact_name provided
+// ? first turn is not a valid query, so leave it
+Open the file was working on.	FILES	file_open	Alright, which file should I open?
+5th.	FILES	file_open	. 
+Sample.	FILES	file_share	OK, I'll pull up the presentation.
+
+
+// no file_keyword provided, no contact_name provided
+Show me my files.	FILES	file_search	OK, what file do you want to search for?
+IOS Commute file Gmail.	FILES	file_search	I'll look up '%SearchString%'.
+Reference.	FILES	file_share	Sure thing, I'll pull up the presentation.
+ans: confirm intent
+
+
+// no file_keyword provided, no contact_name provided
+// ? first turn is not a valid query, so leave it
+Hey Cortana share this file with.	FILES	file_share	OK, who do you wanna share it with?	F
+Open Excel file.	FILES	file_open	Which Excel should I open?	T
+
+// no file_keyword provided, no contact_name provided
+Open Food with nutrition deck.	FILES	file_open	. 
+Performance file.	FILES	file_open	Which one did you want?
+ans: confirm intent
+
+
+// no file_keyword provided, no contact_name provided
+// ? first turn is not a valid query, so leave it
+// adult has slot issue
+Open file was working on.	FILES	file_open	OK, which file should I open?
+Adult.	FILES	file_open	. 
+Open my recent PowerPoint.	FILES	file_open	Sorry, Which one did you want?
+
+// no file_keyword provided, no contact_name provided
+// ? not sure why will goes this way
+// but this should be confirm
+Hey Cortana show me the shiproom deck.	FILES	file_search	I'll look that up.
+Kubernetes on Azure Pitch Deck.pptx.	FILES	file_open	. 
+ans: confirm intent
+
+
+
+
+// no file_keyword provided, no contact_name provided
+// 
+Open file was working.	FILES	file_open	Which file should I open?	F
+Kenny 2 one bank.	FILES	file_open	Which one did you want?	T
+ans: confirm intent
+
+// no file_keyword provided, no contact_name provided
+// ? not sure if this is a correct multi turn behavior
+Share of file with.	FILES	file_share	Which file should I share?
+My recent files.	FILES	file_search	Which one did you want to share?
+
+
+// no file_keyword provided, no contact_name provided
+// ? not sure if this is a correct multi turn behavior
+// ? but attached has a DSAT
+Share attached presentation.	FILES	file_share	I couldn't find a presentation called '%FileNameString%'.
+Files.	FILES	file_search	Sorry, What did you want to search for?
+Files.	FILES	file_search	I'm sorry, I'm not getting it.
+
+
+
+// no file_keyword provided, no contact_name provided
+Open the PPT I was working on.	FILES	file_open	Alright, which PowerPoint should I open?
+Reviewed test.	FILES	file_search	. 
+ans: confirm intent
+
+
+// no file_keyword provided, no contact_name provided
+//  ? not sure why cortana response nothing
+Download the blue world doc.	FILES	file_download	. 	F
+HE shiproom 05 zero 520.	FILES	file_open	Which one did you want?	T
+Teams.	FILES	file_open	Which file did you want?	T
+Play.	FILES	file_open	Sorry, Which file did you want?	T
+
+
+
+// no file_keyword provided, no contact_name provided
+// mac contact name overtrigger
+Open open the Excel I was working on.	FILES	file_open	OK, which Excel should I open?
+Mac.	FILES	file_open	. 
+ans: confirm intent
+
+
+// no file_keyword provided, no contact_name provided
+Download the Excel I was working on.	FILES	file_download	Alright, which Excel should I download?
+Android Result Track A.	FILES	file_download	. 
+ans: confirm intent
+
+// no file_keyword provided, no contact_name provided
+// ? not sure if is a valid multi turn
+Find Assisstant ship criteria file.	FILES	file_search	I'll look that up.
+Morning time.	FILES	file_share	OK, I'll bring up the presentation.
+
+
+// no file_keyword provided, no contact_name provided
+// ? why it keeps asking which one you want to share . 
+Then share a file.	FILES	file_share	Alright, Which file should I share?
+First one.	FILES	file_share	Which one did you want to share?
+All.	FILES	file_share	I'm sorry, I'm not getting it.
+
+
+
+=======================================================
+====no file_keyword provided, no contact_name provided====
+=======================================================
+
+// no file_keyword provided, no contact_name provided
+// file_keyword will be asked at first
+// if not found it will keep asking
+Open files.	FILES	file_open	OK, what file would you like to open?
+Test.	FILES	file_open	Which file did you want?
+Pepper.	FILES	file_open	Sorry, Which file did you want?
+ans: confirm intent
+
+// no file_keyword provided, no contact_name provided
+// ? not sure if 1st should be position ref
+// but having  the first one should be also confirm intent , can document it as wells
+Open my recent spreadsheet.	FILES	file_open	Alright, which Excel should I open?
+1st.	FILES	file_open
+ans: confirm intent (for normal position ref case)
+
+
+// no file_keyword provided, no contact_name provided
+// ? not sure if 1st should be position ref
+// but having  the first one should be also confirm intent , can document it as wells
+Open the service Jersey deck.	FILES	file_open	I couldn't find that PowerPoint, but here are some recent ones.
+3rd.	FILES	file_open	. 
+
+
+
+// no file_keyword provided, no contact_name provided
+// file_keyword will be asked at first
+Share file.	FILES	file_share	Alright, which file should I share?
+Kusto Queries.pptx.	FILES	file_share	Alright, who do you wanna share it with?
+Pakpassion meeting.	FILES	file_share	Sorry, I couldn't find anyone called Pakpassion meeting.
+ans: confirm intent
+
+// no file_keyword provided, no contact_name provided
+// this case slot does not tag correctly , only jungle tags correct
+// not commited in the feature but it should be confirm
+Open my recent word doc.	FILES	file_open	OK, which Word doc should I open?
+Intelligent.	FILES	file_search	What did you want to search for?
+Intelligent.	FILES	file_search	Sorry, What did you want to search for?
+Jungle.	FILES	file_search	I'll look that up.
+ans: confirm intent
+
+// no file_keyword provided, no contact_name provided
+// slot is wrong but this should be confirm intent
+Open Excel.	FILES	file_open	OK, which Excel should I open?
+Copy of CELA-LiveEventBugs.xlsx.	FILES	file_open	Which one did you want?
+ans: confirm intent
+
+
+// no file_keyword provided, no contact_name provided
+// slot has issue in the second turn 
+// not commited in the feature but it should be confirm
+Open the document.	FILES	file_open	What file would you like to open?
+Voice Skills.	FILES	file_open	OK, which file should I open?
+ans: confirm intent
+
+// no file_keyword provided, no contact_name provided
+// ? not sure if it is valid since it has slot issue
+Show me all the files.	FILES	file_search	Alright, what file do you want to search for?
+Call.	FILES	file_search	What did you want to search for?
+All.	FILES	file_search	Sorry, What did you want to search for?
+Ice land.xlsx.	FILES	file_share	Share that with which one?
+
+
+// no file_keyword provided, no contact_name provided
+// ? not sure if it is valid since second turn is not useful
+Open Excel file.	FILES	file_open	OK, which Excel should I open?
+Cortana you're not saying only open which Excel but it does not implement that there is a theory file available so Cortana sword announce about Excel file information.	FILES	file_open	Which one did you want?
+
+// no file_keyword provided, no contact_name provided
+// slot has issues
+// ? not sure what 10 it should look like
+Open the deck I was working on.	FILES	file_open	Alright, which PowerPoint should I open?
+Lost.	FILES	file_share	Which one did you want to share?
+10	FILES	file_share	Should I share this?
+
+// no file_keyword provided, no contact_name provided
+Share a deck.	FILES	file_share	Alright, which PowerPoint should I share?
+Great Books for Interview.	FILES	file_share	Who do you wanna share it with?
+Carrie Parker.	FILES	file_share	Should I share this?
+ans: confirm intent
+
+
+
+// no file_keyword provided, no contact_name provided
+//wrong slot
+// audio file type wrong 
+// ? not sure if this is valid multi turn
+Open my file.	FILES	file_open	Which file should I open?
+Audio off.	FILES	file_open	Which one did you want?
+Sandeep transition plan for B LR teams.	FILES	file_open	. 
+
+// no file_keyword provided, no contact_name provided
+// ? not sure if this is valid multi turn
+// caesars has slot issue
+Hey Cortana share file 2.	FILES	file_share	OK, which file should I share?
+Caesars.	FILES	file_share	Which one did you want?
+
+// no file_keyword provided, no contact_name provided
+// ? speech issue
+// but pattern trigger can remove pattern to lock
+Open Mac PPT X.	FILES	file_open	I couldn't find that file.
+Adult and you.	FILES	file_open	. 
+
+
+
+=======================================================
+====file_keyword provided, no contact_name provided====
+=======================================================
+
+// file_keyword provided, no contact_name provided
+// ? but file not found , it seems this is not a valid multi turn
+Open rises presentation.	FILES	file_open	I couldn't find that PowerPoint.
+Mac.	FILES	file_open	. 
+
+// file_keyword provided, no contact_name provided
+// new feature scenario but leave it as confrim intent should be fine
+Open sales presentation.	FILES	file_open	OK, which PowerPoint should I open?
+Quarterly Sales Review.pptx.	FILES	file_open	. 
+ans: confirm intent
+
+// file_keyword provided, no contact_name provided
+// new feature scenario but leave it as confrim intent should be fine
+Download the Reference deck I was working on.	FILES	file_download	OK, which PowerPoint should I download?	F
+Kingston test XLS.	FILES	file_search	I'll look up '%SearchString%'.	T
+ans: confirm intent
+
+// file_keyword provided, no contact_name provided
+// ? does not look like a correct multi turn snice maya does not show up
+Search for intelligent deck.	FILES	file_search	I'll look that up.
+Blue Whale.docx.	FILES	file_share	Which Maya should I share with?
+
+// file_keyword provided, no contact_name provided
+// ? does not look like a correct multi turn snice search then share
+Search for intelligent communication PPT.	FILES	file_search	I'll look that up.	F
+Test.	FILES	file_share	Which file should I share?	T
+
+// file_keyword provided, no contact_name provided
+// ? does not look like a correct multi turn snice the first turn should finish
+Open file Gotham.	FILES	file_open	. 	F
+Because I love you.	FILES	file_open	Which one did you want?	T
+
+
+// file_keyword provided, no contact_name provided
+// ? does not look like a correct multi turn snice the first turn could not find
+// ? but it success finally , leave it , not document this case
+Open Linda news on deck.	FILES	file_open	I couldn't find that PowerPoint.
+Performance.	FILES	file_open	Which one did you want?
+Blue will dock.	FILES	file_share	Alright, who do you wanna share it with?
+Maya Robinson.	FILES	file_share
+
+// file_keyword provided, no contact_name provided
+// file not found but it will pop up for selection
+Open random presentation.	FILES	file_open	I couldn't find that PowerPoint, but here are some recent ones.	F
+Test presentation.	FILES	file_share	OK, who do you wanna share it with?	T
+Test to Yoder.	FILES	file_share	Sorry, I couldn't find anyone called Test to Yoder.	T
+ans: confirm intent
+
+
+// file_keyword provided, no contact_name provided
+// seocnd slot fail
+Share the Reference deck.	FILES	file_share	Which presentation?	F
+Plus.	FILES	file_share	Sure, I'll pull up the presentation.	T
+ans: confirm intent
+
+// file_keyword provided, no contact_name provided
+// slot has issue
+// but should be confirm
+Open Review deck.	FILES	file_open	Alright, which PowerPoint should I open?	F
+Second or one.	FILES	file_open	. 	T
+ans: confirm intent
+
+// file_keyword provided, no contact_name provided
+// but should be confirm
+Open the tab document.	FILES	file_open	I couldn't find that file, but here are some recent ones.
+Great Books for Interview.	FILES	file_share	OK, I'll pull up the presentation.
+ans: confirm intent
+
+// file_keyword provided, no contact_name provided
+// but should be confirm
+Hey Cortana open Excel file.	FILES	file_open	Which Excel should I open?
+Great.	FILES	file_share	Alright, I'll bring up the presentation.
+ans: confirm intent
+
+// file_keyword provided, no contact_name provided
+// but should be confirm
+Hey Cortana share the Presentation -Morning Time.	FILES	file_share	Alright, Is this the one you wanna pull up?
+Kingston XLS.	FILES	file_search	I'll look up '%SearchString%'.
+ans: confirm intent
+
+// file_keyword provided, no contact_name provided
+// slot has issue but it should be confirm
+Share the Reference point presentation.	FILES	file_share	Alright, which presentation?
+Test.	FILES	file_open	Which file did you want?
+ans: confirm intent
+
+// file_keyword provided, no contact_name provided
+//? should be the order_ref or position_ref
+/ acrroding to scheam it is order_ref
+Hey Cortana search files for Kingston.	FILES	file_search	I'll look up '%SearchString%'.
+That last one.	FILES	file_share	Which one did you want?
+ans: confirm intent
+
+
+// file_keyword provided, no contact_name provided
+// second turn slot has issues
+Search for intelligent communications PPTX.	FILES	file_search	I'll look that up.
+Meeting details.docx.	FILES	file_share	Which Maya should I share with?
+ans: confirm intent
+
+
+// file_keyword provided, no contact_name provided
+// fort is contact_name overtriggering
+// need to check scheam if #4 will be order_ref
+Open sales deck.	FILES	file_open	Which PowerPoint should I open?	F
+Fort.	FILES	file_share	Which one did you want to share?	T
+#4.	FILES	file_share	I'm sorry, I'm not getting it.	T
+ans: confirm intent
+
+
+// file_keyword provided, no contact_name provided
+// ? not sure if it is a valid multi turn 
+Open the dialogue matrix document.	FILES	file_open	. 
+Test.	FILES	file_share	Sure thing, I'll pull up the presentation.
+Last opened item.	FILES	file_share	Which one did you want to share?
+Quit file Columbus off video.	FILES	file_share	I couldn't find that file.
+
+
+// file_keyword provided, no contact_name provided
+Hey Cortana share my recent deck.	FILES	file_share	Alright, which presentation?
+Baked potatoes.	FILES	file_share	I'll pull up the presentation.
+ans: confirm intent
+
+// file_keyword provided, no contact_name provided
+// ? present is not sure a valid pattern but currently file domain 
+// ? not sure if it is a valid multi turn conversation
+Present the Garden PPT.	FILES	file_search	. 	F
+Well.	FILES	file_share	Which one did you want to share?	T
+Excel.	FILES	file_share	Alright, which Excel should I share?	T
+
+// file_keyword provided, no contact_name provided
+// ? in this case, is file found already?
+Search for my file FY21 Planning.	FILES	file_search	I'll look up '%SearchString%'.
+Inside Sales Summary.	FILES	file_open	. 
+
+// file_keyword provided, no contact_name provided
+// not a valid conversation but it is confirm intent
+Share the file test permissions.	FILES	file_share	OK, who do you wanna share it with?
+The challengers.	FILES	file_share	Sorry, I couldn't find anyone called The challengers.
+ans: confirm intent
+
+
+
+// file_keyword provided, no contact_name provided
+Share the Garden PPT.	FILES	file_share	Sure, Is this the one you wanna pull up?
+Reference point.	FILES	file_open	. 
+ans: confirm intent
+
+
+
+// file_keyword provided, no contact_name provided
+// slot first turn has issue
+// ? not sure if this is valid multi turn conversation
+Hey Cortana open time file.	FILES	file_open	. 	F
+Food for Children.	FILES	file_share	OK, who do you wanna share it with?	T
+
+
+
+// file_keyword provided, no contact_name provided
+// ? not sure why this turn cortana does not response
+Open Kingston POR document.	FILES	file_open	. 
+Test accounts for name disambiguation.	FILES	file_share	Who do you wanna share it with?
+Ana.	FILES	file_share	Should I share this?
+
+// file_keyword provided, no contact_name provided
+// speech issue
+// ? not sure if a correct multi turn
+Open the PowerPoint that sell a shared with me.	FILES	file_open	OK, which PowerPoint should I share?	F
+Cortana test.	FILES	file_share	Should I share this?	T
+CoW International Testing.	FILES	file_download	. 	T
+
+
+// file_keyword provided, no contact_name provided
+Open file perfect.	FILES	file_open	Which file should I open?
+Teams.	FILES	file_open	Which one did you want?
+ans: confirm intent
+
+
+// file_keyword provided, no contact_name provided
+// shared should not trigger so do not think thiis si valid multi turn 
+Shared document one with the chat group the challengers.	FILES	file_share	I'll look up '%SearchString%'.
+Ice land.xlsx.	FILES	file_search	. 
+
+// file_keyword provided, no contact_name provided
+// ? not sure if saying the last is a valid multi turn
+Open Kingston Shiproom deck.	FILES	file_open	. 
+Reference point Plus.	FILES	file_share	Should I share this?
+The last.	FILES	file_share	Which Maya should I share with?
+
+// file_keyword provided, no contact_name provided
+Share the audit deck.	FILES	file_share	Who do you wanna share it with?
+Jason.	FILES	file_share	Share that with which one?
+ans: confirm intent
+
+// file_keyword provided, no contact_name provided
+// ? not sure if saying 7 is a valid multi turn
+// but should be confirm intent
+Hey Cortana search files for testing.	FILES	file_search	I'll look up '%SearchString%'.
+7	FILES	file_open	. 
+
+
+// file_keyword provided, no contact_name provided
+Open Food with nutrition PPT.	FILES	file_open	Who do you wanna share it with?
+Cortana Calendar Insights.	FILES	file_open	. 
+ans: confirm intent
+
+=======================================================
+====no file_keyword provided, contact_name provided====
+=======================================================
+
+// no file_keyword provided, contact_name provided
+//all following turn should be confirm
+// file_keyword will be asked at first
+// ? but contact name will be ask again. this can double confirm
+Hey Cortana share the document I was working on with Carrie Parker.	FILES	file_share	OK, which file should I share?
+Bake the Potatoes.pptx.	FILES	file_share	Alright, who do you wanna share it with?
+Parker.	FILES	file_share	Should I share this?
+ans: confirm intent
+
+// no file_keyword provided, contact_name provided
+//all following turn should be confirm
+// file_keyword will be asked at first
+// ? but contact name will be ask again. this can double confirm
+Hey Cortana share the presentation I was working on with Ayantu.	FILES	file_share	OK, which PowerPoint should I share?
+Bake the Potatoes.	FILES	file_share	Share that with which one?
+Ayantu Gemechu.	FILES	file_share	Should I share this?
+ans: confirm intent
+
+// no file_keyword provided, contact_name provided
+// file_keyword will be asked at first
+Hey Cortana share the PowerPoint presentation I was working on with the Carrie Parker.	FILES	file_share	Alright, which PowerPoint should I share?
+Onboarding & Training.	FILES	file_share	OK, who do you wanna share it with?
+ans: confirm intent
+
+// no file_keyword provided, contact_name provided
+//all following turn should be confirm
+// file_keyword will be asked at first
+// it seems file_keyword can be asked multiple time, so it needs to update
+Hey Cortana share a file to Carrie Parker.	FILES	file_share	Alright, which file should I share?
+Coding Skills.	FILES	file_share	Should I share this?
+ans: confirm intent
+
+// no file_keyword provided, contact_name provided
+//all following turn should be confirm
+// ? but contact name will be ask again. this can double confirm
+Share the xls I was working on with Miller.	FILES	file_share	Which Excel should I share?
+Kingston.	FILES	file_share	Which one did you want to share?
+Kingston Test.xlsx.	FILES	file_share	Share that with which one?
+Toby Miller.	FILES	file_share	Should I share this?
+ans: confirm intent
+
+
+// no file_keyword provided, contact_name provided
+Hey Cortana share the presentation I was working on with Abraham Jacob.	FILES	file_share	Alright, which PowerPoint should I share?	F
+Sample.	FILES	file_share	Should I share this?	T
+ans: confirm intent
+
+// no file_keyword provided, contact_name provided
+Hey Cortana share the presentation I was working on with Shravan.	FILES	file_share	OK, which PowerPoint should I share?	F
+Analysts.	FILES	file_share	Should I share this?	T
+ans: confirm intent
+
+// no file_keyword provided, contact_name provided
+Show my document with Zhen Lu.	FILES	file_search	Alright, what file do you want to search for?
+Pass rate.	FILES	file_share	I'll look that up.
+ans: confirm intent
+
+// no file_keyword provided, contact_name provided
+// ? not sure why this case will ask contact name as first
+Share my documents with Zhen Lu.	FILES	file_share	Who do you wanna share it with?	F
+Zhen Lu.	FILES	file_share	Share that with which one?	T
+Change it.	FILES	file_share	. 	T
+
+
+
+// no file_keyword provided, contact_name provided
+Share the books doc with mula.	FILES	file_share	OK, which Word doc should I share?
+Top 10 Best Books.docx.	FILES	file_share	Share that with which one?
+ans: confirm intent
+
+// no file_keyword provided, contact_name provided
+// looks like search query , interesting
+// slot has issue but it should be confirm
+Files shared by Ling.	FILES	file_search	Alright, what file do you want to search for?
+OK our document.	FILES	file_search	What did you want to search for?
+Fiscal FY21.	FILES	file_search	I'll look up '%SearchString%'.
+ans: confirm intent
+
+// no file_keyword provided, contact_name provided
+// ? not sure if it is a valid multi turn
+Share file with Miller.	FILES	file_share	Alright, which file should I share?
+Yes.	FILES	file_share	. 
+
+
+// no file_keyword provided, contact_name provided
+Hey Cortana share the presentation I was working on with Maya.	FILES	file_share	Which PowerPoint should I share?
+Maya Robinson.	FILES	file_share	Should I share this?
+ans: confirm intent
+
+// no file_keyword provided, contact_name provided
+// slot has issues in second turn
+Share the doc with Ana Carolina de Souza Mendes.	FILES	file_share	Alright, which Word doc should I share?
+Teams Voice Skill - BVT Plan.docx.	FILES	file_share	Should I share this?
+ans: confirm intent
+
+// no file_keyword provided, contact_name provided 
+// slot has issues in second turn
+// ? not sure if it is a valid multi turn but intent should be confirm 
+Hey Cortana share the document I was working on with Ayantu Gemechu.	FILES	file_share	Sorry, I don't know the answer to this one.
+Reference point.	FILES	file_share	Alright, I'll bring up the presentation.
+ans: confirm intent
+
+
+// no file_keyword provided, contact_name provided 
+Share the xls I was working on with Sawyer Miller.	FILES	file_share	OK, which Excel should I share?
+Reference point.	FILES	file_share	I'll pull up the presentation.
+ans: confirm intent
+
+// no file_keyword provided, contact_name provided 
+Share the XLS I was working on with Ana.	FILES	file_share	OK, which Excel should I share?
+Kingston-Device.	FILES	file_share	Should I share this?
+ans: confirm intent
+
+
+// no file_keyword provided, contact_name provided 
+Share the document I was working on with Miller.	FILES	file_share	Which file should I share?
+Ice cream Flavors.xlsx.	FILES	file_share	Should I share this?
+ans: confirm intent
+
+// no file_keyword provided, contact_name provided
+Share the document I was working on with Cruise.	FILES	file_share	Alright, which file should I share?
+Reference point.	FILES	file_share	Share that with which one?
+ans: confirm intent
+
+// no file_keyword provided, contact_name provided
+Hey Cortana share the document I was working on with Gemechu.	FILES	file_share	OK, which file should I share?
+Custom.	FILES	file_share	Which one did you want to share?
+ans: confirm intent
+
+
+// no file_keyword provided, contact_name provided
+// ? not sure if this is a valid conversation since users change they mind
+Share the XLS I was working on with Ana Carolina de Souza Mendes.	FILES	file_share	Which Excel should I share?
+Tours & Travel.xlsx.	FILES	file_share	Should I share this?
+At at friends point plus.	FILES	file_share	I'll pull up the presentation.
+ans: confirm intent
+
+// no file_keyword provided, contact_name provided
+Share my PowerPoint with Sara.	FILES	file_share	Alright, which PowerPoint should I share?
+Reference point Plus.	FILES	file_open	Which one did you want?
+ans: confirm intent
+
+// no file_keyword provided, contact_name provided
+// new feature scenario but leave it as confrim intent should be fine
+// should be none of these ,sppech issue
+// so leave it 
+Share my Word document with Sailesh.	FILES	file_share	OK, which Word doc should I share?
+Now of these.	FILES	file_open	Which one did you want?
+
+
+// no file_keyword provided, contact_name provided
+// It will be set up has slot issue but hard to tell...
+Hey Cortana share the document I was working on with Chava.	FILES	file_share	Which file should I share?
+It will be set up.	FILES	file_share	Which one did you want to share?
+ans: confirm intent
+
+
+// no file_keyword provided, contact_name provided
+//xl should be filekeyword , issue
+// bird should be file_keword 
+Share file with Naseem.	FILES	file_share	OK, Which file should I share?
+XL.	FILES	file_share	Which one did you want to share?
+Bird.	FILES	file_share	I'm sorry, I'm not getting it.
+ans: confirm intent
+
+=======================================================
+====file_keyword provided, no contact_name provided====
+=======================================================
+
+// file_keyword provided, no contact_name provided
+// ? not sure if this case files being found will affect result
+// 
+Share Testing file.	FILES	file_share	Who do you wanna share it with?
+MSD mslgroup channel.	FILES	file_share	Sorry, I couldn't find anyone called MSD mslgroup channel.
+ans: confirm intent
+
+// file_keyword provided, no contact_name provided
+// ? not a valid case. no sure if can be documented as confirm intent
+Open files in TVs group.	FILES	file_open	Which file should I open?
+Open User Interviews list.	FILES	file_open	. 
+
+// file_keyword provided, no contact_name provided
+// new feature scenario but leave it as confrim intent should be fine
+Can you open the planning I ran file?	FILES	file_open	OK, which file should I open?
+Task_Assistance_Iron_Planning.docx.	FILES	file_open	. 
+ans: confirm intent
+
+
+
+
+
+
+
+<others>
+// ? files found, hard to tell what is the intent for the seocnd turn
+// might be based on cortana response
+
+Hey Cortana share the morning time presentation I was working on with Sha.	FILES	file_share	Should I share this?
+Hey Cortana share the time presentation in I was working on their the Robinsons.	FILES	file_share	OK, which PowerPoint should I share?
+
+
+// ? not a valid multi turn because of data source
+Share share the attached presentation.	FILES	file_share	I couldn't find a presentation in the invite.
+Samples.	FILES	file_share	Which presentation?
+
+// ? not a valid multit turn since meeting xxx do not support
+// need to study in the ftureu
+Hey Cortana share the coffee presentation with meetings reset.	FILES	file_share	. 
+Hello.	FILES	file_open	. 
+
+
+
+<slot_problem>
+not sure if this should be contact_name or to_contact_name
+

@@ -1,0 +1,244 @@
+
+//file domain description
+
+Description:
+Files domain supports queries related to the following:
+
+searching file
+downloading file
+sharing file
+opening  file
+navigating file
+other(please refer to file_other intent sections)
+Queries related to the following are not supported by files domain so they should be placed in NOTSURE/other_domain.
+
+printing file
+copying and pasting  file
+closing file
+deleting file
+uploading file
+moving file
+
+
+
+//file_other
+
+file_other
+from FILES Domain
+Open to judges 
+Description:
+This intent is used for search- and navigation-related queries that are not covered by the file_search and file_navigate intents. The types of queries that belong in this intent are:
+
+Searching for or navigating to folders/locations on your computer, including
+Desktop
+Downloads folder
+Documents folder
+Any other user-created folder
+Searching for or navigating to files within folders
+Any query related to the following folders or file types
+photos
+pictures
+music
+movies
+videos
+//? considering add image, gif , jpeg, jpg, since they belong to web usually but they are not folders so do not add
+
+
+Queries related to printing, copying/pasting, deleting, etc. do not belong to FILES domain and should not be placed in file_other. These queries should be placed in NOTSURE/other_domain.
+
+
+posive examples
+
+[show|bring] me to the pictures i save
+pictures is the folder on windows
+[i wanna see|open|pull up] all my pictures (on this pc)
+pictures is the folder on windows
+[find|look for|open|go to|search|take me to] (my) pictures
+pictures is the folder on windows
+[show|bring] me my pictures from 2020
+pictures is the folder on windows
+[find|look for|open|go to|search|take me to] (my) photos ([on desktop|on c drive| in my computer])
+photos is the folder on windows
+[ show|bring] my photos from april 2015
+photos is the folder on windows
+[find|look for|open|go to|search|take me to] (my) documents ([on desktop|on c drive| in my computer])
+documents is the folder on windows
+[find|look for|open|go to|search|take me to] (my) recent downloads ([on desktop|on c drive| in my computer])
+downloads is the folder on windows
+[find|look for|open|go to|search|take me to] folders ([on desktop|on c drive| in my computer])
+search docs in folder so it is file_other intent
+search folder docs
+search docs in folder so it is file_other intent
+[find|look for|open|go to|search|take me to] my deck in my answer folder
+[find|look for|open|go to|search|take me to] my [music|videos] ([on desktop|on c drive| in my computer])
+
+
+negative examples
+navigate to files
+
+'files' is not tagged as file_folder so 'navigate to' will be file_navigate intent.
+go to my recent files
+'files' is not tagged as file_folder so 'navigate to' will be file_navigate intent.
+
+
+
+// file navigate
+
+file_navigate
+from FILES Domain
+Open to judges 
+Description:
+Following verbs are required to be present in the queries for the  file_navigate intent
+
+navigate to 
+go to 
+An exception is that when queries are related to the following then they will be file_other intent:
+
+navigating to folders/locations on your computer, including
+Desktop
+Downloads folder
+Documents folder
+Any other user-created folder
+navigating to files within folders
+navigating to the following folders or file types
+photos
+pictures
+music
+movies
+videos
+
+Positive Examples
+navigate to the recent files
+go to my recent files
+go to the file i worked yesterday
+
+
+negative example
+
+Query
+Comment
+Action
+go to downloads
+
+// here file_other is not evaluated
+// but in the future, need to add patterns to make sure downloads having enough patterns for UWP to become file_other
+'downloads' is a folder on windows so it is file_other intent
+navigate to downloads
+'downloads' is a folder on windows so it is file_other intent
+
+
+
+//file_type slot
+file_type
+from FILES Domain
+Open to judges 
+Description:
+ The type of file or document. 
+
+
+
+This is the list should be tagged as file_type
+
+(pptx, ppts  ,ppt, deck, decks, presentation, presentations, powerpoint, powerpoints, power point, slide, slides, doc, docx, docs, Doc, Docx, Docs, excel, excels, xls, xlsx, sheet, sheets, spreadsheet, spreadsheets, workbook, worksheet, csv, tsv, note, notes, onenote, onenotes ,OneNote, notebook, notebooks, pdf, pdfs, PDF, png, msg, ics, vcs, vsdx, vssx, vstx, vsdm, vssm, vstm, vsd, vdw, vss, vst, mpp, mpt, word).    
+
+
+
+This is the list SHOULD not being tagged as file_type
+
+(spec, specs, file, files, document, documents).
+
+
+
+//positve examples
+find pdf files
+find all my docx from the last 3 weeks
+Deck for Tuesday shiproom
+Look for a spreadsheet that was saved yesterday.
+find all OneNote files Rachel sent me in May
+locate my word file I was working on from August.
+find my readme.doc
+find nature13458.pdf downloaded on Sept 2 2014
+locate my word doc I was working on from May
+this query has two tokens should be tagged as file_type, please merge 'word doc' as a single slot for file_type
+test dot doc
+//remove this snice this is spelling issue
+test dot ppt x
+// do not support photo and must
+open photo file
+// do not support music
+open music file
+
+//negative examples
+
+go to downloads
+downloads will be file_folder not file_type.
+// ? https://microsoft-my.sharepoint.com/personal/annamdev_microsoft_com/_layouts/15/Doc.aspx?sourcedoc={b0f49c6f-dd5c-4524-838d-7b6487bafafc}&action=edit&wd=target%28File%20Skills.one%7C3a0cc9e2-46ee-42f8-af40-fded59ac95ff%2FNavigation%7Ce42cbb87-3589-4bd5-8e3d-1955b2047cb4%2F%29
+// ? accoridng to this, go wit file_action  since teams only uses downloads
+// ? not sure if teams can work  
+// ? lots of traniing in teams  so leave it as file_folder (file_folder evaluation will be ignore in evaluation)
+// ? but downloaed /contact downloaed / will be file_action lots of training, need to  update in the future
+find my downloaded files
+// old 
+downloaded will be file_folder not file_type.
+// new
+downloaded will be file_action and files is not file_type.
+
+share the document better test
+document will not be file_type
+open file skills
+file will not be file_type
+
+
+
+
+
+//file_folder
+Description:
+On windows, there are a list of folders where users can access by file_folder slot
+
+positive examples:
+
+Query
+Comment
+Action
+go to downloads
+downloads folder so it will be file_other intent
+go to my download
+downloads folder so it will be file_other intent
+show my downloads
+downloads folder so it will be file_other intent
+search planning deck in planning folder
+'planning' folder so it will be file_other intent
+find my deck in my answer folder
+'answer' folder so it will be file_other intent
+look 3S file in corescience folder
+ 'corescience' folder so it will be file_other intent
+Show me the pictures I took last month
+'pictures' folder so it will be file_other intent
+Show me the videos I made yesterday
+'videos' folder so it will be file_other intent
+
+
+
+negative examples:
+
+navigate to files
+'files' is not tagged as file_folder so 'navigate to' will be file_navigate intent.
+go to my recent files
+'files' is not tagged as file_folder so 'navigate to' will be file_navigate intent.
+// ? https://microsoft-my.sharepoint.com/personal/annamdev_microsoft_com/_layouts/15/Doc.aspx?sourcedoc={b0f49c6f-dd5c-4524-838d-7b6487bafafc}&action=edit&wd=target%28File%20Skills.one%7C3a0cc9e2-46ee-42f8-af40-fded59ac95ff%2FNavigation%7Ce42cbb87-3589-4bd5-8e3d-1955b2047cb4%2F%29
+// ? accoridng to this, go wit file_action  since teams only uses downloads
+// ? not sure if teams can work  
+// ? lots of traniing in teams  so leave it as file_folder (file_folder evaluation will be ignore in evaluation)
+// ? but downloaed /contact downloaed / will be file_action lots of training, need to  update in the future
+
+
+find the file I downloaded just now in aether folder
+'downloaded' is not tagged as 'file_folder' , it is tagged as 'file_action' slot
+open the file i just downloaded
+'downloaded' is not tagged as 'file_folder' , it is tagged as 'file_action' slot
+find my download file
+'download' is tagged as 'file_keyword' slot
+find my local files
+'local' is tagged as 'file_keyword' slot
+

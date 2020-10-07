@@ -1,0 +1,28 @@
+
+//domain attachment
+
+// slot decription 
+
+attachment
+from FILES Domain
+Open to judges 
+Description:
+To specify that users are trying to search or share documents attached. 
+
+Multi-turn Only:
+Original Slot:
+
+// positve examples
+Example Queries
+Positive ExamplesNegative Examples
+Query
+Comment
+Action
+share the attached document
+attached is not file_action slot and it is attachment slot
+attachments from Mike
+ppt files attached by Alex
+attached is not file_action slot and it is attachment slot
+show me the recent attachments
+what is the last attachment Michael sent to me
+find doc attachments

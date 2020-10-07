@@ -1,0 +1,416 @@
+negative intent file_search
+uery	Comment
+    file
+	
+    this belongs to web domain
+    a file
+	
+    this belongs to web domain
+    document
+	
+    this belongs to web domain
+    a dcoument
+	
+    this belongs to web domain
+    navigate to downloads
+	
+    this is file_navigate intent
+    go to files
+	
+     this is file_navigate intent
+
+
+negative intent file_open
+    file 
+	
+    this belongs to web domain
+    a file
+	
+    this belongs to web domain
+    document
+	
+    this belongs to web domain
+    a document
+	
+    this belongs to web domain
+
+
+negative intent file_share
+    file 
+	
+    this belongs to web domain
+    a file
+	
+    this belongs to web domain
+    document
+	
+    this belongs to web domain
+    a document
+	
+    this belongs to web domain
+
+negative intent file_download
+    file 
+	
+    this belongs to web domain
+    a file
+	
+    this belongs to web domain
+    document
+	
+    this belongs to web domain
+    a document
+	
+    this belongs to web domain
+
+
+negative intent file_navigate
+uery	Comment
+    downloads
+	
+    not associated with pattern('navigate to', 'go to')
+    files
+	
+     not associated with pattern('navigate to', 'go to')
+    find my recent download
+	
+     not associated with pattern('navigate to', 'go to')
+    show me downloads
+	
+     not associated with pattern('navigate to', 'go to')
+    file 
+	
+    this belong to web domain
+    a file
+	
+     this belong to web domain
+    document
+	
+     this belong to web domain
+    a document
+	
+    this belong to web domain
+
+
+positive intent file_other
+Query	Comment
+    bring me to the pictures i save
+	
+    pictures is the folder on windows
+    i wanna see all my pictures
+	
+    pictures is the folder on windows
+    open pictures
+	
+     pictures is the folder on windows
+    pictures on this pc
+	
+     pictures is the folder on windows
+    bring up all pictures on my computer
+	
+    pictures is the folder on windows
+    pull up my saved pictures
+	
+     pictures is the folder on windows
+    show me the pictures
+	
+    pictures is the folder on windows
+    open my pictures
+	
+     pictures is the folder on windows
+    where are my pictures
+	
+    pictures is the folder on windows
+    do i have this picture saved
+	
+    currently do not support picture search
+    can you send me a picture
+	
+     currently do not support picture search
+    take me to my pictures
+	
+     pictures is the folder on windows
+    go to pictures
+	
+    pictures is the folder on windows
+    find my pictures
+	
+     pictures is the folder on windows
+    show me my pictures from 2020
+	
+     pictures is the folder on windows
+    how do i open my pictures
+	
+     pictures is the folder on windows
+    how do you sync your iphone pictures to your computer
+	
+     pictures is the folder on windows
+    how do i save pictures from my phone to the computer
+	
+    pictures is the folder on windows
+    find desktop photos
+	
+    photos is the folder on windows
+     look for alondra photos
+	
+     photos is the folder on windows
+    photos on the c drive
+	
+    photos is the folder on windows
+    search computer for omnisphere photo
+	
+     currently do not support photo search
+    open my photos
+	
+     photos is the folder on windows
+    go to my photos
+	
+    photos is the folder on windows
+    show my photos from april 2015
+	
+     photos is the folder on windows
+    take me to documents
+	
+    documents is the folder on windows
+    open my documents
+	
+    documents is the folder on windows
+    open documents
+	
+     documents is the folder on windows
+    go to documents
+	
+    documents is the folder on windows
+    where are my documents
+	
+     documents is the folder on windows
+    documents
+	
+    documents is the folder on windows
+    find documents
+	
+    documents is the folder on windows
+    my documents
+	
+    documents is the folder on windows
+    do i have any current download
+	
+    download / downloads folder on windows needs to be associated with limited patterns then it will be supported. please also see some negative examples which are marked as file_navigate
+    downloads
+	
+    download / downloads folder on windows needs to be associated with limited patterns then it will be supported. please also see some negative examples which are marked as file_navigate
+    open recent downloads
+	
+     download / downloads folder on windows needs to be associated with limited patterns then it will be supported. please also see some negative examples which are marked as file_navigate
+    downloads downloads
+	
+    download / downloads folder on windows needs to be associated with limited patterns then it will be supported. please also see some negative examples which are marked as file_navigate
+    downloads on this computer
+	
+    download / downloads folder on windows needs to be associated with limited patterns then it will be supported. please also see some negative examples which are marked as file_navigate
+    find download folder for me
+	
+     download / downloads folder on windows needs to be associated with limited patterns then it will be supported. please also see some negative examples which are marked as file_navigate
+    please open downloads on this pc
+	
+    download / downloads folder on windows needs to be associated with limited patterns then it will be supported. please also see some negative examples which are marked as file_navigate
+    find my recent download
+	
+     download / downloads folder on windows needs to be associated with limited patterns then it will be supported. please also see some negative examples which are marked as file_navigate
+    my downloads
+	
+    download / downloads folder on windows needs to be associated with limited patterns then it will be supported. please also see some negative examples which are marked as file_navigate
+    show me downloads
+	
+     download / downloads folder on windows needs to be associated with limited patterns then it will be supported. please also see some negative examples which are marked as file_navigate
+    show me downloads on this computer
+	
+    download / downloads folder on windows needs to be associated with limited patterns then it will be supported. please also see some negative examples which are marked as file_navigate
+    show me recent downloads
+	
+     download / downloads folder on windows needs to be associated with limited patterns then it will be supported. please also see some negative examples which are marked as file_navigate
+    open up download folder
+	
+     download / downloads folder on windows needs to be associated with limited patterns then it will be supported. please also see some negative examples which are marked as file_navigate
+    music downloads
+	
+     download / downloads folder on windows needs to be associated with limited patterns then it will be supported. please also see some negative examples which are marked as file_navigate
+    open movies folder for me
+	
+    folder on windows is unsupported
+    devices and printers folder
+	
+    folder on windows is unsupported
+    hello open tomahawk control panel folder
+	
+    folder on windows is unsupported
+    open my folder
+	
+    folder on windows is unsupported
+    find my skype folder
+	
+    folder on windows is unsupported
+    go to network speeds folder
+	
+    folder on windows is unsupported
+    please open google chrome folder
+	
+     folder on windows is unsupported
+    locate ashton anything folder
+	
+    folder on windows is unsupported
+    open up temporary file folder
+	
+     folder on windows is unsupported
+    open folder docs
+	
+     folder on windows is unsupported
+    search that app data folder
+	
+     folder on windows is unsupported
+    where is the recycle bin folder
+	
+    folder on windows is unsupported
+    open folder options
+	
+    folder on windows is unsupported
+     open onedrive folder
+	
+     folder on windows is unsupported
+    how can i open a new file folder
+	
+    folder on windows is unsupported
+    go to the folder movies
+	
+     folder on windows is unsupported
+    download folders
+	
+     folder on windows is unsupported
+    find my music on this computer
+	
+    music is the folder on windows
+    my music
+	
+    music is the folder on windows
+    find videos i took last year
+	
+    videos is the folder on windows
+
+negative intent file_other
+Query	Comment
+    navigate to the recent files
+	
+    'navigate to' , 'go to' are patterns supported to access folders. please refer to file_navigate intent section
+    go to downloads
+	
+     'navigate to' , 'go to' are patterns supported to access folders. please refer to file_navigate intent section
+    file 
+	
+    this belongs to web domain
+    a file
+	
+    this belongs to web domain
+    document
+	
+    this belongs to web domain
+    a document
+	
+    this belongs to web domain
+    print the file
+	
+    this belongs to web domain
+    delete
+	
+    this belongs to web domain
+    delete an xml file
+	
+     this belongs to mystuff domain
+
+
+slot file_type
+file_type
+Description change:
+
+//old
+    <p>&nbsp;The type of file or document.&nbsp;</p>
+<p><br></p>
+<p>This is the list should be tagged as file_type</p>
+<p>(pptx, ppts &nbsp;,ppt, deck, decks, presentation, presentations, powerpoint, powerpoints, power point, slide, slides, doc, docx, docs, Doc, Docx, Docs, excel, excels, xls, xlsx, spreadsheet, spreadsheets, workbook, worksheet, csv, tsv, note, notes, onenote, onenotes ,OneNote, notebook, notebooks, pdf, pdfs, PDF, jpg, jpeg, gif, png, image, msg, ics, vcs, vsdx, vssx, vstx, vsdm, vssm, vstm, vsd, vdw, vss, vst, mpp, mpt, word, photo, music). &nbsp;&nbsp;&nbsp;</p>
+<p><br></p>
+<p>This is the list SHOULD not being tagged as file_type</p>
+<p>(spec, specs, file, files, document, documents).</p>
+
+
+//new
+    <p>&nbsp;The type of file or document.&nbsp;</p>
+<p><br></p>
+<p>This is the list should be tagged as file_type</p>
+<p>(pptx, ppts &nbsp;,ppt, deck, decks, presentation, presentations, powerpoint, powerpoints, power point, slide, slides, doc, docx, docs, Doc, Docx, Docs, excel, excels, xls, xlsx, spreadsheet, spreadsheets, workbook, worksheet, csv, tsv, note, notes, onenote, onenotes ,OneNote, notebook, notebooks, pdf, pdfs, PDF, jpg, jpeg, gif, png, image, msg, ics, vcs, vsdx, vssx, vstx, vsdm, vssm, vstm, vsd, vdw, vss, vst, mpp, mpt, word). &nbsp;&nbsp;&nbsp;</p>
+<p><br></p>
+<p>This is the list SHOULD not being tagged as file_type</p>
+<p>(spec, specs, file, files, document, documents).</p>
+
+
+
+slot file_folder
+file_folder
+Description change:
+
+Description change:
+
+    <p>On Teams client, there is a specific 'my downloads' file folder and this is to mark the download file folder.</p>
+
+    <p>On windows, there are a list of folders where users can access by name</p>
+
+Positive example change:
+    go to <u>downloads</u>
+    search planning deck in <u>plannng</u> folder
+	
+    
+    'search' verb will be file_search intent
+
+
+    go to my <u>download</u>
+    find my deck in my <u>answer</u>folder
+	
+    
+    'find' verb will be file_search intent
+
+
+    look 3S file in <u>corescience</u> folder
+	
+    'look' will be file_search intent
+    go to my <u>downloads</u>
+	
+    'go to' pharse will be file_other intent
+    go to <u>downloads</u> folder
+	
+    'go to phrase' will be file_other intent
+    find my <u>downloaded</u> files
+	
+    show my <u>downloads</u>
+	
+
+Negative example change:
+Query	Comment
+    navigate to files
+	
+    this will be file_navigate intent(please refer to file_navigate intent) but 'files' will not mark as file_folder snice c
+    go to my recent files
+	
+    this will be file_navigate intent(please refer to file_navigate intent) but 'files' will not mark as file_folder
+    find the file I downloaded just now in aether folder
+	
+    downloaded is not tagged as 'file_folder' , it is tagged as 'file_action'
+    find the file i downloaded just know
+	
+    downloaded is not tagged as 'file_folder' , it is tagged as 'file_action'
+    open the file i just downloaded
+	
+    downloaded is not tagged as 'file_folder' , it is tagged as 'file_action'
+    find my download file
+	
+     download ss tagged as file_keyword
+    find my local files
+	
+    local is tagged as file_keyword

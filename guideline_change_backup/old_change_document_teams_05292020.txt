@@ -1,0 +1,98 @@
+file_search
+Positive example change:
+Query	Comment
+ 
+ //psotive
+What is the last attachment Alex sent me?
+
+ 
+Show me recent attachments
+
+
+
+file_share
+Positive example change:
+Query	Comment
+ 
+Share the attached deck
+
+
+
+
+//// file_type changed i seperate from attached since schema is not yet defined
+//update to teams only
+file_type
+Description change:
+    
+ The type of file or document. 
+
+
+
+
+
+This is the list should be tagged as file_type
+
+
+(pptx, ppts  ,ppt, deck, decks, presentation, presentations, powerpoint, powerpoints, power point, slide, slides, doc, docx, docs, Doc, Docx, Docs, excel, excels, xls, xlsx, spreadsheet, spreadsheets, workbook, worksheet, csv, tsv, note, notes, onenote, onenotes ,OneNote, notebook, notebooks, pdf, pdfs, PDF, jpg, jpeg, gif, png, image, msg, ics, vcs, vsdx, vssx, vstx, vsdm, vssm, vstm, vsd, vdw, vss, vst, mpp, mpt, word, photo, music).    
+
+
+
+
+
+This is the list SHOULD not being tagged as file_type
+
+
+(spec, specs, file, files, document, documents).
+
+
+    
+ The type of file or document. 
+
+
+
+
+
+This is the list should be tagged as file_type
+
+
+(pptx, ppts  ,ppt, deck, decks, presentation, presentations, powerpoint, powerpoints, power point, slide, slides, doc, docx, docs, Doc, Docx, Docs, excel, excels, xls, xlsx, sheet, sheets, spreadsheet, spreadsheets, workbook, worksheet, csv, tsv, note, notes, onenote, onenotes ,OneNote, notebook, notebooks, pdf, pdfs, PDF, png, msg, ics, vcs, vsdx, vssx, vstx, vsdm, vssm, vstm, vsd, vdw, vss, vst, mpp, mpt, word).
+
+
+
+
+
+This is the list SHOULD not being tagged as file_type
+
+
+(spec, specs, file, files, document, documents).
+
+
+Positive example change:
+Query	Comment
+ 
+// ppt x leave it since currect pattern will overtrigger , do it in the future
+test dot  ppt x
+
+ 
+open photo file
+
+ 
+open music file
+
+
+
+/////
+data_source
+Positive example change:
+Query	Comment
+ 
+Share the attached deck
+
+ 
+What is the last attachment Alex sent me?
+
+ 
+Show me recent attachments
+
+
+
