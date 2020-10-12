@@ -112,7 +112,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		cortana where is my windows journal	file_search	
 0		show recent downloads	file_search	
 0		find management onenote	file_search	
-0		List notes	file_search	
+0		List notes	file_navigate	
 0		hey cortana find me my picture	file_search	
 0		where is my photos	file_search	
 0		netplwiz.exe	file_search	
@@ -123,13 +123,13 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		show me the last document i modified	file_search	
 0		can you find my restaurant note	file_search	
 0		show my photos from April 2015	file_search	
-0		list high school photos dated june 6	file_search	
+0		list high school photos dated june 6	file_navigate	
 0		pull up photos from anniversary	file_search	
 0		search wilson document	file_search	
 0		show me all world documents	file_search	
 0		Show me the powerpoint for the gameday	file_search	
 0		Show my photo	file_search	
-0		list shopping notes	file_search	
+0		list shopping notes	file_navigate	
 0		hey cortana search powerpoint preview	file_search	
 0		how do i find task manager in windows ten	file_search	
 0		photos from me	file_search	
@@ -205,7 +205,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		search for congress is a broken branch of government in documents	file_search	
 0		excel spreadsheet tutorial	file_search	
 0		documents please	file_search	
-0		what are my documents	file_navigate	
+0		what are my documents	file_search	
 0		Find previous note about a restaurant.	file_search	
 0		find my photos	file_search	
 0		show my photos from April 2015	file_search	
@@ -387,7 +387,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		search presentation	file_search	
 0		i want to review the file i last edited on march seventeenth	file_open	
 0		show me july's inventory spreadsheet.	file_search	
-0		what was my last note	file_navigate	
+0		what was my last note	file_search	
 0		show my photos from April 2015	file_search	
 0		show notes sub context- party	file_search	
 0		search search my onedrive for it strategy	file_search	
@@ -429,15 +429,15 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		how do i find federal income tax on excel	file_search	
 0		show me the powerpoint presentation for the wedding.	file_search	
 0		send me to photos	file_search	
-0		What was that note about how to make the best margaritas?	file_navigate	
+0		What was that note about how to make the best margaritas?	file_search	
 0		vm marketplace deployment docs	file_search	
-0		notes for the meeting next week -what are they	file_navigate	
+0		notes for the meeting next week -what are they	file_search	
 0		documents f	file_search	
 0		Find photo taken last year	file_search	
 0		Show grocery note with eggs, butter and milk.	file_share	
 0		has my files	file_search	
 0		find file dot png	file_search	
-0		what was the last excel file i worked on	file_navigate	
+0		what was the last excel file i worked on	file_search	
 0		search for twenty eleven frq one in onedrive	file_search	
 0		locate cover letters dated between august 2 2007 and january 23 2012	file_search	
 0		find word document called lease	file_search	
@@ -445,7 +445,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		hey cortana show me my photos	file_search	
 0		Recent documents	file_search	
 0		take me to my photos	file_search	
-0		hey cortana what was the last file i edited	file_navigate	
+0		hey cortana what was the last file i edited	file_search	
 0		cortana what recipes did i recently print	file_search	
 0		find file resume	file_search	
 0		cortana show me my reminder list	file_search	
@@ -455,7 +455,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		find me the text file	file_search	
 0		cortana find presentation 1 in my documents.	file_search	
 0		show my photos from April 2015	file_search	
-0		List all documents done in the last 10 days	file_search	
+0		List all documents done in the last 10 days	file_navigate	
 0		show me my picture smoking instructions	file_search	
 0		Show my personal expenses spreadsheet for this year	file_search	
 0		go to my cookies	file_navigate	
@@ -492,13 +492,13 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		taxes.xlsx	file_search	
 0		where is make a web note	file_search	
 0		get whale sleep presentation for me now.	file_search	
-0		hey cortana what was the last document i worked off	file_navigate	
+0		hey cortana what was the last document i worked off	file_search	
 0		find i explore dot exe	file_search	
 0		Pull up Cubism Art Presentation.	file_search	
 0		show me the task note i created last week.	file_search	
 0		Find the notes re: insurance payment.	file_search	
 0		I need to see the homework doc.	file_navigate	
-0		hey cortana what was the last document i opened	file_navigate	
+0		hey cortana what was the last document i opened	file_search	
 0		Search for Prince's tax files.	file_search	
 0		find oxford hotel bill	file_search	
 0		where is sharpener in photos gallery	file_search	
@@ -520,7 +520,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		all my documents about personnel	file_search	
 0		find documents from last week.	file_search	
 0		hi*.txt	file_search	
-0		Cortana, list Latin notes from last year	file_search	
+0		Cortana, list Latin notes from last year	file_navigate	
 0		Go to reading list	file_navigate	
 0		I need to see spreadsheet named holiday	file_navigate	
 0		i want to see the list that has the word golf	file_navigate	
@@ -539,7 +539,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Organize weekly tasks.	file_search	
 0		Can you find and open my grocery store notes?	file_search	
 0		cultureshockppt	file_search	
-0		List notes on grocery shopping	file_search	
+0		List notes on grocery shopping	file_navigate	
 0		where are my files call brian	file_search	
 0		hey cortana find me my files	file_search	
 0		find my photos	file_search	
@@ -691,7 +691,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		show my mount rushmore photos from july 15th	file_search	
 0		Cortana, Find my visio diagrams before July 30th	file_search	
 0		hey cortana show my documents	file_search	
-0		list my music	file_search	
+0		list my music	file_navigate	
 0		Find my previous employment document	file_search	
 0		photos from hawaii	file_search	
 0		find my music	file_search	
@@ -798,7 +798,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		\\feed\files	file_search	
 0		find my document called sport	file_search	
 0		show spreadsheets since june 22	file_search	
-0		Pitch list excel doc	file_search	
+0		Pitch list excel doc	file_navigate	
 0		show me my note	file_search	
 0		acm.exe	file_search	
 0		find italian words document	file_search	
@@ -847,7 +847,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Show me all notes from Friday	file_search	
 0		find files	file_search	
 0		I need to see my geekoid slides	file_navigate	
-0		list my notes	file_search	
+0		list my notes	file_navigate	
 0		What's on my shopping list?	file_search	
 0		Show my recipe files from may on.	file_search	
 0		Please find all Word documents that have dessert recipes on them.	file_search	
@@ -880,7 +880,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		show me excel files about friends	file_search	
 0		note revise complete the square negative form	file_search	
 0		show me pictures from nineteen eighteen	file_search	
-0		Let me know what is on errands list this weekend.	file_search	
+0		Let me know what is on errands list this weekend.	file_navigate	
 0		show me my photos	file_search	
 0		Show me yesterdays excel sheet	file_search	
 0		Where's my "Call List?	file_search	
@@ -1083,7 +1083,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		show me pictures of baby rabbits	file_search	
 0		where is my note	file_search	
 0		hey cortana show me word documents that i worked on in april	file_search	
-0		Cortana, List MyTask List from January 5	file_search	
+0		Cortana, List MyTask List from January 5	file_navigate	
 0		display my legoland trip notes created on 5/27/13.	file_search	
 0		show task list	file_search	
 0		show my photos from April 2015	file_search	
@@ -1097,7 +1097,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		display dental presentation.	file_search	
 0		Find my journal notes.	file_search	
 0		Look for ballet essay.	file_search	
-0		Cortana list by size all edited documents on August 25th 2014.	file_search	
+0		Cortana list by size all edited documents on August 25th 2014.	file_navigate	
 0		excel worksheet from yesterday	file_search	
 0		show my photos from April 2015	file_search	
 0		show me picture	file_search	
@@ -1120,7 +1120,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		search for photos on jill's first birthday	file_search	
 0		search the onedrive for the holman's death investigation file documents for viewing	file_search	
 0		hey cortana show me a picture my cat	file_search	
-0		list my music	file_search	
+0		list my music	file_navigate	
 0		find my music	file_search	
 0		show me photos from las vegas	file_search	
 0		Locate saved document	file_search	
@@ -1231,7 +1231,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		show my photos from April 2015	file_search	
 0		Cortana, display pictures from Amusement Park downloaded last weekend.	file_search	
 0		Show me my Chilli's note.	file_search	
-0		List jacks yesterday photos	file_search	
+0		List jacks yesterday photos	file_navigate	
 0		find the party note	file_search	
 0		recent files windows	file_search	
 0		locate ginger's current project overview pdf.	file_search	
@@ -1258,7 +1258,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		search the hard drive for putana	file_search	
 0		hey cortana show photos from december	file_search	
 0		find yearly budget presentation.	file_search	
-0		What are the items on the Costco list?	file_navigate	
+0		What are the items on the Costco list?	file_search	
 0		Locate my Disney World pictures from last October.	file_search	
 0		Show me the papers I saved after January 1st referencing last years annual report	file_search	
 0		hey cortana go to my games	file_navigate	
@@ -1267,7 +1267,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		project ares docs megg	file_search	
 0		find documents downloaded between 7/13/14 and 7/15/14	file_search	
 0		I need to view my Summer slides.	file_open	
-0		spotify playlist sniper two thousand and seven	file_search	
+0		spotify playlist sniper two thousand and seven	file_navigate	
 0		Find the Hawaii slides.	file_search	
 0		cortana find document resume 05/06/14	file_search	
 0		please find my party notes	file_search	
@@ -1301,7 +1301,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		do i have a document called	file_search	
 0		check notes for gyn appointment.	file_search	
 0		show my photos from April 2015	file_search	
-0		What are the items on my up North list?	file_navigate	
+0		What are the items on my up North list?	file_search	
 0		Cortana I am looking for my powerpoint presentation for grades K-8 6-14-13 can you help me find it?	file_search	
 0		document	file_search	
 0		What's on my shopping list?	file_search	
@@ -1348,7 +1348,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		show my photos from April 2015	file_search	
 0		find photos from last week	file_search	
 0		ppt presentation	file_search	
-0		LIST ERRANDS NOTE	file_search	
+0		LIST ERRANDS NOTE	file_navigate	
 0		new files	file_search	
 0		show my photos from April 2015	file_search	
 0		run program calibur	file_search	
@@ -1421,7 +1421,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Show me my schedule that I updated last week.	file_search	
 0		hey cortana find a document with orange to everything	file_search	
 0		bring up my female pictures	file_search	
-0		list of notes	file_search	
+0		list of notes	file_navigate	
 0		i need to find my books list	file_search	
 0		Find the PowerPoint on DropBox	file_search	
 0		find the picture of john	file_search	
@@ -1601,7 +1601,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Find my resume	file_search	
 0		hidden file	file_search	
 0		find grocer notes	file_search	
-0		In the party list, what were the items to buy from the bakery?	file_navigate	
+0		In the party list, what were the items to buy from the bakery?	file_search	
 0		\\tkzaw-pro-14\mydocs	file_search	
 0		find my random notes.	file_search	
 0		WhAT DOCUMENTS WERE EDITED ON 05/16/1966	file_search	
@@ -1670,7 +1670,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		show me my notes	file_search	
 0		find scanned documents	file_search	
 0		show me the supplies list	file_search	
-0		List all notes for this week.	file_search	
+0		List all notes for this week.	file_navigate	
 0		search my files for razer synapse	file_search	
 0		Locate my Word Docs created in the last 2 months	file_search	
 0		pdf downloads	file_search	
@@ -1686,7 +1686,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		program files\cclea	file_search	
 0		hey cortana show me the photos i took in december	file_search	
 0		can you show me my pictures from sky drive?	file_search	
-0		what was the last note i made	file_navigate	
+0		what was the last note i made	file_search	
 0		track my notes	file_search	
 0		Show my photos	file_search	
 0		find my files	file_search	
@@ -1722,7 +1722,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		where are my saved notes	file_search	
 0		hey cortana search file for devon	file_search	
 0		Find visio diagrams i worked on before November 10th	file_search	
-0		List all note for Friday's party.	file_search	
+0		List all note for Friday's party.	file_navigate	
 0		What spreadsheets do I have from after July 3rd?	file_search	
 0		find spreadsheet of mango three	file_search	
 0		Find me the vet appointment notes.	file_search	
@@ -1901,7 +1901,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		cortana, show me my documents in the onedrive	file_search	
 0		find my photo stream	file_search	
 0		\\officefile\	file_search	
-0		list of all my rap music	file_search	
+0		list of all my rap music	file_navigate	
 0		show my photos from April 2015	file_search	
 0		find all itunes files	file_search	
 0		hey cortana take me to photos	file_search	
@@ -1970,7 +1970,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		athens save a lot weekly flyer	file_download	
 0		show my photos from April 2015	file_search	
 0		where is the start button?	file_search	
-0		list my notes for friday.	file_search	
+0		list my notes for friday.	file_navigate	
 0		find sticky notes	file_search	
 0		Search Doc2	file_search	
 0		show me my pictures of	file_search	
@@ -2072,7 +2072,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		I would like to see the photos edited on may 5th	file_navigate	
 0		ben .pptx	file_search	
 0		I want to review my notes from restaurant BRavos	file_open	
-0		List all Action Item files from January	file_search	
+0		List all Action Item files from January	file_navigate	
 0		find all files	file_search	
 0		.lock file onedrive	file_search	
 0		Cortana Search files for spreadsheet	file_search	
@@ -2212,7 +2212,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		where is hike file saved	file_search	
 0		Cortana, get my homework from science class that I did on Monday	file_search	
 0		Display a list of the guests to the party.	file_search	
-0		movie charlie playlist to my music	file_search	
+0		movie charlie playlist to my music	file_navigate	
 0		Search for all my clients cover letters between August 2, 2007 and January 23rd, 2012.	file_search	
 0		Bill's document.	file_search	
 0		samson.docx	file_search	
@@ -2237,7 +2237,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Retrieve my PowerPoints that I created before 9/04.	file_search	
 0		Find the documents I created on Monday on OneDrive	file_search	
 0		Find my documents	file_search	
-0		Where is my Wedding Invitation List file saved that I entered on Tuesday?	file_search	
+0		Where is my Wedding Invitation List file saved that I entered on Tuesday?	file_navigate	
 0		show my photos from April 2015	file_search	
 0		Jeremy's design doc	file_search	
 0		show kid pictures from one drive	file_search	
@@ -2346,7 +2346,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		lookup note restaurant	file_search	
 0		powerpoint presentation	file_search	
 0		show my photos from April 2015	file_search	
-0		idea list edits	file_search	
+0		idea list edits	file_navigate	
 0		.txt or .doc	file_search	
 0		Cortana show me the powerpoint presantation on proper nutrition for K-8 students.	file_search	
 0		show my photos from April 2015	file_search	
@@ -2362,7 +2362,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		alright what is it now note	file_search	
 0		search my files for york hospital.	file_search	
 0		find the budget excel edited 09/10/14	file_search	
-0		List Jacks gym documents from January to March	file_search	
+0		List Jacks gym documents from January to March	file_navigate	
 0		i'd like to see the money spreadsheet.	file_navigate	
 0		get me my photos	file_search	
 0		show me all my pdf files	file_search	
@@ -2396,7 +2396,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Find all my quotes saved from since June	file_search	
 0		show my photos from April 2015	file_search	
 0		show my photos from April 2015	file_search	
-0		playlist settings number 4.	file_search	
+0		playlist settings number 4.	file_navigate	
 0		do i search for a file	file_search	
 0		Revise note about Karen	file_search	
 0		my photos	file_search	
@@ -2595,7 +2595,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		documents and settings\	file_search	
 0		Locate note-summer.	file_search	
 0		documents	file_search	
-0		list slides for project blah	file_search	
+0		list slides for project blah	file_navigate	
 0		onedrivesetup.exe	file_search	
 0		Look for the powerpoint on traffic for Marcy.	file_search	
 0		cortana, locate my file titled may goals from last wednesday	file_search	
@@ -2629,12 +2629,12 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		find crazy on you by heart in the hard drive	file_search	
 0		show my notes on grouppost	file_search	
 0		display concert slides	file_search	
-0		what are my notes	file_navigate	
+0		what are my notes	file_search	
 0		Pull up all notes I made last week	file_search	
 0		do i have any music on file	file_search	
 0		\\tkzaw-pro-14\mydocs6\b	file_search	
 0		Find a note that contains prescriptions	file_search	
-0		list high school photos dated june 6	file_search	
+0		list high school photos dated june 6	file_navigate	
 0		where can i find the document i just scanned	file_search	
 0		my music.	file_search	
 0		show me album	file_search	
@@ -2729,7 +2729,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		find received files	file_search	
 0		Cortana, I need to view the file wee_ziggy.pdf located on my onedrive.	file_open	
 0		files ending in msi	file_search	
-0		list my music	file_search	
+0		list my music	file_navigate	
 0		Show me presentations created by Bill Withers.	file_share	
 0		find the preso called septemberprofits.doc	file_search	
 0		search for dustin's presentaion	file_search	
@@ -2808,7 +2808,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		cortana please show me the biology lab presentation.	file_search	
 0		wfind all eagle files	file_search	
 0		txt: pass	file_search	
-0		List all notes for my "Japan business trip.	file_search	
+0		List all notes for my "Japan business trip.	file_navigate	
 0		where's my downloads go	file_search	
 0		can i see the really long document	file_navigate	
 0		Find and view the Hairshow presenation	file_search	
@@ -2830,7 +2830,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		find my documents	file_search	
 0		find documents I created yesterday	file_search	
 0		open documents	file_open	
-0		List the file I saved to onedrive yesterday.	file_search	
+0		List the file I saved to onedrive yesterday.	file_navigate	
 0		search for birthday photos	file_search	
 0		Locate the OneNote files from January through March.	file_search	
 0		Cortana can you find a word document with the keyword ""Family	file_search	
@@ -2865,12 +2865,12 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		hi cortana find my music files	file_search	
 0		find notes with the word diet in them	file_search	
 0		need you to display my kids weekly schedule notes	file_search	
-0		after july 4th what are my spreadsheets	file_navigate	
+0		after july 4th what are my spreadsheets	file_search	
 0		cortana find my chess game	file_search	
 0		Show me the weekend errand list.	file_search	
 0		hey cortana find all files that	file_search	
-0		list shopping notes.	file_search	
-0		List Hawaii slides in order saved.	file_search	
+0		list shopping notes.	file_navigate	
+0		List Hawaii slides in order saved.	file_navigate	
 0		where's my hp printer	file_search	
 0		List, notes, search	file_search	
 0		please show me work presentation.	file_search	
@@ -3039,7 +3039,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		cortana can you show me all my pictures please	file_search	
 0		which files i opened yesterday	file_search	
 0		Show my photos from April 2015	file_search	
-0		what are my notes	file_navigate	
+0		what are my notes	file_search	
 0		find documents I created yesterday	file_search	
 0		hey cortana where is the command prompt in windows ten	file_search	
 0		find file account three	file_search	
@@ -3068,7 +3068,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		certweb.msc	file_search	
 0		Locate my Word Docs created in the last five months.	file_search	
 0		offline files	file_search	
-0		what are my notes	file_navigate	
+0		what are my notes	file_search	
 0		show all my recent downloads	file_search	
 0		Axions me to PowerPoint presentation	file_search	
 0		I need to find my cover letters from July 1, 2008 and August 2, 2010	file_search	
@@ -3125,9 +3125,9 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		find large files on hard drive	file_search	
 0		7z file	file_search	
 0		find documents I created yesterday	file_search	
-0		spotify playlist sniper two thousand and seven	file_search	
+0		spotify playlist sniper two thousand and seven	file_navigate	
 0		do i have a paint program	file_search	
-0		let me know what is on errands list this weekend.	file_search	
+0		let me know what is on errands list this weekend.	file_navigate	
 0		poetry slideshow	file_search	
 0		show me some picture in my photos	file_search	
 0		hey cortana find my recipes	file_search	
@@ -3210,7 +3210,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		show me presentation location	file_search	
 0		show work spreadsheet1	file_search	
 0		I need to see the presentation that I saved today	file_navigate	
-0		bulleted list find it	file_search	
+0		bulleted list find it	file_navigate	
 0		show me my note	file_search	
 0		open photo's open photo's	file_open	
 0		show me photos downloaded today	file_search	
@@ -3419,9 +3419,9 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		find my grocery shopping notes.	file_search	
 0		find documents i edited at starbucks	file_search	
 0		Can you look for my New Orleans photos from last January	file_search	
-0		what are my notes	file_navigate	
+0		what are my notes	file_search	
 0		show my photos from April 2015	file_search	
-0		list my reservations on my trip notes	file_search	
+0		list my reservations on my trip notes	file_navigate	
 0		find my ace excel spreadsheet	file_search	
 0		search for my documents	file_search	
 0		find me pictures that are called snowden	file_search	
@@ -3441,13 +3441,13 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		find me powerpoint.	file_search	
 0		can you tell me where my pictures are	file_search	
 0		search all files for peace	file_search	
-0		List Jacks documents for the last three weeks	file_search	
+0		List Jacks documents for the last three weeks	file_navigate	
 0		hey cortana search my staff word documents	file_search	
 0		hey cortana what's on my notes	file_search	
 0		manh.txt	file_search	
 0		Give me joe doe's Monday presentation	file_navigate	
 0		My pictures	file_search	
-0		list recent notes I made	file_search	
+0		list recent notes I made	file_navigate	
 0		find documents I created yesterday	file_search	
 0		polhook.dll	file_search	
 0		hey cortana find me a list of all of the pdf files i have	file_search	
@@ -3491,9 +3491,9 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Photos taken last summer	file_search	
 0		open documents	file_open	
 0		I would like to view jeans presentation	file_open	
-0		Modify list of tasks.	file_search	
+0		Modify list of tasks.	file_navigate	
 0		i've lost some mp three files have you any idea where i could find them	file_search	
-0		list find day care	file_search	
+0		list find day care	file_navigate	
 0		i writing a note in customer service for papa john's can you bring me back my note	file_search	
 0		find photos titled vacation	file_search	
 0		file named srange	file_search	
@@ -3510,7 +3510,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Go to my recent files.	file_navigate	
 0		Pull up powerpoint on budget training.	file_search	
 0		Slide presentation revise Jackson Company	file_search	
-0		List of me	file_search	
+0		List of me	file_navigate	
 0		view slide a and b.	file_open	
 0		*.*	file_search	
 0		hey cortana search for new gate on onedrive	file_search	
@@ -3587,7 +3587,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Can you find me the grocery notes?	file_search	
 0		find tasks list in notes	file_search	
 0		Display the pictures that I edited in August.	file_search	
-0		list all notes for this week.	file_search	
+0		list all notes for this week.	file_navigate	
 0		Read document	file_search	
 0		show my photos from April 2015	file_search	
 0		search for my notes	file_search	
@@ -3622,7 +3622,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		the phots of my wedding please display	file_search	
 0		show me recent document	file_search	
 0		go to my documents	file_navigate	
-0		AFTER JULY 4TH WHAT ARE MY SPREADSHEETS	file_navigate	
+0		AFTER JULY 4TH WHAT ARE MY SPREADSHEETS	file_search	
 0		putty.exe	file_search	
 0		launch presentation	file_search	
 0		Find my flash cards	file_search	
@@ -3843,12 +3843,12 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		I need the presentation on our great society.	file_search	
 0		powershell.exe	file_search	
 0		view slide show of photos downloaded on 8-5-14	file_open	
-0		playlist l one	file_search	
+0		playlist l one	file_navigate	
 0		pull up my pictures	file_search	
 0		show my photos from April 2015	file_search	
 0		i need to locate my visio diagrams i worked on before january 9th	file_search	
 0		debit note	file_search	
-0		what are my favourite songs	file_navigate	
+0		what are my favourite songs	file_search	
 0		powerpoint	file_search	
 0		show my photos from April 2015	file_search	
 0		find all my pictures	file_search	
@@ -4192,7 +4192,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		c:/program files x86/	file_search	
 0		What's in my shopping list?	file_search	
 0		show my photos from April 2015	file_search	
-0		List of me	file_search	
+0		List of me	file_navigate	
 0		Display my annual physical exam notes.	file_search	
 0		show my photos from April 2015	file_search	
 0		hey cortana search system for movies	file_search	
@@ -4251,7 +4251,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Cortana please help me find my powerpoint presentation on nutrition for grade school children.	file_search	
 0		Show me list	file_search	
 0		show my photos from April 2015	file_search	
-0		List my reminder note about Collin's school	file_search	
+0		List my reminder note about Collin's school	file_navigate	
 0		find me a document called ignorant	file_search	
 0		find my resume	file_search	
 0		find dan's presentation.	file_search	
@@ -4271,7 +4271,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		hey cortana pull up my photos from april twenty	file_search	
 0		search q drive	file_search	
 0		show my photos from April 2015	file_search	
-0		List of most need it off accessories	file_search	
+0		List of most need it off accessories	file_navigate	
 0		find documents abo	file_search	
 0		find documents I created yesterday	file_search	
 0		bring up my downloads	file_search	
@@ -4300,7 +4300,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Find calculator.	file_search	
 0		I need to make some changes to the literature presentation.	file_search	
 0		View last saved word doc	file_open	
-0		what are my notes	file_navigate	
+0		what are my notes	file_search	
 0		Program files	file_search	
 0		FILES	file_search	
 0		I want to see my Big Sur photo album	file_navigate	
@@ -4323,7 +4323,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		show my photos from April 2015	file_search	
 0		search browser downloads	file_search	
 0		is document blah on my onedrive	file_search	
-0		List all notes for my meeting next week.	file_search	
+0		List all notes for my meeting next week.	file_navigate	
 0		Do I have any list?	file_search	
 0		Find Chris Wolf in my photos	file_search	
 0		Display all notes from 2 weeks ago	file_search	
@@ -4359,7 +4359,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		files onedrive	file_search	
 0		notes for writing a narrative	file_search	
 0		temporary internet files	file_search	
-0		what was the last photo i took	file_navigate	
+0		what was the last photo i took	file_search	
 0		find notes from the interview this morning.	file_search	
 0		Cortana where is my Jpeg Album	file_search	
 0		Bring me to Mark's presentation	file_search	
@@ -4373,7 +4373,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Find my little black book that I saved last wedensday	file_search	
 0		can you show me my pictures	file_search	
 0		look for the last grocery note	file_search	
-0		list my music	file_search	
+0		list my music	file_navigate	
 0		community group dropout report	file_search	
 0		go to my recent files	file_navigate	
 0		hey cortana show me the photos i took in january	file_search	
@@ -4433,7 +4433,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		cortana show me my applications	file_search	
 0		shared docum	file_search	
 0		Cortana, where did I save the file from Amber?	file_download	
-0		what are my notes about the meeting	file_navigate	
+0		what are my notes about the meeting	file_search	
 0		show me my email addresses	file_search	
 0		saved photos.	file_search	
 0		show me norton files	file_search	
@@ -4452,7 +4452,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		show my photos from April 2015	file_search	
 0		Can I see my supper list	file_navigate	
 0		Find the charity auction photos on drop box	file_search	
-0		what are my notes	file_navigate	
+0		what are my notes	file_search	
 0		find my photos of x rays	file_search	
 0		Bring up word document	file_search	
 0		find the pta notes from last week	file_search	
@@ -4483,7 +4483,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		find note labeled movies	file_search	
 0		show me mileage note	file_search	
 0		show me the powerpoint for the photos.	file_search	
-0		List all notes for my "Japan business trip.	file_search	
+0		List all notes for my "Japan business trip.	file_navigate	
 0		do you have any music	file_search	
 0		Pull up the Ravenswood Income spreadsheet.	file_search	
 0		show me the documents please	file_search	
@@ -4567,7 +4567,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		find file dot png	file_search	
 0		what is listed under my party notes	file_search	
 0		find black holes files	file_search	
-0		check vacation list for shopping	file_search	
+0		check vacation list for shopping	file_navigate	
 0		go to my documents	file_navigate	
 0		show me photos from this month.	file_search	
 0		netplwiz.exe	file_search	
@@ -4600,7 +4600,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		world of tanks in my stuff	file_search	
 0		Find my presentation.	file_search	
 0		find hp surestart	file_search	
-0		list notes with keyword kim.	file_search	
+0		list notes with keyword kim.	file_navigate	
 0		show me photos from last year	file_search	
 0		show my photos from April 2015	file_search	
 0		show me my income and expenses spreadsheet	file_search	
@@ -4646,7 +4646,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		find all excel files	file_search	
 0		MANEJO DE OPERACIONES ONENOTE	file_search	
 0		cryea.dll	file_search	
-0		make changes to idea list note.	file_search	
+0		make changes to idea list note.	file_navigate	
 0		show my photos from April 2015	file_search	
 0		spreadsheet from 09/01/12	file_search	
 0		Show my photos from April	file_search	
@@ -4794,12 +4794,12 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		show me the lawn work note.	file_search	
 0		Cortana, I would like to view Minerals Slides saved last week.	file_open	
 0		commonfile	file_search	
-0		Please list all "Shopping" notes for next March.	file_search	
+0		Please list all "Shopping" notes for next March.	file_navigate	
 0		Leaf science project presentation	file_search	
 0		show me my notes	file_search	
 0		check my songs	file_search	
 0		hey cortana find my pictures from january	file_search	
-0		List of my things to shop.	file_search	
+0		List of my things to shop.	file_navigate	
 0		Find me the Coffee Shop notes.	file_search	
 0		hey cortana show me pictures i took in a	file_search	
 0		system file sh	file_search	
@@ -4985,7 +4985,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		c:/program files x86 steam	file_search	
 0		Get my birthday party notes I saved on Monday	file_search	
 0		from last xmas show photos	file_search	
-0		who is on the list for	file_search	
+0		who is on the list for	file_navigate	
 0		pull up sticky notes	file_search	
 0		show me pictures taken in the last month	file_search	
 0		Look for April's cash flow statement files.	file_search	
@@ -5279,7 +5279,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		FIND EMAIL LIST	file_search	
 0		find me itv hub	file_search	
 0		show my photos from April 2015	file_search	
-0		get the errand list for this weekend	file_search	
+0		get the errand list for this weekend	file_navigate	
 0		hey cortana do i have a program on this compute r	file_search	
 0		find presentation from last meeting	file_search	
 0		Show me my note called "Surprise Party".	file_search	
@@ -5364,9 +5364,9 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		shark.jpg	file_search	
 0		find document is there a true religion from god's standpoint	file_search	
 0		find my documents	file_search	
-0		what are my notes	file_navigate	
+0		what are my notes	file_search	
 0		c:\program files\unikey\unikeynt.exe	file_search	
-0		list slides by name	file_search	
+0		list slides by name	file_navigate	
 0		where are my photos gone	file_search	
 0		Show my photos	file_search	
 0		find me my pictures	file_search	
@@ -5441,7 +5441,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		"I would like to view all documents that were downloaded on June 3, 2001."	file_open	
 0		my files to onedrive	file_search	
 0		find Homework.	file_search	
-0		lookup guest list in my notes	file_search	
+0		lookup guest list in my notes	file_navigate	
 0		find the pictures in april	file_search	
 0		show me the pictures from this month	file_search	
 0		find pdf files created last week	file_search	
@@ -5452,7 +5452,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Show me all my notes from Tuesday.	file_search	
 0		find my photos	file_search	
 0		bring up the download file	file_search	
-0		cortana what are my notes	file_navigate	
+0		cortana what are my notes	file_search	
 0		show my photos from April 2015	file_search	
 0		hi cortana can you get the spreadsheet for me	file_search	
 0		find the file saturn gas mileage	file_search	
@@ -5540,7 +5540,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		program files steam	file_search	
 0		bring up party notes now.	file_search	
 0		do i have any pictures	file_search	
-0		list trains	file_search	
+0		list trains	file_navigate	
 0		msra.exe /expert	file_search	
 0		Search documents	file_search	
 0		Search documents for recent address list	file_search	
@@ -5676,7 +5676,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		where's my files	file_search	
 0		hey cortana i'd like to find the spreadsheet for property tax for two thousand eleven	file_search	
 0		Search for July's expense files	file_search	
-0		What are the items on the Costco list?	file_navigate	
+0		What are the items on the Costco list?	file_search	
 0		Cortana, locate all files saved as Toronto 2012	file_search	
 0		show my photos from April 2015	file_search	
 0		search smite patch notes	file_search	
@@ -5761,7 +5761,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Load the history notes that Terry sent me anytime between Monday and Thursday	file_search	
 0		find my photo	file_search	
 0		where are my documents	file_search	
-0		meeting notes list all	file_search	
+0		meeting notes list all	file_navigate	
 0		i need to see the notes about the house.	file_navigate	
 0		show my photos from April 2015	file_search	
 0		show me my emails.	file_search	
@@ -5804,7 +5804,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		hey cortana hey cortana can you show my	file_search	
 0		show my photos from April 2015	file_search	
 0		Can you give me my downloads	file_navigate	
-0		List notes for "Monday reminders.	file_search	
+0		List notes for "Monday reminders.	file_navigate	
 0		Show grand canyon slides	file_search	
 0		I need to locate my visio diagrams I worked on before January 9th	file_search	
 0		find my pictures	file_search	
@@ -5868,7 +5868,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		search my music	file_search	
 0		show my photos from April 2015	file_search	
 0		Find Canada Trip photos	file_search	
-0		List notes title	file_search	
+0		List notes title	file_navigate	
 0		Find me cheap cars dot jpg.	file_search	
 0		hey cortana find all jpegs on my hard drive	file_search	
 0		Find and access New York City 2014 vacation.	file_search	
@@ -5991,7 +5991,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		find Amber's presentation on saving the bay	file_search	
 0		take me to programs	file_search	
 0		Find ray's medication list	file_search	
-0		what are my notes	file_navigate	
+0		what are my notes	file_search	
 0		Find all documents edited on july 1st	file_search	
 0		Cortana, look for all the text files I created since yesterday	file_search	
 0		Review party notes	file_open	
@@ -6004,7 +6004,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		find grocery notes	file_search	
 0		i want you to modify that list	file_search	
 0		show my disney land photos last sunday	file_search	
-0		what are my notes	file_navigate	
+0		what are my notes	file_search	
 0		find my downloads please	file_search	
 0		presentation powerpoint	file_search	
 0		display notes with keyword grocery.	file_search	
@@ -6144,7 +6144,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		locate the document 'gas ' in the one drive	file_search	
 0		find all photos	file_search	
 0		budget report by joe	file_search	
-0		hey cortana what was i last working on in powerpoint	file_navigate	
+0		hey cortana what was i last working on in powerpoint	file_search	
 0		Find list: reading list	file_search	
 0		hey cortana go to my downloads	file_navigate	
 0		actually have i got any pictures of	file_search	
@@ -6158,7 +6158,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		view latest created margin slide	file_open	
 0		please find my engagement pictures.	file_search	
 0		Search the slides titled school project.	file_search	
-0		Cortana list by size all edited documents on August 25th 2014.	file_search	
+0		Cortana list by size all edited documents on August 25th 2014.	file_navigate	
 0		hey cortana onedrive search cats	file_search	
 0		hey cortana show me my pictures from zurich switzerland	file_search	
 0		Find me pictures I downloaded today.	file_search	
@@ -6166,7 +6166,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		my music	file_search	
 0		bring up my documents	file_search	
 0		find my meeting notes to update	file_search	
-0		who is on the list for	file_search	
+0		who is on the list for	file_navigate	
 0		What's on my picnic shopping list	file_search	
 0		FIND QUOTES NOTE	file_search	
 0		Search documents for recent address list	file_search	
@@ -6278,7 +6278,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		hey cortana find a file called signature	file_search	
 0		i want to see my photos	file_navigate	
 0		show my photos from April 2015	file_search	
-0		Activate idea list editing.	file_search	
+0		Activate idea list editing.	file_navigate	
 0		snow blower files	file_search	
 0		find emails that contains the word job	file_search	
 0		Can you show me my school list?	file_search	
@@ -6305,7 +6305,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		my homework document	file_search	
 0		system requirements document	file_search	
 0		hey cortana show me powerpoint slides about the charity auction	file_search	
-0		i need that list again	file_search	
+0		i need that list again	file_navigate	
 0		Show me my resume	file_search	
 0		Pull up the grocery notes.	file_search	
 0		documents t	file_search	
@@ -6357,7 +6357,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Cortana, pull up the PharmTech presentation	file_search	
 0		show me pictures on the onedrive	file_search	
 0		Do I have any new email	file_search	
-0		What are my notes on grocery shopping?	file_navigate	
+0		What are my notes on grocery shopping?	file_search	
 0		show me my note	file_search	
 0		hey cortana can you search a file for me	file_search	
 0		Please find the babysitting co-op document about hour totals from July 1.	file_search	
@@ -6526,7 +6526,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		show me pictures taken in august	file_search	
 0		hey cortana show me my notes from last week	file_search	
 0		hey cortana find all my pictures from this year	file_search	
-0		List notes for tonight.	file_search	
+0		List notes for tonight.	file_navigate	
 0		search drive c	file_search	
 0		show my photos from April 2015	file_search	
 0		put onscreen anything pertaining to geekoid	file_search	
@@ -6599,7 +6599,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Where is the presentation from today on dating techniques.	file_search	
 0		restore files from two months ago	file_search	
 0		find documents	file_search	
-0		what are my notes	file_navigate	
+0		what are my notes	file_search	
 0		i need my trans am anniversary card file	file_search	
 0		find my favourites box	file_search	
 0		bring up my photos	file_search	
@@ -6619,7 +6619,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		take me to the boot file	file_search	
 0		show my photos from April 2015	file_search	
 0		Show me all teenspeak files	file_search	
-0		list notes on tasks	file_search	
+0		list notes on tasks	file_navigate	
 0		peerblock lists	file_search	
 0		find photo.	file_search	
 0		hey cortana show me word documents that contain the word moose	file_search	
@@ -6813,7 +6813,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		hey cortana search my stuff	file_search	
 0		show all notes about my trip	file_search	
 0		show me my movies	file_search	
-0		List my notes for the meeting next week	file_search	
+0		List my notes for the meeting next week	file_navigate	
 0		show me my songs	file_search	
 0		review my meeting notes	file_open	
 0		search for my homework document	file_search	
@@ -6882,7 +6882,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		search meeting notes for start time and venue	file_search	
 0		can you show me my photos?	file_search	
 0		locate presentation 1	file_search	
-0		cortana what are my notes	file_navigate	
+0		cortana what are my notes	file_search	
 0		Donna's presentation edit	file_search	
 0		display my photos in the screensaver	file_search	
 0		investment excel	file_search	
@@ -6944,7 +6944,7 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Find the rent for 2 bedroom apartments in Minnesota spreadsheet	file_search	
 0		np.exe	file_search	
 0		search in z drive for aliens	file_search	
-0		List all documents done in the last 10 days	file_search	
+0		List all documents done in the last 10 days	file_navigate	
 0		my google photos	file_search	
 0		show my photos from April 2015	file_search	
 0		show me holiday photos	file_search	

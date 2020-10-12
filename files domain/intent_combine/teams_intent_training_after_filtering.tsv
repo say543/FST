@@ -5314,11 +5314,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Go for powerpoint deck	file_navigate	
 0		Go for powerpoint deck	file_navigate	
 0		Go for powerpoint deck	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
 0		share the most recently used memos of this conversation	file_share	
 0		share the most recently used memos of this conversation	file_share	
 0		share the most recently used memos of this conversation	file_share	
@@ -5349,11 +5349,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Cortana display my I was creating file.	file_search	
 0		Cortana display my I was creating file.	file_search	
 0		Cortana display my I was creating file.	file_search	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
 0		Cortana see my I was composing files.	file_navigate	
 0		Cortana see my I was composing files.	file_navigate	
 0		Cortana see my I was composing files.	file_navigate	
@@ -5419,11 +5419,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Share the document I last edited to the meeting	file_share	
 0		Share the document I last edited to the meeting	file_share	
 0		Share the document I last edited to the meeting	file_share	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
 0		opening the document newest.	file_open	
 0		opening the document newest.	file_open	
 0		opening the document newest.	file_open	
@@ -5434,11 +5434,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		share files with my meeting attendees in next	file_share	
 0		share files with my meeting attendees in next	file_share	
 0		share files with my meeting attendees in next	file_share	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
 0		Browse my files in this last week	file_navigate	
 0		Browse my files in this last week	file_navigate	
 0		Browse my files in this last week	file_navigate	
@@ -5514,11 +5514,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Open workplace OneNote I uploaded	file_open	
 0		Open workplace OneNote I uploaded	file_open	
 0		Open workplace OneNote I uploaded	file_open	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
 0		Go in my deck	file_navigate	
 0		Go in my deck	file_navigate	
 0		Go in my deck	file_navigate	
@@ -6294,11 +6294,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Show of my downloaded files	file_search	
 0		Show of my downloaded files	file_search	
 0		Show of my downloaded files	file_search	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
 0		share preview test plan document file with Jacob	file_share	
 0		share preview test plan document file with Jacob	file_share	
 0		share preview test plan document file with Jacob	file_share	
@@ -6354,11 +6354,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		please run the document I was working on recently.	file_open	
 0		please run the document I was working on recently.	file_open	
 0		please run the document I was working on recently.	file_open	
-0		list my I updated open document	file_open	
-0		list my I updated open document	file_open	
-0		list my I updated open document	file_open	
-0		list my I updated open document	file_open	
-0		list my I updated open document	file_open	
+0		list my I updated open document	file_navigate	
+0		list my I updated open document	file_navigate	
+0		list my I updated open document	file_navigate	
+0		list my I updated open document	file_navigate	
+0		list my I updated open document	file_navigate	
 0		Pull up preview test plan document dok	file_search	
 0		Pull up preview test plan document dok	file_search	
 0		Pull up preview test plan document dok	file_search	
@@ -6379,11 +6379,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Share workplace deck in the 11AM meeting	file_share	
 0		Share workplace deck in the 11AM meeting	file_share	
 0		Share workplace deck in the 11AM meeting	file_share	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
 0		Show of my ppt	file_search	
 0		Show of my ppt	file_search	
 0		Show of my ppt	file_search	
@@ -6509,11 +6509,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Share my Word	file_share	
 0		Share my Word	file_share	
 0		Share my Word	file_share	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
 0		please visit my I was editing files.	file_navigate	
 0		please visit my I was editing files.	file_navigate	
 0		please visit my I was editing files.	file_navigate	
@@ -6524,26 +6524,26 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		download voice skills word	file_download	
 0		download voice skills word	file_download	
 0		download voice skills word	file_download	
-0		list my I last edited open documents	file_open	
-0		list my I last edited open documents	file_open	
-0		list my I last edited open documents	file_open	
-0		list my I last edited open documents	file_open	
-0		list my I last edited open documents	file_open	
+0		list my I last edited open documents	file_navigate	
+0		list my I last edited open documents	file_navigate	
+0		list my I last edited open documents	file_navigate	
+0		list my I last edited open documents	file_navigate	
+0		list my I last edited open documents	file_navigate	
 0		share the files John	file_share	
 0		share the files John	file_share	
 0		share the files John	file_share	
 0		share the files John	file_share	
 0		share the files John	file_share	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		list my I updated open documents	file_open	
-0		list my I updated open documents	file_open	
-0		list my I updated open documents	file_open	
-0		list my I updated open documents	file_open	
-0		list my I updated open documents	file_open	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		list my I updated open documents	file_navigate	
+0		list my I updated open documents	file_navigate	
+0		list my I updated open documents	file_navigate	
+0		list my I updated open documents	file_navigate	
+0		list my I updated open documents	file_navigate	
 0		showing me files I was working on.	file_navigate	
 0		showing me files I was working on.	file_navigate	
 0		showing me files I was working on.	file_navigate	
@@ -6594,11 +6594,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Cortana open the pictures paper I was working on recently	file_open	
 0		Cortana open the pictures paper I was working on recently	file_open	
 0		Cortana open the pictures paper I was working on recently	file_open	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
 0		Open a document I was writing	file_open	
 0		Open a document I was writing	file_open	
 0		Open a document I was writing	file_open	
@@ -7519,11 +7519,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Share file preview test plan document in voice skills stand up meeting attendees	file_share	
 0		Share file preview test plan document in voice skills stand up meeting attendees	file_share	
 0		Share file preview test plan document in voice skills stand up meeting attendees	file_share	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
 0		Share the document I used most recently with the conversation	file_share	
 0		Share the document I used most recently with the conversation	file_share	
 0		Share the document I used most recently with the conversation	file_share	
@@ -7624,11 +7624,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Can opening the last document I was editing	file_open	
 0		Can opening the last document I was editing	file_open	
 0		Can opening the last document I was editing	file_open	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
 0		save this document	file_download	
 0		save this document	file_download	
 0		save this document	file_download	
@@ -7654,11 +7654,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Cortana display the document most recent.	file_search	
 0		Cortana display the document most recent.	file_search	
 0		Cortana display the document most recent.	file_search	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
 0		Bring up the document files I just edited	file_search	
 0		Bring up the document files I just edited	file_search	
 0		Bring up the document files I just edited	file_search	
@@ -8019,11 +8019,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		I just edited a document , then open the document.	file_open	
 0		I just edited a document , then open the document.	file_open	
 0		I just edited a document , then open the document.	file_open	
-0		list my I was writing open documents	file_open	
-0		list my I was writing open documents	file_open	
-0		list my I was writing open documents	file_open	
-0		list my I was writing open documents	file_open	
-0		list my I was writing open documents	file_open	
+0		list my I was writing open documents	file_navigate	
+0		list my I was writing open documents	file_navigate	
+0		list my I was writing open documents	file_navigate	
+0		list my I was writing open documents	file_navigate	
+0		list my I was writing open documents	file_navigate	
 0		Share tax file about this conversation	file_share	
 0		Share tax file about this conversation	file_share	
 0		Share tax file about this conversation	file_share	
@@ -8429,11 +8429,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		take me to file I uploaded.	file_search	
 0		take me to file I uploaded.	file_search	
 0		take me to file I uploaded.	file_search	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
 0		I need a document to open that I uploaded.	file_open	
 0		I need a document to open that I uploaded.	file_open	
 0		I need a document to open that I uploaded.	file_open	
@@ -8749,11 +8749,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		I was writing a document , then open the document.	file_open	
 0		I was writing a document , then open the document.	file_open	
 0		I was writing a document , then open the document.	file_open	
-0		list my I uploaded open documents	file_open	
-0		list my I uploaded open documents	file_open	
-0		list my I uploaded open documents	file_open	
-0		list my I uploaded open documents	file_open	
-0		list my I uploaded open documents	file_open	
+0		list my I uploaded open documents	file_navigate	
+0		list my I uploaded open documents	file_navigate	
+0		list my I uploaded open documents	file_navigate	
+0		list my I uploaded open documents	file_navigate	
+0		list my I uploaded open documents	file_navigate	
 0		Pull on deployment timeline doc	file_open	
 0		Pull on deployment timeline doc	file_open	
 0		Pull on deployment timeline doc	file_open	
@@ -8774,11 +8774,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		I required to view my I have recently opened files.	file_open	
 0		I required to view my I have recently opened files.	file_open	
 0		I required to view my I have recently opened files.	file_open	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
 0		Share my PPT	file_share	
 0		Share my PPT	file_share	
 0		Share my PPT	file_share	
@@ -8929,11 +8929,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		shows me files I used most recently.	file_navigate	
 0		shows me files I used most recently.	file_navigate	
 0		shows me files I used most recently.	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
 0		share file with my meeting in 11AM	file_share	
 0		share file with my meeting in 11AM	file_share	
 0		share file with my meeting in 11AM	file_share	
@@ -9039,11 +9039,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Launch the document I just edited	file_open	
 0		Launch the document I just edited	file_open	
 0		Launch the document I just edited	file_open	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
 0		Share most recently used Word in the 10 pm on Wednesday chat	file_share	
 0		Share most recently used Word in the 10 pm on Wednesday chat	file_share	
 0		Share most recently used Word in the 10 pm on Wednesday chat	file_share	
@@ -9289,11 +9289,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		show me the excel I had been working on	file_search	
 0		show me the excel I had been working on	file_search	
 0		show me the excel I had been working on	file_search	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
 0		Please open the last document recently	file_open	
 0		Please open the last document recently	file_open	
 0		Please open the last document recently	file_open	
@@ -9479,11 +9479,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		return to the previous document	file_navigate	
 0		return to the previous document	file_navigate	
 0		return to the previous document	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
 0		please visit my I had up before file.	file_navigate	
 0		please visit my I had up before file.	file_navigate	
 0		please visit my I had up before file.	file_navigate	
@@ -9749,11 +9749,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Share the downloads the last used to the meeting	file_share	
 0		Share the downloads the last used to the meeting	file_share	
 0		Share the downloads the last used to the meeting	file_share	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
 0		Share file lt review with shiproom meeting participants	file_share	
 0		Share file lt review with shiproom meeting participants	file_share	
 0		Share file lt review with shiproom meeting participants	file_share	
@@ -10234,11 +10234,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		show me the files I was creating last weeks.	file_search	
 0		show me the files I was creating last weeks.	file_search	
 0		show me the files I was creating last weeks.	file_search	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
 0		Navigate for my I was working on recently files	file_navigate	
 0		Navigate for my I was working on recently files	file_navigate	
 0		Navigate for my I was working on recently files	file_navigate	
@@ -10334,11 +10334,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		reopening the last document newest.	file_open	
 0		reopening the last document newest.	file_open	
 0		reopening the last document newest.	file_open	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
 0		saving tax image	file_download	
 0		saving tax image	file_download	
 0		saving tax image	file_download	
@@ -10374,11 +10374,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Open my I was working on I had up before draft I was working on I had up before	file_open	
 0		Open my I was working on I had up before draft I was working on I had up before	file_open	
 0		Open my I was working on I had up before draft I was working on I had up before	file_open	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
 0		share a file with chat next	file_share	
 0		share a file with chat next	file_share	
 0		share a file with chat next	file_share	
@@ -10759,11 +10759,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		sharing the deployment timeline downloaded files with this meeting attendees	file_share	
 0		sharing the deployment timeline downloaded files with this meeting attendees	file_share	
 0		sharing the deployment timeline downloaded files with this meeting attendees	file_share	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
 0		can you see my I was just working on files.	file_navigate	
 0		can you see my I was just working on files.	file_navigate	
 0		can you see my I was just working on files.	file_navigate	
@@ -10899,11 +10899,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		please launch the document I was working on recently.	file_open	
 0		please launch the document I was working on recently.	file_open	
 0		please launch the document I was working on recently.	file_open	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
 0		share workplace file using roger	file_share	
 0		share workplace file using roger	file_share	
 0		share workplace file using roger	file_share	
@@ -10999,11 +10999,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		I need to display my I used most recently files.	file_search	
 0		I need to display my I used most recently files.	file_search	
 0		I need to display my I used most recently files.	file_search	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
 0		show my downloaded files files	file_search	
 0		show my downloaded files files	file_search	
 0		show my downloaded files files	file_search	
@@ -12044,11 +12044,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Share lt review paper I was last working on using voice skills stand up meeting participants	file_share	
 0		Share lt review paper I was last working on using voice skills stand up meeting participants	file_share	
 0		Share lt review paper I was last working on using voice skills stand up meeting participants	file_share	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
 0		Open paper on which I was editing	file_open	
 0		Open paper on which I was editing	file_open	
 0		Open paper on which I was editing	file_open	
@@ -12234,11 +12234,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		please raise the I last edited document	file_navigate	
 0		please raise the I last edited document	file_navigate	
 0		please raise the I last edited document	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
 0		saving voice skills image	file_download	
 0		saving voice skills image	file_download	
 0		saving voice skills image	file_download	
@@ -12539,11 +12539,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Open most recently used ppt	file_open	
 0		Open most recently used ppt	file_open	
 0		Open most recently used ppt	file_open	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
 0		Share most recently used OneNote I was last working on to the meeting participants	file_share	
 0		Share most recently used OneNote I was last working on to the meeting participants	file_share	
 0		Share most recently used OneNote I was last working on to the meeting participants	file_share	
@@ -13559,11 +13559,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		saving deployment timeline file	file_download	
 0		saving deployment timeline file	file_download	
 0		saving deployment timeline file	file_download	
-0		list my I was using open documents	file_open	
-0		list my I was using open documents	file_open	
-0		list my I was using open documents	file_open	
-0		list my I was using open documents	file_open	
-0		list my I was using open documents	file_open	
+0		list my I was using open documents	file_navigate	
+0		list my I was using open documents	file_navigate	
+0		list my I was using open documents	file_navigate	
+0		list my I was using open documents	file_navigate	
+0		list my I was using open documents	file_navigate	
 0		going back to previous document	file_navigate	
 0		going back to previous document	file_navigate	
 0		going back to previous document	file_navigate	
@@ -13724,11 +13724,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Bring up the paper I was working on recently.	file_search	
 0		Bring up the paper I was working on recently.	file_search	
 0		Bring up the paper I was working on recently.	file_search	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
 0		share the lt review spreadsheet to this meeting participants	file_share	
 0		share the lt review spreadsheet to this meeting participants	file_share	
 0		share the lt review spreadsheet to this meeting participants	file_share	
@@ -14084,11 +14084,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Share document I was editing with voice skills stand up chat	file_share	
 0		Share document I was editing with voice skills stand up chat	file_share	
 0		Share document I was editing with voice skills stand up chat	file_share	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
 0		Share voice skills spreadsheet to the tomorrow meeting participants	file_share	
 0		Share voice skills spreadsheet to the tomorrow meeting participants	file_share	
 0		Share voice skills spreadsheet to the tomorrow meeting participants	file_share	
@@ -14109,11 +14109,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Bring up the document file that I worked on	file_search	
 0		Bring up the document file that I worked on	file_search	
 0		Bring up the document file that I worked on	file_search	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
 0		show my downloads	file_search	
 0		show my downloads	file_search	
 0		show my downloads	file_search	
@@ -14494,11 +14494,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		please go to my I have recently opened files.	file_navigate	
 0		please go to my I have recently opened files.	file_navigate	
 0		please go to my I have recently opened files.	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
 0		Find the paper newest	file_search	
 0		Find the paper newest	file_search	
 0		Find the paper newest	file_search	
@@ -14534,11 +14534,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		share a file with meeting participants next	file_share	
 0		share a file with meeting participants next	file_share	
 0		share a file with meeting participants next	file_share	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
 0		opening the document I was just working on.	file_open	
 0		opening the document I was just working on.	file_open	
 0		opening the document I was just working on.	file_open	
@@ -15009,11 +15009,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Open deployment timeline file	file_open	
 0		Open deployment timeline file	file_open	
 0		Open deployment timeline file	file_open	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
 0		opening the last document I worked on.	file_open	
 0		opening the last document I worked on.	file_open	
 0		opening the last document I worked on.	file_open	
@@ -15439,11 +15439,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Please bring back up the last document I was open	file_search	
 0		Please bring back up the last document I was open	file_search	
 0		Please bring back up the last document I was open	file_search	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
 0		reopen the last document I was working on.	file_open	
 0		reopen the last document I was working on.	file_open	
 0		reopen the last document I was working on.	file_open	
@@ -15459,11 +15459,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Open the last document in most recent	file_open	
 0		Open the last document in most recent	file_open	
 0		Open the last document in most recent	file_open	
-0		list my I was working on recently open documents	file_open	
-0		list my I was working on recently open documents	file_open	
-0		list my I was working on recently open documents	file_open	
-0		list my I was working on recently open documents	file_open	
-0		list my I was working on recently open documents	file_open	
+0		list my I was working on recently open documents	file_navigate	
+0		list my I was working on recently open documents	file_navigate	
+0		list my I was working on recently open documents	file_navigate	
+0		list my I was working on recently open documents	file_navigate	
+0		list my I was working on recently open documents	file_navigate	
 0		share payroll files with alice	file_share	
 0		share payroll files with alice	file_share	
 0		share payroll files with alice	file_share	
@@ -15919,11 +15919,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Show me of my files	file_search	
 0		Show me of my files	file_search	
 0		Show me of my files	file_search	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
 0		Reopen last documents open	file_open	
 0		Reopen last documents open	file_open	
 0		Reopen last documents open	file_open	
@@ -16169,11 +16169,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		share deployment timeline file using roger	file_share	
 0		share deployment timeline file using roger	file_share	
 0		share deployment timeline file using roger	file_share	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
 0		sharing insurance file with jay ongg	file_share	
 0		sharing insurance file with jay ongg	file_share	
 0		sharing insurance file with jay ongg	file_share	
@@ -16294,11 +16294,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Cortana opens the Excel document I just edited	file_open	
 0		Cortana opens the Excel document I just edited	file_open	
 0		Cortana opens the Excel document I just edited	file_open	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
 0		Hi please show me to my I updated files	file_search	
 0		Hi please show me to my I updated files	file_search	
 0		Hi please show me to my I updated files	file_search	
@@ -16349,11 +16349,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Open tax excel	file_open	
 0		Open tax excel	file_open	
 0		Open tax excel	file_open	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
 0		Open most recently used memos	file_open	
 0		Open most recently used memos	file_open	
 0		Open most recently used memos	file_open	
@@ -16509,11 +16509,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		save deployment timeline picture	file_download	
 0		save deployment timeline picture	file_download	
 0		save deployment timeline picture	file_download	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
 0		go back to previous document	file_navigate	
 0		go back to previous document	file_navigate	
 0		go back to previous document	file_navigate	
@@ -16769,11 +16769,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Find the document I was just working on and open it please.	file_search	
 0		Find the document I was just working on and open it please.	file_search	
 0		Find the document I was just working on and open it please.	file_search	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
 0		Hey could you please direct me to the my last files I was last working on?	file_navigate	
 0		Hey could you please direct me to the my last files I was last working on?	file_navigate	
 0		Hey could you please direct me to the my last files I was last working on?	file_navigate	
@@ -16999,11 +16999,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Share document I was last working on with design sync meeting	file_share	
 0		Share document I was last working on with design sync meeting	file_share	
 0		Share document I was last working on with design sync meeting	file_share	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
 0		download that file	file_download	
 0		download that file	file_download	
 0		download that file	file_download	
@@ -17189,11 +17189,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Can you open my I worked on file for me	file_open	
 0		Can you open my I worked on file for me	file_open	
 0		Can you open my I worked on file for me	file_open	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
 0		Share the paper I was last working on in this meeting participants	file_share	
 0		Share the paper I was last working on in this meeting participants	file_share	
 0		Share the paper I was last working on in this meeting participants	file_share	
@@ -17589,11 +17589,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		return to previous document	file_navigate	
 0		return to previous document	file_navigate	
 0		return to previous document	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
 0		Share file deployment timeline of shiproom meeting attendees	file_share	
 0		Share file deployment timeline of shiproom meeting attendees	file_share	
 0		Share file deployment timeline of shiproom meeting attendees	file_share	
@@ -17844,31 +17844,31 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		I last edited a document , please open the document.	file_open	
 0		I last edited a document , please open the document.	file_open	
 0		I last edited a document , please open the document.	file_open	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
 0		show the files the this last week.	file_search	
 0		show the files the this last week.	file_search	
 0		show the files the this last week.	file_search	
 0		show the files the this last week.	file_search	
 0		show the files the this last week.	file_search	
-0		list my I was creating open document	file_open	
-0		list my I was creating open document	file_open	
-0		list my I was creating open document	file_open	
-0		list my I was creating open document	file_open	
-0		list my I was creating open document	file_open	
+0		list my I was creating open document	file_navigate	
+0		list my I was creating open document	file_navigate	
+0		list my I was creating open document	file_navigate	
+0		list my I was creating open document	file_navigate	
+0		list my I was creating open document	file_navigate	
 0		share the tax Excel of this conversation	file_share	
 0		share the tax Excel of this conversation	file_share	
 0		share the tax Excel of this conversation	file_share	
 0		share the tax Excel of this conversation	file_share	
 0		share the tax Excel of this conversation	file_share	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
 0		share the files with my 11AM meeting participants	file_share	
 0		share the files with my 11AM meeting participants	file_share	
 0		share the files with my 11AM meeting participants	file_share	
@@ -18089,11 +18089,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Cortana open that documentation.	file_open	
 0		Cortana open that documentation.	file_open	
 0		Cortana open that documentation.	file_open	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
 0		Please open the my this document	file_open	
 0		Please open the my this document	file_open	
 0		Please open the my this document	file_open	
@@ -18184,11 +18184,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		showing me my I used most recently files	file_navigate	
 0		showing me my I used most recently files	file_navigate	
 0		showing me my I used most recently files	file_navigate	
-0		list my I updated open document	file_open	
-0		list my I updated open document	file_open	
-0		list my I updated open document	file_open	
-0		list my I updated open document	file_open	
-0		list my I updated open document	file_open	
+0		list my I updated open document	file_navigate	
+0		list my I updated open document	file_navigate	
+0		list my I updated open document	file_navigate	
+0		list my I updated open document	file_navigate	
+0		list my I updated open document	file_navigate	
 0		I would like to see my I was composing files please.	file_navigate	
 0		I would like to see my I was composing files please.	file_navigate	
 0		I would like to see my I was composing files please.	file_navigate	
@@ -18339,11 +18339,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Can opens the last document I updated	file_open	
 0		Can opens the last document I updated	file_open	
 0		Can opens the last document I updated	file_open	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
 0		show me archives recently.	file_search	
 0		show me archives recently.	file_search	
 0		show me archives recently.	file_search	
@@ -18884,11 +18884,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Cortana open my bill doucments again	file_open	
 0		Cortana open my bill doucments again	file_open	
 0		Cortana open my bill doucments again	file_open	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
 0		opening the last document I had been working on.	file_open	
 0		opening the last document I had been working on.	file_open	
 0		opening the last document I had been working on.	file_open	
@@ -19129,11 +19129,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Open the document I've recently used	file_open	
 0		Open the document I've recently used	file_open	
 0		Open the document I've recently used	file_open	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
 0		showing me my PowerPoint files	file_navigate	
 0		showing me my PowerPoint files	file_navigate	
 0		showing me my PowerPoint files	file_navigate	
@@ -19394,11 +19394,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Open brownbag dr	file_open	
 0		Open brownbag dr	file_open	
 0		Open brownbag dr	file_open	
-0		list my I uploaded open documents	file_open	
-0		list my I uploaded open documents	file_open	
-0		list my I uploaded open documents	file_open	
-0		list my I uploaded open documents	file_open	
-0		list my I uploaded open documents	file_open	
+0		list my I uploaded open documents	file_navigate	
+0		list my I uploaded open documents	file_navigate	
+0		list my I uploaded open documents	file_navigate	
+0		list my I uploaded open documents	file_navigate	
+0		list my I uploaded open documents	file_navigate	
 0		show my microsoft excel I was editing	file_search	
 0		show my microsoft excel I was editing	file_search	
 0		show my microsoft excel I was editing	file_search	
@@ -19479,11 +19479,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Show of my downloaded files	file_search	
 0		Show of my downloaded files	file_search	
 0		Show of my downloaded files	file_search	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
 0		share deployment timeline file with John	file_share	
 0		share deployment timeline file with John	file_share	
 0		share deployment timeline file with John	file_share	
@@ -19679,11 +19679,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Please bring back up the last document I has open	file_search	
 0		Please bring back up the last document I has open	file_search	
 0		Please bring back up the last document I has open	file_search	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
 0		Share the file of this chat	file_share	
 0		Share the file of this chat	file_share	
 0		Share the file of this chat	file_share	
@@ -20199,11 +20199,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Go of downloaded files	file_navigate	
 0		Go of downloaded files	file_navigate	
 0		Go of downloaded files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
 0		Open my preview test plan document info paper	file_open	
 0		Open my preview test plan document info paper	file_open	
 0		Open my preview test plan document info paper	file_open	
@@ -20239,11 +20239,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		open the files I last edited.	file_open	
 0		open the files I last edited.	file_open	
 0		open the files I last edited.	file_open	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
 0		I want to see my I uploaded files please.	file_navigate	
 0		I want to see my I uploaded files please.	file_navigate	
 0		I want to see my I uploaded files please.	file_navigate	
@@ -20304,11 +20304,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Share this paper I had been working on in this meeting participants	file_share	
 0		Share this paper I had been working on in this meeting participants	file_share	
 0		Share this paper I had been working on in this meeting participants	file_share	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
 0		please go to my I was composing files.	file_navigate	
 0		please go to my I was composing files.	file_navigate	
 0		please go to my I was composing files.	file_navigate	
@@ -20484,11 +20484,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		showing me my recently files	file_navigate	
 0		showing me my recently files	file_navigate	
 0		showing me my recently files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
 0		Reopen last document opened	file_open	
 0		Reopen last document opened	file_open	
 0		Reopen last document opened	file_open	
@@ -20684,11 +20684,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Please show me my I had up before file , Cortana	file_search	
 0		Please show me my I had up before file , Cortana	file_search	
 0		Please show me my I had up before file , Cortana	file_search	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
 0		open the files newest.	file_open	
 0		open the files newest.	file_open	
 0		open the files newest.	file_open	
@@ -21099,11 +21099,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		keep that I created file	file_download	
 0		keep that I created file	file_download	
 0		keep that I created file	file_download	
-0		list my I've recently used open document	file_open	
-0		list my I've recently used open document	file_open	
-0		list my I've recently used open document	file_open	
-0		list my I've recently used open document	file_open	
-0		list my I've recently used open document	file_open	
+0		list my I've recently used open document	file_navigate	
+0		list my I've recently used open document	file_navigate	
+0		list my I've recently used open document	file_navigate	
+0		list my I've recently used open document	file_navigate	
+0		list my I've recently used open document	file_navigate	
 0		Take me where I can see all my recent files	file_search	
 0		Take me where I can see all my recent files	file_search	
 0		Take me where I can see all my recent files	file_search	
@@ -21209,11 +21209,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Navigate to a file	file_navigate	
 0		Navigate to a file	file_navigate	
 0		Navigate to a file	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
 0		Pull to the document last active	file_navigate	
 0		Pull to the document last active	file_navigate	
 0		Pull to the document last active	file_navigate	
@@ -21709,11 +21709,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Open most recently used document I uploaded	file_open	
 0		Open most recently used document I uploaded	file_open	
 0		Open most recently used document I uploaded	file_open	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
 0		Open most recently used dok	file_open	
 0		Open most recently used dok	file_open	
 0		Open most recently used dok	file_open	
@@ -21794,11 +21794,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		please put up the I had been working on document	file_search	
 0		please put up the I had been working on document	file_search	
 0		please put up the I had been working on document	file_search	
-0		list my I have recently opened open documents	file_open	
-0		list my I have recently opened open documents	file_open	
-0		list my I have recently opened open documents	file_open	
-0		list my I have recently opened open documents	file_open	
-0		list my I have recently opened open documents	file_open	
+0		list my I have recently opened open documents	file_navigate	
+0		list my I have recently opened open documents	file_navigate	
+0		list my I have recently opened open documents	file_navigate	
+0		list my I have recently opened open documents	file_navigate	
+0		list my I have recently opened open documents	file_navigate	
 0		please bring up the I worked on paper	file_search	
 0		please bring up the I worked on paper	file_search	
 0		please bring up the I worked on paper	file_search	
@@ -21974,11 +21974,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		sharing files with conversation 10 pm on Wednesday	file_share	
 0		sharing files with conversation 10 pm on Wednesday	file_share	
 0		sharing files with conversation 10 pm on Wednesday	file_share	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
 0		took me to the file I've recently used.	file_search	
 0		took me to the file I've recently used.	file_search	
 0		took me to the file I've recently used.	file_search	
@@ -21994,16 +21994,16 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Open the last document that newest	file_open	
 0		Open the last document that newest	file_open	
 0		Open the last document that newest	file_open	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
 0		display the excel I have recently opened	file_search	
 0		display the excel I have recently opened	file_search	
 0		display the excel I have recently opened	file_search	
@@ -22014,11 +22014,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		show me my most recent Word files.	file_search	
 0		show me my most recent Word files.	file_search	
 0		show me my most recent Word files.	file_search	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
 0		show me my downloaded files	file_search	
 0		show me my downloaded files	file_search	
 0		show me my downloaded files	file_search	
@@ -22144,11 +22144,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Browse my file from today	file_navigate	
 0		Browse my file from today	file_navigate	
 0		Browse my file from today	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
 0		can you show my the last used file.	file_search	
 0		can you show my the last used file.	file_search	
 0		can you show my the last used file.	file_search	
@@ -22309,11 +22309,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Open the last paper I updated	file_open	
 0		Open the last paper I updated	file_open	
 0		Open the last paper I updated	file_open	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
 0		Navigate in my I've recently used files	file_navigate	
 0		Navigate in my I've recently used files	file_navigate	
 0		Navigate in my I've recently used files	file_navigate	
@@ -22919,11 +22919,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Navigate of word	file_navigate	
 0		Navigate of word	file_navigate	
 0		Navigate of word	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
 0		Share the file in this meeting attendees	file_share	
 0		Share the file in this meeting attendees	file_share	
 0		Share the file in this meeting attendees	file_share	
@@ -22934,11 +22934,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Find the document which last active	file_search	
 0		Find the document which last active	file_search	
 0		Find the document which last active	file_search	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
 0		open the document I is working on today to page one.	file_open	
 0		open the document I is working on today to page one.	file_open	
 0		open the document I is working on today to page one.	file_open	
@@ -23054,11 +23054,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		I need you to re-open the document I updated	file_open	
 0		I need you to re-open the document I updated	file_open	
 0		I need you to re-open the document I updated	file_open	
-0		list my I was last working on open document	file_open	
-0		list my I was last working on open document	file_open	
-0		list my I was last working on open document	file_open	
-0		list my I was last working on open document	file_open	
-0		list my I was last working on open document	file_open	
+0		list my I was last working on open document	file_navigate	
+0		list my I was last working on open document	file_navigate	
+0		list my I was last working on open document	file_navigate	
+0		list my I was last working on open document	file_navigate	
+0		list my I was last working on open document	file_navigate	
 0		open the file I've recently used.	file_open	
 0		open the file I've recently used.	file_open	
 0		open the file I've recently used.	file_open	
@@ -23144,11 +23144,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Cortana opened my invoice doucments again	file_open	
 0		Cortana opened my invoice doucments again	file_open	
 0		Cortana opened my invoice doucments again	file_open	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
 0		share this file using Anna Green	file_share	
 0		share this file using Anna Green	file_share	
 0		share this file using Anna Green	file_share	
@@ -23984,11 +23984,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Hi please show me my I had been working on files	file_search	
 0		Hi please show me my I had been working on files	file_search	
 0		Hi please show me my I had been working on files	file_search	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
 0		save payroll document	file_download	
 0		save payroll document	file_download	
 0		save payroll document	file_download	
@@ -24174,11 +24174,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Can you please open a document the last used?	file_open	
 0		Can you please open a document the last used?	file_open	
 0		Can you please open a document the last used?	file_open	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
 0		upload deployment timeline word	file_download	
 0		upload deployment timeline word	file_download	
 0		upload deployment timeline word	file_download	
@@ -24374,11 +24374,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		share a file with my chat at 11AM	file_share	
 0		share a file with my chat at 11AM	file_share	
 0		share a file with my chat at 11AM	file_share	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
 0		share the files with alice	file_share	
 0		share the files with alice	file_share	
 0		share the files with alice	file_share	
@@ -24474,11 +24474,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Cortana open my bill doucments again	file_open	
 0		Cortana open my bill doucments again	file_open	
 0		Cortana open my bill doucments again	file_open	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
 0		I need you re-open the document I was writing	file_open	
 0		I need you re-open the document I was writing	file_open	
 0		I need you re-open the document I was writing	file_open	
@@ -25089,11 +25089,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		share payroll files John	file_share	
 0		share payroll files John	file_share	
 0		share payroll files John	file_share	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
 0		Show me the last document I made modifications	file_search	
 0		Show me the last document I made modifications	file_search	
 0		Show me the last document I made modifications	file_search	
@@ -25239,21 +25239,21 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Pull up a document I was editing	file_search	
 0		Pull up a document I was editing	file_search	
 0		Pull up a document I was editing	file_search	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
 0		I you need to re-open the document I've recently used	file_open	
 0		I you need to re-open the document I've recently used	file_open	
 0		I you need to re-open the document I've recently used	file_open	
 0		I you need to re-open the document I've recently used	file_open	
 0		I you need to re-open the document I've recently used	file_open	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
 0		Please pull up my I just edited paper	file_search	
 0		Please pull up my I just edited paper	file_search	
 0		Please pull up my I just edited paper	file_search	
@@ -25599,11 +25599,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Can you opened my I was using file for me	file_open	
 0		Can you opened my I was using file for me	file_open	
 0		Can you opened my I was using file for me	file_open	
-0		list my I was working on open documents	file_open	
-0		list my I was working on open documents	file_open	
-0		list my I was working on open documents	file_open	
-0		list my I was working on open documents	file_open	
-0		list my I was working on open documents	file_open	
+0		list my I was working on open documents	file_navigate	
+0		list my I was working on open documents	file_navigate	
+0		list my I was working on open documents	file_navigate	
+0		list my I was working on open documents	file_navigate	
+0		list my I was working on open documents	file_navigate	
 0		open the document I was working on today to page one.	file_open	
 0		open the document I was working on today to page one.	file_open	
 0		open the document I was working on today to page one.	file_open	
@@ -26199,11 +26199,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Pull up the paper recent	file_search	
 0		Pull up the paper recent	file_search	
 0		Pull up the paper recent	file_search	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
 0		Please show me my most recent file , Cortana	file_search	
 0		Please show me my most recent file , Cortana	file_search	
 0		Please show me my most recent file , Cortana	file_search	
@@ -26529,11 +26529,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		please raise the I had up before document	file_navigate	
 0		please raise the I had up before document	file_navigate	
 0		please raise the I had up before document	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
 0		Open that PPT	file_open	
 0		Open that PPT	file_open	
 0		Open that PPT	file_open	
@@ -26639,11 +26639,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Cortana open recent document.	file_open	
 0		Cortana open recent document.	file_open	
 0		Cortana open recent document.	file_open	
-0		list my newest open document	file_open	
-0		list my newest open document	file_open	
-0		list my newest open document	file_open	
-0		list my newest open document	file_open	
-0		list my newest open document	file_open	
+0		list my newest open document	file_navigate	
+0		list my newest open document	file_navigate	
+0		list my newest open document	file_navigate	
+0		list my newest open document	file_navigate	
+0		list my newest open document	file_navigate	
 0		share brownbag files with roger	file_share	
 0		share brownbag files with roger	file_share	
 0		share brownbag files with roger	file_share	
@@ -27014,11 +27014,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		save workplace picture	file_download	
 0		save workplace picture	file_download	
 0		save workplace picture	file_download	
-0		list my recent open document	file_open	
-0		list my recent open document	file_open	
-0		list my recent open document	file_open	
-0		list my recent open document	file_open	
-0		list my recent open document	file_open	
+0		list my recent open document	file_navigate	
+0		list my recent open document	file_navigate	
+0		list my recent open document	file_navigate	
+0		list my recent open document	file_navigate	
+0		list my recent open document	file_navigate	
 0		Share the document newest with the chat	file_share	
 0		Share the document newest with the chat	file_share	
 0		Share the document newest with the chat	file_share	
@@ -27224,11 +27224,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Open my the info paper	file_open	
 0		Open my the info paper	file_open	
 0		Open my the info paper	file_open	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
 0		Cortana bringing up my preview test plan document download.	file_search	
 0		Cortana bringing up my preview test plan document download.	file_search	
 0		Cortana bringing up my preview test plan document download.	file_search	
@@ -27324,11 +27324,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Cortana bring up the document I was working on before the phone call is interrupted me.	file_search	
 0		Cortana bring up the document I was working on before the phone call is interrupted me.	file_search	
 0		Cortana bring up the document I was working on before the phone call is interrupted me.	file_search	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
 0		Open a document recent	file_open	
 0		Open a document recent	file_open	
 0		Open a document recent	file_open	
@@ -27444,11 +27444,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		share files with John	file_share	
 0		share files with John	file_share	
 0		share files with John	file_share	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
 0		Please open the last document I updated	file_open	
 0		Please open the last document I updated	file_open	
 0		Please open the last document I updated	file_open	
@@ -27579,11 +27579,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		sharing most recently used file with Anna Green	file_share	
 0		sharing most recently used file with Anna Green	file_share	
 0		sharing most recently used file with Anna Green	file_share	
-0		list my I was using open document	file_open	
-0		list my I was using open document	file_open	
-0		list my I was using open document	file_open	
-0		list my I was using open document	file_open	
-0		list my I was using open document	file_open	
+0		list my I was using open document	file_navigate	
+0		list my I was using open document	file_navigate	
+0		list my I was using open document	file_navigate	
+0		list my I was using open document	file_navigate	
+0		list my I was using open document	file_navigate	
 0		re-open the last document I was using.	file_open	
 0		re-open the last document I was using.	file_open	
 0		re-open the last document I was using.	file_open	
@@ -27659,11 +27659,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Cortana open the downloads document last active	file_open	
 0		Cortana open the downloads document last active	file_open	
 0		Cortana open the downloads document last active	file_open	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
 0		Retrieve what I was just working and open it up.	file_open	
 0		Retrieve what I was just working and open it up.	file_open	
 0		Retrieve what I was just working and open it up.	file_open	
@@ -28209,11 +28209,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Please pulls up my last active document	file_search	
 0		Please pulls up my last active document	file_search	
 0		Please pulls up my last active document	file_search	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
 0		Bring of the document I used most recently.	file_search	
 0		Bring of the document I used most recently.	file_search	
 0		Bring of the document I used most recently.	file_search	
@@ -28369,11 +28369,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Go for files	file_navigate	
 0		Go for files	file_navigate	
 0		Go for files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
-0		what is my newly opened files	file_navigate	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
+0		what is my newly opened files	file_search	
 0		Go with download	file_navigate	
 0		Go with download	file_navigate	
 0		Go with download	file_navigate	
@@ -28739,11 +28739,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Launch that document I to compose	file_open	
 0		Launch that document I to compose	file_open	
 0		Launch that document I to compose	file_open	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
 0		Open and paper I was editing	file_open	
 0		Open and paper I was editing	file_open	
 0		Open and paper I was editing	file_open	
@@ -28854,11 +28854,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		shared file with John	file_share	
 0		shared file with John	file_share	
 0		shared file with John	file_share	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
 0		sharing preview test plan document file with roger	file_share	
 0		sharing preview test plan document file with roger	file_share	
 0		sharing preview test plan document file with roger	file_share	
@@ -29134,11 +29134,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Retrieve what I only working on and open it up.	file_open	
 0		Retrieve what I only working on and open it up.	file_open	
 0		Retrieve what I only working on and open it up.	file_open	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
 0		sharing files with meeting 11AM	file_share	
 0		sharing files with meeting 11AM	file_share	
 0		sharing files with meeting 11AM	file_share	
@@ -29559,11 +29559,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Cortana bring up the document I was working on before the telephone call interrupted me.	file_search	
 0		Cortana bring up the document I was working on before the telephone call interrupted me.	file_search	
 0		Cortana bring up the document I was working on before the telephone call interrupted me.	file_search	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
 0		I need to see my I was creating files.	file_navigate	
 0		I need to see my I was creating files.	file_navigate	
 0		I need to see my I was creating files.	file_navigate	
@@ -30154,11 +30154,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		saving that picture	file_download	
 0		saving that picture	file_download	
 0		saving that picture	file_download	
-0		list my recent open document	file_open	
-0		list my recent open document	file_open	
-0		list my recent open document	file_open	
-0		list my recent open document	file_open	
-0		list my recent open document	file_open	
+0		list my recent open document	file_navigate	
+0		list my recent open document	file_navigate	
+0		list my recent open document	file_navigate	
+0		list my recent open document	file_navigate	
+0		list my recent open document	file_navigate	
 0		Hey can you resume the document I previously worked for?	file_open	
 0		Hey can you resume the document I previously worked for?	file_open	
 0		Hey can you resume the document I previously worked for?	file_open	
@@ -30919,11 +30919,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Launch LT review discussion paper I had up before	file_open	
 0		Launch LT review discussion paper I had up before	file_open	
 0		Launch LT review discussion paper I had up before	file_open	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
-0		What are the files I was last working in	file_navigate	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
+0		What are the files I was last working in	file_search	
 0		Share workplace paper I was working on with the meeting	file_share	
 0		Share workplace paper I was working on with the meeting	file_share	
 0		Share workplace paper I was working on with the meeting	file_share	
@@ -31424,11 +31424,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Cortana open I just edited documentation.	file_open	
 0		Cortana open I just edited documentation.	file_open	
 0		Cortana open I just edited documentation.	file_open	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
 0		I want to see the most recent files I have	file_navigate	
 0		I want to see the most recent files I have	file_navigate	
 0		I want to see the most recent files I have	file_navigate	
@@ -31519,11 +31519,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Please opening the last document last active	file_open	
 0		Please opening the last document last active	file_open	
 0		Please opening the last document last active	file_open	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
-0		what is my recently opened files	file_navigate	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
+0		what is my recently opened files	file_search	
 0		visit my I was working on files.	file_navigate	
 0		visit my I was working on files.	file_navigate	
 0		visit my I was working on files.	file_navigate	
@@ -31819,11 +31819,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Hey show me my I was just working on edits	file_search	
 0		Hey show me my I was just working on edits	file_search	
 0		Hey show me my I was just working on edits	file_search	
-0		list my I had up before open document	file_open	
-0		list my I had up before open document	file_open	
-0		list my I had up before open document	file_open	
-0		list my I had up before open document	file_open	
-0		list my I had up before open document	file_open	
+0		list my I had up before open document	file_navigate	
+0		list my I had up before open document	file_navigate	
+0		list my I had up before open document	file_navigate	
+0		list my I had up before open document	file_navigate	
+0		list my I had up before open document	file_navigate	
 0		share the files with my 10 pm on Wednesday conversation	file_share	
 0		share the files with my 10 pm on Wednesday conversation	file_share	
 0		share the files with my 10 pm on Wednesday conversation	file_share	
@@ -32044,11 +32044,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		open file lt review	file_open	
 0		open file lt review	file_open	
 0		open file lt review	file_open	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
-0		What were the files I was last working on	file_navigate	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
+0		What were the files I was last working on	file_search	
 0		save LT review discussion image	file_download	
 0		save LT review discussion image	file_download	
 0		save LT review discussion image	file_download	
@@ -32214,16 +32214,16 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		display the excel most recent	file_search	
 0		display the excel most recent	file_search	
 0		display the excel most recent	file_search	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		What are the files I was last working on	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
-0		what are my recently - opened files	file_navigate	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		What are the files I was last working on	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
+0		what are my recently - opened files	file_search	
 0		please go to my most recent file.	file_navigate	
 0		please go to my most recent file.	file_navigate	
 0		please go to my most recent file.	file_navigate	
@@ -32254,11 +32254,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		upload lt review file	file_download	
 0		upload lt review file	file_download	
 0		upload lt review file	file_download	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
-0		What are the files I the last working on	file_navigate	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
+0		What are the files I the last working on	file_search	
 0		Go in Excel	file_navigate	
 0		Go in Excel	file_navigate	
 0		Go in Excel	file_navigate	
@@ -32534,11 +32534,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		can you see my last active files.	file_navigate	
 0		can you see my last active files.	file_navigate	
 0		can you see my last active files.	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
 0		open the document I had been working today to page one.	file_open	
 0		open the document I had been working today to page one.	file_open	
 0		open the document I had been working today to page one.	file_open	
@@ -33094,11 +33094,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		show me the files that I created last weeks.	file_search	
 0		show me the files that I created last weeks.	file_search	
 0		show me the files that I created last weeks.	file_search	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
-0		what are my newly opened files	file_navigate	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
+0		what are my newly opened files	file_search	
 0		Share the file in this conversation	file_share	
 0		Share the file in this conversation	file_share	
 0		Share the file in this conversation	file_share	
@@ -33309,11 +33309,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Open the paper which I was working on recently	file_open	
 0		Open the paper which I was working on recently	file_open	
 0		Open the paper which I was working on recently	file_open	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
-0		what are my recently opened files	file_navigate	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
+0		what are my recently opened files	file_search	
 0		Hey can you resume the document I previously worked for?	file_open	
 0		Hey can you resume the document I previously worked for?	file_open	
 0		Hey can you resume the document I previously worked for?	file_open	
@@ -33694,11 +33694,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Reopen last documents opened	file_open	
 0		Reopen last documents opened	file_open	
 0		Reopen last documents opened	file_open	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
 0		Share file brownbag of this conversation	file_share	
 0		Share file brownbag of this conversation	file_share	
 0		Share file brownbag of this conversation	file_share	
@@ -34239,11 +34239,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		Open the paper that that was closed	file_open	
 0		Open the paper that that was closed	file_open	
 0		Open the paper that that was closed	file_open	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
-0		What was the files I was last working on	file_navigate	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
+0		What was the files I was last working on	file_search	
 0		show my ppt archives	file_search	
 0		show my ppt archives	file_search	
 0		show my ppt archives	file_search	
@@ -34259,11 +34259,11 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		sharing files with my next meeting attendees	file_share	
 0		sharing files with my next meeting attendees	file_share	
 0		sharing files with my next meeting attendees	file_share	
-0		list my I updated open documents	file_open	
-0		list my I updated open documents	file_open	
-0		list my I updated open documents	file_open	
-0		list my I updated open documents	file_open	
-0		list my I updated open documents	file_open	
+0		list my I updated open documents	file_navigate	
+0		list my I updated open documents	file_navigate	
+0		list my I updated open documents	file_navigate	
+0		list my I updated open documents	file_navigate	
+0		list my I updated open documents	file_navigate	
 0		I required to view my I was writing files.	file_open	
 0		I required to view my I was writing files.	file_open	
 0		I required to view my I was writing files.	file_open	
