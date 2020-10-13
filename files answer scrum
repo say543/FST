@@ -92,6 +92,12 @@ https://msasg.visualstudio.com/Cortana/_search?action=contents&text=file_keyword
 都是用bot framework 只有 TVS 還是用tcp ... 所以完全不同
 
 
+
+list skill
+https://msasg.visualstudio.com/Cortana/_git/cortana-list-skill?path=%2Fservices%2FListSkill&_a=contents&version=GBmaster
+manifest
+https://msasg.visualstudio.com/Cortana/_git/cortana-list-skill?path=%2Fservices%2FListSkill%2Fsrc%2FService%2Flistskillbot-staging_manifest.json&_a=contents&version=GBmaster
+
 <keyword> slot i guess
 https://msasg.visualstudio.com/Cortana/_search?action=contents&text=find_my_stuff&type=code&lp=code-Project&filters=ProjectFilters%7BCortana%7D&pageSize=25&result=DefaultCollection%2FCortana%2Fcortana-search-skill%2FGBmaster%2F%2Fservices%2FCortanaSearchSkill%2Fsrc%2FService%2FMiddleware%2FLocalBotActivityUpdateMiddleware.cs
 
