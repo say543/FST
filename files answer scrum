@@ -84,6 +84,18 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 
 
 =============================
+http endpoint for test
+=============================
+
+// v1 vc will be the new clientid you create
+https://substrate-sdf.office.com/httpqas?debug=1&q=test&vs=M365Search&vc=filestest:true 
+// v2 will have more debug message
+https://substrate-sdf.office.com/httpqas?debug=1&q=test&vs=M365Search&vc=filestest:true&version=2
+
+
+
+
+=============================
 fill skil report
 UWP
 =============================
