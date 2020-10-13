@@ -123,6 +123,10 @@ https://msasg.visualstudio.com/Cortana/_search?action=contents&text=find_my_stuf
 https://msasg.visualstudio.com/Cortana/_search?action=contents&text=find_my_stuff&type=code&lp=code-Project&filters=ProjectFilters%7BCortana%7D&pageSize=25&result=DefaultCollection%2FCortana%2FCore%2FGBmaster%2F%2Fruntime%2Fcomponents%2FUnderstanding%2FLanguageUnderstandingComponent%2Ftests%2FData%2FLuResult.json
 https://msasg.visualstudio.com/Cortana/_search?action=contents&text=find_my_stuff&type=code&lp=code-Project&filters=ProjectFilters%7BCortana%7D&pageSize=25&result=DefaultCollection%2FCortana%2FCore%2FGBmaster%2F%2Fruntime%2Fcomponents%2FUnderstanding%2FLanguageUnderstandingComponent%2Fsrc%2FResources%2FDefaultScenarioConfig.json
 
+
+PME repo
+https://msasg.visualstudio.com/Cortana/_git/calendar-and-email-skills
+
 =============================
 convergeing plan b2 for Q2 2020
 =============================
