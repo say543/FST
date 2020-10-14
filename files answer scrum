@@ -105,6 +105,23 @@ https://msasg.visualstudio.com/Cortana/_search?action=contents&text=file_keyword
 
 
 
+
+TestHelper.cs  in files skill
+裡面有用到所有的slot
+GetActivity () -> GetActivityWithSlots()
+https://msasg.visualstudio.com/Cortana/_git/file-answers-skill?path=%2Fservices%2FFileAnswerSkill%2Ftests%2FUnitTests%2FTestsHelper.cs&_a=contents&version=GBmaster
+
+botFrameSlot.cs
+shared 的repo
+這邊有define slot 跟slot value 的說明
+但是感覺很像很彈性
+https://msasg.visualstudio.com/Cortana/_git/cortana-botframework-skills-sdk?path=%2Flibs%2FCortanaBFSkillSDK%2FBotContract%2FShared%2FBotFrameworkSlot.cs&_a=contents&version=GBmaster
+
+botframeworkSementicFrame.cs
+https://msasg.visualstudio.com/Cortana/_search?action=contents&text=BotFrameworkSemanticFrame&type=code&lp=code-Project&filters=ProjectFilters%7BCortana%7DRepositoryFilters%7Bcortana-botframework-skills-sdk%7D&pageSize=25&result=DefaultCollection%2FCortana%2Fcortana-botframework-skills-sdk%2FGBmaster%2F%2Flibs%2FCortanaBFSkillSDK%2FBotContract%2FShared%2FBotFrameworkSemanticFrame.cs
+
+
+
 list skill
 https://msasg.visualstudio.com/Cortana/_git/cortana-list-skill?path=%2Fservices%2FListSkill&_a=contents&version=GBmaster
 這個有比較新的check in
@@ -114,6 +131,10 @@ RecallListUWPTests.cs
 all scenario in this file
 ListNotSkill.cs
 https://msasg.visualstudio.com/Cortana/_git/cortana-list-skill?path=%2Fservices%2FListSkill%2Fsrc%2FService%2FBot%2FListBotSkill.cs
+
+
+ListSlot
+https://msasg.visualstudio.com/Cortana/_git/cortana-list-skill?path=%2Fservices%2FListSkill%2Ftests%2FFunctionalTests%2FCreateListTests%2FCreateListWindowsTests.cs&_a=blame&version=GBmaster
 
 manifest
 https://msasg.visualstudio.com/Cortana/_git/cortana-list-skill?path=%2Fservices%2FListSkill%2Fsrc%2FService%2Flistskillbot-staging_manifest.json&_a=contents&version=GBmaster
