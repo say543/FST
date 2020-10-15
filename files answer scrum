@@ -1395,6 +1395,14 @@ deriveFromClient=
 files=files::qd_files
 
 
+// 這個只有derive for client 沒有新的model 因為新的還沒有要道worldwide  要worldwide 才要放
+griffinsdf_M365Search.QasMSSearch01DS.ClientIdConfig
+[query_domains:filestest]
+deriveFromClient=
+
+
+
+
 
 
 step2:
@@ -1405,6 +1413,7 @@ griffinsdf_M365Search.QasMSSearch01DS.ClientIdConfig.ini
 filestest=filestest:true
 
 step3: (? 這個因該是answer team 要改)
+這個是answer 要pass 的flight (實際上http 也可以pass 這個flight)
 substrate search 的config
 https://dev.azure.com/msasg/Bing_and_IPG/_git/SubstrateSearch?path=%2Fprivate%2FComponents%2FQu%2FQuV2%2FSubstrateSearch.QuV2.Plugins%2FQas%2FQasB2InputCreatorConfigurationV2.ini&_a=contents&version=GBmaster
 
