@@ -1397,6 +1397,10 @@ files=files::qd_files
 
 // 這個只有derive for client 沒有新的model 因為新的還沒有要道worldwide  要worldwide 才要放
 griffinsdf_M365Search.QasMSSearch01DS.ClientIdConfig
+
+[clients]
+filestest=filestest
+
 [query_domains:filestest]
 deriveFromClient=
 
