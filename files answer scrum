@@ -168,6 +168,13 @@ https://msasg.visualstudio.com/Cortana/_search?action=contents&text=find_my_stuf
 PME repo
 https://msasg.visualstudio.com/Cortana/_git/calendar-and-email-skills
 
+domain repo
+https://msasg.visualstudio.com/Cortana/_search?action=contents&text=domains.cs&type=code&lp=code-Project&filters=ProjectFilters%7BCortana%7DRepositoryFilters%7Bcalendar-and-email-skills%7D&pageSize=25&result=DefaultCollection%2FCortana%2Fcalendar-and-email-skills%2FGBmaster%2F%2Fskills%2FEmail%2Fsrc%2FConstants%2FDomains.cs
+intents repo
+https://msasg.visualstudio.com/Cortana/_search?action=contents&text=intents.cs&type=code&lp=code-Project&filters=ProjectFilters%7BCortana%7DRepositoryFilters%7Bcalendar-and-email-skills%7D&pageSize=25&result=DefaultCollection%2FCortana%2Fcalendar-and-email-skills%2FGBmaster%2F%2Fskills%2FEmail%2Fsrc%2FConstants%2FIntents.cs
+slots repo
+https://msasg.visualstudio.com/Cortana/_git/calendar-and-email-skills?path=%2Fskills%2FEmail%2Fsrc%2FConstants%2FSlots.cs&_a=contents&version=GBmaster
+
 =============================
 convergeing plan b2 for Q2 2020
 =============================
