@@ -8,6 +8,26 @@ https://microsoftapc.sharepoint.com/teams/CLU705/_layouts/15/Doc.aspx?sourcedoc=
 
 
 =============================================
+evaluation check cache
+========================================
+E:\_EVAL_CACHE\FilesUsedByModel
+
+delete your domain eg: files_
+to make sure it will run again, not fetch the old result
+
+
+=============================================
+evaluation get QAS input  with contexual
+========================================
+
+You can also use local evaluation with contexual feature
+E:\CoreScienceDataStaging\TestResults\Evaluation\ContexualFilesFileKeyWordTestB2.2020_10_19_12_43_10/AnnotationSet.2020_10_19_12_43_10.CuResponses
+For each line it is a valid input feednito QCSlevel tool
+
+you can copy pass
+
+
+=============================================
 evaluation run with annotationexception
 ========================================
 <email_title>
