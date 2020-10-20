@@ -2674,8 +2674,8 @@ blackListQuerySet = {
     'take me to note',
     'Open note',
     'Open note on my computer',
-    'open notes on desktop',
-    'where do you think i can you open note please?',
+    'open notes on desktop'
+    'where do you think i can you open note please?'
     #spreadsheet
     'spreadsheet',
     'open up spreadsheet',
@@ -3803,15 +3803,7 @@ with codecs.open((inputFile.split("."))[0] +'_after_filter'+'.tsv', 'w', 'utf-8'
                         #print(originalQuery)
                         skip = True
                         break
-
-
-                # for debug
-                if originalQuery.lower() == 'where do you think i can you open note please?':
-                    print(skip)
-                    print(hasphraseToRemove)
-                    print(hasFileType)
-                    
-                    
+                   
 
                 # if really want to use this as domian initial data
                 # follow up items
