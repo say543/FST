@@ -88,6 +88,7 @@ B2 new setup test 10292020
  .\QCSQueryLabelWithLES.exe --encoding utf-8 --legacyAllowUnusedParameters --verbose --loadingThreadsNum 1 --threadsNum 1 -c E:\searchgold\deploy\builds\data\answers\QASB2PlaceHolder --variant griffinsdf_M365Search.QASB2PlaceHolder  --clientId "domains_all_rings_test"  -i "E:\CoreScienceDataStaging\datasets\TeamsVoiceSkills\Test\Mustpass_TVS_Files_Golden_after-filtering.tsv" --queryInColumn 5 -o E:\CoreScienceDataStaging\TestResults\Evaluation\all_after_old.Default 
 
 
+.\QCSQueryLabelWithLES.exe --encoding utf-8 --legacyAllowUnusedParameters --verbose --loadingThreadsNum 1 --threadsNum 1 -c E:\searchgold\deploy\builds\data\answers\QASB2PlaceHolder,E:\searchgold\deploy\builds\data\answers\QasMSSearch01DS  --clientId "domains_all_rings_test" --variant griffinsdf_M365Search.QASB2PlaceHolder --datasets QasMSSearch01DS,QASB2PlaceHolder -i "E:\CoreScienceDataStaging\datasets\TeamsVoiceSkills\Test\Mustpass_TVS_Files_Golden_after-filtering.tsv" --queryInColumn 5 -o E:\CoreScienceDataStaging\TestResults\Evaluation\all_after_old.Default
 
 =============================
 synthetic guery generation can send request to data team
