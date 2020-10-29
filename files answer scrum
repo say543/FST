@@ -92,6 +92,11 @@ B2 new setup test 10292020
 // 
 .\QCSQueryLabelWithLES.exe --encoding utf-8 --legacyAllowUnusedParameters --verbose --loadingThreadsNum 1 --threadsNum 1 -c E:\searchgold\deploy\builds\data\answers\QASB2PlaceHolder,E:\searchgold\deploy\builds\data\answers\QasMSSearch01DS  --clientId "domains_all_rings_test" --variant griffinsdf_M365Search --datasets QASB2PlaceHolder,QasMSSearch01DS -i "E:\CoreScienceDataStaging\datasets\TeamsVoiceSkills\Test\Mustpass_TVS_Files_Golden_after-filtering.tsv" --queryInColumn 5 -o E:\CoreScienceDataStaging\TestResults\Evaluation\all_after_old.Default
 
+// memory evaluation
+//wtih super set in SDF and subset in WW
+// it will load super set from SDF
+
+
 =============================
 synthetic guery generation can send request to data team
 =============================
