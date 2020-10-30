@@ -81,6 +81,29 @@ files domain 怎麼onbaord 到evaluation
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1182483?_a=files
 看這個pr
 
+
+
+===================
+frisbee test for TSV
+===================
+<email_title>
+frisbee test for TSV
+
+Here are the frisbee test cases for the Files domain. 
+https://proe2e.visualstudio.com/FrisBEE/_git/FrisBEE%20Partners?path=%2FFrisBEE%2FTestModules%2FConfigFiles%2FTestCases%2FTeams
+
+The tests are contained in
+1.	DownloadFileTests.xml
+2.	OpenFileTests.xml
+3.	ShareFileTests.xml
+
+Run Configs  for these tests are present in https://proe2e.visualstudio.com/FrisBEE/_git/FrisBEE%20Partners?path=%2FFrisBEE%2FTestModules%2FConfigFiles%2FRunConfig%2FTeams
+
+Let me know if you have any doubts.
+
+
+
+
 =============================
 B2 new setup test 10292020
 =============================
