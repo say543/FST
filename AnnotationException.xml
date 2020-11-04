@@ -78,5 +78,20 @@ if judge tag as file_name evalution 會找file_keyword 來對應
 <SlotMap name="attachment">file_action</SlotMap>
 
 
+11042020
+how annotation exception affects precison and recall?  (by the following two cases)
+here file_other is intentIgnore in annotationException.xml
+query/ expeced domain / expected / intent / predict domain / predict intent/ predict slot
 
+my pictures	files	file_other		files																						file_other		xxx		TRUE
+my pictures	files	file_other		files																						file_share		yyy		FALSE
 
+ 
+case1:
+    model predicts file_other but file_othere is intentIngore so case 1  will not affect query precision and recall
+    
+case2:
+    model predicts file_share. even though file_other is intentignore, it will hurt query precision since it counts as part of file_share
+    
+so in conclusion,
+    即使是file_other model 的intent rule 也要對  否則會傷害metric
