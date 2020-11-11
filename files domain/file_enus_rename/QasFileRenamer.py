@@ -143,7 +143,7 @@ if __name__ == '__main__':
 
 
     
-    cmd = ("-s ..\\output_domain_answer_10202020v2_300\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
+    #cmd = ("-s ..\\output_domain_answer_10202020v2_300\\domain_svm\\final -t replaced -r files_enus_mv1:files_enus_mv2").split()
 
     ###########
     ### checked in intent model ###
@@ -320,6 +320,9 @@ if __name__ == '__main__':
     #cmd = ("-s ..\\output_intent_answer_pergra_08192020v1\\intent_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
 
     #cmd = ("-s ..\\output_intent_answer_pergra_08192020v2\\intent_svm\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
+
+
+    cmd = ("-s ..\\output_intent_answer_pergra_11062020v1\\intent_svm\\final -t replaced -r files_enus_mv1:files_enus_mv5").split()
 
     
     #cmd = ("-s ..\\output_adhoc_slot_07092020v1\\slot_lccrf\\final -t replaced -r files_enus_mv1:files_enus_mv3").split()
