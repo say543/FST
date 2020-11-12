@@ -1,0 +1,2 @@
+<contact_name_from> sent to <contact_name> w <contact_name_from> th attachment	1	EMAILSEARCH	<contact_name_from> sent to <contact_name> with <attachment> attachment </attachment>	search_email	0
+<keyword> about <keyword> with attachments	1	EMAILSEARCH	<keyword> about <keyword> with <attachment> attachments </attachment>	search_email	0

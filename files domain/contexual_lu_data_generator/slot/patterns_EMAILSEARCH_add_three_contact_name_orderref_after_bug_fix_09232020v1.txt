@@ -5,9 +5,7 @@ attachment from <contact_name_from>	13	EMAILSEARCH	<attachment> attachment </att
 attachment to <contact_name_to>	8	EMAILSEARCH	<attachment> attachment </attachment> to <contact_name_to>	search_email	0
 from <contact_name_from> to <contact_name_to> with attachment	5	EMAILSEARCH	from <contact_name_from> to <contact_name_to> with <attachment> attachment </attachment>	search_email	0
 <keyword> attachment from <contact_name_from>	5	EMAILSEARCH	<keyword> <attachment> attachment </attachment> from <contact_name_from>	search_email	0
-what is <order_ref> attachment that <contact_name_from> sent <contact_name_to>	4	EMAILSEARCH	what is <order_ref> <attachment> attachment </attachment> that <contact_name_from> sent <contact_name_to>	search_email	0
 to <contact_name_to> with attachment	4	EMAILSEARCH	to <contact_name_to> with <attachment> attachment </attachment>	search_email	0
-what is <order_ref> attachment <contact_name_from> sent <contact_name_to>	3	EMAILSEARCH	what is <order_ref> <attachment> attachment </attachment> <contact_name_from> sent <contact_name_to>	search_email	0
 show me <order_ref> attachments	3	EMAILSEARCH	show me <order_ref> <attachment> attachments </attachment>	search_email	0
 from <contact_name_from> with attachments	3	EMAILSEARCH	from <contact_name_from> with <attachment> attachments </attachment>	search_email	0
 <attachment_type> attachments from <contact_name_from>	3	EMAILSEARCH	<attachment_type> <attachment> attachments </attachment> from <contact_name_from>	search_email	0
@@ -19,7 +17,6 @@ to <contact_name_to> attachments	3	EMAILSEARCH	to <contact_name_to> <attachment>
 <attachment_type> hasattachmentstrue	3	EMAILSEARCH	<attachment_type> hasattachmentstrue	search_email	0
 <keyword> with attachment	3	EMAILSEARCH	<keyword> with <attachment> attachment </attachment>	search_email	0
 from <contact_name_from> about <keyword> with attachment	3	EMAILSEARCH	from <contact_name_from> about <keyword> with <attachment> attachment </attachment>	search_email	0
-what is <order_ref> attachment that <contact_name_from> sent <contact_name_to>	2	EMAILSEARCH	what is <order_ref> <attachment> attachment </attachment> that <contact_name> sent <contact_name_to>	search_email	0
 to <contact_name_to> attachment <keyword>	2	EMAILSEARCH	to <contact_name_to> <attachment> attachment </attachment> <keyword>	search_email	0
 from <contact_name_from> attachment	2	EMAILSEARCH	from <contact_name_from> <attachment> attachment </attachment>	search_email	0
 from <contact_name_from> with <keyword> attachments	2	EMAILSEARCH	from <contact_name_from> with <keyword> <attachment> attachments </attachment>	search_email	0
@@ -38,141 +35,143 @@ from <contact_name_from> attachments	2	EMAILSEARCH	from <contact_name_from> <att
 sent to <contact_name_to> with attachment	2	EMAILSEARCH	sent to <contact_name_to> with <attachment> attachment </attachment>	search_email	0
 <order_ref> attachments	1	EMAILSEARCH	<order_ref> <attachment> attachments </attachment>	search_email	0
 show me <order_ref> <attachment_type> attachments	1	EMAILSEARCH	show me <order_ref> <attachment_type> <attachment> attachments </attachment>	search_email	0
+what is <order_ref> attachment <contact_name_from> sent <contact_name_to>	1	EMAILSEARCH	what is <order_ref> <attachment> attachment </attachment> <contact_name_from> sent <contact_name_to>	search_email	0
 <order_ref> attachment from <contact_name_from>	1	EMAILSEARCH	<order_ref> <attachment> attachment </attachment> from <contact_name_from>	search_email	0
 whats <order_ref> attachment that <contact_name_from> sent <contact_name_to>	1	EMAILSEARCH	whats <order_ref> <attachment> attachment </attachment> that <contact_name_from> sent <contact_name_to>	search_email	0
 find files from <contact_name_from> with an attachment	1	EMAILSEARCH	find files from <contact_name_from> with an <attachment> attachment </attachment>	search_email	0
-whats <order_ref> attachment <contact_name_from> sent <contact_name_to>	1	EMAILSEARCH	whataposs <order_ref> <attachment> attachment </attachment> <contact_name_from> sent <contact_name_to>	search_email	0
+what is <order_ref> attachment that <contact_name_from> sent me	1	EMAILSEARCH	what is <order_ref> <attachment> attachment </attachment> that <contact_name_from> sent me	search_email	0
 show me attachments	1	EMAILSEARCH	show me <attachment> attachments </attachment>	search_email	0
 show me most <order_ref> attachments sent by <contact_name_from>	1	EMAILSEARCH	show me most <order_ref> <attachment> attachments </attachment> sent by <contact_name_from>	search_email	0
-from <contact_name_from> with attachment last march	1	EMAILSEARCH	from <contact_name_from> with <attachment> attachment </attachment> <date> last march </date>	search_email	0
+from <contact_name_from> with attachment last march	1	EMAILSEARCH	from <contact_name_from> with <attachment> attachment </attachment> <start_date> last march </start_date>	search_email	0
 from <contact_name_from> with <attachment_type> attachment	1	EMAILSEARCH	from <contact_name_from> with <attachment_type> <attachment> attachment </attachment>	search_email	0
-<keyword> messages containing attachments from november 15th	1	EMAILSEARCH	<keyword> messages containing <attachment> attachments </attachment> from <date> november 15th </date>	search_email	0
+<keyword> messages containing attachments from november 15th	1	EMAILSEARCH	<keyword> messages containing <attachment> attachments </attachment> from <start_date> november 15th </start_date>	search_email	0
 look for attachments in <keyword> topic	1	EMAILSEARCH	look for <attachment> attachments </attachment> in <keyword> topic	search_email	0
-receive some attachment between 1 to 2 in afternoon	1	EMAILSEARCH	receive some <attachment> attachment </attachment> between <time> 1 </time> to <time> 2 in afternoon </time>	search_email	0
+receive some attachment between 1 to 2 in afternoon	1	EMAILSEARCH	receive some <attachment> attachment </attachment> between <start_time> 1 </start_time> to <end_time> 2 in afternoon </end_time>	search_email	0
 <keyword> was included on attachment	1	EMAILSEARCH	<keyword> was included on <attachment> attachment </attachment>	search_email	0
-yesterday attachment from <contact_name_from>	1	EMAILSEARCH	<date> yesterday </date> <attachment> attachment </attachment> from <contact_name_from>	search_email	0
-show last weeks attachments	1	EMAILSEARCH	show <date> last week </date> s <attachment> attachments </attachment>	search_email	0
+yesterday attachment from <contact_name_from>	1	EMAILSEARCH	<start_date> yesterday </start_date> <attachment> attachment </attachment> from <contact_name_from>	search_email	0
+show last weeks attachments	1	EMAILSEARCH	show <start_date> last week </start_date> s <attachment> attachments </attachment>	search_email	0
 <attachment_type> attachment <keyword>	1	EMAILSEARCH	<attachment_type> <attachment> attachment </attachment> <keyword>	search_email	0
 <contact_name_to> received attachment from <contact_name_from>	1	EMAILSEARCH	<contact_name_to> received <attachment> attachment </attachment> from <contact_name_from>	search_email	0
 look for <attachment_type> attachments	1	EMAILSEARCH	look for <attachment_type> <attachment> attachments </attachment>	search_email	0
 find all attachments	1	EMAILSEARCH	find all <attachment> attachments </attachment>	search_email	0
-<attachment_type> attachments from last week	1	EMAILSEARCH	<attachment_type> <attachment> attachments </attachment> from <date> last week </date>	search_email	0
-<keyword> with attachments from march to april	1	EMAILSEARCH	<keyword> with <attachment> attachments </attachment> from <date> march </date> to <date> april </date>	search_email	0
-<keyword> from <contact_name_from> with attachment from january 1 to january 5	1	EMAILSEARCH	<keyword> from <contact_name_from> with <attachment> attachment </attachment> from <date> january 1 </date> to <date> january 5 </date>	search_email	0
-attachments in last week	1	EMAILSEARCH	<attachment> attachments </attachment> <date> in last week </date>	search_email	0
-attachments march 21st to march 23rd	1	EMAILSEARCH	<attachment> attachments </attachment> <date> march 21st </date> to <date> march 23rd </date>	search_email	0
-attachments received in february	1	EMAILSEARCH	<attachment> attachments </attachment> received in <date> february </date>	search_email	0
-attachments from last tuesday	1	EMAILSEARCH	<attachment> attachments </attachment> from <date> last tuesday </date>	search_email	0
-attachments from september	1	EMAILSEARCH	<attachment> attachments </attachment> from <date> september </date>	search_email	0
-attachments from january	1	EMAILSEARCH	<attachment> attachments </attachment> from <date> january </date>	search_email	0
-april attachments	1	EMAILSEARCH	<date> april </date> <attachment> attachments </attachment>	search_email	0
-<keyword> attachments from october to november	1	EMAILSEARCH	<keyword> <attachment> attachments </attachment> from <date> october </date> to <date> november </date>	search_email	0
+<attachment_type> attachments from last week	1	EMAILSEARCH	<attachment_type> <attachment> attachments </attachment> from <start_date> last week </start_date>	search_email	0
+<keyword> with attachments from march to april	1	EMAILSEARCH	<keyword> with <attachment> attachments </attachment> from <start_date> march </start_date> to <end_date> april </end_date>	search_email	0
+<keyword> from <contact_name_from> with attachment from january 1 to january 5	1	EMAILSEARCH	<keyword> from <contact_name_from> with <attachment> attachment </attachment> from <start_date> january 1 </start_date> to <end_date> january 5 </end_date>	search_email	0
+attachments in last week	1	EMAILSEARCH	<attachment> attachments </attachment> <start_date> in last week </start_date>	search_email	0
+attachments march 21st to march 23rd	1	EMAILSEARCH	<attachment> attachments </attachment> <start_date> march 21st </start_date> to <end_date> march 23rd </end_date>	search_email	0
+attachments received in february	1	EMAILSEARCH	<attachment> attachments </attachment> received in <start_date> february </start_date>	search_email	0
+attachments from last tuesday	1	EMAILSEARCH	<attachment> attachments </attachment> from <start_date> last tuesday </start_date>	search_email	0
+attachments from september	1	EMAILSEARCH	<attachment> attachments </attachment> from <start_date> september </start_date>	search_email	0
+attachments from january	1	EMAILSEARCH	<attachment> attachments </attachment> from <start_date> january </start_date>	search_email	0
+april attachments	1	EMAILSEARCH	<start_date> april </start_date> <attachment> attachments </attachment>	search_email	0
+<keyword> attachments from october to november	1	EMAILSEARCH	<keyword> <attachment> attachments </attachment> from <start_date> october </start_date> to <end_date> november </end_date>	search_email	0
 attachment from <contact_name_from> on <keyword>	1	EMAILSEARCH	<attachment> attachment </attachment> from <contact_name_from> on <keyword>	search_email	0
 <contact_name> with <attachment_type> attachment	1	EMAILSEARCH	<contact_name> with <attachment_type> <attachment> attachment </attachment>	search_email	0
 attachments from <contact_name>	1	EMAILSEARCH	<attachment> attachments </attachment> from <contact_name>	search_email	0
 from <contact_name_from> with attachment about <keyword>	1	EMAILSEARCH	from <contact_name_from> with <attachment> attachment </attachment> about <keyword>	search_email	0
 <keyword> attachment shared by <contact_name_from>	1	EMAILSEARCH	<keyword> <attachment> attachment </attachment> shared by <contact_name_from>	search_email	0
-from <contact_name_from> with attachments from 9/1 to 9/31	1	EMAILSEARCH	from <contact_name_from> with <attachment> attachments </attachment> from <date> 9/1 </date> to <date> 9/31 </date>	search_email	0
+from <contact_name_from> with attachments from 9/1 to 9/31	1	EMAILSEARCH	from <contact_name_from> with <attachment> attachments </attachment> from <start_date> 9/1 </start_date> to <end_date> 9/31 </end_date>	search_email	0
 get attachment from <contact_name_from>	1	EMAILSEARCH	get <attachment> attachment </attachment> from <contact_name_from>	search_email	0
 from <contact_name_from> all attachments	1	EMAILSEARCH	from <contact_name_from> all <attachment> attachments </attachment>	search_email	0
 from <contact_name_from> containing attachment	1	EMAILSEARCH	from <contact_name_from> containing <attachment> attachment </attachment>	search_email	0
 <keyword> from <contact_name_from> with attachment	1	EMAILSEARCH	<keyword> from <contact_name_from> with <attachment> attachment </attachment>	search_email	0
-last weeks messages with attachments	1	EMAILSEARCH	<date> last week </date> s messages with <attachment> attachments </attachment>	search_email	0
-<message_type> lfrom last week about <keyword> with attachment	1	EMAILSEARCH	<message_type> lfrom <date> last week </date> about <keyword> with <attachement> attachment </attachement>	search_email	0
-sending some attachment from last night <keyword>	1	EMAILSEARCH	sending some <attachment> attachment </attachment> from <time> last night </time> <keyword>	search_email	0
+last weeks messages with attachments	1	EMAILSEARCH	<start_date> last week </start_date> s messages with <attachment> attachments </attachment>	search_email	0
+what is <order_ref> attachment that <contact_name_from> sent <contact_name_to>	1	EMAILSEARCH	what is <order_ref> <attachment> attachment </attachment> that <contact_name_from> sent <contact_name_to>	search_email	0
+<message_type> lfrom last week about <keyword> with attachment	1	EMAILSEARCH	<message_type> lfrom <start_date> last week </start_date> about <keyword> with <attachement> attachment </attachement>	search_email	0
+sending some attachment from last night <keyword>	1	EMAILSEARCH	sending some <attachment> attachment </attachment> from <start_time> last night </start_time> <keyword>	search_email	0
 message about <keyword> including attachment	1	EMAILSEARCH	message about <keyword> including <attachment> attachment </attachment>	search_email	0
 <message_type> but only if they have an attachment	1	EMAILSEARCH	<message_type> but only if they have an <attachment> attachment </attachment>	search_email	0
-<contact_name_from> sent <contact_name_to> an attachment regarding <keyword>	1	EMAILSEARCH	<contact_name_from> sent <contact_name_to> an <attachment> attachment </attachment> regarding <keyword>	search_email	0
 search for message from <contact_name_from> to <contact_name_to> with <keyword> attachment	1	EMAILSEARCH	search for message from <contact_name_from> to <contact_name_to> with <keyword> <attachment> attachment </attachment>	search_email	0
 my <keyword> attachment	1	EMAILSEARCH	my <keyword> <attachment> attachment </attachment>	search_email	0
-last night <keyword> attachment	1	EMAILSEARCH	<time> last night </time> <keyword> <attachment> attachment </attachment>	search_email	0
+last night <keyword> attachment	1	EMAILSEARCH	<start_time> last night </start_time> <keyword> <attachment> attachment </attachment>	search_email	0
 attachment from <contact_name_from> <keyword>	1	EMAILSEARCH	<attachment> attachment </attachment> from <contact_name_from> <keyword>	search_email	0
 what attachments has <contact_name> sent	1	EMAILSEARCH	what <attachment> attachments </attachment> has <contact_name> sent	search_email	0
 view attachment	1	EMAILSEARCH	view <attachment> attachment </attachment>	search_email	0
-<keyword> with attachments sent from may to june	1	EMAILSEARCH	<keyword> with <attachment> attachments </attachment> sent from <date> may </date> to <date> june </date>	search_email	0
+<keyword> with attachments sent from may to june	1	EMAILSEARCH	<keyword> with <attachment> attachments </attachment> sent from <start_date> may </start_date> to <end_date> june </end_date>	search_email	0
 small attachments	1	EMAILSEARCH	small <attachment> attachments </attachment>	search_email	0
-show attachments march 1 to 15	1	EMAILSEARCH	show <attachment> attachments </attachment> <date> march 1 </date> to <date> 15 </date>	search_email	0
+show attachments march 1 to 15	1	EMAILSEARCH	show <attachment> attachments </attachment> <start_date> march 1 </start_date> to <end_date> 15 </end_date>	search_email	0
 show all attachments	1	EMAILSEARCH	show all <attachment> attachments </attachment>	search_email	0
 see attachment	1	EMAILSEARCH	see <attachment> attachment </attachment>	search_email	0
 run search on messages with attachments	1	EMAILSEARCH	run search on messages with <attachment> attachments </attachment>	search_email	0
 received from <contact_name_from> including attachment	1	EMAILSEARCH	received from <contact_name_from> including <attachment> attachment </attachment>	search_email	0
+<keyword> about <keyword> with attachments	1	EMAILSEARCH	<keyword> about <keyword> with <attachment> attachments </attachment>	search_email	0
 <attachment_type> was included on attachment	1	EMAILSEARCH	<attachment_type> was included on <attachment> attachment </attachment>	search_email	0
 <attachment_type> sent attachments	1	EMAILSEARCH	<attachment_type> sent <attachment> attachments </attachment>	search_email	0
 need attachment <message_type>	1	EMAILSEARCH	need <attachment> attachment </attachment> <message_type>	search_email	0
 messages with attachments	1	EMAILSEARCH	messages with <attachment> attachments </attachment>	search_email	0
-messages with attachment march 1 through march 10	1	EMAILSEARCH	messages with <attachment> attachment </attachment> <date> march 1 </date> through <date> march 10 </date>	search_email	0
-messages with <contact_name_to> with attachment	1	EMAILSEARCH	messages with <contact_name_to> with <attachment> attachment </attachment>	search_email	0
+messages with attachment march 1 through march 10	1	EMAILSEARCH	messages with <attachment> attachment </attachment> <start_date> march 1 </start_date> through <end_date> march 10 </end_date>	search_email	0
+messages with <contact_name> with attachment	1	EMAILSEARCH	messages with <contact_name> with <attachment> attachment </attachment>	search_email	0
 messages to <contact_name_to> with attachment	1	EMAILSEARCH	messages to <contact_name_to> with <attachment> attachment </attachment>	search_email	0
 messages including attachments	1	EMAILSEARCH	messages including <attachment> attachments </attachment>	search_email	0
-messages from <contact_name_from> last week with attachments	1	EMAILSEARCH	messages from <contact_name_from> <date> last week </date> with <attachment> attachments </attachment>	search_email	0
+messages from <contact_name_from> last week with attachments	1	EMAILSEARCH	messages from <contact_name_from> <start_date> last week </start_date> with <attachment> attachments </attachment>	search_email	0
 messages from <contact_name_from> with <attachment_type> attachments	1	EMAILSEARCH	messages from <contact_name_from> with <attachment_type> <attachment> attachments </attachment>	search_email	0
 message from <contact_name_from> with <keyword> attachment	1	EMAILSEARCH	message from <contact_name_from> with <keyword> <attachment> attachment </attachment>	search_email	0
-message from last month with attachments	1	EMAILSEARCH	message from <date> last month </date> with <attachment> attachments </attachment>	search_email	0
+message from last month with attachments	1	EMAILSEARCH	message from <start_date> last month </start_date> with <attachment> attachments </attachment>	search_email	0
 message from <contact_name_from> with an attachment	1	EMAILSEARCH	message from <contact_name_from> with an <attachment> attachment </attachment>	search_email	0
 message from <contact_name_from> about <keyword> with attachment	1	EMAILSEARCH	message from <contact_name_from> about <keyword> with <attachment> attachment </attachment>	search_email	0
-message from april 5th with <keyword> attachment	1	EMAILSEARCH	message from <date> april 5th </date> with <keyword> <attachment> attachment </attachment>	search_email	0
+message from april 5th with <keyword> attachment	1	EMAILSEARCH	message from <start_date> april 5th </start_date> with <keyword> <attachment> attachment </attachment>	search_email	0
 message containing attachment	1	EMAILSEARCH	message containing <attachment> attachment </attachment>	search_email	0
 message attachments from <contact_name_from>	1	EMAILSEARCH	message <attachment> attachments </attachment> from <contact_name_from>	search_email	0
-may <keyword> from <contact_name_from> with attachment	1	EMAILSEARCH	<date> may </date> <keyword> from <contact_name_from> with <attachment> attachment </attachment>	search_email	0
+may <keyword> from <contact_name_from> with attachment	1	EMAILSEARCH	<start_date> may </start_date> <keyword> from <contact_name_from> with <attachment> attachment </attachment>	search_email	0
 look for messages with <attachment_type> attachments	1	EMAILSEARCH	look for messages with <attachment_type> <attachment> attachments </attachment>	search_email	0
 <attachment_type> attachment	1	EMAILSEARCH	<attachment_type> <attachment> attachment </attachment>	search_email	0
 <keyword> <attachment_type> attachment	1	EMAILSEARCH	<keyword> <attachment_type> <attachment> attachment </attachment>	search_email	0
 <keyword> attachment receipt	1	EMAILSEARCH	<keyword> <attachment> attachment </attachment> receipt	search_email	0
 from <contact_name_from> with attachment to <contact_name_to>	1	EMAILSEARCH	from <contact_name_from> with <attachment> attachment </attachment> to <contact_name_to>	search_email	0
 from <contact_name_from> include attachment	1	EMAILSEARCH	from <contact_name_from> include <attachment> attachment </attachment>	search_email	0
-<keyword> from november to december last year with attachment	1	EMAILSEARCH	<keyword> from <date> november </date> to <date> december </date> <date> last year </date> with <attachment> attachment </attachment>	search_email	0
+<keyword> from november to december last year with attachment	1	EMAILSEARCH	<keyword> from <start_date> november </start_date> to <end_date> december </end_date> <start_date> last year </start_date> with <attachment> attachment </attachment>	search_email	0
 find <attachment_type> attachment	1	EMAILSEARCH	find <attachment_type> <attachment> attachment </attachment>	search_email	0
 find my attachments	1	EMAILSEARCH	find my <attachment> attachments </attachment>	search_email	0
 find attachments from <contact_name_from>	1	EMAILSEARCH	find <attachment> attachments </attachment> from <contact_name_from>	search_email	0
 find attachments	1	EMAILSEARCH	find <attachment> attachments </attachment>	search_email	0
-<attachment_type> attachment from january	1	EMAILSEARCH	<attachment_type> <attachment> attachment </attachment> from <date> january </date>	search_email	0
+<attachment_type> attachment from january	1	EMAILSEARCH	<attachment_type> <attachment> attachment </attachment> from <start_date> january </start_date>	search_email	0
 <keyword> attachment sent from <contact_name_from>	1	EMAILSEARCH	<keyword> <attachment> attachment </attachment> sent from <contact_name_from>	search_email	0
 <message_type> from <contact_name_from> with an attachment	1	EMAILSEARCH	<message_type> from <contact_name_from> with an <attachment> attachment </attachment>	search_email	0
 <contact_name> s attachments	1	EMAILSEARCH	<contact_name> s <attachment> attachments </attachment>	search_email	0
 download attachment	1	EMAILSEARCH	download <attachment> attachment </attachment>	search_email	0
 contain attachment	1	EMAILSEARCH	contain <attachment> attachment </attachment>	search_email	0
-<contact_name> s messages from last week with attachment	1	EMAILSEARCH	<contact_name> s messages from <date> last week </date> with <attachment> attachment </attachment>	search_email	0
-<keyword> attachments from last tuesday	1	EMAILSEARCH	<keyword> <attachment> attachments </attachment> from <date> last tuesday </date>	search_email	0
+<contact_name> s messages from last week with attachment	1	EMAILSEARCH	<contact_name> s messages from <start_date> last week </start_date> with <attachment> attachment </attachment>	search_email	0
+<keyword> attachments from last tuesday	1	EMAILSEARCH	<keyword> <attachment> attachments </attachment> from <start_date> last tuesday </start_date>	search_email	0
 <keyword> attachments	1	EMAILSEARCH	<keyword> <attachment> attachments </attachment>	search_email	0
-attachments last year from <contact_name_from>	1	EMAILSEARCH	<attachment> attachments </attachment> <date> last year </date> from <contact_name_from>	search_email	0
-attachments last year	1	EMAILSEARCH	<attachment> attachments </attachment> <date> last year </date>	search_email	0
-attachments from preceding month	1	EMAILSEARCH	<attachment> attachments </attachment> from <date> preceding month </date>	search_email	0
-attachments from past five weeks	1	EMAILSEARCH	<attachment> attachments </attachment> from <date> past five weeks </date>	search_email	0
-attachments from january 2 and january 9	1	EMAILSEARCH	<attachment> attachments </attachment> from <date> january 2 </date> and <date> january 9 </date>	search_email	0
-attachments from february 2 and today	1	EMAILSEARCH	<attachment> attachments </attachment> from <date> february 2 </date> and <date> today </date>	search_email	0
-attachments from christmas to new years	1	EMAILSEARCH	<attachment> attachments </attachment> from <date> christmas </date> to <date> new years </date>	search_email	0
-attachments form last tuesday	1	EMAILSEARCH	<attachment> attachments </attachment> form <date> last tuesday </date>	search_email	0
-attachments fom last monday	1	EMAILSEARCH	<attachment> attachments </attachment> fom <date> last monday </date>	search_email	0
-attachments april 1st to april 2nd	1	EMAILSEARCH	<attachment> attachments </attachment> <date> april 1st </date> to <date> april 2nd </date>	search_email	0
+attachments last year from <contact_name_from>	1	EMAILSEARCH	<attachment> attachments </attachment> <start_date> last year </start_date> from <contact_name_from>	search_email	0
+attachments last year	1	EMAILSEARCH	<attachment> attachments </attachment> <start_date> last year </start_date>	search_email	0
+attachments from preceding month	1	EMAILSEARCH	<attachment> attachments </attachment> from <start_date> preceding month </start_date>	search_email	0
+attachments from past five weeks	1	EMAILSEARCH	<attachment> attachments </attachment> from <start_date> past five weeks </start_date>	search_email	0
+attachments from january 2 and january 9	1	EMAILSEARCH	<attachment> attachments </attachment> from <start_date> january 2 </start_date> and <end_date> january 9 </end_date>	search_email	0
+attachments from february 2 and today	1	EMAILSEARCH	<attachment> attachments </attachment> from <start_date> february 2 </start_date> and <end_date> today </end_date>	search_email	0
+attachments from christmas to new years	1	EMAILSEARCH	<attachment> attachments </attachment> from <start_date> christmas </start_date> to <end_date> new years </end_date>	search_email	0
+attachments form last tuesday	1	EMAILSEARCH	<attachment> attachments </attachment> form <start_date> last tuesday </start_date>	search_email	0
+attachments fom last monday	1	EMAILSEARCH	<attachment> attachments </attachment> fom <start_date> last monday </start_date>	search_email	0
+attachments april 1st to april 2nd	1	EMAILSEARCH	<attachment> attachments </attachment> <start_date> april 1st </start_date> to <end_date> april 2nd </end_date>	search_email	0
 attachment with <attachment_type>	1	EMAILSEARCH	<attachment> attachment </attachment> with <attachment_type>	search_email	0
 attachment sent <attachment_type>	1	EMAILSEARCH	<attachment> attachment </attachment> sent <attachment_type>	search_email	0
-attachments received in june	1	EMAILSEARCH	<attachment> attachments </attachment> received in <date> june </date>	search_email	0
-attachment received in last month	1	EMAILSEARCH	<attachment> attachment </attachment> received in <date> last month </date>	search_email	0
+attachments received in june	1	EMAILSEARCH	<attachment> attachments </attachment> received in <start_date> june </start_date>	search_email	0
+attachment received in last month	1	EMAILSEARCH	<attachment> attachment </attachment> received in <start_date> last month </start_date>	search_email	0
 attachment received	1	EMAILSEARCH	<attachment> attachment </attachment> received	search_email	0
 attachment included	1	EMAILSEARCH	<attachment> attachment </attachment> included	search_email	0
 attachment <keyword>	1	EMAILSEARCH	<attachment> attachment </attachment> <keyword>	search_email	0
 attachments <keyword>	1	EMAILSEARCH	<attachment> attachments </attachment> <keyword>	search_email	0
-attachment from <contact_name_from> last week <keyword>	1	EMAILSEARCH	<attachment> attachment </attachment> from <contact_name_from> <date> last week </date> <keyword>	search_email	0
-attachment from may 20 to june 28 about <keyword>	1	EMAILSEARCH	<attachment> attachment </attachment> from <date> may 20 </date> to <date> june 28 </date> about <keyword>	search_email	0
-attachment from last week was complete	1	EMAILSEARCH	<attachment> attachment </attachment> from <date> last week </date> was complete	search_email	0
-attachments from march	1	EMAILSEARCH	<attachment> attachments </attachment> from <date> march </date>	search_email	0
-attachments from febrauary	1	EMAILSEARCH	<attachment> attachments </attachment> from <date> febrauary </date>	search_email	0
-attachments from last weekend	1	EMAILSEARCH	<attachment> attachments </attachment> from <date> last weekend </date>	search_email	0
-attachment from last monday	1	EMAILSEARCH	<attachment> attachment </attachment> from <date> last monday </date>	search_email	0
-attachments from july 2019	1	EMAILSEARCH	<attachment> attachments </attachment> from <date> july 2019 </date>	search_email	0
-attachments from yesterday	1	EMAILSEARCH	<attachment> attachments </attachment> from <date> yesterday </date>	search_email	0
+attachment from <contact_name_from> last week <keyword>	1	EMAILSEARCH	<attachment> attachment </attachment> from <contact_name_from> <start_date> last week </start_date> <keyword>	search_email	0
+attachment from may 20 to june 28 about <keyword>	1	EMAILSEARCH	<attachment> attachment </attachment> from <start_date> may 20 </start_date> to <end_date> june 28 </end_date> about <keyword>	search_email	0
+attachment from last week was complete	1	EMAILSEARCH	<attachment> attachment </attachment> from <start_date> last week </start_date> was complete	search_email	0
+attachments from march	1	EMAILSEARCH	<attachment> attachments </attachment> from <start_date> march </start_date>	search_email	0
+attachments from febrauary	1	EMAILSEARCH	<attachment> attachments </attachment> from <start_date> febrauary </start_date>	search_email	0
+attachments from last weekend	1	EMAILSEARCH	<attachment> attachments </attachment> from <start_date> last weekend </start_date>	search_email	0
+attachment from last monday	1	EMAILSEARCH	<attachment> attachment </attachment> from <start_date> last monday </start_date>	search_email	0
+attachments from july 2019	1	EMAILSEARCH	<attachment> attachments </attachment> from <start_date> july 2019 </start_date>	search_email	0
+attachments from yesterday	1	EMAILSEARCH	<attachment> attachments </attachment> from <start_date> yesterday </start_date>	search_email	0
 attachment for <keyword>	1	EMAILSEARCH	<attachment> attachment </attachment> for <keyword>	search_email	0
 attachment about <keyword>	1	EMAILSEARCH	<attachment> attachment </attachment> about <keyword>	search_email	0
-march attachments	1	EMAILSEARCH	<date> march </date> <attachment> attachments </attachment>	search_email	0
-july attachments	1	EMAILSEARCH	<date> july </date> <attachment> attachments </attachment>	search_email	0
+march attachments	1	EMAILSEARCH	<start_date> march </start_date> <attachment> attachments </attachment>	search_email	0
+july attachments	1	EMAILSEARCH	<start_date> july </start_date> <attachment> attachments </attachment>	search_email	0
 any messages with attachments in them	1	EMAILSEARCH	any messages with <attachment> attachments </attachment> in them	search_email	0
-<contact_name_from> sent <contact_name_to> some attachment	1	EMAILSEARCH	<contact_name_from> sent <contact_name_to> some <attachment> attachment </attachment>	search_email	0
-<keyword> attachments from september to october	1	EMAILSEARCH	<keyword> <attachment> attachments </attachment> from <date> september </date> to <date> october </date>	search_email	0
-<keyword> attachments from may to june	1	EMAILSEARCH	<keyword> <attachment> attachments </attachment> from <date> may </date> to <date> june </date>	search_email	0
-<keyword> attachments from june to july	1	EMAILSEARCH	<keyword> <attachment> attachments </attachment> from <date> june </date> to <date> july </date>	search_email	0
+<contact_name_from> sent me some attachment	1	EMAILSEARCH	<contact_name_from> sent me some <attachment> attachment </attachment>	search_email	0
+<keyword> attachments from september to october	1	EMAILSEARCH	<keyword> <attachment> attachments </attachment> from <start_date> september </start_date> to <end_date> october </end_date>	search_email	0
+<keyword> attachments from may to june	1	EMAILSEARCH	<keyword> <attachment> attachments </attachment> from <start_date> may </start_date> to <end_date> june </end_date>	search_email	0
+<keyword> attachments from june to july	1	EMAILSEARCH	<keyword> <attachment> attachments </attachment> from <start_date> june </start_date> to <end_date> july </end_date>	search_email	0
 from <contact_name_from> with <keyword> attachment	1	EMAILSEARCH	from <contact_name_from> with <keyword> <attachment> attachment </attachment>	search_email	0
 attachment from pam	1	EMAILSEARCH	attachment from pam	search_email	0
-show me attachment <attachment_type> with <contact_name_to>	1	EMAILSEARCH	show me <attachment> attachment </attachment> <attachment_type> with <contact_name_to>	search_email	0
+show me attachment <attachment_type> with <contact_name>	1	EMAILSEARCH	show me <attachment> attachment </attachment> <attachment_type> with <contact_name>	search_email	0
 to <contact_name_to> with attachments	1	EMAILSEARCH	to <contact_name_to> with <attachment> attachments </attachment>	search_email	0
 attachment from <contact_name_from> <attachment_type>	1	EMAILSEARCH	<attachment> attachment </attachment> from <contact_name_from> <attachment_type>	search_email	0
 <contact_name> attachments <keyword>	1	EMAILSEARCH	<contact_name> <attachment> attachments </attachment> <keyword>	search_email	0
@@ -186,14 +185,14 @@ show me <keyword> attachments with <attachment_type>	1	EMAILSEARCH	show me <keyw
 find attachment from <contact_name_from> <attachment_type>	1	EMAILSEARCH	find <attachment> attachment </attachment> from <contact_name_from> <attachment_type>	search_email	0
 <contact_name> has attachment	1	EMAILSEARCH	<contact_name> has <attachment> attachment </attachment>	search_email	0
 sent to <contact_name_to> with <attachment_type> attachments	1	EMAILSEARCH	sent to <contact_name_to> with <attachment_type> <attachment> attachments </attachment>	search_email	0
-look up attachments with <contact_name_to>	1	EMAILSEARCH	look up <attachment> attachments </attachment> with <contact_name_to>	search_email	0
+look up attachments with <contact_name>	1	EMAILSEARCH	look up <attachment> attachments </attachment> with <contact_name>	search_email	0
 <contact_name> <attachment_type> attachments	1	EMAILSEARCH	<contact_name> <attachment_type> <attachment> attachments </attachment>	search_email	0
 <contact_name> attachments from <keyword>	1	EMAILSEARCH	<contact_name> <attachment> attachments </attachment> from <keyword>	search_email	0
 from <contact_name_from> with attachment <keyword>	1	EMAILSEARCH	from <contact_name_from> with <attachment> attachment </attachment> <keyword>	search_email	0
 <keyword> attachments to <contact_name_to>	1	EMAILSEARCH	<keyword> <attachment> attachments </attachment> to <contact_name_to>	search_email	0
 <attachment_type> attachments sent to <contact_name_to>	1	EMAILSEARCH	<attachment_type> <attachment> attachments </attachment> sent to <contact_name_to>	search_email	0
 where is attachment from <contact_name_from>	1	EMAILSEARCH	where is <attachment> attachment </attachment> from <contact_name_from>	search_email	0
-show me attachments with <contact_name_to>	1	EMAILSEARCH	show me <attachment> attachments </attachment> with <contact_name_to>	search_email	0
+show me attachments with <contact_name>	1	EMAILSEARCH	show me <attachment> attachments </attachment> with <contact_name>	search_email	0
 <keyword> attachments from <contact_name_from>	1	EMAILSEARCH	<keyword> <attachment> attachments </attachment> from <contact_name_from>	search_email	0
 from <contact_name_from> <keyword> attachment	1	EMAILSEARCH	from <contact_name_from> <keyword> <attachment> attachment </attachment>	search_email	0
 <contact_name> with attachment	1	EMAILSEARCH	<contact_name> with <attachment> attachment </attachment>	search_email	0
@@ -210,11 +209,12 @@ attachments i sent to <contact_name_to>	1	EMAILSEARCH	<attachment> attachments <
 from <contact_name_from> contains attachments	1	EMAILSEARCH	from <contact_name_from> contains <attachment> attachments </attachment>	search_email	0
 <contact_name> <keyword> attachment	1	EMAILSEARCH	<contact_name> <keyword> <attachment> attachment </attachment>	search_email	0
 to <contact_name_to> with <keyword> attachment	1	EMAILSEARCH	to <contact_name_to> with <keyword> <attachment> attachment </attachment>	search_email	0
-with attachments on monday	1	EMAILSEARCH	with <attachment> attachments </attachment> on <date> monday </date>	search_email	0
-<keyword> attachment from august 2018	1	EMAILSEARCH	<keyword> <attachment> attachment </attachment> from <date> august 2018 </date>	search_email	0
+with attachments on monday	1	EMAILSEARCH	with <attachment> attachments </attachment> on <start_date> monday </start_date>	search_email	0
+<keyword> attachment from august 2018	1	EMAILSEARCH	<keyword> <attachment> attachment </attachment> from <start_date> august 2018 </start_date>	search_email	0
 from <contact_name> with attachment	1	EMAILSEARCH	from <contact_name> <attachment> with attachment </attachment>	search_email	0
-with attachments yesterday	1	EMAILSEARCH	with <attachment> attachments </attachment> <date> yesterday </date>	search_email	0
-with attachments this week	1	EMAILSEARCH	with <attachment> attachments </attachment> <date> this week </date>	search_email	0
-from <contact_name_from> about <keyword> with attachment in may	1	EMAILSEARCH	from <contact_name_from> about <keyword> with <attachment> attachment </attachment> in <date> may </date>	search_email	0
-from <contact_name_from> about <keyword> with attachment last week	1	EMAILSEARCH	from <contact_name_from> about <keyword> with <attachment> attachment </attachment> <date> last week </date>	search_email	0
-<keyword> attachment from august 2017	1	EMAILSEARCH	<keyword> <attachment> attachment </attachment> from <date> august 2017 </date>	search_email	0
+<contact_name_from> sent to <contact_name> w <contact_name_from> th attachment	1	EMAILSEARCH	<contact_name_from> sent to <contact_name> with <attachment> attachment </attachment>	search_email	0
+with attachments yesterday	1	EMAILSEARCH	with <attachment> attachments </attachment> <start_date> yesterday </start_date>	search_email	0
+with attachments this week	1	EMAILSEARCH	with <attachment> attachments </attachment> <start_date> this week </start_date>	search_email	0
+from <contact_name_from> about <keyword> with attachment in may	1	EMAILSEARCH	from <contact_name_from> about <keyword> with <attachment> attachment </attachment> in <start_date> may </start_date>	search_email	0
+from <contact_name_from> about <keyword> with attachment last week	1	EMAILSEARCH	from <contact_name_from> about <keyword> with <attachment> attachment </attachment> <start_date> last week </start_date>	search_email	0
+<keyword> attachment from august 2017	1	EMAILSEARCH	<keyword> <attachment> attachment </attachment> from <start_date> august 2017 </start_date>	search_email	0
