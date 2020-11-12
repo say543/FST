@@ -226,6 +226,8 @@ one note page
 ============================
 file domain preprocessort
 ==============================
+
+
 .o.
 执行的顺序是 从后往前，所以两个位置换一下就work了。
 
@@ -246,3 +248,13 @@ https://carina/wiki/articles/CMF/Fst-Cheatsheet-Transduce.html
 
 graph 是non-whitespace symbol
 define tokenizeFileSearchOperatorForAllFileNames Tab ... Tab <-@ {.} || [.#. | graph+] _ ["A-Za-z" | digit | {_} | {-} | {*}]+ [{ } | .#.];
+
+
+11122020
+file with .ppt
+不會被preprocessor out
+
+.ppt 卻會 要investigate 一下
+
+
+
