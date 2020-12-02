@@ -91,13 +91,23 @@ onenote:https://microsoftapc.sharepoint.com/teams/CLU705/Shared%20Documents/User
 3:00 有slcie
 
 5:45 (有說明MSO 的定義)
-substrate search(5:40 MSO(office.com + sharepoint.com), Teams Search Bar, MSO) / cortana (COW, outlook commute, teams voice) / bingAtWork(new na,e : MSB web vertical, 網頁上面的一個all tab, files SERP  要support,)
-MSB wrok vertical(bing.com 網頁上面的一個tab, files answer 要support)
 
-? how about bing.com  is it part of MSB ? yes
+// new
+substrate search(5:40 MSO(office.com + sharepoint.com), Teams Search Bar, MSO) / cortana (COW, outlook commute, teams voice) / bingAtWork(new na,e : MSB work vertical, 網頁上面的一個all tab, files SERP  要support,)
+MSB web(bing.com 網頁上面的一個'all' tab, files answer 要support)
+
+// old
+/*
+{substrate search(5:40 MSO(office.com + sharepoint.com), Teams Search Bar, MSO) / cortana (COW, outlook commute, teams voice) / bingAtWork(new na,e : MSB web vertical, 網頁上面的一個all tab, files SERP  要support,)
+MSB wrok vertical(bing.com 網頁上面的一個tab, files answer 要support)}
 
 
-? how abour OWA (outlook-sdf.office.com,  outlook web)
+how about bing.com  is it part of MSB ? 
+ans :yes
+
+
+how abour OWA 
+ans: (outlook-sdf.office.com,  outlook web)
 OW mobile, dektop(這因該是純web)
 
 
