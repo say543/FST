@@ -1719,6 +1719,13 @@ https://dataexplorer.azure.com/clusters/kusto.aria.microsoft.com/databases/e218b
 
 
 
+12012020
+for model D setupo
+ab test 没有100% 最多 50/50
+
+for roll out  有50 跟100  一班都選roll out
+點進去會有兩個可以選  忽略上面 , 下面的就可以直接start
+
 
 ==============================
 run griffin qpc with outputing related domains and with specified client id with new QCS tool
