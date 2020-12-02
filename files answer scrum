@@ -279,7 +279,8 @@ https://substrate-sdf.office.com/httpqas?debug=1&q=test&vs=M365Search&vc=fileste
 // v2 will have more debug message
 https://substrate-sdf.office.com/httpqas?debug=1&q=test&vs=M365Search&vc=filestest:true&version=2
 
-
+// 怎麼看semantic frame output 還不太懂....只能看到有intent...
+https://substrate-sdf.office.com/httpqas?debug=1&query=show%20my%20authored%20files&vs=M365Search&vc=filestest:true&version=2
 
 
 =============================
