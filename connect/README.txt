@@ -10,7 +10,7 @@ core priority
        project scope
       
       learning section:
-         it is ok to specify ?% time in learning but needs to be concrete (brownbag(related), brownbag(unrelated eg: ranker) or OKR' real-align aligned)
+         it is ok to specify ?% time in learning but needs to be concrete (brownbag(related), brownbag(unrelated eg: ranker, not modeling related) or OKR' real-align aligned)
          
       
   
