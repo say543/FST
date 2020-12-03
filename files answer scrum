@@ -1766,8 +1766,26 @@ https://dataexplorer.azure.com/clusters/kusto.aria.microsoft.com/databases/e218b
 for model D setupo
 ab test 没有100% 最多 50/50
 
+
+'add new progression'
 for roll out  有50 跟100  一班都選roll out
 點進去會有兩個可以選  忽略上面 , 下面的就可以直接start
+for A/B test 
+就只有50%
+
+
+
+12032020
+一班如果roll out (devring) 100%
+status 會是running
+然後左下角會有STOP 的 button for emergency
+如果DRI 點了stop 之後  status from 'running' to 'stopped'
+
+這個時候原本的progression 就沒辦法重新 enalbe devring
+
+那可以選iterative progression 會複製舊的progression
+然後在eg: developer ring 重新click advance 就可以追上原本的progression 但是還是必須要自己點
+
 
 
 ==============================
