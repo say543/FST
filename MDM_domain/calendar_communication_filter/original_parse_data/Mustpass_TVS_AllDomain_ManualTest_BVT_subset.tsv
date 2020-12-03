@@ -1,0 +1,47 @@
+ConversationId	MessageId	MessageTimestamp	MessageFrom	MessageText	JudgedDomain	JudgedIntent	JudgedConstraints	ConversationContext	MetaData	Frequency
+BVT-456	0		user	Cancel my 4pm	CALENDAR	delete_calendar_entry	Cancel my <start_time>4pm</start_time>		[]	1
+BVT-457	0		user	Cancel my 7 o'clock	CALENDAR	delete_calendar_entry	Cancel my <start_time>7</start_time> o'clock		[]	1
+BVT-460	0		user	Remove my 10am	CALENDAR	delete_calendar_entry	Remove my <start_time>10am</start_time>		[]	1
+BVT-461	0		user	Remove my 1 o'clock	CALENDAR	delete_calendar_entry	Remove my <start_time>1</start_time> o'clock		[]	1
+BVT-464	0		user	Decline my 11am	CALENDAR	delete_calendar_entry	Decline my <start_time>11am</start_time>		[]	1
+BVT-465	0		user	Decline my 4 o'clock	CALENDAR	delete_calendar_entry	Decline my <start_time>4</start_time> o'clock		[]	1
+BVT-295	0		user	Start my 6am meeting	CALENDAR	connect_to_meeting	Start my <start_time>6am</start_time> meeting		[]	1
+BVT-304	0		user	Join my 5am meeting	CALENDAR	connect_to_meeting	Join my <start_time>5am</start_time> meeting		[]	1
+BVT-314	0		user	Dial me into my 3pm meeting	CALENDAR	connect_to_meeting	Dial me into my <start_time>3pm</start_time> meeting		[]	1
+BVT-334	0		user	Connect my 8am meeting	CALENDAR	connect_to_meeting	Connect my <start_time>8am</start_time> meeting		[]	1
+BVT-336	0		user	Patch me into my 6am meeting	CALENDAR	connect_to_meeting	Patch me into my <start_time>6am</start_time> meeting		[]	1
+BVT-348	0		user	Connect me to my 9am meeting	CALENDAR	connect_to_meeting	Connect me to my <start_time>9am</start_time> meeting		[]	1
+BVT-397	0		user	Cancel my 7pm meeting	CALENDAR	delete_calendar_entry	Cancel my <start_time>7pm</start_time> meeting		[]	1
+BVT-412	0		user	Remove my 11pm meeting	CALENDAR	delete_calendar_entry	Remove my <start_time>11pm</start_time> meeting		[]	1
+BVT-425	0		user	Decline my 1am meeting	CALENDAR	delete_calendar_entry	Decline my <start_time>1am</start_time> meeting		[]	1
+BVT-467	0		user	Decline my meeting at 10 o'clock	CALENDAR	delete_calendar_entry	Decline my meeting at <start_time>10</start_time> o'clock		[]	1
+BVT-438	0		user	Decline my Magical Friday meeting	CALENDAR	delete_calendar_entry	Decline my <start_date>Magical Friday</start_date> meeting		[]	1
+BVT-480	0		user	Text Hillary Clinton Help me help you.	COMMUNICATION	send_text	Text <contact_name>Hillary Clinton</contact_name> <message>Help me help you</message>.		[]	1
+BVT-494	0		user	Tell Hoffman Did you hear about Bobby and Jane?	COMMUNICATION	send_text	Tell <contact_name>Hoffman</contact_name> <message>Did you hear about Bobby and Jane?</message>		[]	1
+BVT-510	0		user	Tell Giorgianni	COMMUNICATION	send_text	Tell <contact_name>Giorgianni</contact_name>		[]	1
+BVT-485	0		user	Text Ashley Ana's cats and dogs are as fluffy as the day is long.	COMMUNICATION	send_text	Text <contact_name>Ashley</contact_name> <message>Ana's cats and dogs are as fluffy as the day is long</message>.		[]	1
+BVT-498	0		user	Send message to Sela Jotham has pretty good hair.	COMMUNICATION	send_text	Send message to <contact_name>Sela</contact_name> <message>Jotham has pretty good hair</message>.		[]	1
+BVT-492	0		user	Send message to Haim A PM, an engineer, and a UX designer walk into a bar.	COMMUNICATION	send_text	Send message to <contact_name>Haim</contact_name> <message>A PM, an engineer, and a UX designer walk into a bar</message>.		[]	1
+BVT-497	0		user	Text Mokadam What?	COMMUNICATION	send_text	Text <contact_name>Mokadam</contact_name> <message>What?</message>		[]	1
+BVT-501	0		user	Send a message to Burton You know you need unique New York.	COMMUNICATION	send_text	Send a message to <contact_name>Burton</contact_name> <message>You know you need unique New York</message>.		[]	1
+BVT-506	0		user	Text Karlsen Jotham has pretty good hair.	COMMUNICATION	send_text	Text <contact_name>Karlsen</contact_name> <message>Jotham has pretty good hair</message>.		[]	1
+BVT-479	0		user	Tell Adi Sela Did you hear about Bobby and Jane?	COMMUNICATION	send_text	Tell <contact_name>Adi Sela</contact_name> <message>Did you hear about Bobby and Jane?</message>		[]	1
+BVT-488	0		user	Tell Fred I don't see anyone. Where are you guys?	COMMUNICATION	send_text	Tell <contact_name>Fred</contact_name> <message>I don't see anyone. Where are you guys?</message>		[]	1
+BVT-493	0		user	Send a message to Haim Can you come to my office. We have to talk.	COMMUNICATION	send_text	Send a message to <contact_name>Haim</contact_name> <message>Can you come to my office. We have to talk</message>.		[]	1
+BVT-499	0		user	Send Text to Jacob Can you come to my office. We have to talk.	COMMUNICATION	send_text	Send Text to <contact_name>Jacob</contact_name> <message>Can you come to my office. We have to talk</message>.		[]	1
+BVT-159	0		user	Share the Gun Smoke pdf with Clinton	FILES	file_share	Share the <file_keyword>Gun Smoke</file_keyword> <file_type>pdf</file_type> with <to_contact_name>Clinton</to_contact_name>		[]	1
+BVT-164	0		user	Share the Best Lady pdf with Magical Freedom Galaxy	FILES	file_share	Share the <file_keyword>Best Lady</file_keyword> <file_type>pdf</file_type> with <sharetarget_name>Magical Freedom Galaxy</sharetarget_name>		[]	1
+BVT-166	0		user	Share the Amelia Earhart pdf with this chat	FILES	file_share	Share the <file_keyword>Amelia Earhart</file_keyword> <file_type>pdf</file_type> with <sharetarget_name>this</sharetarget_name> <sharetarget_type>chat</sharetarget_type>		[]	1
+BVT-173	0		user	Share the Gunsmoke pdf with Testing is meeting	FILES	file_share	Share the <file_keyword>Gunsmoke</file_keyword> <file_type>pdf</file_type> with <sharetarget_name>Testing is</sharetarget_name> <sharetarget_type>meeting</sharetarget_type>		[]	1
+BVT-193	0		user	Share the Happy pdf with John Henry	FILES	file_share	Share the <file_keyword>Happy</file_keyword> <file_type>pdf</file_type> with <to_contact_name>John Henry</to_contact_name>		[]	1
+BVT-165	0		user	Share the pdf I was working on with Trigger Tech	FILES	file_share	Share the <file_type>pdf</file_type> <contact_name>I</contact_name> was <file_action>working</file_action> on with <sharetarget_name>Trigger Tech</sharetarget_name>		[]	1
+BVT-186	0		user	Share the Diet Brian excel with Cap'n Crunch Time	FILES	file_share	Share the <file_keyword>Diet Brian</file_keyword> <file_type>excel</file_type> with<sharetarget_name>Cap'n Crunch Time</sharetarget_name>		[]	1
+BVT-187	0		user	Share the Microsoft Best Practices excel with Magical Freedom Galaxy	FILES	file_share	Share the <file_keyword>Microsoft Best Practices</file_keyword> <file_type>excel</file_type> with <sharetarget_name>Magical Freedom Galaxy</sharetarget_name>		[]	1
+BVT-188	0		user	Share the excel I was working on with Business Plan Review	FILES	file_share	Share the <file_type>excel</file_type> <contact_name>I</contact_name> was <file_action>working</file_action> on with <sharetarget_name>Business Plan Review</sharetarget_name>		[]	1
+BVT-163	0		user	Share the Best pdf with All Hands Meeting meeting	FILES	file_share	Share the <file_keyword>Best</file_keyword> <file_type>pdf</file_type> with <sharetarget_name>All Hands Meeting</sharetarget_name> <sharetarget_type>meeting</sharetarget_type>		[]	1
+BVT-194	0		user	Share the Radical pdf with Meeting for Cool and Attractive People meeting	FILES	file_share	Share the <file_keyword>Radical</file_keyword> <file_type>pdf</file_type> with <sharetarget_name>Meeting for Cool and Attractive People</sharetarget_name> <sharetarget_type>meeting</sharetarget_type>		[]	1
+BVT-214	0		user	Share the Happy presentation with Testing is My Favorite meeting	FILES	file_share	Share the <file_keyword>Happy</file_keyword> <file_type>presentation</file_type> with <sharetarget_name>Testing is My Favorite</sharetarget_name> <sharetarget_type>meeting</sharetarget_type>		[]	1
+BVT-221	0		user	Share the document I was working on with Meeting for Cool and Attractive People	FILES	file_share	Share the document <contact_name>I</contact_name> was <file_action>working</file_action> on with <sharetarget_type>Meeting</sharetarget_type> <sharetarget_name>for Cool and Attractive People</sharetarget_name>		[]	1
+BVT-113	0		user	Move to the slide Meeting for	INMEETING	goto_slide	Move to the slide <slide_name>Meeting for</slide_name>		[]	1
+BVT-148	0		user	Jump to the Flower, Bird, slide	INMEETING	goto_slide	Jump to the <slide_name>Flower, Bird</slide_name>, slide		[]	1
+
