@@ -15,6 +15,12 @@ E:\_EVAL_CACHE\FilesUsedByModel
 delete your domain eg: files_
 to make sure it will run again, not fetch the old result
 
+每一個evaluation test output folder
+你 will have log.txt
+可以看哪個model being picked up 
+
+
+
 
 =============================================
 evaluation get QAS input  with contexual
