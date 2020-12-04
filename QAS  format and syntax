@@ -1,0 +1,10 @@
+
+  
+  
+12042020
+
+// 為什麼sdf_v2 50 要在sdfv2 前面的概念
+  
+No, derive的概念只是在所有东西做初始化的时候有用，所以前后顺序并不重要；但是clientId是在realtime起作用，所以顺序会有影响
+​
+    我懂了 有點像是fall back 的概念  確保sdfv2_50 有問題還可以fall back 到sdfv2
