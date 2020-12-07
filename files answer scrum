@@ -81,6 +81,41 @@ files domain 怎麼onbaord 到evaluation
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1182483?_a=files
 看這個pr
 
+
+=====================
+bert email lu - contexual using rules 
+12072020
+=====================
+
+[10:20 AM] Yue Ma
+    
+dnn准备下一个quarter ship出去，现在就是做做试验
+​[10:22 AM] Chieh-Chun Chang
+    有打算在DNN 用contextual signal 嗎?  正在研究怎麼把她跟bert 一起用  但是還沒比較好的想法?
+​[10:23 AM] Yue Ma
+    
+我也还没有想法呢 (smile) stca好像用了
+​[10:23 AM] Yue Ma
+    
+你准备把files 换成bert么
+​[10:23 AM] Yue Ma
+    
+我有点担心latency太大，现在主要在看perfomance
+Edited​[10:24 AM] Chieh-Chun Chang
+    是  這也是valid 的concern 我也問下STCA  
+​[10:25 AM] Chieh-Chun Chang
+    但是latency 你是用啥用  QAS tool 嗎
+​[10:25 AM] Yue Ma
+    
+是的，
+​[10:25 AM] Yue Ma
+    
+email的contextual signal就一个，不行我pattern一下都可以 (smile)
+​[10:26 AM] Chieh-Chun Chang
+    好的  如果有這個pr 可以加我讓我學習一下 
+
+
+
 =====================
 QU suggestion for NL search - eye off analysis 12072020
 =====================
