@@ -1,0 +1,34 @@
+
+1. We are blocked from deploying any newer models in the existing B2 setup, for a specific problem
+
+	// QAS merging problem for two datasets
+
+	// WW/SIP
+	[default]
+	filemv1
+	
+	// MSIT/SDF
+	[default] // Files v2 is not coming up
+	filemv2
+	
+	
+	
+
+
+2. We could not deploy a newer model to 50% of users in a particular ring and continue to get other model results as well.  
+	
+	// WW/SIP
+	[default]
+	filemv1
+	
+	// MSIT/SDF
+	[default]
+	filemv1
+	linksearch
+
+
+	[query_domains:filestestv2] // Files v2 is not coming up, also you will miss linksearch
+	Derive= default (from MSIT/SDF)  
+	File=filev2 
+
+
