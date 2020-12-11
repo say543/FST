@@ -1,0 +1,2 @@
+Hey Cortana Open file called nippy protocol introduction .	file_open	Hey Cortana Open file called <file_name>nippy protocol introduction</file_name>.	ExternalInput11	0	1	nippy protocol introduction	1	0	0
+Hey Cortana Open attachment called nippy protocol introduction .	file_open	Hey Cortana Open attachment called <file_name>nippy protocol introduction</file_name>.	ExternalInput11	0	1	nippy protocol introduction	1	0	0
