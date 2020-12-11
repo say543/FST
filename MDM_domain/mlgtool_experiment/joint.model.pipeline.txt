@@ -1,0 +1,101 @@
+BoundaryView --in=ExternalInput2 --out=query
+# Padding left - [CLS] for intent
+ConstFeatureGenerator --in=ExternalInput2 --out=CLS --stringfeaturevalue=[CLS]
+StringFeatureUnion --in=CLS,ExternalInput2 --out=crf_input_query
+# Hashing-based ngrams
+StringHash --in=crf_input_query --out=unigram --unsigned
+FeatureShifter --in=unigram --out=unigram_l1 --shift=1 
+FeatureShifter --in=unigram --out=unigram_l2 --shift=2
+FeatureShifter --in=unigram --out=unigram_l3 --shift=3
+FeatureShifter --in=unigram --out=unigram_l4 --shift=4
+FeatureShifter --in=unigram --out=unigram_r1 --shift=-1
+FeatureShifter --in=unigram --out=unigram_r2 --shift=-2
+FeatureShifter --in=unigram --out=unigram_r3 --shift=-3
+FeatureShifter --in=unigram --out=unigram_r4 --shift=-4
+# Bigram and Trigram feature
+FeatureConjunction --in=unigram,unigram_l1 --out=bigram --WeightOperator=max
+FeatureConjunction --in=bigram,unigram_l2 --out=trigram --WeightOperator=max
+FeatureShifter --in=bigram --out=bigram_l1 --shift=1
+FeatureShifter --in=bigram --out=bigram_l2 --shift=2
+FeatureShifter --in=bigram --out=bigram_r1 --shift=-1
+FeatureShifter --in=bigram --out=bigram_r2 --shift=-2
+FeatureShifter --in=trigram --out=trigram_l1 --shift=1
+FeatureShifter --in=trigram --out=trigram_l2 --shift=2
+FeatureShifter --in=trigram --out=trigram_r1 --shift=-1
+# Skip-bigram feature
+FeatureConjunction --in=unigram,unigram_l2 --out=skipbigram_l1 --WeightOperator=max
+FeatureShifter --in=skipbigram_l1 --out=skipbigram_r1 --shift=-2
+# Static lexicon
+MlgFeaturizer --in=crf_input_query --out=lexicon0 --maxNGramLength=20 --fts=lexicon.bin --utf8-regex
+FeatureReplicate --in=lexicon0 --out=lexicon --xform=span
+FeatureConjunction --in=lexicon,unigram_l1 --out=lexicon_l1 --WeightOperator=max
+FeatureConjunction --in=lexicon,unigram_r1 --out=lexicon_r1 --WeightOperator=max
+# Wordtype
+MlgFeaturizer --in=ExternalInput1 --out=lexicon1 --maxNGramLength=20 --fts=wordtype.bin --utf8-regex
+FeatureReplicate --in=lexicon1 --out=wordtype --xform=span
+FeatureConjunction --in=wordtype,unigram --out=wordtype_unigram --WeightOperator=max
+FeatureConjunction --in=wordtype,unigram_l1 --out=wordtype_l1 --WeightOperator=max
+FeatureConjunction --in=wordtype,unigram_r1 --out=wordtype_r1 --WeightOperator=max
+# Multi-turn features
+TextEditor --in=ExternalInput3 --out=PreviousTurnDomain --config=lowercase.texteditor.txt
+StringHash --in=PreviousTurnDomain --out=PreviousTurnDomainHash --unsigned
+
+TextEditor --in=ExternalInput4 --out=PreviousTurnIntent --config=lowercase.texteditor.txt
+StringHash --in=PreviousTurnIntent --out=PreviousTurnIntentHash --unsigned
+
+TextEditor --in=ExternalInput6 --out=TaskFrameEntityStates0 --config=lowercase.texteditor.txt
+StopWordFilter --in=TaskFrameEntityStates0 --out=TaskFrameEntityStates --stopwords=taskframeentitystates.stopword.txt --tolower
+StringHash --in=TaskFrameEntityStates --out=TaskFrameEntityStatesHash --unsigned
+
+TextEditor --in=ExternalInput7 --out=TaskFrameGUID --config=lowercase.texteditor.txt
+StringHash --in=TaskFrameGUID --out=TaskFrameGUIDHash --unsigned
+
+TextEditor --in=ExternalInput8 --out=TaskFrameName --config=lowercase.texteditor.txt
+StringHash --in=TaskFrameName --out=TaskFrameNameHash --unsigned
+
+TextEditor --in=ExternalInput9 --out=TaskFrameStatus --config=lowercase.texteditor.txt
+StringHash --in=TaskFrameStatus --out=TaskFrameStatusHash --unsigned
+
+FeatureConjunction --in=PreviousTurnDomainHash,PreviousTurnIntentHash --out=MultiturnConj1 --WeightOperator=max
+FeatureConjunction --in=TaskFrameStatus,PreviousTurnDomainHash --out=MultiturnConj2 --WeightOperator=max
+FeatureConjunction --in=TaskFrameStatus,PreviousTurnIntentHash --out=MultiturnConj3 --WeightOperator=max
+FeatureConjunction --in=TaskFrameEntityStatesHash,PreviousTurnDomainHash --out=MultiturnConj4 --WeightOperator=max
+FeatureConjunction --in=TaskFrameEntityStatesHash,PreviousTurnIntentHash --out=MultiturnConj5 --WeightOperator=max
+FeatureConjunction --in=TaskFrameEntityStatesHash,TaskFrameStatus --out=MultiturnConj6 --WeightOperator=max
+
+# Taskframe feature for slot
+FeatureDuplicate --in=crf_input_query,TaskFrameEntityStatesHash --out=entitystate_slot
+# Dynamic lexicon: UserContacts
+FeatureStringToTag --in=crf_input_query,ExternalInput10 --out=UserContacts
+FeatureReplicate --in=UserContacts --out=UserContactsSpan --xform=span
+# Dynamic lexicon: UserFileNames
+NgramGeneratorV2 --in=ExternalInput11 --out=UserFileNames_match_phrases --n=2 --noboundarycross --includereverse --includebm --config=ngramconfig.ini
+FeatureSetConcat --in=ExternalInput11,UserFileNames_match_phrases --out=UserFileNames_match
+FeatureStringToTag --in=crf_input_query,UserFileNames_match --out=UserFileNames
+FeatureReplicate --in=UserFileNames --out=UserFileNamesSpan --xform=span
+# Dynamic lexicon: UserFileNamesKeyPhrases
+NgramGeneratorV2 --in=ExternalInput12 --out=UserFileNamesKeyPhrases_match_phrases --n=2 --noboundarycross --includereverse --includebm --config=ngramconfig.ini
+FeatureSetConcat --in=ExternalInput12,UserFileNamesKeyPhrases_match_phrases --out=UserFileNamesKeyPhrases_match
+FeatureStringToTag --in=crf_input_query,UserFileNamesKeyPhrases_match --out=UserFileNamesKeyPhrases
+FeatureReplicate --in=UserFileNamesKeyPhrases --out=UserFileNamesKeyPhrasesSpan --xform=span
+# Dynamic lexicon: UserMeetingSubjects
+NgramGeneratorV2 --in=ExternalInput13 --out=UserMeetingSubjects_match_phrases --n=2 --noboundarycross --includereverse --includebm --config=ngramconfig.ini
+FeatureSetConcat --in=ExternalInput13,UserMeetingSubjects_match_phrases --out=UserMeetingSubjects_match
+FeatureStringToTag --in=crf_input_query,UserMeetingSubjects_match --out=UserMeetingSubjects
+FeatureReplicate --in=UserMeetingSubjects --out=UserMeetingSubjectsSpan --xform=span
+# Word Cluster
+MlgFeaturizer --in=crf_input_query --out=wordcluster --maxNGramLength=20 --fts=wordcluster.bin --utf8-regex
+FeatureShifter --in=wordcluster --out=wordcluster_l1 --shift=1
+FeatureShifter --in=wordcluster --out=wordcluster_r1 --shift=-1
+FeatureConjunction --in=wordcluster_l1,unigram --out=wc1 --WeightOperator=max
+FeatureConjunction --in=wordcluster_r1,unigram --out=wc2 --WeightOperator=max
+FeatureConjunction --in=wordcluster,unigram_l1 --out=wc3 --WeightOperator=max
+FeatureConjunction --in=wordcluster,unigram_r1 --out=wc4 --WeightOperator=max
+# Feature extraction: query-level features for intent
+RandomFeature --in=ExternalInput2 --out=bias --rv=constant --val=1 --tagidval=1 --fromval=-1 --toval=-1
+FeatureSetConcat --in=bias,bigram,trigram,skipbigram_l1,PreviousTurnDomainHash,PreviousTurnIntentHash,TaskFrameEntityStatesHash,TaskFrameGUIDHash,TaskFrameNameHash,TaskFrameStatusHash,MultiturnConj1,MultiturnConj2,MultiturnConj3,MultiturnConj4,MultiturnConj5,MultiturnConj6,UserContacts,UserFileNames,UserFileNamesKeyPhrases,UserMeetingSubjects --out=intent_features0
+FeatureNormalizer --in=intent_features0 --out=intent_features1 --norm=presence
+ResetIndex --in=intent_features1 --out=intent_features --start=0 --step=0
+# Decode
+# 
+TriangularChainCRF --in=crf_input_query,intent_features,unigram,unigram_l1,unigram_l2,unigram_l3,unigram_l4,unigram_r1,unigram_r2,unigram_r3,unigram_r4,bigram,bigram_l1,bigram_l2,bigram_r1,bigram_r2,trigram,trigram_l1,trigram_l2,trigram_r1,skipbigram_l1,skipbigram_r1,lexicon,lexicon_l1,lexicon_r1,wordtype,wordtype_unigram,wordtype_l1,wordtype_r1,UserContactsSpan,UserFileNamesSpan,UserFileNamesKeyPhrasesSpan,UserMeetingSubjectsSpan,wordcluster,wordcluster_l1,wordcluster_r1,wc1,wc2,wc3,wc4,entitystate_slot --out=ModelInputQuery,ModelPrediction --model=tricrf.model.bin
