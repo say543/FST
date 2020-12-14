@@ -7,6 +7,13 @@ new path?  還不對  要找一下....
 https://microsoftapc.sharepoint.com/teams/CLU705/_layouts/15/Doc.aspx?sourcedoc={75f33d6e-4674-4c39-bd74-112bf8e821ae}&action=edit&wd=target%28%F0%9F%93%9A%20Reference%2F%F0%9F%93%95%20Dev%20Handbook%2FDevelopment.one%7Cf0744253-2d76-4cb7-87ad-01577c02e5a9%2FModel%20Repository%20-%20Enlist%2C%20Setup%20and%20Structure%7C7e1929a0-cb51-4324-b4c4-97a79eda7d64%2F%29
 
 
+
+==========================================
+evaluation for multi turn CSDS
+==========================================
+by Yue Ma
+我们的evaluation，Conversation Context只定义PreviousTurnDomain， 不定义TaskFrameStatus，是不会check domain score的
+
 =============================================
 evaluation check cache
 ========================================
