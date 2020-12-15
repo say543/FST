@@ -98,24 +98,37 @@ print('labels {}'.format(labels))
 
 
 
-
+#also huggingface
+#https://huggingface.co/transformers/model_doc/distilbert.html
 tokenizer = DistilBertTokenizer.from_pretrained('distilbert-base-uncased', do_lower_case=True)
 
-text_ids = [tokenizer.encode(text, max_length=300, pad_to_max_length=True) for text in texts]
+#https://github.com/huggingface/transformers/issues/5397
+#text_ids = [tokenizer.encode(text, max_length=300, pad_to_max_length=True) for text in texts]
+# remove warning message
+text_ids = [tokenizer.encode(text, max_length=300, pad_to_max_length=True, truncation=True) for text in texts]
 
 
 
 
 att_masks = []
 for ids in text_ids:
+    # if id > 0 , then element will 1
+    # otherwise, element will 0
     masks = [int(id > 0) for id in ids]
     att_masks.append(masks)
 
+#sklearn split data
+#https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html
+#? same random state but in different ways, how to make sure each query is aligned
+#  https://www.cnblogs.com/Yanjy-OnlyOne/p/11288098.html
+# it seems same random_state will generate the same result
 train_x, test_val_x, train_y, test_val_y = train_test_split(text_ids, labels, random_state=111, test_size=0.2)
 train_m, test_val_m = train_test_split(att_masks, random_state=111, test_size=0.2)
 test_x, val_x, test_y, val_y = train_test_split(test_val_x, test_val_y, random_state=111, test_size=0.5)
 test_m, val_m = train_test_split(test_val_m, random_state=111, test_size=0.5)
 
+#https://pytorch.org/docs/stable/tensors.html
+# can be multiple dimentionas
 train_x = torch.tensor(train_x)
 test_x = torch.tensor(test_x)
 val_x = torch.tensor(val_x)
@@ -128,6 +141,8 @@ val_m = torch.tensor(val_m)
 
 # kwargs = {'num_workers': 1, 'pin_memory': True} if gpu_available else {}
 
+#https://zhuanlan.zhihu.com/p/76638962
+#buer distributed learning
 hvd.init()
 
 train_data = TensorDataset(train_x, train_m, train_y)
@@ -141,6 +156,7 @@ val_dataloader = DataLoader(val_data, sampler=val_sampler, batch_size=batch_size
 gpu_available = torch.cuda.is_available()
 
 if gpu_available:
+    print("gpu_availabe: {}".format(gpu_available))
     torch.cuda.set_device(hvd.local_rank())
 
 num_labels = len(set(labels))
