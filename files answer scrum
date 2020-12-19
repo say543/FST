@@ -82,7 +82,53 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 看這個pr
 
 
+==============
+heron data
+==============
+[12/7 8:53 AM] Vijay Rajagopal
+    +Haoda Chu & +Chieh-Chun Chang for answering it for Teams Message and file search respectively
+(1 liked)​[12/7 9:33 AM] Haoda Chu
+    Thanks!
++ Paulo and Tao
+Paulo Salem da Silva This is really promising and it may directly help Teams Message scenario
+Tao Sun Could you please point us to the latest heron data for Teams Message and file search, so that we can start some experiments? Thanks
+(2 liked)​[12/7 10:37 AM] Hasmik Tananyan
+    Is the schema very different from email search data?
+​[12/7 10:38 AM] Hasmik Tananyan
+    We have module which extracts data from heron not sure if it will support file search data if it is very different
+​[12/7 10:47 AM] Haoda Chu
+    Hasmik Tananyan You can find the latest schema here: https://carina/clu/cortana/TEAMSMESSAGE
+The schema of teams message is quite similar to NL email search (like a subset). Maybe we can directly reuse you module without any change
+​[12/7 10:50 AM] Hasmik Tananyan
+    We need to try if it works will be super cool
+(1 liked)​[12/7 10:51 AM] Hasmik Tananyan
+    I can try it if you point me to heron portal of data also I might need some permission
+​[12/7 11:00 AM] Haoda Chu
+    
+Awesome! I am not sure if  the latest data has been checked in to heron. Will get back to you after following up with tao.
+(1 liked)​[12/7 5:47 PM] Vijay Rajagopal
+    
 
+So is it fair to suggest the following action items:
+
+
+	
+Haoda Chu \ Paulo Salem da Silva - Provide Teams Message dataset to Hasmik - Owner - Haoda Chu \ Paulo Salem da Silva
+	Hasmik Tananyan - Extend the evaluation tool to support V2 NL Transformations to setup E2E evaluation pipeline. Some of the questions that we should be able to answer are:
+	
+
+		
+Currently confidence score is set to 0.2 for NL to trigger. What happens if I set to 0.3 - What would be the alteration rate in this experiment?
+		I have a new model - What are the diffs in terms of NL triggering compared to older model
+		Owner: Hasmik Tananyan
+	
+	
+	Sharanya Vemu \ Mikkel Conradi - To incorporate this in Q3 planning
+	​​​​​​​​​​​​​​
+
+
+
+Edited<https://teams.microsoft.com/l/message/19:8cacdedb5759491ebda50f4b65f8febb@thread.skype/1607359985045?tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47&amp;groupId=0e62b139-e8ff-471b-aab4-a8edbd680f10&amp;parentMessageId=1607121565490&amp;teamName=User Understanding&amp;channelName=NL Email Search ✉&amp;createdTime=1607359985045>
 ===============
 october cow set (not tail)
 for domain precision is like 60%
