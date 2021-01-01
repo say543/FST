@@ -235,6 +235,10 @@ def readLines(filename):
 
 
 
+#inputFile1 = "files_intent_training_checkin.tsv"
+#inputFile2 = "files_intent_training.tsv"
+
+
 inputFile1 = "files_intent_training_checkin.tsv"
 inputFile2 = "files_intent_training.tsv"
 
