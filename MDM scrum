@@ -2,12 +2,26 @@
 
 
 ====================================
+MDM model quality, shift to prod tickets
+
+====================================
+https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdev.azure.com%2Fmsasg%2F678b9503-3ecd-4823-8af7-d44814b0aff2%2F_workitems%2Fedit%2F3182439%3Ftracking_data%3DeyJTb3VyY2UiOiJFbWFpbCIsIlR5cGUiOiJOb3RpZmljYXRpb24iLCJTSUQiOiJtcy52c3Mtd29yay5teS13b3JraXRlbS1hc3NpZ25lZC10by1jaGFuZ2VzLXN1YnNjcmlwdGlvbiIsIlNUeXBlIjoiQ09OIiwiUmVjaXAiOjEsIl94Y2kiOnsiTklEIjoxODIwNzUyNDksIk1SZWNpcCI6Im0wPTEgIiwiQWN0IjoiYmUxYWY1YTgtNzFhNS00NDEzLWE4MmYtYmQ3MjM0NzUxOGY0In0sIkVsZW1lbnQiOiJoZXJvL2N0YSJ9&data=04%7C01%7CChiehChun.Chang%40microsoft.com%7Cd4523a57b7c74db59f9a08d8b0d1d90b%7C72f988bf86f141af91ab2d7cd011db47%7C0%7C0%7C637453762626260828%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=3%2FJgCnD9LQOwumD4G4F9Vem4Y3LHJVQz9HSEYeZdHJY%3D&reserved=0
+https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdev.azure.com%2Fmsasg%2F678b9503-3ecd-4823-8af7-d44814b0aff2%2F_workitems%2Fedit%2F3182437%3Ftracking_data%3DeyJTb3VyY2UiOiJFbWFpbCIsIlR5cGUiOiJOb3RpZmljYXRpb24iLCJTSUQiOiJtcy52c3Mtd29yay5teS13b3JraXRlbS1hc3NpZ25lZC10by1jaGFuZ2VzLXN1YnNjcmlwdGlvbiIsIlNUeXBlIjoiQ09OIiwiUmVjaXAiOjEsIl94Y2kiOnsiTklEIjoxODIwNzUyNDQsIk1SZWNpcCI6Im0wPTEgIiwiQWN0IjoiMDA1MTMyMTYtMzM0Yy00YjhlLTk5MDgtYTYyNzdlY2YyNTdhIn0sIkVsZW1lbnQiOiJoZXJvL2N0YSJ9&data=04%7C01%7CChiehChun.Chang%40microsoft.com%7C31fe70f67fcb49dfa4f808d8b0d1d7c2%7C72f988bf86f141af91ab2d7cd011db47%7C0%7C0%7C637453762612838554%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=tA3QBwajTyy3uAVsm2TgHGrHCqVcHBJZj7868jqAjcE%3D&reserved=0
+https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdev.azure.com%2Fmsasg%2F678b9503-3ecd-4823-8af7-d44814b0aff2%2F_workitems%2Fedit%2F3182436%3Ftracking_data%3DeyJTb3VyY2UiOiJFbWFpbCIsIlR5cGUiOiJOb3RpZmljYXRpb24iLCJTSUQiOiJtcy52c3Mtd29yay5teS13b3JraXRlbS1hc3NpZ25lZC10by1jaGFuZ2VzLXN1YnNjcmlwdGlvbiIsIlNUeXBlIjoiQ09OIiwiUmVjaXAiOjEsIl94Y2kiOnsiTklEIjoxODIwNzUyNDMsIk1SZWNpcCI6Im0wPTEgIiwiQWN0IjoiMDA1MTMyMTYtMzM0Yy00YjhlLTk5MDgtYTYyNzdlY2YyNTdhIn0sIkVsZW1lbnQiOiJoZXJvL2N0YSJ9&data=04%7C01%7CChiehChun.Chang%40microsoft.com%7C3b499ae6fa094bf8f34608d8b0d1d511%7C72f988bf86f141af91ab2d7cd011db47%7C0%7C0%7C637453762557800216%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=%2BKSxuCiqiqCu05ObeX5uOYBG0VqW%2BXOut9sIiSdYxgQ%3D&reserved=0
+https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdev.azure.com%2Fmsasg%2F678b9503-3ecd-4823-8af7-d44814b0aff2%2F_workitems%2Fedit%2F3182438%3Ftracking_data%3DeyJTb3VyY2UiOiJFbWFpbCIsIlR5cGUiOiJOb3RpZmljYXRpb24iLCJTSUQiOiJtcy52c3Mtd29yay5teS13b3JraXRlbS1hc3NpZ25lZC10by1jaGFuZ2VzLXN1YnNjcmlwdGlvbiIsIlNUeXBlIjoiQ09OIiwiUmVjaXAiOjEsIl94Y2kiOnsiTklEIjoxODIwNzUyNDUsIk1SZWNpcCI6Im0wPTEgIiwiQWN0IjoiMDA1MTMyMTYtMzM0Yy00YjhlLTk5MDgtYTYyNzdlY2YyNTdhIn0sIkVsZW1lbnQiOiJoZXJvL2N0YSJ9&data=04%7C01%7CChiehChun.Chang%40microsoft.com%7C4f14adccd12542c30f9808d8b0d1d291%7C72f988bf86f141af91ab2d7cd011db47%7C0%7C0%7C637453762529156696%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=%2BgxA96K0GE9Sw9XLrPgHA4T3Qr35JimbWZLU8GV8WFU%3D&reserved=0
+
+
+
+====================================
 TNLR, enterprice BERT
 ====================================
 內部的希望我們都用這個
 
 pretrain or fine tune 怎麼加feature ?
 haoda 說有類似的work 以後可以看
+
+bert offline experiment ticket
+https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdev.azure.com%2Fmsasg%2F678b9503-3ecd-4823-8af7-d44814b0aff2%2F_workitems%2Fedit%2F3182466%3Ftracking_data%3DeyJTb3VyY2UiOiJFbWFpbCIsIlR5cGUiOiJOb3RpZmljYXRpb24iLCJTSUQiOiJtcy52c3Mtd29yay5teS13b3JraXRlbS1hc3NpZ25lZC10by1jaGFuZ2VzLXN1YnNjcmlwdGlvbiIsIlNUeXBlIjoiQ09OIiwiUmVjaXAiOjEsIl94Y2kiOnsiTklEIjoxODIwNzUyODcsIk1SZWNpcCI6Im0wPTEgIiwiQWN0IjoiOTdlMzUzNGEtMzA5MC00MTIzLThhMWEtMzAzMGU5NTViOWQ5In0sIkVsZW1lbnQiOiJoZXJvL2N0YSJ9&data=04%7C01%7CChiehChun.Chang%40microsoft.com%7C25a1a61db8b44047dafc08d8b0d1da65%7C72f988bf86f141af91ab2d7cd011db47%7C0%7C0%7C637453762649937211%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=0Wu02CZxSoDicqHxyRLynfPHqrCKF0sL5%2FouDWdSg8M%3D&reserved=0
 
 
 
