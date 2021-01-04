@@ -82,6 +82,14 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 看這個pr
 
 ======================================
+evaluation CSDS deployment configuration
+======================================
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging?path=%2Fsrc%2FCopyModels%2FOneRuntimeTargetConfig.xml
+
+<email_thread>
+Have you on-boarded and updated model from CLU Studio but still maintain in CSDS?
+
+======================================
 mystuff retired 的相關ticket
 ======================================
 https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdev.azure.com%2Fmsasg%2F678b9503-3ecd-4823-8af7-d44814b0aff2%2F_workitems%2Fedit%2F3182447%3Ftracking_data%3DeyJTb3VyY2UiOiJFbWFpbCIsIlR5cGUiOiJOb3RpZmljYXRpb24iLCJTSUQiOiJtcy52c3Mtd29yay5teS13b3JraXRlbS1hc3NpZ25lZC10by1jaGFuZ2VzLXN1YnNjcmlwdGlvbiIsIlNUeXBlIjoiQ09OIiwiUmVjaXAiOjEsIl94Y2kiOnsiTklEIjoxODIwNzUyNjMsIk1SZWNpcCI6Im0wPTEgIiwiQWN0IjoiOTdlMzUzNGEtMzA5MC00MTIzLThhMWEtMzAzMGU5NTViOWQ5In0sIkVsZW1lbnQiOiJoZXJvL2N0YSJ9&data=04%7C01%7CChiehChun.Chang%40microsoft.com%7Cbfb09caa85424a13443a08d8b0d1da35%7C72f988bf86f141af91ab2d7cd011db47%7C0%7C0%7C637453762645519751%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=E57sH7HWnwjK5LibaiowT661RW5dd0noI6HrbDCfgl4%3D&reserved=0
