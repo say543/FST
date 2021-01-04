@@ -6,6 +6,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 import joblib
 import os, argparse, time, random
+import random;
+import re;
 
 ###############
 #remote
@@ -13,12 +15,18 @@ import os, argparse, time, random
 
 
 import torch
+import torch.nn as nn
+from torch.nn import CrossEntropyLoss
 from torch.utils.data import TensorDataset, DataLoader
 from torch.utils.data.distributed import DistributedSampler
 
-from transformers import DistilBertTokenizer
-from transformers import DistilBertForSequenceClassification, AdamW, DistilBertConfig
+from transformers import DistilBertPreTrainedModel, DistilBertModel
+from transformers import DistilBertTokenizer,DistilBertTokenizerFast
+from transformers import DistilBertForTokenClassification, AdamW, DistilBertConfig
+
 from transformers import get_linear_schedule_with_warmup
+from transformers import BatchEncoding
+from tokenizers import Encoding
 import horovod.torch as hvd
 
 from azureml.core import Workspace, Run, Dataset
@@ -69,17 +77,19 @@ import torch
 from torch.utils.data import TensorDataset, DataLoader
 from torch.utils.data.distributed import DistributedSampler
 
-from transformers import DistilBertTokenizer
-from transformers import DistilBertForSequenceClassification, AdamW, DistilBertConfig
+from transformers import DistilBertTokenizer,DistilBertTokenizerFast
+from transformers import DistilBertForTokenClassification, AdamW, DistilBertConfig
 from transformers import get_linear_schedule_with_warmup
+from transformers import BatchEncoding
+from tokenizers import Encoding
+
 #import horovod.torch as hvd
 
 #from azureml.core import Workspace, Run, Dataset
 
 # ouput only three column
-#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/complaints_after.tsv', sep='\t', encoding="utf-8")
-df = pd.read_csv('E:/azure_ml_notebook/azureml_data/files_domain_training_contexual_answer_small.tsv', sep='\t', encoding="utf-8")
-#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/complaints_sampled_after.csv', encoding="utf-8")
+df = pd.read_csv('E:/azure_ml_notebook/azureml_data/files_slot_training_small.tsv', sep='\t', encoding="utf-8")
+#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/files_slot_training_single.tsv', sep='\t', encoding="utf-8")
 
 
 # for debug
@@ -103,30 +113,92 @@ print('top head data {}'.format(df.head()))
 #label_values = [l for _,l in sorted(zip(order, label_values))]
 '''
 
-
 ###############
 #local above
 ###############
 
-texts = df['query'].values
-labels = df['domain'].values
+##texts = df['query'].values
 
-# for debug
-# label_counts  / label values are useless unless treating them as features
-#print('label_counts {}'.format(label_counts))
-#print('label_values after sorted {}'.format(label_values))
-print('labels {}'.format(labels))
+
+##labels = df['domain'].values
+
+### for debug
+### label_counts  / label values are useless unless treating them as features
+###print('label_counts {}'.format(label_counts))
+###print('label_values after sorted {}'.format(label_values))
+##print('labels {}'.format(labels))
+
+
+# read label
+from typing_extensions import TypedDict
+from typing import List,Any
+IntList = List[int] # A list of token_ids
+IntListList = List[IntList] # A List of List of token_ids, e.g. a Batch
+
+
+import itertools
+class LabelSet:
+    def __init__(self, labels: List[str]):
+        self.labels_to_id = {}
+        self.ids_to_label = {}
+
+        self.labels_to_id["o"] = 0
+        self.ids_to_label[0] = "o"
+        num = 1
+        for label in labels:
+            if label == "o":
+                print("skip:{}".format(label))
+                continue
+            self.labels_to_id[label] = num
+            self.ids_to_label[num] = label
+            num = num +1 
+
+
+    def get_aligned_label_ids_from_aligned_label(self, aligned_labels):
+        return list(map(self.labels_to_id.get, aligned_labels))
+
+    def get_untagged_id(self):
+        return self.labels_to_id["o"]
+
+    def get_labels(self):
+        return self.labels_to_id
+
+slots = ["O", 
+    "file_name", 
+    "file_type", 
+    "data_source", 
+    "contact_name", 
+    "to_contact_name",
+    "file_keyword",
+    "date",
+    "time",
+    "meeting_starttime",
+    "file_action",
+    "file_action_context",
+    "position_ref",
+    "order_ref",
+    "file_recency",
+    "sharetarget_type",
+    "sharetarget_name",
+    "file_folder",
+    "data_source_name",
+    "data_source_type",
+    "attachment"]
+
+# map all slots to lower case
+slots_label_set = LabelSet(labels=map(str.lower,slots))
 
 
 
 #also huggingface
 #https://huggingface.co/transformers/model_doc/distilbert.html
-tokenizer = DistilBertTokenizer.from_pretrained('distilbert-base-uncased', do_lower_case=True)
+#tokenizer = DistilBertTokenizer.from_pretrained('distilbert-base-uncased', do_lower_case=True)
+fast_tokenizer = DistilBertTokenizerFast.from_pretrained('distilbert-base-uncased') # Load a pre-trained tokenizer
 
 # for debug
-print('Original Text: {}'.format(texts[0]))
-print('Tokenized Text: {}'.format(tokenizer.tokenize(texts[0])))
-print('Token IDs: {}'.format(tokenizer.convert_tokens_to_ids(tokenizer.tokenize(texts[0]))))
+##print('Original Text: {}'.format(texts[0]))
+##print('Tokenized Text: {}'.format(tokenizer.tokenize(texts[0])))
+##print('Token IDs: {}'.format(tokenizer.convert_tokens_to_ids(tokenizer.tokenize(texts[0]))))
 
 #https://github.com/huggingface/transformers/issues/5397
 # doing like this
@@ -138,27 +210,117 @@ print('Token IDs: {}'.format(tokenizer.convert_tokens_to_ids(tokenizer.tokenize(
 # remove warning message
 #text_ids = [tokenizer.encode(text, max_length=300, pad_to_max_length=True, truncation=True) for text in texts]
 # replace with suggested parpamter
-text_ids = [tokenizer.encode(text, max_length=300, padding='max_length', truncation=True) for text in texts]
+#text_ids = [tokenizer.encode(text, max_length=300, padding='max_length', truncation=True) for text in texts]
 
-
-#To fine-tune our model, we need two inputs: one array of token IDs (created above) 
-#and one array of a corresponding binary mask, called attention mask in the BERT model specification. 
-# Each attention mask has the same length of the corresponding input sequence and has a 0 if 
-# the corresponding token is a pad token, or a 1 otherwise.
-# length is the same text_ids length (300 setup here)
+text_ids = []
 att_masks = []
-for ids in text_ids:
-    # if id > 0 , then element will 1
-    # otherwise, element will 0
-    masks = [int(id > 0) for id in ids]
+# iterative get labele and also append padding based on text_ids
+labels_for_text_ids = []
+for i, row in df.iterrows():
+    
+
+
+    text = row['query']
+
+
+    text_id = fast_tokenizer.encode(text, max_length=300, padding='max_length', truncation=True)
+    text_ids.append(text_id)
+
+    slot = row['QueryXml']
+	# remove head and end spaces 
+    slot = slot.strip()
+
+
+    # for debug
+    #print("text:{}".format(text))
+    #print("text id :{}".format(text_id))
+    #print("slot: {}".format(slot))
+
+
+    annotations = []
+
+    # for contact_name to reanme to to_contact_name
+    xmlpairs = re.findall("(<.*?>.*?<\/.*?>)", slot)
+
+    textIndex = 0
+    for xmlpair in xmlpairs:
+        # extra type and value for xml tag
+        xmlTypeEndInd = xmlpair.find(">")
+
+        xmlType = xmlpair[1:xmlTypeEndInd]
+
+        xmlValue = xmlpair.replace("<"+xmlType+">", "")
+        xmlValue = xmlValue.replace("</"+xmlType+">", "")
+        xmlValue = xmlValue.strip()
+
+        start = text.lower()[textIndex:].find(xmlValue.lower())
+        if start == -1:
+            print("skipped text: {} and pair: {}".format(row['query'], xmlValue))
+            continue
+        # update textIndex according to moving order
+        textIndex = start
+
+        annotations.append(dict(start=start,end=start+len(xmlValue),text=xmlValue,label=xmlType))
+
+    fast_tokenized_batch : BatchEncoding = fast_tokenizer(text)
+    fast_tokenized_text :Encoding  =fast_tokenized_batch[0]
+
+    # fast token will add CLS and SEP 
+    # ? not sure in real trainnig , do we need to provide or not
+    # in yue case it does not include those two
+    #print("fast token ouput: {}".format(fast_tokenized_text.tokens))
+
+    tokens = fast_tokenized_text.tokens
+    aligned_labels = ["O"]*len(tokens) # Make a list to store our labels the same length as our tokens
+    for anno in (annotations):
+        for char_ix in range(anno['start'],anno['end']):
+            token_ix = fast_tokenized_text.char_to_token(char_ix)
+            if token_ix is not None: # White spaces have no token and will return None
+                aligned_labels[token_ix] = anno['label']
+
+
+    # for debug
+    #for token,label in zip(tokens,aligned_labels):
+    #    print (token,"-",label) 
+
+    aligned_label_ids = slots_label_set.get_aligned_label_ids_from_aligned_label(
+        map(str.lower,aligned_labels)
+    )
+
+    # for debug
+    #for token, label in zip(tokens, aligned_label_ids):
+    #    print(token, "-", label)
+
+
+    # append mask
+    masks = [int(id > 0) for id in text_id]
     att_masks.append(masks)
+
+
+    # append align label by following text_ids's length (wih padding)
+    labels_for_text_id = []
+    for i in range(0,len(text_id)):
+        if i < len(aligned_label_ids):
+            labels_for_text_id.append(aligned_label_ids[i])
+        else:
+            # padding, add label as zero as default
+            labels_for_text_id.append(slots_label_set.get_untagged_id())
+    labels_for_text_ids.append(labels_for_text_id)
+
+
+
+### for debug
+print('text_ids[0]: {}'.format(text_ids[0]))
+print('labels_for_text_ids[0]: {}'.format(labels_for_text_ids[0]))
+print('att mask[0] : {}'.format(att_masks[0]))
+
 
 #sklearn split data
 #https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html
 #? same random state but in different ways, how to make sure each query is aligned
 #  https://www.cnblogs.com/Yanjy-OnlyOne/p/11288098.html
 # it seems same random_state will generate the same result
-train_x, test_val_x, train_y, test_val_y = train_test_split(text_ids, labels, random_state=111, test_size=0.2)
+train_x, test_val_x, train_y, test_val_y = train_test_split(text_ids, labels_for_text_ids, random_state=111, test_size=0.2)
 train_m, test_val_m = train_test_split(att_masks, random_state=111, test_size=0.2)
 test_x, val_x, test_y, val_y = train_test_split(test_val_x, test_val_y, random_state=111, test_size=0.5)
 test_m, val_m = train_test_split(test_val_m, random_state=111, test_size=0.5)
@@ -233,7 +395,7 @@ if gpu_available:
     print("gpu_availabe: {}".format(gpu_available))
     torch.cuda.set_device(hvd.local_rank())
 
-num_labels = len(set(labels))
+num_labels = len(set(slots_label_set.get_labels()))
 
 
 #Here we instantiate our model class. 
@@ -241,8 +403,107 @@ num_labels = len(set(labels))
 # this class class DistilBertForSequenceClassification(DistilBertPreTrainedModel):
 # 
 #https://huggingface.co/transformers/v1.2.0/_modules/pytorch_transformers/modeling_distilbert.html
-model = DistilBertForSequenceClassification.from_pretrained('distilbert-base-uncased', num_labels=num_labels,
+#model = DistilBertForTokenClassification.from_pretrained('distilbert-base-uncased', num_labels=num_labels,
+#                                                            output_attentions=False, output_hidden_states=False)
+
+class DistilBertForTokenClassificationFilesDomain(DistilBertPreTrainedModel):
+    r"""
+        **labels**: (`optional`) ``torch.LongTensor`` of shape ``(batch_size,)``:
+            Labels for computing the sequence classification/regression loss.
+            Indices should be in ``[0, ..., config.num_labels - 1]``.
+            If ``config.num_labels == 1`` a regression loss is computed (Mean-Square loss),
+            If ``config.num_labels > 1`` a classification loss is computed (Cross-Entropy).
+    Outputs: `Tuple` comprising various elements depending on the configuration (config) and inputs:
+        **loss**: (`optional`, returned when ``labels`` is provided) ``torch.FloatTensor`` of shape ``(1,)``:
+            Classification (or regression if config.num_labels==1) loss.
+        **logits**: ``torch.FloatTensor`` of shape ``(batch_size, config.num_labels)``
+            Classification (or regression if config.num_labels==1) scores (before SoftMax).
+        **hidden_states**: (`optional`, returned when ``config.output_hidden_states=True``)
+            list of ``torch.FloatTensor`` (one for the output of each layer + the output of the embeddings)
+            of shape ``(batch_size, sequence_length, hidden_size)``:
+            Hidden-states of the model at the output of each layer plus the initial embedding outputs.
+        **attentions**: (`optional`, returned when ``config.output_attentions=True``)
+            list of ``torch.FloatTensor`` (one for each layer) of shape ``(batch_size, num_heads, sequence_length, sequence_length)``:
+            Attentions weights after the attention softmax, used to compute the weighted average in the self-attention heads.
+    Examples::
+        tokenizer = DistilBertTokenizer.from_pretrained('distilbert-base-uncased')
+        model = DistilBertForSequenceClassificationFilesDomain.from_pretrained('distilbert-base-uncased')
+        input_ids = torch.tensor(tokenizer.encode("Hello, my dog is cute")).unsqueeze(0)  # Batch size 1
+        labels = torch.tensor([1]).unsqueeze(0)  # Batch size 1
+        outputs = model(input_ids, labels=labels)
+        loss, logits = outputs[:2]
+    """
+
+    def __init__(self, config, weight=None):
+        super(DistilBertForTokenClassificationFilesDomain, self).__init__(config)
+        self.num_labels = config.num_labels
+        self.weight = weight
+
+        self.distilbert = DistilBertModel(config)
+        self.pre_classifier = nn.Linear(config.dim, config.dim)
+        self.classifier = nn.Linear(config.dim, config.num_labels)
+        self.dropout = nn.Dropout(config.seq_classif_dropout)
+
+        self.init_weights()
+
+    def forward(
+        self,
+        input_ids=None,
+        attention_mask=None,
+        head_mask=None,
+        inputs_embeds=None,
+        labels=None,
+        output_attentions=None,
+        output_hidden_states=None,
+        return_dict=None,
+    ):
+        # this line is related to wrong message
+        outputs = self.distilbert(
+            input_ids,
+            attention_mask=attention_mask,
+            head_mask=head_mask,
+            inputs_embeds=inputs_embeds,
+            output_attentions=output_attentions,
+            output_hidden_states=output_hidden_states,
+            return_dict=return_dict,
+        )
+
+        sequence_output = outputs[0]
+
+        sequence_output = self.dropout(sequence_output)
+        logits = self.classifier(sequence_output)
+
+        loss = None
+        if labels is not None:
+            loss_fct = CrossEntropyLoss()
+            # Only keep active parts of the loss
+            if attention_mask is not None:
+                active_loss = attention_mask.view(-1) == 1
+                active_logits = logits.view(-1, self.num_labels)
+                active_labels = torch.where(
+                    active_loss, labels.view(-1), torch.tensor(loss_fct.ignore_index).type_as(labels)
+                )
+                loss = loss_fct(active_logits, active_labels)
+            else:
+                loss = loss_fct(logits.view(-1, self.num_labels), labels.view(-1))
+
+        #output = (logits,) + outputs[1:]
+
+        slot_label_id = []
+        for i, ele2d in enumerate(logits):
+            for j, ele1d in enumerate(ele2d):
+                value, label_id = torch.max(ele1d, dim=0)
+                slot_label_id.append(label_id)
+                #print("value: {} anmd index {}".format(value, index))
+
+        slot_label_tensor = torch.tensor([slot_label_id])      
+        output = (slot_label_tensor,) + outputs[1:]
+
+        return ((loss,) + output) if loss is not None else output
+
+model = DistilBertForTokenClassificationFilesDomain.from_pretrained('distilbert-base-uncased', num_labels=num_labels,
                                                             output_attentions=False, output_hidden_states=False)
+
 
 lr_scaler = hvd.size()
 
@@ -315,6 +576,14 @@ num_mb_val = len(val_dataloader)
 if num_mb_val == 0:
     num_mb_val = 1
 
+
+
+# for debug
+for i in range(len(val_x)):
+    for j in range(len(val_x[i])):
+        print(val_x[i][j], end=' ')
+    print()
+
 # https://zhuanlan.zhihu.com/p/143209797
 # this link has similar process as the folloiwngf code for each function
 for n in range(num_epochs):
@@ -354,6 +623,8 @@ for n in range(num_epochs):
         outputs = model(mb_x, attention_mask=mb_m, labels=mb_y)
         
         loss = outputs[0]
+
+
 
         # Perform a backward pass to calculate the gradients.
         loss.backward()
@@ -414,6 +685,13 @@ for n in range(num_epochs):
             outputs = model(mb_x, attention_mask=mb_m, labels=mb_y)
             
             loss = outputs[0]
+
+            
+            # for debug
+            print ("evaluate result")
+            for j in range(len(outputs[1])):
+                print(outputs[1][j], end=' ')
+            print()
             
             val_loss += loss.data / num_mb_val
             
@@ -433,7 +711,7 @@ if hvd.rank() == 0:
     
     model_to_save = model.module if hasattr(model, 'module') else model
     model_to_save.save_pretrained(out_dir)
-    tokenizer.save_pretrained(out_dir)
+    fast_tokenizer.save_pretrained(out_dir)
 
     with open(out_dir + '/train_losses.pkl', 'wb') as f:
         joblib.dump(train_losses, f)
@@ -449,20 +727,27 @@ if hvd.rank() == 0:
 
     run.log('validation loss', avg_val_loss)
 
-
+    
     # save onnx
     # Tokenizing input text
-    # this is question answering so change it only a single sentence
-    #text = "[CLS] Who was Jim Henson ? [SEP] Jim Henson was a puppeteer [SEP]"
-    text = "[CLS] Who was Jim Henson ?"
-    tokenized_text = tokenizer.tokenize(text)
-    print("tokenized_text: {}".format(tokenized_text))
+    text = "a visually stunning rumination on love"
+    fast_tokenized_batch : BatchEncoding = fast_tokenizer(text)
+    fast_tokenized_text :Encoding  =fast_tokenized_batch[0]
+    fast_tokenized_text_tokens_copy = fast_tokenized_text.tokens
+
+    print("fast token ouput version 2 being used here: {}".format(fast_tokenized_text_tokens_copy))
+
     # Masking one of the input tokens
     # this is question answering so change it only a single sentence
     #masked_index = 8
     masked_index = 3
-    tokenized_text[masked_index] = '[MASK]'
-    indexed_tokens = tokenizer.convert_tokens_to_ids(tokenized_text)
+    fast_tokenized_text_tokens_copy[masked_index] = '[MASK]'
+    indexed_tokens = fast_tokenizer.convert_tokens_to_ids(fast_tokenized_text_tokens_copy)
+
+    # for debug 
+    print("fast token ouput version 2 being used here after replace: {}".format(fast_tokenized_text_tokens_copy))
+
+    print("indexed_tokens: {}".format(indexed_tokens))
     segments_ids = [0]
 
     # Creating a dummy input
@@ -479,7 +764,6 @@ if hvd.rank() == 0:
     dummy_input = tokens_tensor
 
     # for deubg
-    # 14 tokens for output
     print("tokens_tensor shape: {}".format(tokens_tensor.shape))
     print("segments_tensor shape: {}".format(segments_tensors.shape))
 
@@ -492,18 +776,6 @@ if hvd.rank() == 0:
     #    dummy_input, out_dir + '/traced_distill_bert.onnx', 
     #    verbose=True)
 
-    # follow yue and add dynamic_axes = {'inputs':{1: '?'},  'logits':{1:  '?'}})
-    # but it semms inputs need to be assocaited with corrent input_names otherwise  it will not work
-    # ? but classficaiton only inputs varis so might be only add inputs
-    '''
-    torch.onnx.export(model=model_to_save, 
-        args=(dummy_input), 
-        f=out_dir + '/traced_distill_bert.onnx.bin', 
-        input_names = ["input_ids"],
-        verbose=True,
-        dynamic_axes ={'input_ids':{1: '?'}}
-        )
-    '''
 
     #follow yue's suggestion to add output 
     torch.onnx.export(model=model_to_save,
@@ -511,10 +783,10 @@ if hvd.rank() == 0:
         f=out_dir + '/traced_distill_bert.onnx.bin',
         input_names = ["input_ids"],
         verbose=True,
-        output_names = ["domain_output"],
+        #output_names = ["logits"],
+        output_names = ["slot_label_tensor"],
         do_constant_folding = True,
         opset_version=11,
-        dynamic_axes = {'input_ids': {1: '?'}, 'domain_output': {1: '?'}}
+        #dynamic_axes = {'input_ids': {1: '?'}, 'logits': {1: '?'}}
+        dynamic_axes = {'input_ids': {1: '?'}, 'slot_label_tensor': {1: '?'}}
         )
-
-        

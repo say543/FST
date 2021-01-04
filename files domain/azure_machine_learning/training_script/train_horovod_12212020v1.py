@@ -163,7 +163,6 @@ train_m, test_val_m = train_test_split(att_masks, random_state=111, test_size=0.
 test_x, val_x, test_y, val_y = train_test_split(test_val_x, test_val_y, random_state=111, test_size=0.5)
 test_m, val_m = train_test_split(test_val_m, random_state=111, test_size=0.5)
 
-# Convert all inputs and labels into torch tensors, the required datatype 
 #https://pytorch.org/docs/stable/tensors.html
 # can be multiple dimentionas
 train_x = torch.tensor(train_x)
@@ -259,19 +258,10 @@ def count_parameters(model):
 
 print('Number of trainable parameters:', count_parameters(model), '\n', model)
 
-# This code is taken from:
-# https://github.com/huggingface/transformers/blob/5bfcd0485ece086ebcbed2d008813037968a9e58/examples/run_glue.py#L102
-# Don't apply weight decay to any parameters whose names include these tokens.
-# (Here, the BERT doesn't have `gamma` or `beta` parameters, only `bias` terms)
 no_decay = ['bias', 'LayerNorm.weight']
-# Separate the `weight` parameters from the `bias` parameters. 
-# - For the `weight` parameters, this specifies a 'weight_decay_rate' of 0.01. (means multiply by 0.99)
-# - For the `bias` parameters, the 'weight_decay_rate' is 0.0. 
 optimizer_grouped_parameters = [
-    # Filter for all parameters which *don't* include 'bias', 'gamma', 'beta'.
     {'params': [p for n, p in model.named_parameters() if not any(nd in n for nd in no_decay)],
      'weight_decay_rate': 0.2},
-     # Filter for parameters which *do* include those.
     {'params': [p for n, p in model.named_parameters() if any(nd in n for nd in no_decay)],
      'weight_decay_rate': 0.0}
 ]
@@ -315,64 +305,27 @@ num_mb_val = len(val_dataloader)
 if num_mb_val == 0:
     num_mb_val = 1
 
-# https://zhuanlan.zhihu.com/p/143209797
-# this link has similar process as the folloiwngf code for each function
 for n in range(num_epochs):
-    # Reset the total loss for this epoch.
     train_loss = 0
     val_loss = 0
-    # Measure how long the training epoch takes.
     start_time = time.time()
     
-    # For each batch of training data...
     for k, (mb_x, mb_m, mb_y) in enumerate(train_dataloader):
-
-        # Always clear any previously calculated gradients before performing a
-        # backward pass. PyTorch doesn't do this automatically because 
-        # accumulating the gradients is "convenient while training RNNs". 
-        # (source: https://stackoverflow.com/questions/48001598/why-do-we-need-to-call-zero-grad-in-pytorch)
         optimizer.zero_grad()
-
-        # Put the model into training mode. Don't be mislead--the call to 
-        # `train` just changes the *mode*, it doesn't *perform* the training.
-        # `dropout` and `batchnorm` layers behave differently during training
-        # vs. test (source: https://stackoverflow.com/questions/51433378/what-does-model-train-do-in-pytorch)
         model.train()
         
         mb_x = mb_x.to(device)
         mb_m = mb_m.to(device)
         mb_y = mb_y.to(device)
         
-
-        # Perform a forward pass (evaluate the model on this training batch).
-        # The documentation for this `model` function is here: 
-        # https://huggingface.co/transformers/v2.2.0/model_doc/bert.html#transformers.BertForSequenceClassification
-        # It returns different numbers of parameters depending on what arguments
-        # arge given and what flags are set. For our useage here, it returns
-        # the loss (because we provided labels) and the "logits"--the model
-        # outputs prior to activation.
         outputs = model(mb_x, attention_mask=mb_m, labels=mb_y)
         
         loss = outputs[0]
-
-        # Perform a backward pass to calculate the gradients.
         loss.backward()
-
-        # Clip the norm of the gradients to 1.0.
-        # This is to help prevent the "exploding gradients" problem.
         torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
-
-        # Update parameters and take a step using the computed gradient.
-        # The optimizer dictates the "update rule"--how the parameters are
-        # modified based on their gradients, the learning rate, etc.
         optimizer.step()
-        # Update the learning rate.
         scheduler.step()
-
-        # Accumulate the training loss over all of the batches so that we can
-        # calculate the average loss at the end. `loss` is a Tensor containing a
-        # single value; the `.item()` function just returns the Python value 
-        # from the tensor.        
+        
         train_loss += loss.data / num_mb_train
     
     print ("\nTrain loss after itaration %i: %f" % (n+1, train_loss))
@@ -380,12 +333,7 @@ for n in range(num_epochs):
     print ("Average train loss after iteration %i: %f" % (n+1, avg_train_loss))
     train_losses.append(avg_train_loss)
     
-
-    # Tell pytorch not to bother with constructing the compute graph during
-    # the forward pass, since this is only needed for backprop (training).
     with torch.no_grad():
-       # Put the model in evaluation mode--the dropout layers behave differently
-       # during evaluation.
         model.eval()
         
         for k, (mb_x, mb_m, mb_y) in enumerate(val_dataloader):
@@ -406,11 +354,6 @@ for n in range(num_epochs):
             #hidden_states=distilbert_output.hidden_states,
             #attentions=distilbert_output.attentions,
             #)
-            # Forward pass, calculate logit predictions.
-            # The documentation for this `model` function is here: 
-            # https://huggingface.co/transformers/v2.2.0/model_doc/bert.html#transformers.BertForSequenceClassification
-            # Get the "logits" output by the model. The "logits" are the output
-            # values prior to applying an activation function like the softmax.
             outputs = model(mb_x, attention_mask=mb_m, labels=mb_y)
             
             loss = outputs[0]
@@ -452,15 +395,11 @@ if hvd.rank() == 0:
 
     # save onnx
     # Tokenizing input text
-    # this is question answering so change it only a single sentence
-    #text = "[CLS] Who was Jim Henson ? [SEP] Jim Henson was a puppeteer [SEP]"
-    text = "[CLS] Who was Jim Henson ?"
+    text = "[CLS] Who was Jim Henson ? [SEP] Jim Henson was a puppeteer [SEP]"
     tokenized_text = tokenizer.tokenize(text)
     print("tokenized_text: {}".format(tokenized_text))
     # Masking one of the input tokens
-    # this is question answering so change it only a single sentence
-    #masked_index = 8
-    masked_index = 3
+    masked_index = 8
     tokenized_text[masked_index] = '[MASK]'
     indexed_tokens = tokenizer.convert_tokens_to_ids(tokenized_text)
     segments_ids = [0]
@@ -495,26 +434,13 @@ if hvd.rank() == 0:
     # follow yue and add dynamic_axes = {'inputs':{1: '?'},  'logits':{1:  '?'}})
     # but it semms inputs need to be assocaited with corrent input_names otherwise  it will not work
     # ? but classficaiton only inputs varis so might be only add inputs
-    '''
     torch.onnx.export(model=model_to_save, 
         args=(dummy_input), 
-        f=out_dir + '/traced_distill_bert.onnx.bin', 
+        f=out_dir + '/traced_distill_bert.onnx', 
         input_names = ["input_ids"],
         verbose=True,
         dynamic_axes ={'input_ids':{1: '?'}}
         )
-    '''
 
-    #follow yue's suggestion to add output 
-    torch.onnx.export(model=model_to_save,
-        args=(dummy_input),
-        f=out_dir + '/traced_distill_bert.onnx.bin',
-        input_names = ["input_ids"],
-        verbose=True,
-        output_names = ["domain_output"],
-        do_constant_folding = True,
-        opset_version=11,
-        dynamic_axes = {'input_ids': {1: '?'}, 'domain_output': {1: '?'}}
-        )
 
         

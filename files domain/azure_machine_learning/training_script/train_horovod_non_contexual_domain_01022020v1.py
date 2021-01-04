@@ -13,11 +13,13 @@ import os, argparse, time, random
 
 
 import torch
+import torch.nn as nn
 from torch.utils.data import TensorDataset, DataLoader
 from torch.utils.data.distributed import DistributedSampler
 
+from transformers.modeling_outputs import SequenceClassifierOutput
 from transformers import DistilBertTokenizer
-from transformers import DistilBertForSequenceClassification, AdamW, DistilBertConfig
+from transformers import DistilBertModel, DistilBertPreTrainedModel, DistilBertForSequenceClassification, AdamW, DistilBertConfig
 from transformers import get_linear_schedule_with_warmup
 import horovod.torch as hvd
 
@@ -57,6 +59,7 @@ df = pd.read_csv(file_name, sep='\t', encoding="utf-8")
 
 
 # for debug
+print('file_name: {}'.format(file_name))
 print('top head data {}'.format(df.head()))
 
 
@@ -236,13 +239,111 @@ if gpu_available:
 num_labels = len(set(labels))
 
 
+class DistilBertForSequenceClassificationFilesDomain(DistilBertPreTrainedModel):
+    r"""
+        **labels**: (`optional`) ``torch.LongTensor`` of shape ``(batch_size,)``:
+            Labels for computing the sequence classification/regression loss.
+            Indices should be in ``[0, ..., config.num_labels - 1]``.
+            If ``config.num_labels == 1`` a regression loss is computed (Mean-Square loss),
+            If ``config.num_labels > 1`` a classification loss is computed (Cross-Entropy).
+    Outputs: `Tuple` comprising various elements depending on the configuration (config) and inputs:
+        **loss**: (`optional`, returned when ``labels`` is provided) ``torch.FloatTensor`` of shape ``(1,)``:
+            Classification (or regression if config.num_labels==1) loss.
+        **logits**: ``torch.FloatTensor`` of shape ``(batch_size, config.num_labels)``
+            Classification (or regression if config.num_labels==1) scores (before SoftMax).
+        **hidden_states**: (`optional`, returned when ``config.output_hidden_states=True``)
+            list of ``torch.FloatTensor`` (one for the output of each layer + the output of the embeddings)
+            of shape ``(batch_size, sequence_length, hidden_size)``:
+            Hidden-states of the model at the output of each layer plus the initial embedding outputs.
+        **attentions**: (`optional`, returned when ``config.output_attentions=True``)
+            list of ``torch.FloatTensor`` (one for each layer) of shape ``(batch_size, num_heads, sequence_length, sequence_length)``:
+            Attentions weights after the attention softmax, used to compute the weighted average in the self-attention heads.
+    Examples::
+        tokenizer = DistilBertTokenizer.from_pretrained('distilbert-base-uncased')
+        model = DistilBertForSequenceClassificationFilesDomain.from_pretrained('distilbert-base-uncased')
+        input_ids = torch.tensor(tokenizer.encode("Hello, my dog is cute")).unsqueeze(0)  # Batch size 1
+        labels = torch.tensor([1]).unsqueeze(0)  # Batch size 1
+        outputs = model(input_ids, labels=labels)
+        loss, logits = outputs[:2]
+    """
+
+    def __init__(self, config, weight=None):
+        super(DistilBertForSequenceClassificationFilesDomain, self).__init__(config)
+        self.num_labels = config.num_labels
+        self.weight = weight
+
+        self.distilbert = DistilBertModel(config)
+        self.pre_classifier = nn.Linear(config.dim, config.dim)
+        self.classifier = nn.Linear(config.dim, config.num_labels)
+        self.dropout = nn.Dropout(config.seq_classif_dropout)
+
+        self.init_weights()
+    def forward(
+        self,
+        input_ids=None,
+        attention_mask=None,
+        head_mask=None,
+        inputs_embeds=None,
+        labels=None,
+        output_attentions=None,
+        output_hidden_states=None,
+        device = 'cpu'
+    ):
+        # this line is related to wrong message
+        distilbert_output = self.distilbert(input_ids=input_ids,
+                                            attention_mask=attention_mask,
+                                            head_mask=head_mask)
+        hidden_state = distilbert_output[0]  # (bs, seq_len, dim)
+        pooled_output = hidden_state[:, 0]  # (bs, dim)
+        pooled_output = self.pre_classifier(pooled_output)  # (bs, dim)
+        pooled_output = nn.ReLU()(pooled_output)  # (bs, dim)
+        pooled_output = self.dropout(pooled_output)  # (bs, dim)
+        logits = self.classifier(pooled_output)  # (bs, dim)
+
+        loss = None
+        if labels is not None:
+            if self.num_labels == 1:
+                loss_fct = nn.MSELoss()
+                loss = loss_fct(logits.view(-1), labels.view(-1))
+            else:
+                loss_fct = nn.CrossEntropyLoss(weight=self.weight)
+                loss = loss_fct(logits.view(-1, self.num_labels), labels.view(-1))
+
+        #output = (logits,) + distilbert_output[1:]
+        #return outputs  # (loss), logits, (hidden_states), (attentions)
+
+
+        # output domain softmax probability for postivie label
+        logits = logits.softmax(dim=1)
+        # pass device as argument
+        # ? ceck if model has variable can be leveraged
+        indices = torch.tensor([1]).to(device)
+
+        return SequenceClassifierOutput(
+            loss=loss,
+            logits=torch.index_select(logits, 1, indices),
+            hidden_states=distilbert_output.hidden_states,
+            attentions=distilbert_output.attentions,
+        )
+
 #Here we instantiate our model class. 
 #We use a compact version, that is trained through model distillation from a base BERT model and modified to include a classification layer at the output. This compact version has 6 transformer layers instead of 12 as in the original BERT model.
 # this class class DistilBertForSequenceClassification(DistilBertPreTrainedModel):
 # 
 #https://huggingface.co/transformers/v1.2.0/_modules/pytorch_transformers/modeling_distilbert.html
-model = DistilBertForSequenceClassification.from_pretrained('distilbert-base-uncased', num_labels=num_labels,
+# replace with my defined class but the same parameters
+model = DistilBertForSequenceClassificationFilesDomain.from_pretrained('distilbert-base-uncased', num_labels=num_labels,
                                                             output_attentions=False, output_hidden_states=False)
+
+#Here we instantiate our model class. 
+#We use a compact version, that is trained through model distillation from a base BERT model and modified to include a classification layer at the output. This compact version has 6 transformer layers instead of 12 as in the original BERT model.
+# this class class DistilBertForSequenceClassification(DistilBertPreTrainedModel):
+# 
+#https://huggingface.co/transformers/v1.2.0/_modules/pytorch_transformers/modeling_distilbert.html
+#model = DistilBertForSequenceClassification.from_pretrained('distilbert-base-uncased', num_labels=num_labels,
+#                                                            output_attentions=False, output_hidden_states=False)
+
+
 
 lr_scaler = hvd.size()
 
@@ -411,9 +512,12 @@ for n in range(num_epochs):
             # https://huggingface.co/transformers/v2.2.0/model_doc/bert.html#transformers.BertForSequenceClassification
             # Get the "logits" output by the model. The "logits" are the output
             # values prior to applying an activation function like the softmax.
-            outputs = model(mb_x, attention_mask=mb_m, labels=mb_y)
+            outputs = model(mb_x, attention_mask=mb_m, labels=mb_y, device=device)
             
             loss = outputs[0]
+
+            # for debug
+            #print('evaluate label result {}'.format(outputs.logits))
             
             val_loss += loss.data / num_mb_val
             

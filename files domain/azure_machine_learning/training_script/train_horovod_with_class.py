@@ -11,13 +11,14 @@ import os, argparse, time, random
 #remote
 ###############
 
-
+'''
 import torch
+import torch.nn as nn
 from torch.utils.data import TensorDataset, DataLoader
 from torch.utils.data.distributed import DistributedSampler
 
 from transformers import DistilBertTokenizer
-from transformers import DistilBertForSequenceClassification, AdamW, DistilBertConfig
+from transformers import DistilBertModel,DistilBertPreTrainedModel, DistilBertForSequenceClassification, AdamW, DistilBertConfig
 from transformers import get_linear_schedule_with_warmup
 import horovod.torch as hvd
 
@@ -58,7 +59,7 @@ df = pd.read_csv(file_name, sep='\t', encoding="utf-8")
 
 # for debug
 print('top head data {}'.format(df.head()))
-
+'''
 
 ###############
 #local below
@@ -66,11 +67,12 @@ print('top head data {}'.format(df.head()))
 
 '''
 import torch
+import torch.nn as nn
 from torch.utils.data import TensorDataset, DataLoader
 from torch.utils.data.distributed import DistributedSampler
 
 from transformers import DistilBertTokenizer
-from transformers import DistilBertForSequenceClassification, AdamW, DistilBertConfig
+from transformers import DistilBertModel,DistilBertPreTrainedModel, DistilBertForSequenceClassification, AdamW, DistilBertConfig
 from transformers import get_linear_schedule_with_warmup
 #import horovod.torch as hvd
 
@@ -163,7 +165,6 @@ train_m, test_val_m = train_test_split(att_masks, random_state=111, test_size=0.
 test_x, val_x, test_y, val_y = train_test_split(test_val_x, test_val_y, random_state=111, test_size=0.5)
 test_m, val_m = train_test_split(test_val_m, random_state=111, test_size=0.5)
 
-# Convert all inputs and labels into torch tensors, the required datatype 
 #https://pytorch.org/docs/stable/tensors.html
 # can be multiple dimentionas
 train_x = torch.tensor(train_x)
@@ -212,7 +213,7 @@ print('val_m dimen {}'.format(val_m.shape))
 #training data setup in learning 
 ###############
 
-
+'''
 # kwargs = {'num_workers': 1, 'pin_memory': True} if gpu_available else {}
 
 #https://zhuanlan.zhihu.com/p/76638962
@@ -232,17 +233,85 @@ gpu_available = torch.cuda.is_available()
 if gpu_available:
     print("gpu_availabe: {}".format(gpu_available))
     torch.cuda.set_device(hvd.local_rank())
-
+'''
 num_labels = len(set(labels))
 
+
+class DistilBertForSequenceClassificationFilesDomain(DistilBertPreTrainedModel):
+    r"""
+        **labels**: (`optional`) ``torch.LongTensor`` of shape ``(batch_size,)``:
+            Labels for computing the sequence classification/regression loss.
+            Indices should be in ``[0, ..., config.num_labels - 1]``.
+            If ``config.num_labels == 1`` a regression loss is computed (Mean-Square loss),
+            If ``config.num_labels > 1`` a classification loss is computed (Cross-Entropy).
+    Outputs: `Tuple` comprising various elements depending on the configuration (config) and inputs:
+        **loss**: (`optional`, returned when ``labels`` is provided) ``torch.FloatTensor`` of shape ``(1,)``:
+            Classification (or regression if config.num_labels==1) loss.
+        **logits**: ``torch.FloatTensor`` of shape ``(batch_size, config.num_labels)``
+            Classification (or regression if config.num_labels==1) scores (before SoftMax).
+        **hidden_states**: (`optional`, returned when ``config.output_hidden_states=True``)
+            list of ``torch.FloatTensor`` (one for the output of each layer + the output of the embeddings)
+            of shape ``(batch_size, sequence_length, hidden_size)``:
+            Hidden-states of the model at the output of each layer plus the initial embedding outputs.
+        **attentions**: (`optional`, returned when ``config.output_attentions=True``)
+            list of ``torch.FloatTensor`` (one for each layer) of shape ``(batch_size, num_heads, sequence_length, sequence_length)``:
+            Attentions weights after the attention softmax, used to compute the weighted average in the self-attention heads.
+    Examples::
+        tokenizer = DistilBertTokenizer.from_pretrained('distilbert-base-uncased')
+        model = DistilBertForSequenceClassificationFilesDomain.from_pretrained('distilbert-base-uncased')
+        input_ids = torch.tensor(tokenizer.encode("Hello, my dog is cute")).unsqueeze(0)  # Batch size 1
+        labels = torch.tensor([1]).unsqueeze(0)  # Batch size 1
+        outputs = model(input_ids, labels=labels)
+        loss, logits = outputs[:2]
+    """
+
+    def __init__(self, config, weight=None):
+        super(DistilBertForSequenceClassificationFilesDomain, self).__init__(config)
+        self.num_labels = config.num_labels
+        self.weight = weight
+
+        self.distilbert = DistilBertModel(config)
+        self.pre_classifier = nn.Linear(config.dim, config.dim)
+        self.classifier = nn.Linear(config.dim, config.num_labels)
+        self.dropout = nn.Dropout(config.seq_classif_dropout)
+
+        self.init_weights()
+
+    def forward(self, input_ids=None, attention_mask=None, head_mask=None, inputs_embeds=None, labels=None):
+        distilbert_output = self.distilbert(input_ids=input_ids,
+                                            attention_mask=attention_mask,
+                                            head_mask=head_mask)
+        hidden_state = distilbert_output[0]  # (bs, seq_len, dim)
+        pooled_output = hidden_state[:, 0]  # (bs, dim)
+        pooled_output = self.pre_classifier(pooled_output)  # (bs, dim)
+        pooled_output = nn.ReLU()(pooled_output)  # (bs, dim)
+        pooled_output = self.dropout(pooled_output)  # (bs, dim)
+        logits = self.classifier(pooled_output)  # (bs, dim)
+
+        outputs = (logits,) + distilbert_output[1:]
+        if labels is not None:
+            if self.num_labels == 1:
+                loss_fct = nn.MSELoss()
+                loss = loss_fct(logits.view(-1), labels.view(-1))
+            else:
+                loss_fct = nn.CrossEntropyLoss(weight=self.weight)
+                loss = loss_fct(logits.view(-1, self.num_labels), labels.view(-1))
+            outputs = (loss,) + outputs
+
+        return outputs  # (loss), logits, (hidden_states), (attentions)
 
 #Here we instantiate our model class. 
 #We use a compact version, that is trained through model distillation from a base BERT model and modified to include a classification layer at the output. This compact version has 6 transformer layers instead of 12 as in the original BERT model.
 # this class class DistilBertForSequenceClassification(DistilBertPreTrainedModel):
 # 
 #https://huggingface.co/transformers/v1.2.0/_modules/pytorch_transformers/modeling_distilbert.html
-model = DistilBertForSequenceClassification.from_pretrained('distilbert-base-uncased', num_labels=num_labels,
+# replace with my defined class but the same parameters
+#model = DistilBertForSequenceClassification.from_pretrained('distilbert-base-uncased', num_labels=num_labels,
+#                                                            output_attentions=False, output_hidden_states=False)
+model = DistilBertForSequenceClassificationFilesDomain.from_pretrained('distilbert-base-uncased', num_labels=num_labels,
                                                             output_attentions=False, output_hidden_states=False)
+
+
 
 lr_scaler = hvd.size()
 
@@ -259,19 +328,10 @@ def count_parameters(model):
 
 print('Number of trainable parameters:', count_parameters(model), '\n', model)
 
-# This code is taken from:
-# https://github.com/huggingface/transformers/blob/5bfcd0485ece086ebcbed2d008813037968a9e58/examples/run_glue.py#L102
-# Don't apply weight decay to any parameters whose names include these tokens.
-# (Here, the BERT doesn't have `gamma` or `beta` parameters, only `bias` terms)
 no_decay = ['bias', 'LayerNorm.weight']
-# Separate the `weight` parameters from the `bias` parameters. 
-# - For the `weight` parameters, this specifies a 'weight_decay_rate' of 0.01. (means multiply by 0.99)
-# - For the `bias` parameters, the 'weight_decay_rate' is 0.0. 
 optimizer_grouped_parameters = [
-    # Filter for all parameters which *don't* include 'bias', 'gamma', 'beta'.
     {'params': [p for n, p in model.named_parameters() if not any(nd in n for nd in no_decay)],
      'weight_decay_rate': 0.2},
-     # Filter for parameters which *do* include those.
     {'params': [p for n, p in model.named_parameters() if any(nd in n for nd in no_decay)],
      'weight_decay_rate': 0.0}
 ]
@@ -315,64 +375,27 @@ num_mb_val = len(val_dataloader)
 if num_mb_val == 0:
     num_mb_val = 1
 
-# https://zhuanlan.zhihu.com/p/143209797
-# this link has similar process as the folloiwngf code for each function
 for n in range(num_epochs):
-    # Reset the total loss for this epoch.
     train_loss = 0
     val_loss = 0
-    # Measure how long the training epoch takes.
     start_time = time.time()
     
-    # For each batch of training data...
     for k, (mb_x, mb_m, mb_y) in enumerate(train_dataloader):
-
-        # Always clear any previously calculated gradients before performing a
-        # backward pass. PyTorch doesn't do this automatically because 
-        # accumulating the gradients is "convenient while training RNNs". 
-        # (source: https://stackoverflow.com/questions/48001598/why-do-we-need-to-call-zero-grad-in-pytorch)
         optimizer.zero_grad()
-
-        # Put the model into training mode. Don't be mislead--the call to 
-        # `train` just changes the *mode*, it doesn't *perform* the training.
-        # `dropout` and `batchnorm` layers behave differently during training
-        # vs. test (source: https://stackoverflow.com/questions/51433378/what-does-model-train-do-in-pytorch)
         model.train()
         
         mb_x = mb_x.to(device)
         mb_m = mb_m.to(device)
         mb_y = mb_y.to(device)
         
-
-        # Perform a forward pass (evaluate the model on this training batch).
-        # The documentation for this `model` function is here: 
-        # https://huggingface.co/transformers/v2.2.0/model_doc/bert.html#transformers.BertForSequenceClassification
-        # It returns different numbers of parameters depending on what arguments
-        # arge given and what flags are set. For our useage here, it returns
-        # the loss (because we provided labels) and the "logits"--the model
-        # outputs prior to activation.
         outputs = model(mb_x, attention_mask=mb_m, labels=mb_y)
         
         loss = outputs[0]
-
-        # Perform a backward pass to calculate the gradients.
         loss.backward()
-
-        # Clip the norm of the gradients to 1.0.
-        # This is to help prevent the "exploding gradients" problem.
         torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
-
-        # Update parameters and take a step using the computed gradient.
-        # The optimizer dictates the "update rule"--how the parameters are
-        # modified based on their gradients, the learning rate, etc.
         optimizer.step()
-        # Update the learning rate.
         scheduler.step()
-
-        # Accumulate the training loss over all of the batches so that we can
-        # calculate the average loss at the end. `loss` is a Tensor containing a
-        # single value; the `.item()` function just returns the Python value 
-        # from the tensor.        
+        
         train_loss += loss.data / num_mb_train
     
     print ("\nTrain loss after itaration %i: %f" % (n+1, train_loss))
@@ -380,12 +403,7 @@ for n in range(num_epochs):
     print ("Average train loss after iteration %i: %f" % (n+1, avg_train_loss))
     train_losses.append(avg_train_loss)
     
-
-    # Tell pytorch not to bother with constructing the compute graph during
-    # the forward pass, since this is only needed for backprop (training).
     with torch.no_grad():
-       # Put the model in evaluation mode--the dropout layers behave differently
-       # during evaluation.
         model.eval()
         
         for k, (mb_x, mb_m, mb_y) in enumerate(val_dataloader):
@@ -406,11 +424,6 @@ for n in range(num_epochs):
             #hidden_states=distilbert_output.hidden_states,
             #attentions=distilbert_output.attentions,
             #)
-            # Forward pass, calculate logit predictions.
-            # The documentation for this `model` function is here: 
-            # https://huggingface.co/transformers/v2.2.0/model_doc/bert.html#transformers.BertForSequenceClassification
-            # Get the "logits" output by the model. The "logits" are the output
-            # values prior to applying an activation function like the softmax.
             outputs = model(mb_x, attention_mask=mb_m, labels=mb_y)
             
             loss = outputs[0]
@@ -452,15 +465,11 @@ if hvd.rank() == 0:
 
     # save onnx
     # Tokenizing input text
-    # this is question answering so change it only a single sentence
-    #text = "[CLS] Who was Jim Henson ? [SEP] Jim Henson was a puppeteer [SEP]"
-    text = "[CLS] Who was Jim Henson ?"
+    text = "[CLS] Who was Jim Henson ? [SEP] Jim Henson was a puppeteer [SEP]"
     tokenized_text = tokenizer.tokenize(text)
     print("tokenized_text: {}".format(tokenized_text))
     # Masking one of the input tokens
-    # this is question answering so change it only a single sentence
-    #masked_index = 8
-    masked_index = 3
+    masked_index = 8
     tokenized_text[masked_index] = '[MASK]'
     indexed_tokens = tokenizer.convert_tokens_to_ids(tokenized_text)
     segments_ids = [0]
@@ -487,7 +496,6 @@ if hvd.rank() == 0:
     print("segments_tensor: {}".format(segments_tensors))
 
     
-
     #torch.onnx.export(model_to_save, 
     #    dummy_input, out_dir + '/traced_distill_bert.onnx', 
     #    verbose=True)
@@ -495,26 +503,10 @@ if hvd.rank() == 0:
     # follow yue and add dynamic_axes = {'inputs':{1: '?'},  'logits':{1:  '?'}})
     # but it semms inputs need to be assocaited with corrent input_names otherwise  it will not work
     # ? but classficaiton only inputs varis so might be only add inputs
-    '''
     torch.onnx.export(model=model_to_save, 
         args=(dummy_input), 
-        f=out_dir + '/traced_distill_bert.onnx.bin', 
+        f=out_dir + '/traced_distill_bert.onnx', 
         input_names = ["input_ids"],
         verbose=True,
         dynamic_axes ={'input_ids':{1: '?'}}
         )
-    '''
-
-    #follow yue's suggestion to add output 
-    torch.onnx.export(model=model_to_save,
-        args=(dummy_input),
-        f=out_dir + '/traced_distill_bert.onnx.bin',
-        input_names = ["input_ids"],
-        verbose=True,
-        output_names = ["domain_output"],
-        do_constant_folding = True,
-        opset_version=11,
-        dynamic_axes = {'input_ids': {1: '?'}, 'domain_output': {1: '?'}}
-        )
-
-        
