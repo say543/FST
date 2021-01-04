@@ -81,6 +81,12 @@ files domain 怎麼onbaord 到evaluation
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1182483?_a=files
 看這個pr
 
+======================================
+mystuff retired 的相關ticket
+======================================
+https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdev.azure.com%2Fmsasg%2F678b9503-3ecd-4823-8af7-d44814b0aff2%2F_workitems%2Fedit%2F3182447%3Ftracking_data%3DeyJTb3VyY2UiOiJFbWFpbCIsIlR5cGUiOiJOb3RpZmljYXRpb24iLCJTSUQiOiJtcy52c3Mtd29yay5teS13b3JraXRlbS1hc3NpZ25lZC10by1jaGFuZ2VzLXN1YnNjcmlwdGlvbiIsIlNUeXBlIjoiQ09OIiwiUmVjaXAiOjEsIl94Y2kiOnsiTklEIjoxODIwNzUyNjMsIk1SZWNpcCI6Im0wPTEgIiwiQWN0IjoiOTdlMzUzNGEtMzA5MC00MTIzLThhMWEtMzAzMGU5NTViOWQ5In0sIkVsZW1lbnQiOiJoZXJvL2N0YSJ9&data=04%7C01%7CChiehChun.Chang%40microsoft.com%7Cbfb09caa85424a13443a08d8b0d1da35%7C72f988bf86f141af91ab2d7cd011db47%7C0%7C0%7C637453762645519751%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=E57sH7HWnwjK5LibaiowT661RW5dd0noI6HrbDCfgl4%3D&reserved=0
+https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmsasg.visualstudio.com%2F678b9503-3ecd-4823-8af7-d44814b0aff2%2F_workitems%2Fedit%2F3182547%3Ftracking_data%3DeyJTb3VyY2UiOiJFbWFpbCIsIlR5cGUiOiJOb3RpZmljYXRpb24iLCJTSUQiOiJtcy52c3Mtd29yay5teS13b3JraXRlbS1hc3NpZ25lZC10by1jaGFuZ2VzLXN1YnNjcmlwdGlvbiIsIlNUeXBlIjoiQ09OIiwiUmVjaXAiOjEsIl94Y2kiOnsiTklEIjoxODIwNzYzMjEsIk1SZWNpcCI6Im0wPTEgIiwiQWN0IjoiMDA1YzQ1MGEtMzM0Yy00YjhlLTk5MDgtYTYyNzdlY2YyNTdhIn0sIkVsZW1lbnQiOiJoZXJvL2N0YSJ9&data=04%7C01%7CChiehChun.Chang%40microsoft.com%7Ca3d387b51f55436042dd08d8b0d450a8%7C72f988bf86f141af91ab2d7cd011db47%7C0%7C0%7C637453773225017814%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=XcIhU1HPeLyczFGwjqtxW7WbIwhL1Zf1GmIstrd%2FmZ8%3D&reserved=0
+https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdev.azure.com%2Fmsasg%2F678b9503-3ecd-4823-8af7-d44814b0aff2%2F_workitems%2Fedit%2F3182448%3Ftracking_data%3DeyJTb3VyY2UiOiJFbWFpbCIsIlR5cGUiOiJOb3RpZmljYXRpb24iLCJTSUQiOiJtcy52c3Mtd29yay5teS13b3JraXRlbS1hc3NpZ25lZC10by1jaGFuZ2VzLXN1YnNjcmlwdGlvbiIsIlNUeXBlIjoiQ09OIiwiUmVjaXAiOjEsIl94Y2kiOnsiTklEIjoxODIwNzUyNjQsIk1SZWNpcCI6Im0wPTEgIiwiQWN0IjoiOTdlMzUzNGEtMzA5MC00MTIzLThhMWEtMzAzMGU5NTViOWQ5In0sIkVsZW1lbnQiOiJoZXJvL2N0YSJ9&data=04%7C01%7CChiehChun.Chang%40microsoft.com%7Cafe78e60fb744845e02408d8b0d1d9cd%7C72f988bf86f141af91ab2d7cd011db47%7C0%7C0%7C637453762641242208%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=ckk04v52%2FTbwGitsmgwjd%2Bl7ml9SIZXKrF74FjaXEEE%3D&reserved=0
 
 ======================================
 compliant gpu for deep learning
@@ -88,6 +94,11 @@ compliant gpu for deep learning
 ======================================
 <email_title>New Compliant GPU clusters ready - 9/30
 
+
+======================================
+TNLR (enterprices bert)  offline experiment
+======================================
+https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdev.azure.com%2Fmsasg%2F678b9503-3ecd-4823-8af7-d44814b0aff2%2F_workitems%2Fedit%2F3182466%3Ftracking_data%3DeyJTb3VyY2UiOiJFbWFpbCIsIlR5cGUiOiJOb3RpZmljYXRpb24iLCJTSUQiOiJtcy52c3Mtd29yay5teS13b3JraXRlbS1hc3NpZ25lZC10by1jaGFuZ2VzLXN1YnNjcmlwdGlvbiIsIlNUeXBlIjoiQ09OIiwiUmVjaXAiOjEsIl94Y2kiOnsiTklEIjoxODIwNzUyODcsIk1SZWNpcCI6Im0wPTEgIiwiQWN0IjoiOTdlMzUzNGEtMzA5MC00MTIzLThhMWEtMzAzMGU5NTViOWQ5In0sIkVsZW1lbnQiOiJoZXJvL2N0YSJ9&data=04%7C01%7CChiehChun.Chang%40microsoft.com%7C25a1a61db8b44047dafc08d8b0d1da65%7C72f988bf86f141af91ab2d7cd011db47%7C0%7C0%7C637453762649937211%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=0Wu02CZxSoDicqHxyRLynfPHqrCKF0sL5%2FouDWdSg8M%3D&reserved=0
 
 ==============
 heron data  for Hasmik and Haoda
