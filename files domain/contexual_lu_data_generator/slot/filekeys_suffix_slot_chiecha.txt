@@ -1,0 +1,55 @@
+file_keyword_tag	acronym answer quality	answer74229
+additionalfilenameskeyphrases_tag	people answer design	answer82541
+additionalfilenameskeyphrases_tag	partner discussion 2019	201963025
+additionalfilenameskeyphrases_tag	msai and substrate	msai49358
+additionalfilenameskeyphrases_tag	feedback 2019	201944895
+additionalfilenameskeyphrases_tag	msai live	msai13646
+additionalfilenameskeyphrases_tag	compliant skills flow	skills53142
+additionalfilenameskeyphrases_tag	voice skills research	skills83740
+additionalfilenameskeyphrases_tag	compliant deployment	compliant45484
+additionalfilenameskeyphrases_tag	ios teams skills	skills82796
+file_keyword_tag	acronym answer quality	answer41416
+additionalfilenameskeyphrases_tag	skills onboarding steps	skills83305
+file_keyword_tag	cortana wait one skills	skills68835
+additionalfilenameskeyphrases_tag	sc q3 okr	okr86912
+additionalfilenameskeyphrases_tag	top okrs	okrs42020
+additionalfilenameskeyphrases_tag	msai cognition fy20	msai70157
+file_keyword_tag	teams ios skill development	skill56956
+additionalfilenameskeyphrases_tag	07 2019 hosting	201924194
+file_keyword_tag	answer respect	answer57226
+file_keyword_tag	voice skill	skill50432
+additionalfilenameskeyphrases_tag	fy20 action	fy2064072
+file_keyword_tag	people skills	skills70225
+file_keyword_tag	people skill	skill81802
+additionalfilenameskeyphrases_tag	3s qf	3s80505
+additionalfilenameskeyphrases_tag	3f183704f06b 20 2020	202035723
+additionalfilenameskeyphrases_tag	q1 kingston	q180590
+additionalfilenameskeyphrases_tag	excellence december 2020	202065832
+additionalfilenameskeyphrases_tag	3s validation	3s68488
+additionalfilenameskeyphrases_tag	mendes 2019	201928895
+additionalfilenameskeyphrases_tag	skills testing	skills55661
+additionalfilenameskeyphrases_tag	dsats 3s dash	3s50042
+additionalfilenameskeyphrases_tag	session 02 2020	202015115
+additionalfilenameskeyphrases_tag	q3 plan dependencies	q331300
+file_keyword_tag	twice. skills fc	skills24413
+file_keyword_tag	2020	202035600
+additionalfilenameskeyphrases_tag	msai cognition fy20	fy2032096
+additionalfilenameskeyphrases_tag	msai csi directors	msai72510
+additionalfilenameskeyphrases_tag	calendar time skill	skill17200
+file_keyword_tag	skill stone	skill80893
+additionalfilenameskeyphrases_tag	globalization 2020	202057623
+additionalfilenameskeyphrases_tag	windows 2020	202016206
+additionalfilenameskeyphrases_tag	update jan 2020	202011287
+additionalfilenameskeyphrases_tag	voice skill dsat	skill70553
+additionalfilenameskeyphrases_tag	teams 2019	201977999
+additionalfilenameskeyphrases_tag	compliant skills flow	compliant16185
+additionalfilenameskeyphrases_tag	sc q3 okr	q353937
+file_keyword_tag	team cyrus skill development	skill45425
+additionalfilenameskeyphrases_tag	log 2020 072020	202081842
+file_keyword_tag	high level design for task answer	answer39981
+additionalfilenameskeyphrases_tag	tasks visit 2019	201918528
+additionalfilenameskeyphrases_tag	okr and plan	okr35593
+file_keyword_tag	hero skill	skill23212
+additionalfilenameskeyphrases_tag	cortana on h2	h244401
+file_keyword_tag	voice skills discoverabilities	skills13957
+file_keyword_tag	skills	skills52566
