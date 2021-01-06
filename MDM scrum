@@ -1,6 +1,40 @@
 
 
 
+
+====================================
+azure ml compliant gpu cluster
+====================================
+
+
+[9:56 AM] Haoda Chu
+    这个cluster 不能在local用 只能用他们compliant aml的api access (得用compliant Aether)
+​[9:56 AM] Haoda Chu
+    目前只能这样, 他们有限制
+​[9:56 AM] Haoda Chu
+    而且还要申请比较多的权限
+​[9:56 AM] Haoda Chu
+    我找下documentation给你 你可以试试
+​[9:57 AM] Chieh-Chun Chang
+    oh 了解 
+​[9:58 AM] Haoda Chu
+    https://dev.azure.com/msdata/Vienna/_wiki/wikis/aml-1p-onboarding/15091/Aether-for-compliant-experimentation
+​[9:58 AM] Haoda Chu
+    你可以follow一下这里的流程
+​[9:58 AM] Haoda Chu
+    还挺详细的 不过估计要一会 权限申请起来慢
+
+
+[9:58 AM] Haoda Chu
+    https://dev.azure.com/msdata/Vienna/_wiki/wikis/aml-1p-onboarding/15091/Aether-for-compliant-experimentation
+​[9:58 AM] Haoda Chu
+    你可以follow一下这里的流程
+​[9:58 AM] Haoda Chu
+    还挺详细的 不过估计要一会 权限申请起来慢
+
+
+
+
 ====================================
 MDM model quality, shift to prod tickets
 
