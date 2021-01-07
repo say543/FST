@@ -206,7 +206,7 @@ find <keyword> <attachment_type> attachments from <contact_name_from>	1	EMAILSEA
 i want to see <contact_name> attachments with <attachment_type>	1	EMAILSEARCH	i want to see <contact_name> <attachment> attachments </attachment> with <attachment_type>	search_email	0
 <keyword> attachment to <contact_name_to>	1	EMAILSEARCH	<keyword> <attachment> attachment </attachment> to <contact_name_to>	search_email	0
 gather <contact_name> all attachments	1	EMAILSEARCH	gather <contact_name> all <attachment> attachments </attachment>	search_email	0
-attachments <contact_name> sent to <contact_name_to>	1	EMAILSEARCH	<attachment> attachments </attachment> <contact_name> sent to <contact_name_to>	search_email	0
+attachments i sent to <contact_name_to>	1	EMAILSEARCH	<attachment> attachments </attachment> i sent to <contact_name_to>	search_email	0
 from <contact_name_from> contains attachments	1	EMAILSEARCH	from <contact_name_from> contains <attachment> attachments </attachment>	search_email	0
 <contact_name> <keyword> attachment	1	EMAILSEARCH	<contact_name> <keyword> <attachment> attachment </attachment>	search_email	0
 to <contact_name_to> with <keyword> attachment	1	EMAILSEARCH	to <contact_name_to> with <keyword> <attachment> attachment </attachment>	search_email	0
