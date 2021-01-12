@@ -38,10 +38,38 @@ azure ml compliant gpu cluster
 ======================
 frisbee test failure
 ======================
-frisbee page
+frisbee page  011120201
+
+Yes, red color is regarded as real and related regression; blue color means seemingly not related regression
+
+//teamsaction command
+Query:
+PS E:\CoreScienceDataStaging\datasources\Files\queryclassificationprocessing> .\QCSQueryLabelWithLES.exe --externalFeaturesColumn 2 --queryInColumn 1 --interactive --verbose --encoding utf-8 --legacyAllowUnusedParameters -c E:\searchgold\deploy\builds\data\answers\QAS12HttpQAS  --variant cortana_teamsaction_enus_mv1 -dl teamsaction
+
+// teamsaction multi turn 
+first one , acute angle (first turn is go to channel)
+
+// show me my call
+should be teamspace_navigate, not calendar domain
+
+// go to settings
+this is ondevice and we do not have it 
+
+// go to teams activity
+// teams should not being tagged as contact_name
+
+
+
+
+
+
+
+
+
 
 
 https://microsoftapc.sharepoint.com/teams/CLU705/_layouts/15/Doc.aspx?sourcedoc={75f33d6e-4674-4c39-bd74-112bf8e821ae}&action=edit&wd=target%28%E2%9A%92%20Feature%20Teams%2F%E2%99%BE%20Multi-Domain%20Modeling%2F%E2%9C%94%20Weekly.one%7Cbce2b8cc-7710-4f50-81ce-f8efc087b0e5%2FFrisbee%20testing%20DSAT%7C72557559-5980-4aac-9a27-f00347e131c2%2F%29
+
 
 
 
