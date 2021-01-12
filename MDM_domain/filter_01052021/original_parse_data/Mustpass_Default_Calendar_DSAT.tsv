@@ -1,0 +1,6 @@
+ConversationId	MessageId	MessageTimestamp	MessageFrom	MessageText	JudgedDomain	JudgedIntent	JudgedConstraints	MetaData	ConversationContext	Frequency	ImplicitConstraints
+DSAT_add+%2B1+123-456-7890+to+meeting	0		user	add +1 123-456-7890 to meeting	COMMUNICATION	add_to_call	add <phone_number>+1 123-456-7890</phone_number> to meeting	[]	{"ClientContext_ReferenceTime":["2018-01-01T10:20:30"]}	1	
+DSAT_add+(123)-456-7890+to+the+meeting%0A	0		user	add (123)-456-7890 to the meeting	COMMUNICATION	add_to_call	add <phone_number>(123)-456-7890</phone_number> to the meeting	[]	{"ClientContext_ReferenceTime":["2018-01-01T10:20:30"]}	1	
+Bug1833017	0		user	Add 979-229-8110 to the meeting	COMMUNICATION	add_to_call	Add <phone_number>979-229-8110</phone_number> to the meeting		{"ClientContext_ReferenceTime":["2018-01-01T10:20:30"]}	1	
+Bug2073204_008	0		user	Add 123456 to the meeting	COMMUNICATION	add_to_call	Add <phone_number>123456</phone_number> to the meeting		{"ClientContext_ReferenceTime":["2018-01-01T10:20:30"]}	1	
+Task_2198422_001	0		user	No, I want to call Raj	CALENDAR	select_other	No, I want to call <contact_name> Raj </contact_name>		{"PreviousTurnDomain":["calendar"],"PreviousTurnIntent":["create_calendar_entry"],"TaskFrameStatus":["InProgress"],"TaskFrameEntityStates":["contact_name:PromptedForSelection"],"ClientContext_ReferenceTime":["2018-01-01T10:20:30"]}	1	
