@@ -49,6 +49,16 @@ PS E:\CoreScienceDataStaging\datasources\Files\queryclassificationprocessing> .\
 // teamsaction multi turn 
 first one , acute angle (first turn is go to channel)
 
+
+first one:
+根據yue 因該是這個condition 加的
+所以也是regression
+https://nlp-platform/clu/cortana/debug/scenario?clientId=Microsoft_Teams_enus_Microsoft&env=HttpQas-O365-Prod&vs=Cortana&query=first%20one&ClientContext_ReferenceTime=2021-01-12T18:44:03.829Z&PreviousTurnDomain=teamsaction&TaskFrameEntityStates=PromptedForSelection
+
+
+acute angle 也是second turn 也是regression
+
+
 // show me my call
 should be teamspace_navigate, not calendar domain
 
