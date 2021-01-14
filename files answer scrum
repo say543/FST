@@ -83,6 +83,32 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 
 
 
+===========================
+pcs centric search discussion
+============================
+[2:37 PM] Mehar Yeleti
+    
+Donovan Lange
+My only comment on that one is the KR here seems kind of squishy in terms of what we actually need to deliver/land.  I know that PCS is a large effort, but if there's a way to make the work/deliverable crisper... (however, ok to take offline)
+Thanks Donovan .. makes sense.. we started off engaging with partners back in Q2 expecting a lot of dependencies from PCS.. and now it almost feel like we might not need a KR as there is minimal to No dependencies for features slated in Q3 for PCS (need to also find if its true for MSO as it is for TM and OM).. However, LU is very adjacent to their experiences in Q3 - for example, Q3 PCS features include User Entry points in QF (e.g. Typing in search bar and clicking on people name suggestion).. For now I kept the KR since there is definitely hard dependencies in Q4 and we might need to do ground work before that..
+Edited​[2:51 PM] Yong Ni
+    
+Mehar, PCS doesn't ask for parity support with speech input on TM (powered by voice skills), right?
+​[2:52 PM] Mehar Yeleti
+    
+thats right 
+(1 liked)​[2:52 PM] Mehar Yeleti
+    
+PCS entry at least for now mainly through typed search
+​[2:55 PM] Mehar Yeleti
+    
+I think even for future, they wouldn't think PCS for Voice skill entry.. Now the team is going mostly towards convergence and in Cobalt they are having plan for Search fall back in most scenarios..
+​[2:59 PM] Mikkel Conradi
+    
+From my perspective, the initial concern about PCS from the UU team was that it was a feature that would be competing with NL.  I then reviewed the PCS documentation and found that it is a feature that is well-supported by end-user research, and I think we should not think of it as a competitor, but rather a feature that can have synergy with NL, because NL can be used to guide the sub-intent in PCS.  (PCS have verticals, often referred to as sub-intents.)  So in my view the main role we play is to ensure that, in NL scenarios that involve people + potentially other entities, the NL signals are properly used to land users in the best sub-intent.  But I do think it is a complex feature that should be carefully designed and tested.
+
+
+
 ==============================
 ambiguous query annotation should be updated in files answer
 ==============================
