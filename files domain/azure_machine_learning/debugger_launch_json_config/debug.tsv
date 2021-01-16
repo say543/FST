@@ -1,0 +1,1 @@
+ConversationId	MessageId	MessageTimestamp	MessageFrom	MessageText	JudgedDomain	JudgedIntent	JudgedConstraints	MetaData	ConversationContext	Frequency	DatasetFile	ImplicitConstraints	Date	FileName	Cat	Query	QcsInputQuery	QueryParserInputQuery	PredictedDomain	PredictedIntent	PredictedSlot	AnalyzedQueryTopResultInJson	AnalyzedQueryAllResultInJson
