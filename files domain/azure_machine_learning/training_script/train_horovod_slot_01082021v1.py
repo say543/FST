@@ -8,9 +8,6 @@ import joblib
 import os, argparse, time, random
 import random;
 import re;
-import codecs;
-import string;
-import traceback
 
 ###############
 #remote
@@ -134,15 +131,6 @@ print('top head data {}'.format(df.head()))
 ##print('labels {}'.format(labels))
 
 
-
-#also huggingface
-#https://huggingface.co/transformers/model_doc/distilbert.html
-#tokenizer = DistilBertTokenizer.from_pretrained('distilbert-base-uncased', do_lower_case=True)
-fast_tokenizer = DistilBertTokenizerFast.from_pretrained('distilbert-base-uncased') # Load a pre-trained tokenizer
-
-
-
-
 # read label
 from typing_extensions import TypedDict
 from typing import List,Any
@@ -152,7 +140,7 @@ IntListList = List[IntList] # A List of List of token_ids, e.g. a Batch
 
 import itertools
 class LabelSet:
-    def __init__(self, labels: List[str], tokenizer, useIob=False):
+    def __init__(self, labels: List[str]):
         self.labels_to_id = {}
         self.ids_to_label = {}
 
@@ -168,170 +156,16 @@ class LabelSet:
             num = num +1 
 
 
-        self.cutoff_length = 100;
-        self.open_pattern = r'<(\w+)>';
-        self.close_pattern = r'</(\w+)>';
-        self.useIob = useIob;
-
-        self.tokenizer = tokenizer
-
-        self.slot_list = [];
-
-        for key, value in self.labels_to_id.items():
-            self.slot_list.append('<' + key + '>');
-            self.slot_list.append('</' + key + '>');
-
     def get_aligned_label_ids_from_aligned_label(self, aligned_labels):
         return list(map(self.labels_to_id.get, aligned_labels))
 
     def get_untagged_id(self):
         return self.labels_to_id["o"]
 
-    def get_untagged_label(self):
-        return self.ids_to_label[0]
-
-
     def get_labels(self):
         return self.labels_to_id
 
-
-    def splitWithBert(self, annotation):
-        preSplit = annotation.split();
-        annotationArray = [];
-        for word in preSplit:
-            if any(slot in word for slot in self.slot_list):
-            #if any('<'+slot in word for slot in self.slolabels_to_id):
-                annotationArray.append(word);
-            else:
-                annotationArray += self.tokenizer.tokenize(word);
-        return annotationArray;
-
-    def generateTagString(self, annotation_filtered_array):
-        if self.useIob:
-            preTag = '';
-            annotation_filtered_array_iob = [];
-            for idx, tag in enumerate(annotation_filtered_array):
-                if tag == 'O':
-                    annotation_filtered_array_iob.append(tag);
-                    preTag = '';
-                else:
-                    annotation_filtered_array_iob.append(('B-' if tag != preTag else 'I-') + tag);
-                    preTag = tag;
-
-            tag_string = " ".join(annotation_filtered_array_iob);
-        else:
-            tag_string = " ".join(annotation_filtered_array);
-        return tag_string;
-
-
-    def checkQueryValid(self, input):
-        # query should not contain any unwanted slot annotations (this happens when the original annotation is wrong)
-        for error_item in self.slot_list:
-        #for key, value in self.labels_to_id.items():
-
-            if error_item in input:
-            #if '<' + key + '>' in input:
-                return False;
-        return True;
-
-    def isOpenPattern(self, word):
-        match = re.match(self.open_pattern, word);
-        if not match:
-            return (None, False);
-        slot = match[1].strip().lower();
-        #if slot in self.slot_dict:
-        if slot in self.labels_to_id:
-            return (slot, True);
-        return (None, False);
-
-    def isClosePattern(self, word, tag):
-        match = re.match(self.close_pattern, word);
-        if not match:
-            return False;
-        slot = match[1].strip();
-        return slot == tag;
-
-
-    def simplePreprocessAnnotation(self, input):
-        # remove email action related
-        #email_action_pattern = r'<email_action>\s*([^<]+?)\s*</email_action>';
-        #preprocessed = re.sub(email_action_pattern, '\\1', input);
-
-        # remove email quantifier related
-        #quantifier_pattern = r'<quantifier>\s*([^<]+?)\s*</quantifier>';
-        #preprocessed = re.sub(quantifier_pattern, '\\1', preprocessed);
-
-
-        preprocessed = input
-
-        # open up the slot annotation with space
-        pattern = r'<([^>]+?)>\s*([^<]+?)\s*</([^>]+?)>';
-        preprocessed = re.sub(pattern, '<\\1> \\2 </\\3>', preprocessed); # <date>friday</date> -> <date> friday </date> for further splitting
-        if preprocessed[-1] in string.punctuation and preprocessed[-1] != '>':
-            punc = preprocessed[-1];
-            preprocessed = preprocessed[:-1] + ' ' + punc;
-        return preprocessed;
-
-    def preprocessRawAnnotation(self, query, annotation_input, isTrain=True):
-        pattern = r'<(?P<name>\w+)>(?P<entity>[^<]+)</(?P=name)>';
-
-        try:
-            annotation_original = annotation_input.strip().lower();
-            annotation = self.simplePreprocessAnnotation(annotation_original);
-            annotation_array = self.splitWithBert(annotation);
-            #annotation_array = self.splitWithBert(annotation_original);
-            annotation_result_arrry = [-1] * len(annotation_array);
-
-            # capture slot name and slot entity, store them in a dict;
-            # find out slot
-            i = 0;
-            while i < len(annotation_array):
-                (slot, isOpen) = self.isOpenPattern(annotation_array[i]);
-                if not isOpen:
-                    annotation_result_arrry[i] = 'O';
-                    i += 1;
-                else:
-                    j = i+1;
-                    while(not self.isClosePattern(annotation_array[j], slot)):
-                        annotation_result_arrry[j] = slot;
-                        j += 1;
-                    i = j+1;
-            
-            word_array = [word for idx, word in enumerate(annotation_array) if annotation_result_arrry[idx] != -1];
-            annotation_filtered_array = [word for idx, word in enumerate(annotation_result_arrry) if annotation_result_arrry[idx] != -1];
-            assert(len(word_array) == len(annotation_filtered_array));
-
-            # adding cutoff length for query
-            if len(word_array) == 0:
-                #continue;
-                return '', ''
-            elif len(word_array) == 1:
-                if all(i in string.punctuation for i in word_array):
-                    #continue;
-                    return '', ''
-
-            if len(word_array) > self.cutoff_length:
-                word_array = word_array[:self.cutoff_length];
-                annotation_filtered_array = annotation_filtered_array[:self.cutoff_length];
-
-            # write input string and tag list in file;
-            word_string = " ".join(word_array);
-            tag_string = self.generateTagString(annotation_filtered_array);
-
-            if not self.checkQueryValid(word_string):
-                #continue;
-                return '', ''
-
-            #feature_parse.append((word_string, tag_string));
-            return word_string, tag_string
-        except:
-            # print stack traice
-            traceback.print_exc()
-            print("skipped query: {} and pair: {}".format(query, annotation_input))
-            return '', '' 
-            #continue;
-
-slots = ["o", 
+slots = ["O", 
     "file_name", 
     "file_type", 
     "data_source", 
@@ -354,10 +188,14 @@ slots = ["o",
     "attachment"]
 
 # map all slots to lower case
-slots_label_set = LabelSet(labels=map(str.lower,slots), 
-                            tokenizer =fast_tokenizer)
+slots_label_set = LabelSet(labels=map(str.lower,slots))
 
 
+
+#also huggingface
+#https://huggingface.co/transformers/model_doc/distilbert.html
+#tokenizer = DistilBertTokenizer.from_pretrained('distilbert-base-uncased', do_lower_case=True)
+fast_tokenizer = DistilBertTokenizerFast.from_pretrained('distilbert-base-uncased') # Load a pre-trained tokenizer
 
 # for debug
 ##print('Original Text: {}'.format(texts[0]))
@@ -384,30 +222,71 @@ for i, row in df.iterrows():
     
 
 
-    query = row['query']
+    text = row['query']
 
+
+    text_id = fast_tokenizer.encode(text, max_length=300, padding='max_length', truncation=True)
+    text_ids.append(text_id)
 
     slot = row['QueryXml']
 	# remove head and end spaces 
     slot = slot.strip()
 
-    # invalid query will return empty string
-    # here using annotation to extract the real query
-    text, tag_string  = slots_label_set.preprocessRawAnnotation(query, slot)
 
-    if text == '' and tag_string == '':
-        continue
+    # for debug
+    #print("text:{}".format(text))
+    #print("text id :{}".format(text_id))
+    #print("slot: {}".format(slot))
 
-    #append labels for [CLS] / [SEP] to tag_string
-    tag_string =  slots_label_set.get_untagged_label() + ' '+ tag_string + ' ' + slots_label_set.get_untagged_label()
 
-    # replcae by class's output word string
-    text_id = fast_tokenizer.encode(text, max_length=300, padding='max_length', truncation=True)
-    text_ids.append(text_id)
+    annotations = []
 
+    # for contact_name to reanme to to_contact_name
+    xmlpairs = re.findall("(<.*?>.*?<\/.*?>)", slot)
+
+    textIndex = 0
+    for xmlpair in xmlpairs:
+        # extra type and value for xml tag
+        xmlTypeEndInd = xmlpair.find(">")
+
+        xmlType = xmlpair[1:xmlTypeEndInd]
+
+        xmlValue = xmlpair.replace("<"+xmlType+">", "")
+        xmlValue = xmlValue.replace("</"+xmlType+">", "")
+        xmlValue = xmlValue.strip()
+
+        start = text.lower()[textIndex:].find(xmlValue.lower())
+        if start == -1:
+            print("skipped text: {} and pair: {}".format(row['query'], xmlValue))
+            continue
+        # update textIndex according to moving order
+        textIndex = start
+
+        annotations.append(dict(start=start,end=start+len(xmlValue),text=xmlValue,label=xmlType))
+
+    fast_tokenized_batch : BatchEncoding = fast_tokenizer(text)
+    fast_tokenized_text :Encoding  =fast_tokenized_batch[0]
+
+    # fast token will add CLS and SEP 
+    # ? not sure in real trainnig , do we need to provide or not
+    # in yue case it does not include those two
+    #print("fast token ouput: {}".format(fast_tokenized_text.tokens))
+
+    tokens = fast_tokenized_text.tokens
+    aligned_labels = ["O"]*len(tokens) # Make a list to store our labels the same length as our tokens
+    for anno in (annotations):
+        for char_ix in range(anno['start'],anno['end']):
+            token_ix = fast_tokenized_text.char_to_token(char_ix)
+            if token_ix is not None: # White spaces have no token and will return None
+                aligned_labels[token_ix] = anno['label']
+
+
+    # for debug
+    #for token,label in zip(tokens,aligned_labels):
+    #    print (token,"-",label) 
 
     aligned_label_ids = slots_label_set.get_aligned_label_ids_from_aligned_label(
-        map(str.lower,tag_string.split())
+        map(str.lower,aligned_labels)
     )
 
     # for debug
@@ -431,23 +310,11 @@ for i, row in df.iterrows():
     labels_for_text_ids.append(labels_for_text_id)
 
 
-    # for debug
-    #print("text:{}".format(text))
-    #print("text id :{}".format(text_id))
-    #print("slot: {}".format(labels_for_text_id))
-
-
 
 ### for debug
-#print('text_ids[0]: {}'.format(text_ids[0]))
-#print('labels_for_text_ids[0]: {}'.format(labels_for_text_ids[0]))
-#print('att mask[0] : {}'.format(att_masks[0]))
-#print('text_ids[3]: {}'.format(text_ids[3]))
-#print('labels_for_text_ids[3]: {}'.format(labels_for_text_ids[3]))
-#print('att mask[3] : {}'.format(att_masks[3]))
-#print('text_ids[4]: {}'.format(text_ids[4]))
-#print('labels_for_text_ids[4]: {}'.format(labels_for_text_ids[4]))
-#print('att mask[4] : {}'.format(att_masks[4]))
+print('text_ids[0]: {}'.format(text_ids[0]))
+print('labels_for_text_ids[0]: {}'.format(labels_for_text_ids[0]))
+print('att mask[0] : {}'.format(att_masks[0]))
 
 
 #sklearn split data
@@ -455,18 +322,10 @@ for i, row in df.iterrows():
 #? same random state but in different ways, how to make sure each query is aligned
 #  https://www.cnblogs.com/Yanjy-OnlyOne/p/11288098.html
 # it seems same random_state will generate the same result
-#train_x, test_val_x, train_y, test_val_y = train_test_split(text_ids, labels_for_text_ids, random_state=111, test_size=0.2)
-#train_m, test_val_m = train_test_split(att_masks, random_state=111, test_size=0.2)
-#test_x, val_x, test_y, val_y = train_test_split(test_val_x, test_val_y, random_state=111, test_size=0.5)
-#test_m, val_m = train_test_split(test_val_m, random_state=111, test_size=0.5)
-
-# make traning data / test data / validation data the same
-train_x, train_y = text_ids, labels_for_text_ids
-train_m = att_masks
-test_x, test_y = text_ids, labels_for_text_ids 
-test_m = att_masks
-val_x, val_y = text_ids, labels_for_text_ids
-val_m = att_masks
+train_x, test_val_x, train_y, test_val_y = train_test_split(text_ids, labels_for_text_ids, random_state=111, test_size=0.2)
+train_m, test_val_m = train_test_split(att_masks, random_state=111, test_size=0.2)
+test_x, val_x, test_y, val_y = train_test_split(test_val_x, test_val_y, random_state=111, test_size=0.5)
+test_m, val_m = train_test_split(test_val_m, random_state=111, test_size=0.5)
 
 # Convert all inputs and labels into torch tensors, the required datatype 
 #https://pytorch.org/docs/stable/tensors.html
@@ -551,7 +410,7 @@ num_labels = len(set(slots_label_set.get_labels()))
 
 
 
-
+'''
 #class DistilBertForTokenClassificationFilesDomain(DistilBertPreTrainedModel):
 class DistilBertForTokenClassificationFilesDomain(DistilBertPreTrainedModel):
     r"""
@@ -677,8 +536,10 @@ class DistilBertForTokenClassificationFilesDomain(DistilBertPreTrainedModel):
 
         # version 3
         #slot_label_tensor = torch.argmax(logits.view(-1, self.num_labels), dim=1)
-        #return ((loss,) + output)         
-'''
+        #return ((loss,) + output) 
+'''        
+
+
 class DistilBertForTokenClassificationFilesDomain(BertForTokenClassification):
 
     def forward(self, input_ids, attention_mask=None, labels=None):
@@ -704,10 +565,8 @@ class DistilBertForTokenClassificationFilesDomain(BertForTokenClassification):
 
 
         slot_output = torch.argmax(logits, -1);
-        # need to be tuple if multiple arguments
-        #return loss, slot_output
-        return (loss, slot_output)
-'''
+        return loss, slot_output;
+
 
 
 model = DistilBertForTokenClassificationFilesDomain.from_pretrained('distilbert-base-uncased', num_labels=num_labels,
@@ -888,23 +747,18 @@ for n in range(num_epochs):
             #hidden_states=distilbert_output.hidden_states,
             #attentions=distilbert_output.attentions,
             #)
-
-
-            # for class defintion
             # Forward pass, calculate logit predictions.
             # The documentation for this `model` function is here: 
             # https://huggingface.co/transformers/v2.2.0/model_doc/bert.html#transformers.BertForSequenceClassification
             # Get the "logits" output by the model. The "logits" are the output
             # values prior to applying an activation function like the softmax.
             outputs = model(mb_x, attention_mask=mb_m, labels=mb_y)
+            
             loss = outputs[0]
-            # for debug
-            ##print('evaluate label result {}'.format(outputs.logits))
 
-            # using yue's class
-            ##(loss, slot_output) = model(mb_x, attention_mask=mb_m, labels=mb_y)
+            
             # for debug
-            #print('evaluate label result {}'.format(slot_output))
+            print('evaluate label result {}'.format(outputs.logits))
 
             val_loss += loss.data / num_mb_val
             
@@ -992,7 +846,7 @@ if hvd.rank() == 0:
 
     #follow yue's suggestion to add output
     # using distillbert class
-
+    '''
     torch.onnx.export(model=model_to_save,
         args=(dummy_input),
         f=out_dir + '/traced_distill_bert.onnx.bin',
@@ -1003,21 +857,16 @@ if hvd.rank() == 0:
         #output_names = ["logits"],
         #output_names = ["slot_label_tensor"],
         output_names = ["slot_output"],
-        #output_names = ["loss","slot_output"],
         do_constant_folding = True,
         opset_version=11,
         #dynamic_axes = {'input_ids': {1: '?'}, 'logits': {1: '?'}}
         #dynamic_axes = {'input_ids': {1: '?'}, 'slot_label_tensor': {1: '?'}}
-        # yue's comment,  loss is not dynamic_axes, can have multiple output
-        # but loss should not in dynamic_axes
         dynamic_axes = {'input_ids': {1: '?'}, 'slot_output': {1: '?'}}
-        #dynamic_axes = {'input_ids': {1: '?'},  'loss': {1: '?'}, 'slot_output': {1: '?'}}
         )
-
     '''
-    # using bert and no return class, having mutiple outputs
-    # using bert class
-    # but it will have runtime errors
+
+    # using bert and no return class
+    # using distillbert class 
     torch.onnx.export(model=model_to_save,
         args=(dummy_input),
         f=out_dir + '/traced_distill_bert.onnx.bin',
@@ -1034,4 +883,3 @@ if hvd.rank() == 0:
         #dynamic_axes = {'input_ids': {1: '?'}, 'slot_label_tensor': {1: '?'}}
         dynamic_axes = {'input_ids': {1: '?'}, 'loss': {1: '?'}, 'slot_output': {1: '?'}}
         )
-    '''

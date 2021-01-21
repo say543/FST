@@ -21,10 +21,10 @@ from torch.utils.data import TensorDataset, DataLoader
 from torch.utils.data.distributed import DistributedSampler
 
 from transformers.modeling_outputs import TokenClassifierOutput
-from transformers import DistilBertPreTrainedModel, DistilBertModel
+#from transformers import DistilBertPreTrainedModel, DistilBertModel
 from transformers import DistilBertTokenizer,DistilBertTokenizerFast
 from transformers import BertForTokenClassification
-from transformers import DistilBertForTokenClassification, AdamW, DistilBertConfig
+#from transformers import DistilBertForTokenClassification, AdamW, DistilBertConfig
 
 from transformers import get_linear_schedule_with_warmup
 from transformers import BatchEncoding
@@ -132,6 +132,7 @@ print("segments_tensor: {}".format(segments_tensors))
 
 # The model needs to be in evaluation mode
 #model.eval()
+
 
 
 # read label
@@ -348,6 +349,11 @@ slots = ["o",
 slots_label_set = LabelSet(labels=map(str.lower,slots), 
                             tokenizer =fast_tokenizer)
 
+num_labels = len(set(slots_label_set.get_labels()))
+
+
+
+
 
 
 #model = DistilBertForTokenClassification.from_pretrained('distilbert-base-uncased', num_labels=num_labels,
@@ -480,9 +486,9 @@ class DistilBertForTokenClassificationFilesDomain(DistilBertPreTrainedModel):
         # version 3
         #slot_label_tensor = torch.argmax(logits.view(-1, self.num_labels), dim=1)
         #return ((loss,) + output) 
-'''     
+'''       
 
-
+'''
 class DistilBertForTokenClassificationFilesDomain(BertForTokenClassification):
 
     def forward(self, input_ids, attention_mask=None, labels=None):
@@ -508,11 +514,56 @@ class DistilBertForTokenClassificationFilesDomain(BertForTokenClassification):
 
 
         slot_output = torch.argmax(logits, -1);
-        #return loss, slot_output;
-        return (loss, slot_output);
+        return loss, slot_output;
+'''
 
-num_labels = len(set(slots_label_set.get_labels()))
+class DistilBertForTokenClassificationFilesDomain(BertForTokenClassification):
 
+    def forward(self, input_ids, attention_mask=None, labels=None):
+        sequence_output = self.bert(input_ids=input_ids, attention_mask=attention_mask)[0]
+        sequence_output = self.dropout(sequence_output)
+        logits = self.classifier(sequence_output);
+        # for training 
+        if labels is not None:
+            loss_fct = nn.CrossEntropyLoss()
+            # Only keep active parts of the loss
+
+            
+            #yue's calculation
+
+            ##attention_mask_label = None
+            if attention_mask is not None:
+                active_loss = attention_mask.view(-1) == 1;
+                active_logits = logits.view(-1, self.num_labels)[active_loss];
+                active_labels = labels.view(-1)[active_loss];
+                loss = loss_fct(active_logits, active_labels);
+            else:
+                loss = loss_fct(logits.view(-1, self.num_labels), labels.view(-1));
+
+            #hugging face calculation
+            # Only keep active parts of the loss
+            #if attention_mask is not None:
+            #    active_loss = attention_mask.view(-1) == 1
+            #    active_logits = logits.view(-1, self.num_labels)
+            #    active_labels = torch.where(
+            #        active_loss, labels.view(-1), torch.tensor(loss_fct.ignore_index).type_as(labels)
+            #    )
+            #    loss = loss_fct(active_logits, active_labels)
+            #else:
+            #    loss = loss_fct(logits.view(-1, self.num_labels), labels.view(-1))
+
+            return loss;
+
+        else:
+        # for inference
+            slot_output = torch.argmax(logits, -1);
+            return slot_output;
+
+
+
+
+
+'''
 #Here we instantiate our model class. 
 #We use a compact version, that is trained through model distillation from a base BERT model and modified to include a classification layer at the output. This compact version has 6 transformer layers instead of 12 as in the original BERT model.
 # this class class DistilBertForSequenceClassification(DistilBertPreTrainedModel):
@@ -522,7 +573,7 @@ num_labels = len(set(slots_label_set.get_labels()))
 model = DistilBertForTokenClassificationFilesDomain.from_pretrained('distilbert-base-uncased', num_labels=num_labels,
                                                             output_attentions=False, output_hidden_states=False)
 
-
+'''
 
 
 
@@ -531,13 +582,13 @@ model = DistilBertForTokenClassificationFilesDomain.from_pretrained('distilbert-
 ##################################################
 
 
-output_dir = './slot_model_saved_test/'
+output_dir = '../TNLR/'
 import os, argparse
 # if folder does not exist then create
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
-
+'''
 # use `save_pretrained()`  to preserve model (one function),，config(same as preserve function), 
 # tokenizer
 # (verisin 1 : two functions, tokenizer.save_vocabulary() / model_to_save.config.to_json_file)
@@ -549,12 +600,15 @@ if not os.path.exists(output_dir):
 model_to_save = model.module if hasattr(model, 'module') else model  
 model_to_save.save_pretrained(output_dir)
 fast_tokenizer.save_pretrained(output_dir)
+'''
+
 
 # save your training arguments together with the trained model
 # originlal those are from input argument
 # here setup value to mimic
 # learning_rate = args.learning_rate
 # adam_epsilon = args.adam_epsilon
+'''
 parser = argparse.ArgumentParser()
 parser.add_argument('--dataset_name', type=str, dest='dataset_name', default='')
 parser.add_argument('--batch_size', type=int, dest='batch_size', default=32)
@@ -565,7 +619,7 @@ args = parser.parse_args()
 args.learning_rate = 2e-5
 args.adam_epsilon = 1e-8
 torch.save(args, os.path.join(output_dir, 'training_args.bin'))
-
+'''
 
 # load model back
 # you need to know exact class for each one
@@ -574,7 +628,28 @@ torch.save(args, os.path.join(output_dir, 'training_args.bin'))
 #torch.nn.modules.module.ModuleAttributeError: 'DistilBertForTokenClassification' object has no attribute 'keys'
 # version2 : load pytroch_model.bin (not sure if it is after trained or not)
 #model = DistilBertForTokenClassification.from_pretrained(output_dir)
-model = DistilBertForTokenClassificationFilesDomain.from_pretrained(output_dir)
+#model = DistilBertForTokenClassificationFilesDomain.from_pretrained(output_dir)
+
+
+from transformers import BertConfig;
+bert_config = BertConfig();
+bert_config.num_labels = 12;
+bert_config.output_attentions = False;
+bert_config.output_hidden_states = False;
+
+
+
+#model = DistilBertForTokenClassificationFilesDomain.from_pretrained(output_dir+'tnlrv3-base.pt', num_labels=num_labels,
+#                                                            output_attentions=False, output_hidden_states=False)
+
+# minic yue is ok to load
+# if no providing config, it will fail...
+# it seems config.json it not important and it can still be loaded
+#model = DistilBertForTokenClassificationFilesDomain.from_pretrained(output_dir+'tnlrv3-base.pt')
+model = DistilBertForTokenClassificationFilesDomain.from_pretrained(output_dir+'tnlrv3-base.pt', config=bert_config)
+
+
+
 
 # load tokenizer back
 # you need to know exact class for each one
@@ -586,6 +661,50 @@ model.to(device)
 
 print("load model done: !")
 
+
+
+##################################################
+# training model below
+##################################################
+
+
+print("training model ....")
+
+test_input_tensor = torch.tensor([[101, 12453, 19453, 6254, 102]])
+at_mask_tensor = torch.tensor([[1, 1, 1, 1, 1]])
+label_mask_tensor = torch.tensor([[0, 0, 6, 0, 0]])
+with torch.no_grad():
+    model.eval()
+
+
+    # if going with class definiton
+    #outputs = model(test_input_tensor, attention_mask=at_mask_tensor, labels=label_mask_tensor)
+    ## for debug
+    ##print("output result: {}", outputs.logits)
+    ## both below output are the same
+    ##print("output loss: {}", outputs.loss)     
+    ##print("output loss: {}", outputs[0])   
+
+
+    # if going with seperate outputs
+    slot_output) = model(test_input_tensor, attention_mask=at_mask_tensor, labels=label_mask_tensor)
+
+    # if gonig wtih sinlge output and evaluation no labels being provided
+
+    print(loss)
+    print(slot_output)
+
+print("training model done")
+
+
+##################################################
+# training model above
+##################################################
+
+
+##################################################
+# evaluate model below
+##################################################
 
 
 print("evaluate model ....")
@@ -607,12 +726,22 @@ with torch.no_grad():
 
 
     # if going with seperate outputs
-    #loss, slot_output = model(test_input_tensor, attention_mask=at_mask_tensor, labels=label_mask_tensor)
-    (loss, slot_output) = model(test_input_tensor, attention_mask=at_mask_tensor, labels=label_mask_tensor)
+    slot_output) = model(test_input_tensor, attention_mask=at_mask_tensor, labels=label_mask_tensor)
 
+    # if gonig wtih sinlge output and evaluation no labels being provided
 
     print(loss)
     print(slot_output)
+
+print("evaluate model done")
+
+
+##################################################
+# evaluate model above
+##################################################
+
+
+
 
 
 ##################################################
@@ -622,11 +751,11 @@ with torch.no_grad():
 # ussing distill bert 
 '''
 #torch.onnx.export(model, dummy_input, 'traced_distill_bert.onnx', verbose=True)
-
+'''
 
 #follow yue's suggestion to add output
 # # ouput is slightly different, not sure it is related to 'do_constant_folding' for optimization for other parameter 
-
+'''
 torch.onnx.export(model=model,
     args=(dummy_input),
     f='traced_distill_bert.onnx.bin',
@@ -639,17 +768,3 @@ torch.onnx.export(model=model,
     )
 '''
 
-# still error
-'''
-#RuntimeError: Only tuples, lists and Variables supported as JIT inputs/outputs. Dictionaries and strings are also accepted but their usage is not recommended. But got unsupported type NoneType
-torch.onnx.export(model=model,
-    args=(dummy_input),
-    f='traced_distill_bert.onnx.bin',
-    input_names = ["input_ids"],
-    verbose=True,
-    output_names = ["loss","slot_output"],
-    do_constant_folding = True,
-    opset_version=11,
-    dynamic_axes = {'input_ids': {1: '?'}, 'slot_output': {1: '?'}}
-    )
-'''

@@ -9,8 +9,6 @@ import os, argparse, time, random
 import random;
 import re;
 import codecs;
-import string;
-import traceback
 
 
 ###############
@@ -88,9 +86,8 @@ from tokenizers import Encoding
 #from azureml.core import Workspace, Run, Dataset
 
 # ouput only three column
-df = pd.read_csv('E:/azure_ml_notebook/azureml_data/files_slot_training.tsv', sep='\t', encoding="utf-8")
 #df = pd.read_csv('E:/azure_ml_notebook/azureml_data/files_slot_training_small.tsv', sep='\t', encoding="utf-8")
-#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/files_slot_training_single.tsv', sep='\t', encoding="utf-8")
+df = pd.read_csv('E:/azure_ml_notebook/azureml_data/files_slot_training_single.tsv', sep='\t', encoding="utf-8")
 
 
 # for debug
@@ -130,7 +127,58 @@ print('top head data {}'.format(df.head()))
 ##print('labels {}'.format(labels))
 
 
+# read label
+from typing_extensions import TypedDict
+from typing import List,Any
+IntList = List[int] # A list of token_ids
+IntListList = List[IntList] # A List of List of token_ids, e.g. a Batch
 
+
+import itertools
+class LabelSet:
+    def __init__(self, labels: List[str]):
+        self.labels_to_id = {}
+        self.ids_to_label = {}
+
+        self.labels_to_id["o"] = 0
+        self.ids_to_label[0] = "o"
+        num = 1
+        for label in labels:
+            if label == "o":
+                print("skip:{}".format(label))
+                continue
+            self.labels_to_id[label] = num
+            self.ids_to_label[num] = label
+            num = num +1 
+
+
+    def get_aligned_label_ids_from_aligned_label(self, aligned_labels):
+        return list(map(self.labels_to_id.get, aligned_labels))
+
+slots = ["O", 
+    "file_name", 
+    "file_type", 
+    "data_source", 
+    "contact_name", 
+    "to_contact_name",
+    "file_keyword",
+    "date",
+    "time",
+    "meeting_starttime",
+    "file_action",
+    "file_action_context",
+    "position_ref",
+    "order_ref",
+    "file_recency",
+    "sharetarget_type",
+    "sharetarget_name",
+    "file_folder",
+    "data_source_name",
+    "data_source_type",
+    "attachment"]
+
+# map all slots to lower case
+slots_label_set = LabelSet(labels=map(str.lower,slots))
 
 
 
@@ -158,220 +206,6 @@ fast_tokenizer = DistilBertTokenizerFast.from_pretrained('distilbert-base-uncase
 
 
 
-# read label
-from typing_extensions import TypedDict
-from typing import List,Any
-IntList = List[int] # A list of token_ids
-IntListList = List[IntList] # A List of List of token_ids, e.g. a Batch
-
-
-import itertools
-class LabelSet:
-    def __init__(self, labels: List[str], tokenizer, useIob=False):
-        self.labels_to_id = {}
-        self.ids_to_label = {}
-
-        self.labels_to_id["o"] = 0
-        self.ids_to_label[0] = "o"
-        num = 1
-        for label in labels:
-            if label == "o":
-                print("skip:{}".format(label))
-                continue
-            self.labels_to_id[label] = num
-            self.ids_to_label[num] = label
-            num = num +1 
-
-
-        self.cutoff_length = 100;
-        self.open_pattern = r'<(\w+)>';
-        self.close_pattern = r'</(\w+)>';
-        self.useIob = useIob;
-
-        self.tokenizer = tokenizer
-
-        self.slot_list = [];
-
-        for key, value in self.labels_to_id.items():
-            self.slot_list.append('<' + key + '>');
-            self.slot_list.append('</' + key + '>');
-
-    def get_aligned_label_ids_from_aligned_label(self, aligned_labels):
-        return list(map(self.labels_to_id.get, aligned_labels))
-
-
-
-    def get_untagged_id(self):
-        return self.labels_to_id["o"]
-
-    def get_untagged_label(self):
-        return self.ids_to_label[0]
-
-    def splitWithBert(self, annotation):
-        preSplit = annotation.split();
-        annotationArray = [];
-        for word in preSplit:
-            if any(slot in word for slot in self.slot_list):
-            #if any('<'+slot in word for slot in self.slolabels_to_id):
-                annotationArray.append(word);
-            else:
-                annotationArray += self.tokenizer.tokenize(word);
-        return annotationArray;
-
-    def generateTagString(self, annotation_filtered_array):
-        if self.useIob:
-            preTag = '';
-            annotation_filtered_array_iob = [];
-            for idx, tag in enumerate(annotation_filtered_array):
-                if tag == 'O':
-                    annotation_filtered_array_iob.append(tag);
-                    preTag = '';
-                else:
-                    annotation_filtered_array_iob.append(('B-' if tag != preTag else 'I-') + tag);
-                    preTag = tag;
-
-            tag_string = " ".join(annotation_filtered_array_iob);
-        else:
-            tag_string = " ".join(annotation_filtered_array);
-        return tag_string;
-
-
-    def checkQueryValid(self, input):
-        # query should not contain any unwanted slot annotations (this happens when the original annotation is wrong)
-        for error_item in self.slot_list:
-        #for key, value in self.labels_to_id.items():
-
-            if error_item in input:
-            #if '<' + key + '>' in input:
-                return False;
-        return True;
-
-    def isOpenPattern(self, word):
-        match = re.match(self.open_pattern, word);
-        if not match:
-            return (None, False);
-        slot = match[1].strip().lower();
-        #if slot in self.slot_dict:
-        if slot in self.labels_to_id:
-            return (slot, True);
-        return (None, False);
-
-    def isClosePattern(self, word, tag):
-        match = re.match(self.close_pattern, word);
-        if not match:
-            return False;
-        slot = match[1].strip();
-        return slot == tag;
-
-
-    def simplePreprocessAnnotation(self, input):
-        # remove email action related
-        #email_action_pattern = r'<email_action>\s*([^<]+?)\s*</email_action>';
-        #preprocessed = re.sub(email_action_pattern, '\\1', input);
-
-        # remove email quantifier related
-        #quantifier_pattern = r'<quantifier>\s*([^<]+?)\s*</quantifier>';
-        #preprocessed = re.sub(quantifier_pattern, '\\1', preprocessed);
-
-
-        preprocessed = input
-
-        # open up the slot annotation with space
-        pattern = r'<([^>]+?)>\s*([^<]+?)\s*</([^>]+?)>';
-        preprocessed = re.sub(pattern, '<\\1> \\2 </\\3>', preprocessed); # <date>friday</date> -> <date> friday </date> for further splitting
-        if preprocessed[-1] in string.punctuation and preprocessed[-1] != '>':
-            punc = preprocessed[-1];
-            preprocessed = preprocessed[:-1] + ' ' + punc;
-        return preprocessed;
-
-    def preprocessRawAnnotation(self, query, annotation_input, isTrain=True):
-        pattern = r'<(?P<name>\w+)>(?P<entity>[^<]+)</(?P=name)>';
-
-        try:
-            annotation_original = annotation_input.strip().lower();
-            annotation = self.simplePreprocessAnnotation(annotation_original);
-            annotation_array = self.splitWithBert(annotation);
-            #annotation_array = self.splitWithBert(annotation_original);
-            annotation_result_arrry = [-1] * len(annotation_array);
-
-            # capture slot name and slot entity, store them in a dict;
-            # find out slot
-            i = 0;
-            while i < len(annotation_array):
-                (slot, isOpen) = self.isOpenPattern(annotation_array[i]);
-                if not isOpen:
-                    annotation_result_arrry[i] = 'O';
-                    i += 1;
-                else:
-                    j = i+1;
-                    while(not self.isClosePattern(annotation_array[j], slot)):
-                        annotation_result_arrry[j] = slot;
-                        j += 1;
-                    i = j+1;
-            
-            word_array = [word for idx, word in enumerate(annotation_array) if annotation_result_arrry[idx] != -1];
-            annotation_filtered_array = [word for idx, word in enumerate(annotation_result_arrry) if annotation_result_arrry[idx] != -1];
-            assert(len(word_array) == len(annotation_filtered_array));
-
-            # adding cutoff length for query
-            if len(word_array) == 0:
-                #continue;
-                return '', ''
-            elif len(word_array) == 1:
-                if all(i in string.punctuation for i in word_array):
-                    #continue;
-                    return '', ''
-
-            if len(word_array) > self.cutoff_length:
-                word_array = word_array[:self.cutoff_length];
-                annotation_filtered_array = annotation_filtered_array[:self.cutoff_length];
-
-            # write input string and tag list in file;
-            word_string = " ".join(word_array);
-            tag_string = self.generateTagString(annotation_filtered_array);
-
-            if not self.checkQueryValid(word_string):
-                #continue;
-                return '', ''
-
-            #feature_parse.append((word_string, tag_string));
-            return word_string, tag_string
-        except:
-            # print stack traice
-            traceback.print_exc()
-            print("skipped query: {} and pair: {}".format(query, annotation_input))
-            return '', '' 
-            #continue;
-
-slots = ["o", 
-    "file_name", 
-    "file_type", 
-    "data_source", 
-    "contact_name", 
-    "to_contact_name",
-    "file_keyword",
-    "date",
-    "time",
-    "meeting_starttime",
-    "file_action",
-    "file_action_context",
-    "position_ref",
-    "order_ref",
-    "file_recency",
-    "sharetarget_type",
-    "sharetarget_name",
-    "file_folder",
-    "data_source_name",
-    "data_source_type",
-    "attachment"]
-
-# map all slots to lower case
-slots_label_set = LabelSet(labels=map(str.lower,slots), 
-                            tokenizer =fast_tokenizer)
-
-
-
-
 # iterative get labele and also append padding based on text_ids
 tokensForQueries = []
 labelsForQueries =[]
@@ -395,21 +229,11 @@ for i, row in df.iterrows():
     slot = slot.strip()
 
 
-    # for debug 
-    #print("query:{}".format(query))
-    #print("slot: {}".format(slot))
+    print("query:{}".format(query))
+    print("slot: {}".format(slot))
 
     annotations = []
 
-
-    word_string, tag_string  = slots_label_set.preprocessRawAnnotation(query, slot)
-    if word_string == '' and tag_string == '':
-        continue
-
-    tokensForQueries.append(word_string)
-    labelsForQueries.append(tag_string)
-
-    '''
     # for contact_name to reanme to to_contact_name
     xmlpairs = re.findall("(<.*?>.*?<\/.*?>)", slot)
 
@@ -428,18 +252,16 @@ for i, row in df.iterrows():
         if start == -1:
             print("skipped query: {} and pair: {}".format(query, xmlValue))
             continue
-
-        # record annotation index
-        annotations.append(dict(start=queryIndex+start,end=queryIndex+start+len(xmlValue),text=xmlValue,label=xmlType))
-
         # update queryIndex according to moving order
-        queryIndex = queryIndex+start+len(xmlValue)
+        queryIndex = start
 
-        
+        annotations.append(dict(start=start,end=start+len(xmlValue),text=xmlValue,label=xmlType))
     # for debug
-    #for anno in annotations:
-    ##Show our annotations
-	#    print (query[anno['start']:anno['end']],anno['label'])
+    '''
+    for anno in annotations:
+    #Show our annotations
+	    print (query[anno['start']:anno['end']],anno['label'])
+    '''
 
     fast_tokenized_batch : BatchEncoding = fast_tokenizer(query)
     fast_tokenized_text :Encoding  =fast_tokenized_batch[0]
@@ -456,34 +278,47 @@ for i, row in df.iterrows():
             token_ix = fast_tokenized_text.char_to_token(char_ix)
             if token_ix is not None: # White spaces have no token and will return None
                 aligned_labels[token_ix] = anno['label']
-    '''
+
 
     # for debug
     #for token,label in zip(tokens,aligned_labels):
     #    print (token,"-",label) 
 
 
-    # for collect query and label
-    #query = ''
-    ##labelsforQuery = ''
-    #for i, (token, label) in enumerate(zip(tokens, aligned_labels)):
-    #    # ignore [CLS] / [SEP]
-    #    if i == 0 or i == len(tokens)-1:
-    #        continue
-    #    query = query + ' ' + token
-    #    labelsforQuery = labelsforQuery + ' '+ str(label)
 
-    #tokensForQueries.append(query)
-    #labelsForQueries.append(labelsforQuery)
+    query = ''
+    labelsforQuery = ''
+    for i, (token, label) in enumerate(zip(tokens, aligned_labels)):
+        # ignore [CLS] / [SEP]
+        if i == 0 or i == len(tokens)-1:
+            continue
+        query = query + ' ' + token
+        labelsforQuery = labelsforQuery + ' '+ str(label)
 
-    #aligned_label_ids = slots_label_set.get_aligned_label_ids_from_aligned_label(
-    #    map(str.lower,aligned_labels)
-    #)
+    tokensForQueries.append(query)
+    labelsForQueries.append(labelsforQuery)
+
+    aligned_label_ids = slots_label_set.get_aligned_label_ids_from_aligned_label(
+        map(str.lower,aligned_labels)
+    )
 
     # for debug
     #for token, label in zip(tokens, aligned_label_ids):
     #    print(token, "-", label)
 
+    '''
+    query = ''
+    labelsforQuery = ''
+    for i, (token, label_id) in enumerate(zip(tokens, aligned_label_ids)):
+        # ignore [CLS] / [SEP]
+        if i == 0 or i == len(tokens)-1:
+            continue
+        query = query + ' ' + token
+        labelsforQuery = labelsforQuery + ' '+ str(label_id)
+
+    tokensForQueries.append(query)
+    labelsForQueries.append(labelsforQuery)
+    '''
 
 
 print('output training and test file');

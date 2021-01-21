@@ -203,6 +203,7 @@ class DistilBertForSequenceClassificationFilesDomain(DistilBertPreTrainedModel):
 
 
 
+
 #Here we instantiate our model class. 
 #We use a compact version, that is trained through model distillation from a base BERT model and modified to include a classification layer at the output. This compact version has 6 transformer layers instead of 12 as in the original BERT model.
 # this class class DistilBertForSequenceClassification(DistilBertPreTrainedModel):

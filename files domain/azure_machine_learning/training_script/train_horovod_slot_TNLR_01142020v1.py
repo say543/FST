@@ -24,10 +24,11 @@ from torch.utils.data import TensorDataset, DataLoader
 from torch.utils.data.distributed import DistributedSampler
 
 from transformers.modeling_outputs import TokenClassifierOutput
-from transformers import DistilBertPreTrainedModel, DistilBertModel
+#from transformers import DistilBertPreTrainedModel, DistilBertModel
 from transformers import DistilBertTokenizer,DistilBertTokenizerFast
 from transformers import BertForTokenClassification
-from transformers import DistilBertForTokenClassification, AdamW, DistilBertConfig
+#from transformers import DistilBertForTokenClassification, AdamW, DistilBertConfig
+from transformers import AdamW
 
 from transformers import get_linear_schedule_with_warmup
 from transformers import BatchEncoding
@@ -40,6 +41,7 @@ from azureml.core import Workspace, Run, Dataset
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--dataset_name', type=str, dest='dataset_name', default='')
+parser.add_argument('--TNLR_model_bin', type=str, dest='TNLR_model_bin', default='')
 parser.add_argument('--batch_size', type=int, dest='batch_size', default=32)
 parser.add_argument('--learning_rate', type=float, dest='learning_rate', default=1e-5)
 parser.add_argument('--adam_epsilon', type=float, dest='adam_epsilon', default=1e-8)
@@ -48,7 +50,7 @@ parser.add_argument('--num_epochs', type=int, dest='num_epochs', default=5)
 
 
 args = parser.parse_args()
-
+TNLR_model_name = args.TNLR_model_bin
 dataset_name = args.dataset_name
 batch_size = args.batch_size
 learning_rate = args.learning_rate
@@ -56,10 +58,13 @@ adam_epsilon = args.adam_epsilon
 num_epochs = args.num_epochs
 
 
+
 run = Run.get_context()
 workspace = run.experiment.workspace
 
 dataset = Dataset.get_by_name(workspace, name=dataset_name)
+TNLR_model = Dataset.get_by_name(workspace, name=TNLR_model_name)
+
 
 file_name = dataset.download()[0]
 
@@ -513,6 +518,8 @@ print('train_m dimen {}'.format(train_m.shape))
 print('val_m dimen {}'.format(val_m.shape))
 
 
+
+
 ###############
 #training data setup in learning 
 ###############
@@ -551,7 +558,7 @@ num_labels = len(set(slots_label_set.get_labels()))
 
 
 
-
+'''
 #class DistilBertForTokenClassificationFilesDomain(DistilBertPreTrainedModel):
 class DistilBertForTokenClassificationFilesDomain(DistilBertPreTrainedModel):
     r"""
@@ -677,8 +684,9 @@ class DistilBertForTokenClassificationFilesDomain(DistilBertPreTrainedModel):
 
         # version 3
         #slot_label_tensor = torch.argmax(logits.view(-1, self.num_labels), dim=1)
-        #return ((loss,) + output)         
-'''
+        #return ((loss,) + output)  
+'''       
+
 class DistilBertForTokenClassificationFilesDomain(BertForTokenClassification):
 
     def forward(self, input_ids, attention_mask=None, labels=None):
@@ -707,11 +715,24 @@ class DistilBertForTokenClassificationFilesDomain(BertForTokenClassification):
         # need to be tuple if multiple arguments
         #return loss, slot_output
         return (loss, slot_output)
-'''
+        return slot_output
 
 
-model = DistilBertForTokenClassificationFilesDomain.from_pretrained('distilbert-base-uncased', num_labels=num_labels,
-                                                            output_attentions=False, output_hidden_states=False)
+# load TNLR model
+#model = DistilBertForTokenClassificationFilesDomain.from_pretrained('distilbert-base-uncased', num_labels=num_labels,
+#                                                            output_attentions=False, output_hidden_states=False)
+
+# load TNLR model
+print('load TNLR model...')
+
+from transformers import BertConfig;
+bert_config = BertConfig();
+bert_config.num_labels = 12;
+bert_config.output_attentions = False;
+bert_config.output_hidden_states = False;
+
+model = DistilBertForTokenClassificationFilesDomain.from_pretrained(TNLR_model, config=bert_config)
+print('load TNLR model done')
 
 
 lr_scaler = hvd.size()
@@ -896,17 +917,25 @@ for n in range(num_epochs):
             # https://huggingface.co/transformers/v2.2.0/model_doc/bert.html#transformers.BertForSequenceClassification
             # Get the "logits" output by the model. The "logits" are the output
             # values prior to applying an activation function like the softmax.
-            outputs = model(mb_x, attention_mask=mb_m, labels=mb_y)
-            loss = outputs[0]
+            ##outputs = model(mb_x, attention_mask=mb_m, labels=mb_y)
+            ##loss = outputs[0]
+            ##val_loss += loss.data / num_mb_val
             # for debug
             ##print('evaluate label result {}'.format(outputs.logits))
 
-            # using yue's class
-            ##(loss, slot_output) = model(mb_x, attention_mask=mb_m, labels=mb_y)
+            # using yue's class with multiple output 
+            ##loss, slot_output = model(mb_x, attention_mask=mb_m, labels=mb_y)
+            ##val_loss += loss.data / num_mb_val
             # for debug
             #print('evaluate label result {}'.format(slot_output))
 
-            val_loss += loss.data / num_mb_val
+
+            # using yue's class with single output 
+            # and make loss zero
+            slot_output = model(mb_x, attention_mask=mb_m, labels=mb_y)
+            val_loss += 0 / num_mb_val
+            # for debug
+            #print('evaluate label result {}'.format(slot_output))
             
         print ("Validation loss after itaration %i: %f" % (n+1, val_loss))
         avg_val_loss = metric_average(val_loss, 'avg_val_loss')
@@ -1008,8 +1037,6 @@ if hvd.rank() == 0:
         opset_version=11,
         #dynamic_axes = {'input_ids': {1: '?'}, 'logits': {1: '?'}}
         #dynamic_axes = {'input_ids': {1: '?'}, 'slot_label_tensor': {1: '?'}}
-        # yue's comment,  loss is not dynamic_axes, can have multiple output
-        # but loss should not in dynamic_axes
         dynamic_axes = {'input_ids': {1: '?'}, 'slot_output': {1: '?'}}
         #dynamic_axes = {'input_ids': {1: '?'},  'loss': {1: '?'}, 'slot_output': {1: '?'}}
         )

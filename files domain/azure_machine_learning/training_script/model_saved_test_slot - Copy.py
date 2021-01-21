@@ -134,6 +134,7 @@ print("segments_tensor: {}".format(segments_tensors))
 #model.eval()
 
 
+
 # read label
 from typing_extensions import TypedDict
 from typing import List,Any
@@ -143,7 +144,7 @@ IntListList = List[IntList] # A List of List of token_ids, e.g. a Batch
 
 import itertools
 class LabelSet:
-    def __init__(self, labels: List[str], tokenizer, useIob=False):
+    def __init__(self, labels: List[str]):
         self.labels_to_id = {}
         self.ids_to_label = {}
 
@@ -159,170 +160,16 @@ class LabelSet:
             num = num +1 
 
 
-        self.cutoff_length = 100;
-        self.open_pattern = r'<(\w+)>';
-        self.close_pattern = r'</(\w+)>';
-        self.useIob = useIob;
-
-        self.tokenizer = tokenizer
-
-        self.slot_list = [];
-
-        for key, value in self.labels_to_id.items():
-            self.slot_list.append('<' + key + '>');
-            self.slot_list.append('</' + key + '>');
-
     def get_aligned_label_ids_from_aligned_label(self, aligned_labels):
         return list(map(self.labels_to_id.get, aligned_labels))
 
     def get_untagged_id(self):
         return self.labels_to_id["o"]
 
-    def get_untagged_label(self):
-        return self.ids_to_label[0]
-
-
     def get_labels(self):
         return self.labels_to_id
 
-
-    def splitWithBert(self, annotation):
-        preSplit = annotation.split();
-        annotationArray = [];
-        for word in preSplit:
-            if any(slot in word for slot in self.slot_list):
-            #if any('<'+slot in word for slot in self.slolabels_to_id):
-                annotationArray.append(word);
-            else:
-                annotationArray += self.tokenizer.tokenize(word);
-        return annotationArray;
-
-    def generateTagString(self, annotation_filtered_array):
-        if self.useIob:
-            preTag = '';
-            annotation_filtered_array_iob = [];
-            for idx, tag in enumerate(annotation_filtered_array):
-                if tag == 'O':
-                    annotation_filtered_array_iob.append(tag);
-                    preTag = '';
-                else:
-                    annotation_filtered_array_iob.append(('B-' if tag != preTag else 'I-') + tag);
-                    preTag = tag;
-
-            tag_string = " ".join(annotation_filtered_array_iob);
-        else:
-            tag_string = " ".join(annotation_filtered_array);
-        return tag_string;
-
-
-    def checkQueryValid(self, input):
-        # query should not contain any unwanted slot annotations (this happens when the original annotation is wrong)
-        for error_item in self.slot_list:
-        #for key, value in self.labels_to_id.items():
-
-            if error_item in input:
-            #if '<' + key + '>' in input:
-                return False;
-        return True;
-
-    def isOpenPattern(self, word):
-        match = re.match(self.open_pattern, word);
-        if not match:
-            return (None, False);
-        slot = match[1].strip().lower();
-        #if slot in self.slot_dict:
-        if slot in self.labels_to_id:
-            return (slot, True);
-        return (None, False);
-
-    def isClosePattern(self, word, tag):
-        match = re.match(self.close_pattern, word);
-        if not match:
-            return False;
-        slot = match[1].strip();
-        return slot == tag;
-
-
-    def simplePreprocessAnnotation(self, input):
-        # remove email action related
-        #email_action_pattern = r'<email_action>\s*([^<]+?)\s*</email_action>';
-        #preprocessed = re.sub(email_action_pattern, '\\1', input);
-
-        # remove email quantifier related
-        #quantifier_pattern = r'<quantifier>\s*([^<]+?)\s*</quantifier>';
-        #preprocessed = re.sub(quantifier_pattern, '\\1', preprocessed);
-
-
-        preprocessed = input
-
-        # open up the slot annotation with space
-        pattern = r'<([^>]+?)>\s*([^<]+?)\s*</([^>]+?)>';
-        preprocessed = re.sub(pattern, '<\\1> \\2 </\\3>', preprocessed); # <date>friday</date> -> <date> friday </date> for further splitting
-        if preprocessed[-1] in string.punctuation and preprocessed[-1] != '>':
-            punc = preprocessed[-1];
-            preprocessed = preprocessed[:-1] + ' ' + punc;
-        return preprocessed;
-
-    def preprocessRawAnnotation(self, query, annotation_input, isTrain=True):
-        pattern = r'<(?P<name>\w+)>(?P<entity>[^<]+)</(?P=name)>';
-
-        try:
-            annotation_original = annotation_input.strip().lower();
-            annotation = self.simplePreprocessAnnotation(annotation_original);
-            annotation_array = self.splitWithBert(annotation);
-            #annotation_array = self.splitWithBert(annotation_original);
-            annotation_result_arrry = [-1] * len(annotation_array);
-
-            # capture slot name and slot entity, store them in a dict;
-            # find out slot
-            i = 0;
-            while i < len(annotation_array):
-                (slot, isOpen) = self.isOpenPattern(annotation_array[i]);
-                if not isOpen:
-                    annotation_result_arrry[i] = 'O';
-                    i += 1;
-                else:
-                    j = i+1;
-                    while(not self.isClosePattern(annotation_array[j], slot)):
-                        annotation_result_arrry[j] = slot;
-                        j += 1;
-                    i = j+1;
-            
-            word_array = [word for idx, word in enumerate(annotation_array) if annotation_result_arrry[idx] != -1];
-            annotation_filtered_array = [word for idx, word in enumerate(annotation_result_arrry) if annotation_result_arrry[idx] != -1];
-            assert(len(word_array) == len(annotation_filtered_array));
-
-            # adding cutoff length for query
-            if len(word_array) == 0:
-                #continue;
-                return '', ''
-            elif len(word_array) == 1:
-                if all(i in string.punctuation for i in word_array):
-                    #continue;
-                    return '', ''
-
-            if len(word_array) > self.cutoff_length:
-                word_array = word_array[:self.cutoff_length];
-                annotation_filtered_array = annotation_filtered_array[:self.cutoff_length];
-
-            # write input string and tag list in file;
-            word_string = " ".join(word_array);
-            tag_string = self.generateTagString(annotation_filtered_array);
-
-            if not self.checkQueryValid(word_string):
-                #continue;
-                return '', ''
-
-            #feature_parse.append((word_string, tag_string));
-            return word_string, tag_string
-        except:
-            # print stack traice
-            traceback.print_exc()
-            print("skipped query: {} and pair: {}".format(query, annotation_input))
-            return '', '' 
-            #continue;
-
-slots = ["o", 
+slots = ["O", 
     "file_name", 
     "file_type", 
     "data_source", 
@@ -345,15 +192,19 @@ slots = ["o",
     "attachment"]
 
 # map all slots to lower case
-slots_label_set = LabelSet(labels=map(str.lower,slots), 
-                            tokenizer =fast_tokenizer)
+slots_label_set = LabelSet(labels=map(str.lower,slots))
+
+num_labels = len(set(slots_label_set.get_labels()))
+
+
+
 
 
 
 #model = DistilBertForTokenClassification.from_pretrained('distilbert-base-uncased', num_labels=num_labels,
 #                                                            output_attentions=False, output_hidden_states=False)
 
-'''
+
 #class DistilBertForTokenClassificationFilesDomain(DistilBertPreTrainedModel):
 class DistilBertForTokenClassificationFilesDomain(DistilBertPreTrainedModel):
     r"""
@@ -480,9 +331,9 @@ class DistilBertForTokenClassificationFilesDomain(DistilBertPreTrainedModel):
         # version 3
         #slot_label_tensor = torch.argmax(logits.view(-1, self.num_labels), dim=1)
         #return ((loss,) + output) 
-'''     
+'''        
 
-
+'''
 class DistilBertForTokenClassificationFilesDomain(BertForTokenClassification):
 
     def forward(self, input_ids, attention_mask=None, labels=None):
@@ -508,10 +359,8 @@ class DistilBertForTokenClassificationFilesDomain(BertForTokenClassification):
 
 
         slot_output = torch.argmax(logits, -1);
-        #return loss, slot_output;
-        return (loss, slot_output);
-
-num_labels = len(set(slots_label_set.get_labels()))
+        return loss, slot_output;
+'''
 
 #Here we instantiate our model class. 
 #We use a compact version, that is trained through model distillation from a base BERT model and modified to include a classification layer at the output. This compact version has 6 transformer layers instead of 12 as in the original BERT model.
@@ -578,7 +427,7 @@ model = DistilBertForTokenClassificationFilesDomain.from_pretrained(output_dir)
 
 # load tokenizer back
 # you need to know exact class for each one
-#fast_tokenizer = DistilBertTokenizerFast.from_pretrained('distilbert-base-uncased') # Load a pre-trained tokenizer
+fast_tokenizer = DistilBertTokenizerFast.from_pretrained('distilbert-base-uncased') # Load a pre-trained tokenizer
 
 # copy model to  GPU/CPU to work
 model.to(device)
@@ -607,8 +456,7 @@ with torch.no_grad():
 
 
     # if going with seperate outputs
-    #loss, slot_output = model(test_input_tensor, attention_mask=at_mask_tensor, labels=label_mask_tensor)
-    (loss, slot_output) = model(test_input_tensor, attention_mask=at_mask_tensor, labels=label_mask_tensor)
+    loss, slot_output = model(test_input_tensor, attention_mask=at_mask_tensor, labels=label_mask_tensor)
 
 
     print(loss)
@@ -639,17 +487,3 @@ torch.onnx.export(model=model,
     )
 '''
 
-# still error
-'''
-#RuntimeError: Only tuples, lists and Variables supported as JIT inputs/outputs. Dictionaries and strings are also accepted but their usage is not recommended. But got unsupported type NoneType
-torch.onnx.export(model=model,
-    args=(dummy_input),
-    f='traced_distill_bert.onnx.bin',
-    input_names = ["input_ids"],
-    verbose=True,
-    output_names = ["loss","slot_output"],
-    do_constant_folding = True,
-    opset_version=11,
-    dynamic_axes = {'input_ids': {1: '?'}, 'slot_output': {1: '?'}}
-    )
-'''

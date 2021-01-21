@@ -502,11 +502,221 @@ https://huggingface.co/transformers/_modules/transformers/modeling_distilbert.ht
 
 
 # yue's bert script folder
+# sequence should be bert's output 1
+# token should be bert's output 0
+
 #https://msasg.visualstudio.com/LanguageUnderstanding/_git/Timex_Deep_Model?path=%2FTimexModelScripts%2FTimexModelScripts%2FBert_Email%2Fbert_slot_model.py&version=GBmaster&_a=contents
 
 
-# comment until here
+#TNLR
+# unilm github
+# https://github.com/microsoft/unilm/tree/master/unilm
+#haoda
+# yue ma
+# 01072021
+#only checkpoint
+#need to find vocab.txt from bert (not distilled bert)
+# it might have model_config.json
+#     
+#\\FSU\Shares\TuringShare\NLR_Models\Monolingual\NLRv1-Base-Uncased\model_config.json
+#​[1:05 PM] Yue Ma
+    
+#self.bert(input_ids=input_ids, attention_mask=attention_mask)[1]
+#​[1:17 PM] Yue Ma
+    
+#https://msasg.visualstudio.com/LanguageUnderstanding/_git/Timex_Deep_Model?path=%2FTimexModelScripts%2FTimexModelScripts%2FBert_Email%2Fbert_intent_model.py&version=GBmaster&line=31&lineEnd=48&lineStartColumn=1&lineEndColumn=31&lineStyle=plain&_a=contents
+#​[1:32 PM] Yue Ma
 
+#https://github.com/onnx/tutorials/blob/master/tutorials/VisualizingAModel.md
+#onnx/tutorialsTutorials for creating and using ONNX models. Contribute to onnx/tutorials development by creating an account on GitHub.github.com
+
+# 01132021
+# load pt
+# \\FSU\Shares\TuringShare\NLR_Models\Monolingual\NLRv3-Base-Uncased
+# use default bert_config snice not providing confi.json
+# and you can change layer 
+# ? nneed to figure out how ot do that
+# here is to provide labels
+# dimention you cannot change
+#from transformers import BertConfig;
+#bert_config = BertConfig();
+#bert_config.num_labels = 12;
+#bert_config.output_attentions = False;
+#bert_config.output_hidden_states = False;
+
+
+
+
+
+#onnix graph it repository
+#https://github.com/onnx/tutorials/blob/master/tutorials/VisualizingAModel.md
+
+
+
+# preprocessing
+# preprocess_bert.py v.s train_horovod_slot.py
+# different
+# 1>  my training data is non consistent
+#0	hey cortana look for my password document	file_search	files	look for <contact_name> my </contact_name> <file_keyword> password </file_keyword> document
+# former:
+# look for my password document	O O contact_name file_keyword O
+# later:
+# hey co ##rta ##na look for my password document	O file_keyword file_keyword file_keyword O O contact_name O O
+# resoan 1 : query and traningi data inconsistent
+
+# 2> Where is my music?	file_search	files	Where is <contact_name> my </contact_name> <file_type> music </file_type> ?
+# former:
+# where is my music ?	O O contact_name file_type O
+# later:
+# where is my music ?	file_type file_type contact_name O O
+# reason:
+# logic wrong while extracting slots
+
+
+#3>
+#0	shows me files I was composing.	file_navigate	files	shows me files <contact_name> I </contact_name> was <file_action> composing </file_action>.
+# former:
+# shows me files i was composing .	O O O contact_name O file_action O
+# later:
+# shows me files i was composing .	O O contact_name O O file_action O
+# reason:
+# logic wrong while extracting slots
+# for 'i' when it searches index it will wrong
+# so need to refer to the function 'splitWithBert()' 
+# it also preprocess toekn inside xml pair <> <> then seperate it
+# this is more ideal to do
+
+
+
+
+
+
+# preprocessing script from yue
+# [for tokenization]
+# logic
+# query : search spreadsheets saved after 3/12
+#annotation_result_arrry:
+#-1 : mean <> start and end 
+#between -1 -1 it is the slot type
+#-1 : will not a
+#['O', -1, 'file_type', 'file_type', 'file_type', -1, -1, 'file_action', -1, -1, 'date', 'date', 'date', 'date', ...]
+
+#word array : based on annnotated array / annotation_result_array to generate 
+#get
+#['search', 'spreads', '##hee', '##ts', 'saved', 'after', '3', '/', '12']
+
+
+#annotation_filtered_array
+#label array with string
+#['O', 'file_type', 'file_type', 'file_type', 'file_action', 'date', 'date', 'date', 'date']
+
+
+# 'adding cutoff length for query' section
+#		do not nudetstand very well
+
+
+# 'if not self.checkQueryValid(word_string)':
+#		if exisitng 
+#		not sure why needs this
+
+
+# [for generating traninig data]
+# i leave it at first right know
+# generateTrainTestData
+
+https://msasg.visualstudio.com/LanguageUnderstanding/_git/Timex_Deep_Model?path=%2FTimexModelScripts%2FTimexModelScripts%2FBert_Email%2Fpreprocess_bert.py&version=GBmaster&_a=contents
+
+
+
+# if using yue's class and output loss , slot_output as multiple outputs
+# it will be this error
+# run 73 (child 75)
+[2021-01-09T03:34:31.385345] The experiment failed. Finalizing run...
+Starting the daemon thread to refresh tokens in background for process with pid = 153
+Cleaning up all outstanding Run operations, waiting 900.0 seconds
+2 items cleaning up...
+Cleanup took 0.4081854820251465 seconds
+Traceback (most recent call last):
+  File "train_horovod_slot.py", line 1019, in <module>
+    dynamic_axes = {'input_ids': {1: '?'}, 'loss': {1: '?'}, 'slot_output': {1: '?'}}
+  File "/azureml-envs/azureml_0189aad80ec2226ecb7db7088cba855e/lib/python3.6/site-packages/torch/onnx/__init__.py", line 148, in export
+    strip_doc_string, dynamic_axes, keep_initializers_as_inputs)
+  File "/azureml-envs/azureml_0189aad80ec2226ecb7db7088cba855e/lib/python3.6/site-packages/torch/onnx/utils.py", line 66, in export
+    dynamic_axes=dynamic_axes, keep_initializers_as_inputs=keep_initializers_as_inputs)
+  File "/azureml-envs/azureml_0189aad80ec2226ecb7db7088cba855e/lib/python3.6/site-packages/torch/onnx/utils.py", line 416, in _export
+    fixed_batch_size=fixed_batch_size)
+  File "/azureml-envs/azureml_0189aad80ec2226ecb7db7088cba855e/lib/python3.6/site-packages/torch/onnx/utils.py", line 279, in _model_to_graph
+    graph, torch_out = _trace_and_get_graph_from_model(model, args, training)
+  File "/azureml-envs/azureml_0189aad80ec2226ecb7db7088cba855e/lib/python3.6/site-packages/torch/onnx/utils.py", line 236, in _trace_and_get_graph_from_model
+    trace_graph, torch_out, inputs_states = torch.jit._get_trace_graph(model, args, _force_outplace=True, _return_inputs_states=True)
+  File "/azureml-envs/azureml_0189aad80ec2226ecb7db7088cba855e/lib/python3.6/site-packages/torch/jit/__init__.py", line 277, in _get_trace_graph
+    outs = ONNXTracedModule(f, _force_outplace, return_inputs, _return_inputs_states)(*args, **kwargs)
+  File "/azureml-envs/azureml_0189aad80ec2226ecb7db7088cba855e/lib/python3.6/site-packages/torch/nn/modules/module.py", line 532, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/azureml-envs/azureml_0189aad80ec2226ecb7db7088cba855e/lib/python3.6/site-packages/torch/jit/__init__.py", line 360, in forward
+    self._force_outplace,
+  File "/azureml-envs/azureml_0189aad80ec2226ecb7db7088cba855e/lib/python3.6/site-packages/torch/jit/__init__.py", line 350, in wrapper
+    out_vars, _ = _flatten(outs)
+RuntimeError: Only tuples, lists and Variables supported as JIT inputs/outputs. Dictionaries and strings are also accepted but their usage is not recommended. But got unsupported type NoneType
+
+[2021-01-09T03:34:32.048969] Finished context manager injector with Exception.
+#RuntimeError: Only tuples, lists and Variables supported as JIT inputs/outputs. Dictionaries and strings are also accepted but their usage is not recommended. But got unsupported type NoneType
+https://blog.csdn.net/qq_33120609/article/details/105857725
+
+
+#BertForTokenClassification
+https://github.com/DavidNemeskey/emBERT/blob/62825a1ef6b7d1e1eee8b8bf4644281c17860670/embert/model.py
+#BertForTokenClassification
+#https://github.com/DavidNemeskey/emBERT/blob/26faed05408ba8651020fef1ae8d07f331b5cd86/scripts/train_embert.py
+#model_dir
+#config = BertConfig.from_pretrained(
+#                model_dir,
+#                # os.path.join(args.bert_model, 'bert_config.json'),
+#                num_labels=num_labels, finetuning_task=args.task_name
+#            )
+
+# class definition
+# here return needs to be tuple
+# in class 
+# class TokenClassifier(BertForTokenClassification):
+#return (loss, logits)
+
+
+
+
+# yue's cpmmen
+
+
+#RuntimeError: Only tuples, lists and Variables supported as JIT inputs/outputs. Dictionaries and strings are also accepted but their usage is not recommended. But got unsupported type NoneType
+# related ticket and issues
+#https://github.com/pytorch/pytorch/issues/42391
+
+#torch._C._nn.nll_loss?
+#https://discuss.pytorch.org/t/where-is-torch-c-nn-nll-loss/9769
+
+
+
+
+
+# hyper paramter tunning 
+#https://medium.com/distributed-computing-with-ray/hyperparameter-optimization-for-transformers-a-guide-c4e32c6c989b
+
+
+
+#BertConfig
+# specify layer
+# how to verify,
+# using output config.json to verify
+#"num_hidden_layers": 12,
+# Number of trainable parameters: 108907797 
+#"num_hidden_layers": 3,
+#Number of trainable parameters:    45116949 
+#https://rdrr.io/github/jonathanbratt/RBERT/man/BertConfig.html
+#https://www.deepspeed.ai/tutorials/bert-pretraining/
+
+
+# comment until here
+ 
 
 https://github.com/DavidNemeskey/emBERT/blob/62825a1ef6b7d1e1eee8b8bf4644281c17860670/embert/model.py
 
@@ -1082,6 +1292,9 @@ query : send email to tom
                         21[1,1]=1.0
                         0[2,2]=1.0
                         1[3,3]=1.0
+
+
+
 
 
 

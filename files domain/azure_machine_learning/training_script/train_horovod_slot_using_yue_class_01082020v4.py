@@ -455,18 +455,10 @@ for i, row in df.iterrows():
 #? same random state but in different ways, how to make sure each query is aligned
 #  https://www.cnblogs.com/Yanjy-OnlyOne/p/11288098.html
 # it seems same random_state will generate the same result
-#train_x, test_val_x, train_y, test_val_y = train_test_split(text_ids, labels_for_text_ids, random_state=111, test_size=0.2)
-#train_m, test_val_m = train_test_split(att_masks, random_state=111, test_size=0.2)
-#test_x, val_x, test_y, val_y = train_test_split(test_val_x, test_val_y, random_state=111, test_size=0.5)
-#test_m, val_m = train_test_split(test_val_m, random_state=111, test_size=0.5)
-
-# make traning data / test data / validation data the same
-train_x, train_y = text_ids, labels_for_text_ids
-train_m = att_masks
-test_x, test_y = text_ids, labels_for_text_ids 
-test_m = att_masks
-val_x, val_y = text_ids, labels_for_text_ids
-val_m = att_masks
+train_x, test_val_x, train_y, test_val_y = train_test_split(text_ids, labels_for_text_ids, random_state=111, test_size=0.2)
+train_m, test_val_m = train_test_split(att_masks, random_state=111, test_size=0.2)
+test_x, val_x, test_y, val_y = train_test_split(test_val_x, test_val_y, random_state=111, test_size=0.5)
+test_m, val_m = train_test_split(test_val_m, random_state=111, test_size=0.5)
 
 # Convert all inputs and labels into torch tensors, the required datatype 
 #https://pytorch.org/docs/stable/tensors.html
@@ -551,7 +543,7 @@ num_labels = len(set(slots_label_set.get_labels()))
 
 
 
-
+'''
 #class DistilBertForTokenClassificationFilesDomain(DistilBertPreTrainedModel):
 class DistilBertForTokenClassificationFilesDomain(DistilBertPreTrainedModel):
     r"""
@@ -677,8 +669,10 @@ class DistilBertForTokenClassificationFilesDomain(DistilBertPreTrainedModel):
 
         # version 3
         #slot_label_tensor = torch.argmax(logits.view(-1, self.num_labels), dim=1)
-        #return ((loss,) + output)         
-'''
+        #return ((loss,) + output) 
+'''        
+
+
 class DistilBertForTokenClassificationFilesDomain(BertForTokenClassification):
 
     def forward(self, input_ids, attention_mask=None, labels=None):
@@ -704,10 +698,8 @@ class DistilBertForTokenClassificationFilesDomain(BertForTokenClassification):
 
 
         slot_output = torch.argmax(logits, -1);
-        # need to be tuple if multiple arguments
-        #return loss, slot_output
-        return (loss, slot_output)
-'''
+        return loss, slot_output;
+
 
 
 model = DistilBertForTokenClassificationFilesDomain.from_pretrained('distilbert-base-uncased', num_labels=num_labels,
@@ -888,23 +880,20 @@ for n in range(num_epochs):
             #hidden_states=distilbert_output.hidden_states,
             #attentions=distilbert_output.attentions,
             #)
-
-
-            # for class defintion
             # Forward pass, calculate logit predictions.
             # The documentation for this `model` function is here: 
             # https://huggingface.co/transformers/v2.2.0/model_doc/bert.html#transformers.BertForSequenceClassification
             # Get the "logits" output by the model. The "logits" are the output
             # values prior to applying an activation function like the softmax.
-            outputs = model(mb_x, attention_mask=mb_m, labels=mb_y)
-            loss = outputs[0]
-            # for debug
-            ##print('evaluate label result {}'.format(outputs.logits))
+            #outputs = model(mb_x, attention_mask=mb_m, labels=mb_y)
+            #loss = outputs[0]
+            
+            loss, slot_output = model(mb_x, attention_mask=mb_m, labels=mb_y)
 
-            # using yue's class
-            ##(loss, slot_output) = model(mb_x, attention_mask=mb_m, labels=mb_y)
+            
             # for debug
-            #print('evaluate label result {}'.format(slot_output))
+            #print('evaluate label result {}'.format(outputs.logits))
+            print('evaluate label result {}'.format(slot_output))
 
             val_loss += loss.data / num_mb_val
             
@@ -992,7 +981,7 @@ if hvd.rank() == 0:
 
     #follow yue's suggestion to add output
     # using distillbert class
-
+    '''
     torch.onnx.export(model=model_to_save,
         args=(dummy_input),
         f=out_dir + '/traced_distill_bert.onnx.bin',
@@ -1003,21 +992,16 @@ if hvd.rank() == 0:
         #output_names = ["logits"],
         #output_names = ["slot_label_tensor"],
         output_names = ["slot_output"],
-        #output_names = ["loss","slot_output"],
         do_constant_folding = True,
         opset_version=11,
         #dynamic_axes = {'input_ids': {1: '?'}, 'logits': {1: '?'}}
         #dynamic_axes = {'input_ids': {1: '?'}, 'slot_label_tensor': {1: '?'}}
-        # yue's comment,  loss is not dynamic_axes, can have multiple output
-        # but loss should not in dynamic_axes
         dynamic_axes = {'input_ids': {1: '?'}, 'slot_output': {1: '?'}}
-        #dynamic_axes = {'input_ids': {1: '?'},  'loss': {1: '?'}, 'slot_output': {1: '?'}}
         )
-
     '''
-    # using bert and no return class, having mutiple outputs
-    # using bert class
-    # but it will have runtime errors
+
+    # using bert and no return class
+    # using distillbert class 
     torch.onnx.export(model=model_to_save,
         args=(dummy_input),
         f=out_dir + '/traced_distill_bert.onnx.bin',
@@ -1034,4 +1018,3 @@ if hvd.rank() == 0:
         #dynamic_axes = {'input_ids': {1: '?'}, 'slot_label_tensor': {1: '?'}}
         dynamic_axes = {'input_ids': {1: '?'}, 'loss': {1: '?'}, 'slot_output': {1: '?'}}
         )
-    '''

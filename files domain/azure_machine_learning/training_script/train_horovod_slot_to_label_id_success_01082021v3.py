@@ -88,8 +88,7 @@ from tokenizers import Encoding
 #from azureml.core import Workspace, Run, Dataset
 
 # ouput only three column
-df = pd.read_csv('E:/azure_ml_notebook/azureml_data/files_slot_training.tsv', sep='\t', encoding="utf-8")
-#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/files_slot_training_small.tsv', sep='\t', encoding="utf-8")
+df = pd.read_csv('E:/azure_ml_notebook/azureml_data/files_slot_training_small.tsv', sep='\t', encoding="utf-8")
 #df = pd.read_csv('E:/azure_ml_notebook/azureml_data/files_slot_training_single.tsv', sep='\t', encoding="utf-8")
 
 
@@ -199,13 +198,6 @@ class LabelSet:
     def get_aligned_label_ids_from_aligned_label(self, aligned_labels):
         return list(map(self.labels_to_id.get, aligned_labels))
 
-
-
-    def get_untagged_id(self):
-        return self.labels_to_id["o"]
-
-    def get_untagged_label(self):
-        return self.ids_to_label[0]
 
     def splitWithBert(self, annotation):
         preSplit = annotation.split();
@@ -343,7 +335,7 @@ class LabelSet:
             return '', '' 
             #continue;
 
-slots = ["o", 
+slots = ["O", 
     "file_name", 
     "file_type", 
     "data_source", 
