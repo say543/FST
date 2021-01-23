@@ -121,6 +121,9 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/2
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/2008943?_a=files&path=%2Fdatasets%2FDefault%2FTest%2FMustpass_Default_Calendar_Golden.tsv
 
 
+// include after 01212020
+// but rules might not include
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/2033451?_a=files&path=%2Fdatasources%2FCalendar%2FPatternHotfix%2FInfiles%2Fcortana_calendar_enus_mv10.domain.pattern.tagger.extra.infile
 
 ====================================
 TNLR, enterprice BERT
