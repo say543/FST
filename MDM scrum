@@ -2,6 +2,8 @@
 
 
 
+
+
 ====================================
 retired dataset
 ====================================
@@ -105,6 +107,27 @@ https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdev.azure.com%
 calendar training data shared by caroline
 =================================
 https://microsoft-my.sharepoint.com/:f:/p/dasilvac/ElhqSMxs7lJLu1OvWAu-KAABTOO4ck21GmqUThCF2-KELQ?e=jmzG9M
+
+
+
+=================================
+calendar infile and pronoun
+=================================
+[1/19 12:58 PM] Caroline Santos Marques da Silva
+    
+Hey C3, regarding our last call, this is the FST rule to queries like "join this/that/it" 
+define extrapronoun Ins(pronoun) EndTag("pronoun") LC([{​​​join}​​​] WS);
+​[1/19 12:59 PM] Caroline Santos Marques da Silva
+    
+"pronoun" is only a text file with the pronouns "it/that/this"
+​[1/19 1:00 PM] Caroline Santos Marques da Silva
+    
+you can find here: CoreScienceDataStaging\datasources\Calendar\PatternHotfix\Lexicons
+​[1/19 1:00 PM] Caroline Santos Marques da Silva
+    
+and all FST rules are: \CoreScienceDataStaging\datasources\Calendar\PatternHotfix\Infiles
+Edited
+
 
 =================================
 calendar bug fix ticket
