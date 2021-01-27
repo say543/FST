@@ -1,0 +1,104 @@
+[CLS] Add 979-229-8110 to the meeting	ExactMatchPrediction	6	0	5	1	0	0	0	1	1	1	57	1	2	2	0	1	3	3	0	1	4	4	0	1	5	5
+inprogress calendar select_none [CLS] Cancel	ExactMatchPrediction	2	0	14	1	0	0	0	1	1	1
+[CLS] Cancel my meeting with boy	ExactMatchPrediction	6	0	25	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	0	1	4	4	0	1	5	5
+[CLS] Cancel my meeting with boys	ExactMatchPrediction	6	0	25	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	0	1	4	4	0	1	5	5
+[CLS] Cancel my meeting with girl	ExactMatchPrediction	6	0	25	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	0	1	4	4	0	1	5	5
+[CLS] Cancel my meeting with girls	ExactMatchPrediction	6	0	25	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	0	1	4	4	0	1	5	5
+completedsuccessful calendar [CLS] Join that meeting	ExactMatchPrediction	4	0	21	1	0	0	0	1	1	1	60	1	2	2	0	1	3	3
+completedsuccessful calendar [CLS] Join this meeting	ExactMatchPrediction	4	0	21	1	0	0	0	1	1	1	60	1	2	2	0	1	3	3
+[CLS] may availability	ExactMatchPrediction	3	0	16	1	0	0	77	1	1	1	0	1	2	2
+[CLS] My upcoming 1:1 meeting location	ExactMatchPrediction	6	0	40	1	0	0	0	1	1	1	78	1	2	2	91	1	3	3	0	1	4	4	0	1	5	5
+[CLS] next meeting place	ExactMatchPrediction	4	0	40	1	0	0	78	1	1	1	0	1	2	2	0	1	3	3
+[CLS] What do I have later in the afternoon	ExactMatchPrediction	9	0	37	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	0	1	4	4	0	1	5	5	0	1	6	6	0	1	7	7	78	1	8	8
+[CLS] What do I have tonight	ExactMatchPrediction	6	0	37	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	0	1	4	4	78	1	5	5
+[CLS] What meetings do I have from 8 am to 10 am tomorrow	ExactMatchPrediction	13	0	37	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	0	1	4	4	0	1	5	5	0	1	6	6	78	1	7	7	78	1	8	8	0	1	9	9	20	1	10	10	20	1	11	11	19	1	12	12
+[CLS] When is my next weekly meeting	ExactMatchPrediction	7	0	39	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	78	1	4	4	91	1	5	5	0	1	6	6
+[CLS] calendar update	ExactMatchPrediction	3	0	15	1	0	0	0	1	1	1	0	1	2	2
+[CLS] find time to meet nitin	ExactMatchPrediction	6	0	16	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	0	1	4	4	8	1	5	5
+calendar [CLS] get call with lisa started	ExactMatchPrediction	6	0	21	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	8	1	4	4	0	1	5	5
+calendar [CLS] get class with melinda started	ExactMatchPrediction	6	0	21	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	8	1	4	4	0	1	5	5
+calendar [CLS] get meeting with bill started	ExactMatchPrediction	6	0	21	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	8	1	4	4	0	1	5	5
+calendar [CLS] get my class at 3 pm started	ExactMatchPrediction	8	0	21	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	0	1	4	4	78	1	5	5	78	1	6	6	0	1	7	7
+calendar [CLS] get my meeting at 2pm started	ExactMatchPrediction	7	0	21	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	0	1	4	4	78	1	5	5	0	1	6	6
+[CLS] how s my week	ExactMatchPrediction	5	0	37	1	0	0	0	1	1	1	0	1	2	2	77	1	3	3	77	1	4	4
+completedsuccessful calendar find_calendar_when [CLS] join it	ExactMatchPrediction	3	0	21	1	0	0	0	1	1	1	60	1	2	2
+promptedforconfirmation calendar connect_to_meeting [CLS] join it	ExactMatchPrediction	3	0	20	1	0	0	0	1	1	1	60	1	2	2
+[CLS] join my monday meeting	ExactMatchPrediction	5	0	21	1	0	0	0	1	1	1	0	1	2	2	77	1	3	3	0	1	4	4
+promptedforconfirmation calendar delete_calendar_entry [CLS] cancel	ExactMatchPrediction	2	0	14	1	0	0	0	1	1	1
+[CLS] show me my meeting insights	ExactMatchPrediction	6	0	45	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	0	1	4	4	0	1	5	5
+[CLS] turn my next meeting	ExactMatchPrediction	5	0	21	1	0	0	0	1	1	1	0	1	2	2	78	1	3	3	0	1	4	4
+[CLS] when is my next meeting with ms pierre	ExactMatchPrediction	9	0	39	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	78	1	4	4	0	1	5	5	0	1	6	6	0	1	7	7	8	1	8	8
+[CLS] add alex to the class	ExactMatchPrediction	6	0	2	1	0	0	0	1	1	1	8	1	2	2	0	1	3	3	0	1	4	4	0	1	5	5
+[CLS] add alex to the course	ExactMatchPrediction	6	0	2	1	0	0	0	1	1	1	8	1	2	2	0	1	3	3	0	1	4	4	0	1	5	5
+[CLS] add alex to the lecture	ExactMatchPrediction	6	0	2	1	0	0	0	1	1	1	8	1	2	2	0	1	3	3	0	1	4	4	0	1	5	5
+[CLS] add alex to this class	ExactMatchPrediction	6	0	2	1	0	0	0	1	1	1	8	1	2	2	0	1	3	3	0	1	4	4	0	1	5	5
+[CLS] add alex to this course	ExactMatchPrediction	6	0	2	1	0	0	0	1	1	1	8	1	2	2	0	1	3	3	0	1	4	4	0	1	5	5
+[CLS] add alex to this lecture	ExactMatchPrediction	6	0	2	1	0	0	0	1	1	1	8	1	2	2	0	1	3	3	0	1	4	4	0	1	5	5
+[CLS] cancel my algebra class	ExactMatchPrediction	5	0	25	1	0	0	0	1	1	1	0	1	2	2	91	1	3	3	0	1	4	4
+[CLS] cancel my literature course	ExactMatchPrediction	5	0	25	1	0	0	0	1	1	1	0	1	2	2	91	1	3	3	0	1	4	4
+[CLS] cancel my o chem lecture	ExactMatchPrediction	6	0	25	1	0	0	0	1	1	1	0	1	2	2	91	1	3	3	91	1	4	4	0	1	5	5
+[CLS] cancel the algebra class at 11	ExactMatchPrediction	7	0	25	1	0	0	0	1	1	1	0	1	2	2	91	1	3	3	0	1	4	4	0	1	5	5	78	1	6	6
+[CLS] cancel the algebra class on monday	ExactMatchPrediction	7	0	25	1	0	0	0	1	1	1	0	1	2	2	91	1	3	3	0	1	4	4	0	1	5	5	77	1	6	6
+[CLS] cancel the algebra class on monday at 11	ExactMatchPrediction	9	0	25	1	0	0	0	1	1	1	0	1	2	2	91	1	3	3	0	1	4	4	0	1	5	5	77	1	6	6	0	1	7	7	78	1	8	8
+[CLS] cancel the literature course at 1	ExactMatchPrediction	7	0	25	1	0	0	0	1	1	1	0	1	2	2	91	1	3	3	0	1	4	4	0	1	5	5	78	1	6	6
+[CLS] cancel the literature course on thursday	ExactMatchPrediction	7	0	25	1	0	0	0	1	1	1	0	1	2	2	91	1	3	3	0	1	4	4	0	1	5	5	77	1	6	6
+[CLS] cancel the literature course on thursday at 1	ExactMatchPrediction	9	0	25	1	0	0	0	1	1	1	0	1	2	2	91	1	3	3	0	1	4	4	0	1	5	5	77	1	6	6	0	1	7	7	78	1	8	8
+[CLS] cancel the o chem lecture at 2	ExactMatchPrediction	8	0	25	1	0	0	0	1	1	1	0	1	2	2	91	1	3	3	91	1	4	4	0	1	5	5	0	1	6	6	78	1	7	7
+[CLS] cancel the o chem lecture on tuesday	ExactMatchPrediction	8	0	25	1	0	0	0	1	1	1	0	1	2	2	91	1	3	3	91	1	4	4	0	1	5	5	0	1	6	6	77	1	7	7
+[CLS] cancel the o chem lecture on tuesday at 2	ExactMatchPrediction	10	0	25	1	0	0	0	1	1	1	0	1	2	2	91	1	3	3	91	1	4	4	0	1	5	5	0	1	6	6	77	1	7	7	0	1	8	8	78	1	9	9
+[CLS] current meetings	ExactMatchPrediction	3	0	37	1	0	0	78	1	1	1	0	1	2	2
+[CLS] dial into my algebra class	ExactMatchPrediction	6	0	21	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	91	1	4	4	0	1	5	5
+[CLS] dial into my algebra discussion section	ExactMatchPrediction	7	0	21	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	91	1	4	4	0	1	5	5	0	1	6	6
+[CLS] dial into my math120 lecture	ExactMatchPrediction	6	0	21	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	91	1	4	4	0	1	5	5
+[CLS] dial into my next class	ExactMatchPrediction	6	0	21	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	78	1	4	4	0	1	5	5
+[CLS] disconnect from my class	ExactMatchPrediction	5	0	28	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	0	1	4	4
+[CLS] disconnect from my course	ExactMatchPrediction	5	0	28	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	0	1	4	4
+[CLS] disconnect from my lecture	ExactMatchPrediction	5	0	28	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	0	1	4	4
+[CLS] disconnect from the class	ExactMatchPrediction	5	0	28	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	0	1	4	4
+[CLS] disconnect from the course	ExactMatchPrediction	5	0	28	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	0	1	4	4
+[CLS] disconnect from the lecture	ExactMatchPrediction	5	0	28	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	0	1	4	4
+[CLS] disconnect from this class	ExactMatchPrediction	5	0	28	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	0	1	4	4
+[CLS] disconnect from this lecture	ExactMatchPrediction	5	0	28	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	0	1	4	4
+[CLS] end my class	ExactMatchPrediction	4	0	28	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3
+[CLS] end my course	ExactMatchPrediction	4	0	28	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3
+[CLS] end my lecture	ExactMatchPrediction	4	0	28	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3
+[CLS] end the class	ExactMatchPrediction	4	0	28	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3
+[CLS] end the course	ExactMatchPrediction	4	0	28	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3
+[CLS] end the lecture	ExactMatchPrediction	4	0	28	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3
+[CLS] end this class	ExactMatchPrediction	4	0	28	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3
+[CLS] end this course	ExactMatchPrediction	4	0	28	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3
+[CLS] end this lecture	ExactMatchPrediction	4	0	28	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3
+[CLS] finished meetings	ExactMatchPrediction	3	0	37	1	0	0	48	1	1	1	0	1	2	2
+[CLS] hang up my class	ExactMatchPrediction	5	0	28	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	0	1	4	4
+[CLS] hang up my course	ExactMatchPrediction	5	0	28	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	0	1	4	4
+[CLS] hang up my lecture	ExactMatchPrediction	5	0	28	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	0	1	4	4
+[CLS] hang up my meeting	ExactMatchPrediction	5	0	28	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	0	1	4	4
+[CLS] hang up the class	ExactMatchPrediction	5	0	28	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	0	1	4	4
+[CLS] hang up the course	ExactMatchPrediction	5	0	28	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	0	1	4	4
+[CLS] hang up the lecture	ExactMatchPrediction	5	0	28	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	0	1	4	4
+[CLS] hang up the meeting	ExactMatchPrediction	5	0	28	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	0	1	4	4
+[CLS] hang up this class	ExactMatchPrediction	5	0	28	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	0	1	4	4
+[CLS] hang up this course	ExactMatchPrediction	5	0	28	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	0	1	4	4
+[CLS] hang up this lecture	ExactMatchPrediction	5	0	28	1	0	0	0	1	1	1	0	1	2	2	0	1	3	3	0	1	4	4
+[CLS] join my algebra class	ExactMatchPrediction	5	0	21	1	0	0	0	1	1	1	0	1	2	2	91	1	3	3	0	1	4	4
+[CLS] join my algebra discussion section	ExactMatchPrediction	6	0	21	1	0	0	0	1	1	1	0	1	2	2	91	1	3	3	0	1	4	4	0	1	5	5
+[CLS] join my math120 lecture	ExactMatchPrediction	5	0	21	1	0	0	0	1	1	1	0	1	2	2	91	1	3	3	0	1	4	4
+[CLS] meetings dhruva bhagdikar is a part of	ExactMatchPrediction	8	0	37	1	0	0	0	1	1	1	8	1	2	2	8	1	3	3	0	1	4	4	0	1	5	5	0	1	6	6	0	1	7	7
+[CLS] meetings late week	ExactMatchPrediction	4	0	37	1	0	0	0	1	1	1	78	1	2	2	78	1	3	3
+[CLS] meetings old week	ExactMatchPrediction	4	0	37	1	0	0	0	1	1	1	78	1	2	2	78	1	3	3
+[CLS] meetings past couple days	ExactMatchPrediction	5	0	37	1	0	0	0	1	1	1	78	1	2	2	78	1	3	3	78	1	4	4
+[CLS] meetings past couple weeks	ExactMatchPrediction	5	0	37	1	0	0	0	1	1	1	78	1	2	2	78	1	3	3	78	1	4	4
+[CLS] meetings past few days	ExactMatchPrediction	5	0	37	1	0	0	0	1	1	1	78	1	2	2	78	1	3	3	78	1	4	4
+[CLS] meetings past few weeks	ExactMatchPrediction	5	0	37	1	0	0	0	1	1	1	78	1	2	2	78	1	3	3	78	1	4	4
+[CLS] meetings past shortly weeks	ExactMatchPrediction	5	0	37	1	0	0	0	1	1	1	78	1	2	2	78	1	3	3	78	1	4	4
+[CLS] meetings past week	ExactMatchPrediction	4	0	37	1	0	0	0	1	1	1	78	1	2	2	78	1	3	3
+[CLS] meetings previous week	ExactMatchPrediction	4	0	37	1	0	0	0	1	1	1	78	1	2	2	78	1	3	3
+[CLS] meetings prior week	ExactMatchPrediction	4	0	37	1	0	0	0	1	1	1	78	1	2	2	78	1	3	3
+[CLS] old meetings	ExactMatchPrediction	3	0	37	1	0	0	48	1	1	1	0	1	2	2
+[CLS] older meetings	ExactMatchPrediction	3	0	37	1	0	0	48	1	1	1	0	1	2	2
+[CLS] past meetings	ExactMatchPrediction	3	0	37	1	0	0	48	1	1	1	0	1	2	2
+[CLS] previous meetings	ExactMatchPrediction	3	0	37	1	0	0	48	1	1	1	0	1	2	2
+[CLS] prior meetings	ExactMatchPrediction	3	0	37	1	0	0	48	1	1	1	0	1	2	2
+[CLS] when's the next class	ExactMatchPrediction	5	0	39	1	0	0	0	1	1	1	0	1	2	2	78	1	3	3	0	1	4	4
+[CLS] where's my next course	ExactMatchPrediction	5	0	40	1	0	0	0	1	1	1	0	1	2	2	78	1	3	3	0	1	4	4
+[CLS] where's my next lecture	ExactMatchPrediction	5	0	40	1	0	0	0	1	1	1	0	1	2	2	78	1	3	3	0	1	4	4
