@@ -715,6 +715,78 @@ https://github.com/DavidNemeskey/emBERT/blob/62825a1ef6b7d1e1eee8b8bf4644281c178
 #https://www.deepspeed.ai/tutorials/bert-pretraining/
 
 
+
+
+#joint intent and slot filling
+# yues code as reference but following internet at first
+# https://msasg.visualstudio.com/LanguageUnderstanding/_git/Timex_Deep_Model?path=%2FTimexModelScripts%2FTimexModelScripts%2FBert_Email%2Fbert_intent_slot.py&version=GBmaster&_a=contents
+# option 1 and paper
+# has good table for comparison
+#https://arxiv.org/pdf/1902.10909.pdf
+https://github.com/monologg/JointBERT
+# intent label
+#https://github.com/monologg/JointBERT/blob/master/data/snips/dev/label
+# query 
+# https://github.com/monologg/JointBERT/blob/master/data/snips/dev/seq.in
+# slot output
+# https://github.com/monologg/JointBERT/blob/master/data/snips/dev/seq.out
+# for intent
+# ? i do not need unk snice i have files_others or might be i need to have another default
+# check MDM
+# i can use current prod model to output intent for each slot data 
+# (current slot data has intent  but might not e correct)
+# if domain score >=0.35 , then intent should be valid, otherwise, setup it
+# as default OTHER intent if needed
+# convert_examples_to_features()
+# this will generate features including intent. need to see how data being feed in
+# class TensorDataset to store
+# https://github.com/monologg/JointBERT/blob/7497631c2065f3f7be853b893e0730676745e0fe/main.py#L13
+# here stores tensor dataset
+# and feed to trainer class
+# class trainer, train() function
+# https://github.com/monologg/JointBERT/blob/7497631c2065f3f7be853b893e0730676745e0fe/trainer.py#L15
+# also using linear warmp and decay
+# https://github.com/monologg/JointBERT/blob/7497631c2065f3f7be853b893e0730676745e0fe/trainer.py#L87
+# here output class and input has all arguments needed
+# self.model_class.from_pretrained() pass classs
+# https://github.com/monologg/JointBERT/blob/7497631c2065f3f7be853b893e0730676745e0fe/trainer.py#L29
+# here define possible class can be loaded
+# https://github.com/monologg/JointBERT/blob/7497631c2065f3f7be853b893e0730676745e0fe/utils.py#L14
+# here using **inputs to pass all necessary algorithm
+# https://github.com/monologg/JointBERT/blob/7497631c2065f3f7be853b893e0730676745e0fe/trainer.py#L87
+# ? not sure about whether batch size will affect or not
+#https://github.com/monologg/JointBERT/blob/7497631c2065f3f7be853b893e0730676745e0fe/trainer.py#L87
+# for self.bert, providng token_type_ids
+# ? for my setting and yue's setting we do not do that might be uncessary
+#https://github.com/monologg/JointBERT/blob/7497631c2065f3f7be853b893e0730676745e0fe/model/modeling_jointbert.py#L24
+# [0] for sequence output (token classfication)
+# [1] for intent classficaition output (sequence classfication)
+# loss calculation
+#total_loss = intent_loss + coef * slot_loss (Change coef with --slot_loss_coef option)
+# (in yue's code, it defines two losses, one for intent and othe other for slot)
+# https://msasg.visualstudio.com/LanguageUnderstanding/_git/Timex_Deep_Model?path=%2FTimexModelScripts%2FTimexModelScripts%2FBert_Email%2Fbert_intent_slot.py&version=GBmaster&_a=contents
+# define intent_logits class
+# drop out rate the same bert
+# hidden size dimention the same bert
+# https://github.com/monologg/JointBERT/blob/7497631c2065f3f7be853b893e0730676745e0fe/model/module.py#L4
+# define slot_logits class
+# hidden size dimention the same bert
+#https://github.com/monologg/JointBERT/blob/7497631c2065f3f7be853b893e0730676745e0fe/model/module.py#L15
+# ouput is a tuple 
+# ? but it looks like this will fail onnx, can try to have two outputs or two class
+#https://github.com/monologg/JointBERT/blob/7497631c2065f3f7be853b893e0730676745e0fe/model/modeling_jointbert.py#L59
+# no care about inference for onnx
+# need to follow what yue does
+# https://github.com/monologg/JointBERT/blob/7497631c2065f3f7be853b893e0730676745e0fe/model/modeling_jointbert.py#L59
+# ignore_index is ignored in function
+# not sure wy need this
+# https://github.com/monologg/JointBERT/blob/7497631c2065f3f7be853b893e0730676745e0fe/model/modeling_jointbert.py#L48 
+
+
+
+# also has function to calculate metrics (itent, slot)
+
+
 # comment until here
  
 
