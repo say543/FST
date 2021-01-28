@@ -83,6 +83,71 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 
 
 ==========================
+ranker rules discussion with Eric 01282021
+==========================
+
+recording
+https://microsoft-my.sharepoint-df.com/:v:/p/chiecha/ESY2GGwaeDFDgG0BSCYAgIsBkRdGvt3cdEfqUiFpO1zA1Q
+met 1:
+if see web(top down) / file search semantic frame / file domain score with a threshold , ranker only knows the top domain and other candidates only
+=> demote web
+demote web domains and let other domains compete with each other
+cons: it might let other domains overtrigger as well
+
+met 2:
+if see web(top down) / file search semantic frame / file domain score with a threshold , ranker only knows the top domain and other candidates only
+=> boost files domain score
+bosst files domain score
+it might not affect other domains, it does, that means files domain overtrigger
+
+
+how to implement:
+one week to implement rule and setup flight in rankder (? i think this flight can be the same what model D has )
+
+how to test:
+1> skill team with rankder flight to run frisbee test, this will not trigger icm
+2> rolls out to rings eg : devring -> microsoft ring
+each ring has its own frisbee test and if it fails, it might trigger ICM
+
+(personally i do not prefer the second method since postmoderm is not a good way)
+
+
+next step
+decide 'threshold' and create a work item for eric
+1> using kusto log to check and analyze query
+kusto query:
+
+let starttime = datetime("2020-11-18 00:00:00");
+let endtime = datetime("2020-12-04 00:00:00");
+CortexTraceMDS
+// // | where TIMESTAMP between (starttime..endtime) and traffic_type == "Untagged"
+// // | where data_center in ("WestUS2", "EastUS2")
+// // | distinct trace_id | count 
+| where CategoryName == "RankerBuilder"
+| where (Message startswith "Ranked #1 candidate Score" and Message contains "email" and Message endswith "intent=show_next") or (Message startswith "Ranked #2 candidate Score" and Message contains "email" and Message endswith "intent=show_next")
+| distinct trace_id, traffic_type
+| join (
+CortexTraceMDS
+| where TIMESTAMP between (starttime..endtime) and traffic_type == "Untagged"
+| where data_center in ("WestUS2", "EastUS2")
+| where CategoryName == "RankerBuilder"
+| where (Message startswith "Ranked #0 candidate Score" and Message contains "web" and Message endswith "intent=other") or (Message startswith "Ranked #0 candidate Score" and Message contains "common" and Message endswith "intent=show_next")
+| distinct trace_id, traffic_type
+) on trace_id
+| count 
+
+and for the output content you can see
+
+SkillDebuggingLog_Understanding    
+from ale{"SemanticFrame":{"Domain":"raw_input","Intent":"raw_input","IntentScore":"1"},"Score":"1","LUComponentName":"RawInputLanguageUnderstandingComponent","Slots":[{"Name":"input_text","Value":"*Redacted*","BestValue":"","Score":"1"}]}
+
+
+2> i prefer to use previous measurement set i build file_keyword + file_type
+and use PR curve to decide what is the triggering threshold and decide which is better
+
+
+
+==========================
 3s dsat
 new ranking strategy
 ==========================
