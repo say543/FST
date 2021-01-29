@@ -6,8 +6,26 @@
 compliant-lu from communication slot tagging
 can learn from distillation from here
 ===================
+
+
+01282021 video
 https://msasg.visualstudio.com/DefaultCollection/LanguageUnderstanding/_git/compliant-lu
 也是submit job 到AML  有空可以study
+
+eran 基本上用這個做continual training
+provide data 然後fine tune 之前的node
+branch 是continual_325
+https://msasg.visualstudio.com/DefaultCollection/LanguageUnderstanding/_git/compliant-lu?path=%2Fteacher_student_training%2Faml_pipeline%2FAml_continual_training_pipeline.py
+
+
+
+<below 要ask haoda for confirmation>
+
+aml_data_upload.ipynb 可能是要update data
+https://msasg.visualstudio.com/DefaultCollection/LanguageUnderstanding/_git/compliant-lu?path=%2Fteacher_student_training%2Fnotebook
+
+bert_distill_communicatio.ipynb 可能是跑distillation data
+可以之後try try
 
 
 ====================================
