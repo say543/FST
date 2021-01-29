@@ -2,6 +2,8 @@
 
 =======================
 discussion score card 01282021
+
+before shipping feature we can review scorecard
 =======================
 
 metric definition
@@ -18,5 +20,12 @@ https://exp.microsoft.com/xcard/?view=9405f317-8b9e-483b-9b08-763a1f627257
 quality of service (Qos)
 https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fexp.microsoft.com%2Fxcard%2F%3FstepId%3D9ea1afda-1db8-4163-9150-e782eceb4795%26scorecardIds%3D246259613&data=04%7C01%7Cjcreigt%40microsoft.com%7Cbadfeb3d34ed441cca0f08d8b926135e%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637462920489452366%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=f0y6RKtJHLlkg2j96pRiXHEisb4BNK%2FV5%2Fqy4Kc8A10%3D&reserved=0
 
+
+
+========================
+after shipping feature
+want to know metrics for real users.
+
+========================
 ? not sure what this link is for
 aka.ms/mssearchmetrics
