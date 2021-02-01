@@ -1148,6 +1148,18 @@ https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQC
 endpoint 直接call
 https://httpqas12-qas-prod-mw1p.qas.binginternal.com/httpqas?query=set%20volume%20to%2050%20percent&vs=Cortana&debug=true&version=2&vc=caac:cortanasdk|ipe_locale:en-us|luscenario:teams|feature.luselfhost:1
 
+with feature flight
+https://httpqas12-qas-prod-mw1p.qas.binginternal.com/httpqas?query=first%20one&vs=Cortana&debug=true&version=2&vc=caac:cortanasdk|ipe_locale:en-us|luscenario:teams|feature.lufeatureflight3:1
+
+但是url 不能帶external feature
+[12:02 PM] Yong Ni
+    
+sorry，no。直接httpqas url不能带external features
+​[12:03 PM] Yong Ni
+    
+如果你想测的clientId在CLU Studio没有的话就只能自己写代码了，或者看看BingIntent还不能用
+
+
 
 ======================
 teasm message try out how to setup
