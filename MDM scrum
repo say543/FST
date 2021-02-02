@@ -164,7 +164,13 @@ lastest aether experiment to get training data
 
 cortana_calendar_enus_mv10.domain.hotfix.modification.pipeline.txt
 這個的最後seesion 有oost domian socre for synonsyms
-以後 MDM 需要可能可以使用
+有用到這個lexicon file cortana_calendar_enus_mv10.domain.patternMeetingSynonyms.txt
+
+這個會直接compile 成一個bin file file 在這行被使用
+MlgFeaturizer --in=BSS_STV --out=patternMeetingSynonyms --fts=cortana_calendar_enus_mv10.domain.patternMeetingSynonyms.bin --maxNGramLength=20
+
+以後 MDM 需要可能可以使用 下面這個section
+
 #####################
 # Boost domain score to 0.6 for specific queries having lower model scores
 # Bug 2962350: [Calendar] Words like "session", "review" and "discussion" should be treated as synonyms for meeting
