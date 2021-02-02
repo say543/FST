@@ -436,8 +436,6 @@ for i, row in df.iterrows():
 
     
     intent = row['intent']
-    intent_labels.append(intent_label_set.get_ids_from_label(intent))
-
 
     slot = row['QueryXml']
 	# remove head and end spaces 
@@ -448,7 +446,12 @@ for i, row in df.iterrows():
     text, tag_string  = slots_label_set.preprocessRawAnnotation(query, slot)
 
     if text == '' and tag_string == '':
+        print("query_with_slot_issue\t{}\t{}".format(query, slot))
         continue
+
+
+    # only if it is valid string for slot then add intent label
+    intent_labels.append(intent_label_set.get_ids_from_label(intent))
 
     #append labels for [CLS] / [SEP] to tag_string
     tag_string =  slots_label_set.get_untagged_label() + ' '+ tag_string + ' ' + slots_label_set.get_untagged_label()
@@ -1332,7 +1335,7 @@ if hvd.rank() == 0:
         # ? change it to a better name like slot_output in the future
         #output_names = ["logits"],
         #output_names = ["slot_label_tensor"],
-        output_names = ["intent_output, slot_output"],
+        output_names = ["intent_output", "slot_output"],
         #output_names = ["loss","slot_output"],
         do_constant_folding = True,
         opset_version=11,

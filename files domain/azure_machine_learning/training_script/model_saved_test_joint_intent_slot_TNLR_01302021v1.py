@@ -697,37 +697,9 @@ class DistilBertForTokenClassificationFilesDomain(BertPreTrainedModel):
 
         # if either one is none, then do inference
         if intent_label_ids is None or slot_label_ids is None:
-            # output intent label as weight
             intent_output = torch.argmax(intent_logits, -1);
             slot_output = torch.argmax(slot_logits, -1);
-
-            # QAS
-            # for domain, it needs to have probabilty
-            #    files_enus_mv7_domain_svm_score (tag: 1, string: 0)
-            #            0[-1,-1]=0.1968164
-
-            # for intent
-            #                files_enus_mv7_intent_svm_score (tag: 11, string: 0)
-            #            0[-1,-1]=2.2269628
-            #            1[-1,-1]=-1.5521804
-            #            2[-1,-1]=-1.6113045
-            #            3[-1,-1]=-1.0233102
-            #            4[-1,-1]=-1.3408698
-            #            5[-1,-1]=-1.8470569
-            #            6[-1,-1]=-1.0570247
-            #            7[-1,-1]=-1.167596
-            #            8[-1,-1]=-1.8137677
-            #            9[-1,-1]=-0.99997
-            #            10[-1,-1]=-1.389961
-
-
-            intent_prob = intent_logits.softmax(dim=1)
-            #indices = torch.tensor([1]).to(device)
-            # this is for domain the second since in domian = 1
-            #temp = torch.index_select(intent_logits, 1, indices),
-
-            #return intent_output, slot_output
-            return intent_output, slot_output, intent_prob
+            return intent_output, slot_output
         else:
             return total_intent_loss, total_slot_loss
 
@@ -887,14 +859,11 @@ with torch.no_grad():
 
 
     # if going with seperate outputs
-    #intent_output,slot_output = model(test_input_tensor, attention_mask=at_mask_tensor
-    #    )
-    intent_output,slot_output,intent_prob = model(test_input_tensor, attention_mask=at_mask_tensor
+    intent_output,slot_output = model(test_input_tensor, attention_mask=at_mask_tensor
         )
 
     print("intent_output: {}".format(intent_output))
     print("slot_output: {}".format(slot_output))
-    #print("intent_output: {}".format(intent_prob))
 
 print("evaluate model done")
 
@@ -924,11 +893,9 @@ torch.onnx.export(model=model,
     f='traced_distill_bert.onnx.bin',
     input_names = ["input_ids"],
     verbose=True,
-    #output_names = ["intent_output", "slot_output"],
-    output_names = ["intent_output", "slot_output",'intent_prob'],
+    output_names = ["intent_output, slot_output"],
     do_constant_folding = True,
     opset_version=11,
-    #dynamic_axes = {'input_ids': {1: '?'}, 'intent_output': {1: '?'}, 'slot_output': {1: '?'}}
-    dynamic_axes = {'input_ids': {1: '?'}, 'intent_output': {1: '?'}, 'slot_output': {1: '?'},'intent_prob': {1: '?'}}
+    dynamic_axes = {'input_ids': {1: '?'}, 'intent_output': {1: '?'}, 'slot_output': {1: '?'}}
     )
 

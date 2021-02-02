@@ -787,6 +787,32 @@ https://github.com/monologg/JointBERT
 # also has function to calculate metrics (itent, slot)
 
 
+
+# tensor.backward()
+#
+# will use the chain rule to compute the gradient for every parameter in the network. For a give param, w of size d, it will perform: gradient * dy/dw where dy/dw will will be computed by the chain rule.
+# https://discuss.pytorch.org/t/what-does-tensor-backward-do-mathematically/27953
+
+
+# QAS output 
+# # for domain, it needs to have probabilty
+# files_enus_mv7_domain_svm_score (tag: 1, string: 0)
+# 0[-1,-1]=0.1968164
+# for intent
+# files_enus_mv7_intent_svm_score (tag: 11, string: 0)
+ #                       0[-1,-1]=2.2269628
+ #                       1[-1,-1]=-1.5521804
+ #                       2[-1,-1]=-1.6113045
+ #                       3[-1,-1]=-1.0233102
+ #                       4[-1,-1]=-1.3408698
+ #                       5[-1,-1]=-1.8470569
+ #                       6[-1,-1]=-1.0570247
+ #                       7[-1,-1]=-1.167596
+ #                       8[-1,-1]=-1.8137677
+ #                       9[-1,-1]=-0.99997
+ #                       10[-1,-1]=-1.389961
+
+
 # comment until here
  
 

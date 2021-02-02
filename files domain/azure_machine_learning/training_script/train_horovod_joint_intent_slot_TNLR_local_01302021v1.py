@@ -999,11 +999,7 @@ class DistilBertForTokenClassificationFilesDomain(BertPreTrainedModel):
         if intent_label_ids is None or slot_label_ids is None:
             intent_output = torch.argmax(intent_logits, -1);
             slot_output = torch.argmax(slot_logits, -1);
-            
-            intent_prob = intent_logits.softmax(dim=1)
-
-            #return intent_output, slot_output
-            return intent_output, slot_output, intent_prob
+            return intent_output, slot_output
         else:
             return total_intent_loss, total_slot_loss
 
@@ -1355,8 +1351,7 @@ for n in range(num_epochs):
             # for validating, no label is provided so it will output slot label
             # and make loss zero
             slot_output = model(mb_x, attention_mask=mb_m)
-            #intent_output, slot_output = model(mb_x, attention_mask=mb_m)
-            intent_output,slot_output,intent_prob = model(mb_x, attention_mask=mb_m)
+            intent_output, slot_output = model(mb_x, attention_mask=mb_m)
             val_loss += 0 / num_mb_val
             # for debug
             #print('evaluate label result {}'.format(slot_output))
@@ -1546,14 +1541,12 @@ if True:
         # ? change it to a better name like slot_output in the future
         #output_names = ["logits"],
         #output_names = ["slot_label_tensor"],
-        #output_names = ["intent_output", "slot_output"],
-        output_names = ["intent_output", "slot_output",'intent_prob'],
+        output_names = ["intent_output", "slot_output"],
         #output_names = ["loss","slot_output"],
         do_constant_folding = True,
         opset_version=11,
         #dynamic_axes = {'input_ids': {1: '?'}, 'logits': {1: '?'}}
         #dynamic_axes = {'input_ids': {1: '?'}, 'slot_label_tensor': {1: '?'}}
-        #dynamic_axes = {'input_ids': {1: '?'}, 'intent_output': {1: '?'}, 'slot_output': {1: '?'}}
-        dynamic_axes = {'input_ids': {1: '?'}, 'intent_output': {1: '?'}, 'slot_output': {1: '?'},'intent_prob': {1: '?'}}
+        dynamic_axes = {'input_ids': {1: '?'}, 'intent_output': {1: '?'}, 'slot_output': {1: '?'}}
         #dynamic_axes = {'input_ids': {1: '?'}, 'loss': {1: '?'}, 'slot_output': {1: '?'}}
         )
