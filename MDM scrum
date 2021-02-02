@@ -144,10 +144,40 @@ https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdev.azure.com%
 
 
 
+================================
+caroline sync 
+================================
+01292021
+新增了pattern for not tagging synonym  for meeting like 
+class/lectre/course/appointment/event/meeting/schedule
+
+有用到一些dropwords
+
+model calendar process
+https://microsoft-my.sharepoint.com/personal/dasilvac_microsoft_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fdasilvac%5Fmicrosoft%5Fcom%2FDocuments%2Ffor%5FC3&originalPath=aHR0cHM6Ly9taWNyb3NvZnQtbXkuc2hhcmVwb2ludC5jb20vOmY6L3AvZGFzaWx2YWMvRWxocVNNeHM3bEpMdTFPdldBdS1LQUFCVE9PNGNrMjFHbXFVVGhDRjItS0VMUT9ydGltZT1sRURyY2t6SDJFZw
+model_calendar_planing.xlsx
+
+you will see calendar bug progress shared by caroline
+
+https://microsoft-my.sharepoint.com/personal/dasilvac_microsoft_com/_layouts/15/onedrive.aspx?originalPath=aHR0cHM6Ly9taWNyb3NvZnQtbXkuc2hhcmVwb2ludC5jb20vOmY6L3AvZGFzaWx2YWMvRWxocVNNeHM3bEpMdTFPdldBdS1LQUFCVE9PNGNrMjFHbXFVVGhDRjItS0VMUT9ydGltZT1sRURyY2t6SDJFZw&id=%2Fpersonal%2Fdasilvac%5Fmicrosoft%5Fcom%2FDocuments%2Ffor%5FC3%2FDataThatAreInTheLatestModel
+lastest aether experiment to get training data
+
+cortana_calendar_enus_mv10.domain.hotfix.modification.pipeline.txt
+這個的最後seesion 有oost domian socre for synonsyms
+以後 MDM 需要可能可以使用
+#####################
+# Boost domain score to 0.6 for specific queries having lower model scores
+# Bug 2962350: [Calendar] Words like "session", "review" and "discussion" should be treated as synonyms for meeting
+
+
+
 =================================
 calendar training data shared by caroline
 =================================
 https://microsoft-my.sharepoint.com/:f:/p/dasilvac/ElhqSMxs7lJLu1OvWAu-KAABTOO4ck21GmqUThCF2-KELQ?e=jmzG9M
+
+01292021
+
 
 
 
