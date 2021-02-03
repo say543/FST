@@ -1,5 +1,27 @@
 
 
+
+===============================
+project alexandar newsletter
+===============================
+<email_title>
+TNLR v4
+Project Alexander Newsletter January 2021
+
+
+===================
+MDM sepearted 8 qpc
+===================
+file://YANHU-SUZHOU/Users/yanhu/Desktop/MDM_MLM_onboard/tvs_assistant_clu_refactored_by_domain
+// 最大的qpc
+assistant_enus_tvs_mv1.queryprocessingconfiguration.
+
+所有的domain 改成import
+encoder=qd_encoder
+=>
+encoder=mdm_mv1::qd_encoder with import mdm_mv1=assistant_enus_tvs_uber_mv1(這個有自己的qpc, 然後各個subdomain 都要用的) 
+
+
 ===================
 AMD GPU for usage
 ===================
