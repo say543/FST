@@ -110,4 +110,8 @@ Teams-multiturn-07012020v38		no,show more files	select_more	common	PromptedForCo
 teams_singleturn_07012020_1		marketing deck	file_search							
 answer_singleturn_07012020_2		What was that last PowerPoint attachment?	file_search							
 serp_singleturn_07012020_1		shiproom ppt	file_search							
-
+Teams-multiturn-07082020v1		lt review	file_search	files	InProgress			PreviousTurnDomain(files)TaskFrameStatus(inprogress)		
+Teams-multiturn-07082020v2		lt review	file_search	common	InProgress			PreviousTurnDomain(common)TaskFrameStatus(inprogress)		
+Teams-multiturn-07082020v3		lt review	file_search	files	PromptedForConfirmation			PreviousTurnDomain(files)TaskFrameStatus(inprogress)		
+Teams-multiturn-07082020v4		lt review	file_search	common	PromptedForConfirmation			PreviousTurnDomain(common)TaskFrameStatus(inprogress)		
+answer_singleturn_10122020_1		June Sprint end demos excel nidhi	file_search							

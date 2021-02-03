@@ -2534,7 +2534,6 @@ TurnNumber	PreviousTurnIntent	query	intent	PreviousTurnDomain	TaskFrameStatus	Ta
 0		look for presentation marked 435C	file_search	
 0		search for powerpoints created before 11/10	file_search	
 0		Show my photos from	file_search	
-0		cortana show me presentations with the annual tech report	file_share	
 0		Find my downloads	file_search	
 0		show my photos from April 2015	file_search	
 0		find my music	file_search	
