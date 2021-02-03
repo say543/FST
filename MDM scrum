@@ -23,6 +23,19 @@ encoder=qd_encoder
 =>
 encoder=mdm_mv1::qd_encoder with import mdm_mv1=assistant_enus_tvs_uber_mv1(這個有自己的qpc, 然後各個subdomain 都要用的) 
 
+正常的domain
+calendar=qd_calendar
+=>
+calendar=calendar_mv1::qd_calendar
+calendar_mv1=assistant_enus_tvs_calendar_mv1 wtih import 的qpc 
+assistant_enus_tvs_calendar_mv1.queryprocessingconfiguration 內部會再用到uber 裡面的encoder 還有rule 的pipeline
+
+cmf_generic 是為了要 clu studio 的 query context,  clu studio 的preproceesed query 還是從 qd_encoder_tokenizer
+
+但是拿raw Query 沒有考慮小寫   之後on board 要確定這次事情
+
+
+
 
 ===================
 AMD GPU for usage
