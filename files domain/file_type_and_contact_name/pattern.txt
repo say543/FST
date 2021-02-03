@@ -10,4 +10,5 @@
 ##0	CONTACTNAMEHOLDER files	file_search	files	<contact_name> CONTACTNAMEHOLDER </contact_name> files
 ##0	CONTACTNAMEHOLDER's files	file_search	files	<contact_name> CONTACTNAMEHOLDER </contact_name>'s files
 ##0	files CONTACTNAMEHOLDER	file_search	files	files <contact_name> CONTACTNAMEHOLDER </contact_name>
-0	FILETYPEHOLDER CONTACTNAMEHOLDER sent	file_search	files	<file_type> FILETYPEHOLDER </file_type> <contact_name> CONTACTNAMEHOLDER </contact_name> sent
+##0	FILETYPEHOLDER CONTACTNAMEHOLDER sent	file_search	files	<file_type> FILETYPEHOLDER </file_type> <contact_name> CONTACTNAMEHOLDER </contact_name> sent
+0	FILETYPEHOLDER CONTACTNAMEHOLDER shared	file_search	files	<file_type> FILETYPEHOLDER </file_type> <contact_name> CONTACTNAMEHOLDER </contact_name> shared
