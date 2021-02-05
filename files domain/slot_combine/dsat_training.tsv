@@ -18,7 +18,7 @@
 0	Sharefile with my next meeting.	file_share	files	Sharefile with <to_contact_name> my </to_contact_name> <meeting_starttime> next </meeting_starttime> <sharetarget_type> meeting </sharetarget_type>.	Reporting_Teams_20190716-20190831_3k.tsv
 0	Sharefile with someone.	file_share	files	Sharefile with someone.	Validating_Teams_20191001-20191031_7k.tsv
 0	Share. Running late and join my meeting doc here.	file_share	files	Share. <file_keyword> Running late and join my meeting </file_keyword> <file_type> doc </file_type> <sharetarget_name> here </sharetarget_name>	Validating_Teams_20191001-20191031_7k.tsv
-0	Share the PowerPoint from Outlook.	file_share	files	Share the <file_type> PowerPoint </file_type> from <data_source> Outlook </data_source>	Validating_Teams_20191001-20191031_7k.tsv
+0	Share the PowerPoint from Outlook.	file_share	files	Share the <file_type> PowerPoint </file_type> from <data_source_type> Outlook </data_source_type>	Validating_Teams_20191001-20191031_7k.tsv
 0	Open on call notebook.	file_open	files	Open <file_keyword> on call </file_keyword> <file_type> notebook </file_type>	Validating_Teams_20191001-20191031_7k.tsv
 0	Hey Cortana open the document for what should 0.	file_open	files	open the document for <file_keyword> what should 0 </file_keyword>	Validating_Teams_20191001-20191031_7k.tsv
 0	Share Names PowerPoint with Darrin?	file_share	files	Share <file_keyword> Names </file_keyword> <file_type> PowerPoint </file_type> with <to_contact_name> Darrin </to_contact_name> ?	Validating_Teams_20190716-20190831_3k.tsv
@@ -42,7 +42,7 @@
 0	Sharefile with my next meeting.	file_share	files	Sharefile with <to_contact_name> my </to_contact_name> <meeting_starttime> next </meeting_starttime> <sharetarget_type> meeting </sharetarget_type>.	Reporting_Teams_20190716-20190831_3k.tsv
 0	Sharefile with someone.	file_share	files	Sharefile with someone.	Validating_Teams_20191001-20191031_7k.tsv
 0	Share. Running late and join my meeting doc here.	file_share	files	Share. <file_keyword> Running late and join my meeting </file_keyword> <file_type> doc </file_type> <sharetarget_name> here </sharetarget_name>	Validating_Teams_20191001-20191031_7k.tsv
-0	Share the PowerPoint from Outlook.	file_share	files	Share the <file_type> PowerPoint </file_type> from <data_source> Outlook </data_source>	Validating_Teams_20191001-20191031_7k.tsv
+0	Share the PowerPoint from Outlook.	file_share	files	Share the <file_type> PowerPoint </file_type> from <data_source_type> Outlook </data_source_type>	Validating_Teams_20191001-20191031_7k.tsv
 0	Open on call notebook.	file_open	files	Open <file_keyword> on call </file_keyword> <file_type> notebook </file_type>	Validating_Teams_20191001-20191031_7k.tsv
 0	Hey Cortana open the document for what should 0.	file_open	files	open the document for <file_keyword> what should 0 </file_keyword>	Validating_Teams_20191001-20191031_7k.tsv
 0	Share Names PowerPoint with Darrin?	file_share	files	Share <file_keyword> Names </file_keyword> <file_type> PowerPoint </file_type> with <to_contact_name> Darrin </to_contact_name> ?	Validating_Teams_20190716-20190831_3k.tsv
@@ -60,7 +60,7 @@
 0	Share the reference point plus deck with lunch with Cortana meeting.	file_share	files	Share the <file_keyword>reference point plus</file_keyword> <file_type>deck</file_type> with <sharetarget_name>lunch with Cortana</sharetarget_name> <sharetarget_type>meeting</sharetarget_type>.	Validating_Teams_AllDomain_SR_RandomSampling_20200201-20200229_7k.tsv
 0	Share the Dev Spec, file with my next meeting.	file_share	files	Share the <file_keyword>Dev Spec</file_keyword>, file with <to_contact_name>my</to_contact_name> <meeting_starttime>next</meeting_starttime> <sharetarget_type>meeting</sharetarget_type>.	Validating_Teams_AllDomain_SR_RandomSampling_20200201-20200229_7k.tsv
 0	Open Teams Search offsite agenda document.	file_open	files	Open <file_keyword>Teams Search offsite agenda</file_keyword> document.	Validating_Teams_AllDomain_SR_RandomSampling_20200201-20200229_7k.tsv
-0	Emails with attachments	file_search	files	Emails with <data_source>attachments</data_source>	Validating_SnA_SR_OutlookMobile_FileSearch_20200304-20200331.tsv
+0	Emails with attachments	file_search	files	Emails with <attachment>attachments</attachment>	Validating_SnA_SR_OutlookMobile_FileSearch_20200304-20200331.tsv
 0	Share Bake the Potatoes document with Tom Cruise.	file_share	files	Share <file_keyword>Bake the Potatoes</file_keyword> document with <to_contact_name>Tom Cruise</to_contact_name>.	Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
 0	Share the file I was working on with walstreet the meeting.	file_share	files	Share the file <contact_name>I</contact_name> was <file_action>working</file_action> on with <sharetarget_name>walstreet the</sharetarget_name> <sharetarget_type>meeting</sharetarget_type>.	Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
 0	Share the Bug doc with Popeye a Knight meeting.	file_share	files	Share the <file_keyword>Bug</file_keyword> <file_type>doc</file_type> with <sharetarget_name>Popeye a Knight</sharetarget_name> <sharetarget_type>meeting</sharetarget_type>.	Validating_Teams_AllDomain_SR_RandomSampling_20200101-20200123_6k.tsv
@@ -87,8 +87,8 @@
 0	pull up another pdf	file_search	files	pull up another <file_type>pdf</file_type>	Validating_UWP_AllDomain_CIVPrime_RandomSampling_Feb-2019_Test-55k.tsv
 0	show me my most recently viewed document	file_search	files	show me <contact_name>my</contact_name> most <file_recency>recently</file_recency> <file_action>viewed</file_action> document	Validating_UWP_AllDomain_CIVPrime_RandomSampling_Feb-2019_Test-55k.tsv
 0	video files	file_search	files	<file_folder>video</file_folder> files	Validating_UWP_AllDomain_CIVPrime_RandomSampling_Feb-2019_Test-55k.tsv
-0	where are my videos kept on this computer	file_search	files	where are <contact_name>my</contact_name> <file_folder>videos</file_folder> kept on this <data_source>computer</data_source>	Validating_UWP_AllDomain_CIVPrime_RandomSampling_Feb-2019_Test-55k.tsv
-0	would you please save this on the computer this page	file_download	files	would you please save <file_keyword>this</file_keyword> on the <data_source>computer</data_source> this page	Validating_UWP_AllDomain_CIVPrime_RandomSampling_Feb-2019_Test-55k.tsv
+0	where are my videos kept on this computer	file_search	files	where are <contact_name>my</contact_name> <file_folder>videos</file_folder> kept on this <data_source_type>computer</data_source_type>	Validating_UWP_AllDomain_CIVPrime_RandomSampling_Feb-2019_Test-55k.tsv
+0	would you please save this on the computer this page	file_download	files	would you please save <file_keyword>this</file_keyword> on the <data_source_type>computer</data_source_type> this page	Validating_UWP_AllDomain_CIVPrime_RandomSampling_Feb-2019_Test-55k.tsv
 0	find word excel	file_search	files	find <file_type>word excel</file_type>	Validating_UWP_AllDomain_CIVPrime_RandomSampling_Feb-2019_Test-55k.tsv
 0	download folder	file_search	files	download folder	Validating_UWP_Head_CIVPrime_RandomSampling_011018-123118-10k.tsv
 0	open download file	file_open	files	open <file_keyword>download</file_keyword> file	Validating_UWP_Head_CIVPrime_RandomSampling_011018-123118-10k.tsv
@@ -109,7 +109,7 @@
 0	Open skills file with Mohit	file_share	files	Open <file_keyword>skills</file_keyword> file with <to_contact_name>Mohit</to_contact_name>	Reporting_Teams_20200101-20200123_6k.tsv
 0	Open the Bug Template and other useful info Word document	file_open	files	Open the <file_keyword>Bug Template and other useful info</file_keyword> <file_type>Word</file_type> document	Reporting_Teams_20200101-20200123_6k.tsv
 0	Share Cortana file with Ping at the 4:30	file_share	files	Share <file_keyword>Cortana</file_keyword> file with <to_contact_name>Ping</to_contact_name> at the <time>4:30</time>	Reporting_Teams_20200101-20200123_6k.tsv
-0	Share file Teams I was skilled elopment spreadsheet	file_share	files	Share file <file_keyword Teams I was skilled elopment</file_keyword> <file_type>spreadsheet</file_type>	Reporting_Teams_20200101-20200123_6k.tsv
+0	Share file Teams I was skilled elopment spreadsheet	file_share	files	Share file <file_keyword> Teams I was skilled elopment</file_keyword> <file_type>spreadsheet</file_type>	Reporting_Teams_20200101-20200123_6k.tsv
 0	Share the Free Sample PPT with all is well meeting	file_share	files	Share the <file_keyword>Free Sample</file_keyword> <file_type>PPT</file_type> with <sharetarget_name>all is well</sharetarget_name> <sharetarget_type>meeting</sharetarget_type>	Reporting_Teams_20200101-20200123_6k.tsv
 0	Share the Onboarding & Training documents with Nick Cruise	file_share	files	Share the <file_keyword>Onboarding &amp; Training</file_keyword> documents with <to_contact_name>Nick Cruise</to_contact_name>	Reporting_Teams_20200101-20200123_6k.tsv
 0	Share the Reference PPT with all is well meeting	file_share	files	Share the <file_keyword>Reference</file_keyword> <file_type>PPT</file_type> with <sharetarget_name>all is well</sharetarget_name> <sharetarget_type>meeting</sharetarget_type>	Reporting_Teams_20200101-20200123_6k.tsv
@@ -217,3 +217,4 @@
 0	open my PPT I am working on	file_open	files	open <contact_name>my</contact_name> <file_type>PPT</file_type> <contact_name>I</contact_name> am <file_action>working</file_action> on	Validating_UWP_AllDomain_QueryExpansion.tsv
 0	Open Food with nutrition deck	file_open	files	Open <file_keyword>Food with nutrition</file_keyword> <file_type>deck</file_type>	Validating_TVS_AllDomain_SR_20200401-20200430.tsv
 0	Open Mac pptx with Rose	file_share	files	Open <file_keyword>Mac</file_keyword> <file_type>pptx</file_type> with <to_contact_name>Rose</to_contact_name>	Validating_TVS_AllDomain_SR_20200501-20200531.tsv
+0	Open word documents.	file_open	files	Open <file_type>word</file_type> documents.	Validating_TVS_AllDomain_SR_20200601-20200630.tsv
