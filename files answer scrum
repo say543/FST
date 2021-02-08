@@ -81,6 +81,18 @@ files domain 怎麼onbaord 到evaluation
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1182483?_a=files
 看這個pr
 
+===========================
+tool to generate a file name and test it , from files answer
+===========================
+<email_title>
+RE: Details of tool used for sign-off
+We run this tool against TDS, details are given under AnswerQualityTool section. 
+
+AnswerQualityTool  (Web view)
+https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FTeamGSAOJI%2F_layouts%2FOneNote.aspx%3Fid%3D%252Fteams%252FTeamGSAOJI%252FShared%2520Documents%252F3S%2520Answers%252F3S%2520Answers%26wd%3Dtarget%2528AnswerQualityTool.one%257CAE9F721E-FC82-45A7-9325-4926B6E7477B%252F%2529&data=04%7C01%7CChiehChun.Chang%40microsoft.com%7C9679cf2c37cc4f0be54408d8cbf18186%7C72f988bf86f141af91ab2d7cd011db47%7C0%7C0%7C637483585559576720%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=DquZzmpR9IEYu8z5pKO9MwtzX9duReUi2jnF3eNjftw%3D&reserved=0
+
+
+
 ==========================
 Bug Bash: NL File Search in MSO (DF)
 ==========================
