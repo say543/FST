@@ -887,10 +887,44 @@ array([1, 1, 0, 0], dtype=int64)
 # [for intent]
 
 
+
+# pandas read empty string , not NAN, by setting an option
+# https://stackoverflow.com/questions/10867028/get-pandas-read-csv-to-read-empty-values-as-empty-string-instead-of-nan/43832955
+
+
+
+
+# bert output
+# paper 
+# https://arxiv.org/abs/1810.04805
+# the authors describe two ways to work with BERT, 
+# 1> one as with “feature extraction” mechanism. 
+# That is, we use the final output of BERT as an input to another model. 
+# This way we’re “extracting” features from text using BERT and then use it in a separate model for the actual task in hand. 
+# 2> The other way is by “fine-tuning” BERT. 
+# That is, we add additional layer/s on top of BERT and then train the whole thing together. 
+# This way, we train our additional layer/s and also change (fine-tune) the BERTs weights.
+# below link using the seocnd 
+# [1] : pool output , for sequence claissfcaiotn
+# [0]: sequence outpu,t for token claasfication
+# https://www.kaggle.com/questions-and-answers/86510
+#Let's take an example of "You are a kaggle kernels master".
+#Before passing it to bert model you need to add [CLS] token in the begining and [SEP] token at the end of the sentence.
+#
+#Now the sentence is "[CLS] You are a kaggle kernels master [SEP]".#
+#
+#Now if you give above sentence to BertModel you will get 768 dimension embedding for each token in the given sentence. So 'sequence output' will give output of dimension [1, 8, 768] since there are 8 tokens including [CLS] and [SEP] and 'pooled output' will give output of dimension [1, 1, 768] which is the embedding of [CLS] token.
+
+# https://towardsdatascience.com/bert-to-the-rescue-17671379687f
+# https://github.com/huggingface/transformers/issues/1827
+# https://github.com/shudima/notebooks/blob/master/BERT_to_the_rescue.ipynb
+
 # comment until here
  
 
-https://github.com/DavidNemeskey/emBERT/blob/62825a1ef6b7d1e1eee8b8bf4644281c17860670/embert/model.py
+#https://medium.com/@aniruddha.choudhury94/part-2-bert-fine-tuning-tutorial-with-pytorch-for-text-classification-on-the-corpus-of-linguistic-18057ce330e1
+
+#https://github.com/DavidNemeskey/emBERT/blob/62825a1ef6b7d1e1eee8b8bf4644281c17860670/embert/model.py
 
 
 
