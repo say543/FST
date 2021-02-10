@@ -205,17 +205,6 @@ class LabelSet:
         return self.ids_to_label[0]
 
 
-    def get_id(self, label):
-        return self.labels_to_id[label]
-
-    def get_label(self, id):
-        return self.ids_to_label[id]        
-
-
-    
-    def get_ids(self):
-        return self.labels_to_id
-
     def get_labels(self):
         return self.labels_to_id
 
@@ -396,12 +385,6 @@ class IntentLabelSet:
     def get_labels(self):
         return self.labels_to_id
     
-    def get_id(self, label):
-        return self.labels_to_id[label]
-
-    def get_label(self, id):
-        return self.ids_to_label[id]  
-    
     def get_ids_from_label(self, label):
         return self.labels_to_id[label]
 
@@ -422,321 +405,6 @@ intents = [
 
 
 intent_label_set = IntentLabelSet(labels=map(str.lower,intents))
-
-class Evaluation():
-    def __init__(self, slots_label_set, intent_label_set, useIob=False):
-        self.useIob = useIob;
-        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu");
-        # no need
-        #self.preprocess_driver = Preprocess_Driver_Bert(self.useIob);
-        #self.slot_dict = self.preprocess_driver.slot_dict;
-        #self.slot_dict_rev = {v: k for k, v in self.slot_dict.items()};
-
-        # replace with my own class 
-        #self.intent_dict = self.preprocess_driver.intent_dict;
-        #self.intent_dict_rev = {v: k for k, v in self.intent_dict.items()};
-        self.slots_label_set = slots_label_set
-        self.intent_label_set = intent_label_set
-
-
-        #self.intent_preds = []
-        #self.out_intent_label_ids =[] 
-        #self.slot_preds = []
-        #self.out_slot_labels_ids = []
-
-        self.intent_preds =  None
-        #self.out_intent_label = None
-        self.slot_preds = None
-        #self.out_slot_labels = None
-
-
-        self.intent_golden = None
-        self.slot_golden = None
-
-    def add_intent_pred_and_golden(self, intent_output, intent_golden):
-        #intent_preds = np.append(intent_preds, intent_logits.detach().cpu().numpy(), axis=0)
-        # single dimention
-        #intent_preds = np.append(intent_preds, intent_label_set.get_label(intent_logits.item()), axis=0)
-        #out_intent_label_ids = np.append(
-        #     out_intent_label_ids, intent_logits.item(), axis=0)
-
-        #self.intent_preds.append(intent_label_set.get_label(intent_output.item()))
-        #self.out_intent_label_ids.append(intent_output.item())
-
-        # intent_output is a two 2D tensor
-        
-        if self.intent_preds is None:
-            intent_list = intent_output.tolist()
-            self.intent_preds = intent_list
-
-            intent_golden_list = intent_golden.tolist()
-            self.intent_golden = intent_golden_list           
-            #self.out_intent_label = [intent_label_set.get_label(intent) for intent in intent_list]
-
-            # change to numpy
-            self.intent_preds = np.array(self.intent_preds)
-            self.intent_golden = np.array(self.intent_golden)
-
-            #self.out_intent_label = np.array(self.out_intent_label)
-        else:
-            intent_list = intent_output.tolist()
-            self.intent_preds = np.append(self.intent_preds, intent_list, axis=0)
-
-            intent_golden_list = intent_golden.tolist()
-            self.intent_golden = np.append(self.intent_golden, intent_golden_list, axis=0)
-
-            #self.out_intent_label = np.append(self.out_intent_label, [intent_label_set.get_label(intent) for intent in intent_list], axis=0)
-
-    def add_slot_pred_and_golden(self, slot_output, slot_golden):
-        #intent_preds = np.append(intent_preds, intent_logits.detach().cpu().numpy(), axis=0)
-        # single dimention
-        #intent_preds = np.append(intent_preds, intent_label_set.get_label(intent_logits.item()), axis=0)
-        #out_intent_label_ids = np.append(
-        #     out_intent_label_ids, intent_logits.item(), axis=0)
-
-
-        #slot_list = []
-        #for ele in slot_output.tolist():
-        #    slot_list.append(slots_label_set.get_label(ele))
-        #self.slot_preds.append(slot_list)
-        
-        #slot_id_list = []
-        #for ele in slot_output.tolist():
-        #    slot_id_list.append(ele)
-        #self.out_slot_labels_ids.append(slot_id_list)
-
-        if self.slot_preds is None:
-            slot_id_list = slot_output.tolist()
-            self.slot_preds = slot_id_list
-
-            slot_golden_id_list = slot_golden.tolist()
-            self.slot_golden = slot_golden_id_list            
-
-            #slot_labels_list = []
-            #for i in range(len(slot_id_list)):
-            #    sub_list =  [slots_label_set.get_label(slot_id) for slot_id in slot_id_list[i]]
-            #    slot_labels_list.append(sub_list)
-
-            # change to numpy
-            self.slot_preds = np.array(self.slot_preds)
-            self.slot_golden = np.array(self.slot_golden)
-            #self.out_slot_labels = np.array(slot_labels_list)
-
-        else:
-
-            slot_id_list = slot_output.tolist()
-            self.slot_preds = np.append(self.slot_preds, slot_id_list, axis=0)
-
-            slot_golden_id_list = slot_golden.tolist()
-            self.slot_golden = np.append(self.slot_golden, slot_golden_id_list, axis=0)
-
-            #slot_labels_list = []
-            #for i in range(len(slot_id_list)):
-            #    sub_list =  [slots_label_set.get_label(slot_id) for slot_id in slot_id_list[i]]
-            #    slot_labels_list.append(sub_list)
-
-            #self.out_slot_labels = np.append(self.out_slot_labels, slot_labels_list, axis=0)
-
-
-    def get_intent_metrics(self, preds, golden):
-        #acc = (preds == golden).mean()
-        #return {
-        #    "intent_acc": acc
-        #}
-        assert len(preds) == len(golden)
-
-
-        intents_tp = {};
-        intents_fp = {};
-        intents_fn = {};
-
-        for label in self.intent_label_set.get_labels():
-            intents_tp[label] = 0;
-            intents_fp[label] = 0;
-            intents_fn[label] = 0;
-
-        for pred, golden_per_query in zip(preds.tolist(), golden.tolist()):
-            pred_label = self.intent_label_set.get_label(pred)
-            golden_per_query_label = self.intent_label_set.get_label(golden_per_query)
-            if pred_label == golden_per_query_label:
-                intents_tp[golden_per_query_label] += 1;
-            else:
-                intents_fp[pred_label] += 1;
-                intents_fn[golden_per_query_label] += 1;                
-
-        total_tp_intent = 0;
-        total_fp_intent = 0;
-        total_fn_intent = 0;
-
-        for label in self.intent_label_set.get_labels():
-            total_tp_intent += intents_tp[label];
-            total_fp_intent += intents_fp[label];
-            total_fn_intent += intents_fn[label];
-
-            if intents_tp[label] != 0:
-                precision = intents_tp[label] / (intents_tp[label] + intents_fp[label]);
-                recall = intents_tp[label] / (intents_tp[label] + intents_fn[label]);
-            
-                # for each label metric
-                print("intent: {}, precision: {}, recall: {}\n".format(label, precision, recall));
-        
-        # for debug
-        overall_precision_intent = 0;
-        overall_recall_intent = 0;
-        if total_tp_intent != 0:
-            overall_precision_intent = total_tp_intent / (total_tp_intent + total_fp_intent);
-            overall_recall_intent = total_tp_intent / (total_tp_intent + total_fn_intent);
-
-        print("overall intent precision: {}, overall intent recall: {}".format(overall_precision_intent, overall_recall_intent));
-        
-        return {
-            "total_intent_precision": overall_precision_intent,
-            "total_intent_recall": overall_recall_intent
-        }
-
-    # for iob
-    #def get_intent_metrics(self, preds, golden):
-    #    #acc = (preds == golden).mean()
-    #    #return {
-    #    #    "intent_acc": acc
-    #    #}
-    #    assert len(preds) == len(golden)
-       
-    #    return {
-    #        "intent_precision": precision_score(preds, golden),
-    #        "intent_recall": recall_score(preds, golden)
-    #    }
-
-
-    def create_slot_arrays(self, pred_list):
-        # initailize each slot's result
-        slot_arrays={}
-        for label in self.slots_label_set.get_labels():
-            slot_arrays[label]=[]
-
-        current_slot_array = []
-        current_slot_tag = ''
-        for index, id in enumerate(pred_list):
-            word = self.slots_label_set.get_label(id)
-            if word != 'o':
-                if current_slot_tag != '':
-                    if current_slot_tag == word:
-                        current_slot_array.append(index)
-                    else:
-                        slot_arrays[current_slot_tag].append(current_slot_array)
-                        current_slot_array=[]
-                        current_slot_tag=word
-                else:
-                    current_slot_tag = word
-                    current_slot_array = []
-                    current_slot_array.append(index)
-            if (word == 'o' or index == len(pred_list)-1) and current_slot_tag != '':
-                slot_arrays[current_slot_tag].append(current_slot_array)
-                current_slot_tag=''
-                current_slot_array=[]
-            if word == 'o':
-                continue;
-        return slot_arrays;
-
-    def get_slot_metrics(self, preds, golden):
-        assert len(preds) == len(golden)
-
-
-        #initializat dictionary
-        slot_tp_tn_fn_counts = {}
-        for label in self.slots_label_set.get_labels():
-            slot_tp_tn_fn_counts[label+"_fn"]=0
-            slot_tp_tn_fn_counts[label+"_fp"]=0
-            slot_tp_tn_fn_counts[label+"_tp"]=0       
-
-        for pred, golden_per_query in zip(preds.tolist(), golden.tolist()):
-            preds_slot_array = self.create_slot_arrays(pred)
-            golden_slot_array = self.create_slot_arrays(golden_per_query)
-            query_fn = 0
-            query_fp = 0
-            for label in self.slots_label_set.get_labels():
-                golden_set=set(map(tuple, golden_slot_array[label]))
-                preds_set=set(map(tuple, preds_slot_array[label]))
-
-                # use set operator to check each span
-                tp_count = len(preds_set & golden_set)
-                fp_count = len(preds_set - golden_set)
-                fn_count = len(golden_set-preds_set)
-                slot_tp_tn_fn_counts[label+"_fn"]=slot_tp_tn_fn_counts[label+"_fn"]+fn_count
-                slot_tp_tn_fn_counts[label+"_fp"]=slot_tp_tn_fn_counts[label+"_fp"]+fp_count
-                slot_tp_tn_fn_counts[label+"_tp"]=slot_tp_tn_fn_counts[label+"_tp"]+tp_count
-                query_fn = query_fn+fn_count
-                query_fp = query_fp+fp_count
-
-    
-        total_tp_slot = 0;
-        total_fp_slot = 0;
-        total_fn_slot = 0;
-        for label in self.slots_label_set.get_labels():
-            total_tp_slot += slot_tp_tn_fn_counts[label+"_tp"];
-            total_fp_slot += slot_tp_tn_fn_counts[label+"_fp"];
-            total_fn_slot += slot_tp_tn_fn_counts[label+"_fn"];
-                
-            slot_metric = label+'\t'+ ': total_tp: '+str(slot_tp_tn_fn_counts[label+"_tp"])+', total_fp: '+str(slot_tp_tn_fn_counts[label+"_fp"])+', total_fn: '+str(slot_tp_tn_fn_counts[label+"_fn"]);
-            # for debug
-            print("slot metric\t{}".format(slot_metric))
-            
-        overall_precision_slot = 0;
-        overall_recall_slot = 0;
-
-        if total_tp_slot != 0:
-            overall_precision_slot = total_tp_slot / (total_tp_slot + total_fp_slot);
-            overall_recall_slot = total_tp_slot / (total_tp_slot + total_fn_slot);
-
-        return {
-             "total_slot_precision": overall_precision_slot,
-             "total_slot_recall": overall_recall_slot
-             #"slot_f1": f1_score(preds.tolist(), golden.tolist())
-        }
-
-
-
-        #preds_slot_array = self.create_slot_arrays(self, preds.tolist())
-        #golgden_slot_array = self.create_slot_arrays(self, golden.tolist())
-
-
-        #for pred, golden_per_query in zip(preds.tolist(), golden.tolist()):
-        #    golden_set=set(map(tuple, golden_slot_arrays[label]))
-        #            prediction_set=set(map(tuple, predicted_slot_arrays[label]))
-        #            tp_count = len(prediction_set & golden_set)
-        #            fp_count = len(prediction_set-golden_set)
-        #            fn_count = len(golden_set-prediction_set)
-        #            slot_tp_tn_fn_counts[label+"_fn"]=slot_tp_tn_fn_counts[label+"_fn"]+fn_count
-        #            slot_tp_tn_fn_counts[label+"_fp"]=slot_tp_tn_fn_counts[label+"_fp"]+fp_count
-        #            slot_tp_tn_fn_counts[label+"_tp"]=slot_tp_tn_fn_counts[label+"_tp"]+tp_count
-        #            query_fn = query_fn+fn_count
-        #            query_fp = query_fp+fp_count
-
-    # leave for iob
-    #def get_slot_metrics(self, preds, golden):
-    #    assert len(preds) == len(golden)
-    #    return {
-    #        "slot_precision": precision_score(preds.tolist(), golden.tolist()),
-    #        "slot_recall": recall_score(preds.tolist(), golden.tolist()),
-    #        "slot_f1": f1_score(preds.tolist(), golden.tolist())
-    #    }
-
-    def compute_metrics(self):
-        # checking the length is the same
-        assert len(self.intent_preds) == len(self.intent_golden) == len(self.slot_preds) == len(self.slot_golden)
-        results = {}
-
-        # library cannot calculate intent, find later
-        intent_result = self.get_intent_metrics(self.intent_preds, self.intent_golden)
-        slot_result = self.get_slot_metrics(self.slot_preds, self.slot_golden)
-        #sementic_result = get_sentence_frame_acc(self.intent_preds, self.intent_golden, self.slot_preds, self.slot_golden)
-
-        results.update(intent_result)
-        results.update(slot_result)
-        #results.update(sementic_result)
-
-        return results
-
 
 
 # for debug
@@ -953,7 +621,7 @@ if gpu_available:
 
 
 ###############
-#remote training data setup in learning below
+#training data setup in learning below
 ###############
 
 
@@ -972,7 +640,7 @@ val_dataloader = DataLoader(val_data, sampler=val_sampler, batch_size=batch_size
 
 
 ###############
-#remote training data setup in learning below
+#training data setup in learning above
 ###############
 
 
@@ -1361,9 +1029,6 @@ model = model.to(device)
 ###############
 
 
-###############
-# remote traningi parameter setup below
-###############
 
 #we print the model architecture and all model learnable parameters.
 def count_parameters(model):
@@ -1428,9 +1093,6 @@ if num_mb_val == 0:
     num_mb_val = 1
 
 
-###############
-# remote traningi parameter setup above
-###############
 
 # for debug
 #for i in range(len(val_x)):
@@ -1522,9 +1184,6 @@ for n in range(num_epochs):
     train_losses.append(avg_train_loss)
     
 
-    # initialize evaluation test object
-    evaluation_test = Evaluation(slots_label_set, intent_label_set)
-
     # Tell pytorch not to bother with constructing the compute graph during
     # the forward pass, since this is only needed for backprop (training).
     with torch.no_grad():
@@ -1585,8 +1244,6 @@ for n in range(num_epochs):
             # and make loss zero
             #intent_output, slot_output = model(mb_x, attention_mask=mb_m)
             intent_output,slot_output,intent_prob = model(mb_x, attention_mask=mb_m)
-            evaluation_test.add_intent_pred_and_golden(intent_output, mb_y)
-            evaluation_test.add_slot_pred_and_golden(slot_output, mb_z)
             val_loss += 0 / num_mb_val
             # for debug
             #print('evaluate label result {}'.format(slot_output))
@@ -1595,8 +1252,6 @@ for n in range(num_epochs):
         avg_val_loss = metric_average(val_loss, 'avg_val_loss')
         print ("Average validation loss after iteration %i: %f" % (n+1, avg_val_loss))
         val_losses.append(avg_val_loss)
-
-        print(' Validation metric after iteration {} : {}'.format(n+1, evaluation_test.compute_metrics()))
     
     end_time = time.time()
     epoch_mins, epoch_secs = epoch_time(start_time, end_time)

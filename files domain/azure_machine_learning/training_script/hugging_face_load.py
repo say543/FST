@@ -764,6 +764,10 @@ https://github.com/monologg/JointBERT
 # loss calculation
 #total_loss = intent_loss + coef * slot_loss (Change coef with --slot_loss_coef option)
 # (in yue's code, it defines two losses, one for intent and othe other for slot)
+# total_loss = intent_loss + slot_loss;
+# total_loss.backward() <= and sum them up to do backward propagation
+# in debugging mode, tensor(2.4028) + tensor(3.0916) = tensor(5.4944)
+# ? not sure how this backprog works  but internet also use single lost to backward propagate
 # https://msasg.visualstudio.com/LanguageUnderstanding/_git/Timex_Deep_Model?path=%2FTimexModelScripts%2FTimexModelScripts%2FBert_Email%2Fbert_intent_slot.py&version=GBmaster&_a=contents
 # define intent_logits class
 # drop out rate the same bert
@@ -781,7 +785,29 @@ https://github.com/monologg/JointBERT
 # ignore_index is ignored in function
 # not sure wy need this
 # https://github.com/monologg/JointBERT/blob/7497631c2065f3f7be853b893e0730676745e0fe/model/modeling_jointbert.py#L48 
+# evaluation
+# intent_logits.detach().cpu().numpy() generates array()
+#array([[ 2.39753183e-02, -1.00037996e-02,  2.51673833e-02,
+        -4.94064158e-03, -1.02473386e-02,  1.26954960e-02,
+        -1.67937279e-02,  6.12567812e-02,  2.03567557e-04,
+         2.56004222e-02,  6.15039468e-02],
+       [ 2.23806202e-02, -1.10518197e-02,  2.86248215e-02,
+        -3.70978750e-03, -1.03999898e-02,  1.11508286e-02,
+        -1.12427333e-02,  6.14888370e-02, -9.67073254e-04,
+         2.52279546e-02,  6.27490729e-02]])
+# each is np.array
+>>> np.append(a, b, axis=0)
+array([[1, 2],
+       [3, 4],
+       [2, 1],
+       [4, 3]])
+#np.argmax(c, axis=1)
+>>> np.argmax(c, axis=1)
+array([1, 1, 0, 0], dtype=int64)
+# intent has the first one
+# 
 
+#https://github.com/monologg/JointBERT/blob/7497631c2065f3f7be853b893e0730676745e0fe/trainer.py#L161
 
 
 # also has function to calculate metrics (itent, slot)
@@ -811,6 +837,54 @@ https://github.com/monologg/JointBERT
  #                       8[-1,-1]=-1.8137677
  #                       9[-1,-1]=-0.99997
  #                       10[-1,-1]=-1.389961
+
+
+
+
+
+# how to get tensor's value
+ # Consider using variable.item() instead for 0-dim tensors. For higher-dimensional variables, use variable.tolist().
+# https://discuss.pytorch.org/t/get-value-out-of-torch-cuda-float-tensor/2539/11
+
+
+
+
+# nn.linear
+#https://pytorch.org/docs/stable/generated/torch.nn.Linear.html
+
+
+
+# good paper
+#https://zhuanlan.zhihu.com/p/143123368
+
+
+
+#yue's joint intent and slot
+# not sure how this function works
+# ? get_lexicon_vector might be can be checked
+# https://msasg.visualstudio.com/LanguageUnderstanding/_git/Timex_Deep_Model?path=%2FTimexModelScripts%2FTimexModelScripts%2FBert_Email%2Fevaluate_bert.py&version=GBmaster&_a=contents
+# in another file, it is truly being used here
+# (by search function in repo)
+# https://msasg.visualstudio.com/LanguageUnderstanding/_search?action=contents&text=get_lexicon_vector&type=code&lp=code-Project&filters=ProjectFilters%7BLanguageUnderstanding%7DRepositoryFilters%7BTimex_Deep_Model%7D&pageSize=25&result=DefaultCollection%2FLanguageUnderstanding%2FTimex_Deep_Model%2FGBmaster%2F%2FTimexModelScripts%2FTimexModelScripts%2FTensorflow%2Fevaluate_model_hypertuning.py
+
+
+# evaluate_model()
+# do not go with batch size
+# [for slot]
+# each query then evaluate model to get output
+# predicted_labels_slot = list(map((lambda x: self.slot_dict_rev[x]), slot_result));
+# this also 1-d list
+# predicted_slot_arrays = self.create_slot_arrays_iob(predicted_labels_slot)
+# predicted_slot_arrays will output
+# key : contact_name , list : [[1,2], [3,4]]
+# 1-2 is the span to have contact name
+# golden_set=set(map(tuple, golden_slot_arrays[label]))
+# [[1,2], [3,4]] =>((1,2) , (3,4))
+# set is for type, map just tuple for each label's sublist
+# since set , order does not mater
+# python set operation
+#https://www.geeksforgeeks.org/python-set-operations-union-intersection-difference-symmetric-difference/
+# [for intent]
 
 
 # comment until here
