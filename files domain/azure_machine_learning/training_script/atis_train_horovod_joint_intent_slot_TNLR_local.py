@@ -112,8 +112,8 @@ from tokenizers import Encoding
 #from azureml.core import Workspace, Run, Dataset
 
 #df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TrainSet_small_012n02021v1.tsv', sep='\t', encoding="utf-8",
-#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/atis_train.tsv', sep='\t', encoding="utf-8",
-df = pd.read_csv('E:/azure_ml_notebook/azureml_data/atis_train_ten.tsv', sep='\t', encoding="utf-8",
+df = pd.read_csv('E:/azure_ml_notebook/azureml_data/atis_train.tsv', sep='\t', encoding="utf-8",
+#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/atis_train_ten.tsv', sep='\t', encoding="utf-8",
     keep_default_na=False,
     dtype={
     'MessageId': object, 'Frequency': object, 'ConversationContext': object, 'SelectionIgnore': object})
@@ -2221,7 +2221,7 @@ optimizer_grouped_parameters = [
 learning_rate = 1e-5
 eps=1e-8
 optimizer = AdamW(optimizer_grouped_parameters, lr=learning_rate, eps=eps)
-num_epochs = 2
+num_epochs = 5
 total_steps = len(train_dataloader) * num_epochs
 scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=0, num_training_steps=total_steps)
 

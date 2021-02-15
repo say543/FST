@@ -59,8 +59,8 @@ from tokenizers import Encoding
 #from azureml.core import Workspace, Run, Dataset
 
 #df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TrainSet_small_012n02021v1.tsv', sep='\t', encoding="utf-8",
-#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/atis_train.tsv', sep='\t', encoding="utf-8",
-df = pd.read_csv('E:/azure_ml_notebook/azureml_data/atis_train_ten.tsv', sep='\t', encoding="utf-8",
+df = pd.read_csv('E:/azure_ml_notebook/azureml_data/atis_train.tsv', sep='\t', encoding="utf-8",
+#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/atis_train_ten.tsv', sep='\t', encoding="utf-8",
     keep_default_na=False,
     dtype={
     'MessageId': object, 'Frequency': object, 'ConversationContext': object, 'SelectionIgnore': object})
@@ -1694,7 +1694,8 @@ print("load model done: !")
 ##################################################
 
 
-output_dir = './outputs/'
+#output_dir = './outputs/'
+output_dir = '../outputs_temp_load_v1_02152021v1/'
 import os, argparse
 # if folder does not exist then create
 if not os.path.exists(output_dir):
@@ -1877,7 +1878,7 @@ with torch.no_grad():
         #print('evaluate label result {}'.format(slot_output))	
 
     # my calculation        	
-    #print(' Validation metric : {}'.format(evaluation_test.compute_metrics()))
+    print(' Validation metric : {}'.format(evaluation_test.compute_metrics()))
     # IOB calculation
     print(' Validation metric Iob: {}'.format(evaluation_test_iob.compute_metrics()))
 
