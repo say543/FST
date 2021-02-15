@@ -112,10 +112,17 @@ from tokenizers import Encoding
 #from azureml.core import Workspace, Run, Dataset
 
 #df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TrainSet_small_012n02021v1.tsv', sep='\t', encoding="utf-8",
-df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TrainSet_ten_01202021v1.tsv', sep='\t', encoding="utf-8",
+#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/atis_train.tsv', sep='\t', encoding="utf-8",
+df = pd.read_csv('E:/azure_ml_notebook/azureml_data/atis_train_ten.tsv', sep='\t', encoding="utf-8",
     keep_default_na=False,
     dtype={
     'MessageId': object, 'Frequency': object, 'ConversationContext': object, 'SelectionIgnore': object})
+
+
+#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/atis_train_ten.tsv', sep='\t', encoding="utf-8",
+#    keep_default_na=False,
+#    dtype={
+#    'MessageId': object, 'Frequency': object, 'ConversationContext': object, 'SelectionIgnore': object})
 
 
 # for debug
@@ -173,16 +180,19 @@ IntListList = List[IntList] # A List of List of token_ids, e.g. a Batch
 
 import itertools
 class LabelSet:
-    def __init__(self, labels: List[str], tokenizer, useIob=False):
+    def __init__(self, labels: List[str], tokenizer, untagged_id = 0, useIob=False):
         self.labels_to_id = {}
         self.ids_to_label = {}
+        self.untagged_id = untagged_id
 
-        self.labels_to_id["o"] = 0
-        self.ids_to_label[0] = "o"
-        num = 1
+        self.labels_to_id["o"] = untagged_id
+        self.ids_to_label[untagged_id] = "o"
+
+        num = 0
         for label in labels:
             if label == "o":
                 print("skip:{}".format(label))
+                num = num +1 
                 continue
             self.labels_to_id[label] = num
             self.ids_to_label[num] = label
@@ -209,7 +219,7 @@ class LabelSet:
         return self.labels_to_id["o"]
 
     def get_untagged_label(self):
-        return self.ids_to_label[0]
+        return self.ids_to_label[self.untagged_id]
 
     def get_id(self, label):
         return self.labels_to_id[label]
@@ -303,7 +313,52 @@ class LabelSet:
             preprocessed = preprocessed[:-1] + ' ' + punc;
         return preprocessed;
 
-    def preprocessRawAnnotation(self, query, annotation_input, isTrain=True):
+
+    def preprocessIOBAnnotation(self, query, annotation_input, isTrain=True):
+        new_annotation_input = ""
+        #  convert_examples_to_features
+        # _create_examples
+        try:
+            query_original = query.strip().lower();
+            query_original_words = query_original.split()
+            annotation_original = annotation_input.strip().lower();
+            annotation_original_labels =  annotation_original.split()
+        
+            assert len(query_original_words) == len(annotation_original_labels)
+
+
+            # ? not sure how this value works
+            pad_token_label_id = -100
+            tokens = []
+            slot_labels = []
+            for word, label in zip(query_original_words, annotation_original_labels):
+                word_tokens = self.tokenizer.tokenize(word)
+                # ? not sure if this needed
+                if not word_tokens: 
+                    raise Exception(query, 'unsopported tokens in word')
+                    #word_t word_tokens:
+                    #word_tokens = [unk_token]  # For handling the bad-encoded word
+
+                tokens.extend(word_tokens)
+                # do not use pad_token_label_id from ignore_index
+                #slot_labels_ids.extend([int(slot_label)] + [pad_token_label_id] * (len(word_tokens) - 1))
+                for i in range(len(word_tokens)):
+                    slot_labels.append(label)
+
+
+            return ' '.join([str(token) for token in tokens]), ' '.join([str(slot_label) for slot_label in slot_labels])
+        except:
+            # print stack traice
+            traceback.print_exc()
+            print("<IOB> skipped query: {} and pair: {}".format(query, annotation_input))
+            return '', '' 
+            #continue;
+
+    def preprocessRawAnnotation(self, query, annotation_input, isTrain=True, useIob=False):
+
+        if useIob is True:
+            return self.preprocessIOBAnnotation(query, annotation_input, isTrain=True)
+
         pattern = r'<(?P<name>\w+)>(?P<entity>[^<]+)</(?P=name)>';
 
         try:
@@ -362,107 +417,136 @@ class LabelSet:
             return '', '' 
             #continue;
 
-slots = [
-    "o",
-    "absolute_location",
-    "added_text_temp",
-    "attachment",
-    "attribute_type",
-    "audio_device_type",
-    "availability",
-    "contact_attribute",
-    "contact_name",
-    "contact_name_type",
-    "data_source",
-    "data_source_name",
-    "data_source_type",
-    "date",
-    "deck_location",
-    "deck_name",
-    "destination_calendar",
-    "destination_platform",
-    "duration",
-    "end_date",
-    "end_time",
-    "feedback_subject",
-    "feedback_type",
-    "file_action",
-    "file_action_context",
-    "file_filerecency",
-    "file_folder",
-    "file_keyword",
-    "file_name",
-    "file_recency",
-    "file_type",
-    "from_contact_name",
-    "from_relationship_name",
-    "implicit_location",
-    "job_title",
-    "key",
-    "meeting_room",
-    "meeting_starttime",
-    "meeting_title",
-    "meeting_type",
-    "mergemsg",
-    "message",
-    "message_category",
-    "message_type",
-    "move_earlier_time",
-    "move_later_time",
-    "numerical_increment",
-    "office_location",
-    "order_ref",
-    "org_name",
-    "original_contact_name",
-    "original_end_date",
-    "original_end_time",
-    "original_start_date",
-    "original_start_time",
-    "original_title",
-    "people_attribute",
-    "phone_number",
-    "position_ref",
-    "project_name",
-    "pronoun",
-    "quantity",
-    "relationship_name",
-    "scenario",
-    "search_query",
-    "setting_level",
-    "setting_type",
-    "share_target",
-    "sharetarget_name",
-    "sharetarget_type",
-    "skill_name",
-    "slide_content_type",
-    "slide_name",
-    "slide_number",
-    "slot_attribute",
-    "source_platform",
-    "speed_dial",
-    "start_date",
-    "start_time",
-    "teammeeting_quantifier",
-    "teammeeting_starttime",
-    "teammeeting_title",
-    "teamspace_channel",
-    "teamspace_keyword",
-    "teamspace_menu",
-    "teamspace_tab",
-    "teamspace_team",
-    "teamsuser_activitytype",
-    "teamsuser_status",
-    "teamsuser_topic",
-    "time",
-    "title",
-    "to_contact_name",
-    "volume_level"
-]
 
+slots = [
+    #minic atis
+    "PAD",
+    "UNK",
+    "o",
+    "B-aircraft_code",
+    "B-airline_code",
+    "B-airline_name",
+    "I-airline_name",
+    "B-airport_code",
+    "B-airport_name",
+    "I-airport_name",
+    "B-arrive_date.date_relative",
+    "B-arrive_date.day_name",
+    "B-arrive_date.day_number",
+    "I-arrive_date.day_number",
+    "B-arrive_date.month_name",
+    "B-arrive_date.today_relative",
+    "B-arrive_time.end_time",
+    "I-arrive_time.end_time",
+    "B-arrive_time.period_mod",
+    "B-arrive_time.period_of_day",
+    "I-arrive_time.period_of_day",
+    "B-arrive_time.start_time",
+    "I-arrive_time.start_time",
+    "B-arrive_time.time",
+    "I-arrive_time.time",
+    "B-arrive_time.time_relative",
+    "I-arrive_time.time_relative",
+    "B-city_name",
+    "I-city_name",
+    "B-class_type",
+    "I-class_type",
+    "B-connect",
+    "B-cost_relative",
+    "I-cost_relative",
+    "B-day_name",
+    "B-day_number",
+    "B-days_code",
+    "B-depart_date.date_relative",
+    "B-depart_date.day_name",
+    "B-depart_date.day_number",
+    "I-depart_date.day_number",
+    "B-depart_date.month_name",
+    "B-depart_date.today_relative",
+    "I-depart_date.today_relative",
+    "B-depart_date.year",
+    "B-depart_time.end_time",
+    "I-depart_time.end_time",
+    "B-depart_time.period_mod",
+    "B-depart_time.period_of_day",
+    "I-depart_time.period_of_day",
+    "B-depart_time.start_time",
+    "I-depart_time.start_time",
+    "B-depart_time.time",
+    "I-depart_time.time",
+    "B-depart_time.time_relative",
+    "I-depart_time.time_relative",
+    "B-economy",
+    "I-economy",
+    "B-fare_amount",
+    "I-fare_amount",
+    "B-fare_basis_code",
+    "I-fare_basis_code",
+    "B-flight_days",
+    "B-flight_mod",
+    "I-flight_mod",
+    "B-flight_number",
+    "B-flight_stop",
+    "I-flight_stop",
+    "B-flight_time",
+    "I-flight_time",
+    "B-fromloc.airport_code",
+    "B-fromloc.airport_name",
+    "I-fromloc.airport_name",
+    "B-fromloc.city_name",
+    "I-fromloc.city_name",
+    "B-fromloc.state_code",
+    "B-fromloc.state_name",
+    "I-fromloc.state_name",
+    "B-meal",
+    "B-meal_code",
+    "I-meal_code",
+    "B-meal_description",
+    "I-meal_description",
+    "B-mod",
+    "B-month_name",
+    "B-or",
+    "B-period_of_day",
+    "B-restriction_code",
+    "I-restriction_code",
+    "B-return_date.date_relative",
+    "I-return_date.date_relative",
+    "B-return_date.day_name",
+    "B-return_date.day_number",
+    "B-return_date.month_name",
+    "B-return_date.today_relative",
+    "I-return_date.today_relative",
+    "B-return_time.period_mod",
+    "B-return_time.period_of_day",
+    "B-round_trip",
+    "I-round_trip",
+    "B-state_code",
+    "B-state_name",
+    "B-stoploc.airport_name",
+    "B-stoploc.city_name",
+    "I-stoploc.city_name",
+    "B-stoploc.state_code",
+    "B-time",
+    "I-time",
+    "B-time_relative",
+    "B-today_relative",
+    "I-today_relative",
+    "B-toloc.airport_code",
+    "B-toloc.airport_name",
+    "I-toloc.airport_name",
+    "B-toloc.city_name",
+    "I-toloc.city_name",
+    "B-toloc.country_name",
+    "B-toloc.state_code",
+    "B-toloc.state_name",
+    "I-toloc.state_name",
+    "B-transport_type",
+    "I-transport_type"
+]
 
 # map all slots to lower case
 slots_label_set = LabelSet(labels=map(str.lower,slots), 
-                            tokenizer =fast_tokenizer)
+                            tokenizer =fast_tokenizer, untagged_id = 2)
 
 class IntentLabelSet:
     def __init__(self, labels: List[str]):
@@ -491,143 +575,27 @@ class IntentLabelSet:
 # ? multi turn intent how to incorporate extra features is not yet decided
 intents = [
     "x",
-    "accept_meeting",
-    "add_attendee",
-    "add_contact",
-    "add_more",
-    "add_to_call",
-    "answer_phone",
-    "appreciation",
-    "assign_nickname",
-    "block_time",
-    "calendar_notsure",
-    "calendar_other",
-    "call_back",
-    "call_voice_mail",
-    "cancel",
-    "change_calendar_entry",
-    "check_availability",
-    "check_im_status",
-    "close_setting",
-    "communication_other",
-    "confirm",
-    "connect_to_meeting",
-    "contact_meeting_attendees",
-    "create_calendar_entry",
-    "decline_meeting",
-    "delete_calendar_entry",
-    "depreciation",
-    "devicecontrol_other",
-    "disconnect_from_meeting",
-    "end_call",
-    "feedback_other",
-    "file_download",
-    "file_navigate",
-    "file_open",
-    "file_other",
-    "file_search",
-    "file_share",
-    "find_calendar_entry",
-    "find_calendar_entry_followup",
-    "find_calendar_when",
-    "find_calendar_where",
-    "find_calendar_who",
-    "find_calendar_why",
-    "find_contact",
-    "find_duration",
-    "find_meeting_insight",
-    "find_meeting_room",
-    "finish_task",
-    "forwarding_off",
-    "forwarding_on",
-    "forwarding_status",
-    "get_notifications",
-    "go_back",
-    "go_forward",
-    "goto_slide",
-    "help",
-    "hide_whiteboard",
-    "hold",
-    "ignore_incoming",
-    "ignore_with_message",
-    "lock",
-    "make_call",
-    "mark",
-    "mark_tentative",
-    "mute",
-    "mute_participant",
-    "navigate_calendar",
-    "next_slide",
-    "open_setting",
-    "other",
-    "press_key",
-    "previous_slide",
-    "query_last_text",
-    "query_message",
-    "query_sender",
-    "query_speeddial",
-    "redial",
-    "reject",
-    "repeat",
-    "repeat_slowly",
-    "repeat_user",
-    "reply",
-    "resume",
-    "retry",
-    "search_messages",
-    "search_org_chart",
-    "search_people_attribute",
-    "search_people_by_attribute",
-    "search_people_by_name",
-    "select_any",
-    "select_item",
-    "select_more",
-    "select_none",
-    "select_other",
-    "send_text",
-    "send_text_meeting",
-    "set_default_device",
-    "set_speeddial",
-    "set_volume",
-    "show_next",
-    "show_previous",
-    "show_whiteboard",
-    "slide_back",
-    "speakerphone_off",
-    "speakerphone_on",
-    "start_over",
-    "start_presenting",
-    "stop",
-    "stop_presenting",
-    "submit_feedback",
-    "teamsaction_other",
-    "teamspace_addtoteam",
-    "teamspace_checkmember",
-    "teamspace_createteam",
-    "teamspace_favorite",
-    "teamspace_follow",
-    "teamspace_help",
-    "teamspace_jointeam",
-    "teamspace_navigate",
-    "teamspace_removemember",
-    "teamspace_search",
-    "teamspace_sharechannel",
-    "teamspace_sharetab",
-    "teamspace_showhotkey",
-    "teamspace_showtab",
-    "teamspace_unfavorite",
-    "teamspace_unfollow",
-    "teamsuser_checkorg",
-    "teamsuser_openchat",
-    "teamsuser_setstatus",
-    "teamsuser_showactivity",
-    "time_remaining",
-    "transfer",
-    "turn_down",
-    "turn_up",
-    "unmute",
-    "volume_down",
-    "volume_up"
+    "atis_abbreviation",
+    "atis_aircraft",
+    "atis_aircraft#atis_flight",
+    "atis_airfare",
+    "atis_airline",
+    "atis_airline#atis_flight_no",
+    "atis_airport",
+    "atis_capacity",
+    "atis_cheapest",
+    "atis_city",
+    "atis_distance",
+    "atis_flight",
+    "atis_flight#atis_airfare",
+    "atis_flight_no",
+    "atis_flight_time",
+    "atis_ground_fare",
+    "atis_ground_service",
+    "atis_ground_service#atis_ground_fare",
+    "atis_meal",
+    "atis_quantity",
+    "atis_restriction"
 ]
 
 
@@ -1533,7 +1501,7 @@ for i, row in df.iterrows():
 
     # invalid query will return empty string
     # here using annotation to extract the real query
-    text, tag_string  = slots_label_set.preprocessRawAnnotation(query, slot)
+    text, tag_string  = slots_label_set.preprocessRawAnnotation(query, slot, useIob=True)
 
     if text == '' and tag_string == '':
         print("query_with_slot_issue\t{}\t{}".format(query, slot))
@@ -1545,7 +1513,12 @@ for i, row in df.iterrows():
     intent_labels.append(intent_label_set.get_ids_from_label(intent.lower()))
 
     #append labels for [CLS] / [SEP] to tag_string
-    tag_string =  slots_label_set.get_untagged_label() + ' '+ tag_string + ' ' + slots_label_set.get_untagged_label()
+    #tag_string =  slots_label_set.get_untagged_label() + ' '+ tag_string + ' ' + slots_label_set.get_untagged_label()
+    # v1: 
+    # CLS , SEP label = 0
+    # B-label extend 
+    tag_string =  slots_label_set.get_label(0) + ' '+ tag_string + ' ' + slots_label_set.get_label(0)
+
 
     # replcae by class's output word string
     text_id = fast_tokenizer.encode(text, max_length=300, padding='max_length', truncation=True)
@@ -1573,7 +1546,9 @@ for i, row in df.iterrows():
             labels_for_text_id.append(aligned_label_ids[i])
         else:
             # padding, add label as zero as default
-            labels_for_text_id.append(slots_label_set.get_untagged_id())
+            #labels_for_text_id.append(slots_label_set.get_untagged_id())
+            # padding add pad id
+            labels_for_text_id.append(slots_label_set.get_id('pad'))
     labels_for_text_ids.append(labels_for_text_id)
 
 
@@ -2246,7 +2221,7 @@ optimizer_grouped_parameters = [
 learning_rate = 1e-5
 eps=1e-8
 optimizer = AdamW(optimizer_grouped_parameters, lr=learning_rate, eps=eps)
-num_epochs = 5
+num_epochs = 2
 total_steps = len(train_dataloader) * num_epochs
 scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=0, num_training_steps=total_steps)
 
@@ -2560,14 +2535,29 @@ if hvd.rank() == 0:
 # for local test
 if True:
 
-    out_dir = './outputs'
+    out_dir = './outputs/'
     import os, argparse
     # if folder does not exist then create
     if not os.path.exists(out_dir):
         os.makedirs(out_dir)
     
     model_to_save = model.module if hasattr(model, 'module') else model
-    
+
+
+    # trying to do self load buy fail
+    print("self reload model testing...")
+    #normal pytroch model bin
+    model_to_save.save_pretrained(out_dir)
+    fast_tokenizer.save_pretrained(out_dir)
+    #torch.save(model, os.path.join(out_dir, 'model.pt'))
+    # load function
+    model_to_load = DistilBertForTokenClassificationFilesDomain.from_pretrained(out_dir+'pytorch_model.bin', 
+        config=bert_config,
+        num_intent_labels=num_intent_labels,
+        num_slot_labels=num_slot_labels)
+    print("self reload model testing done!")
+
+
     # save onnx
     # Tokenizing input text
     text = "a visually stunning rumination on love"

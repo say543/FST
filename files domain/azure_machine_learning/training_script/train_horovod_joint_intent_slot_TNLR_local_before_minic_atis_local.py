@@ -111,11 +111,11 @@ from tokenizers import Encoding
 
 #from azureml.core import Workspace, Run, Dataset
 
-#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TrainSet_small_012n02021v1.tsv', sep='\t', encoding="utf-8",
-df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TrainSet_ten_01202021v1.tsv', sep='\t', encoding="utf-8",
-    keep_default_na=False,
-    dtype={
-    'MessageId': object, 'Frequency': object, 'ConversationContext': object, 'SelectionIgnore': object})
+# ouput only three column
+#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/files_slot_training_small.tsv', sep='\t', encoding="utf-8")
+df = pd.read_csv('E:/azure_ml_notebook/azureml_data/files_slot_training_ten.tsv', sep='\t', encoding="utf-8")
+#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/files_slot_training_single.tsv', sep='\t', encoding="utf-8")
+#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/files_slot_training.tsv', sep='\t', encoding="utf-8")
 
 
 # for debug
@@ -362,103 +362,27 @@ class LabelSet:
             return '', '' 
             #continue;
 
-slots = [
-    "o",
-    "absolute_location",
-    "added_text_temp",
-    "attachment",
-    "attribute_type",
-    "audio_device_type",
-    "availability",
-    "contact_attribute",
-    "contact_name",
-    "contact_name_type",
-    "data_source",
-    "data_source_name",
-    "data_source_type",
+slots = ["o", 
+    "file_name", 
+    "file_type", 
+    "data_source", 
+    "contact_name", 
+    "to_contact_name",
+    "file_keyword",
     "date",
-    "deck_location",
-    "deck_name",
-    "destination_calendar",
-    "destination_platform",
-    "duration",
-    "end_date",
-    "end_time",
-    "feedback_subject",
-    "feedback_type",
+    "time",
+    "meeting_starttime",
     "file_action",
     "file_action_context",
-    "file_filerecency",
-    "file_folder",
-    "file_keyword",
-    "file_name",
-    "file_recency",
-    "file_type",
-    "from_contact_name",
-    "from_relationship_name",
-    "implicit_location",
-    "job_title",
-    "key",
-    "meeting_room",
-    "meeting_starttime",
-    "meeting_title",
-    "meeting_type",
-    "mergemsg",
-    "message",
-    "message_category",
-    "message_type",
-    "move_earlier_time",
-    "move_later_time",
-    "numerical_increment",
-    "office_location",
-    "order_ref",
-    "org_name",
-    "original_contact_name",
-    "original_end_date",
-    "original_end_time",
-    "original_start_date",
-    "original_start_time",
-    "original_title",
-    "people_attribute",
-    "phone_number",
     "position_ref",
-    "project_name",
-    "pronoun",
-    "quantity",
-    "relationship_name",
-    "scenario",
-    "search_query",
-    "setting_level",
-    "setting_type",
-    "share_target",
-    "sharetarget_name",
+    "order_ref",
+    "file_recency",
     "sharetarget_type",
-    "skill_name",
-    "slide_content_type",
-    "slide_name",
-    "slide_number",
-    "slot_attribute",
-    "source_platform",
-    "speed_dial",
-    "start_date",
-    "start_time",
-    "teammeeting_quantifier",
-    "teammeeting_starttime",
-    "teammeeting_title",
-    "teamspace_channel",
-    "teamspace_keyword",
-    "teamspace_menu",
-    "teamspace_tab",
-    "teamspace_team",
-    "teamsuser_activitytype",
-    "teamsuser_status",
-    "teamsuser_topic",
-    "time",
-    "title",
-    "to_contact_name",
-    "volume_level"
-]
-
+    "sharetarget_name",
+    "file_folder",
+    "data_source_name",
+    "data_source_type",
+    "attachment"]
 
 # map all slots to lower case
 slots_label_set = LabelSet(labels=map(str.lower,slots), 
@@ -490,145 +414,17 @@ class IntentLabelSet:
 
 # ? multi turn intent how to incorporate extra features is not yet decided
 intents = [
-    "x",
-    "accept_meeting",
-    "add_attendee",
-    "add_contact",
-    "add_more",
-    "add_to_call",
-    "answer_phone",
-    "appreciation",
-    "assign_nickname",
-    "block_time",
-    "calendar_notsure",
-    "calendar_other",
-    "call_back",
-    "call_voice_mail",
-    "cancel",
-    "change_calendar_entry",
-    "check_availability",
-    "check_im_status",
-    "close_setting",
-    "communication_other",
-    "confirm",
-    "connect_to_meeting",
-    "contact_meeting_attendees",
-    "create_calendar_entry",
-    "decline_meeting",
-    "delete_calendar_entry",
-    "depreciation",
-    "devicecontrol_other",
-    "disconnect_from_meeting",
-    "end_call",
-    "feedback_other",
-    "file_download",
-    "file_navigate",
-    "file_open",
+    "file_search", 
+    "file_open", 
+    "file_share", 
+    "file_download", 
     "file_other",
-    "file_search",
-    "file_share",
-    "find_calendar_entry",
-    "find_calendar_entry_followup",
-    "find_calendar_when",
-    "find_calendar_where",
-    "find_calendar_who",
-    "find_calendar_why",
-    "find_contact",
-    "find_duration",
-    "find_meeting_insight",
-    "find_meeting_room",
-    "finish_task",
-    "forwarding_off",
-    "forwarding_on",
-    "forwarding_status",
-    "get_notifications",
-    "go_back",
-    "go_forward",
-    "goto_slide",
-    "help",
-    "hide_whiteboard",
-    "hold",
-    "ignore_incoming",
-    "ignore_with_message",
-    "lock",
-    "make_call",
-    "mark",
-    "mark_tentative",
-    "mute",
-    "mute_participant",
-    "navigate_calendar",
-    "next_slide",
-    "open_setting",
-    "other",
-    "press_key",
-    "previous_slide",
-    "query_last_text",
-    "query_message",
-    "query_sender",
-    "query_speeddial",
-    "redial",
+    "file_navigate",
+    "cancel",
+    "confirm",
     "reject",
-    "repeat",
-    "repeat_slowly",
-    "repeat_user",
-    "reply",
-    "resume",
-    "retry",
-    "search_messages",
-    "search_org_chart",
-    "search_people_attribute",
-    "search_people_by_attribute",
-    "search_people_by_name",
-    "select_any",
-    "select_item",
-    "select_more",
     "select_none",
-    "select_other",
-    "send_text",
-    "send_text_meeting",
-    "set_default_device",
-    "set_speeddial",
-    "set_volume",
-    "show_next",
-    "show_previous",
-    "show_whiteboard",
-    "slide_back",
-    "speakerphone_off",
-    "speakerphone_on",
-    "start_over",
-    "start_presenting",
-    "stop",
-    "stop_presenting",
-    "submit_feedback",
-    "teamsaction_other",
-    "teamspace_addtoteam",
-    "teamspace_checkmember",
-    "teamspace_createteam",
-    "teamspace_favorite",
-    "teamspace_follow",
-    "teamspace_help",
-    "teamspace_jointeam",
-    "teamspace_navigate",
-    "teamspace_removemember",
-    "teamspace_search",
-    "teamspace_sharechannel",
-    "teamspace_sharetab",
-    "teamspace_showhotkey",
-    "teamspace_showtab",
-    "teamspace_unfavorite",
-    "teamspace_unfollow",
-    "teamsuser_checkorg",
-    "teamsuser_openchat",
-    "teamsuser_setstatus",
-    "teamsuser_showactivity",
-    "time_remaining",
-    "transfer",
-    "turn_down",
-    "turn_up",
-    "unmute",
-    "volume_down",
-    "volume_up"
-]
+    "select_more"]
 
 
 intent_label_set = IntentLabelSet(labels=map(str.lower,intents))
@@ -1505,31 +1301,14 @@ labels_for_text_ids = []
 for i, row in df.iterrows():
     
 
-    query = row['MessageText']
+    query = row['query']
 
     
-    intent = row['JudgedIntent']
+    intent = row['intent']
 
-    slot = row['JudgedConstraints']
+    slot = row['QueryXml']
 	# remove head and end spaces 
     slot = slot.strip()
-
-
-    # ignore multi turn queries
-    conversationContext = row['ConversationContext']
-
-    if  (conversationContext.lower().find('previous') != -1 or 
-        conversationContext.lower().find('task') != -1 or 
-        conversationContext.lower().find('user') != -1):
-        print("multiturn query\t{}\t{}".format(row['ConversationId'], query))
-        continue
-
-    # filter invalid intent query
-    try:
-        intent_label_set.get_ids_from_label(intent.lower())
-    except KeyError:
-         print("wroing intent query \t{}\t{}".format(query, intent))
-         continue
 
     # invalid query will return empty string
     # here using annotation to extract the real query
@@ -1541,8 +1320,7 @@ for i, row in df.iterrows():
 
 
     # only if it is valid string for slot then add intent label
-    # using low case slot to lookup
-    intent_labels.append(intent_label_set.get_ids_from_label(intent.lower()))
+    intent_labels.append(intent_label_set.get_ids_from_label(intent))
 
     #append labels for [CLS] / [SEP] to tag_string
     tag_string =  slots_label_set.get_untagged_label() + ' '+ tag_string + ' ' + slots_label_set.get_untagged_label()

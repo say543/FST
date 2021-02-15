@@ -758,6 +758,11 @@ https://github.com/monologg/JointBERT
 #https://github.com/monologg/JointBERT/blob/7497631c2065f3f7be853b893e0730676745e0fe/trainer.py#L87
 # for self.bert, providng token_type_ids
 # ? for my setting and yue's setting we do not do that might be uncessary
+# it is necessary when calling bertModel
+#  0 for the first part, 1 for the second part
+# ? but question answer might need it ?
+# https://huggingface.co/transformers/glossary.html
+# https://huggingface.co/transformers/model_doc/bert.html
 #https://github.com/monologg/JointBERT/blob/7497631c2065f3f7be853b893e0730676745e0fe/model/modeling_jointbert.py#L24
 # [0] for sequence output (token classfication)
 # [1] for intent classficaition output (sequence classfication)
@@ -785,6 +790,11 @@ https://github.com/monologg/JointBERT
 # ignore_index is ignored in function
 # not sure wy need this
 # https://github.com/monologg/JointBERT/blob/7497631c2065f3f7be853b893e0730676745e0fe/model/modeling_jointbert.py#L48 
+# word_tokens = [unk_token]  # For handling the bad-encoded word
+# ? not sure whether we need to hanlde this or not, or check yue's code
+# ? can add test ihe futurue
+# https://github.com/monologg/JointBERT/blob/7497631c2065f3f7be853b893e0730676745e0fe/data_loader.py#L148
+
 # evaluation
 # intent_logits.detach().cpu().numpy() generates array()
 #array([[ 2.39753183e-02, -1.00037996e-02,  2.51673833e-02,
@@ -806,7 +816,6 @@ array([[1, 2],
 array([1, 1, 0, 0], dtype=int64)
 # intent has the first one
 # 
-
 #https://github.com/monologg/JointBERT/blob/7497631c2065f3f7be853b893e0730676745e0fe/trainer.py#L161
 
 
@@ -906,7 +915,7 @@ array([1, 1, 0, 0], dtype=int64)
 # This way, we train our additional layer/s and also change (fine-tune) the BERTs weights.
 # below link using the seocnd 
 # [1] : pool output , for sequence claissfcaiotn
-# [0]: sequence outpu,t for token claasfication
+# [0]: sequence output (miusleading name) for token claasfication
 # https://www.kaggle.com/questions-and-answers/86510
 #Let's take an example of "You are a kaggle kernels master".
 #Before passing it to bert model you need to add [CLS] token in the begining and [SEP] token at the end of the sentence.

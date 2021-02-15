@@ -11,16 +11,12 @@ import re;
 import codecs;
 import string;
 import traceback
-# install package for calculation
-# https://github.com/chakki-works/seqeval
-# only support IOB format....
-from seqeval.metrics import precision_score, recall_score, f1_score
 
 ###############
 #remote
 ###############
 
-'''
+
 import torch
 import torch.nn as nn
 from torch.nn import CrossEntropyLoss
@@ -79,20 +75,23 @@ TNLR_model_file_name = TNLR_model.download()[0]
 # for original data: CSV
 #df = pd.read_csv(file_name)
 # for files doamin data : tsv
-df = pd.read_csv(file_name, sep='\t', encoding="utf-8")
+df = pd.read_csv(file_name, sep='\t', encoding="utf-8",
+    keep_default_na=False,
+    dtype={
+    'MessageId': object, 'Frequency': object, 'ConversationContext': object, 'SelectionIgnore': object})
+
 
 
 # for debug
 print('top head data {}'.format(df.head()))
-'''
+
 
 ###############
 #local below
 ###############
 
-
+'''
 import torch
-import torch.nn as nn
 from torch.utils.data import TensorDataset, DataLoader
 from torch.utils.data.distributed import DistributedSampler
 
@@ -111,11 +110,9 @@ from tokenizers import Encoding
 
 #from azureml.core import Workspace, Run, Dataset
 
-#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TrainSet_small_012n02021v1.tsv', sep='\t', encoding="utf-8",
-df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TrainSet_ten_01202021v1.tsv', sep='\t', encoding="utf-8",
-    keep_default_na=False,
-    dtype={
-    'MessageId': object, 'Frequency': object, 'ConversationContext': object, 'SelectionIgnore': object})
+# ouput only three column
+df = pd.read_csv('E:/azure_ml_notebook/azureml_data/files_slot_training_small.tsv', sep='\t', encoding="utf-8")
+#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/files_slot_training_single.tsv', sep='\t', encoding="utf-8")
 
 
 # for debug
@@ -137,7 +134,7 @@ print('top head data {}'.format(df.head()))
 #label_values = list(label_counts.index)
 #order = list(pd.DataFrame(df['Product_Label'].value_counts()).index)
 #label_values = [l for _,l in sorted(zip(order, label_values))]
-
+'''
 
 ###############
 #local above
@@ -210,6 +207,7 @@ class LabelSet:
 
     def get_untagged_label(self):
         return self.ids_to_label[0]
+
 
     def get_id(self, label):
         return self.labels_to_id[label]
@@ -459,7 +457,6 @@ slots = [
     "volume_level"
 ]
 
-
 # map all slots to lower case
 slots_label_set = LabelSet(labels=map(str.lower,slots), 
                             tokenizer =fast_tokenizer)
@@ -477,7 +474,7 @@ class IntentLabelSet:
 
     def get_labels(self):
         return self.labels_to_id
-
+    
     def get_id(self, label):
         return self.labels_to_id[label]
 
@@ -632,534 +629,6 @@ intents = [
 
 
 intent_label_set = IntentLabelSet(labels=map(str.lower,intents))
-
-
-
-# not yet finished
-'''
-class EvaluationFromYue():
-    def __init__(self, slots_label_set, intent_label_set, useIob=False):
-        self.useIob = useIob;
-        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu");
-        # no need
-        #self.preprocess_driver = Preprocess_Driver_Bert(self.useIob);
-        #self.slot_dict = self.preprocess_driver.slot_dict;
-        #self.slot_dict_rev = {v: k for k, v in self.slot_dict.items()};
-
-        # replace with my own class 
-        #self.intent_dict = self.preprocess_driver.intent_dict;
-        #self.intent_dict_rev = {v: k for k, v in self.intent_dict.items()};
-        self.slots_label_set = slots_label_set
-        self.intent_label_set = intent_label_set
-
-
-        # no need onnx model snice only evaluation
-        #self.onnx_model_name = 'model.onnx.bin';
-
-    def create_slot_arrays_iob(input_tag_list):
-        slot_arrays={}
-        for label in get_slot_labels():
-            slot_arrays[label]=[]
-
-        current_slot_array = []
-        current_slot_tag = ''
-        for index, word in enumerate(input_tag_list):
-            if word[0:2] == 'B-':
-                if current_slot_tag != '':
-                    slot_arrays[current_slot_tag].append(current_slot_array)
-                    current_slot_tag=''
-                    current_slot_array=[]
-                current_slot_tag = word[2:len(word)]
-                current_slot_array.append(index)
-            if word[0:2] == 'I-' and current_slot_tag != '':
-                if current_slot_tag != word[2:len(word)]:
-                    slot_arrays[current_slot_tag].append(current_slot_array)
-                    current_slot_tag=''
-                    current_slot_array=[]
-                else:
-                    current_slot_array.append(index)
-            if (word == 'O' or index == len(input_tag_list)-1) and current_slot_tag != '':
-                slot_arrays[current_slot_tag].append(current_slot_array)
-                current_slot_tag=''
-                current_slot_array=[]
-            if word == 'O':
-                continue;
-        return slot_arrays;
-
-    def create_slot_arrays(self, input_tag_list):
-        slot_arrays={}
-        for label in self.get_slot_labels():
-            slot_arrays[label]=[]
-
-        current_slot_array = []
-        current_slot_tag = ''
-        for index, word in enumerate(input_tag_list):
-            if word != 'O':
-                if current_slot_tag != '':
-                    if current_slot_tag == word:
-                        current_slot_array.append(index)
-                    else:
-                        slot_arrays[current_slot_tag].append(current_slot_array)
-                        current_slot_array=[]
-                        current_slot_tag=word
-                else:
-                    current_slot_tag = word
-                    current_slot_array = []
-                    current_slot_array.append(index)
-            if (word == 'O' or index == len(input_tag_list)-1) and current_slot_tag != '':
-                slot_arrays[current_slot_tag].append(current_slot_array)
-                current_slot_tag=''
-                current_slot_array=[]
-            if word == 'O':
-                continue;
-        return slot_arrays;
-
-    def get_slot_labels(self):
-        slot_labels=[]
-        for label in self.slot_dict.keys():
-            if label != 'O':
-                slot_labels.append(label)
-        return slot_labels;
-
-
-    def get_lexicon_vector(self, word_list):
-        lexicon_list = [];
-        for word in word_list:
-            lexicon_list.append(self.preprocess_driver.lexiconLookup(word));
-        return lexicon_list;
-
-    def evaluate_model(self, 
-                       model, 
-                       input_file_tsv, 
-                       jointIntent=False):
-
-        model.eval();
-        slot_labels = self.get_slot_labels()
-        slot_tp_tn_fn_counts = {}
-
-        for label in slot_labels:
-            slot_tp_tn_fn_counts[label+"_fn"]=0
-            slot_tp_tn_fn_counts[label+"_fp"]=0
-            slot_tp_tn_fn_counts[label+"_tp"]=0
-
-        output=""
-
-        total_number = 0;
-        total_true_positive = 0;
-        total_false_positive = 0;
-        total_true_negative = 0;
-        total_false_negative = 0;
-
-        intents_tp = {};
-        intents_fp = {};
-        intents_fn = {};
-
-        for key in self.intent_dict:
-            intents_tp[key] = 0;
-            intents_fp[key] = 0;
-            intents_fn[key] = 0;
-
-
-        with codecs.open(input_file_tsv, 'r', 'utf-8') as f_input:
-            for line in f_input:
-                line = line.strip();
-                if not line:
-                    continue;
-                array = line.split('\t');
-                if len(array) < 2:
-                    continue;
-                sentence = array[0].strip();
-                tagString = array[1].strip();
-                if not sentence:
-                    print('input cannot be empty');
-                    continue;
-
-                input_tag_list=tagString.split(' ');
-
-                golden_intent = "";
-                if jointIntent:
-                    golden_intent = input_tag_list[0];
-                    if golden_intent not in self.intent_dict:
-                        continue;
-
-                    input_tag_list = input_tag_list[1:];
-
-                input_tag_list.append('O');
-                input_tag_list.insert(0, 'O');
-                golden_slot_arrays = self.create_slot_arrays_iob(input_tag_list) if self.useIob else self.create_slot_arrays(input_tag_list);
-                
-                word_list = sentence.split(' ');
-                encoded_dict = self.preprocess_driver.tokenizer.encode_plus(word_list);
-
-                index_array = encoded_dict['input_ids'];           
-                attention_mask = encoded_dict['attention_mask'];
-
-                assert(len(input_tag_list) == len(index_array));
-
-                length = len(index_array);
-                lexicon_index_array = [];
-
-                with torch.no_grad():
-                    input_x = torch.LongTensor(index_array).unsqueeze(0).to(self.device);
-                    mask = torch.LongTensor(attention_mask).unsqueeze(0).to(self.device);
-                    intent_out, slot_out = model(input_ids=input_x, attention_mask=mask);
-
-                    intent_result = intent_out[0].cpu().tolist();
-                    slot_result = slot_out[0].cpu().tolist();
-
-                # Slot Evaluation
-
-                predicted_labels_slot = list(map((lambda x: self.slot_dict_rev[x]), slot_result));
-                predicted_slot_arrays = self.create_slot_arrays_iob(predicted_labels_slot) if self.useIob else self.create_slot_arrays(predicted_labels_slot);
-                query_fn = 0
-                query_fp = 0
-                for label in slot_labels:
-                    golden_set=set(map(tuple, golden_slot_arrays[label]))
-                    prediction_set=set(map(tuple, predicted_slot_arrays[label]))
-                    tp_count = len(prediction_set & golden_set)
-                    fp_count = len(prediction_set-golden_set)
-                    fn_count = len(golden_set-prediction_set)
-                    slot_tp_tn_fn_counts[label+"_fn"]=slot_tp_tn_fn_counts[label+"_fn"]+fn_count
-                    slot_tp_tn_fn_counts[label+"_fp"]=slot_tp_tn_fn_counts[label+"_fp"]+fp_count
-                    slot_tp_tn_fn_counts[label+"_tp"]=slot_tp_tn_fn_counts[label+"_tp"]+tp_count
-                    query_fn = query_fn+fn_count
-                    query_fp = query_fp+fp_count
-                
-                # Intent Evaluation
-                if jointIntent:
-                    predicted_label_intent = self.intent_dict_rev[intent_result];
-
-                    if predicted_label_intent == golden_intent:
-                        intents_tp[golden_intent] += 1;
-                    else:
-                        intents_fp[predicted_label_intent] += 1;
-                        intents_fn[golden_intent] += 1;
-
-            total_tp_slot = 0;
-            total_fp_slot = 0;
-            total_fn_slot = 0;
-
-            for label in slot_labels:
-                total_tp_slot += slot_tp_tn_fn_counts[label+"_tp"];
-                total_fp_slot += slot_tp_tn_fn_counts[label+"_fp"];
-                total_fn_slot += slot_tp_tn_fn_counts[label+"_fn"];
-                
-                slot_metric = label+'\t'+ ': total_tp: '+str(slot_tp_tn_fn_counts[label+"_tp"])+', total_fp: '+str(slot_tp_tn_fn_counts[label+"_fp"])+', total_fn: '+str(slot_tp_tn_fn_counts[label+"_fn"]);
-                print(slot_metric+'\n')
-            
-            overall_precision_slot = 0;
-            overall_recall_slot = 0;
-
-            if total_tp_slot != 0:
-                overall_precision_slot = total_tp_slot / (total_tp_slot + total_fp_slot);
-                overall_recall_slot = total_tp_slot / (total_tp_slot + total_fn_slot);
-
-            print("overall slot precision: {}, overall slot recall: {}".format(overall_precision_slot, overall_recall_slot));
-
-            if jointIntent:
-
-                total_tp_intent = 0;
-                total_fp_intent = 0;
-                total_fn_intent = 0;
-
-                for key in self.intent_dict:
-                    total_tp_intent += intents_tp[key];
-                    total_fp_intent += intents_fp[key];
-                    total_fn_intent += intents_fn[key];
-            
-                precision_intent = 0;
-                recall_intent = 0;
-                if intents_tp[key] != 0:
-                    precision = intents_tp[key] / (intents_tp[key] + intents_fp[key]);
-                    recall = intents_tp[key] / (intents_tp[key] + intents_fn[key]);
-            
-                    # print("intent: {}, precision: {}, recall: {}\n".format(key, precision, recall));
-
-                overall_precision_intent = 0;
-                overall_recall_intent = 0;
-                if total_tp_intent != 0:
-                    overall_precision_intent = total_tp_intent / (total_tp_intent + total_fp_intent);
-                    overall_recall_intent = total_tp_intent / (total_tp_intent + total_fn_intent);
-
-                print("overall intent precision: {}, overall intent recall: {}".format(overall_precision_intent, overall_recall_intent));
-
-    def evaluate_tsv(self, 
-                     model_name, 
-                     input_file_tsv, 
-                     ignored_queries_tsv, 
-                     output_file_tsv, 
-                     slot_metrics_tsv,
-                     joinIntent=False):
-        
-        model = Bert_Model_Slot.from_pretrained(model_name);
-        model.eval();
-        slot_labels = self.get_slot_labels()
-
-        slot_tp_tn_fn_counts = {}
-
-        for label in slot_labels:
-            slot_tp_tn_fn_counts[label+"_fn"]=0
-            slot_tp_tn_fn_counts[label+"_fp"]=0
-            slot_tp_tn_fn_counts[label+"_tp"]=0
-
-        intents_tp = {};
-        intents_fp = {};
-        intents_fn = {};
-
-        for key in self.intent_dict:
-            intents_tp[key] = 0;
-            intents_fp[key] = 0;
-            intents_fn[key] = 0;
-        
-        f_ignored_queries = open(ignored_queries_tsv, "w")
-        f_output = open(output_file_tsv, "w")
-        output=""
-
-        total_number = 0;
-        total_true_positive = 0;
-        total_false_positive = 0;
-        total_true_negative = 0;
-        total_false_negative = 0;
-
-        line_count=0
-        ignore_line_count=0
-        header=''
-        ignore_header=''
-
-        with codecs.open(input_file_tsv, 'r', 'utf-8') as f_input:
-            for line in f_input:
-                line = line.strip();
-                if not line:
-                    continue;
-                array = line.split('\t');
-                if len(array) < 2:
-                    continue;
-                sentence = array[0].strip();
-                tagString = array[1].strip();
-                if not sentence:
-                    print('input cannot be empty');
-                    continue;
-
-                input_tag_list=tagString.split(' ');
-                input_tag_list.append('O');
-                input_tag_list.insert(0, 'O');
-                golden_slot_arrays = self.create_slot_arrays(input_tag_list)
-
-                word_list = sentence.split(' ');
-                index_array = self.preprocess_driver.tokenizer.encode_plus(word_list)['input_ids'];
-                assert(len(input_tag_list) == len(index_array));
-                length = len(index_array);
-
-                lexicon_index_array = [];
-
-                with torch.no_grad():
-                    input_x = torch.LongTensor(index_array).unsqueeze(0).cpu();
-                    model_out = model(input_ids=input_x);
-                    
-                    result = model_out[0].cpu().tolist();
-
-                predicted_labels = list(map((lambda x: self.slot_dict_rev[x]), result));
-
-                if (len(input_tag_list) != len(index_array) or len(input_tag_list) != len(predicted_labels)):
-                    if(ignore_line_count==0):
-                        ignore_header="InputQuery"+'\t'+"InputLabels"+'\t'+"OutputLabels"+'\t'+"InputLabelQueryLengthMismatch"+'\t'+"InputOutputLabelLengthMismatch"
-                        f_ignored_queries.write(ignore_header +'\n')
-                    f_ignored_queries.write(line+'\t'+" ".join(predicted_labels)+'\t'+str(len(input_tag_list) != len(word_list))+'\t'+str(len(input_tag_list) != len(predicted_labels))+'\n')
-                    ignore_line_count = ignore_line_count+1
-                    continue;
-
-                predicted_slot_arrays = self.create_slot_arrays(predicted_labels)
-
-                if(line_count==0):
-                    header="Query"+'\t'+"InputLabels"+'\t'+"PredictedLabels"
-                output = sentence+'\t'+tagString+'\t'+" ".join(predicted_labels)
-
-                query_fn = 0
-                query_fp = 0
-                for label in slot_labels:
-                    golden_set=set(map(tuple, golden_slot_arrays[label]))
-                    prediction_set=set(map(tuple, predicted_slot_arrays[label]))
-                    tp_count = len(prediction_set & golden_set)
-                    fp_count = len(prediction_set-golden_set)
-                    fn_count = len(golden_set-prediction_set)
-                    if(line_count==0):
-                        header=header+'\t'+"{}_tp".format(label)+'\t'+"{}_fp".format(label)+'\t'+"{}_fn".format(label)
-                    output=output+'\t'+str(tp_count)+'\t'+str(fp_count)+'\t'+str(fn_count)
-                    slot_tp_tn_fn_counts[label+"_fn"]=slot_tp_tn_fn_counts[label+"_fn"]+fn_count
-                    slot_tp_tn_fn_counts[label+"_fp"]=slot_tp_tn_fn_counts[label+"_fp"]+fp_count
-                    slot_tp_tn_fn_counts[label+"_tp"]=slot_tp_tn_fn_counts[label+"_tp"]+tp_count
-                    query_fn = query_fn+fn_count
-                    query_fp = query_fp+fp_count
-
-                if(line_count==0):
-                    header=header+'\t'+"AreAllPredictionsCorrect"
-                output=output+'\t'+str(query_fn==0 and query_fp==0)
-
-                if(line_count==0):
-                    f_output.write(header+'\n')
-                f_output.write(output+'\n')
-                line_count=line_count+1
-
-            f_slot_metrics = open(slot_metrics_tsv, "w")
-
-            total_tp = 0;
-            total_fp = 0;
-            total_fn = 0;
-
-            for label in slot_labels:
-                slot_precision = 0;
-                slot_recall = 0;
-                if slot_tp_tn_fn_counts[label+"_tp"] != 0:
-                    slot_precision = slot_tp_tn_fn_counts[label+"_tp"]/(slot_tp_tn_fn_counts[label+"_tp"]+slot_tp_tn_fn_counts[label+"_fp"])
-                    slot_recall = slot_tp_tn_fn_counts[label+"_tp"]/(slot_tp_tn_fn_counts[label+"_tp"]+slot_tp_tn_fn_counts[label+"_fn"])
-                slot_metric = label+'\t'+ ': total_tp: '+str(slot_tp_tn_fn_counts[label+"_tp"])+', total_fp: '+str(slot_tp_tn_fn_counts[label+"_fp"])+', total_fn: '+str(slot_tp_tn_fn_counts[label+"_fn"])+', precision: '+str(slot_precision)+'\t'+', recall: '+str(slot_recall)
-                f_slot_metrics.write(slot_metric+'\n')
-                print(slot_metric+'\n')
-
-                total_tp += slot_tp_tn_fn_counts[label+"_tp"];
-                total_fp += slot_tp_tn_fn_counts[label+"_fp"];
-                total_fn += slot_tp_tn_fn_counts[label+"_fn"];
-            
-            overall_precision = 0;
-            overall_recall = 0;
-            if total_tp != 0:
-                overall_precision = total_tp / (total_tp + total_fp);
-                overall_recall = total_tp / (total_tp + total_fn);
-            
-            print('overall precision: ' + str(overall_precision) + '\r\n');
-            print('overall recall: ' + str(overall_recall) + '\r\n');
-
-            f_slot_metrics.close()
-            f_ignored_queries.close()
-            f_output.close()
-
-    def evaluate_model_intent(self, input_file_tsv, model=None, model_location=None, threshold=None):
-        
-        if model is None:
-            if model_location is None:
-                raise("Must provide model location");
-            model = Bert_Model_Intent.from_pretrained(model_location);
-        
-        model.eval();
-        intents_tp = {};
-        intents_fp = {};
-        intents_fn = {};
-
-        for key in self.intent_dict:
-            intents_tp[key] = 0;
-            intents_fp[key] = 0;
-            intents_fn[key] = 0;
-
-        with codecs.open(input_file_tsv, 'r', 'utf-8') as f_input:
-            for line in f_input:
-                line = line.strip();
-                if not line:
-                    continue;
-                array = line.split('\t');
-                if len(array) < 2:
-                    continue;
-                sentence = array[0].strip();
-                intents = array[1].strip();
-                if not sentence:
-                    print('input cannot be empty');
-                    continue;
-
-                word_list = sentence.split(' ');
-                golden_intent_list = [];
-
-                # Evaluate Multiple Intent
-                if threshold is not None:
-                    intent_list_raw = intents.split(',');
-                    golden_intent_list = [item.strip() for item in intent_list_raw];
-                else:
-                    golden_intent_list.append(intents);
-                
-                # If intent is not in dict, do not evaluate
-                intent_valid = True;
-                for item in golden_intent_list:
-                    if item not in self.intent_dict:
-                        intent_valid = False;
-                        break;
-
-                if not intent_valid:
-                    continue;
-
-                index_array = self.preprocess_driver.tokenizer.encode_plus(word_list)['input_ids'];
-
-                with torch.no_grad():
-                    input_x = torch.LongTensor(index_array).unsqueeze(0).to(self.device);
-                    model_out = model(input_ids=input_x);
-
-                    result = model_out[0].cpu().tolist();
-                
-                predicted_intent_list = [];
-
-                # Evaluate Multiple intent where the predicted score is beyond a threshold
-                if threshold is not None:
-                    for idx in range(len(result)):
-                        if result[idx] > threshold:
-                            predicted_intent_list.append(self.intent_dict_rev[idx]);
-                else:
-                    predicted_intent_list.append(self.intent_dict_rev[result]);
-
-                for item in golden_intent_list:
-                    if item in predicted_intent_list:
-                        intents_tp[item] += 1;
-                    else:
-                        intents_fn[item] += 1;
-
-                for item in predicted_intent_list:
-                    if item not in golden_intent_list:
-                        intents_fp[item] += 1;
-
-        total_tp = 0;
-        total_fp = 0;
-        total_fn = 0;
-
-        for key in self.intent_dict:
-            total_tp += intents_tp[key];
-            total_fp += intents_fp[key];
-            total_fn += intents_fn[key];
-            
-            precision = 0;
-            recall = 0;
-            if intents_tp[key] != 0:
-                precision = intents_tp[key] / (intents_tp[key] + intents_fp[key]);
-                recall = intents_tp[key] / (intents_tp[key] + intents_fn[key]);
-            
-            print("intent: {}, precision: {}, recall: {}\n".format(key, precision, recall));
-
-        overall_precision = 0;
-        overall_recall = 0;
-        if total_tp != 0:
-            overall_precision = total_tp / (total_tp + total_fp);
-            overall_recall = total_tp / (total_tp + total_fn);
-
-        print("overall precision: {}, overall recall: {}".format(overall_precision, overall_recall));
-                
-    def saveModelOnnx(self, model_name):
-        model = Bert_Model_Slot.from_pretrained(model_name);
-        model.eval();
-        print(model);
-        pytorch_total_params = sum(p.numel() for p in model.parameters());
-        print(pytorch_total_params);
-
-        print('save onnx');
-        dummy_inputs = [101, 3191, 2026, 22028, 2055, 2522, 17258, 10651, 102];
-        dummy_mask = [1, 1, 1, 1, 1, 1, 1, 1, 1];
-        
-        inputs = torch.LongTensor(dummy_inputs).unsqueeze(0).cpu();
-        masks = torch.LongTensor(dummy_mask).unsqueeze(0).cpu();
-        torch.onnx.export(model=model, 
-                          args=(inputs, masks),
-                          f=self.onnx_model_name,
-                          input_names = ["input_ids", "attention_mask"],
-                          verbose=True,
-                          output_names = ["slot_output"],
-                          do_constant_folding = True,
-                          opset_version=11,
-                          dynamic_axes = {'input_ids': {1: '?'}, 'attention_mask': {1: '?'}, 'slot_output': {1: '?'}});
-'''
 
 class Evaluation():
     def __init__(self, slots_label_set, intent_label_set, useIob=False):
@@ -1477,9 +946,6 @@ class Evaluation():
 
 
 
-
-
-
 # for debug
 ##print('Original Text: {}'.format(texts[0]))
 ##print('Tokenized Text: {}'.format(tokenizer.tokenize(texts[0])))
@@ -1513,7 +979,6 @@ for i, row in df.iterrows():
     slot = row['JudgedConstraints']
 	# remove head and end spaces 
     slot = slot.strip()
-
 
     # ignore multi turn queries
     conversationContext = row['ConversationContext']
@@ -1687,18 +1152,18 @@ gpu_available = torch.cuda.is_available()
 ###############
 
 
-	
 ###############
 # hvd initilization below
 ###############
-'''
+
 #https://zhuanlan.zhihu.com/p/76638962
 #buer distributed learning
 hvd.init()
+
 if gpu_available:
     print("gpu_availabe: {}".format(gpu_available))
     torch.cuda.set_device(hvd.local_rank())
-'''
+
 
 
 
@@ -1719,7 +1184,7 @@ if gpu_available:
 # kwargs = {'num_workers': 1, 'pin_memory': True} if gpu_available else {}
 
 
-'''
+
 train_data = TensorDataset(train_x, train_m, train_y, train_z)
 train_sampler = DistributedSampler(train_data, num_replicas=hvd.size(), rank=hvd.rank())
 train_dataloader = DataLoader(train_data, sampler=train_sampler, batch_size=batch_size)
@@ -1727,37 +1192,15 @@ train_dataloader = DataLoader(train_data, sampler=train_sampler, batch_size=batc
 val_data = TensorDataset(val_x, val_m, val_y, val_z)
 val_sampler = DistributedSampler(val_data, num_replicas=hvd.size(), rank=hvd.rank())
 val_dataloader = DataLoader(val_data, sampler=val_sampler, batch_size=batch_size)
-'''
-
-###############
-#remote training data setup in learning above
-###############
-
 
 
 
 ###############
-#local training data setup in learning below
+#remote training data setup in learning below
 ###############
 
-# kwargs = {'num_workers': 1, 'pin_memory': True} if gpu_available else {}
-#batch_size = 32
-batch_size = 6
-# https://pytorch.org/docs/stable/data.html
-# for local remove repliaces rank optional arigment
-# also remove distributedSampler
-#train_data = TensorDataset(train_x, train_m, train_y)
-#train_dataloader = DataLoader(train_data, sampler=None, batch_size=batch_size)
-train_data = TensorDataset(train_x, train_m, train_y, train_z)
-train_dataloader = DataLoader(train_data, sampler=None, batch_size=batch_size)
-#val_data = TensorDataset(val_x, val_m, val_y)
-#val_dataloader = DataLoader(val_data, sampler=None, batch_size=batch_size)
-val_data = TensorDataset(val_x, val_m, val_y, val_z)
-val_dataloader = DataLoader(val_data, sampler=None, batch_size=batch_size)
 
-###############
-#local training data setup in learning above
-###############
+
 
 
 ###############
@@ -2074,16 +1517,7 @@ class DistilBertForTokenClassificationFilesDomain(BertPreTrainedModel):
 
         # if either one is none, then do inference
         if intent_label_ids is None or slot_label_ids is None:
-
-            # actually this one output
-            # [a,b] a: number of per batch b: 1
-            # eg: [5,5,5,.....5] and 5 is the intent index with highest
             intent_output = torch.argmax(intent_logits, -1);
-
-
-            # this one is also
-            # [a,b] a: number of per batch b: number of max tokens (eg:300)
-            # eg: [[1,2,3,4],[5,6,7,8]]
             slot_output = torch.argmax(slot_logits, -1);
 
             intent_prob = intent_logits.softmax(dim=1)
@@ -2114,16 +1548,17 @@ bert_config.output_hidden_states = False;
 
 
 # load TNLR model remotely
-#print('load TNLR model with path {}'.format(TNLR_model_file_name))
-#model = DistilBertForTokenClassificationFilesDomain.from_pretrained(TNLR_model_file_name, config=bert_config)
+print('load TNLR model with path {}'.format(TNLR_model_file_name))
+model = DistilBertForTokenClassificationFilesDomain.from_pretrained(TNLR_model_file_name, 
+    config=bert_config,
+    num_intent_labels=num_intent_labels,	
+    num_slot_labels=num_slot_labels)
 
 
 # load TNLR model locally
-print('load TNLR model with path {}'.format('../TNLR/'+'tnlrv3-base.pt'))
-model = DistilBertForTokenClassificationFilesDomain.from_pretrained('../TNLR/'+'tnlrv3-base.pt', 
-    config=bert_config,
-    num_intent_labels=num_intent_labels,
-    num_slot_labels=num_slot_labels)
+#print('load TNLR model with path {}'.format('../TNLR/'+'tnlrv3-base.pt'))
+#model = DistilBertForTokenClassificationFilesDomain.from_pretrained('../TNLR/'+'tnlrv3-base.pt', config=bert_config)
+
 
 print('load TNLR model done')
 
@@ -2149,10 +1584,11 @@ model = model.to(device)
 # move model to  device above
 ###############
 
+
 ###############
 # remote traningi parameter setup below
 ###############
-'''
+
 #we print the model architecture and all model learnable parameters.
 def count_parameters(model):
     return sum(p.numel() for p in model.parameters() if p.requires_grad)
@@ -2214,64 +1650,11 @@ num_mb_val = len(val_dataloader)
 
 if num_mb_val == 0:
     num_mb_val = 1
-'''
 
 
 ###############
 # remote traningi parameter setup above
 ###############
-
-
-###############
-# local traningi parameter setup below
-###############
-#we print the model architecture and all model learnable parameters.
-def count_parameters(model):
-    return sum(p.numel() for p in model.parameters() if p.requires_grad)
-
-print('Number of trainable parameters:', count_parameters(model), '\n', model)
-#? different from yues no_decay setup(include 'LayerNorm.bias')
-no_decay = ['bias', 'LayerNorm.weight']
-
-optimizer_grouped_parameters = [
-    # Filter for all parameters which *don't* include 'bias', 'gamma', 'beta'.
-    # different frmo yue's setup (0.01)
-    {'params': [p for n, p in model.named_parameters() if not any(nd in n for nd in no_decay)],
-     'weight_decay_rate': 0.2},
-     # Filter for parameters which *do* include those.
-    {'params': [p for n, p in model.named_parameters() if any(nd in n for nd in no_decay)],
-     'weight_decay_rate': 0.0}
-]
-
-learning_rate = 1e-5
-eps=1e-8
-optimizer = AdamW(optimizer_grouped_parameters, lr=learning_rate, eps=eps)
-num_epochs = 5
-total_steps = len(train_dataloader) * num_epochs
-scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=0, num_training_steps=total_steps)
-
-def epoch_time(start_time, end_time):
-    elapsed_time = end_time - start_time
-    elapsed_mins = int(elapsed_time / 60)
-    elapsed_secs = int(elapsed_time - (elapsed_mins * 60))
-    return elapsed_mins, elapsed_secs
-
-seed_val = 111
-random.seed(seed_val)
-np.random.seed(seed_val)
-torch.manual_seed(seed_val)
-torch.cuda.manual_seed_all(seed_val)
-train_losses = []
-val_losses = []
-num_mb_train = len(train_dataloader)
-num_mb_val = len(val_dataloader)
-
-if num_mb_val == 0:
-    num_mb_val = 1
-###############
-# local traningi parameter setup above
-###############
-
 
 # for debug
 #for i in range(len(val_x)):
@@ -2358,18 +1741,16 @@ for n in range(num_epochs):
         train_loss += total_loss.data / num_mb_train
     
     print ("\nTrain loss after itaration %i: %f" % (n+1, train_loss))
-    #avg_train_loss = metric_average(train_loss, 'avg_train_loss')
-    #print ("Average train loss after iteration %i: %f" % (n+1, avg_train_loss))
-    #train_losses.append(avg_train_loss)
+    avg_train_loss = metric_average(train_loss, 'avg_train_loss')
+    print ("Average train loss after iteration %i: %f" % (n+1, avg_train_loss))
+    train_losses.append(avg_train_loss)
     
-
 
     # initialize evaluation test object
     evaluation_test = Evaluation(slots_label_set, intent_label_set)
 
     # Tell pytorch not to bother with constructing the compute graph during
     # the forward pass, since this is only needed for backprop (training).
-    
     with torch.no_grad():
        # Put the model in evaluation mode--the dropout layers behave differently
        # during evaluation.
@@ -2430,37 +1811,27 @@ for n in range(num_epochs):
             intent_output,slot_output,intent_prob = model(mb_x, attention_mask=mb_m)
             evaluation_test.add_intent_pred_and_golden(intent_output, mb_y)
             evaluation_test.add_slot_pred_and_golden(slot_output, mb_z)
-
-
             val_loss += 0 / num_mb_val
             # for debug
             #print('evaluate label result {}'.format(slot_output))
             
         print ("Validation loss after itaration %i: %f" % (n+1, val_loss))
-        #avg_val_loss = metric_average(val_loss, 'avg_val_loss')
-        #print ("Average validation loss after iteration %i: %f" % (n+1, avg_val_loss))
-        #val_losses.append(avg_val_loss)
+        avg_val_loss = metric_average(val_loss, 'avg_val_loss')
+        print ("Average validation loss after iteration %i: %f" % (n+1, avg_val_loss))
+        val_losses.append(avg_val_loss)
 
-        print(' Validation metric after iteration {} : {}'.format(n+1, evaluation_test.compute_metrics())) 
+        print(' Validation metric after iteration {} : {}'.format(n+1, evaluation_test.compute_metrics()))
     
     end_time = time.time()
     epoch_mins, epoch_secs = epoch_time(start_time, end_time)
     print(f'Time: {epoch_mins}m {epoch_secs}s')
 
-    
 
-###############
-# onnx output remote below
-###############
-'''
+
 # ? not sure why needs checking rank
 if hvd.rank() == 0:
     
     out_dir = './outputs'
-    import os, argparse
-    # if folder does not exist then create
-    if not os.path.exists(out_dir):
-        os.makedirs(out_dir)
     
     model_to_save = model.module if hasattr(model, 'module') else model
     model_to_save.save_pretrained(out_dir)
@@ -2552,19 +1923,10 @@ if hvd.rank() == 0:
 
 
 '''
-###############
-# onnx output remote above
-###############
-
-
 # for local test
 if True:
 
     out_dir = './outputs'
-    import os, argparse
-    # if folder does not exist then create
-    if not os.path.exists(out_dir):
-        os.makedirs(out_dir)
     
     model_to_save = model.module if hasattr(model, 'module') else model
     
@@ -2617,24 +1979,23 @@ if True:
     #    verbose=True)
 
 
-	# using bert and no return class, having mutiple outputs	
-    torch.onnx.export(model=model_to_save,	
-        args=(dummy_input),	
-        f=out_dir + '/traced_distill_bert.onnx.bin',	
-        input_names = ["input_ids"],	
-        verbose=True,	
-        # here logits is not internal logits means	
-        # ? change it to a better name like slot_output in the future	
-        #output_names = ["logits"],	
-        #output_names = ["slot_label_tensor"],	
-        #output_names = ["intent_output", "slot_output"],	
-        output_names = ['intent_output', 'slot_output','intent_prob'],	
-        #output_names = ["loss","slot_output"],	
-        do_constant_folding = True,	
-        opset_version=11,	
-        #dynamic_axes = {'input_ids': {1: '?'}, 'logits': {1: '?'}}	
-        #dynamic_axes = {'input_ids': {1: '?'}, 'slot_label_tensor': {1: '?'}}	
-        #dynamic_axes = {'input_ids': {1: '?'}, 'intent_output': {1: '?'}, 'slot_output': {1: '?'}}	
-        dynamic_axes = {'input_ids': {1: '?'}, 'intent_output': {1: '?'}, 'slot_output': {1: '?'},'intent_prob': {1: '?'}}	
-        #dynamic_axes = {'input_ids': {1: '?'}, 'loss': {1: '?'}, 'slot_output': {1: '?'}}	
+    # using bert and no return class, having mutiple outputs
+    torch.onnx.export(model=model,
+        args=(dummy_input),
+        f=out_dir + '/traced_distill_bert.onnx.bin',
+        input_names = ["input_ids"],
+        verbose=True,
+        # here logits is not internal logits means
+        # ? change it to a better name like slot_output in the future
+        #output_names = ["logits"],
+        #output_names = ["slot_label_tensor"],
+        output_names = ["slot_output"],
+        #output_names = ["loss","slot_output"],
+        do_constant_folding = True,
+        opset_version=11,
+        #dynamic_axes = {'input_ids': {1: '?'}, 'logits': {1: '?'}}
+        #dynamic_axes = {'input_ids': {1: '?'}, 'slot_label_tensor': {1: '?'}}
+        dynamic_axes = {'input_ids': {1: '?'}, 'slot_output': {1: '?'}}
+        #dynamic_axes = {'input_ids': {1: '?'}, 'loss': {1: '?'}, 'slot_output': {1: '?'}}
         )
+'''
