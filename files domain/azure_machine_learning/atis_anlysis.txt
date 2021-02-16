@@ -1,0 +1,361 @@
+
+
+=================
+bert config  && huper paarmeter
+atis experiment
+=================
+
+//joint bert 
+        # Prepare optimizer and schedule (linear warmup and decay)
+        no_decay = ['bias', 'LayerNorm.weight']
+        optimizer_grouped_parameters = [
+            {'params': [p for n, p in self.model.named_parameters() if not any(nd in n for nd in no_decay)],
+             'weight_decay': self.args.weight_decay},
+            {'params': [p for n, p in self.model.named_parameters() if any(nd in n for nd in no_decay)], 'weight_decay': 0.0}
+        ]
+		//fixed in code
+		i update to this in atis
+
+
+optimizer
+	no hvd compressor
+
+schedular traing steps 
+t_total = len(train_dataloader) // self.args.gradient_accumulation_steps * self.args.num_train_epochs
+		(140 // 1) * 5
+		// floor operation 
+		// fixed in code 
+		// my case no floor operation but should be the same 
+		
+		
+if (step + 1) % self.args.gradient_accumulation_steps == 0:
+	whatever step it is ,  it will alawys be zero
+
+
+batch = tuple(t.to(self.device) for t in batch)  # GPU or CPU
+	? it seems only one example will be evaluate, batch_size is not being used
+		
+epoch_iterator = tqdm(train_dataloader, desc="Iteration")
+	4487 / 32 = 140
+		會補足
+	step will be 32
+
+
+if 0 < self.args.max_steps < global_step:
+	max_steps = -1 and global_step keeps +1
+	so it will nevert happen
+
+
+epsilon
+1e-08
+	pass as parameter, the same
+
+drop rate = 0.1
+evavulate batchsize = 64
+trainf batch size = 32
+use crf = false
+warmup_steps = 0
+	//fixed in code, the same 
+weight_decay = 0.0
+	//fixed in code
+	i update to this in atis
+gradient_accumulation_step = 1
+
+igonre_index = 0 
+
+learning rate 5e-05
+	pass as parameter
+	i updare to this in atis 
+logging steps 200
+
+max_grad_borm 1.0
+
+max_seq_len = 50
+max_steps = -1
+
+num_train_epochs = 5.0
+	pass as parameter, the same
+save_steps = 200
+seed = 1234
+	? not sure if the same as seed_val fixed code , random seed for torch, cuda
+	https://github.com/monologg/JointBERT/blob/7497631c2065f3f7be853b893e0730676745e0fe/utils.py
+	refer to here 
+	fixed in code 
+	i update to this in atis
+
+slot_loss_coef = 1.0
+	fixed in code
+	
+slot_pad_label : PAD
+
+
+epoch = 5
+
+bert config
+	attention_probs_dropout_prob = 0.1
+		fixed in code, the same 
+	chunk_size_feed_forward : 0 
+		fixed in code, the same 
+	diviertiy penalty -0.0
+		fixed in code, the same 
+	do _ sample : False 
+		fixed in code, the same 
+	early_stopping = false 
+		fixed in code, the same 
+	gradient_checkpoint : false
+		fixed in code, the same 
+	hodden_act : gelu
+		fixed in code, the same 
+	hidden_dropout_prob = 0.1
+		fixed in code, the same 
+	hidden_size - 768
+	idslabel 
+		0 : label_0
+		1: labe l1
+		
+	initialzie_range = 0.02
+		fixed in code, the same 
+	intermediat_size = 3072
+		fixed in code, the same 
+	
+	layer_nor,_eps = 1e-12
+		fixed in code, the same 
+	length_penalty : 1.0
+		fixed in code, the same 
+	
+	max_length 20
+		fixed in code, the same 
+	max_grad_norm 1.0
+		fixed int code, the same 
+		
+
+	max_position_embedding:512
+		fixed in code, the same 
+	model_type : bert 
+		fixed in code, the same 
+	name_or_path : bert-case-uncased
+		? not sure if it affects or not 
+		need to provide by myself
+	
+	ni repated_ngram_size : 0
+		fixed in code, the same 
+	num attention ahead = 12
+		fixed in code, the same 
+	num beam grups 1
+		fixed in code, the same 
+	num beams 1
+		fixed in code, the same 
+	num_hidden layers -12
+		my case i go witj 3 
+	num_labels = 2
+		fixed in code, the same 
+	num_return_sequences 1
+		fixed in code, the same 
+	output attention false 
+		fixed in code, the same 
+	pad token _id = 0
+		fixed in code, the same 
+	psoitoon_emveddding absolue
+		fixed in code, the same 
+	repetititon penalty  1.0
+		fixed in code, the same 
+	return ditc : true 
+		fixed in code, the same 
+	temperatire 1.0
+		fixed in code, the same 
+	top k 50
+		fixed in code, the same 
+	top p 1.0
+		fixed in code, the same 
+	torchscript fasle
+		fixed in code, the same 
+	type vocan size = 2
+		fixed in code, the same 
+	vocan size = 30522
+		fixed in code, the same 
+	
+
+
+
+// my config
+
+run 7
+	改了parameter
+	跟run 4 比起來 slot 確實有比較好  雖然還是低
+	intent 每個turn 都依樣 ? 這個真的不make sense
+	from 
+	Validation metric after iteration 5 : {'total_intent_precision': 0.7321428571428571, 'total_intent_recall': 0.7321428571428571, 'total_slot_precision': 0, 'total_slot_recall': 0}
+	to
+	Validation metric after iteration 5 : {'total_intent_precision': 0.7321428571428571, 'total_intent_recall': 0.7321428571428571, 'total_slot_precision': 0.5263466042154566, 'total_slot_recall': 0.2630962832894352}
+
+run 10
+	to 12 layers 
+	all zero 
+	
+	? not sure why 
+
+run 13 
+	same as rum 7, max token = 50
+	no big difference
+	
+run 37
+	add random sampler
+	status : fail but can output model
+	Validation metric after iteration 5 : {'total_intent_precision': 0.9631449631449631, 'total_intent_recall': 0.9631449631449631, 'total_slot_precision': 0.6362861138588533, 'total_slot_recall': 0.6925818667854756}
+	using cpu locally to load gpu trained model(*.pt) and do metric verification
+			yes it can be verified, the same
+
+run 42
+	add random sampler
+	status : fail but can output model
+	try 12 layers to see whether performance is better than run 37
+	Validation metric after iteration 5 : {'total_intent_precision': 0.9325441143622962, 'total_intent_recall': 0.9325441143622962, 'total_slot_precision': 0.570620239390642, 'total_slot_recall': 0.5840944531075963}
+	Validation metric Iob after iteration 5 : {'intent_acc': 0.9325441143622962, 'slot_precision': 0.6037959381044488, 'slot_recall': 0.6852431127208869, 'slot_f1': 0.6419464294894864}			
+	// no big difference
+	
+=================
+evaluation logic
+i shou;d ignore o and pad for calculation 
+i thikn 
+================
+	
+=================
+code flow 
+=================
+joint bert 
+	in the first place 
+	model zero_grad but i do not have , i have optimizer.zero_gra[
+	
+	in some case model will .zerograd  but i do have 
+	
+	
+
+=================
+original aml behavaior
+=================
+run 1
+ Validation metric after iteration 5 : {'total_intent_precision': 0.7321428571428571, 'total_intent_recall': 0.7321428571428571, 'total_slot_precision': 0, 'total_slot_recall': 0}
+
+
+
+=================
+original atis behavior
+=================
+
+max_len =50
+
+i want to fly from baltimore to dallas round trip
+
+attention (same as my att_masks)
+len(12)
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, ...]
+
+input_id (same as my text_id)
+[101, 1045, 2215, 2000, 4875, 2013, 6222, 2000, 5759, 2461, 4440, 102, 0, 0, ...]
+
+
+len = 12
+
+
+token_type1_id (i do not provide this )
+all zero to max_len = 50
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...]
+
+slot label id (same as my labels_for_text_id)
+len = 12
+[0, 2, 2, 2, 2, 2, 73, 2, 114, 98, 99, 0, 0, 0, ...]
+[0, 2, 2, 2, 2, 2, 73, 2, 114, 98, 99, 0, 0, 0, ...]
+
+
+0 2 2 2 100, 111   
+0 for pad token
+2 for untag toekn
+CLS SEP for zero
+otherthan that using 2
+
+
+
+i'm looking for a flight from charlotte to las vegas that stops in st. louis hopefully a dinner flight how can i find that out
+golden query to check preprocessing
+
+before adding CLS and sep
+[2, 2, 2, 2, 2, 2, 2, 2, 73, 2, 114, 115, 2, 2, ...]
+len() = 29=8
+2
+2
+2
+2
+2
+2
+2
+2
+73
+2
+114
+115
+2
+2
+2
+// here st.louis extend
+103
+103
+104
+2
+2
+81
+2
+2
+2
+2
+2
+2
+
+
+
+
+
+
+slot precision 0.94
+
+
+=================
+v1
+CLS , SEP label = 0, as pad
+B-label extend 
+train = dev = eva
+=================
+
+// applied in atis repo
+// cpu local
+// slot 9,1,2
+{'intent_acc': 0.9973202322465387}
+{'slot_f1': 0.982715575187248, 'slot_precision': 0.9805812839348451, 'slot_recall': 0.984859177519728}
+{'sementic_frame_acc': 0.9522108083966057}
+
+
+//applied in my local
+//3 layers
+//cpu
+// same setting but different runs might be differentve81
+//first outputs_temp_load_v1_02142021v1
+  Validation metric after iteration 5 : {'total_intent_precision': 0.9220460129551039, 'total_intent_recall': 0.9220460129551039, 'total_slot_precision': 0.6902472527472527, 'total_slot_recall': 0.7089552238805971}
+//second time outputs_temp_load_v1_02152021v1
+   Validation metric after iteration 5 : {'total_intent_precision': 0.8981460799642618, 'total_intent_recall': 0.8981460799642618, 'total_slot_precision': 0.5670757511637748, 'total_slot_recall': 0.5970149253731343}
+  
+Time: 32m 1s
+// test local to load model and do metric calculation again, to further verify
+// load onnx bin still cannot work -error
+Unable to load from type '<class 'onnx.onnx_ml_pb2.ModelProto'>'
+// store
+E:\azure_ml_notebook\outputs_temp_load_v1_02142021v1
+// using pytorch_model.bin to local test
+// third time, my evauation replicate success in atis_model_saved
+// thrid time  IOB logic is higher
+Validation metric Iob: {'intent_acc': 0.8981460799642618, 'slot_precision': 0.6036986236579482, 'slot_recall': 0.700471956975085, 'slot_f1': 0.6484948558364029}  
+
+
+
+//applied in my local
+//12 layers
+//cpu
+
