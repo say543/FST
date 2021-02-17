@@ -1,4 +1,19 @@
 
+=================
+atis how to load file 
+=================
+archive_file = os.path.join(pretrained_model_name_or_path, WEIGHTS_NAME)
+'atis_model'
+'pytorch_model.bin'
+? not sure where the location is
+
+cached_path
+resolved_archive_file = cached_path(
+
+TRANSFORMERS_CACHE
+cache_dir : 'C:\\Users\\chiecha.REDMOND/.cache\\huggingface\\transformers'
+in only stores weights, not other thing
+
 
 =================
 bert config  && huper paarmeter
@@ -76,6 +91,7 @@ max_steps = -1
 num_train_epochs = 5.0
 	pass as parameter, the same
 save_steps = 200
+	it will trigger to save model
 seed = 1234
 	? not sure if the same as seed_val fixed code , random seed for torch, cuda
 	https://github.com/monologg/JointBERT/blob/7497631c2065f3f7be853b893e0730676745e0fe/utils.py
@@ -88,6 +104,9 @@ slot_loss_coef = 1.0
 	
 slot_pad_label : PAD
 
+pad_token_label_id
+	assocaited with slot_pad_label
+	
 
 epoch = 5
 
@@ -182,6 +201,7 @@ bert config
 run 7
 	改了parameter
 	跟run 4 比起來 slot 確實有比較好  雖然還是低
+	atis iteration 中最後snapshot 沒有return failure 的case (還不知道原因是啥)
 	intent 每個turn 都依樣 ? 這個真的不make sense
 	from 
 	Validation metric after iteration 5 : {'total_intent_precision': 0.7321428571428571, 'total_intent_recall': 0.7321428571428571, 'total_slot_precision': 0, 'total_slot_recall': 0}
@@ -199,6 +219,7 @@ run 13
 	no big difference
 	
 run 37
+	ouput_randomsampler_v1_02152021v1
 	add random sampler
 	status : fail but can output model
 	Validation metric after iteration 5 : {'total_intent_precision': 0.9631449631449631, 'total_intent_recall': 0.9631449631449631, 'total_slot_precision': 0.6362861138588533, 'total_slot_recall': 0.6925818667854756}
@@ -206,12 +227,68 @@ run 37
 			yes it can be verified, the same
 
 run 42
+	ouput_randomsampler_layer12_v1_02162021v1
 	add random sampler
 	status : fail but can output model
 	try 12 layers to see whether performance is better than run 37
 	Validation metric after iteration 5 : {'total_intent_precision': 0.9325441143622962, 'total_intent_recall': 0.9325441143622962, 'total_slot_precision': 0.570620239390642, 'total_slot_recall': 0.5840944531075963}
 	Validation metric Iob after iteration 5 : {'intent_acc': 0.9325441143622962, 'slot_precision': 0.6037959381044488, 'slot_recall': 0.6852431127208869, 'slot_f1': 0.6419464294894864}			
 	// no big difference
+	using cpu locally to load gpu trained model(*.pt) and do metric verification
+		yes it can be verified, the same
+		
+run 43/45
+	add random sampler
+	extend epoch from  5 to 15 to see performance
+	layer = 3
+	Validation metric after iteration 14 : {'total_intent_precision': 0.9955327228054501, 'total_intent_recall': 0.9955327228054501, 'total_slot_precision': 0.2737879045217596, 'total_slot_recall': 0.778050048266132}
+	Validation metric Iob after iteration 14 : {'intent_acc': 0.9955327228054501, 'slot_precision': 0.27106448912714387, 'slot_recall': 0.8352540884644934, 'slot_f1': 0.4092993236611045}
+	intent improves but slots does not update much
+
+run 49/51
+	add random sampler
+	status : fail but can output model
+	alawyas this error it can be different log files  eg : 70_drive_log_0.txt,  70_drive_log_1.txt
+	Traceback (most recent call last):
+	File "atis_train_horovod_joint_intent_slot_TNLR.py", line 2031, in <module>
+		model_to_save.save_pretrained(out_dir)
+	File "/azureml-envs/azureml_1807a796a9d0358a0054a3b50c9aa95a/lib/python3.6/site-packages/transformers/modeling_utils.py", line 812, in save_pretrained
+		torch.save(state_dict, output_model_file)
+	File "/azureml-envs/azureml_1807a796a9d0358a0054a3b50c9aa95a/lib/python3.6/site-packages/torch/serialization.py", line 328, in save
+		_legacy_save(obj, opened_file, pickle_module, pickle_protocol)
+	File "/azureml-envs/azureml_1807a796a9d0358a0054a3b50c9aa95a/lib/python3.6/site-packages/torch/serialization.py", line 196, in __exit__
+		self.file_like.close()
+	OSError: [Errno 5] Input/output error
+
+	extend epoch from  5 to 15 to see performance
+	layer = 3
+	igonre PAD token for evaluation to check performance - folliwng atis logic
+	
+	最好加個tab 分割
+	wo pad metric 真的可以提升
+	雖然iob 跟my logic 仍然有落差
+	my logic 
+		w pad
+			slot_precision 非常低 
+			Validation metric after iteration 15 : {'total_intent_precision': 0.9959794505249051, 'total_intent_recall': 0.9959794505249051, 'total_slot_precision': 0.3740392826643894, 'total_slot_recall': 0.7805747382490532}
+			pad	: total_tp: 4912, total_fp: 27029, total_fn: 4042
+			
+			很多slot 的false positive 都增加了
+			可能就來自於pad 的location 我想
+		wo pad
+			iteration 5 可以到80
+			Validation metric wo pad after iteration 15 : {'total_intent_precision': 0.9959794505249051, 'total_intent_recall': 0.9959794505249051, 'total_slot_precision': 0.9048287478944413, 'total_slot_recall': 0.8960742882562278}
+			pad	: total_tp: 0, total_fp: 111, total_fn: 0
+	
+	打算用這個version 在local repo 一下 
+		but pytorch_model.bin size = 0 , 輸出有問題 我想... 只有model.pt
+		mode.pt 沒辦法load 不知道為啥.... 無法verify
+	training set 看看是不是都依樣
+			
+			
+	
+			
+
 	
 =================
 evaluation logic
@@ -318,11 +395,66 @@ len() = 29=8
 slot precision 0.94
 
 
+
+=================
+TNLR  using atis repo
+train = dev = eva
+epoch = 5
+layer = 3
+=================
+
+C:\Users\chiecha.REDMOND\.cache\huggingface_TNLR_02162021v1
+// eboch_atis_five_extend_b_slot_and_with_CLS_SEP_PAD_with_TNLR_02162021
+//including PAD for evaluation
+evaluate TNLR {'intent_acc': 0.9669495310406432, 'slot_precision': 0.5178640144451351, 'slot_recall': 0.7128305423134906, 'slot_f1': 0.5999039879299113, 'sementic_frame_acc': 0.13867798124162573} :
+
+
+// remove pad for evaluation
+// slot is better
+ evaluate TNLR {'intent_acc': 0.9669495310406432, 'slot_precision': 0.7281873056520943, 'slot_recall': 0.7662154359402066, 'slot_f1': 0.7467175190696511, 'sementic_frame_acc': 0.4582402858418937} :
+
+
+
+=================
+TNLR  using atis repo
+train = dev = eva
+epoch = 5
+layer = 12
+=================
+layer12 is not better than layer3
+
+// eboch_atis_five_extend_b_slot_and_with_CLS_SEP_PAD_with_TNLR_layer12_02162021
+//including PAD for evaluation
+ evaluate TNLR {'intent_acc': 0.93144260830728, 'slot_precision': 0.5129070455891059, 'slot_recall': 0.3529723342704641, 'slot_f1': 0.41816909226944704, 'sementic_frame_acc': 0.0031263957123715946} :
+
+
+// remove pad for evaluation
+// not being better.... not sure why
+ evaluate TNLR {'intent_acc': 0.93144260830728, 'slot_precision': 0.49209596429235636, 'slot_recall': 0.5092705459677936, 'slot_f1': 0.5005359732643924, 'sementic_frame_acc': 0.08240285841893702} :
+
+
+
+
 =================
 v1
 CLS , SEP label = 0, as pad
 B-label extend 
 train = dev = eva
+this case 
+https://github.com/chakki-works/seqeval/blob/master/seqeval/metrics/sequence_labeling.py
+ warnings.warn('{} seems not to be NE tag.'.format(chunk))
+         >>> from seqeval.metrics.sequence_labeling import get_entities
+        >>> seq = ['B-PER', 'I-PER', 'O', 'B-LOC']
+        >>> get_entities(seq)
+        [('PER', 0, 1), ('LOC', 3, 3)]
+		
+since v1 will break this chunk
+
+
+this case evaluation will be different
+my logic: B-code I-code are different span 
+IOB logic: B-code I-code are the same slot 
+
 =================
 
 // applied in atis repo
@@ -338,8 +470,10 @@ train = dev = eva
 //cpu
 // same setting but different runs might be differentve81
 //first outputs_temp_load_v1_02142021v1
+//outputs_local_load_v1_02142021v1
   Validation metric after iteration 5 : {'total_intent_precision': 0.9220460129551039, 'total_intent_recall': 0.9220460129551039, 'total_slot_precision': 0.6902472527472527, 'total_slot_recall': 0.7089552238805971}
-//second time outputs_temp_load_v1_02152021v1
+//second time 
+outputs_temp_load_v1_02152021v1 >outputs_local_load_v1_02152021v1
    Validation metric after iteration 5 : {'total_intent_precision': 0.8981460799642618, 'total_intent_recall': 0.8981460799642618, 'total_slot_precision': 0.5670757511637748, 'total_slot_recall': 0.5970149253731343}
   
 Time: 32m 1s
@@ -352,10 +486,24 @@ E:\azure_ml_notebook\outputs_temp_load_v1_02142021v1
 // third time, my evauation replicate success in atis_model_saved
 // thrid time  IOB logic is higher
 Validation metric Iob: {'intent_acc': 0.8981460799642618, 'slot_precision': 0.6036986236579482, 'slot_recall': 0.700471956975085, 'slot_f1': 0.6484948558364029}  
+// trying to reproduce for all merics - wo pad and wo pad
+ Validation metric : {'total_intent_precision': 0.8956890775072593, 'total_intent_recall': 0.8956890775072593, 'total_slot_precision': 0.4078921277017648, 'total_slot_recall': 0.5346031038835672}
+ Validation metric wo pad: {'total_intent_precision': 0.8956890775072593, 'total_intent_recall': 0.8956890775072593, 'total_slot_precision': 0.5564067712838255, 'total_slot_recall': 0.5007784697508897}
+ Validation metric Iob wo pad: {'intent_acc': 0.8956890775072593, 'slot_precision': 0.4143335281304787, 'slot_recall': 0.6419986829107672, 'slot_f1': 0.5036324303380583}
+ Validation metric Iob: {'intent_acc': 0.8956890775072593, 'slot_precision': 0.6458380757265346, 'slot_recall': 0.6290137826552858, 'slot_f1': 0.6373149136107523}
+
 
 
 
 //applied in my local
 //12 layers
 //cpu
+// not big improvement
+outputs_local_load_layer12_v1_02162021v1
+ Validation metric : {'total_intent_precision': 0.9309805673442038, 'total_intent_recall': 0.9309805673442038, 'total_slot_precision': 0.537526347485697, 'total_slot_recall': 0.5302220242073216}
 
+
+=================
+MDM experiment 
+compared to hvd initilization
+=================
