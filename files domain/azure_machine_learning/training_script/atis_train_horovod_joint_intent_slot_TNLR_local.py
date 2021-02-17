@@ -1244,7 +1244,41 @@ class Evaluation():
             #self.out_slot_labels = np.append(self.out_slot_labels, slot_labels_list, axis=0)
 
 
+    # for iob
+    def get_intent_metrics_Iob(self, preds, golden):
+        #acc = (preds == golden).mean()
+        #return {
+        #    "intent_acc": acc
+        #}
+        assert len(preds) == len(golden)
+
+        acc = (preds == golden).mean()
+
+        # repo :
+        #  origginal preds dtype=int64, nparray
+        # inside is labelid
+        #[0:4478]
+        # originla golden (output_intent_labes inds), dtype=int64, nparray
+        # [0:4478]
+        # inside is labelid
+
+       
+        return {
+            # originla code using this
+            "intent_acc": acc
+            # ? belo code cannot work, need to sutdy
+            # 
+            #"intent_precision": precision_score(preds, golden),
+            #"intent_recall": recall_score(preds, golden)
+        }
+
+
     def get_intent_metrics(self, preds, golden):
+
+
+        if self.useIob is True:
+            return self.get_intent_metrics_Iob(preds, golden)
+
         #acc = (preds == golden).mean()
         #return {
         #    "intent_acc": acc
@@ -1300,20 +1334,6 @@ class Evaluation():
             "total_intent_recall": overall_recall_intent
         }
 
-    # for iob
-    #def get_intent_metrics(self, preds, golden):
-    #    #acc = (preds == golden).mean()
-    #    #return {
-    #    #    "intent_acc": acc
-    #    #}
-    #    assert len(preds) == len(golden)
-       
-    #    return {
-    #        "intent_precision": precision_score(preds, golden),
-    #        "intent_recall": recall_score(preds, golden)
-    #    }
-
-
     def create_slot_arrays(self, pred_list):
         # initailize each slot's result
         slot_arrays={}
@@ -1344,7 +1364,51 @@ class Evaluation():
                 continue;
         return slot_arrays;
 
+
+    # leave for iob
+    def get_slot_metrics_Iob(self, preds, golden):
+        assert len(preds) == len(golden)
+
+
+
+        # repo :
+        #  origginal slot_preds_list 2d list,
+        # inside is slot, not id, so need to transformed
+        # for each element, length is not fixed length
+        # ? but in my case will the same , should be ok
+
+
+        # map :
+        # https://stackoverflow.com/questions/42594695/how-to-apply-a-function-map-values-of-each-element-in-a-2d-numpy-array-matrix
+        def myfunc(z):
+            return self.slots_label_set.get_label(z)
+
+        #temp = myfunc(preds)
+        preds_labels = np.vectorize(myfunc)(preds)
+
+        # 
+        #[0:4478]
+        # originla golden (output_slot_labellist),2d list,
+        # inside is slot, not id
+        # for each element, length is not fixed length
+        # ? but in my case will the same , should be ok
+
+        golden_labels = np.vectorize(myfunc)(golden)
+
+
+
+        return {
+            "slot_precision": precision_score(golden_labels.tolist(), preds_labels.tolist()),
+            "slot_recall": recall_score(golden_labels.tolist(), preds_labels.tolist()),
+            "slot_f1": f1_score(golden_labels.tolist(), preds_labels.tolist())
+        }
+
     def get_slot_metrics(self, preds, golden):
+
+        if self.useIob is True:
+            return self.get_slot_metrics_Iob(preds, golden)
+
+
         assert len(preds) == len(golden)
 
 
@@ -1418,16 +1482,30 @@ class Evaluation():
         #            query_fn = query_fn+fn_count
         #            query_fp = query_fp+fp_count
 
-    # leave for iob
-    #def get_slot_metrics(self, preds, golden):
-    #    assert len(preds) == len(golden)
-    #    return {
-    #        "slot_precision": precision_score(preds.tolist(), golden.tolist()),
-    #        "slot_recall": recall_score(preds.tolist(), golden.tolist()),
-    #        "slot_f1": f1_score(preds.tolist(), golden.tolist())
-    #    }
+
+    # leave it no need since overloading 
+    def compute_metrics_IOB(self):
+        # checking the length is the same
+        assert len(self.intent_preds) == len(self.intent_golden) == len(self.slot_preds) == len(self.slot_golden)
+        results = {}
+
+        intent_result = self.get_intent_metrics(self.intent_preds, self.intent_golden)
+        slot_result = self.get_slot_metrics(self.slot_preds, self.slot_golden)
+        #sementic_result = get_sentence_frame_acc(intent_preds, intent_labels, slot_preds, slot_labels)
+
+        results.update(intent_result)
+        results.update(slot_result)
+        #results.update(sementic_result)
+
+        return results
 
     def compute_metrics(self):
+
+
+        #if self.useIob is True:
+        #    return self.compute_metrics_IOB()
+
+
         # checking the length is the same
         assert len(self.intent_preds) == len(self.intent_golden) == len(self.slot_preds) == len(self.slot_golden)
         results = {}
@@ -2083,7 +2161,7 @@ from transformers import BertConfig;
 bert_config = BertConfig();
 #no need to provide level for bertPreTrainModel
 #bert_config.num_labels = num_labels;
-bert_config.num_hidden_layers = 3
+bert_config.num_hidden_layers = 12
 bert_config.output_attentions = False;
 bert_config.output_hidden_states = False;
 
@@ -2341,6 +2419,7 @@ for n in range(num_epochs):
 
     # initialize evaluation test object
     evaluation_test = Evaluation(slots_label_set, intent_label_set)
+    evaluation_test_iob = Evaluation(slots_label_set, intent_label_set, useIob=True)
 
     # Tell pytorch not to bother with constructing the compute graph during
     # the forward pass, since this is only needed for backprop (training).
@@ -2405,6 +2484,8 @@ for n in range(num_epochs):
             intent_output,slot_output,intent_prob = model(mb_x, attention_mask=mb_m)
             evaluation_test.add_intent_pred_and_golden(intent_output, mb_y)
             evaluation_test.add_slot_pred_and_golden(slot_output, mb_z)
+            evaluation_test_iob.add_intent_pred_and_golden(intent_output, mb_y)	
+            evaluation_test_iob.add_slot_pred_and_golden(slot_output, mb_z)	
 
 
             val_loss += 0 / num_mb_val
@@ -2417,6 +2498,7 @@ for n in range(num_epochs):
         #val_losses.append(avg_val_loss)
 
         print(' Validation metric after iteration {} : {}'.format(n+1, evaluation_test.compute_metrics())) 
+        print(' Validation metric Iob after iteration {} : {}'.format(n+1, evaluation_test.compute_metrics()))
     
     end_time = time.time()
     epoch_mins, epoch_secs = epoch_time(start_time, end_time)

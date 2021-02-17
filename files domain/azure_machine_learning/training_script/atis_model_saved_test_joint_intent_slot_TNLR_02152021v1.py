@@ -214,22 +214,17 @@ IntListList = List[IntList] # A List of List of token_ids, e.g. a Batch
 
 import itertools
 class LabelSet:
-    def __init__(self, labels: List[str], tokenizer, untagged_id, pad_token_label_id,  useIob=False):
+    def __init__(self, labels: List[str], tokenizer, untagged_id = 0, useIob=False):
         self.labels_to_id = {}
         self.ids_to_label = {}
         self.untagged_id = untagged_id
+
         self.labels_to_id["o"] = untagged_id
         self.ids_to_label[untagged_id] = "o"
 
-
-        self.pad_token_label_id = pad_token_label_id
-        self.labels_to_id["pad"] = pad_token_label_id
-        self.ids_to_label[pad_token_label_id] = "pad"
-
         num = 0
         for label in labels:
-            # using lower case to compare
-            if label.lower() == "o" or label.lower() == "pad":
+            if label == "o":
                 print("skip:{}".format(label))
                 num = num +1 
                 continue
@@ -259,12 +254,6 @@ class LabelSet:
 
     def get_untagged_label(self):
         return self.ids_to_label[self.untagged_id]
-
-    def get_pad_id(self):
-        return self.pad_token_label_id
-
-    def get_pad_label(self):
-        return self.ids_to_label[self.pad_token_label_id]
 
     def get_id(self, label):
         return self.labels_to_id[label]
@@ -591,9 +580,7 @@ slots = [
 
 # map all slots to lower case
 slots_label_set = LabelSet(labels=map(str.lower,slots), 
-                            tokenizer =fast_tokenizer, 
-                            untagged_id = 2,
-                            pad_token_label_id = 0)
+                            tokenizer =fast_tokenizer, untagged_id = 2)
 
 class IntentLabelSet:
     def __init__(self, labels: List[str]):
@@ -886,7 +873,6 @@ class Evaluation():
 
 
     # leave for iob
-    '''
     def get_slot_metrics_Iob(self, preds, golden):
         assert len(preds) == len(golden)
 
@@ -923,27 +909,6 @@ class Evaluation():
             "slot_recall": recall_score(golden_labels.tolist(), preds_labels.tolist()),
             "slot_f1": f1_score(golden_labels.tolist(), preds_labels.tolist())
         }
-    '''
-
-
-    def get_slot_metrics_Iob(self, preds, golden):
-        assert len(preds) == len(golden)
-
-        # map list of id to label
-        preds_labels_list = [[] for _ in range(len(preds))]
-        golden_labels_list = [[] for _ in range(len(golden))]
-
-    
-        for i in range(len(golden)):
-            for j in range(len(golden[i])):
-                preds_labels_list[i].append(slots_label_set.get_label(preds[i][j]))
-                golden_labels_list[i].append(slots_label_set.get_label(golden[i][j]))
-
-        return {
-            "slot_precision": precision_score(golden_labels_list, preds_labels_list),
-            "slot_recall": recall_score(golden_labels_list, preds_labels_list),
-            "slot_f1": f1_score(golden_labels_list,  preds_labels_list)
-        }
 
     def get_slot_metrics(self, preds, golden):
 
@@ -961,8 +926,7 @@ class Evaluation():
             slot_tp_tn_fn_counts[label+"_fp"]=0
             slot_tp_tn_fn_counts[label+"_tp"]=0       
 
-        #for pred, golden_per_query in zip(preds.tolist(), golden.tolist()):
-        for pred, golden_per_query in zip(preds, golden):
+        for pred, golden_per_query in zip(preds.tolist(), golden.tolist()):
             preds_slot_array = self.create_slot_arrays(pred)
             golden_slot_array = self.create_slot_arrays(golden_per_query)
             query_fn = 0
@@ -1027,60 +991,14 @@ class Evaluation():
 
 
     # leave it no need since overloading 
-    #def compute_metrics_IOB(self):
-    #    # checking the length is the same
-    #    assert len(self.intent_preds) == len(self.intent_golden) == len(self.slot_preds) == len(self.slot_golden)
-    #    results = {}
-
-    #    intent_result = self.get_intent_metrics(self.intent_preds, self.intent_golden)
-    #    slot_result = self.get_slot_metrics(self.slot_preds, self.slot_golden)
-    #    #sementic_result = get_sentence_frame_acc(intent_preds, intent_labels, slot_preds, slot_labels)
-
-    #    results.update(intent_result)
-    #    results.update(slot_result)
-    #    #results.update(sementic_result)
-
-    #    return results
-
-    def compute_metrics(self, ignore_pad=False):
-
-
-        #if self.useIob is True:
-        #    return self.compute_metrics_IOB()
-
+    def compute_metrics_IOB(self):
         # checking the length is the same
         assert len(self.intent_preds) == len(self.intent_golden) == len(self.slot_preds) == len(self.slot_golden)
         results = {}
 
-        slot_preds_list = [[] for _ in range(self.slot_golden.shape[0])]
-        slot_golden_list = [[] for _ in range(self.slot_golden.shape[0])]
-
-        for i in range(self.slot_golden.shape[0]):
-            for j in range(self.slot_golden.shape[1]):
-                # v2
-                 # ignore pad_token_label_id
-                if ignore_pad == True:
-                    if self.slot_golden[i, j] != self.slots_label_set.get_pad_id():
-                        slot_preds_list[i].append(self.slot_preds[i][j])
-                        slot_golden_list[i].append(self.slot_golden[i][j])
-                else:
-                        slot_preds_list[i].append(self.slot_preds[i][j])
-                        slot_golden_list[i].append(self.slot_golden[i][j])
-
-
-                #  no need to map label
-                # it will be done inside get_slot_metrics()
-                # there is np.array mapping inside get_slot_metrics()
-                #if self.slot_golden[i, j] != self.slots_label_set.get_pad_label():
-                    #slot_preds_wo_pad[i].append(slots_label_set.get_label(self.slot_preds[i][j]))
-                    #slot_golden_wo_pad[i].append(slots_label_set.get_label(self.slot_golden[i][j]))
-
-
-
-
         intent_result = self.get_intent_metrics(self.intent_preds, self.intent_golden)
-        slot_result = self.get_slot_metrics(slot_preds_list, slot_golden_list)
-        #sementic_result = get_sentence_frame_acc(self.intent_preds, self.intent_golden, self.slot_preds, self.slot_golden)
+        slot_result = self.get_slot_metrics(self.slot_preds, self.slot_golden)
+        #sementic_result = get_sentence_frame_acc(intent_preds, intent_labels, slot_preds, slot_labels)
 
         results.update(intent_result)
         results.update(slot_result)
@@ -1088,23 +1006,27 @@ class Evaluation():
 
         return results
 
-
-        #if ignore_pad == True:
-
-        #else:
+    def compute_metrics(self):
 
 
+        #if self.useIob is True:
+        #    return self.compute_metrics_IOB()
 
-        #    # library cannot calculate intent, find later
-        #    intent_result = self.get_intent_metrics(self.intent_preds, self.intent_golden)
-        #    slot_result = self.get_slot_metrics(self.slot_preds, self.slot_golden)
-            #sementic_result = get_sentence_frame_acc(self.intent_preds, self.intent_golden, self.slot_preds, self.slot_golden)
 
-        #    results.update(intent_result)
-        #    results.update(slot_result)
-        #    #results.update(sementic_result)
+        # checking the length is the same
+        assert len(self.intent_preds) == len(self.intent_golden) == len(self.slot_preds) == len(self.slot_golden)
+        results = {}
 
-        #    return results
+        # library cannot calculate intent, find later
+        intent_result = self.get_intent_metrics(self.intent_preds, self.intent_golden)
+        slot_result = self.get_slot_metrics(self.slot_preds, self.slot_golden)
+        #sementic_result = get_sentence_frame_acc(self.intent_preds, self.intent_golden, self.slot_preds, self.slot_golden)
+
+        results.update(intent_result)
+        results.update(slot_result)
+        #results.update(sementic_result)
+
+        return results
 
 
 # for debug
@@ -1176,7 +1098,7 @@ for i, row in df.iterrows():
     # v1: 
     # CLS , SEP label = 0
     # B-label extend 
-    tag_string =  slots_label_set.get_pad_label() + ' '+ tag_string + ' ' + slots_label_set.get_pad_label()
+    tag_string =  slots_label_set.get_label(0) + ' '+ tag_string + ' ' + slots_label_set.get_label(0)
 
 
     # replcae by class's output word string
@@ -1207,7 +1129,7 @@ for i, row in df.iterrows():
             # padding, add label as zero as default
             #labels_for_text_id.append(slots_label_set.get_untagged_id())
             # padding add pad id
-            labels_for_text_id.append(slots_label_set.get_pad_id())
+            labels_for_text_id.append(slots_label_set.get_id('pad'))
     labels_for_text_ids.append(labels_for_text_id)
 
 
@@ -1773,12 +1695,7 @@ print("load model done: !")
 
 
 #output_dir = './outputs/'
-#output_dir = '../outputs_temp_load_v1_02152021v1/'
-#output_dir = '../outputs_local_load_v1_02152021v1/'
-#output_dir = '../ouput_randomsampler_v1_02152021v1/'
-#output_dir = '../ouput_randomsampler_layer12_v1_02162021v1/'
-output_dir = '../ouput_randomsampler_v1_02172021v1/'
-#output_dir = '../outputs_local_load_layer12_v1_02162021v1/'
+output_dir = '../outputs_temp_load_v1_02152021v1/'
 import os, argparse
 # if folder does not exist then create
 if not os.path.exists(output_dir):
@@ -1824,7 +1741,7 @@ bert_config.output_hidden_states = False;
 
 
 
-#model = DistilBertForTokenClassificationFilesDomain.from_pretrained(output_dir+'pytorch_model.bin', 
+model = DistilBertForTokenClassificationFilesDomain.from_pretrained(output_dir+'pytorch_model.bin', 
         config=bert_config,
         num_intent_labels=num_intent_labels,
         num_slot_labels=num_slot_labels)
@@ -1962,10 +1879,8 @@ with torch.no_grad():
 
     # my calculation        	
     print(' Validation metric : {}'.format(evaluation_test.compute_metrics()))
-    print(' Validation metric wo pad: {}'.format(evaluation_test.compute_metrics(ignore_pad=True)))
     # IOB calculation
-    print(' Validation metric Iob wo pad: {}'.format(evaluation_test_iob.compute_metrics()))    
-    print(' Validation metric Iob: {}'.format(evaluation_test_iob.compute_metrics(ignore_pad=True)))
+    print(' Validation metric Iob: {}'.format(evaluation_test_iob.compute_metrics()))
 
 
 ##################################################

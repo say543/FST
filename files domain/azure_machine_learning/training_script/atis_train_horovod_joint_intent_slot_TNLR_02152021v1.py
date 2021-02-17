@@ -1,5 +1,3 @@
-
-
 # source code from here
 #https://github.com/vilcek/fine-tuning-BERT-for-text-classification/blob/master/02-data-classification.ipynb
 import numpy as np
@@ -18,28 +16,86 @@ import traceback
 # only support IOB format....
 from seqeval.metrics import precision_score, recall_score, f1_score
 
-
-'''
-import traceback
-import warnings
-import sys
-
-def warn_with_traceback(message, category, filename, lineno, file=None, line=None):
-
-    log = file if hasattr(file,'write') else sys.stderr
-    traceback.print_stack(file=log)
-    log.write(warnings.formatwarning(message, category, filename, lineno, line))
-
-warnings.showwarning = warn_with_traceback
-'''
-
 ###############
-#local below
+#remote
 ###############
 
 
 import torch
 import torch.nn as nn
+from torch.nn import CrossEntropyLoss
+from torch.utils.data import TensorDataset, DataLoader
+from torch.utils.data.distributed import DistributedSampler
+
+from transformers.modeling_outputs import TokenClassifierOutput
+#from transformers import DistilBertPreTrainedModel, DistilBertModel
+from transformers import DistilBertTokenizer,DistilBertTokenizerFast
+#from transformers import BertForTokenClassification
+from transformers import BertPreTrainedModel,BertModel
+
+#from transformers import DistilBertForTokenClassification, AdamW, DistilBertConfig
+from transformers import AdamW
+
+from transformers import get_linear_schedule_with_warmup
+from transformers import BatchEncoding
+from tokenizers import Encoding
+import horovod.torch as hvd
+
+from azureml.core import Workspace, Run, Dataset
+
+
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--dataset_name', type=str, dest='dataset_name', default='')
+parser.add_argument('--TNLR_model_bin', type=str, dest='TNLR_model_bin', default='')
+parser.add_argument('--batch_size', type=int, dest='batch_size', default=32)
+parser.add_argument('--learning_rate', type=float, dest='learning_rate', default=1e-5)
+parser.add_argument('--adam_epsilon', type=float, dest='adam_epsilon', default=1e-8)
+parser.add_argument('--num_epochs', type=int, dest='num_epochs', default=5)
+
+
+
+args = parser.parse_args()
+TNLR_model_name = args.TNLR_model_bin
+dataset_name = args.dataset_name
+batch_size = args.batch_size
+learning_rate = args.learning_rate
+adam_epsilon = args.adam_epsilon
+num_epochs = args.num_epochs
+
+
+
+run = Run.get_context()
+workspace = run.experiment.workspace
+
+dataset = Dataset.get_by_name(workspace, name=dataset_name)
+TNLR_model = Dataset.get_by_name(workspace, name=TNLR_model_name)
+
+
+file_name = dataset.download()[0]
+TNLR_model_file_name = TNLR_model.download()[0]
+
+
+# for original data: CSV
+#df = pd.read_csv(file_name)
+# for files doamin data : tsv
+df = pd.read_csv(file_name, sep='\t', encoding="utf-8",
+    keep_default_na=False,
+    dtype={
+    'MessageId': object, 'Frequency': object, 'ConversationContext': object, 'SelectionIgnore': object})
+
+
+
+# for debug
+print('top head data {}'.format(df.head()))
+
+
+###############
+#local below
+###############
+
+'''
+import torch
 from torch.utils.data import TensorDataset, DataLoader
 from torch.utils.data.distributed import DistributedSampler
 
@@ -58,18 +114,9 @@ from tokenizers import Encoding
 
 #from azureml.core import Workspace, Run, Dataset
 
-#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TrainSet_small_012n02021v1.tsv', sep='\t', encoding="utf-8",
-df = pd.read_csv('E:/azure_ml_notebook/azureml_data/atis_train.tsv', sep='\t', encoding="utf-8",
-#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/atis_train_ten.tsv', sep='\t', encoding="utf-8",
-    keep_default_na=False,
-    dtype={
-    'MessageId': object, 'Frequency': object, 'ConversationContext': object, 'SelectionIgnore': object})
-
-
-#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/atis_train_ten.tsv', sep='\t', encoding="utf-8",
-#    keep_default_na=False,
-#    dtype={
-#    'MessageId': object, 'Frequency': object, 'ConversationContext': object, 'SelectionIgnore': object})
+# ouput only three column
+df = pd.read_csv('E:/azure_ml_notebook/azureml_data/files_slot_training_small.tsv', sep='\t', encoding="utf-8")
+#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/files_slot_training_single.tsv', sep='\t', encoding="utf-8")
 
 
 # for debug
@@ -91,117 +138,30 @@ print('top head data {}'.format(df.head()))
 #label_values = list(label_counts.index)
 #order = list(pd.DataFrame(df['Product_Label'].value_counts()).index)
 #label_values = [l for _,l in sorted(zip(order, label_values))]
-
+'''
 
 ###############
 #local above
 ###############
 
-
-#########################
-# torch tensor operation test below
-#########################
-
-output = torch.tensor([[[-0.1221, -0.3479, -0.0684,  0.0110,  0.2062,  0.1621, -0.0185,
-           0.0124,  0.5029,  0.7174,  0.2862, -0.2431,  0.1328, -0.1321,
-          -0.4819,  0.2302,  0.0615, -0.2918, -0.3064, -0.2910,  0.3069],
-         [ 0.0583, -0.2261, -0.1034,  0.1108,  0.0693,  0.2041, -0.1494,
-          -0.0275,  0.0287,  0.0484,  0.3371, -0.0232,  0.2029,  0.0085,
-          -0.2478,  0.1623,  0.0651, -0.0443, -0.4363, -0.0838,  0.0469],
-         [ 0.0049, -0.2861, -0.0598,  0.1419, -0.0236,  0.2379, -0.1346,
-          -0.1205,  0.0782,  0.0839,  0.2446,  0.0358,  0.2748, -0.0316,
-          -0.1360,  0.1410,  0.0341, -0.1465, -0.4751, -0.1850,  0.0027],
-         [-0.2048, -0.2630,  0.1079, -0.1364, -0.0478,  0.2168, -0.2872,
-          -0.0433,  0.2038, -0.0138,  0.2251, -0.1251, -0.0528,  0.0448,
-          -0.3945,  0.2250,  0.0129,  0.0118, -0.3394,  0.0837,  0.0479],
-         [ 0.3469,  0.1035,  0.2902,  0.1426,  0.0818, -0.1072,  0.3632,
-           0.0375,  0.3482, -0.2737,  0.0239, -0.1121, -0.1262, -0.2249,
-          -0.2885, -0.0055, -0.3414,  0.1324, -0.1100, -0.1086,  0.0097]]])
-
-#version 1
-#for i, ele2d in enumerate(output):
-#    for j, ele1d in enumerate(ele2d):
-#        value, index = torch.max(ele1d, dim=0)
-#        print("value: {} anmd index {}".format(value, index))
+##texts = df['query'].values
 
 
-#version 2
-#index = torch.argmax(output.view(-1,21), dim=1)
+##labels = df['domain'].values
 
-#print(index)
+### for debug
+### label_counts  / label values are useless unless treating them as features
+###print('label_counts {}'.format(label_counts))
+###print('label_values after sorted {}'.format(label_values))
+##print('labels {}'.format(labels))
 
 
 
-#########################
-# torch tensor operation test above
-#########################
-
-
-
-
-
-
-#enc = BertTokenizer.from_pretrained("bert-base-uncased")
+#also huggingface
+#https://huggingface.co/transformers/model_doc/distilbert.html
+#tokenizer = DistilBertTokenizer.from_pretrained('distilbert-base-uncased', do_lower_case=True)
 fast_tokenizer = DistilBertTokenizerFast.from_pretrained('distilbert-base-uncased') # Load a pre-trained tokenizer
 
-# Tokenizing input text
-
-# save onnx
-# Tokenizing input text
-text = "a visually stunning rumination on love"
-fast_tokenized_batch : BatchEncoding = fast_tokenizer(text)
-fast_tokenized_text :Encoding  =fast_tokenized_batch[0]
-fast_tokenized_text_tokens_copy = fast_tokenized_text.tokens
-
-print("fast token ouput version 2 being used here: {}".format(fast_tokenized_text_tokens_copy))
-
-# Masking one of the input tokens
-# this is question answering so change it only a single sentence
-#masked_index = 8
-masked_index = 3
-fast_tokenized_text_tokens_copy[masked_index] = '[MASK]'
-indexed_tokens = fast_tokenizer.convert_tokens_to_ids(fast_tokenized_text_tokens_copy)
-
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-
-# for debug 
-print("device: {}".format('cuda' if torch.cuda.is_available() else 'cpu'))
-
-print("indexed_tokens: {}".format(indexed_tokens))
-segments_ids = [0]
-
-# Creating a dummy input
-# but you need to move tensors to GPU
-#https://github.com/huggingface/transformers/issues/227
-#tokens_tensor = torch.tensor([indexed_tokens])
-#segments_tensors = torch.tensor([segments_ids])
-print("create input for device: {}".format(device))
-
-# adding [] is the same as unqueeze(0) function
-tokens_tensor = torch.tensor([indexed_tokens]).to(device)
-
-segments_tensors = torch.tensor([segments_ids]).to(device)
-dummy_input = tokens_tensor
-
-# for deubg
-print("tokens_tensor shape: {}".format(tokens_tensor.shape))
-print("segments_tensor shape: {}".format(segments_tensors.shape))
-
-print("tokens_tensor: {}".format(tokens_tensor))
-print("segments_tensor: {}".format(segments_tensors))
-
-
-
-# Initializing the model with the torchscript flag
-# Flag set to True even though it is not necessary as this model does not have an LM Head.
-#config = BertConfig(vocab_size_or_config_json_file=32000, hidden_size=768,
-#    num_hidden_layers=12, num_attention_heads=12, intermediate_size=3072, torchscript=True)
-
-# Instantiating the model
-#model = BertModel(config)
-
-# The model needs to be in evaluation mode
-#model.eval()
 
 
 
@@ -214,22 +174,17 @@ IntListList = List[IntList] # A List of List of token_ids, e.g. a Batch
 
 import itertools
 class LabelSet:
-    def __init__(self, labels: List[str], tokenizer, untagged_id, pad_token_label_id,  useIob=False):
+    def __init__(self, labels: List[str], tokenizer, untagged_id = 0, useIob=False):
         self.labels_to_id = {}
         self.ids_to_label = {}
         self.untagged_id = untagged_id
+
         self.labels_to_id["o"] = untagged_id
         self.ids_to_label[untagged_id] = "o"
 
-
-        self.pad_token_label_id = pad_token_label_id
-        self.labels_to_id["pad"] = pad_token_label_id
-        self.ids_to_label[pad_token_label_id] = "pad"
-
         num = 0
         for label in labels:
-            # using lower case to compare
-            if label.lower() == "o" or label.lower() == "pad":
+            if label == "o":
                 print("skip:{}".format(label))
                 num = num +1 
                 continue
@@ -259,12 +214,6 @@ class LabelSet:
 
     def get_untagged_label(self):
         return self.ids_to_label[self.untagged_id]
-
-    def get_pad_id(self):
-        return self.pad_token_label_id
-
-    def get_pad_label(self):
-        return self.ids_to_label[self.pad_token_label_id]
 
     def get_id(self, label):
         return self.labels_to_id[label]
@@ -591,9 +540,7 @@ slots = [
 
 # map all slots to lower case
 slots_label_set = LabelSet(labels=map(str.lower,slots), 
-                            tokenizer =fast_tokenizer, 
-                            untagged_id = 2,
-                            pad_token_label_id = 0)
+                            tokenizer =fast_tokenizer, untagged_id = 2)
 
 class IntentLabelSet:
     def __init__(self, labels: List[str]):
@@ -647,7 +594,6 @@ intents = [
 
 
 intent_label_set = IntentLabelSet(labels=map(str.lower,intents))
-
 
 class Evaluation():
     def __init__(self, slots_label_set, intent_label_set, useIob=False):
@@ -886,7 +832,6 @@ class Evaluation():
 
 
     # leave for iob
-    '''
     def get_slot_metrics_Iob(self, preds, golden):
         assert len(preds) == len(golden)
 
@@ -923,27 +868,6 @@ class Evaluation():
             "slot_recall": recall_score(golden_labels.tolist(), preds_labels.tolist()),
             "slot_f1": f1_score(golden_labels.tolist(), preds_labels.tolist())
         }
-    '''
-
-
-    def get_slot_metrics_Iob(self, preds, golden):
-        assert len(preds) == len(golden)
-
-        # map list of id to label
-        preds_labels_list = [[] for _ in range(len(preds))]
-        golden_labels_list = [[] for _ in range(len(golden))]
-
-    
-        for i in range(len(golden)):
-            for j in range(len(golden[i])):
-                preds_labels_list[i].append(slots_label_set.get_label(preds[i][j]))
-                golden_labels_list[i].append(slots_label_set.get_label(golden[i][j]))
-
-        return {
-            "slot_precision": precision_score(golden_labels_list, preds_labels_list),
-            "slot_recall": recall_score(golden_labels_list, preds_labels_list),
-            "slot_f1": f1_score(golden_labels_list,  preds_labels_list)
-        }
 
     def get_slot_metrics(self, preds, golden):
 
@@ -961,8 +885,7 @@ class Evaluation():
             slot_tp_tn_fn_counts[label+"_fp"]=0
             slot_tp_tn_fn_counts[label+"_tp"]=0       
 
-        #for pred, golden_per_query in zip(preds.tolist(), golden.tolist()):
-        for pred, golden_per_query in zip(preds, golden):
+        for pred, golden_per_query in zip(preds.tolist(), golden.tolist()):
             preds_slot_array = self.create_slot_arrays(pred)
             golden_slot_array = self.create_slot_arrays(golden_per_query)
             query_fn = 0
@@ -1027,59 +950,35 @@ class Evaluation():
 
 
     # leave it no need since overloading 
-    #def compute_metrics_IOB(self):
-    #    # checking the length is the same
-    #    assert len(self.intent_preds) == len(self.intent_golden) == len(self.slot_preds) == len(self.slot_golden)
-    #    results = {}
+    def compute_metrics_IOB(self):
+        # checking the length is the same
+        assert len(self.intent_preds) == len(self.intent_golden) == len(self.slot_preds) == len(self.slot_golden)
+        results = {}
 
-    #    intent_result = self.get_intent_metrics(self.intent_preds, self.intent_golden)
-    #    slot_result = self.get_slot_metrics(self.slot_preds, self.slot_golden)
-    #    #sementic_result = get_sentence_frame_acc(intent_preds, intent_labels, slot_preds, slot_labels)
+        intent_result = self.get_intent_metrics(self.intent_preds, self.intent_golden)
+        slot_result = self.get_slot_metrics(self.slot_preds, self.slot_golden)
+        #sementic_result = get_sentence_frame_acc(intent_preds, intent_labels, slot_preds, slot_labels)
 
-    #    results.update(intent_result)
-    #    results.update(slot_result)
-    #    #results.update(sementic_result)
+        results.update(intent_result)
+        results.update(slot_result)
+        #results.update(sementic_result)
 
-    #    return results
+        return results
 
-    def compute_metrics(self, ignore_pad=False):
+    def compute_metrics(self):
 
 
         #if self.useIob is True:
         #    return self.compute_metrics_IOB()
 
+
         # checking the length is the same
         assert len(self.intent_preds) == len(self.intent_golden) == len(self.slot_preds) == len(self.slot_golden)
         results = {}
 
-        slot_preds_list = [[] for _ in range(self.slot_golden.shape[0])]
-        slot_golden_list = [[] for _ in range(self.slot_golden.shape[0])]
-
-        for i in range(self.slot_golden.shape[0]):
-            for j in range(self.slot_golden.shape[1]):
-                # v2
-                 # ignore pad_token_label_id
-                if ignore_pad == True:
-                    if self.slot_golden[i, j] != self.slots_label_set.get_pad_id():
-                        slot_preds_list[i].append(self.slot_preds[i][j])
-                        slot_golden_list[i].append(self.slot_golden[i][j])
-                else:
-                        slot_preds_list[i].append(self.slot_preds[i][j])
-                        slot_golden_list[i].append(self.slot_golden[i][j])
-
-
-                #  no need to map label
-                # it will be done inside get_slot_metrics()
-                # there is np.array mapping inside get_slot_metrics()
-                #if self.slot_golden[i, j] != self.slots_label_set.get_pad_label():
-                    #slot_preds_wo_pad[i].append(slots_label_set.get_label(self.slot_preds[i][j]))
-                    #slot_golden_wo_pad[i].append(slots_label_set.get_label(self.slot_golden[i][j]))
-
-
-
-
+        # library cannot calculate intent, find later
         intent_result = self.get_intent_metrics(self.intent_preds, self.intent_golden)
-        slot_result = self.get_slot_metrics(slot_preds_list, slot_golden_list)
+        slot_result = self.get_slot_metrics(self.slot_preds, self.slot_golden)
         #sementic_result = get_sentence_frame_acc(self.intent_preds, self.intent_golden, self.slot_preds, self.slot_golden)
 
         results.update(intent_result)
@@ -1089,22 +988,6 @@ class Evaluation():
         return results
 
 
-        #if ignore_pad == True:
-
-        #else:
-
-
-
-        #    # library cannot calculate intent, find later
-        #    intent_result = self.get_intent_metrics(self.intent_preds, self.intent_golden)
-        #    slot_result = self.get_slot_metrics(self.slot_preds, self.slot_golden)
-            #sementic_result = get_sentence_frame_acc(self.intent_preds, self.intent_golden, self.slot_preds, self.slot_golden)
-
-        #    results.update(intent_result)
-        #    results.update(slot_result)
-        #    #results.update(sementic_result)
-
-        #    return results
 
 
 # for debug
@@ -1141,7 +1024,6 @@ for i, row in df.iterrows():
 	# remove head and end spaces 
     slot = slot.strip()
 
-
     # ignore multi turn queries
     conversationContext = row['ConversationContext']
 
@@ -1176,8 +1058,7 @@ for i, row in df.iterrows():
     # v1: 
     # CLS , SEP label = 0
     # B-label extend 
-    tag_string =  slots_label_set.get_pad_label() + ' '+ tag_string + ' ' + slots_label_set.get_pad_label()
-
+    tag_string =  slots_label_set.get_label(0) + ' '+ tag_string + ' ' + slots_label_set.get_label(0)
 
     # replcae by class's output word string
     text_id = fast_tokenizer.encode(text, max_length=300, padding='max_length', truncation=True)
@@ -1207,7 +1088,7 @@ for i, row in df.iterrows():
             # padding, add label as zero as default
             #labels_for_text_id.append(slots_label_set.get_untagged_id())
             # padding add pad id
-            labels_for_text_id.append(slots_label_set.get_pad_id())
+            labels_for_text_id.append(slots_label_set.get_id('pad'))
     labels_for_text_ids.append(labels_for_text_id)
 
 
@@ -1307,6 +1188,9 @@ print('train_m dimen {}'.format(train_m.shape))
 print('val_m dimen {}'.format(val_m.shape))
 
 
+# for debug 
+
+
 
 ###############
 # check gpu below
@@ -1321,30 +1205,69 @@ gpu_available = torch.cuda.is_available()
 
 
 ###############
-#local training data setup in learning below
+# hvd initilization below
 ###############
+
+#https://zhuanlan.zhihu.com/p/76638962
+#buer distributed learning
+hvd.init()
+
+if gpu_available:
+    print("gpu_availabe: {}".format(gpu_available))
+    torch.cuda.set_device(hvd.local_rank())
+
+
+
+
+###############
+# hvd initilization above
+###############
+
+
+
+
+
+
+###############
+#remote training data setup in learning below
+###############
+
 
 # kwargs = {'num_workers': 1, 'pin_memory': True} if gpu_available else {}
-#batch_size = 32
-batch_size = 6
-# https://pytorch.org/docs/stable/data.html
-# for local remove repliaces rank optional arigment
-# also remove distributedSampler
-#train_data = TensorDataset(train_x, train_m, train_y)
-#train_dataloader = DataLoader(train_data, sampler=None, batch_size=batch_size)
+
+
+
 train_data = TensorDataset(train_x, train_m, train_y, train_z)
-train_dataloader = DataLoader(train_data, sampler=None, batch_size=batch_size)
-#val_data = TensorDataset(val_x, val_m, val_y)
-#val_dataloader = DataLoader(val_data, sampler=None, batch_size=batch_size)
+train_sampler = DistributedSampler(train_data, num_replicas=hvd.size(), rank=hvd.rank())
+train_dataloader = DataLoader(train_data, sampler=train_sampler, batch_size=batch_size)
+
 val_data = TensorDataset(val_x, val_m, val_y, val_z)
-val_dataloader = DataLoader(val_data, sampler=None, batch_size=batch_size)
+val_sampler = DistributedSampler(val_data, num_replicas=hvd.size(), rank=hvd.rank())
+val_dataloader = DataLoader(val_data, sampler=val_sampler, batch_size=batch_size)
+
+
 
 ###############
-#local training data setup in learning above
+#remote training data setup in learning below
 ###############
 
+
+
+
+
+###############
+# load model below
+###############
+
+#Here we instantiate our model class. 
+#We use a compact version, that is trained through model distillation from a base BERT model and modified to include a classification layer at the output. This compact version has 6 transformer layers instead of 12 as in the original BERT model.
+# this class class DistilBertForSequenceClassification(DistilBertPreTrainedModel):
+# 
+#https://huggingface.co/transformers/v1.2.0/_modules/pytorch_transformers/modeling_distilbert.html
 #model = DistilBertForTokenClassification.from_pretrained('distilbert-base-uncased', num_labels=num_labels,
 #                                                            output_attentions=False, output_hidden_states=False)
+
+
 
 '''
 #class DistilBertForTokenClassificationFilesDomain(DistilBertPreTrainedModel):
@@ -1472,7 +1395,7 @@ class DistilBertForTokenClassificationFilesDomain(DistilBertPreTrainedModel):
 
         # version 3
         #slot_label_tensor = torch.argmax(logits.view(-1, self.num_labels), dim=1)
-        #return ((loss,) + output) 
+        #return ((loss,) + output)  
 '''       
 
 '''
@@ -1501,9 +1424,11 @@ class DistilBertForTokenClassificationFilesDomain(BertForTokenClassification):
 
 
         slot_output = torch.argmax(logits, -1);
-        return loss, slot_output;
+        # need to be tuple if multiple arguments
+        #return loss, slot_output
+        #return (loss, slot_output)
+        return slot_output
 '''
-
 '''
 class DistilBertForTokenClassificationFilesDomain(BertForTokenClassification):
 
@@ -1644,34 +1569,10 @@ class DistilBertForTokenClassificationFilesDomain(BertPreTrainedModel):
 
         # if either one is none, then do inference
         if intent_label_ids is None or slot_label_ids is None:
-            # output intent label as weight
             intent_output = torch.argmax(intent_logits, -1);
             slot_output = torch.argmax(slot_logits, -1);
 
-            # QAS
-            # for domain, it needs to have probabilty
-            #    files_enus_mv7_domain_svm_score (tag: 1, string: 0)
-            #            0[-1,-1]=0.1968164
-
-            # for intent
-            #                files_enus_mv7_intent_svm_score (tag: 11, string: 0)
-            #            0[-1,-1]=2.2269628
-            #            1[-1,-1]=-1.5521804
-            #            2[-1,-1]=-1.6113045
-            #            3[-1,-1]=-1.0233102
-            #            4[-1,-1]=-1.3408698
-            #            5[-1,-1]=-1.8470569
-            #            6[-1,-1]=-1.0570247
-            #            7[-1,-1]=-1.167596
-            #            8[-1,-1]=-1.8137677
-            #            9[-1,-1]=-0.99997
-            #            10[-1,-1]=-1.389961
-
-
             intent_prob = intent_logits.softmax(dim=1)
-            #indices = torch.tensor([1]).to(device)
-            # this is for domain the second since in domian = 1
-            #temp = torch.index_select(intent_logits, 1, indices),
 
             #return intent_output, slot_output
             return intent_output, slot_output, intent_prob
@@ -1679,360 +1580,498 @@ class DistilBertForTokenClassificationFilesDomain(BertPreTrainedModel):
             return total_intent_loss, total_slot_loss
 
 
-'''
-#Here we instantiate our model class. 
-#We use a compact version, that is trained through model distillation from a base BERT model and modified to include a classification layer at the output. This compact version has 6 transformer layers instead of 12 as in the original BERT model.
-# this class class DistilBertForSequenceClassification(DistilBertPreTrainedModel):
-# 
-#https://huggingface.co/transformers/v1.2.0/_modules/pytorch_transformers/modeling_distilbert.html
-# replace with my defined class but the same parameters
-model = DistilBertForTokenClassificationFilesDomain.from_pretrained('distilbert-base-uncased', num_labels=num_labels,
-                                                            output_attentions=False, output_hidden_states=False)
 
-'''
+
+# load distillbert  model
+#model = DistilBertForTokenClassificationFilesDomain.from_pretrained('distilbert-base-uncased', num_labels=num_labels,
+#                                                            output_attentions=False, output_hidden_states=False)
 
 
 
-
-
-##################################################
-# load TNLR model below
-##################################################
-
-'''
-output_dir = '../TNLR/'
-import os, argparse
-# if folder does not exist then create
-if not os.path.exists(output_dir):
-    os.makedirs(output_dir)
-
-
-
-
-# save your training arguments together with the trained model
-# originlal those are from input argument
-# here setup value to mimic
-# learning_rate = args.learning_rate
-# adam_epsilon = args.adam_epsilon
-
-# load model back
-# you need to know exact class for each one
-# it expects file like pytorch_model.bin
-# <failed >version 1: so rename *pt to see if it wokrs. it will complaint 
-#torch.nn.modules.module.ModuleAttributeError: 'DistilBertForTokenClassification' object has no attribute 'keys'
-# version2 : load pytroch_model.bin (not sure if it is after trained or not)
-#model = DistilBertForTokenClassification.from_pretrained(output_dir)
-#model = DistilBertForTokenClassificationFilesDomain.from_pretrained(output_dir)
 
 
 from transformers import BertConfig;
 bert_config = BertConfig();
-# no need to provide level for bertPreTrainModel
+#no need to provide level for bertPreTrainModel
 #bert_config.num_labels = num_labels;
 bert_config.num_hidden_layers = 3
 bert_config.output_attentions = False;
 bert_config.output_hidden_states = False;
 
 
-
-#model = DistilBertForTokenClassificationFilesDomain.from_pretrained(output_dir+'tnlrv3-base.pt', num_labels=num_labels,
-#                                                            output_attentions=False, output_hidden_states=False)
-
-# minic yue is ok to load
-# if no providing config, it will fail...
-# it seems config.json it not important and it can still be loaded
-#model = DistilBertForTokenClassificationFilesDomain.from_pretrained(output_dir+'tnlrv3-base.pt')
-#model = DistilBertForTokenClassificationFilesDomain.from_pretrained(output_dir+'tnlrv3-base.pt', config=bert_config)
-
-
-model = DistilBertForTokenClassificationFilesDomain.from_pretrained(output_dir+'tnlrv3-base.pt', 
+# load TNLR model remotely
+print('load TNLR model with path {}'.format(TNLR_model_file_name))
+model = DistilBertForTokenClassificationFilesDomain.from_pretrained(TNLR_model_file_name, 
     config=bert_config,
-    num_intent_labels=num_intent_labels,
+    num_intent_labels=num_intent_labels,	
     num_slot_labels=num_slot_labels)
 
-# load tokenizer back
-# you need to know exact class for each one
-#fast_tokenizer = DistilBertTokenizerFast.from_pretrained('distilbert-base-uncased') # Load a pre-trained tokenizer
 
-# copy model to  GPU/CPU to work
-model.to(device)
+# load TNLR model locally
+#print('load TNLR model with path {}'.format('../TNLR/'+'tnlrv3-base.pt'))
+#model = DistilBertForTokenClassificationFilesDomain.from_pretrained('../TNLR/'+'tnlrv3-base.pt', config=bert_config)
 
 
-print("load model done: !")
-'''
+print('load TNLR model done')
 
-##################################################
-# load TNLR model above
-##################################################
+###############
+# load model above
+###############
 
 
 
-##################################################
-# load local cpu-based pretrained model below
-##################################################
+###############
+# move model to device below
+###############
+
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
+# for debug 
+print("device: {}".format('cuda' if torch.cuda.is_available() else 'cpu'))
+
+model = model.to(device)
 
 
-#output_dir = './outputs/'
-#output_dir = '../outputs_temp_load_v1_02152021v1/'
-#output_dir = '../outputs_local_load_v1_02152021v1/'
-#output_dir = '../ouput_randomsampler_v1_02152021v1/'
-#output_dir = '../ouput_randomsampler_layer12_v1_02162021v1/'
-output_dir = '../ouput_randomsampler_v1_02172021v1/'
-#output_dir = '../outputs_local_load_layer12_v1_02162021v1/'
-import os, argparse
-# if folder does not exist then create
-if not os.path.exists(output_dir):
-    os.makedirs(output_dir)
+###############
+# move model to  device above
+###############
 
 
+###############
+# remote traningi parameter setup below
+###############
 
+#we print the model architecture and all model learnable parameters.
+def count_parameters(model):
+    return sum(p.numel() for p in model.parameters() if p.requires_grad)
 
-# save your training arguments together with the trained model
-# originlal those are from input argument
-# here setup value to mimic
-# learning_rate = args.learning_rate
-# adam_epsilon = args.adam_epsilon
+print('Number of trainable parameters:', count_parameters(model), '\n', model)
 
-# load model back
-# you need to know exact class for each one
-# it expects file like pytorch_model.bin
-# <failed >version 1: so rename *pt to see if it wokrs. it will complaint 
-#torch.nn.modules.module.ModuleAttributeError: 'DistilBertForTokenClassification' object has no attribute 'keys'
-# version2 : load pytroch_model.bin (not sure if it is after trained or not)
-#model = DistilBertForTokenClassification.from_pretrained(output_dir)
-#model = DistilBertForTokenClassificationFilesDomain.from_pretrained(output_dir)
+# This code is taken from:
+# https://github.com/huggingface/transformers/blob/5bfcd0485ece086ebcbed2d008813037968a9e58/examples/run_glue.py#L102
+# Don't apply weight decay to any parameters whose names include these tokens.
+# (Here, the BERT doesn't have `gamma` or `beta` parameters, only `bias` terms)
+no_decay = ['bias', 'LayerNorm.weight']
+# Separate the `weight` parameters from the `bias` parameters. 
+# - For the `weight` parameters, this specifies a 'weight_decay_rate' of 0.01. (means multiply by 0.99)
+# - For the `bias` parameters, the 'weight_decay_rate' is 0.0. 
+#optimizer_grouped_parameters = [
+#    # Filter for all parameters which *don't* include 'bias', 'gamma', 'beta'.
+#    {'params': [p for n, p in model.named_parameters() if not any(nd in n for nd in no_decay)],
+##     'weight_decay_rate': 0.2},
+#     # Filter for parameters which *do* include those.
+#    {'params': [p for n, p in model.named_parameters() if any(nd in n for nd in no_decay)],
+#     'weight_decay_rate': 0.0}
+#]
 
-
-from transformers import BertConfig;
-bert_config = BertConfig();
-# no need to provide level for bertPreTrainModel
-#bert_config.num_labels = num_labels;
-bert_config.num_hidden_layers = 3
-bert_config.output_attentions = False;
-bert_config.output_hidden_states = False;
-
-
-
-#model = DistilBertForTokenClassificationFilesDomain.from_pretrained(output_dir+'tnlrv3-base.pt', num_labels=num_labels,
-#                                                            output_attentions=False, output_hidden_states=False)
-
-# minic yue is ok to load
-# if no providing config, it will fail...
-# it seems config.json it not important and it can still be loaded
-#model = DistilBertForTokenClassificationFilesDomain.from_pretrained(output_dir+'tnlrv3-base.pt')
-#model = DistilBertForTokenClassificationFilesDomain.from_pretrained(output_dir+'tnlrv3-base.pt', config=bert_config)
-
-
-
-#model = DistilBertForTokenClassificationFilesDomain.from_pretrained(output_dir+'pytorch_model.bin', 
-        config=bert_config,
-        num_intent_labels=num_intent_labels,
-        num_slot_labels=num_slot_labels)
-
-# load tokenizer back
-# you need to know exact class for each one
-#fast_tokenizer = DistilBertTokenizerFast.from_pretrained('distilbert-base-uncased') # Load a pre-trained tokenizer
-
-# copy model to  GPU/CPU to work
-model.to(device)
-
-
-print("load model done: !")
-
-
-##################################################
-# load local cpu-based pretrained model below
-##################################################
+# <jointbert configure>
+optimizer_grouped_parameters = [
+    # Filter for all parameters which *don't* include 'bias', 'gamma', 'beta'.
+    {'params': [p for n, p in model.named_parameters() if not any(nd in n for nd in no_decay)],
+     'weight_decay': 0.0},
+     # Filter for parameters which *do* include those.
+    {'params': [p for n, p in model.named_parameters() if any(nd in n for nd in no_decay)],
+     'weight_decay': 0.0}
+]
 
 
 
-##################################################
-# load trained onnx model (CPU)
-##################################################
-'''
-#https://github.com/onnx/tutorials
-# https://www.onnxruntime.ai/python/auto_examples/plot_load_and_predict.html#
+optimizer = AdamW(optimizer_grouped_parameters, lr=learning_rate, eps=adam_epsilon)
+compression = hvd.Compression.fp16
+optimizer = hvd.DistributedOptimizer(optimizer,
+                                     named_parameters=model.named_parameters(),
+                                     compression=compression)
+# optimizer = hvd.DistributedOptimizer(optimizer,
+#                                      named_parameters=model.named_parameters())
+
+total_steps = len(train_dataloader) * num_epochs
+scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=0, num_training_steps=total_steps)
+
+hvd.broadcast_parameters(model.state_dict(), root_rank=0)
+hvd.broadcast_optimizer_state(optimizer, root_rank=0)
+
+def epoch_time(start_time, end_time):
+    elapsed_time = end_time - start_time
+    elapsed_mins = int(elapsed_time / 60)
+    elapsed_secs = int(elapsed_time - (elapsed_mins * 60))
+    return elapsed_mins, elapsed_secs
+
+def metric_average(val, name):
+    tensor = torch.tensor(val)
+    avg_tensor = hvd.allreduce(tensor, name=name)
+    return avg_tensor.item()
+
+# <jointbert configure>
+#seed_val = 111
+seed_val = 1234
+
+random.seed(seed_val)
+np.random.seed(seed_val)
+torch.manual_seed(seed_val)
+torch.cuda.manual_seed_all(seed_val)
 
 
-# need to 'pip install onnx'
-# https://thenewstack.io/tutorial-using-a-pre-trained-onnx-model-for-inferencing/
-import onnx
-import onnxruntime
-# https://pytorch.org/tutorials/advanced/super_resolution_with_onnxruntime.html
+train_losses = []
+val_losses = []
+num_mb_train = len(train_dataloader)
+num_mb_val = len(val_dataloader)
 
-model = onnx.load("E:\\azure_ml_notebook\\outputs_temp_load_v1_02142021v1\\traced_distill_bert.onnx.bin")
-onnx.checker.check_model(model)
-'''
+if num_mb_val == 0:
+    num_mb_val = 1
 
 
+###############
+# remote traningi parameter setup above
+###############
 
-##################################################
-# training model below, not yet finisihed, just placeholder
-##################################################
+# for debug
+#for i in range(len(val_x)):
+#    for j in range(len(val_x[i])):
+#        print(val_x[i][j], end=' ')
+#    print()
 
-'''
-print("training model ....")
+# https://zhuanlan.zhihu.com/p/143209797
+# this link has similar process as the folloiwngf code for each function
+for n in range(num_epochs):
+    # Reset the total loss for this epoch.
+    train_loss = 0
+    val_loss = 0
+    # Measure how long the training epoch takes.
+    start_time = time.time()
+    
+    # For each batch of training data...
+    for k, (mb_x, mb_m, mb_y, mb_z) in enumerate(train_dataloader):
 
-test_input_tensor = torch.tensor([[101, 12453, 19453, 6254, 102]])
-at_mask_tensor = torch.tensor([[1, 1, 1, 1, 1]])
+        # Always clear any previously calculated gradients before performing a
+        # backward pass. PyTorch doesn't do this automatically because 
+        # accumulating the gradients is "convenient while training RNNs". 
+        # (source: https://stackoverflow.com/questions/48001598/why-do-we-need-to-call-zero-grad-in-pytorch)
+        optimizer.zero_grad()
 
-intent_label_mask_tensor = torch.tensor([[1]])
-slot_label_mask_tensor = torch.tensor([[0, 0, 6, 0, 0]])
-with torch.no_grad():
-    model.eval()
+        # Put the model into training mode. Don't be mislead--the call to 
+        # `train` just changes the *mode*, it doesn't *perform* the training.
+        # `dropout` and `batchnorm` layers behave differently during training
+        # vs. test (source: https://stackoverflow.com/questions/51433378/what-does-model-train-do-in-pytorch)
+        model.train()
+        
+        mb_x = mb_x.to(device)
+        mb_m = mb_m.to(device)
+        mb_y = mb_y.to(device)
+        mb_z = mb_z.to(device)
+        
 
-    # if going with seperate outputs
-    intent_loss,slot_loss = model(test_input_tensor, attention_mask=at_mask_tensor, 
-        intent_label_ids=intent_label_mask_tensor,
-        slot_label_ids=slot_label_mask_tensor
+        # Perform a forward pass (evaluate the model on this training batch).
+        # The documentation for this `model` function is here: 
+        # https://huggingface.co/transformers/v2.2.0/model_doc/bert.html#transformers.BertForSequenceClassification
+        # It returns different numbers of parameters depending on what arguments
+        # arge given and what flags are set. For our useage here, it returns
+        # the loss (because we provided labels) and the "logits"--the model
+        # outputs prior to activation.
+
+
+        #  for class output 
+        #outputs = model(mb_x, attention_mask=mb_m, labels=mb_y)
+        #loss = outputs[0]
+
+
+        # for training with label
+        # only loss output being provide
+        intent_loss, slot_loss = model(mb_x, attention_mask=mb_m, 
+        intent_label_ids=mb_y,
+        slot_label_ids=mb_z
         )
 
-    print("intent_loss: {}".format(intent_loss))
-    print("slot_loss: {}".format(slot_loss))
 
-print("training model done")
-'''
+        # Perform a backward pass to calculate the gradients.
+        # #loss.backward()	
+        # for intent and slot loss how to backword	
+        # yue sums up and use them to backward	
+        # ? not sure how it does	
+        total_loss = intent_loss + slot_loss	
+        total_loss.backward()
 
-##################################################
-# training model above
-##################################################
+        # Clip the norm of the gradients to 1.0.
+        # This is to help prevent the "exploding gradients" problem.
+        torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+
+        # Update parameters and take a step using the computed gradient.
+        # The optimizer dictates the "update rule"--how the parameters are
+        # modified based on their gradients, the learning rate, etc.
+        optimizer.step()
+        # Update the learning rate.
+        scheduler.step()
+
+        # Accumulate the training loss over all of the batches so that we can
+        # calculate the average loss at the end. `loss` is a Tensor containing a
+        # single value; the `.item()` function just returns the Python value 
+        # from the tensor.        
+        #train_loss += loss.data / num_mb_train
+        train_loss += total_loss.data / num_mb_train
+    
+    print ("\nTrain loss after itaration %i: %f" % (n+1, train_loss))
+    avg_train_loss = metric_average(train_loss, 'avg_train_loss')
+    print ("Average train loss after iteration %i: %f" % (n+1, avg_train_loss))
+    train_losses.append(avg_train_loss)
+    
+
+    # initialize evaluation test object
+    evaluation_test = Evaluation(slots_label_set, intent_label_set)
+    evaluation_test_iob = Evaluation(slots_label_set, intent_label_set, useIob=True)
+
+    # Tell pytorch not to bother with constructing the compute graph during
+    # the forward pass, since this is only needed for backprop (training).
+    with torch.no_grad():
+       # Put the model in evaluation mode--the dropout layers behave differently
+       # during evaluation.
+        model.eval()
+        
+        for k, (mb_x, mb_m, mb_y, mb_z) in enumerate(val_dataloader):
+            mb_x = mb_x.to(device)
+            mb_m = mb_m.to(device)
+            mb_y = mb_y.to(device)
+            mb_z = mb_z.to(device)
+        
+            # in forward function 
+            # outputs[0] is logic
+            #if not return_dict:
+            #output = (start_logits, end_logits) + distilbert_output[1:]
+            #return ((total_loss,) + output) if total_loss is not None else output
+
+            #return QuestionAnsweringModelOutput(
+            #loss=total_loss,
+            #start_logits=start_logits,
+            #end_logits=end_logits,
+            #hidden_states=distilbert_output.hidden_states,
+            #attentions=distilbert_output.attentions,
+            #)
 
 
-##################################################
-# evaluate model - single query below
-##################################################
-'''
-print("evaluate model ....")
+            # for class defintion
+            # Forward pass, calculate logit predictions.
+            # The documentation for this `model` function is here: 
+            # https://huggingface.co/transformers/v2.2.0/model_doc/bert.html#transformers.BertForSequenceClassification
+            # Get the "logits" output by the model. The "logits" are the output
+            # values prior to applying an activation function like the softmax.
+            ##outputs = model(mb_x, attention_mask=mb_m, labels=mb_y)
+            ##loss = outputs[0]
+            ##val_loss += loss.data / num_mb_val
+            # for debug
+            ##print('evaluate label result {}'.format(outputs.logits))
 
-test_input_tensor = torch.tensor([[101, 12453, 19453, 6254, 102]])
-at_mask_tensor = torch.tensor([[1, 1, 1, 1, 1]])
-# inference no need label
-#intent_label_mask_tensor = torch.tensor([[1]])
-#slot_label_mask_tensor = torch.tensor([[0, 0, 6, 0, 0]])
-with torch.no_grad():
-    model.eval()
+            # using yue's class with multiple output 
+            ##loss, slot_output = model(mb_x, attention_mask=mb_m, labels=mb_y)
+            ##val_loss += loss.data / num_mb_val
+            # for debug
+            #print('evaluate label result {}'.format(slot_output))
 
 
-    # if going with seperate outputs
-    #intent_output,slot_output = model(test_input_tensor, attention_mask=at_mask_tensor
-    #    )
-    intent_output,slot_output,intent_prob = model(test_input_tensor, attention_mask=at_mask_tensor
+            # using yue's class with single output 
+            # and make loss zero
+            ##slot_output = model(mb_x, attention_mask=mb_m, labels=mb_y)
+            ##val_loss += 0 / num_mb_val
+            # for debug
+            #print('evaluate label result {}'.format(slot_output))
+
+
+            # using yue's class also if-else
+            # for validating, no label is provided so it will output slot label
+            # and make loss zero
+            #intent_output, slot_output = model(mb_x, attention_mask=mb_m)
+            intent_output,slot_output,intent_prob = model(mb_x, attention_mask=mb_m)
+            evaluation_test.add_intent_pred_and_golden(intent_output, mb_y)
+            evaluation_test.add_slot_pred_and_golden(slot_output, mb_z)
+            evaluation_test_iob.add_intent_pred_and_golden(intent_output, mb_y)	
+            evaluation_test_iob.add_slot_pred_and_golden(slot_output, mb_z)	
+            val_loss += 0 / num_mb_val
+            # for debug
+            #print('evaluate label result {}'.format(slot_output))
+            
+        print ("Validation loss after itaration %i: %f" % (n+1, val_loss))
+        avg_val_loss = metric_average(val_loss, 'avg_val_loss')
+        print ("Average validation loss after iteration %i: %f" % (n+1, avg_val_loss))
+        val_losses.append(avg_val_loss)
+
+        print(' Validation metric after iteration {} : {}'.format(n+1, evaluation_test.compute_metrics()))
+        print(' Validation metric Iob after iteration {} : {}'.format(n+1, evaluation_test.compute_metrics()))
+    
+    end_time = time.time()
+    epoch_mins, epoch_secs = epoch_time(start_time, end_time)
+    print(f'Time: {epoch_mins}m {epoch_secs}s')
+
+
+
+# ? not sure why needs checking rank
+if hvd.rank() == 0:
+    
+    out_dir = './outputs'
+    import os, argparse
+    # if folder does not exist then create
+    if not os.path.exists(out_dir):
+        os.makedirs(out_dir)
+    
+    model_to_save = model.module if hasattr(model, 'module') else model
+    model_to_save.save_pretrained(out_dir)
+    fast_tokenizer.save_pretrained(out_dir)
+
+    with open(out_dir + '/train_losses.pkl', 'wb') as f:
+        joblib.dump(train_losses, f)
+
+    with open(out_dir + '/val_losses.pkl', 'wb') as f:
+        joblib.dump(val_losses, f)
+
+
+    #add to save output model in pt
+    # it might be redundant since it might be the same as model_to_save.save_pretrained(out_dir)
+    # but right know i use model.pt to register in azure
+    torch.save(model, os.path.join(out_dir, 'model.pt'))
+
+    run.log('validation loss', avg_val_loss)
+
+    
+    # save onnx
+    # Tokenizing input text
+    text = "a visually stunning rumination on love"
+    fast_tokenized_batch : BatchEncoding = fast_tokenizer(text)
+    fast_tokenized_text :Encoding  =fast_tokenized_batch[0]
+    fast_tokenized_text_tokens_copy = fast_tokenized_text.tokens
+
+    print("fast token ouput version 2 being used here: {}".format(fast_tokenized_text_tokens_copy))
+
+    # Masking one of the input tokens
+    # this is question answering so change it only a single sentence
+    #masked_index = 8
+    masked_index = 3
+    fast_tokenized_text_tokens_copy[masked_index] = '[MASK]'
+    indexed_tokens = fast_tokenizer.convert_tokens_to_ids(fast_tokenized_text_tokens_copy)
+
+    # for debug 
+    print("fast token ouput version 2 being used here after replace: {}".format(fast_tokenized_text_tokens_copy))
+
+    print("indexed_tokens: {}".format(indexed_tokens))
+    segments_ids = [0]
+
+    # Creating a dummy input
+    # but you need to move tensors to GPU
+    #https://github.com/huggingface/transformers/issues/227
+    #tokens_tensor = torch.tensor([indexed_tokens])
+    #segments_tensors = torch.tensor([segments_ids])
+    print("create input for device: {}".format(device))
+
+    # adding [] is the same as unqueeze(0) function
+    tokens_tensor = torch.tensor([indexed_tokens]).to(device)
+
+    segments_tensors = torch.tensor([segments_ids]).to(device)
+    dummy_input = tokens_tensor
+
+    # for deubg
+    print("tokens_tensor shape: {}".format(tokens_tensor.shape))
+    print("segments_tensor shape: {}".format(segments_tensors.shape))
+
+    print("tokens_tensor: {}".format(tokens_tensor))
+    print("segments_tensor: {}".format(segments_tensors))
+
+    #torch.onnx.export(model_to_save, 
+    #    dummy_input, out_dir + '/traced_distill_bert.onnx', 
+    #    verbose=True)
+
+
+    # using bert and no return class, having mutiple outputs
+    torch.onnx.export(model=model_to_save,
+        args=(dummy_input),
+        f=out_dir + '/traced_distill_bert.onnx.bin',
+        input_names = ["input_ids"],
+        verbose=True,
+        # here logits is not internal logits means
+        # ? change it to a better name like slot_output in the future
+        #output_names = ["logits"],
+        #output_names = ["slot_label_tensor"],
+        #output_names = ["intent_output", "slot_output"],
+        output_names = ['intent_output', 'slot_output','intent_prob'],
+        #output_names = ["loss","slot_output"],
+        do_constant_folding = True,
+        opset_version=11,
+        #dynamic_axes = {'input_ids': {1: '?'}, 'logits': {1: '?'}}
+        #dynamic_axes = {'input_ids': {1: '?'}, 'slot_label_tensor': {1: '?'}}
+        #dynamic_axes = {'input_ids': {1: '?'}, 'intent_output': {1: '?'}, 'slot_output': {1: '?'}}
+        dynamic_axes = {'input_ids': {1: '?'}, 'intent_output': {1: '?'}, 'slot_output': {1: '?'},'intent_prob': {1: '?'}}
+        #dynamic_axes = {'input_ids': {1: '?'}, 'loss': {1: '?'}, 'slot_output': {1: '?'}}
         )
 
-    print("intent_output: {}".format(intent_output))
-    print("slot_output: {}".format(slot_output))
-    #print("intent_output: {}".format(intent_prob))
 
-print("evaluate model done")
 '''
+# for local test
+if True:
 
-##################################################
-# evaluate model - single query above
-##################################################
+    out_dir = './outputs'
+    
+    model_to_save = model.module if hasattr(model, 'module') else model
+    
+    # save onnx
+    # Tokenizing input text
+    text = "a visually stunning rumination on love"
+    fast_tokenized_batch : BatchEncoding = fast_tokenizer(text)
+    fast_tokenized_text :Encoding  =fast_tokenized_batch[0]
+    fast_tokenized_text_tokens_copy = fast_tokenized_text.tokens
 
+    print("fast token ouput version 2 being used here: {}".format(fast_tokenized_text_tokens_copy))
 
-##################################################
-# evaluate model - a file below - not onnx model
-##################################################
+    # Masking one of the input tokens
+    # this is question answering so change it only a single sentence
+    #masked_index = 8
+    masked_index = 3
+    fast_tokenized_text_tokens_copy[masked_index] = '[MASK]'
+    indexed_tokens = fast_tokenizer.convert_tokens_to_ids(fast_tokenized_text_tokens_copy)
 
-# initialize evaluation test object
-evaluation_test = Evaluation(slots_label_set, intent_label_set)
-evaluation_test_iob = Evaluation(slots_label_set, intent_label_set, useIob=True)
-with torch.no_grad():	
-    # Put the model in evaluation mode--the dropout layers behave differently	
-    # during evaluation.	
-    model.eval()	
-        	
-    for k, (mb_x, mb_m, mb_y, mb_z) in enumerate(val_dataloader):	
-        mb_x = mb_x.to(device)	
-        mb_m = mb_m.to(device)	
-        mb_y = mb_y.to(device)	
-        mb_z = mb_z.to(device)		
-        intent_output,slot_output,intent_prob = model(mb_x, attention_mask=mb_m)	
+    # for debug 
+    print("fast token ouput version 2 being used here after replace: {}".format(fast_tokenized_text_tokens_copy))
 
+    print("indexed_tokens: {}".format(indexed_tokens))
+    segments_ids = [0]
 
+    # Creating a dummy input
+    # but you need to move tensors to GPU
+    #https://github.com/huggingface/transformers/issues/227
+    #tokens_tensor = torch.tensor([indexed_tokens])
+    #segments_tensors = torch.tensor([segments_ids])
+    print("create input for device: {}".format(device))
 
+    # adding [] is the same as unqueeze(0) function
+    tokens_tensor = torch.tensor([indexed_tokens]).to(device)
 
-        evaluation_test.add_intent_pred_and_golden(intent_output, mb_y)	
-        evaluation_test.add_slot_pred_and_golden(slot_output, mb_z)
-        evaluation_test_iob.add_intent_pred_and_golden(intent_output, mb_y)	
-        evaluation_test_iob.add_slot_pred_and_golden(slot_output, mb_z)		
-        # for debug	
-        #print('evaluate label result {}'.format(slot_output))	
+    segments_tensors = torch.tensor([segments_ids]).to(device)
+    dummy_input = tokens_tensor
 
-    # my calculation        	
-    print(' Validation metric : {}'.format(evaluation_test.compute_metrics()))
-    print(' Validation metric wo pad: {}'.format(evaluation_test.compute_metrics(ignore_pad=True)))
-    # IOB calculation
-    print(' Validation metric Iob wo pad: {}'.format(evaluation_test_iob.compute_metrics()))    
-    print(' Validation metric Iob: {}'.format(evaluation_test_iob.compute_metrics(ignore_pad=True)))
+    # for deubg
+    print("tokens_tensor shape: {}".format(tokens_tensor.shape))
+    print("segments_tensor shape: {}".format(segments_tensors.shape))
 
+    print("tokens_tensor: {}".format(tokens_tensor))
+    print("segments_tensor: {}".format(segments_tensors))
 
-##################################################
-# evaluate model - a file above - not onnx model
-##################################################
+    
 
-##################################################
-# evaluate model - a file below - not yet success
-##################################################
-'''
-# initialize evaluation test object
-evaluation_test = Evaluation(slots_label_set, intent_label_set)
-evaluation_test_iob = Evaluation(slots_label_set, intent_label_set, useIob=True)
-
-for k, (mb_x, mb_m, mb_y, mb_z) in enumerate(val_dataloader):	
-    mb_x = mb_x.to(device)	
-    mb_m = mb_m.to(device)	
-    mb_y = mb_y.to(device)	
-    mb_z = mb_z.to(device)		
-    #intent_output,slot_output,intent_prob = model(mb_x, attention_mask=mb_m)	
-    session = onnxruntime.InferenceSession(model)
-    input_name = session.get_inputs()[0].name
-    output_name = session.get_outputs()[0].name
+    #torch.onnx.export(model_to_save, 
+    #    dummy_input, out_dir + '/traced_distill_bert.onnx', 
+    #    verbose=True)
 
 
-
-    evaluation_test.add_intent_pred_and_golden(intent_output, mb_y)	
-    evaluation_test.add_slot_pred_and_golden(slot_output, mb_z)
-    evaluation_test_iob.add_intent_pred_and_golden(intent_output, mb_y)	
-    evaluation_test_iob.add_slot_pred_and_golden(slot_output, mb_z)		
-
-
-
-# my calculation        	
-#print(' Validation metric : {}'.format(evaluation_test.compute_metrics()))
-# IOB calculation
-print(' Validation metric Iob: {}'.format(evaluation_test_iob.compute_metrics()))
-'''
-
-##################################################
-# evaluate model - a file above - not yet success
-##################################################
-
-
-
-##################################################
-# Store model(not in pytorch) 
-##################################################
-
-# ussing distill bert 
-'''
-#torch.onnx.export(model, dummy_input, 'traced_distill_bert.onnx', verbose=True)
-'''
-
-#follow yue's suggestion to add output
-# # ouput is slightly different, not sure it is related to 'do_constant_folding' for optimization for other parameter 
-'''
-torch.onnx.export(model=model,
-    args=(dummy_input),
-    f='traced_distill_bert.onnx.bin',
-    input_names = ["input_ids"],
-    verbose=True,
-    #output_names = ["intent_output", "slot_output"],
-    output_names = ['intent_output', 'slot_output','intent_prob'],
-    do_constant_folding = True,
-    opset_version=11,
-    #dynamic_axes = {'input_ids': {1: '?'}, 'intent_output': {1: '?'}, 'slot_output': {1: '?'}}
-    dynamic_axes = {'input_ids': {1: '?'}, 'intent_output': {1: '?'}, 'slot_output': {1: '?'},'intent_prob': {1: '?'}}
-    )
+    # using bert and no return class, having mutiple outputs
+    torch.onnx.export(model=model,
+        args=(dummy_input),
+        f=out_dir + '/traced_distill_bert.onnx.bin',
+        input_names = ["input_ids"],
+        verbose=True,
+        # here logits is not internal logits means
+        # ? change it to a better name like slot_output in the future
+        #output_names = ["logits"],
+        #output_names = ["slot_label_tensor"],
+        output_names = ["slot_output"],
+        #output_names = ["loss","slot_output"],
+        do_constant_folding = True,
+        opset_version=11,
+        #dynamic_axes = {'input_ids': {1: '?'}, 'logits': {1: '?'}}
+        #dynamic_axes = {'input_ids': {1: '?'}, 'slot_label_tensor': {1: '?'}}
+        dynamic_axes = {'input_ids': {1: '?'}, 'slot_output': {1: '?'}}
+        #dynamic_axes = {'input_ids': {1: '?'}, 'loss': {1: '?'}, 'slot_output': {1: '?'}}
+        )
 '''

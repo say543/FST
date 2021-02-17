@@ -768,6 +768,9 @@ https://github.com/monologg/JointBERT
 # [1] for intent classficaition output (sequence classfication)
 # loss calculation
 #total_loss = intent_loss + coef * slot_loss (Change coef with --slot_loss_coef option)
+# intent loss: tensor(3.3958, grad_fn=<NllLossBackward>)
+# slot loss: tensor(5.0549, grad_fn=<NllLossBackward>)
+# toal_loss : tensor(8.4507, grad_fn=<AddBackward0>) 
 # (in yue's code, it defines two losses, one for intent and othe other for slot)
 # total_loss = intent_loss + slot_loss;
 # total_loss.backward() <= and sum them up to do backward propagation
@@ -794,6 +797,13 @@ https://github.com/monologg/JointBERT
 # ? not sure whether we need to hanlde this or not, or check yue's code
 # ? can add test ihe futurue
 # https://github.com/monologg/JointBERT/blob/7497631c2065f3f7be853b893e0730676745e0fe/data_loader.py#L148
+# trainer.py
+#epoch_iterator = tqdm(train_dataloader, desc="Iteration")
+#            for step, batch in enumerate(epoch_iterator):
+# batch : text_id, attention_mask,token_type_id (? not sure this is necessary), inten_label_ids, slot_label_ids
+# each size of it is number of tranining examples based on  train_batch_size
+
+
 
 # evaluation
 # intent_logits.detach().cpu().numpy() generates array()
@@ -927,6 +937,102 @@ array([1, 1, 0, 0], dtype=int64)
 # https://towardsdatascience.com/bert-to-the-rescue-17671379687f
 # https://github.com/huggingface/transformers/issues/1827
 # https://github.com/shudima/notebooks/blob/master/BERT_to_the_rescue.ipynb
+
+
+
+
+#DistributedSampler
+# in atis local run, i do not have sampler
+# in atis remote run, using distributed sampler metric is pretty low so i switch to RandomSampler 
+# default DistributedSampler's shuffle is true so before feeding to maching total data has been shuffle
+# so data loader does not need to shuffle again
+# usng self.epoch = 0 as default
+# default shuffle= true
+# epoch = 2
+# dataset size = 16
+# cuda : 0 and 1
+# batch size = 2
+# epoch 1
+# cuda 0 will only see 8 datas (uncontrollable), c00
+# cuda 1 will only see 8 datas (uncontrollable), c10
+# epoch 2
+# cuda 0 will only see 8 datas (uncontrollable), c01
+# cuda 1 will only see 8 datas (uncontrollable), c11
+# c00 = c01, c10 = c11
+# by seeting up sampler.set_epoch(e), e = epoch number
+# epoch 1
+# cuda 0 will only see 8 datas (uncontrollable), c00
+# cuda 1 will only see 8 datas (uncontrollable), c10
+# epoch 2
+# cuda 0 will only see 8 datas (uncontrollable), c01
+# cuda 1 will only see 8 datas (uncontrollable), c11
+# c00 != c01, c10 != c11
+# then each epoch a cpu can see whole dataset
+# does above create overfitting problem?
+# No,每一个step不同进程之间都会去同步自己的参数、gradient、甚至buffer.
+# so no need to setup seed
+# https://zhuanlan.zhihu.com/p/97115875
+# this link also explains and say no seed change is needed
+# https://blog.csdn.net/weixin_45738220/article/details/112151455
+
+# for data loader
+# epoch = 2
+# dataset size = 8
+# nproc_per_node = 2
+# cuda : 0 and 1
+# batch size = 4
+# rand_loader =DataLoader(dataset=dataset,batch_size=batch_size,sampler=None,shuffle=True)
+# (without using distributedsampler and only shuffle)
+# each epoch, a GPU sees 2 batch and each batch size = 4 and each batch is shuffle
+# snice total epoch = 2 , a GPU see the whole dataset twice 
+# rand_loader = DataLoader(dataset=dataset,batch_size=batch_size,sampler=sampler)
+# using distributedsampler
+# nproc_per_node = 2
+# sample divides the whole dataset into nproc_per_node( = 2)
+# nproc_per_node cpu shares the whole dataset
+# 
+
+# https://www.squncle.com/article/2020/5/10/29278.html
+# https://murphypei.github.io/blog/2020/09/pytorch-distributed
+# https://discuss.pytorch.org/t/distributedsampler/90205
+# https://pytorch.org/cppdocs/api/classtorch_1_1data_1_1samplers_1_1_distributed_sampler.html?highlight=distributedsampler#_CPPv4I0EN5torch4data8samplers18DistributedSamplerE
+# good repor
+# has warmp up , early-stopping
+# Warmup 是一種訓練技巧，透過由小到大預熱學習率可以避免一開始學習率過大所造成的不穩定
+# https://github.com/Lance0218/Pytorch-DistributedDataParallel-Training-Tricks
+# https://lance0218.medium.com/training-tricks-for-pytorch-distributed-data-parallel-1cd48cc7d97a
+
+#init_weights
+Have a look at the code for .from_pretrained(). What actually happens is something like this:
+
+find the correct base model class to initialise
+initialise that class with pseudo-random initialisation (by using the _init_weights function that you mention)
+find the file with the pretrained weights
+overwrite the weights of the model that we just created with the pretrained weightswhere applicable
+This ensure that layers were not pretrained (e.g. in some cases the final classification layer) do get initialised in _init_weights but don't get overridden.
+
+# in jointbert experiment it does not have it
+#https://github.com/huggingface/transformers/issues/4701
+
+
+
+
+
+# random sees setup to reproduce model
+# https://github.com/Lance0218/Pytorch-DistributedDataParallel-Training-Tricks/blob/master/customized_function.py
+
+# hvd
+#Accomplish this by guarding model checkpointing code with hvd.rank() != 0.
+# ? in noline tutorial, it uses hvd_rank() = 0 to check
+# Pin each GPU to a single process.
+#https://horovod.readthedocs.io/en/stable/pytorch.html
+
+
+
+
+# multiple loss function
+# ? can check in the future
+# https://bbs.cvmart.net/topics/1449
 
 # comment until here
  
