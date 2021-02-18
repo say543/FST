@@ -59,8 +59,7 @@ from tokenizers import Encoding
 #from azureml.core import Workspace, Run, Dataset
 
 #df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TrainSet_small_012n02021v1.tsv', sep='\t', encoding="utf-8",
-df = pd.read_csv('E:/azure_ml_notebook/azureml_data/atis_test.tsv', sep='\t', encoding="utf-8",
-#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/atis_train.tsv', sep='\t', encoding="utf-8",
+df = pd.read_csv('E:/azure_ml_notebook/azureml_data/atis_train.tsv', sep='\t', encoding="utf-8",
 #df = pd.read_csv('E:/azure_ml_notebook/azureml_data/atis_train_ten.tsv', sep='\t', encoding="utf-8",
     keep_default_na=False,
     dtype={
@@ -1167,6 +1166,11 @@ for i, row in df.iterrows():
         print("query_with_slot_issue\t{}\t{}".format(query, slot))
         continue
 
+
+    # only if it is valid string for slot then add intent label
+    # using low case slot to lookup
+    intent_labels.append(intent_label_set.get_ids_from_label(intent.lower()))
+
     #append labels for [CLS] / [SEP] to tag_string
     #tag_string =  slots_label_set.get_untagged_label() + ' '+ tag_string + ' ' + slots_label_set.get_untagged_label()
     # v1: 
@@ -1175,26 +1179,14 @@ for i, row in df.iterrows():
     tag_string =  slots_label_set.get_pad_label() + ' '+ tag_string + ' ' + slots_label_set.get_pad_label()
 
 
-    aligned_label_ids = slots_label_set.get_aligned_label_ids_from_aligned_label(
-        map(str.lower,tag_string.split())
-    )
-
-    if None in set(aligned_label_ids):
-        print("query_with_unkonwn slot_issue\t{}\t{}".format(query, slot))
-        continue
-
-    # only if it is valid string for slot then add intent label
-    # using low case slot to lookup
-    intent_labels.append(intent_label_set.get_ids_from_label(intent.lower()))
-
-
     # replcae by class's output word string
     text_id = fast_tokenizer.encode(text, max_length=300, padding='max_length', truncation=True)
     text_ids.append(text_id)
 
 
-
-
+    aligned_label_ids = slots_label_set.get_aligned_label_ids_from_aligned_label(
+        map(str.lower,tag_string.split())
+    )
 
     # for debug
     #for token, label in zip(tokens, aligned_label_ids):
@@ -1832,7 +1824,7 @@ bert_config.output_hidden_states = False;
 
 
 
-model = DistilBertForTokenClassificationFilesDomain.from_pretrained(output_dir+'pytorch_model.bin', 
+#model = DistilBertForTokenClassificationFilesDomain.from_pretrained(output_dir+'pytorch_model.bin', 
         config=bert_config,
         num_intent_labels=num_intent_labels,
         num_slot_labels=num_slot_labels)
@@ -1981,7 +1973,7 @@ with torch.no_grad():
 ##################################################
 
 ##################################################
-# evaluate model - a file below - oxxn -  not yet success
+# evaluate model - a file below - not yet success
 ##################################################
 '''
 # initialize evaluation test object
@@ -2014,7 +2006,7 @@ print(' Validation metric Iob: {}'.format(evaluation_test_iob.compute_metrics())
 '''
 
 ##################################################
-# evaluate model - a file above - oxxn -  not yet success
+# evaluate model - a file above - not yet success
 ##################################################
 
 

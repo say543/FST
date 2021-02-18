@@ -1102,6 +1102,7 @@ for i, row in df.iterrows():
 	# remove head and end spaces 
     slot = slot.strip()
 
+
     # ignore multi turn queries
     conversationContext = row['ConversationContext']
 
@@ -1126,11 +1127,6 @@ for i, row in df.iterrows():
         print("query_with_slot_issue\t{}\t{}".format(query, slot))
         continue
 
-
-    # only if it is valid string for slot then add intent label
-    # using low case slot to lookup
-    intent_labels.append(intent_label_set.get_ids_from_label(intent.lower()))
-
     #append labels for [CLS] / [SEP] to tag_string
     #tag_string =  slots_label_set.get_untagged_label() + ' '+ tag_string + ' ' + slots_label_set.get_untagged_label()
     # v1: 
@@ -1138,15 +1134,27 @@ for i, row in df.iterrows():
     # B-label extend 
     tag_string =  slots_label_set.get_pad_label() + ' '+ tag_string + ' ' + slots_label_set.get_pad_label()
 
-    # <jointbert configure>
+
+    aligned_label_ids = slots_label_set.get_aligned_label_ids_from_aligned_label(
+        map(str.lower,tag_string.split())
+    )
+
+    if None in set(aligned_label_ids):
+        print("query_with_unkonwn slot_issue\t{}\t{}".format(query, slot))
+        continue
+
+    # only if it is valid string for slot then add intent label
+    # using low case slot to lookup
+    intent_labels.append(intent_label_set.get_ids_from_label(intent.lower()))
+
+
     # replcae by class's output word string
     text_id = fast_tokenizer.encode(text, max_length=300, padding='max_length', truncation=True)
     text_ids.append(text_id)
 
 
-    aligned_label_ids = slots_label_set.get_aligned_label_ids_from_aligned_label(
-        map(str.lower,tag_string.split())
-    )
+
+
 
     # for debug
     #for token, label in zip(tokens, aligned_label_ids):
@@ -2042,7 +2050,7 @@ if True:
     #add to save output model in pt
     # it might be redundant since it might be the same as model_to_save.save_pretrained(out_dir)
     # but right know i use model.pt to register in azure
-    torch.save(model, os.path.join(out_dir, 'model.pt'))
+    torch.save(model_to_save, os.path.join(out_dir, 'model.pt'))
 
     # <jointbert configure>
     #run.log('validation loss', avg_val_loss)

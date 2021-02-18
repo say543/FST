@@ -171,7 +171,7 @@ from typing import List,Any
 IntList = List[int] # A list of token_ids
 IntListList = List[IntList] # A List of List of token_ids, e.g. a Batch
 
-
+import itertools
 class LabelSet:
     def __init__(self, labels: List[str], tokenizer, untagged_id, pad_token_label_id,  useIob=False):
         self.labels_to_id = {}
@@ -523,7 +523,9 @@ slots = [
 
 # map all slots to lower case
 slots_label_set = LabelSet(labels=map(str.lower,slots), 
-                            tokenizer =fast_tokenizer, untagged_id = 2)
+                            tokenizer =fast_tokenizer, 
+                            untagged_id = 2,
+                            pad_token_label_id = 0)
 
 class IntentLabelSet:
     def __init__(self, labels: List[str]):
@@ -1187,6 +1189,12 @@ for i, row in df.iterrows():
 	# remove head and end spaces 
     slot = slot.strip()
 
+
+    # ignore any empty queries
+    if len(query.strip()) == 0 or len(intent.strip()) == 0 or len(slot) == 0:
+        print("empty query skipped\t{}".format(row['ConversationId']))
+        continue
+
     # ignore multi turn queries
     conversationContext = row['ConversationContext']
 
@@ -1211,26 +1219,34 @@ for i, row in df.iterrows():
         print("query_with_slot_issue\t{}\t{}".format(query, slot))
         continue
 
-
-    # only if it is valid string for slot then add intent label
-    # using low case slot to lookup
-    intent_labels.append(intent_label_set.get_ids_from_label(intent.lower()))
-
     #append labels for [CLS] / [SEP] to tag_string
     #tag_string =  slots_label_set.get_untagged_label() + ' '+ tag_string + ' ' + slots_label_set.get_untagged_label()
     # v1: 
     # CLS , SEP label = 0
     # B-label extend 
-    tag_string =  slots_label_set.get_label(0) + ' '+ tag_string + ' ' + slots_label_set.get_label(0)
+    tag_string =  slots_label_set.get_pad_label() + ' '+ tag_string + ' ' + slots_label_set.get_pad_label()
+
+
+    aligned_label_ids = slots_label_set.get_aligned_label_ids_from_aligned_label(
+        map(str.lower,tag_string.split())
+    )
+
+    if None in set(aligned_label_ids):
+        print("query_with_unkonwn slot_issue\t{}\t{}".format(query, slot))
+        continue
+
+    # only if it is valid string for slot then add intent label
+    # using low case slot to lookup
+    intent_labels.append(intent_label_set.get_ids_from_label(intent.lower()))
+
 
     # replcae by class's output word string
     text_id = fast_tokenizer.encode(text, max_length=300, padding='max_length', truncation=True)
     text_ids.append(text_id)
 
 
-    aligned_label_ids = slots_label_set.get_aligned_label_ids_from_aligned_label(
-        map(str.lower,tag_string.split())
-    )
+
+
 
     # for debug
     #for token, label in zip(tokens, aligned_label_ids):
@@ -1251,8 +1267,14 @@ for i, row in df.iterrows():
             # padding, add label as zero as default
             #labels_for_text_id.append(slots_label_set.get_untagged_id())
             # padding add pad id
-            labels_for_text_id.append(slots_label_set.get_id('pad'))
+            labels_for_text_id.append(slots_label_set.get_pad_id())
     labels_for_text_ids.append(labels_for_text_id)
+
+
+    # for debug
+    #print("text:{}".format(text))
+    #print("text id :{}".format(text_id))
+    #print("slot: {}".format(labels_for_text_id))
 
 
     # for debug
@@ -1961,6 +1983,7 @@ for n in range(num_epochs):
 
     # initialize evaluation test object
     evaluation_test = Evaluation(slots_label_set, intent_label_set)
+    evaluation_test_iob = Evaluation(slots_label_set, intent_label_set, useIob=True)
 
     # Tell pytorch not to bother with constructing the compute graph during
     # the forward pass, since this is only needed for backprop (training).
@@ -2034,6 +2057,9 @@ for n in range(num_epochs):
         val_losses.append(avg_val_loss)
 
         print(' Validation metric after iteration {} : {}'.format(n+1, evaluation_test.compute_metrics()))
+        print(' Validation metric wo pad after iteration {} : {}'.format(n+1, evaluation_test.compute_metrics(ignore_pad=True)))
+        #print(' Validation metric Iob after iteration {} : {}'.format(n+1, evaluation_test_iob.compute_metrics()))
+        #print(' Validation metric Iob wo pad after iteration {} : {}'.format(n+1, evaluation_test_iob.compute_metrics(ignore_pad=True)))
     
     end_time = time.time()
     epoch_mins, epoch_secs = epoch_time(start_time, end_time)
@@ -2060,7 +2086,7 @@ if hvd.rank() == 0:
     #add to save output model in pt
     # it might be redundant since it might be the same as model_to_save.save_pretrained(out_dir)
     # but right know i use model.pt to register in azure
-    torch.save(model, os.path.join(out_dir, 'model.pt'))
+    torch.save(model_to_save, os.path.join(out_dir, 'model.pt'))
 
     run.log('validation loss', avg_val_loss)
 
