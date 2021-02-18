@@ -1,4 +1,27 @@
 
+
+
+==================
+atis test dataset 
+==================
+problematic queries 
+with number as token
+query_with_unkonwn slot_issue   what meals are served on american flight 665 673 from milwaukee to seattle      O B-meal O O O B-airline_name O B-flight_number I-flight_number O B-fromloc.city_name O B-toloc.city_name
+query_with_unkonwn slot_issue   show me the delta flights which serve a snack to coach passengers       O O O B-airline_name O O O O B-meal_description O B-compartment O
+
+
+query_with_unkonwn slot_issue   list airports in arizona nevada and california please   O O O B-state_name I-state_name O B-state_name O
+query_with_unkonwn slot_issue   what class is fare code q       O O O O O B-booking_class
+query_with_unkonwn slot_issue   a flight from baltimore to san francisco arriving between 5 and 8 pm    O B-flight O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O B-arrive_time.start_time O B-arrive_time.end_time I-arrive
+
+
+has i-flight_number unknow slot
+
+solution:
+ignore if slot is not inside the list
+
+
+
 =================
 atis how to load file 
 =================
@@ -259,6 +282,11 @@ run 49/51
 	File "/azureml-envs/azureml_1807a796a9d0358a0054a3b50c9aa95a/lib/python3.6/site-packages/torch/serialization.py", line 196, in __exit__
 		self.file_like.close()
 	OSError: [Errno 5] Input/output error
+		1>sometimes error happens to model_to_save.save_pretrained(out_dir) 
+		2> sometimes error happens to torch.save(model, os.path.join(out_dir, 'model.pt'))
+		看起來像是race condition
+		trying in run 58/60 by comment the second one but it still error
+		not sure why....
 
 	extend epoch from  5 to 15 to see performance
 	layer = 3
@@ -287,8 +315,33 @@ run 49/51
 			
 			
 	
-			
+run 67/69
+	remove ranmdom sampler 
+	extend to 25 epochs to check metrics
+	to see if 'status : fail but can output model' can be removed
+	the status is correct by metric is low....
+	Validation metric wo pad after iteration 25 : {'total_intent_precision': 0.9714285714285714, 'total_intent_recall': 0.9714285714285714, 'total_slot_precision': 0.7425512104283054, 'total_slot_recall': 0.6940818102697999}
 
+
+run 70/74
+	add random sampler
+	status : fail but can output model
+	alawyas this error it can be different log files  eg : 70_drive_log_5.txt,  70_drive_log_7.txt
+	overall intent precision: 0.9975429975429976, overall intent recall: 0.9975429975429976
+	Validation metric wo pad after iteration 15 : {'total_intent_precision': 0.9975429975429976, 'total_intent_recall': 0.9975429975429976, 'total_slot_precision': 0.8887891873703101, 'total_slot_recall': 0.8812277580071174}
+	
+	ouput_randomsampler_layer12_v1_02172021v1
+	this onw pytorch_model.bin is not empty
+	trying to replicate metrics and validating test dataset (run 49/51) but might be litle bit different
+	
+	atis_train
+		local 
+			Validation metric wo pad: {'total_intent_precision': 0.9975429975429976, 'total_intent_recall': 0.9975429975429976, 'total_slot_precision': 0.8887891873703101, 'total_slot_recall': 0.8812277580071174
+	
+	atis_test
+		some problematic queris
+		slot is lower compared to train set
+			 Validation metric wo pad: {'total_intent_precision': 0.9761904761904762, 'total_intent_recall': 0.9761904761904762, 'total_slot_precision': 0.8285714285714286, 'total_slot_recall': 0.8255052661542841}
 	
 =================
 evaluation logic
@@ -506,4 +559,17 @@ outputs_local_load_layer12_v1_02162021v1
 =================
 MDM experiment 
 compared to hvd initilization
+CLS , SEP label = 0, as pad
 =================
+
+run ?
+	using distributed sampler
+	original hyper parameters
+	epoch = 25 to check
+	so far 
+	即使用distributedSampler  結果也還可以  看起來atis 就是data 量不夠多
+	等跑完25 可能要加入code
+		check semantic frame (不知道yue 有沒有這個code)
+	Validation metric wo pad after iteration 17 : {'total_intent_precision': 0.974581939799331, 'total_intent_recall': 0.974581939799331, 'total_slot_precision': 0.8828073246900728, 'total_slot_recall': 0.9165029228275287}
+	
+	
