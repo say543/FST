@@ -6,3 +6,20 @@ https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmicrosoftapc.s
 
 one note page
 https://microsoftapc.sharepoint.com/teams/CLU705/_layouts/15/Doc.aspx?sourcedoc={75f33d6e-4674-4c39-bd74-112bf8e821ae}&action=edit&wd=target%28%F0%9F%93%9A%20Reference%2F%F0%9F%93%95%20Dev%20Handbook%2FB2%20Deployment.one%7C04ae536d-91d7-4f54-af71-1708a12f6596%2FProcess%7C9852204a-5c23-4548-ba92-7724a6428576%2F%29
+
+
+previous discussion
+[9/24/2020 9:51 AM] Yong Ni
+    没看懂问题，QAS里面如果有两个相同domain的模型，一定需要放在两个不同的clientId下面，调用的时候runtime需要分别传进来两个不同的custom variant——怎么传，传哪个是调用者的决定啊
+​[9/24/2020 9:52 AM] Chieh-Chun Chang
+    
+​[9/24/2020 9:52 AM] Chieh-Chun Chang
+    這邊要填一個existing application
+​[9/24/2020 9:52 AM] Chieh-Chun Chang
+    我想說是另一個大概是選no?
+
+<email_thread>
+[Scale Onboarding] request
+[Scale Onboarding] request is [Approved].
+
+Re: Request for Status/ETA on Model B2 Planned Work
