@@ -1,5 +1,59 @@
 
 
+=========================
+modeling methdology 
+=========================
+0218 brown bag
+https://microsoftapc.sharepoint.com/teams/CLU705/_layouts/15/Doc.aspx?sourcedoc=%7B030809f7-103c-4303-b1e1-fe0440ea4f6e%7D&action=edit&wd=target%28Scrums.one%7Cb3222388-ea29-44ad-835f-d26ad0e395e7%2F2-18%7Ce7fec698-ae57-4815-aa8e-797fa77cc4a6%2F%29&wdorigin=703&wdpreservelink=1
+
+email search term
+Knowledge distillation: 
+
+Goal: mimic the behavior of larger model using smaller student model 
+
+General distillation/Task agnostic distillation. Such as MiniLM, TinyBert,MobileBERT,  and TransferDistill 
+
+Task-agonistic LM ---- general distillation---> Task-agnostic compact LM-------> downstream finetuning 
+
+Pro: Can be leveraged by multiple downstream tasks 
+
+Con: General distillation is usually more challenging and is still a research topic 
+
+Task specific distillation 
+
+Task-agonistic LM --->Downstream finetuning---> Task specific distillation 
+
+Pro: Finetuning with larger checking usually can give us decent results 
+
+Cons: when you have multiple downstream tasks, you have do task-specific distillation multiple times 
+
+Quantization  
+
+Mixed precision training with FP16 
+
+Quantization aware of training with int8 or even binary operator 
+
+Post Quantization (CPU architecture) 
+
+Dynamic 
+
+Static 
+
+Quantization with distillation 
+
+… 
+
+Hardware Speedup 
+
+GPU/FPGA 
+
+Graph optimization with onnx runtime 
+
+Pruning 
+
+Select sub network 
+
+
 ===============================
 AAAI 2021 introduction
 ===============================
