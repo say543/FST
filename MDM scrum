@@ -12,7 +12,32 @@ Knowledge distillation:
 Goal: mimic the behavior of larger model using smaller student model 
 
 General distillation/Task agnostic distillation. Such as MiniLM, TinyBert,MobileBERT,  and TransferDistill 
+miniLM has paperes
+https://github.com/microsoft/unilm/tree/master/minilm
+for english uncase
+MiniLMv1-L12-H384-uncased: 12-layer, 384-hidden, 12-heads, 33M parameters, 2.7x faster than BERT-Base
+MiniLMv1-L6-H384-uncased: 6-layer, 384-hidden, 12-heads, 22M parameters, 5.3x faster than BERT-Base
+MiniLMv1-L6-H768-uncased: 6-layer, 768-hidden, 12-heads, 66M parameters, 2.0x faster than BERT-Base
 
+tingbert
+https://github.com/huawei-noah/Pretrained-Language-Model/tree/master/TinyBERT
+has data augmentation, not sure how it works
+
+mobile bert
+mention quantization
+https://github.com/google-research/google-research/tree/master/mobilebert
+
+cannot find 
+TransferDistill 
+
+
+
+Task-agonistic LM ---- general distillation---> Task-agnostic compact LM-------> downstream finetuning 
+
+task-agonistic 
+paper
+問看看是不是這樣
+https://arxiv.org/pdf/2002.10957.pdf
 Task-agonistic LM ---- general distillation---> Task-agnostic compact LM-------> downstream finetuning 
 
 Pro: Can be leveraged by multiple downstream tasks 
@@ -30,14 +55,16 @@ Cons: when you have multiple downstream tasks, you have do task-specific distill
 Quantization  
 
 Mixed precision training with FP16 
+代表性paper
+https://arxiv.org/pdf/1805.10387.pdf
 
 Quantization aware of training with int8 or even binary operator 
 
 Post Quantization (CPU architecture) 
+    // 好像xinjie 說只有memorization 的optimization
+    Dynamic 
 
-Dynamic 
-
-Static 
+     Static 
 
 Quantization with distillation 
 
