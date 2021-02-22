@@ -1,0 +1,15 @@
+<email_title>
+ unable to download personal context grammar from asdebug page
+ 
+ 
+ usually debug 
+ but it cannot be done
+ https://asdebug/InternalData
+ 
+ @Chieh-Chun Chang, to quickly unblock yourself, you can try to download the item directly from the SLP app SDS store. Following is one such sample uri:
+https://substrate.office.com/api/v2.0/me/SDS('f3f64fec-ecee-4e9a-9eed-a36a5e421300')/Collections/personalgrammars/items/filesraw
+
+
+@Marlon has written the following wiki that can help you to fetch the desired data.
+ Manually fetch grammars from SDS 
+ https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fmicrosoft.sharepoint-df.com%2Fteams%2FEmailTriageandPersonalization%2F_layouts%2FOneNote.aspx%3Fid%3D%252Fteams%252FEmailTriageandPersonalization%252FSiteAssets%252FEmail%2520Triage%2520and%2520Personalization%2520Notebook%26wd%3Dtarget%2528Speech%2520and%2520Language%2520Personalization.one%257C3979BDDF-5FDA-49EF-B2B7-886262308E32%252FManually%2520fetch%2520grammars%2520from%2520SDS%257C82797084-78B7-4542-BF5B-2D1FA341C3BB%252F%2529&data=04%7C01%7CChiehChun.Chang%40microsoft.com%7C82ede9e82b4c4d47ef9008d8d76e5b49%7C72f988bf86f141af91ab2d7cd011db47%7C0%7C0%7C637496216280727613%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=bsZXZ7RbHhAj%2BlULkCoiWFhZNZM%2B5bhQGJ0jg%2FtEVSs%3D&reserved=0
