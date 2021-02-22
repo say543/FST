@@ -1,0 +1,23 @@
+TimeEx0:RegexICL(^(([0-1]?[0-9]|2[0-3])([\.: ])([0-9][0-9]?))$)
+TimeEx1:RegexICL(^(([0-1]?[0-9]|2[0-3])([\.: ])([0-9][0-9]?))[ ]*(o[' ]clock[ ]*)$)
+TimeEx2:RegexICL(^(([0-1]?[0-9]|2[0-3])([\.: ])([0-9][0-9]?))[ ]*(a[ ]?m|p[ ]?m)$)
+TimeEx3:RegexICL(^(([0-1]?[0-9]|2[0-3])([\.: ])([0-9][0-9]?))[ ]*(o[' ]clock[ ]*)(a[ ]?m|p[ ]?m)$)
+TimeEx4:RegexICL(^(next|last) (week|month|monday|mon|tuesday|tues|wednesday|wed|thursday|thur|friday|fri|saturday|sat|sunday|sun)$)
+TimeEx5:RegexIC(^(today|tomorrow|yesterday)$)
+Num_ESES_Reg:RegexICL(^[\d]+(\.[\d]+)?$)
+position_ref:Trie(.\resource\LexiconFiles\position_ref.txt)
+contact_name:Trie(.\resource\LexiconFiles\combine_lexicon.txt)
+to_contact_name:Trie(.\resource\LexiconFiles\combine_lexicon.txt)
+share_targetname_positive1:RegexICL(^((hey cortana )?)(share|send|sharefile) [a-zA-Z0-9-_ ]* (here)$)
+share_targetname_positive2:RegexICL(^((hey cortana )?)(sharefile) (here)$)
+share_target_name_and_type_negative1:RegexICL((from) [a-zA-Z0-9-_ ]* (meeting|conversation|chat|channel|team)$)
+
+
+file_open1:RegexICL(^((hey cortana )?)(open) [a-zA-Z0-9-_ ]* (pptx|ppts|ppt|deck|decks|presentation|presentations|powerpoint|powerpoints|power point|slide|slides|doc|docx|docs|spec|excel|excels|xls|xlsx|sheets|sheet|spreadsheet|spreadsheets|workbook|worksheet|csv|tsv|note|notes|onenote|onenotes|onenote|notebook|notebooks|pdf|pdfs|jpg|jpeg|gif|png|msg|ics|vcs|vsdx|vssx|vstx|vsdm|vssm|vstm|vsd|vdw|vss|vst|mpp|mpt|word|words|document|documents|file|files)$)
+file_open2:RegexICL(^((hey cortana )?)(open) [a-zA-Z0-9-_ ]* (pptx|ppts|ppt|deck|decks|presentation|presentations|powerpoint|powerpoints|power point|slide|slides|doc|docx|docs|spec|excel|excels|xls|xlsx|sheets|sheet|spreadsheet|spreadsheets|workbook|worksheet|csv|tsv|note|notes|onenote|onenotes|onenote|notebook|notebooks|pdf|pdfs|jpg|jpeg|gif|png|msg|ics|vcs|vsdx|vssx|vstx|vsdm|vssm|vstm|vsd|vdw|vss|vst|mpp|mpt|word|words|document|documents|file|files) (from|by))
+
+
+file_keyword_positive1:RegexICL((i am) (working on|editing) (pptx|ppts|ppt|deck|decks|presentation|presentations|powerpoint|powerpoints|power point|slide|slides|doc|docx|docs|spec|excel|excels|xls|xlsx|spreadsheet|spreadsheets|workbook|worksheet|csv|tsv|note|notes|onenote|onenotes|onenote|notebook|notebooks|pdf|pdfs|jpg|jpeg|gif|png|image|msg|ics|vcs|vsdx|vssx|vstx|vsdm|vssm|vstm|vsd|vdw|vss|vst|mpp|mpt|word|words|document|documents|file|files))
+
+
+file_keyword_positive2:RegexICL(^(FILEKEYWORDFILENAME)+.*$)

@@ -1,0 +1,3 @@
+%%FilterBinaryFile:	E:\fileAnswer_data_synthesis\CMF_training\resource\personal_grammar\filekeywordOrfilename.lex.desc.bin
+0	FileKeys
+FeatureName= *, AtomFeatureId=-1, CompoundFeatureId=0

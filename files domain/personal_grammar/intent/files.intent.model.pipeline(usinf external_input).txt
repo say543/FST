@@ -1,0 +1,17 @@
+
+# match filename filekeyword
+# match contacts - this part is to be replaced with the real-time query-contexts matching logic
+#MlgFeaturizer --in=cortana_files_enus_mv1_preprocessed_lowercase_query --out=slot.mlg.files.matches --maxNGramLength=20 --fts=files.lex.desc.bin
+#MlgFeaturizer --in=ExternalInput1 --out=slot.mlg.filekeywordOrfilename.matches --maxNGramLength=20 --fts=filekeywordOrfilename.lex.desc.bin
+
+
+
+# match patterns 
+
+MlgFeaturizer --in=ExternalInput1 --out=slot.mlg.filekeywordOrfilename.patternmatches --maxNGramLength=20 --fts=filekeywordOrfilename.intent.lex.desc.bin --utf8-regex 
+
+
+#MaaFGlobalIdAllocator --in=intent_ngram_1gram,intent_ngram_2gram,intent_ngram_3gram,intent_mlg_lexicon,intent_PreviousTurnIntent_default,intent_PreviousTurnDomain_default,intent_TaskFrameStatus_default --out=intent_features --mapping=files_enus_mv3.intent.features.bin
+#LinearDocClassifierEnsemble --in=intent_features --out=intent_default_linear --ini=files_enus_mv3.intent.ini --weights=files_enus_mv3.intent.model.bin
+#FeatureNormalizer --in=intent_default_linear --out=files_enus_mv3_intent_svm_score --norm=identity
+

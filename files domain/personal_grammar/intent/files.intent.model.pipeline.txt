@@ -1,0 +1,17 @@
+
+SingleTokenView --in=BodySurfaceStream --out=singletokenfirst --inputIsContig
+NLPFSTApplier --in=singletokenfirst --out=FstOut --fst=files.preprocess.fst --mode=transducer
+ExtractNthFeature --in=FstOut --out=LastFstOut --n=-1 --stringfs
+CharTokenizer --in=LastFstOut --out=cortana_files_enus_mv1_preprocessed_query,cortana_files_enus_mv1_preprocessed_intertoken --sep=\s\t\r\n --del=\t
+
+TextEditor --in=cortana_files_enus_mv1_preprocessed_query --out=cortana_files_enus_mv1_preprocessed_lowercase_query --config=files.preprocess.lowercase.texteditor.txt
+
+# match patterns 
+
+MlgFeaturizer --in=cortana_files_enus_mv1_preprocessed_lowercase_query --out=slot.mlg.filekeywordOrfilenameIntent.patternmatches --maxNGramLength=20 --fts=filekeywordOrfilenameIntent.lex.desc.bin --utf8-regex 
+
+
+#MaaFGlobalIdAllocator --in=intent_ngram_1gram,intent_ngram_2gram,intent_ngram_3gram,intent_mlg_lexicon,intent_PreviousTurnIntent_default,intent_PreviousTurnDomain_default,intent_TaskFrameStatus_default --out=intent_features --mapping=files_enus_mv3.intent.features.bin
+#LinearDocClassifierEnsemble --in=intent_features --out=intent_default_linear --ini=files_enus_mv3.intent.ini --weights=files_enus_mv3.intent.model.bin
+#FeatureNormalizer --in=intent_default_linear --out=files_enus_mv3_intent_svm_score --norm=identity
+

@@ -1,0 +1,41 @@
+MaaFNGramFeaturizer --in=ExternalInput1 --out=intent_ngram_1gram --order=1 --bin=files_enus_mv3.intent.ngram.1gram.bin --captureBoundary
+MaaFNGramFeaturizer --in=ExternalInput1 --out=intent_ngram_2gram --order=2 --bin=files_enus_mv3.intent.ngram.2gram.bin --captureBoundary
+MaaFNGramFeaturizer --in=ExternalInput1 --out=intent_ngram_3gram --order=3 --bin=files_enus_mv3.intent.ngram.3gram.bin --captureBoundary
+
+
+
+MlgFeaturizer --in=ExternalInput1 --out=intent_mlg_lexicon --maxNGramLength=20 --fts=files_enus_mv3.intent.mlg.lexicon.bin --utf8-regex
+SingleTokenView --in=ExternalInput2 --out=intent_PreviousTurnIntent_singletoken
+MlgFeaturizer --in=intent_PreviousTurnIntent_singletoken --out=intent_PreviousTurnIntent_default --maxNGramLength=20 --fts=files_enus_mv3.intent.PreviousTurnIntent.bin --utf8-regex
+SingleTokenView --in=ExternalInput3 --out=intent_PreviousTurnDomain_singletoken
+MlgFeaturizer --in=intent_PreviousTurnDomain_singletoken --out=intent_PreviousTurnDomain_default --maxNGramLength=20 --fts=files_enus_mv3.intent.PreviousTurnDomain.bin --utf8-regex
+SingleTokenView --in=ExternalInput4 --out=intent_TaskFrameStatus_singletoken
+MlgFeaturizer --in=intent_TaskFrameStatus_singletoken --out=intent_TaskFrameStatus_default --maxNGramLength=20 --fts=files_enus_mv3.intent.TaskFrameStatus.bin --utf8-regex
+
+
+
+
+# combined both features
+TextEditor --in=ExternalInput5 --out=FileNamesNormalized --config=files_enus_mv3.contextual.texteditor.config.txt
+TextEditor --in=ExternalInput6 --out=FileKeyPhrasesNormalized --config=files_enus_mv3.contextual.texteditor.config.txt
+StringFeatureUnion --in=FileNamesNormalized,FileKeyPhrasesNormalized --out=FileNameKeyPhrasesCombined
+FeatureStringToTag --in=ExternalInput1,FileNameKeyPhrasesCombined --out=mlg.filekeywordOrfilename.matches
+
+
+# token replace
+TokenReplacer --in=ExternalInput1,mlg.filekeywordOrfilename.matches --out=filekeywordOrfilename_replaced --canonicalToken=FILEKEYWORDFILENAME --algo=maxnumtokens 
+# using pattern to match
+# here using another online pattern file to match
+#MlgFeaturizer --in=filekeywordOrfilename_replaced --out=filekeywordOrfilename_pattern_matches --maxNGramLength=20 --fts=filekeywordOrfilename.intent.lex.desc.bin --utf8-regex 
+MlgFeaturizer --in=filekeywordOrfilename_replaced --out=filekeywordOrfilename_pattern_matches --maxNGramLength=20 --fts=filekeywordOrfilenameOnline.lex.desc.bin --utf8-regex
+
+
+# calculate match cnt
+FeatureValueAggregator --in=filekeywordOrfilename_pattern_matches --out=filekeywordOrfilename_pattern_matches_count --algo=count 
+
+FeatureSetFilter --in=filekeywordOrfilename_pattern_matches,filekeywordOrfilename_pattern_matches_count --out=filekeywordOrfilename_matches_conj --filterTagId=0 --filterWeight=1 --keepTagFeatures=1 --keepStringFeatures=1 
+
+
+MaaFGlobalIdAllocator --in=intent_ngram_1gram,intent_ngram_2gram,intent_ngram_3gram,intent_mlg_lexicon,intent_PreviousTurnIntent_default,intent_PreviousTurnDomain_default,intent_TaskFrameStatus_default,filekeywordOrfilename_matches_conj --out=intent_features --mapping=files_enus_mv3.intent.features.bin
+LinearDocClassifierEnsemble --in=intent_features --out=intent_default_linear --ini=files_enus_mv3.intent.ini --weights=files_enus_mv3.intent.model.bin
+FeatureNormalizer --in=intent_default_linear --out=files_enus_mv3_intent_svm_score --norm=identity

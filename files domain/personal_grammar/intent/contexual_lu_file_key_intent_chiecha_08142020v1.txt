@@ -1,0 +1,5 @@
+FileKeys:Trie(E:\fileAnswer_data_synthesis\CMF_training\resource\personal_grammar\intent\filekeys_intent_chiecha.txt)
+
+
+
+file_keyword_positive2:RegexICL(^(FILEKEYWORDFILENAME)+.*$)

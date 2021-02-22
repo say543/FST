@@ -1,0 +1,11 @@
+
+SingleTokenView --in=BodySurfaceStream --out=singletokenfirst --inputIsContig
+NLPFSTApplier --in=singletokenfirst --out=FstOut --fst=files.preprocess.fst --mode=transducer
+ExtractNthFeature --in=FstOut --out=LastFstOut --n=-1 --stringfs
+CharTokenizer --in=LastFstOut --out=cortana_files_enus_mv1_preprocessed_query,cortana_files_enus_mv1_preprocessed_intertoken --sep=\s\t\r\n --del=\t
+
+TextEditor --in=cortana_files_enus_mv1_preprocessed_query --out=cortana_files_enus_mv1_preprocessed_lowercase_query --config=files.preprocess.lowercase.texteditor.txt
+
+# replace with my prefer name
+#MlgFeaturizer --in=cortana_files_enus_mv1_preprocessed_lowercase_query --out=slot.mlg.files.matches --maxNGramLength=20 --fts=files.lex.desc.bin
+MlgFeaturizer --in=cortana_files_enus_mv1_preprocessed_lowercase_query --out=slot.mlg.filekeywordOrfilename.matches --maxNGramLength=20 --fts=filekeywordOrfilename.lex.desc.bin
