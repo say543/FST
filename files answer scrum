@@ -103,6 +103,17 @@ BTW, 这个是官方用法 Intent - Regular Expressions in MLGTools (sharepoint.
 (1 liked)​[3:04 PM] Yong Ni
     
 CMF只是直接复用MLG代码，并没有加新东西
+這邊的word 指的是把整個query 當作一個word 
+
+regex regexIc 是整個query 要轉乘single token
+
+然後 ^ 和 & 才有用
+SingleTokenView --in=filekeywordOrfilename_replaced --out=filekeywordOrfilename_replaced_singletoken
+
+
+RegexL / RegexICL 整個query 看成一個list 可以match 一個token or 多個token
+這個時候因為可以match 一個single token 所以 ^ 和 & 就沒有用處了
+
 
 
 ========================
