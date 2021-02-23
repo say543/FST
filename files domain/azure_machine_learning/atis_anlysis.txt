@@ -585,7 +585,7 @@ run 14/16
 		training data
 			whole night net yet finished
 			might be not a good idea to evaluate
-		TVS october
+		TVS_october_validation data(loccaly)
 		{
   'intent_acc': 0.9302210081946859,
   'ABSOLUTE_LOCATION': {
@@ -1791,6 +1791,501 @@ run 38/40
   ])
 }
 
+	TVS_october_validation data(loccaly)
+{
+  'intent_acc': 0.9327042463372237,
+  'ABSOLUTE_LOCATION': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 1
+  },
+  'AD': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 0
+  },
+  'ATTACHMENT': {
+    'precision': 0.75,
+    'recall': 1.0,
+    'f1-score': 0.8571428571428571,
+    'support': 3
+  },
+  'AVAILABILITY': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 44
+  },
+  'CONTACT_NAME': {
+    'precision': 0.8952772073921971,
+    'recall': 0.95092693565976,
+    'f1-score': 0.9222633527234267,
+    'support': 917
+  },
+  'DATE': {
+    'precision': 0.25,
+    'recall': 0.5,
+    'f1-score': 0.3333333333333333,
+    'support': 2
+  },
+  'DECK_LOCATION': {
+    'precision': 1.0,
+    'recall': 1.0,
+    'f1-score': 1.0,
+    'support': 1
+  },
+  'DECK_NAME': {
+    'precision': 0.92,
+    'recall': 0.8214285714285714,
+    'f1-score': 0.8679245283018867,
+    'support': 28
+  },
+  'DESTINATION_CALENDAR': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 1
+  },
+  'DESTINATION_PLATFORM': {
+    'precision': 0.6944444444444444,
+    'recall': 0.8333333333333334,
+    'f1-score': 0.7575757575757577,
+    'support': 30
+  },
+  'DURATION': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 3
+  },
+  'END_TIME': {
+    'precision': 1.0,
+    'recall': 0.8333333333333334,
+    'f1-score': 0.9090909090909091,
+    'support': 6
+  },
+  'FEEDBACK_TYPE': {
+    'precision': 0.6,
+    'recall': 1.0,
+    'f1-score': 0.7499999999999999,
+    'support': 6
+  },
+  'FILE_ACTION': {
+    'precision': 0.9459459459459459,
+    'recall': 0.9722222222222222,
+    'f1-score': 0.9589041095890412,
+    'support': 36
+  },
+  'FILE_FILERECENCY': {
+    'precision': 1.0,
+    'recall': 0.875,
+    'f1-score': 0.9333333333333333,
+    'support': 8
+  },
+  'FILE_KEYWORD': {
+    'precision': 0.8547854785478548,
+    'recall': 0.8993055555555556,
+    'f1-score': 0.8764805414551607,
+    'support': 288
+  },
+  'FILE_RECENCY': {
+    'precision': 0.9487179487179487,
+    'recall': 0.9487179487179487,
+    'f1-score': 0.9487179487179487,
+    'support': 39
+  },
+  'FILE_TYPE': {
+    'precision': 0.9269102990033222,
+    'recall': 0.9489795918367347,
+    'f1-score': 0.9378151260504202,
+    'support': 294
+  },
+  'FROM_CONTACT_NAME': {
+    'precision': 0.4,
+    'recall': 1.0,
+    'f1-score': 0.5714285714285715,
+    'support': 2
+  },
+  'FROM_RELATIONSHIP_NAME': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 1
+  },
+  'IMPLICIT_LOCATION': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 1
+  },
+  'MEETING_STARTTIME': {
+    'precision': 1.0,
+    'recall': 1.0,
+    'f1-score': 1.0,
+    'support': 1
+  },
+  'MEETING_TITLE': {
+    'precision': 0.25,
+    'recall': 0.5,
+    'f1-score': 0.3333333333333333,
+    'support': 4
+  },
+  'MEETING_TYPE': {
+    'precision': 1.0,
+    'recall': 0.4,
+    'f1-score': 0.5714285714285715,
+    'support': 5
+  },
+  'MESSAGE': {
+    'precision': 0.7421875,
+    'recall': 0.7916666666666666,
+    'f1-score': 0.7661290322580645,
+    'support': 240
+  },
+  'MESSAGE_CATEGORY': {
+    'precision': 1.0,
+    'recall': 1.0,
+    'f1-score': 1.0,
+    'support': 4
+  },
+  'NUMERICAL_INCREMENT': {
+    'precision': 1.0,
+    'recall': 1.0,
+    'f1-score': 1.0,
+    'support': 1
+  },
+  'OFFICE_LOCATION': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 1
+  },
+  'ORDER_REF': {
+    'precision': 0.968421052631579,
+    'recall': 0.968421052631579,
+    'f1-score': 0.968421052631579,
+    'support': 95
+  },
+  'ORIGINAL_START_TIME': {
+    'precision': 1.0,
+    'recall': 1.0,
+    'f1-score': 1.0,
+    'support': 1
+  },
+  'ORIGINAL_TITLE': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 1
+  },
+  'PHONE_NUMBER': {
+    'precision': 0.8375,
+    'recall': 0.9178082191780822,
+    'f1-score': 0.8758169934640524,
+    'support': 73
+  },
+  'POSITION_REF': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 3
+  },
+  'RELATIONSHIP_NAME': {
+    'precision': 0.8571428571428571,
+    'recall': 0.20689655172413793,
+    'f1-score': 0.33333333333333326,
+    'support': 29
+  },
+  'SEARCH_QUERY': {
+    'precision': 0.8974358974358975,
+    'recall': 0.8898305084745762,
+    'f1-score': 0.8936170212765957,
+    'support': 118
+  },
+  'SHARETARGET_NAME': {
+    'precision': 0.8611111111111112,
+    'recall': 0.9393939393939394,
+    'f1-score': 0.8985507246376813,
+    'support': 33
+  },
+  'SHARETARGET_TYPE': {
+    'precision': 0.8461538461538461,
+    'recall': 0.9166666666666666,
+    'f1-score': 0.8799999999999999,
+    'support': 12
+  },
+  'SLIDE_CONTENT_TYPE': {
+    'precision': 0.7894736842105263,
+    'recall': 1.0,
+    'f1-score': 0.8823529411764706,
+    'support': 15
+  },
+  'SLIDE_NAME': {
+    'precision': 0.8961038961038961,
+    'recall': 0.9324324324324325,
+    'f1-score': 0.9139072847682119,
+    'support': 74
+  },
+  'SLIDE_NUMBER': {
+    'precision': 1.0,
+    'recall': 1.0,
+    'f1-score': 1.0,
+    'support': 46
+  },
+  'SOURCE_PLATFORM': {
+    'precision': 1.0,
+    'recall': 0.5,
+    'f1-score': 0.6666666666666666,
+    'support': 2
+  },
+  'START_DATE': {
+    'precision': 0.9558823529411765,
+    'recall': 0.9737827715355806,
+    'f1-score': 0.9647495361781077,
+    'support': 267
+  },
+  'START_TIME': {
+    'precision': 0.9298780487804879,
+    'recall': 0.9775641025641025,
+    'f1-score': 0.9531250000000001,
+    'support': 312
+  },
+  'TEAMSPACE_CHANNEL': {
+    'precision': 0.7212121212121212,
+    'recall': 0.8880597014925373,
+    'f1-score': 0.7959866220735785,
+    'support': 134
+  },
+  'TEAMSPACE_KEYWORD': {
+    'precision': 0.6390532544378699,
+    'recall': 0.7012987012987013,
+    'f1-score': 0.6687306501547987,
+    'support': 154
+  },
+  'TEAMSPACE_MENU': {
+    'precision': 0.7647058823529411,
+    'recall': 0.8125,
+    'f1-score': 0.787878787878788,
+    'support': 16
+  },
+  'TEAMSPACE_TEAM': {
+    'precision': 0.6463414634146342,
+    'recall': 0.6022727272727273,
+    'f1-score': 0.6235294117647059,
+    'support': 88
+  },
+  'TEAMSUSER_ACTIVITYTYPE': {
+    'precision': 0.8181818181818182,
+    'recall': 0.9,
+    'f1-score': 0.8571428571428572,
+    'support': 30
+  },
+  'TEAMSUSER_STATUS': {
+    'precision': 0.8571428571428571,
+    'recall': 0.9230769230769231,
+    'f1-score': 0.888888888888889,
+    'support': 26
+  },
+  'TIME': {
+    'precision': 0.9302325581395349,
+    'recall': 0.975609756097561,
+    'f1-score': 0.9523809523809524,
+    'support': 82
+  },
+  'TITLE': {
+    'precision': 0.5448717948717948,
+    'recall': 0.5743243243243243,
+    'f1-score': 0.5592105263157894,
+    'support': 148
+  },
+  'TO_CONTACT_NAME': {
+    'precision': 0.898876404494382,
+    'recall': 0.9411764705882353,
+    'f1-score': 0.9195402298850575,
+    'support': 85
+  },
+  'VOLUME_LEVEL': {
+    'precision': 1.0,
+    'recall': 1.0,
+    'f1-score': 1.0,
+    'support': 8
+  },
+  'slot_precision': array([
+    0.,
+    0.,
+    0.75,
+    0.,
+    0.89527721,
+    0.25,
+    1.,
+    0.92,
+    0.,
+    0.69444444,
+    0.,
+    1.,
+    0.6,
+    0.94594595,
+    1.,
+    0.85478548,
+    0.94871795,
+    0.9269103,
+    0.4,
+    0.,
+    0.,
+    1.,
+    0.25,
+    1.,
+    0.7421875,
+    1.,
+    1.,
+    0.,
+    0.96842105,
+    1.,
+    0.,
+    0.8375,
+    0.,
+    0.85714286,
+    0.8974359,
+    0.86111111,
+    0.84615385,
+    0.78947368,
+    0.8961039,
+    1.,
+    1.,
+    0.95588235,
+    0.92987805,
+    0.72121212,
+    0.63905325,
+    0.76470588,
+    0.64634146,
+    0.81818182,
+    0.85714286,
+    0.93023256,
+    0.54487179,
+    0.8988764,
+    1.
+  ]),
+  'slot_recall': array([
+    0.,
+    0.,
+    1.,
+    0.,
+    0.95092694,
+    0.5,
+    1.,
+    0.82142857,
+    0.,
+    0.83333333,
+    0.,
+    0.83333333,
+    1.,
+    0.97222222,
+    0.875,
+    0.89930556,
+    0.94871795,
+    0.94897959,
+    1.,
+    0.,
+    0.,
+    1.,
+    0.5,
+    0.4,
+    0.79166667,
+    1.,
+    1.,
+    0.,
+    0.96842105,
+    1.,
+    0.,
+    0.91780822,
+    0.,
+    0.20689655,
+    0.88983051,
+    0.93939394,
+    0.91666667,
+    1.,
+    0.93243243,
+    1.,
+    0.5,
+    0.97378277,
+    0.9775641,
+    0.8880597,
+    0.7012987,
+    0.8125,
+    0.60227273,
+    0.9,
+    0.92307692,
+    0.97560976,
+    0.57432432,
+    0.94117647,
+    1.
+  ]),
+  'slot_f1': array([
+    0.,
+    0.,
+    0.85714286,
+    0.,
+    0.92226335,
+    0.33333333,
+    1.,
+    0.86792453,
+    0.,
+    0.75757576,
+    0.,
+    0.90909091,
+    0.75,
+    0.95890411,
+    0.93333333,
+    0.87648054,
+    0.94871795,
+    0.93781513,
+    0.57142857,
+    0.,
+    0.,
+    1.,
+    0.33333333,
+    0.57142857,
+    0.76612903,
+    1.,
+    1.,
+    0.,
+    0.96842105,
+    1.,
+    0.,
+    0.87581699,
+    0.,
+    0.33333333,
+    0.89361702,
+    0.89855072,
+    0.88,
+    0.88235294,
+    0.91390728,
+    1.,
+    0.66666667,
+    0.96474954,
+    0.953125,
+    0.79598662,
+    0.66873065,
+    0.78787879,
+    0.62352941,
+    0.85714286,
+    0.88888889,
+    0.95238095,
+    0.55921053,
+    0.91954023,
+    1.
+  ])
+}
+
+	//test 比較
+	// bert 少了feedback_subject, people_attribute
+	// ? 可能用單獨設query 看一下
+	// 很難說誰比較好
+	// 還是要aether evaluate 一下比較好
+	
+
 ==================
 eran discussion
 ==================
@@ -1901,3 +2396,61 @@ haoda sync 02192021
 ======================
 transferdistill 是MSR 在working 
 可以有空看看怎麼用
+
+
+
+
+======================
+qas setup
+======================
+// rule 
+		ExternalInput4 (tag: 8, string: 0)
+
+			39[0,0]=1.0
+
+			0[1,1]=1.0
+
+			0[2,2]=1.0
+
+			0[3,3]=1.0
+
+			78[4,4]=1.0
+
+			91[5,5]=1.0
+
+			0[6,6]=1.0
+
+			0[7,7]=1.0
+			
+// dnn 
+
+// intent_prob
+			0[0,0]=0.00012395185
+			0[1,1]=1.595618e-09
+			0[136,136]=2.0400597e-09
+
+			0[137,137]=1.1641267e-08
+/  intent tage
+			0[0,0]=39.0
+			need to move weight to tag
+			and set weight according to intent prob
+
+// slot_tag
+// need to scale to 0.99 to let hotfix wins
+// and shift right by one
+// also, tagid needs to map
+// 2 => 0 becasue extra two slots unless retrain
+
+			2[0,0]=1.0
+
+			2[1,1]=1.0
+
+			2[2,2]=1.0
+
+			80[3,3]=1.0
+
+			93[4,4]=1.0
+
+			2[5,5]=1.0
+
+			2[6,6]=1.0
