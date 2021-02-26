@@ -1,0 +1,2554 @@
+
+
+
+==================
+atis test dataset 
+==================
+problematic queries 
+with number as token
+query_with_unkonwn slot_issue   what meals are served on american flight 665 673 from milwaukee to seattle      O B-meal O O O B-airline_name O B-flight_number I-flight_number O B-fromloc.city_name O B-toloc.city_name
+query_with_unkonwn slot_issue   show me the delta flights which serve a snack to coach passengers       O O O B-airline_name O O O O B-meal_description O B-compartment O
+
+
+query_with_unkonwn slot_issue   list airports in arizona nevada and california please   O O O B-state_name I-state_name O B-state_name O
+query_with_unkonwn slot_issue   what class is fare code q       O O O O O B-booking_class
+query_with_unkonwn slot_issue   a flight from baltimore to san francisco arriving between 5 and 8 pm    O B-flight O B-fromloc.city_name O B-toloc.city_name I-toloc.city_name O O B-arrive_time.start_time O B-arrive_time.end_time I-arrive
+
+
+has i-flight_number unknow slot
+
+solution:
+ignore if slot is not inside the list
+
+
+
+=================
+atis how to load file 
+=================
+archive_file = os.path.join(pretrained_model_name_or_path, WEIGHTS_NAME)
+'atis_model'
+'pytorch_model.bin'
+? not sure where the location is
+
+cached_path
+resolved_archive_file = cached_path(
+
+TRANSFORMERS_CACHE
+cache_dir : 'C:\\Users\\chiecha.REDMOND/.cache\\huggingface\\transformers'
+in only stores weights, not other thing
+
+
+=================
+bert config  && huper paarmeter
+atis experiment
+=================
+
+//joint bert 
+        # Prepare optimizer and schedule (linear warmup and decay)
+        no_decay = ['bias', 'LayerNorm.weight']
+        optimizer_grouped_parameters = [
+            {'params': [p for n, p in self.model.named_parameters() if not any(nd in n for nd in no_decay)],
+             'weight_decay': self.args.weight_decay},
+            {'params': [p for n, p in self.model.named_parameters() if any(nd in n for nd in no_decay)], 'weight_decay': 0.0}
+        ]
+		//fixed in code
+		i update to this in atis
+
+
+optimizer
+	no hvd compressor
+
+schedular traing steps 
+t_total = len(train_dataloader) // self.args.gradient_accumulation_steps * self.args.num_train_epochs
+		(140 // 1) * 5
+		// floor operation 
+		// fixed in code 
+		// my case no floor operation but should be the same 
+		
+		
+if (step + 1) % self.args.gradient_accumulation_steps == 0:
+	whatever step it is ,  it will alawys be zero
+
+
+batch = tuple(t.to(self.device) for t in batch)  # GPU or CPU
+	? it seems only one example will be evaluate, batch_size is not being used
+		
+epoch_iterator = tqdm(train_dataloader, desc="Iteration")
+	4487 / 32 = 140
+		會補足
+	step will be 32
+
+
+if 0 < self.args.max_steps < global_step:
+	max_steps = -1 and global_step keeps +1
+	so it will nevert happen
+
+
+epsilon
+1e-08
+	pass as parameter, the same
+
+drop rate = 0.1
+evavulate batchsize = 64
+trainf batch size = 32
+use crf = false
+warmup_steps = 0
+	//fixed in code, the same 
+weight_decay = 0.0
+	//fixed in code
+	i update to this in atis
+gradient_accumulation_step = 1
+
+igonre_index = 0 
+
+learning rate 5e-05
+	pass as parameter
+	i updare to this in atis 
+logging steps 200
+
+max_grad_borm 1.0
+
+max_seq_len = 50
+max_steps = -1
+
+num_train_epochs = 5.0
+	pass as parameter, the same
+save_steps = 200
+	it will trigger to save model
+seed = 1234
+	? not sure if the same as seed_val fixed code , random seed for torch, cuda
+	https://github.com/monologg/JointBERT/blob/7497631c2065f3f7be853b893e0730676745e0fe/utils.py
+	refer to here 
+	fixed in code 
+	i update to this in atis
+
+slot_loss_coef = 1.0
+	fixed in code
+	
+slot_pad_label : PAD
+
+pad_token_label_id
+	assocaited with slot_pad_label
+	
+
+epoch = 5
+
+bert config
+	attention_probs_dropout_prob = 0.1
+		fixed in code, the same 
+	chunk_size_feed_forward : 0 
+		fixed in code, the same 
+	diviertiy penalty -0.0
+		fixed in code, the same 
+	do _ sample : False 
+		fixed in code, the same 
+	early_stopping = false 
+		fixed in code, the same 
+	gradient_checkpoint : false
+		fixed in code, the same 
+	hodden_act : gelu
+		fixed in code, the same 
+	hidden_dropout_prob = 0.1
+		fixed in code, the same 
+	hidden_size - 768
+	idslabel 
+		0 : label_0
+		1: labe l1
+		
+	initialzie_range = 0.02
+		fixed in code, the same 
+	intermediat_size = 3072
+		fixed in code, the same 
+	
+	layer_nor,_eps = 1e-12
+		fixed in code, the same 
+	length_penalty : 1.0
+		fixed in code, the same 
+	
+	max_length 20
+		fixed in code, the same 
+	max_grad_norm 1.0
+		fixed int code, the same 
+		
+
+	max_position_embedding:512
+		fixed in code, the same 
+	model_type : bert 
+		fixed in code, the same 
+	name_or_path : bert-case-uncased
+		? not sure if it affects or not 
+		need to provide by myself
+	
+	ni repated_ngram_size : 0
+		fixed in code, the same 
+	num attention ahead = 12
+		fixed in code, the same 
+	num beam grups 1
+		fixed in code, the same 
+	num beams 1
+		fixed in code, the same 
+	num_hidden layers -12
+		my case i go witj 3 
+	num_labels = 2
+		fixed in code, the same 
+	num_return_sequences 1
+		fixed in code, the same 
+	output attention false 
+		fixed in code, the same 
+	pad token _id = 0
+		fixed in code, the same 
+	psoitoon_emveddding absolue
+		fixed in code, the same 
+	repetititon penalty  1.0
+		fixed in code, the same 
+	return ditc : true 
+		fixed in code, the same 
+	temperatire 1.0
+		fixed in code, the same 
+	top k 50
+		fixed in code, the same 
+	top p 1.0
+		fixed in code, the same 
+	torchscript fasle
+		fixed in code, the same 
+	type vocan size = 2
+		fixed in code, the same 
+	vocan size = 30522
+		fixed in code, the same 
+	
+
+
+
+// my config
+
+run 7
+	改了parameter
+	跟run 4 比起來 slot 確實有比較好  雖然還是低
+	atis iteration 中最後snapshot 沒有return failure 的case (還不知道原因是啥)
+	intent 每個turn 都依樣 ? 這個真的不make sense
+	from 
+	Validation metric after iteration 5 : {'total_intent_precision': 0.7321428571428571, 'total_intent_recall': 0.7321428571428571, 'total_slot_precision': 0, 'total_slot_recall': 0}
+	to
+	Validation metric after iteration 5 : {'total_intent_precision': 0.7321428571428571, 'total_intent_recall': 0.7321428571428571, 'total_slot_precision': 0.5263466042154566, 'total_slot_recall': 0.2630962832894352}
+
+run 10
+	to 12 layers 
+	all zero 
+	
+	? not sure why 
+
+run 13 
+	same as rum 7, max token = 50
+	no big difference
+	
+run 37
+	ouput_randomsampler_v1_02152021v1
+	add random sampler
+	status : fail but can output model
+	Validation metric after iteration 5 : {'total_intent_precision': 0.9631449631449631, 'total_intent_recall': 0.9631449631449631, 'total_slot_precision': 0.6362861138588533, 'total_slot_recall': 0.6925818667854756}
+	using cpu locally to load gpu trained model(*.pt) and do metric verification
+			yes it can be verified, the same
+
+run 42
+	ouput_randomsampler_layer12_v1_02162021v1
+	add random sampler
+	status : fail but can output model
+	try 12 layers to see whether performance is better than run 37
+	Validation metric after iteration 5 : {'total_intent_precision': 0.9325441143622962, 'total_intent_recall': 0.9325441143622962, 'total_slot_precision': 0.570620239390642, 'total_slot_recall': 0.5840944531075963}
+	Validation metric Iob after iteration 5 : {'intent_acc': 0.9325441143622962, 'slot_precision': 0.6037959381044488, 'slot_recall': 0.6852431127208869, 'slot_f1': 0.6419464294894864}			
+	// no big difference
+	using cpu locally to load gpu trained model(*.pt) and do metric verification
+		yes it can be verified, the same
+		
+run 43/45
+	add random sampler
+	extend epoch from  5 to 15 to see performance
+	layer = 3
+	Validation metric after iteration 14 : {'total_intent_precision': 0.9955327228054501, 'total_intent_recall': 0.9955327228054501, 'total_slot_precision': 0.2737879045217596, 'total_slot_recall': 0.778050048266132}
+	Validation metric Iob after iteration 14 : {'intent_acc': 0.9955327228054501, 'slot_precision': 0.27106448912714387, 'slot_recall': 0.8352540884644934, 'slot_f1': 0.4092993236611045}
+	intent improves but slots does not update much
+
+run 49/51
+	add random sampler
+	status : fail but can output model
+	alawyas this error it can be different log files  eg : 70_drive_log_0.txt,  70_drive_log_1.txt
+	Traceback (most recent call last):
+	File "atis_train_horovod_joint_intent_slot_TNLR.py", line 2031, in <module>
+		model_to_save.save_pretrained(out_dir)
+	File "/azureml-envs/azureml_1807a796a9d0358a0054a3b50c9aa95a/lib/python3.6/site-packages/transformers/modeling_utils.py", line 812, in save_pretrained
+		torch.save(state_dict, output_model_file)
+	File "/azureml-envs/azureml_1807a796a9d0358a0054a3b50c9aa95a/lib/python3.6/site-packages/torch/serialization.py", line 328, in save
+		_legacy_save(obj, opened_file, pickle_module, pickle_protocol)
+	File "/azureml-envs/azureml_1807a796a9d0358a0054a3b50c9aa95a/lib/python3.6/site-packages/torch/serialization.py", line 196, in __exit__
+		self.file_like.close()
+	OSError: [Errno 5] Input/output error
+		1>sometimes error happens to model_to_save.save_pretrained(out_dir) 
+		2> sometimes error happens to torch.save(model, os.path.join(out_dir, 'model.pt'))
+		看起來像是race condition
+		trying in run 58/60 by comment the second one but it still error
+		not sure why....
+
+	extend epoch from  5 to 15 to see performance
+	layer = 3
+	igonre PAD token for evaluation to check performance - folliwng atis logic
+	
+	最好加個tab 分割
+	wo pad metric 真的可以提升
+	雖然iob 跟my logic 仍然有落差
+	my logic 
+		w pad
+			slot_precision 非常低 
+			Validation metric after iteration 15 : {'total_intent_precision': 0.9959794505249051, 'total_intent_recall': 0.9959794505249051, 'total_slot_precision': 0.3740392826643894, 'total_slot_recall': 0.7805747382490532}
+			pad	: total_tp: 4912, total_fp: 27029, total_fn: 4042
+			
+			很多slot 的false positive 都增加了
+			可能就來自於pad 的location 我想
+		wo pad
+			iteration 5 可以到80
+			Validation metric wo pad after iteration 15 : {'total_intent_precision': 0.9959794505249051, 'total_intent_recall': 0.9959794505249051, 'total_slot_precision': 0.9048287478944413, 'total_slot_recall': 0.8960742882562278}
+			pad	: total_tp: 0, total_fp: 111, total_fn: 0
+	
+	打算用這個version 在local repo 一下 
+		but pytorch_model.bin size = 0 , 輸出有問題 我想... 只有model.pt
+		mode.pt 沒辦法load 不知道為啥.... 無法verify
+	training set 看看是不是都依樣
+			
+			
+	
+run 67/69
+	remove ranmdom sampler 
+	extend to 25 epochs to check metrics
+	to see if 'status : fail but can output model' can be removed
+	the status is correct by metric is low....
+	Validation metric wo pad after iteration 25 : {'total_intent_precision': 0.9714285714285714, 'total_intent_recall': 0.9714285714285714, 'total_slot_precision': 0.7425512104283054, 'total_slot_recall': 0.6940818102697999}
+
+
+run 70/74
+	add random sampler
+	status : fail but can output model
+	alawyas this error it can be different log files  eg : 70_drive_log_5.txt,  70_drive_log_7.txt
+	overall intent precision: 0.9975429975429976, overall intent recall: 0.9975429975429976
+	Validation metric wo pad after iteration 15 : {'total_intent_precision': 0.9975429975429976, 'total_intent_recall': 0.9975429975429976, 'total_slot_precision': 0.8887891873703101, 'total_slot_recall': 0.8812277580071174}
+	
+	ouput_randomsampler_layer12_v1_02172021v1
+	this onw pytorch_model.bin is not empty
+	trying to replicate metrics and validating test dataset (run 49/51) but might be litle bit different
+	
+	atis_train
+		local 
+			Validation metric wo pad: {'total_intent_precision': 0.9975429975429976, 'total_intent_recall': 0.9975429975429976, 'total_slot_precision': 0.8887891873703101, 'total_slot_recall': 0.8812277580071174
+	
+	atis_test
+		some problematic queris
+		slot is lower compared to train set
+			 Validation metric wo pad: {'total_intent_precision': 0.9761904761904762, 'total_intent_recall': 0.9761904761904762, 'total_slot_precision': 0.8285714285714286, 'total_slot_recall': 0.8255052661542841}
+	
+=================
+evaluation logic
+i shou;d ignore o and pad for calculation 
+i thikn 
+================
+	
+=================
+code flow 
+=================
+joint bert 
+	in the first place 
+	model zero_grad but i do not have , i have optimizer.zero_gra[
+	
+	in some case model will .zerograd  but i do have 
+	
+	
+
+=================
+original aml behavaior
+=================
+run 1
+ Validation metric after iteration 5 : {'total_intent_precision': 0.7321428571428571, 'total_intent_recall': 0.7321428571428571, 'total_slot_precision': 0, 'total_slot_recall': 0}
+
+
+
+=================
+original atis behavior
+=================
+
+max_len =50
+
+i want to fly from baltimore to dallas round trip
+
+attention (same as my att_masks)
+len(12)
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, ...]
+
+input_id (same as my text_id)
+[101, 1045, 2215, 2000, 4875, 2013, 6222, 2000, 5759, 2461, 4440, 102, 0, 0, ...]
+
+
+len = 12
+
+
+token_type1_id (i do not provide this )
+all zero to max_len = 50
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, ...]
+
+slot label id (same as my labels_for_text_id)
+len = 12
+[0, 2, 2, 2, 2, 2, 73, 2, 114, 98, 99, 0, 0, 0, ...]
+[0, 2, 2, 2, 2, 2, 73, 2, 114, 98, 99, 0, 0, 0, ...]
+
+
+0 2 2 2 100, 111   
+0 for pad token
+2 for untag toekn
+CLS SEP for zero
+otherthan that using 2
+
+
+
+i'm looking for a flight from charlotte to las vegas that stops in st. louis hopefully a dinner flight how can i find that out
+golden query to check preprocessing
+
+before adding CLS and sep
+[2, 2, 2, 2, 2, 2, 2, 2, 73, 2, 114, 115, 2, 2, ...]
+len() = 29=8
+2
+2
+2
+2
+2
+2
+2
+2
+73
+2
+114
+115
+2
+2
+2
+// here st.louis extend
+103
+103
+104
+2
+2
+81
+2
+2
+2
+2
+2
+2
+
+
+
+
+
+
+slot precision 0.94
+
+
+
+=================
+TNLR  using atis repo
+train = dev = eva
+epoch = 5
+layer = 3
+=================
+
+C:\Users\chiecha.REDMOND\.cache\huggingface_TNLR_02162021v1
+// eboch_atis_five_extend_b_slot_and_with_CLS_SEP_PAD_with_TNLR_02162021
+//including PAD for evaluation
+evaluate TNLR {'intent_acc': 0.9669495310406432, 'slot_precision': 0.5178640144451351, 'slot_recall': 0.7128305423134906, 'slot_f1': 0.5999039879299113, 'sementic_frame_acc': 0.13867798124162573} :
+
+
+// remove pad for evaluation
+// slot is better
+ evaluate TNLR {'intent_acc': 0.9669495310406432, 'slot_precision': 0.7281873056520943, 'slot_recall': 0.7662154359402066, 'slot_f1': 0.7467175190696511, 'sementic_frame_acc': 0.4582402858418937} :
+
+
+
+=================
+TNLR  using atis repo
+train = dev = eva
+epoch = 5
+layer = 12
+=================
+layer12 is not better than layer3
+
+// eboch_atis_five_extend_b_slot_and_with_CLS_SEP_PAD_with_TNLR_layer12_02162021
+//including PAD for evaluation
+ evaluate TNLR {'intent_acc': 0.93144260830728, 'slot_precision': 0.5129070455891059, 'slot_recall': 0.3529723342704641, 'slot_f1': 0.41816909226944704, 'sementic_frame_acc': 0.0031263957123715946} :
+
+
+// remove pad for evaluation
+// not being better.... not sure why
+ evaluate TNLR {'intent_acc': 0.93144260830728, 'slot_precision': 0.49209596429235636, 'slot_recall': 0.5092705459677936, 'slot_f1': 0.5005359732643924, 'sementic_frame_acc': 0.08240285841893702} :
+
+
+
+
+=================
+v1
+CLS , SEP label = 0, as pad
+B-label extend 
+train = dev = eva
+this case 
+https://github.com/chakki-works/seqeval/blob/master/seqeval/metrics/sequence_labeling.py
+ warnings.warn('{} seems not to be NE tag.'.format(chunk))
+         >>> from seqeval.metrics.sequence_labeling import get_entities
+        >>> seq = ['B-PER', 'I-PER', 'O', 'B-LOC']
+        >>> get_entities(seq)
+        [('PER', 0, 1), ('LOC', 3, 3)]
+		
+since v1 will break this chunk
+
+
+this case evaluation will be different
+my logic: B-code I-code are different span 
+IOB logic: B-code I-code are the same slot 
+
+=================
+
+// applied in atis repo
+// cpu local
+// slot 9,1,2
+{'intent_acc': 0.9973202322465387}
+{'slot_f1': 0.982715575187248, 'slot_precision': 0.9805812839348451, 'slot_recall': 0.984859177519728}
+{'sementic_frame_acc': 0.9522108083966057}
+
+
+//applied in my local
+//3 layers
+//cpu
+// same setting but different runs might be differentve81
+//first outputs_temp_load_v1_02142021v1
+//outputs_local_load_v1_02142021v1
+  Validation metric after iteration 5 : {'total_intent_precision': 0.9220460129551039, 'total_intent_recall': 0.9220460129551039, 'total_slot_precision': 0.6902472527472527, 'total_slot_recall': 0.7089552238805971}
+//second time 
+outputs_temp_load_v1_02152021v1 >outputs_local_load_v1_02152021v1
+   Validation metric after iteration 5 : {'total_intent_precision': 0.8981460799642618, 'total_intent_recall': 0.8981460799642618, 'total_slot_precision': 0.5670757511637748, 'total_slot_recall': 0.5970149253731343}
+  
+Time: 32m 1s
+// test local to load model and do metric calculation again, to further verify
+// load onnx bin still cannot work -error
+Unable to load from type '<class 'onnx.onnx_ml_pb2.ModelProto'>'
+// store
+E:\azure_ml_notebook\outputs_temp_load_v1_02142021v1
+// using pytorch_model.bin to local test
+// third time, my evauation replicate success in atis_model_saved
+// thrid time  IOB logic is higher
+Validation metric Iob: {'intent_acc': 0.8981460799642618, 'slot_precision': 0.6036986236579482, 'slot_recall': 0.700471956975085, 'slot_f1': 0.6484948558364029}  
+// trying to reproduce for all merics - wo pad and wo pad
+ Validation metric : {'total_intent_precision': 0.8956890775072593, 'total_intent_recall': 0.8956890775072593, 'total_slot_precision': 0.4078921277017648, 'total_slot_recall': 0.5346031038835672}
+ Validation metric wo pad: {'total_intent_precision': 0.8956890775072593, 'total_intent_recall': 0.8956890775072593, 'total_slot_precision': 0.5564067712838255, 'total_slot_recall': 0.5007784697508897}
+ Validation metric Iob wo pad: {'intent_acc': 0.8956890775072593, 'slot_precision': 0.4143335281304787, 'slot_recall': 0.6419986829107672, 'slot_f1': 0.5036324303380583}
+ Validation metric Iob: {'intent_acc': 0.8956890775072593, 'slot_precision': 0.6458380757265346, 'slot_recall': 0.6290137826552858, 'slot_f1': 0.6373149136107523}
+
+
+
+
+//applied in my local
+//12 layers
+//cpu
+// not big improvement
+outputs_local_load_layer12_v1_02162021v1
+ Validation metric : {'total_intent_precision': 0.9309805673442038, 'total_intent_recall': 0.9309805673442038, 'total_slot_precision': 0.537526347485697, 'total_slot_recall': 0.5302220242073216}
+
+
+=================
+MDM experiment 
+compared to hvd initilization
+CLS , SEP label = 0, as pad
+=================
+
+run 14/16
+	using distributed sampler
+	original hyper parameters
+	3 layer TNLR
+	epoch = 25 to check
+	so far 
+	即使用distributedSampler  結果也還可以  看起來atis 就是data 量不夠多
+	等跑完25 可能要加入code
+	
+	training da
+	MDM_01202021v1
+			check semantic frame (不知道yue 有沒有這個code)
+		Validation metric wo pad after iteration 17 : {'total_intent_precision': 0.974581939799331, 'total_intent_recall': 0.974581939799331, 'total_slot_precision': 0.8828073246900728, 'total_slot_recall': 0.9165029228275287}
+			seems after iteration 18 it will saturate
+		Validation metric wo pad after iteration 25 : {'total_intent_precision': 0.9770122630992196, 'total_intent_recall': 0.9770122630992196, 'total_slot_precision': 0.8929008059442842, 'total_slot_recall': 0.9238345532249349}
+
+	// original format
+	//TVS_october_validation data(loccaly)
+	//	Validation metric wo pad: {'total_intent_precision': 0.9302210081946859, 'total_intent_recall': 0.9302210081946859, 'total_slot_precision': 0.8338330834582709, 'total_slot_recall': 0.8737889499869076}
+
+
+	change to IOB2 format as haoda suggeest
+		training data
+			whole night net yet finished
+			might be not a good idea to evaluate
+		TVS_october_validation data(loccaly)
+		{
+  'intent_acc': 0.9302210081946859,
+  'ABSOLUTE_LOCATION': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 1
+  },
+  'AD': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 0
+  },
+  'ATTACHMENT': {
+    'precision': 0.6,
+    'recall': 1.0,
+    'f1-score': 0.7499999999999999,
+    'support': 3
+  },
+  'AVAILABILITY': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 44
+  },
+  'CONTACT_NAME': {
+    'precision': 0.9028213166144201,
+    'recall': 0.9422028353326063,
+    'f1-score': 0.9220917822838847,
+    'support': 917
+  },
+  'DATE': {
+    'precision': 0.3333333333333333,
+    'recall': 0.5,
+    'f1-score': 0.4,
+    'support': 2
+  },
+  'DECK_LOCATION': {
+    'precision': 1.0,
+    'recall': 1.0,
+    'f1-score': 1.0,
+    'support': 1
+  },
+  'DECK_NAME': {
+    'precision': 0.9565217391304348,
+    'recall': 0.7857142857142857,
+    'f1-score': 0.8627450980392156,
+    'support': 28
+  },
+  'DESTINATION_CALENDAR': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 1
+  },
+  'DESTINATION_PLATFORM': {
+    'precision': 0.675,
+    'recall': 0.9,
+    'f1-score': 0.7714285714285714,
+    'support': 30
+  },
+  'DURATION': {
+    'precision': 1.0,
+    'recall': 0.3333333333333333,
+    'f1-score': 0.5,
+    'support': 3
+  },
+  'END_TIME': {
+    'precision': 1.0,
+    'recall': 0.8333333333333334,
+    'f1-score': 0.9090909090909091,
+    'support': 6
+  },
+  'FEEDBACK_SUBJECT': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 0
+  },
+  'FEEDBACK_TYPE': {
+    'precision': 0.5555555555555556,
+    'recall': 0.8333333333333334,
+    'f1-score': 0.6666666666666667,
+    'support': 6
+  },
+  'FILE_ACTION': {
+    'precision': 0.9459459459459459,
+    'recall': 0.9722222222222222,
+    'f1-score': 0.9589041095890412,
+    'support': 36
+  },
+  'FILE_FILERECENCY': {
+    'precision': 1.0,
+    'recall': 0.875,
+    'f1-score': 0.9333333333333333,
+    'support': 8
+  },
+  'FILE_KEYWORD': {
+    'precision': 0.8466666666666667,
+    'recall': 0.8819444444444444,
+    'f1-score': 0.8639455782312925,
+    'support': 288
+  },
+  'FILE_RECENCY': {
+    'precision': 0.9487179487179487,
+    'recall': 0.9487179487179487,
+    'f1-score': 0.9487179487179487,
+    'support': 39
+  },
+  'FILE_TYPE': {
+    'precision': 0.9144736842105263,
+    'recall': 0.9455782312925171,
+    'f1-score': 0.9297658862876254,
+    'support': 294
+  },
+  'FROM_CONTACT_NAME': {
+    'precision': 0.5,
+    'recall': 1.0,
+    'f1-score': 0.6666666666666666,
+    'support': 2
+  },
+  'FROM_RELATIONSHIP_NAME': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 1
+  },
+  'IMPLICIT_LOCATION': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 1
+  },
+  'MEETING_STARTTIME': {
+    'precision': 0.3333333333333333,
+    'recall': 1.0,
+    'f1-score': 0.5,
+    'support': 1
+  },
+  'MEETING_TITLE': {
+    'precision': 0.5,
+    'recall': 0.75,
+    'f1-score': 0.6,
+    'support': 4
+  },
+  'MEETING_TYPE': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 5
+  },
+  'MESSAGE': {
+    'precision': 0.7976653696498055,
+    'recall': 0.8541666666666666,
+    'f1-score': 0.8249496981891348,
+    'support': 240
+  },
+  'MESSAGE_CATEGORY': {
+    'precision': 0.8,
+    'recall': 1.0,
+    'f1-score': 0.888888888888889,
+    'support': 4
+  },
+  'NUMERICAL_INCREMENT': {
+    'precision': 1.0,
+    'recall': 1.0,
+    'f1-score': 1.0,
+    'support': 1
+  },
+  'OFFICE_LOCATION': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 1
+  },
+  'ORDER_REF': {
+    'precision': 0.9479166666666666,
+    'recall': 0.9578947368421052,
+    'f1-score': 0.9528795811518324,
+    'support': 95
+  },
+  'ORIGINAL_START_TIME': {
+    'precision': 1.0,
+    'recall': 1.0,
+    'f1-score': 1.0,
+    'support': 1
+  },
+  'ORIGINAL_TITLE': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 1
+  },
+  'PEOPLE_ATTRIBUTE': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 0
+  },
+  'PHONE_NUMBER': {
+    'precision': 0.8375,
+    'recall': 0.9178082191780822,
+    'f1-score': 0.8758169934640524,
+    'support': 73
+  },
+  'POSITION_REF': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 3
+  },
+  'RELATIONSHIP_NAME': {
+    'precision': 0.8333333333333334,
+    'recall': 0.1724137931034483,
+    'f1-score': 0.28571428571428575,
+    'support': 29
+  },
+  'SEARCH_QUERY': {
+    'precision': 0.8688524590163934,
+    'recall': 0.8983050847457628,
+    'f1-score': 0.8833333333333333,
+    'support': 118
+  },
+  'SHARETARGET_NAME': {
+    'precision': 0.8205128205128205,
+    'recall': 0.9696969696969697,
+    'f1-score': 0.8888888888888888,
+    'support': 33
+  },
+  'SHARETARGET_TYPE': {
+    'precision': 0.9166666666666666,
+    'recall': 0.9166666666666666,
+    'f1-score': 0.9166666666666666,
+    'support': 12
+  },
+  'SLIDE_CONTENT_TYPE': {
+    'precision': 0.75,
+    'recall': 1.0,
+    'f1-score': 0.8571428571428571,
+    'support': 15
+  },
+  'SLIDE_NAME': {
+    'precision': 0.8846153846153846,
+    'recall': 0.9324324324324325,
+    'f1-score': 0.9078947368421053,
+    'support': 74
+  },
+  'SLIDE_NUMBER': {
+    'precision': 0.9782608695652174,
+    'recall': 0.9782608695652174,
+    'f1-score': 0.9782608695652174,
+    'support': 46
+  },
+  'SOURCE_PLATFORM': {
+    'precision': 1.0,
+    'recall': 0.5,
+    'f1-score': 0.6666666666666666,
+    'support': 2
+  },
+  'START_DATE': {
+    'precision': 0.9481481481481482,
+    'recall': 0.9588014981273408,
+    'f1-score': 0.9534450651769087,
+    'support': 267
+  },
+  'START_TIME': {
+    'precision': 0.9390243902439024,
+    'recall': 0.9871794871794872,
+    'f1-score': 0.9625,
+    'support': 312
+  },
+  'TEAMSPACE_CHANNEL': {
+    'precision': 0.6424581005586593,
+    'recall': 0.8582089552238806,
+    'f1-score': 0.7348242811501599,
+    'support': 134
+  },
+  'TEAMSPACE_KEYWORD': {
+    'precision': 0.6420454545454546,
+    'recall': 0.7337662337662337,
+    'f1-score': 0.6848484848484849,
+    'support': 154
+  },
+  'TEAMSPACE_MENU': {
+    'precision': 0.7777777777777778,
+    'recall': 0.875,
+    'f1-score': 0.823529411764706,
+    'support': 16
+  },
+  'TEAMSPACE_TEAM': {
+    'precision': 0.6956521739130435,
+    'recall': 0.5454545454545454,
+    'f1-score': 0.6114649681528662,
+    'support': 88
+  },
+  'TEAMSUSER_ACTIVITYTYPE': {
+    'precision': 0.7878787878787878,
+    'recall': 0.8666666666666667,
+    'f1-score': 0.8253968253968254,
+    'support': 30
+  },
+  'TEAMSUSER_STATUS': {
+    'precision': 0.8333333333333334,
+    'recall': 0.9615384615384616,
+    'f1-score': 0.8928571428571429,
+    'support': 26
+  },
+  'TIME': {
+    'precision': 0.9090909090909091,
+    'recall': 0.975609756097561,
+    'f1-score': 0.9411764705882352,
+    'support': 82
+  },
+  'TITLE': {
+    'precision': 0.5151515151515151,
+    'recall': 0.5743243243243243,
+    'f1-score': 0.5431309904153354,
+    'support': 148
+  },
+  'TO_CONTACT_NAME': {
+    'precision': 0.9120879120879121,
+    'recall': 0.9764705882352941,
+    'f1-score': 0.9431818181818181,
+    'support': 85
+  },
+  'VOLUME_LEVEL': {
+    'precision': 1.0,
+    'recall': 1.0,
+    'f1-score': 1.0,
+    'support': 8
+  },
+  'slot_precision': array([
+    0.,
+    0.,
+    0.6,
+    0.,
+    0.90282132,
+    0.33333333,
+    1.,
+    0.95652174,
+    0.,
+    0.675,
+    1.,
+    1.,
+    0.,
+    0.55555556,
+    0.94594595,
+    1.,
+    0.84666667,
+    0.94871795,
+    0.91447368,
+    0.5,
+    0.,
+    0.,
+    0.33333333,
+    0.5,
+    0.,
+    0.79766537,
+    0.8,
+    1.,
+    0.,
+    0.94791667,
+    1.,
+    0.,
+    0.,
+    0.8375,
+    0.,
+    0.83333333,
+    0.86885246,
+    0.82051282,
+    0.91666667,
+    0.75,
+    0.88461538,
+    0.97826087,
+    1.,
+    0.94814815,
+    0.93902439,
+    0.6424581,
+    0.64204545,
+    0.77777778,
+    0.69565217,
+    0.78787879,
+    0.83333333,
+    0.90909091,
+    0.51515152,
+    0.91208791,
+    1.
+  ]),
+  'slot_recall': array([
+    0.,
+    0.,
+    1.,
+    0.,
+    0.94220284,
+    0.5,
+    1.,
+    0.78571429,
+    0.,
+    0.9,
+    0.33333333,
+    0.83333333,
+    0.,
+    0.83333333,
+    0.97222222,
+    0.875,
+    0.88194444,
+    0.94871795,
+    0.94557823,
+    1.,
+    0.,
+    0.,
+    1.,
+    0.75,
+    0.,
+    0.85416667,
+    1.,
+    1.,
+    0.,
+    0.95789474,
+    1.,
+    0.,
+    0.,
+    0.91780822,
+    0.,
+    0.17241379,
+    0.89830508,
+    0.96969697,
+    0.91666667,
+    1.,
+    0.93243243,
+    0.97826087,
+    0.5,
+    0.9588015,
+    0.98717949,
+    0.85820896,
+    0.73376623,
+    0.875,
+    0.54545455,
+    0.86666667,
+    0.96153846,
+    0.97560976,
+    0.57432432,
+    0.97647059,
+    1.
+  ]),
+  'slot_f1': array([
+    0.,
+    0.,
+    0.75,
+    0.,
+    0.92209178,
+    0.4,
+    1.,
+    0.8627451,
+    0.,
+    0.77142857,
+    0.5,
+    0.90909091,
+    0.,
+    0.66666667,
+    0.95890411,
+    0.93333333,
+    0.86394558,
+    0.94871795,
+    0.92976589,
+    0.66666667,
+    0.,
+    0.,
+    0.5,
+    0.6,
+    0.,
+    0.8249497,
+    0.88888889,
+    1.,
+    0.,
+    0.95287958,
+    1.,
+    0.,
+    0.,
+    0.87581699,
+    0.,
+    0.28571429,
+    0.88333333,
+    0.88888889,
+    0.91666667,
+    0.85714286,
+    0.90789474,
+    0.97826087,
+    0.66666667,
+    0.95344507,
+    0.9625,
+    0.73482428,
+    0.68484848,
+    0.82352941,
+    0.61146497,
+    0.82539683,
+    0.89285714,
+    0.94117647,
+    0.54313099,
+    0.94318182,
+    1.
+  ])
+}
+
+run 38/40
+	using distributed sampler
+	original hyper parameters
+	3 layer hugging face bert
+	after 25 epochs
+	CSDS 
+	https://msasg.visualstudio.com/Cortana/_build/results?buildId=19042889&view=ms.vss-test-web.build-test-results-tab&runId=197153574&paneView=debug
+		it looks like intent is still an issue
+		but some queries pipeline will fail
+			share this file with jay ongg
+			ad jay
+			
+	training data
+	{
+  'intent_acc': 0.9867448523427832,
+  'ABSOLUTE_LOCATION': {
+    'precision': 1.0,
+    'recall': 0.25,
+    'f1-score': 0.4,
+    'support': 8
+  },
+  'AD': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 0
+  },
+  'ATTACHMENT': {
+    'precision': 0.8490566037735849,
+    'recall': 0.8226691042047533,
+    'f1-score': 0.8356545961002786,
+    'support': 547
+  },
+  'ATTRIBUTE_TYPE': {
+    'precision': 0.5,
+    'recall': 0.5,
+    'f1-score': 0.5,
+    'support': 2
+  },
+  'AUDIO_DEVICE_TYPE': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 7
+  },
+  'CONTACT_ATTRIBUTE': {
+    'precision': 0.3333333333333333,
+    'recall': 0.125,
+    'f1-score': 0.18181818181818182,
+    'support': 8
+  },
+  'CONTACT_NAME': {
+    'precision': 0.9645897750857724,
+    'recall': 0.9732051282051282,
+    'f1-score': 0.9688782999000192,
+    'support': 23400
+  },
+  'CONTACT_NAME_TYPE': {
+    'precision': 0.3333333333333333,
+    'recall': 0.2222222222222222,
+    'f1-score': 0.26666666666666666,
+    'support': 9
+  },
+  'DATA_SOURCE': {
+    'precision': 0.7307692307692307,
+    'recall': 0.6785714285714286,
+    'f1-score': 0.7037037037037038,
+    'support': 28
+  },
+  'DATA_SOURCE_NAME': {
+    'precision': 0.9876847290640394,
+    'recall': 0.9876847290640394,
+    'f1-score': 0.9876847290640394,
+    'support': 406
+  },
+  'DATA_SOURCE_TYPE': {
+    'precision': 0.9791921664626683,
+    'recall': 0.9864364981504316,
+    'f1-score': 0.9828009828009827,
+    'support': 811
+  },
+  'DATE': {
+    'precision': 0.9284116331096197,
+    'recall': 0.9263392857142857,
+    'f1-score': 0.9273743016759776,
+    'support': 448
+  },
+  'DECK_LOCATION': {
+    'precision': 0.9545454545454546,
+    'recall': 0.8936170212765957,
+    'f1-score': 0.9230769230769231,
+    'support': 47
+  },
+  'DECK_NAME': {
+    'precision': 0.9158200290275762,
+    'recall': 0.9348148148148148,
+    'f1-score': 0.9252199413489736,
+    'support': 675
+  },
+  'DESTINATION_CALENDAR': {
+    'precision': 0.9736842105263158,
+    'recall': 0.8409090909090909,
+    'f1-score': 0.9024390243902439,
+    'support': 44
+  },
+  'DESTINATION_PLATFORM': {
+    'precision': 0.9054263565891473,
+    'recall': 0.9404186795491143,
+    'f1-score': 0.9225908372827805,
+    'support': 621
+  },
+  'DURATION': {
+    'precision': 0.6818181818181818,
+    'recall': 0.6521739130434783,
+    'f1-score': 0.6666666666666666,
+    'support': 23
+  },
+  'END_DATE': {
+    'precision': 1.0,
+    'recall': 0.75,
+    'f1-score': 0.8571428571428571,
+    'support': 16
+  },
+  'END_TIME': {
+    'precision': 0.8113207547169812,
+    'recall': 0.86,
+    'f1-score': 0.8349514563106797,
+    'support': 50
+  },
+  'FEEDBACK_SUBJECT': {
+    'precision': 0.9821428571428571,
+    'recall': 0.9649122807017544,
+    'f1-score': 0.9734513274336283,
+    'support': 114
+  },
+  'FEEDBACK_TYPE': {
+    'precision': 0.8497109826589595,
+    'recall': 0.9607843137254902,
+    'f1-score': 0.9018404907975459,
+    'support': 306
+  },
+  'FILE_ACTION': {
+    'precision': 0.9700680272108844,
+    'recall': 0.9596231493943472,
+    'f1-score': 0.9648173207036536,
+    'support': 2229
+  },
+  'FILE_FILERECENCY': {
+    'precision': 0.9095022624434389,
+    'recall': 0.9617224880382775,
+    'f1-score': 0.9348837209302325,
+    'support': 209
+  },
+  'FILE_FOLDER': {
+    'precision': 0.9230769230769231,
+    'recall': 0.9230769230769231,
+    'f1-score': 0.9230769230769231,
+    'support': 13
+  },
+  'FILE_KEYWORD': {
+    'precision': 0.9280849904658132,
+    'recall': 0.9469149527515286,
+    'f1-score': 0.9374054202778924,
+    'support': 7196
+  },
+  'FILE_NAME': {
+    'precision': 0.5694444444444444,
+    'recall': 0.40594059405940597,
+    'f1-score': 0.4739884393063584,
+    'support': 101
+  },
+  'FILE_RECENCY': {
+    'precision': 0.9701492537313433,
+    'recall': 0.972568578553616,
+    'f1-score': 0.9713574097135742,
+    'support': 401
+  },
+  'FILE_TYPE': {
+    'precision': 0.9664750957854407,
+    'recall': 0.9800194255584848,
+    'f1-score': 0.9732001377884948,
+    'support': 7207
+  },
+  'FROM_CONTACT_NAME': {
+    'precision': 0.8859060402684564,
+    'recall': 0.9041095890410958,
+    'f1-score': 0.894915254237288,
+    'support': 146
+  },
+  'IMPLICIT_LOCATION': {
+    'precision': 0.5,
+    'recall': 0.08333333333333333,
+    'f1-score': 0.14285714285714285,
+    'support': 12
+  },
+  'JOB_TITLE': {
+    'precision': 0.5,
+    'recall': 0.25,
+    'f1-score': 0.3333333333333333,
+    'support': 24
+  },
+  'MEETING_ROOM': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 1
+  },
+  'MEETING_STARTTIME': {
+    'precision': 0.9,
+    'recall': 0.9113924050632911,
+    'f1-score': 0.9056603773584907,
+    'support': 158
+  },
+  'MEETING_TITLE': {
+    'precision': 0.7004608294930875,
+    'recall': 0.7916666666666666,
+    'f1-score': 0.7432762836185819,
+    'support': 192
+  },
+  'MEETING_TYPE': {
+    'precision': 1.0,
+    'recall': 0.6585365853658537,
+    'f1-score': 0.7941176470588235,
+    'support': 41
+  },
+  'MESSAGE': {
+    'precision': 0.9241216950380297,
+    'recall': 0.9411656215418664,
+    'f1-score': 0.9325657894736843,
+    'support': 5422
+  },
+  'MESSAGE_CATEGORY': {
+    'precision': 0.8918918918918919,
+    'recall': 0.9166666666666666,
+    'f1-score': 0.9041095890410958,
+    'support': 36
+  },
+  'MOVE_EARLIER_TIME': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 1
+  },
+  'MOVE_LATER_TIME': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 3
+  },
+  'NUMERICAL_INCREMENT': {
+    'precision': 0.8913043478260869,
+    'recall': 0.9111111111111111,
+    'f1-score': 0.9010989010989011,
+    'support': 45
+  },
+  'OFFICE_LOCATION': {
+    'precision': 1.0,
+    'recall': 0.6666666666666666,
+    'f1-score': 0.8,
+    'support': 3
+  },
+  'ORDER_REF': {
+    'precision': 0.9683301343570058,
+    'recall': 0.9824732229795521,
+    'f1-score': 0.9753504108264863,
+    'support': 2054
+  },
+  'ORG_NAME': {
+    'precision': 0.3333333333333333,
+    'recall': 0.1111111111111111,
+    'f1-score': 0.16666666666666666,
+    'support': 9
+  },
+  'ORIGINAL_CONTACT_NAME': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 10
+  },
+  'ORIGINAL_START_DATE': {
+    'precision': 0.1111111111111111,
+    'recall': 0.06666666666666667,
+    'f1-score': 0.08333333333333334,
+    'support': 15
+  },
+  'ORIGINAL_START_TIME': {
+    'precision': 0.7045454545454546,
+    'recall': 0.6739130434782609,
+    'f1-score': 0.688888888888889,
+    'support': 46
+  },
+  'PEOPLE_ATTRIBUTE': {
+    'precision': 0.9401709401709402,
+    'recall': 0.9401709401709402,
+    'f1-score': 0.9401709401709402,
+    'support': 351
+  },
+  'PHONE_NUMBER': {
+    'precision': 0.9230080572963295,
+    'recall': 0.9617537313432836,
+    'f1-score': 0.9419826404751028,
+    'support': 1072
+  },
+  'POSITION_REF': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 2
+  },
+  'PROJECT_NAME': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 2
+  },
+  'RELATIONSHIP_NAME': {
+    'precision': 0.8672566371681416,
+    'recall': 0.9074074074074074,
+    'f1-score': 0.8868778280542987,
+    'support': 540
+  },
+  'SEARCH_QUERY': {
+    'precision': 0.8668280871670703,
+    'recall': 0.9701897018970189,
+    'f1-score': 0.9156010230179029,
+    'support': 369
+  },
+  'SETTING_TYPE': {
+    'precision': 1.0,
+    'recall': 1.0,
+    'f1-score': 1.0,
+    'support': 1
+  },
+  'SHARETARGET_NAME': {
+    'precision': 0.8889925373134329,
+    'recall': 0.9297560975609757,
+    'f1-score': 0.9089175011921794,
+    'support': 1025
+  },
+  'SHARETARGET_TYPE': {
+    'precision': 0.9428044280442804,
+    'recall': 0.9489322191272052,
+    'f1-score': 0.945858398889403,
+    'support': 1077
+  },
+  'SHARE_TARGET': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 7
+  },
+  'SLIDE_CONTENT_TYPE': {
+    'precision': 0.9290780141843972,
+    'recall': 0.9703703703703703,
+    'f1-score': 0.9492753623188406,
+    'support': 135
+  },
+  'SLIDE_NAME': {
+    'precision': 0.9340974212034384,
+    'recall': 0.9476744186046512,
+    'f1-score': 0.9408369408369409,
+    'support': 1032
+  },
+  'SLIDE_NUMBER': {
+    'precision': 0.9696682464454977,
+    'recall': 0.9893617021276596,
+    'f1-score': 0.9794159885112494,
+    'support': 1034
+  },
+  'SLOT_ATTRIBUTE': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 10
+  },
+  'SOURCE_PLATFORM': {
+    'precision': 0.47058823529411764,
+    'recall': 0.32432432432432434,
+    'f1-score': 0.38400000000000006,
+    'support': 74
+  },
+  'SPEED_DIAL': {
+    'precision': 1.0,
+    'recall': 1.0,
+    'f1-score': 1.0,
+    'support': 5
+  },
+  'START_DATE': {
+    'precision': 0.9649793996468511,
+    'recall': 0.9770560190703218,
+    'f1-score': 0.9709801599052413,
+    'support': 3356
+  },
+  'START_TIME': {
+    'precision': 0.9523281596452328,
+    'recall': 0.9752128666035951,
+    'f1-score': 0.9636346639244648,
+    'support': 5285
+  },
+  'TEAMSPACE_CHANNEL': {
+    'precision': 0.9085487077534792,
+    'recall': 0.9364754098360656,
+    'f1-score': 0.922300706357215,
+    'support': 488
+  },
+  'TEAMSPACE_KEYWORD': {
+    'precision': 0.8479349186483104,
+    'recall': 0.8943894389438944,
+    'f1-score': 0.8705428846771603,
+    'support': 1515
+  },
+  'TEAMSPACE_MENU': {
+    'precision': 0.849802371541502,
+    'recall': 0.9598214285714286,
+    'f1-score': 0.9014675052410902,
+    'support': 448
+  },
+  'TEAMSPACE_TAB': {
+    'precision': 0.5,
+    'recall': 0.23076923076923078,
+    'f1-score': 0.3157894736842105,
+    'support': 13
+  },
+  'TEAMSPACE_TEAM': {
+    'precision': 0.7585139318885449,
+    'recall': 0.8221476510067114,
+    'f1-score': 0.7890499194847022,
+    'support': 298
+  },
+  'TEAMSUSER_ACTIVITYTYPE': {
+    'precision': 0.9113924050632911,
+    'recall': 0.9391304347826087,
+    'f1-score': 0.9250535331905783,
+    'support': 690
+  },
+  'TEAMSUSER_STATUS': {
+    'precision': 0.9509981851179673,
+    'recall': 0.9868173258003766,
+    'f1-score': 0.9685767097966729,
+    'support': 531
+  },
+  'TEAMSUSER_TOPIC': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 1
+  },
+  'TIME': {
+    'precision': 0.95276008492569,
+    'recall': 0.9604066345639379,
+    'f1-score': 0.9565680788702371,
+    'support': 1869
+  },
+  'TITLE': {
+    'precision': 0.7220408163265306,
+    'recall': 0.7514868309260833,
+    'f1-score': 0.7364696086594504,
+    'support': 2354
+  },
+  'TO_CONTACT_NAME': {
+    'precision': 0.9358423844405153,
+    'recall': 0.9640905542544886,
+    'f1-score': 0.9497564726993079,
+    'support': 3843
+  },
+  'VOLUME_LEVEL': {
+    'precision': 0.9219512195121952,
+    'recall': 0.9742268041237113,
+    'f1-score': 0.9473684210526315,
+    'support': 194
+  },
+  'slot_precision': array([
+    1.,
+    0.,
+    0.8490566,
+    0.5,
+    0.,
+    0.33333333,
+    0.96458978,
+    0.33333333,
+    0.73076923,
+    0.98768473,
+    0.97919217,
+    0.92841163,
+    0.95454545,
+    0.91582003,
+    0.97368421,
+    0.90542636,
+    0.68181818,
+    1.,
+    0.81132075,
+    0.98214286,
+    0.84971098,
+    0.97006803,
+    0.90950226,
+    0.92307692,
+    0.92808499,
+    0.56944444,
+    0.97014925,
+    0.9664751,
+    0.88590604,
+    0.5,
+    0.5,
+    0.,
+    0.9,
+    0.70046083,
+    1.,
+    0.9241217,
+    0.89189189,
+    0.,
+    0.,
+    0.89130435,
+    1.,
+    0.96833013,
+    0.33333333,
+    0.,
+    0.11111111,
+    0.70454545,
+    0.94017094,
+    0.92300806,
+    0.,
+    0.,
+    0.86725664,
+    0.86682809,
+    1.,
+    0.88899254,
+    0.94280443,
+    0.,
+    0.92907801,
+    0.93409742,
+    0.96966825,
+    0.,
+    0.47058824,
+    1.,
+    0.9649794,
+    0.95232816,
+    0.90854871,
+    0.84793492,
+    0.84980237,
+    0.5,
+    0.75851393,
+    0.91139241,
+    0.95099819,
+    0.,
+    0.95276008,
+    0.72204082,
+    0.93584238,
+    0.92195122
+  ]),
+  'slot_recall': array([
+    0.25,
+    0.,
+    0.8226691,
+    0.5,
+    0.,
+    0.125,
+    0.97320513,
+    0.22222222,
+    0.67857143,
+    0.98768473,
+    0.9864365,
+    0.92633929,
+    0.89361702,
+    0.93481481,
+    0.84090909,
+    0.94041868,
+    0.65217391,
+    0.75,
+    0.86,
+    0.96491228,
+    0.96078431,
+    0.95962315,
+    0.96172249,
+    0.92307692,
+    0.94691495,
+    0.40594059,
+    0.97256858,
+    0.98001943,
+    0.90410959,
+    0.08333333,
+    0.25,
+    0.,
+    0.91139241,
+    0.79166667,
+    0.65853659,
+    0.94116562,
+    0.91666667,
+    0.,
+    0.,
+    0.91111111,
+    0.66666667,
+    0.98247322,
+    0.11111111,
+    0.,
+    0.06666667,
+    0.67391304,
+    0.94017094,
+    0.96175373,
+    0.,
+    0.,
+    0.90740741,
+    0.9701897,
+    1.,
+    0.9297561,
+    0.94893222,
+    0.,
+    0.97037037,
+    0.94767442,
+    0.9893617,
+    0.,
+    0.32432432,
+    1.,
+    0.97705602,
+    0.97521287,
+    0.93647541,
+    0.89438944,
+    0.95982143,
+    0.23076923,
+    0.82214765,
+    0.93913043,
+    0.98681733,
+    0.,
+    0.96040663,
+    0.75148683,
+    0.96409055,
+    0.9742268
+  ]),
+  'slot_f1': array([
+    0.4,
+    0.,
+    0.8356546,
+    0.5,
+    0.,
+    0.18181818,
+    0.9688783,
+    0.26666667,
+    0.7037037,
+    0.98768473,
+    0.98280098,
+    0.9273743,
+    0.92307692,
+    0.92521994,
+    0.90243902,
+    0.92259084,
+    0.66666667,
+    0.85714286,
+    0.83495146,
+    0.97345133,
+    0.90184049,
+    0.96481732,
+    0.93488372,
+    0.92307692,
+    0.93740542,
+    0.47398844,
+    0.97135741,
+    0.97320014,
+    0.89491525,
+    0.14285714,
+    0.33333333,
+    0.,
+    0.90566038,
+    0.74327628,
+    0.79411765,
+    0.93256579,
+    0.90410959,
+    0.,
+    0.,
+    0.9010989,
+    0.8,
+    0.97535041,
+    0.16666667,
+    0.,
+    0.08333333,
+    0.68888889,
+    0.94017094,
+    0.94198264,
+    0.,
+    0.,
+    0.88687783,
+    0.91560102,
+    1.,
+    0.9089175,
+    0.9458584,
+    0.,
+    0.94927536,
+    0.94083694,
+    0.97941599,
+    0.,
+    0.384,
+    1.,
+    0.97098016,
+    0.96363466,
+    0.92230071,
+    0.87054288,
+    0.90146751,
+    0.31578947,
+    0.78904992,
+    0.92505353,
+    0.96857671,
+    0.,
+    0.95656808,
+    0.73646961,
+    0.94975647,
+    0.94736842
+  ])
+}
+
+	TVS_october_validation data(loccaly)
+{
+  'intent_acc': 0.9327042463372237,
+  'ABSOLUTE_LOCATION': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 1
+  },
+  'AD': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 0
+  },
+  'ATTACHMENT': {
+    'precision': 0.75,
+    'recall': 1.0,
+    'f1-score': 0.8571428571428571,
+    'support': 3
+  },
+  'AVAILABILITY': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 44
+  },
+  'CONTACT_NAME': {
+    'precision': 0.8952772073921971,
+    'recall': 0.95092693565976,
+    'f1-score': 0.9222633527234267,
+    'support': 917
+  },
+  'DATE': {
+    'precision': 0.25,
+    'recall': 0.5,
+    'f1-score': 0.3333333333333333,
+    'support': 2
+  },
+  'DECK_LOCATION': {
+    'precision': 1.0,
+    'recall': 1.0,
+    'f1-score': 1.0,
+    'support': 1
+  },
+  'DECK_NAME': {
+    'precision': 0.92,
+    'recall': 0.8214285714285714,
+    'f1-score': 0.8679245283018867,
+    'support': 28
+  },
+  'DESTINATION_CALENDAR': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 1
+  },
+  'DESTINATION_PLATFORM': {
+    'precision': 0.6944444444444444,
+    'recall': 0.8333333333333334,
+    'f1-score': 0.7575757575757577,
+    'support': 30
+  },
+  'DURATION': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 3
+  },
+  'END_TIME': {
+    'precision': 1.0,
+    'recall': 0.8333333333333334,
+    'f1-score': 0.9090909090909091,
+    'support': 6
+  },
+  'FEEDBACK_TYPE': {
+    'precision': 0.6,
+    'recall': 1.0,
+    'f1-score': 0.7499999999999999,
+    'support': 6
+  },
+  'FILE_ACTION': {
+    'precision': 0.9459459459459459,
+    'recall': 0.9722222222222222,
+    'f1-score': 0.9589041095890412,
+    'support': 36
+  },
+  'FILE_FILERECENCY': {
+    'precision': 1.0,
+    'recall': 0.875,
+    'f1-score': 0.9333333333333333,
+    'support': 8
+  },
+  'FILE_KEYWORD': {
+    'precision': 0.8547854785478548,
+    'recall': 0.8993055555555556,
+    'f1-score': 0.8764805414551607,
+    'support': 288
+  },
+  'FILE_RECENCY': {
+    'precision': 0.9487179487179487,
+    'recall': 0.9487179487179487,
+    'f1-score': 0.9487179487179487,
+    'support': 39
+  },
+  'FILE_TYPE': {
+    'precision': 0.9269102990033222,
+    'recall': 0.9489795918367347,
+    'f1-score': 0.9378151260504202,
+    'support': 294
+  },
+  'FROM_CONTACT_NAME': {
+    'precision': 0.4,
+    'recall': 1.0,
+    'f1-score': 0.5714285714285715,
+    'support': 2
+  },
+  'FROM_RELATIONSHIP_NAME': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 1
+  },
+  'IMPLICIT_LOCATION': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 1
+  },
+  'MEETING_STARTTIME': {
+    'precision': 1.0,
+    'recall': 1.0,
+    'f1-score': 1.0,
+    'support': 1
+  },
+  'MEETING_TITLE': {
+    'precision': 0.25,
+    'recall': 0.5,
+    'f1-score': 0.3333333333333333,
+    'support': 4
+  },
+  'MEETING_TYPE': {
+    'precision': 1.0,
+    'recall': 0.4,
+    'f1-score': 0.5714285714285715,
+    'support': 5
+  },
+  'MESSAGE': {
+    'precision': 0.7421875,
+    'recall': 0.7916666666666666,
+    'f1-score': 0.7661290322580645,
+    'support': 240
+  },
+  'MESSAGE_CATEGORY': {
+    'precision': 1.0,
+    'recall': 1.0,
+    'f1-score': 1.0,
+    'support': 4
+  },
+  'NUMERICAL_INCREMENT': {
+    'precision': 1.0,
+    'recall': 1.0,
+    'f1-score': 1.0,
+    'support': 1
+  },
+  'OFFICE_LOCATION': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 1
+  },
+  'ORDER_REF': {
+    'precision': 0.968421052631579,
+    'recall': 0.968421052631579,
+    'f1-score': 0.968421052631579,
+    'support': 95
+  },
+  'ORIGINAL_START_TIME': {
+    'precision': 1.0,
+    'recall': 1.0,
+    'f1-score': 1.0,
+    'support': 1
+  },
+  'ORIGINAL_TITLE': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 1
+  },
+  'PHONE_NUMBER': {
+    'precision': 0.8375,
+    'recall': 0.9178082191780822,
+    'f1-score': 0.8758169934640524,
+    'support': 73
+  },
+  'POSITION_REF': {
+    'precision': 0.0,
+    'recall': 0.0,
+    'f1-score': 0.0,
+    'support': 3
+  },
+  'RELATIONSHIP_NAME': {
+    'precision': 0.8571428571428571,
+    'recall': 0.20689655172413793,
+    'f1-score': 0.33333333333333326,
+    'support': 29
+  },
+  'SEARCH_QUERY': {
+    'precision': 0.8974358974358975,
+    'recall': 0.8898305084745762,
+    'f1-score': 0.8936170212765957,
+    'support': 118
+  },
+  'SHARETARGET_NAME': {
+    'precision': 0.8611111111111112,
+    'recall': 0.9393939393939394,
+    'f1-score': 0.8985507246376813,
+    'support': 33
+  },
+  'SHARETARGET_TYPE': {
+    'precision': 0.8461538461538461,
+    'recall': 0.9166666666666666,
+    'f1-score': 0.8799999999999999,
+    'support': 12
+  },
+  'SLIDE_CONTENT_TYPE': {
+    'precision': 0.7894736842105263,
+    'recall': 1.0,
+    'f1-score': 0.8823529411764706,
+    'support': 15
+  },
+  'SLIDE_NAME': {
+    'precision': 0.8961038961038961,
+    'recall': 0.9324324324324325,
+    'f1-score': 0.9139072847682119,
+    'support': 74
+  },
+  'SLIDE_NUMBER': {
+    'precision': 1.0,
+    'recall': 1.0,
+    'f1-score': 1.0,
+    'support': 46
+  },
+  'SOURCE_PLATFORM': {
+    'precision': 1.0,
+    'recall': 0.5,
+    'f1-score': 0.6666666666666666,
+    'support': 2
+  },
+  'START_DATE': {
+    'precision': 0.9558823529411765,
+    'recall': 0.9737827715355806,
+    'f1-score': 0.9647495361781077,
+    'support': 267
+  },
+  'START_TIME': {
+    'precision': 0.9298780487804879,
+    'recall': 0.9775641025641025,
+    'f1-score': 0.9531250000000001,
+    'support': 312
+  },
+  'TEAMSPACE_CHANNEL': {
+    'precision': 0.7212121212121212,
+    'recall': 0.8880597014925373,
+    'f1-score': 0.7959866220735785,
+    'support': 134
+  },
+  'TEAMSPACE_KEYWORD': {
+    'precision': 0.6390532544378699,
+    'recall': 0.7012987012987013,
+    'f1-score': 0.6687306501547987,
+    'support': 154
+  },
+  'TEAMSPACE_MENU': {
+    'precision': 0.7647058823529411,
+    'recall': 0.8125,
+    'f1-score': 0.787878787878788,
+    'support': 16
+  },
+  'TEAMSPACE_TEAM': {
+    'precision': 0.6463414634146342,
+    'recall': 0.6022727272727273,
+    'f1-score': 0.6235294117647059,
+    'support': 88
+  },
+  'TEAMSUSER_ACTIVITYTYPE': {
+    'precision': 0.8181818181818182,
+    'recall': 0.9,
+    'f1-score': 0.8571428571428572,
+    'support': 30
+  },
+  'TEAMSUSER_STATUS': {
+    'precision': 0.8571428571428571,
+    'recall': 0.9230769230769231,
+    'f1-score': 0.888888888888889,
+    'support': 26
+  },
+  'TIME': {
+    'precision': 0.9302325581395349,
+    'recall': 0.975609756097561,
+    'f1-score': 0.9523809523809524,
+    'support': 82
+  },
+  'TITLE': {
+    'precision': 0.5448717948717948,
+    'recall': 0.5743243243243243,
+    'f1-score': 0.5592105263157894,
+    'support': 148
+  },
+  'TO_CONTACT_NAME': {
+    'precision': 0.898876404494382,
+    'recall': 0.9411764705882353,
+    'f1-score': 0.9195402298850575,
+    'support': 85
+  },
+  'VOLUME_LEVEL': {
+    'precision': 1.0,
+    'recall': 1.0,
+    'f1-score': 1.0,
+    'support': 8
+  },
+  'slot_precision': array([
+    0.,
+    0.,
+    0.75,
+    0.,
+    0.89527721,
+    0.25,
+    1.,
+    0.92,
+    0.,
+    0.69444444,
+    0.,
+    1.,
+    0.6,
+    0.94594595,
+    1.,
+    0.85478548,
+    0.94871795,
+    0.9269103,
+    0.4,
+    0.,
+    0.,
+    1.,
+    0.25,
+    1.,
+    0.7421875,
+    1.,
+    1.,
+    0.,
+    0.96842105,
+    1.,
+    0.,
+    0.8375,
+    0.,
+    0.85714286,
+    0.8974359,
+    0.86111111,
+    0.84615385,
+    0.78947368,
+    0.8961039,
+    1.,
+    1.,
+    0.95588235,
+    0.92987805,
+    0.72121212,
+    0.63905325,
+    0.76470588,
+    0.64634146,
+    0.81818182,
+    0.85714286,
+    0.93023256,
+    0.54487179,
+    0.8988764,
+    1.
+  ]),
+  'slot_recall': array([
+    0.,
+    0.,
+    1.,
+    0.,
+    0.95092694,
+    0.5,
+    1.,
+    0.82142857,
+    0.,
+    0.83333333,
+    0.,
+    0.83333333,
+    1.,
+    0.97222222,
+    0.875,
+    0.89930556,
+    0.94871795,
+    0.94897959,
+    1.,
+    0.,
+    0.,
+    1.,
+    0.5,
+    0.4,
+    0.79166667,
+    1.,
+    1.,
+    0.,
+    0.96842105,
+    1.,
+    0.,
+    0.91780822,
+    0.,
+    0.20689655,
+    0.88983051,
+    0.93939394,
+    0.91666667,
+    1.,
+    0.93243243,
+    1.,
+    0.5,
+    0.97378277,
+    0.9775641,
+    0.8880597,
+    0.7012987,
+    0.8125,
+    0.60227273,
+    0.9,
+    0.92307692,
+    0.97560976,
+    0.57432432,
+    0.94117647,
+    1.
+  ]),
+  'slot_f1': array([
+    0.,
+    0.,
+    0.85714286,
+    0.,
+    0.92226335,
+    0.33333333,
+    1.,
+    0.86792453,
+    0.,
+    0.75757576,
+    0.,
+    0.90909091,
+    0.75,
+    0.95890411,
+    0.93333333,
+    0.87648054,
+    0.94871795,
+    0.93781513,
+    0.57142857,
+    0.,
+    0.,
+    1.,
+    0.33333333,
+    0.57142857,
+    0.76612903,
+    1.,
+    1.,
+    0.,
+    0.96842105,
+    1.,
+    0.,
+    0.87581699,
+    0.,
+    0.33333333,
+    0.89361702,
+    0.89855072,
+    0.88,
+    0.88235294,
+    0.91390728,
+    1.,
+    0.66666667,
+    0.96474954,
+    0.953125,
+    0.79598662,
+    0.66873065,
+    0.78787879,
+    0.62352941,
+    0.85714286,
+    0.88888889,
+    0.95238095,
+    0.55921053,
+    0.91954023,
+    1.
+  ])
+}
+
+	//test 比較
+	// bert 少了feedback_subject, people_attribute
+	// ? 可能用單獨設query 看一下
+	// 很難說誰比較好
+	// 還是要aether evaluate 一下比較好
+
+
+run 41/43
+	using distributed sampler
+	original hyper parameters
+	3 layer huggingface distilBert
+	epoch = 25 to check
+	
+	training da
+	MDM_01202021v1
+
+run ?/?
+	using distributed sampler
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer TNLR
+	epoch = 5
+	
+
+==================
+eran discussion
+==================
+query.strip()
+
+token vocab.txt
+
+character => go that
+	? but xinjie mentions UNK token as well
+	it will have problems
+
+
+
+[CLS] call back [SEP]
+101   3     4    102 PAD PAD 
+PAD   o     o PAD PAD PAD 
+
+
+for cls and SEP should be zero in mask or not 
+[1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, ...]
+
+
+intent mapping 
+
+
+create_slot_arrays
+
+
+miniLM
+
+tinyBERT
+
+
+word piece
+	exception.
+	chinese
+	UNK
+	will check
+	
+	
+post quantification
+	in xinjie
+	it will also compact mobel size
+
+
+send an email to notification
+	we need to notify again
+	
+	
+======================
+seqeval	
+https://datascience.stackexchange.com/questions/37824/difference-between-iob-and-iob2-format
+======================
+https://datascience.stackexchange.com/questions/37824/difference-between-iob-and-iob2-format
+2
+
+IOB: Here, I is used for a token inside a chunk, O is used for a token outside a chunk and B is only used for the beginning token of a Named Entity (chunk) spanning more than one token.
+
+Alex I-PER
+is O
+going O
+to O
+Los B-LOC
+Angeles I-LOC
+
+
+IOB2: It is same as IOB, except that the B- tag is used in the beginning of every chunk (i.e. all chunks start with the B- tag).
+// for jointBERt it uses IOB2 according to traning dataset
+Alex B-PER
+is O
+going O
+to O
+Los B-LOC
+Angeles I-LOC
+
+	差在span 只有single toekn 會是  B  or I
+	
+	
+http://cs229.stanford.edu/proj2005/KrishnanGanapathy-NamedEntityRecognition.pdf
+
+
+default case 
+// should be IOB 2
+>>> from seqeval.metrics import accuracy_score
+>>> from seqeval.metrics import classification_report
+>>> from seqeval.metrics import f1_score
+>>> y_true = [['O', 'O', 'O', 'B-MISC', 'I-MISC', 'I-MISC', 'O'], ['B-PER', 'I-PER', 'O']]
+>>> y_pred = [['O', 'O', 'B-MISC', 'I-MISC', 'I-MISC', 'I-MISC', 'O'], ['B-PER', 'I-PER', 'O']]
+>>> f1_score(y_true, y_pred)
+0.50
+>>> classification_report(y_true, y_pred)
+              precision    recall  f1-score   support
+
+        MISC       0.00      0.00      0.00         1
+			// MISC is not entire span correct so its result is false
+         PER       1.00      1.00      1.00         1
+
+   micro avg       0.50      0.50      0.50         2
+   macro avg       0.50      0.50      0.50         2
+weighted avg       0.50      0.50      0.50         2
+
+
+
+//default case will be micro
+// average: none to cover the span
+======================
+haoda sync 02192021
+======================
+transferdistill 是MSR 在working 
+可以有空看看怎麼用
+
+
+
+
+======================
+qas setup
+======================
+
+//method 1
+// this case will miss probability from other intents , other than top 1 intent
+
+
+
+//original
+
+Prediction
+ModelPrediction + RulePrediction
+including al intent and slot
+	index starts with 0
+	
+	each intent from ModelPrediciton
+	intent 137
+		extends length to the same as queries
+			137[1096,1096]=4.63459e-28
+
+			0[1097,1097]=4.63459e-28
+
+			0[1098,1098]=4.63459e-28
+
+			0[1099,1099]=4.63459e-28
+
+			0[1100,1100]=4.63459e-28
+
+			0[1101,1101]=4.63459e-28
+
+			0[1102,1102]=4.63459e-28
+
+			0[1103,1103]=4.63459e-28
+	
+	each domain will filter based on assistant_enus_tvs_xxx_mv1.intent.idmap.txt
+	
+	need to update dispatch for each domain
+		create IntentProbFieldToTag from IntentProbs, replace intents in each dispatch, no need CRF select
+		//reuse IntentProbs repalce intents and no need CRF select
+		reuse SlotTags and no need CRF
+
+IntentProbs
+139 tags 
+包含hotfix (138 +1)
+	tag = intent number
+to minic originla IntentProbs
+	extra rule intent 
+	normalize intent_prob from DNN to 0.99
+	merge them together
+
+SlotTags
+	indexing starting with zero
+include cls token, not include intent
+SlotTags (tag: 7, string: 0)
+
+
+
+output3
+
+// rule 
+		ExternalInput4 (tag: 8, string: 0)
+
+			39[0,0]=1.0
+
+			0[1,1]=1.0
+
+			0[2,2]=1.0
+
+			0[3,3]=1.0
+
+			78[4,4]=1.0
+
+			91[5,5]=1.0
+
+			0[6,6]=1.0
+
+			0[7,7]=1.0
+			
+// dnn 
+
+// intent_prob
+			0[0,0]=0.00012395185
+			0[1,1]=1.595618e-09
+			0[136,136]=2.0400597e-09
+
+			0[137,137]=1.1641267e-08
+/  intent tag
+			0[0,0]=39.0
+			need to move weight to tag
+			and set weight according to intent prob
+
+// slot_tag
+// need to scale to 0.99 to let hotfix wins
+// and shift right by one
+// also, tagid needs to map
+// 2 => 0 becasue extra two slots unless retrain
+
+			2[0,0]=1.0
+
+			2[1,1]=1.0
+
+			2[2,2]=1.0
+
+			80[3,3]=1.0
+
+			93[4,4]=1.0
+
+			2[5,5]=1.0
+
+			2[6,6]=1.0
+
+
+
+
+======================
+YC suggested 02252021
+======================
+
+mask LM
+language
+unlabel data
+
+learing rate
+might be 1e-5  too small ?
+
+5e-5
