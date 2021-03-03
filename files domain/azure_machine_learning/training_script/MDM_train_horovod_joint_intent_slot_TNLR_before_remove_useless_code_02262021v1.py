@@ -47,7 +47,6 @@ from azureml.core import Workspace, Run, Dataset
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--dataset_name', type=str, dest='dataset_name', default='')
-parser.add_argument('--augment_dataset_name', type=str, dest='augment_dataset_name', default='')
 parser.add_argument('--TNLR_model_bin', type=str, dest='TNLR_model_bin', default='')
 parser.add_argument('--pretrain_model', type=str, dest='pretrain_model', default='TNLR')
 parser.add_argument('--seed_val', type=str, dest='seed_val', default=111)
@@ -63,7 +62,6 @@ TNLR_model_name = args.TNLR_model_bin
 pretrain_model_name = args.pretrain_model
 seed_val_int = int(args.seed_val)
 dataset_name = args.dataset_name
-augment_dataset_name = args.augment_dataset_name
 batch_size = args.batch_size
 learning_rate = args.learning_rate
 adam_epsilon = args.adam_epsilon
@@ -75,13 +73,10 @@ run = Run.get_context()
 workspace = run.experiment.workspace
 
 dataset = Dataset.get_by_name(workspace, name=dataset_name)
-augment_dataset = Dataset.get_by_name(workspace, name=augment_dataset_name)
 TNLR_model = Dataset.get_by_name(workspace, name=TNLR_model_name)
 
 
 file_name = dataset.download()[0]
-if len(augment_dataset_name) > 0:
-    augment_file_name = augment_dataset.download()[0]
 TNLR_model_file_name = TNLR_model.download()[0]
 
 
@@ -94,20 +89,8 @@ df = pd.read_csv(file_name, sep='\t', encoding="utf-8",
     'MessageId': object, 'Frequency': object, 'ConversationContext': object, 'SelectionIgnore': object})
 
 
-# for data augmentation
-# repeat 10 times
-if len(augment_dataset_name) > 0:
-    for i in range(20):
-        df2 = pd.read_csv(augment_file_name, sep='\t', encoding="utf-8",
-            keep_default_na=False,
-            dtype={
-            'MessageId': object, 'Frequency': object, 'ConversationContext': object, 'SelectionIgnore': object})
-
-        df = df.append(df2)
-
 
 # for debug
-print('df size {}'.format(df.shape))
 print('top head data {}'.format(df.head()))
 
 
@@ -1294,18 +1277,9 @@ for i, row in df.iterrows():
     # ignore multi turn queries
     conversationContext = row['ConversationContext']
 
-    if  (conversationContext.lower().find('previousturndomain') != -1 or 
-        conversationContext.lower().find('previousturnintent') != -1 or 
-        conversationContext.lower().find('taskframeentitystates') != -1 or
-        conversationContext.lower().find('taskframeguid') != -1 or
-        conversationContext.lower().find('taskframename') != -1 or
-        conversationContext.lower().find('taskframestatus') != -1
-        # leave presonal grammar as first turn as well even though they are not being used
-        #conversationContext.lower().find('usercontacts') != -1 or 
-        #conversationContext.lower().find('userfilenames') != -1 or 
-        #conversationContext.lower().find('userfilenameskeyphrases') != -1 or 
-        #conversationContext.lower().find('Usermeetingsubjects') != -1
-        ):
+    if  (conversationContext.lower().find('previous') != -1 or 
+        conversationContext.lower().find('task') != -1 or 
+        conversationContext.lower().find('user') != -1):
         print("multiturn query\t{}\t{}".format(row['ConversationId'], query))
         continue
 

@@ -1021,18 +1021,124 @@ This ensure that layers were not pretrained (e.g. in some cases the final classi
 # random sees setup to reproduce model
 # https://github.com/Lance0218/Pytorch-DistributedDataParallel-Training-Tricks/blob/master/customized_function.py
 
-# hvd
+# hvd horovod
 #Accomplish this by guarding model checkpointing code with hvd.rank() != 0.
 # ? in noline tutorial, it uses hvd_rank() = 0 to check
 # Pin each GPU to a single process.
+# # Save checkpoints only on worker 0 to prevent other workers from corrupting them.
+#checkpoint_dir = '/tmp/train_logs' if hvd.rank() == 0 else None
+# ? not sure how to load checkpoint_dir
+# https://github.com/horovod/horovod
+# https://github.com/horovod/horovod/issues/58
 #https://horovod.readthedocs.io/en/stable/pytorch.html
+# this link explians why using hvd.rank() to guard
+#https://pyro.ai/examples/svi_horovod.html
+
+# detail talks about ranker
+# https://spell.ml/blog/distributed-model-training-using-horovod-XvqEGRUAACgAa5th
+# https://github.com/horovod/horovod/issues/1774
+
+# output epoch traning branch
+#  cann add in the future
+#        if batch_idx % args.log_interval == 0:
+#            # Horovod: use train_sampler to determine the number of examples in
+#            # this worker's partition.
+#            print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}'.format(
+#                epoch, batch_idx * len(data), len(train_sampler),
+#                100. * batch_idx / len(train_loader), loss.item()))
+# https://github.com/horovod/horovod/blob/master/examples/pytorch/pytorch_mnist.py
+
+# flow to save checkpoint in pytorch in offical github
+# can refer to pytorch offical website
+     if hvd.rank() == 0:
+        filepath = args.checkpoint_format.format(epoch=epoch + 1)
+        state = {
+            'model': model.state_dict(),
+            'optimizer': optimizer.state_dict(),
+        }
+        torch.save(state, filepath)
+# https://github.com/horovod/horovod/blob/f3af98649a26f4f3725fcab6a9bd3e8d29d7ffd2/examples/pytorch/pytorch_imagenet_resnet50.py
+# can refer to pytorch offical website
+# sotre checkpoint 
+EPOCH = 5
+PATH = "model.pt"
+LOSS = 0.4
+
+torch.save({
+            'epoch': EPOCH,
+            'model_state_dict': net.state_dict(),
+            'optimizer_state_dict': optimizer.state_dict(),
+            'loss': LOSS,
+            }, PATH)
+# load checkpount
+model = Net()
+optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
+
+checkpoint = torch.load(PATH)
+model.load_state_dict(checkpoint['model_state_dict'])
+optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+epoch = checkpoint['epoch']
+loss = checkpoint['loss']
+
+model.eval()
+# - or -
+model.train()
+# https://pytorch.org/tutorials/recipes/recipes/saving_and_loading_a_general_checkpoint.html
 
 
 
+# BertPooler
+# max pooling 的idea
+#在Bert中，pool的作用是，输出的时候，用一个全连接层将整个句子的信息用第一个token来表示
+#  BertForSequenceClassification 用到的是 pooled_output，即用1个位置上的输出表示整个句子的含义
+class BertPooler(nn.Module):
+    def __init__(self, config):
+        super(BertPooler, self).__init__()
+        self.dense = nn.Linear(config.hidden_size, config.hidden_size)
+        self.activation = nn.Tanh()
+
+    def forward(self, hidden_states):
+        # We "pool" the model by simply taking the hidden state corresponding
+        # to the first token.
+        first_token_tensor = hidden_states[:, 0]
+        pooled_output = self.dense(first_token_tensor)
+        pooled_output = self.activation(pooled_output)
+        return pooled_output
+# https://www.cnblogs.com/dogecheng/p/11907036.html
+
+#IntentClassfier using in joint bert 
+# similar to BertForSequenceClassification in hugging face
+# Bert用于提取文本特征进行Embedding，Dropout防止过拟合，Linear是一个弱分类器
+#  BertForSequenceClassification 用到的是 pooled_output，即用1个位置上的输出表示整个句子的含义
+# 有多用到一個Bert Pooler
+# https://www.cnblogs.com/dogecheng/p/11907036.html
+
+#SlotClassfier using in joint bert 
+# similar to BertForTokenClassification in hugging face
+# Bert用于提取文本特征进行Embedding，Dropout防止过拟合，Linear是一个弱分类器
+# BertForTokenClassification 的中 forward() 函数的部分代码，它用到的是全部 token 上的输出
+# 沒有用到Bert Pooler
+## https://www.cnblogs.com/dogecheng/p/11907036.html
+
+# how to output hidden state from distill bert pretrained model
+# https://stackoverflow.com/questions/60780181/access-the-output-of-several-layers-of-pretrained-distilbert-model
 
 # multiple loss function
 # ? can check in the future
 # https://bbs.cvmart.net/topics/1449
+#https://github.com/horovod/horovod/issues/58
+
+
+
+
+# aml computer node cnt
+# in my default with distributedSampler , my node_count = 8
+# ? if want to use randomSampler, might be node_count  = 1 to try whether errors or ont
+#https://docs.microsoft.com/en-us/python/api/azureml-train-core/azureml.train.dnn.pytorch?view=azure-ml-py
+
+
+# azure machine learning open a terminal
+# https://docs.microsoft.com/en-us/azure/machine-learning/how-to-access-terminal
 
 # comment until here
  

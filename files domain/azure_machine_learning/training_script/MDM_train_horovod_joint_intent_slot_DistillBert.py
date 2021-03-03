@@ -28,7 +28,7 @@ from torch.utils.data import TensorDataset, DataLoader, RandomSampler
 from torch.utils.data.distributed import DistributedSampler
 
 from transformers.modeling_outputs import TokenClassifierOutput
-from transformers import DistilBertPreTrainedModel, DistilBertModel
+#from transformers import DistilBertPreTrainedModel, DistilBertModel
 from transformers import DistilBertTokenizer,DistilBertTokenizerFast
 #from transformers import BertForTokenClassification
 from transformers import BertPreTrainedModel,BertModel
@@ -47,10 +47,7 @@ from azureml.core import Workspace, Run, Dataset
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--dataset_name', type=str, dest='dataset_name', default='')
-parser.add_argument('--augment_dataset_name', type=str, dest='augment_dataset_name', default='')
 parser.add_argument('--TNLR_model_bin', type=str, dest='TNLR_model_bin', default='')
-parser.add_argument('--pretrain_model', type=str, dest='pretrain_model', default='TNLR')
-parser.add_argument('--seed_val', type=str, dest='seed_val', default=111)
 parser.add_argument('--batch_size', type=int, dest='batch_size', default=32)
 parser.add_argument('--learning_rate', type=float, dest='learning_rate', default=1e-5)
 parser.add_argument('--adam_epsilon', type=float, dest='adam_epsilon', default=1e-8)
@@ -60,10 +57,7 @@ parser.add_argument('--num_epochs', type=int, dest='num_epochs', default=5)
 
 args = parser.parse_args()
 TNLR_model_name = args.TNLR_model_bin
-pretrain_model_name = args.pretrain_model
-seed_val_int = int(args.seed_val)
 dataset_name = args.dataset_name
-augment_dataset_name = args.augment_dataset_name
 batch_size = args.batch_size
 learning_rate = args.learning_rate
 adam_epsilon = args.adam_epsilon
@@ -75,13 +69,10 @@ run = Run.get_context()
 workspace = run.experiment.workspace
 
 dataset = Dataset.get_by_name(workspace, name=dataset_name)
-augment_dataset = Dataset.get_by_name(workspace, name=augment_dataset_name)
 TNLR_model = Dataset.get_by_name(workspace, name=TNLR_model_name)
 
 
 file_name = dataset.download()[0]
-if len(augment_dataset_name) > 0:
-    augment_file_name = augment_dataset.download()[0]
 TNLR_model_file_name = TNLR_model.download()[0]
 
 
@@ -94,20 +85,8 @@ df = pd.read_csv(file_name, sep='\t', encoding="utf-8",
     'MessageId': object, 'Frequency': object, 'ConversationContext': object, 'SelectionIgnore': object})
 
 
-# for data augmentation
-# repeat 10 times
-if len(augment_dataset_name) > 0:
-    for i in range(20):
-        df2 = pd.read_csv(augment_file_name, sep='\t', encoding="utf-8",
-            keep_default_na=False,
-            dtype={
-            'MessageId': object, 'Frequency': object, 'ConversationContext': object, 'SelectionIgnore': object})
-
-        df = df.append(df2)
-
 
 # for debug
-print('df size {}'.format(df.shape))
 print('top head data {}'.format(df.head()))
 
 
@@ -737,12 +716,10 @@ intents_map_to_outofdomain_intent = {
     'communication_notsure'
 }
 
-intent_label_set = IntentLabelSet(labels=map(str.lower,intents), outofdomain_id = 0)
+intent_label_set = IntentLabelSet(labels=map(str.lower,intents))
 
 class Evaluation():
     def __init__(self, slots_label_set, intent_label_set, useIob=False):
-
-        # here IOB means IOB2 format
         self.useIob = useIob;
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu");
         # no need
@@ -1294,18 +1271,9 @@ for i, row in df.iterrows():
     # ignore multi turn queries
     conversationContext = row['ConversationContext']
 
-    if  (conversationContext.lower().find('previousturndomain') != -1 or 
-        conversationContext.lower().find('previousturnintent') != -1 or 
-        conversationContext.lower().find('taskframeentitystates') != -1 or
-        conversationContext.lower().find('taskframeguid') != -1 or
-        conversationContext.lower().find('taskframename') != -1 or
-        conversationContext.lower().find('taskframestatus') != -1
-        # leave presonal grammar as first turn as well even though they are not being used
-        #conversationContext.lower().find('usercontacts') != -1 or 
-        #conversationContext.lower().find('userfilenames') != -1 or 
-        #conversationContext.lower().find('userfilenameskeyphrases') != -1 or 
-        #conversationContext.lower().find('Usermeetingsubjects') != -1
-        ):
+    if  (conversationContext.lower().find('previous') != -1 or 
+        conversationContext.lower().find('task') != -1 or 
+        conversationContext.lower().find('user') != -1):
         print("multiturn query\t{}\t{}".format(row['ConversationId'], query))
         continue
 
@@ -1548,7 +1516,7 @@ val_dataloader = DataLoader(val_data, sampler=val_sampler, batch_size=batch_size
 
 
 ###############
-# model definition below
+# load model below
 ###############
 
 #Here we instantiate our model class. 
@@ -1773,7 +1741,6 @@ class IntentClassifier(nn.Module):
 
     def forward(self, x):
         x = self.dropout(x)
-        # x[(bs, input_dim)] * [input_dim, num_intent_labels] = [bs, num_intent_labels]
         return self.linear(x)
 
 
@@ -1785,206 +1752,14 @@ class SlotClassifier(nn.Module):
 
     def forward(self, x):
         x = self.dropout(x)
-        # ? x dimentio need to further confirm but i believe this way
-        # x[((bs, seq_len, input_dim))] * [input_dim, num_slot_labels] = [bs, seq_len, num_slot_labels]
         return self.linear(x)
 
 
-
-class MDMTVSHuggingFaceDistillBERT(DistilBertPreTrainedModel):
-
-
-    def __init__(self, config, num_intent_labels, num_slot_labels, weight=None, ):
-        super(MDMTVSHuggingFaceDistillBERT, self).__init__(config)
-        # pretrained model (not specifific to slot intent do not need labels)
-        # self.num_labels = config.num_labels
-        self.num_intent_labels = num_intent_labels
-        self.num_slot_labels = num_slot_labels
-
-        # ? might be no need this so comment it 
-        # yue does not have this
-        #self.weight = weight
-
-        # yue is using BertModel for class but internet is using DistilBertPreTrainedModel
-        # ? need to check what is difference
-        self.distilbert = DistilBertModel(config=config)  # Load pretrained bert
-
-        self.intent_pre_classifier = nn.Linear(config.dim, config.dim)
-
-        # one class for intent
-        # one class for slot
-        # using bert's dropout_rate and hideen dimention
-        # ? need to make sure config has dropout_rate
-        self.intent_classifier = IntentClassifier(config.dim, self.num_intent_labels, config.dropout)
-        self.slot_classifier = SlotClassifier(config.dim, self.num_slot_labels, config.dropout)
-
-        # ? need to study what this function is for
-        self.init_weights()
-
-    def forward(self, input_ids, attention_mask=None, intent_label_ids=None, slot_label_ids=None):
-
-
-        # remove token_type_ids since it is not neceessary
-        distilbert_output = self.distilbert(input_ids=input_ids, attention_mask=attention_mask)
-
-
-        #sequence_output = output[0]
-        #pooled_output = output[1]  # [CLS]
-
-        # huggerung face distillBert does not have pool layer inside
-        # it only outputs transformer class as output 
-        # so using output[0](input_embedding)  for both sequence / token classficaiton at the same time
-        # for sequence classfication
-        # rely on the first token as well 
-        # but handel pooler in a different way than BErt
-        # handle pooled_output as huggingface modeling_distilbert.py , (DistilBertForSequenceClassification)
-        hidden_state = distilbert_output[0]  # (bs, seq_len, dim)
-        pooled_output = hidden_state[:, 0]  # (bs, dim)
-        pooled_output = self.intent_pre_classifier(pooled_output)  # (bs, dim)
-        pooled_output = nn.ReLU()(pooled_output)  # (bs, dim)
-
-
-        # for token classifcation, it is the same as bert
-        # handle sequence_output as huggingface modeling_distilbert.py ,DistilBertForTokenClassification
-        sequence_output = distilbert_output[0]
-
-        intent_logits = self.intent_classifier(pooled_output)
-        slot_logits = self.slot_classifier(sequence_output)
-
-        # define intent loss / slot loss 
-        total_intent_loss = 0
-        # 1. Intent Softmax
-        if intent_label_ids is not None:
-            if self.num_intent_labels == 1:
-                intent_loss_fct = nn.MSELoss()
-                intent_loss = intent_loss_fct(intent_logits.view(-1), intent_label_ids.view(-1))
-            else:
-                intent_loss_fct = nn.CrossEntropyLoss()
-                intent_loss = intent_loss_fct(intent_logits.view(-1, self.num_intent_labels), intent_label_ids.view(-1))
-            total_intent_loss += intent_loss
-
-        # 2. Slot Softmax
-        # ignore coefficeint part
-        total_slot_loss = 0
-        if slot_label_ids is not None:
-            # remove ignore_index since unnecessary
-            #slot_loss_fct = nn.CrossEntropyLoss(ignore_index=self.args.ignore_index)
-            slot_loss_fct = nn.CrossEntropyLoss()
-            # Only keep active parts of the loss
-            if attention_mask is not None:
-                active_loss = attention_mask.view(-1) == 1
-                active_logits = slot_logits.view(-1, self.num_slot_labels)[active_loss]
-                active_labels = slot_label_ids.view(-1)[active_loss]
-                slot_loss = slot_loss_fct(active_logits, active_labels)
-            else:
-                slot_loss = slot_loss_fct(slot_logits.view(-1, self.num_slot_labels), slot_label_ids.view(-1))
-            # ignore coefficeint part
-            #total_slot_loss += self.args.slot_loss_coef * slot_loss
-            total_slot_loss += slot_loss
-
-
-        # if either one is none, then do inference
-        if intent_label_ids is None or slot_label_ids is None:
-            intent_output = torch.argmax(intent_logits, -1);
-            slot_output = torch.argmax(slot_logits, -1);
-
-            intent_prob = intent_logits.softmax(dim=1)
-
-            #return intent_output, slot_output
-            return intent_output, slot_output, intent_prob
-        else:
-            return total_intent_loss, total_slot_loss
-
-
-class MDMTVSBert(BertPreTrainedModel):
+class DistilBertForTokenClassificationFilesDomain(BertPreTrainedModel):
 
 
     def __init__(self, config, num_intent_labels, num_slot_labels, weight=None, ):
-        super(MDMTVSBert, self).__init__(config)
-        # pretrained model (not specifific to slot intent do not need labels)
-        # self.num_labels = config.num_labels
-        self.num_intent_labels = num_intent_labels
-        self.num_slot_labels = num_slot_labels
-
-        # ? might be no need this so comment it 
-        # yue does not have this
-        #self.weight = weight
-
-        # yue is using BertModel for class but internet is using BertPreTrainedModel
-        # ? need to check what is difference
-        self.bert = BertModel(config=config)  # Load pretrained bert
-
-
-        # one class for intent
-        # one class for slot
-        # using bert's dropout_rate and hideen dimention
-        # ? need to make sure config has dropout_rate
-        self.intent_classifier = IntentClassifier(config.hidden_size, self.num_intent_labels, config.hidden_dropout_prob)
-        self.slot_classifier = SlotClassifier(config.hidden_size, self.num_slot_labels, config.hidden_dropout_prob)
-
-        # ? need to study what this function is for
-        self.init_weights()
-
-    def forward(self, input_ids, attention_mask=None, intent_label_ids=None, slot_label_ids=None):
-
-
-        # remove token_type_ids since it is not neceessary
-        output = self.bert(input_ids=input_ids, attention_mask=attention_mask)
-        sequence_output = output[0]
-        pooled_output = output[1]  # [CLS]
-
-        intent_logits = self.intent_classifier(pooled_output)
-        slot_logits = self.slot_classifier(sequence_output)
-
-        # define intent loss / slot loss 
-        total_intent_loss = 0
-        # 1. Intent Softmax
-        if intent_label_ids is not None:
-            if self.num_intent_labels == 1:
-                intent_loss_fct = nn.MSELoss()
-                intent_loss = intent_loss_fct(intent_logits.view(-1), intent_label_ids.view(-1))
-            else:
-                intent_loss_fct = nn.CrossEntropyLoss()
-                intent_loss = intent_loss_fct(intent_logits.view(-1, self.num_intent_labels), intent_label_ids.view(-1))
-            total_intent_loss += intent_loss
-
-        # 2. Slot Softmax
-        # ignore coefficeint part
-        total_slot_loss = 0
-        if slot_label_ids is not None:
-            # remove ignore_index since unnecessary
-            #slot_loss_fct = nn.CrossEntropyLoss(ignore_index=self.args.ignore_index)
-            slot_loss_fct = nn.CrossEntropyLoss()
-            # Only keep active parts of the loss
-            if attention_mask is not None:
-                active_loss = attention_mask.view(-1) == 1
-                active_logits = slot_logits.view(-1, self.num_slot_labels)[active_loss]
-                active_labels = slot_label_ids.view(-1)[active_loss]
-                slot_loss = slot_loss_fct(active_logits, active_labels)
-            else:
-                slot_loss = slot_loss_fct(slot_logits.view(-1, self.num_slot_labels), slot_label_ids.view(-1))
-            # ignore coefficeint part
-            #total_slot_loss += self.args.slot_loss_coef * slot_loss
-            total_slot_loss += slot_loss
-
-
-        # if either one is none, then do inference
-        if intent_label_ids is None or slot_label_ids is None:
-            intent_output = torch.argmax(intent_logits, -1);
-            slot_output = torch.argmax(slot_logits, -1);
-
-            intent_prob = intent_logits.softmax(dim=1)
-
-            #return intent_output, slot_output
-            return intent_output, slot_output, intent_prob
-        else:
-            return total_intent_loss, total_slot_loss
-
-class MDMTVSTNLR(BertPreTrainedModel):
-
-
-    def __init__(self, config, num_intent_labels, num_slot_labels, weight=None, ):
-        super(MDMTVSTNLR, self).__init__(config)
+        super(DistilBertForTokenClassificationFilesDomain, self).__init__(config)
         # pretrained model (not specifific to slot intent do not need labels)
         # self.num_labels = config.num_labels
         self.num_intent_labels = num_intent_labels
@@ -2065,91 +1840,43 @@ class MDMTVSTNLR(BertPreTrainedModel):
             return total_intent_loss, total_slot_loss
 
 
-###############
-# model definition above
-###############
 
 
-###############
-# load model below
-###############
+# load distillbert  model
+#model = DistilBertForTokenClassificationFilesDomain.from_pretrained('distilbert-base-uncased', num_labels=num_labels,
+#                                                            output_attentions=False, output_hidden_states=False)
 
 
 
 
-if pretrain_model_name == 'distilbert-base-uncased':
+
+from transformers import BertConfig;
+bert_config = BertConfig();
+#no need to provide level for bertPreTrainModel
+#bert_config.num_labels = num_labels;
+bert_config.num_hidden_layers = 3
+bert_config.output_attentions = False;
+bert_config.output_hidden_states = False;
 
 
-    from transformers import DistilBertConfig
-    distilbert_config = DistilBertConfig();
-    #no need to provide level for bertPreTrainModel
-    #bert_config.num_labels = num_labels;
-    distilbert_config.n_layers = 3
-    #distilbert_config.output_attentions = False;
-    #distilbert_config.output_hidden_states = False;
-
-    # load distillbert  model
-    print('load distill bert model with mode {}'.format(pretrain_model_name))
-    #model = MDMTVSHuggingFaceDistillBERT.from_pretrained('distilbert-base-uncased', num_labels=num_labels,
-    #                                                            output_attentions=False, output_hidden_states=False)
-    model = MDMTVSHuggingFaceDistillBERT.from_pretrained(pretrain_model_name,
-        config=distilbert_config,
-        num_intent_labels=num_intent_labels,	
-        num_slot_labels=num_slot_labels)
+# load TNLR model remotely
+print('load TNLR model with path {}'.format(TNLR_model_file_name))
+model = DistilBertForTokenClassificationFilesDomain.from_pretrained(TNLR_model_file_name, 
+    config=bert_config,
+    num_intent_labels=num_intent_labels,	
+    num_slot_labels=num_slot_labels)
 
 
-elif pretrain_model_name == 'bert-base-uncased':
-    from transformers import BertConfig;
-    bert_config = BertConfig();
-    #no need to provide level for bertPreTrainModel
-    #bert_config.num_labels = num_labels;
-    bert_config.num_hidden_layers = 3
-    bert_config.output_attentions = False;
-    bert_config.output_hidden_states = False;
+# load TNLR model locally
+#print('load TNLR model with path {}'.format('../TNLR/'+'tnlrv3-base.pt'))
+#model = DistilBertForTokenClassificationFilesDomain.from_pretrained('../TNLR/'+'tnlrv3-base.pt', config=bert_config)
 
 
-
-    # default TNLR
-    # load TNLR model remotely
-    print('load bert model with mode {}'.format(pretrain_model_name))
-    model = MDMTVSBert.from_pretrained(pretrain_model_name, 
-        config=bert_config,
-        num_intent_labels=num_intent_labels,	
-        num_slot_labels=num_slot_labels)    
-
-else:
-    from transformers import BertConfig;
-    bert_config = BertConfig();
-    #no need to provide level for bertPreTrainModel
-    #bert_config.num_labels = num_labels;
-    bert_config.num_hidden_layers = 3
-    bert_config.output_attentions = False;
-    bert_config.output_hidden_states = False;
-
-
-
-    # default TNLR
-    # load TNLR model remotely
-    print('load TNLR model with path {}'.format(TNLR_model_file_name))
-    model = MDMTVSTNLR.from_pretrained(TNLR_model_file_name, 
-        config=bert_config,
-        num_intent_labels=num_intent_labels,	
-        num_slot_labels=num_slot_labels)
-
-
-    # load TNLR model locally
-    #print('load TNLR model with path {}'.format('../TNLR/'+'tnlrv3-base.pt'))
-    #model = MDMTVSTNLR.from_pretrained('../TNLR/'+'tnlrv3-base.pt', config=bert_config)
-
-print('load model done')
+print('load TNLR model done')
 
 ###############
 # load model above
 ###############
-
-
-
-
 
 
 
@@ -2222,13 +1949,11 @@ def metric_average(val, name):
     avg_tensor = hvd.allreduce(tensor, name=name)
     return avg_tensor.item()
 
-#seed_val = 111
-# pass as arg parameter
-print("seed val int:{}".format(seed_val_int))
-random.seed(seed_val_int)
-np.random.seed(seed_val_int)
-torch.manual_seed(seed_val_int)
-torch.cuda.manual_seed_all(seed_val_int)
+seed_val = 111
+random.seed(seed_val)
+np.random.seed(seed_val)
+torch.manual_seed(seed_val)
+torch.cuda.manual_seed_all(seed_val)
 
 train_losses = []
 val_losses = []
@@ -2492,7 +2217,7 @@ if hvd.rank() == 0:
     #    verbose=True)
 
 
-    # using bert and no return class, having mutple outputs
+    # using bert and no return class, having mutiple outputs
     torch.onnx.export(model=model_to_save,
         args=(dummy_input),
         f=out_dir + '/traced_distill_bert.onnx.bin',
