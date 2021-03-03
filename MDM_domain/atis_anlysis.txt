@@ -336,13 +336,31 @@ run 70/74
 	
 	atis_train
 		local 
-			Validation metric wo pad: {'total_intent_precision': 0.9975429975429976, 'total_intent_recall': 0.9975429975429976, 'total_slot_precision': 0.8887891873703101, 'total_slot_recall': 0.8812277580071174
+			Validation metric wo pad after iteration 15: {'total_intent_precision': 0.9975429975429976, 'total_intent_recall': 0.9975429975429976, 'total_slot_precision': 0.8887891873703101, 'total_slot_recall': 0.8812277580071174
 	
 	atis_test
 		some problematic queris
 		slot is lower compared to train set
-			 Validation metric wo pad: {'total_intent_precision': 0.9761904761904762, 'total_intent_recall': 0.9761904761904762, 'total_slot_precision': 0.8285714285714286, 'total_slot_recall': 0.8255052661542841}
+			 Validation metric wo pad after iteration 15: {'total_intent_precision': 0.9761904761904762, 'total_intent_recall': 0.9761904761904762, 'total_slot_precision': 0.8285714285714286, 'total_slot_recall': 0.8255052661542841}
 	
+	
+run 80/?
+	in jupiter book 
+	#disable distirbuted computing
+    #node_count=8,
+    node_count=1,
+	nd wo hvd rank ,add random sampler
+	
+	then it seems one cpu can train 
+	status will not fail
+	
+	
+	//compared to run 70/74 the same epoch runs 
+	// the metric is lower, but not sure why
+	trainnig set 
+		Validation metric Iob wo pad after iteration 5 : {'intent_acc': 0.9542104087558633, 'slot_precision': 0.7881576018401721, 'slot_recall': 0.7849831873776004, 'slot_f1': 0.7865671918099858}
+
+
 =================
 evaluation logic
 i shou;d ignore o and pad for calculation 
@@ -2304,12 +2322,108 @@ run 41/43
 	training da
 	MDM_01202021v1
 
-run ?/?
+run 44/46
 	using distributed sampler
 	original hyper parameters + learning rate from 1e-5 to 5e-5 
 	3 layer TNLR
 	epoch = 5
 	
+	training da
+	MDM_01202021v1
+	
+	這個case 的ppt 的相對好一些 
+	
+	還是要把validation set 都修好  就不用看eran 的PR
+
+
+run 47/49	
+	using distributed sampler
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer TNLR
+	epoch = 10
+	
+	training da
+	MDM_01202021v1
+	
+	
+
+run 53/55
+	test 
+	using distributed sampler
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer TNLR
+	epoch = 10
+	test data agumentation DSAT(static)
+		target open (.*) ppt
+		repeat 10 times
+		751705
+
+
+
+run 56/??
+	this one get cancel 
+	test 
+	using distributed sampler
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer TNLR
+	epoch = 10
+	test data agumentation DSAT(static)
+		target open (.*) ppt
+		add more files DSAT based on 38/40
+		repeat 10 times		
+		
+run 61/63
+	test 
+	using distributed sampler
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer TNLR
+	epoch = 5
+		5 似乎沒有什麼太大的幫助  光training loss 就比不上了
+	test data agumentation DSAT(static)
+		target open (.*) ppt
+		add more DSAT based on 38/40
+			相較53/55 根多 files DSAT 
+			發現很多augmented data 竟然是multi turn 的  要investigate 一下
+			原來是很多的multi turn 的query 找不到
+			原因是因為user 這個case 可能太strict....
+			
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			
+		repeat 10 times
+		
+		這個因該不需要evaluate 
+			
+	
+run 65/67
+	using distributed sampler
+	original hyper parameters
+	3 layer TNLR
+	epoch = 25 to check
+	after 25 epochs
+	模擬run 14/16
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			沒有intent = X 的logic 
+			讓他跑  可能之後evaluate 看看行不行
+	job 一瞬間會沒有output 要等一段時間
+			
+run 69/71
+	using distributed sampler
+	original hyper parameters
+	3 layer TNLR
+	10 epoch
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+		看看10個epoch + multi turn change + higher learning rate 的搶先看結
+	模擬run 38/40
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
 
 ==================
 eran discussion
@@ -2539,6 +2653,19 @@ output3
 
 
 
+=====================
+eran branch 
+=====================
+
+https://msasg.visualstudio.com/Cortana/_build/results?buildId=19092871&view=ms.vss-test-web.build-test-results-tab&runId=197935550&resultId=100005&paneView=debug
+
+run 38/40
+	ValidatingKingstonOctober2020
+	ValidatingTeamsOctober2020
+	
+
+old MDM check metrics
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1971873?_a=files
 
 ======================
 YC suggested 02252021
@@ -2552,3 +2679,64 @@ learing rate
 might be 1e-5  too small ?
 
 5e-5
+
+
+
+======================
+yong suggested 02262021
+======================
+ppt 
+in domain try
+out of domain try 
+
+
+
+
+======================
+haoda suggested 
+======================
+
+02262021
+share code for review
+
+
+03022021
+// old 做法是
+// trian 的時候是只有給type
+// seqeval 轉成b-type i-type
+// evalvuate 用原本的type 
+
+open the lu migration pp ##t	2 2 29 29 32 32
+									       b-type i-type
+										   type   type
+										   
+										   
+										   type type
+										   32   32
+										   
+										   b-type i-type
+
+
+
+// haoda 的建議
+// 最好在train 的時候  給他boundry 
+// type becomes b-type /i type 
+//然後  seqeval 可以用
+然後再 qas 30 跟31 map 成一樣的
+slot = 30
+slot = 60  B ,I
+
+										 b-type i-type  i-type
+										 30     31		31
+										 30     31      31
+										 evaluate 
+											seqeval  loss 
+										 evaluate_cortana
+												31 to 30 
+										30       30      30
+										open question ?
+
+
+
+
+
