@@ -2411,7 +2411,7 @@ run 65/67
 			讓他跑  可能之後evaluate 看看行不行
 	job 一瞬間會沒有output 要等一段時間
 			
-run 69/71
+run 85/87
 	using distributed sampler
 	original hyper parameters
 	3 layer TNLR
@@ -2419,11 +2419,66 @@ run 69/71
 	original hyper parameters + learning rate from 1e-5 to 5e-5 
 		看看10個epoch + multi turn change + higher learning rate 的搶先看結
 	模擬run 38/40
+	comared to 65/67, intent might be better
 	但是修正multi turn 的data 
 			現在把
 			personal grammar 當成multi turn (? 以後可能要revisit)
 			normal conversational context 的multi 濾掉
 			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+
+run 85/88
+	using distributed sampler
+	original hyper parameters
+	3 layer TNLR
+	10 epoch
+	模擬run 38/40
+	comared to 65/67, intent might be better
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+
+
+
+
+run 89/91
+	using distributed sampler
+	original hyper parameters
+	3 layer Bert
+		10 epoch
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+			
+run 92/94
+	using distributed sampler
+	original hyper parameters
+	3 layer TNLR
+		5 epoch
+	IOB logic
+		this is to verify new IOB training code then less node 
+		local can verify and new CSDS setup branch is needed
+		2 nodes , 一個batch 時間變成5倍 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+
+run ?/?
+	using distributed sampler
+	original hyper parameters
+	3 layer TNLR
+		25 epoch
+		6 nodes => 只剩6 個nodes
+	IOB logic
+		this is to verify new IOB training code then less node 
+		2 nodes , 一個batch 時間變成5倍 
+
 
 ==================
 eran discussion
@@ -2693,7 +2748,7 @@ out of domain try
 
 
 ======================
-haoda suggested 
+haoda suggested 03022021
 ======================
 
 02262021
@@ -2739,4 +2794,32 @@ slot = 60  B ,I
 
 
 
+======================
+eran sync 03022021 03022021
+======================
+<message> slot is broken
+missed tokens
+	has clarified
 
+contact name might be wrong
+
+
+
+======================
+data problem
+======================
+training da
+MDM_01202021v1
+	sent_text => should be send_text
+		this is from MDM CRF data arguement modules. originla MDM CRF will ignore it so leave it 
+	search_message => should be search_messages
+
+	send_tex => should be send_text
+
+	volum_up => should be volume_up
+	
+	
+======================
+gpu subscription list
+======================
+https://ml.azure.com/compute/list/training?wsid=/subscriptions/ddb33dc4-889c-4fa1-90ce-482d793d6480/resourcegroups/DevExp/workspaces/DevExperimentation&tid=72f988bf-86f1-41af-91ab-2d7cd011db47
