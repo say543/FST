@@ -1,0 +1,26 @@
+one page reference
+
+onenote:https://microsoft.sharepoint.com/teams/CortanaCore/Shared%20Documents/Core%20Science/Cortana%20Core%20Science/LU%20Data%20and%20Measurement/Plans.one#OnePager%20-%20LuTimex%20Advanced%20Modeling&section-id=%7BBD0CF208-4094-402E-86E8-D8B4B2775CA9%7D&page-id=%7B5EB47988-9678-47AC-9226-C3EFDAF47FBE%7D&end
+Motivation and Goal:
+
+Currently our Timex Model is a CRF model hosted with forked MLG Pipelines, the pipeline is forked in 2017 with 3 year old implementations. It's hard to maintain with unmanaged code. Previously caused a serve 1 livesite in TEE. We currently mitigate by strictly limiting the query length (350 characters).
+
+We want to explore an up to date alternatives, such as an onnx model in replacement. This could help build a more advanced LU solution. Also, we would like to expose our solution as a nuget package for partners to use.
+
+Details:
+
+	1. Build a timex onnx model with our current data. We can leverage AML with TF or Pytorch on building a DNN model then convert it to onnx. The model should have a good quality comparing with CRF.
+	
+	2. Build .NET API to expose the model for slot entity extraction. Explore existing (open source) onnx runtime frameworks or host this model in AML. Some of the existing references can be:
+		a. ML .NET
+		b. Microsoft Onnx Runtime with CSharp API
+		c. Host model in AML
+		d. TensorFlow.NET or TensorFlowSharp
+		
+	3. Publish the solution as a Nuget Package for partners
+	
+	4. Optimize the latency for 1 and 2 (Stretch)
+
+Deliverables:
+
+Timex Onnx Model, API implementation demo, and the solution as a nuget package.
