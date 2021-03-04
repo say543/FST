@@ -87,6 +87,14 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 看這個pr
 
 
+
+==============================
+b and b2 difference
+==============================
+B services run on every user mailbox eg, O(120K servers).
+B2 services run on a subset for availability close to every mailbox, but not 1:1.  Clique size can vary based on load, but typically varies from 3K-30K. 
+
+
 ==============================
 people centric search and file search conflict from nitin's email
 ==============================
