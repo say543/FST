@@ -186,50 +186,17 @@ class LabelSet:
         self.labels_to_id["pad"] = pad_token_label_id
         self.ids_to_label[pad_token_label_id] = "pad"
 
-       
+        num = 0
+        for label in labels:
+            # using lower case to compare
+            if label.lower() == "o" or label.lower() == "pad":
+                print("skip:{}".format(label))
+                num = num +1 
+                continue
+            self.labels_to_id[label] = num
+            self.ids_to_label[num] = label
+            num = num +1 
 
-        if useIob == True:
-            num = 0
-            for label in labels:
-                # o/ pad are default tokens provided so skip
-                if label.lower() == "o" or label.lower() == "pad":
-                    print("skip:{}".format(label))
-                    num = num +1
-                    continue
-            
-                # UNK token do not create b-xxx /i -xxx token
-                if label.lower() == "unk":
-                    while num in self.ids_to_label.keys():
-                        num = num +1
-                    self.labels_to_id[label] = num
-                    self.ids_to_label[num] = label
-                    num = num +1
-                    continue
-
-                # for each valid label
-                # creage b-xxx / i-xxx tow slots
-                for variation_label in ['b-'+label, 'i-'+label]:
-                    # find num which is not being use
-                    while num in self.ids_to_label.keys():
-                        num = num +1
-                    self.labels_to_id[variation_label] = num
-                    self.ids_to_label[num] = variation_label
-                    num = num +1
-        else:
-            num = 0
-            for label in labels:
-                # using lower case to compare
-                # o/ pad are default tokens provided so skip
-                if label.lower() == "o" or label.lower() == "pad":
-                    print("skip:{}".format(label))
-                    num = num+1
-                    continue
-            
-                while num in self.ids_to_label.keys():
-                    num = num +1
-                self.labels_to_id[label] = num
-                self.ids_to_label[num] = label
-                num = num +1
 
         self.cutoff_length = 100;
         self.open_pattern = r'<(\w+)>';
@@ -240,19 +207,9 @@ class LabelSet:
 
         self.slot_list = [];
 
-        # create slot list by removing b- /i- from key
         for key, value in self.labels_to_id.items():
-            
-            if useIob == True:
-                if key.lower() == "o" or key.lower() == "pad" or key.lower() == "unk":
-                    self.slot_list.append('<' + key + '>');
-                    self.slot_list.append('</' + key + '>');
-                else:
-                    self.slot_list.append('<' + key.split('-')[1] + '>');
-                    self.slot_list.append('</' + key.split('-')[1] + '>');
-            else:
-                self.slot_list.append('<' + key + '>');
-                self.slot_list.append('</' + key + '>');
+            self.slot_list.append('<' + key + '>');
+            self.slot_list.append('</' + key + '>');
 
     def get_aligned_label_ids_from_aligned_label(self, aligned_labels):
         return list(map(self.labels_to_id.get, aligned_labels))
@@ -284,8 +241,6 @@ class LabelSet:
         return self.labels_to_id
 
 
-    # only output tokenized text string
-    '''
     def splitWithBert(self, annotation):
         preSplit = annotation.split();
         annotationArray = [];
@@ -296,22 +251,6 @@ class LabelSet:
             else:
                 annotationArray += self.tokenizer.tokenize(word);
         return annotationArray;
-    '''
-
-    # output tokenized text string and untokenized text string 
-    def splitWithBert(self, annotation):
-        preSplit = annotation.split();
-        annotationArray = [];
-        textArrayWoTokenizer = [];
-
-        for word in preSplit:
-            if any(slot in word for slot in self.slot_list):
-            #if any('<'+slot in word for slot in self.slolabels_to_id):
-                annotationArray.append(word);
-            else:
-                annotationArray += self.tokenizer.tokenize(word);
-                textArrayWoTokenizer.append(word)
-        return annotationArray, textArrayWoTokenizer;
 
     def generateTagString(self, annotation_filtered_array):
         if self.useIob:
@@ -322,9 +261,7 @@ class LabelSet:
                     annotation_filtered_array_iob.append(tag);
                     preTag = '';
                 else:
-                    # go with lower case
-                    #annotation_filtered_array_iob.append(('B-' if tag != preTag else 'I-') + tag);
-                    annotation_filtered_array_iob.append(('b-' if tag != preTag else 'i-') + tag);
+                    annotation_filtered_array_iob.append(('B-' if tag != preTag else 'I-') + tag);
                     preTag = tag;
 
             tag_string = " ".join(annotation_filtered_array_iob);
@@ -349,18 +286,9 @@ class LabelSet:
             return (None, False);
         slot = match[1].strip().lower();
         #if slot in self.slot_dict:
-
-
-        if self.useIob == True:
-            # return original slot 
-            if 'b-'+ slot in self.labels_to_id:
-                return (slot, True);
-            if 'i-'+ slot in self.labels_to_id:
-                return (slot, True);
-        else:
-            if slot in self.labels_to_id:
-                return (slot, True);
-            return (None, False);
+        if slot in self.labels_to_id:
+            return (slot, True);
+        return (None, False);
 
     def isClosePattern(self, word, tag):
         match = re.match(self.close_pattern, word);
@@ -396,69 +324,10 @@ class LabelSet:
         #  convert_examples_to_features
         # _create_examples
         try:
-
-            annotation_original = annotation_input.strip().lower();
-            annotation = self.simplePreprocessAnnotation(annotation_original);
-            annotation_array, text_Array_WoTokenizer = self.splitWithBert(annotation);
-            #annotation_array = self.splitWithBert(annotation_original);
-            annotation_result_arrry = [-1] * len(annotation_array);
-
-            # capture slot name and slot entity, store them in a dict;
-            # find out slot
-            i = 0;
-            while i < len(annotation_array):
-                (slot, isOpen) = self.isOpenPattern(annotation_array[i]);
-                if not isOpen:
-                    annotation_result_arrry[i] = 'O';
-                    i += 1;
-                else:
-                    j = i+1;
-                    while(not self.isClosePattern(annotation_array[j], slot)):
-                        annotation_result_arrry[j] = slot;
-                        j += 1;
-                    i = j+1;
-            
-            word_array = [word for idx, word in enumerate(annotation_array) if annotation_result_arrry[idx] != -1];
-            annotation_filtered_array = [word for idx, word in enumerate(annotation_result_arrry) if annotation_result_arrry[idx] != -1];
-            assert(len(word_array) == len(annotation_filtered_array));
-
-            # adding cutoff length for query
-            if len(word_array) == 0:
-                #continue;
-                return '', '', ''
-            elif len(word_array) == 1:
-                if all(i in string.punctuation for i in word_array):
-                    #continue;
-                    return '', '', ''
-
-            if len(word_array) > self.cutoff_length:
-                word_array = word_array[:self.cutoff_length];
-                annotation_filtered_array = annotation_filtered_array[:self.cutoff_length];
-
-            # write input string and tag list in file;
-            word_string = " ".join(word_array);
-            tag_string = self.generateTagString(annotation_filtered_array);
-
-            if not self.checkQueryValid(word_string):
-                #continue;
-                return '', '', ''
-
-            #feature_parse.append((word_string, tag_string));
-            return word_string, tag_string, " ".join(text_Array_WoTokenizer)
-
-
-            '''
             query_original = query.strip().lower();
             query_original_words = query_original.split()
-            #annotation_original = annotation_input.strip().lower();
-            #annotation_original_labels =  annotation_original.split()
-
-
             annotation_original = annotation_input.strip().lower();
-            annotation = self.simplePreprocessAnnotation(annotation_original);
-            annotation_array = self.splitWithBert(annotation);
-            annotation_result_arrry = [-1] * len(annotation_array);
-
+            annotation_original_labels =  annotation_original.split()
         
             assert len(query_original_words) == len(annotation_original_labels)
 
@@ -478,14 +347,11 @@ class LabelSet:
                 tokens.extend(word_tokens)
                 # do not use pad_token_label_id from ignore_index
                 #slot_labels_ids.extend([int(slot_label)] + [pad_token_label_id] * (len(word_tokens) - 1))
-
-                slot_labels.append('b-'+label)
-                for i in range(len(word_tokens)-1):
-                    slot_labels.append('i-'+label)
+                for i in range(len(word_tokens)):
+                    slot_labels.append(label)
 
 
             return ' '.join([str(token) for token in tokens]), ' '.join([str(slot_label) for slot_label in slot_labels])
-            '''
         except:
             # print stack traice
             traceback.print_exc()
@@ -503,7 +369,7 @@ class LabelSet:
         try:
             annotation_original = annotation_input.strip().lower();
             annotation = self.simplePreprocessAnnotation(annotation_original);
-            annotation_array, text_Array_WoTokenizer = self.splitWithBert(annotation);
+            annotation_array = self.splitWithBert(annotation);
             #annotation_array = self.splitWithBert(annotation_original);
             annotation_result_arrry = [-1] * len(annotation_array);
 
@@ -529,11 +395,11 @@ class LabelSet:
             # adding cutoff length for query
             if len(word_array) == 0:
                 #continue;
-                return '', '', ''
+                return '', ''
             elif len(word_array) == 1:
                 if all(i in string.punctuation for i in word_array):
                     #continue;
-                    return '', '', ''
+                    return '', ''
 
             if len(word_array) > self.cutoff_length:
                 word_array = word_array[:self.cutoff_length];
@@ -545,15 +411,15 @@ class LabelSet:
 
             if not self.checkQueryValid(word_string):
                 #continue;
-                return '', '', ''
+                return '', ''
 
             #feature_parse.append((word_string, tag_string));
-            return word_string, tag_string, " ".join(text_Array_WoTokenizer)
+            return word_string, tag_string
         except:
             # print stack traice
             traceback.print_exc()
             print("skipped query: {} and pair: {}".format(query, annotation_input))
-            return '', '', '' 
+            return '', '' 
             #continue;
 
 slots = [
@@ -661,8 +527,7 @@ slots = [
 slots_label_set = LabelSet(labels=map(str.lower,slots), 
                             tokenizer =fast_tokenizer, 
                             untagged_id = 2,
-                            pad_token_label_id = 0,
-                            useIob =True)
+                            pad_token_label_id = 0)
 
 
 class IntentLabelSet:
@@ -1133,8 +998,7 @@ class Evaluation():
         }
     '''
 
-    # manually add prefix for IOB to check
-    '''
+
     def get_slot_metrics_Iob(self, preds, golden):
         assert len(preds) == len(golden)
 
@@ -1176,77 +1040,6 @@ class Evaluation():
                     golden_labels_list[i].append('B-'+ golden_label.upper())
                 else:
                     golden_labels_list[i].append('I-'+ golden_label.upper())
-                prev_golden_label = golden_label
-
-
-        ret_dic = {}
-        classification_dic = classification_report(golden_labels_list, preds_labels_list, output_dict=True)
-
-        for key, value in classification_dic.items():
-
-            #micro avg       0.50      0.50      0.50         2
-            #macro avg       0.50      0.50      0.50         2
-            #weighted avg       0.50      0.50      0.50         2
-            # ignore these three keys
-
-            if key != 'micro avg' and key != 'macro avg' and key != 'weighted avg':
-                ret_dic[key] = value
-
-        ret_dic['slot_precision'] = precision_score(golden_labels_list, preds_labels_list, average=None)
-        ret_dic['slot_recall'] = recall_score(golden_labels_list, preds_labels_list, average=None)
-        ret_dic['slot_f1'] = f1_score(golden_labels_list,  preds_labels_list, average=None)
-
-
-        return ret_dic
-        #return {
-        #    "classfication_report": classification_report(golden_labels_list, preds_labels_list),
-        #    "slot_precision": precision_score(golden_labels_list, preds_labels_list, average=None),
-        #    "slot_recall": recall_score(golden_labels_list, preds_labels_list, average=None),
-        #    "slot_f1": f1_score(golden_labels_list,  preds_labels_list, average=None)
-        #}
-    '''
-
-    def get_slot_metrics_Iob(self, preds, golden):
-        assert len(preds) == len(golden)
-
-        # map list of id to label
-        preds_labels_list = [[] for _ in range(len(preds))]
-        golden_labels_list = [[] for _ in range(len(golden))]
-
-        # map from id to label
-        #for i in range(len(golden)):
-        #    for j in range(len(golden[i])):
-        #        preds_labels_list[i].append(slots_label_set.get_label(preds[i][j]))
-        #        golden_labels_list[i].append(slots_label_set.get_label(golden[i][j]))
-
-        # map from id to label
-        for i in range(len(golden)):
-            # using previous token to decide whether it should be B or I
-            # map label form lower case to upper case for seqeval pacakage
-            prev_pred_label = ""
-            prev_golden_label = ""
-            for j in range(len(golden[i])):
-
-                pred_label = slots_label_set.get_label(preds[i][j])
-                golden_label = slots_label_set.get_label(golden[i][j])
-
-                
-                # if new label start
-                if pred_label == slots_label_set.get_untagged_label() or pred_label == slots_label_set.get_pad_label():
-                    preds_labels_list[i].append(pred_label.upper())
-                elif pred_label != prev_pred_label:
-                    preds_labels_list[i].append(pred_label.upper())
-                else:
-                    preds_labels_list[i].append(pred_label.upper())
-                prev_pred_label = pred_label
-
-                # if new label start
-                if golden_label == slots_label_set.get_untagged_label() or golden_label == slots_label_set.get_pad_label():
-                    golden_labels_list[i].append(golden_label.upper())
-                elif golden_label != prev_golden_label:
-                    golden_labels_list[i].append(golden_label.upper())
-                else:
-                    golden_labels_list[i].append(golden_label.upper())
                 prev_golden_label = golden_label
 
 
@@ -1442,7 +1235,6 @@ class Evaluation():
 
 # iterative get labele and also append padding based on text_ids
 tokensForQueries = []
-tokensIdForQueries = []
 labelsForQueries =[]
 labelIdsForQueries = []
 
@@ -1510,12 +1302,10 @@ for i, row in df.iterrows():
 
     # invalid query will return empty string
     # here using annotation to extract the real query
-    #text, tag_string  = slots_label_set.preprocessRawAnnotation(query, slot)
-    #text, tag_string  = slots_label_set.preprocessRawAnnotation(query, slot, useIob=True)
-    text, tag_string, text_WoTokenizer  = slots_label_set.preprocessRawAnnotation(query, slot, useIob=True)
+    text, tag_string  = slots_label_set.preprocessRawAnnotation(query, slot)
     tag_string_wo_CLS_SEP = tag_string
 
-    if text == '' and tag_string == '' and text_WoTokenizer == '':
+    if text == '' and tag_string == '':
         print("query_with_slot_issue\t{}\t{}".format(query, slot))
         continue
 
@@ -1535,9 +1325,7 @@ for i, row in df.iterrows():
         continue
 
     # replcae by class's output word string
-    #text_id = fast_tokenizer.encode(text, max_length=300, padding='max_length', truncation=True)
-    text_id = fast_tokenizer.encode(text_WoTokenizer, max_length=300, padding='max_length', truncation=True)
-    text_id_wo_padding = fast_tokenizer.encode(text_WoTokenizer, padding=False)
+    text_id = fast_tokenizer.encode(text, max_length=300, padding='max_length', truncation=True)
     text_ids.append(text_id)
 
 
@@ -1570,8 +1358,6 @@ for i, row in df.iterrows():
     #print("slot: {}".format(labels_for_text_id))    
 
     tokensForQueries.append(text)
-    #tokensIdForQueries.append(text_id)
-    tokensIdForQueries.append(text_id_wo_padding)
     labelsForQueries.append(tag_string)
 
     # do not include CLS SEP for comparison
@@ -1666,9 +1452,8 @@ with codecs.open(output_file, 'w', 'utf-8') as fout:
 
 output_file = '..\\azureml_data\\after_my_preprocessingOriginalSlotIdsv1.tsv'
 with codecs.open(output_file, 'w', 'utf-8') as fout:
-    for i, (query, queryId, labelIdListForQuery) in enumerate(zip(tokensForQueries, tokensIdForQueries, labelIdsForQueries)):
-        fout.write(query + '\t' + " ".join([str(x) for x in queryId]) + '\t'+ " ".join([str(x) for x in labelIdListForQuery]) + '\r\n');
-
+    for i, (query, labelIdListForQuery) in enumerate(zip(tokensForQueries, labelIdsForQueries)):
+        fout.write(query + '\t' + " ".join([str(x) for x in labelIdListForQuery]) + '\r\n');
 
 
 

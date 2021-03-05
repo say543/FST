@@ -1,3 +1,5 @@
+
+
 # source code from here
 #https://github.com/vilcek/fine-tuning-BERT-for-text-classification/blob/master/02-data-classification.ipynb
 import numpy as np
@@ -11,20 +13,31 @@ import re;
 import codecs;
 import string;
 import traceback
-# install package for calculation	
-# https://github.com/chakki-works/seqeval	
-# only support IOB format....	
+# install package for calculation
+# https://github.com/chakki-works/seqeval
+# only support IOB format....
 from seqeval.metrics import precision_score, recall_score, f1_score, classification_report
 
-###############
-#remote
-###############
+'''
+import traceback
+import warnings
+import sys
+
+def warn_with_traceback(message, category, filename, lineno, file=None, line=None):
+
+    log = file if hasattr(file,'write') else sys.stderr
+    traceback.print_stack(file=log)
+    log.write(warnings.formatwarning(message, category, filename, lineno, line))
+
+warnings.showwarning = warn_with_traceback
+'''
+
 
 
 import torch
 import torch.nn as nn
 from torch.nn import CrossEntropyLoss
-from torch.utils.data import TensorDataset, DataLoader, RandomSampler
+from torch.utils.data import TensorDataset, DataLoader
 from torch.utils.data.distributed import DistributedSampler
 
 from transformers.modeling_outputs import TokenClassifierOutput
@@ -34,89 +47,53 @@ from transformers import DistilBertTokenizer,DistilBertTokenizerFast
 from transformers import BertPreTrainedModel,BertModel
 
 #from transformers import DistilBertForTokenClassification, AdamW, DistilBertConfig
-from transformers import AdamW
 
 from transformers import get_linear_schedule_with_warmup
 from transformers import BatchEncoding
 from tokenizers import Encoding
-import horovod.torch as hvd
-
-from azureml.core import Workspace, Run, Dataset
 
 
 
-parser = argparse.ArgumentParser()
-parser.add_argument('--dataset_name', type=str, dest='dataset_name', default='')
-parser.add_argument('--augment_dataset_name', type=str, dest='augment_dataset_name', default='')
-parser.add_argument('--TNLR_model_bin', type=str, dest='TNLR_model_bin', default='')
-parser.add_argument('--pretrain_model', type=str, dest='pretrain_model', default='TNLR')
-parser.add_argument('--seed_val', type=str, dest='seed_val', default=111)
-parser.add_argument('--batch_size', type=int, dest='batch_size', default=32)
-parser.add_argument('--learning_rate', type=float, dest='learning_rate', default=1e-5)
-parser.add_argument('--adam_epsilon', type=float, dest='adam_epsilon', default=1e-8)
-parser.add_argument('--num_epochs', type=int, dest='num_epochs', default=5)
+#########################
+# torch tensor operation test below
+#########################
+
+output = torch.tensor([[[-0.1221, -0.3479, -0.0684,  0.0110,  0.2062,  0.1621, -0.0185,
+           0.0124,  0.5029,  0.7174,  0.2862, -0.2431,  0.1328, -0.1321,
+          -0.4819,  0.2302,  0.0615, -0.2918, -0.3064, -0.2910,  0.3069],
+         [ 0.0583, -0.2261, -0.1034,  0.1108,  0.0693,  0.2041, -0.1494,
+          -0.0275,  0.0287,  0.0484,  0.3371, -0.0232,  0.2029,  0.0085,
+          -0.2478,  0.1623,  0.0651, -0.0443, -0.4363, -0.0838,  0.0469],
+         [ 0.0049, -0.2861, -0.0598,  0.1419, -0.0236,  0.2379, -0.1346,
+          -0.1205,  0.0782,  0.0839,  0.2446,  0.0358,  0.2748, -0.0316,
+          -0.1360,  0.1410,  0.0341, -0.1465, -0.4751, -0.1850,  0.0027],
+         [-0.2048, -0.2630,  0.1079, -0.1364, -0.0478,  0.2168, -0.2872,
+          -0.0433,  0.2038, -0.0138,  0.2251, -0.1251, -0.0528,  0.0448,
+          -0.3945,  0.2250,  0.0129,  0.0118, -0.3394,  0.0837,  0.0479],
+         [ 0.3469,  0.1035,  0.2902,  0.1426,  0.0818, -0.1072,  0.3632,
+           0.0375,  0.3482, -0.2737,  0.0239, -0.1121, -0.1262, -0.2249,
+          -0.2885, -0.0055, -0.3414,  0.1324, -0.1100, -0.1086,  0.0097]]])
+
+#version 1
+#for i, ele2d in enumerate(output):
+#    for j, ele1d in enumerate(ele2d):
+#        value, index = torch.max(ele1d, dim=0)
+#        print("value: {} anmd index {}".format(value, index))
 
 
+#version 2
+#index = torch.argmax(output.view(-1,21), dim=1)
 
-args = parser.parse_args()
-TNLR_model_name = args.TNLR_model_bin
-pretrain_model_name = args.pretrain_model
-seed_val_int = int(args.seed_val)
-dataset_name = args.dataset_name
-augment_dataset_name = args.augment_dataset_name
-batch_size = args.batch_size
-learning_rate = args.learning_rate
-adam_epsilon = args.adam_epsilon
-num_epochs = args.num_epochs
-
-
-
-run = Run.get_context()
-workspace = run.experiment.workspace
-
-dataset = Dataset.get_by_name(workspace, name=dataset_name)
-augment_dataset = Dataset.get_by_name(workspace, name=augment_dataset_name)
-TNLR_model = Dataset.get_by_name(workspace, name=TNLR_model_name)
-
-
-file_name = dataset.download()[0]
-if len(augment_dataset_name) > 0:
-    augment_file_name = augment_dataset.download()[0]
-TNLR_model_file_name = TNLR_model.download()[0]
-
-
-# for original data: CSV
-#df = pd.read_csv(file_name)
-# for files doamin data : tsv
-df = pd.read_csv(file_name, sep='\t', encoding="utf-8",
-    keep_default_na=False,
-    dtype={
-    'MessageId': object, 'Frequency': object, 'ConversationContext': object, 'SelectionIgnore': object})
-
-
-# for data augmentation
-# repeat 10 times
-if len(augment_dataset_name) > 0:
-    for i in range(20):
-        df2 = pd.read_csv(augment_file_name, sep='\t', encoding="utf-8",
-            keep_default_na=False,
-            dtype={
-            'MessageId': object, 'Frequency': object, 'ConversationContext': object, 'SelectionIgnore': object})
-
-        df = df.append(df2)
-
-
-# for debug
-print('df size {}'.format(df.shape))
-print('top head data {}'.format(df.head()))
+#print(index)
 
 
 ###############
 #local below
 ###############
 
-'''
+
 import torch
+import torch.nn as nn
 from torch.utils.data import TensorDataset, DataLoader
 from torch.utils.data.distributed import DistributedSampler
 
@@ -131,13 +108,49 @@ from transformers import get_linear_schedule_with_warmup
 from transformers import BatchEncoding
 from tokenizers import Encoding
 
-#import horovod.torch as hvd
+#import horovod.torch as hvdbnbbb
+
+
+
+# load arguments
+parser = argparse.ArgumentParser()
+parser.add_argument('--pretrain_model', type=str, dest='pretrain_model', default='TNLR')
+
+args = parser.parse_args()
+pretrain_model_name = args.pretrain_model
+
+
 
 #from azureml.core import Workspace, Run, Dataset
+#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TestSet.tsv', sep='\t', encoding="utf-8",
+#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TrainSet_01202021v1.tsv', sep='\t', encoding="utf-8",
+#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/open_ppt_augmentation.tsv', sep='\t', encoding="utf-8",
+#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TrainSet_small_01202021v1.tsv', sep='\t', encoding="utf-8",
+df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TrainSet_ten_01202021v1.tsv', sep='\t', encoding="utf-8",
+#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TrainSet_double_fake_annotation_01202021v1.tsv', sep='\t', encoding="utf-8",
+#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TrainSet_problematic_data.tsv', sep='\t', encoding="utf-8",
+#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/atis_test.tsv', sep='\t', encoding="utf-8",
+#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/atis_train.tsv', sep='\t', encoding="utf-8",
+#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/atis_train_ten.tsv', sep='\t', encoding="utf-8",
+    keep_default_na=False,
+    dtype={
+    'MessageId': object, 'Frequency': object, 'ConversationContext': object, 'SelectionIgnore': object})
 
-# ouput only three column
-df = pd.read_csv('E:/azure_ml_notebook/azureml_data/files_slot_training_small.tsv', sep='\t', encoding="utf-8")
-#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/files_slot_training_single.tsv', sep='\t', encoding="utf-8")
+
+# for data augmentation
+#for i in range(3):
+#    df2 = pd.read_csv('E:/azure_ml_notebook/azureml_data/open_ppt_augmentation.tsv', sep='\t', encoding="utf-8",
+#        keep_default_na=False,
+#        dtype={
+#        'MessageId': object, 'Frequency': object, 'ConversationContext': object, 'SelectionIgnore': object})
+
+#    df = df.append(df2)
+
+
+#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/atis_train_ten.tsv', sep='\t', encoding="utf-8",
+#    keep_default_na=False,
+#    dtype={
+#    'MessageId': object, 'Frequency': object, 'ConversationContext': object, 'SelectionIgnore': object})
 
 
 # for debug
@@ -159,30 +172,79 @@ print('top head data {}'.format(df.head()))
 #label_values = list(label_counts.index)
 #order = list(pd.DataFrame(df['Product_Label'].value_counts()).index)
 #label_values = [l for _,l in sorted(zip(order, label_values))]
-'''
+
 
 ###############
 #local above
 ###############
 
-##texts = df['query'].values
+
+#########################
+# torch tensor operation test above
+#########################
 
 
-##labels = df['domain'].values
-
-### for debug
-### label_counts  / label values are useless unless treating them as features
-###print('label_counts {}'.format(label_counts))
-###print('label_values after sorted {}'.format(label_values))
-##print('labels {}'.format(labels))
-
-
-
-#also huggingface
-#https://huggingface.co/transformers/model_doc/distilbert.html
-#tokenizer = DistilBertTokenizer.from_pretrained('distilbert-base-uncased', do_lower_case=True)
+#enc = BertTokenizer.from_pretrained("bert-base-uncased")
 fast_tokenizer = DistilBertTokenizerFast.from_pretrained('distilbert-base-uncased') # Load a pre-trained tokenizer
 
+# Tokenizing input text
+
+# save onnx
+# Tokenizing input text
+text = "a visually stunning rumination on love"
+fast_tokenized_batch : BatchEncoding = fast_tokenizer(text)
+fast_tokenized_text :Encoding  =fast_tokenized_batch[0]
+fast_tokenized_text_tokens_copy = fast_tokenized_text.tokens
+
+print("fast token ouput version 2 being used here: {}".format(fast_tokenized_text_tokens_copy))
+
+# Masking one of the input tokens
+# this is question answering so change it only a single sentence
+#masked_index = 8
+masked_index = 3
+fast_tokenized_text_tokens_copy[masked_index] = '[MASK]'
+indexed_tokens = fast_tokenizer.convert_tokens_to_ids(fast_tokenized_text_tokens_copy)
+
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+
+# for debug 
+print("device: {}".format('cuda' if torch.cuda.is_available() else 'cpu'))
+
+print("indexed_tokens: {}".format(indexed_tokens))
+segments_ids = [0]
+
+# Creating a dummy input
+# but you need to move tensors to GPU
+#https://github.com/huggingface/transformers/issues/227
+#tokens_tensor = torch.tensor([indexed_tokens])
+#segments_tensors = torch.tensor([segments_ids])
+print("create input for device: {}".format(device))
+
+# adding [] is the same as unqueeze(0) function
+tokens_tensor = torch.tensor([indexed_tokens]).to(device)
+
+segments_tensors = torch.tensor([segments_ids]).to(device)
+dummy_input = tokens_tensor
+
+# for deubg
+print("tokens_tensor shape: {}".format(tokens_tensor.shape))
+print("segments_tensor shape: {}".format(segments_tensors.shape))
+
+print("tokens_tensor: {}".format(tokens_tensor))
+print("segments_tensor: {}".format(segments_tensors))
+
+
+
+# Initializing the model with the torchscript flag
+# Flag set to True even though it is not necessary as this model does not have an LM Head.
+#config = BertConfig(vocab_size_or_config_json_file=32000, hidden_size=768,
+#    num_hidden_layers=12, num_attention_heads=12, intermediate_size=3072, torchscript=True)
+
+# Instantiating the model
+#model = BertModel(config)
+
+# The model needs to be in evaluation mode
+#model.eval()
 
 
 
@@ -191,6 +253,7 @@ from typing_extensions import TypedDict
 from typing import List,Any
 IntList = List[int] # A list of token_ids
 IntListList = List[IntList] # A List of List of token_ids, e.g. a Batch
+
 
 import itertools
 class LabelSet:
@@ -207,50 +270,17 @@ class LabelSet:
         self.labels_to_id["pad"] = pad_token_label_id
         self.ids_to_label[pad_token_label_id] = "pad"
 
-       
+        num = 0
+        for label in labels:
+            # using lower case to compare
+            if label.lower() == "o" or label.lower() == "pad":
+                print("skip:{}".format(label))
+                num = num +1 
+                continue
+            self.labels_to_id[label] = num
+            self.ids_to_label[num] = label
+            num = num +1 
 
-        if useIob == True:
-            num = 0
-            for label in labels:
-                # o/ pad are default tokens provided so skip
-                if label.lower() == "o" or label.lower() == "pad":
-                    print("skip:{}".format(label))
-                    num = num +1
-                    continue
-            
-                # UNK token do not create b-xxx /i -xxx token
-                if label.lower() == "unk":
-                    while num in self.ids_to_label.keys():
-                        num = num +1
-                    self.labels_to_id[label] = num
-                    self.ids_to_label[num] = label
-                    num = num +1
-                    continue
-
-                # for each valid label
-                # creage b-xxx / i-xxx tow slots
-                for variation_label in ['b-'+label, 'i-'+label]:
-                    # find num which is not being use
-                    while num in self.ids_to_label.keys():
-                        num = num +1
-                    self.labels_to_id[variation_label] = num
-                    self.ids_to_label[num] = variation_label
-                    num = num +1
-        else:
-            num = 0
-            for label in labels:
-                # using lower case to compare
-                # o/ pad are default tokens provided so skip
-                if label.lower() == "o" or label.lower() == "pad":
-                    print("skip:{}".format(label))
-                    num = num+1
-                    continue
-            
-                while num in self.ids_to_label.keys():
-                    num = num +1
-                self.labels_to_id[label] = num
-                self.ids_to_label[num] = label
-                num = num +1
 
         self.cutoff_length = 100;
         self.open_pattern = r'<(\w+)>';
@@ -261,19 +291,9 @@ class LabelSet:
 
         self.slot_list = [];
 
-        # create slot list by removing b- /i- from key
         for key, value in self.labels_to_id.items():
-            
-            if useIob == True:
-                if key.lower() == "o" or key.lower() == "pad" or key.lower() == "unk":
-                    self.slot_list.append('<' + key + '>');
-                    self.slot_list.append('</' + key + '>');
-                else:
-                    self.slot_list.append('<' + key.split('-')[1] + '>');
-                    self.slot_list.append('</' + key.split('-')[1] + '>');
-            else:
-                self.slot_list.append('<' + key + '>');
-                self.slot_list.append('</' + key + '>');
+            self.slot_list.append('<' + key + '>');
+            self.slot_list.append('</' + key + '>');
 
     def get_aligned_label_ids_from_aligned_label(self, aligned_labels):
         return list(map(self.labels_to_id.get, aligned_labels))
@@ -305,8 +325,6 @@ class LabelSet:
         return self.labels_to_id
 
 
-    # only output tokenized text string
-    '''
     def splitWithBert(self, annotation):
         preSplit = annotation.split();
         annotationArray = [];
@@ -317,22 +335,6 @@ class LabelSet:
             else:
                 annotationArray += self.tokenizer.tokenize(word);
         return annotationArray;
-    '''
-
-    # output tokenized text string and untokenized text string 
-    def splitWithBert(self, annotation):
-        preSplit = annotation.split();
-        annotationArray = [];
-        textArrayWoTokenizer = [];
-
-        for word in preSplit:
-            if any(slot in word for slot in self.slot_list):
-            #if any('<'+slot in word for slot in self.slolabels_to_id):
-                annotationArray.append(word);
-            else:
-                annotationArray += self.tokenizer.tokenize(word);
-                textArrayWoTokenizer.append(word)
-        return annotationArray, textArrayWoTokenizer;
 
     def generateTagString(self, annotation_filtered_array):
         if self.useIob:
@@ -343,9 +345,7 @@ class LabelSet:
                     annotation_filtered_array_iob.append(tag);
                     preTag = '';
                 else:
-                    # go with lower case
-                    #annotation_filtered_array_iob.append(('B-' if tag != preTag else 'I-') + tag);
-                    annotation_filtered_array_iob.append(('b-' if tag != preTag else 'i-') + tag);
+                    annotation_filtered_array_iob.append(('B-' if tag != preTag else 'I-') + tag);
                     preTag = tag;
 
             tag_string = " ".join(annotation_filtered_array_iob);
@@ -370,18 +370,9 @@ class LabelSet:
             return (None, False);
         slot = match[1].strip().lower();
         #if slot in self.slot_dict:
-
-
-        if self.useIob == True:
-            # return original slot 
-            if 'b-'+ slot in self.labels_to_id:
-                return (slot, True);
-            if 'i-'+ slot in self.labels_to_id:
-                return (slot, True);
-        else:
-            if slot in self.labels_to_id:
-                return (slot, True);
-            return (None, False);
+        if slot in self.labels_to_id:
+            return (slot, True);
+        return (None, False);
 
     def isClosePattern(self, word, tag):
         match = re.match(self.close_pattern, word);
@@ -417,69 +408,10 @@ class LabelSet:
         #  convert_examples_to_features
         # _create_examples
         try:
-
-            annotation_original = annotation_input.strip().lower();
-            annotation = self.simplePreprocessAnnotation(annotation_original);
-            annotation_array, text_Array_WoTokenizer = self.splitWithBert(annotation);
-            #annotation_array = self.splitWithBert(annotation_original);
-            annotation_result_arrry = [-1] * len(annotation_array);
-
-            # capture slot name and slot entity, store them in a dict;
-            # find out slot
-            i = 0;
-            while i < len(annotation_array):
-                (slot, isOpen) = self.isOpenPattern(annotation_array[i]);
-                if not isOpen:
-                    annotation_result_arrry[i] = 'O';
-                    i += 1;
-                else:
-                    j = i+1;
-                    while(not self.isClosePattern(annotation_array[j], slot)):
-                        annotation_result_arrry[j] = slot;
-                        j += 1;
-                    i = j+1;
-            
-            word_array = [word for idx, word in enumerate(annotation_array) if annotation_result_arrry[idx] != -1];
-            annotation_filtered_array = [word for idx, word in enumerate(annotation_result_arrry) if annotation_result_arrry[idx] != -1];
-            assert(len(word_array) == len(annotation_filtered_array));
-
-            # adding cutoff length for query
-            if len(word_array) == 0:
-                #continue;
-                return '', '', ''
-            elif len(word_array) == 1:
-                if all(i in string.punctuation for i in word_array):
-                    #continue;
-                    return '', '', ''
-
-            if len(word_array) > self.cutoff_length:
-                word_array = word_array[:self.cutoff_length];
-                annotation_filtered_array = annotation_filtered_array[:self.cutoff_length];
-
-            # write input string and tag list in file;
-            word_string = " ".join(word_array);
-            tag_string = self.generateTagString(annotation_filtered_array);
-
-            if not self.checkQueryValid(word_string):
-                #continue;
-                return '', '', ''
-
-            #feature_parse.append((word_string, tag_string));
-            return word_string, tag_string, " ".join(text_Array_WoTokenizer)
-
-
-            '''
             query_original = query.strip().lower();
             query_original_words = query_original.split()
-            #annotation_original = annotation_input.strip().lower();
-            #annotation_original_labels =  annotation_original.split()
-
-
             annotation_original = annotation_input.strip().lower();
-            annotation = self.simplePreprocessAnnotation(annotation_original);
-            annotation_array = self.splitWithBert(annotation);
-            annotation_result_arrry = [-1] * len(annotation_array);
-
+            annotation_original_labels =  annotation_original.split()
         
             assert len(query_original_words) == len(annotation_original_labels)
 
@@ -499,14 +431,11 @@ class LabelSet:
                 tokens.extend(word_tokens)
                 # do not use pad_token_label_id from ignore_index
                 #slot_labels_ids.extend([int(slot_label)] + [pad_token_label_id] * (len(word_tokens) - 1))
-
-                slot_labels.append('b-'+label)
-                for i in range(len(word_tokens)-1):
-                    slot_labels.append('i-'+label)
+                for i in range(len(word_tokens)):
+                    slot_labels.append(label)
 
 
             return ' '.join([str(token) for token in tokens]), ' '.join([str(slot_label) for slot_label in slot_labels])
-            '''
         except:
             # print stack traice
             traceback.print_exc()
@@ -524,7 +453,7 @@ class LabelSet:
         try:
             annotation_original = annotation_input.strip().lower();
             annotation = self.simplePreprocessAnnotation(annotation_original);
-            annotation_array, text_Array_WoTokenizer = self.splitWithBert(annotation);
+            annotation_array = self.splitWithBert(annotation);
             #annotation_array = self.splitWithBert(annotation_original);
             annotation_result_arrry = [-1] * len(annotation_array);
 
@@ -550,11 +479,11 @@ class LabelSet:
             # adding cutoff length for query
             if len(word_array) == 0:
                 #continue;
-                return '', '', ''
+                return '', ''
             elif len(word_array) == 1:
                 if all(i in string.punctuation for i in word_array):
                     #continue;
-                    return '', '', ''
+                    return '', ''
 
             if len(word_array) > self.cutoff_length:
                 word_array = word_array[:self.cutoff_length];
@@ -566,15 +495,15 @@ class LabelSet:
 
             if not self.checkQueryValid(word_string):
                 #continue;
-                return '', '', ''
+                return '', ''
 
             #feature_parse.append((word_string, tag_string));
-            return word_string, tag_string, " ".join(text_Array_WoTokenizer)
+            return word_string, tag_string
         except:
             # print stack traice
             traceback.print_exc()
             print("skipped query: {} and pair: {}".format(query, annotation_input))
-            return '', '', '' 
+            return '', '' 
             #continue;
 
 slots = [
@@ -682,8 +611,8 @@ slots = [
 slots_label_set = LabelSet(labels=map(str.lower,slots), 
                             tokenizer =fast_tokenizer, 
                             untagged_id = 2,
-                            pad_token_label_id = 0,
-                            useIob =True)
+                            pad_token_label_id = 0)
+
 
 class IntentLabelSet:
     def __init__(self, labels: List[str], outofdomain_id):
@@ -722,10 +651,9 @@ class IntentLabelSet:
     def get_outofdomain_label(self):
         return self.ids_to_label[self.outofdomain_id]
 
-
 # ? multi turn intent how to incorporate extra features is not yet decided
 intents = [
-    "x",
+    "X",
     "accept_meeting",
     "add_attendee",
     "add_contact",
@@ -1154,8 +1082,7 @@ class Evaluation():
         }
     '''
 
-    # manually add prefix for IOB to check
-    '''
+
     def get_slot_metrics_Iob(self, preds, golden):
         assert len(preds) == len(golden)
 
@@ -1197,77 +1124,6 @@ class Evaluation():
                     golden_labels_list[i].append('B-'+ golden_label.upper())
                 else:
                     golden_labels_list[i].append('I-'+ golden_label.upper())
-                prev_golden_label = golden_label
-
-
-        ret_dic = {}
-        classification_dic = classification_report(golden_labels_list, preds_labels_list, output_dict=True)
-
-        for key, value in classification_dic.items():
-
-            #micro avg       0.50      0.50      0.50         2
-            #macro avg       0.50      0.50      0.50         2
-            #weighted avg       0.50      0.50      0.50         2
-            # ignore these three keys
-
-            if key != 'micro avg' and key != 'macro avg' and key != 'weighted avg':
-                ret_dic[key] = value
-
-        ret_dic['slot_precision'] = precision_score(golden_labels_list, preds_labels_list, average=None)
-        ret_dic['slot_recall'] = recall_score(golden_labels_list, preds_labels_list, average=None)
-        ret_dic['slot_f1'] = f1_score(golden_labels_list,  preds_labels_list, average=None)
-
-
-        return ret_dic
-        #return {
-        #    "classfication_report": classification_report(golden_labels_list, preds_labels_list),
-        #    "slot_precision": precision_score(golden_labels_list, preds_labels_list, average=None),
-        #    "slot_recall": recall_score(golden_labels_list, preds_labels_list, average=None),
-        #    "slot_f1": f1_score(golden_labels_list,  preds_labels_list, average=None)
-        #}
-    '''
-
-    def get_slot_metrics_Iob(self, preds, golden):
-        assert len(preds) == len(golden)
-
-        # map list of id to label
-        preds_labels_list = [[] for _ in range(len(preds))]
-        golden_labels_list = [[] for _ in range(len(golden))]
-
-        # map from id to label
-        #for i in range(len(golden)):
-        #    for j in range(len(golden[i])):
-        #        preds_labels_list[i].append(slots_label_set.get_label(preds[i][j]))
-        #        golden_labels_list[i].append(slots_label_set.get_label(golden[i][j]))
-
-        # map from id to label
-        for i in range(len(golden)):
-            # using previous token to decide whether it should be B or I
-            # map label form lower case to upper case for seqeval pacakage
-            prev_pred_label = ""
-            prev_golden_label = ""
-            for j in range(len(golden[i])):
-
-                pred_label = slots_label_set.get_label(preds[i][j])
-                golden_label = slots_label_set.get_label(golden[i][j])
-
-                
-                # if new label start
-                if pred_label == slots_label_set.get_untagged_label() or pred_label == slots_label_set.get_pad_label():
-                    preds_labels_list[i].append(pred_label.upper())
-                elif pred_label != prev_pred_label:
-                    preds_labels_list[i].append(pred_label.upper())
-                else:
-                    preds_labels_list[i].append(pred_label.upper())
-                prev_pred_label = pred_label
-
-                # if new label start
-                if golden_label == slots_label_set.get_untagged_label() or golden_label == slots_label_set.get_pad_label():
-                    golden_labels_list[i].append(golden_label.upper())
-                elif golden_label != prev_golden_label:
-                    golden_labels_list[i].append(golden_label.upper())
-                else:
-                    golden_labels_list[i].append(golden_label.upper())
                 prev_golden_label = golden_label
 
 
@@ -1459,7 +1315,6 @@ class Evaluation():
         #    return results
 
 
-
 # for debug
 ##print('Original Text: {}'.format(texts[0]))
 ##print('Tokenized Text: {}'.format(tokenizer.tokenize(texts[0])))
@@ -1485,6 +1340,9 @@ labels_for_text_ids = []
 for i, row in df.iterrows():
     
 
+    #for debug
+    #print("conversation id {}".format(row['ConversationId']))
+
     query = row['MessageText']
 
     
@@ -1495,10 +1353,12 @@ for i, row in df.iterrows():
     slot = slot.strip()
 
 
+
     # ignore any empty queries
     if len(query.strip()) == 0 or len(intent.strip()) == 0 or len(slot) == 0:
         print("empty query skipped\t{}".format(row['ConversationId']))
         continue
+
 
     # ignore multi turn queries
     conversationContext = row['ConversationContext']
@@ -1518,6 +1378,10 @@ for i, row in df.iterrows():
         print("multiturn query\t{}\t{}".format(row['ConversationId'], query))
         continue
 
+
+    
+
+
     # filter invalid intent query
     try:
         intent_label_set.get_ids_from_label(intent.lower())
@@ -1529,13 +1393,12 @@ for i, row in df.iterrows():
             continue
         intent = intent_label_set.get_outofdomain_label()
 
+
     # invalid query will return empty string
     # here using annotation to extract the real query
-    #text, tag_string  = slots_label_set.preprocessRawAnnotation(query, slot)
-    #text, tag_string  = slots_label_set.preprocessRawAnnotation(query, slot, useIob=True)
-    text, tag_string, text_WoTokenizer  = slots_label_set.preprocessRawAnnotation(query, slot, useIob=True)
+    text, tag_string  = slots_label_set.preprocessRawAnnotation(query, slot)
 
-    if text == '' and tag_string == '' and text_WoTokenizer == '':
+    if text == '' and tag_string == '':
         print("query_with_slot_issue\t{}\t{}".format(query, slot))
         continue
 
@@ -1561,8 +1424,7 @@ for i, row in df.iterrows():
 
 
     # replcae by class's output word string
-    #text_id = fast_tokenizer.encode(text, max_length=300, padding='max_length', truncation=True)
-    text_id = fast_tokenizer.encode(text_WoTokenizer, max_length=300, padding='max_length', truncation=True)
+    text_id = fast_tokenizer.encode(text, max_length=300, padding='max_length', truncation=True)
     text_ids.append(text_id)
 
 
@@ -1598,17 +1460,9 @@ for i, row in df.iterrows():
     #print("slot: {}".format(labels_for_text_id))
 
 
-    # for debug
-    #print("text:{}".format(text))
-    #print("text id :{}".format(text_id))
-    #print("slot: {}".format(labels_for_text_id))
 
 num_slot_labels = len(set(slots_label_set.get_labels()))
 num_intent_labels = len(set(intent_label_set.get_labels()))
-
-# for debug
-print('num_slot_labels: {}'.format(num_slot_labels))
-print('num_intent_labels: {}'.format(num_intent_labels))
 
 ### for debug
 #print('text_ids[0]: {}'.format(text_ids[0]))
@@ -1699,7 +1553,6 @@ print('val_m dimen {}'.format(val_m.shape))
 
 
 
-
 ###############
 # check gpu below
 ###############
@@ -1713,69 +1566,32 @@ gpu_available = torch.cuda.is_available()
 
 
 ###############
-# hvd initilization below
+#local training data setup in learning below
 ###############
-
-#https://zhuanlan.zhihu.com/p/76638962
-#buer distributed learning
-hvd.init()
-
-if gpu_available:
-    print("gpu_availabe: {}".format(gpu_available))
-    torch.cuda.set_device(hvd.local_rank())
-
-
-
-
-###############
-# hvd initilization above
-###############
-
-
-
-
-
-
-###############
-#remote training data setup in learning below
-###############
-
 
 # kwargs = {'num_workers': 1, 'pin_memory': True} if gpu_available else {}
-
-
-
+#batch_size = 32
+batch_size = 6
+# https://pytorch.org/docs/stable/data.html
+# for local remove repliaces rank optional arigment
+# also remove distributedSampler
+#train_data = TensorDataset(train_x, train_m, train_y)
+#train_dataloader = DataLoader(train_data, sampler=None, batch_size=batch_size)
 train_data = TensorDataset(train_x, train_m, train_y, train_z)
-train_sampler = DistributedSampler(train_data, num_replicas=hvd.size(), rank=hvd.rank())
-train_dataloader = DataLoader(train_data, sampler=train_sampler, batch_size=batch_size)
-
+train_dataloader = DataLoader(train_data, sampler=None, batch_size=batch_size)
+#val_data = TensorDataset(val_x, val_m, val_y)
+#val_dataloader = DataLoader(val_data, sampler=None, batch_size=batch_size)
 val_data = TensorDataset(val_x, val_m, val_y, val_z)
-val_sampler = DistributedSampler(val_data, num_replicas=hvd.size(), rank=hvd.rank())
-val_dataloader = DataLoader(val_data, sampler=val_sampler, batch_size=batch_size)
-
-
+val_dataloader = DataLoader(val_data, sampler=None, batch_size=batch_size)
 
 ###############
-#remote training data setup in learning below
+#local training data setup in learning above
 ###############
 
 
 
-
-
-###############
-# model definition below
-###############
-
-#Here we instantiate our model class. 
-#We use a compact version, that is trained through model distillation from a base BERT model and modified to include a classification layer at the output. This compact version has 6 transformer layers instead of 12 as in the original BERT model.
-# this class class DistilBertForSequenceClassification(DistilBertPreTrainedModel):
-# 
-#https://huggingface.co/transformers/v1.2.0/_modules/pytorch_transformers/modeling_distilbert.html
 #model = DistilBertForTokenClassification.from_pretrained('distilbert-base-uncased', num_labels=num_labels,
 #                                                            output_attentions=False, output_hidden_states=False)
-
-
 
 '''
 #class DistilBertForTokenClassificationFilesDomain(DistilBertPreTrainedModel):
@@ -1903,7 +1719,7 @@ class DistilBertForTokenClassificationFilesDomain(DistilBertPreTrainedModel):
 
         # version 3
         #slot_label_tensor = torch.argmax(logits.view(-1, self.num_labels), dim=1)
-        #return ((loss,) + output)  
+        #return ((loss,) + output) 
 '''       
 
 '''
@@ -1932,11 +1748,9 @@ class DistilBertForTokenClassificationFilesDomain(BertForTokenClassification):
 
 
         slot_output = torch.argmax(logits, -1);
-        # need to be tuple if multiple arguments
-        #return loss, slot_output
-        #return (loss, slot_output)
-        return slot_output
+        return loss, slot_output;
 '''
+
 '''
 class DistilBertForTokenClassificationFilesDomain(BertForTokenClassification):
 
@@ -2270,10 +2084,34 @@ class MDMTVSTNLR(BertPreTrainedModel):
 
         # if either one is none, then do inference
         if intent_label_ids is None or slot_label_ids is None:
+            # output intent label as weight
             intent_output = torch.argmax(intent_logits, -1);
             slot_output = torch.argmax(slot_logits, -1);
 
+            # QAS
+            # for domain, it needs to have probabilty
+            #    files_enus_mv7_domain_svm_score (tag: 1, string: 0)
+            #            0[-1,-1]=0.1968164
+
+            # for intent
+            #                files_enus_mv7_intent_svm_score (tag: 11, string: 0)
+            #            0[-1,-1]=2.2269628
+            #            1[-1,-1]=-1.5521804
+            #            2[-1,-1]=-1.6113045
+            #            3[-1,-1]=-1.0233102
+            #            4[-1,-1]=-1.3408698
+            #            5[-1,-1]=-1.8470569
+            #            6[-1,-1]=-1.0570247
+            #            7[-1,-1]=-1.167596
+            #            8[-1,-1]=-1.8137677
+            #            9[-1,-1]=-0.99997
+            #            10[-1,-1]=-1.389961
+
+
             intent_prob = intent_logits.softmax(dim=1)
+            #indices = torch.tensor([1]).to(device)
+            # this is for domain the second since in domian = 1
+            #temp = torch.index_select(intent_logits, 1, indices),
 
             #return intent_output, slot_output
             return intent_output, slot_output, intent_prob
@@ -2281,20 +2119,107 @@ class MDMTVSTNLR(BertPreTrainedModel):
             return total_intent_loss, total_slot_loss
 
 
-###############
-# model definition above
-###############
+
+'''
+#Here we instantiate our model class. 
+#We use a compact version, that is trained through model distillation from a base BERT model and modified to include a classification layer at the output. This compact version has 6 transformer layers instead of 12 as in the original BERT model.
+# this class class DistilBertForSequenceClassification(DistilBertPreTrainedModel):
+# 
+#https://huggingface.co/transformers/v1.2.0/_modules/pytorch_transformers/modeling_distilbert.html
+# replace with my defined class but the same parameters
+model = DistilBertForTokenClassificationFilesDomain.from_pretrained('distilbert-base-uncased', num_labels=num_labels,
+                                                            output_attentions=False, output_hidden_states=False)
+
+'''
 
 
-###############
-# load model below
-###############
 
+##################################################
+# load TNLR model below
+##################################################
+
+'''
+output_dir = '../TNLR/'
+import os, argparse
+# if folder does not exist then create
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+
+
+
+
+# save your training arguments together with the trained model
+# originlal those are from input argument
+# here setup value to mimic
+# learning_rate = args.learning_rate
+# adam_epsilon = args.adam_epsilon
+
+# load model back
+# you need to know exact class for each one
+# it expects file like pytorch_model.bin
+# <failed >version 1: so rename *pt to see if it wokrs. it will complaint 
+#torch.nn.modules.module.ModuleAttributeError: 'DistilBertForTokenClassification' object has no attribute 'keys'
+# version2 : load pytroch_model.bin (not sure if it is after trained or not)
+#model = DistilBertForTokenClassification.from_pretrained(output_dir)
+#model = DistilBertForTokenClassificationFilesDomain.from_pretrained(output_dir)
+
+
+from transformers import BertConfig;
+bert_config = BertConfig();
+# no need to provide level for bertPreTrainModel
+#bert_config.num_labels = num_labels;
+bert_config.num_hidden_layers = 3
+bert_config.output_attentions = False;
+bert_config.output_hidden_states = False;
+
+
+
+#model = DistilBertForTokenClassificationFilesDomain.from_pretrained(output_dir+'tnlrv3-base.pt', num_labels=num_labels,
+#                                                            output_attentions=False, output_hidden_states=False)
+
+# minic yue is ok to load
+# if no providing config, it will fail...
+# it seems config.json it not important and it can still be loaded
+#model = DistilBertForTokenClassificationFilesDomain.from_pretrained(output_dir+'tnlrv3-base.pt')
+#model = DistilBertForTokenClassificationFilesDomain.from_pretrained(output_dir+'tnlrv3-base.pt', config=bert_config)
+
+
+model = DistilBertForTokenClassificationFilesDomain.from_pretrained(output_dir+'tnlrv3-base.pt', 
+    config=bert_config,
+    num_intent_labels=num_intent_labels,
+    num_slot_labels=num_slot_labels)
+
+# load tokenizer back
+# you need to know exact class for each one
+#fast_tokenizer = DistilBertTokenizerFast.from_pretrained('distilbert-base-uncased') # Load a pre-trained tokenizer
+
+# copy model to  GPU/CPU to work
+model.to(device)
+
+
+print("load model done: !")
+'''
+
+##################################################
+# load TNLR model above
+##################################################
+
+
+
+##################################################
+# load remote downloaded / local trained model below
+##################################################
 
 
 
 if pretrain_model_name == 'distilbert-base-uncased':
 
+    output_dir = '../output_distilbert/'
+
+    import os, argparse
+    # if folder does not exist then create
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
 
     from transformers import DistilBertConfig
     distilbert_config = DistilBertConfig();
@@ -2315,6 +2240,16 @@ if pretrain_model_name == 'distilbert-base-uncased':
 
 
 elif pretrain_model_name == 'bert-base-uncased':
+
+
+    output_dir = '../output_bert/'
+
+    import os, argparse
+    # if folder does not exist then create
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
+
     from transformers import BertConfig;
     bert_config = BertConfig();
     #no need to provide level for bertPreTrainModel
@@ -2324,487 +2259,269 @@ elif pretrain_model_name == 'bert-base-uncased':
     bert_config.output_hidden_states = False;
 
 
-
-    # default TNLR
-    # load TNLR model remotely
-    print('load bert model with mode {}'.format(pretrain_model_name))
-    model = MDMTVSBert.from_pretrained(pretrain_model_name, 
+    print('load bert model with path {}'.format(pretrain_model_name))
+    model = MDMTVSBert.from_pretrained(output_dir+'pytorch_model.bin', 
         config=bert_config,
-        num_intent_labels=num_intent_labels,	
-        num_slot_labels=num_slot_labels)    
-
-else:
-    from transformers import BertConfig;
-    bert_config = BertConfig();
-    #no need to provide level for bertPreTrainModel
-    #bert_config.num_labels = num_labels;
-    bert_config.num_hidden_layers = 3
-    bert_config.output_attentions = False;
-    bert_config.output_hidden_states = False;
-
-
-
-    # default TNLR
-    # load TNLR model remotely
-    print('load TNLR model with path {}'.format(TNLR_model_file_name))
-    model = MDMTVSTNLR.from_pretrained(TNLR_model_file_name, 
-        config=bert_config,
-        num_intent_labels=num_intent_labels,	
+        num_intent_labels=num_intent_labels,
         num_slot_labels=num_slot_labels)
 
 
-    # load TNLR model locally
-    #print('load TNLR model with path {}'.format('../TNLR/'+'tnlrv3-base.pt'))
-    #model = MDMTVSTNLR.from_pretrained('../TNLR/'+'tnlrv3-base.pt', config=bert_config)
+else:
 
-print('load model done')
 
-###############
-# load model above
-###############
+    output_dir = '../output_TNLR/'
 
+    import os, argparse
+    # if folder does not exist then create
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
 
 
+    from transformers import BertConfig;
+    bert_config = BertConfig();
+    #no need to provide level for bertPreTrainModel
+    #bert_config.num_labels = num_labels;
+    bert_config.num_hidden_layers = 3
+    bert_config.output_attentions = False;
+    bert_config.output_hidden_states = False;
 
 
+    print('load TNLR model with path {}'.format(pretrain_model_name))
+    model = MDMTVSTNLR.from_pretrained(output_dir+'pytorch_model.bin', 
+        config=bert_config,
+        num_intent_labels=num_intent_labels,
+        num_slot_labels=num_slot_labels)
 
 
-###############
-# move model to device below
-###############
+# copy model to  GPU/CPU to work
+model.to(device)
 
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-# for debug 
-print("device: {}".format('cuda' if torch.cuda.is_available() else 'cpu'))
+print("load model done: !")
 
-model = model.to(device)
 
+##################################################
+# load remote downloaded / local trained model below
+##################################################
 
-###############
-# move model to  device above
-###############
 
+##################################################
+# load untrained model and Store model in pytorch
+##################################################
+'''
+from transformers import DistilBertConfig
+distilbert_config = DistilBertConfig();
+#no need to provide level for bertPreTrainModel
+#bert_config.num_labels = num_labels;
+distilbert_config.n_layers = 3
+#distilbert_config.output_attentions = False;
+#distilbert_config.output_hidden_states = False;
+# load distillbert  model
+print('load distill bert model with mode {}'.format(pretrain_model_name))
+#model = MDMTVSHuggingFaceDistillBERT.from_pretrained('distilbert-base-uncased', num_labels=num_labels,
+#                                                            output_attentions=False, output_hidden_states=False)
+model = MDMTVSHuggingFaceDistillBERT.from_pretrained(pretrain_model_name,
+        config=distilbert_config,
+        num_intent_labels=num_intent_labels,	
+        num_slot_labels=num_slot_labels)
+'''
 
-###############
-# remote traningi parameter setup below
-###############
-
-#we print the model architecture and all model learnable parameters.
-def count_parameters(model):
-    return sum(p.numel() for p in model.parameters() if p.requires_grad)
-
-print('Number of trainable parameters:', count_parameters(model), '\n', model)
-
-# This code is taken from:
-# https://github.com/huggingface/transformers/blob/5bfcd0485ece086ebcbed2d008813037968a9e58/examples/run_glue.py#L102
-# Don't apply weight decay to any parameters whose names include these tokens.
-# (Here, the BERT doesn't have `gamma` or `beta` parameters, only `bias` terms)
-no_decay = ['bias', 'LayerNorm.weight']
-# Separate the `weight` parameters from the `bias` parameters. 
-# - For the `weight` parameters, this specifies a 'weight_decay_rate' of 0.01. (means multiply by 0.99)
-# - For the `bias` parameters, the 'weight_decay_rate' is 0.0. 
-optimizer_grouped_parameters = [
-    # Filter for all parameters which *don't* include 'bias', 'gamma', 'beta'.
-    {'params': [p for n, p in model.named_parameters() if not any(nd in n for nd in no_decay)],
-     'weight_decay_rate': 0.2},
-     # Filter for parameters which *do* include those.
-    {'params': [p for n, p in model.named_parameters() if any(nd in n for nd in no_decay)],
-     'weight_decay_rate': 0.0}
-]
-
-optimizer = AdamW(optimizer_grouped_parameters, lr=learning_rate, eps=adam_epsilon)
-compression = hvd.Compression.fp16
-optimizer = hvd.DistributedOptimizer(optimizer,
-                                     named_parameters=model.named_parameters(),
-                                     compression=compression)
-# optimizer = hvd.DistributedOptimizer(optimizer,
-#                                      named_parameters=model.named_parameters())
-
-total_steps = len(train_dataloader) * num_epochs
-scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=0, num_training_steps=total_steps)
-
-hvd.broadcast_parameters(model.state_dict(), root_rank=0)
-hvd.broadcast_optimizer_state(optimizer, root_rank=0)
-
-def epoch_time(start_time, end_time):
-    elapsed_time = end_time - start_time
-    elapsed_mins = int(elapsed_time / 60)
-    elapsed_secs = int(elapsed_time - (elapsed_mins * 60))
-    return elapsed_mins, elapsed_secs
-
-def metric_average(val, name):
-    tensor = torch.tensor(val)
-    avg_tensor = hvd.allreduce(tensor, name=name)
-    return avg_tensor.item()
-
-#seed_val = 111
-# pass as arg parameter
-print("seed val int:{}".format(seed_val_int))
-random.seed(seed_val_int)
-np.random.seed(seed_val_int)
-torch.manual_seed(seed_val_int)
-torch.cuda.manual_seed_all(seed_val_int)
-
-train_losses = []
-val_losses = []
-num_mb_train = len(train_dataloader)
-num_mb_val = len(val_dataloader)
-
-if num_mb_val == 0:
-    num_mb_val = 1
-
+##################################################
+# load untrained model and Store model in pytorch
+##################################################
 
-###############
-# remote traningi parameter setup above
-###############
-
-# for debug
-#for i in range(len(val_x)):
-#    for j in range(len(val_x[i])):
-#        print(val_x[i][j], end=' ')
-#    print()
-
-# https://zhuanlan.zhihu.com/p/143209797
-# this link has similar process as the folloiwngf code for each function
-for n in range(num_epochs):
-    # Reset the total loss for this epoch.
-    train_loss = 0
-    val_loss = 0
-    # Measure how long the training epoch takes.
-    start_time = time.time()
-    
-    # For each batch of training data...
-    for k, (mb_x, mb_m, mb_y, mb_z) in enumerate(train_dataloader):
-
-        # Always clear any previously calculated gradients before performing a
-        # backward pass. PyTorch doesn't do this automatically because 
-        # accumulating the gradients is "convenient while training RNNs". 
-        # (source: https://stackoverflow.com/questions/48001598/why-do-we-need-to-call-zero-grad-in-pytorch)
-        optimizer.zero_grad()
-
-        # Put the model into training mode. Don't be mislead--the call to 
-        # `train` just changes the *mode*, it doesn't *perform* the training.
-        # `dropout` and `batchnorm` layers behave differently during training
-        # vs. test (source: https://stackoverflow.com/questions/51433378/what-does-model-train-do-in-pytorch)
-        model.train()
-        
-        mb_x = mb_x.to(device)
-        mb_m = mb_m.to(device)
-        mb_y = mb_y.to(device)
-        mb_z = mb_z.to(device)
-        
-
-        # Perform a forward pass (evaluate the model on this training batch).
-        # The documentation for this `model` function is here: 
-        # https://huggingface.co/transformers/v2.2.0/model_doc/bert.html#transformers.BertForSequenceClassification
-        # It returns different numbers of parameters depending on what arguments
-        # arge given and what flags are set. For our useage here, it returns
-        # the loss (because we provided labels) and the "logits"--the model
-        # outputs prior to activation.
-
-
-        #  for class output 
-        #outputs = model(mb_x, attention_mask=mb_m, labels=mb_y)
-        #loss = outputs[0]
-
-
-        # for training with label
-        # only loss output being provide
-        intent_loss, slot_loss = model(mb_x, attention_mask=mb_m, 
-        intent_label_ids=mb_y,
-        slot_label_ids=mb_z
-        )
-
-
-        # Perform a backward pass to calculate the gradients.
-        # #loss.backward()	
-        # for intent and slot loss how to backword	
-        # yue sums up and use them to backward	
-        # ? not sure how it does	
-        total_loss = intent_loss + slot_loss	
-        total_loss.backward()
-
-        # Clip the norm of the gradients to 1.0.
-        # This is to help prevent the "exploding gradients" problem.
-        torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
-
-        # Update parameters and take a step using the computed gradient.
-        # The optimizer dictates the "update rule"--how the parameters are
-        # modified based on their gradients, the learning rate, etc.
-        optimizer.step()
-        # Update the learning rate.
-        scheduler.step()
-
-        # Accumulate the training loss over all of the batches so that we can
-        # calculate the average loss at the end. `loss` is a Tensor containing a
-        # single value; the `.item()` function just returns the Python value 
-        # from the tensor.        
-        #train_loss += loss.data / num_mb_train
-        train_loss += total_loss.data / num_mb_train
-    
-    print ("\nTrain loss after itaration %i: %f" % (n+1, train_loss))
-    avg_train_loss = metric_average(train_loss, 'avg_train_loss')
-    print ("Average train loss after iteration %i: %f" % (n+1, avg_train_loss))
-    train_losses.append(avg_train_loss)
-    
-
-    # initialize evaluation test object
-    evaluation_test = Evaluation(slots_label_set, intent_label_set)
-    evaluation_test_iob = Evaluation(slots_label_set, intent_label_set, useIob=True)
-
-    # Tell pytorch not to bother with constructing the compute graph during
-    # the forward pass, since this is only needed for backprop (training).
-    with torch.no_grad():
-       # Put the model in evaluation mode--the dropout layers behave differently
-       # during evaluation.
-        model.eval()
-        
-        for k, (mb_x, mb_m, mb_y, mb_z) in enumerate(val_dataloader):
-            mb_x = mb_x.to(device)
-            mb_m = mb_m.to(device)
-            mb_y = mb_y.to(device)
-            mb_z = mb_z.to(device)
-        
-            # in forward function 
-            # outputs[0] is logic
-            #if not return_dict:
-            #output = (start_logits, end_logits) + distilbert_output[1:]
-            #return ((total_loss,) + output) if total_loss is not None else output
-
-            #return QuestionAnsweringModelOutput(
-            #loss=total_loss,
-            #start_logits=start_logits,
-            #end_logits=end_logits,
-            #hidden_states=distilbert_output.hidden_states,
-            #attentions=distilbert_output.attentions,
-            #)
-
-
-            # for class defintion
-            # Forward pass, calculate logit predictions.
-            # The documentation for this `model` function is here: 
-            # https://huggingface.co/transformers/v2.2.0/model_doc/bert.html#transformers.BertForSequenceClassification
-            # Get the "logits" output by the model. The "logits" are the output
-            # values prior to applying an activation function like the softmax.
-            ##outputs = model(mb_x, attention_mask=mb_m, labels=mb_y)
-            ##loss = outputs[0]
-            ##val_loss += loss.data / num_mb_val
-            # for debug
-            ##print('evaluate label result {}'.format(outputs.logits))
-
-            # using yue's class with multiple output 
-            ##loss, slot_output = model(mb_x, attention_mask=mb_m, labels=mb_y)
-            ##val_loss += loss.data / num_mb_val
-            # for debug
-            #print('evaluate label result {}'.format(slot_output))
-
-
-            # using yue's class with single output 
-            # and make loss zero
-            ##slot_output = model(mb_x, attention_mask=mb_m, labels=mb_y)
-            ##val_loss += 0 / num_mb_val
-            # for debug
-            #print('evaluate label result {}'.format(slot_output))
-
-
-            # using yue's class also if-else
-            # for validating, no label is provided so it will output slot label
-            # and make loss zero
-            #intent_output, slot_output = model(mb_x, attention_mask=mb_m)
-            intent_output,slot_output,intent_prob = model(mb_x, attention_mask=mb_m)
-            evaluation_test.add_intent_pred_and_golden(intent_output, mb_y)	
-            evaluation_test.add_slot_pred_and_golden(slot_output, mb_z)	
-            evaluation_test_iob.add_intent_pred_and_golden(intent_output, mb_y)	
-            evaluation_test_iob.add_slot_pred_and_golden(slot_output, mb_z)	
-            val_loss += 0 / num_mb_val
-            # for debug
-            #print('evaluate label result {}'.format(slot_output))
-            
-        print ("Validation loss after itaration %i: %f" % (n+1, val_loss))
-        avg_val_loss = metric_average(val_loss, 'avg_val_loss')
-        print ("Average validation loss after iteration %i: %f" % (n+1, avg_val_loss))
-        val_losses.append(avg_val_loss)
-
-        #print(' Validation metric after iteration {} : {}'.format(n+1, evaluation_test.compute_metrics()))
-        #print(' Validation metric wo pad after iteration {} : {}'.format(n+1, evaluation_test.compute_metrics(ignore_pad=True)))
-        #print(' Validation metric Iob after iteration {} : {}'.format(n+1, evaluation_test_iob.compute_metrics()))
-        print(' Validation metric Iob wo pad after iteration {} : {}'.format(n+1, evaluation_test_iob.compute_metrics(ignore_pad=True)))
-    
-    end_time = time.time()
-    epoch_mins, epoch_secs = epoch_time(start_time, end_time)
-    print(f'Time: {epoch_mins}m {epoch_secs}s')
-
-
-
-# ? not sure why needs checking rank
-if hvd.rank() == 0:
-    
-    out_dir = './outputs'
-    
-    model_to_save = model.module if hasattr(model, 'module') else model
-    model_to_save.save_pretrained(out_dir)
-    fast_tokenizer.save_pretrained(out_dir)
-
-    with open(out_dir + '/train_losses.pkl', 'wb') as f:
-        joblib.dump(train_losses, f)
-
-    with open(out_dir + '/val_losses.pkl', 'wb') as f:
-        joblib.dump(val_losses, f)
-
-
-    #add to save output model in pt
-    # it might be redundant since it might be the same as model_to_save.save_pretrained(out_dir)
-    # but right know i use model.pt to register in azure
-    torch.save(model_to_save, os.path.join(out_dir, 'model.pt'))
-
-    run.log('validation loss', avg_val_loss)
-
-    
-    # save onnx
-    # Tokenizing input text
-    text = "a visually stunning rumination on love"
-    fast_tokenized_batch : BatchEncoding = fast_tokenizer(text)
-    fast_tokenized_text :Encoding  =fast_tokenized_batch[0]
-    fast_tokenized_text_tokens_copy = fast_tokenized_text.tokens
-
-    print("fast token ouput version 2 being used here: {}".format(fast_tokenized_text_tokens_copy))
-
-    # Masking one of the input tokens
-    # this is question answering so change it only a single sentence
-    #masked_index = 8
-    masked_index = 3
-    fast_tokenized_text_tokens_copy[masked_index] = '[MASK]'
-    indexed_tokens = fast_tokenizer.convert_tokens_to_ids(fast_tokenized_text_tokens_copy)
-
-    # for debug 
-    print("fast token ouput version 2 being used here after replace: {}".format(fast_tokenized_text_tokens_copy))
-
-    print("indexed_tokens: {}".format(indexed_tokens))
-    segments_ids = [0]
-
-    # Creating a dummy input
-    # but you need to move tensors to GPU
-    #https://github.com/huggingface/transformers/issues/227
-    #tokens_tensor = torch.tensor([indexed_tokens])
-    #segments_tensors = torch.tensor([segments_ids])
-    print("create input for device: {}".format(device))
-
-    # adding [] is the same as unqueeze(0) function
-    tokens_tensor = torch.tensor([indexed_tokens]).to(device)
-
-    segments_tensors = torch.tensor([segments_ids]).to(device)
-    dummy_input = tokens_tensor
-
-    # for deubg
-    print("tokens_tensor shape: {}".format(tokens_tensor.shape))
-    print("segments_tensor shape: {}".format(segments_tensors.shape))
-
-    print("tokens_tensor: {}".format(tokens_tensor))
-    print("segments_tensor: {}".format(segments_tensors))
-
-    #torch.onnx.export(model_to_save, 
-    #    dummy_input, out_dir + '/traced_distill_bert.onnx', 
-    #    verbose=True)
-
-
-    # using bert and no return class, having mutple outputs
-    torch.onnx.export(model=model_to_save,
-        args=(dummy_input),
-        f=out_dir + '/traced_distill_bert.onnx.bin',
-        input_names = ["input_ids"],
-        verbose=True,
-        # here logits is not internal logits means
-        # ? change it to a better name like slot_output in the future
-        #output_names = ["logits"],
-        #output_names = ["slot_label_tensor"],
-        #output_names = ["intent_output", "slot_output"],
-        output_names = ['intent_output', 'slot_output','intent_prob'],
-        #output_names = ["loss","slot_output"],
-        do_constant_folding = True,
-        opset_version=11,
-        #dynamic_axes = {'input_ids': {1: '?'}, 'logits': {1: '?'}}
-        #dynamic_axes = {'input_ids': {1: '?'}, 'slot_label_tensor': {1: '?'}}
-        #dynamic_axes = {'input_ids': {1: '?'}, 'intent_output': {1: '?'}, 'slot_output': {1: '?'}}
-        dynamic_axes = {'input_ids': {1: '?'}, 'intent_output': {1: '?'}, 'slot_output': {1: '?'},'intent_prob': {1: '?'}}
-        #dynamic_axes = {'input_ids': {1: '?'}, 'loss': {1: '?'}, 'slot_output': {1: '?'}}
-        )
 
+
+##################################################
+# load trained onnx model (CPU)
+##################################################
+'''
+#https://github.com/onnx/tutorials
+# https://www.onnxruntime.ai/python/auto_examples/plot_load_and_predict.html#
+
+
+# need to 'pip install onnx'
+# https://thenewstack.io/tutorial-using-a-pre-trained-onnx-model-for-inferencing/
+import onnx
+import onnxruntime
+# https://pytorch.org/tutorials/advanced/super_resolution_with_onnxruntime.html
+
+model = onnx.load("E:\\azure_ml_notebook\\outputs_temp_load_v1_02142021v1\\traced_distill_bert.onnx.bin")
+onnx.checker.check_model(model)
+'''
+
+
+
+##################################################
+# training model below, not yet finisihed, just placeholder
+##################################################
 
 '''
-# for local test
-if True:
+print("training model ....")
 
-    out_dir = './outputs'
-    
-    model_to_save = model.module if hasattr(model, 'module') else model
-    
-    # save onnx
-    # Tokenizing input text
-    text = "a visually stunning rumination on love"
-    fast_tokenized_batch : BatchEncoding = fast_tokenizer(text)
-    fast_tokenized_text :Encoding  =fast_tokenized_batch[0]
-    fast_tokenized_text_tokens_copy = fast_tokenized_text.tokens
+test_input_tensor = torch.tensor([[101, 12453, 19453, 6254, 102]])
+at_mask_tensor = torch.tensor([[1, 1, 1, 1, 1]])
 
-    print("fast token ouput version 2 being used here: {}".format(fast_tokenized_text_tokens_copy))
+intent_label_mask_tensor = torch.tensor([[1]])
+slot_label_mask_tensor = torch.tensor([[0, 0, 6, 0, 0]])
+with torch.no_grad():
+    model.eval()
 
-    # Masking one of the input tokens
-    # this is question answering so change it only a single sentence
-    #masked_index = 8
-    masked_index = 3
-    fast_tokenized_text_tokens_copy[masked_index] = '[MASK]'
-    indexed_tokens = fast_tokenizer.convert_tokens_to_ids(fast_tokenized_text_tokens_copy)
-
-    # for debug 
-    print("fast token ouput version 2 being used here after replace: {}".format(fast_tokenized_text_tokens_copy))
-
-    print("indexed_tokens: {}".format(indexed_tokens))
-    segments_ids = [0]
-
-    # Creating a dummy input
-    # but you need to move tensors to GPU
-    #https://github.com/huggingface/transformers/issues/227
-    #tokens_tensor = torch.tensor([indexed_tokens])
-    #segments_tensors = torch.tensor([segments_ids])
-    print("create input for device: {}".format(device))
-
-    # adding [] is the same as unqueeze(0) function
-    tokens_tensor = torch.tensor([indexed_tokens]).to(device)
-
-    segments_tensors = torch.tensor([segments_ids]).to(device)
-    dummy_input = tokens_tensor
-
-    # for deubg
-    print("tokens_tensor shape: {}".format(tokens_tensor.shape))
-    print("segments_tensor shape: {}".format(segments_tensors.shape))
-
-    print("tokens_tensor: {}".format(tokens_tensor))
-    print("segments_tensor: {}".format(segments_tensors))
-
-    
-
-    #torch.onnx.export(model_to_save, 
-    #    dummy_input, out_dir + '/traced_distill_bert.onnx', 
-    #    verbose=True)
-
-
-    # using bert and no return class, having mutiple outputs
-    torch.onnx.export(model=model,
-        args=(dummy_input),
-        f=out_dir + '/traced_distill_bert.onnx.bin',
-        input_names = ["input_ids"],
-        verbose=True,
-        # here logits is not internal logits means
-        # ? change it to a better name like slot_output in the future
-        #output_names = ["logits"],
-        #output_names = ["slot_label_tensor"],
-        output_names = ["slot_output"],
-        #output_names = ["loss","slot_output"],
-        do_constant_folding = True,
-        opset_version=11,
-        #dynamic_axes = {'input_ids': {1: '?'}, 'logits': {1: '?'}}
-        #dynamic_axes = {'input_ids': {1: '?'}, 'slot_label_tensor': {1: '?'}}
-        dynamic_axes = {'input_ids': {1: '?'}, 'slot_output': {1: '?'}}
-        #dynamic_axes = {'input_ids': {1: '?'}, 'loss': {1: '?'}, 'slot_output': {1: '?'}}
+    # if going with seperate outputs
+    intent_loss,slot_loss = model(test_input_tensor, attention_mask=at_mask_tensor, 
+        intent_label_ids=intent_label_mask_tensor,
+        slot_label_ids=slot_label_mask_tensor
         )
+
+    print("intent_loss: {}".format(intent_loss))
+    print("slot_loss: {}".format(slot_loss))
+
+print("training model done")
 '''
+
+##################################################
+# training model above
+##################################################
+
+
+##################################################
+# evaluate model - single query below
+##################################################
+'''
+print("evaluate model ....")
+
+test_input_tensor = torch.tensor([[101, 12453, 19453, 6254, 102]])
+at_mask_tensor = torch.tensor([[1, 1, 1, 1, 1]])
+# inference no need label
+#intent_label_mask_tensor = torch.tensor([[1]])
+#slot_label_mask_tensor = torch.tensor([[0, 0, 6, 0, 0]])
+with torch.no_grad():
+    model.eval()
+
+
+    # if going with seperate outputs
+    #intent_output,slot_output = model(test_input_tensor, attention_mask=at_mask_tensor
+    #    )
+    intent_output,slot_output,intent_prob = model(test_input_tensor, attention_mask=at_mask_tensor
+        )
+
+    print("intent_output: {}".format(intent_output))
+    print("slot_output: {}".format(slot_output))
+    #print("intent_output: {}".format(intent_prob))
+
+print("evaluate model done")
+'''
+
+##################################################
+# evaluate model - single query above
+##################################################
+
+##################################################
+# evaluate model - a file below - not onnx model
+##################################################
+
+# initialize evaluation test object
+evaluation_test = Evaluation(slots_label_set, intent_label_set)
+evaluation_test_iob = Evaluation(slots_label_set, intent_label_set, useIob=True)
+
+with torch.no_grad():	
+    # Put the model in evaluation mode--the dropout layers behave differently	
+    # during evaluation.	
+    model.eval()	
+        	
+    for k, (mb_x, mb_m, mb_y, mb_z) in enumerate(val_dataloader):	
+        mb_x = mb_x.to(device)	
+        mb_m = mb_m.to(device)	
+        mb_y = mb_y.to(device)	
+        mb_z = mb_z.to(device)		
+        intent_output,slot_output,intent_prob = model(mb_x, attention_mask=mb_m)	
+
+
+
+
+        evaluation_test.add_intent_pred_and_golden(intent_output, mb_y)	
+        evaluation_test.add_slot_pred_and_golden(slot_output, mb_z)	
+        evaluation_test_iob.add_intent_pred_and_golden(intent_output, mb_y)	
+        evaluation_test_iob.add_slot_pred_and_golden(slot_output, mb_z)	
+        # for debug	
+        #print('evaluate label result {}'.format(slot_output))	
+
+    # my calculation
+    # using this http://jsonviewer.stack.hu/ to check json result       	
+    #print(' Validation metric : {}'.format(evaluation_test.compute_metrics()))
+    #print(' Validation metric wo pad: {}'.format(evaluation_test.compute_metrics(ignore_pad=True)))
+    #print(' Validation metric Iob after iteration : {}'.format(evaluation_test_iob.compute_metrics()))
+    print(' Validation metric Iob wo pad after iteration : {}'.format(evaluation_test_iob.compute_metrics(ignore_pad=True)))
+
+
+
+##################################################
+# evaluate model - a file above - not onnx model
+##################################################
+
+##################################################
+# evaluate model - a file below - oxxn -  not yet success
+##################################################
+'''
+# initialize evaluation test object
+evaluation_test = Evaluation(slots_label_set, intent_label_set)
+evaluation_test_iob = Evaluation(slots_label_set, intent_label_set, useIob=True)
+
+for k, (mb_x, mb_m, mb_y, mb_z) in enumerate(val_dataloader):	
+    mb_x = mb_x.to(device)	
+    mb_m = mb_m.to(device)	
+    mb_y = mb_y.to(device)	
+    mb_z = mb_z.to(device)		
+    #intent_output,slot_output,intent_prob = model(mb_x, attention_mask=mb_m)	
+    session = onnxruntime.InferenceSession(model)
+    input_name = session.get_inputs()[0].name
+    output_name = session.get_outputs()[0].name
+
+
+
+    evaluation_test.add_intent_pred_and_golden(intent_output, mb_y)	
+    evaluation_test.add_slot_pred_and_golden(slot_output, mb_z)
+    evaluation_test_iob.add_intent_pred_and_golden(intent_output, mb_y)	
+    evaluation_test_iob.add_slot_pred_and_golden(slot_output, mb_z)		
+
+
+
+# my calculation        	
+#print(' Validation metric : {}'.format(evaluation_test.compute_metrics()))
+# IOB calculation
+print(' Validation metric Iob: {}'.format(evaluation_test_iob.compute_metrics()))
+'''
+
+##################################################
+# evaluate model - a file above - oxxn -  not yet success
+##################################################
+
+
+
+
+##################################################
+# Store model(not in pytorch) 
+##################################################
+
+# ussing distill bert 
+'''
+#torch.onnx.export(model, dummy_input, 'traced_distill_bert.onnx', verbose=True)
+'''
+
+#follow yue's suggestion to add output
+# # ouput is slightly different, not sure it is related to 'do_constant_folding' for optimization for other parameter 
+'''
+torch.onnx.export(model=model,
+    args=(dummy_input),
+    f='traced_distill_bert.onnx.bin',
+    input_names = ["input_ids"],
+    verbose=True,
+    #output_names = ["intent_output", "slot_output"],
+    output_names = ['intent_output', 'slot_output','intent_prob'],
+    do_constant_folding = True,
+    opset_version=11,
+    #dynamic_axes = {'input_ids': {1: '?'}, 'intent_output': {1: '?'}, 'slot_output': {1: '?'}}
+    dynamic_axes = {'input_ids': {1: '?'}, 'intent_output': {1: '?'}, 'slot_output': {1: '?'},'intent_prob': {1: '?'}}
+    )
+'''
+
