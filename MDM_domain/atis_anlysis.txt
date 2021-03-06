@@ -2459,6 +2459,7 @@ run 92/94
 	original hyper parameters
 	3 layer TNLR
 		5 epoch
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
 	IOB logic
 		this is to verify new IOB training code then less node 
 		local can verify and new CSDS setup branch is needed
@@ -2469,16 +2470,66 @@ run 92/94
 			normal conversational context 的multi 濾掉
 			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
 
-run ?/?
+
+
+run 96/98
 	using distributed sampler
 	original hyper parameters
 	3 layer TNLR
-		25 epoch
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+		5 epoch
 		6 nodes => 只剩6 個nodes
+		不小心跟92/94 用到一樣的condition
 	IOB logic
 		this is to verify new IOB training code then less node 
 		2 nodes , 一個batch 時間變成5倍 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
 
+run 108/?
+	using distributed sampler
+	original hyper parameters
+	3 layer TNLR
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+		10 epoch
+		6 nodes => 只剩6 個nodes
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	? 可能有不小心新增額外的一些training data, we can verify next week
+		766034
+	
+
+
+run 123/?
+	using distributed sampler
+	original hyper parameters
+	3 layer bert
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+		10 epoch
+		4 nodes => 只剩4 個nodes
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	data
+		765794
 
 ==================
 eran discussion
@@ -2823,3 +2874,213 @@ MDM_01202021v1
 gpu subscription list
 ======================
 https://ml.azure.com/compute/list/training?wsid=/subscriptions/ddb33dc4-889c-4fa1-90ce-482d793d6480/resourcegroups/DevExp/workspaces/DevExperimentation&tid=72f988bf-86f1-41af-91ab-2d7cd011db47
+
+
+
+
+	
+======================
+gpu subscription list
+======================
+
+assistant_enus_default_encoder_mv1.normalizer.fst
+	 要問minwoo 這個source 在哪
+	 我寫的因該是tokenizer
+	 
+	 
+	 看起來要用raw query 然後自己再lower case 
+	 而不是 encoding, enocding 會有問題
+	 
+	 
+
+3:00 pm 
+0: SingleTokenView --in=BodySurfaceStream --out=singletoken --inputIsContig
+        Inputs:
+                BodySurfaceStream (tag: 0, string: 3)
+                        Token 0: 3
+                        Token 1: 00
+                        Token 2: am
+        Output:
+                singletoken (tag: 0, string: 1)
+                        3:00 am[0,2]=1.0
+1: NLPFSTApplier --in=singletoken --out=preproc --fst=assistant_enus_default_encoder_mv1.tokenizer.fst --mode=transducer
+        Inputs:
+                singletoken (tag: 0, string: 1)
+                        3:00 am[0,2]=1.0
+        Output:
+                preproc (tag: 1, string: 1)
+                        0[-1,-1]=1.0
+                        3:00 am[-1,-1]=1.0
+2: ExtractNthFeature --in=preproc --out=lastout --n=-1 --stringfs
+        Inputs:
+                preproc (tag: 1, string: 1)
+                        0[-1,-1]=1.0
+                        3:00 am[-1,-1]=1.0
+        Output:
+                lastout (tag: 0, string: 1)
+                        3:00 am[-1,-1]=1.0
+3: CharTokenizer --in=lastout --out=RawQuery,InterTokens --sep=\s\t\r\n --del=\t
+        Inputs:
+                lastout (tag: 0, string: 1)
+                        3:00 am[-1,-1]=1.0
+        Output:
+                RawQuery (tag: 0, string: 2)
+                        3:00[0,0]=1.0
+                        am[1,1]=1.0
+                InterTokens (tag: 0, string: 3)
+                        [0,0]=1.0
+                         [1,1]=1.0
+                        [2,2]=1.0
+4: SingleTokenView --in=RawQuery --out=norm_singletoken
+        Inputs:
+                RawQuery (tag: 0, string: 2)
+                        3:00[0,0]=1.0
+                        am[1,1]=1.0
+        Output:
+                norm_singletoken (tag: 0, string: 1)
+                        3:00 am[0,0]=1.0
+5: NLPFSTApplier --in=norm_singletoken --out=normalized --fst=assistant_enus_default_encoder_mv1.normalizer.fst --mode=transducer
+        Inputs:
+                norm_singletoken (tag: 0, string: 1)
+                        3:00 am[0,0]=1.0
+        Output:
+                normalized (tag: 1, string: 1)
+                        0[-1,-1]=1.0
+                        0:00 am[-1,-1]=1.0
+6: ExtractNthFeature --in=normalized --out=norm_lastout --n=-1 --stringfs
+        Inputs:
+                normalized (tag: 1, string: 1)
+                        0[-1,-1]=1.0
+                        0:00 am[-1,-1]=1.0
+        Output:
+                norm_lastout (tag: 0, string: 1)
+                        0:00 am[-1,-1]=1.0
+7: CharTokenizer --in=norm_lastout --out=NormalizedRawQuery,NormalizedInterTokens --sep=\s\t\r\n --del=\t
+        Inputs:
+                norm_lastout (tag: 0, string: 1)
+                        0:00 am[-1,-1]=1.0
+        Output:
+                NormalizedRawQuery (tag: 0, string: 2)
+                        0:00[0,0]=1.0
+                        am[1,1]=1.0
+                NormalizedInterTokens (tag: 0, string: 3)
+                        [0,0]=1.0
+                         [1,1]=1.0
+                        [2,2]=1.0
+8: TextEditor --in=NormalizedRawQuery --out=Encoding --config=assistant_enus_default_encoder_mv1.lowercase.texteditor.txt
+        Inputs:
+                NormalizedRawQuery (tag: 0, string: 2)
+                        0:00[0,0]=1.0
+                        am[1,1]=1.0
+        Output:
+                Encoding (tag: 0, string: 2)
+                        0:00[0,0]=1.0
+                        am[1,1]=1.0
+						
+			
+
+
+==========================
+my python && QAS compared
+==========================		
+
+//QAS
+	Inputs:
+
+		ExternalInput1 (tag: 0, string: 5)
+
+			open[0,0]=1.0
+
+			the[1,1]=1.0
+
+			lu[2,2]=1.0
+
+			migration[3,3]=1.0
+
+			ppt[4,4]=1.0
+
+	Output:
+
+		tokens (tag: 0, string: 8)
+
+			[CLS][0,0]=1.0
+
+			open[0,0]=1.0
+
+			the[0,0]=1.0
+
+			lu[0,0]=1.0
+
+			migration[0,0]=1.0
+
+			pp[0,0]=1.0
+
+			##t[0,0]=1.0
+
+			[SEP][0,0]=1.0
+
+		input_ids (tag: 8, string: 0)
+
+			101[0,0]=1.0
+
+			2330[1,1]=1.0
+
+			1996[2,2]=1.0
+
+			11320[3,3]=1.0
+
+			9230[4,4]=1.0
+
+			4903[5,5]=1.0
+
+			2102[6,6]=1.0
+
+			102[7,7]=1.0
+
+
+// python output 
+// different tokenizer
+'open the lu migration pp ##t'
+[101, 2330, 1996, 11320, 9230, 4903, 1001, 1001, 1056, 102, 0, 0, 0, 0, ...]	
+
+fast_tokenizer 
+	因為 因該要用raw string  extracted from annotation 才對
+	如果用 tokenized 的string 會被tokenizerd 兩次 
+					
+
+=============================
+MSIT, problematic word piece tokenizer
+=============================
+//MSIT
+Open abc
+open abc
+
+
+			
+				
+==========================
+problematic word piece tokenizer
+==========================
+
+恩  因該是你說的word piece 的algorithm 可能真的不一樣了....
+
+//qas 
+[6:18 PM] Chieh-Chun Chang
+            input_ids (tag: 6, string: 0)
+            101[0,0]=1.0
+            1017[1,1]=1.0
+            29627[2,2]=1.0
+            8889[3,3]=1.0
+            2572[4,4]=1.0
+            102[5,5]=1.0
+
+
+			3[0,0]=1.0
+
+			##:[0,0]=1.0
+
+			##00[0,0]=1.0
+
+//python 
+101, 1017, 1024, 4002, 2572,  102,
+            :    00
