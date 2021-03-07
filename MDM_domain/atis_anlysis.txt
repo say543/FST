@@ -2489,7 +2489,7 @@ run 96/98
 			normal conversational context 的multi 濾掉
 			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
 
-run 108/?
+run 108/110
 	using distributed sampler
 	original hyper parameters
 	3 layer TNLR
@@ -2505,18 +2505,19 @@ run 108/?
 			normal conversational context 的multi 濾掉
 			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
 	修正fast_tokenizer 的input 要用untokenizer 的input 
-	修正dynamic output as yue suggested
+	修正dynamic output as yue sugge
+	sted
 	? 可能有不小心新增額外的一些training data, we can verify next week
 		766034
 	
 
 
-run 123/?
+run 123/125
 	using distributed sampler
 	original hyper parameters
 	3 layer bert
 	original hyper parameters + learning rate from 1e-5 to 5e-5 
-		10 epoch
+		10 e
 		4 nodes => 只剩4 個nodes
 
 	IOB logic
@@ -2530,6 +2531,81 @@ run 123/?
 	修正dynamic output as yue suggested
 	data
 		765794
+
+
+run 126/?
+	using distributed sampler
+	original hyper parameters
+	3 layer TNLR
+		10 epoch
+		4 nodes => 只剩4 個nodes
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	拿掉extra training data 
+
+
+run 129/?
+	using distributed sampler
+	original hyper parameters
+	3 layer bert
+		10 epoch
+		4 nodes => 只剩4 個nodes
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+
+
+run ?/?
+	using distributed sampler
+	original hyper parameters
+	original hyper parameters + learning rate from 1e-5 to 5e-5
+	3 layer TNLR
+		25 epoch
+		4 nodes => 只剩4 個nodes
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	拿掉extra training dat
+
+
+run ?/?
+	using distributed sampler
+	original hyper parameters
+	3 layer bert
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+		25 epoch
+		4 nodes => 只剩4 個nodes
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
 
 ==================
 eran discussion
