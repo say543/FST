@@ -1,0 +1,20 @@
+==========================
+min dai 的 mystuff exception
+==========================
+
+<email_thread>
+
+[3/4 4:20 PM] Min Dai
+    
+tks CQ，我之前尝试过找kusto的traceid，确实是先有WebException再QAS 的excepiotn，那看来我找到的应该是合理的，我之前不太肯定对不对
+​[3/4 4:21 PM] Chieh-Chun Chang
+    那因該對  如果有log 可以share 給我看嗎  好奇他怎麼display smile
+​[3/4 4:22 PM] Min Dai
+    
+
+CortexTraceMDS
+//| where trace_id == "4fc5c84e50384e74ae3fe045329344e0"
+| where trace_id == "da7024a513114704914d758cf3ce61a5"
+//| where Message contains "exception"
+| project TIMESTAMP, trace_id, machine, LogLevel, Message
+
