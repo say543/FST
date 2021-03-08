@@ -1,0 +1,6 @@
+
+
+Pass in a PipelineParameter into an AzureBatchStep as an argument
+
+
+ParallelRunStep to collect data
