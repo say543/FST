@@ -102,8 +102,26 @@ people centric search and file search conflict from nitin's email
 RE: Clarification on current state / plans to address People Answer over-triggering
 
 
+
 ==============================
-oivic data
+QAS corner cases
+==============================
+https://microsoftapc.sharepoint.com/teams/CLU705/_layouts/OneNote.aspx?id=%2Fteams%2FCLU705%2FShared%20Documents%2FUser%20Understanding&wd=target%28%F0%9F%8F%97%20Engineering%2F%F0%9F%9A%A8%20DRI%2F%E2%9A%B0%20On-Call%20Postmortems.one%7C5D08D513-B7DA-4966-B6F4-9BB12D13D1CB%2F%5BFeb%2025%5D%20%5C%2F%20Sev3%20-%20Assistant%20LU%20runtime%20reliability%7CE175AF1F-F765-40E4-B21F-EA3864FC312E%2F%29
+onenote:https://microsoftapc.sharepoint.com/teams/CLU705/Shared%20Documents/User%20Understanding/🏗%20Engineering/🚨%20DRI/⚰%20On-Call%20Postmortems.one#%5bFeb%2025%5d%20/%20Sev3%20-%20Assistant%20LU%20runtime%20reliability&section-id={5D08D513-B7DA-4966-B6F4-9BB12D13D1CB}&page-id={E175AF1F-F765-40E4-B21F-EA3864FC312E}&end
+
+[5:04 PM] Min Dai
+    不过我本身也应该在本地测试的时候就想到去test一些corner case
+​[5:04 PM] Min Dai
+    最后有一个表格
+​[5:04 PM] Min Dai
+    表格上方也有一段
+
+<email_title>
+RE: QAS availability drops
+
+
+==============================
+oivic data / MDP
 ==============================
 <email_title>
 Sharepoint Search data from OIVIC
