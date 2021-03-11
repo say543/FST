@@ -3,10 +3,23 @@ step1:
 https://osp.office.net/idm/identity/access/Eligibilities
 
 has access to three
+this link docuemnts all necessart eligibilities
+https://docs.substrate.microsoft.net/docs/Substrate-AI/Eligibilities-and-prerequisites/Eligibilities-and-prerequisites-overview.html?uid=eligibilities-and-prerequisites&toc=%2Fdocs%2Ftoc.html
 
 
 step2:
-download rdp
+click reset password
+right down corner you will see 'DSVM password reset succeeded'
+
+sep3 
+click copy password
+
+
+
+step4:
+download rdp, and copy paste the password
+then you should be ok 
+
 https://substrate.microsoft.net/euclidai/projects/cfd13ac5-a6e6-b080-4872-7e21d3328e82/environments/205d8314-3608-4b4b-8352-8c8345826967
 
 
