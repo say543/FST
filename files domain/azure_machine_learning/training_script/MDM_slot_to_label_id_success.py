@@ -87,8 +87,8 @@ from tokenizers import Encoding
 
 #from azureml.core import Workspace, Run, Dataset
 
-df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TrainSet_01202021v1.tsv', sep='\t', encoding="utf-8",
-#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TrainSet_ten_01202021v1.tsv', sep='\t', encoding="utf-8",
+#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TrainSet_01202021v1.tsv', sep='\t', encoding="utf-8",
+df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TrainSet_ten_01202021v1.tsv', sep='\t', encoding="utf-8",
 #df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TrainSet_double_fake_annotation_01202021v1.tsv', sep='\t', encoding="utf-8",
 #df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TrainSet_problematic_data.tsv', sep='\t', encoding="utf-8",
 #df = pd.read_csv('E:/azure_ml_notebook/azureml_data/atis_test.tsv', sep='\t', encoding="utf-8",
@@ -1445,6 +1445,7 @@ tokensForQueries = []
 tokensIdForQueries = []
 labelsForQueries =[]
 labelIdsForQueries = []
+filteredConversationalId = []
 
 
 text_ids = []
@@ -1452,6 +1453,8 @@ att_masks = []
 intent_labels = []
 # iterative get labele and also append padding based on text_ids
 labels_for_text_ids = []
+
+max_padding_length = 300
 
 for i, row in df.iterrows():
     
@@ -1534,12 +1537,15 @@ for i, row in df.iterrows():
         print("query_with_unkonwn slot_issue\t{}\t{}".format(query, slot))
         continue
 
+    # only if it is valid string for slot then add intent label
+    # using low case slot to lookup
+    intent_labels.append(intent_label_set.get_ids_from_label(intent.lower()))
+
     # replcae by class's output word string
     #text_id = fast_tokenizer.encode(text, max_length=300, padding='max_length', truncation=True)
-    text_id = fast_tokenizer.encode(text_WoTokenizer, max_length=300, padding='max_length', truncation=True)
+    text_id = fast_tokenizer.encode(text_WoTokenizer, max_length=max_padding_length, padding='max_length', truncation=True)
     text_id_wo_padding = fast_tokenizer.encode(text_WoTokenizer, padding=False)
     text_ids.append(text_id)
-
 
     # for debug
     #for token, label in zip(tokens, aligned_label_ids):
@@ -1575,9 +1581,19 @@ for i, row in df.iterrows():
     labelsForQueries.append(tag_string)
 
     # do not include CLS SEP for comparison
+    #labelIdsForQueries.append(slots_label_set.get_aligned_label_ids_from_aligned_label(
+    #    map(str.lower,tag_string_wo_CLS_SEP.split())
+    #))
+
+    #include CLS SEP for comparison
     labelIdsForQueries.append(slots_label_set.get_aligned_label_ids_from_aligned_label(
-        map(str.lower,tag_string_wo_CLS_SEP.split())
+        map(str.lower,tag_string.split())
     ))
+
+
+
+    # add conversational id
+    filteredConversationalId.append(row['ConversationId'])
 
     '''
     # for contact_name to reanme to to_contact_name
@@ -1655,6 +1671,107 @@ for i, row in df.iterrows():
     #    print(token, "-", label)
 
 
+
+class TokenizerInconsistentDataSet:
+
+    def __init__(self, max_padding_length, slots_label_set, includePad=False):
+        self.max_padding_length = max_padding_length
+        self.slots_label_set = slots_label_set
+        self.includePad = includePad
+
+    def append_extra_query(self, filename, intent_ids, tokensIdForQueries, labelIdsForQueries, attention_masks=None, tokensForQueries=None, filteredConversationalId=None):
+
+        #df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TrainSet_ten_01202021v1.tsv', sep='\t', encoding="utf-8",
+        df = pd.read_csv(filename, sep='\t', encoding="utf-8",
+            keep_default_na=False
+        )
+
+        for i, row in df.iterrows():
+
+            conversationid = row['ConversationId']
+            text =  row['TokenizedMessageText']
+            textId = row['TokenizedMessageTextId']
+            intentId = row['TokenizedJudgedIntentId']
+            slotIds = row['TokenizedJudgedConstraintsId']
+
+
+            assert(len(textId.split()) == len(slotIds.split()));
+
+            if filteredConversationalId is not None:
+                filteredConversationalId.append(conversationid)
+
+            intent_ids.append(intentId)
+
+            if tokensForQueries is not None:
+                tokensForQueries.append(text)
+
+
+
+            # include [CLS] and [SEP] , no padding 
+            # in original dataset, it does have CLS /SEP / padding and we might need to add padding  
+
+            #tokensIdForQueries.append(textId)
+            textIdWithPad = textId
+
+            if self.includePad is True:
+                # output pad for debug
+                textIdWithPadLength = textIdWithPad.split()
+                for i in range(0, self.max_padding_length):
+                    if i >= len(textIdWithPadLength):
+                        textIdWithPad = textIdWithPad + ' ' + str(slots_label_set.get_pad_id())
+            tokensIdForQueries.append([int(x) for x in textIdWithPad.split()])
+
+
+            if attention_masks is not None:
+                attention_mask = [int(int(id) > 0) for id in textIdWithPad.split()]
+                attention_masks.append(attention_mask)
+
+
+            # noinclude [CLS] and [SEP], no padding
+            # in original dataset, it does have CLS /SEP / padding and we might need to add padding  
+            #labelIdsForQueries.append(slotIds)
+            # output pad for debug
+            # CLS , SEP label = 0
+            #slotIdsWithClsSepPad =  slots_label_set.get_pad_label() + ' '+ slotIds + ' ' + slots_label_set.get_pad_label()
+            #for i in range(0, len(self.max_padding_length)):
+            #    if i >= len(slotIdsWithClsSepPad):
+            #        textIdWithPad = textIdWithPad + ' ' +  slots_label_set.get_pad_id()
+            #labelIdsForQueries.append(slotIdsWithClsSepPad)
+
+            # include [CLS] and [SEP], no padding
+            # in original dataset, it does have CLS /SEP / padding and we might need to add padding  
+            #labelIdsForQueries.append(slotIds)
+            # output pad for debug
+            # CLS , SEP label = 0
+            slotIdsWithPad =  slotIds
+
+            if self.includePad is True:
+                slotIdsWithPadLength = slotIdsWithPad.split()
+                for i in range(0, self.max_padding_length):
+                    if i >= len(slotIdsWithPadLength):
+                        slotIdsWithPad = slotIdsWithPad + ' ' + str(slots_label_set.get_pad_id())
+            labelIdsForQueries.append([int(x) for x in slotIdsWithPad.split()])
+
+
+        return intent_ids,tokensIdForQueries,labelIdsForQueries, attention_masks, tokensForQueries, filteredConversationalId
+
+tokenizer_inconsistent_dataset = TokenizerInconsistentDataSet(
+    max_padding_length = max_padding_length, 
+    slots_label_set = slots_label_set, 
+    includePad=False)    
+intent_ids,tokensIdForQueries,labelIdsForQueries, _, _, _ = tokenizer_inconsistent_dataset.append_extra_query(
+    filename= 'E:/azure_ml_notebook/azureml_data/tokenizer_enforcement_query.tsv',
+    # poor name , here ' intent_labels' stores ids , not labels
+    intent_ids = intent_labels,
+    tokensIdForQueries = tokensIdForQueries,
+    labelIdsForQueries = labelIdsForQueries,
+    # optional
+    #attention_masks = att_masks,
+    tokensForQueries = tokensForQueries,
+    filteredConversationalId = filteredConversationalId
+)
+
+
 '''
 print('output training and test file');
 #output_file = 'train_bert_email_slot.tsv' if isTrain == True else 'dev_bert_email_slot.tsv'
@@ -1664,12 +1781,17 @@ with codecs.open(output_file, 'w', 'utf-8') as fout:
         fout.write(query.strip() + '\t' + labelsforQuery.strip() + '\r\n');
 '''
 
+'''
 output_file = '..\\azureml_data\\after_my_preprocessingOriginalSlotIdsv1.tsv'
 with codecs.open(output_file, 'w', 'utf-8') as fout:
     for i, (query, queryId, labelIdListForQuery) in enumerate(zip(tokensForQueries, tokensIdForQueries, labelIdsForQueries)):
         fout.write(query + '\t' + " ".join([str(x) for x in queryId]) + '\t'+ " ".join([str(x) for x in labelIdListForQuery]) + '\r\n');
+'''
 
-
+output_file = '..\\azureml_data\\after_my_preprocessingOriginalSlotIdsv1.tsv'
+with codecs.open(output_file, 'w', 'utf-8') as fout:
+    for i, (conversationId, intent_label, query, queryId, labelIdListForQuery) in enumerate(zip(filteredConversationalId, intent_labels, tokensForQueries, tokensIdForQueries, labelIdsForQueries)):
+        fout.write(str(conversationId) + '\t' + query + '\t' + str(intent_label) + '\t'+" ".join([str(x) for x in queryId]) + '\t'+ " ".join([str(x) for x in labelIdListForQuery]) + '\r\n');
 
 
 

@@ -48,7 +48,6 @@ from azureml.core import Workspace, Run, Dataset
 parser = argparse.ArgumentParser()
 parser.add_argument('--dataset_name', type=str, dest='dataset_name', default='')
 parser.add_argument('--augment_dataset_name', type=str, dest='augment_dataset_name', default='')
-parser.add_argument('--tokenizer_enforcement_dataset_name', type=str, dest='tokenizer_enforcement_dataset_name', default='')
 parser.add_argument('--TNLR_model_bin', type=str, dest='TNLR_model_bin', default='')
 parser.add_argument('--pretrain_model', type=str, dest='pretrain_model', default='TNLR')
 parser.add_argument('--seed_val', type=str, dest='seed_val', default=111)
@@ -65,7 +64,6 @@ pretrain_model_name = args.pretrain_model
 seed_val_int = int(args.seed_val)
 dataset_name = args.dataset_name
 augment_dataset_name = args.augment_dataset_name
-tokenizer_enforcement_dataset_name = args.tokenizer_enforcement_dataset_name
 batch_size = args.batch_size
 learning_rate = args.learning_rate
 adam_epsilon = args.adam_epsilon
@@ -79,17 +77,12 @@ workspace = run.experiment.workspace
 dataset = Dataset.get_by_name(workspace, name=dataset_name)
 if len(augment_dataset_name) > 0:
     augment_dataset = Dataset.get_by_name(workspace, name=augment_dataset_name)
-if len(tokenizer_enforcement_dataset_name) > 0:
-    tokenizer_enforcement_dataset = Dataset.get_by_name(workspace, name=tokenizer_enforcement_dataset_name)
-
 TNLR_model = Dataset.get_by_name(workspace, name=TNLR_model_name)
 
 
 file_name = dataset.download()[0]
 if len(augment_dataset_name) > 0:
     augment_file_name = augment_dataset.download()[0]
-if len(tokenizer_enforcement_dataset_name) > 0:
-    tokenizer_enforcement_file_name = tokenizer_enforcement_dataset.download()[0]
 TNLR_model_file_name = TNLR_model.download()[0]
 
 
@@ -1490,8 +1483,6 @@ att_masks = []
 intent_labels = []
 # iterative get labele and also append padding based on text_ids
 labels_for_text_ids = []
-
-max_padding_length = 300
 for i, row in df.iterrows():
     
 
@@ -1612,108 +1603,6 @@ for i, row in df.iterrows():
     #print("text:{}".format(text))
     #print("text id :{}".format(text_id))
     #print("slot: {}".format(labels_for_text_id))
-
-
-class TokenizerInconsistentDataSet:
-
-    def __init__(self, max_padding_length, slots_label_set, includePad=False):
-        self.max_padding_length = max_padding_length
-        self.slots_label_set = slots_label_set
-        self.includePad = includePad
-
-    def append_extra_query(self, filename, intent_ids, tokensIdForQueries, labelIdsForQueries, attention_masks=None, tokensForQueries=None, filteredConversationalId=None):
-
-        #df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TrainSet_ten_01202021v1.tsv', sep='\t', encoding="utf-8",
-        df = pd.read_csv(filename, sep='\t', encoding="utf-8",
-            keep_default_na=False
-        )
-
-        for i, row in df.iterrows():
-
-            conversationid = row['ConversationId']
-            text =  row['TokenizedMessageText']
-            textId = row['TokenizedMessageTextId']
-            intentId = row['TokenizedJudgedIntentId']
-            slotIds = row['TokenizedJudgedConstraintsId']
-
-
-            assert(len(textId.split()) == len(slotIds.split()));
-
-            if filteredConversationalId is not None:
-                filteredConversationalId.append(conversationid)
-
-            intent_ids.append(intentId)
-
-            if tokensForQueries is not None:
-                tokensForQueries.append(text)
-
-
-
-            # include [CLS] and [SEP] , no padding 
-            # in original dataset, it does have CLS /SEP / padding and we might need to add padding  
-
-            #tokensIdForQueries.append(textId)
-            textIdWithPad = textId
-
-            if self.includePad is True:
-                # output pad for debug
-                textIdWithPadLength = textIdWithPad.split()
-                for i in range(0, self.max_padding_length):
-                    if i >= len(textIdWithPadLength):
-                        textIdWithPad = textIdWithPad + ' ' + str(slots_label_set.get_pad_id())
-            tokensIdForQueries.append([int(x) for x in textIdWithPad.split()])
-
-
-            if attention_masks is not None:
-                attention_mask = [int(int(id) > 0) for id in textIdWithPad.split()]
-                attention_masks.append(attention_mask)
-
-
-            # noinclude [CLS] and [SEP], no padding
-            # in original dataset, it does have CLS /SEP / padding and we might need to add padding  
-            #labelIdsForQueries.append(slotIds)
-            # output pad for debug
-            # CLS , SEP label = 0
-            #slotIdsWithClsSepPad =  slots_label_set.get_pad_label() + ' '+ slotIds + ' ' + slots_label_set.get_pad_label()
-            #for i in range(0, len(self.max_padding_length)):
-            #    if i >= len(slotIdsWithClsSepPad):
-            #        textIdWithPad = textIdWithPad + ' ' +  slots_label_set.get_pad_id()
-            #labelIdsForQueries.append(slotIdsWithClsSepPad)
-
-            # include [CLS] and [SEP], no padding
-            # in original dataset, it does have CLS /SEP / padding and we might need to add padding  
-            #labelIdsForQueries.append(slotIds)
-            # output pad for debug
-            # CLS , SEP label = 0
-            slotIdsWithPad =  slotIds
-
-            if self.includePad is True:
-                slotIdsWithPadLength = slotIdsWithPad.split()
-                for i in range(0, self.max_padding_length):
-                    if i >= len(slotIdsWithPadLength):
-                        slotIdsWithPad = slotIdsWithPad + ' ' + str(slots_label_set.get_pad_id())
-            labelIdsForQueries.append([int(x) for x in slotIdsWithPad.split()])
-
-
-        return intent_ids,tokensIdForQueries,labelIdsForQueries, attention_masks, tokensForQueries, filteredConversationalId
-
-tokenizer_inconsistent_dataset = TokenizerInconsistentDataSet(
-    max_padding_length = max_padding_length, 
-    slots_label_set = slots_label_set, 
-    includePad=True)    
-intent_ids,text_ids,labels_for_text_ids,att_masks, _, _ = tokenizer_inconsistent_dataset.append_extra_query(
-    filename= tokenizer_enforcement_file_name,
-    # poor name , here ' intent_labels' stores ids , not labels
-    intent_ids = intent_labels,
-    tokensIdForQueries = text_ids,
-    labelIdsForQueries = labels_for_text_ids,
-    # optional
-    attention_masks = att_masks,
-    #tokensForQueries = tokensForQueries,
-    #filteredConversationalId = filteredConversationalId
-)
-
-
 
 num_slot_labels = len(set(slots_label_set.get_labels()))
 num_intent_labels = len(set(intent_label_set.get_labels()))
