@@ -944,10 +944,63 @@ array([1, 1, 0, 0], dtype=int64)
 #DistributedSampler
 # in atis local run, i do not have sampler
 # in atis remote run, using distributed sampler metric is pretty low so i switch to RandomSampler 
+# default DistributedSampler's shuffle is true so before feeding to maching total data has been shuffle
+# so data loader does not need to shuffle again
+# usng self.epoch = 0 as default
+# default shuffle= true
+# epoch = 2
+# dataset size = 16
+# cuda : 0 and 1
+# batch size = 2
+# epoch 1
+# cuda 0 will only see 8 datas (uncontrollable), c00
+# cuda 1 will only see 8 datas (uncontrollable), c10
+# epoch 2
+# cuda 0 will only see 8 datas (uncontrollable), c01
+# cuda 1 will only see 8 datas (uncontrollable), c11
+# c00 = c01, c10 = c11
+# by seeting up sampler.set_epoch(e), e = epoch number
+# epoch 1
+# cuda 0 will only see 8 datas (uncontrollable), c00
+# cuda 1 will only see 8 datas (uncontrollable), c10
+# epoch 2
+# cuda 0 will only see 8 datas (uncontrollable), c01
+# cuda 1 will only see 8 datas (uncontrollable), c11
+# c00 != c01, c10 != c11
+# then each epoch a cpu can see whole dataset
+# does above create overfitting problem?
+# No,每一个step不同进程之间都会去同步自己的参数、gradient、甚至buffer.
+# so no need to setup seed
+# https://zhuanlan.zhihu.com/p/97115875
+# this link also explains and say no seed change is needed
+# https://blog.csdn.net/weixin_45738220/article/details/112151455
+
+# for data loader
+# epoch = 2
+# dataset size = 8
+# nproc_per_node = 2
+# cuda : 0 and 1
+# batch size = 4
+# rand_loader =DataLoader(dataset=dataset,batch_size=batch_size,sampler=None,shuffle=True)
+# (without using distributedsampler and only shuffle)
+# each epoch, a GPU sees 2 batch and each batch size = 4 and each batch is shuffle
+# snice total epoch = 2 , a GPU see the whole dataset twice 
+# rand_loader = DataLoader(dataset=dataset,batch_size=batch_size,sampler=sampler)
+# using distributedsampler
+# nproc_per_node = 2
+# sample divides the whole dataset into nproc_per_node( = 2)
+# nproc_per_node cpu shares the whole dataset
+# 
+
+# https://www.squncle.com/article/2020/5/10/29278.html
+# https://murphypei.github.io/blog/2020/09/pytorch-distributed
 # https://discuss.pytorch.org/t/distributedsampler/90205
 # https://pytorch.org/cppdocs/api/classtorch_1_1data_1_1samplers_1_1_distributed_sampler.html?highlight=distributedsampler#_CPPv4I0EN5torch4data8samplers18DistributedSamplerE
-
-
+# good repor
+# has warmp up , early-stopping
+# Warmup 是一種訓練技巧，透過由小到大預熱學習率可以避免一開始學習率過大所造成的不穩定
+# https://github.com/Lance0218/Pytorch-DistributedDataParallel-Training-Tricks
+# https://lance0218.medium.com/training-tricks-for-pytorch-distributed-data-parallel-1cd48cc7d97a
 
 #init_weights
 Have a look at the code for .from_pretrained(). What actually happens is something like this:
@@ -961,7 +1014,180 @@ This ensure that layers were not pretrained (e.g. in some cases the final classi
 # in jointbert experiment it does not have it
 #https://github.com/huggingface/transformers/issues/4701
 
+
+
+
+
+# random sees setup to reproduce model
+# https://github.com/Lance0218/Pytorch-DistributedDataParallel-Training-Tricks/blob/master/customized_function.py
+
+# hvd horovod
+#Accomplish this by guarding model checkpointing code with hvd.rank() != 0.
+# ? in noline tutorial, it uses hvd_rank() = 0 to check
+# Pin each GPU to a single process.
+# # Save checkpoints only on worker 0 to prevent other workers from corrupting them.
+#checkpoint_dir = '/tmp/train_logs' if hvd.rank() == 0 else None
+# ? not sure how to load checkpoint_dir
+# https://github.com/horovod/horovod
+# https://github.com/horovod/horovod/issues/58
+#https://horovod.readthedocs.io/en/stable/pytorch.html
+# this link explians why using hvd.rank() to guard
+#https://pyro.ai/examples/svi_horovod.html
+
+# detail talks about ranker
+# https://spell.ml/blog/distributed-model-training-using-horovod-XvqEGRUAACgAa5th
+# https://github.com/horovod/horovod/issues/1774
+
+# output epoch traning branch
+#  cann add in the future
+#        if batch_idx % args.log_interval == 0:
+#            # Horovod: use train_sampler to determine the number of examples in
+#            # this worker's partition.
+#            print('Train Epoch: {} [{}/{} ({:.0f}%)]\tLoss: {:.6f}'.format(
+#                epoch, batch_idx * len(data), len(train_sampler),
+#                100. * batch_idx / len(train_loader), loss.item()))
+# https://github.com/horovod/horovod/blob/master/examples/pytorch/pytorch_mnist.py
+
+# flow to save checkpoint in pytorch in offical github
+# can refer to pytorch offical website
+     if hvd.rank() == 0:
+        filepath = args.checkpoint_format.format(epoch=epoch + 1)
+        state = {
+            'model': model.state_dict(),
+            'optimizer': optimizer.state_dict(),
+        }
+        torch.save(state, filepath)
+# https://github.com/horovod/horovod/blob/f3af98649a26f4f3725fcab6a9bd3e8d29d7ffd2/examples/pytorch/pytorch_imagenet_resnet50.py
+# can refer to pytorch offical website
+# sotre checkpoint 
+EPOCH = 5
+PATH = "model.pt"
+LOSS = 0.4
+
+torch.save({
+            'epoch': EPOCH,
+            'model_state_dict': net.state_dict(),
+            'optimizer_state_dict': optimizer.state_dict(),
+            'loss': LOSS,
+            }, PATH)
+# load checkpount
+model = Net()
+optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
+
+checkpoint = torch.load(PATH)
+model.load_state_dict(checkpoint['model_state_dict'])
+optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
+epoch = checkpoint['epoch']
+loss = checkpoint['loss']
+
+model.eval()
+# - or -
+model.train()
+# https://pytorch.org/tutorials/recipes/recipes/saving_and_loading_a_general_checkpoint.html
+
+
+
+# BertPooler
+# max pooling 的idea
+#在Bert中，pool的作用是，输出的时候，用一个全连接层将整个句子的信息用第一个token来表示
+#  BertForSequenceClassification 用到的是 pooled_output，即用1个位置上的输出表示整个句子的含义
+class BertPooler(nn.Module):
+    def __init__(self, config):
+        super(BertPooler, self).__init__()
+        self.dense = nn.Linear(config.hidden_size, config.hidden_size)
+        self.activation = nn.Tanh()
+
+    def forward(self, hidden_states):
+        # We "pool" the model by simply taking the hidden state corresponding
+        # to the first token.
+        first_token_tensor = hidden_states[:, 0]
+        pooled_output = self.dense(first_token_tensor)
+        pooled_output = self.activation(pooled_output)
+        return pooled_output
+# https://www.cnblogs.com/dogecheng/p/11907036.html
+
+#IntentClassfier using in joint bert 
+# similar to BertForSequenceClassification in hugging face
+# Bert用于提取文本特征进行Embedding，Dropout防止过拟合，Linear是一个弱分类器
+#  BertForSequenceClassification 用到的是 pooled_output，即用1个位置上的输出表示整个句子的含义
+# 有多用到一個Bert Pooler
+# https://www.cnblogs.com/dogecheng/p/11907036.html
+
+#SlotClassfier using in joint bert 
+# similar to BertForTokenClassification in hugging face
+# Bert用于提取文本特征进行Embedding，Dropout防止过拟合，Linear是一个弱分类器
+# BertForTokenClassification 的中 forward() 函数的部分代码，它用到的是全部 token 上的输出
+# 沒有用到Bert Pooler
+## https://www.cnblogs.com/dogecheng/p/11907036.html
+
+# how to output hidden state from distill bert pretrained model
+# https://stackoverflow.com/questions/60780181/access-the-output-of-several-layers-of-pretrained-distilbert-model
+
+# multiple loss function
+# ? can check in the future
+# https://bbs.cvmart.net/topics/1449
+#https://github.com/horovod/horovod/issues/58
+
+
+
+
+# aml computer node cnt
+# in my default with distributedSampler , my node_count = 8
+# ? if want to use randomSampler, might be node_count  = 1 to try whether errors or ont
+#https://docs.microsoft.com/en-us/python/api/azureml-train-core/azureml.train.dnn.pytorch?view=azure-ml-py
+
+
+# azure machine learning open a terminal
+# https://docs.microsoft.com/en-us/azure/machine-learning/how-to-access-terminal
+
+
+# hvd.Compression.fp16
+#https://jishuin.proginn.com/p/763bfbd305f9
+#https://ggaaooppeenngg.github.io/zh-CN/2019/08/30/horovod-%E5%AE%9E%E7%8E%B0%E5%88%86%E6%9E%90/
+
+
+
+#onnx model read as graph
+#https://github.com/lutzroeder/netron
+
+
+
+# onnx runtime iference 
+
+#https://www.codenong.com/cs105302201/
+
+
+# bert / transformer tokenizer discusssion
+#https://blog.floydhub.com/tokenization-nlp/
+# learn syntactic knowledge at the lower levels of the neural network and then semantic knowledge at the higher levels
+# It won’t understand where one word starts and another ends. It won’t even know what constitutes a word. We get around this by first learning to understand spoken language and then learning to relate speech to written text. So we need to find a way to do two things to be able to feed our training data of text into our DL model:
+# 1. Split the input into smaller chunks: 
+# 2. Represent the input as a vector: 
+# with cat, but cannot understand cats
+# So even if you learned the word “cat” in your training set, the final model would not recognize the plural “cats”. It does not break words into sub-words so it would miss anything like “talk” vs. “talks” vs. “talked” and “talking”.
+# so needs to combine words
+# discusss tradeoff between word level,character level , subword level
+#t he larger the vocabulary size the more common words you can tokenize. The smaller the vocabulary size the more subword tokens you need to avoid having to use the <UNK> token. It is this delicate balance that you can tinker with to try and find an optimum solution for your particular task.
+# byte pair encoding (BPE), greedy base algorithm
+# here is a “</w>” token at the end of each word. This is to identify a word boundary so that the algorithm knows where each word ends.
+# Merging works by identifying the most frequently represented byte pairs.
+# 1> Get the word count frequency
+# 2> Get the initial token count and frequency (i.e. how many times each character occurs)
+# calculate each token freuency
+# 3> Merge the most common byte pairing
+# Merging works by identifying the most frequently represented byte pairs.
+# 4> Add this to the list of tokens and recalculate the frequency count for each token; this will change with each merging step
+# 5> Rinse and repeat until you have reached your defined token limit or a set number of iterations (as in our example)
+# The problem occurs when there is more than one way to encode a particular word.
+# (? the problem what yue ecountered)
+# To address this we need some way to rank or prioritize the encoding steps so that we end up with the same token encodings for similar phrases. This is, conveniently, a feature of probabilistic subword models such as unigram.
+# uisngthe knowledge like unigram model, predict the next word only (not like GM model predicting the whole sentence)
+
+
+
+
 # comment until here
+
  
 
 #https://medium.com/@aniruddha.choudhury94/part-2-bert-fine-tuning-tutorial-with-pytorch-for-text-classification-on-the-corpus-of-linguistic-18057ce330e1
