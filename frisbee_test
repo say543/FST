@@ -1,5 +1,27 @@
+====================
+aria10 cluster
+==================
+
+add cluster
+https://aria10.kusto.windows.net/
+
 
 feature is column
 
 
+detail
+
+TraceID is 
+
+
 https://dataexplorer.azure.com/clusters/aria10/databases/13acb3eda7e74b46ba7a08f87e6670b6
+
+
+cluster('aria10').database('FrisBEE_Monitoring').frisbeemonitoringresult
+//| where EventInfo_Time > ago(10d)
+//| where Feature in ("CALLING", "INMEETING")
+| where Detail contains "Could not find skill with skill id:"
+| where TraceID has 'fa61ecfe9cf24fe9a55d1f5b8b9f2c5e'
+
+
+
