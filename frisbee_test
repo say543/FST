@@ -1,5 +1,6 @@
 ====================
 aria10 cluster
+MDM cim for frisbee test
 ==================
 
 add cluster
@@ -32,6 +33,12 @@ cluster('aria10').database('FrisBEE_Monitoring').frisbeemonitoringresult
 //| where Feature in ("CALLING", "INMEETING")
 //| where Detail contains "Could not find skill with skill id:"
 | where TraceID has 'be77353f18534316a680238aadc788e1'
+
+LockAndVolumeSkills/VolumeDownBFTests.xml
+
+很多test 都有用
+
+這邊failed 的roup 是SDK_AAD
 
 
 
