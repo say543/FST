@@ -17,11 +17,15 @@ TraceID is
 https://dataexplorer.azure.com/clusters/aria10/databases/13acb3eda7e74b46ba7a08f87e6670b6
 
 
+// for communication icm
+// https://portal.microsofticm.com/imp/v3/incidents/details/231238005/home
 cluster('aria10').database('FrisBEE_Monitoring').frisbeemonitoringresult
 //| where EventInfo_Time > ago(10d)
 //| where Feature in ("CALLING", "INMEETING")
 | where Detail contains "Could not find skill with skill id:"
 | where TraceID has 'fa61ecfe9cf24fe9a55d1f5b8b9f2c5e'
 
+
+// for device control icm
 
 
