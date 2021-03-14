@@ -336,13 +336,31 @@ run 70/74
 	
 	atis_train
 		local 
-			Validation metric wo pad: {'total_intent_precision': 0.9975429975429976, 'total_intent_recall': 0.9975429975429976, 'total_slot_precision': 0.8887891873703101, 'total_slot_recall': 0.8812277580071174
+			Validation metric wo pad after iteration 15: {'total_intent_precision': 0.9975429975429976, 'total_intent_recall': 0.9975429975429976, 'total_slot_precision': 0.8887891873703101, 'total_slot_recall': 0.8812277580071174
 	
 	atis_test
 		some problematic queris
 		slot is lower compared to train set
-			 Validation metric wo pad: {'total_intent_precision': 0.9761904761904762, 'total_intent_recall': 0.9761904761904762, 'total_slot_precision': 0.8285714285714286, 'total_slot_recall': 0.8255052661542841}
+			 Validation metric wo pad after iteration 15: {'total_intent_precision': 0.9761904761904762, 'total_intent_recall': 0.9761904761904762, 'total_slot_precision': 0.8285714285714286, 'total_slot_recall': 0.8255052661542841}
 	
+	
+run 80/?
+	in jupiter book 
+	#disable distirbuted computing
+    #node_count=8,
+    node_count=1,
+	nd wo hvd rank ,add random sampler
+	
+	then it seems one cpu can train 
+	status will not fail
+	
+	
+	//compared to run 70/74 the same epoch runs 
+	// the metric is lower, but not sure why
+	trainnig set 
+		Validation metric Iob wo pad after iteration 5 : {'intent_acc': 0.9542104087558633, 'slot_precision': 0.7881576018401721, 'slot_recall': 0.7849831873776004, 'slot_f1': 0.7865671918099858}
+
+
 =================
 evaluation logic
 i shou;d ignore o and pad for calculation 
@@ -571,14 +589,16 @@ run 14/16
 	即使用distributedSampler  結果也還可以  看起來atis 就是data 量不夠多
 	等跑完25 可能要加入code
 	
-	training data
+	training da
+	MDM_01202021v1
 			check semantic frame (不知道yue 有沒有這個code)
 		Validation metric wo pad after iteration 17 : {'total_intent_precision': 0.974581939799331, 'total_intent_recall': 0.974581939799331, 'total_slot_precision': 0.8828073246900728, 'total_slot_recall': 0.9165029228275287}
 			seems after iteration 18 it will saturate
 		Validation metric wo pad after iteration 25 : {'total_intent_precision': 0.9770122630992196, 'total_intent_recall': 0.9770122630992196, 'total_slot_precision': 0.8929008059442842, 'total_slot_recall': 0.9238345532249349}
 
-	TVS_october_validation data(loccaly)
-		Validation metric wo pad: {'total_intent_precision': 0.9302210081946859, 'total_intent_recall': 0.9302210081946859, 'total_slot_precision': 0.8338330834582709, 'total_slot_recall': 0.8737889499869076}
+	// original format
+	//TVS_october_validation data(loccaly)
+	//	Validation metric wo pad: {'total_intent_precision': 0.9302210081946859, 'total_intent_recall': 0.9302210081946859, 'total_slot_precision': 0.8338330834582709, 'total_slot_recall': 0.8737889499869076}
 
 
 	change to IOB2 format as haoda suggeest
@@ -1095,7 +1115,14 @@ run 38/40
 	using distributed sampler
 	original hyper parameters
 	3 layer hugging face bert
-	after 25 layer
+	after 25 epochs
+	CSDS 
+	https://msasg.visualstudio.com/Cortana/_build/results?buildId=19042889&view=ms.vss-test-web.build-test-results-tab&runId=197153574&paneView=debug
+		it looks like intent is still an issue
+		but some queries pipeline will fail
+			share this file with jay ongg
+			ad jay
+			
 	training data
 	{
   'intent_acc': 0.9867448523427832,
@@ -2284,6 +2311,580 @@ run 38/40
 	// ? 可能用單獨設query 看一下
 	// 很難說誰比較好
 	// 還是要aether evaluate 一下比較好
+
+
+run 41/43
+	using distributed sampler
+	original hyper parameters
+	3 layer huggingface distilBert
+	epoch = 25 to check
+	
+	training da
+	MDM_01202021v1
+
+run 44/46
+	using distributed sampler
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer TNLR
+	epoch = 5
+	
+	training da
+	MDM_01202021v1
+	
+	這個case 的ppt 的相對好一些 
+	
+	還是要把validation set 都修好  就不用看eran 的PR
+
+
+run 47/49	
+	using distributed sampler
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer TNLR
+	epoch = 10
+	
+	training da
+	MDM_01202021v1
+	
+	
+
+run 53/55
+	test 
+	using distributed sampler
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer TNLR
+	epoch = 10
+	test data agumentation DSAT(static)
+		target open (.*) ppt
+		repeat 10 times
+		751705
+
+
+
+run 56/??
+	this one get cancel 
+	test 
+	using distributed sampler
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer TNLR
+	epoch = 10
+	test data agumentation DSAT(static)
+		target open (.*) ppt
+		add more files DSAT based on 38/40
+		repeat 10 times		
+		
+run 61/63
+	test 
+	using distributed sampler
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer TNLR
+	epoch = 5
+		5 似乎沒有什麼太大的幫助  光training loss 就比不上了
+	test data agumentation DSAT(static)
+		target open (.*) ppt
+		add more DSAT based on 38/40
+			相較53/55 根多 files DSAT 
+			發現很多augmented data 竟然是multi turn 的  要investigate 一下
+			原來是很多的multi turn 的query 找不到
+			原因是因為user 這個case 可能太strict....
+			
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			
+		repeat 10 times
+		
+		這個因該不需要evaluate 
+			
+	
+run 65/67
+	using distributed sampler
+	original hyper parameters
+	3 layer TNLR
+	epoch = 25 to check
+	after 25 epochs
+	模擬run 14/16
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			沒有intent = X 的logic 
+			讓他跑  可能之後evaluate 看看行不行
+	job 一瞬間會沒有output 要等一段時間
+			
+run 85/87
+	using distributed sampler
+	original hyper parameters
+	3 layer TNLR
+	10 epoch
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+		看看10個epoch + multi turn change + higher learning rate 的搶先看結
+	模擬run 38/40
+	comared to 65/67, intent might be better
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+
+run 85/88
+	using distributed sampler
+	original hyper parameters
+	3 layer TNLR
+	10 epoch
+	模擬run 38/40
+	comared to 65/67, intent might be better
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+
+
+
+
+run 89/91
+	using distributed sampler
+	original hyper parameters
+	3 layer Bert
+		10 epoch
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+			
+run 92/94
+	using distributed sampler
+	original hyper parameters
+	3 layer TNLR
+		5 epoch
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	IOB logic
+		this is to verify new IOB training code then less node 
+		local can verify and new CSDS setup branch is needed
+		2 nodes , 一個batch 時間變成5倍 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+
+
+
+run 96/98
+	using distributed sampler
+	original hyper parameters
+	3 layer TNLR
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+		5 epoch
+		6 nodes => 只剩6 個nodes
+		不小心跟92/94 用到一樣的condition
+	IOB logic
+		this is to verify new IOB training code then less node 
+		2 nodes , 一個batch 時間變成5倍 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+
+run 108/110
+	using distributed sampler
+	original hyper parameters
+	3 layer TNLR
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+		10 epoch
+		6 nodes => 只剩6 個nodes
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue sugge
+	sted
+	? 可能有不小心新增額外的一些training data, we can verify next week
+		766034
+	
+
+
+run 123/125
+	using distributed sampler
+	original hyper parameters
+	3 layer bert
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+		10 e
+		4 nodes => 只剩4 個nodes
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	data
+		765794
+
+
+run 126/?
+	using distributed sampler
+	original hyper parameters
+	3 layer TNLR
+		10 epoch
+		4 nodes => 只剩4 個nodes
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	拿掉extra training data 
+
+
+run 129/?
+	using distributed sampler
+	original hyper parameters
+	3 layer bert
+		10 epoch
+		4 nodes => 只剩4 個nodes
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+
+
+run 132/134
+	using distributed sampler
+	original hyper parameters
+	original hyper parameters + learning rate from 1e-5 to 5e-5
+	3 layer TNLR
+		25 epoch
+		4 nodes => 只剩4 個nodes
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	拿掉extra training dat
+
+
+run 135/137
+	using distributed sampler
+	original hyper parameters
+	3 layer bert
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+		25 epoch
+		4 nodes => 只剩4 個nodes
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+
+run 138/?
+	using distributed sampler
+	original hyper parameters
+	3 layer TNLR
+		25 epoch
+		4 nodes => 只剩4 個nodes
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	拿掉extra training dat
+
+
+run 141/?
+	using distributed sampler
+	original hyper parameters
+	3 layer bert
+		25 epoch
+		4 nodes => 只剩4 個nodes
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	
+	
+run 151/153
+	using distributed sampler
+	original hyper parameters
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer TNLR
+		2 epoch
+		2 nodes => only
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	拿掉extra training dat
+	test tokenizer_enforcement_query.tsv for wrong tokenizered queries
+	765794 -> 765798
+	in tokenizer_enforcement_query.tsv slot 有的解了  有的沒解
+
+run 154/?
+
+	using distributed sampler
+	original hyper parameters
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer bert
+		10 epoch
+		2 nodes => 看有沒有node 可以用 理論上因該有
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	拿掉extra training dat
+	test tokenizer_enforcement_query.tsv for wrong tokenizered queries
+	增加epoch 看看會不會都解掉
+	765794 -> 765798
+	
+	
+run 157/?
+
+	using distributed sampler
+	original hyper parameters
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer TNLR
+		10 epoch
+		2 nodes => only
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	拿掉extra training dat
+	test tokenizer_enforcement_query.tsv for wrong tokenizered queries
+	增加epoch 看看會不會都解掉
+	765794 -> 765798
+	
+
+run 163/?
+	not sure the condition
+	跟154 基本上一樣的condition  我覺得
+	所以先忽略
+
+run 166/168
+
+	using distributed sampler
+	original hyper parameters
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer TNLR
+		10 epoch
+		2 nodes => only
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	增加 extra training data set in (open_ppt_augmentation.tsv)
+		根據108_110 
+		72 * 20 = 720
+	test tokenizer_enforcement_query.tsv for wrong tokenizered queries
+		根據108_110
+		32
+	765794 -> 767266
+	1472 - 32 - 1440
+	
+	
+run 172/174
+
+	using distributed sampler
+	original hyper parameters
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer bert
+		10 epoch
+		4 nodes
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	增加 extra training data set in (open_ppt_augmentation.tsv)
+		根據108_110 
+		72 * 20 = 720
+	test tokenizer_enforcement_query.tsv for wrong tokenizered queries
+		根據108_110
+		32
+	765794 -> 767266
+	1472 - 32 - 1440
+	
+	
+	
+	
+	
+run 175/?
+
+	using distributed sampler
+	original hyper parameters
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer bert
+		25 epoch
+		6 nodes
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	增加 extra training data set in (open_ppt_augmentation.tsv)
+		根據108_110 
+		72 * 20 = 720
+	test tokenizer_enforcement_query.tsv for wrong tokenizered queries
+		根據108_110
+		32
+	765794 -> 767266
+	1472 - 32 - 1440
+	
+	
+run 178/?
+
+	using distributed sampler
+	original hyper parameters
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer TNLR
+		25 epoch
+		6 nodes
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	增加 extra training data set in (open_ppt_augmentation.tsv)
+		根據108_110 
+		72 * 20 = 720
+	test tokenizer_enforcement_query.tsv for wrong tokenizered queries
+		根據108_110
+		32
+	765794 -> 767266
+	1472 - 32 - 1440
+	
+	
+run ?/?
+
+	using distributed sampler
+	original hyper parameters
+	3 layer TNLR
+		25 epoch
+		6 nodes
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	增加 extra training data set in (open_ppt_augmentation.tsv)
+		根據108_110 
+		72 * 20 = 720
+	test tokenizer_enforcement_query.tsv for wrong tokenizered queries
+		根據108_110
+		32
+	765794 -> 767266
+	1472 - 32 - 1440
+	
+run ?/?
+
+	using distributed sampler
+	original hyper parameters
+	3 layer bert
+		25 epoch
+		6 nodes
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	增加 extra training data set in (open_ppt_augmentation.tsv)
+		根據108_110 
+		72 * 20 = 720
+	test tokenizer_enforcement_query.tsv for wrong tokenizered queries
+		根據108_110
+		32
+	765794 -> 767266
+	1472 - 32 - 1440
 	
 
 ==================
@@ -2403,6 +3004,63 @@ transferdistill 是MSR 在working
 ======================
 qas setup
 ======================
+
+//method 1
+// this case will miss probability from other intents , other than top 1 intent
+
+
+
+//original
+
+Prediction
+ModelPrediction + RulePrediction
+including al intent and slot
+	index starts with 0
+	
+	each intent from ModelPrediciton
+	intent 137
+		extends length to the same as queries
+			137[1096,1096]=4.63459e-28
+
+			0[1097,1097]=4.63459e-28
+
+			0[1098,1098]=4.63459e-28
+
+			0[1099,1099]=4.63459e-28
+
+			0[1100,1100]=4.63459e-28
+
+			0[1101,1101]=4.63459e-28
+
+			0[1102,1102]=4.63459e-28
+
+			0[1103,1103]=4.63459e-28
+	
+	each domain will filter based on assistant_enus_tvs_xxx_mv1.intent.idmap.txt
+	
+	need to update dispatch for each domain
+		create IntentProbFieldToTag from IntentProbs, replace intents in each dispatch, no need CRF select
+		//reuse IntentProbs repalce intents and no need CRF select
+		reuse SlotTags and no need CRF
+
+IntentProbs
+139 tags 
+包含hotfix (138 +1)
+	tag = intent number
+to minic originla IntentProbs
+	extra rule intent 
+	normalize intent_prob from DNN to 0.99
+	merge them together
+
+SlotTags
+	indexing starting with zero
+include cls token, not include intent
+SlotTags (tag: 7, string: 0)
+
+
+
+output3
+
 // rule 
 		ExternalInput4 (tag: 8, string: 0)
 
@@ -2430,7 +3088,7 @@ qas setup
 			0[136,136]=2.0400597e-09
 
 			0[137,137]=1.1641267e-08
-/  intent tage
+/  intent tag
 			0[0,0]=39.0
 			need to move weight to tag
 			and set weight according to intent prob
@@ -2454,3 +3112,527 @@ qas setup
 			2[5,5]=1.0
 
 			2[6,6]=1.0
+
+
+
+=====================
+eran branch 
+=====================
+
+https://msasg.visualstudio.com/Cortana/_build/results?buildId=19092871&view=ms.vss-test-web.build-test-results-tab&runId=197935550&resultId=100005&paneView=debug
+
+run 38/40
+	ValidatingKingstonOctober2020
+	ValidatingTeamsOctober2020
+	
+
+old MDM check metrics
+https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1971873?_a=files
+
+======================
+YC suggested 02252021
+======================
+
+mask LM
+language
+unlabel data
+
+learing rate
+might be 1e-5  too small ?
+
+5e-5
+
+
+
+======================
+yong suggested 02262021
+======================
+ppt 
+in domain try
+out of domain try 
+
+
+
+
+======================
+haoda suggested 03022021
+======================
+
+02262021
+share code for review
+
+
+03022021
+// old 做法是
+// trian 的時候是只有給type
+// seqeval 轉成b-type i-type
+// evalvuate 用原本的type 
+
+open the lu migration pp ##t	2 2 29 29 32 32
+									       b-type i-type
+										   type   type
+										   
+										   
+										   type type
+										   32   32
+										   
+										   b-type i-type
+
+
+
+// haoda 的建議
+// 最好在train 的時候  給他boundry 
+// type becomes b-type /i type 
+//然後  seqeval 可以用
+然後再 qas 30 跟31 map 成一樣的
+slot = 30
+slot = 60  B ,I
+
+										 b-type i-type  i-type
+										 30     31		31
+										 30     31      31
+										 evaluate 
+											seqeval  loss 
+										 evaluate_cortana
+												31 to 30 
+										30       30      30
+										open question ?
+
+
+
+
+======================
+eran sync 03022021 03022021
+======================
+<message> slot is broken
+missed tokens
+	has clarified
+
+contact name might be wrong
+
+
+
+======================
+data problem
+======================
+training da
+MDM_01202021v1
+	sent_text => should be send_text
+		this is from MDM CRF data arguement modules. originla MDM CRF will ignore it so leave it 
+	search_message => should be search_messages
+
+	send_tex => should be send_text
+
+	volum_up => should be volume_up
+	
+	
+======================
+gpu subscription list
+======================
+https://ml.azure.com/compute/list/training?wsid=/subscriptions/ddb33dc4-889c-4fa1-90ce-482d793d6480/resourcegroups/DevExp/workspaces/DevExperimentation&tid=72f988bf-86f1-41af-91ab-2d7cd011db47
+
+
+
+
+	
+======================
+gpu subscription list
+======================
+
+assistant_enus_default_encoder_mv1.normalizer.fst
+	 要問minwoo 這個source 在哪
+	 我寫的因該是tokenizer
+	 
+	 
+	 看起來要用raw query 然後自己再lower case 
+	 而不是 encoding, enocding 會有問題
+	 
+	 
+
+3:00 pm 
+0: SingleTokenView --in=BodySurfaceStream --out=singletoken --inputIsContig
+        Inputs:
+                BodySurfaceStream (tag: 0, string: 3)
+                        Token 0: 3
+                        Token 1: 00
+                        Token 2: am
+        Output:
+                singletoken (tag: 0, string: 1)
+                        3:00 am[0,2]=1.0
+1: NLPFSTApplier --in=singletoken --out=preproc --fst=assistant_enus_default_encoder_mv1.tokenizer.fst --mode=transducer
+        Inputs:
+                singletoken (tag: 0, string: 1)
+                        3:00 am[0,2]=1.0
+        Output:
+                preproc (tag: 1, string: 1)
+                        0[-1,-1]=1.0
+                        3:00 am[-1,-1]=1.0
+2: ExtractNthFeature --in=preproc --out=lastout --n=-1 --stringfs
+        Inputs:
+                preproc (tag: 1, string: 1)
+                        0[-1,-1]=1.0
+                        3:00 am[-1,-1]=1.0
+        Output:
+                lastout (tag: 0, string: 1)
+                        3:00 am[-1,-1]=1.0
+3: CharTokenizer --in=lastout --out=RawQuery,InterTokens --sep=\s\t\r\n --del=\t
+        Inputs:
+                lastout (tag: 0, string: 1)
+                        3:00 am[-1,-1]=1.0
+        Output:
+                RawQuery (tag: 0, string: 2)
+                        3:00[0,0]=1.0
+                        am[1,1]=1.0
+                InterTokens (tag: 0, string: 3)
+                        [0,0]=1.0
+                         [1,1]=1.0
+                        [2,2]=1.0
+4: SingleTokenView --in=RawQuery --out=norm_singletoken
+        Inputs:
+                RawQuery (tag: 0, string: 2)
+                        3:00[0,0]=1.0
+                        am[1,1]=1.0
+        Output:
+                norm_singletoken (tag: 0, string: 1)
+                        3:00 am[0,0]=1.0
+5: NLPFSTApplier --in=norm_singletoken --out=normalized --fst=assistant_enus_default_encoder_mv1.normalizer.fst --mode=transducer
+        Inputs:
+                norm_singletoken (tag: 0, string: 1)
+                        3:00 am[0,0]=1.0
+        Output:
+                normalized (tag: 1, string: 1)
+                        0[-1,-1]=1.0
+                        0:00 am[-1,-1]=1.0
+6: ExtractNthFeature --in=normalized --out=norm_lastout --n=-1 --stringfs
+        Inputs:
+                normalized (tag: 1, string: 1)
+                        0[-1,-1]=1.0
+                        0:00 am[-1,-1]=1.0
+        Output:
+                norm_lastout (tag: 0, string: 1)
+                        0:00 am[-1,-1]=1.0
+7: CharTokenizer --in=norm_lastout --out=NormalizedRawQuery,NormalizedInterTokens --sep=\s\t\r\n --del=\t
+        Inputs:
+                norm_lastout (tag: 0, string: 1)
+                        0:00 am[-1,-1]=1.0
+        Output:
+                NormalizedRawQuery (tag: 0, string: 2)
+                        0:00[0,0]=1.0
+                        am[1,1]=1.0
+                NormalizedInterTokens (tag: 0, string: 3)
+                        [0,0]=1.0
+                         [1,1]=1.0
+                        [2,2]=1.0
+8: TextEditor --in=NormalizedRawQuery --out=Encoding --config=assistant_enus_default_encoder_mv1.lowercase.texteditor.txt
+        Inputs:
+                NormalizedRawQuery (tag: 0, string: 2)
+                        0:00[0,0]=1.0
+                        am[1,1]=1.0
+        Output:
+                Encoding (tag: 0, string: 2)
+                        0:00[0,0]=1.0
+                        am[1,1]=1.0
+						
+			
+
+
+==========================
+my python && QAS compared
+==========================		
+
+//QAS
+	Inputs:
+
+		ExternalInput1 (tag: 0, string: 5)
+
+			open[0,0]=1.0
+
+			the[1,1]=1.0
+
+			lu[2,2]=1.0
+
+			migration[3,3]=1.0
+
+			ppt[4,4]=1.0
+
+	Output:
+
+		tokens (tag: 0, string: 8)
+
+			[CLS][0,0]=1.0
+
+			open[0,0]=1.0
+
+			the[0,0]=1.0
+
+			lu[0,0]=1.0
+
+			migration[0,0]=1.0
+
+			pp[0,0]=1.0
+
+			##t[0,0]=1.0
+
+			[SEP][0,0]=1.0
+
+		input_ids (tag: 8, string: 0)
+
+			101[0,0]=1.0
+
+			2330[1,1]=1.0
+
+			1996[2,2]=1.0
+
+			11320[3,3]=1.0
+
+			9230[4,4]=1.0
+
+			4903[5,5]=1.0
+
+			2102[6,6]=1.0
+
+			102[7,7]=1.0
+
+
+// python output 
+// different tokenizer
+'open the lu migration pp ##t'
+[101, 2330, 1996, 11320, 9230, 4903, 1001, 1001, 1056, 102, 0, 0, 0, 0, ...]	
+
+fast_tokenizer 
+	因為 因該要用raw string  extracted from annotation 才對
+	如果用 tokenized 的string 會被tokenizerd 兩次 
+					
+
+=============================
+MSIT, problematic word piece tokenizer
+=============================
+//MSIT
+Open abc
+open abc
+
+
+			
+				
+==========================
+problematic word piece tokenizer
+==========================
+
+恩  因該是你說的word piece 的algorithm 可能真的不一樣了....
+
+query : 3:00 am 
+
+//qas 
+[6:18 PM] Chieh-Chun Chang
+            input_ids (tag: 6, string: 0)
+            101[0,0]=1.0
+            1017[1,1]=1.0
+            29627[2,2]=1.0
+            8889[3,3]=1.0
+            2572[4,4]=1.0
+            102[5,5]=1.0
+
+
+			3[0,0]=1.0
+
+			##:[0,0]=1.0
+
+			##00[0,0]=1.0
+
+//python 
+101, 1017, 1024, 4002, 2572,  102,
+            :    00
+			
+			
+
+
+Un-favorite this team
+//qas
+		tokens (tag: 0, string: 9)
+
+			[CLS][0,0]=1.0
+
+			un[0,0]=1.0
+
+			##-[0,0]=1.0
+
+			##fa[0,0]=1.0
+
+			##vor[0,0]=1.0
+
+			##ite[0,0]=1.0
+
+			this[0,0]=1.0
+
+			team[0,0]=1.0
+
+			[SEP][0,0]=1.0
+
+		input_ids (tag: 9, string: 0)
+
+			101[0,0]=1.0
+
+			4895[1,1]=1.0
+
+			29624[2,2]=1.0
+
+			7011[3,3]=1.0
+
+			14550[4,4]=1.0
+
+			4221[5,5]=1.0
+
+			2023[6,6]=1.0
+
+			2136[7,7]=1.0
+
+			102[8,8]=1.0
+//python 
+tensor([ 101, 4895, 1011, 5440, 2023, 2136,  102,   
+
+
+
+Un-favorite the voice skills team
+
+//qas 
+		tokens (tag: 0, string: 11)
+
+			[CLS][0,0]=1.0
+
+			un[0,0]=1.0
+
+			##-[0,0]=1.0
+
+			##fa[0,0]=1.0
+
+			##vor[0,0]=1.0
+
+			##ite[0,0]=1.0
+
+			the[0,0]=1.0
+
+			voice[0,0]=1.0
+
+			skills[0,0]=1.0
+
+			team[0,0]=1.0
+
+			[SEP][0,0]=1.0
+
+		input_ids (tag: 11, string: 0)
+
+			101[0,0]=1.0
+
+			4895[1,1]=1.0
+
+			29624[2,2]=1.0
+
+			7011[3,3]=1.0
+
+			14550[4,4]=1.0
+
+			4221[5,5]=1.0
+
+			1996[6,6]=1.0
+
+			2376[7,7]=1.0
+
+			4813[8,8]=1.0
+
+			2136[9,9]=1.0
+
+			102[10,10]=1.0
+			
+//python
+101 4895 1011 5440 1996 2376 4813 2136 102
+
+
+
+==========================
+adapy yue's link result 
+==========================
+query:
+	Un-favorite the voice skills team
+BertTokenizer
+	also has BertTokenizer2
+https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2Fdocs%2Fprocessors%2FBertBasicTokenizer.md&_a=contents&version=GBmaster
+
+
+WordPiecetokenizer1,2,5
+	?還不知道差別
+
+
+original raw query
+        Inputs:
+                RawQuery (tag: 0, string: 5)
+                        Un-favorite[0,0]=1.0
+                        the[1,1]=1.0
+                        voice[2,2]=1.0
+                        skills[3,3]=1.0
+                        team[4,4]=1.0
+
+
+SubwordToWord --in=tokens,slot_output --out=words,words_output --ignoreTokens=[CLS],[SEP]
+
+original
+		## will ber merged into sinlge token
+			Output:
+
+		words (tag: 0, string: 5)
+
+			un-favorite[0,0]=1.0
+
+			the[1,1]=1.0
+
+			voice[2,2]=1.0
+
+			skills[3,3]=1.0
+
+			team[4,4]=1.0
+
+		words_output (tag: 5, string: 0)
+
+			0[0,0]=173.0
+
+			0[1,1]=2.0
+
+			0[2,2]=173.0
+
+			0[3,3]=174.0
+
+			0[4,4]=2.0
+			
+new // unmatch original raw query 
+			Output:
+
+		words (tag: 0, string: 7)
+
+			un[0,0]=1.0
+
+			-[1,1]=1.0
+
+			favorite[2,2]=1.0
+
+			the[3,3]=1.0
+
+			voice[4,4]=1.0
+
+			skills[5,5]=1.0
+
+			team[6,6]=1.0
+
+		words_output (tag: 7, string: 0)
+
+			0[0,0]=2.0
+
+			0[1,1]=2.0
+
+			0[2,2]=2.0
+
+			0[3,3]=2.0
+
+			0[4,4]=173.0
+
+			0[5,5]=174.0
+
+			0[6,6]=2.0
