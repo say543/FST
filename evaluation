@@ -8,6 +8,42 @@ https://microsoftapc.sharepoint.com/teams/CLU705/_layouts/15/Doc.aspx?sourcedoc=
 
 
 
+
+==========================================
+multi annotation debug
+==========================================
+
+With evaluation supporting multi-annotation, a single query could have a list of expected domains and predicted domains. In this case, it's not easy to know which domain has a P/R issue by simply filtering for column AllCorrect=F.
+
+To solve this issue, we have introduced two new columns (towards end of file): IssueDomainsPrecision, IssueDomainsRecall
+
+ 
+
+Here is how you can use it. Let's say you have the following row in SkillSummaryReport:
+
+
+
+Skill
+QueryPrecision
+QueryPrecision (PP)
+QueryRecall
+QueryRecall (PP)
+
+Calendar
+0.8407
+(1393/1657)
+0.8412
+(1393/1656)
+
+
+
+ 
+
+If you want to see the calendar queries that have precision issues, you could filter the IssueDomainsPrecision column and select all values that contain calendar. Next, if you sum up the “Frequency” column, it should add up to (1657-1393). So, these will all be the queries responsible for precision loss.
+
+You can do the same for recall.
+
+
 ==========================================
 evaluation how to see whole page wrong metrics
 ==========================================
