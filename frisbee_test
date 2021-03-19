@@ -42,3 +42,22 @@ LockAndVolumeSkills/VolumeDownBFTests.xml
 
 
 
+
+jarvis query log
+
+沒有feature columnn 可以撈  不太3
+
+let startTime = datetime("2021-03-16T12:29:22.2030000Z");
+let endTime = datetime("2021-03-16T13:59:22.2030000Z");
+let teamsBFSkills = (
+cluster('cortanadiagnosticslogs.kusto.windows.net').database("CompliantCortana").TeamsBfVoiceSkillsLogs
+| where TIMESTAMP >= startTime and TIMESTAMP <= endTime
+| where ServiceId == "volumeskill"
+| where Role == "EastAsia"
+| where TrafficType == "Untagged"
+| where TraceId has 'F7e802fd3caf4f60a4d78bfda5f2f862'
+| );
+teamsBFSkills
+| order by TIMESTAMP asc
+ | where TaskName == "TeamsBfVoiceSkillsLogs" 
+https://jarvis-west.dc.ad.msft.net/logs/kusto?page=logs&be=kusto&kustoUrl=https%3A%2F%2Fcortanadiagnosticslogs.kusto.windows.net%2F&database=CompliantCortana&query=H4sIAAAAAAAEAH2QQWsCMRSE7/6KsBcV1mWNtFDbLVixICiUmnro7Zk8t6nZRPKiIvTHN7pUt1CaU2Dmm2GewcAogA9CV8gKpiBgiN9OwnPe7+WDXv9W9PmQ3w05z3g+yON7T7r3LRNJtOpfbjC8+ZMLCBU9PS822hiKdKclzY4C+k5bOh/AgtJQWkdBSzKupGwTZZcdtFXuQJnF0O5msRNWQLFz7Kqt0WDDuKaTbibOFeul0xLrnlnMaX2xwwd6ZGI6nyzEaP7CHovGAcCqhvRQ/Cy8cAv0+5g4VawoWLJ3ZlchneKTi+XVGTyrE6AwIg1XSXhYr7UUx23teLMByhLVybH17hNluNan17KUzZEISkybESmLk2a4R3OxLtGTdjae+deJY7zzCj1bHRvzgOQ3D80SyP8BAAA=&incidentsourceid=150ca043-be55-454c-ae6f-5c4b81fcf3f2&resource.account=CompliantCortana&resource.id=resource://CompliantCortana/LockAndVolumeResource/Skill_SetVolumeSkillAction_volumeskill_Pass_Untagged_EastAsia&monitor.id=LockAndVolume%20-%20PROD
