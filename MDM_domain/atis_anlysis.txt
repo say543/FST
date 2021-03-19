@@ -2739,7 +2739,7 @@ run 166/168
 	修正dynamic output as yue suggested
 	增加 extra training data set in (open_ppt_augmentation.tsv)
 		根據108_110 
-		72 * 20 = 720
+		72 * 20 = 1440
 	test tokenizer_enforcement_query.tsv for wrong tokenizered queries
 		根據108_110
 		32
@@ -2767,7 +2767,7 @@ run 172/174
 	修正dynamic output as yue suggested
 	增加 extra training data set in (open_ppt_augmentation.tsv)
 		根據108_110 
-		72 * 20 = 720
+		72 * 20 = 1440
 	test tokenizer_enforcement_query.tsv for wrong tokenizered queries
 		根據108_110
 		32
@@ -2777,7 +2777,6 @@ run 172/174
 	
 	
 	
-done
 run 175/?
 
 	using distributed sampler
@@ -2798,7 +2797,7 @@ run 175/?
 	修正dynamic output as yue suggested
 	增加 extra training data set in (open_ppt_augmentation.tsv)
 		根據108_110 
-		72 * 20 = 720
+		72 * 20 = 1440
 	test tokenizer_enforcement_query.tsv for wrong tokenizered queries
 		根據108_110
 		32
@@ -2827,7 +2826,7 @@ run 178/?
 	修正dynamic output as yue suggested
 	增加 extra training data set in (open_ppt_augmentation.tsv)
 		根據108_110 
-		72 * 20 = 720
+		72 * 20 = 1440
 	test tokenizer_enforcement_query.tsv for wrong tokenizered queries
 		根據108_110
 		32
@@ -2835,7 +2834,7 @@ run 178/?
 	1472 - 32 - 1440
 	
 	
-run ?/?
+run 187/?
 
 	using distributed sampler
 	original hyper parameters
@@ -2854,20 +2853,79 @@ run ?/?
 	修正dynamic output as yue suggested
 	增加 extra training data set in (open_ppt_augmentation.tsv)
 		根據108_110 
-		72 * 20 = 720
+		72 * 20 = 1440
 	test tokenizer_enforcement_query.tsv for wrong tokenizered queries
 		根據108_110
 		32
 	765794 -> 767266
 	1472 - 32 - 1440
 	
-run ?/?
+run 190/?
 
 	using distributed sampler
 	original hyper parameters
 	3 layer bert
-		25 epoch
+		10 epoch
 		6 nodes
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	增加 extra training data set in (open_ppt_augmentation.tsv)
+		根據108_110 
+		72 * 20 = 1440
+	test tokenizer_enforcement_query.tsv for wrong tokenizered queries
+		根據108_110
+		32
+	765794 -> 767266
+	1472 - 32 - 1440	
+	
+
+run 193/?
+
+	using distributed sampler
+	original hyper parameters
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer TNLR
+		10 epoch
+		6 nodes => only
+	MDM_TrainSet_01202021v1
+		wrong annotation upd
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	增加 extra training data set in (open_ppt_augmentation.tsv)
+		根據108_110 
+		72 * 20 = 1440
+	test tokenizer_enforcement_query.tsv for wrong tokenizered queries
+		根據108_110 / 166_168
+		62
+	765794 -> 767296
+	1502 - 62 - 1440	
+	
+run 196/?
+
+	using distributed sampler
+	original hyper parameters
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer bert
+		10 epoch
+		6 nodes
+	MDM_TrainSet_01202021v1
+		wrong annotation update
 
 	IOB logic
 		this is to verify new IOB training code then less node 
@@ -2882,11 +2940,14 @@ run ?/?
 		根據108_110 
 		72 * 20 = 720
 	test tokenizer_enforcement_query.tsv for wrong tokenizered queries
-		根據108_110
-		32
-	765794 -> 767266
-	1472 - 32 - 1440
+		根據108_110 / 166_168
+		62
+	765794 -> 767296
+	1502 - 62 - 1440
 	
+	
+
+
 
 ==================
 eran discussion
