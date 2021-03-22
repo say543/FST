@@ -1,6 +1,17 @@
 
 
 
+=======
+
+=======
+
+[11:28 AM] Paulo Salem da Silva
+    
+I'm using my FHL project to learn about this NLP Python lib: spaCy · Industrial-strength Natural Language Processing in Python. This looks very powerful and convenient, and I heard a lot of good things about it. It is kind of a NLTK with a lot of Deep Learning under the hood and designed for industry, not academia. It can do NER, PoS tagging, dependency parsing, etc., for several languages out-of-the-box. Opinions about it? Are there better libs for the same job?
+​[11:32 AM] Haoda Chu
+    I love spaCy smile 
+There is another one I found really interesting, which focused more on academia,  https://guide.allennlp.org/
+(1 liked)<https://teams.microsoft.com/l/message/19:e27745fc0d644da2b605bafe5f31b309@thread.skype/1616437718284?tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47&amp;groupId=0e62b139-e8ff-471b-aab4-a8edbd680f10&amp;parentMessageId=1616437718284&amp;teamName=User Understanding&amp;channelName=Modeling Methodology&amp;createdTime=1616437718284>
 
 =======
 GPT meeting summization
