@@ -3064,6 +3064,244 @@ run 208/210
 	765794 -> 767311
 	1502 - 77 - 1440
 
+run 214/216
+
+	using distributed sampler
+	original hyper parameters
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer TNLR
+		10 epoch
+		6 nodes => only
+	MDM_TrainSet_01202021v1
+		wrong annotation upd
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	增加 extra training data set in (open_ppt_augmentation.tsv)
+		根據108_110 
+		72 * 20 = 1440
+	test tokenizer_enforcement_query.tsv for wrong tokenizered queries
+		根據108_110 / 166_168 / 193_195 / 208_210
+		80
+	765794 -> 767314
+	1502 - 80 - 1440	
+	
+run 217/219
+
+	using distributed sampler
+	original hyper parameters
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer bert
+		10 epoch
+		6 nodes
+	MDM_TrainSet_01202021v1
+		wrong annotation update
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	增加 extra training data set in (open_ppt_augmentation.tsv)
+		根據108_110 
+		72 * 20 = 720
+	test tokenizer_enforcement_query.tsv for wrong tokenizered queries
+		根據108_110 / 166_168 / 193_195 / 208_210
+		62
+	765794 -> 767314
+	1502 - 80 - 1440
+
+
+
+run 220/222
+
+	using distributed sampler
+	original hyper parameters
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer TNLR
+		10 epoch
+		6 nodes => only
+	MDM_TrainSet_01202021v1
+		wrong annotation upd
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	增加 extra training data set in (open_ppt_augmentation.tsv)
+		根據108_110 
+		72 * 20 = 1440
+	test tokenizer_enforcement_query.tsv for wrong tokenizered queries
+		根據108_110 / 166_168 / 193_195 / 208_210 / 217_219
+		80
+	765794 -> 767317
+	1502 - 83 - 1440
+
+run 223/225
+
+	using distributed sampler
+	original hyper parameters
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer bert
+		10 epoch
+		6 nodes
+	MDM_TrainSet_01202021v1
+		wrong annotation update
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	增加 extra training data set in (open_ppt_augmentation.tsv)
+		根據108_110 
+		72 * 20 = 720
+	test tokenizer_enforcement_query.tsv for wrong tokenizered queries
+		根據108_110 / 166_168 / 193_195 / 208_210 / 217_219
+		62
+	765794 -> 767317
+	1502 - 83 - 1440
+
+
+run 226/228
+
+	using distributed sampler
+	original hyper parameters
+	3 layer TNLR
+		10 epoch
+		6 nodes => only
+	MDM_TrainSet_01202021v1
+		wrong annotation upd
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	增加 extra training data set in (open_ppt_augmentation.tsv)
+		根據108_110 
+		72 * 20 = 1440
+	test tokenizer_enforcement_query.tsv for wrong tokenizered queries
+		根據108_110 / 166_168 / 193_195 / 208_210 / 217_219
+		80
+	765794 -> 767317
+	1502 - 83 - 1440
+	
+	感覺會學得不好 因為learning rate 太低
+
+run 229/231
+
+	using distributed sampler
+	original hyper parameters
+	3 layer bert
+		10 epoch
+		6 nodes
+	MDM_TrainSet_01202021v1
+		wrong annotation update
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	增加 extra training data set in (open_ppt_augmentation.tsv)
+		根據108_110 
+		72 * 20 = 720
+	test tokenizer_enforcement_query.tsv for wrong tokenizered queries
+		根據108_110 / 166_168 / 193_195 / 208_210 / 217_219 
+		62
+	765794 -> 767317
+	1502 - 83 - 1440
+	
+	感覺會學得不好 因為learning rate 太低
+
+run 232/234
+
+	using distributed sampler
+	original hyper parameters
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer TNLR
+		10 epoch
+		6 nodes => only
+	MDM_TrainSet_01202021v1
+		wrong annotation upd
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	增加 extra training data set in (open_ppt_augmentation.tsv)
+		根據108_110 
+		72 * 20 = 1440
+	test tokenizer_enforcement_query.tsv for wrong tokenizered queries
+		根據108_110 / 166_168 / 193_195 / 208_210 / 217_219 /  223_225
+		80
+	765794 -> 767318
+	1502 - 84 - 1440
+
+run 235/237
+
+	using distributed sampler
+	original hyper parameters
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer bert
+		10 epoch
+		6 nodes
+	MDM_TrainSet_01202021v1
+		wrong annotation update
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	增加 extra training data set in (open_ppt_augmentation.tsv)
+		根據108_110 
+		72 * 20 = 720
+	test tokenizer_enforcement_query.tsv for wrong tokenizered queries
+		根據108_110 / 166_168 / 193_195 / 208_210 / 217_219 /  223_225
+		62
+	765794 -> 767318
+	1502 - 84 - 1440
+	
+	
 ==================
 eran discussion
 ==================
@@ -3825,3 +4063,91 @@ Wordtokenizer 5
 
 ==========================			
 WordPieceTokenizer5 --in=ExternalInput1 --out=original_tokens,
+
+files answer internatial 
+用unk 取代original query
+
+測試chiness 任一個query 就會btea
+
+
+跟他的chat 來看看
+Guoxuan Zhu
+04012021
+國學說 intenational 的會把它變成最小的力度 
+測試中會變成3個token 所以length 會match
+
+
+
+
+originla token 就不會有UNK 可能是不是要把這個最後用來replace 
+			[CLS][0,0]=1.0
+
+			測[1,1]=1.0
+
+			試[2,2]=1.0
+
+			[SEP][3,3]=1.0
+
+		tokens_temp (tag: 0, string: 4)
+
+			[CLS][0,0]=1.0
+
+			[UNK][1,1]=1.0
+
+			[UNK][2,2]=1.0
+
+			[SEP][3,3]=1.0
+
+
+non cpu version 
+	still using wordpiecetokenizer
+qd_mlm_qas_merge.QueryProcessingConfiguration.ini
+
+cpu version 
+	using wordpiecetokenizer5
+	this is for extra
+		cmfv2_cpu_mlm_domain_tokenizer_sequence_length
+	
+qd_mlm_qas_merge_cpu.QueryProcessingConfiguration.ini
+
+
+qd_mlm_domain_model_featurizer
+cmfv2_cpu_mlm.domain.model.pipeline.txt
+	input1
+		cmfv2_cpu_mlm_domain_tokenizer_input_ids
+	input2
+		cmfv2_cpu_mlm_domain_tokenizer_input_mask
+		
+in post_proc
+12: FeatureSetConcat --in=ExternalInput1 --out=CRFInputQuery_temp
+
+	// normal 
+	// 'two token'
+	// both of them are two tokens
+
+
+	//chiness
+	// 測試
+	// normal
+	//  external input only one 
+	// bert 
+	//  two unk tokens
+	
+	
+	
+	Inputs:
+
+		ExternalInput1 (tag: 0, string: 2)
+
+			[CLS][0,0]=1.0
+
+			測試[1,1]=1.0
+
+	Output:
+
+		CRFInputQuery_temp (tag: 0, string: 2)
+
+			[CLS][0,0]=1.0
+
+			測試[1,1]=1.0
+	// but bert output two tokens
