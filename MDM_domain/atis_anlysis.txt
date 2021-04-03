@@ -4061,13 +4061,223 @@ new // unmatch original raw query
 ==========================
 Wordtokenizer 5
 
-==========================			
-WordPieceTokenizer5 --in=ExternalInput1 --out=original_tokens,
+==========================	
+
+entity 需要這個
+這個也要問一下不知道
+幹嘛
+? TopN --in=op4_o1 --out=cmfv2_cpu_mlm_domain_tokenizer_intertoken --n=31 --order=none --orderby=weight
+
+
+要問一下為啥藥用
+SubwordToWordV2 
+不是用subwordtoword
+	? 看起來多用了unicode 來做merge 不知道en-us 需不需要
+
+
+		
+			
+
+
+		
+WordPieceTokenizer5 --in=ExternalInput1 --out=origin_tokens,tokens_temp,input_ids_temp,attention_mask_temp,segment_ids_temp --maxTokenCount=512 --padTokenId=0 --vocabFile=vocab.txt --mode=Single
+	Inputs:
+
+		ExternalInput1 (tag: 0, string: 1)
+
+			測試[0,0]=1.0
+
+	Output:
+
+		1><done> 想用bert_ModelInputQueryWCLS 這個取代 ModelInputQuery
+		// 但是多了一個[SEP] 不知道子麼filter?
+		// met 1: 
+		//	1> <done>用subword 來filter 掉SEP
+		//  
+		2><done> 所有domain queryparse 的input 
+		改成 bert_QueryParserQuery
+		bert_QueryParserQuery = origin_tokens
+		WordPieceTokenizer5 --in=ExternalInput1 --out=origin_tokens 
+		//  因該要
+		//  在file answer 裡面有用到
+		//  qd_mlm_domain_model_featurizer 的merged_words for query parser 
+		// 這個是來源是SubwordToWordV2 
+		// 為啥用V2 not V1 之後問
+		
+		
+		3><done>
+		另外發現了問題
+		WordPieceTokenizer5 --in=ExternalInput1 --out=origin_tokens,tokens_temp,input_ids_temp,attention_mask_temp,segment_ids_temp --maxTokenCount=512 --padTokenId=0 --vocabFile=vocab.txt --mode=Single
+		竟然會生成正種東西 
+		https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2Fdocs%2Fprocessors%2FWordPieceTokenizer5.md&version=GBmaster&_a=preview
+		看了example 似乎要row query 才行 preprocess 後的好像不行
+		Inputs:	
+			ExternalInput1 (tag: 0, string: 2)	
+				two[0,0]=1.0	
+				token[1,1]=1.0	
+		Output:	
+			origin_tokens (tag: 0, string: 6)	
+				[CLS][0,0]=1.0	
+				two[1,1]=1.0	
+			[SEP][2,2]=1.0	
+			[CLS][0,0]=1.0	
+			token[1,1]=1.0	
+			[SEP][2,2]=1.0
+		(wordpiecetokenzier 好像不會這樣)
+		so 改成用bodystream + singletoken viewer 似乎就可以了
+		raw query 不要灌encode 的 preprocess 結果 就可以了
+		
+		
+		
+		// 4><done>
+		// pattern 的input 要改成bert 的
+		//	communication slot 的要改 ? 大小寫還沒care 只接上input
+		//  teamaction slot 的要改 ? 大小寫還沒care 只接上input
+		// calendar 不用接 也沒錯  蠻神奇的 但是還是一起改吧
+		
+		// 5> 正常的query 會fail 要查察 'two token''show my recent files
+		// 5> 正常的query 似乎有 ' 的會錯
+		
+		// when's my class 
+		// new bert input query 
+
+		ExternalInput1 (tag: 0, string: 4)
+
+			[CLS][0,0]=1.0
+
+			when's[1,1]=1.0
+
+			my[2,2]=1.0
+
+			class[3,3]=1.0
+		// originla crf ModelInputQuery
+		TriangularChainCRF
+			Inputs:
+
+		crf_input_query (tag: 0, string: 5)
+
+			[CLS][-1,-1]=1.0
+
+			when[0,0]=1.0
+
+			's[1,1]=1.0
+
+			my[2,2]=1.0
+
+			class[3,3]=1.0
+		CRF 的部分 qd_uber_joint_featurizer 這個感覺以後不用需要了
+		ModelInputQuery 被bert 的取代
+		ModelPrediction 感覺也不需要再train 了 感覺可以把qd_uber_joint_featurizer comment 掉  
+		然後修post_proc ModelPrediction input留著   但是內部不需要了
+		
+
+		
+		// alex's file 
+		
+		
+
+			
+		6><not yet
+		有一些output CRF_****的naming 因該也要跟著更改 可以以後再改
+
+		7><not yet, need o confirm with files internaitonla answer> entity 的intertokens 因該也要跟著改
+			// from file answer global
+			// cmfv2_cpu_mlm_domain_tokenizer_intertoken <- from qd_mlm_domain_tokenizer_featurizer <-
+			
+			// 用到 BertBasicTokenizerV2 來用 這個要問一下他們怎麼弄的
+			// 以前files mv6 是preprocessor 的output
+			// ? 還有這個bin 是什麼
+			// cmfv2_cpu_mlm.domain.tokenizer.preprocess.bin
+			
+		
+			//originla from encoder
+
+
+		8> <not yet >timexencoder:RawQuery might need to update as well
+
+		9> <not yet > hotfix rule 的input 可能也要跟著改
+
+
+測試分開的dnn output
+		origin_tokens (tag: 0, string: 4)
+
+			[CLS][0,0]=1.0
+
+			測[1,1]=1.0
+
+			試[2,2]=1.0
+
+			[SEP][3,3]=1.0
+
+		tokens_temp (tag: 0, string: 4)
+
+			[CLS][0,0]=1.0
+
+			[UNK][1,1]=1.0
+
+			[UNK][2,2]=1.0
+
+			[SEP][3,3]=1.0
+
+		input_ids_temp (tag: 4, string: 0)
+
+			101[0,0]=1.0
+
+			100[1,1]=1.0
+
+			100[2,2]=1.0
+
+			102[3,3]=1.0
+
+		attention_mask_temp (tag: 4, string: 0)
+
+			1[0,0]=1.0
+
+			1[1,1]=1.0
+
+			1[2,2]=1.0
+
+			1[3,3]=1.0
+
+		segment_ids_temp (tag: 4, string: 0)
+
+			0[0,0]=1.0
+
+			0[1,1]=1.0
+
+			0[2,2]=1.0
+
+			0[3,3]=1.0
+
+Output:
+
+		RawQuery (tag: 0, string: 4)
+
+			when[0,0]=1.0
+
+			's[1,1]=1.0
+
+			my[2,2]=1.0
+
+			class[3,3]=1.0
+
+		InterTokens (tag: 0, string: 5)
+
+			[0,0]=1.0
+
+			[1,1]=1.0
+
+			 [2,2]=1.0
+
+			 [3,3]=1.0
+
+			[4,4]=1.0
+
 
 files answer internatial 
 用unk 取代original query
 
-測試chiness 任一個query 就會btea
+測試chiness 任一個query 就會fail
 
 
 跟他的chat 來看看
@@ -4076,6 +4286,26 @@ Guoxuan Zhu
 國學說 intenational 的會把它變成最小的力度 
 測試中會變成3個token 所以length 會match
 
+
+
+
+在qd_encoder_tokenizer  的output 
+中的中文也不會做任何 分割
+1: NLPFSTApplier --in=singletoken --out=preproc --fst=assistant_enus_default_encoder_mv1.tokenizer.fst --mode=transducer
+
+	Inputs:
+
+		singletoken (tag: 0, string: 1)
+
+			測試[0,0]=1.0
+
+	Output:
+
+		preproc (tag: 1, string: 1)
+
+			0[-1,-1]=1.0
+
+			測試[-1,-1]=1.0
 
 
 
@@ -4099,6 +4329,9 @@ originla token 就不會有UNK 可能是不是要把這個最後用來replace
 			[SEP][3,3]=1.0
 
 
+=====================
+file answer international 的model 分析
+=====================
 non cpu version 
 	still using wordpiecetokenizer
 qd_mlm_qas_merge.QueryProcessingConfiguration.ini
@@ -4121,9 +4354,36 @@ cmfv2_cpu_mlm.domain.model.pipeline.txt
 in post_proc
 12: FeatureSetConcat --in=ExternalInput1 --out=CRFInputQuery_temp
 
+	externalInput from
+		assistant_enus_tvs_uber_mv1.joint.model-> ModelInputQuery (from CRF output)
+		? not sure wh needs this
+		
+		
+
 	// normal 
 	// 'two token'
-	// both of them are two tokens
+	// ti becomes two tokens  SEP will be gone
+12: FeatureSetConcat --in=ExternalInput1 --out=CRFInputQuery_temp
+
+	Inputs:
+
+		ExternalInput1 (tag: 0, string: 3)
+
+			[CLS][0,0]=1.0
+
+			two[1,1]=1.0
+
+			token[2,2]=1.0
+
+	Output:
+
+		CRFInputQuery_temp (tag: 0, string: 3)
+
+			[CLS][0,0]=1.0
+
+			two[1,1]=1.0
+
+			token[2,2]=1.0
 
 
 	//chiness
