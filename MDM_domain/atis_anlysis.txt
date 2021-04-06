@@ -4057,23 +4057,111 @@ new // unmatch original raw query
 			0[5,5]=174.0
 
 			0[6,6]=2.0
-			
-==========================
-Wordtokenizer 5
 
-==========================	
+
+=====================
+file answer international 的model 分析
+=====================
 
 entity 需要這個
 這個也要問一下不知道
 幹嘛
 ? TopN --in=op4_o1 --out=cmfv2_cpu_mlm_domain_tokenizer_intertoken --n=31 --order=none --orderby=weight
+自動生成
+TopN --in=op4_o0 --out=cmfv2_cpu_mlm_domain_tokenizer_query --n=30 --order=none --orderby=weight
+query 最多30 tokens ,  intertoken 31 tokens
+
+
 
 
 要問一下為啥藥用
 SubwordToWordV2 
 不是用subwordtoword
 	? 看起來多用了unicode 來做merge 不知道en-us 需不需要
+	
+	SubwordToWordV2 --in=ExternalInput3,ExternalInput4,people_slot_output,emailsearch_slot_output --out=merged_words,cmfv2_cpu_mlm_domain_postprocess_intertoken,people_slot_postprocessed,emailsearch_slot_postprocessed
+	SubwordToWord --in=tokens,slot_output --out=words,words_output --ignoreTokens=[CLS],[SEP]
+	
+	do not want to merge quries with #a
+	find #a plan file 
+	japenesss case from guosant
 
+
+BpeSlotConverter
+		BpeSlotConverter --in=merged_words,people_slot_postprocessed --out=op1_o0 --tokenDelimiter=## --endToken=[SEP] --bpeEndWord=</w> --srcSlotMappingFile=cmfv2_cpu_mlm.domain.model.people_src_slot_mapping.txt --tgtSlotMappingFile=cmfv2_cpu_mlm.domain.model.people_tgt_slot_mapping.txt --delimeterAsSuffix=false --startToken=[CLS] --padToken=<pad> --subwordDummyTag=X
+		把B, I prefix 拿掉
+
+
+
+為啥用isConfig 而不是isContig
+	https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2Fdocs%2Fprocessors%2FSingleTokenView.md&version=GBmaster&_a=preview
+file mv5 also use'isContig' so go with that
+//raw query & Intertokens comparison
+// ' is gone if going with inputIsConfig
+#SingleTokenView --in=BodySurfaceStream --out=op0_o0 --inputIsConfig
+SingleTokenView --in=BodySurfaceStream --out=singletoken --inputIsContig
+
+failed 'WordPieceTokenizer5' is not a registered processor
+	in aether experiment
+
+	?沒市
+
+# ? why needs to remote tab then feed to WordPieceTokenizer5
+# when's my next class
+# when->'->s my next class
+# 主要是要把tab 拿掉
+# ok
+
+# un-favorite not sure it affect, should not since this is hyphen
+TextEditor --in=op3_o1 --out=op6_o0 --config=cmfv2_cpu_mlm.domain.removetab.texteditor.txt
+WordPieceTokenizer5 --in=op6_o0 --out=cmfv2_cpu_mlm_domain_tokenizer_tokens,useless_tokens_with_unk,cmfv2_cpu_mlm_domain_tokenizer_input_ids,cmfv2_cpu_mlm_domain_tokenizer_input_mask,cmfv2_cpu_mlm_domain_tokenizer_segment_ids --maxTokenCount=32 --pad=false --unknownToken=[UNK] --padTokenId=0 --startToken=[CLS] --wordPiecePrefix=## --endToken=[SEP] --mode=Single --vocabFile=cmfv2_cpu_mlm.domain.vocab.txt
+
+non cpu version 
+	still using wordpiecetokenizer
+qd_mlm_qas_merge.QueryProcessingConfiguration.ini
+
+cpu version 
+	using wordpiecetokenizer5
+	this is for extra
+		cmfv2_cpu_mlm_domain_tokenizer_sequence_length
+	
+qd_mlm_qas_merge_cpu.QueryProcessingConfiguration.ini
+
+qd_mlm_domain_tokenizer_featurizer
+	cmfv2_cpu_mlm_domain_tokenizer_sequence_length,
+		after WordPieceTokenizer5 (not UNK output)+ StringFeatureSetInfo then get 
+	cmfv2_cpu_mlm_domain_tokenizer_tokens,
+		after WordPieceTokenizer5 (not UNK output)
+	cmfv2_cpu_mlm_domain_tokenizer_input_ids,
+		after WordPieceTokenizer5
+	cmfv2_cpu_mlm_domain_tokenizer_input_mask,
+		after WordPieceTokenizer5
+	cmfv2_cpu_mlm_domain_tokenizer_segment_ids,
+		after WordPieceTokenizer5
+	cmfv2_cpu_mlm_domain_tokenizer_query,
+		same input as cmfv2_cpu_mlm_domain_tokenizer_lowercase_query but different following
+		but not sure whether the same 
+	cmfv2_cpu_mlm_domain_tokenizer_intertoken,
+		? simialr to crf encode:InterTokens
+		but CRF does not do lowercase
+	cmfv2_cpu_mlm_domain_tokenizer_lowercase_query
+		? similar to crf encode:LowCaseRawQuery
+		but not sure whether the same
+
+
+
+qd_mlm_domain_model_featurizer
+cmfv2_cpu_mlm.domain.model.pipeline.txt
+	input1
+		cmfv2_cpu_mlm_domain_tokenizer_input_ids
+	input2
+		cmfv2_cpu_mlm_domain_tokenizer_input_mask
+
+			
+==========================
+Wordtokenizer 5
+
+==========================	
 
 		
 			
@@ -4329,28 +4417,6 @@ originla token 就不會有UNK 可能是不是要把這個最後用來replace
 			[SEP][3,3]=1.0
 
 
-=====================
-file answer international 的model 分析
-=====================
-non cpu version 
-	still using wordpiecetokenizer
-qd_mlm_qas_merge.QueryProcessingConfiguration.ini
-
-cpu version 
-	using wordpiecetokenizer5
-	this is for extra
-		cmfv2_cpu_mlm_domain_tokenizer_sequence_length
-	
-qd_mlm_qas_merge_cpu.QueryProcessingConfiguration.ini
-
-
-qd_mlm_domain_model_featurizer
-cmfv2_cpu_mlm.domain.model.pipeline.txt
-	input1
-		cmfv2_cpu_mlm_domain_tokenizer_input_ids
-	input2
-		cmfv2_cpu_mlm_domain_tokenizer_input_mask
-		
 in post_proc
 12: FeatureSetConcat --in=ExternalInput1 --out=CRFInputQuery_temp
 
@@ -4411,3 +4477,8 @@ in post_proc
 
 			測試[1,1]=1.0
 	// but bert output two tokens
+
+
+
+
+		
