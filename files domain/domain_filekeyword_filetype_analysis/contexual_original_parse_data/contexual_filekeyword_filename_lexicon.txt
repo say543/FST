@@ -1,0 +1,2579 @@
+.NET Spec V2
+0 Welcome to Bootcamp
+01 16 msai
+01 coral
+01 monthly
+01 msai assistant
+01 qual
+01 using cortana
+01-23-2019 Action Items Substrate Pipeline - Full_portal update
+01-23-2020 Media Control Skills - Full
+01-30-2020 Action Items Substrate Pipeline - Full portal update
+01-30-2020 Knowledge Bot - Full
+01.18_3days_200
+02 06 calendar
+02-02-2020 MTIS Pipeline
+02-06-2020 Calendar Answer in 3S - Full
+02-06-2020 Calendar Answer on 3S - Full
+02-13-2020  Search Answers Extensibility - Full
+05 2019 cortana
+05-07-2019 Cortana - Hosting skills outside Cortex - Full
+06 linked
+07 - 18 Office Hours July 2018 Summary Notes
+07 cortana
+07 cortana hosting
+07 hosting
+07-29-2019 - Cortana People Search Skill - Full
+08 05 telemetry
+08 cortana
+08-15-2019  ‘SCIS’ Extension- supporting conversation caching - Full
+09-24-2019  BING ANSWERS IN CORTANA - Full
+09-26-2019 - Cortana Alarms & Timers Skill - Full
+0f 2b 86
+0f2b 4f86 818c
+0f2b 818c
+1 agenda
+1 捐助物资要求以及常见问题汇总
+1-16-20 Shiproom
+1-30-20 Shiproom
+1-Pager for PME Data Program
+107463 March 11 DB Mod Big Data Clusters in SQL Server 2019 webinar
+11 il
+11 il research
+12 19 f8
+12 19 v5
+12 2019 copy
+12 copy
+12-05-2019 Assistant Settings - Full
+12.11 communication
+12.2019_Outlook Agility Shared Targets Update
+13 jan jlga
+1440973 - KQL
+16 assistant initiative
+16 initiative
+16 msai
+16 msai initiative
+1756857 - Query suggestions
+1756873 - Classic Personal Favorites in Greenland Phase 2
+1756920 - OOB ranking
+1756920 - OOB ranking - non-syncable
+17B NLG Model
+18 linkedin
+18 o365
+183704f 2 3
+18th
+19 okr template
+19 template
+19H1-Autopilot_Telemetry_Insights_Dashboard-CombDevFuncSpec
+19H1-Autopilot_Telemetry_Pipeline-CombDevFuncSpec
+19_12
+1CS PrivSec Review Data Inventory and Retention Template
+1_Full
+1f
+1to0
+2 israel
+2-06-20 Shiproom
+20 Indigo Ticket - Bangalore - Trivandrum - Bangalore - 30 Jan - 01 Feb 2020
+20 ai
+20 aviv
+20 jan
+20 jan 24
+20 m365
+2015 - QUERY-BY-EXAMPLE KEYWORD SPOTTING USING LONG SHORT-TERM MEMORY NETWORKS
+2015-Baofeng
+2016 analyze
+2016_BSOD_Minidump_Analyze_V
+2019 11 msai
+2019 assistant
+2019 copy
+2019 coral
+2019 cortana
+2019 cortana skills
+2019 hosting
+2019 sep
+2019 substrate
+2019-01 CoralQual
+2019-04 - Outlook Search FY20 Framing
+2019-05-30 - Aesthetic Calendar Palette
+2019-06-18 O365 LinkedIn sync
+2019-08-05 Cortana Telemetry System
+2019-08-20到2019-09-19请假情况统计
+2019-09 Action items extraction - MSAI visit
+2019-11 MSAI IL Research - Task Modeling Overview with Nitin
+2019-12-13 Substrate Intelligence-MSAI Manganese Review
+201908 representationfor email
+2020
+2020 01 msai
+2020 01 smartcomposemonthlyreview
+2020 16 msai
+2020 Chinese New Year vacation plan
+2020 bot full
+2020 chinese
+2020 deck
+2020 full
+2020 knowledge bot
+2020 mpr demo
+2020 msai
+2020 new year
+2020 smart
+2020 smart compose
+2020 smartcomposemonthlyreview
+2020-01-16-MSAI Assistant Initiative Review
+2020-02 Newsletter Feb 2020
+2020-Jan
+202001_SubstrateIntelligenceWorkingSession_RoleOfAIInEffectiveMeetings
+202001_WorkingSession_RoleOfAIInEffectiveMeetings
+20200205_24h(1600)
+2046a 20
+2073330 – Analytics Properties
+20H1 M365 Modern Workplace Scenarios
+20H1 Manganese SAP OKRs - DRAFT
+2108106 compliant ios
+22 2019 mobile
+22nd
+23 copy
+23 media control
+25 nov
+27a 1 2
+29b 9440
+29b 9440 511
+2ab 1f 0070
+2b 86
+3.3 Quiz - qihao
+30 2020 bot
+30 knowledge
+30 knowledge bot
+31july review
+35ce 8b
+35ce706bf8b2 2 2020
+3S Answers Instrumentation
+3S QF Flight Plan FY20
+3S Signal Enrichment
+3S Zero Query + Search Context
+3SAPI integration (version 1).xlsb
+3ae
+3ae 2
+3f183704f06b 27
+3f183704f06b 3
+3p Providers
+3s instrumentation
+3s signal
+3to2
+4 Introduction to Security
+41c9 5d27a55fedb1
+44 28 nov
+4647 a71f
+47 nov 18th
+47 nov nov
+48 nov
+4aab bfa 72b
+4aab bfa7 72b88626923d
+4e 94 89fc
+4f86 818c 1
+4fc 1f 0070
+4fc2ab1f0070 1 20
+511 4892 9db
+51113dff 4b 3c
+51job 12429662
+51job_陈伟平(613858750)
+53 30 jan
+54 jan jan
+58th kenmore
+5d27a55fedb1 1 20
+5to4
+67d
+67d 8ce 012
+67d0ae8ce012 1 20
+67d0ae8ce012 1 27
+67d0ae8ce012 27 2020
+70 Indigo Ticket - Bangalore - Trivandrum - Bangalore - 30 Jan - 01 Feb 2020
+71f 706bf 8b
+72b88626923d 27
+72b88626923d 3 2020
+7ebf 3ae
+7to6
+8 Introduce Customer Services - Intro to Service Fabric LATEST
+818c 1 27
+818c c 364b
+88c 71e
+8ce 012 20
+8ce 1 20
+8cea 9
+9 41c
+9 9f
+9856 8f
+9c 0ae
+9c 67d 0ae
+9da 32c 3
+9db 7e
+AAD RBAC Office Hours Signup
+ABCv3 - Intro to Kusto
+ABCv3 - Strategy and Planning - Customer Data, Commerce and Ecosystems
+ABCv3 - Strategy and Planning - Telemetry and Tools
+AI - Plan to compliant experiment in Teams
+AI 365 30 January 2020
+AI Papers 1816
+AI in M365 for MSAI Customer Deck
+AI+R Scorecard
+AIR Release Policy
+AI_Res_Proposal_IntelliSense for Excel Formulas
+AI_one slide
+API contract for the Substrate Directory groups work
+APIs
+APlus
+AS Trigger Conditions
+AZURE ML TOUR CALENDAR (Oct 21-30)
+Accept-Decline POV Jan 31-2020
+Achievers Ethnography - Detailed Findings - Part 2
+Action Item UXR
+Action Items - Scheduling - Tasks - One Slide on Each - 2020-01-28
+Action Items - Scheduling - Tasks - Summary Slides on Each - 2020-02-03
+Action-Items - Scenario Learnings
+Actions on OMC
+Add exact-match queries or patterns to new intents or slots in exsiting domain
+AddToScopeDiscussion
+Additional Insight Triggers
+Adult New (6)
+After.The.BootCamp
+Akka
+Alerts
+Alexa data handling _ Nov 2019
+All Icons
+Alphacities.Features
+Alternates Support for Dictation (Confusion Networks)
+AlternationsWithQuestionsAndAnswers
+AmbariPortals7a964945-0f2b-4f86-818c-c77cb364b254_1-27-2020
+AmbariPortals7a964945-0f2b-4f86-818c-c77cb364b254_2-3-2020
+Analysis and Data
+Analytics
+Analyzing Experiments - Advanced
+Android Core skills+Extras
+Android Core skills+Extras 14th Jan
+Answers Detailed UX Spec
+Answers and Entity Shipping Criteria
+AppDeploymentOnWvd
+Appendix for Outlook and To Do January 2020 Review
+Application of differential privacy in O365
+Apps_under_LocalSystem_AppPool_03182019
+Architecture
+Archive
+Argus Models for Microsoft Jan  2020
+Argus Vision Newsletter
+Aspiring Agents Pre-Read
+Assistant
+Assistant Roadmap Sync
+AssistantFeedbackDebuggingUpdate
+AssistantIOWorkbook
+AssistantUserRelationship
+Assistive Sidecar Experiences_Research insights
+Attestation, Info & Guidlines - hebrew- Cortana , Jordan
+Audience Expansion
+AudioRoutingFeedback
+Aug 1 Master Deck
+Augmentation Loop Walking Deck
+Auth3rdPartyCompliantCortana
+Availability Intent Annotation Guidelines V1
+Avi-AlternationsWithQuestionsAndAnswers
+Azure Machine Learning Enteprise Edition
+Azure Monitor CEN
+Azure Monitor Onboarding
+AzureArmManagementPorts062c3243-3c1a-4647-a71f-35ce706bf8b2_1-13-2020
+AzureArmManagementPorts062c3243-3c1a-4647-a71f-35ce706bf8b2_1-27-2020
+AzureArmManagementPorts062c3243-3c1a-4647-a71f-35ce706bf8b2_2-3-2020
+AzureArmManagementPorts51113dff-1012-4b3c-b08e-3f183704f06b_1-20-2020
+AzureArmManagementPorts61a8cea9-a5bc-41c9-9e9f-5d27a55fedb1_1-27-2020
+AzureArmManagementPorts61a8cea9-a5bc-41c9-9e9f-5d27a55fedb1_2-3-2020
+AzureArmManagementPorts7a964945-0f2b-4f86-818c-c77cb364b254_1-20-2020
+AzureArmManagementPorts7a964945-0f2b-4f86-818c-c77cb364b254_1-27-2020
+AzureArmManagementPorts7a964945-0f2b-4f86-818c-c77cb364b254_2-3-2020
+AzureArmManagementPortsa9da32c3-d579-4e94-89fc-4fc2ab1f0070_2-3-2020
+AzureArmManagementPortsbd88c71e-523f-4aab-bfa7-72b88626923d_1-27-2020
+AzureArmManagementPortsbd88c71e-523f-4aab-bfa7-72b88626923d_2-3-2020
+AzureArmManagementPortse29b9440-d511-4892-b9db-7e2046a168ff_1-13-2020
+AzureArmManagementPortse29b9440-d511-4892-b9db-7e2046a168ff_1-27-2020
+AzureArmManagementPortsfc7ebf7d-b3ae-45c2-9c08-67d0ae8ce012_1-27-2020
+BF Repo overview
+BOT Framework
+BYS标注平台
+Backlog
+Backup Restore (Sterling)
+Badge List- MSSP Airlift
+Bake the Potatoes
+Basic menu payload
+Bedroom Set and Couch Pics
+BillingWorker
+Bing Answers test cases
+Bing LT Scorecard - December  2019
+Bing for Business Shiproom - old format
+Book
+BookmarksSites - Answer - Project
+Bootcamp TOC
+Bot Design
+Brainwave Overview MSAI Bootcamp
+Brown Bags
+BrownBag_PrecisionEstimatorForSlot
+Bug Template and other useful info
+Bugs on Kingston
+Bugs or ICM for tracking Errors
+Build Substrate Intelligence with Scale
+Business Voice Updates 1 24 20
+C+T Document Culture Plan
+CARFAX Vehicle History Report
+CI Engineering Excellence January 2020
+CLP V-Team Status
+COGS
+COGS and Latency
+COSMOS Pipeline
+CPGC Quarterly Newsletter - FY 20 Q2 PDF
+CPGC021820_draft
+CSDK-Manual-Testing-Cost
+CV Tomer Cigler
+CY17Q4
+Calendar 2019-2020
+Calendar Answer
+Calendar Dialog Design Doc
+Calendar FY 20 Q3 Draft
+Calendar Quarterly OKR & Check Point FY20Q2
+Calendar Quarterly OKR & Check Point Q3
+Calendar Schedule Time skill-FY20H1
+Calendar Service Work Tracking
+Calendar Skill
+Calendar Skill - Transition Plan
+Calendar Speclet - Kingston
+Calendar answer==skill.FY20H1
+Calendar based replies
+CalendarWorkingDocument_0113_draft
+CalendarWorkingDocument_0113_final
+Calling Dialog Doc
+Calling on Outlook Mobile Commute
+Calling out new features
+Capacity
+CarinaTechReview
+Carkit-Test Report
+Chad-Q3-OKR
+Champ
+Channel to Team Links Design
+Chat Service Web API Reference
+ChatBot Questions
+ChatBot Questions and answers
+ChitChat International Test Cases
+Chunlei Wang
+CitadelProposal
+City Of Romance
+Claim Genius Teaser June 2019
+Claims Challenge
+Classification-Train-Judges1And2
+Classmate Review
+Client Side Ranker-CELA
+Code
+Code change specs
+Commerce Asks
+Common
+Comms Future Trends
+Communication Skills on UWP
+Communication and Collaboration - Post Wave 1
+Communications Intelligence Manganese Planning
+Competitive Research-  Summary Results
+Completion Rate Analysis
+ComplianceAuth_onebox_Err
+Compliant AI in M365 - Rajesh Review - 01-24-2020
+Compliant Notifications through UXO
+Compliant Pipeline Monitoring Requirements
+Compliant Skills - Onboarding Steps
+Consumer Group
+Consumption Science - Support Impact
+Containers on Substrate - 12112019
+Context
+ContextPOC
+Contextual Email Ranking Stack - One Pager
+Contextual LU - People Answer - Design
+Control Ring (Sterling)
+Controllers and Processors Analysis Guide - FINAL
+Coral Scenario Checkup
+Core Platform Shiproom -- CURRENT
+Coronavirus Outbreak - ERT List (during CNY)
+Cortana
+Cortana Alex follow ups _ 5 Feb 2020
+Cortana Alexa
+Cortana Deprecations Tracker
+Cortana Experience Overview - Offsite
+Cortana Israel - Action Item extraction - Shiproom
+Cortana Israel - Requests and Scheduling Intent- Shiproom
+Cortana PM Intern home assignment - 2019
+Cortana PM intern home assignment - Elad Ben Arie
+Cortana Platform Weekly Shiproom 10Feb2020
+Cortana Platform Weekly Shiproom 3Feb2020
+Cortana Queries
+Cortana Spec Template
+Cortana Teams Tips Suggestions
+Cortana Telemetry - all clients
+Cortana UWP app - skill readiness
+Cortana for Groups design variations study report
+Cortana in Teams - Completion Rate Exit Criteria
+Cortana in Teams - Completion Rate Exit Criteria - 12.2 Status
+Cortana in Teams - Contact Resolution in Communication Skills
+Cortana in Teams - Pending work for GA
+Cortana in Teams - Present Deck Spec
+Cortana in Teams - Read Messages Spec
+Cortana in Teams - Working Session - 2019-11-07
+Cortana in Teams - Working Session - 2020-01-20
+Cortana in Teams FAQ
+Cortana in Teams R2 Weekly Shiproom
+Cortana in Teams R2 Weekly Shiproom 1-22
+Cortana in Teams R2 Weekly Shiproom 1-29
+Cortana in Teams R2 Weekly Shiproom 2-5
+Cortana on Teams - Messaging Skills Improvements
+Cortana on Windows - 6 February 2020 Working Session
+Cortana on Windows - Deep Dive - Jan 24 2020
+Cortana on Windows - Jan 14 2020
+Cortana on Windows - Scorecard draft
+Cortana on Windows December Update
+Cortana on Windows H2 summary1
+Cortana on Windows Vibranium International Plan
+Cortana transition announcement - DRAFT
+Cortana3PDeprecationPlan
+CortanaDesktop_190816
+CortanaPerfVisualizations
+Cortana_Assistance_RajeshMPR_Jan2020_Deck
+Cortana_Briefing_WS3
+Cortbee4501-Cortbee4699
+Cosmos Convergence Subs
+Cosmos_Day_2019_Cosmos_Architecture
+Cost Rate Model Change FAQs
+Crash Archive
+CustomSpeech_FY20H2 Feature Backlog
+CustomizationData_CortanaInTeams_20190620
+D365OKRs
+DIT++
+DRI
+DRI - Detailed
+DRI NoteBook
+DRI Playbook
+DRM204P
+DSAT List
+DSAT queries
+Data Handling Standards
+Data Mart
+Data Oracle
+Data Wallow_Notes
+DataEstatePlay_Pitch_BCBLS
+DataPipeline Brownbag
+Day in a life - Outlook Cortana Dec 17
+DeepLearning
+DemoToAmazonJanuary2020
+Demos and Talking Points
+Deprecating CortanaIQDRI
+Deprecation Deck v2
+Deprecation Proposal - January 2020 - LT Review
+Deprecation plan - Cortana Mobile Apps
+Deprecation plan - Cortana on Windows
+Design
+Design - Cortex NotificationObservation
+Design Cortana
+Design Kusto
+Designers
+Desktop Outlook Metrics Summary
+DesktopClassification
+Dev
+Dev Monthly Plan
+Dev Newbie
+Dev Wiki
+DevDesign CFU UserService Update - WDG - Redstone
+Dev_Agility_And_RH_S2S_Weekly_Current
+Device Control Toggle Feedback Speclet - Kingston
+Dictate Punctuation - Translated Ranked List
+Direction_OtherCards_Full_compact_design
+Disambig for People Contact in OM SPEC FY20H2
+Distracted_2020
+Doc skills
+Documentation
+Documentations
+Dogfood testers
+Dogfooding Users
+Draft ppt
+Drive Completion Rate for GA
+Drive VST Reach & Retention via Data
+Dynamic Deactivation
+E-mails used in test 11202019
+EASTeamStructure
+ESCommonCostModel
+Efficient Monitoring With Geneva - Best Practices
+Elephants in the world
+Eligibility APIs - Architecture Overview
+Email HRD
+Email Triage Science Update 2020.01.30
+EmailCreate_DesignExplorations_rng_11-01-2019
+EmailSkillExploration_rng_24-01-2020
+Embedded Intelligence Checkpoint (Jan 2020)
+Endpoint_Admin_User_Controls
+Endpoints Table
+Eng Sys PM Meeting - 2-3-20
+Engineering
+Enteprise QF
+Enterprise ATU FY20 incentive plan details
+Enterprise Answer Measurement Proposal
+Enterprise Data Taxonomy (Asset Classification Standard)
+Entity embeddings
+Error handling and polite refusals
+Error-DQRuleApplyOnUsage-DQValidation_Compute_DQRuleApplyOnUsage
+Evoke
+Excel Dogfood Testing
+Exchange Service Overview
+ExpReview - Communication MV4
+Experience Telemetry
+Experiments
+Express v2 Architecture
+Extended logging support for MSFT employees
+ExtensionShard Architecture Discussion
+External dll contact points
+External scheduling demo walk-through
+FEDDec2019-PC&Mob-Update
+FHL-Fix
+FPGA Model Planning
+FY15 ASG Suzhou Campus Online Interview
+FY18H1 AS Flights
+FY19 - Bing Maps By Area - Q2 Planning Checkpoint+Tuning Review 2
+FY19 Forecast
+FY19 Workshop for Office of CEO
+FY19-20 AI in M365 readiness
+FY20 Annotation Asks
+FY20 Q2 Action Item Extraction from Meetings OKRs Reflection
+FY20 Q2 Task Assistance OKRs
+FY20 Q3  Scheduling Intent OKRs
+FY20 Q3 Assistant Platform - Runtime OKR
+FY20 Q3 Assistant Platform OKR
+FY20 Q3 At a Glance - Keypoints
+FY20 Q3 Email Triage
+FY20 Q3 MSAI Answer-Skill Dev Platform - OKR
+FY20 Q3 MSAI Assistant LT OKR's
+FY20 Q3 OKRs - All Up
+FY20 Q3 OKRs - Ian's Team
+FY20 Q3 Timeline
+FY20 Q3 Topic OKRs (WpA MyA Teams Outlook)
+FY20 REE Scenarios_DRAFT
+FY20 S500 List
+FY20 WP SBS Segments Deep Dive Schedule
+FY20-Q2-OKRs
+FY20-Q3-KMI-OKRs
+FY20-Q3-OKRs
+FY20-Q3-Plan
+FY20_21 GLEAM Board Elections Nominee Guide
+FY21 Substrate Budget Planning
+FY21-1H Change Settings via Voice in Outlook Mobile - V2
+Fairy tale for sad children
+Falcon+ModelD-Bootcamp
+Feature Parity Gap Tracker
+Feature Store Processing - Refactoring Proposal
+Feature Tutorial
+Feedback OKRs
+Feedback Working Session Document
+FeedbackLoop
+File Search OKRs
+FileSearchIntegrationProposal
+Filtered Emails - Data Collection
+Flash Feedback Report - Customer Trust
+Flight Answer
+Flight failure tracking
+Flight reviews
+Flighting Plan
+Flighting in compliance -Phase1
+Flights Answer - H2 Planning Doc
+Flyer-20331-58th-LN-NE-Kenmore-WA-98028
+Focused Inbox - Introduction
+Focused Inbox Fixed Behavior and Overrides
+Food for Children
+Food with nutrition
+Foundations DRI Guide
+Frontend
+Functionalities for GCC GCC High DoD
+Functions on Linux
+Fy20 Q3 OKRs - Meeting Insights and Recap
+GAPON_SPO_Sites_VM01_Output_.ListReport.16Jan2020-223217
+GAPON_SPO_Sites_VM01_Output_.SiteCollectionReport.16Jan2020-181009
+GAPON_SPO_Sites_VM01_Output_.SiteReport.16Jan2020-201523
+GAPON_SPO_Sites_VM02_Output.SiteCollectionReport.16Jan2020-181101
+GAPON_SPO_Sites_VM03_Output_.ListReport.16Jan2020-220607
+GDPR Service Solution for Cortana
+GESS H1 2020 Teams
+GOVERNNMENT ONLY - BRK30015 - Ignite Tour - Exchange Hybrid - The What, The Why and the How - final
+GRC Review Office Hours Sign-Up Sheet
+GRC Review Process Flow
+GSAM Self Service Portal FAQ
+GSMO
+General
+General - Communication Onenote
+Geneva and AM - Draft
+GeoAnalytics_DeepDive
+Getting Started
+Glassjar-discussion
+Globalization-Jan 2020 Update
+GoldenUtterances-deliver
+Google Play content - New Microsoft Launcher overview
+Grakon_internship-summary
+Great Places for Cats
+Great Places for Dogs
+Greenland 2.1 L1 DocData Features
+GroupMe-style SMS Dev Design
+GroupsvNextShipRoom_20200123
+GroupsvNextShipRoom_2020206
+Growth - OneNote
+H1 Features Test Plan
+H2 planning - Communication and Collaboration
+HCL_FHL2019_Comparative study of Narrator with NVDA and JAWS
+HCL_FHL2019_DemoDaySummary
+Hackathon2019-Winning-Project-One-Page-Brief
+Hamideh Rezaee 2020
+Happy Home for Cat
+Hekaton
+HighResolutionDateTimeProposal
+Highlights extraction from meeting transcript - Jan 20
+Highlights extraction from meeting transcript - Jan 2020
+Holly-Cortana Ask for Prototype1 - 150508
+Home Automation High Level Design
+How to Execute Test Suite
+How to connect to Global Protect
+How to create Test Plan Test Suite and Test cases in VSO
+How to create bug in VSTS
+How to write a bug through Lightbulb and Shaker
+How-tos
+Hx Partner Asks
+IC-Q3-19-OKR-Template
+IC3 Playbook
+ICE Services Weekly Review
+ITAdminInterviewScript
+IcM PowerBI Base Query
+Ice land (1)
+Importing Calendar Items using REST APIs - July 2019
+Indigo Ticket - Ms Ankita Agrawal - BLR - TRV - BLR
+Ingestion Onboarding
+Ingestions SIGS Data to ADLS (SIGS to ADLS Pipeline)
+Input_summit_092519_ShelleyBjornstad
+Insights extraction from meeting transcript - Brian Mac visit Oct 2019
+IntactTrainingWorkshopScheduling
+Intelligence Working Session - US Trip
+Introduction to MSAI Current
+Introduction to Probability 2nd Edition Dimitri P. Bertsekas
+Investigating
+Investment Proof Submission FAQs
+Islandwood.CoreText (Old - see WinObjC.CoreText instead)
+Itinerary
+JSLT_FLT Meeting Attendee List
+Jan 2020
+Jan Review
+Jan- Teams
+Jan28 exec meeting
+January 15 2020 Experiences + Devices MPR
+JanuarySprintItemsTracking
+Japan Tasks
+Jiahui_Q3_OKRs
+Jim E_Mil
+Johnson Lin Resume
+Joint LT  Monthly Sync Substrate and MSAI
+KMI_Q2_OKR_Reflection
+KQL 3S Design Spec
+KWS Manual Testing
+KWV FA Examples
+KYP Bug Bash UWP
+Key Management Service
+KeypointsModelLatencies
+Kingston
+Kingston Device_Core Skills_Testing
+Kingston Device_Core Skills_Testing_Sha_12.23.2019
+Kingston Device_Core Skills_Testing_Sha_12.23.2019 - Copy
+Kingston Release Cadence
+Kingston-WorkingDeck
+Kingston_Core Skills_Testing
+Know Your Product Jan 2020
+Knowledge Base
+Knowledge Management - MSAI-CSI - Directors Update 11-11-2019
+Knowledge Mining Aug 2019 offsite
+Knowledge Mining Team Capacity Plan
+Knowledge bot MVP spec - Nov 19
+Kusto
+LU
+LU Alteration
+LU Brownbag v1
+LU enablement of S+A NL search scenarios - V2
+LUFY20WorkingSession
+LUFY20WorkingSessionDec2019
+LU_MSAI_Bootcamp_2020
+Language Understanding in ISFB
+Latency
+Latest Teams Modeling for Speech COGS - Yearly Mom Compounded
+Latest_SERP_POR_2019_04_14
+Learning Team Meetings
+Liat-Barel
+Lift Pres - January 20 - Tel Aviv Edition
+Lifted Xaml Outline
+Lists Vision - Fall 2019
+Live Captions spec
+Local Experience
+Local Search 101
+Logical Impression view and pipeline upgrades based on the v2 instrumentation contracts
+Lost_Receipts_Form
+M365 Core PM Talent Guide
+M365 Search - 3S Instrumentation - Client Contracts
+M365CoreCustomerDriven_January2020_Status
+M365CoreDataPlane - FY20H2 - Manganese Review-Final_v1.0
+M365Core_CustomerDriven_TrackingDocument
+MAS 1.4.10 Considerations
+MDP Data For Search
+MM Shiproom Special Topics Schedule
+MM Team Shiproom New Format
+MM-DD-YYYY  Cortana - TTS Streaming - Full
+MPH-O-ID-GA-F820190721
+MPS_Volume 2_Post CDGB Approved _ May 2019_privacy portal version
+MS EVENT POLICY
+MS Sales WW access
+MSA and AAD Report
+MSAI - CSI Work List
+MSAI - Teams x-LT Checkpoint November 2019
+MSAI -- FY20 Resource Allocation and New asks
+MSAI Cognition H2 OKRs
+MSAI G Team All Hands July '19
+MSAI Israel Q2 FY20 OKRs Reflection
+MSAI Israel Q3 FY20 OKRs
+MSAI Live Site Review - 2019-12
+MSAI London Munich Team All Hands April '19
+MSAI STCA FY20 Kickoff
+MSAI STCA FY20 Q3 OKRs
+MSAI Universal Search and Recommendations
+MSAI and Assistant H2 Planning - 12-9-2019
+MSAI-Cognition Joint Shiproom
+MSAI-MyA Q3 plan and dependencies
+MSAI-STCI OKRs
+MSAIRQList
+MSAI_LU_Measurement_Story_02032020
+MSAI_MeetingIntelligence_FY20H2_Plans
+MSX Academy - Account Planning Process_Sellers Facilitator deck_ACADEMY_TEMPLATE_APAC
+MT Calendar REST dev spec
+MTIS - Meeting intelligent
+MTIS Overview
+MTIS Provider Integration
+MTMA - UX Walkthrough
+MVPSummit2020_Sessions
+MVPSummit_MicrosoftTeamsArchitectureSession_March2019
+Management
+Manager Inference Spec
+Manganese-Search
+Map AS
+Master Tax File
+MasterUsage
+Mavens Micro Coaching Sign Up - Jan 2020
+MaxPan_1page
+Meeting
+Meeting Intent Annotation Guidelines V3
+Meeting Intent and Availability Inquiry Intent Annotation Guidelines
+Meeting Notes
+Meeting Notes 012120
+Meeting Quality Assessment
+Meeting Recap
+Meetings
+Meetings - Capture and Share Feedback
+Meetings AI Summary2
+Mentoring Circle Assignments
+Messaging Dialog Doc
+Messaging Query Patterns for LU
+Metastream Injection for Email Search
+Metrics
+Metrics + Signals + Data - FY20 Q3 OKRs
+Microsoft Elite Certificate
+Microsoft Search Feature Review Schedule & Agenda
+Microsoft Search Manganese Working Deck
+Microsoft Search Overview
+Microsoft Search User Job Framework
+Microsoft Teams Customer Pitch Deck
+Microsoft event policy 1
+MicrosoftSearch-ManganesePlan
+MicrosoftSearch-UniversalAPI
+MnM - MDL
+Mobile Client Telemetry Release Impact Details
+Mobile Clients_DefaultNotes
+Mobile shiproom - Q2
+Mobile-Deepdive-with-Richard
+Modeling
+Modern Life Achiever Audience
+ModernHistory
+Modular use of Configuration ASP .NET Core libraries
+Monitoring
+Monitoring and Diagnostics Brown Bag
+Monthly Goals
+Monthly Status_2019Nov_IES
+Monthly Suzhou team report
+Monthly planning
+Moonshot 1-pager
+Move CUTrain to Aether
+MoveScheduleToADF
+Movie
+Movies + Showtimes
+MultiEntity Mail+Calendar
+Multimedia Shiproom
+Multiple Range Queries Support in MDM
+My Account - CSS brownbag (draft)
+MyAnalytics IW Survey - Analysis
+NEOGlobalDeck
+NGP Onboarding - Export
+NL Scenario Queries - Sep 2019
+NL Search for Email Messages Dev Spec
+NL Search for Files Dev Spec
+NL Search for Messages on Teams Mobile Dev Spec
+Name-Resolution-UX-Improvements
+NeuralFY21Projections
+New Cortana interfaces
+New Hire
+New Hire General App  - Facilitators Guide
+New Hire Page
+New Hire Ramp Up for PMs
+New Sect 1
+New Section 1 2
+New Section 1 4
+New Section 2
+New Section 4 2
+New Teams & Exciting Initiatives
+New hire
+Newsletter-Jan-2020
+Next meeting
+Notification Activation Protocol
+Nov -Dec update
+Nudge Reply Metrics
+OCR
+ODSP Teams Sync - Dec 12 2019
+OKR
+OM Cortana
+OM onboard
+OM-feature-matrix
+OMC & Teams Communication - Slides
+OMC -Tasks and Reminders Test Cases
+OMC Calendar Compose
+OMC Data Pipeline
+OMC Perf doc
+OSReplStatusLog_0
+OWA NL Bug Bash
+OWA Weekly's
+ObjectStore DRI
+Objective inference of intent with C2M
+Oct_2019 Outlook Engineering LT Offsite
+Office 365
+OlsIndexQueryLog_0
+OnBoxAutopilotFactoryError
+Onboarding & Training documents
+OneBranch
+OneNote - Switch for controlling Math feature availability
+OneNote UWP - Equation Editor
+OneNote_DeletedPages
+OnePager_Drive VST Completion Rate to Meet GA Criteria
+OnePager_Teams Voice Skill Metrics
+Open PO Details
+Opt-in Promotion Proposal
+Organizing Cortana Geneva Accounts
+Other Roles
+Out of Routines Insight - Incubation
+OutOfRoutine
+Outlook Commute Working Session 2020_02_06
+Outlook Design All-Hands Nov 2019
+Outlook Mobile Growth - December 18th working session
+Outlook Mobile SERP Migration
+Outlook Research - Attention Management in Read & Compose POV - May 2019
+Outlook Search Checkpoint (Jan 2020)
+Outlook mobile FY20Q2 OKRs and Plan
+Outlookcommute_test cases
+Overview of Substrate Search Service 3S API
+Overview_AzureCompliance_Tracker_Current
+PDP API v1 Spec
+PELS Shiproom
+PM
+PM working notes
+POI to L2 Launch Plan
+PPL Assignment v1
+PRFAQ-Presence - Vision - Incubation - Sharat
+Paper4-TDHs
+Parking Jan 2020
+Partner Engagement Process - Teams Mobile
+PartnerFeedback_Oct2019
+Partners Notebook
+People Also Ask
+People Q2_Q3
+People Relevance
+People Search Skill updates-Jan-2020
+People Search skill on Teams Mobile V1
+People Skill Review_Jan_2020
+People Skill Voice Module
+People search on substrate
+PeopleSearchInTeams
+Perf Dependencies & Contracts
+Perf Metrics Data to Cosmos for Score Cards
+Perf OKRs
+PerfStatusUpdates
+Performance Data
+Performance Design Document
+Phase2 1-22-20 Working Session
+Phone System Strategy and Go To Market Plan_ Sept 2019
+Planning
+Platform Requirement Summary_v3
+Platform-wide
+Play My Emails Feedback
+Polite Refusal Intl
+Post Action Item Resolution
+Post R1-Prod Bugs MSAI
+PowerPoint Dog food Testing
+Present the deck and Smart Navigation spec review
+Presentation Skills Workshop
+Presentation to reciever
+President Presentation
+PreviewOfAttachment
+Principal Briefing FINAL Posted Jan 23 2020
+Private build
+Process for determining FY19 Conference sponsorship list
+Product AI Investments Final list - FY19
+Product AI investments - FY19
+Program & Product Managers
+Program Review - Endpoints
+Project Managment
+ProjectSpool-EngUpdate-Jan2020
+Projects
+Publish to store for Msft developers
+Q2 OKR Scoring and Retrospective
+Q3 Backlog
+Q3 Planning
+Q3-OKRs-Summary
+Q4 2019 ES Quarterly Survey Key Takeaways and Actions
+QAS + TEE Model inferencing
+QASTester
+QF
+QF Weekly Flight Review - Current
+QF for Work
+QPS_Group_Shard
+QQR CY19Q4
+QQR-2020-01-COGS
+Qtips_Hints for OM Phase 1
+Quarterly Quality Review
+Quarterly Quality Review Q1CY20
+Quarterly Sales Review
+Queries with SR Issues
+Query set
+Query volume per language
+Questions
+QuestionsPerCategory
+Quick Links
+QuickBuild
+R1 Prod Known Issues and FAQ
+Rahul Q2
+Rajesh MSR - 2020-1-16
+Rajesh MSR Resiliency Reporting
+Rajesh_Jan2020_MPR_DemoScript_finaldraft
+Ramp-up
+Rampup
+React Native at Microsoft
+Reactivating Expired Topics in CPM
+Read Act Compose Framing
+Read Specific Emails
+Reading Time
+Real Time Transcription spec - ORIGINAL
+Recent Graduates & Interns
+Recomendations_OutlookMobile_ShipIt_2020Q2
+ReferenceAttachment
+Registration_Cancellation
+Release Notes
+Relevance
+Reliability overview
+Removing recV0Hack
+Research Ask for Meeting Recap
+Resources
+Responder_WebservicesDumper_MSExchangeRestAppPool_20200204-125308
+Restricted Visibility for Guests
+Resume _ 1 Pager
+Resume_Derek
+Resume_Jerry_Zhang
+Review One Test
+Review with Graham - Jan 20
+Room  Seat Numbering V10 18.12.19_V5_F8
+Rooms and Devices_Notes
+RosterSync
+Running Experiments
+Running Experiments - Advanced
+Running Feature Rollouts
+Running Late - Prioritization and Requirements
+S+A Answer Extensibility - Plan for BUILD 2020 - v1.0
+S+A Assistant Resourcing Map
+S+A Assistant Resourcing Map (Edited)
+S+A Data Insight Requirement Backlog
+S+A H2 Planning
+S+A Initiatives - Teams Mobile Zero Query Experience
+S+A OM focused Shiproom 01142020
+S+A OM focused Shiproom 01212020
+S+A OM focused Shiproom 01282020
+S+A OM focused Shiproom 02042020
+S+A OM focused Shiproom 12032019
+S+A Perf Client Contracts
+S+A Setup for iPhone
+S+A Team H2 Rhythm of Business (Jan 6 2020)
+S+A Test Plan Query
+S+A registration data flow
+S+A_H2_Manganese_Review
+SA_Disambiguation
+SC Ranking Q3 FY20 OKRs
+SC-Contextual-Q3-OKR
+SCIS EV2 migration
+SCIS Required Geneva quota calculations
+SCIS Spotlight
+SCIS and MTIS architecture
+SCOPEStudio-Installation-Instruction
+SDF2MSIT_Bugbash
+SDS-Release-Schedule
+SDS_PoiStats
+SDX Status Tracker v2
+SE-Shiproom
+SERP Grid and Layout
+SM FY20 preview scenarios
+SOW amendment
+SQI -- FY19 Resource Allocation and New asks
+SQL Bits 2020 Walking Deck
+SQLServerAndAzureDataWhatToUseWhen_long
+SR metrics
+SRCH10
+SSAS ModelDeployment
+START HERE
+STCA Tech Talk Series
+STCI MSAI Shiproom - Current
+Sample App Testing
+Sample Report Data
+Scale and Load Validation
+Scan Jan 28, 2020
+Scheduler comms _ Dec 4, 2019
+SchemaManager.Build
+Scrum
+Search Answers Extensibility
+Search Health in Microsoft - pre-read
+Search SDK on Teams Mobile client
+Search Skill Design
+Search Skill Design (1) (1)
+Search Skill Design2
+Search UX FY20
+Search and Assistant in Outlook Mobile - Quarterly Plan Checkpoint - January 29th
+Search and Assistant in Outlook Mobile - Quarterly Plan Checkpoint - January 29th FINAL
+Search and Assistant in Outlook Mobile - Quarterly Plan Checkpoint - October 30th
+Search and Intelligence OKR and Plan Review
+Search fallback on Teams – H1’FY20
+Search on Large Teams
+SearchAssistantInstrumentationChallenges
+SearchRequestContext Schema Change
+Search_backlog
+Secrets
+SegmentsConfig
+Selfhost
+Semantic Search Questions
+ServerList
+ServiceRing_Deployment_Status
+ServicesManager
+Set Up Compliant Cortana for Android Teams App
+Set Up Compliant Teams Desktop and Web
+Set Up Cortana for Commute for Microsoft account
+Set up Cortana for Gmail account
+Set up Cortana for public outlook account
+Shan Zou_CV
+Shared PM Assignment and Resources
+Shared UX User Engagement Events
+Show top customer DSATs on 3SDash
+Signals Across Stack
+Signed-on-Paper_2610f58e-edae-4b2d-9856-8f955d96d7c4
+Signed_Tax_InvoiceReceipt_No_111349
+Signed_Tax_InvoiceReceipt_No_115615
+Signed_Tax_InvoiceReceipt_No_120018
+Signed_Tax_InvoiceReceipt_No_123108
+Signed_Tax_InvoiceReceipt_No_127552
+Signed_Tax_InvoiceReceipt_No_135493
+Signed_Tax_InvoiceReceipt_No_151338
+Signed_Tax_InvoiceReceipt_No_151340
+Single-suggestion meeting suggestions with context - explorations
+Sitting Plan
+Skills List
+Skills Teams LT review 02-12-20
+Skills Teams LT review 12-04-19
+Smart Compose - Candidate Generation - Scoring Overview
+Smart Context Transition
+Smart Replies - Measuring Success
+Smart Reply - Backlog
+Smart Reply Android R1 Release
+Smart Reply in Teams _ Status
+Smart Reply_Teams V2_UX 1910
+Smart Suggestions in Teams - Jan 2020
+Smart Suggestions in Teams - Sep 2019
+Smart compose and meeting insights 101205
+SmartReplyLRP_FY20
+SmartReply_Guidelines_QualityV3.5_Teams
+SmartReply_Test_Case
+Software Engineers
+Solo & Ensemble - Mount Si HS - Full Sched by Teacher
+Speaker Recognition for Travelers
+Spec - Communication and Collaboration Skills on Outlook Commute
+Spec for Accept-Decline
+Spec for Movie
+Spec for Outlook commute feedback
+Specs
+Speech (TTS) Media Download-Streaming
+Speech Engine – Personalization
+Spring2020-MLADS-Reviewers
+Sprint Plan
+Sprint Planning
+Sprint Status
+Staging Teams Voice Skills V0
+Steps to follow before writing bug with an example
+Steve's Team
+Streams Connectors
+Substrate Architecture Discussion - ElySium 15012019
+Substrate Groups Provisioning Latency Reduction
+Substrate Groups Provisioning Performance Optimization
+Substrate Inference
+Substrate Knowledge Weekly Meeting slides
+Substrate Overview
+Substrate Partner Discussion with Teams_01_13_2020
+Substrate Partner Discussion with Teams_02_10_2020
+Substrate Perf Shiproom - 2019-12-04
+Substrate Perf Shiproom - 2020-1-08
+Substrate Perf Shiproom - 2020-1-22
+Substrate Perf Shiproom - 2020-1-29
+Substrate Performance Improvements - Naresh Sundaram
+Substrate Search Query API V1 Specification
+Substrate Search Query API V2 Spec
+Substrate and MSAI Working Session 02-04-2020
+SubstrateArch
+SubstrateAuthInPictures
+SubstratePartnerDiscussion_Cortana_2019Sep30
+SubstrateSearchService
+SubstrateSearchWorkingSession-Jan2020
+Substrate_Conversation_Intelligence_Design
+Substreate HowTo
+Suggested Tasks - A Coherent Team & Q2 OKR
+Summary of Current research
+Surface Audio App PQS Plan
+Surface Audio app update - 011720
+Sustained Engineering Newsletter 12-9
+Sustained Engineering Newsletter 2-3
+Synching User Profile Data to the User Shard
+TDS
+TM onboard
+TSG 2
+TTS voice list
+TTSStreamingAuth
+TTSStreamingData
+TVS - R1 Prod recap - Jan 2020
+TVS - Working Session - 20200210
+Task Assistance Q3-OKR
+Task Assistance_Q2 grades
+Task Forces
+Task Modeling FY21 Capacity Planning
+TaskExtractiononTeams
+Tasks Skill = Answer
+Tea Flavors
+Team 1st
+Team Meeting
+Team Mobile Search - 3S dependency list
+Team Sizes
+Team Status
+Team and Objectives
+Team organization
+Team_Channel_GroupChat Search in Teams
+Teams Client Voice skills for GA - Full [draft]
+Teams ERP Training
+Teams Free Teams Paid  Business Review - Nov 2019
+Teams FriseBEE_PassRate
+Teams Instrumentation Events Breakdown
+Teams Linux Client - Volunteers
+Teams Metrics and Instrumentation Spec
+Teams Mobile Search Dev Spec - Answers
+Teams Mobile Search Spec - Answers V2
+Teams Mobile Voice Skill Test Plan
+Teams Navigation Skills - Dialog Design
+Teams Offsite 2020 (Kollam)
+Teams PM Onboarding
+Teams Search High level Architecture Diagram
+Teams Search-Shiproom_01_09_2020
+Teams Search-Shiproom_01_23_2020
+Teams Search-Shiproom_02_06_2020
+Teams Services Catalog
+Teams Suggested Tips
+Teams Virtual Consults and Bookings Update - Jan 22 2020
+Teams Voice Skill DSAT Tool
+TeamsIOSTurns_WithIndex.ss
+TeamsTeamDefectRate
+Technician Daily Crew Schedules
+Template
+Test
+Test File one
+Test Result Main sheet--Core+Non Core (1)
+TestCasesReport Jan13-Jan17 JLGA
+TestCasesReport-Week47_Nov 18th- Nov 22nd
+TestCasesReport-Week48_Nov 25th- Nov 29th
+TestCasesReport-Week48_Nov25- Nov29
+TestCasesReport-Week54_Jan06- Jan10
+TestCasesReport-Week56_Jan20- Jan24
+TestCasesReport-Weekly
+Testing
+The Advantages of Doing Review
+The Story of Email by the numbers
+The day after - R2 Prep
+The way the cookie crumbles
+Threshold_DE_Intro
+Timeline and Flight plan
+Timex Resolution
+Tips in Teams
+Toads Possum
+Topic Quality Evaluation Portal
+Topic Search
+TotalClientErrorsRawDataLog2020-01-072020-01-08
+Tours & Travel
+Towards a theory of software development expertise present
+Tracking
+Transcript design deck
+Transition Plan for Teams Message Search
+Transition to MSE 2.0 - Israel
+TruckRouting
+Tutorials
+UCS_OMC
+UHRS
+UWP Skill roundup - Privacy Security Compliance tracking
+Uber NGPX Partner List
+Understanding Meeting Insights Metrics
+Understanding Suggested Attachment + Metrics
+Union Mobile App support
+Union for MBR Sept 2019
+Universal Search + Assistant + Instrumentation - FY20 Q2
+Universal Search + Assistant - FY20 Q3 Backlog
+Untitled Section
+Untitled form (2)
+Untitled form 1
+User Context for ASC
+User Feedback on Topics (Private Preview)
+UserZoom License Description
+VA Adoption
+VPN指南及安全规定
+VST AA Onboard
+Values Conversations Playbook
+Vendor Allocation
+Vendor User Report12120
+VendorBudget
+Visual Disc Concept_April2019
+Visualizing Griffin Model D2
+Voice Experience for Pre-Join Screen in Teams
+Voice Scorecard
+Voice Skill Metrics - 1-15
+Voice Skills - Native Flow Fallback for Contact Resolution
+Voice Skills BVT - basic test cases
+Voice Skills BVT Manual Test Cases (Core)
+Voice Skills Competitive Research - October Report
+Voice Skills Manual Test Plan
+Voice Skills Wave 1 review - Jan 2020
+Voice design asks for contextual actions
+Voice horizontal project_one pager
+Voice skills V1 discussion
+Voice skills in Teams Funnel
+VoiceSettingsExploration_rng_17-01-2020
+W+P FY20 Q3 Planning
+WCAG 2.1 implementation - MAS 1.4.10 (Reflow) consideration
+WDP-Relevance dependencies
+WKW Data pipeline
+Walking deck Graph Monetization
+Waterloo Campus Map
+Web relevance shiproom
+WebSdk Testing
+WednesdayAllPlay
+Weekly Whole Page and Answers Ship Meeting
+Weekly status owner shifts
+WeihuaLiu_Resume
+Welcome
+Welcome to 2020 SmartStar
+What's New demo script
+What's next - design deck
+WhatsNew - Design
+Who Knows What Status_Nov_26
+Wiki
+Windows On Call Rotation Current Year
+WordMail and SwiftKey
+Working Deck - Cortana Site and Docs update
+Working From Home Guidance
+Working doc for Day Overview
+Writing Compliant Cortana Skills on UWP
+XAP
+XBox
+XLT 1.24.2020 Agenda
+Your Checklist 2019-20
+Yubikey requests
+Zero Waste Survey 2nd
+ZeroLoss
+Zhong
+[Android][Voice skills] Battery tests
+[DRAFT] Metrics - Time Saved
+[Deprecated] Object Store
+[Dev spec]Teams Mobile Search Baseline Instrumentation
+[Migrated] Analyzing Experiments
+[Migrated] Onboarding to ExP
+[NRP] Private Endpoint Design 3
+[PM Spec] Metrics (Client) in PME Scorecard for Experiment
+[PM spec]Teams Mobile Search Instrumentation
+[PM spec]Union Mobile App Search Instrumentation
+[Untitled]
+[Walid] Mails processing, Substrate and TEE
+[v2] Writing responsibilities back to DirectorySessions API (UPA)
+_old_Communication and Collaboration - Post Wave 1
+a5bc
+a5bc 41c9
+a5bc 9e9f 5d27a55fedb1
+a71f 1 27
+aad report 1
+accept decline
+accept decline pov
+achiever audience
+action item shiproom
+action items pipeline
+adls sigs adls
+agreement 7038940 zen3
+ai
+ai 30
+ai in readiness
+ai investments fy19
+ai january
+ai r scorecard
+ai rotation
+ai rotation proposal
+ai scorecard
+ai summary 2
+alignment om teams
+alteration v2
+alternations questions
+alternationswithquestionsandanswers
+alternatives v3
+ambient kingston
+america zen3 intl
+android app
+android core
+android skills
+annotation asks
+answer on full
+answer s dark
+answers and questions
+answers cortana
+answers meeting
+answers test cases
+api
+app skill
+appver_consented
+architecture
+architecture diagram
+area planning checkpoint
+arm 29b
+arm management ports
+arm management portse
+arm ports 61a
+arm portsbd
+aspiring agents pre
+aspiring pre read
+aspiring read
+assistance mpr
+assistance mpr jan
+assistance rajesh mpr
+assistance rajeshmpr
+assistance rajeshmpr jan2020
+assistant in mobile
+assistant initiative review
+assistant outlook
+assistant platform runtime
+assistant review
+assistant roadmap
+audio 011720
+aug master
+augmentation
+augmentation walking deck
+azure management portsfc
+azure portsa
+azurearmmanagementports062c3243 4647 a71f
+azurearmmanagementports61a8cea9 a5bc 41c9
+azurearmmanagementports61a8cea9 a5bc 9e9f
+azurearmmanagementports7a964945 0f2b 4f86
+azurearmmanagementportsa9da32c3 4e94
+azurearmmanagementportsa9da32c3 d579
+azurearmmanagementportsfc7ebf7d b3ae 9c08
+azurecompliance tracker
+azuresecuritycontrolbenchmark
+b08e 3f183704f06b 1
+b3ae 45c2 67d0ae8ce012
+b9db 1
+b9db 2
+base query
+basic test
+batch Training
+bedroom set couch
+bi_telemetry_mobile
+billing january
+bing ex docs
+bing for business
+bing shiproom
+bookings and consults
+bot
+box factory error
+brainstorm 2020
+brian oct
+briefing final
+briefing jan
+brown bag
+buddy
+budget planning
+bug
+bug lightbulb
+bug template
+bvt
+bvt basic test
+bvt cases
+bvt manual
+bvt manual cases
+bvt manual test
+bvt test
+calendar design
+calendar okr
+calendar quarterly
+calendar quarterly okr
+calendar time
+calendar working
+calendarworkingdocument 0113
+call rotation
+calling features
+calling mobile
+calling new features
+candidate generation overview
+candidate overview
+candidate scoring
+capacity plan
+card details current
+carkit test report
+cases 49
+cases core
+cases dec 30
+cases jan
+cases report
+cases report 13
+cases report weekly
+cases week 55
+category
+cee final
+ceo
+challenges
+chat in teams
+chava
+check and okr
+check point
+checkpoint 2019
+checkpoint 29th final
+checkpoint 30th
+checkpoint jan 2020
+checkpoint january 29th
+city of romance
+claim teaser june
+client contracts
+client pme scorecard
+client release
+clients
+clp
+cny
+cogs yearly compounded
+coherent team q2
+collaboration
+collaboration 1
+collaboration skills
+comms future trends
+communication and collaboration
+communication collaboration post
+commute
+commute account
+commute august mpr
+commute gmail
+commute microsoft account
+commute routines
+complaince doc
+complaince hmds
+completion exit criteria
+completion for ga
+completion meet
+completion rate
+compliance phase
+compliance tracking
+compliant ai
+compliant android
+compliant cortana ios
+compliant for ios
+compliant in m365
+compliant ios
+compliant teams desktop
+compose candidate generation
+compose scoring
+compounds
+configurationdata
+connect to msft
+connected one cube
+contact resolution communication
+contact_picker_ux
+context
+context for asc
+contracts
+contracts and dependencies
+convergence subs
+copy
+copy de
+core core
+core extras
+core room
+core skills extras
+coronavirus ert list
+cortana 2020
+cortana analysis
+cortana and meetings
+cortana and teams
+cortana android
+cortana announcement
+cortana apps
+cortana assistance mpr
+cortana assistance rajesh
+cortana briefing ws3
+cortana commute
+cortana for gmail
+cortana for groups
+cortana for ios
+cortana for os
+cortana for outlook
+cortana geneva accounts
+cortana groups design
+cortana high level design
+cortana hosting
+cortana iqdri
+cortana israel action
+cortana managed services
+cortana mobile
+cortana mpr
+cortana os
+cortana overview
+cortana pending
+cortana r2
+cortana rajesh
+cortana rajeshmpr
+cortana site docs
+cortana skills
+cortana streaming full
+cortana teams
+cortana teams faq
+cortana teams pending
+cortana teams r2
+cortana teams read
+cortana teams tips
+cortana telemetry clients
+cortana uwp
+cortana ux
+cortana vc
+cortana vibranium
+cortana windows scorecard
+cortana working
+cortana ws3
+cortana-logger
+cortana_alignment_om_teams_2
+cortana_teams_ux_vision_vnext
+cortbee 4501 4699
+cortex full
+crash0117
+create bug
+create in vsts
+create intent fake queries
+create test test
+csdk
+csdk framework
+csi update
+cube
+d511
+data and analysis
+data backlog
+data handling
+data plan fy19
+data to adls
+data to cosmos
+day 2
+day overview
+day r2
+dd cortana tts
+dd_VSIXInstaller_20200124193450_3d30
+deactivation
+dead ends
+dec 17
+dec 20 copy
+dec jan sprint
+dec2019
+december update
+deck smart
+deck v2
+decline pov 31
+deep
+demo
+demo script
+demo script finaldraft
+demos points
+dependencies
+dependency
+deprecating cortana iqdri
+deprecation 2
+deprecation deck 2
+deprecation plan
+deprecation v2
+des
+design deck
+detailed spec
+dev spec teams
+dev teams
+device core skills
+device feedback
+device skills
+device_information
+differential
+disambig people contact
+discovery
+discussion cortana sep
+distance jan
+doc day
+docs
+dogfooding
+dogs
+draft time
+drisatisfaction
+drive rate
+drive vst reach
+driven september
+dsats 3sdash
+dynamic parameters residency
+eas structure
+edae 2d 9856
+edae 4b 9856
+edae 4b2d
+elephants in world
+eligibility apis
+email science
+email skill h2
+email triage
+emails feedback
+embedded intelligence jan
+emerging
+employee contact
+employee insurance contact
+endpoints table
+entity shipping criteria
+errorlog
+errors raw data
+errors raw log
+ert
+ethnography detailed part
+excel connected to ONE cube (civp)
+execute suite
+execute test
+execute test suite
+expense page
+experience
+experience overview offsite
+explosion
+extended logging
+extended logging support
+externalmonitoring
+extraction meetings okrs
+extraction transcript
+extractionon
+extras 14th jan
+fairy
+fairy sad
+fairy tale
+fairy tale sad
+fallback for resolution
+fallback on h1
+fallback on teams
+fallback resolution
+feature
+feature tutorial
+features
+features plan
+feb mw
+feedback 1911
+feedback document
+feedback okrs
+final jan 23
+flighting compliance phase
+flighting in phase1
+flow for contact
+flyer 58th
+focused
+focused shiproom 12032019
+food for special
+food nutrition
+food special people
+fpga
+frise pass
+frise pass rate
+fw info-ipphone-v48-Dummy-OTA
+fy draft
+fy19
+fy19 ai
+fy19 cee
+fy19 workshop
+fy20
+fy20 0
+fy20 action item
+fy20 email triage
+fy20 gl
+fy20 plan
+fy20 platform
+fy20 q3 assistant
+fy20 q3 backlog
+fy20 resource
+fy20 resource allocation
+fy20 shiproom nov
+fy20h2 flights
+fy20h2 om
+fy20okr
+fy20q2
+fy21 planning
+fy21 substrate
+fy21 substrate planning
+fy21gpu
+general facilitators
+genius teaser 2019
+grakon summary
+grc hours
+grc office
+grc office hours
+grc process
+grc review
+grc review hours
+grc review office
+great children
+great places dogs
+greenland monthly
+greenland schedule
+group plan
+group research
+groupsvnextshiproom
+gunsmoke
+h1 review 18
+h2 planning
+h2 planning 12
+handling refusals
+highlights meeting
+hoffien-levi-izhak
+home for cat
+hosting
+hosting cortex
+hosting skills
+hours sheet
+hours sign
+hours up sheet
+hudson oh conflicty
+iOS Commute Outlook Pass
+iOS Commute Pass
+iOS Commute Pass - Weekly
+iOS Commute Pass Gmail
+iOS Core Skills + Extras
+iOS Core Skills + Extras 14th Jan
+iRanker.IPS
+ic m power
+ic q3 okr
+ic3 playbook
+ice
+ice review
+ice services
+ice services weekly
+icm query
+il modeling
+il research task
+il task
+image 00001
+image 00002
+image 002
+image00001
+image00002
+image001
+image002
+image003
+in Meeting review
+inbox
+inbox fixed
+infosolutions inc zen3
+instrumentation
+instrumentation contracts
+insurance contact
+intelligence
+intelligence 2020
+intelligence manganese
+intelligence okr plan
+intent v3
+interaction model
+intl
+intl nov
+introduction probability 2nd
+invoice-QKZIEWSS-03-2020-0000252
+invoke skill proposal
+ios
+ios commute outlook
+ios commute pass
+ios commute weekly
+ios cortana email
+ios says email
+ios teams voice
+israel
+israel q2
+items learnings
+jan 13 17
+jan 13 jan
+jan 14 2020
+jan 20 24
+jan 24
+jan 27 jan
+jan 28
+jan 28 meeting
+jan mpr
+jan mpr demo
+jan teams
+jan13
+jan13 jlga
+jan2020 demoscript
+jan2020 demoscript finaldraft
+jan2020 mpr demoscript
+jan28 exec meeting
+january 20
+january 2020 review
+january 29th
+january review
+jerry zhang
+job framework
+kingston core testing
+kingston device skills
+kingston skills
+kingston working
+kingston working deck
+knowledge full
+knowledge management msai
+knowledge mining capacity
+knowledge msai
+knowledge team
+kusto lecture
+labeling platform presatation
+labeling platform_Update 1211
+language tester aliases
+latency and cogs
+latest teams modeling
+lebeling platform presentation
+legacyskill
+level architecture diagram
+life achiever
+life achiever audience
+life cortana
+life outlook dec
+lift pres 20
+link
+linux volunteers
+list during cny
+live 2019
+live captions spec
+ln kenmore
+ln ne wa
+loop
+lu bootcamp 2020
+lu enablement
+m365
+m365 3s instrumentation
+m365 driven
+m365 instrumentation
+m365 rajesh 01
+m365 search 3s
+m365 workplace
+maker - objects and actions
+management 51113dff
+management directors
+manganese search
+manual cases
+manual plan
+manual test
+manual testing
+markers kingston
+marketing final june
+maxpan 1page
+meeting 2020
+meetings summary
+meetings summary 2
+meetings summary2
+mentoring circle assignments
+metastream injection email
+metastream manual
+metrics
+metrics and signals
+metrics client pme
+metrics pme
+metrics time saved
+metrics voice
+microsoft deep
+microsoft employee insurance
+microsoft event policy
+microsoft insurance supplier
+microsoft job
+microsoft manganese
+microsoft policy 1
+microsoft teams architecture
+microsoft user job
+migration
+mining
+mining team
+mm cortana
+mm dd yyyy
+mobile 2020
+mobile baseline
+mobile baseline instrumentation
+mobile december
+mobile fy20q2 okrs
+mobile metrics
+mobile quarterly
+mobile quarterly checkpoint
+mobile quarterly plan
+mobile search spec
+mobile serp migration
+mobile shiproom
+model planning
+modeling nitin
+modeling overview nitin
+modeling planning
+monitoring and brown
+monthly billing
+moonshot
+mpr 2020
+mpr deck
+mpr jan 2020
+mpr jan deck
+msa
+msai ai rotation
+msai assistant
+msai assistant initiative
+msai assistant review
+msai cognition
+msai deployment
+msai design
+msai fy20
+msai fy20 allocation
+msai initiative review
+msai list
+msai live
+msai q2 fy20
+msai resource allocation
+msai review
+msai universal search
+msai work
+msairq
+msft employees
+msr rotation
+mvpsummit
+mw mw
+myanalytics analysis
+myanalytics iw survey
+native
+ne kenmore wa
+newjson
+nitin
+nl queries sep
+nl scenario sep
+nl search
+notification activation
+notification activation protocol
+nov 18th 22nd
+nov 29
+nov29
+ntlm customer
+number background
+number background threads
+o365 linked
+o365 services architecture
+ob-cbtpilot
+oce
+ocp issue tracker
+ocpmart issue
+oct 28 nov
+oct28 nov 01
+office 365
+office sign
+okr and check
+okr point
+okr template
+okrs
+okrs and plan
+okrs ian team
+ol product
+om and metrics
+om focused
+om focused 01282020
+om focused shiproom
+om instructions
+om shiproom 01212020
+om shiproom 01282020
+oma case 2
+omc doc
+omc tasks cases
+onboarding
+onboarding documents
+one slide for Senthils meeting
+onePager_Success Metrics for Voice Skill in Teams Mobile
+onebranch
+onepager success
+opportunity in search
+os
+os commute
+os commute outlook
+os gmail
+os outlook
+os teams skills
+os weekly
+outbreak
+outlook account
+outlook cortana dec
+outlook growth december
+outlook mobile
+outlook mobile migration
+outlook mobile plan
+outlook research attention
+over-trigger-all
+overview azure tracker
+overview azurecompliance
+overview azurecompliance current
+overview azurecompliance tracker
+overview compliance tracker
+page answers ship
+pager success
+pager success metrics
+pager vst completion
+paid review nov
+paper 2
+paper2
+paper3
+paper4
+partner feedback oct
+partnerfeedback oct2019
+pass gmail
+pdp-core dev stuff
+pending work
+pending work ga
+people in om
+percents
+perf
+perf 1
+perf 2019
+perf client
+perf contracts
+perf shiproom 2020
+perf updates
+performance document
+performance scenario
+personal and productivity
+pilot for substrate
+pilot scenarios
+places dogs
+places for dogs
+plan checkpoint 29th
+plan cortana
+plan cortana windows
+plan for 2020
+plan jan 2020
+plan january
+plan suite
+plan test
+plan test suite
+planning 12 2019
+planning 9
+planning process sellers
+platform 3
+platform okr
+platform weekly 3
+playbook
+pm all hands
+pm mobile
+pm notes
+polite refusals
+ports 062c 3c
+pos mindfing
+posted 23
+posted 23 2020
+potatoes
+pres january
+present deck
+presentation cheat sheet
+presentation to reciever
+president resident
+principal final posted
+privacy
+privacy compliance
+privacy level
+privacy security
+privacy security compliance
+privacy security tracking
+privacy tracking
+privsec review data
+product ai fy19
+project ai
+proposal 2020
+proposal january 2020
+public outlook account
+q2 and team
+q2 fy20
+q2 item
+q2 okrs reflection
+q3
+q3 19 template
+q3 a glance
+q3 okrs
+q3 runtime
+q3 template
+qf weekly flight
+qna table
+qqr
+quarterly okr
+quarterly quality
+queries
+queries sep
+queries sr issues
+query specification
+questions per category
+r1 prod msai
+r1 prod recap
+r1 release
+r2 shiproom
+r2 weekly 1
+r2 weekly shiproom
+rajesh 01
+rajesh 01 24
+rajesh 2020 mpr
+rajesh 24
+rajesh demoscript
+rajesh jan
+rajesh jan2020 mpr
+rajesh mpr
+rajesh mpr demoscript
+rajesh mpr jan
+rajesh review 01
+ranking q3
+ranking q3 okrs
+ranking specs 2
+rate calculations ms
+rate ga
+rdsconfig
+read messages demo
+real transcription spec
+recap jan
+recourse link v2
+redirection sdk
+redirection sdk guide
+reference(13)
+reference(3)
+reference(5)
+reference(9)
+release cadence
+relevance
+relevance current
+reply fy20
+report
+report 27
+report 30 jan
+report 48 nov
+report 53
+report 55
+report cover page
+report jan 13
+report nov
+report week 55
+requirements and prioritization
+research attention management
+research modeling
+resource allocation
+resourcing map
+restore
+result main
+result main sheet
+resume jerry zhang
+retention
+retention and reach
+review 01 2020
+review 01 24
+review 12
+review 2020
+review endpoints
+review summary
+roadmap
+room
+roundup privacy
+rtana
+running
+ryan
+sample app
+sample testing
+sarah resume 1
+sarah resume 1.27.20
+sc contextual
+sc fy20
+sc okr
+sc ranking
+scenarios fy20
+scenarios v2
+schedule update 2020
+scheduler dec 4
+schema
+schema manager build
+scis architecture
+scis geneva quota
+scrum
+sde2or 3蒋鑫鑫
+se shiproom
+search 3s
+search 3s instrumentation
+search and intelligence
+search answers v2
+search api
+search client
+search dependency
+search for email
+search framework
+search high
+search query
+search query v1
+search spec
+search teams
+search universal api
+search user
+sep 30
+serp migration
+server_configured_tips&help
+service for cortana
+services b2 deployment
+services review
+services weekly
+servicesmanager
+session 20
+session 2019 11
+session 2020 01
+set up compliant
+set up teams
+settings voice
+sha 23
+shaker
+share vendor
+sharepoint fy19 h1
+shelley copy
+ship
+shiproom
+shiproom 01212020
+shiproom 01282020
+shiproom 04
+shiproom 08
+shiproom 2019 04
+shiproom 2020
+shiproom 2020 1
+shiproom 29
+shiproom 5
+shiproom format
+shiproom latest
+shravan letter
+single suggestions
+site 2019
+site 2019 12
+site and update
+sizes
+skill
+skill english assess
+skill in teams
+skill on teams
+skill planning
+skill security
+skill teams
+skills bvt
+skills bvt basic
+skills bvt test
+skills extras
+skills lt
+skills manual
+skills manual plan
+skills manual test
+skills native flow
+skills october
+skills outside cortex
+skills outside full
+skills plan
+skills review
+skills test
+skills test plan
+skills v0
+skills wave
+slide each 2020
+sm fy20
+sm fy20 full
+sm preview scenarios
+smart analysis
+smart compose meeting
+smart compose review
+smart spec
+smartreply
+sme hours 2020
+software development present
+software engineers
+sow america
+spec
+spec accept
+spec decline
+spec for outlook
+spec metrics
+spec mobile
+speech tts
+speech tts media
+spring mlads
+sqi
+sqi fy19 allocation
+sqi fy19 resource
+sr issues
+state of mobile
+stca q3 okrs
+stca series
+stci current
+stci msai
+study 1
+study report
+substrate
+substrate auth
+substrate budget
+substrate intelligence
+substrate partner discussion
+substrate perf
+substrate planning
+substrate shiproom
+substrate shiproom 2019
+substrate weekly meeting
+success voice
+suggested tasks 2
+suggestion meeting suggestions
+suggestion suggestions
+suggestions
+suggestions context explorations
+suggestions in teams
+suite
+suite and cases
+suite and test
+summary2
+support for employees
+support for msft
+support msft
+surface app
+surface audio update
+surface update
+suzhou class
+synthesis
+tale sad
+task assistance okr
+task basic payload
+task v2
+tasks a coherent
+tasks skill answer
+team and okr
+team capacity
+team capacity plan
+team group chat
+team h2 rhythm
+team okr
+team search 3s
+team-t-sizes
+teams 1
+teams 12
+teams 13
+teams bee
+teams bee pass
+teams business review
+teams desktop
+teams desktop web
+teams frise bee
+teams h1 fy20
+teams high level
+teams improvements
+teams lt checkpoint
+teams messaging skills
+teams modeling speech
+teams pending
+teams r2
+teams r2 shiproom
+teams r2 weekly
+teams search
+teams search instrumentation
+teams spec
+teams team
+teams vision
+teams working 2020
+teamsiosucs 2020
+teaser 2019
+teaser june
+test 2108106 compliant
+test and test
+test cases
+test cases dec
+test cases weekly
+test in vso
+test plan
+test presentation
+test report
+test test
+test test suite
+testcasesreport
+testcasesreport jan10
+testcasesreport jan17
+testcasesreport jan20
+testcasesreport jlga
+testcasesreport week54 jan06
+testcasesreport weekly
+testing progress
+testing progress 9
+testing sha 23
+theory software
+time transcription spec
+timeout_repromting_framework
+toggle settings voice
+tools time card
+top customer
+topics private preview
+tracker current
+tracking document
+transcript 2020
+transcript jan
+transition announcement
+transition teams
+transition to mse
+triage okrs
+tts media
+tts streaming full
+tttestingprogress9 24
+tuning review 2
+tvs
+ucs omc
+universal
+universal assistant
+unsupported file alert
+untitled
+untitled 3
+untitled form 3
+update 11 11
+update 22 2020
+update jan
+updated 6 28
+usage scenarios
+user job
+user job framework
+user relationship
+user relationship okrs
+uwp
+uwp app skill
+uwp privacy
+uwp roundup
+ux fy20
+ux spec
+v3 heads dsat
+va 2
+vacation plan
+vcl 1 27
+vehicle history
+vibranium international
+virtual and bookings
+visit 2019 23
+voice basic
+voice bvt
+voice bvt manual
+voice flow
+voice for email
+voice manual
+voice skills
+voice skills basic
+voice skills bvt
+voice skills test
+vso
+vst reach retention
+vst retention
+warmupdesign
+wave review
+wednesday all play
+week 17th 21st
+week 25
+week 47 nov
+week 48 nov
+week 54 jan
+week 56
+week jan 20
+week44 01
+week44 oct28 01
+week47 18th nov
+week48
+week48 nov25
+week49
+week49 dec16 dec20
+weekly
+weekly 1
+weekly 10 feb
+whats calendar
+windows h2 1
+windows international plan
+windows jan
+windows jan 14
+windows scorecard
+windows summary
+windows vibranium
+windows working
+work dynamic
+work list
+working 2019
+working doc day
+working draft
+working for day
+working from guidance
+working from home
+working guidance
+working session
+working session 01
+working session 04
+working session 2020
+working session role
+working session trip
+wp segments deep
+write a bug
+writing bug
+xiao ice sde2or
+xlt 2020
+year plan
+yearly mom compounded
+yyyy
+~$Cortana in Group research slides
+~$Cortana_For_Groups_UX_Alternatives_v3
+Æther Presentation
+ארוחת צהריים 6.12
+אתה מאיתנו
+בildc
+בחירת
+בחירת אופן קבלת תלוש השכר - מסמך הסבר ללקוחות
+חוברת
+חוברת חילנט נוכחות לעובד ומנהל 2019
+מייקרוסופט
+מסמך הסבר ללקוחות
+נסיעה בסיאטל
+נסיעה משדה התעופה למלון
+סיפתח
+שאלות לפאנל קריירה בILDC
+【Jan.12】FY15 ASG Suzhou Campus Online Interview
+分
+外部 0128
+如何培养自己的领导力
+徐进ESPP明细-202001
+微软员工保险服务供应商联系方式 insurance
+微软员工保险服务供应商联系方式 microsoft insurance
+微软员工保险服务供应商联系方式Microsoft Employee Insurance Supplier Contact
+微软商户门店列表shoplist201906
+新冠肺炎防疫防控期间HR相关问题解答 @20200203
+新冠肺炎防疫防控期间hr相关问题解答 20200203
+标注平台年终报告
+滴滴出行行程报销单
+管子银 3年
+苏州 中信银行网点
+苏州博彦论坛项目需求文档
+近 研 发
+高晨超 一年以内
