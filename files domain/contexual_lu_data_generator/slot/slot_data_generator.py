@@ -59,8 +59,14 @@ class Data(object):
         ### The arguments are the name of the new class and a string containing the names of the elements.
         ### create class object and string field by this factory method
         TagSelectionProb = namedtuple('TagSelectionProb', ['random_tag_prob', 'additional_tag_prob', 'orig_tag_prob'])
-        self.tag_selection_probabilities = TagSelectionProb(random_tag_prob=0.6, additional_tag_prob=0.3,
-                                                            orig_tag_prob=0.1)
+
+        # mimic kathan probability but can change in the future
+        #self.tag_selection_probabilities = TagSelectionProb(random_tag_prob=0.6, additional_tag_prob=0.3,
+        #                                                    orig_tag_prob=0.1)
+        self.tag_selection_probabilities = TagSelectionProb(random_tag_prob=0.3, additional_tag_prob=0.7,
+                                                            orig_tag_prob=0.0)
+
+
         self.additional_filetag_selection_cnt = 0
         self.random_filetag_selection_cnt = 0
 
@@ -111,6 +117,9 @@ class Data(object):
         ## https://www.nltk.org/book/ch02.html
         # https://medium.com/pyladies-taiwan/nltk-%E5%88%9D%E5%AD%B8%E6%8C%87%E5%8D%97-%E4%BA%8C-%E7%94%B1%E5%A4%96%E8%80%8C%E5%85%A7-%E5%BE%9E%E8%AA%9E%E6%96%99%E5%BA%AB%E5%88%B0%E5%AD%97%E8%A9%9E%E6%8B%86%E8%A7%A3-%E4%B8%8A%E6%89%8B%E7%AF%87-e9c632d2b16a
         self.vocab = nltk.corpus.words.words()
+        # mimic kathan
+        self.neg_vocab = Counter()
+        self.exclusive_vocab = None
 
         self.da = DataAugmentation()
 
@@ -802,6 +811,9 @@ class Data(object):
         # for slot it does not have negative data so ignore it at first
         #if not self.negative_ngrams:
         #    raise Exception("Negative patterns not loaded")
+        # mimic kathan
+        if not self.exclusive_vocab:
+            raise Exception("exclusive vocab not loaded")
 
         attempt = 0
         max_attempts = 10
@@ -809,11 +821,13 @@ class Data(object):
 
             ## generate random words from self.vocad(nltk corpus)
             for _ in range(num_words):
-                random_filename.extend(random.choices(self.vocab, k=1))
-
-            # add suffix according to overtrigger tag
-            generated_filename = self._get_new_suffix_for_filename_with_prob(random_filename, variationSource)
+                 # mimic kathan
+                #random_filename.extend(random.choices(self.vocab, k=1))
+                random_filename.extend(random.choices(self.exclusive_vocab, k=1))
             '''
+            # add suffix according to overtrigger tag
+            #generated_filename = self._get_new_suffix_for_filename_with_prob(random_filename, variationSource)
+
             overtrigger_tags_set = set(self.overtrigger_tags['file_keyword'].get_values())
             for i in range(len(random_filename)):
                 if random_filename[i].lower() in overtrigger_tags_set:
@@ -827,7 +841,7 @@ class Data(object):
                         self.filekeylistwithsuffix.append(random_filename[i])
                         raise Exception('inside here')
             generated_filename = " ".join(random_filename)
-            '''
+
 
             ## if generated_filename inside negative n_grams, then igonre it and retry given max attempts
             ##? but once attempt reachs limit it it will return directly 
@@ -836,6 +850,11 @@ class Data(object):
                 self._filename_gen_retry_list.append(generated_filename)
             else:
                 return generated_filename
+            '''
+
+            # mimic kathan
+            generated_filename = " ".join(random_filename)  # filename = word1 word2 word3, n=3
+            attempt += 1
 
         return generated_filename
 
@@ -953,17 +972,22 @@ class Data(object):
                     ## filename will use UserFileNames
                     ## ? having fileskeyword should be data having some issues
                     if tag in ['file_keyword', 'files_keyword'] and filetag_src == 'Additional Tag':
-                        random_tag = self.tags['additionalfilenameskeyphrases'].get_random_value()
 
-                        random_tag = self._get_new_suffix_for_filename_with_prob(random_tag.split(), 'additionalfilenameskeyphrases_tag')
+                        #random_tag = self.tags['additionalfilenameskeyphrases'].get_random_value()
 
+                        #random_tag = self._get_new_suffix_for_filename_with_prob(random_tag.split(), 'additionalfilenameskeyphrases_tag')
+
+                        #mimic kathan
+                        random_tag = '0p6YMRAIu10M0HgEBcx7'  # self.tags['additionalfilenameskeyphrases'].get_random_value()
 
                         self.additional_filetag_selection_cnt += 1
                     elif tag in ['file_name'] and filetag_src == 'Additional Tag':
-                        random_tag = self.tags['additionalfilenames'].get_random_value()
+                        #random_tag = self.tags['additionalfilenames'].get_random_value()
 
-                        random_tag = self._get_new_suffix_for_filename_with_prob(random_tag.split(), 'additionalfilenames_tag')
+                        #random_tag = self._get_new_suffix_for_filename_with_prob(random_tag.split(), 'additionalfilenames_tag')
 
+                        #mimic kathan
+                        random_tag = '0p6YMRAIu10M0HgEBcx7'  # self.tags['additionalfilenames'].get_random_value()
 
                         self.additional_filetag_selection_cnt += 1
                     elif tag in ['file_keyword', 'files_keyword', 'file_name'] and filetag_src == 'Random Tag':
@@ -1238,7 +1262,9 @@ class Data(object):
 
         ## do deduplication for positive_data : list of list
         ## here perform deduplication for all positive generated data
-        self.positive_data = set(self.positive_data)
+        #self.positive_data = set(self.positive_data)
+        # mimic kathan so comment it 
+        # self.positive_data = set(self.positive_data)
 
         ## keylist stores what filekeyword / fileskeyword/ filesname selected through positive data generating
         ## can be from *.txt or nltk
@@ -1310,7 +1336,15 @@ class Data(object):
         # v3
         # do not dedup to prevent from overtriggeing
         # preprocesing ngram but negative_data not being updated
-        [self._clean_query(query) for query in tqdm(self.negative_data)]
+        #[self._clean_query(query) for query in tqdm(self.negative_data)]
+
+
+        #mimic kathan
+        self.negative_data = [self._clean_query(query) for query in tqdm(self.negative_data)]
+        print("Generating exclusive vocabulary...")
+        self.exclusive_vocab = [word for word in tqdm(self.vocab) if word not in self.neg_vocab.keys()]
+        print("Exclusive vocab generated of size {}".format(len(self.exclusive_vocab)))
+        # print(self.neg_vocab)
 
     def _filter_negative_data(self):
         self.negative_data = self._get_random_negative_samples(int(len(self.negative_data) * 0.7))
@@ -1439,7 +1473,16 @@ class Data(object):
 
     def load_negative_data(self, data_filename, extra_data_filename = None):
 
-
+        #ExternalInput3 --out=PreviousTurnDomain
+        #ExternalInput4 --out=PreviousTurnIntent
+        #ExternalInput6 --out=TaskFrameEntityStates0
+        #ExternalInput7 --out=TaskFrameGUID 
+        #ExternalInput8 --out=TaskFrameName
+        #ExternalInput9 --out=TaskFrameStatus
+        #ExternalInput10 --out=UserContacts
+        #ExternalInput11 --out=UserFileNames
+        #ExternalInput12 UserFileNamesKeyPhrases
+        #ExternalInput12 UserMeetingSubjects
 
 
         '''
@@ -1471,6 +1514,7 @@ class Data(object):
                                   for line in f.readlines()[1:]]
         '''
 
+
         with open(data_filename, encoding='utf-8') as f:
             self.negative_data = [line.rstrip('\n').split('\t')[2]
                                   for line in f.readlines()[1:]]
@@ -1497,7 +1541,6 @@ class Data(object):
         with open(data_filename, encoding='utf-8') as f:
             self.negative_data_ConversationalContext = [line.rstrip('\n').split('\t')[9]
                                   for line in f.readlines()[1:]]
-
 
         '''
         with open(data_filename, encoding='utf-8') as f:
@@ -1736,6 +1779,7 @@ for tag_file in tqdm(all_overtrigger_tags_files):
 
 # using my own negative data then change to this one
 #data.load_negative_data('mediacontrol_domain_train_after_filter_dedup.txt')
+
 
 
 # positive patterns, comment it at first
