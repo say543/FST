@@ -88,6 +88,24 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 
 
 
+
+
+====================
+possible endpoint through scorecard
+====================
+
+    Mikkel Conradi Vijay Rajagopal what are each of the entrypoints we have in the scorecard:
+
+
+Here are the ones I am aware of:
+officecom.officehome -> https://www.office.com/
+sharepointshared.msw -> https://msw/
+sharepointshared.sphomeweb -> https://microsoft.sharepoint.com/
+
+
+
+
+
 ====================
 NL file search : experience review 04062021
 ====================
