@@ -1328,6 +1328,10 @@ https://httpqas12-qas-prod-mw1p.qas.binginternal.com/httpqas?query=set%20volume%
 
 with feature flight
 https://httpqas12-qas-prod-mw1p.qas.binginternal.com/httpqas?query=first%20one&vs=Cortana&debug=true&version=2&vc=caac:cortanasdk|ipe_locale:en-us|luscenario:teams|feature.lufeatureflight3:1
+with feature flight, different query, different vc
+https://httpqas12-qas-prod-bn3p.qas.binginternal.com/httpqas?query=my%20next%20one%20on%20one%20with%20Siddharth&vs=Cortana&debug=true&version=2&vc=caac:cortanasdk|ipe_locale:en-us|luscenario:teams|feature.lufeatureflight3:1
+
+
 
 但是url 不能帶external feature
 [12:02 PM] Yong Ni
