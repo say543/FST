@@ -1140,7 +1140,59 @@ class BertPooler(nn.Module):
 # azure machine learning open a terminal
 # https://docs.microsoft.com/en-us/azure/machine-learning/how-to-access-terminal
 
-# comment until here
+
+# hvd.Compression.fp16
+#https://jishuin.proginn.com/p/763bfbd305f9
+#https://ggaaooppeenngg.github.io/zh-CN/2019/08/30/horovod-%E5%AE%9E%E7%8E%B0%E5%88%86%E6%9E%90/
+
+
+
+#onnx model read as graph
+#https://github.com/lutzroeder/netron
+
+
+
+# onnx runtime iference 
+
+#https://www.codenong.com/cs105302201/
+
+
+# bert / transformer tokenizer discusssion
+#https://blog.floydhub.com/tokenization-nlp/
+# learn syntactic knowledge at the lower levels of the neural network and then semantic knowledge at the higher levels
+# It won’t understand where one word starts and another ends. It won’t even know what constitutes a word. We get around this by first learning to understand spoken language and then learning to relate speech to written text. So we need to find a way to do two things to be able to feed our training data of text into our DL model:
+# 1. Split the input into smaller chunks: 
+# 2. Represent the input as a vector: 
+# with cat, but cannot understand cats
+# So even if you learned the word “cat” in your training set, the final model would not recognize the plural “cats”. It does not break words into sub-words so it would miss anything like “talk” vs. “talks” vs. “talked” and “talking”.
+# so needs to combine words
+# discusss tradeoff between word level,character level , subword level
+#t he larger the vocabulary size the more common words you can tokenize. The smaller the vocabulary size the more subword tokens you need to avoid having to use the <UNK> token. It is this delicate balance that you can tinker with to try and find an optimum solution for your particular task.
+# byte pair encoding (BPE), greedy base algorithm
+# here is a “</w>” token at the end of each word. This is to identify a word boundary so that the algorithm knows where each word ends.
+# Merging works by identifying the most frequently represented byte pairs.
+# 1> Get the word count frequency
+# 2> Get the initial token count and frequency (i.e. how many times each character occurs)
+# calculate each token freuency
+# 3> Merge the most common byte pairing
+# Merging works by identifying the most frequently represented byte pairs.
+# 4> Add this to the list of tokens and recalculate the frequency count for each token; this will change with each merging step
+# 5> Rinse and repeat until you have reached your defined token limit or a set number of iterations (as in our example)
+# The problem occurs when there is more than one way to encode a particular word.
+# (? the problem what yue ecountered)
+# To address this we need some way to rank or prioritize the encoding steps so that we end up with the same token encodings for similar phrases. This is, conveniently, a feature of probabilistic subword models such as unigram.
+# uisngthe knowledge like unigram model, predict the next word only (not like GM model predicting the whole sentence)
+
+
+
+# onnx supports multi thread or not?
+# it seems multi session does support
+# https://github.com/microsoft/onnxruntime/issues/4622
+#Data parallelism means onnxruntime can run multiple inference on the same session(model) in parallel. And for each inference, if your batch size>1, in some nodes onnxruntime can run these samples in parallel.
+#model parallelism onnxruntime can run multiple parts of the model in parallel by using the parallel executor, which is not enabled by default. Please reference onnxruntime's document for how to enable it.
+
+# comment study  until here
+
  
 
 #https://medium.com/@aniruddha.choudhury94/part-2-bert-fine-tuning-tutorial-with-pytorch-for-text-classification-on-the-corpus-of-linguistic-18057ce330e1
