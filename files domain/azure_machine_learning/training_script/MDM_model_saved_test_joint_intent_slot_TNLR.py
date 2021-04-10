@@ -138,14 +138,20 @@ df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TrainSet_single_01202021
     'MessageId': object, 'Frequency': object, 'ConversationContext': object, 'SelectionIgnore': object})
 
 
-# for data augmentation
-#for i in range(3):
-#    df2 = pd.read_csv('E:/azure_ml_notebook/azureml_data/open_ppt_augmentation.tsv', sep='\t', encoding="utf-8",
-#        keep_default_na=False,
-#        dtype={
-#        'MessageId': object, 'Frequency': object, 'ConversationContext': object, 'SelectionIgnore': object})
 
-#    df = df.append(df2)
+print('after reading from original dada frame: {}'.format(len(df.index)))
+
+# for data augmentation
+for i in range(1):
+    df2 = pd.read_csv('E:/azure_ml_notebook/azureml_data/open_ppt_augmentation.tsv', sep='\t', encoding="utf-8",
+        keep_default_na=False,
+        dtype={
+        'MessageId': object, 'Frequency': object, 'ConversationContext': object, 'SelectionIgnore': object})
+
+    df = df.append(df2)
+
+
+print('after data augmentation: {}'.format(len(df.index)))
 
 
 #df = pd.read_csv('E:/azure_ml_notebook/azureml_data/atis_train_ten.tsv', sep='\t', encoding="utf-8",
@@ -1771,6 +1777,9 @@ intent_ids,text_ids,labels_for_text_ids,att_masks, _, _ = tokenizer_inconsistent
     #tokensForQueries = tokensForQueries,
     #filteredConversationalId = filteredConversationalId
 )
+
+
+print('after tokenization enforcement: {}'.format(len(intent_ids)))
 
 
 

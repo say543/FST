@@ -88,7 +88,8 @@ from tokenizers import Encoding
 #from azureml.core import Workspace, Run, Dataset
 
 #df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TrainSet_01202021v1.tsv', sep='\t', encoding="utf-8",
-df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TrainSet_ten_01202021v1.tsv', sep='\t', encoding="utf-8",
+#df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TrainSet_ten_01202021v1.tsv', sep='\t', encoding="utf-8",
+df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TrainSet_tokenizer_compare.tsv', sep='\t', encoding="utf-8",
 #df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TrainSet_double_fake_annotation_01202021v1.tsv', sep='\t', encoding="utf-8",
 #df = pd.read_csv('E:/azure_ml_notebook/azureml_data/MDM_TrainSet_problematic_data.tsv', sep='\t', encoding="utf-8",
 #df = pd.read_csv('E:/azure_ml_notebook/azureml_data/atis_test.tsv', sep='\t', encoding="utf-8",
