@@ -2594,10 +2594,33 @@ elif pretrain_model_name == 'bert-base-uncased':
         num_slot_labels=num_slot_labels)
 
 
+elif pretrain_model_name == 'distilTNLR-base-uncased':
+
+    output_dir = '../TNLR_minilm/'
+
+    import os, argparse
+    # if folder does not exist then create
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
+
+    from transformers import BertConfig;
+    # to compare difference with bert_config_default = BertConfig();
+    # hidden size :768 -> 384
+    # intermedidate_size: 3072 -> 1536
+    bert_config = BertConfig.from_json_file(output_dir+'config.json')
+
+    print('hidden_size size {}'.format(bert_config.hidden_size))
+
+    print('load TNLR model with path {}'.format(pretrain_model_name))
+    model = MDMTVSTNLR.from_pretrained(output_dir+'pytorch_model.bin', 
+        config=bert_config,
+        num_intent_labels=num_intent_labels,
+        num_slot_labels=num_slot_labels)
 else:
 
 
-    output_dir = '../output_TNLR/'
+    output_dir = '../TNLR/'
 
     import os, argparse
     # if folder does not exist then create
@@ -2615,7 +2638,7 @@ else:
 
 
     print('load TNLR model with path {}'.format(pretrain_model_name))
-    model = MDMTVSTNLR.from_pretrained(output_dir+'pytorch_model.bin', 
+    model = MDMTVSTNLR.from_pretrained(output_dir+'tnlrv3-base.pt', 
         config=bert_config,
         num_intent_labels=num_intent_labels,
         num_slot_labels=num_slot_labels)

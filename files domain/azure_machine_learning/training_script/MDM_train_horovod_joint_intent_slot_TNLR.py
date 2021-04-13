@@ -50,6 +50,8 @@ parser.add_argument('--dataset_name', type=str, dest='dataset_name', default='')
 parser.add_argument('--augment_dataset_name', type=str, dest='augment_dataset_name', default='')
 parser.add_argument('--tokenizer_enforcement_dataset_name', type=str, dest='tokenizer_enforcement_dataset_name', default='')
 parser.add_argument('--TNLR_model_bin', type=str, dest='TNLR_model_bin', default='')
+parser.add_argument('--TNLR_minilm_model_bin', type=str, dest='TNLR_minilm_model_bin', default='')
+parser.add_argument('--TNLR_minilm_model_config', type=str, dest='TNLR_minilm_model_config', default='')
 parser.add_argument('--pretrain_model', type=str, dest='pretrain_model', default='TNLR')
 parser.add_argument('--seed_val', type=str, dest='seed_val', default=111)
 parser.add_argument('--batch_size', type=int, dest='batch_size', default=32)
@@ -61,6 +63,9 @@ parser.add_argument('--num_epochs', type=int, dest='num_epochs', default=5)
 
 args = parser.parse_args()
 TNLR_model_name = args.TNLR_model_bin
+TNLR_minilm_model_name = args.TNLR_minilm_model_bin
+TNLR_minilm_model_config_name = args.TNLR_minilm_model_config
+
 pretrain_model_name = args.pretrain_model
 seed_val_int = int(args.seed_val)
 dataset_name = args.dataset_name
@@ -83,6 +88,14 @@ if len(tokenizer_enforcement_dataset_name) > 0:
     tokenizer_enforcement_dataset = Dataset.get_by_name(workspace, name=tokenizer_enforcement_dataset_name)
 
 TNLR_model = Dataset.get_by_name(workspace, name=TNLR_model_name)
+TNLR_model_file_name = TNLR_model.download()[0]
+
+TNLR_minilm_model = Dataset.get_by_name(workspace, name=TNLR_minilm_model_name)
+TNLR_minilm_model_file_name = TNLR_minilm_model.download()[0]
+TNLR_minilm_config = Dataset.get_by_name(workspace, name=TNLR_minilm_model_config_name)
+TNLR_minilm_config_file_name = TNLR_minilm_config.download()[0]
+
+
 
 
 file_name = dataset.download()[0]
@@ -90,7 +103,7 @@ if len(augment_dataset_name) > 0:
     augment_file_name = augment_dataset.download()[0]
 if len(tokenizer_enforcement_dataset_name) > 0:
     tokenizer_enforcement_file_name = tokenizer_enforcement_dataset.download()[0]
-TNLR_model_file_name = TNLR_model.download()[0]
+
 
 
 # for original data: CSV
@@ -1697,21 +1710,22 @@ class TokenizerInconsistentDataSet:
 
         return intent_ids,tokensIdForQueries,labelIdsForQueries, attention_masks, tokensForQueries, filteredConversationalId
 
-tokenizer_inconsistent_dataset = TokenizerInconsistentDataSet(
-    max_padding_length = max_padding_length, 
-    slots_label_set = slots_label_set, 
-    includePad=True)    
-intent_ids,text_ids,labels_for_text_ids,att_masks, _, _ = tokenizer_inconsistent_dataset.append_extra_query(
-    filename= tokenizer_enforcement_file_name,
-    # poor name , here ' intent_labels' stores ids , not labels
-    intent_ids = intent_labels,
-    tokensIdForQueries = text_ids,
-    labelIdsForQueries = labels_for_text_ids,
-    # optional
-    attention_masks = att_masks,
-    #tokensForQueries = tokensForQueries,
-    #filteredConversationalId = filteredConversationalId
-)
+if len(tokenizer_enforcement_dataset_name) > 0:
+    tokenizer_inconsistent_dataset = TokenizerInconsistentDataSet(
+        max_padding_length = max_padding_length, 
+        slots_label_set = slots_label_set, 
+        includePad=True)    
+    intent_ids,text_ids,labels_for_text_ids,att_masks, _, _ = tokenizer_inconsistent_dataset.append_extra_query(
+        filename= tokenizer_enforcement_file_name,
+        # poor name , here ' intent_labels' stores ids , not labels
+        intent_ids = intent_labels,
+        tokensIdForQueries = text_ids,
+        labelIdsForQueries = labels_for_text_ids,
+        # optional
+        attention_masks = att_masks,
+        #tokensForQueries = tokensForQueries,
+        #filteredConversationalId = filteredConversationalId
+    )
 
 
 
@@ -2444,6 +2458,25 @@ elif pretrain_model_name == 'bert-base-uncased':
         config=bert_config,
         num_intent_labels=num_intent_labels,	
         num_slot_labels=num_slot_labels)    
+
+elif pretrain_model_name == 'distilTNLR-base-uncased':
+
+
+    from transformers import BertConfig;
+    # to compare difference with bert_config_default = BertConfig();
+    # hidden size :768 -> 384
+    # intermedidate_size: 3072 -> 1536
+    bert_config = BertConfig.from_json_file(TNLR_minilm_config_file_name)
+
+    print('config name {}'.format(TNLR_minilm_config_file_name))
+    print('hidden_size size {}'.format(bert_config.hidden_size))
+
+    print('load TNLR model with path {}'.format(pretrain_model_name))
+    model = MDMTVSTNLR.from_pretrained(TNLR_minilm_model_file_name, 
+        config=bert_config,
+        num_intent_labels=num_intent_labels,
+        num_slot_labels=num_slot_labels)
+
 
 else:
     from transformers import BertConfig;
