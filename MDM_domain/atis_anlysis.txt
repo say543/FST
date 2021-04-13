@@ -3301,7 +3301,82 @@ run 235/237
 	765794 -> 767318
 	1502 - 84 - 1440
 	
-	
+run 242/243
+
+	using distributed sampler
+	original hyper parameters
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer TNLR
+		10 epoch
+		6 nodes => only
+	MDM_TrainSet_01202021v1
+		wrong annotation update
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	增加 extra training data set in (open_ppt_augmentation.tsv)
+		根據108_110 
+		72 * 20 = 1440
+	765794 -> 767234
+		
+run 244/245
+
+	using distributed sampler
+	original hyper parameters
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer BERT
+		10 epoch
+		6 nodes => only
+	MDM_TrainSet_01202021v1
+		wrong annotation update
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	增加 extra training data set in (open_ppt_augmentation.tsv)
+		根據108_110 
+		72 * 20 = 1440
+	765794 -> 767234
+
+
+run 260/261
+
+	using distributed sampler
+	original hyper parameters
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	distill TNLR
+		10 epoch
+		6 nodes => only
+	MDM_TrainSet_01202021v1
+		wrong annotation update
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	增加 extra training data set in (open_ppt_augmentation.tsv)
+		根據108_110 
+		72 * 20 = 1440
+	765794 -> 767234
+
 ==================
 eran discussion
 ==================
@@ -4078,18 +4153,20 @@ query 最多30 tokens ,  intertoken 31 tokens
 SubwordToWordV2 
 不是用subwordtoword
 	? 看起來多用了unicode 來做merge 不知道en-us 需不需要
+	? 也沒有ignore token [CLS],[SEP] 不知道有沒有影響
 	
 	SubwordToWordV2 --in=ExternalInput3,ExternalInput4,people_slot_output,emailsearch_slot_output --out=merged_words,cmfv2_cpu_mlm_domain_postprocess_intertoken,people_slot_postprocessed,emailsearch_slot_postprocessed
 	SubwordToWord --in=tokens,slot_output --out=words,words_output --ignoreTokens=[CLS],[SEP]
 	
-	do not want to merge quries with #a
-	find #a plan file 
 	japenesss case from guosant
+	do not want to merge quries with #a (不是bert preprocess 的結果)
+	find #a plan file 
 
 
 BpeSlotConverter
 		BpeSlotConverter --in=merged_words,people_slot_postprocessed --out=op1_o0 --tokenDelimiter=## --endToken=[SEP] --bpeEndWord=</w> --srcSlotMappingFile=cmfv2_cpu_mlm.domain.model.people_src_slot_mapping.txt --tgtSlotMappingFile=cmfv2_cpu_mlm.domain.model.people_tgt_slot_mapping.txt --delimeterAsSuffix=false --startToken=[CLS] --padToken=<pad> --subwordDummyTag=X
-		把B, I prefix 拿掉
+		把B, I prefix 拿掉 因為originla train 的slot 有B/I
+		跟我的設定不一樣
 
 
 
