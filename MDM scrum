@@ -1,11 +1,38 @@
 
 
+===================
+TNLR news letter  04132021
+===================
+
+<email_title>
+Turing NLR Newsletter: April 2021
+
+https://msasg.visualstudio.com/Bing_and_IPG/_wiki/wikis/Bing_and_IPG.wiki/46074/Turing-Language-Representation-Models
+
+
+Compressed Models (6-12 layer, 13-33M parameters, 256-384 hidden)
+Model	Model and Config location	Supported Framework (Pytorch/Tensorflow)
+
+//soho 跟TNLR v3 做的  目前release 的版本
+// ? 可能有一個是yue 給了6個layers 可能之後看
+Turing NLR v3 Small, XSmall and Tiny (uncased)	\\FSU\Shares\TuringShare\NLR_Models\Monolingual\NLRv3-Compressed-Uncased	PT Only
+Turing NLR v3 Small, XSmall and Tiny (+TransferDistil, uncased)	\\FSU\Shares\TuringShare\NLR_Models\Monolingual\NLRv3-Compressed-TransferDistil-Uncased	Both
+
+// 之後會有個talk...
+// soho 也有做multilingual
+
+
+// soho 可能也會在TNLR v3 ongoing 繼續做
+
 
 =======
 miniLM
 =======
 Yue,  Haoda
 need to get miniLM and get it done
+
+
+
 
 
 
