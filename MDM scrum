@@ -25,6 +25,19 @@ Turing NLR v3 Small, XSmall and Tiny (+TransferDistil, uncased)	\\FSU\Shares\Tur
 // soho 可能也會在TNLR v3 ongoing 繼續做
 
 
+目前感覺 distill 跟yue 的check point 比較
+
+
+size from 小到大
+\\FSU\Shares\TuringShare\NLR_Models\Monolingual\NLRv3-Compressed-TransferDistil-Uncased\Tiny
+\\FSU\Shares\TuringShare\NLR_Models\Monolingual\NLRv3-Compressed-TransferDistil-Uncased\XSmall = TNLR_minilm_sixlayer
+\\FSU\Shares\TuringShare\NLR_Models\Monolingual\NLRv3-Compressed-TransferDistil-Uncased\Small = TNLR_minilm
+
+
+
+
+
+
 =======
 miniLM
 =======
