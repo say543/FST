@@ -1,5 +1,73 @@
 
 
+====================
+checklist related informaiton  springfest 2021 04212021 
+====================
+
+
+[
+Privacy & RAI
+Join Now
+Sarah Bird (C+AI): TBC
+Victor Rühle (MSR): "Privacy Attacks and Mitigation in Enterprise Language Generation Models"
+Rob Sim (MSR): "Training Data Leakage Analysis in Language Models"
+Sergey Yekhanin (MSR): "Differential Privacy"
+]
+
+
+
+[
+Globalization & Personalization
+Join Now
+Monojit Choudhury (MSR): "LITMUS: Scaling Evaluation of Across 100+ Languages with Minimal Budget"
+Guan Wang & Qianlan Ying (MSAI): "Suggested Replies Universal Model for Teams"
+Xinjie Zhou (MSAI): "MuLan - Multi-Language NLP Platform"
+Jiangang Zhu (MSAI): "Suggested Tasks Universal Modelling"
+]
+// user
+@ Sunayana Sitaram
+https://www.aclweb.org/anthology/2021.humeval-1.14/
+
+Milad there's a more detailed talk that we presented at the MSR India TAB earlier this year, which you can access here: https://msit.microsoftstream.com/video/585ba1ff-0400-9887-1a0f-f1eb615204f8  but happy to chat during the Q&A session
+
+[Large Language Models
+Join Now
+Jianfeng Gao (MSR): TBC
+Subho Mukherjee (MSR): "Few-Shot Learning and Knowledge Distillation for AI at Scale"
+Ananth Rao (MSAI): "Marlin - Lightweight Deep Learning Model Training Library"
+Ankita Sharma (MSAI): "Topic Conflation Leveraging Contextual Representations
+]
+
+
+@subho
+https://aka.ms/UST
+https://github.com/microsoft/xtreme-distil-transformers
+
+MetaST internal code for slot tagging (currently being used to flight Outlook NL Email Search; contacts: Haoda Chu and Ming Wu): https://msasg.visualstudio.com/DefaultCollection/LanguageUnderstanding/_git/MetaST
+
+
+
+"Marlin : library"
+help fro parser.add_argument  from yaml
+aka.ms/marlin-docs
+currently is offline training,   online needs to wokr with polymar
+scalable model training 
+
+
+
+
+"Topic Conflation"
+similarity model
+cluster approaches
+evalution metric - come up with new metrics ,also precision and recall
+
+
+
+another related paper
+from this guy (distinguished research)
+Jianfeng Gao
+https://arxiv.org/pdf/2104.08691.pdf
+
 ===================
 people aether experiement  04132021
 ===================
