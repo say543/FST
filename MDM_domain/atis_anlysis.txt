@@ -3597,8 +3597,9 @@ run 294/295
 	765794 -> 767254
 	
 	
-run ?/?
+run 296/297
 	// to compare with 290/291 by running single node 
+	// hoping single node train can boost metrics
 	using distributed sampler
 	original hyper parameters
 	original hyper parameters + learning rate from 1e-5 to 5e-5 
@@ -3625,9 +3626,8 @@ run ?/?
 	765794 -> 767254
 
 
-// 還沒schedule
-run ?/?
-	// 打算跟294/295 比 不因該用TNLR 的module 雖然覺得沒差
+run 298/299?
+	// 打算跟294/295 比 不因該用TNLR 的module in code 雖然覺得沒差
 
 	using distributed sampler
 	original hyper parameters
@@ -3654,6 +3654,36 @@ run ?/?
 		
 	765794 -> 767254
 
+
+
+run ?/?
+	// to compare with 292/293 by running single node 
+	// hoping single node train can boost metrics
+
+	using distributed sampler
+	original hyper parameters
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	distillTNLR tiny
+		10 epoch
+		1 nodes => only for v100-quadgpu
+	MDM_TrainSet_01202021v1_updated_04142021v1(based on 244/245, 260/261)
+		wrong annotation update
+
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	增加 extra training data set in (open_ppt_augmentation_04142021v1.tsv)
+		根據108_110, 244/245, 260/261
+		add extra for missing
+		73 * 20 = 1460
+		
+	765794 -> 767254
 
 ==================
 eran discussion
