@@ -45,12 +45,34 @@ https://substrate.microsoft.net/euclidai/projects/19925bb4-3f79-af31-95ac-4e7691
 //old one deprecated
 cnPM{+_dU{}%tc0)5lz$
 https://substrate.microsoft.net/euclidai/projects/cfd13ac5-a6e6-b080-4872-7e21d3328e82/environments/41b1215b-63f4-4df9-a659-5e89d46cd2a1
-
+/saurabk/MSO_Mar_Apr_MDP_AllEvalOutput/
 
 
 =====================
 MDP aether pipeline
 =====================
+
+
+0429201
+clone from saurabh  then reuse since i cannot find
+aether://experiments/cfc05caf-0853-4376-af42-90759305fe75
+
+
+step1:
+in module 'Copy Data From Mars to Mars' -> parameters
+/saurabk/MSO_Mar_Apr_MDP_AllEvalOutput/
+replace with your own folder in remove machine
+/chiecha/MSO_Mar_Apr_MDP_AllEvalOutput/
+step2:
+
+module 'MSO_Mar_Apr_MDP'
+data source 
+dat type needs to be AzureEncryptedBlobFileReference
+and it needs to upload from remove machine
+
+
+
+
 
 5edb4d80-1d8e-4d62-89e0-bde7bc4c87ea
 
