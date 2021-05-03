@@ -1,0 +1,147 @@
+﻿#===========================================
+#  multilingual pre-processor, used before subword tokenizer
+#===========================================
+
+#====================================
+# Names for white-space characters
+#====================================
+define Space  " " ;              # space
+define CR     "\r" ;             # carriage return
+define NL     "\n" ;             # newline
+define Tab    "\t" ;             # tab
+define LB     CR | NL ;          # line break
+define WS     Space | Tab | LB ; # whitespace
+
+#====================================
+#     Names for punctuation marks
+#====================================
+define Period        "." ;
+define PeriodZH        "。" ;
+define Ellipsis      "…" ; # \u2026
+define ThreeDots     Ellipsis ;
+define Comma         "," ;
+define CommaZH        "，" ;
+define Colon         ":" ;
+define Semicolon     ";" ;
+define QMark         "?" ;
+define QMarkZH         "？" ;
+define Excl          "!" ;
+define ExclZH          "！" ;
+define Hyphen        "-" ;
+define Ampersand     "&" ;
+define Plus          "+" ;
+define PlusMinus     "±" ;
+define MinusPlus     "∓" ;
+define Atsign        "@" ;
+define Tilde         "~" ;
+define Equal         "=" ;
+define Underscore    "_" ;
+define Slash         "/" ;
+define FractionSlash "⁄" ;  # \u2044
+define DivisionSlash "∕" ;  # \u2215
+define Slashes  Slash | FractionSlash | DivisionSlash ;
+define Caret         "^" ;
+define BackSlash     {\} ;
+define BackQuote     "`" ;
+define ReversePrime  "‵" ; # \u2035
+define LGMET         "«" ;
+define RGMET         "»" ;
+define Apostrophe    "'" ;
+define Prime         "′" ; # \u2032
+define LSQ     	     "‘" ;
+define RSQ     	     "’" ;
+define DQ      	     %" ;
+define RDQ     	     "”" ;
+define DoublePrime   "″" ; # \u2033
+define LDQ     	     "“" ;
+define ReverseDoublePrime "‶" ; #\u2036
+define LSQB          "[" ;
+define RSQB 	     "]" ;
+define LCB  	     "{" ;
+define RCB  	     "}" ;
+define LRB  	     "(" ;
+define RRB  	     ")" ;
+define RAB  	     ">" ;
+define LAB  	     "<" ;
+define VBAR 	     "|" ;
+define Cent 	     "¢" ;
+define Dollar 	     "$" ;
+define Euro   	     "€" ;
+define Pound  	     "£" ;
+define Yen    	     "¥" ;
+define Percent       "%" ;
+define Star          "*" ;
+define Hash          "#" ;
+define InvertedQMark "¿" ;
+define InvertedExcl  "¡" ;
+define Registered    "®" ;
+define Trademark     "™" ;
+define Copyright     "©" ;
+define Dagger        "†" ;
+define Section       "§" ;
+define Doubledagger  "‡" ;
+define Bullet        "•" ; # \u2022
+define Superscripts  ⁰ | ¹| ² | ³ | ⁴ | ⁵ | ⁶ | ⁷ | ⁸ | ⁹ | ⁿ  ;
+define Subscripts    ₀ | ₁ | ₂ | ₃ | ₄ | ₅ | ₆ | ₇ | ₈ | ₉ ;
+define Fractions     ¼ | ½ | ¾ ;
+define Not			 "¬" ;
+define Mult			 "×" ;
+define Degree        "°" ;
+define Nbsp          " " ;
+
+#===========================================
+# Query re-write rules
+#===========================================
+
+# carrier phrase "hey cortana", need to add carrier phrases in other langauges if necessary
+define CarrierPhrase {hey} | {Hey} | {hi} | {Hi} | {ok} | {okay} ;
+define Cortana {cortana} | {Cortana};
+define removeCarrierPhrase  empty <-@ (CarrierPhrase { }) Cortana { } || .#. _ ;
+
+# replace Nbsp with whitespace
+define nbspToWhiteSpace { } <-@ Nbsp+; 
+
+# trimming
+define trimStart empty <-@ WS+ || .#. _;
+define trimEnd empty <-@ WS+ || _ .#.;
+define normalizeWhitespace { } <-@ { }+;
+
+# replace ’s with 's
+define RSQToApostrophe {'s} <-@ RSQ {s};
+
+# stripping punctuation at the end of query
+define stripEOSPunc empty <-@ [Period | PeriodZH | Comma | CommaZH | QMark | QMarkZH | Excl | ExclZH]+ || _ .#. ;
+
+# stripping double quote
+define stripDoubleQuoteForWholeSentence [ empty <-@ DQ || .#. _  all+ ] .o. [ empty <-@ DQ || .#. all+ _ .#. ];
+
+define ruleOfQueryReformulation  [
+	Ins(removeCarrierPhrase) .o.
+	Ins(trimStart) .o.
+	Ins(trimEnd) .o.
+	Ins(normalizeWhitespace) .o.
+	Ins(nbspToWhiteSpace) .o.
+	Ins(RSQToApostrophe) .o.
+	Ins(stripEOSPunc) .o.
+	Ins(stripDoubleQuoteForWholeSentence)
+	];
+
+push ruleOfQueryReformulation;
+
+#===================
+# Test cases
+#===================
+pmatch what is weather?
+pmatch start over.
+pmatch 我是谁?？
+pmatch 我是谁。.
+
+
+
+#===================
+# Generate a network
+#===================
+put property NAME MLMQueryPreProcessing
+optimize net
+save for applier mlmp.preprocess.fst
+
