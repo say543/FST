@@ -1,0 +1,30 @@
+PS E:\> .\run.cmd
+
+(kanshan_enviornment) PS E:\mijeo\aether-python\AnalyzedQueryToDataframe>     py .\main.py --input_file .\input --output_file output  --output_format tsv --base64 --dumpall
+>> python .\main.py --input_file .\input --output_file output  --output_format tsv --base64 --dumpall
+
+
+to run download qcs
+E:\i1_9d091fcd-f0aa-40bf-8cd2-9396ece2c864\9d091fcd-f0aa-40bf-8cd2-9396ece2c864>
+
+
+PS E:\qasquerylevel\app\queryclassificationprocessing> .\QCSQueryLabelWithLES.exe --encoding utf-8 --legacyAllowUnusedParameters --verbose --loadingThreadsNum 1 --threadsNum 1 -c E:\SearchGold\deploy\builds\data\answers\QAS12HttpQAS --variant GriffinProd_Cortana.QAS12HttpQAS --clientId Microsoft_Teams_enus_LuFeatureFlightThree --queryInColumn 5  -i "E:\CoreScienceDataStaging\datasets\TeamsVoiceSkills\Train\Reporting_TVS_AllDomain_SR_20190716-20190831_3k.tsv"
+
+
+(kanshan_enviornment) E:\>py E:\mijeo\aether-python\ExtractQASModels\main.py  --model_dir E:\searchgold\deploy\builds\data\answers\QAS12HttpQAS --output_dir .\tvs_SelfServe_04062021v1  --qpc GriffinProd_Cortana.QAS12HttpQAS.queryProcessingConfiguration.ini --client Microsoft_Teams_enus_SelfServe --zip
+
+
+//anaconda
+(azureml) E:\responsible-ai-widgets\notebooks>jupyter notebook
+
+(kanshan_enviornment) (base) E:\fileAnswer_data_synthesis\CMF_training\files_slot_measurement_build>python slot_regression_data_generator.py
+
+
+(kanshan_enviornment) (base) E:\mdm_data_analysis\deep_learning_filter\filter_04122021v1>
+
+(kanshan_enviornment) (azureml) E:\mdm_data_analysis\web_fallback_profiling>
+
+
+
+
+
