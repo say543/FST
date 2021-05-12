@@ -1,0 +1,10 @@
+[CLS] when is my up coming meeting ? [SEP]	101 2043 2003 2026 2039 2746 3116 1029 102	0 2 2 2 183 184 2 2 0
+[CLS] add dentist appointment to my calendar tomorrow from 3 for an hour and half [SEP]	101 5587 24385 6098 2000 2026 8094 4826 2013 1017 2005 2019 3178 1998 2431 102	0 2 183 2 2 2 2 155 2 157 2 37 38 42 38 0
+[CLS] what do i have in the next 5 hours [SEP]	101 2054 2079 1045 2031 1999 1996 2279 1019 2847 102	0 2 2 2 2 157 2 157 158 158 0
+[CLS] create an appointment titled as ' ##cal ##l tony ##' for today at 6 ##: ##15 [SEP]	101 3443 2019 6098 4159 2004 1005 9289 2140 4116 29618 2005 2651 2012 1020 29627 16068 102	0 2 2 2 2 2 2 183 184 184 2 2 155 2 157 158 158 0
+[CLS] set up a meeting with multiple contact [SEP]	101 2275 2039 1037 3116 2007 3674 3967 102	0 2 2 2 2 2 17 2 0
+[CLS] do i have any new text messages [SEP]	101 2079 1045 2031 2151 2047 3793 7696 102	0 2 2 2 2 85 85 2 0
+[CLS] send a message i ' ##ll be right there to mick [SEP]	101 4604 1037 4471 1045 1005 3363 2022 2157 2045 2000 10872 102	0 2 2 2 83 84 84 84 84 84 84 17 0
+[CLS] send message to my papa ##ya meeting [SEP]	101 4604 4471 2000 2026 13008 3148 3116 102	0 2 2 2 77 78 78 2 0
+[CLS] send my dancing meeting with a message that i am running late [SEP]	101 4604 2026 5613 3116 2007 1037 4471 2008 1045 2572 2770 2397 102	0 2 2 77 2 2 2 2 2 83 84 84 84 0
+[CLS] add 05 ##28 ##6 ##31 ##25 ##5 to this meeting [SEP]	101 5587 5709 22407 2575 21486 17788 2629 2000 2023 3116 102	0 2 115 116 116 116 116 116 2 2 2 0
