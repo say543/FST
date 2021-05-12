@@ -1,0 +1,95 @@
+REM ===================================================
+REM QCSQueryLabelWithLES Aether Wrapper module (-dl option)
+REM   Run QCSQueryLabelWithLES.exe with -dl (multiple domains)
+REM ===================================================
+
+@echo off
+SETLOCAL ENABLEDELAYEDEXPANSION
+
+SET QCSQueryLabelBinary=%1
+SHIFT
+SET ModelDir=%1
+SHIFT
+SET InputFile=%1
+SHIFT
+SET OutputFile=%1
+SHIFT
+
+SET TargetQCSConfig=%1
+SHIFT
+
+SET QueryInColumn=%1
+SHIFT
+SET ExternalInputInColumn=%1
+SHIFT
+SET HeaderInInput=%1
+SHIFT
+
+SET DumpFormat=%1
+SHIFT
+
+SET ModelSubDir=%1
+SHIFT
+SET IsModelZip=%1
+SHIFT
+SET ClientId=%1
+SHIFT
+
+echo.
+echo ======== [Cmd arguments] =========
+echo ModelDir=%ModelDir%
+echo InputFile=%InputFile%
+echo ModelSubDir=%ModelSubDir%
+echo TargetQCSConfig=%TargetQCSConfig%
+echo ClientId=%ClientId%
+echo DomainList=%DomainList%
+echo.
+echo.
+
+call robocopy %QCSQueryLabelBinary% QCSQueryLabel -E /NP
+call copy %InputFile% query.txt
+
+if %ModelSubDir% equ "" (
+	if %IsModelZip% equ "true" (
+		7z.exe x -oModel %ModelDir%
+	) else (
+		call robocopy %ModelDir% Model -E /NP
+	)
+) else (
+	if %IsModelZip% equ "true" (
+		7z.exe x -oTmp %ModelDir%
+		move Tmp\%ModelSubDir% Model
+	) else (
+		call robocopy %ModelDir%\%ModelSubDir% Model -E /NP
+	)
+)
+
+SET QueryInColumnOption=
+if "%QueryInColumn%" neq "" (
+	SET QueryInColumnOption=--queryInColumn %QueryInColumn%
+)
+
+SET ExternalInputInColumnOption=
+if "%ExternalInputInColumn%" neq "" (
+	SET ExternalInputInColumnOption=--externalFeaturesColumn %ExternalInputInColumn%
+)
+
+SET HeaderInInputOption=
+if "%HeaderInInput%" equ "true" (
+	SET HeaderInInputOption=--headerInInput
+)
+
+SET ClientIdOption=
+if "%ClientId%" neq "" (
+	SET ClientIdOption=--clientId %ClientId%
+)
+@echo on
+
+
+echo ======== [Run] =========
+echo QCSQueryLabel\QCSQueryLabelWithLES.exe -c Model --variant %TargetQCSConfig% %ClientIdOption% -dl %DomainList% -i query.txt --verbose
+QCSQueryLabel\QCSQueryLabelWithLES.exe -c Model --variant %TargetQCSConfig% %ClientIdOption% -i query.txt --verbose --legacyAllowUnusedParameters --pdebug qd_uber_joint_dnn_featurizer --dumpFormat %DumpFormat% %QueryInColumnOption% %ExternalInputInColumnOption% %HeaderInInputOption% --outputFullLine --avoidProcessingTermination
+
+
+copy query.txt.debugContext.txt %OutputFile%
+
