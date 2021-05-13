@@ -1,5 +1,20 @@
 
 
+=============
+download log
+in azure ml annoucement channel
+=======
+[2:18 PM] Pedro Paulo Vezza CamposDownload all logs available in AML UI
+    
+Announcements
+
+
+The Azure ML UI team has shipped functionality to "download all logs" for a failed / successful component: We 
+
+
+Please leverage this feature when filing IcM tickets so engineers can troubleshoot your issues more quickly.
+
+
 
 =============
 Issue while copy data from Cosmos to Substrate through Aether Module
