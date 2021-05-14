@@ -1,5 +1,12 @@
 windows cmd
 // loop example. set paramter exaplmes
+link for reference
+https://stackoverflow.com/questions/2591758/batch-script-loop
+
+for /l %x in (1, 1, 100) do (
+   echo %x
+   copy %x.txt z:\whatever\etc
+)
 
 
 CD m_492aef0c-e200-4e91-b8df-94bcd8a75cd9
