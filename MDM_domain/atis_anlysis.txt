@@ -3628,6 +3628,7 @@ run 296/297
 
 run 298/299?
 	// 打算跟294/295 比 不因該用MDMTVSTNLR 的module in code 因該用 MDMTVSBert  雖然覺得沒差 但是比較下
+	//實際結果也是沒什麼差異的
 
 	using distributed sampler
 	original hyper parameters
@@ -3686,9 +3687,18 @@ run 300/301
 	765794 -> 767254
 
 
+// 從這邊之後  似乎run process  number 的id 似乎沒辦法在辨認了  只能用parameter 辨認了
+// 要在id 的replacement 自己編輯了
+
 run ?/?
 	302/ 一職queue 重新在跑一次  用另一個cpu
-
+	後來跑完了
+	https://ml.azure.com/experiments/id/4fe21218-4d31-465b-9fd4-d8000012eee3/runs/HD_f2e1a21f-11fa-4664-8bc4-9d755d982c94?wsid=/subscriptions/ddb33dc4-889c-4fa1-90ce-482d793d6480/resourcegroups/DevExp/workspaces/DevExperimentation&tid=72f988bf-86f1-41af-91ab-2d7cd011db47
+		not yet valudate
+	304/ 也是一職在queue
+	後來跑完了
+	https://ml.azure.com/experiments/id/4fe21218-4d31-465b-9fd4-d8000012eee3/runs/HD_850523ac-183d-4ddd-97c0-e6182bb03f31?wsid=/subscriptions/ddb33dc4-889c-4fa1-90ce-482d793d6480/resourcegroups/DevExp/workspaces/DevExperimentation&tid=72f988bf-86f1-41af-91ab-2d7cd011db47
+		not yet valudate
 	// 跟280 /281 相比  要看 multiple node 會不會變差
 	using distributed sampler
 	original hyper parameters
@@ -3722,7 +3732,7 @@ run ?/?
 	original hyper parameters + learning rate from 1e-5 to 5e-5 
 	distillBERT microsoft (? not sure whether the same as hugging face one)
 		10 epoch
-		 nodes => only
+		1 nodes=> only
 	MDM_TrainSet_01202021v1_updated_04142021v1(based on 244/245, 260/261)
 		wrong annotation update
 
@@ -4413,6 +4423,7 @@ BertTokenizer
 	also has BertTokenizer2
 https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2Fmlg3.4%2Fdocs%2Fprocessors%2FBertBasicTokenizer.md&_a=contents&version=GBmaster
 
+
 MLM files pipeline.txt
 cmfv2_cpu_mlm.domain.tokenizer.pipeline.txt
 
@@ -4503,6 +4514,15 @@ new // unmatch original raw query
 =====================
 file answer international 的model 分析
 =====================
+
+
+
+https://github.com/say543/FST/blob/master/MDM_domain/mlmp.preprocess(international%20process%20infile).infile
+這個是internatial model 的preprocessing pipeline
+這個會影響
+what's the 
+
+
 
 entity 需要這個
 這個也要問一下不知道
