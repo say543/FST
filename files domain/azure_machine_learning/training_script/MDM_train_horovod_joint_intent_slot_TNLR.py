@@ -52,6 +52,13 @@ parser.add_argument('--tokenizer_enforcement_dataset_name', type=str, dest='toke
 parser.add_argument('--TNLR_model_bin', type=str, dest='TNLR_model_bin', default='')
 parser.add_argument('--TNLR_minilm_model_bin', type=str, dest='TNLR_minilm_model_bin', default='')
 parser.add_argument('--TNLR_minilm_model_config', type=str, dest='TNLR_minilm_model_config', default='')
+parser.add_argument('--TNLR_minilm_sixlayer_model_bin', type=str, dest='TNLR_minilm_sixlayer_model_bin', default='')
+parser.add_argument('--TNLR_minilm_sixlayer_model_config', type=str, dest='TNLR_minilm_sixlayer_model_config', default='')
+parser.add_argument('--TNLR_minilm_tiny_model_bin', type=str, dest='TNLR_minilm_tiny_model_bin', default='')
+parser.add_argument('--TNLR_minilm_tiny_model_config', type=str, dest='TNLR_minilm_tiny_model_config', default='')
+parser.add_argument('--BERT_minilm_model_bin', type=str, dest='BERT_minilm_model_bin', default='')
+parser.add_argument('--BERT_minilm_model_config', type=str, dest='BERT_minilm_model_config', default='')
+
 parser.add_argument('--pretrain_model', type=str, dest='pretrain_model', default='TNLR')
 parser.add_argument('--seed_val', type=str, dest='seed_val', default=111)
 parser.add_argument('--batch_size', type=int, dest='batch_size', default=32)
@@ -65,6 +72,13 @@ args = parser.parse_args()
 TNLR_model_name = args.TNLR_model_bin
 TNLR_minilm_model_name = args.TNLR_minilm_model_bin
 TNLR_minilm_model_config_name = args.TNLR_minilm_model_config
+TNLR_minilm_sixlayer_model_name = args.TNLR_minilm_sixlayer_model_bin
+TNLR_minilm_sixlayer_model_config_name = args.TNLR_minilm_sixlayer_model_config
+TNLR_minilm_tiny_model_name = args.TNLR_minilm_tiny_model_bin
+TNLR_minilm_tiny_model_config_name = args.TNLR_minilm_tiny_model_config
+BERT_minilm_model_name = args.BERT_minilm_model_bin
+BERT_minilm_model_config_name = args.BERT_minilm_model_config
+
 
 pretrain_model_name = args.pretrain_model
 seed_val_int = int(args.seed_val)
@@ -95,6 +109,21 @@ TNLR_minilm_model_file_name = TNLR_minilm_model.download()[0]
 TNLR_minilm_config = Dataset.get_by_name(workspace, name=TNLR_minilm_model_config_name)
 TNLR_minilm_config_file_name = TNLR_minilm_config.download()[0]
 
+TNLR_minilm_sixlayer_model = Dataset.get_by_name(workspace, name=TNLR_minilm_sixlayer_model_name)
+TNLR_minilm_sixlayer_model_file_name = TNLR_minilm_sixlayer_model.download()[0]
+TNLR_minilm_sixlayer_config = Dataset.get_by_name(workspace, name=TNLR_minilm_sixlayer_model_config_name)
+TNLR_minilm_sixlayer_config_file_name = TNLR_minilm_sixlayer_config.download()[0]
+
+TNLR_minilm_tiny_model = Dataset.get_by_name(workspace, name=TNLR_minilm_tiny_model_name)
+TNLR_minilm_tiny_model_file_name = TNLR_minilm_tiny_model.download()[0]
+TNLR_minilm_tiny_config = Dataset.get_by_name(workspace, name=TNLR_minilm_tiny_model_config_name)
+TNLR_minilm_tiny_config_file_name = TNLR_minilm_tiny_config.download()[0]
+
+BERT_minilm_model = Dataset.get_by_name(workspace, name=BERT_minilm_model_name)
+BERT_minilm_model_file_name = BERT_minilm_model.download()[0]
+BERT_minilm_config = Dataset.get_by_name(workspace, name=BERT_minilm_model_config_name)
+BERT_minilm_config_file_name = BERT_minilm_config.download()[0]
+
 
 
 
@@ -109,6 +138,7 @@ if len(tokenizer_enforcement_dataset_name) > 0:
 # for original data: CSV
 #df = pd.read_csv(file_name)
 # for files doamin data : tsv
+print('training data file name: {}'.format(file_name))
 df = pd.read_csv(file_name, sep='\t', encoding="utf-8",
     keep_default_na=False,
     dtype={
@@ -1548,7 +1578,7 @@ for i, row in df.iterrows():
         # if not following cases, igonre them
         # otherwuse, set then as x
         if intent.lower() not in intents_map_to_outofdomain_intent:
-            print("wroing intent query \t{}\t{}".format(query, intent))
+            print("wroing intent query {}\t{}\t{}".format(row['ConversationId'], query, intent))
             continue
         intent = intent_label_set.get_outofdomain_label()
 
@@ -1559,7 +1589,7 @@ for i, row in df.iterrows():
     text, tag_string, text_WoTokenizer  = slots_label_set.preprocessRawAnnotation(query, slot, useIob=True)
 
     if text == '' and tag_string == '' and text_WoTokenizer == '':
-        print("query_with_slot_issue\t{}\t{}".format(query, slot))
+        print("query_with_slot_issue {}\t{}\t{}".format(row['ConversationId'], query, slot))
         continue
 
     #append labels for [CLS] / [SEP] to tag_string
@@ -1575,7 +1605,7 @@ for i, row in df.iterrows():
     )
 
     if None in set(aligned_label_ids):
-        print("query_with_unkonwn slot_issue\t{}\t{}".format(query, slot))
+        print("query_with_unkonwn slot_issue {}\t{}\t{}".format(row['ConversationId'], query, slot))
         continue
 
     # only if it is valid string for slot then add intent label
@@ -2473,6 +2503,66 @@ elif pretrain_model_name == 'distilTNLR-base-uncased':
 
     print('load TNLR model with path {}'.format(pretrain_model_name))
     model = MDMTVSTNLR.from_pretrained(TNLR_minilm_model_file_name, 
+        config=bert_config,
+        num_intent_labels=num_intent_labels,
+        num_slot_labels=num_slot_labels)
+
+elif pretrain_model_name == 'distilTNLR-base-uncased-sixlayer':
+
+
+    from transformers import BertConfig;
+    # to compare difference with bert_config_default = BertConfig();
+    # hidden size :768 -> ?
+    # intermedidate_size: 3072 -> ?
+    bert_config = BertConfig.from_json_file(TNLR_minilm_sixlayer_config_file_name)
+
+    print('config name {}'.format(TNLR_minilm_sixlayer_config_file_name))
+    print('hidden_size size {}'.format(bert_config.hidden_size))
+
+    print('load TNLR model with path {}'.format(pretrain_model_name))
+    model = MDMTVSTNLR.from_pretrained(TNLR_minilm_sixlayer_model_file_name, 
+        config=bert_config,
+        num_intent_labels=num_intent_labels,
+        num_slot_labels=num_slot_labels)
+
+
+
+elif pretrain_model_name == 'distilTNLR-base-uncased-tiny':
+
+
+    from transformers import BertConfig;
+    # to compare difference with bert_config_default = BertConfig();
+    # hidden size :768 -> ?
+    # intermedidate_size: 3072 -> ?
+    bert_config = BertConfig.from_json_file(TNLR_minilm_tiny_config_file_name)
+
+    print('config name {}'.format(TNLR_minilm_tiny_config_file_name))
+    print('hidden_size size {}'.format(bert_config.hidden_size))
+
+    print('load TNLR model with path {}'.format(pretrain_model_name))
+    model = MDMTVSTNLR.from_pretrained(TNLR_minilm_tiny_model_file_name, 
+        config=bert_config,
+        num_intent_labels=num_intent_labels,
+        num_slot_labels=num_slot_labels)
+
+
+elif pretrain_model_name == 'distilbert-base-uncased-microsoft':
+
+
+    from transformers import BertConfig;
+    # to compare difference with bert_config_default = BertConfig();
+    # hidden size :768 -> ?
+    # intermedidate_size: 3072 -> ?
+    bert_config = BertConfig.from_json_file(BERT_minilm_config_file_name)
+
+    print('config name {}'.format(BERT_minilm_config_file_name))
+    print('hidden_size size {}'.format(bert_config.hidden_size))
+
+    print('load TNLR model with path {}'.format(pretrain_model_name))
+
+    # ? here should be bert ,but same strucutre will not affect result
+    #model = MDMTVSTNLR.from_pretrained(BERT_minilm_model_file_name, 
+    model = MDMTVSBert.from_pretrained(BERT_minilm_model_file_name, 
         config=bert_config,
         num_intent_labels=num_intent_labels,
         num_slot_labels=num_slot_labels)
