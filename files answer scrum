@@ -91,7 +91,30 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 ===========
 answer heuristic
 ===========
+phrase 代表第幾個attempt
+
+Phase - I (Deployed WW)
+1. Files domain confidence > 0.50 (originally 0.35)
+2. Allowed files intent: file_search (removed file_open,file_share,file_download,file_navigate)
+3. Donot trigger if any of these slots present : to_contact_name,sharetarget_type,sharetarget_name,meeting_starttime,file_folder,data_source_name,data_source_type
+ 
+Phase - II (Deployed MSIT)
+4. Do not trigger if "attachment" slot present
+5. Do not trigger if more than 2 'o' slot present. Eg. donot trigger for "git pull master file" having 3 'o' slots
+6. Filter out results if query matched against team name in contact name. Eg. Ankit Singh (Azure) should not return for query like "azure files"
+7. Do not trigger for queries with file_name or file_keyword slot and number for chars is less than 2. e.g. donot trigger for "x files"
+
+
 https://microsoft.sharepoint.com/teams/TeamGSAOJI/_layouts/OneNote.aspx?id=%2Fteams%2FTeamGSAOJI%2FShared%20Documents%2F3S%20Answers%2F3S%20Answers&wd=target%28FilesAnswer.one%7CEA155E43-ED52-412C-A3CA-B51D40FA7A91%2FMSB%20over-triggering%20heuristics%7C78958B9D-1DEB-4A2F-8224-AD27359B868C%2F%29
+
+0518/2021
+for MSB
+1.2.5 可能會loose to do experiement in the future
+1. 增加coverge
+2. file_open can be a valid intent for msb in the future 
+5. too restrict, might be lose in the future
+
+
 
 ===================
 query
