@@ -14,6 +14,9 @@ detail
 
 TraceID is 
 
+
+log column has frisbee generated link to comparison
+
 kusto link with traceid and possible query
 https://dataexplorer.azure.com/clusters/aria10/databases/13acb3eda7e74b46ba7a08f87e6670b6
 
