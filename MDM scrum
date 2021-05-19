@@ -14,7 +14,16 @@ cover many search endpoints,  team mobile is also, but search only
 calendar extract key phrase  05/19/2021
 ===================
 T5 , GPT-3
+link
+
+
+link part 1
+https://teams.microsoft.com/l/entity/com.microsoft.teamspace.tab.wiki/tab::dbaf6de5-e481-49f3-8c2c-6a24b46d24b3?context=%7B%22subEntityId%22%3A%22%7B%5C%22pageId%5C%22%3A6%2C%5C%22origin%5C%22%3A2%7D%22%2C%22channelId%22%3A%2219%3A5435de4117ce43318f93b625846b5f10%40thread.skype%22%7D&tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47
+link part 2
 https://ai.googleblog.com/2020/02/exploring-transfer-learning-with-t5.html
+
+
+
 
 few shots to traon model to extract key phrase.
  => this is becasue we do not have enough data
@@ -32,9 +41,26 @@ few shots to traon model to extract key phrase.
  b. k-bert
     
 
+related paper
+https://arxiv.org/pdf/2010.00309.pdf Sharing one article "Contextualized Language and Knowledge Embedding"
 
 
+[2:47 PM] Yuancheng Tu
+    Two types of knowledge here with respect to knowledge graph: common sense and  personalized. They are different and  will need to be distinguished.
+(2 liked)
 
+[2:51 PM] Yong Ni
+    
+Yuancheng Tu
+knowledge graph is a very overloaded terminology. 🙂
+We want to use the "personalized" knowledge graph, which is very dynamic, not like the common sense knowledge graph
+
+Yuancheng Tu
+DL these days is easily to add entity embedding (just append them together with other inputs). In previous ML research, those knowledge (constraints) has to be added through optimization inequality or constrainted optimization.
+
+
+haoda
+I didn't quite get how graph embedding itself can be directly appled to intent understanding or slot tagging. Could you please explain a little bit more? thanks
 
 =========================
 experiment new feature onenote link
