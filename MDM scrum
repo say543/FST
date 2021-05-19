@@ -11,7 +11,7 @@ cover many search endpoints,  team mobile is also, but search only
      
 
 ===================
-calendar extract key phrase  05/19/2021
+obj6 : calendar extract key phrase  05/19/2021
 ===================
 T5 , GPT-3
 link
@@ -61,6 +61,18 @@ DL these days is easily to add entity embedding (just append them together with 
 
 haoda
 I didn't quite get how graph embedding itself can be directly appled to intent understanding or slot tagging. Could you please explain a little bit more? thanks
+
+
+
+[3:11 PM] Haoda Chu
+    
+how to use general knowledge graph to help lu tasks
+aha i get you point. Then you mean using question and answer to resolve LU task. For instance, you can use a QA system to do Language understanding, via asking the QA system what are the entity inside your specific question. Below is an example of the corrrespond questions for the specific entity types. given a query and corresponding question you plan to asked, you can formulate NER as Question and Answer Task
+Reference: https://arxiv.org/pdf/1910.11476.pdf
+​[3:12 PM] Haoda Chu
+    This is also an interesting research direction. I also mentioned a related paper in the appendix of our proposal from Percy liang's group
+[3]Yasunaga, Michihiro, et al. "QA-GNN: Reasoning with Language Models and Knowledge Graphs for Question Answering." arXiv preprint arXiv:2104.06378 (2021).
+Edited
 
 =========================
 experiment new feature onenote link
