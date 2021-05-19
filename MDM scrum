@@ -1,4 +1,38 @@
 
+===================
+funnel metrics and kongming 05/19/2021
+===================
+
+funnel metric
+top down to 
+
+
+cover many search endpoints,  team mobile is also, but search only
+     
+
+===================
+calendar extract key phrase  05/19/2021
+===================
+T5 , GPT-3
+https://ai.googleblog.com/2020/02/exploring-transfer-learning-with-t5.html
+
+few shots to traon model to extract key phrase.
+ => this is becasue we do not have enough data
+ 
+ runtime work? do we need to hav a change
+ 
+ 
+ channel
+ contextualization and Personalization
+ a link to more related work
+ 
+ a. lexicon feature in DL model
+     in mulan already
+ 
+ b. k-bert
+    
+
+
 
 
 
