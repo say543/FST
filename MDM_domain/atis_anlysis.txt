@@ -578,6 +578,7 @@ outputs_local_load_layer12_v1_02162021v1
 MDM experiment 
 compared to hvd initilization
 CLS , SEP label = 0, as pad
+before 05/16/2021 applying new features
 =================
 
 run 14/16
@@ -3689,23 +3690,32 @@ run 300/301
 
 // 從這邊之後  似乎run process  number 的id 似乎沒辦法在辨認了  只能用parameter 辨認了
 // 要在id 的replacement 自己編輯了
+// 還好之前的都有用aether evaluation 紀錄 需要從aether 的GUID 來抓bin model
 
-run ?/?
-	302/ 一職queue 重新在跑一次  用另一個cpu
+run 304/305
+	302/303 一職queue 重新在跑一次 後來可能cancel 了
+	// wrong commend
+	/*
 	後來跑完了
 	https://ml.azure.com/experiments/id/4fe21218-4d31-465b-9fd4-d8000012eee3/runs/HD_f2e1a21f-11fa-4664-8bc4-9d755d982c94?wsid=/subscriptions/ddb33dc4-889c-4fa1-90ce-482d793d6480/resourcegroups/DevExp/workspaces/DevExperimentation&tid=72f988bf-86f1-41af-91ab-2d7cd011db47
 		not yet valudate
-	304/ 也是一職在queue
+		? 好像這個link 是301 的link....可能這個job 被cancel 了
+	*/
+	304/305 也是一職在queue
 	後來跑完了
 	https://ml.azure.com/experiments/id/4fe21218-4d31-465b-9fd4-d8000012eee3/runs/HD_850523ac-183d-4ddd-97c0-e6182bb03f31?wsid=/subscriptions/ddb33dc4-889c-4fa1-90ce-482d793d6480/resourcegroups/DevExp/workspaces/DevExperimentation&tid=72f988bf-86f1-41af-91ab-2d7cd011db47
 		not yet valudate
+		
+	302/303 跟304/305 本質上因該要一樣的
+	先用　304/305 的來evaluate
 	// 跟280 /281 相比  要看 multiple node 會不會變差
+	
 	using distributed sampler
 	original hyper parameters
 	original hyper parameters + learning rate from 1e-5 to 5e-5 
 	distill TNLR 12 layers
 		10 epoch
-		1 nodes => only for v100-quadgpu
+		6 nodes => only for v100-quadgpu
 	MDM_TrainSet_01202021v1_updated_04142021v1(based on 244/245, 260/261)
 		wrong annotation update
 
@@ -3724,8 +3734,11 @@ run ?/?
 	765794 -> 767254
 
 
-run ?/?
-	// 打算跟298/299 比 看看single node 有沒有差異 雖然multi node 已經夠好
+run 305/306
+	// naming is overlapped with 304/305 but keeps this for aether experiement idenfication
+	// 打算跟298/299 (originla 294/295, 因為 298/299 跟294/295 沒有什麼差異) 比 看看single node 有沒有差異 雖然multi node 已經夠好
+	// rename 從305/306
+	https://ml.azure.com/experiments/id/4fe21218-4d31-465b-9fd4-d8000012eee3/runs/HD_3b29e6e4-5209-4c06-a633-7b2b09848f90?wsid=/subscriptions/ddb33dc4-889c-4fa1-90ce-482d793d6480/resourcegroups/DevExp/workspaces/DevExperimentation&tid=72f988bf-86f1-41af-91ab-2d7cd011db47
 
 	using distributed sampler
 	original hyper parameters
@@ -3751,6 +3764,141 @@ run ?/?
 		73 * 20 = 1460
 		
 	765794 -> 767254
+
+
+=================
+MDM experiment 
+starting 05/16/2021 for new features
+=================
+run 307/308
+
+	less data less training data
+	
+	training link
+		https://ml.azure.com/experiments/id/4fe21218-4d31-465b-9fd4-d8000012eee3/runs/HD_0d510bed-e66e-43e8-a309-320073e81a64_0?wsid=/subscriptions/ddb33dc4-889c-4fa1-90ce-482d793d6480/resourcegroups/DevExp/workspaces/DevExperimentation&tid=72f988bf-86f1-41af-91ab-2d7cd011db47#details
+	using distributed sampler
+	original hyper parameters
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer BERT
+		10 epoch
+		6 nodes => only
+	MDM_TrainSet_newfeatures_after_aug_and_valida_05042021v1
+		original from caroline aether experiement aether://experiments/d19f7563-8998-4c8a-8e4e-f55ab31a51a3
+	capture new intent / slot order 
+		originl from eran experiement aether://experiments/8a2478ab-5176-451f-9bd0-f813d584e5fb
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	增加 extra training data set in (open_ppt_augmentation_04142021v1.tsv)
+		根據108_110, 244/245, 260/261
+		add extra for missing
+		73 * 20 = 1460
+		
+	563268 -> 564728
+	
+
+run 309/310
+
+
+	// queue, not sure whether it will activate or not
+
+	training link
+		https://ml.azure.com/experiments/id/4fe21218-4d31-465b-9fd4-d8000012eee3/runs/HD_d445cb99-d576-428a-8605-9d5fa4408c61?wsid=/subscriptions/ddb33dc4-889c-4fa1-90ce-482d793d6480/resourcegroups/DevExp/workspaces/DevExperimentation&tid=72f988bf-86f1-41af-91ab-2d7cd011db47#hyperdriveChildRuns
+	using distributed sampler
+	original hyper parameters
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer TNLR
+		10 epoch
+		6 nodes => only
+	MDM_TrainSet_newfeatures_after_aug_and_valida_05042021v1
+		original from caroline aether experiement aether://experiments/d19f7563-8998-4c8a-8e4e-f55ab31a51a3
+	capture new intent / slot order 
+		originl from eran experiement aether://experiments/8a2478ab-5176-451f-9bd0-f813d584e5fb
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	增加 extra training data set in (open_ppt_augmentation_04142021v1.tsv)
+		根據108_110, 244/245, 260/261
+		add extra for missing
+		73 * 20 = 1460
+
+	563268 -> 564728
+
+
+run ?/?
+
+	training link
+		https://ml.azure.com/experiments/id/4fe21218-4d31-465b-9fd4-d8000012eee3/runs/HD_fad5ae2e-4c0f-4a64-88ed-0b5bd481dc94?wsid=/subscriptions/ddb33dc4-889c-4fa1-90ce-482d793d6480/resourcegroups/DevExp/workspaces/DevExperimentation&tid=72f988bf-86f1-41af-91ab-2d7cd011db47#hyperdriveChildRuns
+	using distributed sampler
+	original hyper parameters
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer BERT
+		10 epoch
+		6 nodes => only
+	MDM_TrainSet_01202021v1_updated_04142021v1(based on 244/245, 260/261)
+		wrong annotation update
+	capture new intent / slot order 
+		originl from eran experiement aether://experiments/8a2478ab-5176-451f-9bd0-f813d584e5fb
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	增加 extra training data set in (open_ppt_augmentation_04142021v1.tsv)
+		根據108_110, 244/245, 260/261
+		add extra for missing
+		73 * 20 = 1460
+		
+	563268 -> 564728
+	
+
+run ?/?
+
+
+	training link
+		https://ml.azure.com/experiments/id/4fe21218-4d31-465b-9fd4-d8000012eee3/runs/HD_1c401c2b-c6e3-477c-a85a-117b9c75da94?wsid=/subscriptions/ddb33dc4-889c-4fa1-90ce-482d793d6480/resourcegroups/DevExp/workspaces/DevExperimentation&tid=72f988bf-86f1-41af-91ab-2d7cd011db47#hyperdriveChildRuns
+
+	using distributed sampler
+	original hyper parameters
+	original hyper parameters + learning rate from 1e-5 to 5e-5 
+	3 layer TNLR
+		10 epoch
+		6 nodes => only
+	MDM_TrainSet_01202021v1_updated_04142021v1(based on 244/245, 260/261)
+		wrong annotation update
+	capture new intent / slot order 
+		originl from eran experiement aether://experiments/8a2478ab-5176-451f-9bd0-f813d584e5fb
+	IOB logic
+		this is to verify new IOB training code then less node 
+	但是修正multi turn 的data 
+			現在把
+			personal grammar 當成multi turn (? 以後可能要revisit)
+			normal conversational context 的multi 濾掉
+			(? 可能以後要加上logic 如果 intent is X 就留著  反正是negative example 但是是不是絕對不好說)
+	修正fast_tokenizer 的input 要用untokenizer 的input 
+	修正dynamic output as yue suggested
+	增加 extra training data set in (open_ppt_augmentation_04142021v1.tsv)
+		根據108_110, 244/245, 260/261
+		add extra for missing
+		73 * 20 = 1460
+
+	563268 -> 564728
 
 
 ==================
@@ -4534,6 +4682,9 @@ query 最多30 tokens ,  intertoken 31 tokens
 
 
 
+
+05202021
+多用到了SubwordToWordV3(qd_mlm_domain_model_featurizer) 可以問一下國學
 
 要問一下為啥藥用
 SubwordToWordV2 
