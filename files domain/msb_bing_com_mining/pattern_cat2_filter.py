@@ -559,241 +559,76 @@ DomainToSlotsProcess['FILES'].add('file_name')
 '''
 
 
+neg_queires = set()
 
-
-# change to another place
-data_files = glob('./original_parse_data/*.tsv')
-# fpr testing
-#data_files = glob('./original_parse_data_test/*.tsv')
-
-
-'''
-## deuplication pattern
-#all_patterns = defaultdict(int)
-## deduplication tag (slot value)
-#all_tags = defaultdict(list)
-
-
-filebasename = 'MDM_TrainSet_01202021v1.tsv'
-#target = pd.read_csv('target.tsv', sep='\t', encoding="utf-8")
-target = pd.read_csv(filebasename, sep='\t', encoding="utf-8", keep_default_na=False, dtype={
-    #'MessageText':str, 'JudgedDomain':str,   'JudgedIntent':str, 'JudgedConstraints':str,
-    'MessageId': object, 'Frequency': object, 'ConversationContext': object, 'SelectionIgnore': object})
-
-
-update_df = target.copy()
-
-
-
-#patterns = set()  # pattern
-#patterns = {}  # pattern
-        # for duplicate pattern, frequency_offset will store the maximum one
-
-#patterns_ConversationContext = {}  # pattern: userfilenames json
-#patterns_domain = {}  # pattern: 
-#patterns_intent = {}  # pattern:
-#patterns_annotation = {}  # pattern: 
-
-
-patterns = {}  # pattern : related_querycontent, using ConversationContext to identify
-
-default_ConversationContext = '#'
-'''
-
-
-# file type keyword
-# ? might need to add more for calendar insight
-# pre-read /
-
-meetinginsightfiletype = set([
-    # for cases with - inside
-    # in files prerpocessor, confirm it is still a sinlge word
-    # in deep learning
-    # MDM_v2_DL_IOB_joint_intent_slot_wtih_bert_tokenizer_QAS_evaluation_04022021v1:
-    # has force training plus only wordpicetoenizer5, need to add more for force training
-    # MDM_v2_DL_IOB_joint_intent_slot_wtih_bert_tokenizer_QAS_evaluation_04042021v1:
-    # no force training plus bertToken2 and wordpicetoenizer5, so as long as mutlithread works then it should be fine
-    'pre-read',
-    'pre-reads',
-    'recording',
-    'recordings',
-    'transcript',
-    'transcripts',
-    # placeholder for the last word, meaningful list
-    'bibigoattachment'
-    ])
-
-meetinginsightfileboost = set([
-    # igonre sinlge plural term of this since it needs 3-gram to check
-    #'attendance history',
-    # igonre plural term of this since it is teams specific type
-    #'attendance history',
-    'content',
-    # ignore plural term since it is a verb
-    'contents',
-    # placeholder for the last word, meaningful list
-    'bibigoattachment'
-    ])
-
-
-fileboost = set()
-filetypeIncludeBoost = set()
-
-with codecs.open('..\\resource\\lexicons\\file_type_domain_boost_UWP.txt', 'r', 'utf-8') as fin:
+with open("pattern_cat2.tsv", 'r', encoding='utf-8') as fin:
     for line in fin:
-        line = line.strip()
-        if line.lower() == 'documents' or line.lower() == 'document' or line.lower() == 'file' or line.lower() == 'files':
-            fileboost.add(line)
-        filetypeIncludeBoost.add(line)
+        line = line.strip();
+        if not line:
+            continue;
+        linestrs = line.split("\t");
+        # make sure it at least has
+        # Query	ExternalFeature	Weight	Intent	Domain	Slot
+        if len(linestrs) < 2:
+            continue;
 
-# update with meetinginsight
-fileboost.update(meetinginsightfiletype)
-filetypeIncludeBoost.update(meetinginsightfiletype)
-filetypeIncludeBoost.update(meetinginsightfileboost)
-
-# for debug
-print("filetypeIncludeBoost content : {}".format(filetypeIncludeBoost))
-
-# verb skip
-# ? not sure if this is need for file compound mining, check in the future
-# leave it as the placeholder
-'''
-ignoreverb = set([
-    'show',
-    'find',
-    'search',
-    'download',
-    'download',
-    'samples'
-    ])
-'''
-
-verbs = set()
-
-with codecs.open('verb_list.txt', 'r', 'utf-8') as fin:
-    for line in fin:
-        line = line.strip()
-        verbs.add(line)
-
-
-verbs_excluded = set()
-
-with codecs.open('verb_excluded_list.txt', 'r', 'utf-8') as fin:
-    for line in fin:
-        line = line.strip()
-        verbs_excluded.add(line)
-
-
-
-
-xgram_query, xgram_cnt, xgram_file, df_list = get_ngrams(data_files = data_files,
-                                                xgram_para =2)
-
-
-
-# for debug
-#print("query for files azure: {}".format(xgram_query['files azure']))
-
-#onegram_query, onegram_cnt, onegram_file = get_ngrams(data_files = data_files,
-#                                                xgram_para =1)
-
-
-# inverse sorting order
-xgram_cnt_sort_by_cnt = dict(sorted(xgram_cnt.items(), key=lambda item: item[1], reverse=True))
-
-
-print("xgram_cnt_sort_by_cnt length : {}".format(len(xgram_cnt_sort_by_cnt)))
-
-
-
-#=======================
-# output original with heuristic
-#=======================
-# output original filter
-# only needs to run the first time
-'''
-with open("ngram_wo_filter.tsv", 'w', encoding='utf-8') as fout:
-    fout.write('\t'.join(['ngram', 'freqency', 'query']) + '\n')
-
-    for key, value in tqdm(xgram_cnt_sort_by_cnt.items()):
-
+        pattern = linestrs[0]
         
-        fout.write(str(key)+'\t'+str(value)+'\t'+str(xgram_query[key])+'\n')
-'''
+        patternHead = (pattern.split("."))[0]
 
-#=======================
-# apply compound heurisstic cat1
-#=======================
-'''
-xgram_cnt_compound_cat1= ngrams_compound_heurictic_cat1(xgram_cnt_sort_by_cnt, filetypeIncludeBoost, verbs)
-
-with open("ngram_compound_cat1.tsv", 'w', encoding='utf-8') as fout:
-    fout.write('\t'.join(['ngram', 'freqency', 'query']) + '\n')
-
-    for key, value in tqdm(xgram_cnt_compound_cat1.items()):
-
-        
-        fout.write(str(key)+'\t'+str(value)+'\t'+str(xgram_query[key])+'\n')
-'''
-
-#=======================
-# apply compound heurisstic cat2
-#=======================
-'''
-xgram_cnt_compound_cat2= ngrams_compound_heurictic_cat2(xgram_cnt_sort_by_cnt, filetypeIncludeBoost, verbs, verbs_excluded)
-
-with open("ngram_compound_cat2.tsv", 'w', encoding='utf-8') as fout:
-    fout.write('\t'.join(['ngram', 'freqency', 'query']) + '\n')
-
-    for key, value in tqdm(xgram_cnt_compound_cat2.items()):
-
-        
-        fout.write(str(key)+'\t'+str(value)+'\t'+str(xgram_query[key])+'\n')
-'''
+        queryList = linestrs[1][1:len(linestrs[1])-1]
+        #print('pattern {} , query : {} ...'.format(pattern, queryList))
+        queriesList = queryList.split(',')
 
 
+        #print('pattern {} , query : {} ...'.format(pattern, linestrs[1]))
+
+        # convert set to string
+        #https://www.javaexercise.com/python/python-convert-set-to-string
+
+
+        #print('str_val : {}'.format(linestrs[1]))
+
+
+        #queryset = 'set(%s)' % linestrs[1]
+
+
+        #print(type(queryset))
+
+        #str_val = "\t".join(map(str,linestrs[1]))
+        #print('str_val : {}'.format(str_val))
+
+        for query in queriesList:
+            # remove extra space 
+            query = query.strip()
+            # remove quote
+            query = query[1:len(query)-1]
+
+            # for deubg 
+            #print('patternhead: {} , query: {}'.format(patternHead, query))
+
+            if query.lower().find((' '+ patternHead.lower()+' ').lower()) != -1:
+                neg_queires.add(query)
+            elif query.lower().startswith(patternHead.lower()+' '):
+                neg_queires.add(query)
+            else:
+                print('filter patternhead: {} , query: {}'.format(patternHead, query))
 
 
 
-#=======================
-# apply verb heurisstic1
-#=======================
-'''
-df_res_dict= pattern_heurictic_cat1(df_list, filetypeIncludeBoost, verbs)
+
+with open("pattern_cat2_filter.tsv", 'w', encoding='utf-8') as fout:
+    fout.write('\t'.join(['TurnNumber', 'PreviousTurnIntent', 'query','domain','PreviousTurnDomain', \
+    'TaskFrameStatus', 'TaskFrameEntityStates', 'TaskFrameGUID', 'SpeechPeopleDisambiguationGrammarMatches']) + '\n')
 
 
-with open("pattern_cat1.tsv", 'w', encoding='utf-8') as fout:
-    fout.write('\t'.join(['pattern', 'query']) + '\n')
-
-    for key,  df in tqdm(df_res_dict.items()):
-        if len(df) > 0:
+    for query in tqdm(neg_queires):
+        if len(query) > 0:
 
             #ouput list 
             #fout.write(str(key)+'\t'+str(df['Query'].tolist())+'\n')
-            # output set
-            fout.write(str(key)+'\t'+str(set(df['Query']))+'\n')
-'''
-
-#=======================
-# apply verb heurisstic2
-#=======================
-
-df_res_dict= pattern_heurictic_cat2(df_list, filetypeIncludeBoost, verbs, verbs_excluded)
-
-
-with open("pattern_cat2.tsv", 'w', encoding='utf-8') as fout:
-    fout.write('\t'.join(['pattern', 'query']) + '\n')
-
-    for key,  df in tqdm(df_res_dict.items()):
-        if len(df) > 0:
-
-            #ouput list 
-            #fout.write(str(key)+'\t'+str(df['Query'].tolist())+'\n')
-            # output set
-            fout.write(str(key)+'\t'+str(set(df['Query']))+'\n')
-
-
-
+            # output set'
+            fout.write('0'+'\t\t'+str(query)+'\t'+'web'+'\t\t\t\t\t\t\t'+'pattern_cat2.tsv'+'\n')
 
 
 
