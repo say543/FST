@@ -1,0 +1,8 @@
+07212021
+
+除了tcp signal (提供task frame status)
+
+	QAS Featurization Outputs 要看有沒有taskFrameEntityStates
+  
+  這樣當作feature train  contexul signal 才會work 
+  
