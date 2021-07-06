@@ -1,4 +1,32 @@
 
+================
+metric integration in AZURE ML in SOTA experiemnt by paulo
+================
+link 
+https://docs.microsoft.com/en-us/azure/machine-learning/how-to-use-mlflow
+
+[Yesterday 4:40 PM] Paulo Salem da SilvaTracking results metrics in AzureML with MLflow
+    
+SOTA Experimentation, while I was finalizing my SOTA project for this quarter, I remembered about one great tool called MLflow and tried here. It allows the systematic collection of experimentation parameters and metrics (as well as other things) for later inspection. It is a great way of tracking and preserving what happens.
+
+Moreover, it turns out that it is well integrated with AzureML experimentation mechanisms, so we can easily see our metrics there. Besides being convenient, it is also a matter of good governance: metrics are permanently preserved. Here's a screenshot of my latest experiment with its multiple runs (all easily collected from one single Jupyter notebook running on AML):
+
+
+
+
+Here's the Precison vs Recall chart, showing all combinations I found:
+
+
+
+In the above chart, if you look closely, you'll note that I made gradual progress up to some pretty impressive GPT-3 results. This sort of tracking thus also helps us to appreciate the gradual and cumulative efforts that went into improving our numbers.
+
+What do you think? Do you have any other suggestions for managing, visualizing and leveraging such experimentation logs?
+
+
+
+Edited<https://teams.microsoft.com/l/message/19:e27745fc0d644da2b605bafe5f31b309@thread.skype/1625528450977?tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47&amp;groupId=0e62b139-e8ff-471b-aab4-a8edbd680f10&amp;parentMessageId=1625528450977&amp;teamName=User Understanding&amp;channelName=SOTA Experimentation&amp;createdTime=1625528450977>
+
+
 
 ================
 interesting email
