@@ -7,24 +7,33 @@ https://microsoft-my.sharepoint-df.com/:v:/p/chiecha/EQUZ03iSIqNOlEoHf3ZDMxkBoly
 
 feedback about architecture
 
-feature norm?
+feature norm
+因該是沒有feaure 的意思
 
 Q
 convert onehot encoding into dense vector then concate with embeeding , that might better.
 
+因為one hot distance encoding 每個notation 的距離不一樣
+
+
+
 Q
 prefer not to change BERT
+from mei huh FPGA　recording
 
 Q
 if you are using pytorch, I think you can just use nn.Embedding. It will be equivalent to one-hot followed by a fc.
 
 Q
 PME will always have a default single turn intent(search_email) even though just starting ?
-but need to ask
+but need to ask?
+看skill ｃｏｄｅ　要看他怎麼desugn
 
 
 Q
 The challenge on bias essentially depends on your data distribution. What's your method to solve this?
+We discussed about the exposure bias problem, might need to intro some noise on previous intent, or more than 1 extra layers on top to make the model more robust. We still want overall model to focus on query itself, and previous intent is just some extra help.
+
 
 Q 
 evaluation
