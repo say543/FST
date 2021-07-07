@@ -1,5 +1,35 @@
 
 ================
+kathan  presentation  07072021
+================
+https://microsoft-my.sharepoint-df.com/:v:/p/chiecha/EQUZ03iSIqNOlEoHf3ZDMxkBoly7XzNi0wDckxXpTZsdXw
+
+
+feedback about architecture
+
+feature norm?
+
+Q
+convert onehot encoding into dense vector then concate with embeeding , that might better.
+
+Q
+prefer not to change BERT
+
+Q
+if you are using pytorch, I think you can just use nn.Embedding. It will be equivalent to one-hot followed by a fc.
+
+Q
+PME will always have a default single turn intent(search_email) even though just starting ?
+but need to ask
+
+
+Q
+The challenge on bias essentially depends on your data distribution. What's your method to solve this?
+
+Q 
+evaluation
+
+================
 FPGA status from meihuh  07062021
 ================
 chat : FPGA status and plan
