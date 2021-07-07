@@ -1436,7 +1436,18 @@ instaill from here
 https://msasg.visualstudio.com/QAS/_git/qas?path=%2Fprivate%2Fanswers%2FSDS%2FQCS%2Flib%2Fsrc%2FQueryProcessing%2FProcessing%2Fsrc%2Fpython%2Finterface
 
 
+// refer to GriffinProd_Cortana.QAS12HttpQAS.ClientIdConfig.ini
+''|''|''
+
+each one has defined in the following endpoint
+Microsoft_Teams_enus_Developer = luscenario:teams&feature.lutest:1&ipe_locale:en-us,en-gb,en-au,en-in,en-ca
+Microsoft_Teams_enus_Microsoft = luscenario:teams&feature.luselfhost:1&ipe_locale:en-us,en-gb,en-au,en-in,en-ca
+Microsoft_Teams_enus_Preview = luscenario:teams&feature.lucandidate1:1&ipe_locale:en-us,en-gb,en-au,en-in,en-ca
+Microsoft_Teams_enus_Public = luscenario:teams&ipe_locale:en-us,en-gb,en-au,en-in,en-ca
+
+
 endpoint 直接call
+// this is microsoft
 https://httpqas12-qas-prod-mw1p.qas.binginternal.com/httpqas?query=set%20volume%20to%2050%20percent&vs=Cortana&debug=true&version=2&vc=caac:cortanasdk|ipe_locale:en-us|luscenario:teams|feature.luselfhost:1
 
 with feature flight
