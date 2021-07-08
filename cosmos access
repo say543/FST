@@ -1,4 +1,34 @@
 
+======================
+cosmo  access from yong
+======================
+[Yesterday 11:28 AM] Yong Ni
+     这个需要你用Torus账号登陆
+​[Yesterday 11:29 AM] Chieh-Chun Chang
+    how?
+​[Yesterday 11:29 AM] Yong Ni
+    Use Cosmos with a Torus account - Substrate Dev Center (microsoft.net)
+​[Yesterday 11:32 AM] Yong Ni
+    而且你要开的这个vs好像不在这个列表里面Office.M365 Eligibility / VC Listing  (Web view)，不确定是不是还需要特殊的权限申请
+​[Yesterday 11:33 AM] Yong Ni
+    你确定不是 "office.adhoc" ？
+​[Yesterday 11:33 AM] Yong Ni
+    Request Eligibility and/or Torus Account  (Web view)
+[Request Eligibility and\/or Torus Account] (https://microsoft.sharepoint-df.com/teams/M365DataGovernance2/Shared%20Documents/M365%20Data%20Governance%20Process)​[Yesterday 11:38 AM] Chieh-Chun Chang
+    我查察 這個是data.mining 的repo
+​[Yesterday 11:39 AM] Chieh-Chun Chang
+    我也是一次看這個  但是我一職都沒辦法access cosmo14.
+​[Yesterday 11:41 AM] Yong Ni
+    如果你用Totus账号也不行，那就只可能只最后那个request eligibility的问题，根据不同VC需要不同的eligibility，把上面这几个链接都看完申请了eligibility应该就可以啦
+    
+    useful link
+    https://docs.substrate.microsoft.net/docs/Security/Torus/Use-Cosmos-with-Torus-account.html?uid=use-cosmos-with-torus-account&toc=%2Fdocs%2Ftoc.html
+    https://microsoft.sharepoint-df.com/teams/M365DataGovernance2/_layouts/15/Doc.aspx?sourcedoc=%7Bc6514939-732c-4fcb-b069-fdeea612798e%7D&%3Baction=view&%3Bwd=target%28Governance.one%7Ccf4226d0-01e4-4081-bd50-cc2c7bcd09c7%2FRequest+Eligibility+and%5C%2For+Torus+Account%7C109a1ab2-2906-4473-bcdb-217558a5826a%2F%29&%3Bwdorigin=703&%3Bwdpreservelink=1&isSPOFile=1
+
+
+
+
+
 
 ======================
 cosmo  access
