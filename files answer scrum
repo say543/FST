@@ -90,9 +90,21 @@ https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/1
 
 
 ===========================================
-mv8 lexicon cleaning
+mv8 change
 ===========================================
 https://msasg.visualstudio.com/Cortana/_git/CoreScienceDataStaging/pullrequest/2305063?_a=files&path=%2Fdatasources%2FFiles%2Fresource%2FLexiconFiles%2Fcombine_lexicon.txt
+lexicon cleaninig
+dataset new queries
+slot update: file_action_context(remove ? will cause problem for hotfix) new slot?
+
+
+pcfg in json comment
+
+intent new data but intent.custom , not personal grammar, need to add
+
+slot new data
+
+
 
 ===========================================
 nickel planning  document from shuyin
