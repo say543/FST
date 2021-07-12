@@ -1,4 +1,21 @@
 
+
+
+====================
+possible inject external knowledge in FPGA
+good paper 07122021
+====================
+[2:46 PM] Haoda Chu
+    
+Science 🔬 Hi Team, I came across two interesting ACL papers that focus on injecting lexicon/factual/linguistic knowledge through adapters. The solution seems quite promising because FPGA only supports very limited modeling ways to leverage external knowledge . Tagging Xinjie Zhou to see if we can explore this in ATLAS project
+
+
+https://arxiv.org/pdf/2002.01808.pdf
+https://arxiv.org/pdf/2105.07148v1.pdf
+
+<https://teams.microsoft.com/l/message/19:d8a43ec9f4bf42e7afd38cf487e28ec2@thread.skype/1626126396339?tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47&amp;groupId=0e62b139-e8ff-471b-aab4-a8edbd680f10&amp;parentMessageId=1626126396339&amp;teamName=User Understanding&amp;channelName=Science 🔬&amp;createdTime=1626126396339>
+
+
 ================
 kathan  presentation  07072021
 ================
